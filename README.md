@@ -1,6 +1,6 @@
 # Pahankanuwa English Translations
 
-![Pahankanuwa Knowledge Base](docs
+docs/images/Homepage.png
 
 > 📚 170 Sermons • 166 Subjects • 2815 Citations • 14 Sutta Sources
 
