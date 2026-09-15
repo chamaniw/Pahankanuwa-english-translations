@@ -1,3 +1,5 @@
+https://chamaniw.github.io/Pahankanuwa-english-translations/
+
 Pahankanuwa-english-translations
 English translations of the Pahankanuwa sermons of Ven. Katukurunde Nanananda Thero
 These translations were created from digitised editions of the Pahankanuwa sermons.
