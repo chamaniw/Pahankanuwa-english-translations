@@ -1,5 +1,7 @@
 # Pahankanuwa English Translations
 
+docs/images/homepage.png
+
 ### English Translations of the Pahankanuwa Sermons of Ven. Katukurunde Nanananda Thero
 
 🌐 **Online Knowledge Base**
