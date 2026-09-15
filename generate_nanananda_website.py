@@ -426,7 +426,31 @@ def build_website():
             <li><a href="statistics.html">Workbook Statistics</a> - Detailed data and metrics breakdown</li>
         </ul>
     </div>
-    """
+<div class="card">
+    <h3>Knowledge Base Navigation</h3>
+    <ul>
+        <li><a href="sermons/index.html">Browse Sermons</a> - Catalog of Pahankanuwa sermon translations and full DOCX transcripts</li>
+        <li>subjects/index.htmlBrowse Subjects</a> - Index of key Dhamma concepts and topics</li>
+        <li>suttas/index.htmlBrowse Sutta References</a> - Canonical Sutta index mapped to English translations</li>
+        <li>citations/index.htmlBrowse Citations Index</a> - Opening passages and textual citations</li>
+        <li><a href="statistics.html">Workbook Statistics</a> - Detailed data and metrics breakdown</li>
+    </ul>
+</div>
+
+<div class="card">
+    <h3>Downloads</h3>
+
+    <p>
+        <a href="https://github.com/chamaniw/Pahankanuwa-english-translations/raw/refs/heads/main/Pahankanuwa_English_Translations.zip">
+        📥 Download Complete Translation Collection (ZIP)
+        </a>
+    </p>
+
+    <p>
+        Download all available English translations of the Pahankanuwa sermon series in a single ZIP file.
+    </p>
+</div>
+"""
     with open(OUTPUT_DIR / "index.html", "w", encoding="utf-8") as f:
         f.write(get_base_html("Home", home_content))
 
