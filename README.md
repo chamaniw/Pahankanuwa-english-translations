@@ -15,4 +15,6 @@ All credit for the original sermons belongs to Ven. Katukurunde Nanananda Thero 
 
 If you are a copyright holder and have concerns regarding distribution of these materials, please contact the repository maintainer.
 
+https://github.com/chamaniw/Pahankanuwa-english-translations/raw/refs/heads/main/Pahankanuwa_English_Translations.zip
+
 https://archive.org/details/pahankanuwa-english-translations-main
