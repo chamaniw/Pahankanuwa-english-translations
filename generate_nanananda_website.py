@@ -2,6 +2,7 @@ import os
 import re
 import shutil
 import json
+import unicodedata
 import pandas as pd
 from pathlib import Path
 
@@ -17,16 +18,21 @@ os.makedirs(OUTPUT_DIR / "sermons", exist_ok=True)
 os.makedirs(OUTPUT_DIR / "subjects", exist_ok=True)
 os.makedirs(OUTPUT_DIR / "suttas", exist_ok=True)
 os.makedirs(OUTPUT_DIR / "citations", exist_ok=True)
+os.makedirs(OUTPUT_DIR / "concepts", exist_ok=True)
 
 
 # ==============================================================================
 # HELPER FUNCTIONS
 # ==============================================================================
 def slugify(text: str) -> str:
-    """Converts strings/subjects/suttas into clean, URL-safe filenames."""
+    """Converts strings/subjects/suttas into clean, URL-safe filenames, normalizing Pali diacritics."""
     if not isinstance(text, str) or not text.strip():
         return "unknown"
-    clean = text.strip().lower()
+    
+    # Normalize unicode characters to decompose diacritics (e.g., ā -> a, ṭ -> t)
+    clean = unicodedata.normalize('NFD', text.strip())
+    clean = ''.join(c for c in clean if unicodedata.category(c) != 'Mn').lower()
+    
     clean = re.sub(r'[\s/\\\-\:\,\.\(\)]+', '_', clean)
     clean = re.sub(r'[^a-z0-9_]', '', clean)
     clean = re.sub(r'_+', '_', clean).strip('_')
@@ -71,6 +77,7 @@ def get_base_html(title: str, content: str, rel_path_to_root: str = "") -> str:
                 <a href="{rel_path_to_root}index.html">Home</a>
                 <a href="{rel_path_to_root}sermons/index.html">Sermons</a>
                 <a href="{rel_path_to_root}subjects/index.html">Subjects</a>
+                <a href="{rel_path_to_root}concepts/index.html">Concepts</a>
                 <a href="{rel_path_to_root}suttas/index.html">Suttas</a>
                 <a href="{rel_path_to_root}citations/index.html">Citations</a>
                 <a href="{rel_path_to_root}statistics.html">Statistics</a>
@@ -381,6 +388,7 @@ def build_website():
     suttas_df = xl.parse("Suttas") if "Suttas" in xl.sheet_names else pd.DataFrame()
     citations_df = xl.parse("Citations") if "Citations" in xl.sheet_names else pd.DataFrame()
     stats_df = xl.parse("Statistics") if "Statistics" in xl.sheet_names else pd.DataFrame()
+    concepts_df = xl.parse("Concepts") if "Concepts" in xl.sheet_names else pd.DataFrame()
 
     search_index = []
 
@@ -388,6 +396,7 @@ def build_website():
     subject_count = len(subjects_df)
     sutta_count = len(suttas_df)
     citation_count = len(citations_df)
+    concept_count = len(concepts_df)
 
     # 1. GENERATE HOMEPAGE
     home_content = f"""
@@ -407,8 +416,8 @@ def build_website():
             <div class="stat-label">Dhamma Subjects</div>
         </div>
         <div class="stat-card">
-            <div class="stat-number">{citation_count}</div>
-            <div class="stat-label">Citations Indexed</div>
+            <div class="stat-number">{concept_count}</div>
+            <div class="stat-label">Concepts</div>
         </div>
         <div class="stat-card">
             <div class="stat-number">{sutta_count}</div>
@@ -419,37 +428,28 @@ def build_website():
     <div class="card">
         <h3>Knowledge Base Navigation</h3>
         <ul>
-            <li><a href="sermons/index.html">Browse Translated Sermons</a> - Catalog of Pahankanuwa sermon translations and full DOCX transcripts</li>
+            <li><a href="sermons/index.html">Browse Sermons</a> - Catalog of Pahankanuwa sermon translations and full DOCX transcripts</li>
             <li><a href="subjects/index.html">Browse Subjects</a> - Index of key Dhamma concepts and topics</li>
+            <li><a href="concepts/index.html">Browse Concepts</a> - Index of core Pali terms and doctrinal themes</li>
             <li><a href="suttas/index.html">Browse Sutta References</a> - Canonical Sutta index mapped to English translations</li>
             <li><a href="citations/index.html">Browse Citations Index</a> - Opening passages and textual citations</li>
             <li><a href="statistics.html">Workbook Statistics</a> - Detailed data and metrics breakdown</li>
         </ul>
     </div>
-<div class="card">
-    <h3>Knowledge Base Navigation</h3>
-    <ul>
-        <li><a href="sermons/index.html">Browse Sermons</a> - Catalog of Pahankanuwa sermon translations and full DOCX transcripts</li>
-        <li>subjects/index.htmlBrowse Subjects</a> - Index of key Dhamma concepts and topics</li>
-        <li>suttas/index.htmlBrowse Sutta References</a> - Canonical Sutta index mapped to English translations</li>
-        <li>citations/index.htmlBrowse Citations Index</a> - Opening passages and textual citations</li>
-        <li><a href="statistics.html">Workbook Statistics</a> - Detailed data and metrics breakdown</li>
-    </ul>
-</div>
 
-<div class="card">
-    <h3>Downloads</h3>
+    <div class="card">
+        <h3>Downloads</h3>
 
-    <p>
-        <a href="https://github.com/chamaniw/Pahankanuwa-english-translations/raw/refs/heads/main/Pahankanuwa_English_Translations.zip">
-        📥 Download Complete Translation Collection (ZIP)
-        </a>
-    </p>
+        <p>
+            <a href="https://github.com/chamaniw/Pahankanuwa-english-translations/raw/refs/heads/main/Pahankanuwa_English_Translations.zip">
+            📥 Download Complete Translation Collection (ZIP)
+            </a>
+        </p>
 
-    <p>
-        Download all available English translations of the Pahankanuwa sermon series in a single ZIP file.
-    </p>
-</div>
+        <p>
+            Download all available English translations of the Pahankanuwa sermon series in a single ZIP file.
+        </p>
+    </div>
 """
     with open(OUTPUT_DIR / "index.html", "w", encoding="utf-8") as f:
         f.write(get_base_html("Home", home_content))
@@ -559,7 +559,95 @@ def build_website():
     with open(OUTPUT_DIR / "subjects" / "index.html", "w", encoding="utf-8") as f:
         f.write(get_base_html("Subjects Index", subjects_list_html, rel_path_to_root="../"))
 
-    # 4. GENERATE SUTTA PAGES
+    # 4. GENERATE CONCEPT PAGES
+    if not concepts_df.empty and "Count" in concepts_df.columns:
+        concepts_df = concepts_df.sort_values(by="Count", ascending=False)
+
+    concept_index_rows = []
+    for _, row in concepts_df.iterrows():
+        pali = str(row.get("Pali Term", "")).strip()
+        english = str(row.get("English Translation", "")).strip()
+        definition = str(row.get("Definition", "")).strip()
+        sermons = str(row.get("Sermons", ""))
+        count = row.get("Count", 0)
+
+        if not pali or pali == "nan":
+            continue
+
+        slug = slugify(pali)
+        filename = f"{slug}.html"
+
+        sermon_list = [s.strip() for s in sermons.split(",") if s.strip()]
+        
+        # Sort sermons numerically (e.g., Sermon 2 before Sermon 10)
+        def get_sermon_num(val):
+            nums = re.findall(r"\d+", str(val))
+            return int(nums[0]) if nums else 0
+
+        sermon_list = sorted(sermon_list, key=get_sermon_num)
+        sermon_links = "".join([f"<li><a href='../sermons/{format_sermon_filename(s)}'>Sermon {s}</a></li>" for s in sermon_list])
+
+        concept_html = f"""
+        <a href="index.html" class="back-link">&larr; Back to Concepts Index</a>
+
+        <div class="card">
+            <h2>{pali}</h2>
+            <p><strong>English:</strong> {english}</p>
+            <p><strong>Sermon Count:</strong> {count}</p>
+        </div>
+
+        <div class="card">
+            <h3>Definition</h3>
+            <p>{definition}</p>
+        </div>
+
+        <div class="card">
+            <h3>Related Sermons ({count})</h3>
+            <ul>{sermon_links if sermon_links else '<li>No linked sermons.</li>'}</ul>
+        </div>
+        """
+
+        with open(OUTPUT_DIR / "concepts" / filename, "w", encoding="utf-8") as f:
+            f.write(get_base_html(f"Concept: {pali}", concept_html, rel_path_to_root="../"))
+
+        concept_index_rows.append(f"""
+        <tr>
+            <td><a href='{filename}'>{pali}</a></td>
+            <td>{english}</td>
+            <td>{count}</td>
+        </tr>
+        """)
+
+        search_index.append({
+            "title": f"Concept: {pali}",
+            "type": "Concept",
+            "url": f"concepts/{filename}",
+            "text": f"{pali} {english} {definition}"
+        })
+
+    # Concepts Index Page
+    concepts_index_html = f"""
+    <h2>Dhamma Concepts</h2>
+    <div class="card">
+        <table>
+            <thead>
+                <tr>
+                    <th>Pali Term</th>
+                    <th>English Translation</th>
+                    <th>Sermon Count</th>
+                </tr>
+            </thead>
+            <tbody>
+                {''.join(concept_index_rows)}
+            </tbody>
+        </table>
+    </div>
+    """
+
+    with open(OUTPUT_DIR / "concepts" / "index.html", "w", encoding="utf-8") as f:
+        f.write(get_base_html("Concepts Index", concepts_index_html, rel_path_to_root="../"))
+
+    # 5. GENERATE SUTTA PAGES
     sutta_index_rows = []
     for _, row in suttas_df.iterrows():
         ref_name = str(row.get("Reference", "")).strip()
@@ -605,7 +693,7 @@ def build_website():
     with open(OUTPUT_DIR / "suttas" / "index.html", "w", encoding="utf-8") as f:
         f.write(get_base_html("Suttas Index", suttas_list_html, rel_path_to_root="../"))
 
-    # 5. GENERATE CITATION PAGES
+    # 6. GENERATE CITATION PAGES
     citation_index_rows = []
     for idx, row in citations_df.iterrows():
         citation_text = str(row.values[0]) if len(row) > 0 else f"Citation {idx+1}"
@@ -649,7 +737,7 @@ def build_website():
     with open(OUTPUT_DIR / "citations" / "index.html", "w", encoding="utf-8") as f:
         f.write(get_base_html("Citations Index", citations_list_html, rel_path_to_root="../"))
 
-    # 6. GENERATE STATISTICS PAGE
+    # 7. GENERATE STATISTICS PAGE
     stats_table_html = ""
     if not stats_df.empty:
         stats_table_html = stats_df.to_html(classes="stats-table", index=False)
@@ -659,6 +747,7 @@ def build_website():
             <tr><th>Metric</th><th>Count</th></tr>
             <tr><td>Total Translated Sermons</td><td>{sermon_count}</td></tr>
             <tr><td>Total Dhamma Subjects</td><td>{subject_count}</td></tr>
+            <tr><td>Total Concepts</td><td>{concept_count}</td></tr>
             <tr><td>Total Citations</td><td>{citation_count}</td></tr>
             <tr><td>Total Sutta Sources</td><td>{sutta_count}</td></tr>
         </table>
@@ -673,11 +762,11 @@ def build_website():
     with open(OUTPUT_DIR / "statistics.html", "w", encoding="utf-8") as f:
         f.write(get_base_html("Statistics", stats_page_html))
 
-    # 7. WRITE SEARCH INDEX JSON
+    # 8. WRITE SEARCH INDEX JSON
     with open(OUTPUT_DIR / "search_index.json", "w", encoding="utf-8") as f:
         json.dump(search_index, f)
 
-    # 8. WRITE ASSETS
+    # 9. WRITE ASSETS
     write_assets()
 
     # PRINT SUMMARY OUTPUT
@@ -685,6 +774,7 @@ def build_website():
     print(f"Homepage:   {OUTPUT_DIR / 'index.html'}")
     print(f"Sermons:    {len(sermons_df)} pages generated in {OUTPUT_DIR / 'sermons'}")
     print(f"Subjects:   {len(subjects_df)} pages generated in {OUTPUT_DIR / 'subjects'}")
+    print(f"Concepts:   {len(concepts_df)} pages generated in {OUTPUT_DIR / 'concepts'}")
     print(f"Suttas:     {len(suttas_df)} pages generated in {OUTPUT_DIR / 'suttas'}")
     print(f"Citations:  {len(citations_df)} pages generated in {OUTPUT_DIR / 'citations'}")
     print(f"Statistics: {OUTPUT_DIR / 'statistics.html'}\n")
