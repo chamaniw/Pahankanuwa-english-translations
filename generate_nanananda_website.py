@@ -404,6 +404,8 @@ def build_website():
         <h2>English Translations of Pahankanuwa Sermons</h2>
         <p><strong>Venerable Katukurunde Nanananda Thero</strong></p>
         <p>Welcome to the structured Dhamma Knowledge Base, cataloging and indexing the English translations of the Pahankanuwa Sermons delivered by Most Venerable Katukurunde Nanananda Thero. This portal provides direct cross-references between translated sermon passages, Dhamma subjects, and canonical Sutta citations.</p>
+	<p>The translations presented in this knowledge base were prepared from digitised editions of the Pahankanuwa sermon series. Original sermon texts were derived from OCR-processed versions of publicly available PDF editions and translated through a collaborative workflow involving OCR correction, AI-assisted translation, and human review and proofreading. The project is intended as a freely accessible resource for Dhamma study and reference.</p>
+	<p>Disclaimer: These translations are provided for educational and Dhamma-study purposes only and are not intended for commercial use. All credit for the original sermons belongs to Ven. Katukurunde Nanananda Thero and the original publishers. If you are a copyright holder and have concerns regarding the distribution of these materials, please contact the repository maintainer.</p>
     </div>
 
     <div class="grid-4">
