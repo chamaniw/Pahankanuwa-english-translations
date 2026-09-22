@@ -1,0 +1,203 @@
+/* --- Site Configuration Variables --- */
+:root {
+    --page-width: 90%;
+    --line-color: #c7740e;
+    --banner-bg: #ffd740;
+    --footer-bg: #ffe885;
+    --text-color: #333;
+    --link-color: #0066cc;
+    --link-hover: #004499;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px 0;
+    background-color: #ffffff;
+    color: var(--text-color);
+}
+
+/* Master Page Wrapper */
+.page-wrapper {
+    width: var(--page-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+}
+
+/* Header Banner */
+header {
+    background-color: var(--banner-bg);
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: normal;
+}
+
+header h1 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Two-Column Flex Layout */
+.layout {
+    display: flex;
+    flex-grow: 1;
+    padding: 30px 0;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    width: 220px;
+    border-right: 3px solid var(--line-color);
+    padding-right: 20px;
+    flex-shrink: 0;
+}
+
+.sidebar-section {
+    margin-bottom: 25px;
+}
+
+.sidebar-section h3 {
+    font-size: 16px;
+    margin: 0 0 10px 0;
+    color: var(--text-color);
+}
+
+.sidebar-section ul {
+    list-style: none;
+    padding-left: 10px;
+    margin: 0;
+}
+
+.sidebar-section li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.sidebar-section a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.sidebar-section a:hover,
+.sidebar-section a.active {
+    color: #000;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Main Content Area */
+.content {
+    flex-grow: 1;
+    padding-left: 40px;
+}
+
+/* Common Item Card (Sermons, Books, Stanzas) */
+.item-card {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed var(--line-color);
+}
+
+.item-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.download-links a,
+.content a {
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+.download-links a:hover,
+.content a:hover {
+    text-decoration: underline;
+    color: var(--link-hover);
+}
+
+.separator {
+    color: #999;
+    margin: 0 8px;
+}
+
+/* Clickable Stanza Words */
+a.pali-word {
+    color: var(--text-color);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--line-color);
+}
+
+a.pali-word:hover {
+    background-color: var(--footer-bg);
+    color: #000;
+}
+
+/* Footer Styling */
+footer {
+    background-color: var(--footer-bg);
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .page-wrapper {
+        width: 100%;
+    }
+
+    body {
+        padding: 0;
+    }
+
+    .layout {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 3px solid var(--line-color);
+        padding-right: 0;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .sidebar-section {
+        margin-bottom: 0;
+        min-width: 140px;
+    }
+
+    .content {
+        padding-left: 0;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+}

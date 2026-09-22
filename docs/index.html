@@ -1,97 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Pahankanuwa Sermons (English Translations) | Ven. Katukurunde Nanananda Thero</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="search.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English Translations of Pahankanuwa Sermons | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
 </head>
 <body>
-    <header class="site-header">
-        <div class="container header-container">
-            <div class="site-branding">
-                <h1 class="site-title"><a href="index.html">Ven. Katukurunde Nanananda Thero</a></h1>
-                <span class="site-tagline">English Translations of Pahankanuwa Sermons</span>
-            </div>
-            <nav class="main-nav">
-                <a href="index.html">Home</a>
-                <a href="sermons/index.html">Sermons</a>
-                <a href="subjects/index.html">Subjects</a>
-                <a href="concepts/index.html">Concepts</a>
-                <a href="suttas/index.html">Suttas</a>
-                <a href="citations/index.html">Citations</a>
-                <a href="statistics.html">Statistics</a>
-            </nav>
-        </div>
-    </header>
 
-    <div class="search-container container">
-        <input type="text" id="searchInput" placeholder="Search English translations by sermon title, subject, sutta, or citation..." onkeyup="performSearch()">
-        <div id="searchResults" class="search-results"></div>
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html" class="active">Home</a><a href="sermons.html">Sermons</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
     </div>
+  </header>
+  
 
-    <main class="container main-content">
-        
-    <div class="card">
-        <h2>English Translations of Pahankanuwa Sermons</h2>
-        <p><strong>Venerable Katukurunde Nanananda Thero</strong></p>
-        <p>Welcome to the structured Dhamma Knowledge Base, cataloging and indexing the English translations of the Pahankanuwa Sermons delivered by Most Venerable Katukurunde Nanananda Thero. This portal provides direct cross-references between translated sermon passages, Dhamma subjects, and canonical Sutta citations.</p>
-	<p>The translations presented in this knowledge base were prepared from digitised editions of the Pahankanuwa sermon series. Original sermon texts were derived from OCR-processed versions of publicly available PDF editions and translated through a collaborative workflow involving OCR correction, AI-assisted translation, and human review and proofreading. The project is intended as a freely accessible resource for Dhamma study and reference.</p>
-	<p>Disclaimer: These translations are provided for educational and Dhamma-study purposes only and are not intended for commercial use. All credit for the original sermons belongs to Ven. Katukurunde Nanananda Thero and the original publishers. If you are a copyright holder and have concerns regarding the distribution of these materials, please contact the repository maintainer.</p>
-    </div>
+  <div class="search-container">
+    <input type="text" id="searchInput" class="search-input" onkeyup="filterData()" placeholder="Search sermon index by title, citation, or source...">
+  </div>
 
-    <div class="grid-4">
-        <div class="stat-card">
-            <div class="stat-number">170</div>
-            <div class="stat-label">Translated Sermons</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number">166</div>
-            <div class="stat-label">Dhamma Subjects</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number">25</div>
-            <div class="stat-label">Concepts</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number">14</div>
-            <div class="stat-label">Sutta Sources</div>
-        </div>
-    </div>
+  <main class="homepage-content">
 
-    <div class="card">
-        <h3>Knowledge Base Navigation</h3>
-        <ul>
-            <li><a href="sermons/index.html">Browse Sermons</a> - Catalog of Pahankanuwa sermon translations and full DOCX transcripts</li>
-            <li><a href="subjects/index.html">Browse Subjects</a> - Index of key Dhamma concepts and topics</li>
-            <li><a href="concepts/index.html">Browse Concepts</a> - Index of core Pali terms and doctrinal themes</li>
-            <li><a href="suttas/index.html">Browse Sutta References</a> - Canonical Sutta index mapped to English translations</li>
-            <li><a href="citations/index.html">Browse Citations Index</a> - Opening passages and textual citations</li>
-            <li><a href="statistics.html">Workbook Statistics</a> - Detailed data and metrics breakdown</li>
-        </ul>
-    </div>
+    <section class="hero">
+      <h1>English Translations of Pahankanuwa Sermons</h1>
+      <h2>Venerable Katukurunde Nanananda Thero</h2>
+      
+      <p>Welcome to the structured Dhamma Knowledge Base, cataloging and indexing the English translations of the Pahankanuwa Sermons delivered by Most Venerable Katukurunde Nanananda Thero. This portal provides direct cross-references between translated sermon passages, Dhamma subjects, and canonical Sutta citations.</p>
+      
+      <p>The translations presented in this knowledge base were prepared from digitised editions of the Pahankanuwa sermon series. Original sermon texts were derived from OCR-processed versions of publicly available PDF editions and translated through a collaborative workflow involving OCR correction, AI-assisted translation, and human review and proofreading. The project is intended as a freely accessible resource for Dhamma study and reference.</p>
+      
+      <p class="disclaimer"><strong>Disclaimer:</strong> These translations are provided for educational and Dhamma-study purposes only and are not intended for commercial use. All credit for the original sermons belongs to Ven. Katukurunde Nanananda Thero and the original publishers. If you are a copyright holder and have concerns regarding the distribution of these materials, please contact the repository maintainer.</p>
+    </section>
 
-    <div class="card">
-        <h3>Downloads</h3>
+    <section class="stats-grid">
+      <a href="sermons.html" class="stat-card">
+        <span class="stat-number">170</span>
+        <span class="stat-label">Browse All Sermons</span>
+      </a>
+      <a href="citations.html" class="stat-card">
+        <span class="stat-number">3,062</span>
+        <span class="stat-label">Browse Citations Index</span>
+      </a>
+      <a href="statistics.html" class="stat-card">
+        <span class="stat-number">100%</span>
+        <span class="stat-label">View Full Collection Stats</span>
+      </a>
+    </section>
 
-        <p>
-            <a href="https://github.com/chamaniw/Pahankanuwa-english-translations/raw/refs/heads/main/Pahankanuwa_English_Translations.zip">
-            📥 Download Complete Translation Collection (ZIP)
-            </a>
-        </p>
+  </main>
 
-        <p>
-            Download all available English translations of the Pahankanuwa sermon series in a single ZIP file.
-        </p>
-    </div>
+  <footer>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
 
-    </main>
+  
+<script>
+function filterData() {
+    var input = document.getElementById('searchInput');
+    var filter = input.value.toLowerCase();
+    
+    var rows = document.querySelectorAll('.data-table tbody tr');
+    rows.forEach(function(row) {
+        var text = row.innerText.toLowerCase();
+        row.style.display = text.includes(filter) ? '' : 'none';
+    });
+}
+</script>
 
-    <footer class="site-footer">
-        <div class="container">
-            <p>English Translations of Pahankanuwa Sermons by Venerable Katukurunde Nanananda Thero &copy; Knowledge Base Static Generator</p>
-        </div>
-    </footer>
+
 </body>
 </html>

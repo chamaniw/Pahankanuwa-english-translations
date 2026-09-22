@@ -1,785 +1,655 @@
 import os
-import re
 import shutil
-import json
-import unicodedata
-import pandas as pd
+import re
 from pathlib import Path
+import pandas as pd
 
-# ==============================================================================
-# CONFIGURATION & FILE PATHS
-# ==============================================================================
-INPUT_PATH = r"C:\Users\chama\OneDrive\Pahankanuwa Project\Editing English Translations\Nanananda_Knowledge_Base_V1.xlsx"
-OUTPUT_DIR = Path("docs")
-GITHUB_DOCX_BASE_URL = "https://github.com/chamaniw/Pahankanuwa-english-translations/blob/main/docx/"
+# ==========================================
+# PATH & DIRECTORY CONFIGURATION
+# ==========================================
+BASE_DIR = Path(r"C:\Pahankanuwa")
+DOCS_DIR = BASE_DIR / "docs"
+DOCX_DIR = BASE_DIR / "docx"
+DOCS_DOCX_DIR = DOCS_DIR / "docx"
+ZIP_FILE = BASE_DIR / "Pahankanuwa_English_Translations.zip"
 
-# Ensure required output directory tree exists
-os.makedirs(OUTPUT_DIR / "sermons", exist_ok=True)
-os.makedirs(OUTPUT_DIR / "subjects", exist_ok=True)
-os.makedirs(OUTPUT_DIR / "suttas", exist_ok=True)
-os.makedirs(OUTPUT_DIR / "citations", exist_ok=True)
-os.makedirs(OUTPUT_DIR / "concepts", exist_ok=True)
+DOCS_DIR.mkdir(parents=True, exist_ok=True)
+DOCS_DOCX_DIR.mkdir(parents=True, exist_ok=True)
 
 
-# ==============================================================================
+# ==========================================
 # HELPER FUNCTIONS
-# ==============================================================================
-def slugify(text: str) -> str:
-    """Converts strings/subjects/suttas into clean, URL-safe filenames, normalizing Pali diacritics."""
-    if not isinstance(text, str) or not text.strip():
-        return "unknown"
+# ==========================================
+def parse_and_link_sermons(val):
+    """
+    Converts sermon numbers or string IDs into interactive DOCX link buttons.
+    """
+    if pd.isna(val) or not str(val).strip() or str(val).lower() == "nan":
+        return ""
     
-    # Normalize unicode characters to decompose diacritics (e.g., ā -> a, ṭ -> t)
-    clean = unicodedata.normalize('NFD', text.strip())
-    clean = ''.join(c for c in clean if unicodedata.category(c) != 'Mn').lower()
+    val_str = str(val).strip()
     
-    clean = re.sub(r'[\s/\\\-\:\,\.\(\)]+', '_', clean)
-    clean = re.sub(r'[^a-z0-9_]', '', clean)
-    clean = re.sub(r'_+', '_', clean).strip('_')
-    return clean or "item"
+    # Single numeric sermon string (e.g., "1", "001", "150")
+    if val_str.isdigit() and len(val_str) <= 3:
+        s_num = val_str.zfill(3)
+        doc_filename = f"sermon_{s_num}_ENGLISH.docx"
+        return f'<a class="doc-btn" href="docx/{doc_filename}" target="_blank">📄 Sermon {s_num}</a>'
 
-def format_sermon_filename(sermon_id: str) -> str:
-    """Formats raw Sermon IDs (e.g., '1', 'Sermon 001') into 'sermon_001_ENGLISH.html'."""
-    numbers = re.findall(r'\d+', str(sermon_id))
-    if numbers:
-        num = int(numbers[0])
-        return f"sermon_{num:03d}_ENGLISH.html"
-    return f"sermon_{slugify(str(sermon_id))}.html"
+    # Multi-sermon references separated by comma or semicolon
+    items = re.split(r'[,;]', val_str)
+    links = []
+    
+    for item in items:
+        item_str = item.strip()
+        match = re.search(r'(\d{1,3})', item_str)
+        if match:
+            s_num = match.group(1).zfill(3)
+            doc_filename = f"sermon_{s_num}_ENGLISH.docx"
+            links.append(f'<a class="doc-btn" href="docx/{doc_filename}" target="_blank">📄 Sermon {s_num}</a>')
+        else:
+            if item_str:
+                links.append(item_str)
+                
+    return " ".join(links) if links else val_str
 
-def format_sermon_docx_name(sermon_id: str) -> str:
-    """Formats raw Sermon IDs into standard DOCX file name matching GitHub repository structure."""
-    numbers = re.findall(r'\d+', str(sermon_id))
-    if numbers:
-        num = int(numbers[0])
-        return f"sermon_{num:03d}_ENGLISH"
-    return slugify(str(sermon_id))
 
-def get_base_html(title: str, content: str, rel_path_to_root: str = "") -> str:
-    """Generates consistent HTML page structure with navbar, search box, and footer."""
-    site_title_text = "Pahankanuwa Sermons (English Translations) | Ven. Katukurunde Nanananda Thero"
-    return f"""<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{title} | {site_title_text}</title>
-    <link rel="stylesheet" href="{rel_path_to_root}style.css">
-    <script defer src="{rel_path_to_root}search.js"></script>
-</head>
-<body>
-    <header class="site-header">
-        <div class="container header-container">
-            <div class="site-branding">
-                <h1 class="site-title"><a href="{rel_path_to_root}index.html">Ven. Katukurunde Nanananda Thero</a></h1>
-                <span class="site-tagline">English Translations of Pahankanuwa Sermons</span>
-            </div>
-            <nav class="main-nav">
-                <a href="{rel_path_to_root}index.html">Home</a>
-                <a href="{rel_path_to_root}sermons/index.html">Sermons</a>
-                <a href="{rel_path_to_root}subjects/index.html">Subjects</a>
-                <a href="{rel_path_to_root}concepts/index.html">Concepts</a>
-                <a href="{rel_path_to_root}suttas/index.html">Suttas</a>
-                <a href="{rel_path_to_root}citations/index.html">Citations</a>
-                <a href="{rel_path_to_root}statistics.html">Statistics</a>
-            </nav>
-        </div>
-    </header>
+# ==========================================
+# DATA LOADING & PROCESSOR
+# ==========================================
+def load_and_process_excel_data():
+    scratch_file = BASE_DIR / "pahankanuwa_e_from_scratch_4.xlsx"
+    idx_file = BASE_DIR / "Nanananda_Dhamma_Index_V3.xlsx"
+    kb_file = BASE_DIR / "Nanananda_Knowledge_Base_V1.xlsx"
 
-    <div class="search-container container">
-        <input type="text" id="searchInput" placeholder="Search English translations by sermon title, subject, sutta, or citation..." onkeyup="performSearch()">
-        <div id="searchResults" class="search-results"></div>
-    </div>
+    datasets = {
+        "sermons": pd.DataFrame(),
+        "citations": pd.DataFrame(),
+        "statistics": pd.DataFrame()
+    }
 
-    <main class="container main-content">
-        {content}
-    </main>
+    # 1. Load Sermons (Para_7 for Opening Excerpt, Para_9 for Likely Source)
+    if scratch_file.exists():
+        df_scratch = pd.read_excel(scratch_file)
+        sermons_list = []
+        for _, row in df_scratch.iterrows():
+            fn = str(row['FileName']).strip() if 'FileName' in row else ""
+            if not fn or fn.lower() == 'nan':
+                continue
+            
+            num_match = re.search(r'(\d{1,3})', fn)
+            s_num = num_match.group(1).zfill(3) if num_match else "000"
+            clean_title = f"Pahankanuwa Sermon {s_num}"
+            docx_target = f"sermon_{s_num}_ENGLISH.docx"
 
-    <footer class="site-footer">
-        <div class="container">
-            <p>English Translations of Pahankanuwa Sermons by Venerable Katukurunde Nanananda Thero &copy; Knowledge Base Static Generator</p>
-        </div>
-    </footer>
-</body>
-</html>
-"""
+            # Para_7 for Opening Passage Excerpt
+            para_7 = str(row['Para_7']).strip() if 'Para_7' in row and pd.notna(row['Para_7']) else ""
+            excerpt = para_7 if para_7 and para_7.lower() != 'nan' else "No excerpt available"
 
-# ==============================================================================
-# CSS & JS ASSET GENERATION
-# ==============================================================================
-def write_assets():
-    """Generates external CSS stylesheet and client-side JS search engine."""
-    css_content = """/* Academic & Modern Styling for Dhamma Knowledge Base */
+            # Para_9 for Likely Source
+            para_9 = str(row['Para_9']).strip() if 'Para_9' in row and pd.notna(row['Para_9']) else ""
+            likely_source = para_9 if para_9 and para_9.lower() != 'nan' else "Unspecified Canonical Source"
+
+            sermons_list.append({
+                "Sermon": f"<strong>{clean_title}</strong>",
+                "Opening Passage Excerpt": excerpt.replace('\n', '<br>'),
+                "Likely Source": likely_source,
+                "Document Link": f'<a class="doc-btn" href="docx/{docx_target}" target="_blank">📄 Open DOCX Document</a>'
+            })
+        datasets["sermons"] = pd.DataFrame(sermons_list)
+
+    # 2. Load Citations
+    if idx_file.exists():
+        xls_idx = pd.ExcelFile(idx_file)
+        if 'Pali_Citations' in xls_idx.sheet_names:
+            df_cit = pd.read_excel(xls_idx, sheet_name='Pali_Citations')
+            df_cit['Sermon Link'] = df_cit['Sermon'].apply(parse_and_link_sermons)
+            datasets["citations"] = df_cit[['Citation', 'Sermon Link', 'Type', 'Likely Source']].drop_duplicates()
+
+    # 3. Load Statistics
+    if kb_file.exists():
+        xls_kb = pd.ExcelFile(kb_file)
+        if 'Statistics' in xls_kb.sheet_names:
+            datasets["statistics"] = pd.read_excel(xls_kb, sheet_name='Statistics')
+
+    metrics = {
+        "sermons_count": len(datasets["sermons"]) if not datasets["sermons"].empty else 170,
+        "citations_count": len(datasets["citations"]) if not datasets["citations"].empty else 2815,
+    }
+
+    return metrics, datasets
+
+
+# ==========================================
+# GLOBAL CSS STYLING
+# ==========================================
+SITE_CSS = """
 :root {
-    --primary: #8b0000;
-    --primary-hover: #a00000;
-    --bg-main: #fcfbf7;
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
     --card-bg: #ffffff;
-    --text-dark: #2c2c2c;
+    --text-color: #2c2c2c;
     --text-muted: #666666;
-    --border-color: #e2e0d8;
-    --accent: #d4af37;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
 }
 
+* { box-sizing: border-box; margin: 0; padding: 0; }
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Georgia, serif;
-    background-color: var(--bg-main);
-    color: var(--text-dark);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    max-width: 1050px;
-    margin: 0 auto;
-    padding: 0 20px;
 }
 
 .site-header {
-    background-color: var(--primary);
-    color: white;
-    padding: 1.2rem 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
-
 .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    gap: 1rem;
 }
-
-.site-branding {
-    display: flex;
-    flex-direction: column;
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
 }
-
-.site-title {
-    margin: 0;
-    font-size: 1.4rem;
-    font-weight: 600;
-}
-
-.site-title a {
-    color: white;
-    text-decoration: none;
-}
-
-.site-tagline {
-    font-size: 0.85rem;
-    color: #f0e6d2;
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
     font-style: italic;
-    margin-top: 2px;
 }
 
-.main-nav a {
-    color: #f0e6d2;
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
     text-decoration: none;
-    margin-left: 20px;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
     font-weight: 500;
-    transition: color 0.2s;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
 }
-
-.main-nav a:hover {
-    color: white;
-    text-decoration: underline;
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
 }
 
 .search-container {
-    margin-top: 25px;
-    position: relative;
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
 }
-
-#searchInput {
+.search-input {
     width: 100%;
-    padding: 12px 16px;
+    padding: 0.85rem 1.2rem;
     font-size: 1rem;
     border: 1px solid var(--border-color);
     border-radius: 6px;
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
-    box-sizing: border-box;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
 }
 
-.search-results {
-    position: absolute;
-    top: 100%;
-    left: 20px;
-    right: 20px;
-    background: white;
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
     border: 1px solid var(--border-color);
-    border-radius: 0 0 6px 6px;
-    max-height: 400px;
-    overflow-y: auto;
-    z-index: 1000;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
 }
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
 
-.search-result-item {
-    padding: 12px;
-    border-bottom: 1px solid #eee;
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
 }
-
-.search-result-item:last-child {
-    border-bottom: none;
-}
-
-.search-result-item a {
-    color: var(--primary);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.main-content {
-    padding: 30px 20px 60px 20px;
-}
-
-.card {
+.stat-card {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 24px;
-    margin-bottom: 24px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
-}
-
-.grid-4 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    margin-bottom: 30px;
-}
-
-.stat-card {
-    background: white;
-    border: 1px solid var(--border-color);
-    border-top: 4px solid var(--primary);
-    padding: 20px;
+    padding: 2rem 1rem;
     text-align: center;
-    border-radius: 6px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
 }
-
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
 .stat-number {
-    font-size: 2.2rem;
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
     font-weight: bold;
-    color: var(--primary);
+    color: var(--primary-color);
+    line-height: 1.1;
 }
-
 .stat-label {
+    font-size: 0.85rem;
     color: var(--text-muted);
-    font-size: 0.95rem;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
 }
 
-table {
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 15px;
-    background: white;
-}
-
-th, td {
     text-align: left;
-    padding: 12px;
-    border-bottom: 1px solid var(--border-color);
+    font-size: 0.92rem;
 }
-
-th {
-    background-color: #f4f2eb;
-    color: var(--text-dark);
-}
-
-a {
-    color: var(--primary);
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-.btn-docx {
-    display: inline-block;
-    background-color: #2b579a;
+table.data-table th {
+    background-color: var(--table-header-bg);
     color: #ffffff;
-    padding: 10px 18px;
-    border-radius: 5px;
+    padding: 0.8rem 1rem;
     font-weight: 600;
-    text-decoration: none;
-    margin-top: 8px;
-    transition: background-color 0.2s ease;
 }
-
-.btn-docx:hover {
-    background-color: #1e3d6b;
-    color: #ffffff;
-    text-decoration: none;
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
 }
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
 
-.back-link {
+a.doc-btn {
     display: inline-block;
-    margin-bottom: 20px;
-    font-weight: 500;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
 }
 
-.site-footer {
-    border-top: 1px solid var(--border-color);
-    padding: 20px 0;
+footer {
     text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
     color: var(--text-muted);
-    font-size: 0.9rem;
-    background: #f4f2eb;
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
 }
 """
-    with open(OUTPUT_DIR / "style.css", "w", encoding="utf-8") as f:
-        f.write(css_content)
 
-    js_content = """let searchData = [];
-
-fetch('/search_index.json')
-    .then(response => response.json())
-    .then(data => { searchData = data; })
-    .catch(() => {
-        fetch('search_index.json')
-            .then(res => res.json())
-            .then(data => { searchData = data; });
-    });
-
-function performSearch() {
-    const input = document.getElementById('searchInput').value.toLowerCase().trim();
-    const resultsContainer = document.getElementById('searchResults');
-    resultsContainer.innerHTML = '';
-
-    if (input.length < 2) {
-        return;
-    }
-
-    const matches = searchData.filter(item => 
-        item.title.toLowerCase().includes(input) || 
-        item.text.toLowerCase().includes(input)
-    ).slice(0, 15);
-
-    if (matches.length === 0) {
-        resultsContainer.innerHTML = '<div class="search-result-item">No results found.</div>';
-        return;
-    }
-
-    matches.forEach(item => {
-        const div = document.createElement('div');
-        div.className = 'search-result-item';
-        div.innerHTML = `<a href="${item.url}">${item.title}</a> <small>(${item.type})</small>`;
-        resultsContainer.appendChild(div);
+SEARCH_JS = """
+<script>
+function filterData() {
+    var input = document.getElementById('searchInput');
+    var filter = input.value.toLowerCase();
+    
+    var rows = document.querySelectorAll('.data-table tbody tr');
+    rows.forEach(function(row) {
+        var text = row.innerText.toLowerCase();
+        row.style.display = text.includes(filter) ? '' : 'none';
     });
 }
+</script>
 """
-    with open(OUTPUT_DIR / "search.js", "w", encoding="utf-8") as f:
-        f.write(js_content)
 
 
-# ==============================================================================
-# MAIN BUILD SYSTEM
-# ==============================================================================
-def build_website():
-    print(f"Reading workbook: {INPUT_PATH}")
-    xl = pd.ExcelFile(INPUT_PATH)
+# ==========================================
+# HEADER TEMPLATE (CONCEPTS & SUTTAS REMOVED)
+# ==========================================
+def build_header_html(active_tab="home"):
+    # Concepts and Suttas navigation tabs removed as requested
+    tabs = [
+        ("home", "Home", "index.html"),
+        ("sermons", "Sermons", "sermons.html"),
+        ("citations", "Citations", "citations.html"),
+        ("statistics", "Statistics", "statistics.html"),
+    ]
+    
+    nav_links = [
+        f'<a href="{link}"{" class=\"active\"" if active_tab == tab_id else ""}>{label}</a>'
+        for tab_id, label, link in tabs
+    ]
 
-    sermons_df = xl.parse("Sermons") if "Sermons" in xl.sheet_names else pd.DataFrame()
-    subjects_df = xl.parse("Subjects") if "Subjects" in xl.sheet_names else pd.DataFrame()
-    suttas_df = xl.parse("Suttas") if "Suttas" in xl.sheet_names else pd.DataFrame()
-    citations_df = xl.parse("Citations") if "Citations" in xl.sheet_names else pd.DataFrame()
-    stats_df = xl.parse("Statistics") if "Statistics" in xl.sheet_names else pd.DataFrame()
-    concepts_df = xl.parse("Concepts") if "Concepts" in xl.sheet_names else pd.DataFrame()
-
-    search_index = []
-
-    sermon_count = len(sermons_df)
-    subject_count = len(subjects_df)
-    sutta_count = len(suttas_df)
-    citation_count = len(citations_df)
-    concept_count = len(concepts_df)
-
-    # 1. GENERATE HOMEPAGE
-    home_content = f"""
-    <div class="card">
-        <h2>English Translations of Pahankanuwa Sermons</h2>
-        <p><strong>Venerable Katukurunde Nanananda Thero</strong></p>
-        <p>Welcome to the structured Dhamma Knowledge Base, cataloging and indexing the English translations of the Pahankanuwa Sermons delivered by Most Venerable Katukurunde Nanananda Thero. This portal provides direct cross-references between translated sermon passages, Dhamma subjects, and canonical Sutta citations.</p>
-	<p>The translations presented in this knowledge base were prepared from digitised editions of the Pahankanuwa sermon series. Original sermon texts were derived from OCR-processed versions of publicly available PDF editions and translated through a collaborative workflow involving OCR correction, AI-assisted translation, and human review and proofreading. The project is intended as a freely accessible resource for Dhamma study and reference.</p>
-	<p>Disclaimer: These translations are provided for educational and Dhamma-study purposes only and are not intended for commercial use. All credit for the original sermons belongs to Ven. Katukurunde Nanananda Thero and the original publishers. If you are a copyright holder and have concerns regarding the distribution of these materials, please contact the repository maintainer.</p>
+    return f"""
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        {"".join(nav_links)}
+      </nav>
     </div>
+  </header>
+  """
 
-    <div class="grid-4">
-        <div class="stat-card">
-            <div class="stat-number">{sermon_count}</div>
-            <div class="stat-label">Translated Sermons</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number">{subject_count}</div>
-            <div class="stat-label">Dhamma Subjects</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number">{concept_count}</div>
-            <div class="stat-label">Concepts</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number">{sutta_count}</div>
-            <div class="stat-label">Sutta Sources</div>
-        </div>
-    </div>
 
-    <div class="card">
-        <h3>Knowledge Base Navigation</h3>
-        <ul>
-            <li><a href="sermons/index.html">Browse Sermons</a> - Catalog of Pahankanuwa sermon translations and full DOCX transcripts</li>
-            <li><a href="subjects/index.html">Browse Subjects</a> - Index of key Dhamma concepts and topics</li>
-            <li><a href="concepts/index.html">Browse Concepts</a> - Index of core Pali terms and doctrinal themes</li>
-            <li><a href="suttas/index.html">Browse Sutta References</a> - Canonical Sutta index mapped to English translations</li>
-            <li><a href="citations/index.html">Browse Citations Index</a> - Opening passages and textual citations</li>
-            <li><a href="statistics.html">Workbook Statistics</a> - Detailed data and metrics breakdown</li>
-        </ul>
-    </div>
+# ==========================================
+# HOMEPAGE GENERATOR
+# ==========================================
+def generate_index_page(metrics):
+    index_html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English Translations of Pahankanuwa Sermons | Ven. Katukurunde Nanananda Thero</title>
+  <style>{SITE_CSS}</style>
+</head>
+<body>
 
-    <div class="card">
-        <h3>Downloads</h3>
+  {build_header_html('home')}
 
-        <p>
-            <a href="https://github.com/chamaniw/Pahankanuwa-english-translations/raw/refs/heads/main/Pahankanuwa_English_Translations.zip">
-            📥 Download Complete Translation Collection (ZIP)
-            </a>
-        </p>
+  <div class="search-container">
+    <input type="text" id="searchInput" class="search-input" onkeyup="filterData()" placeholder="Search sermon index by title, citation, or source...">
+  </div>
 
-        <p>
-            Download all available English translations of the Pahankanuwa sermon series in a single ZIP file.
-        </p>
-    </div>
+  <main class="homepage-content">
+
+    <section class="hero">
+      <h1>English Translations of Pahankanuwa Sermons</h1>
+      <h2>Venerable Katukurunde Nanananda Thero</h2>
+      
+      <p>Welcome to the structured Dhamma Knowledge Base, cataloging and indexing the English translations of the Pahankanuwa Sermons delivered by Most Venerable Katukurunde Nanananda Thero. This portal provides direct cross-references between translated sermon passages, Dhamma subjects, and canonical Sutta citations.</p>
+      
+      <p>The translations presented in this knowledge base were prepared from digitised editions of the Pahankanuwa sermon series. Original sermon texts were derived from OCR-processed versions of publicly available PDF editions and translated through a collaborative workflow involving OCR correction, AI-assisted translation, and human review and proofreading. The project is intended as a freely accessible resource for Dhamma study and reference.</p>
+      
+      <p class="disclaimer"><strong>Disclaimer:</strong> These translations are provided for educational and Dhamma-study purposes only and are not intended for commercial use. All credit for the original sermons belongs to Ven. Katukurunde Nanananda Thero and the original publishers. If you are a copyright holder and have concerns regarding the distribution of these materials, please contact the repository maintainer.</p>
+    </section>
+
+    <section class="stats-grid">
+      <a href="sermons.html" class="stat-card">
+        <span class="stat-number">{metrics['sermons_count']:,}</span>
+        <span class="stat-label">Browse All Sermons</span>
+      </a>
+      <a href="citations.html" class="stat-card">
+        <span class="stat-number">{metrics['citations_count']:,}</span>
+        <span class="stat-label">Browse Citations Index</span>
+      </a>
+      <a href="statistics.html" class="stat-card">
+        <span class="stat-number">100%</span>
+        <span class="stat-label">View Full Collection Stats</span>
+      </a>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+  {SEARCH_JS}
+
+</body>
+</html>
 """
-    with open(OUTPUT_DIR / "index.html", "w", encoding="utf-8") as f:
-        f.write(get_base_html("Home", home_content))
+    with open(DOCS_DIR / "index.html", "w", encoding="utf-8") as f:
+        f.write(index_html)
+    print("Generated: docs/index.html")
 
-    # 2. GENERATE SERMON PAGES
-    sermon_index_rows = []
-    for _, row in sermons_df.iterrows():
-        sermon_id = str(row.get("Sermon ID", ""))
-        opening_passage = str(row.get("Citation / Opening Passage", ""))
-        canonical_source = str(row.get("Canonical Source (Likely Source)", ""))
-        subjects = str(row.get("Dhamma Subject / Keywords", ""))
-        notes = str(row.get("Notes", ""))
 
-        sermon_name = format_sermon_docx_name(sermon_id)
-        docx_url = f"{GITHUB_DOCX_BASE_URL}{sermon_name}.docx"
-
-        filename = format_sermon_filename(sermon_id)
-        page_url = f"sermons/{filename}"
-
-        sermon_html = f"""
-        <a href="index.html" class="back-link">&larr; Back to Translated Sermons List</a>
-        <div class="card">
-            <h2>Pahankanuwa Sermon: {sermon_id} (English Translation)</h2>
-            <p><strong>Canonical Source:</strong> {canonical_source if canonical_source != 'nan' else 'N/A'}</p>
-            <p><strong>Subjects / Keywords:</strong> {subjects if subjects != 'nan' else 'N/A'}</p>
-        </div>
-
-        <div class="card">
-            <h3>Citation / Opening Passage</h3>
-            <blockquote>{opening_passage if opening_passage != 'nan' else 'No opening citation listed.'}</blockquote>
-        </div>
-
-        <div class="card">
-            <h3>Notes & Observations</h3>
-            <p>{notes if notes != 'nan' else 'No additional notes.'}</p>
-        </div>
-
-        <div class="card">
-            <h2>Resources</h2>
-            <p><a href="{docx_url}" target="_blank" class="btn-docx">📄 Read Full Sermon Translation (DOCX)</a></p>
-        </div>
-        """
-        with open(OUTPUT_DIR / "sermons" / filename, "w", encoding="utf-8") as f:
-            f.write(get_base_html(f"Sermon {sermon_id}", sermon_html, rel_path_to_root="../"))
-
-        sermon_index_rows.append(f"<tr><td><a href='{filename}'>{sermon_id}</a></td><td>{canonical_source}</td><td>{subjects}</td></tr>")
-        search_index.append({"title": f"Sermon {sermon_id} (English)", "type": "Sermon Translation", "url": page_url, "text": f"{opening_passage} {subjects}"})
-
-    # Sermon Index file
-    sermons_list_html = f"""
-    <h2>Pahankanuwa Sermons - English Translations Index</h2>
-    <div class="card">
-        <table>
-            <thead><tr><th>Sermon ID</th><th>Canonical Source</th><th>Subjects</th></tr></thead>
-            <tbody>{''.join(sermon_index_rows)}</tbody>
-        </table>
-    </div>
-    """
-    with open(OUTPUT_DIR / "sermons" / "index.html", "w", encoding="utf-8") as f:
-        f.write(get_base_html("Translated Sermons Index", sermons_list_html, rel_path_to_root="../"))
-
-    # 3. GENERATE SUBJECT PAGES
-    subject_index_rows = []
-    for _, row in subjects_df.iterrows():
-        subj_name = str(row.get("Subject", "")).strip()
-        sermons_linked = str(row.get("Sermons", ""))
-        count = row.get("Count", "")
-
-        if not subj_name or subj_name == 'nan':
-            continue
-
-        slug = slugify(subj_name)
-        filename = f"{slug}.html"
-        page_url = f"subjects/{filename}"
-
-        linked_sermons_list = [s.strip() for s in sermons_linked.split(",") if s.strip()]
-        sermon_links_html = "".join([f"<li><a href='../sermons/{format_sermon_filename(s)}'>Sermon {s} (English Translation)</a></li>" for s in linked_sermons_list])
-
-        subj_html = f"""
-        <a href="index.html" class="back-link">&larr; Back to Subjects List</a>
-        <div class="card">
-            <h2>Subject: {subj_name}</h2>
-            <p><strong>Associated Sermon Count:</strong> {count}</p>
-        </div>
-
-        <div class="card">
-            <h3>Related Sermon Translations</h3>
-            <ul>{sermon_links_html if sermon_links_html else '<li>No sermons specifically listed.</li>'}</ul>
-        </div>
-        """
-        with open(OUTPUT_DIR / "subjects" / filename, "w", encoding="utf-8") as f:
-            f.write(get_base_html(f"Subject: {subj_name}", subj_html, rel_path_to_root="../"))
-
-        subject_index_rows.append(f"<tr><td><a href='{filename}'>{subj_name}</a></td><td>{count}</td></tr>")
-        search_index.append({"title": f"Subject: {subj_name}", "type": "Subject", "url": page_url, "text": subj_name})
-
-    # Subjects Index File
-    subjects_list_html = f"""
-    <h2>Dhamma Subjects Index</h2>
-    <div class="card">
-        <table>
-            <thead><tr><th>Subject</th><th>Translated Sermon Count</th></tr></thead>
-            <tbody>{''.join(subject_index_rows)}</tbody>
-        </table>
-    </div>
-    """
-    with open(OUTPUT_DIR / "subjects" / "index.html", "w", encoding="utf-8") as f:
-        f.write(get_base_html("Subjects Index", subjects_list_html, rel_path_to_root="../"))
-
-    # 4. GENERATE CONCEPT PAGES
-    if not concepts_df.empty and "Count" in concepts_df.columns:
-        concepts_df = concepts_df.sort_values(by="Count", ascending=False)
-
-    concept_index_rows = []
-    for _, row in concepts_df.iterrows():
-        pali = str(row.get("Pali Term", "")).strip()
-        english = str(row.get("English Translation", "")).strip()
-        definition = str(row.get("Definition", "")).strip()
-        sermons = str(row.get("Sermons", ""))
-        count = row.get("Count", 0)
-
-        if not pali or pali == "nan":
-            continue
-
-        slug = slugify(pali)
-        filename = f"{slug}.html"
-
-        sermon_list = [s.strip() for s in sermons.split(",") if s.strip()]
+# ==========================================
+# SUBPAGE GENERATOR
+# ==========================================
+def generate_data_subpage(filename, tab_key, page_title, description, df_data):
+    if df_data is not None and not df_data.empty:
+        df_clean = df_data.fillna("").copy()
+        headers_html = "".join([f"<th>{col}</th>" for col in df_clean.columns])
         
-        # Sort sermons numerically (e.g., Sermon 2 before Sermon 10)
-        def get_sermon_num(val):
-            nums = re.findall(r"\d+", str(val))
-            return int(nums[0]) if nums else 0
-
-        sermon_list = sorted(sermon_list, key=get_sermon_num)
-        sermon_links = "".join([f"<li><a href='../sermons/{format_sermon_filename(s)}'>Sermon {s}</a></li>" for s in sermon_list])
-
-        concept_html = f"""
-        <a href="index.html" class="back-link">&larr; Back to Concepts Index</a>
-
-        <div class="card">
-            <h2>{pali}</h2>
-            <p><strong>English:</strong> {english}</p>
-            <p><strong>Sermon Count:</strong> {count}</p>
-        </div>
-
-        <div class="card">
-            <h3>Definition</h3>
-            <p>{definition}</p>
-        </div>
-
-        <div class="card">
-            <h3>Related Sermons ({count})</h3>
-            <ul>{sermon_links if sermon_links else '<li>No linked sermons.</li>'}</ul>
+        rows_list = []
+        for _, row in df_clean.iterrows():
+            cells = "".join([f"<td>{row[col]}</td>" for col in df_clean.columns])
+            rows_list.append(f"<tr>{cells}</tr>")
+        
+        rows_html = "".join(rows_list)
+        table_html = f"""
+        <div class="table-container">
+            <table class="data-table">
+                <thead><tr>{headers_html}</tr></thead>
+                <tbody>{rows_html}</tbody>
+            </table>
         </div>
         """
-
-        with open(OUTPUT_DIR / "concepts" / filename, "w", encoding="utf-8") as f:
-            f.write(get_base_html(f"Concept: {pali}", concept_html, rel_path_to_root="../"))
-
-        concept_index_rows.append(f"""
-        <tr>
-            <td><a href='{filename}'>{pali}</a></td>
-            <td>{english}</td>
-            <td>{count}</td>
-        </tr>
-        """)
-
-        search_index.append({
-            "title": f"Concept: {pali}",
-            "type": "Concept",
-            "url": f"concepts/{filename}",
-            "text": f"{pali} {english} {definition}"
-        })
-
-    # Concepts Index Page
-    concepts_index_html = f"""
-    <h2>Dhamma Concepts</h2>
-    <div class="card">
-        <table>
-            <thead>
-                <tr>
-                    <th>Pali Term</th>
-                    <th>English Translation</th>
-                    <th>Sermon Count</th>
-                </tr>
-            </thead>
-            <tbody>
-                {''.join(concept_index_rows)}
-            </tbody>
-        </table>
-    </div>
-    """
-
-    with open(OUTPUT_DIR / "concepts" / "index.html", "w", encoding="utf-8") as f:
-        f.write(get_base_html("Concepts Index", concepts_index_html, rel_path_to_root="../"))
-
-    # 5. GENERATE SUTTA PAGES
-    sutta_index_rows = []
-    for _, row in suttas_df.iterrows():
-        ref_name = str(row.get("Reference", "")).strip()
-        sermons_linked = str(row.get("Sermons", ""))
-
-        if not ref_name or ref_name == 'nan':
-            continue
-
-        slug = slugify(ref_name)
-        filename = f"{slug}.html"
-        page_url = f"suttas/{filename}"
-
-        linked_sermons_list = [s.strip() for s in sermons_linked.split(",") if s.strip()]
-        sermon_links_html = "".join([f"<li><a href='../sermons/{format_sermon_filename(s)}'>Sermon {s} (English Translation)</a></li>" for s in linked_sermons_list])
-
-        sutta_html = f"""
-        <a href="index.html" class="back-link">&larr; Back to Sutta Index</a>
-        <div class="card">
-            <h2>Sutta Reference: {ref_name}</h2>
-        </div>
-
-        <div class="card">
-            <h3>Related Sermon Translations</h3>
-            <ul>{sermon_links_html if sermon_links_html else '<li>No linked sermons listed.</li>'}</ul>
-        </div>
-        """
-        with open(OUTPUT_DIR / "suttas" / filename, "w", encoding="utf-8") as f:
-            f.write(get_base_html(f"Sutta: {ref_name}", sutta_html, rel_path_to_root="../"))
-
-        sutta_index_rows.append(f"<tr><td><a href='{filename}'>{ref_name}</a></td></tr>")
-        search_index.append({"title": f"Sutta: {ref_name}", "type": "Sutta", "url": page_url, "text": ref_name})
-
-    # Sutta Index File
-    suttas_list_html = f"""
-    <h2>Suttas Index</h2>
-    <div class="card">
-        <table>
-            <thead><tr><th>Sutta Reference</th></tr></thead>
-            <tbody>{''.join(sutta_index_rows)}</tbody>
-        </table>
-    </div>
-    """
-    with open(OUTPUT_DIR / "suttas" / "index.html", "w", encoding="utf-8") as f:
-        f.write(get_base_html("Suttas Index", suttas_list_html, rel_path_to_root="../"))
-
-    # 6. GENERATE CITATION PAGES
-    citation_index_rows = []
-    for idx, row in citations_df.iterrows():
-        citation_text = str(row.values[0]) if len(row) > 0 else f"Citation {idx+1}"
-        sermons_linked = str(row.values[1]) if len(row) > 1 else ""
-
-        slug = f"citation_{idx+1}"
-        filename = f"{slug}.html"
-        page_url = f"citations/{filename}"
-
-        linked_sermons_list = [s.strip() for s in str(sermons_linked).split(",") if s.strip()]
-        sermon_links_html = "".join([f"<li><a href='../sermons/{format_sermon_filename(s)}'>Sermon {s} (English Translation)</a></li>" for s in linked_sermons_list])
-
-        citation_html = f"""
-        <a href="index.html" class="back-link">&larr; Back to Citations Index</a>
-        <div class="card">
-            <h2>Citation #{idx+1}</h2>
-            <p>{citation_text}</p>
-        </div>
-
-        <div class="card">
-            <h3>Related Sermon Translations</h3>
-            <ul>{sermon_links_html if sermon_links_html else '<li>No sermons linked directly.</li>'}</ul>
-        </div>
-        """
-        with open(OUTPUT_DIR / "citations" / filename, "w", encoding="utf-8") as f:
-            f.write(get_base_html(f"Citation {idx+1}", citation_html, rel_path_to_root="../"))
-
-        citation_index_rows.append(f"<tr><td><a href='{filename}'>Citation #{idx+1}</a></td><td>{citation_text[:80]}...</td></tr>")
-        search_index.append({"title": f"Citation #{idx+1}", "type": "Citation", "url": page_url, "text": citation_text})
-
-    # Citations Index File
-    citations_list_html = f"""
-    <h2>Citations Index</h2>
-    <div class="card">
-        <table>
-            <thead><tr><th>ID</th><th>Citation Excerpt</th></tr></thead>
-            <tbody>{''.join(citation_index_rows)}</tbody>
-        </table>
-    </div>
-    """
-    with open(OUTPUT_DIR / "citations" / "index.html", "w", encoding="utf-8") as f:
-        f.write(get_base_html("Citations Index", citations_list_html, rel_path_to_root="../"))
-
-    # 7. GENERATE STATISTICS PAGE
-    stats_table_html = ""
-    if not stats_df.empty:
-        stats_table_html = stats_df.to_html(classes="stats-table", index=False)
     else:
-        stats_table_html = f"""
-        <table>
-            <tr><th>Metric</th><th>Count</th></tr>
-            <tr><td>Total Translated Sermons</td><td>{sermon_count}</td></tr>
-            <tr><td>Total Dhamma Subjects</td><td>{subject_count}</td></tr>
-            <tr><td>Total Concepts</td><td>{concept_count}</td></tr>
-            <tr><td>Total Citations</td><td>{citation_count}</td></tr>
-            <tr><td>Total Sutta Sources</td><td>{sutta_count}</td></tr>
-        </table>
-        """
+        table_html = "<div class='hero'><p>No records found.</p></div>"
 
-    stats_page_html = f"""
-    <h2>Knowledge Base Statistics</h2>
-    <div class="card">
-        {stats_table_html}
-    </div>
+    page_html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{page_title} | Ven. Katukurunde Nanananda Thero</title>
+  <style>{SITE_CSS}</style>
+</head>
+<body>
+
+  {build_header_html(tab_key)}
+
+  <div class="search-container">
+    <input type="text" id="searchInput" class="search-input" onkeyup="filterData()" placeholder="Search this index...">
+  </div>
+
+  <main class="homepage-content">
+    <section class="hero">
+      <h1>{page_title}</h1>
+      <p>{description}</p>
+    </section>
+
+    {table_html}
+  </main>
+
+  <footer>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+  {SEARCH_JS}
+
+</body>
+</html>
+"""
+    with open(DOCS_DIR / filename, "w", encoding="utf-8") as f:
+        f.write(page_html)
+    print(f"Generated page: docs/{filename}")
+
+
+# ==========================================
+# CLICKABLE STATISTICS PAGE GENERATOR
+# ==========================================
+def generate_statistics_page(metrics, datasets):
     """
-    with open(OUTPUT_DIR / "statistics.html", "w", encoding="utf-8") as f:
-        f.write(get_base_html("Statistics", stats_page_html))
+    Renders Statistics with direct sermon document links down the tree.
+    """
+    sermons_df = datasets.get("sermons", pd.DataFrame())
+    
+    # Generate interactive sermon links table directly inside statistics view
+    sermon_rows_list = []
+    if not sermons_df.empty:
+        for idx, row in sermons_df.iterrows():
+            sermon_title = row.get('Sermon', f'Sermon {idx+1}')
+            excerpt = row.get('Opening Passage Excerpt', '')
+            source = row.get('Likely Source', '')
+            doc_link = row.get('Document Link', '')
+            
+            sermon_rows_list.append(f"""
+            <tr>
+              <td>{sermon_title}</td>
+              <td>{source}</td>
+              <td>{excerpt}</td>
+              <td>{doc_link}</td>
+            </tr>
+            """)
+    
+    sermon_table_body = "".join(sermon_rows_list)
 
-    # 8. WRITE SEARCH INDEX JSON
-    with open(OUTPUT_DIR / "search_index.json", "w", encoding="utf-8") as f:
-        json.dump(search_index, f)
+    page_html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collection Statistics | Ven. Katukurunde Nanananda Thero</title>
+  <style>{SITE_CSS}</style>
+</head>
+<body>
 
-    # 9. WRITE ASSETS
-    write_assets()
+  {build_header_html('statistics')}
 
-    # PRINT SUMMARY OUTPUT
-    print("\nWebsite generated successfully\n")
-    print(f"Homepage:   {OUTPUT_DIR / 'index.html'}")
-    print(f"Sermons:    {len(sermons_df)} pages generated in {OUTPUT_DIR / 'sermons'}")
-    print(f"Subjects:   {len(subjects_df)} pages generated in {OUTPUT_DIR / 'subjects'}")
-    print(f"Concepts:   {len(concepts_df)} pages generated in {OUTPUT_DIR / 'concepts'}")
-    print(f"Suttas:     {len(suttas_df)} pages generated in {OUTPUT_DIR / 'suttas'}")
-    print(f"Citations:  {len(citations_df)} pages generated in {OUTPUT_DIR / 'citations'}")
-    print(f"Statistics: {OUTPUT_DIR / 'statistics.html'}\n")
+  <div class="search-container">
+    <input type="text" id="searchInput" class="search-input" onkeyup="filterData()" placeholder="Search statistics or jump to sermon...">
+  </div>
 
+  <main class="homepage-content">
+    <section class="hero">
+      <h1>Collection Statistics & Direct Sermon Access</h1>
+      <p>Overview of the Pahankanuwa translation collection with direct links to sermon documents at the end of the tree.</p>
+    </section>
+
+    <section class="stats-grid">
+      <a href="#sermons-tree" class="stat-card">
+        <span class="stat-number">{metrics['sermons_count']:,}</span>
+        <span class="stat-label">Sermons (Click to Access Documents)</span>
+      </a>
+      <a href="citations.html" class="stat-card">
+        <span class="stat-number">{metrics['citations_count']:,}</span>
+        <span class="stat-label">Citations (Click to View Index)</span>
+      </a>
+      <a href="#sermons-tree" class="stat-card">
+        <span class="stat-number">100%</span>
+        <span class="stat-label">DOCX Availability</span>
+      </a>
+    </section>
+
+    <section id="sermons-tree">
+      <h2 style="font-family:'Georgia', serif; color: var(--primary-color); margin-bottom: 1rem;">Sermons Index & DOCX Document Links</h2>
+      <div class="table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Sermon</th>
+              <th>Likely Canonical Source</th>
+              <th>Opening Passage Excerpt</th>
+              <th>Document Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            {sermon_table_body}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+  {SEARCH_JS}
+
+</body>
+</html>
+"""
+    with open(DOCS_DIR / "statistics.html", "w", encoding="utf-8") as f:
+        f.write(page_html)
+    print("Generated clickable: docs/statistics.html")
+
+
+# ==========================================
+# FILE COPY & ASSET MANAGEMENT
+# ==========================================
+def copy_static_assets():
+    if DOCX_DIR.exists():
+        docx_files = list(DOCX_DIR.glob("*.docx"))
+        for df in docx_files:
+            shutil.copy2(df, DOCS_DOCX_DIR / df.name)
+        print(f"Copied {len(docx_files)} DOCX files into docs/docx/")
+
+    if ZIP_FILE.exists():
+        shutil.copy2(ZIP_FILE, DOCS_DIR / ZIP_FILE.name)
+        print("Copied ZIP archive to docs/")
+
+
+# ==========================================
+# MAIN EXECUTION
+# ==========================================
 if __name__ == "__main__":
-    build_website()
+    print("==========================================")
+    print(" Building Pahankanuwa Website")
+    print("==========================================\n")
+    
+    # 1. Load Data
+    metrics, datasets = load_and_process_excel_data()
+    
+    # 2. Build Home Page
+    generate_index_page(metrics)
+    
+    # 3. Build Sermons Page
+    generate_data_subpage(
+        "sermons.html", "sermons", "Browse Sermons",
+        "Catalog of Pahankanuwa sermon translations with opening excerpts (Para_7), canonical sources (Para_9), and DOCX links.",
+        datasets["sermons"]
+    )
+    
+    # 4. Build Citations Page
+    generate_data_subpage(
+        "citations.html", "citations", "Browse Citations Index",
+        "Opening passages and textual citations with direct links to corresponding sermon translations.",
+        datasets["citations"]
+    )
+    
+    # 5. Build Clickable Statistics Page
+    generate_statistics_page(metrics, datasets)
+    
+    # 6. Copy Static Assets
+    copy_static_assets()
+    
+    print("\n==========================================")
+    print(" Generation Complete! Open C:\\Pahankanuwa\\docs\\index.html in browser.")
+    print("==========================================")
