@@ -9,12 +9,26 @@ import pandas as pd
 # ==========================================
 BASE_DIR = Path(r"C:\Pahankanuwa")
 DOCS_DIR = BASE_DIR / "docs"
-DOCX_DIR = BASE_DIR / "docx"
 DOCS_DOCX_DIR = DOCS_DIR / "docx"
-ZIP_FILE = BASE_DIR / "Pahankanuwa_English_Translations.zip"
+DOCS_PDF_DIR = DOCS_DIR / "pdf"
+DOCS_EPUB_DIR = DOCS_DIR / "epub"
 
+# Ensure all destination output directories exist
 DOCS_DIR.mkdir(parents=True, exist_ok=True)
 DOCS_DOCX_DIR.mkdir(parents=True, exist_ok=True)
+DOCS_PDF_DIR.mkdir(parents=True, exist_ok=True)
+DOCS_EPUB_DIR.mkdir(parents=True, exist_ok=True)
+
+# Source asset folders
+SRC_DOCX_DIR = BASE_DIR / "docx"
+SRC_PDF_DIR = BASE_DIR / "pdf"
+SRC_EPUB_DIR = BASE_DIR / "epub"
+
+# Complete collection file names
+DOCX_COMPLETE = "Pahankanuwa_Sermons_Complete.docx"
+PDF_COMPLETE = "Pahankanuwa_Sermons_Complete.pdf"
+EPUB_COMPLETE = "Pahankanuwa_Sermons_Complete.epub"
+ZIP_FILE = "pahankanuwa_sermons_all_formats.zip"
 
 
 # ==========================================
@@ -53,6 +67,20 @@ def parse_and_link_sermons(val):
     return " ".join(links) if links else val_str
 
 
+def find_sermon_file(s_num, format_ext, search_dir):
+    """
+    Finds actual file matching sermon number (e.g., handles sermon_001.pdf or sermon_001_ENGLISH.pdf).
+    """
+    if not search_dir.exists():
+        return None
+    
+    pattern = re.compile(rf".*{s_num}.*\.{format_ext}$", re.IGNORECASE)
+    for file in search_dir.iterdir():
+        if file.is_file() and pattern.match(file.name):
+            return file.name
+    return None
+
+
 # ==========================================
 # DATA LOADING & PROCESSOR
 # ==========================================
@@ -67,7 +95,7 @@ def load_and_process_excel_data():
         "statistics": pd.DataFrame()
     }
 
-    # 1. Load Sermons (Para_7 for Opening Excerpt, Para_9 for Likely Source)
+    # 1. Load Sermons
     if scratch_file.exists():
         df_scratch = pd.read_excel(scratch_file)
         sermons_list = []
@@ -79,7 +107,11 @@ def load_and_process_excel_data():
             num_match = re.search(r'(\d{1,3})', fn)
             s_num = num_match.group(1).zfill(3) if num_match else "000"
             clean_title = f"Pahankanuwa Sermon {s_num}"
-            docx_target = f"sermon_{s_num}_ENGLISH.docx"
+
+            # Dynamic link check against actual files in system folders
+            docx_file = find_sermon_file(s_num, "docx", SRC_DOCX_DIR) or f"sermon_{s_num}_ENGLISH.docx"
+            pdf_file = find_sermon_file(s_num, "pdf", SRC_PDF_DIR) or f"sermon_{s_num}.pdf"
+            epub_file = find_sermon_file(s_num, "epub", SRC_EPUB_DIR) or f"sermon_{s_num}.epub"
 
             # Para_7 for Opening Passage Excerpt
             para_7 = str(row['Para_7']).strip() if 'Para_7' in row and pd.notna(row['Para_7']) else ""
@@ -89,11 +121,18 @@ def load_and_process_excel_data():
             para_9 = str(row['Para_9']).strip() if 'Para_9' in row and pd.notna(row['Para_9']) else ""
             likely_source = para_9 if para_9 and para_9.lower() != 'nan' else "Unspecified Canonical Source"
 
+            # Combined Document Link buttons
+            doc_links = (
+                f'<a class="doc-btn" href="docx/{docx_file}" target="_blank">📄 DOCX</a> '
+                f'<a class="doc-btn" href="pdf/{pdf_file}" target="_blank">📕 PDF</a> '
+                f'<a class="doc-btn" href="epub/{epub_file}" target="_blank">📘 EPUB</a>'
+            )
+
             sermons_list.append({
                 "Sermon": f"<strong>{clean_title}</strong>",
                 "Opening Passage Excerpt": excerpt.replace('\n', '<br>'),
                 "Likely Source": likely_source,
-                "Document Link": f'<a class="doc-btn" href="docx/{docx_target}" target="_blank">📄 Open DOCX Document</a>'
+                "Document Link": doc_links
             })
         datasets["sermons"] = pd.DataFrame(sermons_list)
 
@@ -228,7 +267,37 @@ body {
 .hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
 .hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
 .hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
 .hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
 
 .stats-grid {
     display: grid;
@@ -266,6 +335,27 @@ body {
     letter-spacing: 0.8px;
     margin-top: 0.4rem;
 }
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
 
 .table-container {
     background: #ffffff;
@@ -322,20 +412,6 @@ footer {
     border-top: 1px solid var(--border-color);
     margin-top: 3rem;
 }
-.zip-btn {
-    display: inline-block;
-    background-color: var(--header-bg);
-    color: #ffffff !important;
-    padding: 0.6rem 1.2rem;
-    border-radius: 6px;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: background-color 0.2s;
-}
-.zip-btn:hover {
-    background-color: #5c0000;
-}
 """
 
 SEARCH_JS = """
@@ -344,7 +420,7 @@ function filterData() {
     var input = document.getElementById('searchInput');
     var filter = input.value.toLowerCase();
     
-    var rows = document.querySelectorAll('.data-table tbody tr');
+    var rows = document.querySelectorAll('.data-table tbody tr, .download-item');
     rows.forEach(function(row) {
         var text = row.innerText.toLowerCase();
         row.style.display = text.includes(filter) ? '' : 'none';
@@ -353,10 +429,10 @@ function filterData() {
 </script>
 """
 
-FOOTER_HTML = """
+FOOTER_HTML = f"""
   <footer>
     <p style="margin-bottom: 1rem;">
-      <a class="zip-btn" href="Pahankanuwa_English_Translations.zip" download>
+      <a class="btn" href="{ZIP_FILE}" download>
         📦 Download All Sermons (.ZIP Archive)
       </a>
     </p>
@@ -366,12 +442,13 @@ FOOTER_HTML = """
 
 
 # ==========================================
-# HEADER TEMPLATE (CONCEPTS & SUTTAS REMOVED)
+# HEADER TEMPLATE
 # ==========================================
 def build_header_html(active_tab="home"):
     tabs = [
         ("home", "Home", "index.html"),
         ("sermons", "Sermons", "sermons.html"),
+        ("downloads", "Downloads", "downloads.html"),
         ("citations", "Citations", "citations.html"),
         ("statistics", "Statistics", "statistics.html"),
     ]
@@ -419,13 +496,23 @@ def generate_index_page(metrics):
   <main class="homepage-content">
 
     <section class="hero">
-      <h1>English Translations of Pahankanuwa Sermons</h1>
-      <h2>Venerable Katukurunde Nanananda Thero</h2>
+      <h1>Pahankanuwa Sermon Series</h1>
+      <h2>English Translation Collection (Sermons 001–170)</h2>
+      <p style="text-align: center; font-weight: 500;">Original Sermons by Most Venerable Katukurunde Nanananda Thero</p>
       
+      <div class="pali-quote">"Sabba-dānaṃ dhamma-dānaṃ jināti"<br>The Gift of Dhamma Excels All Gifts — Dhammapada 354</div>
+
+      <div class="download-banner">
+        <a href="{DOCX_COMPLETE}" class="btn" download>Download Complete DOCX</a>
+        <a href="{PDF_COMPLETE}" class="btn" download>Download Complete PDF</a>
+        <a href="{EPUB_COMPLETE}" class="btn" download>Download Complete EPUB</a>
+        <a href="{ZIP_FILE}" class="btn btn-secondary" download>Download All (ZIP)</a>
+      </div>
+
       <p>Welcome to the structured Dhamma Knowledge Base, cataloging and indexing the English translations of the Pahankanuwa Sermons delivered by Most Venerable Katukurunde Nanananda Thero. This portal provides direct cross-references between translated sermon passages, Dhamma subjects, and canonical Sutta citations.</p>
       
       <p>The translations presented in this knowledge base were prepared from digitised editions of the Pahankanuwa sermon series. Original sermon texts were derived from OCR-processed versions of publicly available PDF editions and translated through a collaborative workflow involving OCR correction, AI-assisted translation, and human review and proofreading. The project is intended as a freely accessible resource for Dhamma study and reference.</p>
-      
+
       <p class="disclaimer"><strong>Disclaimer:</strong> These translations are provided for educational and Dhamma-study purposes only and are not intended for commercial use. All credit for the original sermons belongs to Ven. Katukurunde Nanananda Thero and the original publishers. If you are a copyright holder and have concerns regarding the distribution of these materials, please contact the repository maintainer.</p>
     </section>
 
@@ -434,13 +521,17 @@ def generate_index_page(metrics):
         <span class="stat-number">{metrics['sermons_count']:,}</span>
         <span class="stat-label">Browse All Sermons</span>
       </a>
+      <a href="downloads.html" class="stat-card">
+        <span class="stat-number">4 Formats</span>
+        <span class="stat-label">Downloads Page</span>
+      </a>
       <a href="citations.html" class="stat-card">
         <span class="stat-number">{metrics['citations_count']:,}</span>
         <span class="stat-label">Browse Citations Index</span>
       </a>
       <a href="statistics.html" class="stat-card">
         <span class="stat-number">100%</span>
-        <span class="stat-label">View Full Collection Stats</span>
+        <span class="stat-label">View Collection Stats</span>
       </a>
     </section>
 
@@ -456,6 +547,86 @@ def generate_index_page(metrics):
     with open(DOCS_DIR / "index.html", "w", encoding="utf-8") as f:
         f.write(index_html)
     print("Generated: docs/index.html")
+
+
+# ==========================================
+# DOWNLOADS PAGE GENERATOR
+# ==========================================
+def generate_downloads_page(metrics):
+    individual_items = []
+    for i in range(1, 171):
+        pad_num = str(i).zfill(3)
+        docx_file = find_sermon_file(pad_num, "docx", SRC_DOCX_DIR) or f"sermon_{pad_num}_ENGLISH.docx"
+        pdf_file = find_sermon_file(pad_num, "pdf", SRC_PDF_DIR) or f"sermon_{pad_num}.pdf"
+        epub_file = find_sermon_file(pad_num, "epub", SRC_EPUB_DIR) or f"sermon_{pad_num}.epub"
+
+        item_html = f"""
+        <div class="download-item">
+            <div class="download-info">
+                <h4>Pahankanuwa Sermon #{i}</h4>
+                <p>Individual sermon document files</p>
+            </div>
+            <div class="download-links">
+                <a href="docx/{docx_file}" class="btn btn-secondary" download>DOCX</a>
+                <a href="pdf/{pdf_file}" class="btn btn-secondary" download>PDF</a>
+                <a href="epub/{epub_file}" class="btn btn-secondary" download>EPUB</a>
+            </div>
+        </div>
+        """
+        individual_items.append(item_html)
+
+    downloads_html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Downloads & Documents | Ven. Katukurunde Nanananda Thero</title>
+  <style>{SITE_CSS}</style>
+</head>
+<body>
+
+  {build_header_html('downloads')}
+
+  <div class="search-container">
+    <input type="text" id="searchInput" class="search-input" onkeyup="filterData()" placeholder="Search downloads by sermon number or format...">
+  </div>
+
+  <main class="homepage-content">
+    <section class="hero">
+      <h1>Downloads & Documents</h1>
+      <p>Access full manuscript collections or individual sermon files in your preferred format.</p>
+    </section>
+
+    <div class="download-list">
+      <!-- Complete Archive Download Card -->
+      <div class="download-item" style="border-left: 4px solid var(--header-bg);">
+        <div class="download-info">
+          <h4>Complete Sermon Collection (All 170 Sermons)</h4>
+          <p>Complete set available in DOCX, PDF, EPUB, and a combined ZIP archive.</p>
+        </div>
+        <div class="download-links">
+          <a href="{ZIP_FILE}" class="btn" download>ZIP Archive</a>
+          <a href="{DOCX_COMPLETE}" class="btn btn-secondary" download>DOCX</a>
+          <a href="{PDF_COMPLETE}" class="btn btn-secondary" download>PDF</a>
+          <a href="{EPUB_COMPLETE}" class="btn btn-secondary" download>EPUB</a>
+        </div>
+      </div>
+
+      <h2 style="font-family:'Georgia', serif; color: var(--primary-color); margin-top: 2rem;">Individual Sermon Downloads</h2>
+      {"".join(individual_items)}
+    </div>
+  </main>
+
+  {FOOTER_HTML}
+
+  {SEARCH_JS}
+
+</body>
+</html>
+"""
+    with open(DOCS_DIR / "downloads.html", "w", encoding="utf-8") as f:
+        f.write(downloads_html)
+    print("Generated: docs/downloads.html")
 
 
 # ==========================================
@@ -524,9 +695,6 @@ def generate_data_subpage(filename, tab_key, page_title, description, df_data):
 # CLICKABLE STATISTICS PAGE GENERATOR
 # ==========================================
 def generate_statistics_page(metrics, datasets):
-    """
-    Renders Statistics with direct sermon document links down the tree.
-    """
     sermons_df = datasets.get("sermons", pd.DataFrame())
     
     sermon_rows_list = []
@@ -581,12 +749,12 @@ def generate_statistics_page(metrics, datasets):
       </a>
       <a href="#sermons-tree" class="stat-card">
         <span class="stat-number">100%</span>
-        <span class="stat-label">DOCX Availability</span>
+        <span class="stat-label">Document Availability</span>
       </a>
     </section>
 
     <section id="sermons-tree">
-      <h2 style="font-family:'Georgia', serif; color: var(--primary-color); margin-bottom: 1rem;">Sermons Index & DOCX Document Links</h2>
+      <h2 style="font-family:'Georgia', serif; color: var(--primary-color); margin-bottom: 1rem;">Sermons Index & Document Links</h2>
       <div class="table-container">
         <table class="data-table">
           <thead>
@@ -622,15 +790,33 @@ def generate_statistics_page(metrics, datasets):
 # FILE COPY & ASSET MANAGEMENT
 # ==========================================
 def copy_static_assets():
-    if DOCX_DIR.exists():
-        docx_files = list(DOCX_DIR.glob("*.docx"))
+    # Copy DOCX files
+    if SRC_DOCX_DIR.exists():
+        docx_files = list(SRC_DOCX_DIR.glob("*.docx"))
         for df in docx_files:
             shutil.copy2(df, DOCS_DOCX_DIR / df.name)
         print(f"Copied {len(docx_files)} DOCX files into docs/docx/")
 
-    if ZIP_FILE.exists():
-        shutil.copy2(ZIP_FILE, DOCS_DIR / ZIP_FILE.name)
-        print("Copied ZIP archive to docs/")
+    # Copy PDF files
+    if SRC_PDF_DIR.exists():
+        pdf_files = list(SRC_PDF_DIR.glob("*.pdf"))
+        for pf in pdf_files:
+            shutil.copy2(pf, DOCS_PDF_DIR / pf.name)
+        print(f"Copied {len(pdf_files)} PDF files into docs/pdf/")
+
+    # Copy EPUB files
+    if SRC_EPUB_DIR.exists():
+        epub_files = list(SRC_EPUB_DIR.glob("*.epub"))
+        for ef in epub_files:
+            shutil.copy2(ef, DOCS_EPUB_DIR / ef.name)
+        print(f"Copied {len(epub_files)} EPUB files into docs/epub/")
+
+    # Copy Complete Archive and Document Files
+    for file_name in [ZIP_FILE, DOCX_COMPLETE, PDF_COMPLETE, EPUB_COMPLETE]:
+        src_file = BASE_DIR / file_name
+        if src_file.exists():
+            shutil.copy2(src_file, DOCS_DIR / file_name)
+            print(f"Copied {file_name} to docs/")
 
 
 # ==========================================
@@ -650,21 +836,24 @@ if __name__ == "__main__":
     # 3. Build Sermons Page
     generate_data_subpage(
         "sermons.html", "sermons", "Browse Sermons",
-        "Catalog of Pahankanuwa sermon translations with opening excerpts (Para_7), canonical sources (Para_9), and DOCX links.",
+        "Catalog of Pahankanuwa sermon translations with opening excerpts (Para_7), canonical sources (Para_9), and document links.",
         datasets["sermons"]
     )
+
+    # 4. Build Downloads Page
+    generate_downloads_page(metrics)
     
-    # 4. Build Citations Page
+    # 5. Build Citations Page
     generate_data_subpage(
         "citations.html", "citations", "Browse Citations Index",
         "Opening passages and textual citations with direct links to corresponding sermon translations.",
         datasets["citations"]
     )
     
-    # 5. Build Clickable Statistics Page
+    # 6. Build Clickable Statistics Page
     generate_statistics_page(metrics, datasets)
     
-    # 6. Copy Static Assets
+    # 7. Copy Static Assets
     copy_static_assets()
     
     print("\n==========================================")

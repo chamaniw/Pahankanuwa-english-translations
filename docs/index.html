@@ -110,7 +110,37 @@ body {
 .hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
 .hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
 .hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
 .hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
 
 .stats-grid {
     display: grid;
@@ -148,6 +178,27 @@ body {
     letter-spacing: 0.8px;
     margin-top: 0.4rem;
 }
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
 
 .table-container {
     background: #ffffff;
@@ -204,20 +255,6 @@ footer {
     border-top: 1px solid var(--border-color);
     margin-top: 3rem;
 }
-.zip-btn {
-    display: inline-block;
-    background-color: var(--header-bg);
-    color: #ffffff !important;
-    padding: 0.6rem 1.2rem;
-    border-radius: 6px;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: background-color 0.2s;
-}
-.zip-btn:hover {
-    background-color: #5c0000;
-}
 </style>
 </head>
 <body>
@@ -230,7 +267,7 @@ footer {
         <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
       </div>
       <nav class="top-nav">
-        <a href="index.html" class="active">Home</a><a href="sermons.html">Sermons</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+        <a href="index.html" class="active">Home</a><a href="sermons.html">Sermons</a><a href="downloads.html">Downloads</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
       </nav>
     </div>
   </header>
@@ -243,13 +280,23 @@ footer {
   <main class="homepage-content">
 
     <section class="hero">
-      <h1>English Translations of Pahankanuwa Sermons</h1>
-      <h2>Venerable Katukurunde Nanananda Thero</h2>
+      <h1>Pahankanuwa Sermon Series</h1>
+      <h2>English Translation Collection (Sermons 001–170)</h2>
+      <p style="text-align: center; font-weight: 500;">Original Sermons by Most Venerable Katukurunde Nanananda Thero</p>
       
+      <div class="pali-quote">"Sabba-dānaṃ dhamma-dānaṃ jināti"<br>The Gift of Dhamma Excels All Gifts — Dhammapada 354</div>
+
+      <div class="download-banner">
+        <a href="Pahankanuwa_Sermons_Complete.docx" class="btn" download>Download Complete DOCX</a>
+        <a href="Pahankanuwa_Sermons_Complete.pdf" class="btn" download>Download Complete PDF</a>
+        <a href="Pahankanuwa_Sermons_Complete.epub" class="btn" download>Download Complete EPUB</a>
+        <a href="pahankanuwa_sermons_all_formats.zip" class="btn btn-secondary" download>Download All (ZIP)</a>
+      </div>
+
       <p>Welcome to the structured Dhamma Knowledge Base, cataloging and indexing the English translations of the Pahankanuwa Sermons delivered by Most Venerable Katukurunde Nanananda Thero. This portal provides direct cross-references between translated sermon passages, Dhamma subjects, and canonical Sutta citations.</p>
       
       <p>The translations presented in this knowledge base were prepared from digitised editions of the Pahankanuwa sermon series. Original sermon texts were derived from OCR-processed versions of publicly available PDF editions and translated through a collaborative workflow involving OCR correction, AI-assisted translation, and human review and proofreading. The project is intended as a freely accessible resource for Dhamma study and reference.</p>
-      
+
       <p class="disclaimer"><strong>Disclaimer:</strong> These translations are provided for educational and Dhamma-study purposes only and are not intended for commercial use. All credit for the original sermons belongs to Ven. Katukurunde Nanananda Thero and the original publishers. If you are a copyright holder and have concerns regarding the distribution of these materials, please contact the repository maintainer.</p>
     </section>
 
@@ -258,13 +305,17 @@ footer {
         <span class="stat-number">170</span>
         <span class="stat-label">Browse All Sermons</span>
       </a>
+      <a href="downloads.html" class="stat-card">
+        <span class="stat-number">4 Formats</span>
+        <span class="stat-label">Downloads Page</span>
+      </a>
       <a href="citations.html" class="stat-card">
         <span class="stat-number">3,062</span>
         <span class="stat-label">Browse Citations Index</span>
       </a>
       <a href="statistics.html" class="stat-card">
         <span class="stat-number">100%</span>
-        <span class="stat-label">View Full Collection Stats</span>
+        <span class="stat-label">View Collection Stats</span>
       </a>
     </section>
 
@@ -273,7 +324,7 @@ footer {
   
   <footer>
     <p style="margin-bottom: 1rem;">
-      <a class="zip-btn" href="Pahankanuwa_English_Translations.zip" download>
+      <a class="btn" href="pahankanuwa_sermons_all_formats.zip" download>
         📦 Download All Sermons (.ZIP Archive)
       </a>
     </p>
@@ -287,7 +338,7 @@ function filterData() {
     var input = document.getElementById('searchInput');
     var filter = input.value.toLowerCase();
     
-    var rows = document.querySelectorAll('.data-table tbody tr');
+    var rows = document.querySelectorAll('.data-table tbody tr, .download-item');
     rows.forEach(function(row) {
         var text = row.innerText.toLowerCase();
         row.style.display = text.includes(filter) ? '' : 'none';

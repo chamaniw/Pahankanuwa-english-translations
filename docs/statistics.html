@@ -110,7 +110,37 @@ body {
 .hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
 .hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
 .hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
 .hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
 
 .stats-grid {
     display: grid;
@@ -148,6 +178,27 @@ body {
     letter-spacing: 0.8px;
     margin-top: 0.4rem;
 }
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
 
 .table-container {
     background: #ffffff;
@@ -204,20 +255,6 @@ footer {
     border-top: 1px solid var(--border-color);
     margin-top: 3rem;
 }
-.zip-btn {
-    display: inline-block;
-    background-color: var(--header-bg);
-    color: #ffffff !important;
-    padding: 0.6rem 1.2rem;
-    border-radius: 6px;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: background-color 0.2s;
-}
-.zip-btn:hover {
-    background-color: #5c0000;
-}
 </style>
 </head>
 <body>
@@ -230,7 +267,7 @@ footer {
         <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
       </div>
       <nav class="top-nav">
-        <a href="index.html">Home</a><a href="sermons.html">Sermons</a><a href="citations.html">Citations</a><a href="statistics.html" class="active">Statistics</a>
+        <a href="index.html">Home</a><a href="sermons.html">Sermons</a><a href="downloads.html">Downloads</a><a href="citations.html">Citations</a><a href="statistics.html" class="active">Statistics</a>
       </nav>
     </div>
   </header>
@@ -257,12 +294,12 @@ footer {
       </a>
       <a href="#sermons-tree" class="stat-card">
         <span class="stat-number">100%</span>
-        <span class="stat-label">DOCX Availability</span>
+        <span class="stat-label">Document Availability</span>
       </a>
     </section>
 
     <section id="sermons-tree">
-      <h2 style="font-family:'Georgia', serif; color: var(--primary-color); margin-bottom: 1rem;">Sermons Index & DOCX Document Links</h2>
+      <h2 style="font-family:'Georgia', serif; color: var(--primary-color); margin-bottom: 1rem;">Sermons Index & Document Links</h2>
       <div class="table-container">
         <table class="data-table">
           <thead>
@@ -279,1190 +316,1190 @@ footer {
               <td><strong>Pahankanuwa Sermon 001</strong></td>
               <td>Verse 216 Piya Vagga (the Chapter on Affection)of the Dhammapada</td>
               <td>Taṇhāya jāyatī soko,<br>taṇhāya jāyatī bhayaṁ;<br>Taṇhāya vippamuttassa,<br>natthi soko kuto bhayaṁ.</td>
-              <td><a class="doc-btn" href="docx/sermon_001_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_001_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_001_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_001_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 002</strong></td>
               <td>Verse 40 from the Cittavagga (Chapter on the Mind) of the Dhammapada</td>
               <td>Kumbhūpamaṁ kāyamimaṁ viditvā,nagarūpamaṁ cittamidaṁ ṭhapetvā;Yodhetha māraṁ paññāvudhena,jitañca rakkhe anivesano siyā.</td>
-              <td><a class="doc-btn" href="docx/sermon_002_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_002_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_002_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_002_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 003</strong></td>
               <td>Verse 315, from  the Nirayavagga (Chapter on Hell)  of the Dhammapada</td>
               <td>Nagariṁ yathā paccantaṁ,<br>guttaṁ santarabāhiraṁ;<br>Evaṁ gopetha attānaṁ,<br>khaṇo vo mā upaccagā;<br>Khaṇātītā hi socanti,<br>nirayamhi samappitā.</td>
-              <td><a class="doc-btn" href="docx/sermon_003_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_003_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_003_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_003_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 004</strong></td>
               <td>Verse 282 from the Maggavagga (Chapter on the Path) of the Dhammapada</td>
               <td>Yogā ve jāyatī bhūri,<br> ayogā bhūrisaṅkhayo;<br> Etaṃ dvedhāpathaṃ ñatvā,<br> bhavāya vibhavāya ca;<br> Tathāttānaṃ niveseyya,<br> yathā bhūri pavaḍḍhati.</td>
-              <td><a class="doc-btn" href="docx/sermon_004_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_004_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_004_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_004_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 005</strong></td>
               <td>Verse 217 from the Piyavagga (Chapter on Affection) of the Dhammapada</td>
               <td>Sīladassanasampannaṃ,<br> dhammaṭṭhaṃ saccavedinaṃ;<br> Attano kamma kubbānaṃ,<br> taṃ jano kurute piyaṃ.</td>
-              <td><a class="doc-btn" href="docx/sermon_005_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_005_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_005_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_005_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 006</strong></td>
               <td>Verse 239 from the Malavagga (Chapter on Impurity) of the Dhammapada</td>
               <td>Anupubbena medhāvī,<br> thokathokaṃ khaṇe khaṇe;<br> Kammāro rajatasseva,<br> niddhame malam attano.</td>
-              <td><a class="doc-btn" href="docx/sermon_006_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_006_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_006_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_006_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 007</strong></td>
               <td>Verse 28 from the Appamādavagga (Chapter on Heedfulness) of the Dhammapada</td>
               <td>Cakkhumā visamānīva,<br> vijjamāne parakkame;<br> Paṇḍito jīvalokasmiṃ,<br> pāpāni parivajjaye.</td>
-              <td><a class="doc-btn" href="docx/sermon_007_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_007_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_007_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_007_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 008</strong></td>
               <td>Verse 33 and 34  from the Cittavagga (Chapter on the Mind) of the Dhammapada</td>
               <td>Phandanaṃ capalaṃ cittaṃ,<br> durakkhaṃ dunnivārayaṃ;<br> Ujuṃ karoti medhāvī,<br> usukārova tejanaṃ.<br>Vārijova thale khitto,<br> okamokataubbhato;<br> Pariphandatidaṃ cittaṃ,<br> māradheyyaṃ pahātave.</td>
-              <td><a class="doc-btn" href="docx/sermon_008_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_008_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_008_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_008_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 009</strong></td>
               <td>Verse 161 from the Attavagga (Chapter on the Self) of the Dhammapada</td>
               <td>Attanāva kataṃ pāpaṃ, attajaṃ attasambhavaṃ; Abhimatthati dummedhaṃ, vajiraṃ vasmamayaṃ maṇiṃ.</td>
-              <td><a class="doc-btn" href="docx/sermon_009_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_009_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_009_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_009_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 010</strong></td>
               <td>Verse 281 from the Maggavagga (Chapter on the Path) of the Dhammapada</td>
               <td>Vācānurakkhī manasā susaṃvuto, kāyena ca akusalaṃ na kayirā; Ete tayo kammapathe visodhaye, ārādhaye maggaṃ isippaveditaṃ.</td>
-              <td><a class="doc-btn" href="docx/sermon_010_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_010_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_010_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_010_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 011</strong></td>
               <td>Verse 178 from the Lokavagga (Chapter on the World) of the Dhammapada</td>
               <td>Pathavyā ekarajjena, saggassa gamanena vā; Sabbalokādhipaccena, sotāpattiphalaṃ varaṃ.</td>
-              <td><a class="doc-btn" href="docx/sermon_011_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_011_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_011_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_011_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 012</strong></td>
               <td>Verse 136 from the Daṇḍavagga (Chapter on Punishment) of the Dhammapada</td>
               <td>Atha pāpāni kammāni, karaṃ bālo na bujjhati; Sehi kammehi dummedho, aggidaddhova tappati.</td>
-              <td><a class="doc-btn" href="docx/sermon_012_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_012_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_012_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_012_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 013</strong></td>
               <td>Verse 2 from the Yamakavagga (Chapter of Pairs) of the Dhammapada</td>
               <td>Manopubbaṅgamā dhammā, manoseṭṭhā manomayā; Manasā ce pasannena, bhāsati vā karoti vā; Tato naṃ sukhamanveti, chāyāva anapāyinī.</td>
-              <td><a class="doc-btn" href="docx/sermon_013_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_013_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_013_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_013_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 014</strong></td>
               <td>Verses 197-199 from the Sukhavagga (Chapter on Happiness) of the Dhammapada</td>
               <td>Susukhaṃ vata jīvāma, verinesu averino; Verinesu manussesu, viharāma averino. Susukhaṃ vata jīvāma, āturesu anāturā; Āturesu manussesu, viharāma anāturā. Susukhaṃ vata jīvāma, ussukesu anussukā; Ussukesu manussesu, viharāma anussukā.</td>
-              <td><a class="doc-btn" href="docx/sermon_014_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_014_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_014_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_014_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 015</strong></td>
               <td>Verse 110 from the Sahassavagga (Chapter of Thousands) of the Dhammapada</td>
               <td>Yo ca vassasataṃ jīve, dussīlo asamāhito; Ekāhaṃ jīvitaṃ seyyo, sīlavato jhāyino.</td>
-              <td><a class="doc-btn" href="docx/sermon_015_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_015_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_015_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_015_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 016</strong></td>
               <td>Verses 296-301 from the Bhikkhuvagga (Chapter on the Monk) of the Dhammapada</td>
               <td>Suppabuddhaṃ pabujjhanti, sadā gotamasāvakā; Yesaṃ divā ca ratto ca, niccaṃ buddhagatā sati. Suppabuddhaṃ pabujjhanti, sadā gotamasāvakā; Yesaṃ divā ca ratto ca, niccaṃ dhammagatā sati. Suppabuddhaṃ pabujjhanti, sadā gotamasāvakā; Yesaṃ divā ca ratto ca, niccaṃ saṅghagatā sati. Suppabuddhaṃ pabujjhanti, sadā gotamasāvakā; Yesaṃ divā ca ratto ca, ahiṃsāya rato mano. Suppabuddhaṃ pabujjhanti, sadā gotamasāvakā; Yesaṃ divā ca ratto ca, bhāvanāya rato mano.</td>
-              <td><a class="doc-btn" href="docx/sermon_016_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_016_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_016_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_016_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 017</strong></td>
               <td>Verses 11-12 from the Yamakavagga (Chapter of Pairs) of the Dhammapada</td>
               <td>Asāre sāramatino, sāre cāsāradassino; Te sāraṃ nādhigacchanti, micchāsaṅkappagocarā. Sārañca sārato ñatvā, asārañca asārato; Te sāraṃ adhigacchanti, sammāsaṅkappagocarā.</td>
-              <td><a class="doc-btn" href="docx/sermon_017_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_017_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_017_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_017_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 018</strong></td>
               <td>Verse 100 from the Sahassavagga (Chapter of Thousands) of the Dhammapada</td>
               <td>Sahassamapi ce gāthā, anatthapadasaṃhitā; Ekaṃ gāthāpadaṃ seyyo, yaṃ sutvā upasammati.</td>
-              <td><a class="doc-btn" href="docx/sermon_018_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_018_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_018_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_018_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 019</strong></td>
               <td>Verse 126 from the Pāpavagga (Chapter on Evil) of the Dhammapada</td>
               <td>Gabbhameke uppajjanti, nirayaṃ pāpakammino; Saggaṃ sugatino yanti, parinibbanti anāsavā.</td>
-              <td><a class="doc-btn" href="docx/sermon_019_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_019_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_019_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_019_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 020</strong></td>
               <td>Verse 46 from the Pupphavagga (Chapter on Flowers) of the Dhammapada</td>
               <td>Pheṇūpamaṃ kāyamimaṃ viditvā, marīcidhammaṃ abhisambudhāno; Chetvāna mārassa papupphakāni, adassanaṃ maccurājassa gacche.</td>
-              <td><a class="doc-btn" href="docx/sermon_020_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_020_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_020_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_020_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 021</strong></td>
               <td>Verse 204 from the Sukhavagga (Chapter on Happiness) of the Dhammapada</td>
               <td>Ārogā paramā lābhā, santuṭṭhi paramaṃ dhanaṃ; Vissāsaparamā ñātī, nibbānaṃ paramaṃ sukhaṃ.</td>
-              <td><a class="doc-btn" href="docx/sermon_021_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_021_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_021_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_021_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 022</strong></td>
               <td>Verses 51-52 from the Pupphavagga (Chapter on Flowers) of the Dhammapada</td>
               <td>Yathāpi ruciraṃ pupphaṃ, vaṇṇavantaṃ agandhakaṃ; Evaṃ subhāsitā vācā, aphalā hoti akubbato. Yathāpi ruciraṃ pupphaṃ, vaṇṇavantaṃ sagandhakaṃ; Evaṃ subhāsitā vācā, saphalā hoti pakkubbato.</td>
-              <td><a class="doc-btn" href="docx/sermon_022_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_022_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_022_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_022_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 023</strong></td>
               <td>Verses 9-10 from the Yamakavagga (Chapter of Pairs) of the Dhammapada</td>
               <td>Anikkasāvo kāsāvaṃ, yo vatthaṃ paridahissati; Apeto damasaccena, na so kāsāvamarahati. Yo ca vantakasāvassa, sīlesu susamāhito; Upeto damasaccena, sa ve kāsāvamarahati.</td>
-              <td><a class="doc-btn" href="docx/sermon_023_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_023_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_023_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_023_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 024</strong></td>
               <td>Verses 404 from the Brāhmaṇavagga (Chapter on the Brahmin) of the Dhammapada</td>
               <td>Asaṁsaṭṭhaṁ gahaṭṭhehi, anāgārehi cūbhayaṁ; Anokasāriṁ appicchaṁ, tam ahaṁ brūmi brāhmaṇaṁ.</td>
-              <td><a class="doc-btn" href="docx/sermon_024_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_024_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_024_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_024_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 025</strong></td>
               <td>Verses 412 from the Brāhmaṇavagga (Chapter on the Brahmin) of the Dhammapada</td>
               <td>Ādīnavaṁ loke disvā, dhammaṁ ñatvā nirūpadhiṁ; Na ramati pāpe, pāpe na ramatī sucī.</td>
-              <td><a class="doc-btn" href="docx/sermon_025_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_025_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_025_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_025_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 026</strong></td>
               <td>Ratana-style Refuge Verses preserved in the Khuddaka tradition (non-Dhammapada source)</td>
               <td>Yo vadataṁ pavaro manujesu, Sakyamunī bhagavā katakicco pāragato balavīriyasamaṅgī; Taṁ sugataṁ saraṇamupemi. Rāgavirāgamanejamasokaṁ, dhammamasaṅkhatamappaṭikūlaṁ madhuramimaṁ paguṇaṁ suvibhattaṁ; Dhammamimaṁ saraṇamupemi. Yañca dinnaṁ mahapphalamāhu, catūsu sucīsu purisayugesu; Puggaladhammadassā te, saṅghamimaṁ saraṇamupemi.</td>
-              <td><a class="doc-btn" href="docx/sermon_026_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_026_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_026_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_026_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 027</strong></td>
               <td>Verse 32 from the Appamādavagga (Chapter on Heedfulness) of the Dhammapada</td>
               <td>Appamādarato bhikkhu, pamāde bhayadassivā; Abhabbo parihānāya, nibbānasseva santike.</td>
-              <td><a class="doc-btn" href="docx/sermon_027_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_027_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_027_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_027_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 028</strong></td>
               <td>Verse 125 from the Pāpavagga (Chapter on Evil) of the Dhammapada</td>
               <td>Yo appaduṭṭhassa narassa dussati, suddhassa posassa anaṅgaṇassa; Tameva bālaṁ pacceti pāpaṁ, sukhumo rajo paṭivātaṁva khitto.</td>
-              <td><a class="doc-btn" href="docx/sermon_028_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_028_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_028_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_028_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 029</strong></td>
               <td>Verse 280 from the Maggavagga (Chapter on the Path) of the Dhammapada</td>
               <td>Uṭṭhānakālamhi anutthahāno, yuvā balī ālasiyaṁ upeto; Saṃsannasaṅkappamano kusīto, paññāya maggaṁ alaso na vindati.</td>
-              <td><a class="doc-btn" href="docx/sermon_029_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_029_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_029_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_029_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 030</strong></td>
               <td>Verses 235-236 from the Malavagga (Chapter on Impurity) of the Dhammapada</td>
               <td>Pāṇḍupalāsova dānisi, yamapurisāpi ca te upaṭṭhitā; Uyyogamukhe ca tiṭṭhasi, pātheyyampi ca te na vijjati. So karohi dīpamattano, khippaṁ vāyama paṇḍito bhava; Niddhantamalo anaṅgaṇo, dibbaṁ ariyabhūmimehisi.</td>
-              <td><a class="doc-btn" href="docx/sermon_030_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_030_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_030_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_030_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 031</strong></td>
               <td>Sutta Nipāta, Aṭṭhakavagga</td>
               <td>Imesu kira sajjanti, eke samaṇabrāhmaṇā; Viggayha naṁ vivadanti, janā ekāṅgadassino.</td>
-              <td><a class="doc-btn" href="docx/sermon_031_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_031_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_031_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_031_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 032</strong></td>
               <td>Sutta Nipāta</td>
               <td>Ayoghanahatasseva, jalato jātavedaso; Anupubbūpasantassa, yathā na ñāyate gati. Evaṁ sammā vimuttānaṁ, kāmabandhoghatārinaṁ; Pattānaṁ acalaṁ sukhaṁ, gati na paññāyatīti.</td>
-              <td><a class="doc-btn" href="docx/sermon_032_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_032_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_032_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_032_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 033</strong></td>
               <td>Verse 147 from the Jarāvagga (Chapter on Old Age) of the Dhammapada</td>
               <td>Passa cittakataṁ bimbaṁ, arukāyaṁ samussitaṁ; Āturaṁ bahusaṅkappaṁ, yassa natthi dhuvaṁ ṭhiti.</td>
-              <td><a class="doc-btn" href="docx/sermon_033_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_033_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_033_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_033_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 034</strong></td>
               <td>Aṅguttara Nikāya 4.32, Saṅgaha Sutta</td>
               <td>Dānañca peyyavajjañca, atthacariyā ca yā idha; Samānattatā ca dhammesu, tattha tattha yathārahaṁ. Ete kho saṅgahā loke, rathassāṇīva yāyato. Ete ca saṅgahā nāssu, na mātā puttakāraṇā, labhetha mānaṁ pūjaṁ vā, pitā vā puttakāraṇā. Yasmā ca saṅgahā ete, samavekkhati paṇḍitā; Tasmā mahattaṁ papponti, pāsaṁsā ca bhavanti te.</td>
-              <td><a class="doc-btn" href="docx/sermon_034_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_034_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_034_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_034_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 035</strong></td>
               <td>Verse 25 from the Appamādavagga (Chapter on Heedfulness) of the Dhammapada</td>
               <td>Uṭṭhānenappamādena, saññamena damena ca; Dīpaṁ kayirātha medhāvī, yaṁ ogho nābhikīrati.</td>
-              <td><a class="doc-btn" href="docx/sermon_035_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_035_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_035_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_035_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 036</strong></td>
               <td>Dhammapada Verses 153-154, spoken by the Buddha at Enlightenment</td>
               <td>Anekajātisaṁsāraṁ, sandhāvissaṁ anibbisaṁ; Gahakārakaṁ gavesanto, dukkhā jāti punappunaṁ. Gahakāraka diṭṭhosi, puna gehaṁ na kāhasi; Sabbā te phāsukā bhaggā, gahakūṭaṁ visaṅkhataṁ; Visaṅkhāragataṁ cittaṁ, taṇhānaṁ khayamajjhagā.</td>
-              <td><a class="doc-btn" href="docx/sermon_036_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_036_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_036_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_036_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 037</strong></td>
               <td>Saṁyutta Nikāya, Dhammacakkappavattana tradition verses</td>
               <td>Yadā buddho abhiññāya, dhammacakkaṁ pavattayī; Sadevakassa lokassa, satthā appaṭipuggalo. Sakkāyañca nirodhañca, sakkāyassa ca sambhavaṁ; Ariyañcaṭṭhaṅgikaṁ maggaṁ, dukkhūpasamagāminaṁ. Ye pi dīghāyukā devā, vaṇṇavanto yasassino; Bhītā santāsamāpāduṁ, sīhassev’itare migā. Avītivattā sakkāyaṁ, aniccā kira bho mayaṁ; Arahato vacanaṁ sutvā, vippamuttassa tādino.</td>
-              <td><a class="doc-btn" href="docx/sermon_037_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_037_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_037_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_037_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 038</strong></td>
               <td>Dhaniya Sutta (Sn 1.2) from the Uragavagga of the Sutta Nipāta</td>
               <td>Pakkodano duddhakhīrohamasmi (iti Dhaniyo gopo); Anutīre mahiyā samānavāso; Channā kuṭi āhito gini; Atha ce patthayasī pavassa deva. Akkodhano vigatakhīlohamasmi (iti Bhagavā); Anutīre mahiyekarattivāso; Vivaṭā kuṭi nibbuto gini; Atha ce patthayasī pavassa deva.</td>
-              <td><a class="doc-btn" href="docx/sermon_038_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_038_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_038_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_038_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 039</strong></td>
               <td>Verse 142 from the Daṇḍavagga (Chapter on Punishment) of the Dhammapada</td>
               <td>Alaṅkato cepi samaṃ careyya, santo danto niyato brahmacārī; Sabbesu bhūtesu nidhāya daṇḍaṃ, so brāhmaṇo so samaṇo sa bhikkhu.</td>
-              <td><a class="doc-btn" href="docx/sermon_039_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_039_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_039_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_039_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 040</strong></td>
               <td>Bhaddekaratta Sutta (MN 131) from the Majjhima Nikāya</td>
               <td>Atītaṃ nānvāgameyya, nappaṭikaṅkhe anāgataṃ; Yadatītaṃ pahīnaṃ taṃ, appattañca anāgataṃ. Paccuppannañca yo dhammaṃ, tattha tattha vipassati; Asaṃhīraṃ asaṅkuppaṃ, taṃ vidvā manubrūhaye. Ajjeva kiccamātappaṃ, ko jaññā maraṇaṃ suve; Na hi no saṅgaraṃ tena, mahāsenena maccunā. Evaṃ vihārimātāpiṃ, ahorattamatanditaṃ; Taṃ ve bhaddekarattoti, santo ācikkhate muni.</td>
-              <td><a class="doc-btn" href="docx/sermon_040_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_040_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_040_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_040_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 041</strong></td>
               <td>Hemavata Sutta, Sutta Nipāta</td>
               <td>Kismiṃ loko samuppanno, kismiṃ kubbati santhavaṃ; Kissa loko upādāya, kismiṃ loko vihaññati? Chasu loko samuppanno, chasu kubbati santhavaṃ; Channam-eva upādāya, chasu loko vihaññati.</td>
-              <td><a class="doc-btn" href="docx/sermon_041_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_041_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_041_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_041_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 042</strong></td>
               <td>Cūḷagopālaka Sutta, Majjhima Nikāya</td>
               <td>Ayaṃ loko paro loko, jānatā suppakāsito; Mārena sappattaṃ appattaṃ yañca maccunā. Sabbaṃ lokaṃ abhiññāya, sambuddhena pajānatā; Vivaṭaṃ amatadvāraṃ, khemaṃ nibbānapattiyā. Chinnaṃ pāpimato sotaṃ, viddhastaṃ vinālīkataṃ; Pāmojjabahulā hotha, khemaṃ nibbānapattiyā.</td>
-              <td><a class="doc-btn" href="docx/sermon_042_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_042_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_042_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_042_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 043</strong></td>
               <td>Aṭṭhapuggala Sutta (AN 8 tradition)</td>
               <td>Cattāro ca paṭipannā, cattāro ca phale ṭhitā; Esa saṅgho ujubhūto, paññāsīlasamāhito. Yajamānānaṃ manussānaṃ, puññapekhāna pāṇinaṃ; Karotaṃ opadhikaṃ puññaṃ, saṅghe dinnaṃ mahapphalaṃ.</td>
-              <td><a class="doc-btn" href="docx/sermon_043_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_043_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_043_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_043_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 044</strong></td>
               <td>Anāthapiṇḍikovāda Sutta, Majjhima Nikāya</td>
               <td>Idaṃ hi taṃ Jetavanaṃ, isisaṅghanisevitaṃ; Āvutthaṃ dhammarājena, pītisañjananaṃ mama.<br>Kammaṃ vijjā ca dhammo ca, sīlaṃ jīvitamuttamaṃ; Etena maccā sujjhanti, na gottena dhanena vā. Tasmā hi paṇḍito poso, sampassaṃ atthamattano; Yoniso vicine dhammaṃ, evaṃ tattha visujjhati. Sāriputtova paññāya, sīlena upasamena ca; Yo hi pāragato bhikkhu, etāva paramo siyā.</td>
-              <td><a class="doc-btn" href="docx/sermon_044_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_044_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_044_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_044_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 045</strong></td>
               <td>Sabhiya Sutta (Sn 3.6) from the Sutta Nipāta</td>
               <td>Kiṃ pattinamāhu bhikkhunaṃ, sorataṃ kena dantamāhu; Buddhoti kathaṃ pavuccati, puṭṭho me bhagavā vyākarohi. Pajjena katena attanā, parinibbānagato vitiṇṇakaṅkho; Vibhavañca bhavañca vippahāya, vusitavā khīṇapunabbhavo sa bhikkhu. Sabbadhi upekkhako satimā, na so hiṃsati kañci sabbaloke; Tiṇṇo samaṇo anāvilo, ussadā yassa na santi sorato so. Yassindriyāni bhāvitāni, ajjhattaṃ bahiddhā ca sabbaloke; Imañca parañca lokaṃ viditvā, kālaṃ kaṅkhati bhāvito sa danto. Kappāni viceyya kevalāni, saṃsāraṃ ubhayaṃ cutūpapātaṃ; Vigatarajamanaṅgaṇaṃ visuddhaṃ, pattaṃ jātikkhayaṃ tamāhu buddhan'ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_045_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_045_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_045_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_045_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 046</strong></td>
               <td>heragāthā (Khuddaka Nikāya) of the Pali Canon, specifically from the verses of Elder Jenta (Jentattheragāthā, Thag 1.111).</td>
               <td>Duppabbajjaṃ me duradhivāsā gehā; Dhammo duradhigamo, bhogā kicchā vutti; No itarītareneva yuttaṃ, cintetuṃ satatamaniccan'ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_046_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_046_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_046_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_046_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 047</strong></td>
               <td>Theragāthā, Rāhulattheragāthā</td>
               <td>Ubayeneva sampanno, Rāhulo Bhaddoti maṃ vidū; Yañcāmhi putto Buddhassa, yañca dhammesu cakkhumā. Yañca me āsavā khīṇā, yañca natthi punabbhavo; Arahā dakkhiṇeyyomhi, tevijjo amataddaso.<br>Kāmandhā jālapacchannā, taṇhāchadanachāditā; Pamattabandhunā baddhā, macchāva kumināmukhe. Taṃ kāmaṃ chetvā Mārassa bandhanaṃ samūlaṃ taṇhamabbuyha; Sītibhūto'smi nibbuto'ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_047_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_047_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_047_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_047_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 048</strong></td>
               <td>Nālaka Sutta tradition from the Sutta Nipāta</td>
               <td>Jīvite vāpi sappañño, api vittaparikkhayo; Paññāya ca alābhena, vitto vāpi na jīvati. Sabbaṃ suṇāti sotena, sabbaṃ passati cakkhunā; Na ca diṭṭhaṃ sutaṃ dhīro, sabbaṃ pariccajituṃ arahati. Cakkhumāssa yathā andho, sotavā badhiro yathā; Paññavāssa yathā mūgo, balavā dubbaloriva; Atha atthe samuppanne, sayetha matasāyikaṃ.</td>
-              <td><a class="doc-btn" href="docx/sermon_048_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_048_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_048_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_048_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 049</strong></td>
               <td>Ghaṭīkāra tradition, connected with the Ghaṭīkāra Sutta (MN 81)</td>
               <td>Kumbhakāro pure āsiṃ, Ghaṭīkāro mātāpettibharo āsiṃ; Kassapassa upāsako, virato methunā dhammā; Brahmacārī nirāmiso. Ahuvā te sagāmeyyo, ahuvā te pure sakhā.</td>
-              <td><a class="doc-btn" href="docx/sermon_049_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_049_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_049_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_049_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 050</strong></td>
               <td>Verse 373 from the Bhikkhuvagga (Chapter on the Monk) of the Dhammapada</td>
               <td>Samāhito sampajāno sato buddhassa sāvako, Āsave ca pajānāti āsavānañca sambhavaṃ; Maggañca khayagāminaṃ, āsavānaṃ khayā bhikkhu nicchāto parinibbuto.</td>
-              <td><a class="doc-btn" href="docx/sermon_050_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_050_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_050_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_050_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 051</strong></td>
               <td>Verses 188-192 from the Buddhavagga (Chapter on the Buddha) of the Dhammapada</td>
               <td>Bahuṃ ve saraṇaṃ yanti, pabbatāni vanāni ca; Ārāmarukkhacetyāni, manussā bhayatajjitā. Netaṃ kho saraṇaṃ khemaṃ, netaṃ saraṇamuttamaṃ; Netaṃ saraṇamāgamma, sabbadukkhā pamuccati. Yo ca buddhañca dhammañca, saṅghañca saraṇaṃ gato; Cattāri ariyasaccāni, sammappaññāya passati. Dukkhaṃ dukkhasamuppādaṃ, dukkhassa ca atikkamaṃ; Ariyañcaṭṭhaṅgikaṃ maggaṃ, dukkhūpasamagāminaṃ. Etaṃ kho saraṇaṃ khemaṃ, etaṃ saraṇamuttamaṃ; Etaṃ saraṇamāgamma, sabbadukkhā pamuccati.</td>
-              <td><a class="doc-btn" href="docx/sermon_051_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_051_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_051_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_051_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 052</strong></td>
               <td>Khuddaka Nikāya</td>
               <td>Sabbhireva samāsetha, paṇḍiteh'atthadassibhi; Atthaṃ mahantaṃ gambhīraṃ, duddasaṃ nipuṇaṃ aṇuṃ. Dhīrā samadhigacchanti, appamattā vicakkhaṇāti.</td>
-              <td><a class="doc-btn" href="docx/sermon_052_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_052_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_052_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_052_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 053</strong></td>
               <td>Theragāthā</td>
               <td>Mama saṅkappamaññāya, satthā loke anuttaro; Manomayena kāyena, iddhiyā upasaṅkami. Yadā me ahu saṅkappo, tato uttari desayi; Nippapañcarato buddho, nippapañcaṃ adesayi. Tassāhaṃ dhammamaññāya, vihāsiṃ sāsane rato; Tisso vijjā anuppattā, kataṃ buddhassa sāsanaṃ.</td>
-              <td><a class="doc-btn" href="docx/sermon_053_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_053_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_053_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_053_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 054</strong></td>
               <td>Theragāthā</td>
               <td>Aho buddhā aho dhammā, aho no satthu sampadā; Yatthetādisaṃ dhammaṃ, sāvako sacchikāhisi. Asaṅkheyyesu kappesu, sakkāyādhigatā ahu; Tesaṃ ayaṃ pacchimako, carimoyaṃ samussayo. Jātimaraṇasaṃsāro, natthi dāni punabbhavoti.</td>
-              <td><a class="doc-btn" href="docx/sermon_054_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_054_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_054_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_054_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 055</strong></td>
               <td>Parāyana Vagga, Sutta Nipāta</td>
               <td>Kena-ssu nivuto loko, kena-ssu nappakāsati; Kissābhilepanaṃ brūsi, kiṃsu tassa mahabbhayaṃ? Avijjāya nivuto loko, icchāya nappakāsati; Taṇhābhilepanaṃ brūmi, dukkhamassa mahabbhayaṃ. Savanti sabbadhi sotā, sotānaṃ kiṃ nivāraṇaṃ? Sotānaṃ saṃvaraṃ brūhi, kena sotā pidhiyyare? Yāni sotāni lokasmiṃ, sati tesaṃ nivāraṇaṃ; Sotānaṃ saṃvaraṃ brūmi, paññāyete pidhiyyare.</td>
-              <td><a class="doc-btn" href="docx/sermon_055_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_055_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_055_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_055_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 056</strong></td>
               <td>Verse 41 from the Cittavagga (Chapter on the Mind) of the Dhammapada</td>
               <td>Aciraṃ vatayaṃ kāyo, pathaviṃ adhisessati; Chuḍḍho apetaviññāṇo, niratthaṃva kaliṅgaraṃ.</td>
-              <td><a class="doc-btn" href="docx/sermon_056_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_056_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_056_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_056_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 057</strong></td>
               <td>Ānanda Thera – Theragāthā</td>
               <td>Paṇṇavīsati vassāni, bhagavantaṃ upaṭṭhahiṃ; Mettena kāyakammena, chāyāva anapāyinī. Paṇṇavīsati vassāni, bhagavantaṃ upaṭṭhahiṃ; Mettena vacīkammena, chāyāva anapāyinī. Paṇṇavīsati vassāni, bhagavantaṃ upaṭṭhahiṃ; Mettena manokammena, chāyāva anapāyinī.</td>
-              <td><a class="doc-btn" href="docx/sermon_057_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_057_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_057_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_057_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 058</strong></td>
               <td>verse from the Aṅgulimālattheragāthā (Thag 121–122), which is found in the Theragāthā (Khuddaka Nikāya)</td>
               <td>Koci bhavo nicco, saṅkhārā vāpi sassatā? Uppajjanti ca te bhūtā, cavanti aparāparaṃ. Etamādīnavaṃ ñatvā, bhavasmiṃ anapekkho; Sabbakāmehi mutto me, āsavakkhayo'ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_058_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_058_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_058_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_058_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 059</strong></td>
               <td>Ratana Sutta (Sn 2.1) from the Sutta Nipāta</td>
               <td>Khīṇaṃ purāṇaṃ, navaṃ natthi sambhavaṃ; Virattacittā āyatike bhavasmiṃ. Te khīṇabījā avirūḷhichandā, nibbanti dhīrā yathāyaṃ padīpo. Idamapi saṅghe ratanaṃ paṇītaṃ, etena saccena suvatthi hotu.</td>
-              <td><a class="doc-btn" href="docx/sermon_059_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_059_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_059_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_059_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 060</strong></td>
               <td>Verses 334-337 from the Taṇhāvagga (Chapter on Craving) together with Verse 315 from the Nirayavagga (Chapter on Hell) of the Dhammapada</td>
               <td>Manujassa pamattacārino, taṇhā vaḍḍhati māluvā viya; So plavati hurā huraṃ, phalamicchaṃva vanasmiṃ vānaro. Yaṃ esā sahatī jammī, taṇhā loke visattikā; Sokā tassa pavaḍḍhanti, abhivaṭṭhaṃva bīraṇaṃ. Yo cetaṃ sahatī jammiṃ, taṇhaṃ loke duraccayaṃ; Sokā tamhā papatanti, udabindūva pokkharā. Taṃ vo vadāmi bhaddaṃ vo, yāvantettha samāgatā; Taṇhāya mūlaṃ khaṇatha, usīratthova bīraṇaṃ; Mā vo naḷaṃva sotova, māro bhañji punappunaṃ. Karotha buddhavacanaṃ, khaṇo vo mā upaccagā; Khaṇātītā hi socanti, nirayamhi samappitā.<br>Pamādo rajo, pamādanupatito rajo; Appamādena vijjāya, abbahe sallamattano ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_060_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_060_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_060_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_060_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 061</strong></td>
               <td>Khuddaka Nikāya → Theragāthā → Terasanipāta → Soṇakoḷivisattheragāthā → Thag 13.1 (verses 638–639)</td>
               <td>Accāraddhamhi vīriyamhi,<br>satthā loke anuttaro;<br>Vīṇūpamaṃ karitvā me,<br>dhammaṃ desesi cakkhumā.<br>Tassāhaṃ vacanaṃ sutvā,<br>vihāsiṃ sāsane rato.<br>Samathaṃ paṭipādesiṃ,<br>uttamatthassa pattiyā;<br>Tisso vijjā anuppattā,<br>kataṃ buddhassa sāsanaṃ.</td>
-              <td><a class="doc-btn" href="docx/sermon_061_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_061_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_061_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_061_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 062</strong></td>
               <td>from Udāna 2.9, Asātarūpa Jātaka, and Sutta Nipāta 1086</td>
               <td>Asātaṃ sātarūpena,<br>piyarūpena appiyaṃ;<br>Dukkhaṃ sukhassa rūpena,<br>pamattaṃ ativattati.</td>
-              <td><a class="doc-btn" href="docx/sermon_062_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_062_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_062_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_062_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 063</strong></td>
               <td>Dhammapada 204 (Sukhavagga)</td>
               <td>Ārogya paramā lābhā, nibbānaṃ paramaṃ sukhaṃ;<br>aṭṭhaṅgiko ca maggānaṃ, khemaṃ amatagāminaṃ.</td>
-              <td><a class="doc-btn" href="docx/sermon_063_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_063_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_063_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_063_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 064</strong></td>
               <td>Aṅguttara Nikāya (AN 2.3.9 / Aṅguttara Nikāya Duka Nipāta)</td>
               <td>Nārati sahati dhīraṃ, nārati dhīrasahāti;<br>dhīro ca aratiṃ sahati, dhīro hi aratīsaho.<br>Sabbakammavihāyinaṃ, paṇuṇṇaṃ ko nivāraye;<br>Ko taṃ jambonadassevā, nekkhaṃ ninditumarahati;<br>Devāpi taṃ pasaṃsanti, brahmunāpi pasaṃsito ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_064_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_064_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_064_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_064_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 065</strong></td>
               <td>Dhammapada 276 (Maggavagga)</td>
               <td>Tumhehi kiccaṃ ātappaṃ,<br>akkhātāro tathāgatā;<br>paṭipannā pamokkhanti,<br>jhāyino mārabandhanā.</td>
-              <td><a class="doc-btn" href="docx/sermon_065_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_065_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_065_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_065_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 066</strong></td>
               <td>Dhammapada 36 (Cittavagga)</td>
               <td>Sududdasaṃ sunipuṇaṃ,<br>yatthakāmānipātinaṃ;<br>Cittaṃ rakkhetha medhāvī,<br>cittaṃ guttaṃ sukhāvahaṃ.</td>
-              <td><a class="doc-btn" href="docx/sermon_066_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_066_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_066_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_066_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 067</strong></td>
               <td>Dhammapada 110 (Sahassavagga)</td>
               <td>Yo ca vassasataṃ jīve, dussīlo asamāhito;<br>ekāhaṃ jīvitaṃ seyyo, sīlavantassa jhāyino</td>
-              <td><a class="doc-btn" href="docx/sermon_067_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_067_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_067_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_067_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 068</strong></td>
               <td>Dhammapada 318–319 (Nirayavagga)</td>
               <td>Avajje vajjamatino, vajje ca abajjadassino;<br>micchādiṭṭhisamādānā, sattā gacchanti duggatiṃ.<br>Vajjañca vajjato ñatvā, avajjañca avajjato;<br>sammādiṭṭhisamādānā, sattā gacchanti suggatiṃ.</td>
-              <td><a class="doc-btn" href="docx/sermon_068_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_068_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_068_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_068_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 069</strong></td>
               <td>Apaṇṇaka Jātaka (Jātaka No. 1)</td>
               <td>Apaṇṇakaṃ ṭhānameke, dutiyaṃ āhu takkikā;<br>etadaññāya medhāvī, taṃ gaṇhe yadapaṇṇakaṃ.</td>
-              <td><a class="doc-btn" href="docx/sermon_069_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_069_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_069_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_069_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 070</strong></td>
               <td>from Sutta Nipāta, Mahāmaṅgala Sutta</td>
               <td>Bahū devā manussā ca, maṅgalāni acintayuṃ;<br>ākaṅkhamānā sotthānaṃ,<br>brūhi maṅgalamuttamam.</td>
-              <td><a class="doc-btn" href="docx/sermon_070_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_070_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_070_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_070_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 071</strong></td>
               <td>Dhammapada 102–103 (Sahassavagga)</td>
               <td>Yo ce gāthāsataṃ bhāse,<br>anatthapadasaṃhitā;<br>ekaṃ dhammapadaṃ seyyo,<br>yaṃ sutvā upasammati.<br>Yo sahassaṃ sahassena,<br>saṅgāme mānuse jine;<br>ekañca jeyyamattānaṃ,<br>sa ve saṅgāmajuttamo.</td>
-              <td><a class="doc-btn" href="docx/sermon_071_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_071_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_071_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_071_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 072</strong></td>
               <td>Dhammapada 118 (Pupphavagga)</td>
               <td>Puññañ ce puriso kayirā, kayirāthetaṃ punappunaṃ;<br>tamhi chandaṃ kayirātha, sukho puññassa uccayo.</td>
-              <td><a class="doc-btn" href="docx/sermon_072_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_072_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_072_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_072_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 073</strong></td>
               <td>Dhammapada 209–211 (Piyavagga)</td>
               <td>Ayoge yuñjamattānaṃ, yogasmiñca ayojayaṃ;<br>atthaṃ hitvā piyaggāhī, pihayattānuyoginaṃ.<br>Mā piyehi samāgañchi, appiyehi kudācanaṃ;<br>piyānaṃ adassanaṃ dukkhaṃ, appiyānañca dassanaṃ.<br>Tasmā piyaṃ na kayirātha, piyāpāyo hi pāpako;<br>ganthā tesaṃ na vijjati, yesaṃ natthi piyāppiyaṃ.</td>
-              <td><a class="doc-btn" href="docx/sermon_073_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_073_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_073_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_073_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 074</strong></td>
               <td>Saṃyutta Nikāya (SN 22.95, Pheṇapiṇḍūpama Sutta)</td>
               <td>Pheṇapiṇḍūpamaṃ rūpaṃ, vedanā bubbulūpamā;<br>marīcikūpamā saññā, saṅkhārā kadalūpamā;<br>māyūpamañca viññāṇaṃ, dīpitādiccabandhunā.<br>Yathā yathā yoniso upaparikkhati, rittakaṃ tucchakaṃ hoti,<br>yo naṃ passati yoniso.<br>Imañca kāyaṃ ārabbha, bhūripaññena desitaṃ;<br>pahānaṃ tiṇṇaṃ dhammānaṃ, rūpaṃ passatha chaḍḍitaṃ.<br>Āyu usmā ca viññāṇaṃ, yadā kāyaṃ jahantimaṃ;<br>apaviṭṭho tadā seti, parabhattaṃ acetanaṃ.</td>
-              <td><a class="doc-btn" href="docx/sermon_074_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_074_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_074_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_074_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 075</strong></td>
               <td>Sumedhātherīgāthā (Verse 515)</td>
               <td>Adhigatamidaṃ bahūhi amataṃ,<br>ajja pi ca labhanīyamidaṃ;<br>yo yoniso payuñjati,<br>na ca sakkā aghaṭamānena.</td>
-              <td><a class="doc-btn" href="docx/sermon_075_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_075_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_075_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_075_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 076</strong></td>
               <td>Dhammapada 37 (Cittavagga)</td>
               <td>Dūraṅgamaṃ ekacaraṃ, asarīraṃ guhāsayaṃ;<br>ye cittaṃ saññamessanti, mokkhanti mārabandhanā.</td>
-              <td><a class="doc-btn" href="docx/sermon_076_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_076_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_076_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_076_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 077</strong></td>
               <td>Dhammapada 251 (Malavagga)</td>
               <td>Natthi rāgasamo aggi,<br>natthi dosasamo gaho,<br>natthi mohasamaṃ jālaṃ,<br>natthi taṇhāsamo nadī.</td>
-              <td><a class="doc-btn" href="docx/sermon_077_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_077_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_077_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_077_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 078</strong></td>
               <td>Dhammapada 47 (Pupphavagga)</td>
               <td>Pupphāni heva pacinantaṃ,<br>byāsattamanasaṃ naraṃ;<br>suttaṃ gāmaṃ mahogho va,<br>maccu ādāya gacchati.</td>
-              <td><a class="doc-btn" href="docx/sermon_078_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_078_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_078_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_078_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 079</strong></td>
               <td>Ariyapariyesana Sutta (Majjhima Nikāya 26), Vinaya Piṭaka (Mahāvagga), Saṃyutta Nikāya (SN 6.1)</td>
               <td>Apārutā tesaṃ amatassa dvārā,<br>ye sotavanto pamuñcantu saddhaṃ;<br>vihiṃsasaññī paguṇaṃ na bhāsiṃ,<br>dhammaṃ paṇītaṃ manujesu brahmeti.</td>
-              <td><a class="doc-btn" href="docx/sermon_079_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_079_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_079_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_079_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 080</strong></td>
               <td>Dhammapada 277–279 (Magga-vaggamu)</td>
               <td>Bahūni loke vicitrāni asmiṃ paṭhavimaṇḍale,<br>mathenti maññe saṅkappaṃ subhaṃ rāgūpasaṃhitaṃ;<br>rajamūhataṃca vātena yathā meghopasammaye.<br>Evaṃ sammanti saṅkappā yadā paññāya passati,<br>sabbe saṅkhārā aniccāti yadā paññāya passati;<br>atha nibbindati dukkhe esa maggo visuddhiyā.<br>Sabbe saṅkhārā dukkhāti yadā paññāya passati,<br>atha nibbindati dukkhe esa maggo visuddhiyā.<br>Sabbe dhammā anattāti yadā paññāya passati,<br>atha nibbindati dukkhe esa maggo visuddhiyā.</td>
-              <td><a class="doc-btn" href="docx/sermon_080_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_080_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_080_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_080_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 081</strong></td>
               <td>Dhammapada 146 (Jarāvagga)</td>
               <td>Ko nu hāso kimānando, niccaṃ pajjalite sati;<br>Andhakārena onaddhā, padīpaṃ na gavesatha.</td>
-              <td><a class="doc-btn" href="docx/sermon_081_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_081_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_081_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_081_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 082</strong></td>
               <td>Dhammapada 96 (Sahassavagga)</td>
               <td>Santassa manaṃ hoti,<br>santā vācā ca kamma ca;<br>sammadaññā vimuttassa,<br>upasantassa tādino.</td>
-              <td><a class="doc-btn" href="docx/sermon_082_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_082_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_082_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_082_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 083</strong></td>
               <td>Dhammapada 326 (Nāgavagga)</td>
               <td>Ārabhatha nikkhamatha,<br>yuñjatha buddhasāsane;<br>Dhunātha maccuno senaṃ,<br>naḷāgāraṃ va kuñjaro.<br>Yo imasmiṃ dhammavinaye,<br>appamatto vihessati;<br>Pahāya jāti saṃsāraṃ,<br>dukkhassantaṃ karissati.</td>
-              <td><a class="doc-btn" href="docx/sermon_083_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_083_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_083_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_083_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 084</strong></td>
               <td>Sela Sutta (Majjhima Nikāya 92), Sutta Nipāta (Sn 3.7)</td>
               <td>Abhiññeyyaṃ abhiññātaṃ, bhāvetabbañca bhāvitaṃ,<br>pahātabbaṃ pahīnaṃ me, tasmā buddhosmi brāhmaṇa;<br>Vineyya mayi kaṅkhaṃ, adhimuccassu brāhmaṇa,<br>dullabhaṃ dassanaṃ hoti, sambuddhānaṃ abhiṇhaso;<br>Yesaṃ ve dullabho loke, pātubhāvo abhiṇhaso,<br>sohaṃ brāhmaṇa sambuddho, sallakatto anuttaroti.</td>
-              <td><a class="doc-btn" href="docx/sermon_084_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_084_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_084_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_084_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 085</strong></td>
               <td>Itivuttaka (It 93), Saṃyutta Nikāya (SN 17)</td>
               <td>Na idaṃ anayena jīvitaṃ, nāhāro hadayassa santiko;<br>Āhāratthitiko samussayo, iti disvāna carāmi esanaṃ;<br>Paṅkoti hi naṃ pavedayuṃ, yāyaṃ vandana-pūjānā kulesu;<br>Sukhumaṃ sallam durabbahaṃ, sakkāro kāpurisena dujjaho ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_085_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_085_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_085_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_085_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 086</strong></td>
               <td>Dhammapada 367 (Bhikkhu-vagga)</td>
               <td>Sabbaso nāmarūpasmiṃ yassa natthi mamāyitam,<br>Asatā ca na socati sa ve "bhikkhu"ti vuccati.</td>
-              <td><a class="doc-btn" href="docx/sermon_086_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_086_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_086_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_086_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 087</strong></td>
               <td>Dhammapada 98 (Arahantavagga)</td>
               <td>Gāme vā yadi vāraññe, ninne vā yadi vā thale,<br>Yattha arahanto viharanti, taṃ bhūmiṃ rāmaṇeyyakaṃ.</td>
-              <td><a class="doc-btn" href="docx/sermon_087_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_087_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_087_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_087_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 088</strong></td>
               <td>Dhammapada 38–39 (Cittavagga)</td>
               <td>Anavaṭṭhitacittassa, saddhammaṃ avijānato,<br>Pariplavapasādassa, paññā na paripūrati;<br>Anavassutacittassa, ananvāhatacetaso,<br>Puññapāpapahīnassa, natthi jāgarato bhayaṃ.</td>
-              <td><a class="doc-btn" href="docx/sermon_088_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_088_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_088_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_088_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 089</strong></td>
               <td>Dhammapada 381 (Bhikkhuvagga)</td>
               <td>Pāmojja-bahulo pasanno, Buddhasāsane;<br>Adhigacche padaṃ santaṃ, saṅkhārūpasamaṃ sukhaṃ.</td>
-              <td><a class="doc-btn" href="docx/sermon_089_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_089_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_089_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_089_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 090</strong></td>
               <td>Dhammapada 327 (Nāgavagga)</td>
               <td>Appamādaratā hotha, sacittam anurakkhatha;<br>Duggā uddharathattānaṃ, paṅke sanno va kuñjaro.</td>
-              <td><a class="doc-btn" href="docx/sermon_090_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_090_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_090_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_090_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 091</strong></td>
               <td>Dhammapada 419–420 (Brāhmaṇavagga)</td>
               <td>Cutiṃ yo vedi sattānaṃ, upapattiñca sabbaso;<br>Asattaṃ sugataṃ buddhaṃ, tamahaṃ brūmi brāhmaṇaṃ;<br>Yassa gatiṃ na jānanti, devā gandhabba-mānusā;<br>Khīṇāsavaṃ arahantaṃ, tamahaṃ brūmi brāhmaṇaṃ.</td>
-              <td><a class="doc-btn" href="docx/sermon_091_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_091_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_091_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_091_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 092</strong></td>
               <td>Dhammapada 84 (Paṇḍitavagga)</td>
               <td>Na attahetu na parassa hetu,<br>na puttaṃ icche na dhanaṃ na raṭṭhaṃ;<br>na iccheyya adhammena samiddhimattano,<br>sa sīlavā paññavā dhammiko siyā ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_092_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_092_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_092_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_092_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 093</strong></td>
               <td>Dhammapada 74 (Bālavagga)</td>
               <td>Asataṃ bhāvanamiccheyya, purekhārañca bhikkhusu;<br>āvāsesu ca issariyaṃ, pūjā parakulesu ca;<br>mameva katamaññantu, gihī pabbajitā ubho;<br>mameva ativasā assu, kiccākiccesu kismici;<br>iti bālassa saṅkappo, icchā māno ca vaḍḍhati.</td>
-              <td><a class="doc-btn" href="docx/sermon_093_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_093_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_093_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_093_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 094</strong></td>
               <td>Dhammapada 72 (Bālavagga)</td>
               <td>Yāvadeva anatthāya, ñattaṃ bālassa jāyati;<br>hanti bālassa sukkaṃsaṃ, muddhamassa vipātayaṃ.</td>
-              <td><a class="doc-btn" href="docx/sermon_094_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_094_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_094_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_094_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 095</strong></td>
               <td>Itivuttaka (It 93)</td>
               <td>Na gaṇe care vimano hoti samādhi dullabho,<br>nānājanasaṅgaho dukkho, iti disvāna gaṇaṃ na rocaye;<br>Na kulāni upabbaje muni, vimano hoti samādhi dullabho,<br>so ussukko rasānugiddho, atthaṃ riñcati yo sukhāvaho;<br>Paṅko ti hi naṃ pavedayuṃ, yāyaṃ vandanapūjanā kulesu,<br>sukhumaṃ sallaṃ durubbahaṃ, sakkāro kāpurisena dujjaho ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_095_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_095_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_095_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_095_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 096</strong></td>
               <td>Dhammapada 1 (Yamaka-vagga)</td>
               <td>Mano pubbaṅgamā dhammā, mano seṭṭhā manomayā;<br>Manasā ce paduṭṭhena, bhāsati vā karoti vā;<br>Tato naṃ dukkhamanveti, cakkaṃva vahato padaṃ.</td>
-              <td><a class="doc-btn" href="docx/sermon_096_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_096_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_096_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_096_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 097</strong></td>
               <td>Dhammapada 21–23 (Appamādavagga)</td>
               <td>Appamādo amatapadaṃ, pamādo maccuno padaṃ;<br>Appamattā na mīyanti, ye pamattā yathā matā;<br>Etaṃ visesato ñatvā, appamādamhi paṇḍitā;<br>Appamāde pamodanti, ariyānaṃ gocare ratā;<br>Te jhāyino sātatikā, niccaṃ daḷhaparakkamā;<br>Phusanti dhīrā nibbānaṃ, yogakkhemaṃ anuttaraṃ.</td>
-              <td><a class="doc-btn" href="docx/sermon_097_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_097_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_097_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_097_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 098</strong></td>
               <td>Dhammapada 302 (Lokavagga)</td>
               <td>Duppabbajjaṃ durabhiramaṃ, durāvāsā gharā dukhā;<br>Dukkho 'samānasaṃvāso, tasmā na caddhagū siyā, na ca dukkhānupatito siyāti.</td>
-              <td><a class="doc-btn" href="docx/sermon_098_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_098_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_098_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_098_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 099</strong></td>
               <td>Dhammapada 109 (Sahassavagga)</td>
               <td>Abhivādanasīlissa niccaṃ vuḍḍhāpacāyino,<br>cattāro dhammā vaḍḍhanti: āyu vaṇṇo sukhaṃ balaṃ.</td>
-              <td><a class="doc-btn" href="docx/sermon_099_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_099_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_099_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_099_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 100</strong></td>
               <td>Itivuttaka (It 105)</td>
               <td>No bhāsamānaṃ jānanti, missaṃ bālehi paṇḍitaṃ;<br>Bhāsamānañca jānanti, desentaṃ amataṃ padaṃ.<br>Bhāsaye jotaye dhammaṃ, paggaṇhe isinaṃ dhajaṃ;<br>Subhāsitadhajā isayo, dhammo hi isinaṃ dhajo ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_100_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_100_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_100_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_100_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 101</strong></td>
               <td>Dhammapada 320–322 (Nāgavagga)</td>
               <td>Ahaṃ nāgo 'va saṅgāme, cāpāto patitaṃ saraṃ;<br>Ativākyaṃ titikkhissaṃ, dussīlo hi bahujjano.<br>Dantaṃ nayanti samitiṃ, dantaṃ rājā bhirūhati;<br>Danto seṭṭho manussesu, yo 'tivākyaṃ titikkhati.<br>Varamassatarā dantā, ājānīyā ca sindhavā;<br>Kuñjarā ca mahānāgā, attadanto tato varaṃ.</td>
-              <td><a class="doc-btn" href="docx/sermon_101_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_101_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_101_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_101_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 102</strong></td>
               <td>Dhammapada 115 (Sahassavagga)</td>
               <td>Yo ca vassasataṃ jīve apassaṃ dhammamuttamaṃ,<br>ekāhaṃ jīvitaṃ seyyo passato dhammamuttamaṃ ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_102_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_102_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_102_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_102_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 103</strong></td>
               <td>Dhammapada 422 (Brāhmaṇavagga)</td>
               <td>Tapena brahmacariyena, saṃyamena damena ca;<br>Etena brāhmaṇo hoti, etaṃ brāhmaṇamuttamaṃ.</td>
-              <td><a class="doc-btn" href="docx/sermon_103_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_103_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_103_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_103_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 104</strong></td>
               <td>Dhammapada 92 (Arahantavagga)</td>
               <td>Yesaṃ sannicayo natthi, ye pariññātabhojanā;<br>suññato animitto ca, vimokkho yesaṃ gocaro;<br>ākāseva sakuntānaṃ, gati tesaṃ durannayā.</td>
-              <td><a class="doc-btn" href="docx/sermon_104_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_104_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_104_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_104_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 105</strong></td>
               <td>Itivuttaka (It 26)</td>
               <td>Passāmi loke sadhane manusse,<br>Laddhā dhanaṃ na dadanti mohā;<br>Luddhā dhanaṃ sannicayaṃ karonti,<br>Bhiyyo va kāme abhipatthayanti.<br>Rājā pasayha pathaviṃ vijitvā,<br>Sassāgarantaṃ mahimāvasanto;<br>Oraṃ samudassa atittarūpo,<br>Pāraṃ samudassapi patthayetha.<br>Rājā ca aññe ca bahū manussā,<br>Avītataṇhā maraṇaṃ upenti;<br>Ūṇā va hutvāna jahanti dehaṃ,<br>Kāmehi loke nahi atthi titti.</td>
-              <td><a class="doc-btn" href="docx/sermon_105_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_105_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_105_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_105_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 106</strong></td>
               <td>Dhammapada 174 (Lokavagga)</td>
               <td>Andhabhūto ayaṃ loko, tanuk’ettha vipassati;<br>Sakuṇo jālamuttova, appo saggāya gacchati.</td>
-              <td><a class="doc-btn" href="docx/sermon_106_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_106_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_106_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_106_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 107</strong></td>
               <td>Dhammapada 223 (Kodhavagga)</td>
               <td>Akkodhena jine kodhaṃ, asādhuṃ sādhunā jine;<br>jine kadariyaṃ dānena, saccena alikavādinaṃ.</td>
-              <td><a class="doc-btn" href="docx/sermon_107_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_107_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_107_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_107_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 108</strong></td>
               <td>Dhammapada 127 (Pāpavagga)</td>
               <td>Na antalikkhe na samuddamajjhe,<br>na pabbatānaṃ vivaraṃ pavissa;<br>na vijjatī so jagatīpadesoti,<br>yatthaṭṭhito na ppaheyya maccu.</td>
-              <td><a class="doc-btn" href="docx/sermon_108_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_108_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_108_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_108_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 109</strong></td>
               <td>Itivuttaka (It 53)</td>
               <td>Yassa jito kāma-kaṇṭako,<br>akkoso ca vadho ca bandhanañca;<br>pabbato viya so ṭhito anejo,<br>sukhadukkhesu na vedhatī sa bhikkhū ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_109_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_109_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_109_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_109_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 110</strong></td>
               <td>Dhammapada 260 (Bhikkhuvagga)</td>
               <td>Na tena thero hoti, yenassa palitaṃ siro;<br>paripakko vayo tassa, “moghajiṇṇo” ti vuccati;<br>yamhi saccañ ca dhammo ca, ahiṃsā saṃyamo damo;<br>sa ve vantamalo dhīro, “thero” iti pavuccati.</td>
-              <td><a class="doc-btn" href="docx/sermon_110_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_110_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_110_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_110_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 111</strong></td>
               <td>Dhammapada 112 (Sahassavagga)</td>
               <td>Yo ca vassasataṃ jīve, kusīto hīnavīriyo;<br>ekāhaṃ jīvitaṃ seyyo, vīriyama-rabbhato daḷhaṃ.</td>
-              <td><a class="doc-btn" href="docx/sermon_111_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_111_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_111_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_111_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 112</strong></td>
               <td>Dhammapada 186 (Buddhavagga)</td>
               <td>Na kahāpaṇavassena, titti kāmesu vijjati;<br>appassādā dukhā kāmā, iti viññāya paṇḍito;<br>api dibbesu kāmesu, ratiṃ so nādhigacchati;<br>taṇhakkhayarato hoti, sammāsambuddhasāvako ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_112_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_112_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_112_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_112_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 113</strong></td>
               <td>Dhammapada 62 (Bālavagga)</td>
               <td>Puttā m'atthi dhanam m'atthi, iti bālo vihaññati;<br>attā hi attano natthi, kuto puttā kuto dhanaṃ.</td>
-              <td><a class="doc-btn" href="docx/sermon_113_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_113_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_113_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_113_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 114</strong></td>
               <td>Nālaka Sutta (Sn 683–684) Sutta Nipāta, Khuddaka Nikāya.</td>
               <td>So bodhisatto ratanavaro atulyo,<br>manussaloke hitasukhāya jāto,<br>sakyānaṃ gāme janapade lumbineyyeyya,<br>tenamha tuṭṭhā atiriva kalyarūpā;<br>so sabbasattuttamo aggapuggalo,<br>narāsabho sabbapajānamuttamo,<br>vattessati cakkaṃ isivhaye vane,<br>nadaṃva sīho balavā migābhibhū ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_114_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_114_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_114_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_114_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 115</strong></td>
               <td>Mūgapakkha Jātaka 538 (Verse 21), Khuddaka Nikāya</td>
               <td>Virūḷhamūlasantānaṃ, nigrodhamiva māluto;<br>amittā nappasāhanti, yo mittānaṃ na dubbhati ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_115_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_115_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_115_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_115_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 116</strong></td>
               <td>Dhammapada 157 (Attavagga)</td>
               <td>Attānañce piyaṃ jaññā, rakkheyya naṃ surakkhitaṃ;<br>tiṇṇaṃ aññataraṃ yāmaṃ, paṭijaggeyya paṇḍito ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_116_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_116_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_116_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_116_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 117</strong></td>
               <td>Dhammapada 379–380 (Bhikkhuvagga)</td>
               <td>Attanā codayattānaṃ, paṭimāse attamattano;<br>so attagutto satimā, sukhaṃ bhikkhu vihāhisi;<br>attā hi attano nātho, attā hi attano gati;<br>tasmā saṃyamayattānaṃ, assaṃ bhadraṃva vāṇijo ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_117_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_117_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_117_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_117_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 118</strong></td>
               <td>Dhammapada 285 (Piyavagga)</td>
               <td>Uccinda sineham attano, kumudaṃ sāradikaṃ va pāṇinā;<br>santimaggameva brūhaya, nibbānaṃ Sugatena desitaṃ ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_118_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_118_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_118_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_118_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 119</strong></td>
               <td>Kasibhāradvāja Sutta, Sutta Nipāta, Khuddaka Nikāya</td>
               <td>Saddhā bījaṃ tapo vuṭṭhi, paññā me yuganāṅgalaṃ;<br>hiri īsā mano yottaṃ, sati me phālapācanaṃ;<br>kāyagutto vacīgutto, āhāre udare yato;<br>saccaṃ karomi niddānaṃ, soraccaṃ me pamocanaṃ;<br>viriyaṃ me dhuradhorayhaṃ, yogakkhemādhivāhanaṃ;<br>gacchati anivattantaṃ, yattha gantvā na socare;<br>evamesā kasī kaṭṭhā, sā hoti amataphalā;<br>etaṃ kasiṃ kasitvāna, sabbadukkhā pamuccatī ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_119_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_119_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_119_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_119_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 120</strong></td>
               <td>Dhammapada 212 (Piyavagga)</td>
               <td>Piyato jāyatī soko, piyato jāyatī bhayaṃ;<br>Piyato vippamuttassa, natthi soko kuto bhayaṃ ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_120_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_120_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_120_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_120_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 121</strong></td>
               <td>Dhammapada 67 (Pāpavaagga)</td>
               <td>Na taṃ kammaṃ kataṃ sādhu, yaṃ katvā anutappati;<br>Yassa assumukho rodaṃ, vipākaṃ paṭisevati ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_121_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_121_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_121_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_121_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 122</strong></td>
               <td>Dhammapada 122 (Pāpavagga)</td>
               <td>Māppamaññetha puññassa, na maṃ taṃ āgamissati;<br>Udabindunipātena, udakumbho pi pūrati;<br>Pūrati dhīro puññassa, thokathokampi ācinaṃ ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_122_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_122_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_122_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_122_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 123</strong></td>
               <td>Dhammapada 42 (Cittavagga)</td>
               <td>Diso disaṃ yaṃ taṃ kayirā, verī vā pana verinaṃ;<br>micchāpaṇihitaṃ cittaṃ, pāpiyo naṃ tato kare ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_123_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_123_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_123_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_123_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 124</strong></td>
               <td>Dhammapada 324 (Nāgavagga)</td>
               <td>Dhanapālako nāma kuñjaro, katukappabhedano dunnivārayo;<br>Daddho kabalaṃ na bhuñjati, sumarati nāgavanassa kuñjaro ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_124_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_124_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_124_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_124_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 125</strong></td>
               <td>Dhammapada 325 (Nāgavagga)</td>
               <td>Etaṃ nāgassa nāgena, īsādantassa hatthino;<br>sameti cittaṃ cittena, yaṃ eko ramati vane ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_125_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_125_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_125_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_125_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 126</strong></td>
               <td>Dhammapada 127 (Pāpavagga)</td>
               <td>Na antalikkhe na samuddamajjhe, <br>na pabbatānaṃ vivaraṃ pavissa;<br>Na vijjatī so jagatīpadesoko, <br>yatraṭṭhito mucceyya pāpakammā ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_126_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_126_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_126_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_126_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 127</strong></td>
               <td>Dhammapada 389–390 (Brāhmaṇavagga)</td>
               <td>Na brāhmaṇassa pahareyya, nāssa muñcetha brāhmaṇo; <br>dhī brāhmaṇassa hantāraṃ, tato dhī yassa muñcati; <br>na brāhmaṇassetadakiñci seyyo, yadā nisedho manaso piyehi; <br>yato yato hiṃsamano nivattati, tato tato sammati-c-eva dukkhaṃ ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_127_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_127_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_127_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_127_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 128</strong></td>
               <td>Dhammapada 150 (Jarāvagga)</td>
               <td>Aṭṭhinaṃ nagaraṃ kataṃ, maṃsalohitalepanaṃ;<br>jarā ca maccu ca, māno makkho ca ohito ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_128_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_128_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_128_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_128_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 129</strong></td>
               <td>Dhammapada 227–228 (Kodhavagga)</td>
               <td>Porāṇametaṃ Atula, netaṃ ajjatanāmiva;<br>nindanti tuṇhīmāsīnaṃ, nindanti bahubhāṇinaṃ;<br>mitabhāṇimpi nindanti, natthi loke anindito;<br>na cāhu na ca bhavissati, na cetarahi vijjati;<br>ekantaṃ nindito poso, ekantaṃ vā pasaṃsito ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_129_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_129_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_129_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_129_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 130</strong></td>
               <td>Dhammapada 83 (Paṇḍitavagga)</td>
               <td>Sabbattha ve sappurisā cajanti, na kāmakāmā lapayanti santo;<br>sukhena phuṭṭhā atha vā dukhena, noccāvacaṃ paṇḍitā dassayanti ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_130_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_130_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_130_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_130_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 131</strong></td>
               <td>Dhammapada 137–140 (Daṇḍavagga)</td>
               <td>Yo daṇḍena adandesu, appaduṭṭhesu dussati;<br>dasannamaññataraṃ ṭhānaṃ, khippameva nigacchati;<br>vedanaṃ pharusaṃ jāniṃ, sarīrassa ca bhedanaṃ;<br>garukaṃ vāpi ābādhaṃ, cittakkhepañca pāpuṇe;<br>rājato vā upassaggaṃ, abbhakkhānañca dāruṇaṃ;<br>parikkhayañca ñātīnaṃ, bhogānañca pabhaṅguraṃ;<br>atha vassa agārāni, aggi ḍahati pāvako;<br>kāyassa bhedā duppañño, nirayaṃ so upapajjatī ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_131_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_131_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_131_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_131_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 132</strong></td>
               <td>Dhammapada 15 (Yamakavagga)</td>
               <td>Idha socati pecca socati, pāpakārī ubhayattha socati;<br>so socati so vihaññati, disvā kamma-kiliṭṭham attano ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_132_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_132_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_132_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_132_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 133</strong></td>
               <td>Dhammapada 18 (Yamakavagga)</td>
               <td>Idha nandati pecca nandati, katapuñño ubhayattha nandati;<br>puññaṃ me katan ti nandati, bhiyyo nandati sugatiṃ gato ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_133_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_133_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_133_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_133_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 134</strong></td>
               <td>Dhammapada 164 (Attavagga)</td>
               <td>Yo sāsanaṃ arahatānaṃ, ariyānaṃ dhammajīvinaṃ,<br>paṭikkosati dummedho, diṭṭhiṃ nissāya pāpikaṃ;<br>phalāni attaghaññāya, kambūva phalatattano ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_134_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_134_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_134_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_134_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 135</strong></td>
               <td>Sutta Nipāta (Cundasutta)</td>
               <td>Pucchāmi muniṃ pahūtapaññaṃ, buddhaṃ dhammassāmiṃ vītataṇhaṃ;<br>dvipaduttamaṃ sārathīnaṃ pavaraṃ, kati loke samaṇā, tadingha brūhi ti.<br>Caturo samaṇā, na pañcam' atthi, te te āvikaromi sakkhipuṭṭho;<br>maggajino, maggadesako ca, magge jīvati, yo ca maggadūsī ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_135_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_135_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_135_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_135_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 136</strong></td>
               <td>Dhammapada 29 (Appamādavagga)</td>
               <td>Appamatto pamattesu, suttesu bahujāgaro;<br>abalassaṃva sīghasso, hitvā yāti sumedhaso ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_136_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_136_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_136_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_136_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 137</strong></td>
               <td>Dhammapada 338 (Taṇhāvagga)</td>
               <td>Yathāpi mūle anupaddave daḷhe, chinnopi rukkho punareva rūhati;<br>evampi taṇhānusaye anūhate, uppajjatī dukkhamidaṃ punappunaṃ ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_137_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_137_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_137_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_137_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 138</strong></td>
               <td>Dhammapada 216 (Piyavagga)</td>
               <td>Taṇhāya jāyatī soko, taṇhāya jāyatī bhayaṃ;<br>taṇhāya vippamuttassa, natthi soko kuto bhayaṃ ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_138_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_138_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_138_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_138_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 139</strong></td>
               <td>Dhammapada 40 (Cittavagga)</td>
               <td>Kumbhūpamaṃ kāyamimaṃ viditvā, nagarūpamaṃ cittamidaṃ ṭhapetvā;<br>yodhetha māraṃ paññāyudhena, jitañca rakkhe anivesano siyā ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_139_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_139_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_139_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_139_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 140</strong></td>
               <td>Dhammapada 315 (Nirayavagga)</td>
               <td>Nagaraṃ yathā paccantaṃ, guttaṃ santarabāhiraṃ;<br>evaṃ gopetha attānaṃ, khaṇo ve mā upaccagā;<br>khaṇātītā hi socanti, nirayamhi samappitā ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_140_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_140_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_140_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_140_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 141</strong></td>
               <td>Dhammapada 282 (Maggavagga)</td>
               <td>Yogā ve jāyatī bhūri, ayogā bhūrisaṅkhayo;<br>etaṃ dvedhāpathaṃ ñatvā, bhavāya vibhavāya ca;<br>tathāttānaṃ niveseyya, yathā bhūri pavaḍḍhati ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_141_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_141_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_141_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_141_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 142</strong></td>
               <td>Dhammapada 217 (Piyavagga)</td>
               <td>Sīladassanasampannaṃ, dhammaṭṭhaṃ saccavedinaṃ;<br>attano kamma kubbānaṃ, taṃ jano kurute piyaṃ ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_142_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_142_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_142_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_142_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 143</strong></td>
               <td>Dhammapada 239 (Malāvagga)</td>
               <td>Anupubbena medhāvī, thokathokaṃ khaṇe khaṇe;<br>kammāro rajatasseva, niddhame malam attano ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_143_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_143_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_143_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_143_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 144</strong></td>
               <td>Udāna 5.3 (Soṇavagga, Udānapāḷi)</td>
               <td>Cakkhumā visamānīva, vijjamāne parakkame;<br>paṇḍito jīvalokasmiṃ, pāpāni parivajjaye ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_144_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_144_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_144_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_144_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 145</strong></td>
               <td>Dhammapada 33–34 (Cittavagga)</td>
               <td>Phandanaṃ capalaṃ cittaṃ, durakkhaṃ dunnivārayaṃ;<br>ujuṃ karoti medhāvī, usukāro'va tejanaṃ;<br>vārijo'va thale khitto, okamokataubbhato;<br>pariphandat' idaṃ cittaṃ, māradheyyaṃ pahātave ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_145_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_145_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_145_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_145_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 146</strong></td>
               <td>Dhammapada 240 (Malāvagga)</td>
               <td>Attanāva kataṃ pāpaṃ, attajaṃ attasambhavaṃ;<br>abhimatthati dummedhaṃ, vajiraṃ vasamayaṃ maṇi ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_146_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_146_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_146_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_146_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 147</strong></td>
               <td>Dhammapada 281 (Maggavagga)</td>
               <td>Vācānurakkhī manasā susaṁvuto, kāyena ca akusalaṃ na kayirā;<br>ete tayo kammapathe visodhaye, ārādhaye maggaṃ isippaveditaṃ ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_147_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_147_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_147_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_147_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 148</strong></td>
               <td>Dhammapada 178 (Lokavagga)</td>
               <td>Pathavyā ekarajjena, saggassa gamanena vā;<br>sabbalokādhipaccena, sotāpattiphalaṃ varaṃ ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_148_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_148_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_148_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_148_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 149</strong></td>
               <td>Dhammapada 136 (Pāpavagga)</td>
               <td>Athāpi pāpāni kammāni, karaṃ bālo na bujjhati;<br>sehi kammehi dummedho, aggidaḍḍho 'va tappati ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_149_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_149_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_149_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_149_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 150</strong></td>
               <td>Dhammapada 1 (Yamakavagga)</td>
               <td>Manopubbaṅgamā dhammā, manosetṭhā manomayā;<br>manasā ce pasannena, bhāsati vā karoti vā;<br>tato naṃ sukham anveti, chāyā va anapāyinī ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_150_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_150_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_150_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_150_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 151</strong></td>
               <td>Dhammapada 197–199 (Sukhavagga)</td>
               <td>Susukhaṃ vata jīvāma, verinesu averino;<br>verinesu manussesu, viharāma averino;<br>susukhaṃ vata jīvāma, āturesu anāturā;<br>āturesu manussesu, viharāma anāturā;<br>susukhaṃ vata jīvāma, ussukesu anussukā;<br>ussukesu manussesu, viharāma anussukā ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_151_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_151_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_151_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_151_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 152</strong></td>
               <td>Dhammapada 395 (Brāhmaṇavagga)</td>
               <td>Yo ca vassasataṃ jīve, dussīlo asamāhito;<br>ekāhaṃ jīvitaṃ seyyo, sīlavato jhāyino ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_152_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_152_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_152_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_152_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 153</strong></td>
               <td>Dhammapada 296–300 (Pakīṇṇakavagga)</td>
               <td>Suppabuddhaṃ pabujjhanti, sadā gotamasāvakā;<br>yesaṃ divā ca ratto ca, niccaṃ buddhagatā sati;<br>suppabuddhaṃ pabujjhanti, sadā gotamasāvakā;<br>yesaṃ divā ca ratto ca, niccaṃ dhammagatā sati;<br>suppabuddhaṃ pabujjhanti, sadā gotamasāvakā;<br>yesaṃ divā ca ratto ca, niccaṃ saṅghagatā sati;<br>suppabuddhaṃ pabujjhanti, sadā gotamasāvakā;<br>yesaṃ divā ca ratto ca, ahiṃsāya rato mano;<br>suppabuddhaṃ pabujjhanti, sadā gotamasāvakā;<br>yesaṃ divā ca ratto ca, bhāvanāya rato mano ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_153_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_153_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_153_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_153_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 154</strong></td>
               <td>Dhammapada 11–12 (Yamakavagga)</td>
               <td>Asāre sāramatino, sāre ca asāradassino;<br>te sāraṃ nādhigacchanti, micchāsaṅkappagocarā;<br>sārañca sārato ñatvā, asārañca asārato;<br>te sāraṃ adhigacchanti, sammāsaṅkappagocarā ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_154_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_154_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_154_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_154_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 155</strong></td>
               <td>Dhammapada 100 (Sahassavagga)</td>
               <td>Sahassamapi ce gāthā, anatthapadasaṃhitā;<br>ekaṃ gāthāpadaṃ seyyo, yaṃ sutvā upasammati ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_155_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_155_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_155_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_155_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 156</strong></td>
               <td>Dhammapada 126 (Pāpavagga)</td>
               <td>Gabbhameke uppajjanti, nirayaṃ pāpakammino;<br>saggaṃ sugatino yanti, parinibbanti anāsavā ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_156_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_156_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_156_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_156_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 157</strong></td>
               <td>Dhammapada 46 (Pupphavagga)</td>
               <td>Pheṇūpamaṃ kāyamimaṃ viditvā, marīcidhammaṃ abhisambudhāno;<br>chetvāna mārassa papupphakāni, adassanaṃ maccurājassa gacche ti.</td>
-              <td><a class="doc-btn" href="docx/sermon_157_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_157_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_157_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_157_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 158</strong></td>
               <td>Dhammapada 204 (Sukhavagga)</td>
               <td>Ārogāparamā lābhā, santuṭṭhiparamaṃ dhanaṃ;<br>vissāsaparamā ñātī, nibbānaparamaṃ sukhaṃ.</td>
-              <td><a class="doc-btn" href="docx/sermon_158_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_158_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_158_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_158_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 159</strong></td>
               <td>Dhammapada 51–52 (Pupphavagga)</td>
               <td>Yathāpi ruciraṃ pupphaṃ, vaṇṇavantaṃ agandhakaṃ;<br>evaṃ subhāsitā vācā, aphalā hoti akubbato;<br>yathāpi ruciraṃ pupphaṃ, vaṇṇavantaṃ sagandhakaṃ;<br>evaṃ subhāsitā vācā, saphalā hoti pakkubbato.</td>
-              <td><a class="doc-btn" href="docx/sermon_159_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_159_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_159_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_159_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 160</strong></td>
               <td>Dhammapada 9–10 (Yamakavagga)</td>
               <td>*Anikkasāvo kāsāvaṃ, yo vatthaṃ paridahissati,*<br>*Apeto damasaccena, na so kāsāvamarahati.*<br>*Yo ca vantakasāvassa, sīlesu susamāhito,*<br>*Upeto damasaccena, sa ve kāsāvamarahati.*</td>
-              <td><a class="doc-btn" href="docx/sermon_160_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_160_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_160_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_160_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 161</strong></td>
               <td>Dhammapada 404 (Brāhmaṇavagga)</td>
               <td>Asaṃsaṭṭhaṃ gahaṭṭhehi, anāgārehi cūbhayaṃ;<br>anokasāriṃ appicchaṃ, taṃ ahaṃ brūmi brāhmaṇaṃ.</td>
-              <td><a class="doc-btn" href="docx/sermon_161_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_161_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_161_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_161_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 162</strong></td>
               <td>Dhammapada 414 (Brāhmaṇavagga)</td>
               <td>Ādīnavaṃ loke disvā, dhammaṃ ñatvā nirūpadhiṃ;<br>na ramati pāpe, pāpe na ramatī suci.</td>
-              <td><a class="doc-btn" href="docx/sermon_162_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_162_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_162_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_162_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 163</strong></td>
               <td>Vimānavatthu 53 (Chattamāṇavakavimānavatthu)</td>
               <td>Yo vadataṃ pavaro manujesu, sakyamunī bhagavā katakicco;<br>pāragato balavīriyasamaṅgī, taṃ sugataṃ saraṇamupemi;<br>rāgavirāgamanejamasokaṃ, dhammamasaṅkhatamappaṭikūlaṃ;<br>madhuramimaṃ paguṇaṃ suvibhattaṃ, dhammamimaṃ saraṇamupemi;<br>yañca dinnaṃ mahapphalamāhu, catūsu sucīsu purisayugesu;<br>puggala-dhammadasā te, saṅghamimaṃ saraṇamupemi.</td>
-              <td><a class="doc-btn" href="docx/sermon_163_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_163_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_163_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_163_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 164</strong></td>
               <td>Dhammapada 31 (Appamādavagga)</td>
               <td>Appamādarato bhikkhu, pamāde bhayadassivā;<br>aṇuṃ thūlaṃ dahaṃ, aggīva gacchati.</td>
-              <td><a class="doc-btn" href="docx/sermon_164_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_164_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_164_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_164_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 165</strong></td>
               <td>Dhammapada 125 (Bālavagga)</td>
               <td>Yo appaduṭṭhassa narassa dussati,<br>suddhassa posassa anaṅgaṇassa;<br>tameva bālaṃ pacceti pāpaṃ,<br>sukhumo rajo paṭivātaṃva khitto.</td>
-              <td><a class="doc-btn" href="docx/sermon_165_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_165_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_165_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_165_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 166</strong></td>
               <td>Dhammapada 280 (Maggavagga)</td>
               <td>Uṭṭhānakālamhi anutthahāno,<br>yuvā balī ālasyaṃ upeto;<br>saṃsannasaṅkappamano kusīto,<br>paññāya maggaṃ alaso na vindati.</td>
-              <td><a class="doc-btn" href="docx/sermon_166_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_166_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_166_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_166_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 167</strong></td>
               <td>Dhammapada 235–236 (Jarāvagga)</td>
               <td>Pāṇḍupalāsova dānisi, yamapurisāpi ca te upaṭṭhitā;<br>uyyogamukhe ca tiṭṭhasi, pātheyyampi ca te na vijjati;<br>so karohi dīpamattano, khippaṃ vāyama paṇḍito bhava;<br>niddhantamalo anaṅgaṇo, dibbaṃ ariyabhūmimehisi.</td>
-              <td><a class="doc-btn" href="docx/sermon_167_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_167_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_167_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_167_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 168</strong></td>
               <td>Udāna 6.4 (Jaccandhavagga)</td>
               <td>Imesu kira sajjanti, eke samaṇabrāhmaṇā;<br>viggayha naṃ vivadanti, janā ekāṅgadassino.</td>
-              <td><a class="doc-btn" href="docx/sermon_168_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_168_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_168_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_168_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 169</strong></td>
               <td>Dhammapada 202 (Sukhavagga)</td>
               <td>Ayoghana-hatasseva, jalato jātavedaso;<br>anupubbūpasantassa, yathā na ñāyate gati;<br>evaṃ sammā vimuttānaṃ, kāmabandhoghatārinaṃ;<br>pattānaṃ acalaṃ sukhaṃ, gati na paññāpayati.</td>
-              <td><a class="doc-btn" href="docx/sermon_169_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_169_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_169_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_169_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
             <tr>
               <td><strong>Pahankanuwa Sermon 170</strong></td>
               <td>Dhammapada 147 (Cittavagga)</td>
               <td>Passa cittakataṃ bimbaṃ, arukāyaṃ samussitaṃ;<br>āturaṃ bahusaṅkappaṃ, yassa natthi dhuvaṃ ṭhiti.</td>
-              <td><a class="doc-btn" href="docx/sermon_170_ENGLISH.docx" target="_blank">📄 Open DOCX Document</a></td>
+              <td><a class="doc-btn" href="docx/sermon_170_ENGLISH.docx" target="_blank">📄 DOCX</a> <a class="doc-btn" href="pdf/sermon_170_ENGLISH.pdf" target="_blank">📕 PDF</a> <a class="doc-btn" href="epub/sermon_170_ENGLISH.epub" target="_blank">📘 EPUB</a></td>
             </tr>
             
           </tbody>
@@ -1475,7 +1512,7 @@ footer {
   
   <footer>
     <p style="margin-bottom: 1rem;">
-      <a class="zip-btn" href="Pahankanuwa_English_Translations.zip" download>
+      <a class="btn" href="pahankanuwa_sermons_all_formats.zip" download>
         📦 Download All Sermons (.ZIP Archive)
       </a>
     </p>
@@ -1489,7 +1526,7 @@ function filterData() {
     var input = document.getElementById('searchInput');
     var filter = input.value.toLowerCase();
     
-    var rows = document.querySelectorAll('.data-table tbody tr');
+    var rows = document.querySelectorAll('.data-table tbody tr, .download-item');
     rows.forEach(function(row) {
         var text = row.innerText.toLowerCase();
         row.style.display = text.includes(filter) ? '' : 'none';

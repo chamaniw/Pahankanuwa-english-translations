@@ -41,12 +41,10 @@ The project is intended as a freely accessible Dhamma study resource.
 The online knowledge base includes:
 
 - Searchable sermon index
-- Subject index
-- Sutta reference index
 - Citation index
 - Direct links to translation documents
 - Collection statistics
-- Full-text search across the knowledge base
+
 
 Visit:
 
@@ -61,29 +59,9 @@ https://chamaniw.github.io/Pahankanuwa-english-translations/
 | Sermons | 170 |
 | Subjects | 166 |
 | Citations | 2815 |
-| Sutta Sources | 14 |
 
 ---
 
-## Repository Structure
-
-```text
-docs/
-├── index.html
-├── statistics.html
-├── search.js
-├── search_index.json
-├── style.css
-├── sermons/
-├── subjects/
-├── suttas/
-├── citations/
-└── images/
-
-docx/
-├── sermon_001_ENGLISH.docx
-├── sermon_002_ENGLISH.docx
-└── ...
 
 generate_nanananda_website.py
 Pahankanuwa_English_Translations.zip
@@ -102,6 +80,19 @@ https://chamaniw.github.io/Pahankanuwa-english-translations/
 
 ### Option 2 – Download Complete Collection
 
+---
+
+## Download Complete Sermon Collections
+
+* [Download Complete Collection (DOCX)](Pahankanuwa_Sermons_Complete.docx)
+* [Download Complete Collection (PDF)](Pahankanuwa_Sermons_Complete.pdf)
+* [Download Complete Collection (EPUB)](Pahankanuwa_Sermons_Complete.epub)
+* [Download All Sermons Archive (ZIP)](pahankanuwa_sermons_all_formats.zip)
+
+### Browse Individual Sermon Formats
+* Browse all [PDF Sermons (001–170)](pdf/)
+* Browse all [EPUB Sermons (001–170)](epub/)
+* Browse all [DOCX Sermons (001–170)](docs/docx/)
 Download all currently available English translations as a single ZIP archive:
 
 [Download Complete Translation Collection (ZIP)](https://github.com/chamaniw/Pahankanuwa-english-translations/raw/refs/heads/main/Pahankanuwa_English_Translations.zip)
