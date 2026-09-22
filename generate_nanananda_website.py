@@ -322,6 +322,20 @@ footer {
     border-top: 1px solid var(--border-color);
     margin-top: 3rem;
 }
+.zip-btn {
+    display: inline-block;
+    background-color: var(--header-bg);
+    color: #ffffff !important;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: background-color 0.2s;
+}
+.zip-btn:hover {
+    background-color: #5c0000;
+}
 """
 
 SEARCH_JS = """
@@ -339,12 +353,22 @@ function filterData() {
 </script>
 """
 
+FOOTER_HTML = """
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="zip-btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+"""
+
 
 # ==========================================
 # HEADER TEMPLATE (CONCEPTS & SUTTAS REMOVED)
 # ==========================================
 def build_header_html(active_tab="home"):
-    # Concepts and Suttas navigation tabs removed as requested
     tabs = [
         ("home", "Home", "index.html"),
         ("sermons", "Sermons", "sermons.html"),
@@ -422,9 +446,7 @@ def generate_index_page(metrics):
 
   </main>
 
-  <footer>
-    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
-  </footer>
+  {FOOTER_HTML}
 
   {SEARCH_JS}
 
@@ -486,9 +508,7 @@ def generate_data_subpage(filename, tab_key, page_title, description, df_data):
     {table_html}
   </main>
 
-  <footer>
-    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
-  </footer>
+  {FOOTER_HTML}
 
   {SEARCH_JS}
 
@@ -509,7 +529,6 @@ def generate_statistics_page(metrics, datasets):
     """
     sermons_df = datasets.get("sermons", pd.DataFrame())
     
-    # Generate interactive sermon links table directly inside statistics view
     sermon_rows_list = []
     if not sermons_df.empty:
         for idx, row in sermons_df.iterrows():
@@ -587,9 +606,7 @@ def generate_statistics_page(metrics, datasets):
 
   </main>
 
-  <footer>
-    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
-  </footer>
+  {FOOTER_HTML}
 
   {SEARCH_JS}
 
