@@ -61,40 +61,15 @@ https://chamaniw.github.io/Pahankanuwa-english-translations/
 
 ---
 
-## Collection Statistics
+## Downloads
 
-| Resource | Count |
-|----------|--------:|
-| Sermons | 170 |
-| Subjects | 166 |
-| Citations | 2815 |
+### 📖 Read Online
 
----
+🌐 [Browse English Translation Knowledge Base](https://chamaniw.github.io/Pahankanuwa-english-translations/)
 
+🇱🇰 [Browse Sinhala Pahankanuwa Collection](https://dharmapress.github.io/)
 
----
-
-## Download Options
-
-### Option 1 – Browse Online
-
-Use the searchable online knowledge base:
-
-[Browse English Translation Knowledge Base](https://chamaniw.github.io/Pahankanuwa-english-translations/)
-
-### Option 2 – Browse Sinhala Pahankanuwa Collection
-
-The original Sinhala sermon collection is available here:
-
-[Browse Sinhala Pahankanuwa Collection](https://dharmapress.github.io/)
-
-### Option 3 – Download Complete Translation Collection
-
-Download all currently available English translations as a single ZIP archive:
-
-[Download Complete Translation Collection (ZIP)](https://github.com/chamaniw/Pahankanuwa-english-translations/raw/refs/heads/main/Pahankanuwa_English_Translations.zip)
-
-### Option 4 – Download Complete Sermon Collections
+### 📥 Download Complete Collections
 
 📄 Pahankanuwa_Sermons_Complete.docx
 
@@ -104,19 +79,17 @@ Download all currently available English translations as a single ZIP archive:
 
 🗜️ [English Translation Collection (ZIP)](Pahankanuwa_English_Translations.zip)
 
-### Browse Individual Sermon Formats
+### 📂 Browse Individual Sermons
 
-- [Browse PDF Sermons (001–170)](pdf/)
-- [Browse EPUB Sermons (001–170)](epub/)
-- [Browse DOCX Sermons (001–170)](docs/docx/)
+📕 [Browse PDF Sermons (001–170)](pdf/)
 
-### Option 5 – Archive Backup
+📚 [Browse EPUB Sermons (001–170)](epub/)
 
-Access an archival copy via Internet Archive:
+📄 [Browse DOCX Sermons (001–170)](docs/docx/)
 
-[View Archive.org Backup](https://archive.org/details/pahankanuwa-english-translations-main)
+### 🗄️ Archive Backup
 
----
+📚 [View Archive.org Backup](https://archive.org/details/pahankanuwa-english-translations-main)---
 
 
 ## Disclaimer
