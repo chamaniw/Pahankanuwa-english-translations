@@ -1,7 +1,8 @@
 # Pahankanuwa English Translations
 
-![Pahankanuwa Knowledge Base](docs/images/Homepage.png)
+[![Pahankanuwa Knowledge Base](docs/images/Homepage.png)](https://chamaniw.github.io/Pahankanuwa-english-translations/)
 
+**Click the image above to open the online knowledge base.**
 > 📚 170 Sermons • 166 Subjects • 2815 Citations • 14 Sutta Sources
 
 ## English Translations of the Pahankanuwa Sermons of Ven. Katukurunde Nanananda Thero
