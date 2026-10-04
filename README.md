@@ -71,11 +71,11 @@ https://chamaniw.github.io/Pahankanuwa-english-translations/
 
 ### 📥 Download Complete Collections
 
-📄 Pahankanuwa_Sermons_Complete.docx
+📄 docs/Pahankanuwa_Sermons_Complete.docx
 
-📕 Pahankanuwa_Sermons_Complete.pdf
+📕 docs/Pahankanuwa_Sermons_Complete.pdf
 
-📚 Pahankanuwa_Sermons_Complete.epub
+📚 docs/Pahankanuwa_Sermons_Complete.epub
 
 🗜️ [English Translation Collection (ZIP)](Pahankanuwa_English_Translations.zip)
 
