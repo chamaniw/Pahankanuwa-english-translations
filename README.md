@@ -69,13 +69,13 @@ https://chamaniw.github.io/Pahankanuwa-english-translations/
 
 🇱🇰 [Browse Sinhala Pahankanuwa Collection](https://dharmapress.github.io/)
 
-### 📥 Download Complete Collections
+## 📥 Download Complete Collections
 
-📄 docs/Pahankanuwa_Sermons_Complete.docx
+📄 [Complete DOCX](docs/Pahankanuwa_Sermons_Complete.docx)
 
-📕 docs/Pahankanuwa_Sermons_Complete.pdf
+📕 [Complete PDF](docs/Pahankanuwa_Sermons_Complete.pdf)
 
-📚 docs/Pahankanuwa_Sermons_Complete.epub
+📚 [Complete Epub](docs/Pahankanuwa_Sermons_Complete.epub)
 
 🗜️ [English Translation Collection (ZIP)](Pahankanuwa_English_Translations.zip)
 
