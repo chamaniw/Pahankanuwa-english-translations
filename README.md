@@ -96,10 +96,13 @@ Download all currently available English translations as a single ZIP archive:
 
 ### Option 4 – Download Complete Sermon Collections
 
-- Pahankanuwa_Sermons_Complete.docx
-- Pahankanuwa_Sermons_Complete.pdf
-- Pahankanuwa_Sermons_Complete.epub
-- pahankanuwa_sermons_all_formats.zip
+📄 Pahankanuwa_Sermons_Complete.docx
+
+📕 Pahankanuwa_Sermons_Complete.pdf
+
+📚 Pahankanuwa_Sermons_Complete.epub
+
+🗜️ [English Translation Collection (ZIP)](Pahankanuwa_English_Translations.zip)
 
 ### Browse Individual Sermon Formats
 
