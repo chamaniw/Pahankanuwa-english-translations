@@ -1,6 +1,6 @@
 # Pahankanuwa English Translations
 
-docs/images/Homepage.png
+![Pahankanuwa Knowledge Base](docs/images/Homepage.png)
 
 > 📚 170 Sermons • 166 Subjects • 2815 Citations • 14 Sutta Sources
 
@@ -17,6 +17,15 @@ docs/images/Homepage.png
 ### 📚 Archive Backup
 
 [View Archive.org Backup](https://archive.org/details/pahankanuwa-english-translations-main)
+
+---
+## Related Resources
+
+### Sinhala Pahankanuwa Collection
+
+Original Sinhala editions and study resources:
+
+[Dharmapress Sinhala Collection](https://dharmapress.github.io/)
 
 ---
 
@@ -63,11 +72,6 @@ https://chamaniw.github.io/Pahankanuwa-english-translations/
 ---
 
 
-generate_nanananda_website.py
-Pahankanuwa_English_Translations.zip
-README.md
-```
-
 ---
 
 ## Download Options
@@ -76,34 +80,41 @@ README.md
 
 Use the searchable online knowledge base:
 
-https://chamaniw.github.io/Pahankanuwa-english-translations/
+[Browse English Translation Knowledge Base](https://chamaniw.github.io/Pahankanuwa-english-translations/)
 
-### Option 2 – Download Complete Collection
+### Option 2 – Browse Sinhala Pahankanuwa Collection
 
----
+The original Sinhala sermon collection is available here:
 
-## Download Complete Sermon Collections
+[Browse Sinhala Pahankanuwa Collection](https://dharmapress.github.io/)
 
-* [Download Complete Collection (DOCX)](Pahankanuwa_Sermons_Complete.docx)
-* [Download Complete Collection (PDF)](Pahankanuwa_Sermons_Complete.pdf)
-* [Download Complete Collection (EPUB)](Pahankanuwa_Sermons_Complete.epub)
-* [Download All Sermons Archive (ZIP)](pahankanuwa_sermons_all_formats.zip)
+### Option 3 – Download Complete Translation Collection
 
-### Browse Individual Sermon Formats
-* Browse all [PDF Sermons (001–170)](pdf/)
-* Browse all [EPUB Sermons (001–170)](epub/)
-* Browse all [DOCX Sermons (001–170)](docs/docx/)
 Download all currently available English translations as a single ZIP archive:
 
 [Download Complete Translation Collection (ZIP)](https://github.com/chamaniw/Pahankanuwa-english-translations/raw/refs/heads/main/Pahankanuwa_English_Translations.zip)
 
-### Option 3 – Archive Backup
+### Option 4 – Download Complete Sermon Collections
+
+- Pahankanuwa_Sermons_Complete.docx
+- Pahankanuwa_Sermons_Complete.pdf
+- Pahankanuwa_Sermons_Complete.epub
+- pahankanuwa_sermons_all_formats.zip
+
+### Browse Individual Sermon Formats
+
+- [Browse PDF Sermons (001–170)](pdf/)
+- [Browse EPUB Sermons (001–170)](epub/)
+- [Browse DOCX Sermons (001–170)](docs/docx/)
+
+### Option 5 – Archive Backup
 
 Access an archival copy via Internet Archive:
 
-https://archive.org/details/pahankanuwa-english-translations-main
+[View Archive.org Backup](https://archive.org/details/pahankanuwa-english-translations-main)
 
 ---
+
 
 ## Disclaimer
 
@@ -114,7 +125,3 @@ They are not intended for commercial use.
 All credit for the original sermons belongs to Ven. Katukurunde Nanananda Thero and the original publishers.
 
 If you are a copyright holder and have concerns regarding distribution of these materials, please contact the repository maintainer.
-
----
-
-#
