@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Audio Recordings | Ven. Katukurunde Nanananda Thero</title>
+<style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+
+<body>
+
+
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html" class="active">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+<main class="homepage-content">
+
+<section class="hero">
+
+<h1>Audio Recordings</h1>
+
+<p>
+Listen to English audio recordings of Venerable Katukurunde Nanananda Thero's Dhamma teachings.
+New recordings will be added progressively as they become available.
+</p>
+
+<!-- Playlist 1: Paticca Samuppada -->
+<h2 style="color: var(--primary-color); margin-top: 1.5rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">
+  Paticca Samuppada Series
+</h2>
+<p style="margin-bottom: 1.5rem;">Special sermon series focusing on Dependent Arising (Paticca Samuppada).</p>
+
+<p style='color: var(--text-muted); font-style: italic;'>No recordings currently available in this series.</p>
+
+<!-- Playlist 2: Pahankanuwa Sermons -->
+<h2 style="color: var(--primary-color); margin-top: 2.5rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">
+  Pahankanuwa Sermons
+</h2>
+<p style="margin-bottom: 1.5rem;">English audio narrations of the Pahankanuwa sermon series.</p>
+
+
+<div class="download-item">
+  <div class="download-info">
+    <h4>🎧 Pahankanuwa Sermon #023</h4>
+    <p>English Audio Narration (Pahankanuwa_023.mp3)</p>
+  </div>
+  <div class="download-links">
+    <a href="audio/Pahankanuwa_023.mp3" class="btn btn-secondary" download>Download MP3</a>
+  </div>
+</div>
+<audio controls style="width:100%; margin-top: 0.5rem; margin-bottom: 1.5rem;">
+  <source src="audio/Pahankanuwa_023.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+
+<h2 style="margin-top:2.5rem;">Future Recordings</h2>
+
+<p>
+Additional recordings in both series will be published as they become available.
+</p>
+
+</section>
+
+</main>
+
+
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

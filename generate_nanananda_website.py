@@ -12,17 +12,20 @@ DOCS_DIR = BASE_DIR / "docs"
 DOCS_DOCX_DIR = DOCS_DIR / "docx"
 DOCS_PDF_DIR = DOCS_DIR / "pdf"
 DOCS_EPUB_DIR = DOCS_DIR / "epub"
+DOCS_AUDIO_DIR = DOCS_DIR / "audio"
 
 # Ensure all destination output directories exist
 DOCS_DIR.mkdir(parents=True, exist_ok=True)
 DOCS_DOCX_DIR.mkdir(parents=True, exist_ok=True)
 DOCS_PDF_DIR.mkdir(parents=True, exist_ok=True)
 DOCS_EPUB_DIR.mkdir(parents=True, exist_ok=True)
+DOCS_AUDIO_DIR.mkdir(parents=True, exist_ok=True)
 
 # Source asset folders
 SRC_DOCX_DIR = BASE_DIR / "docx"
 SRC_PDF_DIR = BASE_DIR / "pdf"
 SRC_EPUB_DIR = BASE_DIR / "epub"
+SRC_AUDIO_DIR = BASE_DIR / "audio"
 
 # Complete collection file names
 DOCX_COMPLETE = "Pahankanuwa_Sermons_Complete.docx"
@@ -35,24 +38,16 @@ ZIP_FILE = "Pahankanuwa_English_Translations.zip"
 # HELPER FUNCTIONS
 # ==========================================
 def parse_and_link_sermons(val):
-    """
-    Converts sermon numbers or string IDs into interactive DOCX link buttons.
-    """
     if pd.isna(val) or not str(val).strip() or str(val).lower() == "nan":
         return ""
-    
     val_str = str(val).strip()
-    
-    # Single numeric sermon string (e.g., "1", "001", "150")
     if val_str.isdigit() and len(val_str) <= 3:
         s_num = val_str.zfill(3)
         doc_filename = f"sermon_{s_num}_ENGLISH.docx"
         return f'<a class="doc-btn" href="docx/{doc_filename}" target="_blank">📄 Sermon {s_num}</a>'
 
-    # Multi-sermon references separated by comma or semicolon
     items = re.split(r'[,;]', val_str)
     links = []
-    
     for item in items:
         item_str = item.strip()
         match = re.search(r'(\d{1,3})', item_str)
@@ -63,17 +58,12 @@ def parse_and_link_sermons(val):
         else:
             if item_str:
                 links.append(item_str)
-                
     return " ".join(links) if links else val_str
 
 
 def find_sermon_file(s_num, format_ext, search_dir):
-    """
-    Finds actual file matching sermon number (e.g., handles sermon_001.pdf or sermon_001_ENGLISH.pdf).
-    """
     if not search_dir.exists():
         return None
-    
     pattern = re.compile(rf".*{s_num}.*\.{format_ext}$", re.IGNORECASE)
     for file in search_dir.iterdir():
         if file.is_file() and pattern.match(file.name):
@@ -95,7 +85,6 @@ def load_and_process_excel_data():
         "statistics": pd.DataFrame()
     }
 
-    # 1. Load Sermons
     if scratch_file.exists():
         df_scratch = pd.read_excel(scratch_file)
         sermons_list = []
@@ -108,20 +97,16 @@ def load_and_process_excel_data():
             s_num = num_match.group(1).zfill(3) if num_match else "000"
             clean_title = f"Pahankanuwa Sermon {s_num}"
 
-            # Dynamic link check against actual files in system folders
             docx_file = find_sermon_file(s_num, "docx", SRC_DOCX_DIR) or f"sermon_{s_num}_ENGLISH.docx"
             pdf_file = find_sermon_file(s_num, "pdf", SRC_PDF_DIR) or f"sermon_{s_num}.pdf"
             epub_file = find_sermon_file(s_num, "epub", SRC_EPUB_DIR) or f"sermon_{s_num}.epub"
 
-            # Para_7 for Opening Passage Excerpt
             para_7 = str(row['Para_7']).strip() if 'Para_7' in row and pd.notna(row['Para_7']) else ""
             excerpt = para_7 if para_7 and para_7.lower() != 'nan' else "No excerpt available"
 
-            # Para_9 for Likely Source
             para_9 = str(row['Para_9']).strip() if 'Para_9' in row and pd.notna(row['Para_9']) else ""
             likely_source = para_9 if para_9 and para_9.lower() != 'nan' else "Unspecified Canonical Source"
 
-            # Combined Document Link buttons
             doc_links = (
                 f'<a class="doc-btn" href="docx/{docx_file}" target="_blank">📄 DOCX</a> '
                 f'<a class="doc-btn" href="pdf/{pdf_file}" target="_blank">📕 PDF</a> '
@@ -136,7 +121,6 @@ def load_and_process_excel_data():
             })
         datasets["sermons"] = pd.DataFrame(sermons_list)
 
-    # 2. Load Citations
     if idx_file.exists():
         xls_idx = pd.ExcelFile(idx_file)
         if 'Pali_Citations' in xls_idx.sheet_names:
@@ -144,7 +128,6 @@ def load_and_process_excel_data():
             df_cit['Sermon Link'] = df_cit['Sermon'].apply(parse_and_link_sermons)
             datasets["citations"] = df_cit[['Citation', 'Sermon Link', 'Type', 'Likely Source']].drop_duplicates()
 
-    # 3. Load Statistics
     if kb_file.exists():
         xls_kb = pd.ExcelFile(kb_file)
         if 'Statistics' in xls_kb.sheet_names:
@@ -441,14 +424,12 @@ FOOTER_HTML = f"""
 """
 
 
-# ==========================================
-# HEADER TEMPLATE
-# ==========================================
 def build_header_html(active_tab="home"):
     tabs = [
         ("home", "Home", "index.html"),
         ("sermons", "Sermons", "sermons.html"),
         ("downloads", "Downloads", "downloads.html"),
+        ("audio", "Audio", "audio.html"),
         ("citations", "Citations", "citations.html"),
         ("statistics", "Statistics", "statistics.html"),
     ]
@@ -474,7 +455,7 @@ def build_header_html(active_tab="home"):
 
 
 # ==========================================
-# HOMEPAGE GENERATOR
+# PAGE GENERATORS
 # ==========================================
 def generate_index_page(metrics):
     index_html = f"""<!DOCTYPE html>
@@ -510,33 +491,14 @@ def generate_index_page(metrics):
       </div>
 
       <p>Welcome to the structured Dhamma Knowledge Base, cataloging and indexing the English translations of the Pahankanuwa Sermons delivered by Most Venerable Katukurunde Nanananda Thero. This portal provides direct cross-references between translated sermon passages, Dhamma subjects, and canonical Sutta citations.</p>
-      
-      <p>The translations presented in this knowledge base were prepared from digitised editions of the Pahankanuwa sermon series. Original sermon texts were derived from OCR-processed versions of publicly available PDF editions and translated through a collaborative workflow involving OCR correction, AI-assisted translation, and human review and proofreading. The project is intended as a freely accessible resource for Dhamma study and reference.</p>
 
-	<div style="
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    border-left: 4px solid var(--header-bg);
-    background-color: #fcfaf7;
-    border-radius: 6px;
-">
-    <h3 style="margin-bottom:0.5rem; color: var(--header-bg);">
-        Sinhala Pahankanuwa Collection
-    </h3>
+      <div style="margin-top: 1.5rem; margin-bottom: 1.5rem; padding: 1rem; border-left: 4px solid var(--header-bg); background-color: #fcfaf7; border-radius: 6px;">
+        <h3 style="margin-bottom:0.5rem; color: var(--header-bg);">Sinhala Pahankanuwa Collection</h3>
+        <p style="margin-bottom:0.75rem;">Original Sinhala editions and study resources.</p>
+        <a href="https://dharmapress.github.io/" class="btn btn-secondary" target="_blank">Visit Dharmapress Sinhala Collection</a>
+      </div>
 
-    <p style="margin-bottom:0.75rem;">
-        Original Sinhala editions and study resources.
-    </p>
-
-    <a href="https://dharmapress.github.io/"
-       class="btn btn-secondary"
-       target="_blank">
-       Visit Dharmapress Sinhala Collection
-    </a>
-</div>
-
-      <p class="disclaimer"><strong>Disclaimer:</strong> These translations are provided for educational and Dhamma-study purposes only and are not intended for commercial use. All credit for the original sermons belongs to Ven. Katukurunde Nanananda Thero and the original publishers. If you are a copyright holder and have concerns regarding the distribution of these materials, please contact the repository maintainer.</p>
+      <p class="disclaimer"><strong>Disclaimer:</strong> These translations are provided for educational and Dhamma-study purposes only and are not intended for commercial use.</p>
     </section>
 
     <section class="stats-grid">
@@ -561,7 +523,6 @@ def generate_index_page(metrics):
   </main>
 
   {FOOTER_HTML}
-
   {SEARCH_JS}
 
 </body>
@@ -569,12 +530,8 @@ def generate_index_page(metrics):
 """
     with open(DOCS_DIR / "index.html", "w", encoding="utf-8") as f:
         f.write(index_html)
-    print("Generated: docs/index.html")
 
 
-# ==========================================
-# DOWNLOADS PAGE GENERATOR
-# ==========================================
 def generate_downloads_page(metrics):
     individual_items = []
     for i in range(1, 171):
@@ -621,7 +578,6 @@ def generate_downloads_page(metrics):
     </section>
 
     <div class="download-list">
-      <!-- Complete Archive Download Card -->
       <div class="download-item" style="border-left: 4px solid var(--header-bg);">
         <div class="download-info">
           <h4>Complete Sermon Collection (All 170 Sermons)</h4>
@@ -641,7 +597,6 @@ def generate_downloads_page(metrics):
   </main>
 
   {FOOTER_HTML}
-
   {SEARCH_JS}
 
 </body>
@@ -649,12 +604,139 @@ def generate_downloads_page(metrics):
 """
     with open(DOCS_DIR / "downloads.html", "w", encoding="utf-8") as f:
         f.write(downloads_html)
-    print("Generated: docs/downloads.html")
 
 
-# ==========================================
-# SUBPAGE GENERATOR
-# ==========================================
+def generate_audio_page():
+    # 1. Scan both source and docs folders for all MP3 files
+    audio_files = set()
+    for audio_dir in [SRC_AUDIO_DIR, DOCS_AUDIO_DIR]:
+        if audio_dir.exists():
+            for f in audio_dir.iterdir():
+                if f.is_file() and (f.suffix.lower() == '.mp3' or 'sermon' in f.name.lower() or 'pahankanuwa' in f.name.lower() or 'paticca' in f.name.lower()):
+                    dest_name = f.name if f.name.lower().endswith(".mp3") else f"{f.name}.mp3"
+                    audio_files.add(dest_name)
+
+    # 2. Group files into two separate playlists
+    paticca_files = []
+    pahankanuwa_files = []
+
+    for file_name in audio_files:
+        if "paticca" in file_name.lower():
+            paticca_files.append(file_name)
+        else:
+            pahankanuwa_files.append(file_name)
+
+    # Helper function to sort files numerically based on numbers in the filename
+    def sort_key(filename):
+        numbers = re.findall(r'\d+', filename)
+        return int(numbers[0]) if numbers else 0
+
+    paticca_sorted = sorted(paticca_files, key=sort_key)
+    pahankanuwa_sorted = sorted(pahankanuwa_files, key=sort_key)
+
+    # Helper function to build HTML blocks for a playlist
+    def build_playlist_html(file_list, title_prefix, description_prefix):
+        if not file_list:
+            return "<p style='color: var(--text-muted); font-style: italic;'>No recordings currently available in this series.</p>"
+        
+        cards = []
+        for audio_file in file_list:
+            match = re.search(r'(\d{1,3})', audio_file)
+            item_num = match.group(1).zfill(3) if match else "---"
+            
+            card_html = f"""
+<div class="download-item">
+  <div class="download-info">
+    <h4>🎧 {title_prefix} #{item_num}</h4>
+    <p>{description_prefix} ({audio_file})</p>
+  </div>
+  <div class="download-links">
+    <a href="audio/{audio_file}" class="btn btn-secondary" download>Download MP3</a>
+  </div>
+</div>
+<audio controls style="width:100%; margin-top: 0.5rem; margin-bottom: 1.5rem;">
+  <source src="audio/{audio_file}" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+"""
+            cards.append(card_html)
+        return "\n".join(cards)
+
+    # 3. Generate HTML for both playlists
+    paticca_html = build_playlist_html(
+        paticca_sorted, 
+        "Paticca Samuppada", 
+        "Paticca Samuppada Audio Series"
+    )
+    
+    pahankanuwa_html = build_playlist_html(
+        pahankanuwa_sorted, 
+        "Pahankanuwa Sermon", 
+        "English Audio Narration"
+    )
+
+    # 4. Assemble the full page
+    page_html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Audio Recordings | Ven. Katukurunde Nanananda Thero</title>
+<style>{SITE_CSS}</style>
+</head>
+
+<body>
+
+{build_header_html('audio')}
+
+<main class="homepage-content">
+
+<section class="hero">
+
+<h1>Audio Recordings</h1>
+
+<p>
+Listen to English audio recordings of Venerable Katukurunde Nanananda Thero's Dhamma teachings.
+New recordings will be added progressively as they become available.
+</p>
+
+<!-- Playlist 1: Paticca Samuppada -->
+<h2 style="color: var(--primary-color); margin-top: 1.5rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">
+  Paticca Samuppada Series
+</h2>
+<p style="margin-bottom: 1.5rem;">Special sermon series focusing on Dependent Arising (Paticca Samuppada).</p>
+
+{paticca_html}
+
+<!-- Playlist 2: Pahankanuwa Sermons -->
+<h2 style="color: var(--primary-color); margin-top: 2.5rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">
+  Pahankanuwa Sermons
+</h2>
+<p style="margin-bottom: 1.5rem;">English audio narrations of the Pahankanuwa sermon series.</p>
+
+{pahankanuwa_html}
+
+<h2 style="margin-top:2.5rem;">Future Recordings</h2>
+
+<p>
+Additional recordings in both series will be published as they become available.
+</p>
+
+</section>
+
+</main>
+
+{FOOTER_HTML}
+
+</body>
+</html>
+"""
+
+    with open(DOCS_DIR / "audio.html", "w", encoding="utf-8") as f:
+        f.write(page_html)
+
+    print(f"Generated: docs/audio.html ({len(paticca_sorted)} Paticca Samuppada files, {len(pahankanuwa_sorted)} Pahankanuwa files loaded)")
+
 def generate_data_subpage(filename, tab_key, page_title, description, df_data):
     if df_data is not None and not df_data.empty:
         df_clean = df_data.fillna("").copy()
@@ -703,7 +785,6 @@ def generate_data_subpage(filename, tab_key, page_title, description, df_data):
   </main>
 
   {FOOTER_HTML}
-
   {SEARCH_JS}
 
 </body>
@@ -711,15 +792,10 @@ def generate_data_subpage(filename, tab_key, page_title, description, df_data):
 """
     with open(DOCS_DIR / filename, "w", encoding="utf-8") as f:
         f.write(page_html)
-    print(f"Generated page: docs/{filename}")
 
 
-# ==========================================
-# CLICKABLE STATISTICS PAGE GENERATOR
-# ==========================================
 def generate_statistics_page(metrics, datasets):
     sermons_df = datasets.get("sermons", pd.DataFrame())
-    
     sermon_rows_list = []
     if not sermons_df.empty:
         for idx, row in sermons_df.iterrows():
@@ -798,7 +874,6 @@ def generate_statistics_page(metrics, datasets):
   </main>
 
   {FOOTER_HTML}
-
   {SEARCH_JS}
 
 </body>
@@ -806,7 +881,6 @@ def generate_statistics_page(metrics, datasets):
 """
     with open(DOCS_DIR / "statistics.html", "w", encoding="utf-8") as f:
         f.write(page_html)
-    print("Generated clickable: docs/statistics.html")
 
 
 # ==========================================
@@ -834,12 +908,23 @@ def copy_static_assets():
             shutil.copy2(ef, DOCS_EPUB_DIR / ef.name)
         print(f"Copied {len(epub_files)} EPUB files into docs/epub/")
 
+    # Copy AUDIO files (Fixes missing audio files)
+    if SRC_AUDIO_DIR.exists():
+        audio_files = list(SRC_AUDIO_DIR.glob("*"))
+        copied_count = 0
+        for af in audio_files:
+            if af.is_file():
+                # Append extension if missing on disk
+                dest_name = af.name if af.name.lower().endswith(".mp3") else f"{af.name}.mp3"
+                shutil.copy2(af, DOCS_AUDIO_DIR / dest_name)
+                copied_count += 1
+        print(f"Copied {copied_count} Audio files into docs/audio/")
+
     # Copy Complete Archive and Document Files
     for file_name in [ZIP_FILE, DOCX_COMPLETE, PDF_COMPLETE, EPUB_COMPLETE]:
         src_file = BASE_DIR / file_name
         if src_file.exists():
             shutil.copy2(src_file, DOCS_DIR / file_name)
-            print(f"Copied {file_name} to docs/")
 
 
 # ==========================================
@@ -850,33 +935,24 @@ if __name__ == "__main__":
     print(" Building Pahankanuwa Website")
     print("==========================================\n")
     
-    # 1. Load Data
     metrics, datasets = load_and_process_excel_data()
     
-    # 2. Build Home Page
     generate_index_page(metrics)
-    
-    # 3. Build Sermons Page
     generate_data_subpage(
         "sermons.html", "sermons", "Browse Sermons",
         "Catalog of Pahankanuwa sermon translations with opening excerpts (Para_7), canonical sources (Para_9), and document links.",
         datasets["sermons"]
     )
-
-    # 4. Build Downloads Page
     generate_downloads_page(metrics)
-    
-    # 5. Build Citations Page
+    generate_audio_page()
     generate_data_subpage(
         "citations.html", "citations", "Browse Citations Index",
         "Opening passages and textual citations with direct links to corresponding sermon translations.",
         datasets["citations"]
     )
-    
-    # 6. Build Clickable Statistics Page
     generate_statistics_page(metrics, datasets)
     
-    # 7. Copy Static Assets
+    # Copies all files including audio into docs/ audio
     copy_static_assets()
     
     print("\n==========================================")
