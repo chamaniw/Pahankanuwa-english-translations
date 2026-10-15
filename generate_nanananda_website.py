@@ -75,7 +75,7 @@ def find_sermon_file(s_num, format_ext, search_dir):
 # DATA LOADING & PROCESSOR
 # ==========================================
 def load_and_process_excel_data():
-    scratch_file = BASE_DIR / "pahankanuwa_e_from_scratch_4.xlsx"
+    scratch_file = BASE_DIR / "pahankanuwa_e_from_scratch_5.xlsx"
     idx_file = BASE_DIR / "Nanananda_Dhamma_Index_V3.xlsx"
     kb_file = BASE_DIR / "Nanananda_Knowledge_Base_V1.xlsx"
 
@@ -940,7 +940,7 @@ if __name__ == "__main__":
     generate_index_page(metrics)
     generate_data_subpage(
         "sermons.html", "sermons", "Browse Sermons",
-        "Catalog of Pahankanuwa sermon translations with opening excerpts (Para_7), canonical sources (Para_9), and document links.",
+        "Catalog of Pahankanuwa sermon translations with opening excerpts, canonical sources, and document links.",
         datasets["sermons"]
     )
     generate_downloads_page(metrics)
