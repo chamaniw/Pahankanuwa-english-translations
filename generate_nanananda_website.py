@@ -75,7 +75,7 @@ def find_sermon_file(s_num, format_ext, search_dir):
 # DATA LOADING & PROCESSOR
 # ==========================================
 def load_and_process_excel_data():
-    scratch_file = BASE_DIR / "pahankanuwa_e_from_scratch_5.xlsx"
+    scratch_file = BASE_DIR / "pahankanuwa_e_from_scratch_6.xlsx"
     idx_file = BASE_DIR / "Nanananda_Dhamma_Index_V3.xlsx"
     kb_file = BASE_DIR / "Nanananda_Knowledge_Base_V1.xlsx"
 
@@ -101,11 +101,41 @@ def load_and_process_excel_data():
             pdf_file = find_sermon_file(s_num, "pdf", SRC_PDF_DIR) or f"sermon_{s_num}.pdf"
             epub_file = find_sermon_file(s_num, "epub", SRC_EPUB_DIR) or f"sermon_{s_num}.epub"
 
-            para_7 = str(row['Para_7']).strip() if 'Para_7' in row and pd.notna(row['Para_7']) else ""
-            excerpt = para_7 if para_7 and para_7.lower() != 'nan' else "No excerpt available"
+            # Opening Pali passage
+            para_7 = (
+                str(row['Para_7']).strip()
+                if 'Para_7' in row and pd.notna(row['Para_7'])
+                else ""
+            )
+            excerpt = (
+                para_7
+                if para_7 and para_7.lower() != "nan"
+                else "No excerpt available"
+            )
 
-            para_9 = str(row['Para_9']).strip() if 'Para_9' in row and pd.notna(row['Para_9']) else ""
-            likely_source = para_9 if para_9 and para_9.lower() != 'nan' else "Unspecified Canonical Source"
+            # English translation of the opening passage
+            para_9 = (
+                str(row['Para_9']).strip()
+                if 'Para_9' in row and pd.notna(row['Para_9'])
+                else ""
+            )
+            english_translation = (
+                para_9
+                if para_9 and para_9.lower() != "nan"
+                else "No English translation available"
+            )
+
+            # Likely canonical source
+            para_11 = (
+                str(row['Para_11']).strip()
+                if 'Para_11' in row and pd.notna(row['Para_11'])
+                else ""
+            )
+            likely_source = (
+                para_11
+                if para_11 and para_11.lower() != "nan"
+                else "Unspecified Canonical Source"
+            )
 
             doc_links = (
                 f'<a class="doc-btn" href="docx/{docx_file}" target="_blank">📄 DOCX</a> '
@@ -116,7 +146,8 @@ def load_and_process_excel_data():
             sermons_list.append({
                 "Sermon": f"<strong>{clean_title}</strong>",
                 "Opening Passage Excerpt": excerpt.replace('\n', '<br>'),
-                "Likely Source": likely_source,
+                "English Translation": english_translation.replace('\n', '<br>'),
+                "Likely Source": likely_source.replace('\n', '<br>'),
                 "Document Link": doc_links
             })
         datasets["sermons"] = pd.DataFrame(sermons_list)
