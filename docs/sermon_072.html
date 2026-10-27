@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 072 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_071.html" class="doc-btn">← Previous Sermon (071)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_073.html" class="doc-btn">Next Sermon (073) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 072</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_072_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_072_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_072_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #72</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.75)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Puññañ ce puriso kayirā, kayirāthetaṃ punappunaṃ;</p>
+<p>tamhi chandaṃ kayirātha, sukho puññassa uccayo.</p>
+<p>From:</p>
+<p>Dhammapada 118 (Pupphavagga)</p>
+<p>Dear Listeners,</p>
+<p>Through faith in kamma and the fruit of kamma (*kamma-phala*), an opportunity is provided for a person to steer their life in the right direction. He who does not have a correct understanding of merit (*puñña*), demerit (*pāpa*), wholesome (*kusala*), and unwholesome (*akusala*) actions gets lost in this samsāra and falls into Suffering / Unsatisfactoriness / Stress (*dukkha*). Therefore, the Buddha almost constantly reminds us of the value of a life inclined and oriented towards merit (*puñña*). The verse taken as our theme also illustrates such an occasion. The background story (*nidāna-kathā*) related to this verse also presents a fine example of the value of merit.</p>
+<p>The Great Arahant Mahā Kassapa, having entered into meditative absorption (*samāpatti*) in the Pipphalī Cave in the city of Rājagaha, emerged from that absorption after seven days and scanned with his divine eye (*dibba-cakkhu*) to find a suitable place to wander for alms-food (*piṇḍapāta*). He saw a farm-woman parching corn near a paddy field. At the same time, he reflected whether this woman possessed enough faith (*saddhā*) to perform an act of merit by offering alms (*dāna*). He realized that she was a very faithful woman. Thinking, "If I go there, she will be able to accumulate a vast store of merit," and out of great compassion, the Great Arahant Mahā Kassapa journeyed to that paddy field. That farm-woman, seeing the Venerable Thera, was filled with five-fold joy, and with great happiness, took those puffed rice (*lājā*) and offered them into the bowl of the Venerable Thera, and prostrated herself, worshipping him with the five-fold touch. Having worshipped, she made an aspiration (*patthanā*): "Venerable Sir, whatever truth (*Dhamma*) you have realized, may this merit be a supportive condition for me to attain that same Dhamma!" The Venerable Thera also expressed his appreciation and blessed her: "May it be so!"</p>
+<p>While this farm-woman was returning with a very joyful mind, a highly venomous serpent—it must have been a cobra—lying on the ridge of the field bit her calf. She fell dead right there.</p>
+<p>However, instantly, as if waking up from a dream, this woman was reborn in a golden mansion in the Tāvatiṁsa heaven. The unique feature of that mansion was that garlands of puffed rice were hanging all over, from side to side. This woman reflected: "How did I receive such a grand fortune?" It became clear to her: "I received this from that small act of merit." Then she thought, "If I could obtain such a fortune from such a small act of merit, then I should not fall into negligence (*pramāda*). Being diligent (*appamatta*), I must further secure this fortune of mine by doing more merit." Thinking thus, at the break of dawn, she went to the hut where the Great Arahant Mahā Kassapa was residing and began to perform duties (*vatta-paṭivatta*), sweeping the courtyard of his dwelling with a golden broom and a basket as described there, and filling the water pots. When the Great Arahant Mahā Kassapa looked, all these chores had been done. He thought that some novice monk must have come and performed these duties. This happened on the second day too, and he thought in the same way. On the third day, hearing the sound of sweeping at the dawn-hour, the Great Arahant Mahā Kassapa looked in that direction and saw a certain light shining through the keyhole of the door—the light of that deity (*devatā*). Seeing it, he opened the door and asked, "Who is sweeping here?" This goddess is known as 'Lājā Devadhītā'—the Puffed-Rice Deity. 'Lājā' means puffed rice; she is known by that name. When asked, "Who is it?" she replied:</p>
+<p>"I am your attendant, Lājā Devadhītā."</p>
+<p>"I do not know of any attendant of mine. Who are you?"</p>
+<p>"The other day, after offering you puffed rice, as I was walking away, I was bitten by a snake and died. Immediately, I obtained this state. Now I thought that I must secure this celestial fortune, and must diligently perform meritorious deeds."</p>
+<p>You have heard that the Great Arahant Mahā Kassapa was one of extreme ascetic practices, a Thera observing austere dhutaṅga practices. Even though he had kindly provided her the opportunity to make that alms offering out of compassion, when he looked at this situation in relation to his strict ascetic path, he spoke somewhat sternly: "Who performed these duties yesterday and the day before?" When she replied, "It was I," he said, "What you have done is quite enough. Do not come to this area hereafter." Then she began to weep. "O Venerable Sir, please permit me to further increase and secure my merit and enhance my fortune." But the Great Arahant Mahā Kassapa said, "If you continue to do this, in the future, Dhamma preachers during their sermons will say that even the Great Kassapa received personal services and duties from a goddess. Do not leave room for such talk. Therefore, do not even come near this area," and he sent her away. Then she rose into the sky, weeping, and repeatedly saying, "O Venerable Sir, please permit me." As she refused to leave, the Great Kassapa snapped his fingers, saying, "This woman does not know her limits. Go away from here!" Only after that finger-snap, under the power of his spiritual majesty, was the goddess unable to remain there any longer. Flying into the sky, she lamented her grief. While she was lamenting, the Buddha, who was residing in the Fragrant Chamber (*Gandhakuṭi*) of Jetavana Monastery in Sāvatthi, heard the sound of her weeping. He reflected upon it and, out of compassion for her, projected a ray of light, appearing as if he were standing right in front of her, and delivered the very Dhamma verse we took as our theme.</p>
+<p>What is expressed by that verse, in short, is a sort of balanced, middle-way statement delivered by the Buddha to comfort the deity: "It is my son Kassapa's right to protect his restraint. Likewise, it is also valuable for those who perform merit to be enthusiastic about the merit that belongs to them." Making such a balanced statement, he uttered this verse of our theme. Let us recall it once again:</p>
+<p>*Puññañ ce puriso kayirā, kayirāthetaṁ punappunaṁ,*</p>
+<p>*tamhi chandaṁ kayirātha, sukho puññassa uccayo.*</p>
+<p>"If a person should perform merit, he should do it again and again. He should develop a desire (*chanda*), a liking, a keenness for that merit. What is the reason for this? *Sukho puññassa uccayo*—the accumulation of merit is happiness; it is a cause for happiness." Thus, a simple explanation was presented. It is said that upon hearing this verse, that faithful goddess attained the fruit of Stream-entry (*sotāpatti-phala*). This is a very brief story, but through it, we are shown how merit supports a human being to make their life happy, as mentioned before.</p>
+<p>Let us now reflect upon this verse. In this verse, what the Buddha actually intended was merit (*puñña*). That is to say, after performing a meritorious deed, a person should not stop at that single instance thinking, "This merit is enough for my entire life," but should do it *punappunaṁ*—again and again. If one performs merit, and once it is completed, without being complacent, one should perform that merit again and again. When there is no opportunity to perform merit, or when one is unable to do so, at the very least, one should generate a desire or a keenness for it in one's mind. When you contemplate a little, you will understand the importance of generating this keenness. If we do not incline and orient our minds towards merit, if we do foster a desire for merit even during times when we are not actively performing it, we will hesitate and hold back when an opportunity to perform merit actually arises. We will remain indecisive. But for one who always thinks, "Oh, if only I could perform some merit!"—this 'desire' (*chanda*) is a very important factor in this Dhamma. It is called the desire for the wholesome (*kusalacchanda*)—the keenness or liking to perform merit. A person who possesses this will step forward, saying "I will do it, I will do it," to take charge of that meritorious work and lend a hand to it. Such is its strength.</p>
+<p>Sometimes, if that desire (*chanda*) is absent when one is not performing merit, and if the mind has not been prepared accordingly, the opportunity to do merit slips away. Later, one thinks, "Ah, I missed the opportunity to perform that merit; I was just thinking about it." That is why, although it is a small verse, we can understand that it contains a very deep meaning. Why are we asked to perform merit again and again? Because the accumulation of merit is happiness. The accumulation of merit is a cause that brings happiness both in this world and in the next in samsāra. This, in brief, is the meaning of this verse.</p>
+<p>Next, let us consider the meaning of this story and the verse further. Generally, this matter of merit is something extremely close to our lives. Therefore, it is not merely about doing it, nor about doing it for the sake of doing it, or doing it with expectations of fame and status. Rather, what is important is to understand the value of merit in its true sense according to the Dhamma and then perform it. Hence, even within the story related to this theme, there is a certain depth. First of all, let us contemplate the practice of the Great Arahant Mahā Kassapa. Indeed, if he had been fasting for seven days and possessed the divine eye, some might wonder why he did not go to royal palaces or mansions of wealthy merchants for alms-food. The Great Arahant Mahā Kassapa was a Thera of wonderful, severe ascetic virtues who observed dhutaṅga practices. It was his custom that after emerging from meditative absorption, the opportunity to give alms was granted to the poor and destitute. He mostly wandered for alms among poor huts, regardless of whatever he might receive. This was because he possessed such great compassion. It was not about securing a rich, heavy meal. At that moment—meaning when a monk wanders for alms immediately after emerging from meditative absorption—if one gets the opportunity to offer him alms, it becomes of great fruit and great benefit (*mahapphala mahānisaṁsa*). That is why he always took the trouble to grant this opportunity to a poor person. On this occasion too, he journeyed to the paddy field not for any grand, heavy food, but for some light puffed rice that floats in the wind, which might seem insufficient even to sustain a person. Yet, he accepted with great joy the puffed rice that the woman brought and offered with faith. It was not a grand offering, yet through the benefit of offering that little puffed rice, she obtained even celestial fortune.</p>
+<p>Furthermore, we see that after obtaining that fortune, she made a great effort to further secure that merit and to perform merit again and again through duties and services. Although there was nothing wrong with that, the Great Arahant Mahā Kassapa opposed it and did not give his consent due to a certain scriptural purpose. This was because, through such actions, future human beings might fall into the unwholesome kamma of disparaging Noble Ones (*ariya-upavāda*). We call this "looking to the future"—that is, he followed these practices out of compassion for future generations. Although his action might seem unkind, it reflects this underlying thought: if future members of the Saṅgha were to say, "Even such-and-and-such deities came and performed services for us," it could lead to wrong understandings. At that moment, he firmly dismissed her using words that befitted his restraint.</p>
+<p>Yet, the Buddha, with amazing compassion, resolved the issue from both sides in a balanced way, giving a middle-way answer: "Why? My son Mahā Kassapa did what was his duty. For those who perform merit, either they perform it when they can—as this verse states, they do merit when possible, and when they cannot, they at least generate the desire (*chanda*) for it." That itself is sufficient for a person. That is to say, when one keeps thinking, "Oh, if only I could somehow perform some merit!" one remains in a wholesome state of mind. It is for such a person, when the opportunity to do merit arrives, that the strength to step forward and lend a hand, to take charge of those activities, arises instantly—as it is said in the Dhamma: *"Ahaṁ ahaṁ mitā, ahaṁ ahaṁ"*—"I am here, I am here." Even though this is a short verse, there is a vital point here. We can understand many things through this verse of the Buddha.</p>
+<p>Next, if we reflect on merit (*puñña*) in general, the final line here—usually the final line of verses expresses some theory or fundamental principle—states:</p>
+<p>*Sukho puññassa uccayo*</p>
+<p>"The accumulation of merit is happiness." The Buddha concludes the verse with this. Let us now direct our minds to this. First, let us see what this merit (*puñña*) is. It is said that we all know what merit is to the extent that it needs no further explanation. Even so, let us pay some attention to it. According to the Dhamma, in the scriptures, three main types of merit are shown:</p>
+<p>*Tīṇimāni bhikkhave puññakiriyavatthūni*</p>
+<p>Three grounds for making merit, or three bases of meritorious activity, namely: *dāna* (giving/generosity), *sīla* (morality/virtue), and *bhāvanā* (meditative development). We can generally understand that this refers to a certain spiritual strength developed in the mind through the acts of giving, observing virtue, and practicing meditation. In other places, this is expanded into ten items. You may have heard of them by the name *Dasa puññakiriyavatthu*—the ten bases of meritorious activity. In addition to *dāna*, *sīla*, and *bhāvanā*, they include: sharing of merit (*pattidāna*), rejoicing in others' merit (*pattānumodanā*), rendering services/duties (*veyyāvacca*), showing reverence to those worthy of respect (*apacāyana*), teaching the Dhamma (*desanā*), listening to the Dhamma (*savana*), and finally, straightening one's right view (*diṭṭhijukamma*). Thus, ten meritorious activities are shown under the ten bases of meritorious activity.</p>
+<p>Now, here too, it was because performing duties (*vatta-paṭivatta*) is also a form of merit that this woman, not being satisfied with her giving (*dāna*) alone, was enthusiastic to perform services as well. These are things we can do in our daily lives, even in small ways, according to the opportunities that come our way, even if we might think that acts of giving involve high expenses. Now, those puffed rice were such a small thing. Yet, through that, the Great Arahant Mahā Kassapa received the strength to survive for a day. The food of such a noble Thera was puffed rice. From this, we can see that we should not regard these things as trivial. Moreover, what serves as the support in performing that merit is the mind and faith (*saddhā*). That is precisely why we think the Buddha declared *Saddhā dhanaṁ*—faith is a treasure. Faith is shown as a treasure. Why does faith become a treasure? We must reflect on this. What does it mean to have faith in the Triple Gem? What is the Triple Gem? We must first think about this. The Triple Gem (*Tri-vidha Ratna*). There is a great depth in this concept of "Gem" (*Ratna*). You have heard that there are no other gems equal to each of these gems:</p>
+<p>*Yaṁ kiñci ratanaṁ loke vijjati vividhā puthū,*</p>
+<p>*ratanaṁ buddhasamaṁ natthi, ratanaṁ dhammasamaṁ natthi, ratanaṁ saṅghasamaṁ natthi...*</p>
+<p>"Whatever gems there are in the world, in all their variety, none is equal to the Buddha Gem, none is equal to the Dhamma Gem, none is equal to the Saṅgha Gem." Thus, when a person is said to generate faith, in the word *Saddhā* there is an aspect concerning the heart. Depositing the treasure of faith in the heart, or depositing in the chamber of the heart—what is deposited is these three gems: the Buddha Gem, the Dhamma Gem, and the Saṅgha Gem. Through depositing these, a special value is added to that person's thoughts and aspirations. A great light, a clarity arises within that mind. A word that goes hand in hand with faith (*saddhā*) is *Prasāda* (clarity/serenity/devotion). The two words *Saddho pasanno* (faithful and confident/serene) are found together. In the past, various similes were used for this. There is mention of a certain water-clearing gem which, when placed in muddy water, makes the water clean. Similarly, when faith in the Triple Gem arises, the mind is freed from agitation and attains a state of serene clarity (*prasāda*). The Buddha declared that when a meritorious deed is performed with such a serene mind, it becomes highly beneficial. Even if it is a small thing, if given with faith in such a state, it becomes of great fruit and great benefit (*mahapphala mahānisaṁsa*):</p>
+<p>*Appamapi ce saddahāno dadāti teneva so hoti sukhī parattha*</p>
+<p>"Even if one gives a tiny bit, if one gives with a faithful heart, by that very act one becomes happy in the world beyond." Thus, regarding this merit, the Buddha shows that merit is happiness because, in the life of a human being, various material goods and hoards of wealth are accumulated. All of them can be claimed by fire, water, thieves, or rulers, or they can be destroyed. Unloved heirs can take them. But regarding merit, it is declared:</p>
+<p>*Asādhāraṇam aññesaṁ acoraharaṇo nidhī*</p>
+<p>*kayirātha dhīro puññāni yo nidhī anugāmiko*</p>
+<p>This is a very famous verse. "A treasure that is not shared with others"—meaning others cannot claim it or use it as something common—"a treasure that thieves cannot steal, the wise man should perform merits, for this is the treasure that follows one." Other treasures, deposits, and the like—in modern times, banks, and in those days, vast treasures buried in river basins—can be destroyed by the aforementioned disasters. At the very least, due to inflation and various social and economic changes, the wealth we highly prize can become mere scrap paper overnight. But this merit, we can say, is like a gold coin of eternal value. If something has been deposited in our mind-stream (*citta-santāna*) as merit, that merit never fades away without yielding its fruit.</p>
+<p>Furthermore, when more merits are added to that merit, they become stronger, and it is through this that even a Buddha arises in the future. Accumulated as perfections (*pāramīs*), the strength of merit developed through giving, according to one's aspiration (*prārthanā*) and resolve (*praṇidhi*), is accumulated under the name of "perfection of giving" (*dāna-pāramitā*). The store of merit accumulated through observing virtue becomes the "perfection of virtue" (*sīla-pāramitā*). In this way, we can understand that what lies beneath the word "perfection" (*pāramitā*) is this very mass of merit, the performance of merit. Therefore, we see a great value in the accumulation of merit. Moreover, the Buddha has declared: *"Puññaṁ sukhaṁ jīvitasaṅkhayamhi"*—"Merit at the end of life is a great happiness." No matter how much wealth, land, or vehicles one has accumulated, when one remembers them at the moment of death, it only brings Suffering / Unsatisfactoriness / Stress (*dukkha*). A grief arises thinking, "I have to leave all this behind, don't I?" One cannot take them along. That is why it is said they cannot be taken; they do not follow one. None of those treasures follow. But if one has performed merit, each time one recalls it at the moment of death, it becomes a cause for great joy and solace.</p>
+<p>You have heard about the final moments of King Duṭugämuṇu. It was not other things he recalled, but he had the register of merit (*pin-potha*) brought and recalled the merits he had performed. In the past, some even kept a register of merit. Even nowadays, though very rarely, some keep registers of merit. Some do so out of pride (*māna*) to show others. It should not be so; it is for one's own recollection. If these performed merits are recorded in one's mind, even if not in a book, when one is on one's deathbed, one can reflect and rejoice: "I have these masses of merit accumulated throughout my entire life." Then, one does not go to the next world empty-handed. From the story of Lājā Devadhītā, we see that it is according to our very thoughts that our future Becoming / Existence (*bhava*) is shaped. A characteristic of her celestial mansion was the hanging of garlands of puffed rice. Why puffed rice? Because puffed rice was what was in her mind. Basing on that offered puffed rice, in exact accordance with that wholesome deed, a celestial mansion was formed.</p>
+<p>We must understand that, let alone other things, even for this physical frame of ours to arise, and for us to receive our belongings, kamma lies beneath them in a very subtle way. We think these things happen by chance, or that we made them ourselves: "We can manage things in this world as we want." But beneath these lie the forces of kamma (*kamma-vega*), things of this nature. That which is called merit, then, becomes a support in this samsāra. Now, there are two sides to this. Through merit, on one hand, we turn away from the path of miserable realms (*duggati*) and incline toward the path of happy realms (*sugati*). On the other hand, it also supports us in attaining Nibbāna according to our aspirations.</p>
+<p>Now, when speaking of merit (*puñña*), a word that goes hand in hand with it is wholesome (*kusala*). People talk about doing merit (*puñña*) and doing wholesome deeds (*kusala*). Some have even made a question out of this: "Are these two the same? Is there a difference between them?" There are those who spend more time thinking about these things than actually doing them. Whosoever they may be, keeping them in mind as well, let us now explain the meaning of these words. This merit, indeed, has the word *Puñña*. Its etymology is somewhat hidden. But we have to consider that the ancient commentators (*aṭṭhakathācāriyas*) explain it in the sense of purifying the mind-stream: "Merit is that which purifies the mind-stream," deriving *puñña* from *punāti* (to purify). We can accept this to some extent because these words, *puñña* and *pāpa* (demerit/evil), have come down from ancient times. *Puñña* and *pāpa*. A concept that goes along with this is that the mind is purified by merit and defiled by demerit. The world holds this concept: one is purified by merit and defiled by demerit. This is highly consistent with the fact that through actions performed by our mind, body, and speech, there are occasions when we purify our minds, and occasions when we defile them. The things that defile, we call demerit (*pāpa*); the things that purify, we call merit (*puñña*).</p>
+<p>In modern times, however, some people attempt to give Sinhala etymological explanations to this word *pina* (merit). There are indeed ways in which the Dhamma is distorted in various manners. Some explain *pina* in the sense of pleasing or gratifying the mind (*hitha pinavama*). If we define *pina* in the sense of gratifying the mind, there is a great danger of going astray. There are many things that gratify the mind which are actually demeritorious (*pāpa*). Therefore, it should not be taken in that way. Thus, it becomes meaningful to us only in the sense of purifying the mind—that is merit (*puñña*). What supports this, then, is *dāna*, *sīla*, and *bhāvanā*—in terms of giving, virtue, and meditation. The coarse or gross level of greed (*lobha*) is stinginess. It is described as a stain or rust (*mala*). If this rust is not constantly removed, it leads to one's own ruin from within. In the end, one becomes a great miser. Giving (*dāna*), then, supports the removal of this rust. In short, giving helps to abandon the defilement (*kilesa*) of greed (*lobha*). That is how it works through giving.</p>
+<p>Through virtue (*sīla*), the defilement that can occur through wrong bodily actions, wrong verbal actions, and wrong mental actions—which are described as bodily misconduct, verbal misconduct, and mental misconduct—is prevented by observing the practice of virtue and the like.</p>
+<p>Next, the same applies to meditation (*bhāvanā*). Going to the very depth of it, meditation has the power to eradicate all the defilements in the mind: greed (*lobha*), hatred (*dosa*), and delusion (*moha*). In that respect, merit possesses such power.</p>
+<p>Next, when we reflect on the wholesome (*kusala*), it is also shown to be largely similar. We find the words *puñña* and *kusala* used in the Dhamma as synonyms, or at least as closely related terms. Yet, at times, we see a specific meaning in this word *Kusala*. The Dhamma mentions unwholesome roots (*akusala-mūla*) and wholesome roots (*kusala-mūla*). On one occasion, the monks asked the Venerable Sāriputta: "People talk about Right View, Right View (*sammā-diṭṭhi*). What is this Right View?" On that occasion, Venerable Sāriputta defined Right View using this very word *kusala*. While Right View can be defined in several ways, here Venerable Sāriputta explained: "Friends, if a person knows the unwholesome (*akusala*), knows the root of the unwholesome (*akusala-mūla*), and likewise knows the wholesome (*kusala*), and knows the root of the wholesome (*kusala-mūla*), by that much he is one of Right View." This refers to knowing good and bad. Then he analyzes further: what is the unwholesome? What is mentioned here as the unwholesome refers to what is stated in the training rules (*sikkhāpada*). Killing living beings is unwholesome; taking what is not given is unwholesome; sexual misconduct is unwholesome; false speech is unwholesome; malicious speech is unwholesome; harsh speech is unwholesome; gossip is unwholesome; and finally, wrong things of the mind are mentioned: *abhijjhā*—which means covetousness (intense greed); *vyāpāda*—which refers to ill-will, the opposite of loving-kindness (*mettā*); and *micchā-diṭṭhi*—wrong view. These are shown as the unwholesome (*akusala*). The roots of these unwholesome actions are shown as greed (*lobha*), hatred (*dosa*), and delusion (*moha*).</p>
+<p>Next, when we take the wholesome (*kusala*) side, Venerable Sāriputta explains what is the wholesome and what is the root of the wholesome. The wholesome is abstaining from killing living beings: *Pāṇātipātā veramaṇī kusalaṁ*. What is this *veramaṇī*? *Virati* means abstention or turning away. Killing living beings, taking animal life, is an easy thing, or rather, something to which the mind is easily drawn and likes. It is difficult to abstain from it, but that is what must be done—that is a wholesome deed (*kusala*). Now, from this, we can understand the true meaning of the word *kusala*. In ordinary usage, *kusala* means skillfulness. Now, according to the Dhamma, what is the true skillfulness here? It is not the skill in killing animals. It is the skill of abstaining from the thought and intention of killing animals. In this samsāra, one is called truly skillful if one escapes the path of miserable realms (*duggati*) and goes to the path of happy realms (*sugati*), and eventually, transcending both happy and miserable realms, brings an end to samsāric Suffering / Unsatisfactoriness / Stress (*dukkha*) and realizes Nibbāna.</p>
+<p>The wholesome (*kusala*), then, is abstaining from those aforementioned unwholesome actions. Next, what are the wholesome roots (*kusala-mūla*)? They are defined as: *alobha* (non-greed), *adosa* (non-hatred), and *amoha* (non-delusion). *Alobha* does not mean that greed is entirely eradicated all at once. It refers to the effort made to turn away from greed. It is the effort made to turn away from hatred, and the effort made to turn away from delusion. It is through this that, when one succeeds in one's target some day, one eradicates greed, hatred, and delusion. Thus, the journey from greed to non-greed, the journey from hatred to non-hatred, and the journey from delusion to non-delusion—these are what can be considered as the wholesome (*kusala*). Accordingly, we can understand that there is a deep meaning in that word *kusala*. However, in our day-to-day usage, we often use both terms: doing wholesome deeds and doing merit.</p>
+<p>Be that as it may, on one hand, the mind is purified. On the other hand, as samsāric individuals whose minds are correctly turned toward Nibbāna, we display a certain skillful behavior and practice through merit and the wholesome. Therefore, we must understand that merit is something we must bring very close to our lives. The more merit accumulates, the good that comes to us from it—as the Buddha has said:</p>
+<p>*Puññāni paralokasmiṁ patiṭṭhā honti pāṇinaṁ*</p>
+<p>"Merits are the support for living beings in the world beyond." Merit stands as a support, a protection, and a refuge. Not only that, the *Maṅgala Sutta* mentions *pubbe ca kata-puññatā*—having performed merit in the past—as a blessing (*maṅgala*). Having done merit in the past becomes a blessing in this life. Thus, if we are to receive that blessing in the next life, we must perform merit in this life too. Why? Because we must realize that day by day, the merit and wholesome kamma that granted us this human existence is wearing away. We must make an effort to match this. It is in this regard that the Buddha tells us to be diligent (*appamāda*) in performing merit:</p>
+<p>*Appamādaṁ pasaṁsanti, puññakiriyāsu paṇḍitā*</p>
+<p>"The wise praise diligence in meritorious activities." It was following this very advice that Lājā Devadhītā was eager to do more merit to stabilize her celestial fortunes. We too must reflect, based on this example, that in our lives we have various targets such as acquiring wealth, gaining positions and titles, passing exams, and so on. Whether they succeed or fail, and even if they succeed, they might still face destruction. But far more valuable than all those targets is to be mindful of where we will land next in this samsāric journey. Indeed, if we do not possess such a mass of merit, at the last moment, a bad thought might arise as our near-death thought (*āsanna-citta*).</p>
+<p>Now, from this story, another matter becomes clear to us. In the story of Lājā Devadhītā, that farm-woman—you have heard well about giving alms with clarity in the three-fold thought (*ti-cetanā*). Giving alms with clarity in the three-fold thought means: before giving, preparing the mind to give with good faith and clarity. Next, at the time of giving, performing the act of giving properly. Then, after giving, rejoicing over it without any regret. That is indeed how the goddess obtained celestial fortune. As mentioned in the Dhamma, these three stages are: *pubba-cetanā* (pre-volition), *muñcana-cetanā* (volition at the moment of giving), and *apara-cetanā* (post-volition)—these three stages of the mind are filled with serene clarity (*prasāda*). It was because she possessed great faith and a desire to give as her *pubba-cetanā* (pre-volition) that the Great Arahant saw her with his divine eye and came to her. Next, with great faith, prostrating with the five-fold touch, she offered a ladle of puffed rice. Thus, her *muñcana-cetanā* (volition at the moment of giving) was also pure. Next, as she went away thinking of it and rejoicing with great happiness, her mind was pure at that moment too. That moment arrived as her near-death thought (*āsanna-citta*). Because her death was a sudden, instantaneous death. Even for us, we must realize that even if we go after performing a great merit, if we go with regret at that moment, and if a sudden death occurs, we cannot expect to go to heaven. That is why we must reflect on the importance of giving with clarity in the three-fold thought.</p>
+<p>In performing an act of merit, there are many things involved in the purification of the mind as *pubba-cetanā*. Some say that merit performed with difficulty and effort is highly beneficial. Why is that? A thousand thoughts pull one back. Yet, one rouses one's mind to match it. Rousing it with strong faith and effort, as one prepares for it, that merit becomes stronger. Having done so, even at the moment of performing the merit, one must try not to let the mind weaken. Next, after performing the merit, throughout one's life, one should reflect on it and rejoice—that is what is called sharing and rejoicing in merit (*anumodanā*). The 'Anumodanā sermon' (sermon of appreciation) exists precisely for this purpose. The value of this is also seen in this story—that the *apara-cetanā* (post-volition) must also be kept pure. Indeed, we must reflect that we cannot say at what moment our death will arrive. Even if we live to be ninety or a hundred years old, in the end, we will have to spend our final days not on two legs, but on four legs. One will have to lie on a bed. At that moment on the bed, what one has is only one's thoughts. Not those lands, vehicles, titles, or jobs. They are merely a pile of dreams. One feels as if one lived amidst a pile of dreams. But if one has been skillful in developing one's mind, purifying it, and turning it toward Nibbāna through accumulating this merit and wholesome kamma, then that person has some solace. That is how we must contemplate. Yet, in these times, some people, under the idea that we must abandon everything, speak with over-enthusiasm: "We do not need to accumulate anything. Why encourage only the accumulation of merit? That leads to the dogma of self-illusion (*sakkāya-diṭṭhi*)."</p>
+<p>But we must correctly understand the Right View (*sammā-diṭṭhi*) shown by the Buddha. The Right View of the Buddha has two sides. On the mundane (*lokiya*) level, meaning that which applies to the samsāric individual, the Right View shown by the Buddha is called *Kammassakatā sammā-diṭṭhi*—the Right View that kamma is one's own property. The meaning of *Kammassakatā sammā-diṭṭhi* is the Right View that one's actions are one's own. This was referred to by another name: *Dasa-vatthuka sammā-diṭṭhi*—the Right View consisting of ten bases. To explain it further, it is as follows. In Sinhala, although brahmins used the three words *dāna* (giving), *yāga* (sacrifice), and *homa* (oblation), in our Dhamma they are also applied to giving (*dāna*) without distinction. In short, what is said there is that there is a fruit, a benefit in giving. There is giving, there is alms-offering, there is sacrifice, there is oblation. Next, there is the fruit and result (*vipāka*) of good and bad kamma. Next, there is this world, and there is the world beyond. The meaning of "there is this world and there is the world beyond" is that there is rebirth (*punabbhava*). Some do not believe this. There is this world and there is the world beyond. A distinction between this world and the world beyond exists if a person dies and is reborn. That too is accepted: there is this world, and there is the world beyond. Next, there is mother, and there is father. The view "there is mother, there is father" is presented there to show that there is a special importance in caring for mother and father. Otherwise, like brute animals who do not care for parents—animals have no distinction of parents—here, what is explained by the words "there is mother, there is father" is its deep meaning: there is special fruit and benefit in serving one's mother and father.</p>
+<p>Next, there is another proposition: there are spontaneously born beings (*opapātika-sattā*). Like the goddess mentioned here who suddenly passed away and was born in the heaven—in this day and age, some who hold only science as supreme may not believe this. Because, according to their way of thinking, this mind is something entirely bound to matter. Therefore, once freed from matter, how can this mind go to the heaven or the Brahma world?—someone might question. Mention is made in the Dhamma of those who conducted experiments on this. There was a certain heretical warrior king named Pāyāsi. He thought that if a person's life-breath is prevented from escaping at the moment of death by sealing the vessel with clay, etc., it would not go anywhere after death. He even conducted such experiments. Placing matter first, even nowadays, some who hold a physicalist view wonder, "How can a person who dies here suddenly appear in a mansion and obtain such a state?" But here, in this Right View, the proposition "there are spontaneously born beings" is presented by the Buddha as something to be accepted. Even if one has not witnessed it oneself, there are individuals who have seen it. It is stated: *Atthi sattā opapātikā*—"There are spontaneously born beings." Next, it is also stated that there are in the world ascetics and brahmins who, having realized by their own higher knowledge (*abhiññā*), correctly understand this world and the world beyond. Where such Right View is absent, a wrong view (*diṭṭhi*) arises. The philosophy of those who held the view of annihilation (*uccheda-diṭṭhi*) or the view of nihilism (*nātika-diṭṭhi*) in those days is mentioned in a verse like this:</p>
+<p>*Yāvaj jīvet sukhaṁ jīvet, ṛṇaṁ kṛtvā ghṛtaṁ pibet,*</p>
+<p>*bhasmībhūtassa dehasya, punarāgamanaṁ kutaḥ*</p>
+<p>"As long as one lives, one should live happily; even by incurring debt, one should drink ghee. Once this body is reduced to ashes on the funeral pyre, how can there be a return?" Those who held such views are called annihilationists or nihilists. It was against the ten items of that nihilistic view that the Buddha presented this ten-fold Right View (*dasa-vatthuka sammā-diṭṭhi*). To those things which they denied—saying "there is no benefit in giving, there are no fruits of good and bad actions, there is no mother, no father, no this world, no world beyond"—the Buddha declared, "There is, there is." Therein lies a middle path (*majjhimā paṭipadā*). The Buddha, therefore, did not accept that wrong view or nihilistic view.</p>
+<p>Within samsāric existence, there is inevitably the notion "I am, mine" (*mamaya, māgeya*). What is called *Kammassakatā sammā-diṭṭhi* is the Right View that actions are one's own. Now, some of those intellectuals might say, "If there is no self (*attā*), then there is no such thing as good or bad. Next, how do we know, when reborn in the next life, whether we are experiencing its results?" They try to escape in this way, but there is a situation from which they cannot escape. This is because within kamma itself, there is the perception of self (*atta-saññā*). It is due to ignorance (*avijjā*) that preparations (*saṅkhāra*) arise. *"Cetanāhaṁ bhikkhave kammaṁ vadāmi"*—"Intention, monks, I call kamma." An intention arises based on the designation "I" (*mama*). This intention is put forward to keep the world as one wants. An intention to kill another, an intention to steal something from someone else—when we look back at that intention, an "I" is present there. There is someone called oneself. That cannot be denied. At that point, one cannot merely put forward the view of non-self (*anattā*). This is the reality that the Buddha presents.</p>
+<p>The Buddha always speaks the knowledge and vision of things as they are (*yathābhūta-ñāṇadassana*) within the middle path. Then, according to things as they are, one wanders in this long samsāra due to that very error, that wrong notion—meaning, the notion of "self" (*attā*). That cannot be eradicated all at once merely by thinking, nor is it something that can be eradicated through logic. The way to eradicate it is to enter the path of meditation, and with a concentrated mind, through insight (*vipassanā*), see things as they are, see that there is no self within these five aggregates (*pañcakkhandha*), and thereby escape from it. It cannot be done by arguing: "Why, in our books the Buddha has said there is no self. Therefore, what does it matter to us? We can even kill mother or father and live." That goes to the view of annihilation, the nihilistic view. There were those who spoke in that manner in those days too. It was to turn away from that extreme that the Buddha presented the ten-fold Right View.</p>
+<p>Next, the deep Right View we have pointed out on many occasions in sermons of deep themes. The deep Right View is the supramundane (*lokuttara*) Right View—the Four Noble Truths. Some confuse these two—mundane Right View and supramundane Right View. What we called mundane is a law that applies to samsāric existence. Why does that law apply? As long as ignorance (*avijjā*) exists, preparations (*saṅkhāra*) remain. As long as preparations exist, there is an operation of consciousness (*viññāṇa*), name-and-form (*nāmarūpa*), etc., in accordance with the law of dependent arising (*paṭicca-samuppāda*) in samsāra. Therefore, we cannot escape there by saying "there is no self." Within our action, within our intention, there is a wrong perception, an illusion of "I" (*mama*). We must experience its results; we must take that responsibility. If we did something with a certain responsibility, we must also experience its results. That is it. According to this, the Buddha says one must experience it. For the good one does, there are good results. The talk there is about oneself. Because it is by standing upon that proposition that one does wholesome or unwholesome deeds, merit or demerit. That is necessary. It cannot be done without it. One must escape from this.</p>
+<p>On many occasions, we have given the simile of crossing a water-current. When crossing a great flowing current or a torrent of water, one has to yield a little to the current, and slowly and carefully place one's feet to reach the other side. A similar thing exists in this samsāra. For a long time, one undergoes Suffering / Unsatisfactoriness / Stress (*dukkha*) in this samsāra through ignorance (*avijjā*), craving (*taṇhā*), etc., experiencing the results of the kamma forces generated thereby. Then, all at once, this cannot be done merely by wishing or by logic. This must be realized by oneself—in the manner stated as *paccattaṁ veditabbo viññūhi* (to be personally realized by the wise)—that there is no self here. It is not because it is in the book, nor through logic. Until that is realized, intention arises in that very way, with strong grasping (*upādāna*), with holding. Where there is grasping, there is again Becoming / Existence (*bhava*). Again, Becoming / Existence is created. Here, indeed, it was said to be a celestial mansion. Just as this celestial mansion was created, if a person performed bad kamma, a Becoming / Existence in hell (*niraya*) or the realm of departed spirits (*peta*), etc., fitting for that action, is created. This is the natural law (*dhamma-tā*). It is in accordance with this natural law that the Buddha declared the *Kammassakatā sammā-diṭṭhi*. One cannot escape by saying "there is no world beyond, there is no mother, no father." Standing upon that very proposition, one must then turn to the other side. One must turn to the good side. One must abandon the unwholesome side and turn to the wholesome side. One must abandon the demeritorious side and turn to the meritorious side. That is why the Buddha declares that a Buddhist, without constantly arguing about this, must progress from merit to merit. One must accumulate merit upon merit.</p>
+<p>Furthermore, when we speak of merit nowadays, we usually think only of the meritorious act of giving (*dāna*). But we must understand that virtue (*sīla*) is superior to giving; meditation (*bhāvanā*) is superior to virtue. Within all of them, there is a certain letting go. Giving (*dāna*) performs the relinquishment of external objects. Virtue (*sīla*) performs the abstention from various wrong behaviors of body and speech which our mind highly desires—*veramaṇī virati* (abstention). That is a very difficult thing. There too, it is about letting go. In meditation (*bhāvanā*), it goes even further. Our mind always has a scattered nature, drawing in this and that direction. Controlling it and placing it on a single object is what is done in meditation. Next, what is even deeper is seeing deeply and penetrating this notion of "I" and "mine" (*mamaya, māgeya*), and abandoning attachment toward them. That is the great letting go—abandoning the five aggregates (*pañcakkhandha*).</p>
+<p>Looking at it from that perspective, although we consider merit in brief, within the three grounds of meritorious activity—*dānamaya puññakiriyavatthu*, *sīlamaya puññakiriyavatthu*, and *bhāvanāmaya puññakiriyavatthu*—lies the entire path of practice leading up to Nibbāna. The path of practice that a person must take. Why? We have heard that even during times when no Buddha arose, some, firmly adopting the thought of renunciation (*nekkhamma*), went to the Himavanta (Himalayas) and practiced meditation. Within those acts, whether they were fulfilled or not, underneath lay the thought: "Samsāra is fearful, we must escape from it." Sometimes they thought: "It is not enough if I alone escape; I must free others too from this Suffering / Unsatisfactoriness / Stress (*dukkha*)." This is because, in those lives, being possessors of higher knowledges (*abhiññā*), they saw the suffering and hardships experienced in hell or the realm of departed spirits due to these bad kammas. Out of great compassion, they thought: "It is not enough if I alone escape. I must free others too."</p>
+<p>In any case, in terms of meditation, they strived to unify their minds. They attained states of jhāna, making great sacrifices and fulfilling renunciation (*nekkhamma*). Looking at it from that perspective, within all of them lies letting go. Through this letting go, we can understand that, on one hand, the mind is purified. Along with that, one draws close to Nibbāna. Drawing close to Nibbāna means the stilling of all preparations (*sabba-saṅkhāra-samatha*). Stilling all preparations means stilling the forces of kamma. Thus, turning away from bad kamma and unwholesome kamma, turning toward good kamma, and through that, seeing the true nature of ignorance (*avijjā*) and craving (*taṇhā*) which lie beneath kamma, with wisdom and concentration, removing them, escaping from them, and in the end, obtaining Nibbāna—which is the power to still all preparations and all kamma forces, called *sabba-saṅkhāra-samatha*. It is also called appeasement (*upasama*). It is this path leading up to Nibbāna that the Buddha has brought out through these words "merit" and "wholesome" (*puñña* and *kusala*).</p>
+<p>We must constantly reflect that we should not give room merely to that extreme or over-enthusiastic logic—we are often forced to use the word "intellectuals." They, placing only the brain first and highly magnifying the activity of the brain, become indifferent to these matters. Indifferent to these acts of merit, faith (*saddhā*), and other factors. Now we said that in the word "faith" (*saddhā*), the heart is spoken of. Whosoever they may be, if they listen to the details well, they will understand that there is an influence of the heart in their daily lives too. But when one goes to the side of logic, that is forgotten. Thus, for a complete transformation to occur in a character, in a life—for a complete transformation to take place, both the brain and the heart must walk this journey together in the same manner, in the same way.</p>
+<p>That is why the Buddha—now here too, those acts of merit like giving can be performed externally. If one has great wealth, one can give a great alms-offering. Even though it is a great alms-offering, if the mind is small, one cannot expect great benefit from it. But it was by offering some puffed rice that float in the wind, some parched corn that float in the wind, that this woman was instantaneously reborn in the Tāvatiṁsa heaven. Now, in this day and age, people spend a lot of money to go upwards, attempting to go to various visible worlds like stars by means of great science and technology. Even if they go, they might fall back and in the end even go to hell. Those astronauts who went to the sky and conquered the moon, where are they now? If they have passed away, we do not even know whether they are in hell.</p>
+<p>Therefore, it is not like that temporary going upwards. If the mind is purified, if the mind is turned toward Nibbāna, and next, if states of jhāna are attained, that person can instantaneously obtain rebirth in the heaven, rebirth in the Brahma world, in the aforementioned manner. They can even obtain spontaneously born states. This is what is called the Dhamma. Thus, we must return to the very first verse declared by the Buddha in the Dhammapada:</p>
+<p>*Manopubbaṅgamā dhammā, manoseṭṭhā manomayā*</p>
+<p>"Mind is the forerunner of all states, mind is chief, they are mind-made." Mind is chief in all of these; they are prepared by this mind. There, "mind" refers to those aforementioned streams of thoughts. The heart also joins with it. Thus, doing these wholesome or unwholesome actions, one wanders in this world and in samsāra. But if, at some point, one purifies this heart, purifies thoughts, calms the mind, concentrates it, and through that, realizes the true state of oneself—regarding the five aggregates: form (*rūpa*), feeling (*vedanā*), perception (*saññā*), preparations (*saṅkhāra*), and consciousness (*viññāṇa*)—at that moment, through that realization, the notion "I am, mine" (*mamaya, māgeya*) which was firmly held throughout samsāra as the dogma of self-illusion (*sakkāya-diṭṭhi*), is greatly loosened. Next, starting from there, precisely due to the weakening of the kamma force, the door to the miserable realms is closed for them. Those who possess a strong, gross view of self are found in places like the animal realm. Such is the nature found within animals. Therefore, if one realizes Nibbāna even through the first path (Stream-entry), one's kamma forces are weakened. Going in that manner, if at some point—as the Buddha has shown—one transcends even the subtle states of the conceit 'I am' (*asmi-māna*), and realizes the impermanent (*anicca*), suffering (*dukkha*), and not-self (*anattā*) nature of these five aggregates, then kamma that leads to Becoming / Existence (*bhava-gāmī kamma*) is no longer accumulated in that person's mind-stream. There lies liberation (*vimutti*). It is the path leading up to that which the Buddha has shown here as the middle path. Therefore, we should not throw these away, thinking that these meritorious deeds are something practiced only by those of simple, foolish faith. It is from this that the beginning starts; without the initial step, the others do not come together.</p>
+<p>Therefore, on this day, these virtuous people, treating this observance of virtue (*sīla*) as important, have left their lay-homes for a day and came to observe these valuable practices of virtue. Within that too lies drawing close to the way of life of the Arahants. This observing of virtue—observing the eight precepts (*aṭṭha-sīla*), observing the ten precepts (*dasa-sīla*), and observing a higher virtue after undertaking it—is something highly praised by the Buddha. Next, by practicing meditation while established in that virtue, if one quickly concentrates the mind and realizes the true nature of these five aggregates through insight (*vipassanā*) in the manner shown by the Buddha, one possesses the strength to realize the paths and fruits (*magga-phala*) such as Stream-entry.</p>
+<p>Therefore, you must now rejoice that on this Poyaday, this virtuous group, to the best of their ability, undertook a certain virtue (*sīla*) and listened to the Dhamma for about an hour. In listening to the Dhamma, we always remind you that the immediate benefit is the opportunity to generate or mature those faculties that support Nibbāna, namely: faith (*saddhā*), energy (*viriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*).</p>
+<p>Reflecting in this manner, if faith, energy, mindfulness, concentration, and wisdom have developed to some extent through this one-hour Dhamma sermon, may you develop them further, make your Dhamma listening and meditation more successful through association with noble friends (*kalyāṇa-mitta*), remove obstacles (*palibodha*), bring close supportive factors, and as quickly as possible, before the decline of this Buddha Dispensation (*Sāsana*), escape from all samsāric suffering such as Birth / Arising (*jāti*), Decay and Death / Aging and Death (*jarāmaraṇa*), and sickness, and find solace in the supreme, deathless, great Nibbāna. May the deities also rejoice in this merit of teaching and listening to the Dhamma, and by means of their aspired-for enlightenment (*Bodhi*), may they find solace in the supreme, deathless, great Nibbāna! With this aspiration, recite this verse and dedicate the merits:</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_071.html" class="doc-btn">← Previous Sermon (071)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_073.html" class="doc-btn">Next Sermon (073) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

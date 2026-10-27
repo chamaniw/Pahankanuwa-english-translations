@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 005 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_004.html" class="doc-btn">← Previous Sermon (004)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_006.html" class="doc-btn">Next Sermon (006) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 005</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_005_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_005_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_005_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #5</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No. )</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Sīladassanasampannaṃ,</p>
+<p>dhammaṭṭhaṃ saccavedinaṃ;</p>
+<p>Attano kamma kubbānaṃ,</p>
+<p>taṃ jano kurute piyaṃ.</p>
+<p>From:</p>
+<p>Verse 217 from the Piyavagga (Chapter on Affection) of the Dhammapada</p>
+<p>Dear Listeners,</p>
+<p>The arising of a correct understanding regarding the true purpose and the true values of the Dispensation of the Buddha (*Sammā Sambuddha Sāsana*) within both the laity and the clergy is a cause for the long endurance of the Dispensation. Therefore, the Blessed One utilized various opportunities to highlight those purposes and values. He praised practice-oriented disciples with special praise and showed them special regard. Why? Because practice (*paṭipatti*) is the very life of the Dispensation. Where there is no practice, realization (*paṭivedha*)—namely, the direct experience of the Paths and Fruits, the realization of Nibbāna, and the bringing of an end to the sufferings of *saṃsāra*—cannot be achieved. Because of this, on many occasions the Blessed One extolled the value of cultivating a mutual relationship between both the laity and the clergy in a manner that fosters the growth of supramundane qualities.</p>
+<p>The verse we have just recited, along with its background story, serves as an excellent illustration of this. One morning during the period when the Blessed One was residing at the Veḷuvana Monastery, He entered the city of Rājagaha for alms, accompanied by a retinue of five hundred monks, including the eighty chief disciples. That day was a festival day in Rājagaha, a day of celebration. Perhaps it was a festival similar to the New Year celebrations we speak of today. At that very moment, a group of five hundred children was leaving the city, carrying baskets of oil cakes (*kāvum*). When those children encountered the Blessed One, they placed their baskets of oil cakes to one side, paid homage to the Blessed One and the Saṅgha, and then, taking their baskets of oil cakes, they departed; they bypassed that spot. After they had gone, the Blessed One asked the monks:</p>
+<p>"Monks, would you like to partake of oil cakes?"</p>
+<p>"Where are there oil cakes, venerable sir?"</p>
+<p>"Why, did you not see that group of children passing by here carrying baskets of oil cakes?"</p>
+<p>"Venerable sir, to whom would children like that give oil cakes?"</p>
+<p>"Monks, do not say so. The reason why those children did not offer oil cakes either to me or to you is that the true owner of the oil cakes is walking behind." Saying this, He added: "Monks, we must only leave after partaking of the oil cakes." So saying, the Blessed One sat down with the community of monks under a tree nearby.</p>
+<p>Who was this monk, the "owner of the oil cakes"? Walking separately behind this group of five hundred was the great Arahant, Venerable Mahā Kassapa—who constantly received praise from the Blessed One, who had even received the Blessed One’s own robes as an offering in exchange for his own, and who had been designated by the Blessed One as foremost among those who uphold the ascetic practices (*dhutaṅga*). He was the foremost venerable monk in terms of ascetic qualities. That venerable monk, in accordance with his habitual practice, and because he loved solitude, was walking slowly behind, detached from the main crowd. Then, when the children carrying the baskets of oil cakes saw this venerable monk, they developed a wonderful sense of faith, confidence, and joy. They paid homage by prostrating with the five points of contact, and offered the baskets of oil cakes in their entirety to the venerable monk, saying, "Please accept this, venerable sir." Venerable Mahā Kassapa said to those children: "Children, our Teacher and the community of monks are seated there at the foot of that tree. Go and make an offering to all of them if you have anything to offer." Having said this, Venerable Mahā Kassapa proceeded to the foot of the tree where the Blessed One was seated, accompanied by the group of children. Then those children offered the oil cakes to the entire community of monks, headed by the Blessed One. They stood watching until they finished eating, and even offered water. After the water had been offered and they had finished partaking of the oil cakes, a whisper—a few critical words—was heard among the monks: "These children seem to have distributed alms based on personal preference. While the Blessed One Himself and great elders like the chief disciples are present here, they offered all the oil cakes to Venerable Mahā Kassapa who was walking behind."</p>
+<p>Hearing this, the Blessed One declared: "Monks, do not speak thus. My son Mahā Kassapa is dear to gods and humans. Therefore, gods and humans—not only humans but even gods—venerate and support Mahā Kassapa with almsfood and the four requisites." Having declared this, He uttered the verse we took earlier as our theme:</p>
+<p>*Sīla-dassana-sampannaṃ – dhammaṭṭhaṃ saccavedinaṃ*</p>
+<p>*Attano kamma kubbānaṃ – taṃ jano kurute piyaṃ*</p>
+<p>Let us examine its meaning. '*Sīla-dassana-sampannaṃ*' — there is a fourfold virtue (*sīla*) belonging to the monks. It is called the fourfold purification of virtue (*catupārisuddhi-sīla*). To mention them briefly: first is the virtue of restraint according to the Pātimokkha (*pātimokkha-saṃvara-sīla*), which includes the disciplinary rules laid down by the Blessed One. The training regarding this is one. Next is the virtue of restraint of the sense faculties (*indriya-saṃvara-sīla*), which means restraining and guarding the sense faculties—the eye, ear, nose, and so on—from defilements; this is the second. Next is the virtue of purification of livelihood (*ājīva-pārisuddhi-sīla*), which concerns obtaining the four requisites righteously and properly without resorting to improper means; this is maintaining purity of livelihood. Fourth is the virtue concerning the use of requisites (*paccaya-sannissita-sīla*), which means utilizing the obtained requisites through wise reflection (*paccavekkhaṇa*), considering the true purpose of using them, and turning that use into a form of meditation. In this manner, there is a fourfold virtue for the Saṅgha. Venerable Mahā Kassapa, foremost in ascetic qualities, was fully accomplished in this fourfold purification of virtue. Thus, that is 'virtue' (*sīla*).</p>
+<p>Next, '*dassana*' refers to right view (*sammā-diṭṭhi*). By virtue of the realization of the Paths and Fruits—since we are referring here to an Arahant—he is endowed with that right view. Thus, '*sīla-dassana-sampannaṃ*'. '*Dhammaṭṭhaṃ*' means "established in the Dhamma." He is properly established in the Dhamma. Having directly experienced the supramundane Paths and Fruits, he stands firmly established in the Dhamma; hence, '*dhammaṭṭhaṃ*'. Next, '*saccavedinaṃ*' means he has understood the Four Noble Truths properly; hence '*saccavedinaṃ*'. Furthermore, '*attano kamma kubbānaṃ*'. '*Attano kamma kubbānaṃ*' means, devout friends, "one who does his own work." Here, "one's own work" refers to the work belonging to the monks as taught by the Blessed One, which is the cultivation of the threefold training of virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*), which aids in the attainment of Nibbāna. Thus, it means one who performs this personal work of virtue, concentration, and wisdom.</p>
+<p>Thus, the meaning of this verse is: a monk who is endowed with virtue and right view, who is properly established in the Dhamma, who has understood the Four Noble Truths, and who does his own work—him the folk hold dear (*taṃ jano kurute piyaṃ*). Such a monk becomes dear to the people. This is what the Blessed One declared. Upon hearing the sermon delivered in connection with this verse, all five hundred children became Stream-enterers (*sotāpanna*); they attained the noble Fruit of Stream-entry (*sotāpatti-phala*).</p>
+<p>Now, when we look at this verse and story, it might seem like a mere "oil-cake sermon" suited for the New Year. But this is not just an ordinary oil-cake sermon. It contains a highly valuable fragrance of virtue and a flavor of the Dhamma. Let us try to absorb it.</p>
+<p>First, let us reflect on this: Venerable Mahā Kassapa was a highly special person in this Dispensation. Although there were the chief disciples, their spiritual qualities were of a different category. Venerable Mahā Kassapa was unique because he properly observed all thirteen of the noble ascetic practices (*dhutaṅga*)—practices that support virtue and aid in guarding virtue in the best possible manner. Venerable Mahā Kassapa observed many of these rigorous practices, such as subsisting only on almsfood, forest-dwelling, wearing rag-robes, being content with only three robes, and so forth. And because he loved seclusion, he walked apart from the crowd in that manner. On several occasions, the Blessed One delivered special discourses to the Saṅgha, pointing to him as an exemplar. Highlighting the unique characteristics of his lifestyle, the Blessed One illustrated Venerable Mahā Kassapa’s conduct and his relationship with laypeople through two beautiful similes. According to the verse, Venerable Mahā Kassapa appears to have been extremely popular—even among little children. Nowadays, we know that for a monk to be popular, he is expected to associate closely with laypeople, participate in their affairs, and support them actively. Yet, from the two similes given by the Blessed One regarding Venerable Mahā Kassapa's lifestyle, we understand something entirely different.</p>
+<p>What were the similes given? The Blessed One gave the simile of the moon (*candūpamā*), saying that Mahā Kassapa associates with families like the moon. When walking from house to house for alms, Venerable Mahā Kassapa was just like the moon. Why was the moon chosen as a simile? '*Nicca-navakā, kulesu appagabbhā*'—the moon is always new. It is renewed day by day, whether during the waning or waxing fortnight; it is always something fresh. Similarly, even though Venerable Mahā Kassapa walked from house to house for alms, he was always "new" to those laypeople. How was he new? Because he did not have excessive involvement with those lay devotees. We know there is a common village saying: "The comb of the rooster seen twice a day [loses its novelty and value]." Such a state arises if one associates too closely. But there was no such familiarity with Venerable Mahā Kassapa; he was like the moon. The moon is reflected in our well, in the pond, and everywhere—yet no one can grasp it. No one can capture the moon. In the same way, even though Venerable Mahā Kassapa visited lay households, no one could "grasp" him. Therefore, he was said to be '*kulesu appagabbho*'—unobtrusive among families. He had no excessive intimacy or improper relations with families. Illustrating these two qualities through the simile of the moon, the Blessed One on one occasion advised the monks to live taking Venerable Mahā Kassapa as their model.</p>
+<p>The Blessed One also gave another simile: the '*jarūdapāna*' simile, meaning an "old, abandoned well." Venerable Mahā Kassapa was compared to someone looking down into an abandoned well. When someone peers into an old, dry well, they do so without any intention of falling in, keeping their body and mind detached and balanced. The Blessed One praised Venerable Mahā Kassapa, saying that he walked for alms among laypeople just like someone looking down into an old well with body and mind fully composed and detached. From these two similes, we can see that Venerable Mahā Kassapa does not fit the modern conception of "popularity"; he could not have been a "popular" figure in that sense. But, my friends, there are two levels of popularity. There is a popularity that comes from wealth, position, and power. That is a highly superficial popularity that fades away very quickly. The popularity that arises due to virtuous qualities is something far deeper. Here we see that when it comes to small children, they often sense things almost by instinct. Compared to the minds of adults, which are cluttered and agitated by various thoughts, critical judgments, and biases, children possess a purer mind. They can sometimes sense spiritual virtue instinctively. This must be why those five hundred children—not that they lacked respect for the Blessed One and the rest of the Saṅgha, whom they did worship—were particularly captivated by the ascetic quality of Venerable Mahā Kassapa as he walked alone. Being so captivated, they offered their entire baskets of oil cakes to him. This shows that there must have been some innate meritorious potential within those children. There is a saying, "The growing tree is known by its leaves." Similarly, within these children, like a healthy growing tree, there was an inner spiritual strength. It was precisely because of this that, upon hearing the sermon, they so quickly attained the noble state of Stream-entry (*sotāpatti-phala*). The Blessed One declared that even the state of Stream-entry—though it is only the first of the Paths and Fruits—is superior to sole sovereignty over the earth (*cakkavatti*). Why? Because a Stream-enterer has to undergo a maximum of only seven more lives in *saṃsāra*, and is forever freed from the four planes of misery. They attained such a state.</p>
+<p>We can also understand how the minds of these children were prepared on that occasion. First, they felt inspiration (*pasāda*) toward Venerable Mahā Kassapa's virtues; they recognized those virtues through the short verse uttered by the Blessed One. The meaning of that verse, which we analyzed earlier, helped them understand: "Our minds were inspired because Venerable Mahā Kassapa possesses these noble virtues." When one rejoices with sympathetic joy (*muditā*) over something, one simultaneously grows in that very quality. Consequently, the inspired minds of those children became even purer. Next, we can understand that their act of generosity (*pariccāga*) helped to purify their minds further. Here, it was not merely the oil cakes that were relinquished; the amusement associated with those oil cakes was also relinquished. Those children had set out with the intention of going to the park, eating those oil cakes, and playing games. Yet, all five hundred of them, with one mind, offered all those oil cakes to the Saṅgha headed by the Blessed One. Thereby, their sacrifice was made complete. Their minds became exceedingly joyful and clear. It was with such a joyful mind that they subsequently attained the state of Stream-entry through the realization of the Paths and Fruits. Thus, we can see that there is a valuable flavor of Dhamma and a fragrance of virtue within this story.</p>
+<p>Reflecting further, according to the words of the Blessed One, Venerable Mahā Kassapa's popularity among both gods and humans was a popularity born of his virtuous qualities. There is a common notion today, particularly in this day and age, that the Saṅgha are those who subsist on the four requisites provided by lay devotees, and therefore they must repay a certain debt. It is seen as an exchange, a transaction. Indeed, there is truth to this; there is a transaction involved here. But the manner of repaying this debt is what differs. It is not like the repayment of an ordinary worldly debt. This debt is repaid by rendering a supramundane benefit in return for mundane things. This is why the verse states: '*attano kamma kubbānaṃ*'—"doing one's own work." In society, a person who does only their own work is often called "selfish" (*ātmārthakāmī*). In that sense, the Blessed One describes Venerable Mahā Kassapa as someone working for his own welfare. But as this self-interest (*atmārtha*) is being fulfilled—and what is this self-interest? It is the fulfillment of the qualities of virtue, concentration, and wisdom that aid in the attainment of Nibbāna—the welfare of others (*parārtha*) is simultaneously accomplished. Therefore, here, one's own welfare becomes the welfare of others. When we consider the four requisites offered by devotees to the Saṅgha, offering these is different from giving to beggars, the poor, and the needy. My friends, giving to the poor and needy is done primarily out of compassion (*karuṇā*), whereas offerings to the Saṅgha are made primarily out of faith (*saddhā*). Therefore, on many occasions, to remind the monks of their proper duty, the Blessed One declared: "Monks, you consume the food given out of faith (*saddhādeyya*)." You live by consuming food offered through faith. Hence, you must repay that debt. You must repay that debt. How is this debt repaid? The Dhamma points out four ways of utilizing the four requisites. What are these four?</p>
+<p>First:</p>
+<p>*Theyya-paribhoga* — use as a theft. To use a common expression, it is like "eating by theft," using requisites like a thief.</p>
+<p>Second:</p>
+<p>*Iṇa-paribhoga* — use as a debt, like using something on credit.</p>
+<p>Third:</p>
+<p>*Dāyajja-paribhoga* — use as an inheritance, using something received as a legacy.</p>
+<p>Fourth:</p>
+<p>*Sāmi-paribhoga* — use as an owner, utilizing the requisites as the rightful owner.</p>
+<p>These are the four concepts mentioned in the Dhamma. Let us analyze each of them in some detail.</p>
+<p>*Theyya-paribhoga* (use as a theft) means utilizing the four requisites without possessing any virtuous qualities such as virtue (*sīla*). Through this, the user—the monk—becomes a debtor to the laity. No matter how much he tries to repay the debt on a worldly level, according to the Dhamma he remains a debtor. He may have to repay that debt over a long period in *saṃsāra*. Such is this condition. It is *theyya-paribhoga*—like "eating by theft."</p>
+<p>Next, the second aspect is *iṇa-paribhoga*—use as a debt. This second condition is slightly better than using as a thief—it is taking as a loan. It is unavoidable. The four requisites are essential for the survival of the Saṅgha. Some kind of support is necessary for sustenance: robes (*cīvara*), almsfood (*piṇḍapāta*), lodging (*senāsana*), and medicinal requisites (*gilāna-paccaya*)—something to wear, food to eat, a place to dwell, and medicine. These make up the four requisites. But these requisites are taken by the monks as a debt. Now, we know that if someone takes a loan—say, for a business venture or for agriculture—but wastes it with no intention of ever repaying it, he is not truly a mere debtor, but a thief. On the other hand, if someone utilizes the loan properly and systematically to achieve its intended purpose in business or farming, and pays the interest in due course, then that person is a true debtor. He is someone who fulfills the duty of a debtor. In the same way, how has the Blessed One explained *iṇa-paribhoga*, the "use as a debt"? If a monk utilizes each of those four requisites—robes, almsfood, lodging, and medicinal requisites—by reflecting upon them (*paccavekkhaṇa*) and considering them with wisdom, it is like utilizing them as a responsible debtor. There are two sides to this reflection. Let us take almsfood—food—as an example. Usually, lay devotees use food not only to appease hunger, but also out of desire for taste, to build up the body, or to beautify the complexion. Such are their purposes. Since such motives are unbefitting for monks, the Blessed One declared that they should reflect on the true purpose of the food—the almsfood—they consume. "I take this food only to sustain this body, to cross over this *saṃsāra*, and to lead this noble life of celibacy (*brahmacariya*)." Thus, reflecting on the true meaning of food—almsfood—with wisdom is one side of it. Furthermore, that is not all. The partaking of almsfood is turned into a form of meditation. How? "This almsfood I consume is made of the four elements: earth (*paṭhavī*), water (*āpo*), fire (*tejo*), and wind (*vāyo*). My body, too, is a body composed of these very elements." "Even though this almsfood is clean, once it enters this repulsive body, it becomes repulsive." What is achieved through this? Two forms of meditation are performed: the contemplation of the elements (*dhātu-manasikāra*) and the contemplation of repulsiveness (*asubha-manasikāra*). That is it. As we said earlier, when one takes a loan, it is the duty of a true debtor to keep the purpose of the loan in mind, to work towards it, and to pay the interest on time. Here, too, the same is done. Regarding each of the four requisites—for instance, food: "I took this as a loan. For what purpose? To sustain this body in order to cross over this wilderness of *saṃsāra*." Thus, the purpose is considered. Next, what is the payment of interest? It is turning towards meditation. "This almsfood and my body are both creations of the four elements: earth, water, fire, and wind." From that itself, the truth of not-self (*anattā*) is realized within it—impermanent (*anicca*), suffering (*dukkha*), and not-self (*anattā*). Not only that, but it is also turned towards the aspect of repulsiveness: "This clean food becomes defiled upon entering my filthy body." Lo, through this, interest is paid. Why? Because this is a journey towards Nibbāna. For the journey to Nibbāna, meditation is essential. Thus, through the use of requisites, meditation is performed. That is the payment of interest. Why did we explain this in such detail? Because some people interpret this differently. Some believe that simply by reflecting upon the requisites while consuming them, monks are freed from debt. That cannot be called correct; there is a shortcoming in that view. A monk is not freed from debt merely by reflecting on the requisites while utilizing them. There is still work to be done further ahead. This will become clear when we explain the other points.</p>
+<p>That was the second aspect—*iṇa-paribhoga* (use as a debt). Next, what is the third aspect? *Dāyajja-paribhoga*—use as an inheritance, utilizing them by considering them as a heritage. It is explained like this: let us suppose a monk has attained the state of Stream-entry. From the moment of that attainment, that monk is a true son of the Buddha. Those who stand in the three states of Stream-enterer (*sotāpanna*), Once-returner (*sakadāgāmi*), and Non-returner (*anāgāmi*) are the true sons of the Buddha. However, they have not yet finished their work. Such individuals are called trainees (*sekha*)—those who are training properly in this Dispensation. They have not finished their work. Such individuals utilize these four requisites just as children use their parents' belongings, treating them as an inheritance. When parents are not at home, little children fearlessly use things belonging to their parents—even though they are not their own, because they belong to their parents. Similarly, the use of the four requisites by monks who have realized the initial Paths and Fruits—Stream-entry, Once-returner, and Non-returner—is compared to children utilizing their parents' belongings. This is *dāyajja-paribhoga*. That is the third aspect.</p>
+<p>Finally, there is *sāmi-paribhoga*—use as an owner. Truly, in every sense, utilizing the four requisites as their rightful owner. This occurs only after one becomes an Arahant. At the moment of attaining Arahantship, the liberated person is described as one who is debt-free. That is why—since we were speaking of Venerable Mahā Kassapa—Venerable Mahā Kassapa, who became an Arahant seven days after his ordination, expressed this on one occasion: "For only six days did I consume almsfood as a debt; on the seventh day, I consumed it debt-free." What did he mean by that? That until six days had passed, he had not attained Arahantship, but on the seventh day, he did. From this, it is evident that an Arahant partakes of almsfood free of debt. There is no debt left to be repaid. Whatever else they do—if they perform any special favor for the world—they do so out of compassion for the world (*lokānukampā*), out of empathy for the world. That is why the Blessed One waited until the first sixty disciples became Arahants before sending them in various directions for the welfare and happiness of the many (*bahujana-hitāya bahujana-sukhāya*), and not before. After they became Arahants, the Blessed One did not tell them, "Go and repay your debts," but rather, "wander free from debt." Those sixty were not sent with the idea that they should go and preach the Dhamma to repay their debts. We emphasize this particularly because some people interpret it incorrectly. When the Blessed One told those sixty to wander "for the welfare of the many, for the happiness of the many," He did not mean they should go and repay a debt. For the remainder of their lives, Arahants do this purely out of compassion for the world. Yet it is said: '*anaṇā vicaranti loke*'—"they wander debt-free in the world." From that point on, they wander without debt. Becoming debt-free in this manner is the true release from the bond of debt. Only from then on does *sāmi-paribhoga* (use as an owner) exist; they consume the four requisites as their rightful owners. This is what illustrates how the debt is repaid.</p>
+<p>Furthermore, we know that through the repayment of debt and the development of virtuous qualities, Arahantship is described as a state of debtlessness, a debt-free state. The Blessed One, the Arahants, and the Pacceka Buddhas utilize the four requisites entirely free of debt. Because of the supramundane value inherent in this transaction, you, my friends, may often hear during almsgiving ceremonies that three conditions must be fulfilled for an offering made by lay devotees to be of great fruit and great benefit (*mahapphala mahānisaṃsa*). What are those three conditions?</p>
+<p>*Dāyaka-sampatti* (the excellence of the giver)</p>
+<p>*Deyyadhamma-sampatti* (the excellence of the gift)</p>
+<p>*Paṭigāhaka-sampatti* (the excellence of the recipient)</p>
+<p>*Dāyaka-sampatti* does not mean the material wealth of the donor; it refers to the excellence of virtue that a true donor should possess. It is being complete in a range of virtuous qualities. If one is complete in faith (*saddhā*), the intention of relinquishment (*pariccāga-cetanā*), virtue (*sīla*), and so forth, then they are a true donor. That is *dāyaka-sampatti*. *Deyyadhamma-sampatti* refers to the righteousness of the gift itself. It is that which has been earned and gathered righteously—not something obtained through theft or violence. Moreover, it is prepared nicely and offered with respect, not cast away carelessly. That is *deyyadhamma-sampatti*. *Paṭigāhaka-sampatti* refers to the recipient’s side. When we consider *paṭigāhaka-sampatti*, in the highest sense, those worthy of receiving offerings are the Buddhas, Pacceka Buddhas, and Arahants. Following them are those who progress according to their virtuous qualities. That is *paṭigāhaka-sampatti*. It is based on this that offerings become of great fruit and benefit. This very matter has been expressed in a verse, often using the simile of agriculture:</p>
+<p>*Khettūpamā arahanto*</p>
+<p>*Dāyakā kassakūpamā*</p>
+<p>*Bījūpamaṃ deyyadhammaṃ*</p>
+<p>*Etato nibbattate phalaṃ*</p>
+<p>The Arahants are like fields—like fertile fields. '*Dāyakā kassakūpamā*'—the donors endowed with all those qualities of a donor are like skilled farmers. '*Bījūpamaṃ deyyadhammaṃ*'—the object offered is like good seed-paddy. '*Etato nibbattate phalaṃ*'—from this, the true fruit arises, becoming of great fruit and benefit. It is explained that a vast mass of merit flows in this manner.</p>
+<p>Accordingly, we understand that the Blessed One has shown us the proper, systematic, and righteous relationship between laity and clergy through this story and verse, for the sake of future generations and the progress of the Dispensation in the future. In addition, let us reflect a little further. When we began telling this story, some might have wondered: "Is this real? Is it a true historical event?" There is a very deep matter here. Anyone who reads about the Blessed One's life is filled with awe and wonder at His great wisdom and great compassion. The Blessed One, having a perfect comprehension of the three periods of time—past, present, and future—watches, as it were, like one watching a play unfold. The minds of people in the world are visible to Him. What people do and say, and their past potentials, are all visible to Him. That is why the Blessed One spoke in that manner: "Monks, would you like to eat oil cakes?" and then, "Let us leave only after eating the oil cakes." What was the Blessed One doing here? Throughout the four incalculable aeons and a hundred thousand aeons of fulfilling the paramis, there is no oil cake He had not consumed, no cake He had not eaten. An oil cake was nothing new to Him. Nor did He have any particular craving to feed oil cakes to the Saṅgha. But there is a very deep purpose here. The Blessed One created this opportunity for those five hundred children—having seen their supporting conditions (*upanissaya-sampatti*), having seen the moment when their faith would emerge, and having seen that by acting upon that faith they could achieve the realization of the Paths and Fruits—it was to facilitate this opportunity that the Blessed One declared, "We shall only proceed after eating the oil cakes." Therein lies—we must reflect—the skill in means (*upāya-kosalla*) of His great compassion. It is truly wondrous. At the same time, a noble quality of the Blessed One that we, and the world, can take as an example is His praising of a noble quality even in His own disciple. With anyone else, if they were offered nothing while their pupil was offered oil cakes, their face would turn sour—perhaps looking like an oil cake itself! Such things happen constantly in society: "They did not offer oil cakes to someone of my virtue, yet they offered them to my disciple." Instead, what did the Blessed One do? He said: "Monks, although those children did not give oil cakes either to you or to me, the true owner of the oil cakes is coming behind. Let us wait until then." Through this, the Blessed One gave a great example to the world. He also utilized that opportunity to declare the noble virtues of Venerable Mahā Kassapa through such a verse. Within this, there is a message for the Dispensation; it contains a message showing exactly how the relationship between laity and clergy should be maintained.</p>
+<p>Thus, we can harvest many such insights from this story and this verse. Within this New Year "oil-cake sermon"—as we mentioned earlier—there lies a fragrance of virtue and a taste of Dhamma. The more you, my friends, reflect on this, the more you can absorb its flavor. This is a wonderful opportunity for that.</p>
+<p>Furthermore, you, my friends, are currently preparing for the New Year festival. Let us contemplate the natural principles (*dhammatā*) inherent in it. What is this New Year festival? The wheel of time keeps turning and turning. It never stops anywhere, nor can it be stopped. The wheel of time is just like a cogwheel. Caught in it, the wheel of our life also wears away, and without our even realizing it, our lifespan is spent. We cannot stop this. We are constantly pushed forward, with no time to pause and reflect. This is why certain customs have arisen. Many people do not understand the deeper meanings of New Year customs; they treat it merely as an occasion for amusement. Now, regarding the New Year, you know there is a period called '*nonakatha*' (the non-auspicious time). *Nonakatha* means the period when there is no astrological juncture. There is a belief in the world that everything—all worldly activities—must be done at an auspicious astrological time (*nakatha*). Therefore, when there is no such auspicious time to perform worldly activities, it is the *nonakatha*. Some people think: "Well, we cannot just spend the *nonakatha* doing nothing, so let us do some meritorious deeds." That is a mistaken idea. This *nonakatha* is designated as the "period for meritorious deeds" (*puṇya-kālaya*). If we consider it deeply, it is indeed a "meritorious period." How does it become a meritorious period? We must make that *nonakatha* period a pause in our lives. We should treat it as a small rest, a pause amidst our busy activities. There is the Old Year, and there is the New Year. Between the two, there lies the *nonakatha*. We must make this a meritorious period—not by eating, drinking, and making merry, but by pausing and reflecting calmly. "What were the wrongs committed by me over the past year—through body, speech, and mind? What were my shortcomings towards neighbors, relatives, friends, and the Triple Gem? What are my shortcomings in terms of virtues? What are my shortcomings regarding virtue (*sīla*)?" We must examine these. Now, you know that during the New Year festival in households, houses are thoroughly cleaned, rust is removed, and, what is more, they even build a brand-new hearth to begin the New Year. This renewal—we must turn this into a renewal of the mind. It should be an opportunity to renew the mind—washing away the accumulated trash and rust of the mind, looking towards the future in accordance with the Dhamma, and making it a meritorious period to align our thoughts, wishes, and conduct in such a way that our lives incline towards Nibbāna and avoid falling into states of deprivation within this perilous *saṃsāra*. This is what that opportunity, that pause of the *nonakatha*, should be used for.</p>
+<p>For such an occasion, we have presented several refined reflections through this Dhamma sermon. Accordingly, one can ponder: "Having understood these virtuous qualities, and having correctly understood the values and purposes of the Dispensation, how should we maintain the relationship between laity and clergy? What are the values of this Dispensation? What is considered a 'transaction' in the Dispensation? What has the Blessed One shown us? How should we mold our lives accordingly?" This *nonakatha*, this meritorious period, is an excellent opportunity to reflect on these matters. Our life—while the wheel of time turns endlessly with no beginning or end—this life-wheel of ours, caught and worn away by that cogwheel, is not such a grand thing. It is something that could cease at this very moment. Generally, one's maximum lifespan is now almost unpredictable. Although we say a hundred years, it is currently much less than that. In addition, due to various other disasters and external or internal hazards, we cannot say when our life will end. Even while we are talking, if the heart suddenly stops, a life is ended right there. Such is this perilous situation. This is the brevity of life. Next, we must reflect on the lengthiness of *saṃsāra*—how long we have been suffering in this *saṃsāra*, being born and dying repeatedly. Our true situation lies between these two. Reflecting on this, what has the Blessed One declared for our release from it? The collection of virtues outlined by the Blessed One as virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*), or as giving (*dāna*), virtue (*sīla*), and meditation (*bhāvanā*). There are many details within these. We must reflect on all of them, and utilize this *nonakatha* period, this meritorious period, in the proper manner. Now you know, my friends, that in commercial shops at the end of the year, they hold "sales" to clear out old stock, selling them cheaply just to get rid of them and bring in new goods. Similarly, what we must do is clear out the trash of our minds—even if we have to give it away to whoever will take it—and renew our minds. That is what the New Year truly means. The New Year is not a renewal of clothing, the cleaning of houses, or painting. A true New Year must be a New Year where we grow in virtuous qualities. That is what a festival means—internally.</p>
+<p>Thinking along those lines, we must also reflect on the example set by those little children in our story. Especially in this day and age, those little children offer a great example to lay devotees. For on that day, those children did not go to the park carrying baskets of oil cakes with the intention of offering them to the Saṅgha. They went to eat, drink, and enjoy themselves. Yet, they relinquished that. They relinquished that very intention. They offered that highly delicious food—the oil cakes—entirely to the Saṅgha headed by the Blessed One. Instead of the taste of those oil cakes, they received a far superior supramundane taste, by attaining the Fruit of Stream-entry at that very moment. In that manner, we must reflect that the Blessed One has introduced to us a set of noble values far superior to worldly values. The Buddha’s Dispensation (*Buddha Sāsana*) means living in accordance with those values and shaping our lives by them. If we reflect on the example set by these children, though some level of amusement may be necessary, if we spend this New Year eating, drinking, and making merry in a way that degrades our future and leaves our lives destitute, we will have to pay a debt for it. We will have to suffer for a long time in *saṃsāra*. Therefore, for a festival to truly bring happiness to one's mind, there must be peace of mind. Indeed, everyone would agree that peace is the highest happiness in the world. The path to that peace is what the Blessed One has introduced as the peace of Nibbāna. That is it—that further shore. In order to bring that peace, which is beyond this shore, closer to our daily lives, some revision of our lifestyle, schedule, and daily routine may be necessary. If every merit-seeking friend reflects in this way, then the coming *nonakatha* period will become a truly auspicious time (*nakatha*). Actually, we should realize—some might think that if they do something during the *nonakatha*, it will bring bad luck (*apala*). But, my friends: "It is bad luck (*apala*) if, having attained human birth, one remains without performing wholesome deeds." Bad luck means that having attained human birth, one remains without performing wholesome deeds, rendering it fruitless. That is what *apala* means. Thus, the true auspicious time is this period of the appearance of a Buddha (*buddhōtpāda-kālaya*). Since we have obtained such a truly auspicious time, we must utilize this opportunity. Since we may not be able to do this every day, the wise of the past must have designated this *nonakatha* at the end of the year as a meritorious period, creating a small pause to make use of it. But what did the unwise do instead? They added various unnecessary things to that *nonakatha*, turning it purely into paths of amusement that cause their downfall. Therefore, we must reflect in accordance with the Dhamma, making this meritorious period a truly meritorious one, purifying our minds, and starting the New Year better by reflecting on and correcting any shortcomings in our virtue (*sīla*).</p>
+<p>Especially, the issue of livelihood is a major problem for lay devotees in this day and age. The world is progressing in a perilous manner in search of material development. This is an era that thinks only of the economy, disregarding righteousness. People do not realize this until they fall into the ultimate abyss. Consequently, this is an era where various forms of wrong livelihood (*micchā-ājīva*) come to the forefront for the sake of acquiring and earning wealth quickly. Wise Buddhist devotees must reflect on their livelihood, placing the Dhamma taught by the Blessed One at the forefront. Sometimes there may be shortcomings and scarcities in daily life. One might not be able to get rich quickly. However, one must make a special effort to cultivate that noble virtue of abstaining from wrong livelihood, just as we have undertaken here today. Nowadays, some might think that the things pointed out by the Blessed One are impossible to practice. Abstaining from raising animals for slaughter, the trade in meat, the trade in weapons, the trade in poisons, and the trade in intoxicants—it has come to a point where people feel they would have no job left if they avoided these. In this way, society is heading towards a dangerous precipice. Yet, one must reflect: "Shall I continue to suffer in this long *saṃsāra*, or shall I make some sacrifice to escape from it, now that I have obtained this rare opportunity of a human birth (*khaṇa-sampatti*)?" One must reflect on this with wisdom. No matter what society says, or even how others in one's own household think, wish, or live—each of us is born alone and dies alone. Therefore, each person is responsible for their own action (*kamma*). The Blessed One has declared:</p>
+<p>*Kammassakā, māṇava, sattā kammadāyādā kammayonī kammabandhū kammappaṭisaraṇā, kammaṃ satte vibhajati yadidaṃ hīnapaṇītātāya...*</p>
+<p>"Beings are owners of their actions, heirs to their actions, born of their actions, related to their actions, and have actions as their refuge. Action distinguishes beings as inferior and superior..." This action is what we own. This action is our inheritance. It is due to action that we are born; action is the cause of our birth. Furthermore, action is our kinsman. Action is our refuge. Therefore, we must take responsibility for the actions we perform. Therefore, it is our duty to adjust our lifestyle. Those shortcuts are often dangerous. Shortcuts and rushing are often dangerous. If one resorts to unrighteous means to quickly accumulate and earn wealth, or to quickly solve household problems, that person will surely have to suffer for it someday.</p>
+<p>Therefore, during that period of calculation—treating the *nonakatha* as an occasion to take stock—one must reflect on one's income over the past year. If we look at "income" in a worldly sense, it is a budget seen in figures. In a deeper sense, what is a budget? The income side consists of meritorious deeds (*puñña*), and the expenditure side consists of harmful deeds (*pāpa*). "What are the harmful deeds committed by us? What are the unwholesome deeds? What are the wholesome deeds (*kusala*), the meritorious deeds, that we should have done, could have done, or made an effort to do?" Such is the reflection. Now, in this manner, we must settle a "transaction" regarding ourselves as well. Part of the New Year festival is settling disputes with neighbors and resolving transactions; that is how we begin a New Year. But there is also an internal transaction that must be performed. We must not remain indebted to this life, this rare human existence we have obtained. How many die indebted to the human existence they obtained? They were born as humans, yet they live and die like human hungry ghosts (*preta*) or human demons (*yakṣa*). To avoid falling into such a state, this is a wonderful opportunity to strive and adjust our lifestyle.</p>
+<p>Therefore, you, my friends, must align yourselves with a way of life appropriate to that human existence. Nowadays, when speaking of a good life, many people say—and it has become a sort of fashion—"We do not commit sins, we do no wrong." It is easily said. But merely saying "we do no wrong" does not complete the task. There is a positive side to it: one must perform wholesome deeds (*kusala*). Developing the mind—general principles, principles of virtue (*sīla*). It is not merely a matter of undertaking precepts. One must reflect on them, continually checking daily whether one's lifestyle is maintained in conformity with virtue. Next, one must not stop there. In this Dispensation, the true purpose of virtue is concentration (*samādhi*) and meditation (*bhāvanā*). If we do not build concentration upon the foundation of virtue, then virtue is of little avail. Therefore, virtue is essential. Whether it is the Five Precepts, the Eight Precepts with Livelihood as the Eighth (*ājīva-aṭṭhamaka-sīla*), the Ten Precepts, or the Eight Uposatha Precepts, any virtue is undertaken in order to discipline body and speech, and thereby to calm the mind and bring it to concentration. Therefore, we must be diligent about this concentration—this calmness. There are two aspects to this concentration: tranquility (*samatha*) and insight (*vipassanā*). One calms the mind on a wholesome object. Practicing some meditation subject (*kammaṭṭhāna*) such as loving-kindness (*mettā*), recollection of the Buddha (*buddhānussati*), repulsiveness (*asubha*), or recollection of death (*maraṇasati*) during leisure moments in daily life. Especially in the morning, before going to sleep at night, or when others are asleep, one should find some quiet time as part of the daily routine. By practicing a meditation subject like loving-kindness even for a short time—five or ten minutes—the mind becomes purified and concentrated. Through this, the mind becomes calm. Next, one must not stop at that. Those who cultivated only concentration and achieved higher supernormal knowledges (*abhiññā*) existed not only during the time of a Buddha but also in eras when no Buddha appeared. Yet, they could not bring an end to the suffering (*dukkha*) of *saṃsāra* through that alone. Therefore, the Blessed One pointed out that based on concentration, one must then cultivate insight (*vipassanā*). This is the purpose of virtue and concentration. The wisdom of insight is what is meant by virtue, concentration, and wisdom (*sīla-samādhi-paññā*). An effort must be made to develop that wisdom.</p>
+<p>One should not think, "How can we do these things while living in a household?" In the past, during the time of the Buddha and even more recently—as we just mentioned, those little children realized the Fruit of Stream-entry. This involves not only concentration but also insight knowledges (*vipassanā-ñāṇa*). This is a very subtle thing. At various times during our long journey in *saṃsāra*, we must have practiced meditation to some extent. Those practices remain deposited in our minds, stored in our consciousness (*viññāṇa*). It is like a hidden treasure, but we are unaware of it. Even if there is a golden plate lying in the corner of our kitchen, we might not recognize it. Only when we make a scratch on it, perhaps with a pin, can we identify it. Similarly, deep within our mental continuum—in fact, we have obtained this human existence through a special meritorious potential. Within it, there may lie those potentials of past Dhamma study and meditation. They remain hidden. Whether one is a layperson or a monk, in order to unearth them, one must begin insight meditation (*vipassanā-bhāvanā*). Meeting with qualified teachers of meditation and with the help of spiritual friends (*kalyāṇa-mitta*), one must direct the mind to insight meditation in terms of impermanence, suffering, and not-self (*anicca, dukkha, anattā*). In daily life, everything one encounters in one's lifestyle should be made a testimony, an illustration, of this Dhamma. Through them, one must train to see the three characteristics (*tilakkhaṇa*) taught by the Blessed One. When the mind is habituated to this, then at some point, one can realize the Paths and Fruits almost instantaneously, just as we saw. There is a story from the past where a princess, seeing worms in a toilet she visited, developed the perception of bloating—reflecting on how worms infest a body after death. That single, fleeting thought aided her even to attain Arahantship. Similarly, instead of allowing our minds to be agitated or defiled by lust (*rāga*), hatred (*dosa*), and delusion (*moha*) by the things we see on the road, read in newspapers, or hear in the news, we must see through them the three characteristics taught by the Blessed One: impermanent, suffering, and not-self (*anicca, dukkha, anattā*). That unique perspective is indeed insight (*vipassanā*).</p>
+<p>Now, some today might say that, whatever may have been the case in the past or the lifestyle of our ancient Sinhalese ancestors, these things cannot be practiced in the present era. In the past, our mothers of old—as recorded in Dhamma texts and literature—even when pounding paddy, would not let the husk peel off without turning it into meditation, reflecting on impermanence. Such was their practice. Now, even though various luxury goods have been produced in the world, you, my friends, must see impermanence even through them. "Is not that which is in the living room today in the kitchen tomorrow? And on the next day, is it not finally in the dustbin?" Everything—all these things considered modern, novel, and beautiful—how they proceed towards destruction, towards the mouth of decay. Furthermore, we must see through all these various fashions, high-ranking positions, and those who reign supreme—how their fortune changes, collapsing in a single hour or a single moment. Through these, we must see the three characteristics taught by the Blessed One. None of these are strange things; none of this is unusual. We commonly say, "This is an accident," as if there is a category called "accidents." But in truth, there are no accidents in nature. Let us suppose a wheel of a moving vehicle suddenly comes off, or some such event occurs, resulting in what is called an accident. This did not happen only at that precise moment. It had been loosening gradually before it finally came off. Because we failed to see it, we call it an "accident." That is exactly how it is. That is one aspect of our "accidents." The events that occur to us, the disasters we face—underneath them lies action (*kamma*). That wheel of action. Not a single one is a "sudden accident." The Buddhas and those possessing supernormal knowledges (*abhiññā*), upon seeing these, display a slight smile. Why? "I saw this happening—yet it cannot be prevented." That is why they smile slightly. Consider a mother watching her little child trying to stand up. He must stand up somehow, but each time he falls, she smiles gently, doesn't she? Similarly, when the Buddhas see human beings destroyed by these so-called "accidents" and lamenting, They think: "Alas, these people did not see this coming. The cause for this is some unwholesome deed committed aeons ago. They are now experiencing its result (*vipāka*)." Such is the situation in this world. Truly, there are no "accidents" in nature; they are natural occurrences. To the word "natural," we must add—usually we use "natural" only for inanimate or lifeless things in the world—but the result of action (*kamma-vipāka*) is also included in this. Action, too, has a result. Just as we spoke of farming when discussing merit and demerit, the Blessed One has declared:</p>
+<p>*Yādisaṃ vapate bījaṃ tādisaṃ harate phalaṃ*</p>
+<p>*Kalyāṇakārī kalyāṇaṃ pāpakārī ca pāpakaṃ*</p>
+<p>"According to the seed that is sown,</p>
+<p>So is the fruit that is reaped.</p>
+<p>The doer of good reaps good,</p>
+<p>The doer of evil reaps evil."</p>
+<p>In whatever manner one sows, in that manner one reaps the harvest. The doer of good, the performer of wholesome deeds, reaps good results. The doer of evil reaps painful results (*dukkha*). Therefore, because of such a law, on a valuable Uposatha day like today, we must resolve to treat the coming *nonakatha* period as a true meritorious period—undertaking a special review, a retrospection, and a re-examination of our lives, and based on the lessons learned therefrom, resolve to start the coming New Year with a good lifestyle and a good schedule. This New Year and the Uposatha day have coincided; considering this as an opportunity to shape our lives in accordance with the Dhamma, you, my friends, should reflect on the purity that has arisen in your minds through listening to the Dhamma for an hour today. Endowed with the Eight Precepts with Livelihood as the Eighth or the even higher Eight Uposatha Precepts, you have listened to the Dhamma, disciplining body and speech, and generating firm faith (*saddhā*) in the Triple Gem. Rooted in the energy (*viriya*) born of that faith, you sat on the floor in this manner, applying your minds to listen to the Dhamma despite various obstacles and difficulties. The mindfulness (*sati*) applied in that effort, the mindfulness applied to listen to every single word of this Dhamma sermon, and the calmness that arose in the mind as a result—by applying the mind to these virtuous qualities of faith and so forth, or as recollection of the Dhamma (*dhammānussati*)—can indeed be considered as concentration (*samādhi*). In that manner, this listening to the Dhamma has served as a foundational training in developing the faculties and powers (*indriya, bala*) of faith (*saddhā*), energy (*viriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*), which aid in the attainment of Nibbāna. It is through this that you, my friends, will one day be able to realize the truth of Nibbāna. One should wish: "May we have the strength and power to realize that noble Dhamma of Nibbāna without delay, in this very life, within this human existence obtained during this noble era of the appearance of a Buddha!"</p>
+<p>Furthermore, we must share these merits with the deities: "May all the guardian deities of the Dispensation—the assembly of devas and brahmas—rejoice in whatever mass of wholesome merit we have accumulated by preaching and listening to this Dhamma! May they continue to protect the Dispensation and us, and may they realize the noble, deathless Nibbāna through their desired path of awakening (*bodhi*)!" Likewise, we must make an aspiration for our departed relatives and all living beings from the Avīci hell up to the Akaniṭṭha heaven who might be waiting to rejoice in the merits of this Dhamma preaching and listening: "By rejoicing in these merits, may they be released from painful conditions (*dukkha*) and reach happy states! May they associate with spiritual friends (*kalyāṇa-mitta*), fulfill all wholesome qualities such as meditation, and find peace in the noble, deathless Nibbāna!" Thinking thus, let us now share the merits by reciting these verses.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_004.html" class="doc-btn">← Previous Sermon (004)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_006.html" class="doc-btn">Next Sermon (006) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

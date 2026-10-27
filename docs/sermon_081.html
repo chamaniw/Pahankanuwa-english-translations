@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 081 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_080.html" class="doc-btn">← Previous Sermon (080)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_082.html" class="doc-btn">Next Sermon (082) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 081</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_081_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_081_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_081_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #81</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.24)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Ko nu hāso kimānando, niccaṃ pajjalite sati;</p>
+<p>Andhakārena onaddhā, padīpaṃ na gavesatha.</p>
+<p>From:</p>
+<p>Dhammapada 146 (Jarāvagga)</p>
+<p>Dear Listeners,</p>
+<p>According to the Dhamma expounded by the Buddha, the Teacher of the Three Worlds, darkness and light remind us of two things: ignorance (*avijjā*) and wisdom (*paññā*). The Blessed One declared that the reason why beings in this world have been caught up, entangled, and enmeshed in a great heap of *Dukkha* (Suffering) in this saṃsāra for an endless period of time—a heap of *dukkha* whose beginning and end are invisible—is because their eye of wisdom has been blinded by the darkness of ignorance. That is why the Blessed One has illustrated that realization of life, the realization of Nibbāna, and the seeing of Nibbāna, as the arising of the Dhamma-eye, as the dawning of a light. Beings in this world do not realize that their eye of wisdom is blinded because they have fallen into a state of grave negligence (*pamāda*). Worldly beings do not understand the darkness of ignorance they are in; they spend a long time in saṃsāra groping about in this darkness. Due to various reasons for falling into this negligence, and because of being subject to many forms of intoxication, worldly beings do not understand the dangerous situation they are in. Therefore, the Great Compassionate Blessed One on certain occasions had to arouse spiritual urgency (*saṃvega*) in his listeners through various skillful means. An incident of this nature is mentioned in the background story of the stanza we have taken as our theme today.</p>
+<p>During the time of the Buddha, five hundred householders of Sāvatthī, wishing to see their wives live diligently and with love for the Dhamma, entrusted them to Visākhā, the great lay female disciple, like a group of pupils. These five hundred female lay disciples would always go to the monastery and the park together with the great lay disciple Visākhā. In this way, they remained highly obedient. However, a certain occasion arose—a drinking festival in Sāvatthī. A festival of drinking alcohol. It was held for seven days; such customs, like social festivals, existed in those cities. When such a drinking festival was held, those wives had to prepare alcohol for their husbands. After those seven days had passed in that manner, a large amount of alcohol was left over. These lay women thought, "We too should at least taste a little of this." However, they were afraid to do so in a way that their husbands would find out. Therefore, as a clever ruse, they went and asked for permission from Visākhā, saying, "We would like to go to the park; we had a desire to go to the park." Visākhā also took them along. After going to the park, what happened? Those lay women secretly got the alcohol brought there—since they were a large group, they managed it by some means. Next, they secretly drank it and became intoxicated. Being intoxicated, they behaved badly, in the various ways an intoxicated person behaves. Visākhā felt a great sense of spiritual urgency and dismay (*saṃvega*), thinking, "This will cause a bad rumor among the non-Buddhist ascetics (*tīrthakas*) that Visākhā, the chief female lay disciple of the Ascetic Gotama, also drank alcohol; a great blemish has been cast upon us due to an incident of this nature." Visākhā then admonished those lay women.</p>
+<p>She also said to those lay women, "You will also have to undergo punishment from your husbands. What are you going to do now?" The lay women said, "We will go home and feign illness, showing that we are sick." Visākhā said, "Very well then, try and see," and sent them on. Similarly, when they went home and went to a separate room as if they were sick, and when the husbands came to know of this, they understood the reason. Having understood, they beat and punished them thoroughly.</p>
+<p>After some time passed, another drinking festival came, just like before. On that occasion too—and this is the danger of alcohol and intoxication: once someone acquires a taste for it, they continue to go along with it—so, in the same way, after their husbands had finished drinking, for the second time a thought arose in those lay women, "We must go hide somewhere and secretly use this alcohol." Perhaps it was due to thriftiness, or perhaps due to a reluctance to throw it away. For whatever reason, they came to Visākhā again and presented a proposal to go to the park. Visākhā said, "Once we went and got such bad publicity," and when she rejected that idea, they next presented it under a different guise, saying, "We want to go perform offerings to the Blessed One; we have such an intention." "Ah, very well," said Visākhā, and took this group along. In an unbelievably clever way, while taking flowers, incense, and other offerings, they also carried alcohol in vessels. Having taken it, they drank the alcohol before entering the monastery, and came into the presence of the Blessed One drunk and intoxicated. Visākhā, unaware of this, invited the Blessed One to preach Dhamma to them. Not long after the Blessed One started the Dhamma sermon, so great was the danger and peril of that alcohol that these women felt like dancing and singing songs right in front of the Blessed One.</p>
+<p>Along with that thought, now, generally it is said here that when one is in a state of mindlessness, there are various forces in this world and the universe that can possess us—forces that are opposed to the Dispensation (*Sāsana*), opposed to the Dhamma, and pull us back into saṃsāra, preventing our journey to Nibbāna. In the same way, it is mentioned here that deities belonging to Māra's retinue (*māra-kāyika devatā*) possessed that group and made them clap, laugh, dance, and sing in front of the Blessed One. When the Blessed One reflected on what this was, he understood it. It is mentioned that next, in order to arouse spiritual urgency (*saṃvega*) in them, the Blessed One at that moment emitted a great darkness from his eyebrows. Due to that dense darkness, the intoxication of those lay women vanished because of the fear of death. With the arising of the fear of death, their intoxication vanished. Next, the Blessed One declared to them as advice: "It is not proper to come to me fallen into negligence in this manner. That is why you are possessed by various forces of Māra. Now, with diligence and having aroused great spiritual urgency (*saṃvega*), you must make an effort to escape from this fire." Saying so, he uttered the stanza we have taken as our theme:</p>
+<p>*Ko nu hāso kimānando niccaṃ pajjalite sati*</p>
+<p>*Andhakārena onaddhā padīpaṃ na gavesatha*</p>
+<p>"When there is constant burning, what laughter, what joy? Enwrapped in deep darkness, do you not seek a lamp?"—this is the meaning of that short stanza. It is mentioned that after listening to that sermon by which the Blessed One aroused spiritual urgency (*saṃvega*), that group of women attained the fruit of Stream-entry (*sotāpatti*), based on the spiritual urgency they had developed. Be that as it may, next Visākhā, the great lay disciple, specifically said to the Blessed One: "Venerable Sir, what a dangerous thing this alcohol is, giving rise to sinful, unwholesome states (*akusala*). Was it not due to this alcohol that a group like this began to behave in this manner in front of someone like the Blessed One?" The Blessed One replied, "Indeed, Visākhā, in the past too, many people experienced various troubles due to alcohol," and at that moment he also related a Jātaka story.</p>
+<p>From this, we have to reflect on the challenge the Blessed One presented to the world in this stanza. From the music heard from all directions, we can see that in this world, people always try to remain constantly submerged in an ocean of entertainment. But the Blessed One poses a highly powerful challenge to us through this stanza. We like to spend our time laughing, singing, enjoying ourselves, and dancing. Yet the Blessed One asks, "When there is constant burning, what laughter, what joy? Enwrapped in deep darkness, in dense darkness, do you not seek a lamp?" It is worth reflecting on why the Blessed One presented such a challenge to us.</p>
+<p>In the world today, there are fires everywhere to the extent that even the word "fire" truly evokes fear in a person. It is not only those visible fires. Because the Blessed One knew very well that this world is burning with many invisible fires, he often described the world as burning with eleven fires, or often as three fires—namely, the fires of lust (*rāga*), hatred (*dosa*/*dvesha*), and delusion (*moha*). On other occasions, he describes them as eleven fires: *rāga*, *dosa*, *moha*, and then *Jāti* (Birth), *jarā* (aging), *maraṇa* (death) [the latter two making up *Jarāmaraṇa* (Decay and Death)], *soka* (sorrow), *parideva* (lamentation), *Dukkha* (Suffering), *domanassa* (grief), and *upāyāsa* (despair). The three defilements (*kilesa*) that constantly burn within the minds of beings in saṃsāra, burning other things and other people connected to those respective beings, are lust (*rāga*), hatred (*dosa*), and delusion (*moha*). Accompanying them is *Jāti* (Birth), which is also a fire. Birth too is a fire. What is meant here is a fire of *Dukkha* (Suffering).</p>
+<p>It is because of *Jāti* (Birth) that all other sufferings flow in. Along with *jāti*, next comes *Jarāmaraṇa* (Decay and Death). Along with birth, there is *jarā*, which is aging/growing old, then death (*maraṇa*), sorrow, and lamentation. Accordingly, there are sorrows, crying, lamentations, physical and mental suffering, and intense struggle and exhaustion. The Blessed One declared that beings are constantly burning and running about due to each of these. Since we are burning with these eleven fires in this manner, we must reflect that this entire saṃsāric existence is a terrifying *Dukkha* (Suffering). Many people think of *dukkha* as if existence is one thing and suffering is something inside it. But the Blessed One declared: *dukkhe loko patiṭṭhito*—the world is established in *dukkha*. *Dukkha* is established in the world. Just like two shutter-doors that fit each other perfectly, *dukkha* and the world are identical, to the extent that there is nothing to be separated from one another. In these times, when explaining the Noble Truth of Suffering (*dukkha-sacca*), even when explaining the Dhamma, many people just mention a few things like birth is *dukkha*, aging is *dukkha*, sickness is *dukkha*, a heap of *dukkha*, and then stop there. But because there is no end to listing them in that way, the Blessed One ultimately declared, *saṅkhittena pañcupādānakkhandhā dukkhā*—in brief, the entire five aggregates of grasping are *dukkha*.</p>
+<p>Having shown separately that *Jāti* (Birth) is *dukkha*, aging is *dukkha*, illness is *dukkha*, etc., he finally declares that this entire five aggregates of form, *Vedanā* (Feeling), perception, *Saṅkhāra* (preparations), and *viññāṇa* (consciousness), which we grasp as "I" and "mine"—in brief, the five aggregates of grasping (*pañcupādānakkhandha*)—are *dukkha*. In short, this body of ours is a heap of *dukkha*. That is why the Venerable Vīdāgama Maitreya has stated in the *Lō Väḍa Saňgarāva*:</p>
+<p>*Dara räsa gini äviluṇu kala nibandē*</p>
+<p>*Gini misa darayäyi yana nama noyedē*</p>
+<p>*Ema lesa ek koṭa vadahaḷa muniňdē*</p>
+<p>*Duka misa kayakäyi yana nama noyedē*</p>
+<p>"When a heap of firewood is constantly ablaze,</p>
+<p>It is called 'fire', the name 'firewood' no longer applies;</p>
+<p>In the same way, as expounded by the Sage,</p>
+<p>It is only *dukkha*, the name 'body' no longer applies."</p>
+<p>A beautiful simile is shown there. "When a heap of firewood is constantly ablaze"—when a pile of wood is continuously burning, "it is called 'fire', the name 'firewood' no longer applies." We refer to it as fire; we do not call it a pile of firewood anymore. Once the entire pile of wood has caught fire, nobody refers to it as a pile of firewood. That is what that Venerable Thero is reminding us of. "In the same way, as expounded by the Sage, it is only *dukkha*, the name 'body' no longer applies." Likewise, the Blessed One has shown *dukkha* and the body together. Therefore, rather than calling this a body, it is better to call it *dukkha*. But worldly people do not like to use such terminology, nor do they do so. Yet, according to the word of the Buddha, according to the true state of affairs, this entire body, the very acquisition of a body—that is why birth (*jāti*) is said to be *dukkha*. In the world, the statement "birth is *dukkha*" is generally explained—and even we usually explain it for convenience—only as the pain caused to the mother and the child due to birth. However,</p>
+<p>If we reflect more deeply, *Jāti* (Birth) means the acquisition of a bodily cage made of the four great elements (*mahābhūta*): earth (*paṭhavī*), water (*āpo*), fire (*tejo*), and wind (*vāyo*). From the very moment of acquiring this, because of past ignorance (*avijjā*), the dense darkness of ignorance, one accumulates *Saṅkhāra* (preparations) or *kamma*, merit and demerit, because of the craving for becoming/existence (*bhava-taṇhā*). Everyone likes to remain in this existence. Because of the wrong understanding of "I" and "mine", because of ignorance (*avijjā*), there is an unquenchable, endless, and extraordinary *Taṇhā* (Craving) in worldly beings to maintain this "self" and to increase "my" possessions—a grave craving. We spend our entire lives trying to satisfy that *Taṇhā* (Craving). Through the wholesome and unwholesome *kamma* performed for its sake, *Bhava* (Becoming) is brought about for us.</p>
+<p>*Bhava* (Becoming) means it grants another birth (*jāti*), a subsequent existence somewhere. The initial stage of that existence is *Jāti* (Birth). Birth means a bodily cage is formed, made of those elements mentioned earlier. Next, from the very moment of its arising, the fire element (*tejo-dhātu*) within it becomes active and produces something called hunger. For this, one must provide food. As soon as a little child is born, they are born crying. Thus they ask for milk. In that way, there is *Taṇhā* (Craving) for food. The fire element in this bodily cage operates and hunger is produced. This is the fire that no one can bear. This is common to everyone. One is burned by this hunger. In this way, this bodily cage is like a burning pile of firewood. One must put firewood into it again and again—that is, food. Next, there is thirst. That too is a fire. It is called the fire of hunger. The painful fires of hunger and thirst. Those two are common to everyone.</p>
+<p>In addition to that, there is the fatigue of satisfying and preparing them. Next, due to various disturbances concerning those elements—*paṭhavī*, *āpo*, *tejo*, and *vāyo*—in that cage, and because of those very defilements, it is said that the three humors of wind, bile, and phlegm (*vā, pit, sem*) become deranged. Due to these various causes, and due to external and internal afflictions, illnesses and diseases flow in—sickness (*vyādhi*). Next, even if there are no such illnesses, this bodily cage begins to decay from the moment of birth. It gradually undergoes decay. We make a certain distinction between youth and old age, and we look upon one part of it favorably, thinking, "We are young." But in reality, from the very day of birth, decay begins. This decay is hastened by sickness, by illnesses and diseases. That too is indeed the derangement of these four elements, or of wind, bile, and phlegm, arriving according to one's *kamma* through various other external and internal afflictions. Thus, a life is spent in the midst of such a heap of *Dukkha* (Suffering). Yet we think we possess good health. We now generally express wishes for "long life and the blessing of health" (*āyur-ārogya-sampatti*). That wish or blessing is good. But its fulfillment actually depends on the *kamma* of each individual; otherwise, in terms of worldly nature, no one can say they spend even a single day in perfect health.</p>
+<p>The Blessed One once declared that if anyone, carrying around a bodily cage like this, proudly says, "I am healthy," there is no greater foolishness than that. Not even for a single moment is there real health in this body. What is here is a heap of diseases. It is called a cage of diseases—a fragile cage of diseases. When this heap of diseases manifests outwardly, that is when we say, "I have fallen ill." Thus, there is a whole heap of illnesses and diseases that come along with this bodily cage. Next, we also try to escape from decay (*jarā*) and old age. No matter how much effort is made through various medical treatments and medical research, these two—*Jarāmaraṇa* (Decay and Death)—cannot be prevented. At some point, one must submit to them. The Blessed One has declared: *na hi so upakkamo yena jātā na mīyare*—"There is no device by which those who are born do not die." *Jarāmapi pāpuṇitvā maraṇaṃ, evaṃdhammā hi pāṇino*—"Even after reaching old age, there is death; such is the nature of living beings." In the end, even after reaching old age, one has to die.</p>
+<p>Thus, within us there is generally a desire to be ageless and immortal; within worldly beings, there is a desire to escape decay, escape death, and obtain a certain happiness, a permanent state. But the Blessed One declared that death is something that goes hand-in-hand with birth (*jāti*). Birth and death are a tethered pair, something bound together. Therefore, we cannot accept only birth and reject death. Death arises along with birth. That is why the verses on mindfulness of death (*maraṇānussati*) that you often use state: *uppattiyā sahevedaṃ maraṇaṃ āgataṃ sadā*—"This death has arrived together with birth itself." "At all times, death comes along with birth." In that way, because these tethered things cannot be separated, as soon as a person takes birth, sickness, decay, and death—all of these—belong to them. Such a dangerous situation exists along with this body. In addition to being burned by those defilements (*kilesa*), next, as a result of the unwholesome *kamma* one performs, one has to be born in the realm of hungry ghosts (*peta-loka*) and undergo suffering for a long time, burning with extremely severe fires of hunger and thirst, and various other such miseries.</p>
+<p>Likewise, we can see how animals suffer in the animal realm. In the ghost realms, and next in the planes of misery (*apāya*), and in the even more terrifying hells (*niraya*). There are places where the Blessed One himself from his own sacred mouth preached the details of the Great Hell and other such places, showing how terrifying the sufferings of hell are. In the Lohakumbhī hell, molten metal is poured into the mouths of some. There are extraordinary details about this. According to one's *kamma*, one has to drink molten metal. Sometimes, instead of that alcohol which was drunk with great relish, one has to drink molten copper. Otherwise, the Blessed One points out instances of beings undergoing suffering without dying, according to their *kamma*, boiling in metal cauldrons of the Lohakumbhī hell, going up and down. The Blessed One declares that the suffering endured by worldly beings in those hells cannot be fully described.</p>
+<p>In the Great Hell, inside a hall with burning, blazing walls where even the floor is ablaze, those beings run up and down. There are four gates; they try to escape through these gates. Then, the gates supposedly open suddenly. But while they are opening, there are descriptions of how long they spend running about like this, undergoing the results of the sinful *kamma* they have committed. Likewise, they sometimes have to walk on burning, blazing mountains. They have to swallow red-hot iron balls. The Blessed One has declared that through the medium of fire, various terrifying retributive sufferings and miseries exist in those planes of misery (*apāya*) and hells (*niraya*). That is why the Blessed One has illustrated this entire saṃsāra as a place that is burning and blazing with fire. Therefore, the Blessed One has told us to constantly reflect on these subjects of spiritual urgency (*saṃvega-vatthu*) in order to prevent the negligence (*pamāda*) that generally arises within us.</p>
+<p>The world is fallen into negligence. Various things cause this. We all know the negligence of sleepiness. In addition to that, there is the desire to get intoxicated. The negligence that arises due to addiction to alcohol is extremely dangerous. Due to that intoxication, one sometimes behaves in this very world like an animal, a hungry ghost, or a demon, performing various sinful deeds. *Surā-meraya-majja-pamādaṭṭhānā*—there are places in these times where this is explained as a joke in various ways. An era has now arrived where those jokes are sometimes taken as the truth. But drinking alcohol is called *pamādaṭṭhāna*—the ground for negligence. A cause for negligence. Drinking alcohol is specifically shown as a cause for negligence.</p>
+<p>Many other causes of negligence are shown in the Dhamma: the intoxication of health (*ārogya-mada*), the intoxication of life (*jīvita-mada*), the intoxication of wealth (*bhoga-mada*)—in this way, there are various forms of intoxication. One thinks about one's health, gets intoxicated by conceit, and falls into negligence. Next is the intoxication of life (*jīvita-mada*). In that way, regarding life, one has a notion that one will not die. The intoxication of youth (*yobbana-mada*) means thinking about one's youth and forgetting that one will grow old. Thus, through forgetting all these things, it is through mindlessness (loss of mindfulness) that these intoxications occur.</p>
+<p>Therefore, we can understand: what must we arouse to overcome these intoxications? Mindfulness (*sati*), awareness. The Blessed One declares that we must always try to live with mindfulness and clear comprehension (*sati-sampajañña*). That is why, as the primary task in the Blessed One's path of meditation, it is shown that while guarding virtue (*sīla*) and other qualities, and established on that virtue, one must constantly reflect on some wholesome object through a certain meditation subject (*kammaṭṭhāna*). By constantly reflecting on a meditation subject such as loving-kindness (*mettā*), recollection of the Buddha (*buddhānussati*), foulness (*asubha*), or mindfulness of death (*maraṇasati*), one unifies the scattered mind and thereby calms the mind. Next, on the basis of that established mindfulness (*sati*) and concentration (*samādhi*), one can gain true understanding of the world by way of insight knowledges (*vipassanā-ñāṇa*). What helps to awaken all of this is spiritual urgency (*saṃvega*). That is why they are called subjects of spiritual urgency (*saṃvega-vatthu*).</p>
+<p>Regarding the cultivation of this *saṃvega*, worldly people think and believe that being entertained is the way, that by being entertained they can escape from these things. We try to remove this *dukkha* by bringing about various forms of entertainment. All that does is make us forget the suffering; the medicine is not truly applied. It is like applying a plaster, covering up the disease. It is just like when a house is on fire: instead of fleeing from the house, someone might drink alcohol and sleep inside the house. They will sleep well, but before long, they will be burned to ashes. In that very way, worldly beings try to solve the problem of *dukkha* through shortcuts. But what did the Blessed One try to make worldly beings understand, after striving and fulfilling the perfections (*pāramī*) for four incalculable aeons and a hundred thousand eons? It is the path of practice (*paṭipadā*) that helps to completely escape from this saṃsāric suffering.</p>
+<p>That is why the Blessed One asks that question: *Ko nu hāso kimānando niccaṃ pajjalite sati?* In this way, even in this world, you are burning with this fire of hunger, and next with this fire of illness, and with various other fires arising in the mind such as lust, hatred, and delusion—you are burning with a multitude of such fires. Next, we must also remind ourselves of the factors shown as subjects of spiritual urgency (*saṃvega-vatthu*). Even if we are not burning at this very moment, as a result of the *kamma* performed during our long saṃsāra, at least until one is freed from the four planes of misery (*apāya*) through the knowledge of the path of Stream-entry (*sotāpatti-magga-ñāṇa*), everyone must be prepared to burn with the fires of hell.</p>
+<p>Thus, it is not only when we have jumped into the fire, but rather the understanding that there is a fire ahead into which we might have to jump, or into which we might fall—that is the understanding the Blessed One tries to cultivate within worldly beings. Until one is freed from the four planes of misery, those fires of hell belong to oneself. One does not know at what moment they will be felt. After this life is lost, if a grave past *kamma* arises, sometimes in the four planes of misery, one will have to undergo terrifying suffering such as burning in those fires which the Blessed One himself described as "impossible to fully detail." Or else in the ghost realms or the animal realm. It is in the midst of such a heap of fire that we sing songs, dance, and chant. Scholars of these times level various accusations, saying that the Blessed One preached an absolute pessimism. Now, this is a challenge. But this is the true state of affairs. Like a doctor, one cannot treat an illness without diagnosing it. The illness must at least be indicated to some extent. Otherwise, the patient will not agree to the required treatment.</p>
+<p>That is why the Blessed One reminds us of these illnesses as subjects of spiritual urgency (*saṃvega-vatthu*). Various kinds of *Jāti* (Birth), *jarā* (aging), *vyādhi* (sickness), *maraṇa* (death) [i.e., *Jarāmaraṇa* (Decay and Death)], *soka* (sorrow), *parideva* (lamentation), and so on—there is no need to separately explain birth, aging, and next, death. One must reflect on the saṃsāric *dukkha* endured in the past. One must reflect on the suffering to be endured in the future. One must reflect on the suffering of the planes of misery. Next, the suffering regarding what we have to do for hunger, for food in this life. By constantly reflecting on these various matters, the desire for this *Bhava* (Becoming) must be removed.</p>
+<p>Something called *bhava-taṇhā* (craving for becoming/existence) exists within all beings. The desire for *bhava*. Everyone likes to carry on this existence. But how we demonstrate what this existence is, according to the Dhamma, is like this: the wheel of a moving chariot touches the ground for only an extremely brief moment. But if we do not consider that the wheel is constantly moving, it is as if this wheel goes on scraping and scraping. It is upon a perception (*saññā*) of that nature that worldly beings have formed a perception of permanence (*nicca-saññā*), and have developed the feeling, "I exist," "I" and "mine". But there is constantly a rolling-over in this. Existence (*pavattana*) means rolling over. Even if we look at the literal meaning of the word *pavattiya* (occurrence/rolling on), it is a rolling over. We treat this rolling-over as something permanent, saying, "I exist," and we use the terms "I" and "mine". Worldly beings do not understand the nature of ignorance (*avijjā*) in this, the delusion (*moha*) in this. It is so profound that it cannot be expressed in words. Why can it not be expressed in words? Because words themselves have been formulated based on this delusion. The language accepted by the world, which exists by way of convention (*sammuti*) and is used by worldly beings, also consists of a multitude of symbols constructed according to the perception of permanence (*nicca-saññā*). Such is the deep state of affairs.</p>
+<p>That must be why the Blessed One was initially hesitant even to preach this Dhamma. "How am I to explain this to the world using the language developed by the world?" How can I explain this to worldly beings in the language they themselves have created? All of this, this existence, which is a rolling-over—when worldly beings talk of existence, they regard it as something permanent, but in reality, there is only a rolling-over there. It is because of this rolling-over that all this *dukkha* flows in. *Yad aniccaṃ taṃ dukkhaṃ, yaṃ dukkhaṃ tad anattā*—the Blessed One has briefly illustrated the three characteristics (*tilakkhaṇa*) in this way. Whatever is *Anicca* (Impermanent) is *Dukkha* (Suffering). *Anicca* means *anicca-vipariṇāma-dhamma*—subject to change and impermanence. It is *anicca* because it is not permanent. What is not permanent is *anicca*. And that *anicca* means, next, there is a rolling-over right there. There is a change right there. It is called *vipariṇāma-aññathābhāva*—change, turning into something else. Within that turning, there is a vibration, a rolling-over. And because of that rolling-over, it is *dukkha*, because it does not remain in one way.</p>
+<p>Why do worldly people change their postures? Why is it that one cannot remain sitting in one position? When one sits in one way for a little while, even in a highly comfortable seat, a *Vedanā* (Feeling) is felt. A pain is felt somewhere. Be it a wind-pain or some other kind of pain, a *vedanā* is felt. Then, because of that *vedanā*, we change postures to cover up that *dukkha*. It is through things of this nature that we try to cover up this *dukkha*, just like the person who drinks alcohol to forget their suffering. Such a nature exists within worldly beings. Thus, worldly beings do not want to face the problem. They do not want to face the problem. That is exactly why this problem drags on and on. But the Blessed One, like a skilled physician, like a teacher, like a guide, had to introduce this problem. That is why the Blessed One reminds us to constantly reflect on those subjects of spiritual urgency (*saṃvega-vatthu*). Moreover, just as in the story where he conjured a great darkness to cause pain and created a great fear and terror (*santrāsa*) within them, it is when such terror and fear arrive that a person's eyes are opened.</p>
+<p>Many people know from Dhamma points and stories what helped Paṭācārā to attain Arahantship. There is no need to explain the story of Paṭācārā anew. Everyone knows this. For Paṭācārā, her present was lost with the loss of her husband. Next, her future was lost with the loss of her two children. Her past was also lost when she went in search of her home and found her parents had also been burned to ashes. So she understood, "There is nothing more to be wished for in this. Such is the present, such is the future, and such is the past." In that way, through the *dukkha* that has come upon oneself, one must try to realize this truth. One should not wait until such a situation arrives. The wise person, the person who applies mindfulness and wisdom, the person who makes use of that spiritual urgency (*saṃvega*), understands that fear before it comes to them and prepares for it.</p>
+<p>What is called the supreme bliss of Nibbāna is the complete liberation from all this saṃsāric *dukkha*, the liberation from that craving for becoming/existence (*bhava-taṇhā*). As long as this *bhava-taṇhā* exists, because worldly beings wish for *bhava*, Māra says, "Here, take it," and gives it to them. What does he give, saying "Here, take it"? It is this very bodily cage mentioned earlier. That cage which is said to be pure *dukkha*. "Well, you asked for it, so I am giving it," says Māra, and gives it. He gives it like a tethered thing. He gives this only to pull it back. Māra pulls this bodily cage in that way. Under the force of that pulling, and because of that vibration, illnesses and all those things mentioned earlier come along. Māra always looks to—as said in "this death has arrived together with birth itself"—he gave this body only to take it back, to pull it back. This is like a game of tug-of-war.</p>
+<p>This was given only to be pulled back. Along with that, seeing the suffering, fatigue, terror (*santrāsa*), and torment (*santāpa*) that the person undergoes, Māra rejoices. Such is the nature of Māra. What is the easiest solution to this pulling? Letting go. That is the solution the Blessed One offers. One must let go of it from Māra. Otherwise, being dragged along with it, one falls into *dukkha*. This letting go is what the Blessed One shows for the destruction of the craving for becoming/existence (*bhava-taṇhā*). There is a nature within worldly beings to desire existence. The solution offered by ordinary worldly beings is that, to satisfy those desires, they seek and provide whatever they want—be it food, drink, wealth, positions, etc. But none of these can ever fill the void. It is like the great ocean.</p>
+<p>This thirst of *Taṇhā* (Craving) can never be quenched. Instead, what is the path of training shown by the Blessed One? He shows a certain method precisely to quench this craving, this thirst of *taṇhā*. The method shown for that is the destruction of ignorance (*avijjā*). It is by thinning out ignorance that the thirst of *taṇhā* can be destroyed. To thin out that feeling of "I" and "mine", which is called ignorance (*avijjā*), the Blessed One points out: "Constantly reflect on the fact that this state you are in is *Anicca* (Impermanent), *Dukkha* (Suffering), and *Anattā* (Not-self)." The Blessed One makes us understand through wisdom that there is nothing here that can be taken as "I" or "mine".</p>
+<p>"Is this form permanent? Is *Vedanā* (Feeling) permanent?" Is even one of them permanent? If it is not permanent, if something is *anicca*, he asks, "Is it happiness or suffering (*dukkha*)?" One has to say, "It is *dukkha*." It is a state of suffering. If something is of a nature to change, of a nature to roll over, if it is something that must constantly be reconstructed and prepared, then this is a great *dukkha*. *Saṅkhāra* (Formations) means a heap of preparations. Now, the word *saṅkhāra* is frequently used. What is here is entirely a heap of preparations. This entire existence is a heap of preparations. For these preparations, a certain effort is required. That itself is *dukkha*. Thus, when it is said *saṅkhārā paramā dukkhā*—that the heap of preparations is the ultimate *dukkha*—it means that worldly beings have to undergo great suffering just for the sake of this preparing. However, this is not visible; it is not understood.</p>
+<p>It is precisely by the stilling of this heap of preparations (*saṅkhāra*) that the Blessed One points to true happiness. It is called *sabba-saṅkhāra-samatha* (the stilling of all preparations/formations). What instigates the arising of these preparations is *Taṇhā* (Craving), the force of craving. Based on those two ideas of "I" and "mine" derived from ignorance (*avijjā*), there is a grave craving in worldly beings to increase the measure of what belongs to them. It is for its sake that one has to undergo all this suffering. But that craving is never quenched. To escape from this *Taṇhā* (Craving), as mentioned earlier, one must arouse the eye of wisdom, the light, the lamp, in the form of insight knowledges (*vipassanā-ñāṇa*). It is described as the light of wisdom (*paññā-āloka*). It is described as the lamp of wisdom (*paññā-padīpa*), the lamp of knowledge (*ñāṇa-padīpa*).</p>
+<p>It is only when that eye of wisdom is aroused that the true nature of the world is understood. On such occasions, that craving mentioned earlier naturally understands that this is a futile thing, a baseless thing, without any foundation. Through that realization, that craving for becoming/existence (*bhava-taṇhā*) is destroyed. Ignorance (*avijjā*) is fundamental here—the view of "I" and "mine" is an opinion derived from not knowing. To quench this great thirst of *Taṇhā* (Craving) born from that, one has to remove the darkness of ignorance (*avijjā*). To remove that, one has to arouse the mindfulness and clear comprehension (*sati-sampajañña*) called heedfulness, having freed oneself from those intoxications.</p>
+<p>This cannot be done through the ways of entertainment available in the world. Therefore, if we were to openly declare some of the Blessed One's discourses in these times, we might perhaps face serious accusations from certain quarters. There is one short passage where the Blessed One declared—to say it in Sinhala: "Monks, in the Noble Discipline, singing is a form of crying." The Blessed One declares that music, what is called song, heard from all directions, is a form of wailing. This is a severe challenge. This entire world exists completely enmeshed and entangled in song.</p>
+<p>However, the place the Blessed One gives to this song and music might sometimes cause some people to feel displeased, at least to some extent, even towards the Blessed One. They talk about "this music." But we can realize this for ourselves: even the sweetest music in the world—if placed inside a machine like this, by turning a small key or screw here and there, that sweet music can be turned into a sound of crying. In that way, one can understand that this music is indeed a form of crying. In truth, some music is indeed crying. That is why, in a more recent era, a certain Western poet stated that the sweetest songs in the world are those of saddest thought. Everyone knows this.</p>
+<p>Why do these sad songs become sweet songs? Within the minds of these beings in saṃsāra, there are deposited fear, terror (*santrāsa*), and sorrow. Due to these, there is a great heap of accumulated *Dukkha* (Suffering). That heap of *dukkha* is recalled by worldly beings. Through that, even from that, worldly beings derive a kind of gratification (*assāda*). That is why these sad songs are regarded as the most pleasant songs in the world. Sometimes we say that a dove, a cuckoo (*kokila*), or a koel is singing a very sweet song. But in truth, that could be a cry of wailing due to separation from the beloved (*piya-vippayoga*), due to the loss of their young or their mates. We call this a song. Thus, we can understand the word of the Blessed One accordingly.</p>
+<p>Next, there is also another declaration by the Blessed One when speaking of ways of entertainment: *ummattakaṃ idaṃ, bhikkhave, naccaṃ*—"Monks, in the Noble Discipline, dancing is a form of madness." This drama, this dancing, is madness. If we declare this to the world today, some might present strong counter-arguments: "Why call dancing a form of madness?" If society accepts as a convention that the way an insane person dances is to be regarded as a tradition, then that becomes a great drama. Seeing an insane person dance, if we create a tradition out of it and establish a convention that "this is the highest form of drama," from that day on, it is considered a drama.</p>
+<p>Otherwise, let us think of it in another way: someone beautifully dressed is placed on a stage that is extremely hot. Because she is burning, she jumps here and there. She leaps up; unable to stand on one foot, she shifts to the other, and in this way she can be seen shifting feet and dancing. But perhaps a foreigner might record this, saying, "This is the dramatic tradition of this country." This dancing is indeed like dancing in madness. Yet, we construct a "tradition" within it and employ a method to derive gratification (*assāda*) from it. It must be for this reason that the Blessed One, according to the Noble Discipline, declared dancing to be a form of madness.</p>
+<p>In the same way, the Blessed One has declared that laughing excessively, showing one's teeth, is a low thing. It is called *komārakaṃ*—something fit for children (childish). Now, while a small child is crying very intensely, someone shows a very trivial thing and begins to make that child laugh. Then, without even remembering that they were crying, that child begins to laugh continuously. Such is the way of the world. That is exactly why the Blessed One raised that question, "What laughter, what joy?" We must remind ourselves of this at least once in a while.</p>
+<p>If not every day, at least once in a while, even on an occasion like this, we should reflect on the truth of this word of the Blessed One. Until we understand this truth, until we direct our minds according to those subjects of spiritual urgency (*saṃvega-vatthu*), we cannot realize this true Dhamma and dispel ignorance (*avijjā*). We cannot quench the thirst of craving (*taṇhā*). We can never escape from this. Therefore, the word of the Blessed One might sometimes be unpalatable. It might be unpalatable to society. It might be unpalatable to the present day, when considered from a contemporary perspective. Looking at contemporary things, someone might say that although these statements belonged to the Blessed One's time, they are not applicable to the present. But, pious devotees! In the Blessed One's time as well as in this time, the very same heap of fire is blazing. It was the fires of lust (*rāga*), hatred (*dosa*), and delusion (*moha*) that blazed then, and those same fires are blazing now.</p>
+<p>The only difference is the firewood that is thrown into them. If it is blazing with whatever firewood, it is called a fire; there is no need to speak of the fire in terms of the firewood. This is a heap of fire. That is why this, which belonged to the Blessed One's time, is indeed called the eternal truth (*sanātana-dhamma*). The Blessed One has declared regarding this Dhamma: *satañca dhammo na jaraṃ upeti*—"The Dhamma of the virtuous ones (the Buddhas and Arahants) never undergoes decay." It never becomes obsolete. Worldly people imagine that this is obsolete. But this truth is applicable to the life of anyone in this world, then, now, and forever.</p>
+<p>Therefore, we must reflect, at least once in a while, on this matter declared by the Blessed One—this true state of affairs. This is called "knowledge and vision of things as they really are" (*yathābhūta-ñāṇadassana*). The Blessed One expounds the actual state of the world. It may be unpalatable. Nothing can be done about that. Even though it is unpalatable, it is the truth. Some things are unpalatable. As soon as you put a myrobalan fruit (*nelli*) into your mouth and bite it, a highly astringent and bitter taste is felt. Do we throw it away just because of that? The myrobalan fruit is a highly valuable medicine, like nectar. But as soon as you bite it, it tastes astringent. Yet, once you begin to suck on it for a while, the real sweet taste of the myrobalan fruit emerges.</p>
+<p>It is just like that when showing the insight knowledges (*vipassanā-ñāṇa*) in this Dispensation: danger (*ādīnava*) and weariness (*nibbidā*). Danger-knowledge (*ādīnava-ñāṇa*) means, among the insight knowledges, one must gain an understanding of the disadvantages and dangers in this world, in this life, in this existence, and in these five aggregates—their nature of *dukkha* and the nature of having to endure suffering. The culmination of all mundane knowledges (*lokiya-ñāṇa*) in the world is the knowledge of danger (*ādīnava-ñāṇa*). You know that as scientific inventions are developed further and further, what is regarded as the highest stage? It is the stage where the defects and shortcomings of that product become visible. In the same way, the knowledge of danger is the highest end of mundane knowledges. If one has understood danger in that way, what arises next? *Nibbidā*. *Nibbidā* means disenchantment/weariness with saṃsāra.</p>
+<p>Worldly people are afraid of the term "disenchantment with saṃsāra" (*nibbidā*). If someone develops disenchantment with saṃsāra, people look at that person with a strange gaze. They think, "Either this person is insane, mad, or something like that"—as if they have an abnormal mind. But if someone tries to escape from this madhouse, the inmates of the madhouse do not like them leaving. That is why the Blessed One declared: *sabbe puthujjanā ummattakā*—"All worldlings, everyone who has not attained the state of a Noble One (*ariya*), are insane." The Blessed One has declared that all worldlings, everyone who has not attained Noble status, exist in a state of madness. Such is the situation in the world.</p>
+<p>Thus, that disenchantment (*nibbidā*), the weariness with saṃsāra, is like the myrobalan fruit. Through disenchantment with saṃsāra, what does that person arouse? Based on that dispassion (*virāga*) or non-attachment arising from disenchantment with saṃsāra, they attain liberation—liberation from saṃsāra. The strength to realize that supreme, deathless Nibbāna is obtained through that knowledge of disenchantment (*nibbidā-ñāṇa*). This is just like an iron door that separates the entire saṃsāra from Nibbāna.</p>
+<p>Pious devotees, you know that sometimes in various tea factories and similar places, there are areas where great furnaces are blazing. But there is an iron door in them; they are separated as if by an iron door. In the same way, once this knowledge called *nibbidā* arises, there emerges an opportunity to escape from saṃsāra. Because it is only by saying goodbye to this saṃsāra that one can go to the other side. One cannot cross over while clinging to this. What is present here is also like that tethered thing mentioned earlier. One can never go to Nibbāna while clinging to saṃsāra. Therefore, a certain moment arrives, specifically when those insight knowledges (*vipassanā-ñāṇa*) mature. This is a natural thing. It is not an unnatural thing; the Blessed One points it out by way of natural laws (*dhammatā*).</p>
+<p>When one first deeply reflects on the impermanence of this world, the law of impermanence (*aniccatā-dhamma*), what is understood is an arising and a passing away. It is that realization of arising and passing away. That is what is called the "knowledge of arising and passing away" (*udayabbaya-ñāṇa*). Within this arising and passing away, just like the first two leaves of a plant emerging from a mango seed or some other seed—just like those first two leaves, the beginning of seeing this arising and passing away is a valuable state. From then on, as that state and the insight knowledges develop, then next, the other insight knowledges also emerge. One begins to understand how passing away occurs with extreme rapidity; this is called dissolution (*bhaṅga*). Everything is breaking and dissolving; this is called the "knowledge of dissolution" (*bhaṅga-ñāṇa*). These are seen breaking and dissolving with rapidity. Because of that breaking and dissolving, next there arises a fear: "Is it not something that is breaking and dissolving that I am holding on to, that I am clinging to?"</p>
+<p>Having experienced that fear and terror (*santrāsa*), next the aspect of danger (*ādīnava*) in it is understood. The realization comes: "If this is something that breaks, and if I hold on to it, I too will be overturned, broken, and destroyed along with it." Therefore, the realization comes that one must escape from this. What helps in that realization of the need to escape is the three characteristics (*tilakkhaṇa*) of *Anicca* (Impermanent), *Dukkha* (Suffering), and *Anattā* (Not-self) pointed out by the Blessed One. When looking in every direction of this world, the practitioner of insight (*vipassanā-yogī*) sees only these three signs. There are various other road signs, advertisements, and other signs. But to the practitioner of insight, through all of these, through the trees and plants, and through the existence of their own body, what must be seen are those three signs: *anicca*, *dukkha*, and *anattā*.</p>
+<p>Not a single thing is permanent. Not a single thing can truly be taken as happiness (*sukha*). Likewise, as the realization gradually arises that there is not even a dream of a possibility to maintain things under one's control as "I" or "mine", the other insight knowledges (*vipassanā-ñāṇa*) mature within that person. They arrive at the point of that disenchantment with saṃsāra (*nibbidā*), which is like the iron door, and next, at some point, they are able to see that light precisely through that disenchantment with saṃsāra. That is the path of liberation (*vimutti-magga*) shown by the Blessed One. Every other teacher in the world sought to solve this problem by other means—by methods similar to applying plasters. Or through some kind of nectar-like drink to become ageless and immortal. Now, it is said that those deities drink some nectar to avoid death; that is an absolute myth. Neither for deities, nor for Brahmās, nor for anyone else, is it ever possible to escape from this saṃsāra through any other nectar than that supreme Nibbāna shown by the Blessed One—the nectar of the supreme, deathless Nibbāna obtained through the stilling of all preparations (*sabba-saṅkhāra-samatha*). Such is the state of affairs in the world.</p>
+<p>Therefore, all of you, pious devotees, must reflect on a valuable Poya day like today, having abstained from those forms of intoxication—especially when a year ends and a new year begins, how many people in this society, in this world, try to use intoxicants to forget that their lives have been depleted by a year? Intoxicants flow freely. The ending of a year and the dawning of a new year is an occasion when alcohol flows freely. In that way, through highly trivial entertainment, worldly beings try to forget the truth declared by the Blessed One. Therefore, especially as a disadvantage of this alcohol, not only does it cause various sicknesses, premature deaths, and other forms of mental derangement and madness, but even if one obtains a subsequent birth (*jāti*), one has to be born with a weak mental state due to addiction to alcohol. In that way, its dangerous disadvantages (*ādīnava*) must also be understood through this background story. What we must do is make an effort to constantly arouse mindfulness and wisdom, just as the Blessed One declared.</p>
+<p>Not only from alcohol, but we must also protect the mind from various other intoxications, such as the intoxication of youth (*yobbana-mada*), the intoxication of health (*ārogya-mada*), the intoxication of life (*jīvita-mada*), and the intoxication of wealth (*bhoga-mada*). Reflecting even more deeply, it is only when the mind is turned away from those terrifying defilements (*kilesa-dhamma*)—namely greed (*lobha*), hatred (*dosa*), and delusion (*moha*), or lust (*rāga*), hatred, and delusion—that one can gain a good understanding of the true state of affairs in the world, the true nature of life, and ultimately be liberated from this entire saṃsāric *dukkha*, realize the supreme deathless Nibbāna, and find peace from this terrifying saṃsāra.</p>
+<p>Therefore, by listening to the Dhamma on a day like today, what do you, pious devotees, generate? If we consider the benefits in this world, you must reflect that you have made a certain effort to develop or bring about the five faculties (*indriya*) and five powers (*bala*) pointed out by the Blessed One, namely faith (*saddhā*), energy (*viriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*). Generally, the benefit of listening to the Dhamma is not a benefit obtained merely by sitting there and somehow listening to it while feeling sleepy. One listens to the Dhamma with faith (*saddhā*) in the Triple Gem, by applying one's mind to the Dhamma. While there are various forms of worldly entertainment such as sweet music, the reason you come to a place like this and spend an hour listening to this Dhamma is because you possess an unshakeable and deep faith (*saddhā*) in the Triple Gem.</p>
+<p>It is also because of the energy (*viriya*) that follows that faith that you were able to sit in one posture, with difficulty, directing your mind to one point, removing it from various scattering tendencies, and listen to it. It is through the energy associated with that faith. Next, when the mind is unified in that way, what arises is mindfulness (*sati*), awareness. You removed mindlessness and aroused mindfulness. While listening to it with mindfulness and clear comprehension (*sati-sampajañña*) during that brief period, next, concentration (*samādhi*) is produced. Within oneself, even for a brief moment, the mind becomes calm and composed. When directing the mind to this Dhamma-listening, without paying attention to the surrounding sounds, a certain concentration (*samādhi*) is established. Through that concentration, certain matters might be understood which were never understood before, no matter how much you had read books.</p>
+<p>Even things you have heard or read a hundred times begin to be understood well at a moment when that faith, energy, mindfulness, and concentration are developed. We do not understand merely because it is in books. We do not understand merely by going to libraries. We do not understand worldly things merely by seeing them. We understand only when our minds are prepared in the necessary way to understand them. We can see this fact: it must have been due to the spiritual urgency (*saṃvega*) aroused through the miracle performed by the Blessed One—to the extent of making Visākhā's lay women sober up—that they obtained some realization of the Dhamma. They were not without merit. In that very way, we must reflect that although there are various shortcomings in the lives we all lead, if on an occasion like this one directs the mind to the Dhamma and arouses faith, energy, mindfulness, and concentration, realizations of the Dhamma can be achieved on such occasions.</p>
+<p>We should rejoice that in this manner, on this valuable day, we listened for an hour to a valuable Dhamma, a Dhamma that follows a discourse of the Blessed One. The group of wholesome volitions (*kusala-cetanā*) generated within one's mind is what we consider here as merit (*puñña*). That mass of merit can also be shared with others through their sharing in it (*anumodanā*). There are many in the world who wish to share in merit—those who have fallen into distress, and next, those who have understood the value of Nibbāna.</p>
+<p>Reflecting on such beings, may all, especially the guardian deities of the Dispensation, along with the deities presiding over this place, share in this store of merit accumulated by both parties of us through the giving and receiving of this Dhamma sermon at this moment. Having shared in it, may they realize the supreme, deathless Nibbāna through whichever Bodhi they have aspired for, and may they provide protection to the Dispensation and to us—with such wishes and blessings we must conclude. Likewise, may our departed relatives, and all beings from Avīci hell up to the highest plane of existence (*bhavāgra*) who desire merit and desire Nibbāna, share in this store of merit accumulated from preaching and listening to the Dhamma, and as quickly as possible, be liberated from various saṃsāric *dukkha* such as *Jāti* (Birth), *Jarāmaraṇa* (Decay and Death), sickness, and so forth, and find peace in the supreme, deathless Nibbāna. With this wish in mind, please recite this stanza.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_080.html" class="doc-btn">← Previous Sermon (080)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_082.html" class="doc-btn">Next Sermon (082) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

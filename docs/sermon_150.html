@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 150 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_149.html" class="doc-btn">← Previous Sermon (149)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_151.html" class="doc-btn">Next Sermon (151) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 150</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_150_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_150_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_150_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #150</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.129)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Sabbadānaṃ dhammadānaṃ jināti,</p>
+<p>Sabbaṃ rasaṃ dhammaraso jināti;</p>
+<p>Sabbaṃ ratiṃ dhammarati jināti,</p>
+<p>Taṇhakkhayo sabbadukkhaṃ jināti.</p>
+<p>From:</p>
+<p>Dhammapada Verse 354 (Taṇhā Vagga)</p>
+<p>Dear Listeners,</p>
+<p>The Tathāgata, the Fully Enlightened One, introduced himself to the world with the epithet "unexcelled King of Dhamma" (*anuttara dhammarāja*). From this introduction, we can understand that there is a certain supreme, victorious quality within the Dhamma. The verse of the Dhamma we have chosen today as our theme is one that demonstrates this victorious nature extending in several directions. It is recorded that this verse of the Dhamma was preached by the Buddha at Jetavana monastery in response to four questions asked by Sakka, the king of devas.</p>
+<p>On one occasion in the Tāvatiṁsa heaven, four questions were discussed among the devas: "Among gifts, which gift is supreme, the noblest? Among tastes, which taste is the noblest? Among attachments, known as *rati*, which attachment is the noblest? Why is the destruction of craving (*taṇhā*) considered supreme?" These questions were discussed among the devas for a long time, for many years. When they were brought to Sakka, the king of devas, Sakka said that no one other than the Buddha could answer them. It is mentioned in the texts that on a certain night, Sakka arrived accompanied by devas and asked these four questions. The answer given to these questions is what we expressed through that verse. The Buddha summarized it thus:</p>
+<p>*Sabbadānaṁ dhammadānaṁ jināti*—the gift of Dhamma excels all other gifts.</p>
+<p>*Sabbaṁ rasaṁ dhammaraso jināti*—the taste of Dhamma excels all other tastes.</p>
+<p>*Sabbaṁ ratiṁ dhammaratī jināti*—*rati* means attachment or delight. Delight in the Dhamma excels all other delights; it conquers them.</p>
+<p>*Taṇhakkhayo sabbadukkhaṁ jināti*—the destruction of craving (*taṇhā*), which is another name for Nibbāna, conquers all suffering (*dukkha*). This is the meaning.</p>
+<p>To understand this, we must bring in another valuable discourse of the Buddha that fits this idea, which you, virtuous friends, may have also heard. On one occasion, the Buddha addressed the Sangha and declared: "Monks, there are these two kinds of gifts: the gift of material things and the gift of the Dhamma. Of these two gifts, this is supreme—namely, the gift of the Dhamma." "Material things" (*āmisa*) refer to food, drink, and other tangible items. What is implied here is that the gift of Dhamma is superior to the gift of material things. Similarly, the Buddha has declared: "Monks, there are two kinds of sharing (*saṁvibhāga*): the sharing of material things and the sharing of Dhamma. Of these two kinds of sharing, the sharing of Dhamma is supreme and foremost." And also from the perspective of helping and favoring others, the Buddha has declared: "Monks, there are these two kinds of help (*anuggaha*) in the world: help through material things and help through the Dhamma. Of these two kinds of help, help through the Dhamma is supreme and foremost." Therefore, what we can understand from this is that the gift of the Dhamma is superior to any large-scale material gift considered as a donation in the world.</p>
+<p>Regarding this matter, the commentators also state that the gift of the Dhamma is supreme, such that even a word of appreciation (*anumodanā*) made using a four-line verse is superior to any large-scale donation of robes, alms-food, lodgings, and medicinal requisites. One might feel doubtful about this. However, when we reflect upon it: just like the arising of a Buddha, the hearing of the Dhamma is also extremely rare. Within a Dhamma that is so rare, sometimes a single line of a verse can contain the message that puts an end to the entire suffering (*dukkha*) of saṁsāra. You have heard, indeed, how the wanderer Upatissa—who later became Ven. Sāriputta—attained the fruit of Stream-entry (*sotāpatti*) upon hearing just half a verse uttered by the Arahant Ven. Assaji. There are many such incidents. Therefore, when considering the benefits, it is no exaggeration to say that even if the gift of the Dhamma is a short verse, it is of great fruit and great benefit (*mahatphala mahānisaṁsa*).</p>
+<p>Just as we spoke of giving, when reflecting upon taste as well, one might feel doubtful, since there are various kinds of tastes in the world that are felt by the tongue. Yet, it is shown that the taste of Dhamma is superior to all these tastes. So much so that it is more delicious than the nectar of the devas, which is called the deathless nectar (*amṛta*). That is why, when speaking of Nibbāna, it is said: "*Etaṁ santaṁ etaṁ paṇītaṁ*"—"This is peaceful, this is sublime." That "sublime" character of Nibbāna can be understood in several senses. For this very reason, the Buddha declared: "*Amatandado ca so hoti, yo dhammaṁ anusāsati*"—"He who instructs in the Dhamma is a giver of the Deathless." If someone instructs in the Dhamma, that person is giving the Deathless nectar. In short, the taste of Dhamma, which helps one escape from saṁsāra, is a taste of the Deathless.</p>
+<p>Furthermore, when the Buddha compared the entire Dhamma-Vinaya to the great ocean for Pahārāda, the lord of Asuras, he preached that just as the great ocean has but one taste—the taste of salt—so this entire Dhamma-Vinaya has but one taste, the taste of liberation (*vimutti-rasa*). Seen from that perspective, the taste of liberation, the taste of Nibbāna, is present in this Dhamma. That is why it was declared to be the Deathless (*amata*). When referring to insight meditation, the Buddha declared:</p>
+<p>*Yato yato sammasati, udayabbayaṁ [khandhānaṁ];*</p>
+<p>*Labhati pīti-pāmojjaṁ, amataṁ taṁ vijānataṁ.*</p>
+<p>Whenever one contemplates the arising and passing away [of the aggregates], one obtains joy and gladness; to those who know, that is the Deathless. If one reflects with wisdom, from the perspective of insight, on the arising and passing away of these five aggregates (*pañcakkhandha*), the joy and gladness obtained through that is a taste of Dhamma like the Deathless, which defeats all other tastes. Unlike the tastes experienced on the tongue that quickly vanish, this taste of Dhamma keeps one alive for a long time, and ultimately helps to end the suffering (*dukkha*) of saṁsāra.</p>
+<p>Next, regarding the attachment called *rati*, this word is most often used in connection with sensual delight (*kāma-rati*). If the term is used in the sense of sensual delight (*kāma-rati*), then the word *rati* is indeed something to be rejected. However, in this Dispensation (*sāsana*), the word *abhirati* (delight) is used in a good sense—delight in the higher wholesome qualities. This delight (*abhirati*) is shown to be something that supports one's monastic life. When it is absent, it is called discontent (*anabhirati*). Therefore, what is referred to as *abhirati* is that very delight in the Dhamma. That delight is shown as a good thing. If it is not there, there is boredom or aversion (*arati*); then comes a weariness regarding the monastic life, or otherwise regarding this journey to Nibbāna. Furthermore, the delight that arises for an insight meditator through insight is described as a superhuman delight (*amānusī rati*):</p>
+<p>*Suññāgāraṁ paviṭṭhassa, santacittassa bhikkhuno;*</p>
+<p>*Amānusī rati hoti, sammā dhammaṁ vipassato.*</p>
+<p>It is said that for a monk who has entered an empty place (*suññāgāra*), with a peaceful mind, who clearly sees the Dhamma with insight, there is a superhuman delight. By "superhuman" (*amānusī*), it means a transcending, noble kind of delight arises. It is this very delight in the Dhamma that defeats all the attachments of the ordinary world, such as attachment to one's wife and children, or attachment to dancing, singing, and instrumental music. Through that delight in the Dhamma, a person reaches a state of great upliftment, generating joy and happiness, sometimes shedding tears—tears of joy. A great buoyancy arises in the heart; goosebumps arise. In that way, the delight that arises supports that person directly toward Nibbāna; it helps in attaining Nibbāna. You have often heard the words *dhammarati* and *dhammarato*, as well as *dhammārāmo dhammārato*. *Dhammārāma* means a person who finds delight in the Dhamma. It is because of this that delight in the Dhamma (*dhammarati*) is supreme.</p>
+<p>Next, there is the matter of the destruction of craving (*taṇhā-khaya*). Now, the world uses craving (*taṇhā*) as an aid to seek happiness. The Buddha compared craving (*taṇhā*) to a thirst. If we think thirst is good because the presence of thirst allows us to enjoy delicious drinks, that is where we go wrong. Therefore, the Buddha refers to Nibbāna by the name *pipāsa-vinayo*—the subduing of thirst. The state where thirst is appeased. So, in reality, thirst is a suffering (*dukkha*). However, because of thirst, we experience gratification (*assāda*) by consuming those tasty drinks. Yet, if at any point we completely appease that thirst, that is indeed the putting of an end to one's suffering (*dukkha*). That is why the destruction of craving (*taṇhā-khaya*) is said to conquer all.</p>
+<p>In short, you have heard many times that suffering (*dukkha*) arises because of craving (*taṇhā*): '*Taṇhāya jāyatī soko, taṇhāya jāyatī bhayaṁ*' and so on. Because of it, grief and fear arise. The Buddha declared that where there is no craving (*taṇhā*), those two do not exist. With this word 'destruction of craving' (*taṇhā-khaya*), the Buddha gave a message to the world that puts an end to all suffering (*dukkha*) of saṁsāra. Until then, the world thought that we enjoy happiness because of this craving (*taṇhā*), and therefore regarded craving (*taṇhā*) as a good thing. Upon appeasing one desire, when one becomes satisfied with it, one then has to go in search of further desires.</p>
+<p>The Buddha has declared that this saṁsāric journey occurs due to ignorance (*avijjā*) and craving (*taṇhā*). Similarly, the Buddha has shown the disadvantages (*ādīnava*) of craving (*taṇhā*) in various situations by giving various similes, showing that within this craving (*taṇhā*) there is an unquenchable thirst, and it is afflicted by such thirst that beings wander in saṁsāra. There is such an insatiable thirst in it. Furthermore, such is the nature of craving (*taṇhā*) that no matter what one obtains, it can never be fulfilled.</p>
+<p>Also, until its roots are removed, craving (*taṇhā*) repeatedly gives birth in saṁsāra. That is why the Buddha declared in the Dhammapada using the simile of a tree: just as a tree, even though cut down, grows again if its root remains undamaged and firm, in the same way, unless the root is pulled out, unless the roots are removed, this tree of craving (*taṇhā*), this mass of suffering (*dukkha*), grows again and again. The Buddha has also on certain occasions compared this to a creeper (*latā*), as a creeper that spreads in various directions. Sometimes it is referred to as the *māluvā* creeper. The *māluvā* creeper refers to parasitic creepers that grow on trees. You have seen, indeed, how that creeper climbs the tree and ultimately destroys the tree itself. Craving (*taṇhā*) is just like that.</p>
+<p>Next, in some other places, because of the sticky, adhesive nature of craving (*taṇhā*), the word *lepa* (plaster/glue) is applied to it. *Ālepa* means something smeared, a resin/gum. Craving (*taṇhā*) is like resin. It is also shown as *visattikā*, something that clings or entangles. In other instances, when pointing out the factors that cause rebirth in saṁsāra, karma is described as the field, consciousness (*viññāṇa*) as the seed, and craving (*taṇhā*) as the moisture that helps it sprout. There, craving (*taṇhā*) is shown as moisture. In this way, it is explained through various similes. It is also shown as a stream of craving (*taṇhā-sota*), as a torrent. This is a river that flows without an end, the river of craving (*taṇhā*) in this saṁsāra. The Buddha declares: '*Natthi taṇhāsamā nadī*'—"There is no river like craving (*taṇhā*)." To that extent, it flows on and on without an end.</p>
+<p>Thus, having shown that disadvantageous side, the Buddha next showed the nature of craving (*taṇhā*) through a deep simile, comparing craving (*taṇhā*) to a seamstress—*sibbanī*. *Sibbanī* refers to both a seamstress (one who sews) and a weaver (one who knits). For what is shown there is that it is this craving (*taṇhā*) that helps one to be born in existence (*bhava*) again and again, from one existence (*bhava*) to another. The Buddha has expressed it as a work like making a stitch or doing a weaving. Craving (*taṇhā*) as a seamstress...</p>
+<p>To show the function it performs, there is a passage frequently used in the Dhamma: '*Taṇhā ponobhavikā nandirāgasahagatā tatratatrābhinandinī*'. Craving (*taṇhā*) has the nature of bringing about renewed existence (*bhava*) again and again—*ponobhavikā*. *Nandirāgasahagatā* means accompanied by delight and lust. *Tatratatrābhinandinī* means finding delight here and there. In craving (*taṇhā*), there is a nature of finding delight in this and that place. Delighting here and there from time to time, it goes on creating existence (*bhava*) continuously in saṁsāra.</p>
+<p>And also, just as we spoke of *rati*, on occasions when speaking of delight in Nibbāna, the Buddha sometimes points out: '*Taṇhakkhayarato hoti sammāsambuddhasāvako*'—"The disciple of the Fully Enlightened One delights in the destruction of craving." This means that the disciple of the Fully Enlightened One remains with a delight in Nibbāna, which is called the destruction of craving (*taṇhā-khaya*). Some scholars of today question this matter: "Isn't developing a desire to destroy craving (*taṇhā*) also a form of craving (*taṇhā*)?" Some see a contradiction here. How can craving (*taṇhā*) be destroyed by craving? But a very good answer to this is mentioned in a certain noteworthy discourse (*sutta*). The event is described as follows:</p>
+<p>At a time when the Venerable Ānanda was residing at the Ghositārāma monastery in Kosambī, a certain nun developed an attachment toward the Venerable Ānanda. Feigning illness, she sent a certain man as a messenger, instructing him: "In my name, with my words, pay homage to the Venerable Ānanda, and tell him that such-and-such a nun is very ill; out of compassion, please visit her to see her and preach a little Dhamma."</p>
+<p>Venerable Ānanda put on his robes, prepared himself, and went to that nunnery. However, upon arrival, Ven. Ānanda understood the underlying motive of this nun. Perhaps because of that, he preached a certain discourse (*sutta-desanā*) in a way that would remove her distorted attitude. That discourse contains several valuable points we need; that is why we are bringing it up. There, Ven. Ānanda first presented four Dhamma factors to that nun:</p>
+<p>'*Āhārasambhūto ayaṁ, bhagini, kāyo, āhāraṁ nissāya āhāro pahātabbo*'—this is the first point.</p>
+<p>The second point: '*Taṇhāsambhūto ayaṁ, bhagini, kāyo, taṇhaṁ nissāya taṇhā pahātabbā*'.</p>
+<p>The third point: '*Mānasambhūto ayaṁ, bhagini, kāyo, mānaṁ nissāya māno pahātabbo*'.</p>
+<p>The fourth point: '*Methunasambhūto ayaṁ, bhagini, kāyo; methune ca setughāto vutto bhagavatā*'.</p>
+<p>Having stated these four points, he then analyzes them. What is the first point? "Sister, this body, this physical frame, is born of food. Yet, *āhāraṁ nissāya āhāro pahātabbo*—depending on food itself, food is to be abandoned." Although this seems like a riddle, Ven. Ānanda next analyzes and explains it. What is meant by this? We cannot live without taking food. However, the practitioner (*yogāvacara*) knows that the Buddha has instructed the practitioner to consume food after reflecting on it and considering it with wisdom. It is through this reflection that, at some point, even that craving (*taṇhā*) for food can be destroyed.</p>
+<p>That reflection is shown in this way: "One does not take this food for amusement, nor for intoxication, nor for physical beauty, nor for beautification" (*neva davāya, na madāya, na maṇḍanāya, na vibhūsanāya*). A practitioner does not take food for play, nor for increasing manly pride, nor to fill out thin places to make the body beautiful. '*Imassa kāyassa ṭhitiyā, yāpanāya, vihiṁsūparatiyā, brahmacariyānuggahāya*'—merely for the survival and maintenance of this body, for ending its discomfort [harm], and for supporting the holy life (*brahmacariya*) under the Dispensation. Furthermore, it is declared: '*Iti purāṇañca vedanaṁ paṭihaṅkhāmi*'—"Thus I will dispel the old feeling of hunger by taking this food." '*Navañca vedanaṁ na uppādessāmi*'—"and I will not generate any new feeling [pain/discomfort] by overeating." And then: '*Yātrā ca me bhavissati, anavajjatā ca phāsuvihāro ca*'—"so that there will be maintenance of my life, blamelessness, and a comfortable abiding for meditation." In that way, by taking food while considering with wisdom and with mindfulness and clear comprehension (*sati-sampajañña*), one can attain Nibbāna by depending on food itself.</p>
+<p>You might have also heard in the Dhamma books that some individuals attained Nibbāna through the very reflection on food. It is mentioned in the commentaries that in the past, even during times of famine, when members of the Sangha were partaking of gruel or taking food, some attained Nibbāna at that very moment of eating, through reflection. Thus, Ven. Ānanda showed there with reason the meaning of '*āhāraṁ nissāya āhāro pahātabbo*'.</p>
+<p>Next, it speaks about craving (*taṇhā*): "Sister, this body is something that has arisen. It has arisen because of craving. Yet, *taṇhaṁ nissāya taṇhā pahātabbā*—depending on craving (*taṇhā*), craving (*taṇhā*) is to be abandoned." This indeed, seems to be a riddle at first glance. If this is analyzed in the way the ordinary world analyzes things, it would lead to a massive entanglement.</p>
+<p>But here, Ven. Ānanda himself presents a special analysis. What is meant by this is not the ordinary coarse craving. Suppose a certain monk hears: "That particular monk has destroyed his influxes (*āsava*) and, having attained Arahantship, is dwelling therein." As soon as he hears this, this monk thinks: "Ah! That Venerable One has become an Arahant in this manner. When, indeed, shall I also attain to that?" That thought, "when shall I also attain to that," is indeed a desire [a form of craving]. But depending on that [desire], one day that monk becomes an Arahant. That is how we must understand the special meaning of abandoning craving (*taṇhā*) by depending on craving (*taṇhā*). The third point is also similar.</p>
+<p>'*Mānasambhūto ayaṁ, bhagini, kāyo, mānaṁ nissāya māno pahātabbo*'—this body is something born of conceit (*māna*). It is because of conceit and views (*diṭṭhi*) that we have obtained this cage [of a body]. Yet, depending on conceit itself, conceit is to be abandoned. This also seems like a riddle. This is explained in a manner similar to the point mentioned before. Suppose a certain monk hears that another monk—indeed, such-and-such a monk—having destroyed his influxes, has attained Arahantship. This monk then thinks: "That monk has attained Arahantship. Why not me? I can also do it!" Conceit is indeed present there: "If that monk did it, it is not impossible for me." Yet, at some point, that conceit helps in realizing Nibbāna. Therefore, that conceit is shown as something beneficial [in this context].</p>
+<p>Now, it was not even necessary to give a detailed explanation of the fourth point; just stating its meaning is sufficient: '*Methunasambhūto ayaṁ, bhagini, kāyo; methune ca setughāto vutto bhagavatā*'. Ven. Ānanda presents this as the very word of the Buddha: "Sister, this body is born of sexual intercourse. It is due to the sexual union of parents that this body of ours has arisen." However, regarding sexual intercourse, what the Buddha has declared is *methune setughāto*. *Setughāta* means like destroying a bridge—the cutting off of connections, disconnecting. Thus, regarding the practice of sexual intercourse, the Blessed One has declared it to be *setughāto* (the destroying of the bridge). '*Vutto bhagavatā*'—that is what is declared. The cutting off of connections.</p>
+<p>As soon as he finished saying that, the nun—who, in fact, even before Ven. Ānanda's arrival, had been lying down covering her head, feigning illness (it was a fake illness, indeed)—immediately got up, fell at the feet of Ven. Ānanda, and begged for forgiveness: "Alas, due to my foolishness and unwholesome thoughts, I committed such a wrong act. May the Venerable One forgive me. I shall never do such a thing again." That is how that story goes.</p>
+<p>From this, we can understand the puzzling matter mentioned earlier. Although various arguments are raised regarding the desire and conceit for Nibbāna, there is a deep meaning in it. However, it is recorded in the history of the Dispensation (*sāsana*) that certain Buddhist sects, having misunderstood that fourth and final point, developed wrong views (*micchā-diṭṭhi*) such as Tantrism. But the Buddha has clearly declared that, regarding the fourth point, what must be done is indeed the complete destruction of the bridge.</p>
+<p>Next, why is craving (*taṇhā*) called a seamstress or a weaver? An incident showing that this too was discussed among the Sangha is mentioned in the Dhamma. On one occasion in the Deer Park at Isipatana, a group of elder monks (*thera*) gathered and held a Dhamma discussion in a Dhamma assembly. It was like the conferences of today—a wonderful Dhamma conference mentioned in our Dhamma literature. Nowadays too, various seminars are held in different places on various subjects. Now, this Dhamma conference began in this manner. This is what was presented as the theme among the elder monks:</p>
+<p>Indeed, they took up a certain verse uttered by the Buddha himself, which is found in a section of the Dhamma available to us even today. What is it? In the text named the Sutta Nipāta, in the section available to us as the Pārāyana Vagga—even if it was not known by the name *Vagga* at that time, it is stated thus:</p>
+<p>In that section of the Dhamma called the Pārāyana, the Blessed One uttered a verse like this, didn't he? To whom? To Tissa Metteyya. In fact, it is called the *Metteyya-pañha* (Questions of Metteyya). This is the verse spoken to the young Brahmin Tissa Metteyya:</p>
+<p>'*Yo ubhonte viditvāna, majjhe mantā na lippati;*</p>
+<p>*Taṁ brūmi mahāpuriso'ti, so'dha sibbanimaccagā.*'</p>
+<p>A verse that is like a great riddle. Its meaning: '*Yo ubhonte viditvāna*'—whoever, having understood the two extremes; '*majjhe mantā na lippati*'—*mantā* means wisdom (*paññā*), does not cling to the middle with wisdom; '*taṁ brūmi mahāpuriso'ti*'—him I call a great man; '*so'dha sibbanimaccagā*'—he has escaped, gone beyond the seamstress in this world. This is what the Buddha has declared.</p>
+<p>Even though it was spoken to the young man Tissa Metteyya, this verse was not explained in detail there; no commentary was given. Because of this, discussions and debates arose among the Sangha regarding the meaning of this verse. The question raised was indeed: "What is the first end spoken of in this verse? What is the second end? What is the middle? Who is the seamstress?" That was the question. The question was presented and taken up for discussion in this way: "What are the two ends or two extremes spoken of in this verse uttered by the Blessed One in the Pārāyana Vagga, in the section of the Metteyya-pañha? What is the middle? Who is the seamstress?"</p>
+<p>There, one monk declared: "As I see it, here, one end is contact (*phassa*). The second end is the arising of contact. The middle is the cessation of contact. The seamstress is craving." If someone has understood this matter correctly, one meditation subject (*kammaṭṭhāna*) is completed. If this matter is understood correctly, this alone is sufficient for one to end all suffering (*dukkha*) and become an Arahant. That was the explanation given by the first elder monk. The second elder monk gave his explanation:</p>
+<p>"As I understand it, the first end spoken of in this verse is the past. The second end is the future. The middle is the present. The seamstress or weaver is indeed craving (*taṇhā*) itself." Then, the third monk presented his opinion: "As I understand it, the first end is pleasant feeling (*vedanā*). The second end is painful feeling (*vedanā*). The middle is neither-painful-nor-pleasant feeling (*vedanā*)—what we now call equanimity (*upekkhā*), that neutral feeling (*vedanā*). And the seamstress is craving (*taṇhā*) itself."</p>
+<p>The fourth monk then presented an opinion: "As I understand it, the first end is Name (*nāma*). The second end is Form (*rūpa*). And the middle is consciousness (*viññāṇa*)." Here, there is a special point: the middle is consciousness (*viññāṇa*). "But the seamstress is indeed craving (*taṇhā*) itself."</p>
+<p>Next, the fifth monk expressed his opinion in this manner: "As I understand it, the first end is the six internal sense-bases (*ajjhattika āyatana*)—meaning, my virtuous friends, the six internal bases: eye, ear, nose, tongue, body, and mind. The second end is the six external sense-bases (*bāhira āyatana*): form, sound, smell, taste, touch, and thoughts [dhamma], which are the objects of the internal bases. The middle is consciousness (*viññāṇa*). The seamstress is craving (*taṇhā*)."</p>
+<p>Then, the sixth monk expressed his opinion: "As I understand it, the first end, the first extreme is identity (*sakkāya*). The Buddha defines *sakkāya* as a name for the five aggregates of grasping (*pañcupādānakkhandha*). You know, indeed, that the five aggregates of grasping are form, feeling (*vedanā*), perception, formations (*saṅkhāra*), and consciousness (*viññāṇa*). When those five aggregates of grasping are taken together with a view about them, that is called the dogma of self-illusion (*sakkāya-diṭṭhi*)—the assumption that those five exist [as a self]. That is the first end. Next, the second end is the arising of identity (*sakkāya-samudaya*). Next, the middle is the cessation of identity (*sakkāya-nirodha*). The seamstress who weaves this is craving."</p>
+<p>Thus, having analyzed these six opinions in this way, since there was a difference of opinion, a unanimous decision was reached among these monks: "Among us, as a result of this conference, six opinions have been presented. Let us go to the Blessed One and ask which of these is correct." The monks went to the Buddha and presented this report—the conference report.</p>
+<p>The Buddha declared: "Monks, all six opinions you have expressed are correct when viewed from their respective angles. They are all correct. *Sabbaṁ saṅghassa subhāsitaṁ pariyāyena*—what you six have declared is correctly spoken in an expositional sense (*pariyāya*), when looked at from each respective angle. However, on that day, when declaring this matter to the young man Metteyya, what I intended was that first point: contact (*phassa*) is one end, the arising of contact is the other end, the cessation of contact is in the middle, and the seamstress is craving (*taṇhā*). It is with that meaning that I declared it."</p>
+<p>Now, what remains for us is to try to understand these points discussed in the conference, each according to our own capacity. Even if we do not give a complete exposition, if we give a hint from these, the practicing devotees (*yogāvacara*) here who practice meditation can take that as a meditation subject (*kammaṭṭhāna*), and will be able to personally realize the fact that each of these supports the attainment of Nibbāna.</p>
+<p>Now let us look at the first explanation. Indeed, the explanation the Buddha declared as fitting in every way is this very one: contact (*phassa*) is the first end; the arising of contact is the second end; the cessation of contact is in the middle. This is generally difficult to understand. We think of contact (*phassa*) as something that arises from the coming together and collision of the sense organ and the object. But the nature of craving (*taṇhā*) is such that, as we said, craving (*taṇhā*) knits them together.</p>
+<p>It leaps from one to another. The teachers of old declared that in saṁsāra, one is constantly on the side of arising (*samudaya*). The side of arising means forgetting cessation (*nirodha*). According to the Buddha's word, all these things are arisings and passings away—*samudaya-vaya*. You have heard the word *udayabbaya*. In everything, there is an arising and a passing away. However, the ordinary saṁsāric being forgets the passing away, forgets cessation, forgets the wearing away, and is inclined to renew it again and again.</p>
+<p>That is what is done; that is why it is called renewed existence (*punabbhava*). Next, *nandirāgasahagatā*—because of that delight and lust, one brings up that pleasant feeling (*vedanā*) again and again. One forgets that it ceases; one forgets its impermanence (*anicca*). Contact (*phassa*) and the arising of contact are the two ends. In the middle is the cessation of contact (*phassa-nirodha*). One leaps over it. One forgets the cessation of contact that lies in the middle.</p>
+<p>We can understand this through this simile. Suppose someone gets a piece of delicious cake. Whether it be a small child or a needy person, they greedily swallow the piece of cake all at once, saying "it is delicious." Instead of that, if one eats it slowly, reflecting on it in the manner mentioned before, then one personally experiences how even that pleasant feeling (*vedanā*) of taste arises and passes away, how it wears away. The cessation (*nirodha*)—the fact that there is no 'thing' there—is grasped by the mind. It is because of lust and attachment that this cessation (*nirodha*) is not grasped by us. That is the secret.</p>
+<p>Then, what does this seamstress do? She leaps and bounds. You can compare the activity of this seamstress to the needle of a sewing machine leaping up and down. What is the function of the bobbin thread (under-thread) in a sewing machine? What is done by the under-thread? Just as one grasps something in terms of craving (*taṇhā*), conceit (*māna*), and views (*diṭṭhi*), the under-thread leaps forward, and when the needle goes down, it forms a knot. That is how the stitching proceeds. Then a long seam is formed. That is the seam of saṁsāra, how the stitch is made. In weaving or knitting, the same thing happens. When knitting, taking one strand or two, one pulls it and goes on making knots. As long as those knots are cast, that knitting extends. That is the kind of thing that happens in saṁsāra.</p>
+<p>Grasping (*upādāna*) gets its place because of craving (*taṇhā*). Next to craving (*taṇhā*) is grasping (*upādāna*). It is that grasping (*upādāna*) that is done under the sewing machine, by the under-thread. Thus, caught by that under-thread, we remain under that seamstress for a long time in saṁsāra. This can be understood even through this matter of contact (*phassa*), even if the other points are not considered.</p>
+<p>There is a certain short passage in the discourses (*sutta-desanā*) expressing insight. If we cite that verse here as an example: '*Phussa phussa vayaṁ passaṁ, evaṁ tattha virajjati*'. *Phussa phussa* means with every instance of contact (*phassa*), one sees its passing away (*vaya*). "Seeing the passing away with each contact, one becomes dispassionate toward it." Then, dispassion (*virāga*) arises; non-attachment arises.</p>
+<p>When you slowly eat that piece of cake, it mixes with saliva and ultimately becomes repulsive. The perception (*saññā*) of taste that you took is ended right there. When eating it again, the same thing happens. That is what happens when seeing that cessation (*nirodha*): '*Phussa phussa vayaṁ passaṁ*'. When one understands the true meaning of this food through reflection as mentioned before, so that one can see that cessation (*nirodha*), and does this with non-attachment, then one understands that there is no taste in what was swallowed greedily all at once, thinking 'it is delicious.' It is not there either. The taste is not in the piece of cake, nor is it in the tongue. It is an illusion, something created by the mind—thinking 'this cake is delicious'—arising due to that contact (*phassa*) and the quickness of craving (*taṇhā*) to bring up that contact again and again.</p>
+<p>Thus, it is not impossible to become an Arahant even through a piece of cake, if one eats it after reflecting in that manner: '*Phussa phussa vayaṁ passaṁ*'—seeing its passing away with every contact (*phassa*).</p>
+<p>Let us stop there with that point. Since there are several other points to mention, next let us look at the second interpretation. The past is one end; the future is the second end. This will be easy to understand. In the middle is the present (*paccuppanna*). Think about it for a moment: you, virtuous friends, have developed some wish to buy a vehicle or build a house. You think about the provisions for it. All of those are ready in the future. Now, perhaps, that castle in the air is already built. You forget about the debt. Craving (*taṇhā*) knits together the past and the future, making you forget the present.</p>
+<p>That is why you have heard so much about the story of Bhāgineyya Saṅgharakkhita, which we mentioned on another occasion. The pupil of that monk Saṅgharakkhita, having become discontented with his teacher, thought: "Now I must disrobe. Having disrobed, I will become a layman, go on like this, and finally get married and have a child." Having generated such a story in his mind as a form of conceptual proliferation (*papañca*), while fanning his teacher with a palm-leaf fan, he struck his teacher on the head, thinking that his wife had dropped the child. In that way, through conceptual proliferation (*papañca*), the present is ultimately forgotten. Such a thing happens. That is how craving (*taṇhā*) knits together the two ends while forgetting [the middle]. That is easy to understand. That is the second one.</p>
+<p>Next, the third one is between pleasant feeling (*vedanā*) and painful feeling (*vedanā*). The Buddha has declared that an untaught worldling (*puthujjana*) afflicted by painful feeling (*vedanā*) yearns for pleasant feeling (*vedanā*). What is the reason? Apart from pleasant feeling (*vedanā*), the ordinary worldling does not know of any escape from painful feeling (*vedanā*). This means that the neither-painful-nor-pleasant feeling (*vedanā*) in the middle is not understood by that person at all. The being bound by ignorance (*avijjā*) has no understanding of that peaceful, neither-painful-nor-pleasant equanimity (*upekkhā*) in the middle. That is what the Buddha points out here.</p>
+<p>So, what that person does is play on a seesaw between pleasure and pain. When pleasant feeling (*vedanā*) ends, they bring it up again. Then next comes painful feeling (*vedanā*). As long as pleasant feeling is present, it is pleasant; when it is absent, it is painful. Then they bring it up again. Thus, there is a seesaw play between pleasure and pain. The neither-painful-nor-pleasant feeling in the middle—that neutral feeling (*vedanā*)—is not understood by that person. It is in the middle. Why is it not understood? By whom is this done? By that very seamstress. She leaps and bounds. In the world, one constantly rolls back and forth between pleasure and pain. She makes one forget about what is in the middle. Through serenity concentration (*samatha-jhāna*), the happiness within that state can be understood at the level of concentration (*samādhi*). Such is the case regarding feeling (*vedanā*). This too will be somewhat easy for you, virtuous friends, to understand.</p>
+<p>Next, with what follows, perhaps something deep might be explained: between Name and Form (*nāma* and *rūpa*). The term 'Name' (*nāma*), apart from the practicing devotees (*yogāvacara*), might not be understood immediately by ordinary people. Where the Buddha explains the phenomena of Name-and-Form (*nāmarūpa*), he states that 'Name' (*nāma*) consists of five factors connected with the mind: feeling (*vedanā*), perception (*saññā*), volition (*cetanā*), contact (*phassa*), and attention (*manasikāra*). You know feeling, perception, and volition, along with contact and attention. These five are shown as mental phenomena (*nāma-dhamma*). Next, Form (*rūpa*) is analyzed, as you, virtuous friends, may have heard, in terms of the great elements (*mahābhūta*): earth (*paṭhavī*), water (*āpo*), fire (*tejo*), and air (*vāyo*). It is based on these that one develops a perception of form (*rūpa-saññā*). Thus, the world sees only these two: Name and Form. In between these two, Name-and-Form (*nāmarūpa*), lies consciousness (*viññāṇa*). Why is that? Because both of these are connected to consciousness (*viññāṇa*). Those mental factors present in Name—feeling (*vedanā*), perception, volition, contact (*phassa*), and attention—arise through consciousness (*viññāṇa*) itself.</p>
+<p>Next, what we recognize as Form (*rūpa*). We do not understand this in a physical sense, but in accordance with the Dhamma. What do we take as the earth element (*paṭhavī*) there? It is through characteristics of hardness and softness. There, we use mental factors (*nāma-dhamma*) even to understand form-phenomena (*rūpa-dhamma*). Through characteristics of hardness and softness, we generate the perception of earth (*paṭhavī*). Next, through characteristics of cohesion and liquidity, we recognize the water element (*āpo*). Next, through characteristics of heat and cold, we recognize the fire element (*tejo*). Through characteristics of movement and distension, we recognize the air element (*vāyo*).</p>
+<p>Thus, that perception of form (*rūpa-saññā*) grasped by our mind is ultimately what remains as Form (*rūpa*). In between those two lies consciousness (*viññāṇa*). The commentators of the past even point out that Name and Form (*nāma* and *rūpa*) proceed in relation to each other. They support each other; neither can stand alone.</p>
+<p>The commentators present an ancient simile. The journey of Name and Form (*nāma* and *rūpa*) in saṁsāra is shown as a journey of a blind man who can walk and a lame man who can see. Riding on the shoulders of the blind man who can walk but cannot see is the lame man. Although he cannot walk, he can see. So, this person walks according to the path indicated by him. It is said that this saṁsāric journey is like the journey of this blind man and the lame man. But if one understands at some point, in between both of these lies consciousness (*viññāṇa*). This is a matter that is very difficult to understand.</p>
+<p>If we give another common simile—we say this having considered it, and not by way of disparaging, but to make it easy for you, virtuous friends, to understand—suppose a dog crossing a single-log bridge sees its reflection in the water. For a moment, it forgets that it is the nature of water to reflect. It assumes that there is a dog in the water—a water dog. So, it reacts to this water dog. Either it growls, or it wags its tail, or otherwise, it keeps looking again and again with curiosity. The dog does not know that it is because it looks that the other dog appears. Thinking it is a visible dog, it looks. Here, that looking dog represents the mental phenomena (*nāma-dhamma*). The visible dog is that Form (*rūpa*). In between both of them lies that reflecting nature of the water.</p>
+<p>Thus, my virtuous friends, within consciousness (*viññāṇa*), there is a reflecting nature like that. That is what we meant by reflection (*paccavekkhaṇā*). It is this very thing: within this illusory consciousness (*viññāṇa*), there is a reflecting nature; if one does not reflect correctly, one gets caught in it. That is unradical attention (*ayoniso manasikāra*). If one reflects incorrectly, like that dog, one has to remain right there on the single-log bridge, wagging its tail or growling. Because that dog does not know the difference between the visible dog and the looking dog. The journey of Name and Form (*nāma* and *rūpa*) is just like that.</p>
+<p>Thus, that consciousness (*viññāṇa*) lies in the middle, and this reflecting nature of consciousness (*viññāṇa*) is not obvious to the ordinary world. The insight meditator must understand it through contemplation. In insight, by contemplating everything, applying the effort of rapid contemplation, one does so to personally realize it for oneself.</p>
+<p>Just saying this in words is not enough. At some point in the understanding of Name-and-Form (*nāmarūpa*), instead of taking the mixture of Name and Form as a single unit, one understands at some point: "It is because of Name (*nāma*) that Form (*rūpa*) exists, and because of Form (*rūpa*) that Name (*nāma*) exists. In the middle of this lies the illusory consciousness (*viññāṇa*)." It is from this mind itself, through the mental factors (*nāma-dhamma*) such as hardness and softness, that one understands Form. Next, for the mental factors to bring up feeling (*vedanā*), perception, and so on, it is that very perception of form (*rūpa-saññā*) that helps us. These support each other. So, this is the journey of the blind man and the lame man. If someone thinks of stopping this saṁsāric journey, it is like the lame man realizing this at some point. Then indeed, one strives to understand Name-and-Form (*nāmarūpa*) with wisdom in that manner. That is the analysis of Name-and-Form (*nāmarūpa*).</p>
+<p>The same applies to what was said about the sense-bases (*āyatana*). The six internal bases (*ajjhattika āyatana*), as mentioned, are eye, ear, nose, tongue, body, and mind. Next, the six external bases (*bāhira āyatana*) are form, sound, smell, taste, touch, and thoughts [dhamma]. What helps to understand this is the simile of the mirage, which we all hear often and which we have to apply. The deer does not know that it is a mirage. The deer thinks it is water. It assumes that the sight seen in the mirage is water. Thus, it assumes that the external base is present there as it appears.</p>
+<p>The deer has no idea that the eye is the internal base here, and that it is running because of that consciousness (*viññāṇa*) reflecting the image fallen on the eye. It has no understanding of consciousness (*viññāṇa*) in the middle. Therefore, the deer runs from here to catch that water. From this, you, virtuous friends, can understand the operation of the mirage.</p>
+<p>That is what is meant by saying that consciousness (*viññāṇa*) lies in the middle, between the six internal bases and the six external bases. And what knits them together is craving (*taṇhā*)—that thirst. A mirage is called *mṛgathṛṣṇikā* (deer-thirst). It is indeed craving (*taṇhā*). Because of the deer's thirst, it runs. It runs after that image falling on its eye, which it sees. These are the kinds of things regarding those six. Indeed, the Buddha applies the word 'mirage' to all perceptions (*saññā*). Every perception generated based on form, sound, smell, taste, touch, and thoughts [dhamma] is shown as a mirage, which, because of craving (*taṇhā*) and the impulse of craving (*taṇhā*), worldlings divide into two and chase after.</p>
+<p>Next, the final one is somewhat deep. Identity (*sakkāya*), as we mentioned earlier, is the five aggregates of grasping (*pañcupādānakkhandha*) itself. These five aggregates of grasping that we hold onto—form, feeling (*vedanā*), perception, formations (*saṅkhāra*), and consciousness (*viññāṇa*)—are built up moment by moment. Although it is not visible to us, the five aggregates of grasping you had when you arrived at this place are not what you have now. Now, they have piled up. That piling up is called accumulation (*upacaya*). They accumulate. They accumulate because one grasps those passing experiences as 'mine' in terms of craving (*taṇhā*), conceit (*māna*), and views (*diṭṭhi*). In that way, piles of grasping (*upādāna*) accumulate.</p>
+<p>The dogma of self-illusion (*sakkāya-diṭṭhi*) means taking the five aggregates of grasping as a self: "Form is my self," "feeling (*vedanā*) is my self," or "the self possesses form," and so forth in various ways. It is twenty-fold. It is called *sakkāya-diṭṭhi*. In twenty ways, one conceptualizes form, feeling (*vedanā*), perception, formations (*saṅkhāra*), and consciousness (*viññāṇa*) as 'I' and 'mine'. Furthermore, ordinary worldlings develop a perception of permanence (*nicca-saññā*) regarding them. Consequently, due to not knowing that cessation (*nirodha*) in the middle—that is, their nature of wearing away—they generate a perception of permanence. One who has developed the vision of impermanence (*anicca*) understands: "This eye is impermanent (*anicca*), forms are impermanent (*anicca*), the contact (*phassa*) arising due to them is impermanent (*anicca*), and the feeling (*vedanā*) arising due to them is impermanent (*anicca*)."</p>
+<p>When impermanence (*anicca*) is developed in that way, instead of the accumulation of the five aggregates of grasping, a wearing away occurs. They begin to wear away. But this happens only after seeing that cessation (*nirodha*). That is why identity (*sakkāya*) is one end. The arising of identity (*sakkāya-samudaya*)—just like what was said about the arising of contact (*phassa-samudaya*)—which is the repeated arising of identity, is the other end. The knitting together of these two is done by craving (*taṇhā*), while disregarding the cessation of identity (*sakkāya-nirodha*). Thus, we can see the work done by the seamstress. Next, we have to mention, using that same simile, how the work done by this seamstress with the under-thread is understood by the insight meditator at some point. When you, virtuous friends, are sewing on a sewing machine at home, if the under-thread suddenly runs out, then immediately after the under-thread runs out, it looks from the outside as if it has been sewn. But the two pieces of cloth remain separated; they are not sewn together.</p>
+<p>For the insight meditator, at some point, through that perception of impermanence (*anicca-saññā*), the knowledge of arising and passing away (*udayabbaya-ñāṇa*) emerges. Having seen both arising and passing away, one gradually seeks to escape from this. On the other hand, the person who is keen on carrying on saṁsāra continuously looks at the arising (*samudaya*): "Indeed, the sun set this evening, but it will rise tomorrow morning; there is nothing to fear. True, the sun set today, but it rises in the morning. This went wrong, yes, this happened. But the next one will be right. This lottery ticket didn't win. The next one will." In that way, through that, they carry it on and on.</p>
+<p>However, if one understands the cessation (*nirodha*) of these and maintains that understanding continuously, the state where this becomes intense is called the knowledge of dissolution (*bhaṅga-ñāṇa*). That is what we have to contemplate, in the manner mentioned earlier: '*Phussa phussa vayaṁ passaṁ*'—seeing the cessation (*nirodha*) with every contact (*phassa*). When insight meditation becomes so intense that even the thoughts arising in the mind are seen as breaking up [dissolving],</p>
+<p>then that path of insight is put into action, and ultimately, through dispassion (*virāga*), revulsion (*nibbidā*), weariness with saṁsāra, liberation (*vimutti*) finally occurs. It is at that moment of liberation that it is like the under-thread running out—something like a stitch proceeds, but it is not sewn together. If it were sewn, it could be analyzed according to time and space, as they say nowadays. But a very wonderful thing happens, which cannot be caught by time or caught by space. That is what is called supramundane (*lokuttara*). That, my virtuous friends, is the supramundane state. There, the mind, having freed itself from that grasping (*upādāna*), freed itself from the under-thread, reaches a wonderfully peaceful and sublime state at the moment of the attainment of fruition (*phala-samāpatti*).</p>
+<p>That is what we have to draw from that simile. The state where the work of that craving-seamstress who delights here and there is suspended is the attainment of fruition (*phala-samāpatti*). Then, that is liberation. Therefore, when we speak of Nibbāna as the destruction of craving (*taṇhā-khaya*), whatever words are used, we must accept that the ultimate purpose of this Dispensation (*sāsana*) is indeed liberation (*vimutti*).</p>
+<p>There is this great mass of suffering (*dukkha*) called pain. The Buddha declared: "I do not declare anything else, nor an eternal existence, but suffering (*dukkha*) and the cessation of suffering (*dukkha-nirodha*). That is my entire message." The world complains about suffering (*dukkha*). I gave the solution for it—cessation (*nirodha*). Apart from that, this is not an eternal, permanent self-nature (*atta-sabhāva*) or anything of the sort. That is the essence of the vision of non-self (*anattā*).</p>
+<p>When the Buddha compared this entire true Dhamma (*saddhamma*) to a Sal tree, in the simile of the Sal tree, he compared the leaves, twigs, etc., to virtue (*sīla*), and went on declaring the various parts of the Dhamma in that manner. Ultimately, what is the heartwood of the Sal tree? It is that state of Nibbāna known as the unshakeable liberation of mind (*akuppā cetovimutti*). It is the completely liberated mind that is unprovoked, unmoving, and freed from that grasping (*upādāna*) mentioned earlier.</p>
+<p>In that liberated mind, there is neither this end, nor that end, nor is there a middle. That is what is mentioned in the Bāhiya Sutta: '*N'ev'idha na huraṁ na ubhayantare*'—neither here, nor there, nor in between both. '*Esev'anto dukkhassa*'—this itself is the end of suffering (*dukkha*).</p>
+<p>That Dhamma, which the great ascetic Bāhiya personally realized through that short passage of the Buddha's word, is what we have been explaining in various ways for this past hour. Thus, Nibbāna lies right there. Our ultimate goal as Buddhists is that Nibbāna which is personally realized through the wonderful attainment of the fruition of Arahantship (*arahattaphala-samāpatti*)—which is like a visual field without a horizon, having neither the two ends mentioned earlier, nor the middle. Apart from that, we must understand that it is not something that various people imagine it to be.</p>
+<p>We pray that the virtue (*sīla*) observed, the meditation practiced, and the Dhamma heard today may serve as a supportive condition (*hetu-vāsanā*) to go on this journey while established in right view (*sammā-diṭṭhi*)!</p>
+<p>Recalling the mass of merit (*kusala-sambhāra*) accumulated by you, virtuous friends, through this hearing of the Dhamma, along with the mass of merit we have accumulated through this preaching of the Dhamma, and the value of that gift of the Dhamma mentioned earlier, may all beings in this world—from the Avīci hell up to the Akaniṭṭha heaven, including all the relatives of you, virtuous friends—rejoice in this merit! By rejoicing in it, at some point, may they escape from all the suffering (*dukkha*) of saṁsāra, such as birth (*jāti*), decay and death (*jarāmaraṇa*), disease, and so on, and having gone beyond that craving-seamstress, may they attain the supreme, great Deathless Nibbāna! Please make this aspiration. Recite these verses to share the merit.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_149.html" class="doc-btn">← Previous Sermon (149)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_151.html" class="doc-btn">Next Sermon (151) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

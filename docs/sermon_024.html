@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 024 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_023.html" class="doc-btn">← Previous Sermon (023)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_025.html" class="doc-btn">Next Sermon (025) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 024</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_024_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_024_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_024_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #24</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No. )</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Asaṁsaṭṭhaṁ gahaṭṭhehi, anāgārehi cūbhayaṁ; Anokasāriṁ appicchaṁ, tam ahaṁ brūmi brāhmaṇaṁ.</p>
+<p>From:</p>
+<p>Verses 404 from the Brāhmaṇavagga (Chapter on the Brahmin) of the Dhammapada</p>
+<p>Dear Listeners,</p>
+<p>Today is Poson Full Moon Poya Day, the day on which we commemorate the historic event of the establishment of the Buddha Sāsana in this country under the leadership of Arahat Mahinda Thero. Although this Buddha Sāsana has survived for many centuries amidst various timely calamities and social upheavals, many people nowadays are not clear even about what its signs of decline are and what its signs of progress are. Therefore, for today's sermon, we have selected a verse and a story that would help us understand this matter at least to some extent.</p>
+<p>The Buddha, the Teacher of the Three Worlds, preached this verse at Jetavanarama in connection with a certain monk named Tissa. This Venerable Tissa, having obtained a meditation topic from the Buddha, entered a forest in search of a suitable place to meditate. As he was walking, he came across a cave situated on a mountain slope, and his mind became very calm and attained concentration (*samādhi*). That monk thought, “This cave is very suitable and congenial (*sappāya*) for me. Perhaps, dwelling here, I will be able to bring an end to the *Dukkha* (Suffering) of saṁsāra. He formed this thought. The deity who resided in that cave, seeing this monk approaching, first looked with divine eye at the monk's virtue (*sīla*). Upon looking, the deity saw that he was a monk who had kept his virtue extremely pure from the very day of his higher ordination (*upasampadā*). So the deity thought, “Now, with such a virtuous person, with a monk, I cannot live together. Deities cannot dwell on a higher level [above a virtuous monk], so this will be troublesome. Yet, the deity thought, “Perhaps this monk will stay only for today and leave tomorrow. Thus, the deity left the cave.</p>
+<p>Then on the second day, Venerable Tissa went to the village for alms. Seeing him, a certain lay woman (*upāsikā*) became very pleased and invited him, offering him almsfood at her house. She requested, “Venerable Sir, please reside here for these three months of the rainy season (*vassāna*); reside in that cave, and we will look after your needs.” The monk accepted this. Thus he returned to the cave. The deity waited for several days, thinking, “He will leave today, he will leave tomorrow.” After about two weeks, the deity realized that this monk had come indeed to spend the rainy season retreat. Then the deity thought, “Now, how can I arrange a way to make this monk leave this place?” Since the monk was pure, there was no way to make any false accusation against him. “However, through some strategy, I must create a blemish in this monk's virtue, create disrepute for him.” Thinking thus, the deity possessed the eldest son of that lay woman. Having possessed him, the deity twisted the child's head, made his eyes roll back, and made him fall down foaming at the mouth.</p>
+<p>When the lay woman screamed in fear, the deity, speaking through the possessed child, said, “It is I who have possessed this child. I do not want any animal sacrifices or offerings. Go to that monk whom you look after, get a piece of a dry vine of wild ginger (*dambuväl*) and a wild beehive, boil some oil, and apply it as nasal drops (*nasya*) to this child; then he will be cured. I will then leave.” This lay woman replied, “Even if my child dies, I cannot do that [ask the monk to do medical work].” Then the deity said, “If you cannot do that, then tell that monk to put some asafoetida powder into this child's nose.” She said, “I cannot do that either.” “Well, if that too is impossible, sprinkle the water used to wash that monk's feet on this child's head.” “Ah, that indeed I can do,” said the lay woman. That day, when Venerable Tissa came for alms, after offering the almsfood, she made him wash his feet and asked, “Venerable Sir, is it wrong if we sprinkle this water on this child's head?” “Very well, it is alright,” he replied. As soon as that water was sprinkled, the deity left the possessed child and returned to the cave. The child was then cured.</p>
+<p>The monk knew nothing of this detail. As usual, after finishing his almsmeal, reflecting on his meditation topic and remaining in meditation, he walked back to the cave. As he was arriving, the deity standing near the door of the cave said, “Great physician, do not enter here.” Then the monk asked, “Who is speaking?” “It is I, the deity residing in this cave,” the deity replied. Then the monk thought, “Have I practiced medicine? Have I practiced medicine for laypeople since the day of my higher ordination? I have not done so. My virtue (*sīla*) is extremely pure.” Seeing this, he asked the deity, “Why do you accuse me like this? Have I done such a thing?” Then the deity said, “Why talk about the past? Did you not do such a thing today itself? Did you not sprinkle water on the head of the child of such-and-such lay woman?” Then the monk realized, “This deity is making a baseless accusation.” At the same time, he thought, “Since the deity cannot find any defect in my virtue, he is making this false accusation.” Then he reflected on his own virtue. The joy and rapture (*pīti, pāmojja*) that arose within him through this reflection was so immense that, subduing it and establishing concentration (*samādhi*)—according to the text, before he could even take another step forward—he attained the supreme fruit of Arahatship right there, having become concentrated through that. After becoming an Arahat, he told the deity, “It is not suitable for you to remain here after accusing a pure monk like me.” When he said this, the deity departed.</p>
+<p>That monk resided there for those three months of the rainy season. Having lived in that cave, after the rainy season retreat, he went to see the Buddha. On that occasion, the other monks asked him, “Friend, did you fulfill your ultimate goal?” meaning, did you become an Arahat. He did not say it directly. Instead, the monk narrated the entire event that had occurred. Then those monks asked, “Venerable Sir, when the deity made that baseless accusation, did you not get angry? Did ill-will (*dosa*) not arise in you?” He replied, “No such change occurred in me.” Perceiving through this that he had indeed become an Arahat, those monks went and told the Buddha, “Venerable Sir, such-and-such monk says this. He claims to be an Arahat.” Then the Buddha, in a manner of endorsing it, said, “My son's virtue is like this, extremely pure. My son is such a person,” and expressing this idea, he uttered the verse we cited at the beginning:</p>
+<p>*“Asaṁsaṭṭhaṁ gahaṭṭhehi, anāgārehi cūbhayaṁ,*</p>
+<p>*Anokasāriṁ appicchaṁ, tam ahaṁ brūmi brāhmaṇaṁ.”*</p>
+<p>“Not associating with householders and the homeless alike, wandering without a home, with few desires—him I call a Brahmin.”</p>
+<p>In this dispensation, the term 'Brahmin'—meaning the noble Brahmin—is used for an Arahat. The Buddha praised such an Arahat in this manner. That is the story. Now, let us see if there is anything in this verse and story related to what we said about the Sāsana.</p>
+<p>First of all, when speaking of the story, we get an excellent example from the lay side through the conduct of that lay woman. Because she was a lay woman who had some understanding of the disciplinary rules (*vinaya*) and virtues of the Sangha, she did not tempt the monk to practice medicine—which is considered a wrong livelihood (*micchā-ājīva*) for monks—even if her child's life was at stake. Through this, we can see that the lay devotees of that time had an understanding of what is allowable (*kappa*) and what is not allowable (*akappa*) for monks. Likewise, there was a nature in that society that supported the preservation of the virtues, such as *sīla*, of the Sangha. In truth, many people in this day and age have no understanding of the virtues, such as *sīla*, of the Sangha. Consequently, they conduct lay-monk relationships based on various other principles. There is a fourfold purification of virtue belonging to monks, known as *Catu-pārisiddhi-sīla*. This is a virtue of four parts. Briefly mentioned:</p>
+<p>1. *Pātimokkha-saṁvara-sīla* (Virtue of restraint according to the Disciplinary Code)</p>
+<p>2. *Indriya-saṁvara-sīla* (Virtue of restraint of the sense faculties)</p>
+<p>3. *Ājīva-pārisiddhi-sīla* (Virtue of purification of livelihood)</p>
+<p>4. *Paccaya-sannissita-sīla* (Virtue connected with the use of requisites)</p>
+<p>Among these, first, the virtue of restraint (*saṁvara-sīla*) means training oneself in accordance with the code of disciplinary rules laid down by the Buddha for the Sangha. The virtue of restraint of the sense faculties (*indriya-saṁvara-sīla*) means guarding the six sense doors—eye, ear, nose, tongue, body, and mind—against defilements (*kilesa*) that flow in, closing and restraining these doors. The virtue of purification of livelihood (*ājīva-pārisiddhi-sīla*) means the pure livelihood proper to monks, especially maintaining correct conduct without forming inappropriate, worldly relationships with lay devotees—it is the virtue regarding the purification of livelihood. Fourthly, the virtue connected with requisites (*paccaya-sannissita-sīla*) means, when using the four requisites—robes, almsfood, lodging, and medicine—reflecting on their true purpose, that is, for the sake of Nibbāna, for attaining Nibbāna, and not using them with greed, but rather turning them into meditation, such as meditating on them as elements (*dhātu-manasikāra*) or as foul (*asubha-manasikāra*).</p>
+<p>It must be because the lay devotees of that time had some understanding of this fourfold pure virtue that, considering the livelihood [of monks] and having respect for the Sangha, she said, “Even if my child dies, I will not ask such a thing from the monk.” Now, in this day and age, this can sometimes be a problem. Why? Because the lay-monk relationship, its value, its suitability or unsuitability, is measured according to principles such as altruistic service, social service, and economics. However, the Buddha has shown that since the ultimate goal of monks is Nibbāna, and since their life is sustained by consuming food given in faith by laypeople, the Buddha allows only what is relevant to the purpose for which they went forth (ordained). Furthermore, practicing medicine for laypeople is a wrong livelihood, an incorrect livelihood, a corruption of families (*kula-dūsana*). That is, the Buddha has shown it as something that corrupts and soils the faith of laypeople. Why? Because being overly intimate leads to the decline of monks. On one hand, monks come forward to fulfill the mundane needs of laypeople, breaking disciplinary rules to please them, and are thus tempted to obtain the four requisites. On the other hand, lay devotees also look to use monks for everything to fulfill their own needs.</p>
+<p>Now, these devotees know that lay life is very complex, lived amidst a great multitude of problems. Often laypeople have to “hit the nail according to the place” (improvise for convenience). When they have no other tool, they turn the monk into a tool. Making an intimate monk a tool, they fulfill their own needs. What happens through this is that the monk deviates from discipline, from the aforementioned purification of livelihood (*ājīva-pārisiddhi*), and not only falls away from his virtue but ultimately even disrobes from the saffron robe. Monks fall into such a state of great decline. They fall into ruin. Along with that, the respect that laypeople had for monks is also lost. You have heard the old saying in this country, “The comb of the cock seen morning and night looks white.” In the same way, they even forget the robe that the monk is wearing. The monk falls to the level of someone just wearing a white dress. The simile of the cock fits perfectly here. They forget that the monk is wearing a robe. Treating him as one of their own, they try to carry on their life by utilizing monks for all their weddings, functions, and every other activity. Although from the perspective of social service, altruism, etc., this might seem like a good thing, because it does not agree with the true purpose of monks, the Buddha declared these to be wrong livelihoods. Thus, such a situation exists.</p>
+<p>At the same time, another important matter is revealed to us by this story through the baseless accusation made by the deity. Hearing that baseless accusation, that monk did not get angry. Instead, what did he do? He reflected on his own virtue (*sīla*). How instantaneous was the result of that reflection! Why? Because he had arrived at that cave while reflecting on his meditation topic. Now, it is shown in the Dhamma that this reflection on one's virtue (*sīlānussati*) is extremely powerful. The rapture (*pāmojja*) that arises through reflecting on virtue is immense. Without shouting and boasting about that rapture to others, one calms it down and pacifies it, and through that joy (*pīti*), both mind and body are tranquilized. Through that tranquility, concentration (*samādhi*) arises. Such is the functioning of the mind. This monk experienced this instantly because he was an extremely virtuous monk who loved solitude. At the same time, drawing upon his past merit (*puñña-sakti*), he instantly attained the fruit of Arahatship. Through this, the benefit of keeping the virtue of purification of livelihood (*ājīva-pārisiddhi-sīla*) perfectly was realized right there by Venerable Tissa. This is a great example when we think of it from the side of the Sangha.</p>
+<p>So, when we reflect on this lay-monk relationship on a day like today, let us turn our attention to the group that came to Mihintale to establish the Buddha Sāsana. History records that this group included Arahat Mahinda Thero, four higher-ordained Arahat monks named Itthiya, Uttiya, Sambala, and Bhaddasāla, the Arahat novice monk Sumana, and the non-returner lay disciple Bhanduka who had attained direct knowledges (*abhiññā*). When we think of how this group was composed, we can understand that this missionary group was sent in a manner perfectly suited to explain the lay-monk relationship to a new country and a new people. Why? Because, looking at it from one side, a minimum of five higher-ordained monks is required for the noble vinaya act of conferring higher ordination (*upasampadā*). Thus, there were at least five higher-ordained monks there. What did the novice monk and the lay disciple do? They must have explained the principles of the lay-monk relationship to this new population. They must have explained, “These are the things that are allowable for monks, and these are the things that are not allowable.” We can understand that this group was formed in a way that helped to coordinate and create awareness. This, too, was done with a deep purpose. It was not because there were no other Arahats or other monks. Bringing a lay disciple along was done so that the gradual transition in this dispensation from layperson to monk, as well as the principles of the lay-monk relationship, could be explained to a new people in an understandable manner.</p>
+<p>However, in the course of time, as we mentioned earlier, while this Sāsana progressed amidst various timely calamities and social upheavals, these noble goals, ideas, and the purpose of going forth began to be forgotten by both monks and laypeople. What ultimately happened through this? The going forth (ordination), which should take place with a deep purpose, finally became a mere nominal going forth. That is, ordination is something that must happen with a deep understanding. Externally, the Buddha has declared that a person does not become a monk merely by wearing robes or shaving the head. Many accept that while ordaining the body is easy, ordaining the mind is difficult. Thus, while ordaining the body can be done in a short time, it takes a considerable amount of time to ordain the mind. There have been rare instances where some people who had developed their perfections (*pāramī*) instantly became Arahats even in lay clothing. But one should not generalize based on that. In this dispensation, this practice (*paṭipadā*) is extremely difficult. The Buddha has declared: *“Dullabhā pabbajjā”* — going forth is rare. It is also difficult. Genuine going forth is a rare and difficult thing. However, in this way, when we gradually think about these social transitions and upheavals, it becomes a very common and very easy thing. That is the level to which it falls. Then, as methods of making this going forth easy develop in various ways, finally, this ordaining becomes a fashion. In this day and age, everything becomes a fashion. Devotees might see the final end of this fashion in the near future.</p>
+<p>Just as these devotees observe the precepts and then relinquish them, going forth might be transformed into a mere “change of clothes” where one ordains in the morning reciting, *“Sabba-dukkha-nissaraṇa-nibbāna-sacchikaraṇatthāya”* (for the sake of release from all suffering and realizing Nibbāna) and removes the robe in the evening. Such things are possible.</p>
+<p>Yet, the Buddha has shown through a wonderful and valuable code of practice how these external changes made during ordination—such as wearing the robe and shaving the head—can be taken deeper and deeper by considering their profound meaning, helping one even to attain Arahatship. This is found in a valuable discourse called the *Dasa Dhamma Sutta*. Although this *Dasa Dhamma Sutta* was preached especially for monks, these devotees' understanding of the ten matters included in this *Dasa Dhamma Sutta* will help establish a proper lay-monk relationship. Even if we cannot completely stop the aforementioned decline of the Sāsana, if lay devotees also become aware of this, it will help to at least arrest the speed of that decline to some extent. That is why we are attempting at this moment to briefly explain, within the available time, the ten matters mentioned in the *Dasa Dhamma Sutta*.</p>
+<p>In that *Dasa Dhamma Sutta*, it is stated as follows: “Monks, there are ten dhammas (matters) that should be constantly, daily reflected upon by one who has gone forth.” “Reflecting” (*paccavekkhaṇa*) means considering, or looking back to examine. It is looking to see: Is something good? Is it bad? Was it done correctly? Was it not? The Buddha once explained this word “reflection” to Rahula Thero using a beautiful simile, just like explaining to a small child. When a person is about to go somewhere, they look into a mirror to adjust their hair, face, and clothing. They look into the mirror to see what the defects are and to correct them. The word “reflection” (*paccavekkhaṇa*) is used for looking into that mirror. A mirror is used in a house for reflection. That is, looking back. You are ready to go, but you look back to see, “Are my adjustments and clothing proper?” A similar idea is present here. There are ten matters to reflect upon. When looked at, they are like ten mirrors. What is each of these? Let us try to understand them next.</p>
+<p>First, monks must daily reflect on this: “I have entered upon a state of altered appearance (*vevaṇṇiyaṁ upagato*).” “I have entered upon a state of altered appearance.” Though mentioned briefly, if explained, it must be taken like this: First, let us think of the lay devotee. The nature of a layperson is not one of altered appearance (*vevaṇṇiya*). They do not like colorless or dull things. The lay devotee likes colorful and beautiful things. But the Buddha tells monks to enter upon a state of altered appearance (*vevaṇṇiya*). How does one enter upon a state of altered appearance? It is explained in two ways: *kāya-vevaṇṇiyaṁ* (altered appearance of the body) and *parikkhāra-vevaṇṇiyaṁ* (altered appearance of requisites). The altered appearance of the body is explained like this: Devotees in this society know how many fashions are made from time to time regarding hair and beard. The torture given to them! Young men and women, seeing how these change from time to time, lean towards that side, spending any amount of money to follow the new fashion. They do that. They strive to do that. But for those gone forth, there is no such problem. Why? Because at the very moment of ordination, hair and beard are shaved off. There is the altered appearance of the body. So, the altered appearance of the body should be understood in that way.</p>
+<p>The altered appearance of requisites is: lay devotees have various colorful clothes. Even if these devotees appear in white clothes at this moment, when going out onto the streets, they might wear colorful clothes that make them unrecognizable. That is the normal nature of a layperson. But regarding monks, the Buddha has declared: wear a robe made of cut pieces, discolored and dyed with paste-dye. Use an almsbowl, a blackened almsbowl. Likewise, the other requisites are things that show fewness of desires (*appicchatā*). They are not luxury goods that are to be used, but what is suitable for fewness of desires. The Buddha has even told some monks, when they were using things suitable for pleasure-seeking laypeople, to break them and throw them away. That shows altered appearance. That is something that monks must constantly bear in mind. “Not colorfulness like a layperson, but altered appearance is what belongs to us.” That is the first one.</p>
+<p>The meaning of the next one in Sinhala is: “My livelihood is bound up with others.” The word *parapaṭibaddhā* is mentioned there. That means, “My livelihood is dependent on others, connected with others. I do not live on my own money, from my own bank account.” They survive on the food offered with faith by lay devotees—going from house to house for alms if they wish—and on other requisites like robes offered by lay devotees. They reside in a hut built by lay devotees. Constantly reflect on that matter. Why reflect on it thus? Through that reflection, the purpose of going forth is automatically remembered. “Why, when I was such a millionaire, did I abandon all that? Why did I come to this poor state?” In truth, the basic meaning of the word *bhikkhu* is a mendicant who lives on alms, like a beggar when looked at. In terms of the word, it is like a beggar, but the difference is that they do not harass people like beggars do. They just go and stand in front of a house for a moment. Whether they receive something or not, it is the same. Furthermore, it is not given in the sense of giving to a beggar; these devotees, thinking of them as a field of merit (*puññakkhetta*) for their own merit on this path to Nibbāna, offer something to the Sangha with faith. Then, through that, the purpose of going forth is remembered. Whenever a monk did wrong, the Buddha would always remind him, “Why, monk, do you not depend on the food given with faith by lay devotees?” Through that, we see the correct lay-monk relationship.</p>
+<p>What is there, within that transaction, is the fulfillment of those virtues. But in this day and age, some people distort the word *parapaṭibaddhā* to an extraordinary degree and explain that for those gone forth, it means fulfilling transactions with lay devotees in a lay manner. That is not it. If one is truly to pay back that debt, one must attain what Venerable Tissa attained. It is through that that the offering becomes of great fruit and great benefit. Along with that Arahatship, how great a merit must have accrued to that lay woman! Otherwise, if that monk had taken up practicing medicine, the alms offered would have been of no use. Such is the situation. To understand this, to remember this, the Buddha has declared to monks: *“Parapaṭibaddhā me jīvikā”* — My livelihood is bound up with others. That, then, is the second one.</p>
+<p>Next, the third one: “A different behavior/manner must be maintained by me.” This needs to be explained. In ordinary, understandable language: “I must deport my physical postures in a manner different from a layperson. My behavior must be different from a layperson.” What does that mean? The word “manner” (*ākalla*) used there refers especially to the way one deports postures like walking, standing, sitting, etc. Regarding the deportment of postures, there is a difference between the way monks deport their postures and the way laypeople do. What belongs to monks is performing activities like walking and going in a calm manner. In short, at the end of the disciplinary rules, the Buddha says: “Monks, you must behave for the clarity of the unclarified, and for the increase of the clarified (*appasannānaṁ vā prasādāya, pasannānaṁ vā bhiyyobhāvāya*).” It is in accordance with these purposes that the Buddha laid down various disciplinary rules and training precepts (*sikkhāpada*). Especially, there are many training rules called *Sekhiya* regarding how a monk should behave in a village: “One should behave in this manner. One should wrap the robe in this manner. One should walk calmly in this manner. One should eat in this manner.” All of these show that seeing this becomes a cause for the layperson's mind to become serene and pleased. That is why monks have a different deportment. If they keep doing what laypeople do, they can never develop that aforementioned calmness and restraint.</p>
+<p>So, regarding the value of this, some might think, “What is the use of doing these things in this modern world?” Modern or not, if we turn our attention to history, the best example of the value of this deportment of postures (*ākappasampatti*) is found in history when we think of how a certain violent and ruthless king named Caṇḍāśoka was transformed. It is a historical story. Seeing the calm manner in which a seven-year-old small Arahat novice monk named Nigrodha was walking across the courtyard of King Caṇḍāśoka's palace, the king became serene, invited him in, listened to the Dhamma from Venerable Nigrodha, and became a changed man. Through this, we see the importance of that deportment of postures. Likewise, we know that according to the Buddha's teaching, this deportment of postures is shown with a beautiful simile. There is a simile expressed by the monks of the past according to the Buddha's teaching:</p>
+<p>*“Siniddhā tela dhārāva ahosi iriyāpatho”*</p>
+<p>A beautiful simile is given for the deportment of the postures of monks: like a smooth stream of oil. Try pouring ghee or coconut oil from a bottle. It does not pour out with a splashing sound like water does. In a wonderful pattern, it flows smoothly, softly, evenly, without turbulence. The Buddha has declared to monks that their postures should be deported in that manner. That is one characteristic of that deportment of postures—like a stream of oil. Thus, monks are told to constantly reflect on this deportment of postures. Just as a layperson looks into a mirror to see if their clothes and ornaments are in place, a monk must constantly reflect on their deportment of postures and correct any defects.</p>
+<p>The fourth matter is regarding one's own virtue (*sīla*). “When reflecting on my virtue, when looking back and considering it, does my own mind blame me?” To explain “does my own mind blame me”: Is there any blemish or defect in my virtue? That is what that monk did too. As soon as the deity accused him, he thought, reflected, and looked into this mirror of his own virtue to see if there was any defect in it. When he looked, there was none. It was through that that he ultimately became an Arahat. Thus, the Buddha has declared that if a person is to improve, they must have what we normally call self-respect in the world. Similarly, it is a cause for oneself to be happy: “I am keeping these virtues such as *sīla*,” and one's mind does not blame oneself. “The mind does not blame” means there is no remorse. “No remorse” means the mind is unified, calm, concentrated, and not scattered. Through this, we see how these are integrated into the practice (*paṭipadā*).</p>
+<p>The next matter—the fifth matter—is: “When my fellow monks (*sabrahmacārī*) whom I associate with, the wise monks, not foolish people, but the wise monks, examine my virtue, is there any cause for them to blame me?” One reflects on that too. In this regard, the Buddha points out a principle called *lokādhipateyya* (governed by the world). Just as one thinks of oneself and is happy, if there is a reasonable blame from the world, monks must behave in such a way that there is no room for it. Thus, they reflect whether there is any room for others to blame them regarding their virtue. Reflecting on this is how it became clear to Venerable Tissa that the deity had made a baseless accusation. No one else, no one at all, could accuse him; his virtue was extremely pure. He realized this through that reflection, the fifth reflection. It was because of this that he went and narrated the complete detail of his life in the cave to the monks without any fear. Let us think of the other side. If that monk had gone to those houses and started practicing medicine, could he have gone and spoken before the Buddha or the other monks? He would have been in a position where he could not speak. Instead, because Venerable Tissa was pure regarding this fifth matter, he spoke without fear, saying, “I spent the time in this and this manner.”</p>
+<p>Now, the sixth matter mentioned is: “There is separation, departure, and dissociation for me from all that is dear and appealing.” We will have to separate from everything. Either by death or through other causes, we will have to separate from everything we consider dear and appealing. What this shows is what belongs to the monk. The verse also says there: *“Gahaṭṭhehi anāgārehi cūbhayaṁ”* — there is no clinging or attachment to householders, nor is there any clinging or attachment to those gone forth. Why do they do this? Because of the Dhamma nature that we will have to separate from all of this. They reflect on this daily. “There is separation from things dear and appealing to me, from people dear and appealing to me; such is the nature of saṁsāra.” They instill this in their minds. That is the sixth matter.</p>
+<p>Next, the seventh matter: they reflect on karma, the law of karma. “Karma is my own property.” If looked at in the true sense, karma is the only thing that belongs to us. Karma is my inheritance, my birthright. Karma is the cause of my birth. Karma is my true kinsman. Karma is my true refuge. Whatever karma I do, whether good or bad, I must expect its result. I am the heir to my karma. I must experience the result of my karma. Thus, they bring close to their lives that wonderful Dhamma nature existing in the world regarding karma, from which not even Buddhas or Arahats can escape. Looking through that mirror of karma, they understand: “This is the nature of our everything, of every single thing. There is nothing to be proud of in these. Our pleasure and pain are due to some past karma. All these good things we experience are due to some past good karma. These difficulties and sufferings are due to various unwholesome (*akusala*) karmas. It is the same for the future.” Living with this principle of karma is what is meant there.</p>
+<p>Next, the eighth matter shown is somewhat unique. “How do my days and nights pass for me?” That is, “How do my nights and days pass? In what manner do my nights and days pass? While doing what?” What this indicates is that every moment of living the life of one gone forth, one must think: “Today I spent a day. Is this day I spent one that helps me fulfill the purpose of my going forth? Or is it one that causes its decline? In what manner do my nights and days pass?” The meaning of that statement is: “How do I spend my time? In a useless manner? Or in a successful manner?” One constantly reflects on this.</p>
+<p>Next, the ninth matter: “Do I delight in empty places, empty houses suitable for meditation? Or do I have a delight in peaceful dwelling in them?” That is a difficult thing. A lay devotee, who lives with a crowd, cannot live alone and secluded in an empty house, a forest, or a cave like that. That is a special strength that helps towards Nibbāna. That is why the Buddha points this out here. What is asked here is about being devoted to meditation, loving solitude. Thus, a monk must ask himself: “Am I truly fond of solitude? Can I live in an empty house? Do I have the strength within me to step away from human society and go to an empty house for the sake of Dhamma and meditation?” They are told to think of this constantly. For one who lives closely associated with and surrounded by laypeople, let alone an empty house, even a forest is something that brings fear. They are afraid even to think of of it. “Alas, how can I live alone?” Such is the situation here. That is why the Buddha has shown this as the ninth matter, as a reflection relevant to meditation, to think and consider about oneself.</p>
+<p>Now, next is the tenth one. It is for the sake of this tenth one that all of these exist. When the Buddha summarizes matters of Dhamma, the final thing is often the crowning point of the Dhamma. Likewise, one must think especially about this; these devotees must instill this in their minds. What is the tenth one? A monk must reflect on this daily: “In my final moments, at the moment of death, if my fellow monks whom I associate with come and ask me: 'Venerable Sir, you have lived this life of one gone forth for so long; have you attained any superhuman state (*uttari-manussa-dhamma*), such as the jhānas, paths, and fruits?' when they ask thus, will I be free from embarrassment, not having to look down at the ground with a frowning face in regret? Have I attained any noble, spiritual state of the Sāsana so that I do not have to be in such a state?” If one has attained some noble state, when that question is asked, even if one is reluctant to say it directly due to fewness of desires (*appicchatā*), at least one can adorn one's face with a gentle smile at that moment of death. “Let them think I did not attain it.” In that way, at that moment of death, when looking back and reflecting on one's life without regret: “My going forth, the purpose of my going forth, has been fulfilled. I have no fear. I have no fear of the lower realms (*apāya*). If Arahatship is attained, there is no more *Jāti* (Birth) or *Jarāmaraṇa* (Decay and Death), sickness, or death in saṁsāra. It is that peace, like a flame gone out Nibbāna.” That is the ultimate goal. The final goal of going forth, the ultimate consummation. Even the robe-belt is tied for this purpose, not for anything else. The robe-belt is not tied so that lay society can tie it and drag the monk along, like a cow is tied and dragged. It is bad to drag that robe-belt to fulfill the mundane needs of laypeople. Tying that robe-belt is a certain symbol. After removing the lay clothes, they put on the robes. What is the meaning of that? *“Sabba-dukkha-nissaraṇa-nibbāna-sacchikaraṇatthāya”* — for the sake of realizing Nibbāna, which brings an end to all suffering of saṁsāra.</p>
+<p>Therefore, right from the beginning, it is connected to that ultimate goal. If these devotees think back on the deep meaning of each of these matters, they can understand from this final matter, even if more details are not said. In the final moments, at the moment of death, if one has attained that noble supramundane state through this rare going forth within this rare Buddha Sāsana—even amidst eating little or nothing, even amidst various illnesses and obstacles—then there is great peace at the final moment. Otherwise, crying out in fear of death, no matter what titles, honors, offices, or degrees one possessed, crying out in terrible lamentation at the final moment, the life of one gone forth ends right there. And then, there is no knowing where one will go. That is why the Buddha highlights this through the final matter of this *Dasa Dhamma Sutta*.</p>
+<p>Now, sometimes someone might say these are outdated things nowadays. We have not yet heard of the *Dasa Dhamma Sutta* being made into a “Nava Dhamma Sutta” (Nine Dhamma Sutta). Monks still use it. What is told to us at the end of this is the consummation of the life of one gone forth, its ultimate purpose. It is that which crowns the life of one gone forth. This is not a common thing. This cannot be made common. Likewise, this is not easy. Now, the life of crows is very easy. The Buddha has shown that for a monk who does not keep the training rules such as the vinaya, it is very easy to live like a crow. But the Buddha has shown that for a genuine monk, life is difficult, hard. Sometimes they do not even receive almsfood properly. Yet, they do not try to please laypeople in inappropriate ways to obtain the four requisites through wrong livelihood. That is the practice. Why? Because that is a great betrayal. On one hand, it is a betrayal of the Sāsana; on the other, it is a betrayal of the rarest purpose in this rare time—crossing over the suffering of saṁsāra, which has not been done before. Through that, the going forth becomes entirely useless. It does not bear fruit; it becomes useless and in vain.</p>
+<p>Through this, we can understand the value of this *Dasa Dhamma Sutta*. In truth, this should not be thought of as something that monks keep hidden and use only for themselves. By lay devotees becoming aware of this, they can protect themselves. They can avoid misleading the intimate monks they associate with by making inappropriate requests. This decline of the Sāsana is an open secret nowadays. There are some things in society known as “open secrets.” One should not be afraid to speak of them. Thus, the cause of this decline of the Sāsana, which exists as an open secret, is not only the negligence of monks. It is also because lay devotees use their positions and power to hold onto that robe-belt, as mentioned before, to fulfill their own needs, or to turn the monk into a tool to “hit the nail according to the place” (improvise for convenience). That is how this decline of the Sāsana occurs. Therefore, our lay devotees must be wise. They must be aware, like that lay woman of the past. In the past, when the Sāsana was shining, when many Arahats resided in this country, the cause of that state of the Sāsana was that lay devotees acted with some understanding of the fourfold pure virtue of the Sangha. Even if they lost their own lives, or the lives of their children, they did not go to have monks do inappropriate, worldly things for them. It is through such actions that the destruction of the Sāsana, the decline of the Sāsana, is brought about. Thus, several highly valuable matters have been revealed to these devotees through this.</p>
+<p>We must reflect on what this Buddha Sāsana is. It is also explained in various ways, such as being threefold: *Pariyatti* (learning/scripture), *Paṭipatti* (practice), and *Paṭivedha* (penetration/realization). When speaking of the Buddha Sāsana, when we say “we have received the Buddha Sāsana,” someone might recall: we received the Dhamma preached by the Buddha. Because Arahat Mahinda came, we received the Tipiṭaka. That is what is called *Pariyatti*. We received the portions of the Dhamma necessary for learning. Likewise, *Paṭipatti* means that this Dhamma in this Sāsana is something to be put into practice. These are not things to be limited to books. Every Dhamma is of a nature that says, “Come and see” (*ehipassiko*), challenging us: “Put me into practice and see.” It is a Dhamma that takes one step by step. Therefore, whether lay or ordained, engaging in that practice is called the *Paṭipatti Sāsana* (the Sāsana of practice). Evidence that this *Paṭipatti Sāsana* shone in those early stages is that when Arahat Mahinda and his group arrived, they ordained even from royal families, even royal queens, entering a vast number of people into the Sāsana; establishing the Sāsana in the proper manner means entering into the practice.</p>
+<p>Next, *Paṭivedha* (penetration/realization) means developing meditation through that practice, developing wisdom—insight wisdom (*vipassanā-paññā*)—and through that, penetrating the paths and fruits of Stream-entry, Once-returning, Non-returning, and Arahatship. “Penetrating” means seeing through this true state, the Four Noble Truths, with the eye of wisdom. Through this, this state which is covered, covered by ignorance (*avijjā*), must be realized by each person for themselves. That is how it can be seen. Another person cannot come and show it, no matter how many researches are done. Now, what is often heard in this day and age is that some might think the Sāsana nowadays is much more developed than during the Buddha's time, or even than in Sri Lanka in the recent past. Why? Because there are so many books. There are various methods regarding learning through different media. Now one can carry the entire Tipiṭaka in one's pocket. The entire Tipiṭaka in the pocket! In the past, they memorized these with great difficulty, chanted them, and bore them in mind. Through that, some change occurred in that person. To avoid forgetting, they chanted them constantly, and without even knowing it, they lived in accordance with the Dhamma. But now, because of all these modern scientific methods—please do not misunderstand our saying this; we have to point out both the benefits and the drawbacks of these—some people become proud. “I have the entire Tipiṭaka with me, in my pocket, in the newest way.” But that is not a genuine learning (*pariyatti*) of the Dhamma. Be that as it may, let us say there is a bit more *Pariyatti* now. However, the practice (*paṭipatti*) becomes weaker and weaker in that manner. Why? Because many people now think this Dhamma, like other things, is something to be understood through research done in various laboratories. Or, like various scientific researches done now, they treat internal things as external and conduct research. That is not the kind of research to be done here. This noble quest (*ariyapariyesana*) is not such a thing. It is only by cultivating virtues such as *sīla* within oneself that the truth of this Dhamma can be tested. Not by things done externally, not by such external research. For that, one must descend into the practice. Right from the beginning, one must descend into the practice, starting from the Five Precepts. So, that is what is called the *Paṭipatti Sāsana*. Looking at it from that perspective, the *Paṭipatti Sāsana* is very weak. Next, even weaker than that is the *Paṭivedha Sāsana* (the Sāsana of realization). Now, some people in this day and age say, “These things cannot be done nowadays. Supramundane states do not belong to this era. Nibbāna does not belong to this era. For those, we must wait until another Buddha comes. Otherwise, it does not suit today's society at all.” Thinking thus, there is a tendency to invalidate it entirely. But we must reflect that according to the Buddha's word, the Buddha has declared: “As long as these thirty-seven aids to enlightenment (*bodhipakkhiya-dhamma*) are developed in one's mind, for so long the world will not be empty of Arahats.”</p>
+<p>We must walk this path of the Dhamma having developed that perception of capability. We must strive to protect the Sāsana. Otherwise, only one-third of the Sāsana will be protected. Only the side regarding the aforementioned learning (*pariyatti*) will develop. There is no use in that developing alone. Books will lie moldering in libraries, but in society, people will ultimately end up tearing each other apart like wild beasts—such a state of criminality. On the other hand, regarding the Sāsana of monks too, such a state of decline is likely to occur if the other factors, namely *paṭipatti* and *paṭivedha*, are neglected. In this Buddha Sāsana, the deepest thing, the most noble thing we expect from a Buddha, is bringing an end to the *Dukkha* (Suffering) of saṁsāra. Only a Fully Enlightened One (*Sammā Sambuddha*) can show the Dhamma necessary to end this suffering of saṁsāra. Not even a Silent Buddha (*Paccekabuddha*) can do that. Although they realize Nibbāna, they cannot explain it to others. Thus, the Buddha declares when preaching deep Dhammas like dependent co-arising (*paṭicca-samuppāda*): “Monks, I have well divided, analyzed, dissected, and brought this Dhamma down to a level where anyone can understand it, and I have laid it open for you to 'see'.” There is an ancient saying, an ancient usage, about “the teacher's closed fist” (*ācariya-mutthi*). That is, some jealous teachers in the past did not give everything to their disciples; they hid a little. The Buddha declares that there is no such thing with Him. “I have not hidden a portion in that manner. Whatever there is relevant to Nibbāna—not to other things, but whatever there is relevant to Nibbāna—within my Buddha-knowledge, I have taught all of it to you.” Therefore, if this Dhamma is put into practice, it is not impossible for someone to realize it. It is in this way that the Fully Enlightened Sāsana can be uplifted, and in this era of decline of the Sāsana, the speed of decline can at least be reduced.</p>
+<p>That is why we directed today's sermon in this direction. In truth, this was not directed at any single individual. There must be proper coordination and awareness within both parties—lay and ordained—about what this true lay-monk relationship is. Nowadays, signs of decline are often highlighted and shown as signs of progress. There is such a tendency. Signs of decline are brought forward as signs of progress. Why? Because the world runs along the economic principles coming from the West. They run along those goals such as altruistic services and social services. It is according to those that they observe and make decisions about the values of this Fully Enlightened Sāsana. That is wrong. We must bring out the values shown in discourses such as this *Dasa Dhamma Sutta* declared by the Buddha. It is according to those that the lay-monk relationship has to be fashioned.</p>
+<p>So, this pious gathering must take these few matters to heart on this valuable day. We all commemorate Poson Poya Day in various ways. We respect Arahat Mahinda Thero as the “Anubuddha” (the Deputy Buddha). The greatest respect we can pay him is to preserve for a long time the Buddha Sāsana he established, by maintaining that aforementioned threefold Sāsana—*pariyatti*, *paṭipatti*, and *paṭivedha*. Learning (*pariyatti*) exists for the sake of practice (*paṭipatti*), and practice exists for the sake of realization (*paṭivedha*). They cannot be separated. True learning is bringing that Noble Dhamma properly into one's own mind, and living in accordance with it. Next, finally, the Buddha has declared: *“Paccattaṁ veditabbo viññūhi”* — this Dhamma is to be personally realized by the wise. It is in that manner that realization (*paṭivedha*) can be achieved. Realizing those supramundane states, one can be released from all the suffering of saṁsāra and realize the supreme deathless Nibbāna.</p>
+<p>Therefore, today, these pious devotees must reflect: stepping away from your homes and leaning towards a certain level of practice of virtues such as *sīla*, you must have practiced some meditation to the extent you could today. It is in that manner, in our own small way, that we must protect this threefold Sāsana. We must think that in accordance with that memorable occasion, we have paid our tribute to Arahat Mahinda Thero. Likewise, through that, bringing close to our lives the purpose of deriving the true benefit of this Fully Enlightened Sāsana, striving individually, cultivating virtues such as *sīla* and meditation, and obtaining proper guidance through association with good friends (*kalyāṇa-mitta*), let us strive as quickly as possible in this very life—since the time of a Buddha's arising is rare, and the Buddha Sāsana is also declining. According to the speed of this decline, we might not get another opportunity to protect these virtues if we are born again. Therefore, in this very life, if possible, through the realization of the paths and fruits of Stream-entry, Once-returning, Non-returning, and Arahatship, may this mass of merit accumulated today be a strong supportive condition (*upanissaya*) for realizing the supreme, deathless Nibbāna.</p>
+<p>Likewise, if any living beings—including one's own relatives—from the Avīci hell up to the Akanitṭha heaven, wish to rejoice in this wholesome deed of hearing and sharing the Dhamma, through that rejoicing, may they be released from states of misery and reach states of happiness. And through association with good friends (*kalyāṇa-mitta*), may they as quickly as possible be released from all the suffering of saṁsāra such as *Jāti* (Birth), *Jarāmaraṇa* (Decay and Death), sickness, and death, and realize the supreme, deathless Nibbāna through a noble path of awakening they aspire to. Aspiring thus, recite these verses:</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_023.html" class="doc-btn">← Previous Sermon (023)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_025.html" class="doc-btn">Next Sermon (025) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

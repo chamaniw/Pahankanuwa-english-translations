@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 028 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_027.html" class="doc-btn">← Previous Sermon (027)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_029.html" class="doc-btn">Next Sermon (029) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 028</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_028_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_028_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_028_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #28</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No. )</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Yo appaduṭṭhassa narassa dussati, suddhassa posassa anaṅgaṇassa; Tameva bālaṁ pacceti pāpaṁ, sukhumo rajo paṭivātaṁva khitto.</p>
+<p>From:</p>
+<p>Verse 125 from the Pāpavagga (Chapter on Evil) of the Dhammapada</p>
+<p>Dear Listeners,</p>
+<p>For you, devotees, who have begun a new year according to the calendar system of the modern world, this Duruthu Poya day can also be made an opportunity to renew your minds. Due to wonderful scientific products, we see the environment around us being renewed day by day. We are granted the opportunity to use newer and newer consumer goods and items. Even though, in terms of material development, a modern era seems to be dawning day by day, on the other hand, when you look at this country and the world with the eye of wisdom, you may see that we are reverting very rapidly towards a barbaric age. This is an era in which human slaughter and animal slaughter, committed in the most cruel manner, are treated as minor things. For such an era, as a fitting Dhamma sermon, both the stanza we have taken as our theme today and its background story demonstrate the perilous aspect of that course of action.</p>
+<p>The Buddha preached this thematic stanza at the Jetavana monastery due to an incident involving a hunter-with-dogs named Koka. One morning, this hunter named Koka set out into the forest for hunting with a pack of dogs. On his way, he met a member of the Saṅgha, a Bhikkhu, walking for alms. This hunter thought, "I have seen an unlucky wretch; now, today, I will not catch any game," and entering the forest, conceived anger and ill-will in his mind. Later, when that monk, having collected his alms and consumed his meal, was returning to the monastery, this hunter, having roamed all over the forest without getting any game, was coming out. On the way, he met this monk once again. Enraged, he thought, "I met this person in the morning. Because of that, I got nothing today. Now I have met him again. I must have him eaten by the dogs," and prepared to set the dogs on him. The Bhikkhu said, "Lay devotee, do not do that." But despite his saying so, this man said, "I met you when setting out today. I meet you now as well. Because of this bad luck, because of an unlucky wretch like you, I got nothing today. I will have you eaten by these dogs," and he set the dogs upon him.</p>
+<p>This monk climbed a nearby tree. Even though he climbed it, according to a disciplinary rule of the Buddha, it is preached that climbing trees is not suitable for monks, being designated as an offense (*āpatti*). However, when chased by wild beasts, permission is given to climb a tree to the height of a man. Accordingly, this monk, without climbing to the very top of the tree, climbed to the height of a man. While he was sitting on a branch, that hunter-with-dogs came and said, "You will not get away like that," surrounded by his dogs. This man pricked the sole of the monk's foot with his arrow. When the monk pulled that leg up and lowered the other leg, he pricked that one too. In this manner, he began to prick his feet. The monk felt unspeakable feeling/sensation (*vedanā*) of pain, and because of this, without his realizing it, his robe slipped off and fell. The robe fell right on top of the hunter, covering his head. These dogs, thinking "This monk has fallen down," crawled inside the robe and ate up their own master. Having eaten him and leaving only the bones, as the dogs were coming out, that Bhikkhu broke a dry twig from the tree and threw it towards the dogs. When the dogs looked up, there was the monk. So they realized, "It is our own master we have eaten," and ran off into the forest.</p>
+<p>A doubt arose in this monk: "Was it not because of the falling of my robe that this person lost his life? Did my virtue (*sīla*) become stained? Is my monkhood still intact?" Having thus developed a disciplinary doubt, the monk went to the Buddha and related the incident from the very beginning. "Was my virtue stained by this? Was it not because of my robe that this harm befell this man?" The Blessed One declared, "No, monk, nothing happened to your virtue. Your monkhood is also pure. That man, by harboring hatred towards someone who was free from hatred, experienced the result (*vipāka*) of it. Not only now, but in the past too, a similar incident happened to this person." Thus, drawing upon a story of the past, the Buddha spoke.</p>
+<p>In the past, this person was a certain physician. Having been born as a physician, he went from village to village to cure patients if there were any, and to earn something by curing them. On one such day, not a single patient came forward. So, as this man was leaving the village hungry without any business, he saw some children playing near the village entrance. In the hollow of a nearby tree, a snake was sticking its head out. This man thought—this physician thought—"Now, the only small job I can do is to make this snake bite one of these children, and then by treating it, earn some money." So he said to those children, "Children, look, there is a common myna chick in this tree hollow. Catch it!" One of those children went and grabbed the snake by its neck, and upon realizing it was a snake, ran back and threw it right onto the physician's body. That snake bit him, and the physician met his death. That is the story. The Buddha declared that in the past too, this man got into trouble by trying to harm innocent people in that manner. Then, he uttered the thematic stanza:</p>
+<p>*Yo appaduṭṭhassa narassa dussati...*</p>
+<p>If anyone harbors hatred towards a person, a human being, who has no hatred, is pure and defilement-free—or in other words, is innocent—that evil recoils upon that very person. How? Just like fine dust thrown against the wind comes back to oneself. Just as throwing dust against the wind strikes one's own eyes, the fruit/result (*vipāka*) of the evil deed one committed comes back to oneself. With this simile, the Buddha briefly revealed the perilous side of evil actions on that occasion. It is recorded that upon hearing this Dhamma sermon, that monk also attained Arahantship.</p>
+<p>This is the story. Even from this short narrative, we can extract certain points. Now, to that hunter-with-dogs, the sight of a monk walking for alms (*piṇḍapāta*) appeared as the sight of an unlucky wretch. This must be because of his living such a barbaric life. But not only in those days, even today there is a wrong view among some Buddhists that seeing a monk in the morning is an inauspicious sight. And so, because that hunter had conceived hatred, the second time, as if seeking revenge, he set the dogs to bite that innocent monk. Subsequently, in exact accordance with the simile declared by the Buddha, he himself was eaten up by the dogs he had set on. That incident shows us, in a somewhat dramatic manner, how this karma (*kamma*) recoils. The result (*vipāka*) of some cruel deeds recoils in a wonderfully dramatic way. Something of that nature happened here as well. In the end, he was eaten up by the very dogs he had set on. Such is the story of the hunter.</p>
+<p>Turning to the other side and looking at the tree, we see the noble conduct of this monk—even in the face of danger, he did not violate the disciplinary rule according to the word of the Buddha. He did not climb to the very top of the tree. Likewise, he harbored no hatred towards the man who was piercing the soles of his feet. Had he conceived such hatred, when disaster befell that man, he might have rejoiced—as some people do nowadays—saying, "Serves him right! What you do to others comes back to you." Instead, this monk developed a remorseful doubt: "Alas, was it not because of my robe that this harm befell this man through me? Therefore, perhaps my virtue (*sīla*) too has become stained." This is a wonderful example for us in this day and age. This robe, which the Buddha has designated as the banner of Arahantship, is a symbol of non-violence. It is not a flag of violence. Thus we see from this story that the monk, in safeguarding those virtuous qualities, lived with a mind of loving-kindness (*mettā*), wishing that no harm should come to anyone even by his robe that had slipped and fallen. And so, it must be due to that rich store of virtue, and perhaps by understanding the nature of *saṃsāra* through the pain (*vedanā*) he experienced, that he is said to have attained Arahantship by the end of that sermon. In everything, when examined with wisdom, there is contained the story of this suffering of *saṃsāra* (*saṃsāra-dukkha*).</p>
+<p>Just as we extracted those points from the story, let us next look at the concept of karma (*kamma*) that the Buddha indeed conveys through the stanza. Why is this era, as we mentioned earlier, reverting back to a barbaric age? A primary reason is the lack of a proper understanding of the natural law of karma (*kamma*) even among Buddhists. A lack of conviction in it, a lack of faith (*saddhā*). Even foreigners, Westerners—that is, even those who speak of a world created by God, which is called theistic creationism—are awakening to the doctrine of karma based on various psychological factors, yet at such a time, our own Buddhists have made it a fashion to disbelieve this. Doubting this, asking: "How do these results (*vipāka*) come back to oneself?" and so forth. However, the Buddha has analyzed this on various occasions, specifically, the fruit of karma (*kamma-vipāka*). In this context, it is called "experienced in this very life" (*diṭṭhadhammavedanīya*). In other words, it had to be experienced in this world itself. Even in these times, though unpublicized, we occasionally hear of such incidents—that those who commit murder or slaughter in the most cruel manner receive, for some reason, wondrous results (*vipāka*) in a dramatic fashion. But it does not end there. It stretches far. For many births (*jāti*), many lifetimes, those results (*vipāka*) have to be experienced.</p>
+<p>As the general natural law concerning this, the Buddha has briefly shown how this karma (*kamma*) yields results over time. You devotees also may have heard that karma ripens over time in three ways: as *diṭṭhadhammavedanīya* (to be experienced in this very life), *upapajjavedanīya* (to be experienced on rebirth), and *aparāpariyavedanīya* (to be experienced in subsequent lifetimes). When we speak of a karma and its result (*vipāka*), the word *vipāka* carries the meaning of ripening. Karma ripens with time, just like a tree matures and bears fruit. Such a ripening occurs. The basic principles regarding this have been briefly pointed out. Here, *diṭṭhadhammavedanīya* means that certain karmas yield results in this very life. There are other karmas that yield results in the next life, or in other words, bring about rebirth/reconnection (*paṭisandhi*) in the next existence. And there are still other karmas that yield results not in the next existence, but in any existence thereafter, across a multitude of future lifetimes. Thus, the Buddha has briefly indicated the ways in which they ripen and must be experienced as *diṭṭhadhammavedanīya*, *upapajjavedanīya*, and *aparāpariyavedanīya*.</p>
+<p>There are Sutta discourses in various places through which one can gain a more subtle or deeper understanding of this. On one occasion, the Buddha delivered a discourse to the monks conveying the idea that this karma (*kamma*) is not a form of determinism (*niyati-vāda*). "Monks, if anyone were to say: 'In whatever way a man performs a karma, in that very same way must he experience its result (*vipāka*),' if one were to say so absolutely, then this path of practice for Nibbāna, this holy life (*brahmacariya*), could never be successfully lived, and there would be no ending of suffering (*dukkha*)." That means we have committed so many evil deeds in *saṃsāra*. If we were to think of attaining Nibbāna only after paying back the results (*vipāka*) for each and every one of them in the exact same way, it would be something that could never be done. That is what the Buddha points out here. While an unwholesome act (*akusala*) is said to be a karma leading to states of deprivation, one cannot say with absolute certainty that everyone who performs an unwholesome act will go to hell. There is a subtle dynamic in this.</p>
+<p>The Buddha reveals that fact in this manner. First, the Buddha presents it like a riddle. In this world, a certain person commits a minor evil deed, a trifling evil deed, and goes to hell. Another person commits a trifling evil deed of the very same measure, but experiences its result (*vipāka*) mildly in this very life and gets away with it. That evil deed goes no further. The Buddha himself then explains why this happens. Regarding the first person mentioned—that is, the one who commits a minor evil deed and goes to hell—his life is described thus: that person does not develop virtue (*sīla*), concentration (*samādhi*), or wisdom (*paññā*). He does not develop his mind; he does not cultivate wisdom. Furthermore, that person's mind is very narrow. He is described as one of "small self" (*appātumo*); his life is one nourished by extremely narrow views. Because of this, even if he commits a minor evil deed, he has to go to hell. Regarding the person who gets away by experiencing the minor evil deed triflingly in this very life, it is said that he is a person of great stature (*mahātma*) who develops virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*). For such a person, that force of karma does not affect him severely. It is then that the Buddha presents the simile. It is a valuable simile, easy for anyone to remember.</p>
+<p>He asks it in order to get an answer from the monks: "If someone were to dissolve a lump of salt in a small cup or bowl of water, would that water become salty? To the extent that it is undrinkable?" The monks reply, "Yes, Venerable Sir. What is the reason for that? The water in that small vessel is very little." Then: "If that very same lump of salt were dissolved in the River Ganges, and one tasted that water, would there be a salty taste?" "No, Venerable Sir. What is the reason for that? The water in that river is abundant; the volume of water is vast." That simile is shown: just as mentioned before, a person who commits a minor evil deed, but whose mind is undeveloped, who has a narrow mind, and who does not cultivate virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*), has to experience the result (*vipāka*) of that evil deed severely in hell. But a person of great stature (*mahātma*) who leads a good life and develops virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*) can experience that same evil deed mildly in this very life and put an end to it there. So there is a distinction of persons here. There is a difference in how the result (*vipāka*) is experienced. Therefore, the Buddha declares that there is no rule saying that when you commit karma in a certain way, it must be experienced in that exact same way. There is a certain specific natural law regarding the manner of experiencing them, regarding the experience itself. It can vary depending on the individuals and due to other different causes.</p>
+<p>Now, to put it briefly, if we take the example of a tree: when a certain seed is planted, a tree grows. But if you fertilize it well before the tree bears fruit, behold, the yield will be abundant. If you reduce the fertilizer, or arrange it so that it cannot bear fruit, the yield decreases. Its yield increases if fertilizer is added, and decreases if fertilizer is reduced. Similarly here, even though one has committed that evil deed, because one leads a good life, the results (*vipāka*) of the evil deed are worn away. Through this, the Buddha highlights a certain relief, a relief for the world regarding escape from this karma. Furthermore, he did not stop there. The Buddha gives two more similes to make this point even more convincing.</p>
+<p>Now, when fined a small amount, even half a Kahāpaṇa, a Kahāpaṇa, or a hundred Kahāpaṇas, a certain person, being unable to pay that Kahāpaṇa or hundred Kahāpaṇas, has to suffer imprisonment and go to jail because he cannot pay that small fine. But another person, when fined in that manner, does not go to jail; he gets away with it. The Buddha points out the reason for this: the first person mentioned is poor and has no assets, so when he is fined, he goes to jail because he cannot pay it. But the wealthy person can escape the jail. It is just like that there too. That is the second simile. He gives a third simile as well.</p>
+<p>A certain person steals a sheep belonging to a sheep-owner. Sometimes, that sheep-owner can beat up, insult, and snatch it back from the thief, or even kill him. But when some other person steals, the owner cannot adopt such a harsh approach and recover the sheep. The reason shown there is: if the person who stole the sheep is a poor man, an ordinary person, the owner can beat him, abuse him, sue him, or have him sent to prison, and thereby recover his lost sheep. But if the thief is a wealthy person like a king or a royal minister, the owner has to clasp his hands in worship and entreat him, saying, "Alas, please give me this sheep or its value." There too, what is shown is that state of great power (*mahesakka*). For the person of lesser power (*alpesakka*)—and we do not use this term *alpesakka* in a mundane sense, or in the sense understood by ordinary worldly people. Rather, for a person who is of "lesser power" (*alpesakka*) in terms of meritorious deeds, virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*), the results (*vipāka*) of evil deeds have to be suffered severely. But for the person of "great power" (*mahesakka*), the true person of great stature (*mahātma*)—nowadays, we call everyone "gentleman" (*mahattayā*), but the Buddha used the term *mahattā* for the one who develops virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*). The word *mahattā* is applied there. That is what we called *mahātmaya*. Therefore, to be a true gentleman, one must cultivate virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*). It is for such gentlemen that the evil deed is worn away mildly, because it is like "the water of the River Ganges."</p>
+<p>What is the message given to the world through this? This karma is not a form of determinism (*niyati-vāda*). In the interval between karma and its result (*vipāka*), one can do something to escape from it. That is why there is an escape from this *saṃsāra*. This is an extremely valuable fact. Why does the Buddha point this out? In those days, there were certain teachers who proclaimed such deterministic views. Likewise, some firmly declared that if someone commits an evil deed, he must definitely pay it back in that exact same way. The Buddha points out the reason for their saying so. Sometimes, those teachers would see a person who had spent his life badly being reborn in a heavenly world. And they would see a person who had led a good life being reborn in hell. That teacher sees this. When someone develops the divine eye—that is, one who has attained direct knowledge (*abhiññā*)—he can see such an occurrence. A certain person spends this life badly, yet goes to a heavenly world. What is meant by "badly" is a person who lives in a bad way, committing the ten unwholesome courses of action (*dasa-akusala*): killing living beings, taking what is not given, sexual misconduct, false speech, malicious speech, harsh speech, gossip/frivolous talk, and furthermore, covetousness (*abhijjhā*), ill-will (*vyāpāda*) which means hatred, and wrong view (*micchā-diṭṭhi*). Yet, he goes and is reborn in a good place. The Buddha presents this as a kind of riddle. Some people who lead a bad life in that manner go to hell, while others go to heaven. Next, there are also two sides to the one who led a good life. A certain person leads a good life; as far as the world can see, he led a good life. Yet, he is reborn in hell. Even nowadays, many people present this as an argument, saying: "We lead good lives; why does this happen to us?"</p>
+<p>Then, the Buddha shows that the Buddha-knowledge penetrated the depth of this. It understood its subtle aspect. The Buddha points out that, regardless of how some people argue, why is it that someone who was committing the ten unwholesome deeds (*dasa-akusala*) goes and is reborn in a heavenly world in the next life? He shows the reason: either prior to that he had performed wholesome karmas (*kusala-kamma*), or subsequently he performed wholesome karmas, or at the near-death moment. Now, let us think: the one who lived badly had performed wholesome deeds either before, or performs wholesome deeds afterwards. Or, at the moment of death, he aligns his mind in accordance with right view (*sammā-diṭṭhi*). It is because of that difference that even though his daily life was spent in that manner, particularly due to that difference at the near-death moment, he goes and is reborn in a happy destination (*sugati*). But nevertheless, someday the results (*vipāka*) of those unwholesome actions will have to be experienced, either in this life, in the next life, or in some future life. Greatly analyzed, the Buddha points it out in that way. It is not suitable to draw an absolute conclusion just by seeing a single such incident. The underlying natural law within it is visible only to the Buddha-eye. He also points out the other side of it. Why is it that someone who leads a good life—that is, who lives abstaining from the ten unwholesome actions (*dasa-akusala*)—even after leading such a life, goes to hell? That person might have done bad things prior to that. Or, he might commit unwholesome deeds afterwards. Or else, at that final moment, he falls into wrong view (*micchā-diṭṭhi*). It is due to such causes that things different from the general pattern occur regarding karma.</p>
+<p>Through this, we have to realize that we are living in an ocean of karma. These are karmas gathered throughout *saṃsāra* over a vast period of time. It is impossible to finish paying back all of these. Instead, the Buddha points out the methods to suppress/neutralize the results (*vipāka*) of these karmas. That is what is called virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*). It is precisely there that this matter becomes extremely important to us. Devotees, this karma is deposited in our consciousness (*viññāṇa*). These are karmas we have performed over a long period of time. They emerge from time to time through this consciousness (*viññāṇa*). This is what is called "karmic attraction." Even in these times, there are certain occurrences. A certain person feels inclined to go to a place where an accident is about to occur; the mind inclines, the mind tells him to go, and drives him there. There is a certain karmic attraction. These are done through this consciousness (*viññāṇa*); these emerge. This is not revealed only in such incidents. In every moment of our daily lives—in short—karmas emerge in our consciousness (*viññāṇa*) moment by moment. Then, when these karmas emerge, because the ordinary person—the worldling (*puthujjana*)—has that view of self, that view of existing group/body (*sakkāya-diṭṭhi*), firmly in place as "I" and "mine", he accumulates more and more karma through that very event. He entangles the ball of thread. That is why the Buddha declared that this *saṃsāra* is like an entangled ball of thread. The ordinary person does not know that this is a certain karma performed in the past. Let us say, for instance, it is the unwholesome deed of killing. Sometimes, the very person one killed comes forward in this life and tries to kill oneself. We do not think of that. Instead, thinking of it as something entirely new, we clash with that person and accumulate even more karma. So, it is in order to prevent such instances that the Buddha has introduced this virtue (*sīla*) here.</p>
+<p>Within this virtue (*sīla*), there are certain resolutions made voluntarily and of one's own free will beforehand: "I shall not kill living beings, I shall not steal, I shall not engage in sexual misconduct, I shall not tell lies, I shall not consume intoxicants," and so on. And so, the forces of karma (*kammāvega*) related to these emerge through our consciousness (*viññāṇa*). For example, one who was engaged in them is inclined towards them as habitual tendencies of *saṃsāra*. The mind tells him to do it. A person accustomed to stealing—the reason some are drawn to stealing even from childhood—is a past habit, a habitual tendency of *saṃsāra*. But the Buddha tells us not to submit to it. The Buddha defines karma as intention (*cetanā*). We have pointed this out on many occasions. "Monks, intention is what I call karma" (*cetanāhaṃ bhikkhave kammaṃ vadāmi*) is a fact known to everyone. "Having intended, one performs karma through body, speech, and mind" (*cetayitvā kammaṃ karoti kāyena vācāya manasā*). The Buddha considers it as karma because it is according to intention (*cetanā*) that one subsequently directs the body, speech, and mind. It is through the three doors of body, speech, and mind that we accumulate karma. In the accumulation of those new karmas, past forces of karma (*kammāvega*) underlie and assist. They emerge as habitual tendencies of *saṃsāra* in everyone. For, even our birth (*jāti*) was brought about by a karma. Therefore, in short, like an ocean of karma, these bubble up and emerge. Due to the dogma of self-illusion (*sakkāya-diṭṭhi*), that person thinks of these emerging things as brand new events, saying, "This is my adversary," or "Here, I have found something to steal," and acts accordingly. That thought arose. Next, speech was employed in accordance with that thought. Then, action was performed in the same way. Through that, there occurs a further accumulation of karma—a new addition to that karma. Having accumulated, those too sink down into consciousness (*viññāṇa*). That is why no end is seen to this *saṃsāra*. The ordinary person entangles this ball of thread—the karmic ball of thread.</p>
+<p>Then, the solution the Buddha gives for that is indeed those precepts of virtue (*sīla-sikkhāpada*). If one resolutely determines: "Under no circumstance shall I kill a living being; under no circumstance shall I steal," one makes such a resolution. One does not see that these forces of karma (*kammāvega*) lie underneath. Yet, one knows this. According to the word of the Buddha, one guards this practice. But nowadays, it is chosen merely as something done thinking only of society. But there is a greater depth here, in this undertaking of virtue (*sīla-samādāna*). This "society" is something to which one also belongs. Therefore, the natural law pointed out here by the Buddha goes much deeper. This is not just for the sake of society; the reason we have led uneven lives throughout this entire *saṃsāra* is due to the neglect of these five precepts of virtue (*pañca-sīla*). The Buddha brings this out particularly to give us the strength to control our own minds on occasions when such forces of karma (*kammāvega*) arise. Through that resolution, by placing wisdom in command, one can conquer it at the level of virtue (*sīla*). At the level of virtue, one can become of great power (*mahesakka*). One can become rich. The person who lacks that is indeed the "poor man" mentioned earlier. The similes mentioned earlier can now be brought close to this context. Or, the lump of salt can be brought close to this. It is the meaning of those similes given by the Buddha that we point out through these Dhamma analyses.</p>
+<p>So, it can be conquered in that way at the level of virtue (*sīla*). Going even higher than that, if one frees oneself—even temporarily—from incoming objects by way of concentration (*samādhi*), and then concentrates the mind and remains in a state of concentration, not allowing it to run to defilements, at that moment, behold, the forces of karma are largely controlled. Even though they keep emerging, one does not submit to them. One does not yield to them, by virtue of that power of concentration (*samādhi-sakti*). It is like keeping them suppressed. What is pointed out even more deeply is indeed "wisdom" (*paññā*). The method of conquering these by seeing their true nature as impermanent (*anicca*), suffering (*dukkha*), and not-self (*anattā*) through the realization of the paths and fruits (*magga-phala*), and reflecting upon them, is what the Buddha ultimately points out—as both the path to Nibbāna and the path to the destruction of all karma. Reflecting on those thoughts exactly where they arise as impermanent (*anicca*), one lets them go. To put it briefly, one brings the mind to equanimity (*upekkhā*). Controlling those arising matters by bringing them to equanimity; that belongs to the side of insight (*vipassanā*). That is why it was said that the wealthy person, that "noble one" (*mahātma*), that "gentleman" (*mahattayā*) mentioned before, develops virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*). That gentleman does not yield to those forces of karma (*kammāvega*). So, one can understand that aspect through this. Next, from another angle, the Buddha analyzes this in an extremely subtle manner. To state the analysis briefly: we said that a vast number of karmas are embedded in our mental continuum, in our consciousness (*viññāṇa*). In yielding their results (*vipāka*), these karmas influence one another in various ways. Sometimes they support, sometimes they obstruct, and sometimes one strength is broken by another karma. There are terms that express these facts.</p>
+<p>In short, first of all, the karma that yields birth (*jāti*) to a person is called *janaka-kamma* (productive karma). In these karmas, there is a force that brings about rebirth/reconnection (*paṭisandhi*) or birth (*jāti*). To bring about rebirth or birth for someone, sometimes even a wholesome thought (*kusala-citta*) which we consider minor might be the cause for gaining a human existence. Through that, it is granted. But although that birth has been granted, other relevant karmas—let us say another karma comes and joins as a support. That is called *upatthambhaka-kamma* (supportive karma). To support (*upasthambhana*) means to assist or help another thing. This exists on both sides, wholesome (*kusala*) and unwholesome (*akusala*)—that is, a category of karma that assists either a wholesome karma or an unwholesome karma. To illustrate with an example: by a certain productive karma (*janaka-kamma*) which brings about rebirth, a person might deserve to be born in a lower hell. But if another karma comes and joins it, giving it support, he will have to be born in a hell of even greater suffering (*dukkha*). Conversely, in the case of a wholesome karma, if another karma comes and joins as a support (*upatthambhaka*) to a productive karma (*janaka-kamma*) that allows birth in a lower heaven, he may be born in a higher heavenly world. Likewise, even after gaining that birth (*jāti*), that supportive karma can make a difference in the pleasure or pain (*vedanā*) experienced during the existence of those born aggregates (*khandha*). Let us say another karma comes: behold, now a person is born in a poor family due to some unwholesome deed. But events that bring pleasant results (*vipāka*) occur because another karma joins in, yielding pleasant results. If an animal gains an animal birth (*jāti*), it has to undergo suffering (*dukkha*). Yet, if a supportive karma (*upatthambhaka-kamma*) joins with it, it assists in yielding pleasant results in various ways. In this way, the supportive karma is described. Through this, it is shown that there are certain mutual relationships even among those karmas.</p>
+<p>Next, there is another category of karma called *upapīḷaka-kamma* (obstructive/weakening karma), which weakens or reduces the strength of those karmas that yield birth. In that regard, one has to understand: if, for instance, one is born in a royal family, when that obstructive karma (*upapīḷaka-kamma*) arises, even in that royal clan he has to suffer painful results due to various oppressions, enemy threats, and so on. Likewise, looking at the opposite side, if another karma that weakens that strength arises for someone destined to be born in a hell of immense suffering, he may be born in a hell of lesser suffering. In any case, one has to understand that there are certain karmas that assist other karmas, others that obstruct them, and still other karmas that completely cut off the productive karma of birth at its very root. There are karmas that completely cut off the strength of that productive karma (*janaka-kamma*) which yields birth. This is called *upaghātaka-kamma* (destructive/destructive-cutting karma). It is shown... indeed, what is called "untimely death" (*akāla-maraṇa*) is precisely the instance where that destructive karma (*upaghātaka-kamma*) comes forward and completely cuts off a person's life. Now, when anyone dies at a young age, we call it an untimely death. Untimely death refers to those instances where a karma comes forward and cuts off life right from the point where birth was granted. This is not within the range of an ordinary person. It is those who have attained direct knowledge (*abhiññā*) who see its true nature. But such a state of affairs exists regarding these karmas. What we must understand is that knowing this supportive nature of karmas, as well as their obstructive or hindering nature, we must live in our existence (*bhava*) in such a way that the painful resulting strength of unwholesome karmas is broken. That is what we have to learn from this.</p>
+<p>Some people, because they committed a certain unwholesome deed, spend their entire lives grieving over it. That is not what should be done. So that the result (*vipāka*) of that evil deed is diluted, one must strengthen oneself through virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*) as mentioned before. One must strive to become a person of great stature (*mahātma*). That is what the Buddha highlights for us through this doctrine of karma (*kamma-vāda*). Through the teachings on this, a certain relief is brought to light. Some treat this as a form of determinism (*niyati-vāda*), thinking that if someone kills an animal, he must absolutely go to hell. The Buddha does not say so either. The Buddha makes a middle statement. Killing living beings is indeed an unwholesome deed leading to states of deprivation, but if someone says that everyone who kills living beings must necessarily and inevitably go to hell, the Buddha does not accept that, because of the aforementioned reason. For, sometimes other karmas come and break the strength of that karma. Do not misunderstand this because of my saying so. Now, one might think: "Therefore, it does not matter how much we sin; let us try to escape from it by giving alms (*dāna*) occasionally." Do not mistake this. But what the Buddha is highlighting here is a certain natural law. Karmas performed over infinite time in this *saṃsāra* are embedded in our consciousness (*viññāṇa*). They emerge. So, the methods of reducing their resulting aspect are what the Buddha highlights here through those several similes. Based on this Dhamma analysis as well, what we must realize is that karmas operate mutually. In short, the doctrine of karma (*kamma-vāda*) is something that pertains to the law of cause and effect (*hetu-phala-dhamma*). This is not determinism (*niyati-vāda*). Precisely because of that, there is an escape from this for us.</p>
+<p>In the past, the Nigaṇṭhas (Jains) of that time thought: "In order to escape from all these karmas, we must inflict pain on the body, thinking that karmas that cause pain and suffering (*dukkha*) are present in our consciousness (*viññāṇa*)." So, by inflicting endless pain and suffering, they tried to wear away those karmas. And having worn them away, they would remain without accumulating new karma. They thought that through such a way of living, they could escape from this *saṃsāra* and realize Nibbāna. The Buddha pointed out that it is a futile effort. If they were summoned and asked: "Through that physical torture you performed, by sleeping on thorns and various other torments inflicted on the body, how much of your karmas, your past karmas, have been worn away?" they cannot give a calculation, a census of it; they cannot give an answer. "How much has been worn away?" Then: "How much more karma is there left to be worn away?" They cannot answer that either. "After wearing away how much will you be freed from this?" They cannot answer that either. The Buddha declared to the Nigaṇṭhas on one occasion that if they cannot provide such accounts and calculations, then trying to wear away karma by inflicting pain on one's body in that manner is a futile effort.</p>
+<p>Therefore, what we must understand is that the Buddha showed the way to escape from this wheel of karma through this wonderful path of Dhamma consisting of virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*). Now, through virtue (*sīla*), at one level, without letting that emerging karmic impulse go to body and speech, one turns it into equanimity within the mind itself and escapes from there. Or else, without letting it go to the body and speech, one conquers it there through the concept of abstinence (*virati*)—the resolution of detachment. For, if body and speech are involved, it becomes a new karma. Let alone that, even in the mind, if it goes on operating for a long time, that too becomes a karma. Therefore, when such a situation arises, one recalls that training rule (*sikkhāpada*) and abstains from it by not engaging the body and speech. Next, in concentration (*samādhi*), it is an even higher level. When it comes to wisdom (*paññā*), finally, seeing their true nature: "Here is only a heap of preparations/preparations (*saṅkhāra*). Here is no such thing as an 'I'. It is not something done by an 'I'." Seeing it as a heap of preparations/preparations (*saṅkhāra*), and thereby developing equanimity (*upekkhā*), an attitude of neutrality in the mind, is how one escapes from that entanglement of karma.</p>
+<p>It is in this manner that the Buddha has presented the analysis of this karma. We must understand these properly. In daily life, since a society has dawning where at least the five precepts (*pañca-sīla*) are not bowed to or respected—which is why we referred to it as a "barbaric age"—we must reflect with wisdom. We must be responsible for these. Some say: "Everything is not-self (*anattā*). Now, after being born in the next birth (*jāti*), do I know that 'it is indeed for the karmas I performed that I am suffering this'?" Whether one knows it or not, at the moment of experiencing those results (*vipāka*), one falls into grief, saying, "Alas, who is the one who did this?" In that case, we sometimes give the simile: when one unwittingly drinks poison, or consumes food, once it enters the body, one does not know that there might have been poison taken along with that food. It is only the physician who knows it, yet one has to suffer for it. Similarly, if poison is put into a well from which one drinks, when one drinks from it, one has to suffer the pain oneself. We must realize that our mental continuum is also like that. There is a resulting aspect to the things put into our mental continuum. Having ripened, it recoils. This is designated as the "round of results" (*vipāka-vāra*). The rounds of results (*vipāka-vāra*) spin round and round in this consciousness (*viññāṇa*) in a wondrous way over a long period in *saṃsāra*. As recorded in some Dhamma stories, sometimes those results have been yielded in the exact same manner for a hundred times, five hundred times. There are such incidents, depending on the powerful force of that karma. As for certain karmas, if that intention (*cetanā*) was intensely directed towards that evil deed, it drags one straight to hell. If it was less intensely directed, on those respective occasions, in the manner mentioned before, it ripens mildly in that very life or in a subsequent life and is worn away. Whatever the case may be, the Buddha has pointed out that there is a way to control the resulting aspect of these karmas in accordance with the Dhamma. That is why we said that the wheel of karma (*kamma-cakka*) can be broken by the wheel of Dhamma (*Dhamma-cakka*). It is only Buddhas who point that out. Until then, the world remains trapped in this very wheel of karma, and being unable to escape from it, wanders in *saṃsāra* for infinite time.</p>
+<p>The nature of these karmas is that once they enter consciousness (*viññāṇa*), they emerge again and again. What is called the life-process of this being, what is called existence (*bhava*), is an existence spent with the world. In interacting with that world, those karmas emerge again and again through the five sense faculties, and subsequently, by submitting to them, one mostly accumulates unwholesome deeds (*akusala*). Through accumulating either wholesome (*kusala*) or unwholesome (*akusala*) deeds, one is born (*jāti*) again and again. There is no end to those lives, no matter what kind of birth (*jāti*) one gains. Next, it is the deep essence of that Dhamma that the Buddha points out. Due to the entanglement of those karmas, and also due to the defiled nature within the being—due to greed (*lobha*), hatred (*dosa*), and delusion (*moha*)—this karmic entanglement mostly gravitates towards the unwholesome side. One has to suffer for infinite time in states of deprivation (*apāya*), the animal world, and the realm of hungry ghosts. Next, even if we look at the wholesome side, there too, in those heavenly worlds, Brahma worlds, etc., one has to experience the results of those karmas for aeons. It is a Buddha who shows that this existence in *saṃsāra*—not only in states of deprivation etc., but even in heavenly worlds and Brahma worlds—is suffering (*dukkha*).</p>
+<p>Why does it become suffering (*dukkha*)? Precisely because of the impermanence (*aniccatā*) of those preparations (*saṅkhāra*). In none of those existences is there any stable, permanent, or pleasant (*sukha*) nature. There is no eternal state. There is no peace or satisfaction. That is why the Buddha pointed out this entire existence as suffering (*dukkha*). What we take as an existence—the five aggregates (*pañcakkhandha*): form (*rūpa*), feeling (*vedanā*), perception (*saññā*), preparations (*saṅkhāra*), and consciousness (*viññāṇa*)—the Buddha declared that suffering (*dukkha*) is embedded in every single one of them due to their impermanent (*anicca*) nature. If something is impermanent (*anicca*), for that very reason, it must be constantly repaired/reconstructed; it wears away. One expects to keep this in the same way forever. When it wears away, when it breaks down, along with that, suffering (*dukkha*), grief, and torment arise in one's mind. Consequently, that effort becomes futile. Therefore, it does not fit that concept of "I" and "mine". Even though one holds onto them as "I" and "mine", without one's even knowing, they wear away and go to destruction. This is why the Buddha pointed out this entire *saṃsāra*—comprising heavenly worlds, hells, etc., which bring pleasure and pain—as suffering (*dukkha*).</p>
+<p>If so, if that is understood, what helps to understand it deeply is indeed insight (*vipassanā*). By directing the mind—stilled by guarding virtuous qualities like virtue (*sīla*), in that manner—towards insight (*vipassanā*) and wise attention (*yoniso manasikāra*), one understands the true nature of the preparations (*saṅkhāra*) operating within this existence. That every single one of them is something that arises, exists, and ceases. The dispassion (*virāga*) and non-attachment developed through that help to detach the mind from this *saṃsāra*. This is not done by wearing away all the karmas in the mind. Rather, the wrong views (*micchā-diṭṭhi*) that perform these karmas and cause them to occur—specifically the dogma of self-illusion (*sakkāya-diṭṭhi*), which is taking the five aggregates (*pañcakkhandha*) such as form (*rūpa*) and feeling (*vedanā*) as "I" and "mine"—are removed first. Going even deeper than that, in the end, it is by removing even the conceit of "I am" (*asmi-māna*) within the entirety of existence that the seed of accumulating karma is finally destroyed. The seed of accumulating karma is the feeling of "I" and "mine", the notion of "maintaining it according to my wishes". Through that, the world mostly wanders on the unrighteous path, committing evil deeds and getting bound further in the entanglement of karma. The Buddha demonstrates this, then. First, at the level of virtue (*sīla*), one restrains body and speech. Next, at the level of concentration (*samādhi*), one reduces—even temporarily—the tendency to get bound along with those forces of karma (*kammāvega*). Looking at it most deeply, by penetrating this, by penetrating its true nature, and developing equanimity (*upekkhā*), one detaches the mind. Such is the path of Dhamma pointed out by the Buddha.</p>
+<p>Therefore, we must realize that this is also what is contained within the Noble Eightfold Path (*Ariya-aṭṭhaṅgika-magga*) pointed out by the Buddha. We may have reminded you on some occasions that the Buddha declares wrong view (*micchā-diṭṭhi*) to be the greatest mistake in the world. In a person of wrong view, whatever thoughts (*saṅkappa*) arise, whatever thoughts and ideas arise, they too are wrong; they also go to the wrong side. The speech used in accordance with those thoughts also goes to that very side, as does action (*kammanta*) and livelihood (*ājīva*). The effort (*vāyāma*) made, the application of mind to it, and if there is any stilling or unification of the mind called concentration (*samādhi*), all of them go to the wrong side. The simile given for this is: if a seed of neem or bitter gourd is planted, the soil nutrients and moisture it draws in all yield only a bitter fruit. Similarly, the journey started with wrong view (*micchā-diṭṭhi*) leads to a wrong concentration called wrong concentration (*micchā-samādhi*). What we call wrong concentration is: nowadays when someone aims a firearm, a certain kind of concentration is required for that too. So those too are indeed wrong concentration (*micchā-samādhi*). In that manner, the other side is demonstrated. If a person of right view (*sammā-diṭṭhi*) has gained the correct vision, his thoughts and wishes go to the right side. Likewise, his speech, action, livelihood, effort, and next mindfulness (*sati*), and the concentration developed therefrom—every single one of these goes to the right (*sammā*) side. The simile given for that is: if a mango seed or sugarcane seed is planted, the moisture it draws in yields only a sweet fruit. Through various such similes, the Buddha expressed that very relationship between karma and its fruit (*phala*), between karma and its result (*vipāka*). The very point shown briefly here with the lump of salt is what is demonstrated through various Dhamma analyses. The Buddha highlights for us the way to cross over this ocean of karma, or in other words, this ocean of *saṃsāra*. One cannot wear these away by getting entangled among them and mixed up with them, or by inflicting pain on the body to wear them away. One must realize the true state of things. What helps with that is indeed what is called the Noble Eightfold Path (*Ariya-aṭṭhaṅgika-magga*). First of all, if one has gained right view (*sammā-diṭṭhi*), through that right view one can bring forth correct thoughts and wishes. In that way, step by step, one's way of thinking is transformed. Now, all three—virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*)—are indeed included in this Noble Eightfold Path. Developing virtue, concentration, and wisdom is itself, from one perspective, what is called developing the Noble Eightfold Path. Those qualities are interconnected. Through that, a complete transformation of that person takes place.</p>
+<p>Next, if that right concentration (*sammā-samādhi*) has been reached, from that point on, what that person does is direct it to his five aggregates (*pañcakkhandha*) and see their true nature as impermanent (*anicca*), suffering (*dukkha*), and not-self (*anattā*). The result of that seeing—if one sees something as it really is (*yathābhūta*)—it naturally turns into disenchantment—disenchantment with *saṃsāra*. One cannot escape from *saṃsāra* while holding onto wishes for *saṃsāra*. It is the path of disenchantment with *saṃsāra* that the Buddha has pointed out. It cannot be hidden. It cannot be made a secret. Whether lay or ordained, if someone hopes to escape from *saṃsāra*, he must bring his mind to a level where he can see those three characteristics (*ti-lakkhaṇa*) pointed out by the Buddha: impermanence (*anicca*), suffering (*dukkha*), and not-self (*anattā*). Indeed, when looked at deeply, it is for this that virtuous qualities like virtue (*sīla*) are supportive. It is not merely for keeping society well-functioning forever. In truth, this becomes a middle path (*majjhimā-paṭipadā*) because those virtuous qualities like virtue are beneficial to both parties, oneself and others. The division between oneself and others is pacified by this wonderful middle path pointed out by the Buddha. Killing living beings is harmful to both oneself and others. There is no need to speak separately of its being harmful to others. That it is harmful to oneself is now evident from this story; at least, it is clear from the narrative we took as the basis of this sermon. Such evidence is not often found. But in these times, we occasionally hear of unpublicized incidents—that for those who commit cruel human murders or animal slaughter, it recoils upon them unexpectedly, just like fine dust thrown against the wind. That is exactly what happened here too: the very dogs he had set on came and ate him up. So, from this, it is seen how the unwholesome deed of killing yields results (*vipāka*) right then and there. Even if it does not yield results in that manner, whether it yields results in the next life, or in a subsequent life, whether those results are visible or invisible, the Buddha declares that such is the nature of *saṃsāra*. Because every single one of them was visible to the Buddha-eye.</p>
+<p>To the various kinds of psychologists of modern times, only an extremely limited area of these is visible. It is by raising various arguments based on that limited view that some Buddhists go astray. But we have the word of the Buddha (*Buddha-vacana*), for those who read and examine it. In an extremely subtle manner, in a way invisible to any other teacher of that time, the Buddha not only revealed this deep natural law of karma, but also brought to light the path of escape from this entire wheel of karma (*kamma-cakka*). Therefore, we must understand from this that this wheel of karma affects everyone. Hence, what is contained within these five precepts (*pañca-sīla*) pointed out by the Buddha is what is beneficial to both parties—oneself and others. Now, a certain person might say: "Be that as it may, what about intoxicants? When we drink alcohol and go to sleep without harming anyone, what is wrong with that? Who is harmed?" But even if its harmful nature is not felt in this very life through diseases and ailments, in the next life, one may be born with mental weaknesses. One is born in various other bad places. It is not just that "harm" we speak of that is present there. It is not only harm to others (*para-hiṃsā*). It is self-harm (*atta-hiṃsā*), self-torture. That is present within each of these training rules. Reflecting on that, the Buddha looked upon the world with great compassion (*mahā-karuṇā*), and this great compassion of the Buddha transcended all those concepts of "self" and "others" present in society. It is with thought for all living beings that he pointed out those qualities of virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*). Therefore, we should not think: "Here, this 'society' is something separate, and I am someone separate." When reflecting from the other side, you too belong to society. In any case, it is by first training the body and speech, and thereby stilling the mind, that we are able to see this truth. It is precisely for this that we need these virtuous qualities like virtue (*sīla*).</p>
+<p>And so, on this valuable day, you devotees have gradually made an effort to guard higher training rules in addition to the five precepts (*pañca-sīla*) you guard daily. Likewise, you engaged in Dhamma discussions, meditation, and so forth. What is the target of all this? It is to enter the path of escape from this *saṃsāra* characterized by birth (*jāti*), decay (*jarā*), disease (*vyādhi*), and death (*maraṇa*) pointed out by the Buddha—to enter the practice. Ultimately, this journey in *saṃsāra* is ended by gradually reducing the number of lifetimes in which those forces of karma (*kamma-vega*) operate. It is brought down to seven births by attaining Stream-entry (*Sotāpatti*). Next, that karmic force is broken to the extent of returning to this world only once, by becoming a Once-returner (*Sakadāgāmī*). By becoming a Non-returner (*Anāgāmī*), those remaining karmas are dealt with. Even so, one spends aeons in the Brahma worlds, in the Pure Abodes (*Suddhāvāsa*). But if one becomes an Arahant, one can free oneself from all karmas in this very life and reach a state where no further birth (*jāti*) is gained. That is the highest state pointed out by the Buddha, that is Arahantship.</p>
+<p>Then, we must realize that our target—whether as a Buddhist layperson or an ordained monk—what everyone hopes for is escape from suffering (*dukkha*). So, in analyzing "suffering" (*dukkha*), it cannot be stopped at that social level mentioned. The Buddha points out that everyone is experiencing great suffering (*dukkha*) within. Consequently, no matter what kind of life one leads, one has to face those sufferings (*dukkha*) of birth (*jāti*), decay (*jarā*), disease, and death (*maraṇa*). That is why we have to think about crossing over *saṃsāra*. Therefore, this pious gathering must think: on a valuable day like today, you were able to deposit in your minds those similes given by the Buddha, which help to develop a good understanding within yourselves regarding that karma (*kamma*) which supports virtuous qualities like virtue (*sīla*). Likewise, you made an effort to guard these virtuous qualities like virtue. Likewise, while hearing the Dhamma and meditating, practicing insight meditation (*vipassanā-bhāvanā*), strive particularly to reach that state of paths and fruits (*magga-phala*) mentioned.</p>
+<p>Therefore, in this new year that has dawning, instead of your mundane goals, you must give a higher place to supramundane (*lokuttara*) goals. For, this Dispensation of the Buddha (*Buddha-sāsana*) is moving towards an era of decline. Perhaps in the next life, in a few generations, people might ask, "Is Nibbāna something you eat?" To that extent, this Nibbāna can become hidden. Such an attitude is gradually spreading in this country. Therefore, having reflected on this, making a firm resolution to develop these virtuous qualities like virtue (*sīla*) even more, through the wholesome power generated from hearing the Dhamma, etc., which you devotees have accumulated so far, and through the development of virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*), and by cultivating faith (*saddhā*), energy (*viriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*), may you make the aspiration: "May this wholesome power be a supportive condition (*hetu-vāsanā*) for escaping from this extremely terrifying *saṃsāra* as quickly as possible, by penetrating the paths and fruits (*magga-phala*) of Stream-entry (*Sotāpatti*), Once-returning (*Sakadāgāmī*), Non-returning (*Anāgāmī*), and Arahantship, and thereby finding peace in the supreme, deathless Great Nibbāna!" Likewise, having aspired: "May my departed relatives who have passed away in my name, as well as the assembly of Devas and Brahmas, by rejoicing in this merit (*kusala*) of preaching and hearing the Dhamma, realize the supreme, deathless Great Nibbāna through whatever type of Awakening (*bodhi*) they have aspired to!"—share the merits by reciting the stanzas in this manner.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_027.html" class="doc-btn">← Previous Sermon (027)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_029.html" class="doc-btn">Next Sermon (029) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

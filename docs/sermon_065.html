@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 065 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_064.html" class="doc-btn">← Previous Sermon (064)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_066.html" class="doc-btn">Next Sermon (066) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 065</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_065_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_065_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_065_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #65</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.205)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Tumhehi kiccaṃ ātappaṃ,</p>
+<p>akkhātāro tathāgatā;</p>
+<p>paṭipannā pamokkhanti,</p>
+<p>jhāyino mārabandhanā.</p>
+<p>From:</p>
+<p>Dhammapada 276 (Maggavagga)</p>
+<p>Dear Listeners,</p>
+<p>Today is this Poson Full Moon Poya day. This is a day on which the attention of pious Buddhists is directed toward both the past and the future of the Buddha Sāsana (Dispensation) in this country. We all accept that on that day, a Dhamma mission of seven members, led by the Great Arahant Mahinda, arrived from Jambudīpa to Mihintale precisely to establish the Buddha Sāsana. Since this mission included five ordained Arahant Theros—Mahinda, Ittiya, Uttiya, Sambala, and Bhaddasāla—along with the Sāmaṇera Sumana and the lay disciple (*upāsaka*) Bhanduka, we can understand that the relationship between the clergy and the laity in the Sambuddha Sāsana was represented therein.</p>
+<p>We all have heard that Arahant Mahinda introduced his group to King Devānampiyatissa with the stanza:</p>
+<p>> *Samaṇā mayaṃ mahārāja,*</p>
+<p>> *dhammarājassa sāvakā;*</p>
+<p>> *Taveva anukampāya,*</p>
+<p>> *jambudīpā idhāgatā.*</p>
+<p>"O Great King, we are recluses, disciples of the King of Dhamma. Out of compassion for you, we have come here from Jambudīpa." Thus they introduced themselves. Furthermore, history records that King Devānampiyatissa, with great faith and confidence in the group led by Arahant Mahinda, acted to establish the Sambuddha Sāsana in this island of Lankā. From then until now, amidst various temporal crises and vicissitudes, the Sambuddha Sāsana has been preserved in this country to a certain extent up to the present day. For the pious who reflect and ponder upon the future of the Buddha Sāsana, we chose as our theme today a valuable Dhammapada stanza that specially reminds us of the practice (*paṭipadā*) of this Buddha Sāsana.</p>
+<p>"*Tumhehi kiccaṃ ātappaṃ, akkhātāro tathāgatā*"—The duty, the exertion that must be made, must be striven for by yourselves. The Tathāgatas are merely teachers who point out the Dhamma.</p>
+<p>"*Paṭipannā pamokkhanti jhāyino*"—Those who enter the path and cultivate absorption (meditation) are freed from the bonds of Māra.</p>
+<p>Through this stanza, the practicality as well as the fruitfulness of the Blessed One's practice is expressed. Indeed, when speaking of this, a valuable discourse (*sūtra*) that reveals the special characteristics within the practice of this Buddha Sāsana is the *Gaṇaka-Moggallāna Sutta* of the Majjhima Nikāya. Even in the opening narrative (*nidāna-kathā*) of that Sutta, an important principle regarding practicality emerges. At a time when the Blessed One was residing in Sāvatthī, at the Eastern Monastery (*Pubbārāma*) known as the palace of Migāra's mother (*Migāramātupāsāda*), which was built and offered by the great lay disciple Visākhā, a Brahmin named Gaṇaka-Moggallāna came to see Him. (Devotees, in modern terms, the Brahmin Moggallāna was an accountant.) Having arrived, he addressed the Buddha as follows: "Just as, Master Gotama, in this palace of Migāra's mother, there is a gradual training, a gradual performance, a gradual practice, visible even down to the last step of this staircase"—the three specific terms mentioned there are *anupubba-sikkhā* (gradual training), *anupubba-kiriyā* (gradual performance), and *anupubba-paṭipadā* (gradual practice)—"and just as among us Brahmins, in our education, a gradual training, a gradual performance, a gradual practice is seen; and also in the art of archery, and also among us who make a living through this accounting, there is a similar training. When we get a new apprentice, a pupil, we train him to count systematically in this way: one-one, two-twos, three-threes, four-fours, five-fives, six-sixes, seven-sevens, eight-eights, nine-nines, ten-tens, and so on, even up to a hundred. In the same way, Master Gotama, is it possible to show such a gradual training, gradual performance, and gradual practice in your Dispensation?" Thus he asked the Blessed One.</p>
+<p>The Blessed One replied: "Brahmin, in my Dispensation too, it can be shown in that way. Just as a horse-trainer, upon receiving a thoroughbred horse that can be trained, first applies the bit and systematically performs the tasks relevant to that training; even so, the Tathāgata, on receiving a person fit to be disciplined, tells that monk: 'Come, monk, be virtuous. Dwell restrained by the restraint of the Pātimokkha. Be perfect in conduct and resort. Seeing danger in the slightest faults, train yourself by undertaking the training rules.' Thus, He gives that very first training. If at any stage that monk has become virtuous in that manner, then the Tathāgata gives him the second step:</p>
+<p>'Come, monk, dwell with the doors of your senses guarded. On seeing a form with the eye, do not grasp its signs or secondary characteristics. Lest evil, unwholesome states such as covetousness and grief flow in on account of not guarding it, establish restraint over the eye.' In that manner, He instructs him to practice sense-restraint over the eye, as well as over the ear, nose, tongue, body, and mind—all six senses.</p>
+<p>When that monk has reached the state of being devoted to guarding the doors of his senses (*indriyesu guttadvāratā*), at that point, the Tathāgata trains this monk further.</p>
+<p>'Come, monk, be moderate in eating. Consume food reflecting and considering wisely: "Neither for amusement, nor for intoxication," and so on. "Not for beautification, nor for adornment, but merely for the maintenance and survival of this body, for ending the discomfort of hunger, and for assisting the holy life." In this way, He establishes him in that training, instructing him to take food after reflecting in a certain reflective manner, solely to appease the feeling of hunger, to avoid the discomfort that arises from overeating, and for living in comfort.'</p>
+<p>When that monk practices that training of knowing moderation in food (*bhojane mattaññutā*), at that stage, the Tathāgata disciplines him thus: 'Come, monk, dwell devoted to wakefulness (*jāgariyānuyoga*).' Dwell accustomed to the practice of wakefulness relevant to effort, and then He gives him the schedule: 'Dwell during the entire day walking back and forth and sitting, purifying your mind of obstructive states. Dwell during the first watch of the night walking back and forth and sitting, freeing your mind of obstructive states. During the middle watch of the night, lie down on your right side in the lion’s posture (*sīha-seyyā*). Having awakened in the last watch of the night, dwell walking back and forth and sitting, freed from obstructive states, devoted to the practice of wakefulness.'</p>
+<p>At whatever stage he dwells devoted to that practice of wakefulness, at that stage the Tathāgata disciplines him further still: 'Come, monk, dwell possessed of mindfulness and clear comprehension (*sati-sampajañña*).' When going forward and returning, one acts with clear comprehension (*sampajānākārī hoti*). That is, he acts with awareness. It means being possessed of established mindfulness. Next, in looking ahead, looking aside, bending, extending (*samiñjite pasārite*), in wearing the outer robe, inner robe, and carrying the bowl, in eating and drinking, in passing stool and urine, and furthermore, in walking, standing, sitting, sleeping, waking, speaking, and keeping silent—in every action, He trains him in mindfulness and clear comprehension, saying 'be one who acts with clear comprehension.'</p>
+<p>When mindfulness and clear comprehension are complete, the Tathāgata admonishes that monk: 'Monk, resort to a secluded dwelling. Get accustomed to resorting to secluded places such as a forest, the root of a tree, a mountain, a glen, a charnel ground, a jungle thicket, the open air, or a heap of straw.' When that monk has reached that state, having returned from his alms-round, he sits down quietly, cross-legged, keeping his body erect, and frees his mind from the hindrances (*nīvaraṇa*). He frees his mind from the hindrances of covetousness, ill-will, dullness and drowsiness, restlessness and worry, and doubt, as well as from excessive hatred, sleepiness, laziness, unsettled anxiety, and indecisiveness. Then, as an illustration of that systematic path, the Buddha explained to that Brahmin how he gradually attains the first absorption (*jhāna*), second absorption, third absorption, fourth absorption, and so forth. Next, the Buddha declares: 'If there are monks who are learners (*sekha*)—who are not yet Arahants but have attained the paths and fruits—this is the Tathāgata's instruction to them as well. And to the Great Arahants whose taints are destroyed (*khīṇāsava*), this training helps in their daily comfortable dwelling (*diṭṭhadhammasukhavihāra*) and for mindfulness and clear comprehension.'</p>
+<p>Then this Brahmin Gaṇaka-Moggallāna asks: 'Master Gotama, when the Saṅgha is thus advised and instructed, do all of them attain Nibbāna, which is the ultimate goal in your Dispensation, or are there some who fail to attain Nibbāna?' Then the Buddha declares: 'Even though I advise and instruct them in this way, some attain that state, while others fail to attain it.' Then the Brahmin asks: 'What is the cause for that, Master Gotama? When Nibbāna exists, and the path to Nibbāna exists, and a teacher like you who shows the path to Nibbāna is present, why is it that some attain it, while others do not attain it?' Then the Buddha replies:</p>
+<p>'In that case, Brahmin, I will ask you a question. Do you know the road that leads to the city of Rājagaha?' 'Yes, I know it very well.' 'Suppose someone asks you for the road to Rājagaha. You say: "Go by this road. As you go, you will find a village. Beyond that, there is a market town. Going along in this way, you can reach Rājagaha." Even though you say so, that person, having received that instruction, takes a different road. Turning the opposite way, he goes in another direction. Consequently, instead of Rājagaha, he arrives in a different region. Then another person comes, asking for the road to Rājagaha. You give him the same instructions, and he follows them correctly and arrives at Rājagaha.' Then the Buddha asks: 'While Rājagaha exists, and the road to Rājagaha exists, and you are there to show the way, what is the reason why one person goes the wrong way like that, while another goes the right way?'</p>
+<p>Then this Brahmin says: 'What can I do about that, Master Gotama? I am merely the one who points out the way—*maggakkhāyī*. I only point out the way. There is nothing I can do. They go as they choose.' Then the Buddha says: 'Just so, Brahmin, even though Nibbāna exists, and the path to Nibbāna exists, and I stand as the instructor who explains Nibbāna, some attain it, while others do not attain it.' Thereupon, the Brahmin, having conceived a certain confidence, said: 'Those who ordained in this Dispensation without faith, merely for a livelihood—they are deceitful, undisciplined in that practice, unrestrained regarding food, regarding mindfulness and clear comprehension, and regarding virtues like morality. Such people do not dwell with Master Gotama. But those who ordained out of faith and practice this path honestly—they are the ones who walk with Master Gotama.' Thus Gaṇaka-Moggallāna...</p>
+<p>...then expresses his appreciation with two similes: "Just as among root-fragrances, black agarwood fragrance is considered supreme; and among heartwood-fragrances, red sandalwood fragrance is supreme; and among flower-fragrances, jasmine fragrance is supreme; even so, among the teachings visible today, the vision of Master Gotama is indeed supreme!" Having thus exulted, he became a lay disciple. Thus we see from this...</p>
+<p>...that these three terms—*anupubba-sikkhā*, *anupubba-kiriyā*, and *anupubba-paṭipadā*—are extremely valuable, helping all of us to generate effort and courage. It is a systematic path of practice.</p>
+<p>Another valuable discourse relevant to this—even if we do not discuss it in full—is the *Pahārāda Sutta*. To mention it briefly, the Asura lord Pahārāda on one occasion told the Buddha that there are eight wonderful and marvelous qualities of the great ocean that delight the Asuras. One of them is—and three terms are mentioned there: "*anupubba-ninno, anupubba-poṇo, anupubba-pabbhāro, na āyatakenēva papāto*"—that the great ocean has a gradual slope, a gradual inclination, a gradual shelf, with no abrupt precipice. He gives this simile as the first wonderful and marvelous quality. The Buddha says: "In my Dhamma-Vinaya too, there are eight wonderful and marvelous qualities."</p>
+<p>As the first quality, He declares: "In this Dispensation, too, there is a gradual training, a gradual performance, a gradual practice—*anupubba-sikkhā, anupubba-kiriyā, anupubba-paṭipadā, na āyatakenēva aññā-paṭivedho*—there is no abrupt penetration of final knowledge (Arahantship)." This word "gradual" (*anupubba*) is indeed a valuable thing in this Dispensation to bring courage to everyone. It is not something achieved in a single day. If one walks correctly on this path, it shows a gradual, systematic effectiveness. Someone might think, "If so, why is it that many people say, 'We have no perfections (*pāramī*). We have no perfections. We have not obtained a triple-rooted (*trihetuka*) rebirth'?" I have heard that recently, many preachers are discouraging people with words that destroy this Dispensation. I declare at this moment that this talk of triple-rooted rebirth is like a parasite on the Dispensation. The Buddha did not do that; He did not reject anyone based on "triple-rootedness." We will next present a good illustration of this from a Dhamma story.</p>
+<p>In Rājagaha, the Buddha was preaching the Dhamma to a large gathering. We have mentioned these before, so we will tell it briefly. While the Buddha was preaching the Dhamma in the midst of this large crowd, there came a leper named Suppabuddha. His skin was discolored all over. He was extremely poor; a beggar. In short, a miserable beggar arrived. Seeing the crowd from afar, he thought, "Perhaps they are distributing food and drink here (as he was starving). If I go there, I might get some food." So he approached. As he drew near, he realized, "No, no, this is not a place where food is being distributed; this is the Ascetic Gotama preaching the Dhamma. No matter, I must at least listen to the Dhamma." So he sat down at the edge of the crowd. When he sat down, the Buddha scanned the entire crowd with His Buddha-cognition, His Buddha-eye: "Who among those present here is capable of understanding the Dhamma?" There might have been kings, treasurers, university graduates, great scholars—all of them were bypassed. The Buddha spotted that beggar. "He is capable of understanding my Dhamma." What followed next was the discourse the Buddha delivered, which was extraordinary. Nowadays, one does not even get to hear such discourses.</p>
+<p>Everyone knows the specialty of the Buddha's style of preaching. It is called "*ānupubbī-kathā*" (gradual discourse). There too, the word "gradual" (*anupubba*) is present. This is to show that even within a single discourse, this gradual order exists. Some people leave it to time and remain inactive, thinking, "Nowadays, no matter what we do, the paths and fruits (*magga-phala*) are far, far away."</p>
+<p>The Buddha delivered that sermon according to the gradual method of discourse. In the Dhamma, it is recorded thus: "*dāna-kathaṃ, sīla-kathaṃ, sagga-kathaṃ, kāmānaṃ ādīnavaṃ, okāraṃ, saṅkilesaṃ, nekkhamme ca ānisaṃsaṃ pakāseti*." This is the sequence of the gradual discourse: talk on giving (*dāna-kathā*), talk on virtue (*sīla-kathā*), talk on heaven (*sagga-kathā*)—how by giving and keeping virtue, one can go to heaven, saying something about heavenly fortune. Then, He turns it the other way: regarding sensual pleasures, whether in the human world or heavenly world, He declares the danger (*kāmānaṃ ādīnavaṃ*), the vileness (*okāraṃ*), and the defiling nature (*saṅkilesaṃ*). Next, He explains the benefit of renunciation (*nekkhamme ca ānisaṃsaṃ*). Thus, He goes down the other side of the mountain. He turns it around, showing that all of this is useless. Now, when speaking of the benefits of renunciation, someone might ask: "What did this beggar have to give? What virtue did he undertake?" The Buddha does not administer precepts the way we do as soon as we arrive! But if there is something to let go of in the mind, first of all, he let go of food. He had come searching for food. It was after letting go of that desire that he sat down there. That too is a great letting go—a giving up. Next, when virtue was spoken of, he must have thought, "Oh, if only I could keep these!" Don't we see that? Then, imagine how he understood its benefits.</p>
+<p>At one point, the Buddha Himself saw how the mind of the leper Suppabuddha was becoming prepared. It is described in these words:</p>
+<p>"*Yathā bhagavā aññāsi*"—concerning that mind: "*kalla-cittaṃ, mudu-cittaṃ, vinīvaraṇa-cittaṃ, udagga-cittaṃ, pasanna-cittaṃ*." The mind of the leper Suppabuddha became prepared, soft, free from hindrances, uplifted, and brightened. It reached a state of overflowing confidence. It was at that moment that the Buddha preached: "*yāsaṃ buddhānaṃ sāmukkaṃsikā dhamma-desanā*"—the truth-discourse that Buddhas themselves introduce to the world: "*dukkhaṃ, samudayaṃ, nirodhaṃ, maggaṃ*" (suffering, origin, cessation, and path).</p>
+<p>Then someone might say: "Look, devotees, they have driven away that miserable wretch!" But look at what happened in the end to that leper Suppabuddha. It is recorded thus: Just as a clean cloth takes dye perfectly, the Buddha's discourse on the Four Noble Truths penetrated his mind completely. As a result, the dust-free, stainless Dhamma-eye arose: "*virajaṃ vītimalaṃ dhammacakkhuṃ udapādi*." Briefly, it is stated as: "*yaṃ kiñci samudayadhammaṃ sabbaṃ taṃ nirodhadhammaṃ*." To many who tell stories about stream-entry (*sotāpatti*), we say: here lies the secret—*yaṃ kiñci samudayadhammaṃ sabbaṃ taṃ nirodhadhammaṃ*. He realized stream-entry in the briefest manner: the Dhamma-eye arose, seeing that "whatever is of a nature to arise, all that is of a nature to cease." That is to say, in short, he saw the Dhamma of Dependent Co-arising (*paṭicca-samuppāda*). We have spoken of these before, so we will not explain them in detail at this moment.</p>
+<p>In the end, the crowd dispersed. None of them knew that this leper who had come had attained, from his previous state, the highest state—which, in the words of the Buddha, is greater than the sovereignty of a wheel-turning monarch (*cakkavatti*). None of that crowd knew that he had attained such a state. There are some special terms mentioned regarding this state. That is why I say this person possesses as many as eight degrees! For a stream-enterer, even if he is uneducated, the following is stated in the Suttas about him: "*diṭṭhadhammo, pattadhammo, viditadhammo, pariyogāḷhadhammo, tiṇṇavicikiccho, vigatakathaṅkatho, vesārajjappatto, aparappaccayo satthusāsane*." There are eight degrees there.</p>
+<p>*Diṭṭhadhammo*: he saw Nibbāna, at least for a moment. *Pattadhammo*: he reached Nibbāna, even for a split second. *Viditadhammo*: he understood Nibbāna. *Pariyogāḷhadhammo*: he dived into Nibbāna. On some occasions, we have illustrated this with similes such as the iron club of the giant Nīla—seeing Nibbāna for a moment. He saw the cessation of preparations (*saṅkhāra-nirodha*). *Tiṇṇavicikiccho*: he crossed over doubt and hesitation regarding past lives, future lives, asking "was there such a thing in the past?" and so forth. *Vigatakathaṅkatho*: he does not need to go around asking others "how, how?". He attained certainty. *Vesārajjappatto*: thus, that beggar became independent, bold. How did that happen? Through that sermon, he became bold in the Dhamma.</p>
+<p>"*Aparappaccayo satthusāsane*"—this is a profound statement. It means reaching a state where one no longer needs the support of anyone else in the Teacher's Dispensation. What does that mean? As you all have heard, a stream-enterer cannot be stopped by anyone. It is said "*sattakkhattu-paramo*"—he is bound to become an Arahant within seven births (*jātis*) at most. His suffering (*dukkha*) will definitely be brought to an end. That is how it is if he is negligent. Otherwise, if he exerts himself in this very life, he can reach those higher states. That is why it says "*aparappaccayo satthusāsane*"—he does not need another's support in the Teacher's Dispensation. If support is received, the work is quickened, which is true, but what was necessary has been obtained. He has obtained the principle that leads to Nibbāna. Like a log thrown into a river that eventually reaches the ocean, such is the state of stream-entry. That is the kind of state he attained.</p>
+<p>Look, on one hand, at the Buddha's style of preaching. It was not something that happened by accident. Through the gradual discourse (*ānupubbī-kathā*), everything was accomplished. And it also happened in an instant. Through this, I am presenting the practical nature of the Dhamma. Some people, as I mentioned, say: "We have no perfections (*pāramī*). Our monks say we do not have triple-rooted rebirth, and so forth"—a bundle of confusions. You must not think of any of this. If this Dispensation is preserved through practice, we said these few words to tell you to engage in these tasks without fear. In some places, as we say briefly in the *Bāhiya Sutta* and others, when it was said "in the seen, let there be only the seen" and so on, he was already an Arahant. Even if we cannot see it, the Buddha, through His "knowledge of the inclinations and underlying tendencies of beings" (*āsayānusaya-ñāṇa*), sees the inner potential within every individual in a wonderful way. It is according to this that the Buddha preaches. Although He did so for the leper Suppabuddha, in some places we see it happening instantly. Even if we do not speak of the reasons at length, we can mention them briefly as follows.</p>
+<p>There are four main terms mentioned regarding the realization of the Dhamma in this Dispensation. Four types of individuals are mentioned: *ugghaṭitaññū, vipañcitaññū, neyya, padaparama*. *Ugghaṭitaññū* refers to one who, just like a door opening the moment the latch is turned, realizes the Dhamma through a very brief discourse. People like Bāhiya Dārucīriya are highly developed; they need only a slight hint. Then they attain everything. *Vipañcitaññū* is the next category. They require a somewhat longer Dhamma discourse. It is only when a detailed Dhamma discourse is delivered that they understand the Dhamma.</p>
+<p>"*Neyya*" means those who need to be led by the hand, as it were, to be shown Nibbāna, through teacher's guidance, association with noble friends (*kalyāṇa-mitta*), listening to the Dhamma, and so on. Only when these come together does the *neyya* person realize the Dhamma at some point. The category called *padaparama* cannot, for some reason, attain the paths and fruits in this life. But they do not need to sit around looking at their horoscopes! Even if such a person has learned something—*padaparama* means one for whom what has been learned will at some point in the future assist in the penetration of the paths and fruits. From this, it is clear that not a single person is cast aside by the Buddha.</p>
+<p>"*Ugghaṭitaññū, vipañcitaññū, neyya, padaparama*"—all of this is said to give you courage, not to criticize anyone else. Such is the situation in the Dispensation. There is no end to the various Sutta discourses that show how fruitful the practice of the Dispensation is.</p>
+<p>If we bring out another valuable Sutta discourse at this moment, the *Bhūmija Sutta* of the Majjhima Nikāya is one such. As shown in the *Bhūmija Sutta*, Ven. Bhūmija went to the house of Prince Jayasena in Rājagaha. Prince Jayasena did not have much faith. After exchanging pleasantries and arranging a seat, Prince Jayasena engaged in conversation and said: "Some ascetics and brahmins make this kind of claim: 'Even if one leads the holy life (*brahmacariya*)—which means the practice of the Dispensation—with a desire (for results), it is fruitless, not productive. Likewise, even if one engages in it without a desire, it is also fruitless. Even if one engages in the holy life on that path with and without a desire, it is fruitless. Next, even if one engages in it neither with nor without a desire, it is still fruitless.' What does Ven. Bhūmija say about this?" Then Ven. Bhūmija said: "Prince, this is not a statement I received directly from the mouth of the Blessed One. I do not know how the Blessed One explains this. But I think that if the Blessed One were asked, He would say something like this." According to his own understanding, Ven. Bhūmija told Prince Jayasena: "According to my view, this is how our Teacher would put it. If someone leads the holy life in an improper manner, on an improper path, even if he does so with a desire, it is fruitless. Even if he does so without a desire, it is fruitless. If he engages in the holy life in an improper manner with and without a desire, it is fruitless. If he leads the holy life in an improper manner neither with nor without a desire, it is still fruitless."</p>
+<p>Then he states the other side: "But if someone engages in the holy life in the proper manner, with a desire, there is a fruit. Even if he leads the holy life without a desire, he can still obtain a fruit. Even if he does so with and without a desire, he can still obtain a fruit. Even if he does so neither with nor without a desire, if the proper path is correct, the fruit [will come]." When this was said, Prince Jayasena was pleased and said: "If it is stated in this way, this Teacher of yours deserves to be placed on the heads of all teachers living today!" Expressing his appreciation, the prince offered the tray of rice brought for him to Ven. Bhūmija. Having partaken of the alms, Ven. Bhūmija went to the Buddha in the evening and related this description: "In the morning, I went to the house of Prince Jayasena. The prince said such and such a thing. I gave such a reply. I hope that in saying so, I did not fall into the error of stating what the Blessed One did not say." He said very humbly, "I believe I presented the Blessed One's view. Do you think I made any mistake?" He asked with great faith. The Blessed One said: "Ah, Bhūmija! No mistake was made. What you stated is exactly what I approve of." To make it even more striking, the Buddha then gave several similes to demonstrate this principle. This is how He explained it in more detail:</p>
+<p>In whatever dispensation—you devotees know the Noble Eightfold Path—think of its opposite: wrong view (*micchā-diṭṭhi*), wrong intention (*micchā-saṅkappa*), wrong speech (*micchā-vācā*), wrong action (*micchā-kammanta*), wrong livelihood (*micchā-ājīva*), wrong effort (*micchā-vāyāma*), wrong mindfulness (*micchā-sati*), and wrong concentration (*micchā-samādhi*). In a dispensation that has a practice leading from wrong view to wrong concentration, even if a disciple leads the holy life with a desire, there is no fruit. Even if he leads the holy life without a desire, there is no fruit. Even if he leads it with and without a desire, there is no fruit. It is fruitless. Even if he leads the holy life neither with nor without a desire, there is no fruit. What is the cause? The word *ayoniso* (unwisely / improperly) is mentioned there. This word is somewhat difficult to translate into Sinhala. Briefly, *ayoniso* means in an improper manner, in a wrong way. This will become clearer from the similes. As we proceed, what is this improper manner? Because it is a practice starting from wrong view and ending in wrong concentration, whether there is desire or not, there is no fruit.</p>
+<p>Then He gives some similes: "Just as, Bhūmija, if someone wanting sesame oil piles sand in a trough, sprinkles it with water, churns it with water, and squeezes it, no matter how much he squeezes it with a desire, or squeezes it without a desire, or squeezes it both with and without a desire, or squeezes it neither with nor without a desire—he cannot get oil by squeezing sand. What is the cause? He did it *ayoniso*—in an improper manner, by a wrong method. Therefore, no matter how much he squeezes the sand, no oil comes." Then the second simile: "Just as, Bhūmija, if someone wanting milk pulls a young cow by the horn to milk her, even if he pulls the cow's horn with a desire, or does so without a desire, or does so both with and without, or does so neither with nor without—no milk comes by pulling the horn. Such is the effort of those people." Since that effort starting from wrong view is improper, there is no fruit.</p>
+<p>He gives a third simile as well: "Just as, Bhūmija, if someone wanting butter pours water into a jar and churns it with a churning-stick for however long, whether he does so with a desire, or without a desire, or both with and without, or neither with nor without, he cannot obtain butter from the water poured into that jar. Such is the effort of those people." The fourth simile: "If someone wanting fire"—you know how they obtained fire in those days—"rubs two pieces of wood together, placing a wet, green piece of wood on top and rubbing it and rubbing it, whether he does so with a desire, or without a desire, or both with and without, or neither with nor without, no fire is produced." These four similes demonstrate the fruitlessness and failure of the practice of those ascetics and brahmins who hold wrong view, and so forth. Next, He shows: "In whatever dispensation right view (*sammā-diṭṭhi*), right intention (*sammā-saṅkappa*), right speech (*sammā-vācā*), right action (*sammā-kammanta*), right livelihood (*sammā-ājīva*), right effort (*sammā-vāyāma*), right mindfulness (*sammā-sati*), and right concentration (*sammā-samādhi*) are found, in that dispensation, if one leads the holy life, whether he does so with a desire, or without a desire, or both with and without, or neither with nor without, that fruit is definitely obtained."</p>
+<p>Then the other similes: "If someone wanting oil places sesame flour in an oil-trough, mixes it with water, and rubs and squeezes it with a desire, or does so without a desire, or both with and without, or neither with nor without, oil emerges from that sesame flour; he can obtain oil." Next, He states the second simile in reverse: "If someone wanting milk pulls a cow that has a young calf at the place where milk can be obtained—you know where that is, the udder, the teat. He pulls precisely from the teat. If he pulls from the teat, whether he does so with a desire, or without a desire, or both with and without, or neither with nor without, milk definitely comes." The third simile—you devotees can infer the rest of it. In brief, these are the similes. The simile the Buddha gives about butter: "If someone pours curd into a jar and churns it with a churning-stick, he can produce butter from it." The fourth simile: "If someone wanting fire rubs a dry stick with another dry stick, he can produce fire from it." Having given these similes, the Buddha says to Ven. Bhūmija: "Bhūmija, if you had told this much to Prince Jayasena, the prince would have expressed great appreciation and, according to that appreciation, would have practiced under you." When this was said, Ven. Bhūmija very humbly said: "How could such similes occur to me, Blessed One, as they occur to the Blessed One?" This is that Sutta.</p>
+<p>Pious devotees, all of this was said because on a day like today, we must remind ourselves of this Noble Eightfold Path in this Dispensation, which goes from right view to right concentration. What is the cause? What is the cause? In the Sambuddha Sāsana, that side is declining, that side is declining. "It is not possible; in this era, it is not possible to realize Nibbāna." In that way, various forces have arisen that discourage those who are enthusiastic. Not from outside, not from other religions, but from within ourselves, from our own people, these things emerge. That is why I am saying these few words. Those who have been discouraged in that manner come and tell us too that such and such was said in various sermons. That is why I am saying this. Such is the Dispensation that lies before us. It is of no use to go on boasting about the past, saying: "Those times were not like today; one cannot even dry a mat of paddy now because Arahants are flying through the sky." Going on repeating such stories with exaggerations will not do. Where we can act, starting from this very step, we must exert ourselves to make the journey. What is relevant to that is what we have stated in this Dispensation. This Dhamma is preached to lay devotees. Lay devotees must by no means think: "We cannot get close to these things." What we must recall is the lay disciple Bhanduka we mentioned earlier, who was an Anāgāmī (Non-returner) and a possessor of higher knowledges (*abhiññā*). During the Buddha's time, there were lay Anāgāmīs like Citta the Householder, Hatthaka of Āḷavī, and others. There were those who walked the path of absorption (*jhāna*) and paths and fruits, such as Nandamātā of Veḷukaṇḍaka, Nakulamātā, Kāpilānī, and others.</p>
+<p>Furthermore, consider how this lay practice is structured. In the past, the lifestyle of those Buddhist devotees was not complex like this. They were people who lived a simple lifestyle of farming, and so forth. Our books record that especially in the evening of life, there were those who observed virtue (*sīla*) on all four Poya days. So, there is the lay five precepts and the Poya eight precepts. Lay five precepts and Poya eight precepts. What is this Poya eight precepts? This is not a performance where a group of people dress up nicely in white, walk in a procession, and act until a photograph is taken. What is the depth in this? What is recorded in the ancient books is that the lay devotee makes a great sacrifice on the day they undertake the Poya eight precepts. Even when there was great hardship and work, even in those times, that lay devotee would incline toward the practice of an Arahant. That is why it is written in those books: "Today, this night and this day, I shall live in accordance with the practice of the Arahants." The Poya eight precepts contain precisely this effort to live in accordance with their practice, even to a small extent. Many do not even know that. While keeping the Poya eight precepts, the lay devotee gradually—either at the end of life, when freed from children, or when viewing it as another trouble—stops using money, and so on, and observes the ten precepts of a householder (*gahaṭṭha-dasa-sīla*). In the past, the term *anagārika* (homeless one) was also applied to the Saṅgha. One can live as an *anagārika*. By undertaking the ten precepts and proceeding further in this way, we once gave a simile to show that it is from within the lay devotee that the monk emerges. It is from the lay caterpillar that the ascetic butterfly will one day fly into the sky. Pious devotees, do not feel bad when I say "lay caterpillar." Why do I say lay caterpillar? That caterpillar's movement is slow. Its appearance is also not so beautiful. But at some point, there is a great wonder in this world. Watching how a butterfly emerges from a caterpillar is wondrous. Similarly, when the form of a monk emerges from a murderer, a beggar, or a person like that leper, it does not happen just casually. It is not because robes are available in shops. It is as an internal transformation—yes, it is through an internal transformation that one becomes a butterfly. Butterfly wings do not emerge from a caterpillar for no reason.</p>
+<p>Nowadays, there are various confusions in this country, such as the practice of temporary ordination for a week as a business. We have said that through this, the pure idea regarding renunciation (*nekkhamma*) is increasingly lost. With various business ideas, they ordain people for a week or two. The tempering, the value of this is lost. They destroy its value. That is why I say this, not to blame anyone who does so. If necessary, there is the ten precepts of a householder (*gahaṭṭha-dasa-sīla*). If at some point one can break all those ties, abandon those connections, and ordain, that indeed is renunciation (*nekkhamma*). That is the moment—sometimes we use this as a simile: cattle that have been penned in a stall for a long night are waiting to see when the door will be opened; the moment the door is opened, they break out and run. Such is the person who has the intention of renunciation (*nekkhamma-cetanā*). At whatever point those basic requirements are fulfilled, they break out of the lay pen and ordain. That is why it is called "*pabbajjā*". The word *pabbajjā* is there. 'Vaja' (pen/stall) is a word that designates a stall. 'Pra' is a word indicating movement. *Pabbajjā* means breaking out of the pen. It is not an act of indiscipline. Breaking out of the lay pen, one goes to ordination, which is like the open air. That is why it is called "two wings." Taking only the bowl and robe—especially in those days, the monks who observed the ascetic practices (*dhutaṅga*) did not have many things. Even that saying demonstrated the beauty of that practice; it has been shown in those similes. We told the story of the butterfly to show that. Nowadays, the word "butterfly" is used in the opposite sense! Be that as it may, we showed those similes to display the greatness of this practice.</p>
+<p>If necessary, lay disciple Bhanduka could have been ordained in India before being brought here. But why was he brought as a lay disciple? To show, to show this relationship. It is from the laity that the monk is born. It is from them that Arahants are born. They do not just fall from the sky. Many people have forgotten that. This is said not to diminish respect for the Saṅgha, but to make you think of the practical aspect. We think: "Well, we are lay people, we cannot do it. Let us keep doing the work that belongs to lay people." If we remain like that, we will be in saṃsāra forever. Constantly. In every sermon, we say: bring out the perception of "I can" (*haki-saññā*). The perception of "I can." But what we hear most in the country is the perception of "I cannot" (*bāri-saññā*). "We cannot do it, and you cannot do it either. If we cannot do it, how can you do it?" That is the kind of talk going around the country. If I do not say this on a day like today, there seems to be no one else to say it. That is why I speak thus. This is the kind of Dispensation we have before us. At least this group of devotees must try to walk on this path of Dhamma.</p>
+<p>There is another point to be made. The factors of stream-entry (*sotāpattiyaṅga*)—four factors that help in becoming a stream-enterer are mentioned in the Dhamma: "*sappurisa-saṃsevo, saddhamma-savanaṃ, yoniso-manasikāro, dhammānudhamma-paṭipatti*." These help in stream-entry: association with superior persons (*sappurisa*), listening to the True Dhamma (*saddhamma-savanaṃ*), wise attention (*yoniso-manasikāra*), and practice in accordance with the Dhamma (*dhammānudhamma-paṭipatti*). Association with superior persons: the Buddha is the greatest superior person, the noble friend (*kalyāṇa-mitta*). Next, listening to the True Dhamma: at least one has to hear a four-line stanza. Without the association of a Buddha, a disciple cannot become an Arahant. Next is *Yoniso manasikāra* (Wise attention). According to that, one must apply proper reflection. Next is *dhammānudhamma-paṭipatti*—leading one's life in accordance with the Dhamma. In this way, we see the greatness of associating with superior persons. Noble friendship: when Ven. Ānanda estimated this as half of the holy life, how did the Buddha correct that undervaluation? He said: "The entire holy life is association with noble friends." The noble friend is indeed that very same superior person (*sappurisa*).</p>
+<p>To impress this further on your minds, we have given various similes in some sermons. One is the simile of the target board. Those who listened to the sermons in those days might remember. There are six rare occurrences that monks recite at the conclusion of protective chants (*paritta*): "*dullabho buddhupādo lokasmiṃ, dullabho manussatta-paṭilābho, dullabhā khaṇa-sampatti, dullabhā pabbajjā, dullabhaṃ saddhamma-savanaṃ, dullabho sappurisa-saṃsevo*." We painted a small picture of these six occurrences to keep them in mind. Think of a target board. In those days, we used to practice shooting at a target. Nowadays, a marksman shoots. Target boards can have various colors, striking to the mind, with one colored circle inside another. The final aim is directed at the center.</p>
+<p>If we show these six points in that way, indeed we all accept that the arising of a Buddha is rare. It is extremely rare. It is rare beyond imagination: "*dullabho buddhupādo lokasmiṃ*." But even rarer than that is obtaining a human birth (*manussatta-paṭilābho*). We must understand that a human existence obtained during the time of a Buddha's arising is that next circle on the board. Obtaining a human existence during the time of a Buddha's arising is extremely rare. Next, even if one obtains a human existence, obtaining the opportunity of the moment (*khaṇa-sampatti*)—being born in a region where one can understand the Dhamma without being blind, mute, deaf, or having other such disabilities, and obtaining a wise human existence—which is explained as the eight wrong times (*akkhaṇa*), obtaining the true opportunity of the moment free from those eight wrong times is the next point: "*dullabhā khaṇa-sampatti*." Within that opportunity of the moment, obtaining ordination (*pabbajjā*)—amidst a thousand difficulties, with great effort, obtaining that ordination we spoke of. Even if one obtains ordination, listening to the True Dhamma (*saddhamma-savanaṃ*) that helps toward Nibbāna is also just as rare. Next, where does that Dhamma come from? That association with superior persons (*sappurisa-saṃseva*) is ultimately the most wonderful, extremely rare thing mentioned in the Dhamma—that association with noble friends that helps one to hear the Dhamma. It is when that is obtained that one can gather all other practices. That is why "*sappurisa-saṃsevo*" is placed at the beginning.</p>
+<p>Therefore, you devotees must contemplate walking on this path of Dhamma, relying on this association with noble friends. They say that in this Dispensation, they are elevating it more and more. The Dispensation can be preserved through external things and external activities. That is true, it seems to rise. But indeed, this is something that must happen from within. At the very beginning, we declared that entire stanza spoken by the Buddha:</p>
+<p>> *Tumhehi kiccaṃ ātappaṃ,*</p>
+<p>> *akkhātāro tathāgatā;*</p>
+<p>> *Paṭipannā pamokkhanti,*</p>
+<p>> *jhāyino mārabandhanā.*</p>
+<p>You yourselves must do what must be done. The Buddha preached the Dhamma. Arahant Mahinda brought the Dhamma preached by the Buddha and preached it to us. Other Theros preached the Dhamma preached by Arahant Mahinda. That Dhamma goes along, passed from hand to hand like a basket. But if we do not put it into practice...?</p>
+<p>That is the deep meaning of this stanza: "*Tumhehi kiccaṃ*"—you yourselves must do what must be done. "*Akkhātāro tathāgatā*"—not only the Tathāgatas, but other preachers too only point it out. Next, "*paṭipannā pamokkhanti*"—only those who walk in this practice attain Nibbāna. Not by merely committing it to memory. If lay devotees walk in that practice at some level, as we mentioned, and if that is the target, then when keeping the daily five precepts and the Poya eight precepts, a shadow of the practice of an Arahant emerges. In that way, gradually, next comes the householder's ten precepts. Next is ordination. This is a journey that goes step by step. The Buddha has often declared, in discourses like the *Anamatagga Saṃyutta*, that bringing an end to this suffering (*dukkha*) of saṃsāra through that path is an extremely rare thing. Why did sixty monks become Arahants upon hearing a single discourse? Because the Buddha described the danger and length of this saṃsāra with unimaginable similes.</p>
+<p>When the length of an eon (*kalpa*) is described, it is astonishing. It is terrifying. You devotees must have heard: if there is a solid stone mountain, one league (*yojana*) in length, width, and height, and a person comes once every hundred years and wipes it with a piece of silk cloth, the mountain would be worn away by that wiping, but the eon would not yet have ended. How amazing! Such a long time. That is why the Buddha says: because of ignorance and craving (*taṇhā*), you and I have been traveling for an extremely long time. If the arising of a Buddha is rare, if the human existence obtained through that arising is rare, if that human existence is complete with the opportunity of the moment, if ordination has been obtained, and if the Dhamma is heard—then what must be done next is what we must contemplate. Accordingly, when we speak of the Buddha on a valuable day like today, since He said in His own words that the offering of practice (*paṭipatti-pūjā*) is more valuable than material offering (*āmisa-pūjā*), even today we must think not in terms of this material side. We must offer to Arahant Mahinda precisely through practice.</p>
+<p>If, through these few words, you devotees have gained some courage and determination to carry this Dispensation into the future, I consider that as the fruit of this sermon. Today, this pious gathering spent the day observing a valuable virtue and engaging in Dhamma-meditation. You have heard from us a sermon that helps in all activities, including tranquility (*samatha*) and insight (*vipassanā*). Relying on this sermon, without being discouraged, walking on this path of Dhamma, may all of you receive the strength and power to quickly approach the noble and supreme deathless Nibbāna through the penetration of the paths and fruits of Stream-entry (*sotāpatti*), Once-returning (*sakadāgāmi*), Non-returning (*anāgāmi*), and Arahantship. While praying thus, if there are any beings from Avīci to Akaniṭṭha who wish to rejoice in this merit of listening to the Dhamma, through that rejoicing, may they attain peace in the supreme deathless Nibbāna through the Bodhi of their aspiration. Let us share these merits by reciting these stanzas:</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_064.html" class="doc-btn">← Previous Sermon (064)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_066.html" class="doc-btn">Next Sermon (066) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

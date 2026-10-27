@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 108 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_107.html" class="doc-btn">← Previous Sermon (107)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_109.html" class="doc-btn">Next Sermon (109) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 108</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_108_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_108_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_108_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #108</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.97)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Na antalikkhe na samuddamajjhe,</p>
+<p>na pabbatānaṃ vivaraṃ pavissa;</p>
+<p>na vijjatī so jagatīpadesoti,</p>
+<p>yatthaṭṭhito na ppaheyya maccu.</p>
+<p>From:</p>
+<p>Dhammapada 127 (Pāpavagga)</p>
+<p>Dear Listeners,</p>
+<p>The fear of death constantly exists within every living being. There is no effort that humans do not make, no means they do not employ, to escape death and live even for a single day. Nevertheless, when death inevitably presents itself in accordance with some grave karma, every such effort and stratagem becomes futile. Today, we intend to deliver this Dhamma sermon based on a stanza and a story that illustrate this natural law (*dhamma-tā*).</p>
+<p>When our Teacher of the Three Worlds, the Buddha, was residing at the Nigrodharama in Kapilavatthu, he uttered this stanza concerning Suppabuddha the Sakyan. Pious listeners, this Suppabuddha the Sakyan was the Buddha's own father-in-law, the father of Princess Yasodhara, and also the father of Venerable Devadatta. Although he was his father-in-law, he harbored a deep animosity toward his son-in-law. He thought, "He abandoned my daughter to go forth on the Great Renunciation, and he ordained my son, making him an enemy." Due to this cultivated animosity, one day this Suppabuddha the Sakyan thought, "I will not allow the Buddha to walk for alms." If the Buddha had been invited to an alms-giving at a certain place, Suppabuddha started holding a drinking party on the road along which he would travel. In short, he gathered a crowd and began drinking alcohol right in the middle of the road.</p>
+<p>As the Buddha was arriving with the community of monks at the time of alms-round, people came and said, "The Blessed One is arriving." Suppabuddha, however, said, "Tell him to go by another road; I am the elder," and did not clear the way, despite those people requesting him several times. Consequently, the Buddha turned back. Then, Suppabuddha the Sakyan sent a spy to listen to what the Buddha would say. The Buddha displayed a gentle smile. As was customary, Venerable Ānanda asked, "What, Blessed One, is the cause for displaying this smile?" Thereupon, the Buddha declared, "Do you see this Suppabuddha the Sakyan? Having committed such a grave karma, on the seventh day from today, right by the staircase on the ground floor of his palace, the earth will split open, and he will plunge into Avīci, the great hell." Having heard this, the spy went back and told Suppabuddha the Sakyan. Suppabuddha thought, "Well, even if that is so, I will not let it happen there. I must act in such a way as to accuse the Buddha of lying." Thinking thus, he had food and drinks brought up to the topmost floor of his seven-storied palace and made arrangements to spend the entire seven days on the top floor. He had the staircases removed, locked the doors on every floor, and stationed guards at the doors, instructing them, "Even if by mistake I attempt to go downstairs, prevent me."</p>
+<p>When the Buddha heard about these precautions, he declared that even if Suppabuddha the Sakyan flew into the sky, went out to sea in a ship, or hid amidst the mountains instead of staying on the top floor of his palace, that event would happen exactly as foretold. It was this very meaning that he expounded to the community of monks on that occasion through the stanza we have taken as our theme:</p>
+<p>> *"Na antalikkhe na samuddamajjhe,*</p>
+<p>> *na pabbatānaṁ vivaraṁ pavissa;*</p>
+<p>> *na vijjatī so jagatīpadesoti,*</p>
+<p>> *yatthaṭṭhito na ppaheyya maccu."*</p>
+<p>The Buddha declared this with absolute certainty, stating that whether in the sky, in the middle of the ocean, or by entering a mountain cleft, there is no place in this world where, abiding, one would not be overcome by death.</p>
+<p>When the seven days were completed, at the exact time of day when the Buddha had been walking on his alms-round and that Sakyan had blocked the road, the Sakyan’s state stallion—the auspicious horse used by Suppabuddha the Sakyan—suddenly went wild on the ground floor and began thrashing against the walls. Hearing this noise, Suppabuddha the Sakyan asked, "What is this commotion?" and was told that the horse had gone wild. That horse could be tamed only by Suppabuddha the Sakyan. Therefore, he felt he must go and subdue the horse. As he approached the door, it opened by itself. Next, the guards also pushed him in that direction. Furthermore, it is said that even though the staircases had been removed, they were somehow put back in place, perhaps pushed back and forth by some natural law (*dhamma-tā*), because that karma had to bear its fruit. In this manner, he was propelled down through all seven floors, and exactly as predicted by the Buddha, the moment he reached the foot of the staircase, the earth opened up right there, and he plunged into Avīci hell. Thus it is recorded in the Dhamma.</p>
+<p>Even when the Buddha uttered that stanza, many attained comprehension of the Dhamma based on that event. However, someone in this day and age might doubt this occurrence. At first glance, from this story of the Dhamma, we are led to believe that by blocking the path of the Buddha, that Sakyan paved the way to hell instead of Nibbāna. Thus, while others paved their way to Nibbāna by taking refuge in the Buddha, this sinful Suppabuddha the Sakyan paved his way straight to hell by preventing the Buddha from going on his alms-round. Insulting the Buddha, which is the karma of abusing the Noble Ones (*ariyūpavāda*), is shown to be a highly grave karma. Insulting Noble Ones such as Buddhas, Paccekabuddhas, and Arahants has very severe consequences, as is pointed out.</p>
+<p>Particularly now, some might not believe this story of going to hell. In our Dhamma literature, there are countless references to the deva worlds and brahma worlds. The pleasures and luxuries of the deva and brahma worlds are mentioned. We read about divine garments, divine food, and divine mansions with great pleasure. Even though many believe in those things, especially in this era, they are reluctant to believe in a realm of Yama or a hell, or the details concerning them. They do not even want to hear about them. Yet, that is precisely the place to which most people belong. Drawing from the Dhamma stories in our literature, we hope next to highlight several points declared by the Buddha regarding the nature of suffering (*dukkha*) in hell. On one occasion, the Buddha addressed the community of monks:</p>
+<p>"Monks, if one were to speak of a place that is entirely undesirable, painful, and disagreeable, one would be referring to hell. So painful is the nature of this hell that it is difficult even to give a simile for it," declared the Buddha.</p>
+<p>Then a certain monk asked, "But, Blessed One, is it possible to give a simile?"</p>
+<p>"Very well, then, I will give a simile," he replied. Here is the simile given:</p>
+<p>"Monks, suppose a criminal is brought before a king. The king tells the executioners, 'Take this man and strike him with a hundred spears in the morning.' They pierce him with a hundred spears in the morning. When they return after doing so, is that man still alive? 'Yes, Venerable Sir,' they say. Then the king says, 'In that case, strike him with another hundred spears at noon.' After they report that he is still alive, he is struck with another hundred spears in the evening. Monks, when asked whether that man who receives three hundred spear strikes experiences suffering (*dukkha*) and grief, they reply, 'Yes, Venerable Sir, what need is there to speak of three hundred spear strikes? Even a single spear strike is extremely painful to a person.'"</p>
+<p>Thereupon, picking up a small pebble in his palm, the Buddha asked, "Is this pebble larger, or is the great Himalaya mountain?"</p>
+<p>"Venerable Sir, this pebble is extremely small; it cannot even be compared to the Himalaya mountain, which is so vast."</p>
+<p>Then the Buddha declared, "Just so, monks, the suffering (*dukkha*) experienced by this man from three hundred spear strikes is like the pebble in my hand. The suffering (*dukkha*) in hell is a vast suffering (*dukkha*) like the Himalaya mountain." That is how he expressed it on that occasion. There are further Dhamma portions related to this. In one place, the Buddha describes the nature of suffering (*dukkha*) in hell step-by-step. There, mention is made of the wardens of hell (*yamapalla*) who assist in meting out retribution to the hell-beings who are ready to receive the fruits of their evil karma. They pierce the two hands and two feet of a person fallen into hell with red-hot iron spikes, and they also pierce his chest. This is called the five-fold transfixing with red-hot iron spikes. It is that kind of suffering (*dukkha*), that kind of punishment that is described.</p>
+<p>Furthermore, it is said that the wardens of hell lay a being fallen into hell down on the ground and slice him with axes. There, it is described that no matter how much suffering (*dukkha*) he receives, beyond what we can even imagine, as long as that karma is not exhausted, that person does not die but continues to suffer. For us, it is unimaginable. A person's life is lost with a small blow. Yet, because of the force of karma, because one has to undergo suffering, the force of karma does not disappear without yielding its fruit; so the Buddha has declared. This, then, is a way in which karma yields its fruit. Even if one dies, the body arises again. In those realms of yakkhas, realms of petas, and hells, the four elements are prepared in ways beyond our imagination to exhaust the momentum of karma. To exhaust karma, these four elements—earth, water, fire, and air—are ready.</p>
+<p>In an unimaginable and wondrous way, those spontaneously born bodies called *opapātika* arise in accordance with karma. Having experienced that sensation (*vedanā*), they subsequently die. They are born again. Once more, bodies arise. That is how it is. Thus, just as they are laid down and sliced with axes, the wardens of hell also slice them with adzes. Next, it is shown that they are harnessed to a chariot and driven back and forth on a ground of red-hot iron. Furthermore, it is shown that they are thrown into a copper cauldron. They are thrown into a boiling, blazing copper cauldron. Burning, the hell-being goes up and down in it. Yet he does not die immediately. He undergoes suffering. He goes up and down and sideways in this manner. It is in this way, according to various evil karmas, that the Buddha has described how hell-beings undergo suffering (*dukkha*).</p>
+<p>After enduring suffering in this manner, when they plunge into the Great Hell, it is even more severe. The Great Hell is mentioned as a place of great wonder, beyond our ability to imagine. It is described as being enclosed by iron walls about a hundred leagues (*yojana*) in length, with red-hot iron above and below, and the ground divided like rooms. The hell-being burns on this red-hot iron. A sheet of flame comes from the eastern wall and strikes the western wall. A sheet of flame comes from the western wall and strikes the eastern wall. A sheet of flame comes from the southern wall and strikes the northern wall. A sheet of flame comes from above and strikes the ground below, and from the ground upwards. In this way, there are sheets of flame from every direction. In the midst of the flames, in accordance with their karma, crying and wailing, undergoing terrible suffering (*dukkha*), they meet with death (*maraṇa*). Then they take birth (*jāti*) once again.</p>
+<p>While they are undergoing suffering (*dukkha*) for a long time in this manner, suddenly, it is said, the eastern door opens. Thereupon, this hell-being runs in that direction, thinking of escaping. Even as he runs, his skin, flesh, and sinews are entirely burnt. As he nears it, the door shuts again. Next, he runs in this direction toward the western door. In this way, he undergoes a wondrous mass of suffering (*dukkha*). Going from there, he next falls into what is called the Gūtha Hell. This Gūtha Hell is like a pit filled with excrement. It is said that inside it, needle-like worms with mouths like the point of a needle pierce the skin, flesh, sinews, and bones of that hell-being, and eat his bone marrow. Such is the grave suffering (*dukkha*) they undergo.</p>
+<p>Then, leaving that place, they fall into a hell of hot ashes, called the Kukkuḷa Hell. Falling into the Kukkuḷa Hell in this manner, and going from there, you, pious listeners, may also have heard about the thorny silk-cotton tree. It is called the Simbalī forest. A forest of silk-cotton trees. Hell-beings are made to climb up and down these silk-cotton trees with thorns about sixteen inches long by those wardens of hell. Next is described the Asipatta forest. The Asipatta forest means there are trees whose leaves are just like swords. When they fall, the hands and feet of those hell-beings, those sinners, are cut, and their noses and ears are sliced off by those falling leaves. Next, mention is made of a flowing river called Vetaraṇī. They fall into it, and along its banks are sharp, cutting weapons like razor blades. While being swept away in this, the hell-wardens haul these hell-beings out with a fishhook. There it is described that when they are asked, "What do you want?" and they say, "I am hungry," red-hot iron balls are thrust into their mouths. Burning their mouths and stomachs, those balls pass out through the lower tract, taking the intestines along with them. Next, if they say they are thirsty, molten copper is poured into their mouths. It is as a place of such unspeakable, wondrous suffering (*dukkha*) and pain that the Buddha describes it in the Suttas.</p>
+<p>That is how the Buddha describes the pain that must be endured in hell. Next, on one occasion, the lifespan in hell is also mentioned in a Sutta discourse. This is found in the Kokālika Sutta. Kokālika was the chief disciple of Venerable Devadatta. Developing a deep animosity toward the two chief disciples, Venerable Sāriputta and Venerable Moggallāna, that disciple went to the Buddha to slander them, saying that both Sāriputta and Moggallāna had evil intentions and were wicked. The Buddha said, "No, Kokālika, do not say so. They are of virtuous character." Despite being told this repeatedly two or three times, it was not long before boils the size of mustard seeds broke out on the body of the monk Kokālika. They grew to the size of mung beans, then chickpea size, then emblic myrobalan (*nelli*) size, and then wood-apple (*beli*) size. Starting as large abscesses, they turned into massive wounds from which blood and pus flowed, and he passed away right there.</p>
+<p>At the time of his passing, when he died, Sahampati Brahma Raja came to the Buddha that night and revealed this matter, saying that Kokālika had died and was born (*jāti*) in the Paduma Hell. The following day, the Buddha announced this to the community of monks: "Last night, Sahampati Brahma Raja came and told me that the monk Kokālika, due to the unwholesome karma of harboring animosity toward Sāriputta and Moggallāna, finally went and was born in the Paduma Hell." Then a certain monk asked, "Venerable Sir, how long is the lifespan in the Paduma Hell?" Thereupon, the Buddha declared, "Monk, it is not easy to measure the lifespan of the Paduma Hell in terms of so many hundreds of years, or so many hundreds of thousands of years." The monk then asked, "Is it possible to give a simile?" Saying "It is possible," the Buddha then gave a simile. It must have been a simile familiar in the Kingdom of Kosala at that time: suppose there is a cart filled with a large quantity of sesame seeds, and a person removes one sesame seed once every hundred years. That cart of sesame, that sesame cart, would be emptied sooner. Yet the Abbuda Hell—even though the question was about the Paduma Hell, the Buddha first declared the lifespan of the Abbuda Hell, which is shorter than that of Paduma. Explaining this, the Buddha stated that from the Abbuda Hell onwards, the lifespan increases twenty-fold progressively through a series of hells named Abbuda, Nirabbuda, Ahaha, Ababa, and so forth, with the Paduma Hell being mentioned at the very end.</p>
+<p>Thus, even in the Abbuda Hell, that hell-being has to live for such a long duration. Next is the Paduma Hell. In terms of time, it is an unimaginably long period; it is this suffering (*dukkha*) of hell that the Buddha points out in these Suttas. Now, in this day and age, some educated people might think these are later additions, or that the Buddha merely carried forward the mythical beliefs of the past. However, what we have to say is this: if someone believes in those divine mansions—the arising of mansions and the arising of bodies in a manner suitable to enjoy those pleasures according to the force of wholesome karma—this is actually a domain within the reach of those with direct-knowledge (*abhiññā*). Everyone has heard that three types of eyes are mentioned in the Dhamma of this Dispensation: the physical eye (*māsa-cakkhu*), the divine eye (*dibba-cakkhu*), and the eye of wisdom (*paññā-cakkhu*). Ordinary people see only with the physical eye, the eye of flesh. Even if other instruments are used, only that physical eye is functional. To truly develop the divine eye, one must cultivate the absorptions (*jhāna*). Next, the eye of wisdom is even deeper; it is the eye that shows the actual natural law of Dependent Arising (*paṭicca-samuppāda*), which brings about Nibbāna. Only a Buddha can bring to light that eye of wisdom, the eye of wisdom (*paññā-cakkhu*). However, yogis who had developed the divine eye also existed before the time of the Buddha. In that very Dhamma, according to the words of the Buddha, it is mentioned that there were yogis who could see back into past births (*jāti*) by hundreds of thousands, even millions. Likewise, there were those with direct-knowledge (*abhiññā*) who could travel through the air.</p>
+<p>Those with direct-knowledge (*abhiññā*) have seen those things—the deva worlds, the brahma worlds, and the nature of suffering (*dukkha*) in the plane of misery. Thus, the Buddha did not include these in the texts merely because they existed in the past; those yogis also saw them to some extent, though they did not see them with perfect clarity. When speaking of the Buddha's divine eye, it is mentioned as an exceptionally pure divine eye. Here, "purity" means that the karma that brought about birth (*jāti*) in those deva worlds and other realms is seen with absolute clarity. Furthermore, it became directly clear to the Buddha that there is no self (*attā*) here, and that these arise solely through the momentum of karma. However, some of those other possessors of direct-knowledge (*abhiññā*) thought, "There must be a creator for this." When a spontaneously born body (*opapātika*) arose, they thought, "Perhaps Brahma or someone else must have created this." Or, concerning the infliction of suffering in the plane of misery, they thought, "This is happening because some almighty being decreed it."</p>
+<p>But the Buddha declares that all of this happens through karma, in accordance with karma. A sight one can see in ordinary life is moths leaping into a lamp. Moths as well as grasshoppers leap into it. They see their companions dying in it. Yet they still leap. They leap into the fire. In this manner, forces that exhaust the momentum of karma operate in both animate and inanimate things. Now, in the story mentioned earlier, why did the horse go wild? The cause of the horse's frenzy was the result (*vipāka*) of that unwholesome karma generated by Suppabuddha. It was the operation of that very unwholesome karma. It was that process operating through the horse that finally dragged Suppabuddha the Sakyan down. In that manner, beyond our comprehension, even in these times, in the human world we often take seriously only the externally visible causes of what are deemed "accidents." Underlying them, there can be the karmic momentum of the individuals concerned. They are drawn into them. Even by a lightning strike, the four elements stand ready to yield the fruit of that karma, as a result of the karmic force generated by our mind. Result (*vipāka*) means ripening.</p>
+<p>The karma committed by that Sakyan ripened over seven days. It is a comprehensible fact that at the exact moment the Buddha walked on his alms-round, at that very instant, the horse went wild and that process began. There is a certain wheel of karma (*kamma-cakka*) operating within this mind. Through this consciousness (*viññāṇa*), that wheel of karma often turns in cycles of seven—such as seven days. That is the exact point of the ripening of that karma. This did not happen due to any curse from the Buddha. The Buddha simply saw it. He saw that the grave karma committed would ripen within seven days and yield its fruit in this manner. He merely declared it as a prediction. He did not curse him. In the same way, regarding those hell-beings, we have to understand the same thing: it is because of this that the Buddha constantly emphasizes that we must avoid unwholesome deeds such as killing living beings and stealing. This is not confined to this world alone. Now, ordinary people regard only what falls within the range of their physical eye as the world, as the universe.</p>
+<p>Only those planetary worlds visible from here are regarded as the world. Now, they are gradually realizing that this is a misconception. But there are infinite, boundless world-systems (*loka-dhātu*) that fell within the range of the Buddha's knowledge. Next, what is even deeper is the natural law (*dhamma-tā*) concerning this karma. In the statement, "Mind precedes all phenomena, mind is chief, mind-made (*manopubbaṅgamā dhammā manoseṭṭhā manomayā*)," the Buddha has given the foremost place to the mind. The mind goes ahead. The mind is chief. We must also reflect upon the word *manomayā*—mind-made. These are created by the mind itself. In the word preparations (*saṅkhāra*), along with the meaning of "putting together" or "arranging," there is also a deeper meaning associated with karma; there is a certain force or power generated through our force of intention.</p>
+<p>In the past, perhaps even artists illustrated this with the example of a potter: before a pot is made, a thought about it arises first. It is in accordance with the thought that the pot is fashioned. Likewise, there is a certain force in this karma that arranges the four elements accordingly. That arranging is done with the help of various other things. In the human world, things are done by using other tools and materials in production. It is only those things that we regard as creations. But the Buddha points out, in this regard, the spontaneously arising bodies—though called spontaneous, what lies underneath is karma. The momentum of karma subsequently emerges as another body corresponding to it.</p>
+<p>Now, as you pious listeners know, when speaking of the plane of misery, four planes of misery are mentioned in the Dhamma. First is the animal realm. We spoke of those grasshoppers and moths. Even more than that, consider how animals devour one another in the great ocean and in the forest. The natural food of each animal is other animals. If a creator god created this, there is no godliness in such a god. But indeed, they are born in those respective realms of becoming (*bhava*) according to the momentum of karma. The Buddha expressed this matter so deeply that on one occasion he declared, "Monks, if there is no karma to ripen in a certain becoming (*bhava*), that becoming (*bhava*) does not arise (*jāti*)." In short, it is mentioned in some Dhamma stories that when a Brahma is born, the mansion corresponding to him has already arisen. In accordance with karma, the appropriate environment—the mansion—is arranged. The body is also like that. Becoming (*bhava*) itself is of that nature. Thus, in the animal realm, various forces of karmic momentum are exhausted according to the karma committed by that being. This is something we can see with our own eyes.</p>
+<p>Similarly, when speaking of those state of existences (*bhava*) like petas, it is said that birds like hawks, crows, and vultures also come and peck at these beings, causing them wondrous pain. Even though they are not visible to the physical eye of some, at least to some extent, one can infer the existence of these peta realms as a rational conclusion; some even get to see them in an indirect manner. Nowadays, through stories of exorcism, mesmerism, and hypnotism, these things are revealed to some extent. Spirits, peta-beings are mostly realms of petas with subtle bodies that undergo suffering (*dukkha*). That exists in close association with the human world itself. Sometimes, the Dhamma portions that speak of those peta realms where they undergo great suffering (*dukkha*) as mere skeletons are recorded in the Dhamma book called the Petavatthu. Sometimes, because of developing attachment to their homes, due to that attachment, due to craving (*taṇhā*), greed, and other evil deeds contrary to the five precepts, they are born (*jāti*) in peta existences (*bhava*) and undergo terrible suffering and hardships. Sometimes, even the bodies of those petas are described. They are called "filth-mouthed" (*asūci-mukha*), having a throat as narrow as a needle and a massive belly. This massive belly has to be nourished through a throat as narrow as a needle. Furthermore, when they go in search of food, they do not find it. Sometimes, when they go in search of food, it turns into excrement instead of food. When they go near rivers in search of water, it becomes a river of blood, or else it dries up. In this manner, they return with cries of distress. They run in this direction, they run in that direction. Thus, it is mentioned in the Dhamma that the suffering (*dukkha*) endured in the peta realm is infinite. You pious listeners can occasionally infer the reality of these peta realms to some extent through various phenomena like spirit possession.</p>
+<p>It is the same with the realm of yakkhas and the realm of asuras. The realm of asuras refers to beings with the traits of yakkhas and rakkhasas. They do not enjoy pleasure either. Yet they remain in those states for a long time. In accordance with the very saṁsāric habit of the cruelties they committed in the human world, they devour one another. Even as they devour one another, their bodies form again. They devour one another again, for infinite, boundless times. It seems very wondrous to us when we speak of this, but it is something that happens on the basis of these four elements. This was seen by yogis. Those with direct-knowledge (*abhiññā*) see these things. In a way beyond our imagination, they are created according to the momentum of karma. In accordance with the karmic forces present in this consciousness (*viññāṇa*), form (*rūpa*) is created. Next, they experience that suffering (*dukkha*). Having experienced suffering (*dukkha*), life continues as long as they must endure the suffering (*dukkha*) related to it. Even you, pious listeners, might sometimes see in hospitals—though it is not an absolute proof—doctors thinking, "This patient will die." Yet he does not die. He neither lives nor dies. He undergoes suffering (*dukkha*). He suffers. We call this "languishing in pain." It is that kind of natural law (*dhamma-tā*) that exists in those peta realms, yakkha realms, and so forth; they live there until that karma is exhausted. The Buddha has declared that karma does not exhaust itself without yielding its fruit (*vipāka*). The committed karma never exhausts itself without yielding its fruit (*vipāka*). It is the manner of yielding fruit (*vipāka*) that the Buddha declares there. Before it yields its fruit, or rather, before the karma is fully ripened, one can perform certain counter-actions to reduce its power, or else to make it ineffective (*ahosi-kamma*).</p>
+<p>However, for those grave karmas that yield their fruit with absolute certainty, which inevitably yield fruit, such as certain karmas of abusing Noble Ones (*ariyūpavāda*) and the weightiest karmas with immediate retribution (*ānantariya-kamma*), no one can provide a remedy. There are karmas so grave that no one can remedy them, which are called *ānantariya-kamma*. Throughout the Dhamma of the Buddha, and what we constantly remind you of, is to practice the Dhamma diligently and to perform wholesome deeds. This is not something said to frighten anyone. The Buddha is merely describing the nature of the world. Within this world, as we believe, there exist deva worlds and brahma worlds; it is wrong to discard them as mere fairy tales. Divine mansions arise, and in such-and-such ways Brahmas come and worship the Buddha, and so forth. It was through the force of wholesome karma that they obtained those. If so, there must also be a fruit (*vipāka*) for those unwholesome deeds. Where are they experienced? Some might say they exist only in this world. But according to the Buddha's knowledge and the things seen by those with direct-knowledge (*abhiññā*), there are, as mentioned, peta realms, yakkha realms, and ultimately, hell. The most severe place is hell. In that hell, in the manner described, that hell-being undergoes intense torment. Yet his life is preserved. He undergoes painful sensations as long as that karma is being exhausted. It is this condition that is called the fear of saṁsāra (*saṁsāra-bhaya*). Now, among the objects of spiritual urgency (*saṁvega*) in saṁsāra, the fear of the plane of misery is one. Birth (*jāti*), aging (*jarā*), sickness, death (*maraṇa*), and next, the fear of the plane of misery. Truly, a Buddhist must take these matters to heart regarding the dangerous nature of saṁsāra—that we will have to face things of this nature.</p>
+<p>Everyone has heard that even though Venerable Moggallāna attained such direct-knowledge (*abhiññā*), due to the unwholesome karma of killing his parents in the past, he was boiled in Avīci hell for a very long period, for aeons (*kalpa*). Likewise, there are numerous other stories. According to the evil karma, it can be for aeons, an unimaginably long time. That is why the Buddha said that even a simile cannot be given. So, if we reflect upon karma, we can see that the danger of this saṁsāra lies within this force of our intention. If we do not direct this properly, if we turn toward the unwholesome side, we cannot say how long the karma generated at every such moment will subsequently yield its fruit. It is that dangerous. Sometimes, to use a simile, having a mind arisen in us, having a mind, is like being given the steering wheel of a fast-moving vehicle. If we direct this correctly, if we direct the mind and its associated faculties properly, we can create a path that brings us closer to a happy destination as well as to Nibbāna. But if we break the five precepts, disregard other virtues like moral virtue (*sīla*), and act under the subjection of the roots of defilement—greed, hatred, and delusion—we will have to experience their fruits (*vipāka*) in those aforementioned places: in the animal realms, peta realms, asura realms, planes of misery, and hells. That is what the Buddha points out in this saṁsāra. The wheel of karma keeps on turning and turning. That wheel of karma yields its fruit even to Paccekabuddhas and Arahants in certain ways. Dhamma stories like those about Venerable Moggallāna are well known. It is said that through the Buddha-power of the Buddha, in a miraculous way, the boulder rolled down by the monk Devadatta was blocked by other rocks appearing in front of it. Yet, a splinter from it came and struck the foot of the Buddha. Thus, there is a nature in this karma to yield its fruit even if only by a scratch or graze. Karma is that severe. If karma yields its fruit even to Buddhas and Arahants, what need is there to speak of us? That is what we have to consider.</p>
+<p>So, we did not relate all these as ordinary stories for the sake of enjoying their narrative flavor. Indeed, there is nothing to enjoy in the story of hell. As for stories of the deva worlds, everyone listens to them with desire. Not only do they believe them, but they also perform meritorious deeds with those aspirations foremost in mind. But when committing those evil deeds, most people do not even think about these planes of misery. Either they laugh at them or make fun of them, saying, "How can these things happen as described?" But the Buddha was merely declaring the actual condition existing in this universe. There are such wondrous things. There are such wondrous places where karma yields its fruit (*vipāka*). Therefore, through all of this, we must reflect that what we need is to develop that very fear of saṁsāra (*saṁsāra-bhaya*). It is through that fear of saṁsāra (*saṁsāra-bhaya*) that the Buddha declared the way to escape from this wheel of karma. To speak of escaping from the wheel of karma—it is true that their fruits (*vipāka*) exist even for one who is an Arahant or a Buddha. However, the Buddhas presented to the world a method to dry up the karmic forces present within this mind. For this karma is a mental force that goes hand in hand with that dogma of self-illusion (*sakkāya-diṭṭhi*), with the feeling of "I" and "mine."</p>
+<p>That is why it is said, "With ignorance as condition, preparations (*avijjā-paccayā saṅkhārā*)." Now we turn to the deeper aspect of the Dhamma. It is because of ignorance that these preparations (*saṅkhāra*) accumulate. Within that ignorance lies that very sense of "I-ness"—the feeling of "I" and "mine." Because of this, based on greed, hatred, and delusion, one is prompted to engage in various processes of action through mind, speech, and body. Those processes are inevitably connected to the fruit (*vipāka*). It generates a certain force, almost like releasing it into the universe. That does not end without yielding its fruit; as a way of yielding fruit, name-and-form (*nāmarūpa*) subsequently arises (*jāti*) corresponding to whatever place it started, providing the sensations (*vedanā*) in accordance with it.</p>
+<p>That is how it is. Thereupon, the Buddha explained that to be liberated from this, one must abandon that aforementioned sense of "I-ness," or the perception of a self (*attā*). When that is removed, one sees the process of this world as a mere process. It is equanimity (*upekkhā*) that assists there. One sees the condition of the world with equanimity. Now, it is because of our feeling of "I" and "mine" that greed or hatred arises, and the delusion born from them, according to which we employ mind, body, and speech. But if we see that all of these occur due to a collection of causes and conditions, we can develop equanimity, a state of neutrality, based on that. It is those instances of developing this deeply that are pointed out in the Dhamma. By walking the Noble Eightfold Path, one must withdraw the mind from that tangle of karma, realizing through this Dependent Arising (*paṭicca-samuppāda*) that this arose due to a multitude of causes and reasons. Coming through such a long period in this saṁsāra, a multitude of karmic seeds have accumulated in this consciousness (*viññāṇa*), gathered as saṁsāric habits. Our behavior corresponds exactly to them. If we do not take sufficient countermeasures against them, they tend to become active. But if we look at every such instance with wise reflection, we can control them in the manner declared by the Buddha.</p>
+<p>The first step in that is moral virtue (*sīla*). What is done through moral virtue is this: if someone has come with a saṁsāric existence inclined and prone to killing living beings, he easily turns to killing living beings. But without giving free rein to that karma, he uses wisdom there and disciplines himself through that Dhamma given by the Buddha. That is why we say that we use the Wheel of Dhamma (*dhamma-cakka*) to break the wheel of karma (*kamma-cakka*). Within the human mind, there is a special power called wisdom. That is what is called understanding (*paññā*). The seed of that understanding lies within this matter of wise attention (*yoniso manasikāra*), which means reflecting wisely. Therefore, those of you who are yogis must especially consider that the beings of the world, the beings who fall into suffering (*dukkha*) in saṁsāra, are engaged in unwise attention (*ayoniso manasikāra*), which means incorrect reflection. But if we turn it toward the correct way of reflecting, which the Buddha pointed out as wise attention (*yoniso manasikāra*), directing it toward the right side of reflection, then we can change our processes of action. Controlling thoughts, controlling speech, controlling actions. It is through that that we gradually escape from the path of the plane of misery and next secure some opportunity to calm our minds. From then on, it is a matter of seeing the actual condition of this world through insight (*vipassanā*). One sees every such thing with equanimity (*upekkhā*) as the fruit (*vipāka*) of a karmic momentum. One does not go to add further to that fruit (*vipāka*).</p>
+<p>Now we usually blame others. But we do not see the karmic forces within this. Through the momentum of karma, not only external things but even human beings are put into action. Sometimes, the killer who brings about one's death (*maraṇa*) becomes like a weapon for oneself. Just like a weapon to oneself. Now, in this case too, the horse going wild—through that, karma was put into action. In that manner, some people go wild due to our own karmas. Through that frenzy, and next through our reaction to it, the tangle of karma often continues further. That is why it is said, "a tangle within and a tangle without"; these two tangles are ultimately tied together. The Buddha points out, "This is merely the wearing away of the momentum of karma." Directing the mind toward that wearing away, without adding to it, without accumulating anew, he tells us to turn it toward equanimity (*upekkhā*). It is in this way that one can gradually escape from this saṁsāra. Through that practice of moral virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*) pointed out by the Buddha, without being caught by those grave forces of karmic momentum, one sees everything as a natural law (*dhamma-tā*). One maintains the mind in that natural law (*dhamma-tā*). Next, the Four Noble Truths mean that all of this is suffering (*dukkha*), and the cause of this suffering (*dukkha*) is craving (*taṇhā*). The cause of suffering (*dukkha*) means that it is because of that craving (*taṇhā*) that attraction or aversion exists among the people of the world.</p>
+<p>Within the view (*diṭṭhi*) of "I," what goes hand in hand with it next is "mine." Thereupon, the multitude of problems that arise and spring up because of those two is what the Buddha tries to restrain through the precepts. Turning to killing living beings, stealing, sexual misconduct, lying, and so forth, occurs because those roots of defilement—greed, hatred, and delusion—are present within. Through them, entering further and further into the tangles of karma, one can never untangle this. Instead, the Buddha declares that we should allow them to wear away through equanimity (*upekkhā*). There is no new karma; instead, one sees this as a mere process, a mere sequence of action. It is the calming of it right then and there. Going toward that calming is what is called Nibbāna here. Thereupon, if at any point that aforementioned firm grasping (*upādāna*) of "I" and "mine" is removed, along with it, that responsibility is also removed. Performing a karma means accepting a certain responsibility. That is what is called grasping (*upādāna*)—holding on. Because of grasping (*upādāna*), the responsibility of the karma performed also falls upon oneself. It is because of this that the fruit (*vipāka*) is said to be bound up with the karma itself. It ripens at some point. Sometimes it takes aeons for it to ripen. Until then, like a being undergoing suffering (*dukkha*) in hell, one is subjected to a multitude of sensations (*vedanā*).</p>
+<p>It is by understanding that suffering (*dukkha*) of saṁsāra that the Buddha showed us the way to escape from this saṁsāra. This saṁsāra is of a wondrous nature—just as it is said, "a tangle within, a tangle without"—tangles on the inside and tangles on the outside. This is a mass of tangles. As a way to escape from this, by being established in moral virtue (*sīla*), cultivating concentration (*samādhi*), and developing wisdom (*paññā*), one must see its actual condition as it really is (*yathā-bhūta*). Here there is only a mere mass of suffering (*dukkha*). Truly, there is nothing to be taken as a self (*attā*) here. There is nothing to be set apart as a self (*attā*). Here there is only a multitude of causes and conditions. There is a certain process. Its results subsequently exist in accordance with it.</p>
+<p>By seeing that condition and bringing the mind to equanimity (*upekkhā*), one is able to attain this liberation. Thereupon, the secret of that lies within the Noble Eightfold Path as right view (*sammā-diṭṭhi*). If taken at an ordinary level, by turning away from the unwholesome side toward that wholesome quality called the ten-fold right view, and by not allowing the mind to go toward the side of sin but keeping the mind anchored in the wholesome, one closes the door to the plane of misery. Next, within the path to a happy destination, one obtains a certain solace, a relief, to direct the mind to the Dhamma. In that manner, without stopping even there, one sees the Four Noble Truths that reflect reality—which were declared in the deepest sense by the Buddha as suffering (*dukkha*), origin (*samudaya*), cessation (*nirodha*), and path (*magga*). That a certain process concerning suffering (*dukkha*) ends in suffering (*dukkha*) is what is called ignorance (*avijjā*) there. We explain ignorance (*avijjā*) as not knowing the Four Noble Truths. What is its meaning? If one accumulates suffering (*dukkha*) due to something, that indeed is ignorance (*avijjā*).</p>
+<p>Thereupon, at the moment knowledge arises, that suffering-producing process ends right there. That is why the beginning of such a process is called preparations (*saṅkhāra*). Due to ignorance, a process, a sequence of action based on taking the perception of a self (*attā*), is set in motion. From then on, five heaps arise which we regard as the five aggregates of grasping (*pañcupādānakkhandha*): a heap of gathered form (*rūpa*), a heap of gathered sensation (*vedanā*), a heap of perception (*saññā*), a heap of preparations (*saṅkhāra*), and a heap of consciousness (*viññāṇa*). The Buddha points out that this is suffering (*dukkha*). Their coming together is suffering (*dukkha*). Instead, the Buddha points out the way to untie this. He untied it by showing the actual condition. If because of not seeing, because of not knowing, one heaps them up and grasps them, then because of knowing them, one comes to let them go. Where there is letting go—now, if the result, the fruit (*vipāka*), goes hand in hand with a certain responsibility, then at the moment that responsibility is let go, one is liberated from it. It is that kind of thing that exists here.</p>
+<p>Therefore, in conclusion, without taking this five aggregates of grasping (*pañcupādānakkhandha*) as "I" and "mine," one must understand that every single one of them is due to causes and conditions. A certain monk asked the Buddha: "Blessed One, what is the cause, the condition, for this form (*rūpa*)? The cause for form (*rūpa*) to arise." The Buddha declared, "The four elements are the cause for this. This form (*rūpa*) has arisen from the four elements: earth, water, fire, and air." There is the simple answer. He asks, "What is the cause for this sensation (*vedanā*)? The cause, the condition." "The cause for sensation (*vedanā*) is contact (*phassa*)." "What is the cause for perception (*saññā*)?" "The cause for perception (*saññā*) is also contact (*phassa*)." "What is the cause for preparations (*saṅkhāra*)?" "The cause for preparations (*saṅkhāra*) is also contact (*phassa*)." "What is the cause for consciousness (*viññāṇa*)?" That is something deep. "The cause for consciousness (*viññāṇa*) is name-and-form (*nāmarūpa*)." You yogis might have heard that the Buddha points out that the people of this world abide within the designation of a subject-object relationship, so to speak—the designation that there is a self (*attā*) and something belonging to a self (*attā*), one who grasps and something grasped. Thereupon, the object of this consciousness (*viññāṇa*) is what is called this name-and-form (*nāmarūpa*). Name and form. There, form (*rūpa*) is made up of those four elements. Name (*nāma*) means those five phenomena: feeling (*vedanā*), perception (*saññā*), intention (*cetanā*), contact (*phassa*), and attention (*manasikāra*). When taken in this way, we have a battle going on within a certain duality, a pair. There is a great tangle created here by making it into two.</p>
+<p>The Buddha has shown the reality of this. The cause for this consciousness (*viññāṇa*) is this name-and-form (*nāmarūpa*). Thereupon, through this understanding, finally, if a sensation (*vedanā*) arose, its cause is not so-and-so, but contact (*phassa*). The cause for perception (*saññā*) is contact (*phassa*); the cause for preparations (*saṅkhāra*) is contact (*phassa*). One saw that right inside here. That indeed is wise attention (*yoniso manasikāra*). Unwise attention (*ayoniso manasikāra*) means looking at it from the other side, concerning the other person. Just as a deer sees water (in a mirage). Here, one sees that all of this is right inside. That form (*rūpa*) is due to these four elements—it is through that kind of attitude, that kind of understanding, that one is eventually able to solve the problem of the five aggregates of grasping (*pañcupādānakkhandha*) for oneself. The path to that is the path of meditation. Attention—wise attention (*yoniso manasikāra*). Thereupon, you pious listeners, by undertaking that moral virtue (*sīla*), have disciplined body and speech and created a certain quiet environment to concentrate the mind.</p>
+<p>If you unify the mind within that environment, removing the scattered nature, lifting and withdrawing the mind from the hindrances (*nīvaraṇa*), testing the mind's strength, and developing the capacity to keep the mind anchored entirely on a single object—it is by using that strength that one can fully comprehend the actual condition of the five aggregates—form (*rūpa*), sensation (*vedanā*), perception (*saññā*), preparations (*saṅkhāra*), and consciousness (*viññāṇa*)—which is a process existing right within one's own five aggregates of grasping (*pañcupādānakkhandha*), and not something external. Though we decorate this form (*rūpa*), calling it "I" and "mine," there are only the four elements here. As for sensation (*vedanā*), regardless of external things connected to other people, this arises within contact (*phassa*), due to contact (*phassa*). Contact (*phassa*) is the most immediate condition, the cause, for sensation (*vedanā*). It is the same for perception (*saññā*); it is contact (*phassa*). In this way, when one is able to see that with wisdom, then through that aforementioned realization of the Paths and Fruits (*magga-phala*), one is eventually able to escape from this suffering (*dukkha*) of saṁsāra and realize the supreme, great deathless Nibbāna. What we hope for through all of this is liberation from the suffering (*dukkha*) of saṁsāra. For one who has no weariness (*nibbidā*) toward saṁsāra, Nibbāna cannot be expected. One cannot hold onto saṁsāra and also attain Nibbāna. Reflecting on karma, especially on the way those evil deeds yield their fruit (*vipāka*), helps to generate weariness toward saṁsāra; it gives rise to the fear of saṁsāra (*saṁsāra-bhaya*). That indeed is what is called the object of spiritual urgency (*saṁvega-vatthu*). Without being limited to thinking only of the suffering of saṁsāra visible in the human world, and understanding through the Dhamma of the Buddha that there are other places where the fruits of this karma ripen, one must develop fear regarding what would happen to us if we went to such places, and thus escape from this dangerous saṁsāra.</p>
+<p>Therefore, through the practice observed today, through the moral virtue (*sīla*) kept, through the meditation practiced, and through this hearing of the Dhamma, if you pious listeners have gained some strength, some spiritual urgency (*saṁvega*), may it develop the qualities of faith, energy, mindfulness, concentration, and wisdom (*saddhā, viriya, sati, samādhi, paññā*) that assist in putting an end to this suffering (*dukkha*) of saṁsāra and finding peace in the supreme, great deathless Nibbāna! Relying on them as strong support (*upanissaya*), with the help of association with noble friends (*kalyāṇa-mitta*), may you pious listeners gain the strength and power to realize the supreme, great deathless Nibbāna in this very life through the penetration of the Paths and Fruits (*magga-phala-paṭivedha*) of Stream-entry (*Sotāpatti*), Once-returning (*Sakadāgāmitā*), Non-returning (*Anāgāmitā*), and Arahantship! Furthermore, may all our relatives and friends, and whoever else from Avīci up to Akaniṭṭha wishes to share in these merits, share in the merit of this Dhamma sermon and Dhamma hearing, and may they all realize the supreme, great deathless Nibbāna through whichever of the three Enlivenments (*bodhi*) they aspire to! Aspiring thus, please recite these stanzas.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_107.html" class="doc-btn">← Previous Sermon (107)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_109.html" class="doc-btn">Next Sermon (109) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 082 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_081.html" class="doc-btn">← Previous Sermon (081)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_083.html" class="doc-btn">Next Sermon (083) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 082</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_082_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_082_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_082_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #82</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.44)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Santassa manaṃ hoti,</p>
+<p>santā vācā ca kamma ca;</p>
+<p>sammadaññā vimuttassa,</p>
+<p>upasantassa tādino.</p>
+<p>From:</p>
+<p>Dhammapada 96 (Sahassavagga)</p>
+<p>Dear Listeners,</p>
+<p>The word "peace" (*santi*) is a word dear to us all. Many people seeking peace perform peace-rituals (*shanthikarma*). They make offerings to deities. The ultimate goal of the path of practice taught in the Dhamma of our Supreme Teacher, the Buddha, is also peace. That is why that supreme, great Nibbāna is referred to as "*paramam santam*"—the ultimate peace. However, devotees, that peace is not something that can be obtained from the outside. It is a sublime state that must be brought forth from within, by calming the mind, body, and speech. Nibbāna——is the extinguishment of internal lust, hatred, and delusion that occurs through that calming. One who has realized Nibbāna uses patience and equanimity (*upekkhā*) to free the mind from the entanglements of kamma that prolong *saṃsāra*. It is the wonderful strength of patience and equanimity of a seven-year-old small Arahant novice (*sāmaṇera*) who became fully stilled (*upasanta*) that is presented as the story behind the stanza we have chosen as our theme.</p>
+<p>In Kosambi, a certain person ordained and received higher ordination under the Buddha and came to be known as Elder Tissa of Kosambi. This Elder Tissa received an invitation from a lay supporter in Kosambi to spend the rains-retreat in a monastery there. Soon after the Elder entered the rains-retreat, the lay supporter brought three robes, ghee, honey, and other requisites for medicinal drinks, and placed them at his feet to offer them. This venerable monk asked, "What is this, lay disciple?" The lay disciple replied, "This is an offering I make to everyone who spends the rains-retreat in this monastery, to every venerable monk whom I invite for the retreat." The venerable monk said, "But lay disciple, this is of no use to me. I do not need it." When asked why, the venerable monk stated, "I do not even have an attendant novice with me." Then the lay supporter said, "Venerable sir, if you do not have an attendant lay-supporter, I will ordain my child under you." The venerable monk agreed to this. The lay supporter brought his seven-year-old small child and handed him over to Venerable Tissa to be ordained.</p>
+<p>Venerable Tissa wet the child's head and gave him the "fivefold skin-group" (*taca-pañcaka*) to ordain him. You may have heard, and even seen in ordination ceremonies, that the very first subject of meditation (*kammaṭṭhāna*) given to someone being ordained is the *taca-pañcaka*. That is, to bring to mind the five parts from the thirty-two parts of the body—hair of the head, hair of the body, nails, teeth, and skin—by reciting "*kesā, lomā, nakhā, dantā, taco*" in forward and reverse order. This is how the first step of ordination is done. Most of you know that the Buddha has declared this foul nature of the body. However, worldly people generally are not inclined to regard these externally visible parts—hair, body hair, nails, teeth, and skin—as loathsome. Far from seeing them as loathsome, these are things people are eager to show off outwardly. Combing, styling, applying scent, powder, perfumes, and dyes to display them outwardly—such are these parts that appear on the surface: hair, body hair, nails, teeth, and skin.</p>
+<p>Many people think that only the things inside the body are loathsome. But, devotees, while these five parts were being explained and the small child’s head was being shaved, that child, who possessed great perfections (*pāramī*) and was highly meritorious, attained the state of a great Arahant with the four analytical knowledges (*paṭisambhidā*). The reason for this must be that he had cultivated the meditation on loathsomeness (*asubha bhāvanā*) in past *saṃsāra*. In any case, the teacher monk did not know about this change. The teacher monk was an ordinary worldling (*puthujjana*). Thus, half a month—that is, two weeks—after the ordination, this venerable monk somehow felt, "I must go with this young novice to see the Buddha." Then, having the Sāmaṇera carry his belongings, he set out toward Savatthi. While traveling in this way, on a certain evening, as it was getting dark, they arrived at a monastery to lodge.</p>
+<p>This small venerable novice obtained a dwelling for his preceptor and cleaned it. By the time he finished cleaning it, night had fallen. He was unable to prepare a place for himself. In the evening, the teacher monk asked, "How is it, is there a place for you to stay?" "No, venerable sir. I did not have time to do that." "Ah, then it is difficult to stay separately in an unfamiliar place like this. Stay in this very room," said the preceptor. He lay down on the bed due to the fatigue of the journey and fell asleep immediately. This small Arahant novice reflected, "Now for three nights I have stayed in the same dwelling with the venerable preceptor. There is a disciplinary rule (*Vinaya*) for monks that one who is not higher-ordained (*anupasampanna*) should not sleep under the same roof with an ordained monk for more than two or three nights. Therefore, if I sleep here tonight, the virtue (*sīla*) of that venerable monk will be breached." Thinking thus, the small novice sat down in the cross-legged posture near the bed and meditated the whole night to protect the elder monk's discipline.</p>
+<p>At the dawn watch of the night, the elder monk woke up and must have remembered the disciplinary rule. According to that procedure, when dawn approaches, that disciplinary rule is implemented by the unordained person leaving that place. Therefore, this venerable monk took the palm-leaf fan that was near the bed and tapped the mat, saying, "Novice, leave this place." As he raised the palm-leaf fan, it struck the eye of the novice who was sitting there. It is said that the eye was completely broken and injured. The eye was damaged to the point of being unusable. However, this novice did not say anything about such an injury having occurred. The elder monk told him to go outside, so covering his eye with one hand, he left the place. He did not just stay idle outside the room, nor did he go looking for medicine. What did he do? He performed all the duties and services due to his preceptor, sweeping with one hand while covering his eye with the other. He swept the toilet, brought the water needed for the toilet, placed water for washing the face, and swept the monastery. Having done all this, the moment came to offer water to the elder monk. He offered it with one hand. At this, the teacher monk felt a bit displeased and became dejected. He scolded him mildly, saying, "This novice is quite undisciplined. He offers water to his preceptors and teachers with only one hand!"</p>
+<p>At that moment, the novice said, "Venerable sir, I know that such a way of performing duties is improper. However, my other hand is not free." When asked "Why?", he then revealed what had happened. Hearing this, Venerable Tissa was overcome with deep spiritual urgency (*saṃvega*). "Alas! How could I have spoken such words to someone of such outstanding virtue?" Thinking thus, he knelt down right there on his haunches, worshipped him, and begged, "Noble sir, please forgive me." Then this small venerable novice said, "No, venerable sir, I did not disclose this with such an expectation. I revealed this matter only to protect your mind. This is neither your fault nor my fault. This is a fault of *saṃsāra*. I did not mention this earlier because I thought it would cause you regret." Thus he consoled him and tried to comfort him. However, the remorse felt by the teacher monk was so great that when they set out from there to see the Buddha, he carried the belongings and the bag of his pupil himself. Carrying his pupil's bag and belongings, he set off to see the Buddha. The Buddha, too, was waiting for the arrival of these two. We can understand that beneath all these phenomena, the great compassion of the Buddha was extended through his attainment of great compassion.</p>
+<p>These two venerable ones approached the Buddha. Having approached, as was custom, the Buddha engaged in friendly conversation. That is, asking how they were, and about their journey. When asking about the journey, it was not about various worldly things, but whether they travelled comfortably without trouble. Then that venerable monk said, "Oh, venerable sir, we had no trouble. But such an event took place. I have never seen a person of such great virtue as this young novice of mine. Such an event occurred." He related the details: "Even after such a thing happened, and even after I spoke to him in that manner, he did not harbor any anger or hatred toward me, but instead tried to console me." It was then that the Buddha declared, "Indeed, monk, those who have destroyed the taints (*khīṇāsava*) are peaceful—their minds are peaceful, their speech is peaceful, and they are stilled in that manner. They are those who are fully stilled." Declaring this, he uttered the verse mentioned earlier:</p>
+<p>*Santassa manaṃ hoti,*</p>
+<p>*santā vācā ca kamma ca*</p>
+<p>*sammadaññā vimuttassa*</p>
+<p>*upasantassa tādino.*</p>
+<p>It is mentioned that upon hearing this Dhamma preached along with the verse, the elder monk, Venerable Tissa, attained Arahantship with the four analytical knowledges. The general meaning of this stanza is that the mind of the one who is liberated by fully understanding with right wisdom, who is fully stilled, and who is of steadfast quality—or in other words, the Arahant—is peaceful. His speech is also peaceful. His physical action is also peaceful. This is the meaning of that stanza.</p>
+<p>Now, with reference to this story and the stanza, let us go a bit deeper and reflect on what kind of example we can take from this for our lives. In truth, what we have here is, as we mentioned earlier, a form of "playfulness" or "loveliness" (*huratalak*). When we speak of playfulness, we know that when a small child performs some work like an adult, parents are very pleased to see that playfulness. Similarly, here, a seven-year-old small novice, at the very moment of his ordination, just as his hair was being shaved, attained that supreme and most noble state of a great Arahant in the world due to the power of his perfections (*pāramī*). Furthermore, one must reflect on each of those qualities of virtue. Although he was such a small child, in order to protect the disciplinary rule of his preceptor, without any prompt or request, he made a self-sacrifice, as it were, and resolved to stay awake the whole night. Moreover, he did not harbor any resentment, anger, or displeasure at the mistake made by the elder monk or the scolding he received. Instead, in an extremely peaceful and stilled manner—even though his eye was ruined—he acted in a way that could open the Dhamma-eye, the eye of wisdom, of the elder monk. What an incredibly exemplary conduct this venerable novice possessed! Even his name is not mentioned in the history of the Dispensation (*Sāsana*). He is referred to only as the pupil of Elder Tissa. If we need to give him a name, we can only call him a "nameless mass of virtue." We can see such a wondrous treasury of virtues in that small character.</p>
+<p>Next, even if we reflect on Venerable Tissa, despite his having the shortcomings of an ordinary worldling (*puthujjana*), at the right moment, he very humbly accepted the mistake he had made and begged for forgiveness, worshipping the small seven-year-old novice. Those virtues—that is, though he was senior in years, the respectful thought he developed toward that small novice who was senior in asceticism and virtue—and his carrying the novice's belongings himself, as if performing a duty or undergoing a punishment for the mistake he made. Such things must have assisted this venerable monk to become an Arahant the very moment he heard this stanza. From this, we can understand that this peace of Nibbāna can be attained through a complete revolution of one's mind. Through the very spiritual urgency (*saṃvega*) that arose in that venerable monk, he realized Nibbāna.</p>
+<p>Then we must reflect on these stories of the past. Some might ask whether these can be believed. Several seven-year-old novices are mentioned in the history of the Dispensation who became Arahants and not only taught the Dhamma but even displayed psychic powers. Most of these seven-year-old Arahants are mentioned as having completed their meditation and attained Arahantship through the cultivation of the meditation on loathsomeness (*asubha bhāvanā*) the moment they were told: "hair of the head, hair of the body, nails, teeth, skin." From this, we have to understand that for those who had meditated for a long time in the past, even a slight reminder was sufficient. Even in childhood, they possessed such a power. Next, among the qualities of virtue of that venerable novice, we can understand that especially his quality of equanimity (*upekkhā*) and patience can be regarded as the most sublime virtues of a person. Ordinary worldly people do not even try to practice the word "*upekkhā*". This is because the Buddha himself has declared that worldly people live between feelings/sensations (*vedanā*) of pleasure and suffering/stress (*dukkha*). He states: "The ordinary worldling, untaught in the Dhamma, when touched by painful feeling/sensation, yearns for pleasant feeling/sensation. Why is that? Because the ordinary person does not see any escape from painful feeling/sensation other than pleasant feeling/sensation."</p>
+<p>But it is the Buddhas who point out that the entire existence in *saṃsāra* lies between these two—attraction and repulsion (attachment and aversion) between pleasure and suffering/stress (*dukkha*). To be liberated from *saṃsāra*, one must come to a neutral state, to equanimity (*upekkhā*). This is called "neither-painful-nor-pleasant feeling/sensation" (*vedanā*). For the ordinary worldling to understand this, it is explained through an illustration found in the ancient books. If there is a rock in the middle of a sandy area, and a deer runs over the rock from one side to the other, its footprints are visible on the far side and on this side, but the part where it ran over the rock is not visible. Similarly, the ordinary worldling recognizes pleasure and recognizes suffering/stress (*dukkha*), but the ordinary worldling cannot even conceive of the neutral state. Equanimity (*upekkhā*) is sometimes thought of as a "sitting-on-the-fence" policy, wavering, or just saving one's own skin. But if we look at it truly, equanimity (*upekkhā*) is the final winning post.</p>
+<p>You may have heard of the ten perfections (*pāramitā*), which are presented as the qualities that make a Buddha:</p>
+<p>*Dānaṃ sīlaṃ ca nekkhammaṃ*</p>
+<p>*paññā viriyena pañcamaṃ*</p>
+<p>*khantī saccamadhiṭṭhānaṃ...*</p>
+<p>As summarized in this verse, the ten perfections are giving, virtue, renunciation, wisdom, energy, patience, truthfulness, determination, loving-kindness, and equanimity (*upekkhā*). Here too, the final winning post is equanimity (*upekkhā*). When we reflect on each of these, we see that in every perfection, such as giving and virtue, this equanimity (*upekkhā*) is connected in some small way. To speak the truth, the noblest quality that is filtered and refined from these perfections is equanimity (*upekkhā*). Because to be liberated from this *saṃsāra*, the mind must be brought to the state of equanimity (*upekkhā*). This equanimity (*upekkhā*) is the neutrality required to realize the truth. Only after bringing the mind to neutrality can one realize the truth. Therefore, this equanimity (*upekkhā*) occupies a primary place in many categories of the Dhamma. A "primary place" means it is the ultimate thing. When these are developed, equanimity (*upekkhā*) is mentioned at the very end in many places.</p>
+<p>The texts even mention ten kinds of equanimity (*upekkhā*). Let us take just a few of them. We mentioned the perfections earlier. Similarly, there is "six-factored equanimity" (*chaḷaṅgupekkhā*). Six-factored equanimity refers to equanimity regarding restraint of the senses. When we speak of sense-restraint, you have heard of our six senses: eye, ear, nose, tongue, body, and mind. Six-factored equanimity means freeing the mind from attachment and aversion toward the objects that come to these six senses, and bringing the mind to a neutral state of equanimity (*upekkhā*). Without generating attraction or repulsion toward pleasant and unpleasant objects, keeping the mind neutral toward desirable and undesirable objects, and without grasping their signs and features—without taking anything strongly and thereby growing defilements—remaining neutral is what is called "six-factored" regarding sense-restraint. It is mentioned that Arahants in particular have perfected this.</p>
+<p>Furthermore, there is mention of "divine-abiding equanimity" (*brahmavihāra upekkhā*). There are four divine abidings (*brahmavihāra*), which you have often heard of: *mettā*, *karuṇā*, *muditā*, and *upekkhā*—loving-kindness, compassion, sympathetic joy, and equanimity. Loving-kindness (*mettā*) is the general wish for all beings to be well and happy. Compassion (*karuṇā*) is directed toward those who are suffering (*dukkha*). Sympathetic joy (*muditā*) is applied to those who are happy, rejoicing by thinking, "How wonderful!" It is the quality of being happy in the happiness of others without envy, which is a valuable quality since envy is a bad trait. It is after all these qualities are perfected and filtered that equanimity (*upekkhā*), neutrality, comes. It is neutrality toward all. This is sometimes illustrated by a comparison: loving-kindness is like milk, compassion is like butter, sympathetic joy is like curd, and equanimity is like ghee, which is a heavy substance. Similarly, it shows calmness, gravity—"gravity" meaning weightiness, respect—and here too, equanimity is mentioned at the very end.</p>
+<p>Next, there is also mention of the seven factors of enlightenment (*bojjhaṅga*). "*Bodhi*" means awakening, realization. Seven factors that assist this realization are mentioned: *sati* (mindfulness), *dhamma-vicaya* (investigation of states), *viriya* (energy), *pīti* (rapture), *passaddhi* (tranquility), *samādhi* (concentration), and *upekkhā* (equanimity). *Sati*, as everyone knows, is mindfulness. Through that mindfulness, one investigates states (*dhamma-vicaya*), bringing to light the understanding of wholesome and unwholesome states, good and bad. Next, in accordance with that, one exerts energy (*viriya*) to develop the good and abandon the bad. Through that energy, a certain rapture (*pīti*) arises. By calming that rapture, a peacefulness called tranquility (*passaddhi*) arises. Through that tranquility, a certain stilled state of mind, concentration (*samādhi*), one-pointedness, arises. After attaining that concentration, in order to protect it, a certain neutral state of mind called equanimity (*upekkhā*) arises. There, it assists that awakening, that realization, to understand things as they really are, bringing the mind to neutrality. The importance of equanimity (*upekkhā*) is present there as well. That is *bojjhaṅga-upekkhā*.</p>
+<p>Next, there is also equanimity regarding insight knowledges (*vipassanā-ñāṇa*). In attaining Nibbāna, one must pass through a series of knowledges before realizing the state of Nibbāna. There are knowledges such as: rise and fall (*udayabbaya*), dissolution (*bhaṅga*), fear (*bhaya*), disadvantage (*ādīnava*), disenchantment (*nibbidā*), desire for deliverance (*muñcitukamyatā*), *paṭisaṅkhā*, and conformity (*anuloma*). There, a special equanimity is mentioned. It is called "equanimity towards preparations" (*saṅkhārupekkhā-ñāṇa*). This is a very important turning point in that succession of insight knowledges. From the stage where arising and passing away are seen, fear arises, followed by disenchantment. Due to that disenchantment, a desire for deliverance arises. According to this desire for deliverance, one then cultivates the three characteristics—impermanent/inconstant (*anicca*), suffering/stress (*dukkha*), and non-self/unsubstantial (*anattā*). Having cultivated them, one arrives at a certain calm state: *saṅkhārupekkhā*, equanimity toward preparations (*saṅkhāra*). At that stage, a neutral, stilled state arises in the mind of the one who is about to be liberated, realizing: "All these are preparations, there is nothing to be taken as I or mine." An illustration is given for this: just as a drop of water on a lotus leaf remains without clinging. Indeed, that illustration is used for the state of Arahantship. This shows that the value of equanimity (*upekkhā*) is present there as well. Similarly, in the descriptions of the *jhānas* (meditative absorptions), in the fourth *jhāna*, having removed the defects of the initial *jhānas* and the hindrances (*nīvaraṇa*), once the mind is one-pointed, it is mentioned that one is free from both pleasure and pain, and free from joy and grief. Without going to either side, there is *upekkhā-sati-pārisuddhi*—the purity of mindfulness brought about by equanimity, a neutral state in the fourth *jhāna*.</p>
+<p>Indeed, the fourth *jhāna* is used as the basis for obtaining the great psychic powers called direct knowledges (*abhiññā*). Thus, we see in all of this that the Buddha, too, goes up to equanimity among the perfections. Next, in the divine abidings, there is that equanimity—the neutral, unshakeable state regarding all beings, like a pot full of ghee. Such is that state. Next, there is equanimity toward preparations (*saṅkhārupekkhā*). Likewise, among the *jhānas*, in the fourth *jhāna*, after the mind is completely stilled and has reached one-pointedness, what is present there is also a neutral state. From this, we can understand the importance of this quality of equanimity (*upekkhā*).</p>
+<p>Ordinary worldly people, instead of equanimity and neutrality, always have a tendency to grasp one side or the other, between attraction and repulsion. The entire *saṃsāra* exists within these two—attraction and repulsion. It is when one is freed from attraction and repulsion that the world is seen as it really is. This is why, in relation to Nibbāna, the recollection of peace (*upasamānussati*) is mentioned. Peacefulness, stillness is mentioned there. In this stanza too, the word *upasanta* is used. *Upasanta* means stilled or calmed. The sign of this calming is Nibbāna. Regarding Nibbāna, a passage is mentioned: *Etam santaṃ, etaṃ paṇītaṃ, yadidaṃ sabbasaṅkhārasamatho sabbūpadhipaṭinissaggo taṇhākkhayo virāgo nirodho nibbānaṃ*. This passage says: "This is peaceful, this is sublime, namely, the stilling of all preparations (*saṅkhāra*), the relinquishment of all acquisitions, the destruction of craving/thirst (*taṇhā*), dispassion, cessation, Nibbāna." Thus, that calming, that neutrality, bringing the mind to that state is Nibbāna. That is true peace. We explained why Nibbāna is identified as the ultimate peace. We can understand the necessity for this. This *saṃsāra* is a great tangle of kamma. All the kamma we have done in the past is stored in this consciousness (*viññāṇa*), and through the objects we collide with at various times, those kammic forces emerge.</p>
+<p>Due to those emerging kammic forces, because of ignorance, because of craving/thirst (*taṇhā*), and because of the feeling of "I and mine," we fail to recognize them as results (*vipāka*). We clash with them and thereby generate more kamma. That is how we prolong *saṃsāra*. That is when the small novice spoke a great Dhamma sermon in those few words: "This is neither your fault, venerable sir, nor my fault. This is a fault of *saṃsāra*." What he called the "fault of *saṃsāra*" is precisely this: this entanglement of kamma. For a long time in this *saṃsāra*, we struggle as with a tangled ball of thread. If a ball of thread is given to a cat, or to someone who does not know how to untangle a tangled ball of thread, they tangle it even more. Similarly, because of ignorance, because of the ignorance that grasps things as "I" and "mine," worldly people gather more kamma through that entanglement of kamma and create a great web of suffering/stress (*dukkha*) for themselves. Instead of that, what must be done at every possible opportunity, as quickly as possible, is to bring in patience and equanimity (*upekkhā*) to calm that kammic force, that kammic impulse, just like that small great Arahant novice did.</p>
+<p>For an ordinary person, even such an accident would be enough to start a major fight. Due to the elder monk's lack of awareness at that moment, the corner of the palm-leaf fan struck him. But the elder monk said: "I did it to my eye" (or rather, the novice did not say 'you broke my eye'). If someone were to blame him further after that, and when offering water with one hand, they could have argued back in anger: "After doing this to my eye, you still speak to me like this!" But that novice, in a very humble, obedient, and gentle manner, explained the nature of the entanglement of kamma to his preceptor: "It is not your fault, venerable sir. This is the nature of kamma, the nature of *saṃsāra*." Therefore, that understanding is what was meant in that stanza by "*sammadaññā vimuttassa*"—liberated through right wisdom. That is right wisdom. For a long time, worldly people revolve on preparations (*saṅkhāra*) because of ignorance. This ignorance, this lack of knowledge, is purely a heap of suffering/stress (*dukkha*). Without understanding that this is a heap of suffering/stress, grasping it as "I" and "mine"—grasping this fivefold group (*pañcakkhandha*) of form, feeling/sensation (*vedanā*), perception, preparations (*saṅkhāra*), and consciousness (*viññāṇa*)—and even misunderstanding the various mishaps that come in accordance with kamma, generating hatred toward those people, thinking "such and such a person did this," they create various entanglements that prolong *saṃsāra*.</p>
+<p>Instead, just as that Arahant did, what we have to think here is: "Beneath this, for whatever reason, there must be our own kamma." Some kamma must have been the cause for that monk's eye to be broken. What he did there was to cover his injured eye and perform the other duties that had to be done, without letting his mind be defiled. His eye of wisdom was developed to that extent. When we bring to mind the treasury of virtues of that small novice—his courage, energy, and so forth—we can see this. At that moment, as we recall how that small novice, covering one eye, performed all those duties and services, we realize: "We cannot get things done even with a minor ailment, and we also ruin our minds with them." What a valuable example he gave to the world there! That is indeed:</p>
+<p>*Santassa manaṃ hoti santā vācā ca kamma ca*</p>
+<p>Because his mind was peaceful, his speech was peaceful, and his action was peaceful—because everything was done peacefully—the opportunity was created for the elder monk to open his Dhamma-eye, his eye of wisdom. Next, another word is mentioned in this stanza. If we were to speak about each and every word mentioned in a single stanza, there are things valuable enough to write a huge book. A very important word mentioned there is *tādī*. The word *tādī* is usually translated as "of steadfast virtue" or "suchlike". The ordinary meaning of the words *tādī* and *tādiso* is "such" or "like that", which is used in society today. We say "such a person." "Such a person" means that person has a certain stability. We say, "It was such a person who said this." But what is this "suchness" (*tādibhāva*) of the Arahant?</p>
+<p>In the ordinary world, most people are "this and that" (*esemese*) sort of people. When we say "this and that," there is a certain fickleness. This Arahant is not just an ordinary "this and that" person. He is a person who is "just so" (*esemavū*). That is why he is called "such" (*tādī*). Because his supramundane liberation is stable. His supramundane liberation, the realization he obtained through his Arahantship regarding the nature of *saṃsāra*—which is dependent co-arising (*paṭiccasamuppāda*)—how things arise through causes and conditions, which he realized in that brief moment—the nature of impermanent/inconstant (*anicca*), suffering/stress (*dukkha*), and non-self/unsubstantial (*anattā*)—that is stable. It is in that that the Arahant is established. That is why he is called "such". The Arahant is such a person. He is not an ordinary person. If he were an ordinary person, he would change according to the objects that come. To be an ordinary person means being drawn toward the form that comes to the eye, being drawn back into *saṃsāra*. One gets caught in the tangle of *saṃsāra* again according to the sound that comes to the ear. That is the way of the ordinary person. It is an ordinary thing, because that person's mind changes according to the object that comes.</p>
+<p>The Arahant is steadfast, sometimes described as being like a stone column (*indakhīla*). This word *tādī* is analyzed in various ways in the texts. But when we reflect deeply, what we have to take is that "suchness" is what is meant here. Steadfast virtues. That steadfast virtue comes through realization, through right wisdom. The realization of the Four Noble Truths, that everything occurs through causes and conditions, that everyone has a tangle of kamma, a heap of kamma gathered in *saṃsāra*. That these emerge at various times due to various causes. That emergence also occurs according to a natural law, according to the cycle of kamma. Its operation is so powerful and so complex that the Buddha has declared: "The field of kamma is unthinkable (*acinteyya*)." If one tries to think about it, one will go mad. To that extent, these cannot be analyzed one by one. This state of affairs is visible to the Buddha's knowledge. An ordinary person cannot untangle the tangles of kamma through logical reasoning. Only a hint is needed here. Except for someone who understands this as a principle through a hint, it is so wonderfully chaotic that one cannot say with certainty how or for how long a single kamma will stretch into the distant future.</p>
+<p>But Arahants, according to their own capacity, understand this as a natural law: "What we call 'I' and 'mine' here is a heap of preparations (*saṅkhāra*) gathered in *saṃsāra* due to ignorance." It is through this heap of preparations (*saṅkhāra*) that we have constructed these phenomena of name-and-form (*nāmarūpa*), taken them as "my body" and "my mind," and through this delusion, got entangled with a world, thereby prolonging *saṃsāra*. This realization, even if momentary, is received by the Arahant. It is established in this that the Arahant's conduct is shaped. That is why, at every moment, they make an effort to bring the mind to equanimity (*upekkhā*). Even if we think of the divine abidings, we see that what is present there is also that neutrality. What we called "six-factored equanimity" (*chaḷaṅgupekkhā*) is also a nature of remaining unshaken and uncaught by sensory objects in their presence. Because of this liberation, that nature is present in the liberated mind.</p>
+<p>That is what is called "the water drop on the lotus leaf." This is why the lotus flower is a valuable symbol in this Dispensation. The Buddha has pointed out a lotus in this swamp of *saṃsāra*, in this swamp of *saṃsāra* of ordinary worldly people:</p>
+<p>*Yathā saṅkāradhānasmiṃ, mahāpathe padumṃ tetha jāyetha, suci manoramaṃ...*</p>
+<p>It is shown in this manner in some places of the Dhamma. Suppose there is a dirty pit by the roadside, a pit of dirty water where rainwater has collected. Somehow a lotus seed falls into it, a lotus plant grows, and a lotus flower blooms. But the lotus flower is not like that dirty water. It is *suci manoramaṃ*—pure and fragrant, beautiful to look at. That is what supramundane virtues are like. That is why the Buddha describes the Arahant as being like a lotus flower on the one hand. From another perspective, the drop of water that falls on the petal or the leaf of the lotus does not wet the leaf or the flower. Also, the lotus remains unsullied by the surrounding mud and water (*vāriṇā toyena anupalittaṃ*). That is what supramundane virtue is. That is the supramundane liberation that Buddhas introduce to the world. That mind of the one who is liberated is what is shown to us in this story through the conduct, the action, and the speech of that small Arahant.</p>
+<p>Therefore, from this we must reflect: what is the root of this? The root, as mentioned earlier, is not something to be obtained by performing peace-rituals or praying to deities. It is the guarding of these very three doors that we have close to us, which we use in our daily lives—the mind, body, and speech. It is the restraint of these three doors. It is the calming of these three doors. Now, some among this group of devotees have undertaken the ten precepts, others have undertaken the eight Uposatha precepts, and still others have undertaken the eight precepts with right livelihood as the eighth (*ājīva-aṭṭhamaka-sīla*). Through all of of these, what one does is restrain body and speech. Although we say "restraining body and speech," within that, the mind is also quickly restrained. Because it is the mind, the thought, that is used to restrain body and speech. Establishing oneself in a certain determination, voluntarily accepting that determination—this virtue, each training rule—thinking "today, or during this period, I will live according to these principles," one restrains body and speech. Through that, restraining the mind as well, without being agitated by the objects that come into life, the day of undertaking precepts is a day for leading a calm life.</p>
+<p>It is that very journey, when started, that becomes a great journey of perfections (*pāramī*) through which a Buddha arises, a Paccekabuddha arises, or an Arahant arises. One must reflect in this way. Then, the calming, or the peacefulness, or the extinguishment of these three doors is what is called Nibbāna. The ultimate purpose of all these perfections is to bring the mind to equanimity (*upekkhā*) in order to realize this ultimate truth, the Dhamma of the Four Noble Truths. The conduct that assists this is what is present in this virtue (*sīla*) as well. Next, the purpose of virtue is concentration (*samādhi*). Virtue is the foundation. Through that foundation, we expect to make the mind still. "Making the mind still" means precisely that. The reason the mind is not still, the reason it scatters, is within those two—attraction and repulsion. At every moment, through what is called sense-restraint, one looks to bring the mind to neutrality. Having brought the mind to a neutral state in this way, by the time one reaches the fourth *jhāna*, the mind's neutrality and one-pointedness are extremely powerful.</p>
+<p>Next, that is what is used by those who possess direct knowledges (*abhiññā*) to perform great psychic powers and feats. Next, some use that very thing to assist them toward Nibbāna. Through that, they see the three characteristics of impermanent/inconstant (*anicca*), suffering/stress (*dukkha*), and non-self/unsubstantial (*anattā*). There too, what assists is equanimity (*upekkhā*), which is called "neither-painful-nor-pleasant." Ordinary worldly people spend their lives between pleasure and pain. But in this Dhamma, it is declared that through that equanimity (*upekkhā*), the *tādī* quality arises. That "suchness" arises. In that way, after concentration is strengthened, what is then spoken of is the meditation on the three characteristics of impermanent/inconstant, suffering/stress, and non-self/unsubstantial. Through insight (*vipassanā*), what we expect is to realize the impermanent/inconstant nature, the suffering/stress nature, and the nature of being unable to say "I" and "mine" of this fivefold group, which we have taken as "I" and "mine" throughout this long *saṃsāra*. For that, too, the aforementioned equanimity (*upekkhā*) is required. That is why it was called "equanimity toward preparations" (*saṅkhārupekkhā*)—one sees all these as preparations. Everything that was taken as "I" and "mine" is seen as preparations. What is present here is a heap of preparations (*saṅkhāra*). As long as this heap of preparations exists, *saṃsāra* grows.</p>
+<p>In fact, why are these called "preparations"? As mentioned, when something arises due to past kamma, through some kammic force, the ordinary worldling is inclined to make many preparations out of ignorance. Instead, what must be done is to calm it right there. "Stilling of preparations" (*saṅkhāra-samatha*) means refraining from making preparations, calming the power of making preparations, the nature of making preparations. It is there that the ultimate supreme peace, liberation, lies. But as long as worldly people took all this as "I" and "mine," they grew this world, and by acting, they tried to escape from *saṃsāra* through attraction and repulsion. Only the Buddha pointed out that what is present here is a relationship of cause and effect. There is nothing to be taken as "I" and "mine." It is due to a series of kammic forces coming from past *saṃsāra* that this life, this existence/becoming (*bhava*), has been obtained.</p>
+<p>Today a human, tomorrow an animal, next a deity—in this way, various kinds of existence/becoming (*bhava*), states of being, have arisen. That existence/becoming is carried on through what is called grasping/holding (*upādāna*)—the firm holding done through craving/thirst (*taṇhā*). Next, because there is no limit to that craving/thirst, due to that very craving/thirst, one makes more preparations along everything that presents itself, and thereby grows craving/thirst. Those preparations are made in order to satisfy craving/thirst. But this is not something that can ever be filled and satisfied. It is not something that brings satisfaction. So, worldly people look for peace by fulfilling daily needs and wants; everyone expects: "If I obtain what my neighbor has obtained, then I will have true peace." But even after obtaining them, there is no satisfaction. There is more, even if one spends a hundred years in this life. It has been said in the past that even great wheel-turning kings (*cakkavatti*), having conquered countries and kingdoms, having conquered the whole world, still found it insufficient. Even then, they were not satisfied. There was no contentment. That is what this craving/thirst (*taṇhā*) is like. Therefore, peace is not found in obtaining the things dictated by craving/thirst. There is never any comfort or calming in that. Instead, what the Buddha points out is the calming of that very craving/thirst. It is the calming of that very thirst. It is bringing the mind to a state where that thirst that runs through *saṃsāra* does not arise. That occurs through realization.</p>
+<p>There, there is nothing to be taken as "I" and "mine". These five groups (*pañcakkhandha*), these five groups of form and so forth that have arisen in accordance with kamma, exist for a certain period of time and then pass away. As long as it exists, the greatest work to be done with it, while remaining neutral, is to realize Nibbāna. According to the Buddha's philosophy, the purpose of human life must be especially the realization of Nibbāna. Other needs and wants are only things done for carrying on daily life. They are things that grow *saṃsāra*. That is why the Buddha has declared: "*na siyā lokavaḍḍhano*"—do not be a grower of the world. Growing the world is not what must be done. It is to grow the world that those wrong views (*micchā-diṭṭhi*) present themselves and give various teachings. But what the Buddha teaches is liberation from this world. The Buddha points out: "Within this fathom-long body, I declare the world, the arising of the world, the cessation of the world, and the path leading to the cessation of the world."</p>
+<p>Therefore, it is within this fathom-long body that those three doors are present. It is there that those six doors are present. What we called the three doors are the mind, body, and speech, which instigate actions. What we called the six doors are these six: eye, ear, nose, tongue, body, and mind. Therefore, within this cage of a body, which has six doors or three doors, lies this suffering/stress (*dukkha*), the cause of suffering, the calming of suffering which is Nibbāna, and the path to it which is the Noble Eightfold Path. The Noble Eightfold Path is right view (*sammā-diṭṭhi*). Understanding the real nature of this world with a neutral mind is right view, and according to that right view, one generates right thoughts (*sammā-saṅkappa*). According to those right thoughts, one uses right speech (*sammā-vācā*). Acting according to that right speech, one refrains from those actions called killing, stealing, sexual misconduct, and so forth. Next, through right livelihood (*sammā-ājīva*), one rectifies one's life with a truly righteous livelihood. Next, through that livelihood, one exerts a certain energy, an effort, to bring close what is good and remove what is bad, which is called right effort (*sammā-vāyāma*).</p>
+<p>Next, through that very energy of right effort, one establishes a certain mindfulness, a right mindfulness (*sammā-sati*), which is a mindfulness established in the mind. After maintaining that mindfulness for a long time and making it one-pointed, it is called concentration (*samādhi*). This is what is called the Noble Eightfold Path. That Noble Eightfold Path is the Middle Path (*majjhimā paṭipadā*) declared by the Buddha. Or in other words, the path to Nibbāna, the middle way. This is why it was called the Middle Path. In it, there is nothing to be taken as "I" and "mine." What is present here is a succession of phenomena (*dhamma-paramparā*). This succession of phenomena is connected to one another through cause and effect. When fertilizer is given to one, another emerges from it. That is what the Buddha declares: "For one who has right view, right thought develops. For one who has right thought, right speech arises. One who has right speech directs himself toward right action. One who is engaged in right action perfects right livelihood. When right livelihood is perfected, right effort develops in that person's mind. Through that right effort, right mindfulness emerges, and that very right mindfulness reaches completion and a stable state under the name of right concentration." That is the Middle Path declared by the Buddha.</p>
+<p>Thus, without the grasping of "I" and "mine," we must analyze and understand this, and guide our mind, body, and speech accordingly. It is through that that those qualities of virtue—the four foundations of mindfulness (*satipaṭṭhāna*), the four right endeavors (*sammappadhāna*), and so forth, the factors of enlightenment (*bojjhaṅga*), the thirty-seven requisites of enlightenment (*bodhipakkhiya-dhamma*)—all these develop in our mind-stream. Even if one has not learned each of these from books, when one cultivates this properly with the guidance of a teacher, all those qualities of virtue develop within that person. When one takes a vitamin pill, whether one looks at its qualities or not, the qualities are present in that vitamin pill. In the same way, through that, what is needed for oneself is completed. Similarly, when one takes a proper meditation subject (*kammaṭṭhāna*) and cultivates it, those qualities of virtue arise naturally: right view, right thought, right speech, and so forth. Next, even if one does not know about the things spoken of in big words such as the four foundations of mindfulness and the four right endeavors, these Dhammas are completed in the mind-stream through that very meditation subject. Having been completed in that way, at a certain moment, one is able to bring the mind to that noble, stilled, *tādī* (such) state declared by the Buddha, through the realization of the Four Noble Truths.</p>
+<p>We can never find peace merely by saying that this entire saṃsāric existence is suffering/stress (*dukkha*), that the existence of this fivefold group, this very existence/becoming (*bhava*), is entirely suffering/stress. What must be done is to calm the craving/thirst (*taṇhā*) within our mind that repeatedly causes suffering, through right realization—through realizing the true state of affairs. That is why we contemplate all these as impermanent/inconstant (*anicca*). When this impermanence is understood more clearly, then the suffering/stress (*dukkha*) nature of this is understood. Its fearful nature—that it is because of grasping this very thing that suffering and pain come to us. Because of that fearful nature, one realizes the non-self/unsubstantial (*anattā*) nature—that this cannot be maintained as "I" and "mine" in a permanent way. It is when these three characteristics are realized to some extent that one enters that noble supramundane state called the fruit of stream-entry (*sotāpatti-phala*). By turning that very wheel of Dhamma once more, one enters the state of a once-returner (*sakadāgāmi*), to return to this world only once. Likewise, after developing it once more, the state of a non-returner (*anāgāmi*), and finally, through that noble state of Arahantship, one is liberated from the entire suffering of *saṃsāra* and is stilled in the noble, deathless, great Nibbāna through this Dhamma, through the aforementioned path.</p>
+<p>Therefore, now, you must reflect that it is through the Dispensation's playfulness of that seven-year-old son, the Arahant novice, through a nameless mass of virtue, that we delivered today's Dhamma sermon. We must reflect that there are various deep Dhammas in the world, but in truth, what calls a person to the path of Nibbāna is an exemplary character. What the Buddhas, Paccekabuddhas, and great Arahants of the past leave behind for the world is an exemplary character, that treasury of virtue. It is along that fragrance of virtue that the world joins the path of Nibbāna, not through logic. Therefore, we must reflect that we must use the character of that small Arahant novice to correct the shortcomings of our lives. Next, we must also reflect on the conduct of that teacher monk regarding humility. Through all of this, we must reflect that in order for that true, stilled peace to arise, we must guard those three doors, or guard those six doors, and by walking on that path of Dhamma, cultivating virtue, concentration, and wisdom, realize as quickly as possible those noble stages of the Aryas declared by the noble Buddha—stream-entry, once-returning, non-returning, and Arahantship—and be stilled in the deathless, great Nibbāna. Indeed, may the practices of virtue and so forth that you practiced today, the hearing of the Dhamma, and the performing of duties and services, assist in this; may they be a strong supportive condition.</p>
+<p>Furthermore, whatever heap of merit we have gathered so far through hearing the Dhamma and preaching the Dhamma, may all those who yearn for Nibbāna, including the deities who protect the Dispensation, and our relatives from the Avīci hell up to the Akaniṭṭha heaven, rejoice in this heap of merit. May they all be liberated as quickly as possible from the extremely terrible *saṃsāra*, from all saṃsāric suffering such as the highly terrifying birth/arising (*jāti*), decay and death/aging and death (*jarāmaraṇa*), sickness, and death, and may they find peace in the noble, deathless, great Nibbāna. Praying thus, share the merits by reciting the stanzas in this manner:</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_081.html" class="doc-btn">← Previous Sermon (081)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_083.html" class="doc-btn">Next Sermon (083) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 083 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_082.html" class="doc-btn">← Previous Sermon (082)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_084.html" class="doc-btn">Next Sermon (084) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 083</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_083_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_083_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_083_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #83</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.158)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Ārabhatha nikkhamatha,</p>
+<p>yuñjatha buddhasāsane;</p>
+<p>Dhunātha maccuno senaṃ,</p>
+<p>naḷāgāraṃ va kuñjaro.</p>
+<p>Yo imasmiṃ dhammavinaye,</p>
+<p>appamatto vihessati;</p>
+<p>Pahāya jāti saṃsāraṃ,</p>
+<p>dukkhassantaṃ karissati.</p>
+<p>From:</p>
+<p>Dhammapada 326 (Nāgavagga)</p>
+<p>Dear Listeners,</p>
+<p>The news of the turning of the Wheel of Dhamma, set in motion by the Teacher of the Three Worlds, the Fully Enlightened One, on an Esala Full Moon Poya Day like this through the *Dhammacakkappavattana Sutta*, reverberated and broadcasted from deva-world to deva-world, and from brahma-world to brahma-world. From this, we can imagine that there was a marvelous kind of broadcasting in that Wheel of Dhamma, far superior to the broadcasting media of the modern world. That there is a certain spiritual splendor of the Dhamma spreading throughout the universe is also apparent from the Sutta discourses that our Buddha preached on various occasions regarding the ancient Dispensation. The background story relevant to the two verses we have chosen as our theme today is also a good proof of this. On one occasion, when the Buddha was residing at the Jetavana monastery in Sāvatthī, he addressed the Sangha and presented an event from a past eon in this manner:</p>
+<p>"Monks, in the extremely distant past, there was a king named Aruṇavā. His kingdom was known as Aruṇavatī. The Blessed One, the Fully Enlightened One of that past era [Sikhī Buddha], lived in dependence on that kingdom of Aruṇavatī. That Sikhī Buddha had two chief disciples named Abhibhū and Sambhava. One day, the Sikhī Buddha addressed the chief disciple Abhibhū—it appears that in those times, the Buddha addressed his disciples as 'Brahmin'—and said, 'Brahmin, until the time for alms arrives, let us go to a certain Brahma-world and return.' 'Very well, Venerable Sir,' he replied. Then, the Sikhī Buddha and the chief disciple Abhibhū disappeared from the kingdom of Aruṇavatī and appeared in that Brahma-world, as quickly as a strong man might stretch his bent arm or bend his stretched arm."</p>
+<p>After arriving in the Brahma-world, the Buddha said to the chief disciple Abhibhū, "May a Dhamma talk occur to you, Brahmin, to deliver to this Great Brahma and his retinue!" Replying, "Yes, Venerable Sir," the Venerable Abhibhū endeavored to generate joy and spiritual urgency (*saṁvega*) in the Brahma king and his retinue through an extraordinary Dhamma discourse. However, that Brahma and his retinue began to speak in a critical tone, saying, "What a strange thing! How wonderful and marvelous! The disciple is preaching the Dhamma in the very presence of the Teacher." Thereupon, the Buddha said to Venerable Abhibhū, "Brahmin, this Brahma king and his retinue are criticizing you, saying such-and-such. Therefore, preach the Dhamma even more intensely to arouse spiritual urgency (*saṁvega*) in them."</p>
+<p>Next, this Venerable One began to preach the Dhamma while performing psychic miracles. Sometimes making himself visible, sometimes invisible, sometimes making only a part of his body visible—either the upper half of his body or the lower half of his body—he preached the Dhamma in various ways, blending it with psychic powers. This assembly of Brahmas was struck with spiritual urgency (*saṁvega*) and amazement, thinking, "This is wonderful and marvelous, that even a disciple possesses such psychic power!" At that moment, Venerable Abhibhū said to Sikhī Buddha, "Venerable Sir, I recall making a statement in the midst of the Sangha on one occasion: 'Friends, standing in the Brahma-worlds, I can make my voice heard throughout a thousandfold world system.'" Then the Sikhī Buddha said, "Brahmin, now is the moment! Now is the time! Fulfil that statement of yours. Make your voice heard throughout a thousandfold world system." When invited by the Buddha, the Venerable One proclaimed to the assembly of Brahmas the very two verses we have chosen as our theme today:</p>
+<p>> *Ārabhatha nikkhamatha,*</p>
+<p>> *yuñjatha buddhasāsane;*</p>
+<p>> *Dhunātha maccuno senaṁ,*</p>
+<p>> *naḷāgāraṁ va kuñjaro.*</p>
+<p>></p>
+<p>> Exert yourselves! Go forth!</p>
+<p>> Engage in the Buddha’s Dispensation!</p>
+<p>> Destroy the army of Death,</p>
+<p>> as an elephant crushes a reed-shed!</p>
+<p>></p>
+<p>> *Yo imasmiṁ dhammavinaye,*</p>
+<p>> *appamatto vihessati;*</p>
+<p>> *Pahāya jāti saṁsāraṁ,*</p>
+<p>> *dukkhassantaṁ karissati.*</p>
+<p>></p>
+<p>> He who shall dwell diligently in this Dhamma and Discipline,</p>
+<p>> Abandoning the round of birth (*jāti*) and saṁsāra,</p>
+<p>> will make an end of suffering (*dukkha*).</p>
+<p>Having delivered that discourse and aroused spiritual urgency (*saṁvega*) in the assembly of Brahmas, Sikhī Buddha and Venerable Abhibhū returned, appearing instantly in the kingdom of Aruṇavatī, as quickly as a strong man might stretch his bent arm or bend his stretched arm. Upon their return, Sikhī Buddha asked the Sangha: "Monks, did you hear our monk Abhibhū proclaiming verses from the Brahma-world?" "Yes, Venerable Sir." "How did those verses sound? Relate them." They recited the two verses exactly as they had been spoken. Thereupon the Buddha said, "Sādhu, sādhu! Excellent is it that you heard the Dhamma discourse of the monk Abhibhū." This was the narrative proclaimed by the Buddha.</p>
+<p>From this, we can see that these two verses reverberated throughout the universe in a past eon, during the time of an ancient Buddha. Next, let us delve into these two verses to understand their meaning. The three main words here, as you must have understood, are *ārabhatha* (exert), *nikkhamatha* (go forth), and *yuñjatha* (yoke/engage). Through these three terms, one fact the Buddha revealed to the world is that the power to make an end of the suffering (*dukkha*) of saṁsāra exists within each and every one of us. On certain occasions, he declared of himself: "I am one who asserts action (*kammavādī*), who asserts efficacy of action (*kiriyavādī*), and who asserts energy (*viriyavādī*)." Nowadays, when people speak of karma, some think, "If it is karma, there is nothing to be done about it." The Buddha did not speak in that sense. He regarded the human being specifically as an individual possessing action, active energy, and virile effort. Therefore, according to that principle, the three terms *ārabhatha*, *nikkhamatha*, and *yuñjatha* represent what the Buddha analyzed on various occasions. In one Sutta, he declares: "Monks, for the non-arising of unarisen sloth and torpor (*thīna-middha*), and for the abandonment of arisen sloth and torpor, there is one quality. What is this one quality?" He referred to those three elements: the element of initiative (*ārambha-dhātu*), the element of launching (*nikkama-dhātu*), and the element of exertion (*parakkama-dhātu*). In any analysis, fundamental elements are called *dhātus*.</p>
+<p>Thus, within an individual, there is an initiating power—the power to start something. There is a launching power to carry it forward. By the element of exertion (*parakkama*), it means the valour to overcome the obstacles that arise in the process and forge ahead; there is a power to conquer them. It is to denote these three aspects that *ārabhatha*, *nikkhamatha*, and *yuñjatha* are used. Moreover, these three terms are especially helpful for increasing one's energy (*viriya*). *Ārabhatha, nikkhamatha, yuñjatha buddhasāsane; dhunātha maccuno senaṁ*—demolish the army of Death. Next, the simile is given, which is a powerful one: "like an elephant destroying a reed-house." There is a hut made of reeds. Is it difficult for an elephant to break it? As soon as it steps on it, it gets crushed with a crackling sound. This simile illustrates the power of energy (*viriya*). Destroy the army of Māra like an elephant crushing a reed-house. What then is this army of Māra? We can see the army of Māra described in the Buddha's own words in the *Padhāna Sutta*. When the Buddha was cultivating that great energy (*viriya*) which we call the "Great Struggle" (*mahā-padhāna*), it is recorded in the texts that Māra came and tried to tempt him to abandon this energy. Then the Buddha addressed Māra: "Māra, here is your army!" What is called his army? It is the defilements (*kilesas*) in our minds. Ten defilements are listed there in a sequence of verses in the *Padhāna Sutta* of the *Sutta Nipāta*:</p>
+<p>"Sensual pleasures (*kāmā*) are your first army; the second is called discontent (*arati*)..." and so on. Sensual pleasures are the first army. The second army is called discontent (*arati*), which is non-delight in the monastic practices of the Dispensation. That is to say, *arati* means a lack of interest or aversion towards the spiritual practices of the Dispensation, towards wholesome qualities (*kusala dhamma*). "That too is your second army." Next, the third army is hunger and thirst (*khuppipāsā*). Neglecting spiritual work on the pretext of hunger and thirst. Next, craving (*taṇhā*) is the fourth army. The fifth army is sloth and torpor (*thīna-middha*). The sixth army is fear (*bhiru*). The seventh army is doubt (*vicikicchā*), indecision. The eighth army is disparagement and obstinacy (*makkha-thambha*). Next, the ninth army is gain, honor, and renown (*lābha-sakkāra-siloka*), and whatever false fame or retinue one acquires—all that is the ninth army of Māra. The tenth army is self-exaltation and disparaging others (*attukkaṁsana-paravambhana*), that vice. These are the ten armies of Māra that the Buddha presented as the Māra of defilements (*kilesa-māra*). When analyzed further, the vast host of defilements belonging to this army is sometimes counted in the thousands. A massive army belongs to the army of Māra. It is against these defilements that we have to wage war.</p>
+<p>What then must we fight with? Now, when talking about this battle, what weapon do we possess to fight these? There are thirty-seven weapons, known as the Thirty-Seven Factors of Awakening (*bodhipakkhiya-dhamma*). Thus, organizing the army means lining up these Thirty-Seven Factors of Awakening. What are these thirty-seven? There are seven groups here. The army can be divided into seven battalions: the Four Establishments of Mindfulness (*satipaṭṭhāna*), the Four Right Efforts (*sammappadhāna*), the Four Bases of Spiritual Power (*iddhipāda*), the Five Faculties (*indriya*), the Five Powers (*bala*), the Seven Factors of Awakening (*bojjhaṅgā*), and the Noble Eightfold Path. These seven are the battalions of the army. How then is this initiated? How is the army organized? How is the army led forward? To understand how the enemy army is broken and victory is achieved through the power called exertion (*parakkama*), one must put these Thirty-Seven Factors of Awakening into practice in one's own mind-stream. Roughly speaking, the yogic warrior receives basic training on the terrain of the Four Establishments of Mindfulness (*satipaṭṭhāna*), sometimes carrying a meditation subject (*kammaṭṭhāna*) as a weapon. The four things belonging to the practice of that noble person on the terrain of the Four Establishments of Mindfulness are the Right Efforts (*sammappadhāna*)—the fourfold energy (*viriya*). You must have heard of this frequently.</p>
+<p>If we explain just one in detail, the Buddha illustrates the side of energy (*viriya*) with a series of terms in this long phrase: "...for the non-arising of unarisen evil, unwholesome qualities, he generates desire (*chandaṁ janeti*), makes an effort (*vāyamati*), arouses energy (*viriyaṁ ārabhati*), exerts his mind (*cittaṁ paggaṇhāti*), and strives (*padahati*)." "Generates desire" means he rouses a keen interest. "Makes an effort" means he exerts himself. "Arouses energy" means he initiates energy. "Exerts his mind" means he positions his determination foremost. Finally, "strives" means he puts forth supreme effort, disregarding body and life, in the form of the ultimate struggle. How does this sequence of terms become fourfold? Consider it briefly: for the non-arising of unarisen unwholesome states, for the abandoning of arisen unwholesome states, for the arising of unarisen wholesome states, and for the maintenance, stabilization, and complete development of arisen wholesome states. This is what is called the fourfold Right Effort (*sammappadhāna*). Just these four.</p>
+<p>From that very practice, the four qualities called the Bases of Spiritual Power (*iddhipāda*) emerge. What are the Bases of Spiritual Power? Desire (*chanda*), energy (*viriya*), mind (*citta*), and investigation (*vīmaṁsā*). As mentioned earlier, "one generates desire." Developing a keen interest or willingness is the first step in applying energy. Next, the effort and energy indicated by the two terms *vāyamati* and *viriyaṁ ārabhati*—that is the base of spiritual power of energy (*viriya*). The term *citta* relates to that determination—*cittaṁ paggaṇhāti*, strengthening the mind, the power of determination. Next, although investigation (*vīmaṁsā*) is not directly mentioned in the phrase, we can understand that as one systematically puts forth energy, an investigative intelligence regarding it arises, an understanding of how it should be done; *vīmaṁsā* is something related to wisdom (*paññā*). Now, depending on the strengths each individual brings from past saṁsāra, some attain Nibbāna——by making desire (*chanda*) their primary vehicle, thinking, "If I develop the desire and willingness, I will definitely complete it." Another, through energy (*viriya*), thinks, "If I put my hand to a task, I will never abandon it," and rouses intense energy. Another, making mind (*citta*) foremost, thinks, "If I resolve, I will surely accomplish it." Yet another focuses on investigation (*vīmaṁsā*), wishing to investigate whether the result of this is true. These are the Bases of Spiritual Power (*iddhipāda*). Base of spiritual power does not mean flying through the air. You can understand that this is relevant to some extent even to worldly life for achieving success in any task. The four Bases of Spiritual Power—desire, energy, mind, and investigation—are necessary not only for supramundane Nibbāna but also for obtaining mundane direct-knowledges (*abhiññā*). Even if we do not speak of lesser achievements, you can assume they apply to them as well. These, then, are the Bases of Spiritual Power.</p>
+<p>Next, as the practitioner carries this out, an understanding of five extraordinary faculties arises, replacing the five ordinary physical senses they had thus far. These are: faith (*saddhā*), energy (*viriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*). These are listed as the faculties (*indriya*) in the Dhamma. It is not through the five physical senses that one realizes Nibbāna—. Not through those five, dear devotees, but by developing the faculties of faith, energy, mindfulness, concentration, and wisdom—by developing these five spiritual faculties. Through their development. What does developing them mean? It does not mean keeping them idle; rather, one utilizes them as powers (*bala*) to repel that army of Māra. Some are repelled by the power of faith (*saddhā-bala*), others by the power of energy (*viriya-bala*), power of mindfulness (*sati-bala*), power of concentration (*samādhi-bala*), and power of wisdom (*paññā-bala*). These very five are shown as the Five Powers (*pañca balāni*) among the Thirty-Seven Factors of Awakening in the Dhamma. When these are lined up, they become the Five Powers.</p>
+<p>Next, the "Seven" refers to the seven factors that help in awakening (*bodhi*), which are lined up towards the end. You must have heard of these: mindfulness (*sati*), investigation of states (*dhamma-vicaya*), energy (*viriya*), rapture (*pīti*), tranquility (*passaddhi*), concentration (*samādhi*), and equanimity (*upekkhā*). Mindfulness (*sati*) is the foundation. When mindfulness is established foremost, the investigation of states (*dhamma-vicaya*)—the ability to identify wholesome and unwholesome states, the ability to deeply understand the meditation subject—emerges. Based on that, the energy (*viriya*) to abandon the unwholesome and cultivate the wholesome arises. Within that energy, the practitioner naturally experiences a certain spiritual, non-material rapture (*pīti*). This aids concentration. It is to the one who exerts energy that this extraordinary, spiritual rapture occurs. Next, calming down that rapture, one develops inner tranquility of body and mind (*passaddhi*) through that energy. Subsequently, concentration (*samādhi*) is raised from that. Following that, to protect and stabilize that concentration, equanimity (*upekkhā*) is developed. These seven, this sequence, is what is known as the Seven Factors of Awakening (*bojjhaṅgā*). This is second only to the Noble Eightfold Path. The Seven Factors of Awakening form such an important category of the Dhamma.</p>
+<p>Now, the final exertion is carried out through the Noble Eightfold Path, which is presented as a single unit. The Noble Eightfold Path (*ariyo aṭṭhaṅgiko maggo*) is an integrated military organization. They are so interconnected that they cannot be separated from one another. Right View (*sammā-diṭṭhi*) leads directly to Right Intention (*sammā-saṅkappa*), and accordingly Right Speech (*sammā-vācā*), Right Action (*sammā-kammanta*), Right Livelihood (*sammā-ājīva*), Right Effort (*sammā-vāyāma*), Right Mindfulness (*sammā-sati*), and Right Concentration (*sammā-samādhi*) are wonderfully connected to one another. Thus, it is this integrated, final military organization, the invasion, and ultimately the exertion—the final step—that is taken by the Noble Eightfold Path. Having cultivated this Noble Eightfold Path at a certain mundane level, it is said that in the supramundane moment, all eight factors arise simultaneously in a single mind-state. The mind-state that arises then is extremely unique. It is not like taking each factor individually. When all eight come together as one, it is through that that one leaps from the mundane to the supramundane side. It is marvelous. This is a highly wondrous natural principle (*dhamma-tā*) that only a Buddha can bring to light. That Path-mind (*magga-citta*) is a concentration (*samādhi*) attained in an instant. The Dhamma states that there is no concentration equal to that concentration: *samādhinā tena samo na vijjati*. It is known as the "immediate concentration" (*ānantarika-samādhi*). Immediately following that concentration is the Fruit (*phala*). Path...</p>
+<p>A special aspect relevant to that concentration-mind (*samādhi-citta*) is that during the Path-moment, these factors provide protection to one another. These are the three factors: Right View (*sammā-diṭṭhi*), Right Effort (*sammā-vāyāma*), and Right Mindfulness (*sammā-sati*). The Buddha reveals a highly wondrous natural principle here. Right View becomes the forerunner; it goes in front. Right Effort pushes from behind, providing momentum and protection. Right Mindfulness stands close at hand, performing the service of attendance, supplying whatever is needed at that moment. To illustrate this with a simile—something frequently seen nowadays, which you will easily understand: how do high state officials travel? First, a security officer goes in front with all necessary equipment, clearing the way and showing the path. Next, a group follows behind. Another security battalion or individual, perhaps a bodyguard, follows behind for protection to ward off threats from the rear. Furthermore, other officers sometimes walk alongside the person for security. According to this simile, Right View (*sammā-diṭṭhi*) goes in front in that supramundane moment. Right Effort (*sammā-vāyāma*) pushes from behind. Right Mindfulness (*sammā-sati*) performs the service of attendance close at hand.</p>
+<p>In this way, that supramundane mind is something highly wondrous. The Noble Eightfold Path can be mundane and prepared (*saṅkhata*). Yet, through that mundane path, as the Buddha pointed out, in a highly marvelous manner, all eight factors are united in a single moment, and it is through that power that one leaps to the other side. This is the moment of leaping into Nibbāna——which is called the Unprepared (*asaṅkhata*). Thus, the military organization available to the practitioner, and the methods of invasion and exertion through that military organization, have been brought to light by the Buddha through this Dhamma.</p>
+<p>"Exert yourselves! Go forth! Engage in the Buddha's Dispensation! Destroy the army of Death!" This refers not only to those defilements; you must have also heard of the ten fetters (*saṁyojana*) by which we are bound to saṁsāra. Severing those fetters systematically through the Path-minds of Stream-entry, Once-returning, Non-returning, and Arahantship, one breaks through those bonds and advances to supramundane attainment, bringing an end to the suffering (*dukkha*) of saṁsāra to realize Arahantship, Nibbāna—. This is what the Buddha illustrated through this verse. If one dwells diligently in such a Dhamma, where "Dhamma-Vinaya" does not mean mere doctrine, but the discipline (*vinaya*) that is the practical application of the doctrine; the Buddha's Dispensation was known in ancient times by the name *Dhamma-Vinaya*. It is not a mere heap of books or theoretical learning (*pariyatti*). Within the term *Dhamma-Vinaya*, there is both the teaching (*dhamma*) and the discipline (*vinaya*). *Yo imasmiṁ dhammavinaye*—if anyone dwells diligently in this Dispensation of Dhamma-Vinaya, then what is the result? *Pahāya jāti saṁsāraṁ*—abandoning this saṁsāra of repeated birth (*jāti*), they make an end of suffering (*dukkha*). These two verses are indeed two highly majestic verses.</p>
+<p>Just as these two verses preached in the Brahma-world by Venerable Abhibhū broadcasted throughout a thousandfold world system, even up to the present day, practicing monks conclude their chanting of the *Vatta Piritha* with these two verses. We can imagine how valuable these two verses are for developing one's energy (*viriya*). There is a valuable historical narrative revealing that these verses were used with great devotion even in ancient Sri Lanka. Some of you might have heard the story of Venerable Milakkhatissa. For those of you who like to listen to stories, here is a good opportunity. The story goes like this:</p>
+<p>In ancient Sri Lanka, near a village where the monks of the Gāminda vāla monastery in the Ruhuna province went for alms-round, there lived a hunter from a hunter family—those who kill animals are called hunters. After reaching youth, this hunter married and supported his wife and children by setting hundreds of traps, killing the animals caught in them, eating some, and selling the rest. One day, leaving his home, he took fire and salt with him. Among the animals caught in the traps overnight, there was a deer. He killed the deer, butchered it, roasted it, and ate it. When he had finished eating, a highly strange, intense thirst arose in him. To quench this thirst, he entered the Gāminda vāla monastery and went to the shed where the water pots were kept. Although the water pots were full of water, due to this man's unwholesome, sinful karma, the water pots appeared empty to him. Thereupon, he began to criticize: "In a place where so many monks reside, there is not even a drop of water to drink!"</p>
+<p>Hearing the man shouting, Venerable Cūla Piṇḍapātika Tissa, who was in the monastery, came out and saw that the pots were indeed full of water. Wondering what was wrong with this man, the Elder realized: "This man has become a living hungry ghost (*peta*) right now, which is why he cannot see the water." Out of compassion, the Elder lifted a water pot and poured water into the hunter’s hands. The hunter drank as much as ten pots of water, but the water he drank was like water poured onto a red-hot iron pan; his thirst was not quenched even after drinking all of that. Thereupon, the Elder said, "Understand, lay devotee, how severe your karma is. You have become a living hungry ghost (*peta*). What kind of retribution will you receive in hell?" Hearing this, a great spiritual urgency (*saṁvega*) arose in the hunter. Immediately, he dismantled the traps he had set, ran back home, released the captive animals at home into the forest, explained the situation to his wife and children, destroyed his weapons, and returned to request ordination from the Elder.</p>
+<p>Then this Elder said, "Lay devotee, ordination is very difficult. How can I ordain you?" He replied, "Having witnessed such a direct, tangible proof, how can I *not* ordain?" When he expressed his strong desire for ordination, the Elder ordained him and gave him the meditation subject of the skin-pentad (*taca-pañcaka kammaṭṭhāna*). From that day on, he was known as Venerable Milakkhatissa. *Milakkha*, dear devotees, means barbarian (*mleccha*). You know the word *mleccha*. There is no need for another word for *mleccha*. A despicable man who kills animals is a barbarian. You are familiar with the name Aṅgulimāla; for some reason, no other monk who was ordained was ever given the name Aṅgulimāla besides Venerable Aṅgulimāla himself. Even though it was not given to others, his character stands out particularly due to that power and diligence (*appamāda*) spoken of by the Buddha. The name Milakkhatissa is just like that. Venerable Milakkhatissa’s character became so noble because of that kind of background. Let us relate what followed his ordination. Having been ordained, how did he spend his life compared to before, when he had spent day and night setting traps, killing the animals caught in them, exerting immense energy just to support his wife and children as his livelihood?</p>
+<p>Next, what did Venerable Milakkhatissa do? Applying that same energy (*viriya*), he began to energetically perform monastic duties at the shrines and the services for the Sangha during the rains-retreat. While practicing meditation, he performed these duties. He also learned the word of the Buddha from that Elder. On one such occasion when he was learning, Venerable Piṇḍapātika Tissa explained the *Devadūta Sutta*. According to the *Devadūta Sutta*, the Buddha has declared that the wardens of hell inflict unimaginable, extremely severe tortures and punishments on a sinner who falls into hell, and then cast him into the great hell. As soon as he heard this, Venerable Milakkhatissa asked, "Venerable Sir, is this not a highly strange thing? After undergoing so much torture, the person is cast again into the great hell. What kind of suffering (*dukkha*) must there be in the great hell?" "Indeed, the great hell is a highly terrifying place." "Can we see it?" he asked.</p>
+<p>"You cannot see it directly, but I can demonstrate something similar," the Elder replied. He instructed Venerable Milakkhatissa to ask the novice monks to pile some green firewood on top of a rock. Venerable Milakkhatissa, together with the novices, gathered a pile of green firewood on top of a rock. Thereupon, the Elder entered into concentration (*samādhi*) and, through psychic power, brought a tiny spark from the Avīci great hell—the text says it was as small as a firefly—and dropped it onto the pile of firewood while the monks watched. Instantly, all the green firewood was reduced to ashes. From this, he understood the terrifying nature of hell.</p>
+<p>Next, Venerable Milakkhatissa asked, "Is there only the reading of books in this Dispensation?" The Elder explained—though at that time there was a convention of classifying them as the duty of meditation (*vipassanā-dhura*) and the duty of texts (*gantha-dhura*), though it was not an absolute division. Then, he said to the Elder: "I was ordained out of faith. I want to realize Nibbāna——quickly. Please give me a meditation subject (*kammaṭṭhāna*)." Thereupon, the Elder considered and gave him a meditation subject in a way that utilized the physical energy (*viriya*) he had been accustomed to practicing. He gave Venerable Milakkhatissa a certain meditation subject that allowed him to practice insight meditation (*vipassanā*) while performing his monastic duties at the temple.</p>
+<p>Then, Venerable Milakkhatissa practiced in a highly marvelous manner, staying awake through the night. The historical accounts of that time record the places associated with Venerable Milakkhatissa. As we see from the texts, the Gāminda vāla monastery was located between Sithulpawwa and Kataragama. Thus, on some days, Venerable Milakkhatissa would perform duties at the shrine room and for the Sangha at Sithulpawwa. On other days, he would perform duties at the Gāminda vāla monastery, staying awake through the night. On some days, at the Kiri Vehera in Kataragama. In this manner, keeping awake through the night at all three locations, when drowsiness overcame him, what did he do? He would wet a straw ring, place it on his head, and place his feet in water. While cultivating energy (*viriya*) in this manner, it is recorded that on one occasion at Sithulpawwa, having practiced thus through two watches of the night, intense drowsiness came upon him towards dawn. While Venerable Milakkhatissa was sitting with the wet straw ring on his head, he heard a novice monk reciting those two verses: *Ārabhatha*, etc. Hearing these verses, Venerable Milakkhatissa reflected: "This discourse was preached for me, for a monk of initiated energy (*ārabdha-viriya*) like me!" Generating joy through that, and attaining absorptions (*jhāna*), it is said that he attained the fruit of Non-returning (*anāgāmī-phala*) at that very moment. Subsequently, by cultivating even more energy, it is recorded in the texts that he attained Arahantship.</p>
+<p>That this story was present not only in recent literature but also in the ancient Sihala commentaries (*Sīhala-aṭṭhakathā*) is demonstrated by the verse of solemn utterance (*udāna-gāthā*) he proclaimed after attaining Arahantship and realizing the path-fruits: "With a straw ring on my head, I walked up and down. Now I have no doubt whatsoever; I have realized the fruits of the path." Thus, through the biography of Venerable Milakkhatissa, we can understand that his life was intimately connected to those two verses. He had put forth such great energy even without knowing those verses. After hearing the two verses, he thought, "This teaching was indeed preached for me." Through that rapture, he attained the path-fruits.</p>
+<p>Let us now contemplate the present day. The Buddha delivered the first Dhamma sermon through the *Dhammacakkappavattana Sutta*. We mentioned that the Wheel of Dhamma was set in motion. But in the end, what remains of that turning Wheel of Dhamma now? Only the symbol of the Wheel of Dhamma. Why is that? Because today, Nibbāna——has been declared obsolete. Nibbāna is considered impossible in this era. Now, only the symbol of the Wheel of Dhamma is left for us. "There is no use in putting forth energy; it is enough to do some minor wholesome deed to accumulate perfections (*pāramīs*) in this day and age." This is the common talk. Thus, the biographies of Venerable Milakkhatissa, Venerable Soṇa, and other Elders who cultivated such energy are viewed merely as ancient legends; they are not considered relevant to this day and age. Such a view is widely held.</p>
+<p>We must reflect wisely on the rains-retreat (*vassa*), which was a highly special period even during the Buddha's time. In the Buddha’s day, even the monks residing in various cities would seek out remote villages when the rains-retreat drew near. On their way, devout lay disciples would offer them alms-food and ask, "Venerable Sirs, where are you traveling?" "To a suitable place." "Then, there are suitable forest tracts and quiet places here. We shall support you with the four requisites. Please reside here." Thus, the monks spent their rains-retreat in those places not with material motivations in mind. Not with material targets, but with spiritual, non-material targets—with Nibbāna——foremost. Because of that noble target, while they lived devoted to meditation, some of the lay devotees who came to know of it, even those who had not known the Dhamma previously, followed their path. Having done so, they too made significant progress on the path to Nibbāna, as you must have heard, as illustrated by the story of Mātika's Mother (*Mātikamātā*). At this moment, even if you would like to hear it, I cannot repeat that story. We have preached it on previous occasions. Mātika's Mother is a highly famous and noble character among lay women.</p>
+<p>While serving those monks, the laywoman Mātika's Mother developed absorptions (*jhāna*), path-fruits (*magga-phala*), direct-knowledges (*abhiññā*), and all other achievements, becoming a Non-returner (*anāgāmī*). From this, we can see that lay devotees in the past, taking the spiritual determination and spiritual goal of the monks as their model, also walked the path to Nibbāna by utilizing that opportunity. Therefore, that is the highest meritorious deed of the rains-retreat. But that rains-retreat merit may not be considered suitable for this day and age if Nibbāna is declared obsolete. Therefore, we must reflect that the Dhamma presented by the Buddha, the Wheel of Dhamma, is indeed something that must be turned within one's own mind-stream. Conquering the army of Māra is not something the Buddha completed on our behalf. The Buddha has conquered Māra. "So now we only have to enjoy Nibbāna, which will come to us automatically"—some think in this way. It is not so. That army of Māra is the very army of Māra residing within ourselves. For that, the essential elements required for the battle within you are the element of initiative (*ārambha-dhātu*), the element of launching (*nikkama-dhātu*), and the element of exertion (*parakkama-dhātu*). Furthermore, the Buddha has shown how to organize the army through the Thirty-Seven Factors of Awakening. Not only the Elders of the past who experienced this, but even barbarian (*mleccha*) hunters, as mentioned, attained world-renowned nobility.</p>
+<p>If we contemplate accordingly, just like that Wheel of Dhamma, the inner strength within us—the spiritual strength—gradually declines when we degenerate in virtue. A sign of this spiritual decline is the emergence of a cult of devotion (*bhaktivāda*) in place of the system of energy (*vīriyavāda*), looking to achieve this through someone else’s help. But this Dhamma cannot be practiced in that way. The Buddha has declared:</p>
+<p>> *Tumhehi kiccaṁ ātappaṁ,*</p>
+<p>> *akkhātāro tathāgatā;*</p>
+<p>> *Paṭipannā pamokkhanti,*</p>
+<p>> *jhāyino mārabandhanā.*</p>
+<p>></p>
+<p>> "You yourselves must make the effort; the Tathāgatas are only teachers. Those who enter the path and practice meditation (*jhāyino*) are freed from the fetter of Māra."</p>
+<p>Thus, according to that word of the Buddha, and also diligence—*appamatto na vihessati* (he who is diligent will not suffer). This word "diligence" (*appamāda*) is the very alphabet of this Dispensation.</p>
+<p>You have heard of: *Appamādo amatapadaṁ* (Diligence is the path to the Deathless). You also hear and know that this path to the Deathless is now being interpreted in various other ways:</p>
+<p>> *Appamādo amatapadaṁ,*</p>
+<p>> *pamādo maccuno padaṁ;*</p>
+<p>> *Appamattā na mīyanti,*</p>
+<p>> *ye pamattā yathā matā.*</p>
+<p>To help you remember, we have translated this into Sinhala:</p>
+<p>> Diligence is the path to the Deathless;</p>
+<p>> negligence is the path of Death.</p>
+<p>> The diligent do not die;</p>
+<p>> the negligent are as if already dead.</p>
+<p>This indeed is the word of the Buddha.</p>
+<p>Next, regarding the Buddha's Dispensation, the Buddha himself has proclaimed it. On many occasions, the Buddha highlights the concept of the "opportunity of the moment" (*khaṇa-sampatti*). There is a general concept among worldly people: *khaṇakicco loko, khaṇakicco loko*—"the world is busy with the moment." The world operates on time. Not only today or yesterday, not only in this era of clocks, but even in those days, the world was a place that worked on time. But although the world speaks of the moment, they do not recognize the true moment. Although they say that the world functions in the instant (*khaṇa*), they do not know what the instant actually is. Therefore, the Buddha goes on to define the "moment." The eight unfortunate opportunities (*attha akkhana*) are the unsuitable states of existence in which a human being can be born. Although I do not explain them in detail—occasions when a Buddha does not arise, or even if he arises, one is unable to hear the Dhamma or practice accordingly—you must have heard of them. The Buddha points out that the most precious moment we have now is the one free from those eight unfortunate opportunities. There is only one such moment: the period when a Buddha has arisen and the Dhamma is present.</p>
+<p>If one does not take advantage of that moment while the Dhamma exists, then: *Khaṇātītā hi socanti, nirayamhi samappitā*—"Those who miss the moment will sorrow when they are consigned to hell." If that moment is missed, one has to go to hell and undergo suffering (*dukkha*). If Venerable Milakkhatissa had missed that moment, how much hellish suffering (*dukkha*) would he have had to undergo? Moreover, it was not only from hell that he was liberated, but from the entire suffering (*dukkha*) of saṁsāra, of repeated birth (*jāti*). With that energy (*viriya*), what do we do today by putting wet straw rings on our heads and placing our feet in buckets of water? We do it merely to pass mundane exams. One cannot escape from saṁsāra by passing mundane exams. But if we apply that very energy towards escaping from saṁsāra, the character of Milakkhatissa is a wonderful invitation and model. There is a certain energy (*viriya*) within us. If we direct it correctly to this side, with right understanding and right view, we can succeed. The Buddha declared that as long as the Thirty-Seven Factors of Awakening are practiced, the world will not be empty of Arahants. "Being practiced" does not mean being in books. It is not about being in books; it is about putting them into practice, living in accordance with them. At the time of his Parinibbāna, the Buddha summarized the entire True Dhamma, saying: "The teachings I have preached during these forty-five years are indeed these thirty-seven."</p>
+<p>Therefore, we must contemplate that we should not merely remain cozy within theoretical learning (*pariyatti*). Once we have gained understanding through it, along with a clear comprehension of how it should be put into practice, we must translate it into practice (*paṭipatti*). It is through realization (*paṭivedha*), the understanding of the path-fruits, that we can make an end of the suffering (*dukkha*) of saṁsāra. If that moment is missed, the Buddha concludes that series of verses with a simile drawn from society: just as a merchant who misses an opportunity to buy goods cheaply laments, "Ah! The time has passed!" after the opportunity is gone, so too will it be for one who, having been born during the appearance of a Buddha, fails to solve the problem of their journey in saṁsāra.</p>
+<p>That is why the Buddha declares: *Khaṇātītā hi socanti* (Those who miss the moment will sorrow). Based on this, the Buddha has set forth the motto: *Khaṇo ve mā upaccagā*—"Let not the precious moment pass you by!" Guided by this motto, the monks of the past entered the rains-retreat. Upon concluding the rains-retreat, many of them, having spent those three or sometimes four months, would bring to the Buddha their final offering, which is called the declaration of Arahantship (*aññā-paṭivedha*). They would declare, either directly or indirectly, that they had attained Arahantship. They would report to the Buddha the realization they had achieved during that period of quietude. The Buddha would express approval by saying, "Sādhu!" Other monks, at the end of the rains-retreat, would travel in search of the Buddha. Such accounts are found in the Dhamma. The Buddha would wait for them to arrive. Sometimes, based on various things they witnessed along the way, once the Buddha purified their meditation subjects, they would immediately attain Arahantship.</p>
+<p>Thus, these were not accidental events. The precise manner in which they cultivated that energy (*viriya*) is not explained everywhere in the Dhamma books. It is simply recorded that a banker's son or a prince was ordained, went to the forest, and shortly thereafter returned as an Arahant—that is all we are given to know. How they lived in the forest, what they did, and how they conquered is often not explained. However, that details are precisely what is contained within the Thirty-Seven Factors of Awakening. During that quietude, they aroused spiritual urgency (*saṁvega*) and used it to propel their monastic journey towards Nibbāna—. Spiritual urgency (*saṁvega*) is, so to speak, the fuel and the velocity. The eight bases of spiritual urgency (*saṁvega-vatthu*) are listed as: birth (*jāti*), decay (*jarā*), disease (*vyādhi*), death (*maraṇa*), the suffering experienced in past saṁsāra, the suffering to be experienced in the future if one continues to remain in it, and the toil of seeking food and livelihood even in this present life. We utilize all of these as bases of spiritual urgency. Throughout this long saṁsāra, not only we but even an animal undergoes immense suffering (*dukkha*) just to survive for a single day to feed itself.</p>
+<p>can escape from this has been revealed only by a Buddha. "Obstructed by the hindrance of ignorance (*avijjā-nīvaraṇa*) and fettered by the bond of craving (*taṇhā-saṁyojana*), monks, you and I have traveled for a long time, for an incalculable number of eons." The similes mentioned in the *Anamatagga Sutta* and other discourses are actually not mere figures of speech. The Buddha often remarked that it is impossible even to give a simile. When he said a simile is impossible, he offered these descriptions merely as a way to help us conceive of it slightly—descriptions of the suffering (*dukkha*) humans have undergone during a single eon, which you might have heard of from the *Anamatagga Sutta*. On one occasion, pointing to Mount Vepulla, the Buddha said to the monks: "Monks, if the skeleton of a single person during a single eon were accumulated, and if that pile of bones were not to decay, it would be larger than this Mount Vepulla." On other occasions in the *Anamatagga* discourses, as we have reminded you many times, the Buddha declared that if the blood shed by a single person—even this very individual we call a human being—when they were born in past saṁsāra as a pig, a goat, a chicken, or a buffalo and had their throat cut, were collected, it would be greater than the water in the four great oceans. And it is said that this is not even a mere exaggeration.</p>
+<p>Similarly, the blood shed due to the torture inflicted when one was falsely accused by kings or caught as a thief in saṁsāra is said to be of that magnitude. Furthermore, on the other hand, if the tears shed over those regarded as beloved in each lifetime—relatives, parents, daughters, sons, and spouses—were gathered, the tears shed by a single person would exceed the waters of the four great oceans. From this, we can imagine how incredibly long this time has been.</p>
+<p>That is why it is declared: *Kici karahaci loke uppajjanti tathāgatā*—"Rarely, at times, do Tathāgatas arise in the world." There are some eons in which no Buddha arises at all, which are called "eons empty of Buddhas" (*buddha-suñña kappa*). Thus, when reflecting on such vast stretches of time, we have been wandering in this long saṁsāra, taking birth in various states of existence over a period so immense that modern science cannot even conceive of it. During those wanderings, not only were we unable to hear such a Dhamma, but we also lacked the capacity, the intellectual power, and the understanding to practice accordingly. In the human state of existence, a human being is endowed with this capacity. Additionally, the rare opportunity of the arising of a Buddha, the chance to hear the Dhamma, and the inner capacity to put that Dhamma into practice are present. Therefore, if such an opportunity is missed, one will have to grieve just like the merchant who, as the Buddha described, failed to purchase goods when they were cheap. This is why the Buddha instructed us to constantly reflect on the bases of spiritual urgency (*saṁvega-vatthu*).</p>
+<p>The Buddha has described this place called "the world" as indeed the very kingdom of Māra. The kingdom of Māra means invitations to defilements (*kilesas*) from every side. However, through the Dhamma brought to light by the Buddha, we must understand what ought to be done. It is that path which the Buddha has illustrated through the Factors of Awakening (*bodhipakkhiya-dhamma*) and other teachings. Reflecting on these during a rains-retreat like this, regardless of the various opinions prevalent in the country, one must contemplate: instead of thinking "it is impossible in this rare opportunity," one should arouse the perception of possibility and, at one's own level, strengthen one's mind to further develop whatever meditation one has practiced so far, especially during this rains-retreat. By practicing these meditation subjects (*kammaṭṭhāna*), powers of which one was previously unaware might emerge from within, just as they did in Mātika's Mother. It is through that energy (*viriya*) that they emerge. Like embers beneath ashes, some individuals possess latent power. But many do not step forward to bring it out. For that, one must make an initiative (*ārambha*).</p>
+<p>It is not a matter of merely learning the word of the Buddha. For a long time, you have gone forth from the home life, from your households, generating a certain degree of the power of renunciation (*nekkhamma-sakti*), and have engaged in this listening to Dhamma and meditation through the undertaking of virtue (*sīla*). Furthermore, utilizing that virtue, if on some occasion you remove the hindrances (*nīvaraṇa*) and concentrate the mind, it is at that very moment that you can enter the path of insight (*vipassanā*). Then, the true nature of this world, which the Buddha brings to light as the Three Characteristics (*ti-lakkhaṇa*), is contained within these three words: impermanent (*anicca*), suffering (*dukkha*), and not-self (*anattā*). Regarding this impermanence, the world possesses the perception of permanence (*nicca-saññā*). Worldly beings live within four perversions (*vipallāsa*), which are distorted views: regarding the impermanent (*anicca*) as permanent, the unbeautiful (*asubha*) as beautiful, the painful (*dukkha*) as pleasant, and what is not-self (*anattā*) as self. The world looks through this distorted lens. However, the Buddhist practitioner, relying on the word of the Buddha, endeavors to bring to light the true nature of the world—knowledge and vision of things as they really are (*yathābhūta-ñāṇadassana*). While constantly cultivating concentration and so forth, one can look at the world from that perspective. One should not think in the way some worldly intellectuals do. One must align one's thinking with the Three Characteristics brought to light by the Buddha. This is what is called wise attention (*yoniso manasikāra*)—contemplating with wisdom.</p>
+<p>In this Dhamma, two factors are listed as helpful for the arising of Right View (*sammā-diṭṭhi*): the voice of another (*paratoghosa*) and wise attention (*yoniso manasikāra*). "The voice of another," dear devotees, means we must hear the Dhamma from someone else; we do not know it on our own. Whether from the Buddha or a disciple, or not only from spoken words but also from written texts, we must learn the Buddha’s Dhamma. Having learned it, we must also know how to apply wise attention correctly and systematically. Even here, some make a mistake, applying unwise attention (*ayoniso manasikāra*) instead of wise attention. Due to various forms of conceit (*māna*), restlessness (*uddhacca*), and so forth, this era is one where even the word of the Buddha is distorted. You know this; these are open secrets. In an era where the Dhamma is distorted due to various reasons, reflecting beforehand and bringing to light wise attention is not an easy task either.</p>
+<p>Identifying correctly those perversions (*vipallāsa*) brought to light by the Buddha, we must train ourselves to look at the world in an undistorted way. Meditation subjects are everywhere in the world. In the ancient Dhamma accounts, it is said that some monks attained Arahantship upon witnessing a forest fire. Other nuns attained it upon seeing water flowing, or seeing leaves falling. These did not happen by accident. To a meditative mind, when a practitioner who has cultivated insight (*vipassanā*) is presented with an illustration in a specific situation, they see the truth through it. That is how path-fruits are realized. They are not obtained for nothing. Therefore, whether we are lay or ordained, we must constantly train ourselves to look at the world from that perspective. If we train ourselves to look at the world according to the Right View (*sammā-diṭṭhi*) brought to light by the Buddha, that is what is called insight (*vipassanā*). If we train ourselves to look with insight, with the eye of insight, then when all those virtues emerge and coalesce, the Noble Eightfold Path becomes active within one's mind-stream, arising in a single mind-moment. It is then that the Path-mind (*magga-citta*) arises.</p>
+<p>"I am now a devotee who keeps the five precepts. The Buddha has said that a Stream-enterer possesses the five precepts. Since I keep the five precepts perfectly, I too must be a Stream-enterer"—there are some who grade themselves in this manner. But the Buddha has illustrated the greatness of Stream-entry (*sotāpatti*) by taking a pinch of soil on his fingernail and asking: "Is the soil on the fingernail greater, or the soil of the entire earth?" Through this simile, he shows that for a Stream-enterer, an immense amount of the suffering (*dukkha*) of saṁsāra has been dismantled. This does not happen automatically through the mere keeping of the five precepts. It occurs through a massive inner transformation. Even though it occurs in a brief instant, through a massive transformation, one attains that supramundane mind. Releasing the five aggregates (*pañcakkhandhā*) even for a single moment, and understanding and directly realizing the deep principle of dependent co-arising (*paṭiccasamuppāda*) through that, one becomes a Stream-enterer. Even the term *sotāpanna*—"Stream-enterer"—is misunderstood by some who confuse it with a story about the ear. "Stream-enterer" means that just as a log of wood thrown into a river flows directly to the ocean, once one enters that stream of Dhamma (*dhamma-sota*), they are guaranteed to realize Arahantship within at most seven births. This occurs through that very realization of the Dhamma.</p>
+<p>The direct realization obtained primarily through vision—the direct realization, albeit brief and instantaneous, regarding the true nature of the world—gradually operates within that individual, whether lay or ordained, breaking the potential for rebirth (*jāti*) in saṁsāra. Breaking it continuously as they walk that path diligently, they subsequently realize the path-fruits of Once-returning (*sakadāgāmī*), Non-returning (*anāgāmī*), and Arahantship. This is a unique internal shift, not a Stream-entry that occurs merely because the five precepts are kept. We must reflect on this wisely. There are methods in the world that treat these achievements lightly, promising to deliver them in a day or two. But if we reflect wisely, the truth is that although it occurs in an instant, it happens through that very natural principle (*dhamma-tā*). A Stream-enterer can be an extremely poor person, an uneducated person, or someone without any degrees. Yet, the Buddha describes such a person with a multitude of terms: *diṭṭhadhammo* (one who has seen the Dhamma), *pattadhammo* (one who has reached the Dhamma), *viditadhammo* (one who has known the Dhamma), *pariyogāḷhadhammo* (one who has plunged into the Dhamma), *tiṇṇavicikiccho* (one who has crossed over doubt), *vigatakathaṅkatho* (one who is free from wavering), *vesārajjappatto* (one who has attained courage). Through these various terms, he indicates that they have seen the Dhamma, reached the Dhamma, plunged into the Dhamma, and attained courage. This means that they have directly realized that Dhamma of dependent co-arising (*paṭiccasamuppāda*) in their own mind-stream in that very instant. It is by virtue of that power that they do not go beyond at most seven more births.</p>
+<p>Proceeding with a clear understanding of these matters is the path; if one assumes it can be done easily, abandoning meditation and thinking this is attained merely by listening to a few discourses, it is a delusion. Avoiding such pitfalls, you must walk the right path, developing virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*). Bringing to light within yourselves those noble elements declared by the Buddha—the element of initiative (*ārambha-dhātu*), the element of launching (*nikkama-dhātu*), and the element of exertion (*parakkama-dhātu*)—and walking that path of energy trodden by Venerable Aṅgulimāla in the past and Venerable Milakkhatissa in more recent times, you should make an end of the suffering (*dukkha*) of saṁsāra. This is what is being declared here. Thus, what is important here is the battle cry, the war song that aids this—the true war song of Buddhists. For the Buddha has declared:</p>
+<p>> *Yo sahassaṁ sahassena,*</p>
+<p>> *sangaame maanuse jine;*</p>
+<p>> *Ekañca jeyyamattānaṁ,*</p>
+<p>> *sa ve saṅgāmajuttamo.*</p>
+<p>></p>
+<p>> "Though one should conquer a million men in battle, yet he indeed is the noblest victor who conquers himself."</p>
+<p>Remembering this, recognizing these principles, bringing to light that very power within yourselves, organizing that army called the Thirty-Seven Factors of Awakening shown by the Buddha, and launching the invasion with that military organization, you must endeavor to achieve that supreme exertion.</p>
+<p>On a valuable day like today, you have undertaken virtue (*sīla*) and must have practiced meditation. At this moment, you have had the opportunity to listen to a Dhamma discourse that supports your meditation and aids in bringing an end to the suffering (*dukkha*) of saṁsāra. By putting it into practice, may the wholesome power of this merit be a supportive condition for all of you to realize the path-fruits starting from Stream-entry, to bring an end to the terrifying suffering (*dukkha*) of saṁsāra as quickly as possible in this very life, and to arrive at the supreme, deathless Nibbāna—. From the Avīci hell to the Akanissa heaven, if there are any beings who wish to rejoice in the merit of this preaching and listening to the Dhamma, may they, by so rejoicing, find peace in the supreme, deathless Nibbāna through the Awakening they aspire to. With this aspiration, recite these verses.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_082.html" class="doc-btn">← Previous Sermon (082)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_084.html" class="doc-btn">Next Sermon (084) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 008 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_007.html" class="doc-btn">← Previous Sermon (007)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_009.html" class="doc-btn">Next Sermon (009) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 008</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_008_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_008_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_008_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #8</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No. )</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Phandanaṃ capalaṃ cittaṃ,</p>
+<p>durakkhaṃ dunnivārayaṃ;</p>
+<p>Ujuṃ karoti medhāvī,</p>
+<p>usukārova tejanaṃ.</p>
+<p>Vārijova thale khitto,</p>
+<p>okamokataubbhato;</p>
+<p>Pariphandatidaṃ cittaṃ,</p>
+<p>māradheyyaṃ pahātave.</p>
+<p>From:</p>
+<p>Verse 33 and 34  from the Cittavagga (Chapter on the Mind) of the Dhammapada</p>
+<p>Dear Listeners,</p>
+<p>Today, this Poya day is recognized as the Adhi Vesak (Intercalary Vesak) Poya day. The very word "Vesak" is sufficient to arouse a deep devotion and faith in pious Buddhists towards the Buddha, His life, and His immense store of virtues. We all know that we define a Buddha as a noble friend (*kalyāṇa-mitta*) who shows the path to Nibbāna when beings in this saṃsāra, having burned in the suffering (*dukkha*), oppression, and fire of this round of rebirths for an extremely long time, finally direct their minds towards [the deeper meaning of] life. The Buddha Himself declared Himself to be a noble friend to the world.</p>
+<p>With the appearance of a Buddha, an opportunity arises for us to receive instructions that reveal this path to Nibbāna. Saṃsāra, then, is a journey akin to moving in a circular track. When we attempt to steer the mind—which has become accustomed to the momentum of running on this circular track—away from it, to direct it toward that noble state of escape, of liberation called Nibbāna, the mind does not listen. Because of saṃsāric habits, this is no easy task. Viewed from another perspective, it is like attempting to escape from, and break free of, the kingdom of Māra. It is like the effort made to escape Māra's kingdom after having been its subjects for an extremely long time. This is something that must be done with immense effort and exertion. If one embarks on this task thinking it to be easy, one will have to retreat very quickly. Therefore, one who hopes to realize Nibbāna, one who prepares to strive for Nibbāna, must first gain some understanding of the saṃsāric weaknesses in one's own mind, the deceptive states (*vañcaka dhamma*), and the obstacles of Māra that may present themselves. It is the Buddha who reveals this very fact to us. The greatest being, the noble friend who can advise us according to the occasion regarding the obstacles that may arise on this path to Nibbāna, is the Buddha. The two verses we have taken as our theme demonstrate the weaknesses, deceptive states, and forces of Māra that generally dominate the mind of a saṃsāric being. Just as these verses provide some understanding of these factors, they also contain guidance on how to conquer them and practical instructions to assist in that endeavor. The background story that led to the preaching of these verses is as follows:</p>
+<p>On one occasion, the Buddha was residing at the Cālikā rock. At that time, a venerable monk named Meghiya was serving as His attendant. One day, Venerable Meghiya approached the Buddha and requested permission to go for alms to the nearby village of Jantu. The Buddha granted him permission. Venerable Meghiya then took his bowl and robes, went to the village for alms, and after his meal, walked up and down on the bank of the Kimikālā River. While doing so, he saw a highly delightful mango grove nearby. Seeing it, he thought: "Ah! This mango grove is ideal for a clansman who is prepared to strive for Nibbāna. This is the best place. I must get permission from the Blessed One and come here to meditate."</p>
+<p>Then, in the evening, he went to see the Buddha and said: "Venerable Sir, when I went to Jantu village for alms today, I saw such a place, and it occurred to me that this is indeed sufficient for a clansman to arouse energy for Nibbāna. It is a good, delightful place. If the Blessed One permits me, I would like to go there to meditate." Then the Buddha replied: "Meghiya, I am currently alone. Wait a little until another monk arrives." But Venerable Meghiya did not comply. Once more he said to the Blessed One: "Venerable Sir, for the Blessed One there is nothing further to be done; everything is completed. There is nothing more to add to the state you have achieved. But for me, there is still much work ahead. To attain Nibbāna, I must add more to what I have done; there is much to be done by way of meditation. Therefore, if the Blessed One allows me, I shall go." For the second time, the Blessed One said: "Meghiya, I am alone at this moment. Wait until another monk arrives." Even then, he did not obey. A third time he pleaded, saying that there was nothing further for the Blessed One to do, but that he himself had work to do. Therefore, if the Blessed One would allow him—and here the word *padhāna* is used, *padhāna* meaning intense striving—"If you allow me to apply *padhāna*-exertion for meditation, I shall go there." At that moment, the Buddha neutrally remarked: "Well, Meghiya, when you speak of applying *padhāna*-exertion, what can we say? Go, then, and do as you wish." Thus, the Buddha gave permission with a neutral attitude (*majjhatta*).</p>
+<p>So, Venerable Meghiya, with great expectations and determination, set out for that mango grove. Having arrived, he prepared a seat in a good spot under a fine mango tree and sat down to meditate. But no sooner had he sat down for meditation than streams of thought (*vitakka*) began flowing into his mind. Unwholesome thoughts—thoughts of sensual desire (*kāma-vitakka*), thoughts of ill-will (*byāpāda-vitakka*), and thoughts of cruelty (*vihiṃsā-vitakka*). You all know that these are the opposites of Right Intention (*sammā-saṅkappa*) in the Noble Eightfold Path—namely, wrong intentions (*micchā-saṅkappa*): thoughts of sensual desire, thoughts of ill-will, and thoughts of cruelty. These came flooding into his mind. He tried to meditate the entire evening, but he could not concentrate or unify his mind. Thereupon, a great sense of spiritual urgency (*saṃvega*) arose in him: "Alas! I ordained out of genuine faith. Is it not truly astonishing that thoughts like these should flood my mind in this manner?" Then, in the evening, he went back to the Buddha and declared: "Venerable Sir, I went and sat down for meditation. But from the moment I sat down, grand thoughts, thoughts of ill-will, thoughts of cruelty, and thoughts of sensual desire have been flooding my mind." At that moment, the Buddha delivered a profound and valuable discourse: "Meghiya, if one's concentration (*samādhi*) is not strong, not mature, there are five qualities, five factors, that help to bring that concentration to maturity. What are these five factors?"</p>
+<p>What is the first factor? It is when a monk has a good noble friend, when he possesses the blessing of a noble friend. That is the first factor: the presence of a noble friend. What is the second factor? It is when a monk is fully accomplished in the moral virtue (*sīla*) appropriate to him. That is, he guards the disciplinary rules (*vinaya*), seeing danger in the slightest faults, strictly observing the precepts, training himself in accordance with them, and fulfilling moral virtue. This refers to being virtuous. What is the third factor? It is when a monk has the opportunity to hear Dhamma discussions concerning the "ten talk-topics" (*dasa-kathāvatthu*) which aid in, and inspire thoughts directed toward, Nibbāna. What are the ten talk-topics mentioned in the Dhamma? Here, too, the Buddha lists them one by one: talk on wanting-little (*appiccha-kathā*), talk on contentment (*santuṭṭhi-kathā*), talk on seclusion (*paviveka-kathā*), talk on aloofness from society (*asaṃsagga-kathā*), talk on arousing energy (*viriyārambha-kathā*), talk on moral virtue (*sīla-kathā*), talk on concentration (*samādhi-kathā*), talk on wisdom (*paññā-kathā*), talk on liberation (*vimutti-kathā*), and talk on the knowledge and vision of liberation (*vimutti-ñāṇadassana-kathā*). These are the ten talk-topics. If we understand them briefly: talk on wanting-little (*appiccha-kathā*) means talks concerning the reduction of desires. Pious devotees, "talks" here refer to matters heard during a Dhamma sermon or perhaps a Dhamma discussion. The monk gets the opportunity to hear a Dhamma discussion or sermon where his noble friends explain the benefits of having few desires—talk on wanting-little. Next, talk on contentment (*santuṭṭhi-kathā*) means talks about being satisfied with what one receives. Talk on seclusion (*paviveka-kathā*) refers to talks regarding living in deep physical and mental solitude and its value—its benefits. Then, talk on aloofness (*asaṃsagga-kathā*) means separating oneself from groups, from the herd. You know that whether we look at wild buffaloes or other animals, they have a habit of moving in herds. Generally, human beings also have a habit of living in herds. Living without the herd, without a crowd, is a great torment for many. That is why we have talk on aloofness—the value of living while guarding one's mind from the herd and the currents that come with it. That is, the benefits of living without entanglement with crowds: talk on aloofness. Then, talk on arousing energy (*viriyārambha-kathā*) is about initiating effort—the talk on the benefits of exerting and initiating energy to burn away defilements, to draw near wholesome states, and to remove unwholesome states. The subsequent terms are self-explanatory. Talk on moral virtue (*sīla-kathā*) means talks on morality. Talk on concentration (*samādhi-kathā*) means talks on concentration. Talk on wisdom (*paññā-kathā*) is on wisdom. Talk on liberation (*vimutti-kathā*) is about Nibbāna. Talk on the knowledge and vision of liberation (*vimutti-ñāṇadassana-kathā*) is about the insights pertaining to Nibbāna. Thus, having the opportunity to hear matters regarding these ten talk-topics is a highly valuable gain for a monk—to prepare his mind. Then He says: utilizing these, what is the fourth factor? It is when a monk, with intense, unrelenting, and active energy, applies himself to the task of abandoning unwholesome thoughts and acquiring wholesome qualities. This is called aroused energy (*ārabdha-viriya*). That is the fourth factor. What is the fifth factor? It is when a monk is endowed with a penetrating wisdom that constantly sees rise and fall—which is called *udayabbaya*—giving him a deep understanding of the impermanent (*anicca*) nature of the world. He becomes one who possesses a penetrating wisdom that constantly perceives arising and passing away.</p>
+<p>Thus, these five factors are extremely helpful for a person to prepare their mind before embarking on meditation. What are these five factors? Briefly stated, a monk—and though we say "monk," you may understand this to apply to any meditating practitioner (*yogāvacara*)—has a noble friend. You should know that "friend" here is not used in the common social sense. In the Dispensation (*Sāsana*), a noble friend (*kalyāṇa-mitta*) is not someone who merely puts an arm around your shoulder. A social friend or companion is someone with whom one associates in good or bad times. That is not what "noble friend" refers to here. That is not why the word was used. When the Buddha speaks of a noble friend (*kalyāṇa-mitta*), we can understand how profound a term this "friend" actually is. He is a teacher whom one must revere, worship, and from whom one must seek advice. Therefore, the first factor mentioned here is association with a teacher. The second factor is being virtuous in the moral virtue (*sīla*) appropriate to oneself. The third factor is the ten talk-topics in the manner described. Just as this was said regarding the monks, you too should have the opportunity to listen to Dhamma discussions, talks, and sermons concerning Nibbāna, and relevant to Nibbāna, to assist in your meditation. Then, the fourth factor is to apply effort—intense and unrelenting effort—in accordance with that. The fifth factor is one's power of wisdom—applying well-established mindfulness and wisdom to engage in that work. These five factors are foundational and primary for anyone embarking on the quest for Nibbāna with a deep purpose.</p>
+<p>Having explained this, the Buddha then declared: "Meghiya, one who has brought his concentration to maturity by relying on these five qualities, these five factors, must next develop four meditations." What are they? He lists them as follows: One must develop the meditation on foulness (*asubha*) to abandon lust (*rāga*). You know that the meditation on foulness is practiced to free the mind from lust—which is a grave defilement carried throughout this long saṃsāric journey. Similarly, one must develop loving-kindness (*mettā*) to eliminate ill-will (*byāpāda*), which is hatred or anger. You see, then, that through these two, the Buddha prescribed the medicine for both attachment and aversion. Thirdly, He lists—as the third meditation—mindfulness of breathing (*ānāpānasati*). One must develop mindfulness of breathing, which is establishing mindfulness on the in-breaths and out-breaths. What is its function, its primary purpose? It is the cutting off of thoughts (*vitakkupaccheda*)—the severing of conceptual thoughts. Directing the mind to one's breathing helps to cut off thoughts. Generally, when thoughts are flooding in, one does not even remember that one is breathing. Yet, when one, with effort, focuses the mind on this subtle process, no room is left for thoughts. That is why it was stated that mindfulness of breathing is especially helpful in cutting off thoughts. And what is the fourth meditation? The Buddha instructed to develop the perception of impermanence (*anicca-saññā*). Frequently maintain the perception of impermanence. This helps to eradicate the conceit "I am" (*asmimāna*). Underlying what the ordinary world calls pride, conceit, or arrogance, lies a very subtle aspect of conceit called the conceit of "existence" or "I am"—the conceit *asmi*. The perception of impermanence helps to eradicate this very conceit.</p>
+<p>In this manner, the Buddha taught four meditations. Having declared this, He then showed Venerable Meghiya their profound connection and the reason for presenting them in this way. Although the perception of impermanence was given as the final meditation, He showed that one can proceed directly to Nibbāna through this very perception of impermanence: "Meghiya, in one who perceives impermanence, the perception of not-self (*anattā-saññā*) becomes established. One who perceives not-self eradicates the conceit 'I am'—the subtle conceit of 'existence'—and, in this very life, here and now, attains that Nibbāna which puts an end to saṃsāric suffering, reaching the noble state of Nibbāna." Thus He declared. Having declared this, He also uttered two verses of solemn utterance (*udāna*), expressions of joy, on that occasion. These are not the verses we took as our theme earlier, but are in addition to them. There, the Buddha spoke two verses demonstrating the pressure one experiences from thoughts, and His own freedom from them:</p>
+<p>*Khuddā vitakkā sukhumā vitakkā*</p>
+<p>*Anuggatā manaso uppilāvā,*</p>
+<p>*Ete avidvā manaso vitakke*</p>
+<p>*Hurāhuraṃ dhāvati bhantacitto.*</p>
+<p>This means: trifling thoughts, subtle thoughts—*khuddā vitakkā, sukhumā vitakkā, anuggatā manaso uppilāvā*—thoughts that cause the mind to float or drift, arising from within the mind itself. An ignorant person (*aviddū*), not understanding these thoughts of the mind, becomes bewildered, confused, and dazed—just as it happened to Venerable Meghiya—and lets these thoughts run hither and thither within the mind. It is as if one is running here and there. You know that even if the physical body does not run around, when these thoughts arise in the mind, it is as though one is running hither and thither. A person with a distracted mind is like an ordinary animal that runs about in response to every passing thought. Describing how a person who cannot control their thoughts falls into such a state of restlessness, He then states in the next verse:</p>
+<p>*Ete ca vidvā manaso vitakke*</p>
+<p>*Ātāpiyo saṃvarati satīmā*</p>
+<p>*Anugate manaso uppilāve*</p>
+<p>*Asesamete pajahāsi buddho*</p>
+<p>Thereupon, He spoke concerning Himself. Understanding this class or collection of thoughts—*ete ca vidvā manaso vitakke, ātāpiyo saṃvarati satimā*—what does the Buddha, or a wise person, do? Being *ātāpī*, which means possessing defilement-burning energy, and being mindful (*satimā*), he restrains these thoughts. He tames them. The solemn utterance expressed here is that an awakened one is entirely free from all such thoughts that arise in the mind.</p>
+<p>What was the mistake made by Venerable Meghiya? We can understand that he went for a good purpose—for intense striving (*padhāna-viriya*). That is why the Buddha finally said, "Well, if you say so, what can we say? Go then." But he went before the right time had arrived. He was too hasty. This is what we must understand. Meditation is a noble aspiration, but Venerable Meghiya was overly hasty. Furthermore, he committed a serious error: disobeying the words of the Buddha. He made that request a third time. This is a serious action, akin to the offense of disparaging the Noble Ones (*ariyūpavāda*). The consequence of this action alone is sufficient to agitate the mind. It is that serious. Having come as an attendant, he forgot his duties, ignored his duties toward the Buddha, disregarded His advice, and went off to meditate in that manner. It was a grand idea, but he was not prepared for the task. His mind was not yet ready. Even when it comes to driving a vehicle, if one gets a new car but does not know how to drive, one must display the letter "L" and drive for some time with an experienced person seated beside them. Similarly, this venerable monk was someone who should have taken instructions from the Buddha and proceeded only when the time was right. Yet he was hasty, driven by pride and conceit. That is why he went so far as to say, "For the Buddha, the work is done, but for me it is not yet so." In response to that, the Buddha delivered those verses we took as our theme, which reveal the nature of the mind:</p>
+<p>*Phandanaṃ capalaṃ cittaṃ*</p>
+<p>*Dūrakkhaṃ dunnivārayaṃ*</p>
+<p>*Ujuṃ karoti medhāvī*</p>
+<p>*Usukāro’va tejanaṃ.*</p>
+<p>This is taught with an excellent simile. You know that in these Dhammapada verses—this being a verse from the Citta Vagga—the Buddha employs extraordinary similes. Here He describes the nature of the mind: *phandanaṃ capalaṃ cittaṃ dūrakkhaṃ dunnivārayaṃ*. This mind—*phandanaṃ* means flickering or trembling. This is explained as the trembling nature of the mind in the ordinary saṃsāric being when confronted with objects such as forms and sounds. The mind trembles—*phandanaṃ*—and *capalaṃ*, it is fickle. Now, Venerable Meghiya went with the intention of realizing Nibbāna. Yet, the mind is fickle; in the end, he was overcome even by thoughts of sensual desire. Such is the nature of the mind. There is nothing strange about it; this is a state to be expected. Because a mind that has run on the circular track of saṃsāra for so long cannot be pulled out of it all at once. The saṃsāric momentum is still active. To counter this, a substantial inner momentum must arise. It is for this purpose that the five factors mentioned earlier, such as association with a teacher, are helpful. So—*phandanaṃ capalaṃ*—this mind is fickle. You all know what "fickle" means; it needs no further explanation. But here, "fickle" does not merely mean being untrustworthy in speech. We often apply "fickle" to words, but here "fickle" means that instead of doing what it set out to do, the mind does something else entirely. That is why it is said: *phandanaṃ capalaṃ cittaṃ*. *Dūrakkhaṃ* means difficult to guard. The simile given for this is like the difficulty of guarding a ripe paddy field from cattle. Similarly, it is difficult to guard the object of meditation, to maintain the mind on the object of meditation—*dūrakkhaṃ*. Simply put, this mind is difficult to guard. Likewise, *dunnivārayaṃ* means it is difficult to restrain the mind from wandering toward unwholesome objects. It is difficult to protect the mind. When it attempts to break free and crash through [one's restraint], preventing it is no easy task. Such is the condition of the mind. Declaring the truth as it really is is the characteristic feature of a Dhamma sermon by the Buddha. So, these weaknesses of the mind are to be expected. *Ujuṃ karoti medhāvī*—yet, what does the wise one (*medhāvī*) do? He straightens his crooked, warped, and fickle mind. How? Here the simile is given: *usukāro'va tejanaṃ*—just as a fletcher (arrow-maker) straightens his arrow. Straightening an arrow: let us say one brings from the forest a piece of wood with a good core, heats it over a fire, and if it is bent, straightens it using wedges or similar methods. Then, by applying oil, tempering it, and sharpening it well, an arrow is made. Once the arrow is fashioned, it is so strong and performs such a great task that a skilled archer can split a horsehair by the flash of lightning. Devotees, you have heard this simile: "To shoot a horsehair from afar in the dark, if the flash of lightning is missed, the shot fails." Thus it is said. Realizing Nibbāna is a similar feat. What is referred to here is developing the power of wisdom to realize Nibbāna. All of this is done through the mind, is it not? Just as a fletcher, through systematic effort, tempers, straightens, and sharpens an arrow, the wise person straightens his mind—even a mind with such weaknesses. Thus it was declared. Similarly, He next presents another simile:</p>
+<p>*Vārijo’va thale khitto*</p>
+<p>*Okamokata ubbhato*</p>
+<p>*Pariphandatidaṃ cittaṃ*</p>
+<p>*Māradheyyaṃ pahātave.*</p>
+<p>Here too, a simile is given. The home of the fish is water. Just as a fish pulled out from its watery home and cast upon dry land struggles this way and that, when one attempts to escape from the familiar kingdom of Māra, this mind thrashes about like "a fish pulled from the water." Through these two verses, the Buddha revealed the true state of the mind.</p>
+<p>Thus, this is a highly valuable discourse (*sutta-desanā*) for us in several ways. We can supplement our understanding by reflecting on the background story. Here we have presented the general meaning of the verses. Even when we reflect on the story, as mentioned before, a meditator's—a practitioner's—intention to realize Nibbāna is good. That desire is noble. However, the mind must be prepared in a suitable manner. For this, desire (*chanda*) is required—an intense desire is needed. First and foremost, the primary requirement is guidance from a teacher. That is why association with a noble friend is essential. Next is the intense desire, the strong yearning called *chanda*. A person must truly possess a powerful yearning. Now, Venerable Meghiya thought that simply because he ordained with the intention of realizing Nibbāna, or with great faith, these defilements would not flood his mind. Thinking thus, he was thrown into dismay (*saṃvega*). But this is a natural law (*dhammatā*). Let us reflect on this using the analogy of a vehicle. When a vehicle is parked in a garage, it does not meet with accidents. A vehicle in a garage never experiences anything called a road accident. It is only when it is taken onto the road that it must face hazards. Similarly, as long as a practitioner is merely thinking, "I must meditate," there is no danger. It is on the day he actually plunges into it and enters seclusion that the pressures of Māra arrive. That is the reality. It is something to be expected. The Buddha advises us to go prepared for this. As described, there must be association with a teacher. One must respectfully follow those instructions. Then, there must be intense desire. Next, one must be accomplished in moral virtue. If one is not virtuous, remorse arises. When one sits down to meditate, thoughts of remorse flood in: "Alas, I have done such and such things!"</p>
+<p>You all know that anyone who meditates, who attempts to concentrate the mind, must be aware of the five hindrances (*nīvaraṇa*) that obstruct concentration—whether conceptually or practically. These are *kāmacchanda*, *byāpāda*, *thīna-middha*, *uddhacca-kukkucca*, and *vicikicchā*. In English, these correspond to sensual desire, ill-will, sloth and torpor, restlessness and worry—restlessness being agitated thoughts about the future, and worry being remorse over past actions and words (these two are grouped together)—and finally, doubt or indecision: "Will this work or not?" It is by freeing the mind from these factors that one makes the mind tranquil. Concentration (*samādhi*) means tranquility.</p>
+<p>The aforementioned factors help to eliminate these hindrances. Especially, if one's moral virtue is impure, worry and remorse (*kukkucca*) will arise in the manner described. Thoughts regarding one's past will come flooding in: "I have done such and such things." Therefore, one must be endowed with moral virtue. Furthermore, by hearing the ten talk-topics, one gains some understanding of Nibbāna and the path, and one must also train oneself accordingly, gaining an understanding of the virtues to be practiced, such as wanting-little and contentment. Next, aroused energy (*ārabdha-viriya*) means one must proceed with a firm, unwavering determination. Furthermore, one must be a person of wisdom—an intelligent, wise individual. Such are the requirements. Ignoring these matters, and especially disregarding one's duties to the Buddha as he did, one cannot succeed in meditation. When one turns one's back on the teacher's advice, no progress can be expected.</p>
+<p>Thus, we can draw many valuable lessons from that story. Let us now consider the other matters—specifically, the four meditations mentioned. If we reflect on them, we can see that the sequence in which the Buddha presents these four meditations is systematic. Often—in fact, always—the best way to verify whether a discourse is indeed the Buddha's is to see how logically these factors fit together. They align in an extraordinary manner: the first leading to the second, the second to the third, the third to the fourth, and the fourth to the fifth, and so on.</p>
+<p>Here, even when prescribing the meditations, He introduces the first one to counter the strongest saṃsāric habit within a being—as you all know, this strongest habit is lust (*rāga*), attachment. Whether subtle, gross, or intense, attachment is the very nature of saṃsāra; in another sense, craving (*taṇhā*) is nothing but this. Therefore, the remedy for it is the meditation on foulness (*asubha*). Particularly, this attachment arises due to the attachment one has toward one's own body. Developing the meditation on foulness lies in realizing the foul nature of the body. Whichever meditation object (*kammaṭṭhāna*) is used—whether one of the thirty-two impure parts of the body such as hair of the head, hair of the body, nails, and teeth, or a corpse in a state of bloatedness (*uddhumāthaka*)—frequently contemplating the foulness of this body is called the perception of foulness (*asubha-saññā*). This perception of foulness must be developed to abandon lust.</p>
+<p>Then, just as there is attachment on one side, there is aversion (*paṭigha*) or friction on the other—often arising when attachment is not satisfied. Aversion is also a serious weakness of the mind. The remedy for it is the meditation on loving-kindness (*mettā-bhāvanā*). You can understand this very easily.</p>
+<p>Now, this discourse is about preparing the mind, straightening the mind. The mind becomes crooked, warped, and fickle primarily between these two poles [of attachment and aversion]. But that is not all. Generally, we speak of the five cords of sensual pleasure (*pañca-kāmaguṇa*)—the objects that enter through the five external senses: eye, ear, nose, tongue, and body. The ordinary world believes that it is because of these that our minds are disturbed. Therefore, some think: "If I close my eyes, block my ears, shut down these senses as much as possible, and go to a secluded place, I will be able to realize Nibbāna." This is a misconception. Because all the sensory objects gathered through these five senses accumulate in the mind. You see various recording devices appearing in this day and age; our consciousness (*viññāṇa*) is much like them. The vast array of saṃsāric habits acquired throughout the past round of rebirths are all stored in this consciousness (*viññāṇa*)—our attachments and aversions. Similarly, the objects experienced through the five senses are deposited in the mind in some manner. These five senses sit around and, like messengers, bring everything and deposit it in the mind. These accumulated deposits in the mind surface precisely when one goes into solitude and sits down alone. No form comes to the eye; no sound comes to the ear. One is protected from all of them. Yet, from within the mind, there arise various defiled thoughts (*vitakka*) from consciousness (*viññāṇa*), emerging according to one's saṃsāric character and kamma. It was to these that Venerable Meghiya succumbed. Such is the situation. It is as a remedy for this that the Buddha next prescribes mindfulness of breathing (*ānāpānasati*).</p>
+<p>Mindfulness of breathing is a highly subtle meditation. To use an analogy: though there are many subjects of meditation (*kammaṭṭhāna*), mindfulness of breathing is the royal highway. We can call it the royal highway because every Buddha attained Buddhahood through mindfulness of breathing. If you reflect, you will realize that once the mind has been calmed by auxiliary meditations such as foulness or loving-kindness, one's mindfulness (*sati*) naturally establishes itself on the in-breath and out-breath. Mindfulness of breathing means mindfulness directed toward the inhalation and exhalation. Normally, people do not direct mindfulness to this. Most do not even remember that they are breathing; they think of this as a machine that runs perpetually. The ordinary world forgets that everything depends on this thread of life. But when those two heavy defilements, lust and ill-will, are subdued through the meditations on foulness and loving-kindness, mindfulness of breathing becomes very easy.</p>
+<p>However, mindfulness of breathing is prescribed here to cut off thoughts. Some practitioners remark: "Even though the Buddha said this is to cut off thoughts, it is precisely when we sit down for mindfulness of breathing that thoughts come flooding in!" That is not surprising. Sometimes, an illness surfaces only when one begins to treat it. The illness is inside. Therefore, one must be prepared to face it; the appropriate medicine must be available. That is the situation with mindfulness of breathing. It is not that the illness was absent; rather, the existing illness surfaced. Some physicians do exactly this: before curing an illness, they administer a strong purgative to bring the illness to the surface, and only then do they give the curative medicine. Similarly, it purges the mind in that manner. Yet, underneath, the mass of thoughts emerges. How powerful this is can be seen from the experience of this venerable monk. He must have strived the entire evening, seated comfortably cross-legged under that beautiful, delightful mango tree—yet he could not concentrate his mind. Only when it became completely impossible did he leave. Such is the power of the momentum of thoughts. That is the astonishing thing. It is this mass of thoughts that overwhelms the world. They arise from within the mind according to one's kamma and temperament. Mindfulness of breathing helps to cut them off. Through mindfulness of breathing, one understands them at various levels. Only when the illness surfaces at its respective levels can the remedy be applied. Thus, when the mind scatters through these inner thoughts, one eventually gains an understanding.</p>
+<p>Now, let us consider the perception of impermanence (*anicca-saññā*). Let us understand why the Buddha taught the perception of impermanence as the fourth step. This is a profound concept. If you understand this—having applied the remedies for lust and ill-will, and having brought the illness (thoughts) to the surface through mindfulness of breathing—one realizes: "My battle now is with these thoughts." What are thoughts? Sensory objects gathered through the five senses throughout saṃsāra, and in this life—whether recently or in the distant past—remain stored in the mind. They surface and trouble the meditator. When they arise, the practitioner must battle them. That is why it was said: *ātāpiyo saṃvarati satimā* (the ardent, mindful one restrains them).</p>
+<p>What the Buddha described in those earlier verses as "trifling thoughts, subtle thoughts, which followed, agitate the mind" (*khuddā vitakkā, sukhumā vitakkā, anuggatā manaso uppilāvā*) are very small things—not grand matters. Sometimes, it is a word spoken by someone years ago, giving rise to ill-will. Or a form barely seen somewhere years ago, on which thoughts arise. They break in with such force that they seem impossible to remove. A practitioner experiences such states. At those times, one sees what a grave obstacle thoughts are to meditation. One must be strong to cut them off. Thus, those minor, trifling thoughts arise from within the mind and cause it to drift. How does one restrain them? By being *ātāpī*—possessing the defilement-burning energy that allows no entry to them. The object of meditation (*kammaṭṭhāna*) is what assists in this.</p>
+<p>You know that when the paddy is ripening, one tethers an ox to prevent it from wandering into the crop. The ox tries its best to reach the crop, but failing to do so, it eventually returns and lies down by the post. Such is the value of binding the mind to a meditation object (*kammaṭṭhāna*). It is only in relation to a meditation object—when one has grasped a meditation object—that one can recognize when the mind has strayed. Some people think that by merely watching the mind wander, they can make it tranquil. That does not work. You can never tame a wild bull by running along with it. Instead, you must give it an anchor; you must tie it to a post. Once tethered, every time it pulls away, using defilement-burning energy and mindfulness—where mindfulness (*sati*) assists—and applying the qualities of mindfulness and clear comprehension (*sati-sampajañña*), which are mindfulness and wisdom, one swiftly brings it back to the post, back to the meditation object, not letting the mind wander far. If you let the mind wander far, before you know it, you will lose all awareness of where you are. Such is the nature of thoughts.</p>
+<p>This is why, as those who have a basic understanding of the mind know, when something makes contact (*phassa*), an impression is made. Based on that, a feeling (*vedanā*) arises. That feeling may be pleasant or painful. Neutral feeling is barely noticed, and regarding it, there is generally a state of ordinary, often ignorant, equanimity; mostly, it is pleasant or painful feeling. Based on these two, a perception is formed. One grasps a perception as good or bad. Upon that perception, thoughts (*vitakka*) are built. Once one is overcome by those thoughts, something else occurs, which can be called conceptual proliferation (*papañca*). Conceptual proliferation means that due to these thoughts branching out, one eventually falls into an extraordinary, grave delusion. One wanders hither and thither within these thoughts, running to the past and the future, to the point of not knowing where one is. These stages are described in the Dhamma: "What one feels (*vedeti*), that one perceives (*sañjānāti*); what one perceives, that one thinks about (*vitakketi*); what one thinks about, that one conceptually proliferates (*papañceti*)." Subject to conceptual proliferation (*papañca*), one is overwhelmed by a tangled web of thoughts whose beginning or end cannot be found, eventually becoming enslaved by the very thoughts of one's own making, forgetting the very purpose of one's endeavor. In this way, the mind becomes utterly distracted.</p>
+<p>Why does all this happen? It is due to improper attention (*ayoniso manasikāra*). Here, the meaning of the word wise attention (*yoniso manasikāra*) taught by the Buddha becomes important. Everyone knows what attention or reflection (*manasikāra*) is. Our minds have the capacity to attend to things. We reflect on something, bringing it to mind. The ordinary world performs this attention improperly (*ayoniso*). In some old translations, this is rendered as "unwisely" or ignorantly. For our times, we can understand it as "inappropriate attention" or ignorant attention—a wrong way of reflecting that gives room to defilements. Wise attention (*yoniso manasikāra*) means reflecting with wisdom. If we consider it more deeply, *yoniso* means directing the mind to the very source where a thought arises—focusing the mind on the very cause of the illness. That is the kind of reflection a meditator must practice: wise attention (*yoniso manasikāra*). This is the case here as well: preventing the mind from wandering far. Once contact (*phassa*) occurs, if one immediately gives way to feeling (*vedanā*), perceptions (*saññā*) follow. As soon as perceptions arise, one follows those signposts to construct thoughts (*vitakka*) in the mind. Becoming enslaved by those thoughts is what is called conceptual proliferation (*papañca*).</p>
+<p>Such is the state of affairs in this world. The entirety of saṃsāra exists within this. It is within these thoughts, by the mind itself, that saṃsāra is created, and it is by the mind itself that one is liberated from saṃsāra. From this, we can understand the perception of impermanence (*anicca-saññā*) taught by the Buddha. Indeed, anyone in the ordinary world can conceptualize the perception of impermanence. We all observe impermanence in daily life: something that existed decays. That is the gross, coarse aspect of it. The deepest aspect of the perception of impermanence arises from seeing the impermanent nature of thoughts themselves. One gains an understanding—through that very discipline—of how these thoughts, which we grasp as "my thoughts," scatter, and how the mind scatters due to the influence of past defilements. That discipline is practiced to make the mind tranquil through concentration (*samādhi*). Yet, what a tranquil mind realizes—realizes in accordance with reality (*yathābhūta*)—is the very nature of the mind: there is no single mind here, nothing to be claimed as "I." Different thoughts arise at different moments; they are thoughts that exist for a mere moment. One realizes that it is because we grasp them tightly through grasping (*upādāna*) that this entire saṃsāric process is created and becoming (*bhava*) is maintained.</p>
+<p>That is what the Buddha declared: in one who has the perception of impermanence, the perception of not-self (*anattā-saññā*) becomes established. One who has the perception of not-self, having eradicated the conceit "I am" (*asmimāna*)—the subtle conceit of "existence"—is comforted by the noble, deathless Nibbāna in this very life (*diṭṭha-dhamma*). Because, due to the distracted and scattering nature of the mind, one realizes that there is nothing here to be grasped as "I," no such thing as a self (*attā*). These thoughts arise, and even as they vanish on the spot, one understands that there is nothing to grasp as "I" or "mine." A thought grasped as "I" ends and vanishes in the next moment. This is realized only when mindfulness and clear comprehension (*sati-sampajañña*)—the combination of mindfulness and wisdom—are fully applied.</p>
+<p>This, too, is indeed a form of concentration (*samādhi*). On one occasion, when describing four developments of concentration (*samādhi-bhāvanā*)—let us mention only the relevant one—the Buddha asked: "Monks, what is the development of concentration that leads to mindfulness and clear comprehension?" He explained: "Here, a monk knows feelings (*vedanā*) as they arise, knows them as they persist, and knows them as they pass away. He knows perceptions (*saññā*) as they arise, knows them as they persist, and knows them as they pass away. He knows thoughts (*vitakka*) as they arise, knows them as they persist, and knows them as they pass away." What is the principle (*dhammatā*) within this? It comes down to those three words: arising, persisting, and passing away; they arise, persist, and pass away. Briefly, there is only arising and passing away. But what we call "persisting" is actually that grasping (*upādāna*)—the act of holding on. In that moment of holding on, it "persists." Within that persistence, a "person" appears. Thus, that is all there is in the world: arising, persisting, and passing away.</p>
+<p>This is realized most profoundly—for in the material world, the difference between arising and passing away is difficult for most to perceive. Their decay is not recognized by the ordinary world. It is only on the day an object is thrown away, discarded on a garbage heap as useless and finished, that its decay is acknowledged. Yet, the arising and passing away—the impermanence—of the material world is of a very gross, coarse level. This impermanence is perceived in its subtlest form precisely by observing these thoughts: seeing how they arise, persist, and pass away. A mind made tranquil through mindfulness of breathing begins to realize this.</p>
+<p>In that meditation, the effort is to keep mindfulness anchored at the point of contact of the breath. Yet, in the meantime, those thoughts arise. Thoughts of the past or various other things come up, and one must subdue them. Through the understanding that this is the actual state of the mind, one eventually realizes that there is no self (*attā*) to be found even in consciousness (*viññāṇa*). We can generally comprehend the lack of a self in form (*rūpa*) easily when it decays. Feeling (*vedanā*)—as one feeling arises and another follows—can also be understood with some effort. Perception (*saññā*) is slightly more difficult, and the impermanence of formations (*saṅkhāra*), which are volitions, is also somewhat difficult. But consciousness (*viññāṇa*) is the great illusion, the grandest illusion of beings in this world. The Buddha Himself compared consciousness (*viññāṇa*) to an illusion. This is something one must experience for oneself. The path to this is what the Buddha has shown here by presenting these meditation objects in a systematic sequence.</p>
+<p>Therefore, reflecting on this, you too should understand that one who aspires to the life of a practitioner, who hopes to embark on this path, must not think of it as an easy task. If one assumes it is easy, one will soon become disillusioned. Knowing that it is a difficult task, preparing the mind, and arousing great energy, one must embark on this work. Otherwise, what happens? One either blames the teacher or blames the meditation. Does someone stop driving simply because road accidents occur? No. There can be many reasons for a road accident; sometimes it is the driver's own ignorance. In the same way, because some people experience mental tension and various difficulties through meditation, some in this era think that meditation is an easy path to distract the mind. This is a mistaken view. It is those who are hasty, like Venerable Meghiya, who act and think in this manner, and who fall into such states.</p>
+<p>The wise person remembers those instructions given by the Buddha. We must embark on this work having prepared the mind. What assists in this, foremostly, is association with a teacher. The Buddha, as we stated earlier, is the world's incomparable noble friend (*kalyāṇa-mitta*). After the Buddha passed away, and indeed even while He was alive, the chief disciples like Venerable Sāriputta and other great Arahants were like parents to the community, helping disciples to reach the state of Arahantship. Next were the eighty great disciples, followed by other members of the Saṅgha according to their capacity. After they passed away, as long as this Dispensation (*Sāsana*) exists, whether lay or ordained, any person who has walked this path of meditation, achieved some progress, and possesses understanding of it, is indeed the noble friend, the teacher. One must be ready to take steps in accordance with the situation, obedient to their words. For this, humility is required.</p>
+<p>The other factors are strengthening the mind through moral virtue, hearing the Dhamma, and so forth; generating an intense desire (*chanda*), a strong yearning; then exerting energy; and intelligently, wisely applying the mind—wisdom (*paññā*). These factors are supportive. The same applies to the prescribed path of meditation. Without mixing them up or entangling them, one must enter that path of meditation. What should be done first must not be done later, and what should be done later must not be done first. Some leap into mindfulness of breathing because it is a highly valued meditation, but they are not prepared for it. Consequently, they complain: "Although the Buddha said to practice mindfulness of breathing to cut off thoughts, for me, only thoughts arise when I try." Some even go so far as to blame the Buddha's teaching.</p>
+<p>What is the reason for this? It is the coarse level mentioned earlier. You know how a carpenter uses a plane. Consider it: first, he uses the coarse plane to smooth out the rough parts. Having done that, by adjusting the blade or using another plane, he shaves the next layer, and then uses a finer plane. A similar process applies to the mind. The mind has coarse levels and subtle levels; coarse levels are eliminated only by a coarse remedy. That is helpful. Some people hesitate, claiming that the meditation on foulness is not suitable for laypeople. Whether lay or ordained, if one seeks Nibbāna, this is helpful. Even if we reflect on this society and look at laypeople, how many crimes occur because of ignorance regarding these defilements of lust and so forth? If there were some restraint and discipline regarding them, even society would become far more peaceful. Even within a household, there would be discipline and restraint. The same applies to the other defilement, ill-will (*byāpāda*). Humans mostly live within these two—attachment and aversion. But once they are subdued, one must proceed further. That is where the simile of the fine plane applies. That is what must be taken up there. It is what the Buddha described as "trifling thoughts, subtle thoughts."</p>
+<p>Venerable Meghiya went thinking: "Just because I have seen a delightful mango grove, if I go there and meditate, I can immediately realize Nibbāna; I can achieve in a single afternoon what the Buddha strived so hard to accomplish." Everything else was perfect: the mango grove was delightful, the shade was good, and the seat was fine. All was well, yet he could not tame his mind. Why? Because underneath arose those thoughts—all the debris, just like the debris swept away when a stream swells after a heavy rain. A practitioner striving for Nibbāna must face such situations.</p>
+<p>At such times, one must not be discouraged. It is something to be expected. That debris must flow out somehow. You know what happens after taking a purgative—there is no need to describe that in detail. After taking a purgative, one thinks: "Alas! Is this the reality? Is this the nature of the body I claimed as mine? Is this the nature of food?" In such moments, this is clearly realized. Similarly, when one sits down for mindfulness of breathing after fulfilling the preliminary requirements, the stream of debris emerges from within the mind. Yet, through that, discipline is achieved, and through discipline, understanding arises. One realizes that this mind is difficult to tame. But why do we tame it? To sharpen this understanding. This is the Middle Path (*majjhimā paṭipadā*). A highly profound matter is present here. If taken to extremes, there is no progress. The solution to the problem of escaping saṃsāric existence—which no other teacher could resolve—was presented by the Buddha through the Middle Path. Initially, calming the mind is necessary; unifying the mind is necessary. Though we say "unifying" the mind, this mind is not a single entity. When it is unified, one perceives its scattering nature. It scatters moment by moment. Due to accumulated kamma, character, tendencies, and temperament, various thoughts (*vitakka*) arise. One is not discouraged by them. Instead, what does one ultimately do through them? One sees that there is nothing here to grasp. Where there is grasping (*upādāna*), there is Māra. Where there is grasping, there "I" exist. One then sees: "Grasping is the source of all trouble." One beholds the truth in accordance with reality (*yathābhūta*). All this is impermanent (*anicca*). What is impermanent is suffering (*dukkha*); because one grasps what is impermanent, one falls into suffering. Furthermore, one realizes: "Nothing can be claimed as 'I' or 'mine' or kept under my control."</p>
+<p>When that realization arrives, when it arrives in its depth, it is then that one peels away the final scab called the conceit "I am" (*asmimāna*), as the Buddha declared. It is through this scab of "existence"—"I am"—that the entire world is measured. "I" is generally a gross, coarse notion; that is what is called the view of an existing group (*sakkāya-diṭṭhi*). Merely eliminating the view of "I" and "mine" does not complete the task. The subtlest level is "am-ness"—not even "I am," but simply "am"—which remains deposited in the mind at an extremely subtle level. This is seen clearly only when the scattering nature of the mind is thoroughly realized and grasping is abandoned. Where there is grasping—at the moment of contact (*phassa*), feeling (*vedanā*) arises through grasping. Grasping there turns it into perception (*saññā*). Perception turns into thought (*vitakka*). Grasping that thought leads to conceptual proliferation (*papañca*), beyond which the mind eventually turns into a virtual madhouse. To prevent this, one must abandon the wrong path of improper attention (*ayoniso manasikāra*). The battle does not begin from the far end. It begins as the Buddha declared in the very first verse of the Dhammapada:</p>
+<p>*Manopubbaṅgamā dhammā*</p>
+<p>*Manoseṭṭhā manomayā*</p>
+<p>The realization that everything arises from the mind itself emerges clearly at that deep stage of meditation.</p>
+<p>Therefore, you must reflect on this. On this valuable Poya day, we must not arouse faith merely by thinking about the Buddha's physical life. One who truly recognizes the Buddha is one who has actually realized Nibbāna. Until then, we see only a physical form, or a Buddha conjured up by our thoughts. Thus, if we hope to see the Buddha, if we hope to recognize Him, we must walk the path to Nibbāna. We must realize this very truth. Only then will we truly see the Buddha. Only then will our faith in the Buddha be perfected.</p>
+<p>Therefore, through this Dhamma listening on this valuable day, some matters pertaining to the ten talk-topics may have been conveyed to you. It is still possible to benefit from this Dispensation in this very life. Some consider this to be outdated. But the very same fires that burned during the Buddha's time are burning today—the fires of lust, hatred, and delusion. Nibbāna, then, is the extinguishing of these fires. It is nothing else; it is not some exotic world, nor is it some celestial realm as some believe. It is simply Nibbāna. In saṃsāra, there is burning. In its place, the Buddha presents Nibbāna. In saṃsāra, there is existence. Realizing that this existence is suffering (*dukkha*), bringing about its cessation is what we called escaping from the circular track of saṃsāra. Revolving on the circular track of saṃsāra is wandering (*saṃsaraṇa*). Escaping from it is deliverance (*nissaraṇa*). Viewed from the perspective of defilements, Nibbāna is liberation from the kingdom of Māra!</p>
+<p>Taking this state as the ultimate goal of your life, during this rare human existence, during this rare period of a Buddha's appearance, and in the closing stages of this Dispensation—for in a few generations, it will become impossible to benefit from this Dhamma because association with teachers will be lost. Those who can advise on this path to Nibbāna, those who are engaged in these practices, will become impossible to find. One might find the rare "black cumin" (*kaḷu-nika*) more easily than them. Therefore, keeping in mind the Buddha's advice on diligence (*appamāda*), you must make a firm determination to walk this path to Nibbāna without delay.</p>
+<p>You should know that by listening to this Dhamma sermon, several highly important wholesome qualities have arisen within your minds even at this moment. Particularly, faith (*saddhā*), energy (*viriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*) are listed among the thirty-seven aids to enlightenment (*bodhipakkhiya-dhamma*). Functioning as both faculties (*indriya*) and powers (*bala*)—faith is both a faculty and a power, a capability as well as a source of strength. Similarly, energy follows faith; through the energy applied to burn defilements and draw near wholesome states, mindfulness arises. Maintaining mindfulness for a long period is what becomes concentration. Eventually, mindfulness overflows and turns into concentration. To a concentrated mind, wisdom arises—seeing things as they really are (*yathābhūta*). These five—faith, energy, mindfulness, concentration, and wisdom—fully operate as faculties and powers precisely when one correctly embarks on meditation for Nibbāna. I hope this Dhamma sermon has helped you to arouse them, at least to some degree, in accordance with your capacity for meditation.</p>
+<p>May the power of generating these qualities of faith, energy, mindfulness, concentration, and wisdom through listening to such a sermon enable you, through your utmost efforts in this very life, to realize the stages of stream-entry (*sotāpatti*), once-returning (*sakadāgāmitā*), non-returning (*anāgāmitā*), and Arahantship, escaping from this entire mass of saṃsāric suffering and attaining the noble, deathless Nibbāna. Furthermore, may the store of merit gathered through this preaching and hearing of the Dhamma be shared with the guardian deities of the Dispensation, and all beings from Avīci to Akaniṭṭha who await these merits—including your departed relatives. May they all rejoice in these merits, obtain the association of noble friends, and swiftly escape all saṃsāric suffering to find peace in the noble, deathless Nibbāna. With this aspiration, let us transfer merits by reciting these verses:</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_007.html" class="doc-btn">← Previous Sermon (007)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_009.html" class="doc-btn">Next Sermon (009) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

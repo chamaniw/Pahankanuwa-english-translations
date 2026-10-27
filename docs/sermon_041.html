@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 041 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_040.html" class="doc-btn">← Previous Sermon (040)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_042.html" class="doc-btn">Next Sermon (042) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 041</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_041_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_041_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_041_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #41</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.155)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Kismiṃ loko samuppanno, kismiṃ kubbati santhavaṃ; Kissa loko upādāya, kismiṃ loko vihaññati? Chasu loko samuppanno, chasu kubbati santhavaṃ; Channam-eva upādāya, chasu loko vihaññati.</p>
+<p>From:</p>
+<p>Hemavata Sutta, Sutta Nipāta</p>
+<p>Dear Listeners,</p>
+<p>The day of Vesak is a triple-blessed day for us Buddhists. The *Jāti* (Birth) of the Buddha is a blessing, the Supreme Enlightenment is a blessing, and the Great Passing Away (Mahāparinibbāna) is a blessing. The Teacher of the Three Worlds, the Blessed One, declared that in this era, He is the very first chick to break open the eggshell of ignorance and emerge into the light. Today, on a day like this, the knowledge of Supreme Enlightenment He attained contains the answers to the problems of all worldly beings who remain trapped inside that eggshell of ignorance. The two verses we have placed before us on this valuable day serve as an excellent illustration of this.</p>
+<p>These two verses are found in the Hemavata Sutta of the Sutta Nipāta. According to the explanations in the commentaries (*Aṭṭhakathā*) related to this sutta, Sātāgira and Hemavata were two Yakkha generals. In the past, during the time of Kassapa Buddha, they had ordained as monks and practiced the monastic life well. However, at some point, due to partiality when resolving a disciplinary dispute (a *vinaya* question), a mistake was committed by these two bhikkhus. It is said that due to the remorse arising from this, instead of being reborn in the celestial realms after death, they took rebirth as long-lived Yakkhas. Among the two, the elder monk became a Yakkha general named Hemavata on Mt. Hemavata in the Himalayas. The other monk became a Yakkha general named Sātāgira on Mt. Sāta in the Middle Country of India. These two had a custom of meeting from time to time at the annual Yakkha assemblies, similar to the meetings in the assembly of devas. Having met at such a Yakkha assembly, and remembering their past acquaintance, they made an agreement with each other: if any wonderful or miraculous event occurred in either the Himalayan region or the Middle Country, they would inform each other.</p>
+<p>It was during such a period that the Buddha delivered the *Dhammacakkappavattana Sutta*. At that moment, the Yakkha Sātāgira came with his Yakkha retinue and listened to the *Dhammacakkappavattana Sutta*, but it is mentioned that he was unable to concentrate his mind. Remembering his friendship, he looked to see if the Yakkha Hemavata was also present. Since he was not there, after the sermon, the Yakkha Sātāgira flew through the sky with his retinue to find the Yakkha Hemavata. Meanwhile, the Yakkha Hemavata, having witnessed the miraculous events that occurred in the Himalayas at the time of the preaching of the *Dhammacakkappavattana Sutta*, set out through the sky with his retinue toward the Middle Country to inform his friend. According to the commentary story, the two groups met in the sky above the city of Rājagaha, and the dialogue they held concerning the virtues of the Buddha is what is contained in this sutta.</p>
+<p>Of these two Yakkha generals, the Yakkha Sātāgira initiates the sutta by announcing the news of the Buddha's appearance. He invites the Yakkha Hemavata to go and see the Buddha: "Today is the full-moon *uposatha* day. This is a beautiful night; shall we go to see the Teacher, Gautama of incomparable name?" Then, to further confirm that this is indeed a Buddha, Hemavata asks: "I think He keeps His mind well-established, possessing a mind of equanimity toward all living beings, and that He controls His thoughts regarding agreeable and disagreeable objects." Then Sātāgira says that it is exactly so. Although we do not repeat the entire verse, yes, the Teacher Gautama has His mind well-established, is endowed with the quality of suchness (*tādī*) toward all beings, and remains neutral toward agreeable and disagreeable objects.</p>
+<p>Again, Hemavata asks: "I think He abstains from unwholesome deeds such as killing living beings and taking what is not given, is free from negligence, and is constantly engaged in meditation." Sātāgira says: "Yes, He is detached from bodily unwholesome deeds, free from negligence, and is constantly in meditation." Again, Hemavata asks: "I think He is free from false speech, malicious speech, harsh speech, and frivolous talk." To this too, Sātāgira replies: "Yes, He is free from unwholesome verbal deeds." Again, Hemavata asks: "I think He is free from sensual thoughts, has removed them, and is constantly endowed with wisdom regarding all phenomena." To this also, Sātāgira replies in the same manner.</p>
+<p>Again, Hemavata says: "I think He is endowed with knowledge and conduct (*vijjācaraṇasampanna*), has destroyed the taints (*āsava*), and has no future *Bhava* (Becoming)." Sātāgira declares that it is indeed so. Now, what follows from there is: "Come, let us go! Let us go to see the Buddha of few wishes, who meditates in the forest. Let us go to see that Teacher. Having met Him, who is like a lion king in the forest, let us ask how to be released from the snare of Māra." From this point on, the narrative in the sutta is presented in a dramatic dialogue form. Then, having approached and addressed the Blessed One, the Yakkha Hemavata asks: "Blessed One, please answer these questions for us." This question is the first of the two verses we have placed as our theme.</p>
+<p>He asks the Buddha:</p>
+<p>> *Kismiṁ loko samuppanno, kismiṁ kubbati santhavaṁ*</p>
+<p>> *Kissa loko upādāya, kismiṁ loko vihaññati.*</p>
+<p>Where is the world born? Where does the world maintain its intimacy—its association? Grasping what does the world get vexed, and where is it vexed? Here are several questions. Then, the answer given by the Buddha is recorded:</p>
+<p>> *Chasu loko samuppanno, chasu kubbati santhavaṁ*</p>
+<p>> *Channam-eva upādāya, chasu loko vihaññati.*</p>
+<p>The world is born in the six; its association and maintenance are in the six. Grasping those very six, the world is vexed in the six. To help you remember this story of the six, if we present it as a verse:</p>
+<p>> Born within the six,</p>
+<p>> In the six it seeks intimacy,</p>
+<p>> Taking the six as its *Upādāna* (Grasping),</p>
+<p>> In the six itself, the world suffers vexation.</p>
+<p>This is the idea presented by the Buddha. Next, the dialogue continues with questions and answers to clarify the meaning of this verse. The Yakkha Hemavata specifically asks what this *Upādāna* (Grasping) is. Grasping something, the world is vexed. The Buddha's answer to this is:</p>
+<p>> *Kāmaguṇā loke mano chaṭṭhā paveditā*</p>
+<p>This means the five cords of sensual pleasure, the fivefold sensual enjoyment, with the mind declared as the sixth. Thus, it is caught within the sixfold sense sphere (*saḷāyatana*). Often, we only talk about the five sensual pleasures. But along with the five cords of sensual pleasure, there is also the mind. That is why it says, "*Kāmaguṇā loke mano paveditā*". It is there, indeed, that the five cords of sensual pleasure and the mind exist—this is the *Upādāna*.</p>
+<p>Next, he asks about release from this: "How does one cross over this world, how is one released from this *Dukkha* (Suffering)?" The Yakkha general asks this. The answer given is that by removing desire (*chanda*) and *Taṇhā* (Craving) for these six sense bases, *Dukkha* is ended, and this is called the end of the world—one crosses over the world by this means, as the Buddha declares.</p>
+<p>To clarify this dialogue even further, the path (*paṭipadā*) is given as the answer: through the development of virtue, concentration, and wisdom (*sīla-samādhi-paññā*), by developing mindfulness (*sati*) and the like, and by abandoning the desire for *Bhava* (Becoming), one can cross over the world. In this way, after clarifying the primary question through the subsequent verses, these two Yakkha generals are highly pleased and express their joy like songs of praise: "Today is a wonderful morning, a beautiful awakening, a wonderful vision we have received in seeing this Teacher." Then they say: "We shall go from village to village, from mountain to mountain, singing the virtues of the Buddha and the virtues of the Dhamma." This is how the sutta ends.</p>
+<p>So, on one hand, the story of these two Yakkha generals contained in the Hemavata Sutta is inspiring enough to generate faith (*saddhā*). The manner in which even Yakkha generals express their faith in the Triple Gem is an excellent example for those who lack faith. Next, let us come directly to the deep meaning of these verses. What is meant by this "six"? "*Chasu loko samuppanno*"—it became clear that these are the six sense bases (*saḷāyatana*). What are called sense bases are the eye, ear, nose, tongue, body, and mind. These are the six bases of *Phassa* (Contact).</p>
+<p>In many instances when explaining this Dhamma, the analysis is carried out in terms of the five aggregates of *Upādāna* (*pañc'upādānakkhandha*). When discussing Nibbāna or meditation, in other instances, they are shown as the six sense bases: the eye, ear, nose, tongue, body, and mind, which, when taken together with their corresponding objects, constitute the six bases of *Phassa*. Thus, what is said here is that the world has arisen in these six bases of *Phassa*. This might be difficult for someone to understand all at once—that the world is born in these six. Next, all the intimacies, associations, and relationships in the world exist within these six. Furthermore, it is by grasping these very six that the world is vexed. This is the story of the six. To impress this question of the six even deeper into our minds, let us try to understand it by bringing forward relevant suttas from various places.</p>
+<p>On many occasions, disciple bhikkhus asked the Buddha, "Venerable Sir, 'the world, the world' it is said. What is this world?" They asked this because it is indeed a problem. For someone who has an understanding of this Dhamma, such a question arises. Perhaps they ask this because they are not satisfied with the conventional concept of the world. There are many such suttas.</p>
+<p>Let us take, for instance, Ven. Ānanda, the personal attendant of the Buddha. He himself asks on one occasion, "Venerable Sir, 'the world, the world' it is said. To what extent does the world exist?" Then, the answer given by the Buddha, Ānanda, employs a term: "*paloka-dhammaṁ*" (subject to crumbling). The meaning of the word *paloka-dhammaṁ* is "having the nature of crumbling or disintegrating". The word *paludu* (damaged/broken) is used in Sinhala; when something is damaged, it is said to be *paludu*. In Pali, both *lujjati* and *palujjati* are used. *Lujjati* means to crumble. *Ludu-venavā* is not a common usage in standard Sinhala. I do not know if *paludu-venavā* is used in certain regions in that sense. *Paludu-venavā* means to break or disintegrate. What is the etymology given by the Buddha? "Whatever is subject to crumbling, that is the world." This is a unique etymology.</p>
+<p>Then He asks Ven. Ānanda: "And what, Ānanda, is subject to crumbling? The eye is subject to crumbling, forms are subject to crumbling, eye-*Viññāṇa* (Consciousness) is subject to crumbling, *Phassa* associated with the eye is subject to crumbling, and any *Vedanā* (Feeling)—whether pleasant, painful, or neutral—arising because of that *Phassa* is also subject to crumbling. Because each and every one of these is subject to crumbling, it is called the world." From this too, we see that this discussion is about the six sense bases (*saḷāyatana*). Saying so, He concludes with a specific phrase used in this training. This is a unique analysis of this Dhamma.</p>
+<p>The unique analyses given by the Buddha are introduced with the text: "In the discipline of the Noble One" (*ariyassa vinaye*). According to the Noble usage or the Noble discipline, this is what is called the world. If anything is subject to crumbling, what crumbles are the eye, ear, nose, and so on, and their corresponding objects. Every single one of them crumbles. It is in the sense of crumbling (*paloka*) that it is called "the world".</p>
+<p>Now, the problem with us is that scholars often pay little attention to this phrase "in the discipline of the Noble One" (*ariyassa vinaye*) and return once again to conventional definitions. In truth, because there was a problem, those Venerable Ones asked the Buddha what the world is. If the Buddha wanted to, He could have replied, "Is that even a question? Just look around you and see." Instead of saying that, He gave such a deep answer because of this Dhamma-conforming analysis. Since the explanation is given as "in the discipline of the Noble One", that is where our attention should be directed. The depth of the Dhamma lies precisely there.</p>
+<p>He did not stop there. There are other suttas related to this. To be brief, on another occasion, a Venerable monk named Samiddhi also asks the Buddha, "Venerable Sir, 'the world, the world' it is said. To what extent is there a world or a designation of the world?" Here too, the Buddha declares: "Samiddhi, where there is the eye, where there are forms, where there is eye-*Viññāṇa*, and where there are things to be known by eye-*Viññāṇa*—there is the world, and there is the designation of the world." You can understand it in the same way for the ear, though we do not repeat it.</p>
+<p>Finally, regarding the mind, we state it specifically because of its unique nature: "Where there is the mind, Samiddhi, where there are mind-objects, where there is mind-*Viññāṇa*, and where there are things to be known by mind-*Viññāṇa*—there is the world."</p>
+<p>The Buddha did not stop there; He also showed where the world is not. This is where we reach the deepest point. The Buddha declares: "Samiddhi, where there is no eye, where there are no forms, where there is no eye-*Viññāṇa*, and where there are no things to be known by eye-*Viññāṇa*—there, there is neither a world nor a designation of the world." Understand the rest in the same way, leaving room for you to reflect.</p>
+<p>Finally, concerning the mind: "Where there is no mind, where there are no mind-objects—that is, *dhammā*, the objects that come to the mind just as forms come to the eye are called *dhammā*—where there is no mind, where there are no mind-objects, where there is no mind-*Viññāṇa* arising from those two, and where there are no things thought to be known through mind-*Viññāṇa*—there, there is neither a world nor a designation of the world." Here too, He presents an analysis according to the Noble usage.</p>
+<p>Thus, we can see that the world we conventionally take to exist is shown by the Buddha to be something relative to the six sense bases (*saḷāyatana*). Not only that, He also showed how the world ceases through the discourse delivered to Ven. Samiddhi. As long as the eye, ear, and so on exist, there is a world. Where they are not, there is no world. What is this place where they are not? This is the problem—this is the problem that many people have. Can there be a state where the eye and so on are not? Can there be a state where the eye, ear, nose, tongue, body, mind, and their corresponding objects are not? That is what is called the cessation of the six sense bases (*saḷāyatana-nirodha*). The cessation of the six sense bases means escaping from this sixfold sense sphere which we have taken to be the world. Therefore, what is called the eggshell of ignorance is this very sixfold sense sphere. The cessation of the six sense bases is indeed the transcending of the world (*lokuttara*). This is what is meant by breaking open the eggshell and coming out.</p>
+<p>When the Buddha declared Himself to be the first chick, some of you might think it was said to disparage the Buddha. It is not His birth as a Bodhisatta that is referred to here. It was at the moment of Supreme Enlightenment (*sambodhi*) that the Buddha, like a chick, broke that eggshell of ignorance. He broke the eggshell of the six sense bases and emerged. Although many peripheral stories are told, this too is a valuable sutta. Let us state it briefly. This is recorded as the word of the Buddha in the Verañja Sutta.</p>
+<p>On one occasion, a brahmin named Verañja, having conceived a dislike for the Buddha and believing that He disparaged brahmins, approached and used many disparaging words against the Buddha. He called Him an annihilationist (*ucchedavāda*), childless/barren (*apagabbha*), and used various other bad words current at that time. The Buddha took each term and explained it in accordance with the Dhamma: "Yes, I am indeed so, but in this particular sense." Ultimately, He inspired faith in the brahmin and brought him to take refuge in the Buddha.</p>
+<p>On that occasion, the Buddha declared: "Brahmin, you are well-aware of this matter—especially those who know about chickens—a hen might sit on eight, ten, or twelve eggs. Having incubated them, if a certain chick, using its claws or its beak, breaks open the eggshell and safely emerges first, what, Brahmin, do they call that chick? Is it not called the eldest, the foremost, the best?" "Yes, indeed, Venerable Sir, that is what they call it." "In the same way, Brahmin, among the world of beings trapped inside the eggshell of ignorance, I am the first to break open the eggshell and emerge."</p>
+<p>Thus, the eggshell was broken at the moment of Supreme Enlightenment (*sambodhi*). Therefore, Nibbāna is the direct realization of the six sense bases. It is a realization attained in this very life (*diṭṭheva dhamme*).</p>
+<p>If the world exists within the six sense bases, if everything is within the six sense bases, then all the scientific instruments you use to point here and there—every single telescope, microscope, and device—has an eye at one end. Some instruments have an ear at one end. In this way, every device is merely an extension of the six sense bases (*saḷāyatana*). They are trapped within it. Science too is trapped within it. There are many who are trapped inside this eggshell. If we can present this truth to the world, especially to the Western world, as a profound aspect of the Dhamma—the depth of the Dhamma concerning Dependent Arising (*paṭiccasamuppāda*) and Nibbāna—then at least some of those brilliant minds trapped within these shells might make an effort to break the eggshell and come out.</p>
+<p>How does one break the eggshell? To put it briefly, they might say it is the Noble Eightfold Path. In another way, it is virtue, concentration, and wisdom (*sīla, samādhi, paññā*). Looking even deeper, it is the cultivation of the Three Characteristics (*tilakkhaṇa*): *Anicca* (Impermanent), *Dukkha* (Suffering), and *Anattā* (Not-self).</p>
+<p>The Buddha has powerfully described the insight (*vipassanā*) used to transcend these six sense bases in various suttas. By taking this eye as permanent and thereby developing desire for it—desire arises from taking things as permanent—having desire is what keeps one trapped inside. Desire (*chanda*) is *Taṇhā* (Craving). Freedom is found at the moment desire is eliminated. What aids this is the cultivation of the Three Characteristics. Removing the sign of permanence, one strives to see them as *Anicca* through *Yoniso manasikāra* (Wise attention). That is what must be taken as the beak of the chick.</p>
+<p>One constantly scrutinizes them as *Anicca*: if something is subject to breaking, if it changes, if it is subject to crumbling (*paloka-dhammaṁ*), then maintaining it is a great trouble—it is *Dukkha*. Next, if it cannot be kept under one's control, how can one say "This is mine, this is my self" (*Anattā*)? This is the Three Characteristics brought to light by the Buddha. If we align ourselves there, it is through the cultivation of the Three Characteristics, when developed intensely, that one can emerge from this eggshell through those insight knowledges (*vipassanā-ñāṇa*). This is the teaching found within the Buddha's dispensation.</p>
+<p>However, many are afraid to eliminate *Dukkha*. The Buddha has said that *Dukkha* itself is the world. Just like two panels of a door closing together, the world exists within *Dukkha*, and *Dukkha* exists within the world. Or rather, it is a completely simple equation: the world equals *Dukkha*. This is the word of the Buddha. Even if we are not prepared to accept it, "*saṅkhittena pañcupādānakkhandhā dukkhā*" means exactly that. In brief, *Jāti* (Birth), *Jarāmaraṇa* (Decay and Death)—all of these are indeed *Dukkha*, but ultimately, the five aggregates of grasping are *Dukkha*.</p>
+<p>The world exists because of the sense bases, the objects present within the daily experienced six sense bases, the attachment to them, and the *Papañca* (Conceptual proliferation / Prolific conceptualization) built upon them. Even if one reaches the far limits of science, that is where the world remains. From suttas such as the Samiddhi Sutta, we see that the Buddha points out the wearing-away nature of these six sense bases. For one who constantly reflects on this, there gradually arises disenchantment (*nibbidā*) and dispassion (*virāga*)—which is also called non-attachment—and these are shown as the gateways that aid one's exit. They are also called liberations (*vimokkha*).</p>
+<p>You, especially those who meditate, have heard that the ultimate end of seeing the sign of permanence as *Anicca* is that no "sign" (*nimitta*) arises in the mind. The impermanence is seen so intensely, its crumbling nature is seen so acutely, that the mind cannot grasp a sign. At that moment, the mind cannot take a sign—this is the signless (*animitta*). When one does not take a sign, one cannot dwell there. *Paṇidhi* means establishing an aspiration or expectation; there is no place to establish an expectation—this is the desireless (*appaṇihita*).</p>
+<p>The end of cultivating *Anicca* is signless liberation (*animitta-vimokkha*). Cultivating the perception of *Dukkha* ends in the desireless (*appaṇihita-vimokkha*); there is no aspiration, no *Taṇhā*—there is only a sense of detachment. Next, if the wise understand this as *Anattā*, realizing there is nothing to be taken as "I" or "mine", the final stage of that cultivation is the void (*suññata*)—they see it as void, realizing there is nothing to take as "I" or "mine". Thus, it is through the cultivation of the Three Characteristics that one transcends this world of the six sense bases.</p>
+<p>This story of the cessation of the world has been analyzed by the Buddha in various other suttas. Furthermore, the manner in which the Buddha presented Himself as a Teacher, as a Guide, is magnificent. Even modern teachers have things to learn from it—the way He presented deep matters, the way He presented Dhamma concepts.</p>
+<p>On one occasion, He was delivering a discourse in the midst of the Sangha. This was not in response to a question asked by anyone. He said: "Bhikkhus, I declare that the end of the world cannot be reached by traveling. At the same time, I say that without reaching the end of the world, there is no making an end of *Dukkha*." This is a contradictory statement. First, remember what was said: "I declare that the end of the world cannot be reached by traveling." Next: "Without reaching the end of the world, there is no making an end of *Dukkha*." Having said this, the Buddha did not go on to analyze it. He stood up and entered His dwelling.</p>
+<p>So, what was to be done? The bhikkhus, not knowing what to do, looked around and saw Ven. Ānanda. The Buddha had constantly praised Ven. Ānanda, and the other bhikkhus also respected him greatly because of his close association with the Buddha. They said, "Let us go and ask Ven. Ānanda." Without troubling the Buddha again, they approached Ven. Ānanda and asked what the meaning of this brief statement of the Buddha was.</p>
+<p>Ven. Ānanda, showing some hesitation, said, "Why did you not ask Him at that very moment? Why do you come to someone like me?" and then gave the answer: "Friends, that by which one has a perception of the world (*loka-saññā*), that by which one has a conceit of the world (*loka-māna*), that is what is called the world in this Noble discipline." According to the Noble usage, according to the unique dispensation definition, that is the world. Next, by what does one measure the world? By the eye, ear, nose, tongue, body, and mind. Other than these, there is nothing to measure it with. Thus, that which measures is the world—this was the explanation he gave. And the Buddha later approved this explanation.</p>
+<p>Thus, we can understand that what the Buddha pointed out was that this world, and the story of crossing over the world, are entirely connected with the six sense bases (*saḷāyatana*). The connection between the world and the six sense bases becomes even clearer to you through a very special sutta which many of you may have read, known as the Rohitassa Sutta, which even scholars consider a unique word of the Buddha. It is a wonderful discourse.</p>
+<p>There too, speaking about the world, the Buddha declares: "Within this very fathom-long carcass, endowed with perception and mind, I declare the world, the arising of the world, the cessation of the world, and the path leading to the cessation of the world." "Within this fathom-long body itself, endowed with perception and mind"—the phrase "body-carcass" is used. If we remove those, it is indeed a corpse, a dead body; but here it is "endowed with perception and mind". That is the unique part. It is within this living body, endowed with perception and mind, that the world exists, the arising of the world exists, the cessation of the world exists, and the path to the cessation of the world exists. Not in another world, not in another place.</p>
+<p>This discourse is indeed the best opportunity for those in this era who have become trapped in science to understand the Buddha's word. Many of you may have heard from those who speak from the side of science that many brilliant minds in the Western world are today trapped in physics, specifically in modern quantum physics. Yet, all of them ultimately come to understand that there is no world independent of a point of view. This is where we arrive. But they are not ready to accept that there is no world independent of a point of view, so they search further. However, their research—their search for the ultimate particle—becomes futile. Because this word of the Buddha was already spoken before.</p>
+<p>The world arises relative to some point of view. It is when the conceit "I am" (*asmi-māna*) is taken—that is what is called the conceit "I am"—the moment "I am" is assumed, and where there is a concept of a living being, it is from the six sense bases relative to that being that a world arises.</p>
+<p>Now, what has happened to us is that, being humans, we pay no attention to other worlds. We do not consider the animal world. Some think of animals merely as things to assist our lives. But there is a world relative to each animal. We cannot understand the world of an ant. We cannot understand the worlds of other animals. There is a world relative to each animal. Even if we were to be born there, we would exist in a completely different world. Those scientists who conduct great research on science, if after death they go to some unwholesome state due to some unwholesome karma—let us say they become a dog or a chicken—then there is no quantum physics there. Then they will have to eat rubbish.</p>
+<p>The world exists within the six sense bases—the forms that come to the eye, the sounds that come to the ear, and we can understand this from their reactions. Pigs do not eat the food we eat. What we perceive as a bad smell is a fragrance to them. It is fragrant to pigs, but bad-smelling to us. That is how we must understand it. However, there exists within worldly beings what we may call "human pride" (*mānavābhimāna*); they develop a certain conceit and claim the world as their own. This is the law of the world. We must seek the end of this. For this, they spend billions of dollars, using various space vehicles. Yet, they remain inside the eggshell. Thinking that one has traversed outer space is not a crossing of *Bhava* (Becoming). They will merely crash somewhere inside the eggshell and fall back.</p>
+<p>Even if one goes to the end of the universe, this eggshell of ignorance, to put it briefly, is the very six sense bases (*saḷāyatana*). Thus, all problems exist within the six sense bases. Getting vexed within it means grasping the six sense bases, taking the six sense bases to be substantial. But if we understand according to the Buddha's word, there is no way for a perception of permanence to exist here. If the eye is also *Anicca*, constantly crumbling—we have shown such a sutta on previous occasions as the Buddha's word. In terms of meditation, the Buddha describes these as *calaṁ* (unstable/shaking), *vayaṁ* (decaying), and *vipariṇāma-dhammaṁ* (subject to change). These are constantly shaking, changing, and undergoing alteration (*aññathābhāva*).</p>
+<p>They are only unseen because of the delusion we hold, our wrong perception, our perception of a self, and our *Sakkāya-diṭṭhi* (View of existing group/body). *Sakkāya* means taking this group as existing together. Because of this, one is ignorant of those facts and thinks this is the end. But it is only when the eggshell is broken that one understands. Breaking the eggshell means that if all of those are *Dukkha* and a vexation, then liberation is found there. It is not a different world.</p>
+<p>When someone dies, the word you use for it is a funeral (*avamaṅgula*—an inauspicious event). Why did the Buddha's Parinibbāna become a blessing (*maṅgula*)? We said that you use the term "the Triple-Blessed Day". Coming out of the mother's womb is *Jāti*. Supreme Enlightenment (*sambodhi*) means coming out of that eggshell of ignorance and realizing it as a direct experience in this very life (*diṭṭheva dhamme*); after that, there is no doubt. From then on, the story is very beautiful.</p>
+<p>The Buddhas and Arahants "live in the world, unsullied by the world" (*loke ṭhito lokena anupalitto*). They live in the world possessing that direct realization; that is what becomes manifest at the moment of Parinibbāna. If they experienced the deathless state while still living, when Arahants are in the attainment of the fruit of Arahantship (*arahatta-phala-samāpatti*), they are temporarily detached from the sufferings and troubles of this world, enjoying the direct realization of the cessation of the six sense bases (*saḷāyatana-nirodha*). To show this, Nibbāna is described by words such as an island, a cave, a refuge, and a shelter. It is not something existing in a different world. It is the experience of that realization right here.</p>
+<p>The Buddha and other Arahants, during the attainment of the fruit (*phala-samāpatti*), detached themselves from the world—that is the state of liberation where they abandoned the five aggregates of grasping (*pañc'upādānakkhandha*). This is done through wisdom (*paññā*). The primary factor for that wisdom exists within every living being: attention (*manasikāra*). It is by applying that attention as *Yoniso manasikāra* (Wise attention) that one can proceed toward liberation.</p>
+<p>We have had to mention on several occasions, according to the theme taken, the relationship between *Viññāṇa* (Consciousness) and *Nāmarūpa* (Name-and-Form). Everyone is trapped within the illusion of *Viññāṇa*. Why is it called an illusion? Because *Viññāṇa* stands between *Nāma* (Name) and *Rūpa* (Form). We have spoken about the word *Nāmarūpa* on previous occasions. "Name" (*nāma*) does not mean a mere bending. According to the Dhamma, in the Buddha's own words, it is *Vedanā* (Feeling), *Saññā* (Perception), Volition (*cetanā*), *Phassa* (Contact), and Attention (*manasikāra*). *Vedanā*, the perception that follows *Vedanā*, the volition formed in accordance with it, the *Phassa* that is the object of volition, and finally, the attention paid to it. It is through these mental phenomena (*nāma-dhamma*) that one recognizes something in the world.</p>
+<p>Because we need to exchange ideas generally, we use words. But whenever we use words, the other person does not get the exact same feeling as ourselves. Let us take an illustration: if someone fell into a river and barely escaped, when the word "river" is spoken to him, what comes to his mind is that past memory of the river, and perhaps even fear. In that way, we cannot convey the complete idea to someone through a word. Then, how do we recognize things? It is through *Vedanā*, *Saññā*, Volition (*cetanā*), *Phassa*, and Attention (*manasikāra*). That is the most personal and unique recognition. General recognition is a convention (*sammuti*) used to exchange ideas within regions or between countries.</p>
+<p>Now, what has happened is that worldly beings get trapped within the convention they have created, and they forget the ultimate truth. The Buddha brought to light the ultimate truth through the concept of *Nāmarūpa*. Between this *Viññāṇa* and *Nāmarūpa*, there is a constant, wonderful delusion of the world. We have given many illustrations of this. To remind you, we have often told the story of the dog on the plank bridge (*edaṇḍa*). What the dog sees is the reflective nature of the water. Therefore, the dog walking on the plank bridge sees what appears to be another dog. Thinking it is another dog, it reacts to it.</p>
+<p>Similarly, *Viññāṇa* also has a deceptive nature because it stands in the middle, between *Nāma* and *Rūpa*. The dog thinks it sees because it looks. But in truth, it is because it looks that it sees. When we say "it is because it looks that it sees", we arrive at the story of attention (*manasikāra*). "*Manasikāra-sambhavā sabbe dhammā*"—the Buddha's word says that all phenomena have their origin in attention. "*Chanda-mūlakā sabbe dhammā*"—all phenomena are rooted in desire.</p>
+<p>Now, why do those scientists, amidst so many troubles, search further and further? Sometimes, as we said on a previous occasion, modern physics is like someone who, when unable to solve a math problem, finally throws in a random symbol because they have nothing else to do, lacking the word of the Buddha. The Buddha has pointed out something that can never be completed by searching: that there is no world independent of a point of view. Yet, these people are driven to search for a world independent of a point of view. Consequently, they cannot recognize those phenomena as they truly are.</p>
+<p>That is what is contained within the term *Nāmarūpa*. *Rūpa* (Form) is a form for a name; *Nāma* (Name) is a mental representation of form—it is not the actual convention, but something like a personal name, a mental representation of form. That is what was analyzed as *Vedanā*, *Saññā*, Volition, and so on. Why did He call it a name-matter form? When the Buddha speaks about *Rūpa*, He constantly reminds us that there are four great elements (*mahābhūta*): earth, water, fire, and wind, which are interwoven. Depending on their dominance in a mixture, we experience them as hardness, heat, and so on. Yet, we recognize them only through mental phenomena (*nāma-dhamma*).</p>
+<p>Therefore, the perception of form (*rūpa-saññā*) that we form regarding the great elements recognized through mental phenomena cannot go beyond them. One cannot recognize form in isolation. Thus, what comes as the object of *Viññāṇa* is once again *Nāmarūpa* itself. Other than that, form cannot be recognized in isolation. That is what we explained through the story of Narcissus. Just as the youth Narcissus, seeing his own face, thought it was a water nymph, so too the ordinary world, seeing the world around them, develops the perception of a self. The Buddha preaches that the perception held by worldly beings is a complete delusion—taking things as "I" and "mine" is a complete delusion, which is the *Sakkāya-diṭṭhi* (Dogma of self-illusion). That is where ignorance lies. Because of this, they form a perception of permanence, due to grasping it.</p>
+<p>In describing worldly beings, the Buddha gives a wonderful simile. This is a simile that not only you, but even an animal can understand. Just as a dog bound to a post with a chain walks around that post, sits right by the post, stands right by the post, walks close to the post, and lies down right by the post—because it cannot go beyond the post—similarly is the *Sakkāya-diṭṭhi*. One who has grasped the *Sakkāya-diṭṭhi* carries these five aggregates of grasping wherever they go. They carry them and go everywhere with them.</p>
+<p>In truth, although they are called five aggregates, when they emerge through reflection, it is seen that they are five groups constructed by the mind itself. At any given moment, what arises are only phenomena (*dhammā*). But just as the dog thinks the reflection is there even when it is not looking, the world, due to the *Sakkāya-diṭṭhi*, cannot understand this. If we say this, they might ask, "If I don't look, does that thing disappear?" But what did he see? He saw only "the seen". We think we saw a "thing"—a "substance". But the Buddha says it is not a thing that was seen; only "the seen" was there. Then, what was heard? It was not the song that was "heard". The same applies to the others. What is said about the sensed? Only "the sensed" was there. What was thought of thoughts? Only "the thought" was there. Therefore, according to the Buddha's word, in truth, there is only the seen, the heard, the sensed, and the thought. Going beyond that is *Papañca* (Conceptual proliferation). This is the deepest aspect.</p>
+<p>Although we state this in words, to directly realize it, one must apply attention (*manasikāra*). Through those very mental phenomena (*nāma-dhamma*), the Buddha reveals the things that aid one's liberation at some point. Remaining inside the eggshell, one applies the tip of the beak to break that eggshell through *Yoniso manasikāra* in accordance with the Three Characteristics of *Anicca*, *Dukkha*, and *Anattā*.</p>
+<p>Attention (*manasikāra*) is something that belongs to *Nāmarūpa*. That attention can be unwise (*ayoniso*) or radical (*yoniso*). Generally, worldly beings possess unwise attention (*ayoniso manasikāra*). Unwise attention means taking the *Anicca* as permanent, taking what is associated with *Dukkha* as happiness, taking the foul as beautiful, and taking what is *Anattā* as self. Instead of that wrong grasping—instead of "clinging" (*parāmāsa*) or *Upādāna*—the Buddha points out something called "scrutinizing" (*sammasana*).</p>
+<p>You have often heard the simile given for this. *Saṅkhāra* (Formations) are compared to a banana trunk. A man, thinking there is heartwood in a banana trunk and intending to make a cupboard or a chair, cuts it at the top and the bottom and carries it on his shoulder, embracing it. But to find out if there is actually any heartwood in it, what does he do? He peels off a layer of bark. Peeling off one layer and gently touching it, behold, there is another layer. And another layer. To know this, one must touch it gently. "Scrutinizing" (*sammasana*) means such an action—a touching with the mind. For this, the term "noting" (*salakkhaṇa*) is used; those who practice insight meditation have heard this. *Salakkhaṇa* means observing, examining with wisdom. The insight meditator, therefore, does not grasp these. Following the instructions given by the Buddha, they carefully reflect on this gently, not giving room to the perception of permanence. The word "reflecting" is often used, but we must understand it not in a superficial way, but as *Yoniso manasikāra*—reflecting with wisdom.</p>
+<p>The insight meditator, by making that reflection increasingly subtle and rapid, understands that what exists here is a pile of *Saṅkhāra*—a pile of fabrications, one inside the other. But there is no core here, no heartwood. When that understanding becomes sharp, there is the effortless seeing of things as they are. That is what is called the knowledge of things as they are (*yathābhūta-ñāṇa*). Wordly beings remain within delusion. With unwise attention (*ayoniso manasikāra*), no one can see this state as it truly is.</p>
+<p>Instead, the Buddha shows that if one raises insight-wisdom (*vipassanā-paññā*) and reflects properly, at that moment, the five aggregates of grasping (*pañc'upādānakkhandha*) are gradually seen. The first step for this is the breaking of the *Sakkāya-diṭṭhi* (Dogma of self-illusion) at the moment of stream-entry (*sotāpatti*). This *Sakkāya-diṭṭhi* is the post to which one was bound. It goes even further when we speak of the conceit "I am" (*asmi-māna*). But primarily, through that wrong grasping—taking all forms, whether past forms that are gone, present forms seen now, or future forms to be seen, as "I" and "mine"—those aggregates of grasping are accumulated. One carries this burden.</p>
+<p>But for one who practices insight, they understand that this exists only as often as it is reflected upon, as often as it arises. Only as often as it arises. When we reflect on the past, without our knowing it, we live in the past. If we recognize it at that very moment as "this is the past", it ends right there. When reflecting on the future, we go on making various plans about it. But if even for a moment we understand that "this is only the future", we do not make it into the present.</p>
+<p>Next, looking at the present, even this present is relative to our grasping, relative to our holding. "Now" is an indefinable word; it is understood only according to the context. What is meant by "now"? The meditator, ultimately, through very subtle and gentle scrutinizing, understands that at the root of what we take to be a "thing" is desire (*chanda*). Next, its arising occurs through reflection. The place where it emerges is *Phassa*. That is why they are called the bases of *Phassa*—the entire world is formed there, based on the eye, ear, nose, tongue, body, mind, and their corresponding objects.</p>
+<p>Next, without stopping at those points, one goes further and further into *Papañca* along the path of delusion. The Buddha points out their true nature: how they cease right there, and at some point, disenchantment arises toward them. It is through that disenchantment that, understanding them as *Saṅkhāra* through insight, one removes wrong views. Next, the conceit "I am" (*asmi-māna*) remains like the final trump card; ordinary worldly beings have the notion "I am". Every being has the conceit "I am".</p>
+<p>The Buddha points out that this measuring exists relative to a certain center. When that center itself is uprooted—at the moment *Taṇhā* and ignorance (*avijjā*) are destroyed—that is final liberation. If the world seeks liberation, everyone talks about liberation. There are liberations attained while remaining inside the world. These are not only those accepted by society; even the great meditators like Āḷāra Kālāma and Uddaka Rāmaputta, who had attained high meditative absorptions (*jhāna*) before the appearance of the Buddha, thought they had attained liberation. But when the Buddha realized that even they remained within a certain delusion, they left Him. Later, the Buddha knew that if this Dhamma were properly presented to them, they would be able to abandon that delusion and attain Arahantship.</p>
+<p>Thus, even those who had attained meditative absorptions were ultimately trapped in a self. Those who sought liberation through tranquility (*samatha*) alone, even though they temporarily enjoyed the bliss of those absorptions and lived for aeons in the Brahma worlds according to the force of their kamma, would still return to the round of rebirth (*saṁsāra*). The Buddha alone showed them that the path of the round of rebirth exists within this. Every one of them is trapped within the *Phassa* of the six sense bases.</p>
+<p>The cessation of the six sense bases (*saḷāyatana-nirodha*) is ultimately Nibbāna itself. The Buddha has pointed out the path to be taken for this: having developed a certain strength of concentration through tranquility, one must proceed to insight (*vipassanā*). Insight becomes sharp—insight means subtle seeing. For that, the mind must be strong, it must be concentrated. With a strong, concentrated mind, as one directs the mind in accordance with the Three Characteristics as instructed by the Buddha, one ultimately sees the impermanence—not as an imposition of impermanence, but the impermanence that was hitherto unseen is finally seen.</p>
+<p>When that is seen, as these things crumble, disenchantment naturally arises. What is described as the knowledge of dissolution (*bhaṅga-ñāṇa*) and so on is this crumbling nature. It is not a disease, but a sign of recovery. Next, having seen that, disenchantment arises, and ultimately, through that detachment, the grasping that was hitherto held as "I" and "mine" is abandoned. When that grasping is gone, it is at that moment that one emerges from the eggshell, when ignorance and craving are destroyed.</p>
+<p>This cessation of the six sense bases, which is detached from the world—what the Buddha declares about the world is that the cessation of the world is realized right here, within this very body. The Buddha did not go to another world at His Parinibbāna. The realization He obtained at the moment of Supreme Enlightenment, the realization obtained through that living body, remained as long as His life-faculty existed; hence, various sensations relative to the body and to the eight worldly conditions occurred in accordance with kamma.</p>
+<p>But on certain occasions, the Buddha directed His mind to the cessation of the six sense bases and the attainment of the fruit of Arahantship, which is why it is described as a cave, a refuge, and an island. He experienced that transcendental peace. That is what is called experiencing the deathless nectar of Nibbāna—the nectar enjoyed by the Buddha and the Arahants. At the final moment, this naturally manifest state arises, and what happens? The four elements of this body return to the four elements. But why is this not annihilationism (*ucchedavāda*)? Because there is nothing here to be destroyed. But for many, they want to be free from *Dukkha*, yet they also want to remain within *Bhava*. Both cannot be done. The cessation of becoming (*bhava-nirodha*) is indeed the cessation of suffering (*dukkha-nirodha*). The cessation of the world is indeed the cessation of suffering. This is an equation.</p>
+<p>If we have understood that matter, on a Vesak day like today, when so many brilliant minds are lost, if we can explain this Dhamma to them deeply in terms of Dependent Arising (*paṭiccasamuppāda*) and the like, then as said before, at least a few more chicks might try to break the eggshell and come out. Today, on this valuable day, we have presented a deep sermon. Within this, there is both faith (*saddhā*) and wisdom (*paññā*). In truth, some scholars lack faith, which is why they do not become active and no effort arises. But faith is also necessary. That is why we said faith is required. With the help of that faith, there follow faith, effort, mindfulness, concentration, and wisdom—wisdom comes at the end. This is not something obtained through mere book-learning or scholarship. It is through the effort generated by faith, the mindfulness developed, and the concentration developed, that wisdom can be obtained.</p>
+<p>Therefore, we hope this sermon will help you look at the Dhamma in a balanced way. On this valuable day, you have dedicated yourselves to this, and many have undertaken the noble precepts. In the meantime, you have practiced meditation and Dhamma-contemplation. Now, at this moment, you have listened to a sermon that aids insight (*vipassanā*). Utilizing all of this, in this rare era of a Buddha's appearance—this highly difficult-to-encounter era of a Buddha's appearance—everyone should strive as much as possible to break the eggshell of ignorance. We wish that this sermon may support you in that endeavor.</p>
+<p>By the delivery of this sermon and by the listening to this sermon, if any beings from the lowest hell (Avīci) to the highest heaven (Akaniṭṭha) expect to share in these merits, may they, through sharing in these merits, realize the supreme goals they aspire to. Recite these verses and dedicate the merits.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_040.html" class="doc-btn">← Previous Sermon (040)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_042.html" class="doc-btn">Next Sermon (042) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

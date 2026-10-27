@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 080 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_079.html" class="doc-btn">← Previous Sermon (079)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_081.html" class="doc-btn">Next Sermon (081) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 080</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_080_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_080_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_080_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #80</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.178)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Bahūni loke vicitrāni asmiṃ paṭhavimaṇḍale,</p>
+<p>mathenti maññe saṅkappaṃ subhaṃ rāgūpasaṃhitaṃ;</p>
+<p>rajamūhataṃca vātena yathā meghopasammaye.</p>
+<p>Evaṃ sammanti saṅkappā yadā paññāya passati,</p>
+<p>sabbe saṅkhārā aniccāti yadā paññāya passati;</p>
+<p>atha nibbindati dukkhe esa maggo visuddhiyā.</p>
+<p>Sabbe saṅkhārā dukkhāti yadā paññāya passati,</p>
+<p>atha nibbindati dukkhe esa maggo visuddhiyā.</p>
+<p>Sabbe dhammā anattāti yadā paññāya passati,</p>
+<p>atha nibbindati dukkhe esa maggo visuddhiyā.</p>
+<p>From:</p>
+<p>Dhammapada 277–279 (Magga-vaggamu)</p>
+<p>Dear Listeners,</p>
+<p>The honor of being the first member of the Sangha community established by the Tathāgata, the Fully Self-Awakened One, belongs to the Great Arahant Aññā Koṇḍañña. For this very reason, the Buddha bestowed upon him the chief position (*etadagga*) among the monks of long standing (*rattaññū*). "Monk of long standing," devotees, means a monk who has spent many nights, many days—that is to say, a long period of time—in this Dispensation. The oldest monk. Furthermore, as you have heard, the honor also belongs to the Great Arahant Aññā Koṇḍañña as the monk who was the very first among human beings to realize the fruit of Stream-entry (*sotāpatti-phala*) upon listening to the Buddha’s first Dhamma sermon.</p>
+<p>According to the Theragāthā Commentary, this Great Arahant Aññā Koṇḍañña was one who had fulfilled the perfections (*pāramīs*) in the dispensations of past Buddhas in order to achieve this chief position. Thus, even before our Buddha appeared in the world, Ven. Koṇḍañña was born into an eminent family in the Brahmin village named Doṇavatthu, close to the city of Kapilavastu. By his clan name, he was known as Koṇḍañña. Later, when the Bodhisatta passed away from the Tusita heaven and was born as the son of King Suddhodana, on the auspicious occasion of the naming ceremony, one hundred and eight Brahmins were invited to the palace. Among them, by that time, the Brahmin Koṇḍañña had mastered the three Vedas and the science of physiognomy (body marks) to their absolute limit. Not only was the Brahmin Koṇḍañña included among those one hundred and eight, but out of those, only eight were assigned the task of examining the prince's bodily marks and giving him a name. The eight Brahmins assigned to this important task were Rāma, Dhaja, Lakkhaṇa, Mantī, Koṇḍañña, Bhoja, Suyama, and Sudatta. Among these eight, the Brahmin Koṇḍañña was the youngest. Then, as described there, after examining the marks, all the other seven Brahmins raised two fingers and declared: "If he remains in the lay life, he will become a Wheel-turning monarch (*cakkavatti*). If he renounces, he will become a Buddha." However, the Brahmin Koṇḍañña raised only one finger and said: "This prince will definitely attain supreme self-awakening (*sambodhi*)."</p>
+<p>So, after those auspicious ceremonies were over, those seven Brahmins went to their respective homes and told their children: "By the time this prince attains Buddhahood, we will not be alive. Therefore, when a Dispensation is established, you at least must ordain in the Dispensation of that Buddha." Having said this, it was not long before they passed away. Then, as we have all heard, at the age of twenty-nine, Prince Siddhartha made the Great Renunciation. Having renounced and gradually making his way, by the time he began practicing self-mortification (*duṣkarakriyā*) in the Uruvelā district, the Brahmin Koṇḍañña went to the homes of the other Brahmins and told their children: "If your fathers were alive, they would ordain at this moment. Therefore, I have now resolved to ordain following that Great Being, that noble prince. If you also wish, join me." Only four of them came forward. Accordingly, in addition to the Brahmin Koṇḍañña, the other Brahmins—Bhaddiya, Vappa, Mahānāma, and Assaji—who are known to everyone as the "Group of Five Monks" (*pañcavaggiya*), set out and went to the Uruvelā district, where they attended upon our Bodhisatta for six years during his practice of self-mortification.</p>
+<p>Next, as you may have also heard, when the Buddha practiced self-mortification and realized its futility, he entered upon the Middle Path, abandoned those painful austerities, and inclined toward a balanced life. Accordingly, unlike how he had previously rejected food, he then went for alms in search of solid food. Seeing this, the group of five monks became disillusioned. They thought, "Now this ascetic Gotama has abandoned effort and has turned to a life of abundance," and having become disillusioned, they abandoned him and went to Isipatana in Varanasi (Benares).</p>
+<p>Meanwhile, as everyone has heard, on the full moon day of Vesak, the Buddha attained supreme self-awakening in this manner, spent the seven weeks at the foot of the Bodhi tree, and due to the invitation of Brahma and other matters, made the determination to teach the Dhamma. He then contemplated to whom he should first preach this Dhamma. First, the ascetic Āḷāra Kālāma came to his mind. You have heard that when the Buddha first went in search of teachers, he first took Āḷāra Kālāma as his teacher. When he thought about it, unfortunately, the ascetic Āḷāra Kālāma had passed away a week earlier. Next, he thought of the ascetic Uddaka Rāmaputta. He too had passed away the previous night. It was only after that that the Buddha thought, "I must go in search of the group of five monks who were of great help to me. They will be able to understand this Dhamma." From that point onward, many of the details are mentioned in a wonderful way in the Buddha's own words in the *Ariya Pariyesana Sutta*.</p>
+<p>The Buddha says: "When I set out and approached Isipatana in Varanasi, the group of five monks saw me from afar and made an agreement among themselves: 'Here comes the ascetic Gotama, who abandoned his striving and has now turned to a luxurious life. Let us not pay homage or show respect to him. Let us not go forward to receive his bowl and robes, but let us only set out a seat; if he wishes, let him sit.' Despite making such an agreement," the Buddha declares, "as I came closer and closer, those five monks were unable to keep to their agreement. Some came forward and received my bowl and robes. Another prepared a seat. Another prepared water to wash my feet." However, those five addressed the Buddha using the term of address *'āvuso'* (friend/brother). "They addressed him by name as 'Avuso Gotama' and in the manner of 'Avuso'." Then the Buddha said to the group of five monks: "Monks, do not address the Tathāgata by the name *'āvuso'*. I have attained supreme self-awakening (*sammā sambodhi*), I have attained the Deathless—Nibbāna. Therefore, listen, I shall teach the Dhamma."</p>
+<p>Then those five said: "When you did not attain Buddhahood through such severe austerities, how can you attain it through this lax lifestyle?" and they did not accept it. A second time the Buddha spoke. A second time the group of five monks rejected it. A third time he spoke. But a third time too they rejected it. At that moment, the Buddha did not perform any other miracle, but rather the miracle of truth. He asked: "Monks, did I ever speak to you in this manner before?" At that moment, faith arose in the group of five monks, and addressing him as "Venerable Sir" (*bhante*), they accepted it. It was after that, as you have heard, that he preached the *Dhammacakkappavattana Sutta* not only to the group of five monks but also to the devas, Brahmas, and others. At the end of that sutta discourse, because the monk Koṇḍañña attained the fruit of Stream-entry, you will find a passage in the *Dhammacakkappavattana Sutta* where the Buddha uttered an inspired utterance (*udāna*): *"Aññāsi vata bho Koṇḍañño, aññāsi vata bho Koṇḍañño!"* That means, "Koṇḍañña has indeed understood, has comprehended, has realized the Dhamma." It was through this that Ven. Koṇḍañña received the name "Aññā Koṇḍañña."</p>
+<p>Then it is mentioned that at one time, the Buddha bestowed upon Ven. Koṇḍañña the chief position (*etadagga*) among the monks of long standing, as mentioned before. However, as the nature of Ven. Koṇḍañña is shown to us, he was extremely humble. The chief disciples, such as Sāriputta and Moggallāna, would constantly pay homage and respect to him as an elder. He rejected all of this, and in order to dwell devoted to meditation, he lived for twelve years in a solitary place in the Himalayas known by the name Chaddanta, receiving service from elephants, as recorded in the books. It is said that even Sakka came to him during that time to engage in Dhamma discussions. The verses we have taken as our theme, according to what is stated in that book, were uttered by him while residing there, having observed how the minds of worldlings (*puthujjana*) behave, and demonstrating the Dhamma method and the Dhamma path to conquer them. Let us look at their meaning.</p>
+<p>*Bahūni loke vicitrāni asmiṁ paṭhavimaṇḍale*</p>
+<p>*Mathenti maññe saṅkappaṁ subhaṁ rāgūpasaṁhitaṁ*</p>
+<p>"There are many variegated things, variegated objects in this world, or rather, on this earthly sphere. These—I think—agitate the lustful intentions and thoughts (*saṅkappa*) arisen due to the perception of beauty (*subha-saññā*)." Then he says:</p>
+<p>*Rajamūhatāñca vātena yathā meghopasammaye*</p>
+<p>*Evaṁ sammanti saṅkappā yadā paññāya passati*</p>
+<p>"Just as the dust raised by the wind is calmed by a great rain cloud, so too do those defiled thoughts and intentions (*saṅkappa*) calm down at whatever time one sees with wisdom." Having said this, next, the method of seeing with wisdom is mentioned by quoting the three very famous verses related to the Three Characteristics (*tilakkhaṇa*), which you have heard so often.</p>
+<p>*Sabbe saṅkhārā aniccāti yadā paññāya passati*</p>
+<p>*Atha nibbindati dukkhe esa maggo visuddhiyā*</p>
+<p>"At whatever time one sees with wisdom that every *saṅkhāra* (formation) is *Anicca* (Impermanent), at that moment one becomes disillusioned with *Dukkha* (Suffering). This itself is the path to purity." In the next verse, there is only a slight difference:</p>
+<p>*Sabbe saṅkhārā dukkhāti yadā paññāya passati*</p>
+<p>*Atha nibbindati dukkhe esa maggo visuddhiyā*</p>
+<p>"At whatever time one sees with wisdom that every *saṅkhāra* (formation) is *Dukkha* (suffering), at that moment one becomes disillusioned with this *dukkha*—that is to say, the *dukkha* of the five aggregates of grasping (*pañcupādānakkhandha*). 'Nibbindati' means to become disillusioned. This is the path to purity." Now, the third verse is slightly different from this:</p>
+<p>*Sabbe dhammā anattāti yadā paññāya passati*</p>
+<p>*Atha nibbindati dukkhe esa maggo visuddhiyā*</p>
+<p>"At whatever time one sees with wisdom that all *dhammas* (all things / phenomena) are *Anattā* (not-self) , then one becomes disillusioned with this *dukkha* of the five aggregates of grasping. This is the path to purity." Thus he uttered these three verses. Now, these Dhamma points are worth discussing a little. Here, he indicates the Three Characteristics through these three verses. He declared that it is precisely by means of the Three Characteristics that those defiled thoughts and intentions can be conquered. At the same time, some people raise a question: "Why did the Brahmin Koṇḍañña not believe when the Buddha attained self-awakening, even though he had predicted in the past that this prince would definitely become a Buddha?" Someone might raise such a question. But what we have to understand is that the idea prevalent among most people at that time was that in order to realize Nibbāna, one must subject the body to pain—self-mortification (*attakilamathānuyoga*). That is why they became disillusioned and left. They did not know anything about a "Middle Path". However, we can understand that the Buddha must have preached the *Dhammacakkappavattana Sutta* in that manner precisely to dispel this wrong view of the group of five monks. Because, as you know, the most fundamental point of the *Dhammacakkappavattana Sutta* is the showing of two extremes: devotion to sensual pleasures (*kāmasukhallikānuyoga*) and devotion to self-mortification (*attakilamathānuyoga*). Without going to either, the Buddha presented the Noble Eightfold Path at that time, stating, "I have discovered a Middle Path." Therefore, among the five, the monk Koṇḍañña attained the fruit of Stream-entry because he understood before the others that the prediction he had given in his childhood had indeed come true.</p>
+<p>Later, the Buddha himself once made this amazing statement: "During the remaining days, this is how I trained these five for Arahantship. I did this: I would instruct two of them, while the other three went for alms. On the food brought by those three, all six of us would survive. The next day, I would instruct three of them, while two went for alms. On the alms-food brought by those two, all six of us would subsist." In this way, the Buddha trained all five of them, and then, as you have heard, it was when he preached the *Anattalakkhaṇa Sutta* that all five of them attained Arahantship. Therefore, the *Anattalakkhaṇa Sutta* helps us to understand these Three Characteristics. For that reason, we will present it briefly on this occasion, because it is very closely connected to the life of Ven. Koṇḍañña. He became an Arahant by listening to this *Anattalakkhaṇa Sutta*.</p>
+<p>The meaning of the words "Anatta Lakkhaṇa" is the characteristic of *Anattā* (Not-self). So, the word *Anattā* (not-self)  was placed at the forefront by the Buddha in that discourse. The Buddha began it in this way. Straight away, the Buddha says to the five: "Monks, form (*rūpa*) is *anattā*. If form were self, this form would not lead to affliction. We should be able to say to form: 'Let my form be thus; let my form not be thus,' according to my wish. But this cannot be said, and form cannot be tamed in this way. Therefore, monks, form is *anattā*."</p>
+<p>Then the Buddha declared the same concerning form (*rūpa*), feeling (*vedanā* / sensation), perception (*saññā*), preparations (*saṅkhāra*), and consciousness (*viññāṇa*)—the five aggregates of grasping (*pañcupādānakkhandha*). Then he asked those five:</p>
+<p>"Monks, is form permanent (*nicca*) or impermanent (*anicca*)?"</p>
+<p>"Impermanent, Venerable Sir," they replied.</p>
+<p>"If something is impermanent, is it ease (*sukha*) or suffering (*dukkha*)?"</p>
+<p>"It is suffering, Venerable Sir," they replied.</p>
+<p>"If something is impermanent, suffering, and subject to change, is it fit to conceptualize it in terms of craving (*taṇhā*), conceit (*māna*), and views (*diṭṭhi*) as: *'etāṁ mama, esohamasmi, eso me attā'*—'This is mine, this I am, this is my self'?"</p>
+<p>Then those five said: "No, Venerable Sir."</p>
+<p>Accordingly, the Buddha made them realize the Three Characteristics, and showed them what ought to be done. Concerning the five aggregates of grasping—an "aggregate" (*khandha*) means a heap or collection, and eleven factors are gathered into this heap: past, future, present, internal, external, gross, subtle, inferior, superior, far, and near. In these eleven ways, one can think about this aggregate of form. Thoughts can arise, and this is what is grasped by the mind as "my aggregate of form." Therefore, one should contemplate all these eleven aspects through comprehensive investigation (*sammasana*) in this manner:</p>
+<p>*“Netāṁ mama”* — This is not mine. *“Nesohamasmi”* — This I am not. *“Na meso attā”* — This is not my self.</p>
+<p>When the Buddha declared that it must be seen with wisdom in this manner, it is seen that at the conclusion of this discourse, those five attained Arahantship.</p>
+<p>From this, we can understand the great wonder contained within these Three Characteristics of *anicca*, *dukkha*, and *anattā*. First, let us raise a problem that many people have. In the first two verses, it was said: *"Sabbe saṅkhārā aniccā"* (All preparations are impermanent) and *"Sabbe saṅkhārā dukkhā"* (All preparations are suffering). But in the third verse, it says: *"Sabbe dhammā anattā"* (All *dhammas* are *anattā*). This is a big problem even for scholars. It says all preparations (*saṅkhāra*) are impermanent. By seeing them as suffering, one develops disillusionment (*nibbidā*) toward the five aggregates of grasping; this is the path to purity. Next, it speaks of them as suffering—the suffering of preparations (*saṅkhāra-dukkha*). Thirdly, it says: *"Sabbe dhammā anattā."* What is meant by "dhammā" there is a problem for many. We can get a clue about this. You might have heard of the *Girimānanda Sutta*. In it, the Buddha points out ten perceptions (*saññā*): the perception of impermanence (*anicca-saññā*), the perception of *anattā* (*anattā-saññā*), the perception of unattractiveness (*asubha-saññā*), the perception of danger (*ādīnava-saññā*), and so forth.</p>
+<p>The Buddha explains the perception of impermanence (*anicca-saññā*) in terms of the five aggregates of grasping: form is impermanent, feeling is impermanent, etc. But the perception of *anattā* (*anattā-saññā*) is explained there in terms of the six sense bases (*āyatana*). What are the six sense bases? The eye, ear, nose, tongue, body, and mind. The eye is *anattā*, forms are *anattā*; the ear is *anattā*, sounds are *anattā*; in that manner, the perception of *anattā* is structured. The last one to come is: *"mano anattā, dhammā anattā"* — the mind is *anattā*, and mind-objects (*dhammā*) are *anattā*. There is a deep point here. Because, in the end, what has to be regarded as *anattā* is the very object that comes to the mind. This is a very deep place in the Dhamma. Because, as the Buddha has shown in certain places, the Middle Path in this Dhamma does not consist merely in being free from the two extremes of sensual indulgence and self-mortification. In many places, the Buddha's Middle Path is shown with much deeper meanings than that. We have pointed out the reason for this on many occasions. The Dependent Arising (*paṭicca-samuppāda*) is its depth. Underneath lies the law of Dependent Arising. Thus, according to Dependent Arising, ultimate liberation lies in not grasping anything. So, in certain places, the Buddha points out: *"nissāya nissāya oghassa nittharaṇā"* (crossing the flood by depending on one thing after another). This means: "One has to cross over this flood of Saṁsāra by using certain things as support." That is to say, one crosses over using them as support, but one does not take them along, grasping and clinging to them, to Nibbāna.</p>
+<p>For this, even though it does not belong to the Buddha's time but to the later *Visuddhimagga* and other texts, there is a simile. Since we spoke of a rapid current of water, here is an appropriate one. Sometimes, during the rainy season when the water of a stream flows rapidly, if there is no way to cross, there is one method: one clings to a creeper hanging from a tree on this side and swings well. Having swung back and forth and gained the necessary momentum, as soon as one reaches the other side with that momentum, one does not keep holding onto it. One lets go. When one lets go, one lands on the other side. It is such a thing that is found in this Dhamma. That is its deepest side. Indeed, scholars of the past point out that there is a wonderful Middle Path in this Dhamma. That is, one makes use of tranquility (*samatha*). "Samatha" means utilizing concentration (*samādhi*) as a support. But one does not grasp concentration either. One does not cling to it. If one develops craving (*taṇhā*) for it, one gets stuck there too. Similarly, in insight (*vipassanā*), one makes use of preparations (*saṅkhāra*). As we said, in tranquility, one attains concentration. Using that concentration as a support, one develops insight, and in the end, just like breaking through concentration, this Nibbāna is something that penetrates through that as well.</p>
+<p>Next, what are called preparations (*saṅkhāra*) in insight: every time one directs the mind to the five aggregates of grasping, something comes to the mind. Whether it is regarding forms or regarding feelings, every such moment is like something bubbling up. These are called preparations. Because they perform the function of preparing and conditioning. Thus, the word *saṅkhāra* is described in some places in this manner: *"saṅkhataṁ abhisaṅkharontī ti saṅkhārā"* (they prepare and condition the prepared, hence they are called preparations). "Saṅkhata" means that which is prepared or conditioned. Then, it is the preparations that bring the prepared to the state of being prepared. This is the important point there. Thus, what is done by preparations is that through preparations, something is prepared; it is brought to the state of being prepared (*saṅkhata*). The Buddha points out: "Behold, all preparations (*saṅkhāra*) are impermanent." Ordinary worldlings regard all these preparations as permanent. But they are impermanent. Likewise, they are fraught with suffering (*dukkha*).</p>
+<p>Next, finally, he points out the objects that come to the mind. In passages like *"manopubbaṅgamā dhammā"* (mind precedes all phenomena), we see that mind is the forerunner. It is by the mind itself that these *dhammas* (phenomena) are prepared. Therefore, even the *dhammas* have to be abandoned. Now, as a matter of common parlance, we say "Nibbāna," "going to Nibbāna," or "one must journey quickly to Nibbāna." But there is a wonderful thing in this Dhamma. In the end, one does not grasp even the concept of Nibbāna—the term "Nibbāna". There is an extremely deep sutta called the *Mūlapariyāya Sutta*, which points out that one does not tightly grasp any concept, not even Nibbāna, but only uses it as a support.</p>
+<p>We can understand this point through *"Sabbe dhammā anattā"* (All *dhammas* are *anattā* - not-self). There are various other similes for this. You might have heard of a highly valuable simile used by the Buddha in the *Alagaddūpama Sutta*—the simile of the raft. The Buddha declares: *"Kullūpamo bhikkhave mayā dhammo desito"* — "Monks, I have taught this Dhamma as comparable to a raft." *"Nittharaṇatthāya no gahaṇatthāya"* — "For the purpose of crossing over, not for the purpose of grasping (carrying it on one's back)." The Buddha presents the simile there in a wonderful way. A person comes to a stretch of water, which could be a large river, with the intention of crossing over. But there is neither a boat nor a bridge. Then what does this person do? He collects grass, twigs, branches, and leaves from the trees around, binds them together with creepers to make a raft, and making an effort with his hands and feet, somehow crosses over to the other side. Once he has crossed, the purpose of the raft is over. He abandons it and goes on. In the same way, the Buddha presented this Dhamma. We make use of these concepts, words, etc., as support. But in the end, we are told to abandon them too. This is a wonderful thing. In this journey, one thing has to be used to support another. One cannot abandon everything all at once.</p>
+<p>Nor can one grasp it. Right there lies the depth of this Dhamma. This is where it differs from all other religions. One cannot grasp everything, nor can one abandon everything. Abandoning everything is what is found in *attakilamathānuyoga* (self-mortification). Clinging to everything is what is found in *kāmasukhallikānuyoga* (sensual indulgence), looking at it from that perspective. But if one contemplates more deeply, this journey to Nibbāna is presented in the structure of that simile of crossing the river.</p>
+<p>On another occasion, a valuable point raised through a discussion among disciples, which is a highly valuable sutta showing this idea of crossing over by using various things as support, is the *Rathavinīta Sutta* of the Majjhima Nikāya. The simile in it is that of King Kosala when he had to make an urgent journey from Sāvatthī to Sāketa. In those days, there were horse chariots—but one could not travel with a single chariot. The horses would get tired. Therefore, for an urgent journey, horse chariots were kept ready at various stages for the king's urgent travel. So, King Kosala leaves the inner palace and gets onto the first chariot. Having traveled to where the second chariot is, he leaves the first chariot. He gets onto the second chariot. Next, when he reaches the third chariot, he leaves the second and gets onto the third. Traveling in this manner, in the end, when he arrives at the city of Sāketa, if his relatives ask which chariot he came by, the king cannot say "by the first chariot," nor "by the second chariot," nor "by the third chariot." He has to tell the entire story. One supported the other. Finally, he has to alight even from the seventh chariot. That is the kind of thing the simile shows.</p>
+<p>The disciples point out another seven stages of purification (*visuddhi*) for the realization of Nibbāna: purification of virtue (*sīla-visuddhi*), purification of mind (*citta-visuddhi*), purification of view (*diṭṭhi-visuddhi*), purification by overcoming doubt (*kaṅkhāvitaraṇa-visuddhi*), purification by knowledge and vision of what is and is not the path (*maggāmagga-ñāṇadassana-visuddhi*), purification by knowledge and vision of the way (*paṭipadā-ñāṇadassana-visuddhi*), and purification by knowledge and vision (*ñāṇadassana-visuddhi*). This purification of virtue is solely for the sake of purification of mind. Purification of mind is solely for the sake of purification of view. Purification of view is solely for the sake of purification by overcoming doubt. Purification by overcoming doubt is solely for the sake of purification by knowledge and vision of what is and is not the path. Purification by knowledge and vision of what is and is not the path is solely for the sake of purification by knowledge and vision of the way. Purification by knowledge and vision of the way is solely for the sake of purification by knowledge and vision. In this manner, seven stages of purification are shown. What is shown in the end? One does not grasp even the final purification by knowledge and vision. For what purpose does one develop purification by knowledge and vision? *"Anupādā parinibbānatthāya"* — for the sake of final extinguishment (*pariNibbāna through non-grasping (without fuel / holding / grasping).</p>
+<p>This shows us that the ultimate goal of this Dispensation is not like joining with some substance, as in many other religions. It is not joining with a deity or some mystical substance of that sort. It is liberation (*vimutti*) itself. Therefore, for liberation, that Middle Path is necessary. Because, as we see from the simile of the chariots, what is needed from the chariots is momentum. In the end, these are employed solely to generate this momentum. If we call the strength and power developed through purification of virtue a momentum, that is purification of mind. From purification of mind to purification of view in that manner, this can be well understood through the simile of the chariots. Such is the nature of what is in this Dhamma. Therefore, looking at the final chapter, even those *dhammas* are abandoned. "Dhamma" means what we conceptualized as Nibbāna. Ordinary worldlings think of Nibbāna as a strange, new world where there is no birth (*jāti*), decay (*jarā*), and death (*maraṇa*). But what the Buddha shows here is not such a thing. All of these—birth (*jāti*), decay and death (*jarā-maraṇa*), and so forth—exist within Dependent Arising (*paṭicca-samuppāda*). All of these have arisen through causes and conditions (*hetu-paccaya*). Therefore, to be freed from these, what is to be done is—one cannot abandon everything at the beginning either. First, the Buddha points out the arising of conditions (*paccaya-samudaya*). The Buddha has highlighted both the causal arising that leads to bondage and the causal arising that leads to liberation. If these things go on, one supporting the other, it will finally end in *Dukkha* (Suffering). If one goes on in this way, these things coming together will finally end in liberation. Such a wonderful Dhamma is this.</p>
+<p>Therefore, it is difficult for some people to understand when it is said that everything is abandoned. But the Buddha points out that these have a value like that of a raft, or like chariots running stage by stage. If one grasps something, within that grasping (*upādāna*), there is becoming (*bhava*). *"Upādāna-paccayā bhavo"* — with grasping as condition, becoming arises. It is through grasping itself that becoming is prepared. Therefore, it is when there is letting go and abandoning that there is the cessation of becoming (*bhava-nirodha*). The cessation of becoming is then what is called Nibbāna. The Buddha has shown on many occasions that the cessation of becoming itself is Nibbāna. Therefore, from the simile of the raft and the simile of the chariots, what we have to understand is that letting go itself leads to the cessation of becoming.</p>
+<p>On another occasion, the Buddha has shown this Middle Path. That too is related to the simile of crossing a stream, called the *Oghataraṇa Sutta*. "Ogha" means the sweeping flood. The Buddha points out this entire Saṁsāra as the flood of sensuality (*kāma-ogha*), the flood of becoming (*bhava-ogha*), the flood of views (*diṭṭhi-ogha*), and the flood of ignorance (*avijjā-ogha*). One is swept away in these four sweeping floods. The question is how to cross over this. There too, struggling blindly does not work. Striving wildly is *attakilamathānuyoga* (self-mortification). The Buddha did that first. He struggled to cross this flood. That did not succeed either. Standing still, one is swept away. Therefore, there is a Middle Path. One can understand that in the case of such a sweeping flood, one has to cross over little by little, step by stage, using that very current to gain some momentum. Such is the way.</p>
+<p>Next, the most special part of this sutta is the aforementioned Three Characteristics (*tilakkhaṇa*). How to apply these Three Characteristics practically in daily life is a question for many. This is shown as the Buddha's own words in many ways—this aggregate (*khandha*). What we call the heap of form, the aggregate of form, the aggregate of feeling, etc., which we grasp, was shown in eleven ways. Similarly, the Buddha has shown the way one should look at each aggregate in a manner that helps in developing the Three Characteristics: as impermanent (*aniccato*), as suffering (*dukkhato*), as a disease (*rogato*), as a boil/tumor (*gaṇḍato*), as a dart (*sallato*), as a calamity (*aghato*), as an affliction (*ābādhato*), as alien/other (*parato*), as disintegrating (*palokato*), as empty (*suññato*), and as not-self (*anattato*). Within these eleven modes is contained the very same Three Characteristics.</p>
+<p>When it says "as impermanent" (*aniccato*), its meaning is: contemplate each aggregate, such as form and feeling, as impermanent (*anicca*). Investigate it. Next, there is "as suffering" (*dukkhato*). The aspect of disease also falls under the category of suffering; see it as a disease. Not only form, but even feeling, perception, etc., and including consciousness (*viññāṇa*)—everything. We usually think that this applies only to form when we speak of these eleven modes. But indeed, the Buddha asks us to apply this comprehensive investigation (*sammasana*) in eleven modes to all of the five aggregates of grasping (*pañcupādānakkhandha*): form, feeling, perception, preparations, and consciousness. Why? For the sake of developing disillusionment (*nibbidā*) toward them—it is through that disillusionment that comprehension and liberation arise.</p>
+<p>Now, in these verses too, it was said: *"yadā paññāya passati"* — when one sees with wisdom. At whatever time one sees these as impermanent and as suffering through wisdom, then disillusionment (*nibbidā*) toward the suffering of the five aggregates of grasping arises. Therefore, as impermanent (*aniccato*), as suffering (*dukkhato*), as a disease (*rogato*)—disease too can be taken as suffering. A boil (*gaṇḍato*) too can be taken as suffering. *"Aghato"* means a wound—some people have festering wounds. Similarly, affliction (*ābādhato*) is directly suffering (*dukkha*). Next, there is "as alien" (*parato*)—which means to look at it as if looking at someone else's property. He asks us to look at it as if looking at another's thing, as alien (*parato*). "As disintegrating" (*palokato*) means as things that break; there too, impermanence (*aniccata*) is present. Damage/decay. Alien (*parato*), disintegrating (*palokato*). Next, "as empty" (*suññato*) relates to the vision of *Anattā* (Not-self). In many places, the Buddha has chosen the word "empty" as: *"suññamidaṁ attena vā attaniyena vā"* — empty of a self or of what belongs to a self. That vision is "empty" (*suññato*). Finally:</p>
+<p>"As not-self" (*anattato*) — look at them as *anattā*. These are the eleven modes. The eleven modes mentioned earlier are for understanding what each aggregate is. It is so broad. It is broad in terms of past, future, present, etc. And the way to look at them is what was just mentioned.</p>
+<p>If one gets used to applying that comprehensive investigation (*sammasana*) as impermanent (*anicca*) and as suffering (*dukkha*) based on the things one experiences in daily life, gradually that turning away (*nirveda*) and disillusionment (*nibbidā*) will grow. As a result of that, one can attain liberation. For those who have practiced this for a long time in past Saṁsāra, even a single sermon of the Buddha might be enough. But for others, they must practice and train in these Three Characteristics in daily life. One must see those things that are seen as impermanent, as suffering, and as *Anattā* (Not-self) according to the clues given by the Buddha. In some places, it is shown in an even broader manner—not just eleven, but in eighteen ways, in forty ways. This is called comprehensive investigation (*sammasana*). What the world does is misapprehension and clinging (*parāmasana*)—grasping tightly. Instead of that, one investigates (*sammasana*): "This is of such a nature." If one practices that in daily life, one can largely conquer those concepts in the mind. Concentration (*samādhi*) also helps with that in daily life.</p>
+<p>So, you must make an effort regarding all of these during the brief period of time received in this life. From all sides, the floods (*ogha*) and so forth are constantly flowing. In such an era, it is up to each individual, based on these clues highlighted by the Buddha, to develop disillusionment (*nibbidā*) toward the five aggregates of grasping, and accordingly develop concentration (*samādhi*) and other qualities that support it. Through that, one can realize those supreme goals in this very life. I expect to conclude a bit briefly today.</p>
+<p>You should consider taking advantage of at least this much that was said. Now, having understood in a broader manner that advice given by Ven. Aññā Koṇḍañña by looking at our own thoughts and wishes, if we develop insight (*vipassanā*) based on the things we encounter, meet, and experience in daily life, then at a moment when we least expect it, we can attain the realization of the Path and Fruit we hope for. Indeed, that noble state is often attained when one does not expect it.</p>
+<p>Because as long as expectation is there, during that time, the aforementioned insight (*vipassanā*) does not operate. Expectation is necessary, and determination is also necessary. But one must be engaged in the work. When one is engaged in the work, if those factors have matured, at some point, one will be able to realize them through that very state of direct experience. Therefore, consider this briefly and shape your lives accordingly. So far, having observed virtue and practiced meditation to some extent, may you take what is to be taken from this Dhamma sermon, and may you gain the strength and power to realize those expected states as quickly as possible! This is my wish.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_079.html" class="doc-btn">← Previous Sermon (079)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_081.html" class="doc-btn">Next Sermon (081) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

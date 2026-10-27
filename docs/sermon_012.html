@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 012 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_011.html" class="doc-btn">← Previous Sermon (011)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_013.html" class="doc-btn">Next Sermon (013) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 012</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_012_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_012_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_012_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #12</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No. )</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Atha pāpāni kammāni, karaṃ bālo na bujjhati; Sehi kammehi dummedho, aggidaddhova tappati.</p>
+<p>From:</p>
+<p>Verse 136 from the Daṇḍavagga (Chapter on Punishment) of the Dhammapada</p>
+<p>Dear Listeners,</p>
+<p>The Blessed One has pointed out on many occasions, with concrete evidence, how beings in this saṃsāra fall into ruin, burning and suffering due to their lack of understanding of the gravity of the results of kamma (*kamma-vipāka*), indeed, due to having no proper comprehension of it. In this Dispensation, the word used for an ignorant person is '*bāla*' (the fool). In common parlance, '*bāla*' refers to a young child. Even if it is a small child, if they attempt to grab a flame out of ignorance, they are bound to be burnt and suffer. What is the reason for that? The very nature of fire is to burn. Similarly, there is a law called the order of kamma (*kamma-niyāma*). It is a universal, natural law. There is a certain law in nature itself, called the order of kamma, which applies equally even to Buddhas and Arahants. According to this order of kamma, if someone commits an unwholesome kamma (evil deed), even if it was done out of ignorance, even if it was done without any faith or belief in the results of kamma, they will still have to suffer its severe consequences. The background story to the stanza we have chosen as our theme is also a story that reveals the terrifying nature of the results of kamma.</p>
+<p>During the time when the Buddha was residing at the Veḷuvana monastery, one day, while the Venerable Mahā Moggallāna was descending from the Gijjhakūṭa (Vulture's Peak) mountain together with the Venerable Lakkhaṇa, Ven. Mahā Moggallāna saw with his divine eye (*dibba-cakkhu*) a hungry ghost (*peta*) with the form of a python, about twenty-five leagues (*yojanas*) long. This was a hungry ghost named Ajagara. Flames of fire rose from the head of this hungry ghost and swept down to the end of his body. Then, flames rose from the tail end of his body and swept up to his head. Flames also burst from both sides of his body and met in the middle. Seeing this kind of sight, the Venerable Mahā Moggallāna smiled. Seeing this smile, Venerable Lakkhaṇa asked, "Venerable Sir, why did you smile?" Then Venerable Mahā Moggallāna replied, "I will not answer that question now. Ask this question in the presence of the Blessed One."</p>
+<p>Later on, when Venerable Mahā Moggallāna, Venerable Lakkhaṇa, and the assembly of monks were seated in the Dhamma Hall, in the presence of the Buddha, Venerable Lakkhaṇa asked that same question to Venerable Mahā Moggallāna: "Why did you smile?" Venerable Mahā Moggallāna explained, "I saw such and such a sight. Such a massive hungry ghost body was engulfed in flames in this manner. Seeing this, I thought that I had never seen such a being before, and a smile arose in me due to the extraordinary nature of that sight." Then the Blessed One addressed the monks: "Monks, my disciples live with eyes, with knowledge. I too saw that very sight at the foot of the Bodhi tree, at the very moment of attaining Buddhahood. However, I did not declare it because, due to the extraordinary nature of this sight, ordinary people might not believe it, and by doubting me, they would accumulate demerit; they would generate unwholesome states (*akusala*). That is why I did not declare it. But now, since Moggallāna is here as a witness to this matter, I shall now declare it." Thus spoke the Blessed One.</p>
+<p>At that moment, the bhikkhus asked, "Reverend Sir, Blessed One, what was the past evil kamma committed by this hungry ghost?" The Blessed One then brought forth the past account. During the time of the Buddha Kassapa, there was a very wealthy treasurer (*seṭṭhi*) named Sumangala. To construct a perfumed chamber (*gandhakuṭi*)—that is, a monastery dwelling place—for Buddha Kassapa, he paved the ground with golden bricks and built a dwelling over a large area at immense expense. Furthermore, he spent heavily on the offering ceremony of the monastery. Just as the treasurer Anāthapiṇḍika built the Jetavana monastery for our Buddha, this treasurer built this monastery. One day, while going early in the morning to see the Buddha, he noticed a certain man sleeping in a hall near the city gate. That man was a thief. Even though the thief was sleeping, he had wandered about all night, and his feet were covered in mud. Seeing this, the treasurer casually remarked to those with him, "This man must have wandered about all night and is now sleeping during the day." The thief overheard this. He was sleeping with his head covered in a yellow cloth. Uncovering his head, he looked up, recognized the treasurer, and conceived a deep hatred and anger, thinking, "Very well, I know what to do to you."</p>
+<p>Thereafter, in revenge for those words, what did this thief do? He set fire to the treasurer's ripe crop field seven times. He also cut the hamstrings of the oxen in the treasurer's cattle-shed. Next, he set fire to the treasurer's mansion seven times. Even after doing all this, unable to quench his anger, the man befriended one of the treasurer’s close servants and asked what the treasurer held most dear. The servant replied that there was nothing the treasurer loved more than the monastery—the perfumed chamber—he had built for the Buddha. Then the thief thought, "Very well, I will quench my anger by setting fire to the Buddha's perfumed chamber." While Buddha Kassapa was away on his alms-round, the thief smashed all the water vessels near the chamber and set fire to the dwelling. The treasurer heard that the chamber was on fire. By the time he arrived there, the chamber was completely burnt down. The treasurer did not feel any grief or sorrow over this. Instead, he clapped his hands joyfully. The people standing nearby asked, "Sir, why do you clap your hands in this manner when the chamber you built at such immense cost is burnt down?" The treasurer replied, "I have deposited my wealth in a place where it cannot be destroyed by fire, thieves, enemies, or water—that is, in the Sasana (Dispensation) of the Buddha. That is not lost. Now I have been given another opportunity to deposit an equal amount of wealth in the same manner—as a treasury of merit. It is because of that, out of that joy, that I clapped my hands."</p>
+<p>Having declared so, just as he said, the treasurer spent another massive sum of money, paving with golden bricks, and built a monastery for the Buddha, for Buddha Kassapa. Having built it and spending immensely, as the dedication ceremony of the monastery, he offered alms for seven days to Buddha Kassapa and twenty thousand bhikkhus. Meanwhile, the thief thought, "Even though I have done so much, I have not been able to discourage this treasurer. Now there is nothing else to do. I must kill this treasurer." With a dagger concealed in his waist, he loitered around the monastery during those seven days, intending to kill the treasurer. However, he found no opportunity. On the seventh day, after offering alms to the Buddha and the Sangha, and while inviting the Buddha for the transfer of merit, the treasurer announced, "Venerable Sir, Blessed One, some person, harboring ill-will towards me, set fire to my field seven times in this manner. He also cut the hamstrings of my cattle seven times in the cattle-shed. He set fire to my house seven times. I believe it must have been this same person who set fire to the perfumed chamber of the Blessed One as well. Yet, I share the very first portion of the merit of this meritorious deed with that person." Thus, the treasurer declared.</p>
+<p>Hearing this, the thief was struck with deep spiritual urgency (*saṃvega*). "Alas! Did I bring such ruin upon a person like this? Such a wonderful, forgiving person! If I do not ask for forgiveness now, a thunderbolt might fall upon my head." Thinking so, he quickly ran and fell at the treasurer's feet, crying, "Forgive me, master!" The treasurer asked, "Why, what is this?" The thief replied, "It was I who caused so many destructions and damages to you." Hearing these things, the treasurer asked, "What was the reason for doing so much? I have never seen you before. Why did you harbor such hatred toward me?" The thief then reminded him: "On such and such a day, while I was sleeping in that hall, you said these words. I conceived intense anger over that." At that moment, the treasurer asked the thief for forgiveness, saying, "Forgive me for saying such a thing." The thief felt even greater spiritual urgency. Then the thief said, "Master, if you have indeed forgiven me, please take me along with my wife and children into your service as slaves." The treasurer replied, "Just because I said that one small word, you caused me so much harm. If I keep you in my house now, how could I ever speak with you? I have no need for your slavery. Now, I have forgiven you. Rise and go your way."</p>
+<p>Thus, in a truly remarkable manner, the thief received forgiveness from the treasurer. But though he received forgiveness from the treasurer, he did not receive forgiveness from kamma. Therefore, the Blessed One—our Buddha—declared: "That thief, after death, was reborn in the Avīci hell (*niraya*). Having burned and boiled there for an extremely long time, now, as the remaining portion of that kamma, he has been reborn as a hungry ghost with that kind of form, burning in flames." Having declared this matter, the Blessed One then declared: "This is how those foolish, ignorant people, fools, commit evil deeds and, as a result, burn as if in forest fires due to their lack of understanding." Saying this, he uttered the stanza we mentioned earlier:</p>
+<p>*Atha pāpāni kammāni – karaṃ bālo na bujjhati*</p>
+<p>*Sehi kammehi dummedho – aggidaḍḍhova tappati*</p>
+<p>In the Dhamma, the term '*bāla*' (fool) is not used in the sense of a young child, as we mentioned earlier, but rather the character of the fool is defined as:</p>
+<p>*duccintitacintī, dubbhāsitabhāsī, dukkatakammakārī*</p>
+<p>This means his thoughts are very bad, his words are bad, and his deeds are bad. It is such a person who is called a fool. Thus, such a fool, while committing evil deeds, does not know the side of their consequences. He does not know the gravity of those results. The Buddha uttered this stanza expressing the idea that committing evil deeds in this way, one is tormented by one's own deeds, just like being burnt by fire. It is recorded that upon hearing this, many people realized the paths and fruits (*magga-phala*).</p>
+<p>Now, based on this story, there are two aspects we can take and consider as exemplary lessons. When we reflect on the behavior of the thief in this story, one is astonished. Can anger and hatred go to such lengths? Even though it was not a remark that warranted such rage, hearing the words casually spoken by the treasurer, this thief developed such intense hatred, and then, to quench that hatred, he set fires. Like one trying to extinguish fire with fire, he set fire to the treasurer's field, to his house, and even to the perfumed chamber of the Blessed One. That is how the world tries to quench hatred. There are many such examples even in this day and age. They set fires to extinguish fires. And having set fires in that manner, the final retribution is exactly of the same nature.</p>
+<p>The Blessed One has declared that often, the retribution of a kamma bears the very same form as the kamma itself. This order of kamma is a natural law operating in the world. The Blessed One often points to the law of seeds (*bīja-niyāma*) as an analogy:</p>
+<p>*Yādisaṃ vapate bījaṃ – tādisaṃ harate phalaṃ*</p>
+<p>*Kalyāṇakārī kalyāṇaṃ – pāpakārī ca pāpakaṃ*</p>
+<p>The Blessed One has declared that in whatever manner one sows a seed, in that very manner does one reap its fruit. Following that, the analysis of kamma is presented: "*kalyāṇakārī kalyāṇaṃ*"—the doer of good reaps good, receiving pleasant results; "*pāpakārī ca pāpakaṃ*"—if one commits an unwholesome deed, one reaps bad results from it. Just as when a mango seed or grape seed is planted, it yields sweet fruit, whereas margosa (*kohomba*) or bitter-gourd (*karavila*) yields bitter fruit. There is such a natural order. Thus, just as he gave fire to others, the burning of fire was returned to him. In this way, one has to suffer grave retributions. There are countless such examples in the Dhamma.</p>
+<p>This was just one sight seen by Venerable Mahā Moggallāna while descending the Gijjhakūṭa mountain. A number of such sights are recorded. For instance, in one place it is mentioned that as Venerable Mahā Moggallāna was descending the Gijjhakūṭa mountain, he saw a skeleton flying through the air. A hungry ghost in the form of a skeleton. Facing that flight, hawks, crows, and vultures pecked between its ribs. This skeleton was flying about wailing. The Blessed One explained that the cause for this was that in this very city of Rājagaha, this hungry ghost had been a cattle butcher—a person who slaughtered cattle. Similarly, another account is given of another hungry ghost body flying through the air. That body had hairs that were sharp like swords. While flying, those sword-like sharp hairs would fly up and fall back piercing its own body. Meanwhile, that hungry ghost wailed and screamed. In this manner, many extraordinary sights regarding those hungry ghost realms are shown. Yet, far more terrifying than that is the suffering (*dukkha*) in hells (*niraya*) such as Avīci. The Blessed One declared that they are so extreme that there is no analogy to describe them. Hell is a vast, terrifying ocean of suffering, impossible to describe even by a Buddha's mouth. Then there is the hungry ghost realm, and then the animal realm—the animal world we see. Regarding that too, the Blessed One declared that the sufferings (*dukkha*) in the animal world are beyond description. Furthermore, even after coming to this human world, beings still suffer the results of those kammas. Yet, they do not realize that these are the kammas committed in the past. Unaware of this, they commit more and more evil deeds. Such is the terrifying situation in the world regarding these kammas. Therefore, when reflecting on these results of kamma, we must take lessons from these accounts to shape our lives—not merely treating them as ordinary stories. The Blessed One has declared this natural law of kamma in its precise manner. Other teachers of that time saw it to some extent. However, the Blessed One understood kamma and its result (*kamma-vipāka*) with utmost depth. Moreover, the Blessed One pointed out the very path to escape from this saṃsāra where kamma operates. The Blessed One presented a certain passage as a subject of meditation (*kammaṭṭhāna*):</p>
+<p>*Kammasakohamhi kamma-dāyādo kamma-yoni kamma-bandhu kamma-paṭisaraṇo.*</p>
+<p>*Yaṃ kammaṃ karissāmi, kalyāṇaṃ vā pāpakaṃ vā, tassa dāyādo bhavissāmi.*</p>
+<p>The Blessed One presented this as a subject of meditation, advising that one should constantly contemplate this natural law of kamma. "*Abhiṇhaṃ paccavekkhitabbaṃ*"—it should be constantly reflected upon, constantly contemplated, as a subject of meditation. Its meaning is: "I am the owner of my kamma, kamma is my inheritance, kamma is my origin, kamma is my kinsman, kamma is my refuge. Whatever kamma I shall do, whether good or evil, of that I shall be the heir." Hearing this, one might think, when it says "kamma is my inheritance" or "kamma is mine," that one can do whatever one wants. But within this lies a terrifying, urgent truth. For this is not about doing whatever one pleases. Kamma has two aspects: good and bad. Because of ignorance (*avijjā*) and craving (*taṇhā*), the saṃsāric being is inclined toward the bad side far more than the good. Therefore, there is a terrifying responsibility, a powerful responsibility regarding this kamma. When we say "kamma is mine," "kamma is my inheritance," it is the bad side we have to reflect upon more. No matter how much pleasant retribution (*sukha-vipāka*) can be obtained through these—by doing meritorious deeds—because beings are so terribly inclined towards evil, it is evil kamma that is accumulated more in saṃsāra. It is because of such a state of affairs that the Blessed One says that through constantly contemplating kamma in this manner, one can even develop a profound disenchantment toward saṃsāra. It is a terrifying responsibility to say "kamma is mine." I cannot do as I please. It is subject to that natural order, the natural law operating in the world.</p>
+<p>Next, the Blessed One declares this regarding kamma in a deeper sense: "*Cetanāhaṃ, bhikkhave, kammaṃ vadāmi. Cetayitvā kammaṃ karoti kāyena vācāya manasā.*" How do we identify this kamma? How one gets caught up in kamma can be a question for someone. Usually, the word kamma is also applied to action. Some call even mere physical activity 'kamma'. But in this Dispensation of the Buddha, the word kamma is applied precisely to intention (*cetanā*). "I say, monks, that intention is kamma." The Blessed One declared this. Therefore, one is bound by kamma according to this intention. "*Cetanāhaṃ, bhikkhave, kammaṃ vadāmi*"—Monks, I say intention is kamma. Why? "*Cetayitvā kammaṃ karoti kāyena vācāya manasā*"—having intended, one performs kamma by body, speech, and mind, accumulating kamma. Otherwise, there is no responsibility for actions that occur involuntarily. And this responsibility exists because one takes responsibility for it. Here lies a very strange state of affairs. One takes responsibility for kamma. How does one take responsibility? Based on the feeling of 'I' and 'mine' out of ignorance (*avijjā*). That is why, when we consider the Dhamma deeply, everything is done out of ignorance. Ignorance means 'I' and 'mine'. Egoism, selfishness. 'I' and 'mine'. "Because he is angry with me, I will kill him." "Because I need to eat, I kill animals." "Because I lack wealth, I steal from others." "For my pleasure, I do other things." In this way, centering on the ego, beings are driven to these unwholesome deeds. Therefore, it is due to ignorance that those preparations (*saṅkhāra*) exist. Due to ignorance, preparations (*saṅkhāra*) are accumulated. A part of these preparations (*saṅkhāra*) is what we call kamma. Whether meritorious preparations (*puññābhisaṅkhāra*), demeritorious preparations (*apuññābhisaṅkhāra*), or imperturbable preparations (*āneñjābhisaṅkhāra*), these preparations (*saṅkhāra*) are kamma itself. When contemplated deeply, it is the most subtle aspect of kamma itself.</p>
+<p>In that manner, it is due to ignorance (*avijjā*) that kamma is also accumulated. Since one holds oneself responsible for it—if one is responsible for the kamma, one must also be responsible for its result. That is why, even if unwilling, one is forced to undergo the terrifying results of those evil deeds. Understanding those results, a wise person should refrain from such evil deeds. The term '*bāla*' is applied to an ignorant person. In the Dhamma, the term '*paṇḍita*' (the wise) is used for a wise person. A wise person develops faith (*saddhā*) in the Buddha, establishes right view (*sammā-diṭṭhi*), distinguishes good from bad, understands merit and demerit, wholesome (*kusala*) and unwholesome (*akusala*), and strives to live accordingly. The ordinary pseudo-intellectual, however, succumbs to intellectualism, doubting, "Can this be possible?" and sometimes resorts to evil deeds to satisfy daily needs. Such a person is referred to in the Dhamma as a '*bāla*', a fool, an ignorant person.</p>
+<p>Therefore, the Blessed One next points out that to help one discern this kamma, there are causes for this kamma. They are called causes (*hetu*) or origins (*nidāna*). The causes for evil kamma are greed (*lobha*), hatred (*dosa*), and delusion (*moha*). There is no need to define this anew to humans, to saṃsāric beings. When saṃsāric beings look into their own minds, they can easily recognize these three defilements (*kilesa*) as a sort of triangle: greed, hatred, and delusion. Delusion is, as we mentioned earlier, ignorance (*avijjā*). That feeling of 'I' and 'mine'. "Even if a thunderbolt strikes the other, I must live"—selfishness, egoism, that intense sense of 'I' and 'mine' is delusion. Because of this, toward what I like, there is greed; toward what I oppose or dislike, there is hatred. When contemplated wisely in this manner, it is due to greed, hatred, and delusion that all the evil deeds in the world occur. Many other defilements can be added to this, but fundamentally they are greed, hatred, and delusion. Next, wholesome states are presented—the opposite of those unwholesome ones.</p>
+<p>Then, what can be classified under the wholesome (*kusala*) side? They are designated as non-greed (*alobha*), non-hatred (*adosa*), and non-delusion (*amoha*). Non-greed, non-hatred, and non-delusion mean that if one frees the mind from greed, even for a single moment, that moment is wholesome. That is a wholesome mind. If one detaches the mind from hatred even for a moment—now, we can see from the behavior of that treasurer that he possessed the wholesome roots of non-hatred (*adosa*) within him, whereas the thief had unwholesome roots. In this manner, we can understand it. If one detaches oneself, even for a moment, from delusion—from the feeling of 'I' and 'mine'—and thinks a thought, utters a word, or performs an action, those fall under the wholesome side. Reflecting in this manner, the Blessed One has deeply analyzed and presented this kamma to us, as well as the side of its consequences and the way to recognize it. Next, the Blessed One has pointed out several other special factors that assist in practicing this.</p>
+<p>What is virtue (*sīla*)? When contemplating it wisely, these precepts—especially the five basic precepts in the Dhamma—are the Five Precepts (*pañca-sīla*). These Five Precepts are just like road signs that you see when traveling on a road. In some places, it says 'drive slowly', 'dangerous curves ahead', 'steep descent ahead'—notifying the driver in this manner. What happens if the driver does not have these notifications? He will drive at the vehicle's maximum speed and plunge into a terrifying abyss. Such is this saṃsāric journey. The Blessed One has presented these Five Precepts as road signs for the being traveling on this saṃsāric journey. Why? Because among evil deeds, five are shown as extremely severe. The things that bring about terrifying consequences in saṃsāra are what are contained in the Five Precepts: killing living beings, stealing, sexual misconduct, lying, and taking intoxicants (*surā-meraya*). Through these, one falls into intense oppression, burning, and torment in saṃsāra. Therefore, the Blessed One first reminds all beings traveling on this saṃsāric journey of these Five Precepts.</p>
+<p>Now, if one drives a vehicle ignoring those road signs, what happens? First, the vehicle veers off the road. Next, it goes into a ditch and falls down an abyss, getting shattered to pieces. In that very manner, a group of terms representing that state is mentioned in the Dhamma regarding hell: '*apāya, duggati, vinipāta, niraya*'. '*Apāya*' means falling away from the correct path. '*Duggati*' means taking the wrong path, like going down into a ditch. '*Vinipāta*' means falling headlong down an abyss. '*Niraya*' means being crushed to pieces, reaching a state where nothing is salvageable. One reaches such a state due to those evil deeds if one does not observe the Five Precepts. Virtue (*sīla*) means precepts (*sikkhāpada*). Why does one undertake and observe these precepts oneself? By recalling this daily, a person gives a certain advice to one's own mind: "Today, I must conduct myself within these Five Precepts." Just as a driver, upon seeing a road sign, reduces the speed of the vehicle if it is going too fast, or slows down if there are curves ahead. In that manner, these Five Precepts are presented as factors that help and support one in shaping one's way of life. Generally, some consider this to be a great hassle. Yet, those who think so do not say such things about the road signs on the street. If they are absent, they blame the government: "They should have placed a road sign there warning of a steep descent." But without considering such things in this saṃsāric journey, they blame the Buddhas, the Arahants, and the Sangha for telling them to observe these precepts. When they begin to burn and suffer from the consequences, only then do they realize the foolishness of what they did. That is why they are called '*bāla*', the ignorant person.</p>
+<p>Therefore, one must contemplate deeply based on the evidence available to us. Along with the Five Precepts, there are other related things—belonging to the ten unwholesome courses of action (*dasa-akusala*)—especially the factors concerning speech that were mentioned in the *ājīva-aṭṭhamaka-sīla* (virtue with livelihood as the eighth). Regarding speech, we usually treat a lie as a trivial thing. Slander and such things are also treated as trivial. But they bring about grave retributions. That is why the Blessed One laid down precepts to abstain from lying, slander, harsh speech, and frivolous talk. Because of these, one ruins the gift of speech—a rare inheritance—that one has received. The same applies to wrong livelihood (*micchā-ājīva*). In this day and age, such things have come to the forefront through the economy—since this is an era that forgets righteousness. But falling into ruin through such wrong livelihood—as we mentioned about the cattle butcher—there are many others. It is not only during the Buddha's time that beings existed in such hungry ghost states. In this era, because those possessing higher spiritual powers (*abhiññā*) are rare, there is no one to declare such matters. Even if there were, even the Buddha did not declare that matter until he had the witness of Venerable Mahā Moggallāna. Why did he not declare it? Lest they say, "The Buddha is lying to deceive us, creating these stories as if to fool small children," and by saying so, they would go to hell. That is why the Blessed One did not declare it. He did not declare it until the time came when Venerable Mahā Moggallāna stood as a witness to that matter. Today, it is just the same. In this era, even if someone rarely sees these things and speaks of them, they are not believed. Yet, the very people who do not believe these things, throwing away what is written in the Dhamma books as old stories, are ready to accept them with utmost reverence if a Western scientist declares something about them.</p>
+<p>Although the word of the Buddha does not need any external support, in this day and age, even Western scientists have had their eyes opened regarding this kamma. You must be hearing about such matters regularly through various means. In some, a memory of past lives (*jātissara-ñāṇa*) arises during childhood. What are famous in the world as reincarnation stories are such occurrences. This is because, in childhood, some small children remember past lives—mostly how they lived in their previous life, how they died, and even the kammas they committed. Truly amazing information about them. Furthermore, through hypnosis, by putting someone into a hypnotic sleep and bringing up their past memories, Westerners have discovered ways to unearth where they lived in the past and what they did and said. These are somewhat like child's play compared to the knowledge of Buddhas and Arahants like Mahā Moggallāna. Yet, even such things are good evidence for someone in this day and age to believe with confidence. Also, about a century ago, in America—when speaking of America back then, they knew practically nothing about Buddhism, kamma, or the natural law of kamma. It was such an era of darkness. But in such a country, there was a Catholic gentleman named Edgar Cayce. That gentleman had not even heard the word kamma in his daily life. However, after entering a hypnotic trance, he gained the ability to describe his own past lives, the kammas that caused them, and the karmic retributions (*kamma-vipāka*) that caused the illnesses of the patients who came to him. The records of the illnesses of the patients who came to him are still stored in a separate library, and even professors conduct research on them and write books. To mention one or two examples, a man came with an eye condition that was close to blindness. On that occasion, Edgar Cayce declared the cause for it. He said that although medicine, social welfare activities, and meritorious deeds might alleviate the illness to a great extent, it could not be completely cured beyond that. Why? Because: "Thousands of years ago, you were born in a certain primitive tribe. What was your job? It was to blind the eyes of enemies captured by your tribe. Since you performed that duty of blinding eyes very well, your eyes cannot be cured beyond this. You cannot be freed from that blindness." Thus, Edgar Cayce determined.</p>
+<p>According to that, we can realize that the results of kamma exist in the world not only during the Buddha's time but even in this era. What is rare is those who can see them and present the facts about them with reasons. That is the situation. Therefore, next, one must consider: how do we escape from this kamma? By avoiding these unwholesome kammas, avoiding evil deeds, and traveling as much as possible on the path of Dhamma—now, most of the time, one resorts to these evil deeds because intention (*cetanā*) operates so rapidly in the mind. Now, everyone is capable of understanding whether one's intention is pure or impure, good or bad—when an intention arises, whether it is a good one or a bad one. Even if it is a bad one, some people, knowing that the bad intention is bad, continue to encourage it, acting and speaking in accordance with it. What is the cause of such an inclination? The lack of development of the mind. That is why the Blessed One declares that, without stopping at virtue (*sīla*) alone—without stopping at merely giving those road signs—the Blessed One next points out a more systematic, more beneficial, and superior path to escape from this terrifying nature of suffering (*dukkha*) in saṃsāra. The Blessed One brings forth a power for beings to escape completely from this order of kamma, from the results of kamma, and from kamma itself. What assists in this is concentration (*samādhi*) and wisdom (*paññā*). Having purified the mind with virtue, one then steadies the mind through concentration. One develops the power to keep the mind on a single object. For such a person, compared to the one mentioned earlier, when the intention moves toward the bad side, there arises a power through concentration to stop it immediately. And the power to escape even more deeply from these karmic forces arises through wisdom. Realizing the true nature of the world directly, there is nothing to be taken as 'I' and 'mine'. What is here is the state of not-self (*anattā*). This great existence of saṃsāra is itself suffering (*dukkha*), and its cause is craving (*taṇhā*). The cessation of this craving is Nibbāna. The path that helps this is the Noble Eightfold Path—this is the comprehension of the Four Noble Truths. That is what is called wisdom (*paññā*).</p>
+<p>If someone develops that wisdom supramundanely—if that person, at the first stage, as a Stream-enterer (*sotāpanna*), has comprehended the Four Noble Truths—a distinct change occurs in that person's intentions. To what extent is that change? It is such that they no longer commit unwholesome deeds that lead to lower realms. Usually, a person can go to hell even due to a single, grave, evil thought arising in a split second. Such is the terrifying behavior of the mind. This mind operates at a speed so rapid that it cannot be compared to any vehicle or machine in the world. If this mind, operating at such a speed, turns to the bad side even for a single moment—if a wrong thought, a wrong word, or a wrong deed is directed toward a Buddha or an Arahant—that is enough to boil in hell for aeons. Many are delighted to see a very fast vehicle. But the driver of that vehicle bears a massive responsibility. If the machinery to stop that vehicle at will is not proper, or if there are various defects, a terrible accident will occur to their lives while traveling at high speed. In the same way, regarding this mind, the Blessed One points out that due to its very rapid nature, if it is directed toward the bad side, one has to suffer severe consequences. However, the Stream-enterer has stopped the mind to some extent. Due to the power of stopping that mind, due to that realization of truth—wisdom—the Stream-enterer limits the entire saṃsāric existence to a maximum of seven births and escapes from it. This means they are born only seven more times. Not only that, but the change that occurs in that mind is so great that the wrong notion of a self, the idea that there is a soul, called the view of existing group (*sakkāya-diṭṭhi*), is removed from that person. The Stream-enterer, who has attained the fruit of stream-entry, not only receives the relief of being born only seven more times in saṃsāra, but they also cannot commit evil deeds that lead to hell. What is the reason? It is that change which occurs in the mind. Through the power of stopping the mind, and also through that wisdom, that person's attachment to deeds is reduced. The responsibility for those deeds is reduced. As we mentioned earlier, the responsibility one takes for performing a kamma is exactly the responsibility one must take for suffering its result. Therefore, while some have to suffer the consequences in hell and other places for a long time due to that view of tightly grasping 'I' and 'mine', that situation is reduced for the Stream-enterer due to that realization.</p>
+<p>Similarly, when one becomes a Once-returner (*sakadāgāmi*) and a Non-returner (*anāgāmi*): the Once-returner comes to this world only once more. The Non-returner does not return to this world again. Reborn in the Brahma world, they attain final Nibbāna (*pariNibbāna) there itself. For the Arahant, there is no birth (*jāti*) after this. Yet, such is the influence of kamma that they still have to undergo some retribution in this very life as kamma to be experienced in the present life (*diṭṭhadhamma-vedanīya*). Due to past kammas or certain kammas committed in this very life, they must undergo those retributions that are to be experienced only in this present life. From this, we can see on one hand how powerful kamma is. Even Buddhas and Arahants had to undergo their retributions, as results of past kammas. You must have often heard of Venerable Mahā Moggallāna, a monk of such great psychic power, yet in the end, five hundred bandits crushed his bones, and he had to pass away into final Nibbāna. Why? Because in the very distant past, he had beaten and killed his parents. Accordingly, one can understand the terrifying nature of this kamma on one hand. On the other hand, what we must reflect upon is this wondrous path pointed out by the Blessed One to escape from that kamma. In this world, there are two wheels: the wheel of kamma and the wheel of Dhamma. It is this wheel of kamma that operates in the most terrifying manner in the world. No being caught in it has any escape from that law of kamma. In whatever manner they perform kamma, in that very manner they have to suffer terrifying retributions. But the Blessed One points out the wheel of Dhamma. As we explained earlier, by walking on this Noble Eightfold Path, avoiding unwholesome states and walking on the wholesome path, purifying body and speech with virtue, calming the mind with concentration, and then seeing the true nature of this world with insight-wisdom—if someone has comprehended the three characteristics of impermanent (*anicca*), suffering (*dukkha*), and not-self (*anattā*) at the first level of Stream-entry—that person escapes from those unwholesome kammas that lead to hell, and is born only seven more times. Then, going gradually in that manner, the Arahant finally puts an end to this entire saṃsāric existence and attains that supreme realization of Nibbāna.</p>
+<p>Therefore, you devotees must contemplate accordingly. One must not think of this kamma as mere stories in old books, that they are lies or exaggerated fabrications. These are wondrous, yet true. For the natural laws operating in this universe, the things we see, sometimes appear very small. When we look at the sky, we see small stars—tiny specks of stars. Yet when scientists describe their actual size, we see stars in a different light. Such wondrous things exist all around us. When scientists describe the size of a star, the size of this moon in the sky, the size of the sun, we believe them because they are scientists. Likewise, how massive are the things that appear small to us in reality? When one reflects on what the Blessed One declared regarding time and space, a great spiritual urgency arises. For such a long time, across such vast space, we have traveled in saṃsāra as beings, haven't we? The Blessed One has declared that no beginning can be seen to this saṃsāra. Covered by ignorance (*avijjā*) and bound by craving (*taṇhā*) due to not knowing the Four Noble Truths, the duration of beings traveling in this saṃsāra cannot be fully described even by a Buddha. It is so endless that it cannot be fully told. The Blessed One brings to light such a wondrous state of affairs that arouses spiritual urgency in one. Even if we do not believe in these Dhamma matters, we proudly proclaim what scientists and astronomers say as great wonders. Sights far more wondrous have been declared by the Blessed One regarding this saṃsāra. In truth, the comprehension of those external things, what has been revealed about them, is mostly used by the world on the unwholesome side—inclining more and more toward fivefold sensual pleasures (*pañca-kāma*) to cultivate this world.</p>
+<p>The Blessed One has declared, "*Na siyā lokavaḍḍhano*"—one should not be a world-cultivator. What needs to be done is not the cultivation of the world, but escaping from the world, escaping from this saṃsāra. It is that which helps to escape from saṃsāra that the Buddhas have declared in this Dhamma. That is what is called this wheel of Dhamma. The power of this wheel of kamma can be broken only by the wheel of Dhamma. Therefore, we must reflect, we must indeed question ourselves: are we going to keep spinning the wheel of kamma in this saṃsāra for an infinite time, or are we going to strive to turn the wheel of Dhamma, declared by the Blessed One, within our own minds? Turning the wheel of Dhamma means, as mentioned, to discipline body and speech to settle our minds, by undertaking as a starting point a certain virtue (*sīla*)—whether the Five Precepts, these Uposatha Eight Precepts, or the Ten Precepts—and striving to observe them properly day by day. Through the peace gained from calming body and speech, one then strives to anchor this wandering mind on a single thought through concentration (*samādhi*), using a subject of meditation (*kammaṭṭhāna*) such as thoughts of loving-kindness (*mettā*), mindfulness of breathing (*ānāpānasati*) which directs the mind to the in-breaths and out-breaths, contemplation of foulness (*asubha-bhāvanā*), or mindfulness of death (*maraṇasati*). The concentration gained from this gives one an understanding of the entire power of the mind. "There is such immense power in my mind, isn't there? I did not understand this all this time; I was utilizing only a tiny fraction of it," such an understanding arises if one is somehow able to bring forth concentration.</p>
+<p>And it does not stop there. Why do we steady this mind? It is to comprehend the true nature of this life of mine, of the world. It is to escape from this saṃsāra. The fundamental matter that helps in this has been pointed out by the Blessed One as the Four Noble Truths. This entire saṃsāra—including gods, deities, and Brahmas, and those beings said to be enjoying pleasure—is suffering (*dukkha*). Why is it suffering? Because all these things are impermanent (*anicca*). Nothing can be kept in a permanent state. Whatever is impermanent, because of that very quality, because of its unstable nature, brings about suffering. It is suffering. In that nature of suffering, there is that changing thing which cannot be kept under one's control as 'I' and 'mine'; there is a state in the world that cannot be governed by oneself. Therefore, the Blessed One pointed out three characteristics: impermanent (*anicca*), suffering (*dukkha*), and not-self (*anattā*). When contemplating wisely, these characteristics can be seen in everything in the world. One must strive to develop the eye capable of seeing these characteristics. That eye is called the 'eye of insight' (*vipassanā-cakkhu*). Insight (*vipassanā*) means seeing through. To facilitate that seeing, various instruments have been invented in the world in this day and age. There are microscopes to see extremely small things magnified. Microscopes, and telescopes to see far. All of these are things done through external instruments. But this insight is the seeing of the true nature of the world, as pointed out by the Blessed One, by purifying one's own mind. What helps in that is constantly contemplating the arising and passing away of things in the world. Everyone can do this according to their own capacity: our in-breaths and out-breaths, the way parts of our body arise and pass away, the fate of the food and drink we consume, the fate of the expensive clothes we buy at various shops. In everything—the fate of our small children whom we cuddle so much. Then they grow up gradually, reach old age, walk with walking sticks, and finally, just like lifting a small child, when they reach old age as grandpas and grandmas, they have to be lifted.</p>
+<p>Such a state of affairs exists in the world. One must contemplate them constantly. Through that, the true nature of this world becomes visible, bringing about a certain disenchantment (*nibbidā*) toward this saṃsāra—many do not like the word disenchantment—but to the extent that a certain disenchantment toward saṃsāra arises, to that extent all that insight-wisdom (*vipassanā-paññā*)—that wisdom—is developed. The power to escape from saṃsāra is sharpened within oneself. In that manner, practicing insight in the past, lay disciples, no matter how poor their livelihood or how uneducated they were, by thinking in accordance with the Dhamma, and developing virtue, concentration, and wisdom to the best of their ability, even attained supramundane path states—Stream-entry, Once-returning, Non-returning, and Arahantship—right in their own homes, as recorded in the Dhamma.</p>
+<p>Therefore, why did you devotees listen so much about kamma? It is to escape from this kamma. Remembering that the Dhamma is what helps to escape from this kamma, today on this Poya day, this devout gathering has undertaken a valuable virtue, the *ājīva-aṭṭhamaka-sīla*, and has focused the mind on the Dhamma, listening to it for this long. The merit of listening to the Dhamma (*dhamma-savanamaya-kusala*) is a certain growth that occurs within our mind. If we describe this growth in terms of qualities, we can show that the mind grew in faith (*saddhā*). It is with great faith that you devotees came to this place to listen to the Dhamma. Next, according to that faith, for this long—a certain energy (*viriya*) that enabled you to sit on the ground like this—with the determination that "somehow I must listen to this Dhamma," you generated energy. That too is a state arisen in the mind. Faith, energy, and then while listening to the Dhamma, you applied mindfulness (*sati*) to pay attention to every single word. Next, when that mindfulness was applied for a long time, for about an hour, a certain degree of concentration (*samādhi*), one-pointedness of mind, arose. Through that one-pointedness, deep understandings arise regarding the things you heard and read, even if heard repeatedly. That is what is called wisdom (*paññā*). In this manner, you should rejoice that you had the opportunity to deposit within your minds, in varying measures, the spiritual faculties and powers (*indriya* and *bala*)—faith, energy, mindfulness, concentration, and wisdom—which assist in attaining Nibbāna.</p>
+<p>Therefore, today, this meritorious group, without postponing to the future the strength gained through turning to the Dhamma, must bring the Dhamma closer to daily life to sharpen it further within this very life. Although Western countries have highly developed other external economic matters and become prosperous, they have realized the value of the Dhamma. No matter how much wealth humans have accumulated in those foreign lands, having become mentally unstable, turning to drugs, and falling into various other terrifying disasters, they are now searching for the Dhamma. In contrast, the people of our country are throwing away this Dhamma of ours, chasing after all those conditions coming from the West, and heading toward the path of decline. In such an era, you wise devotees should rejoice, thinking that today you spent this hour to nourish your minds with the Dhamma, to escape from saṃsāric suffering (*dukkha*), and to develop within yourselves the strength to realize the supreme Dhamma of Nibbāna.</p>
+<p>Now, you must resolve, especially that through the blessings of listening to this Dhamma, may you have the strength and power to develop virtue, concentration, and wisdom, not in the future but in this very life, and realize as soon as possible the path and fruit realizations of Stream-entry, Once-returning, Non-returning, and Arahantship, thereby finding peace in the supreme, deathless, great Nibbāna. You should make that aspiration. Likewise, we now share with the world this store of merit accumulated through the preaching and listening of the Dhamma. There are those who know the value of these merits, even if our ordinary world does not. May the assembly of gods and Brahmas, the assembly of Sasana-protecting deities and Brahmas, and whatever deities reside over this place, share in this merit of preaching and listening to the Dhamma accumulated by us during this hour. Having shared in it, may they find peace in the supreme, deathless, great Nibbāna through whatever Bodhi (awakening) they have aspired for! We should also make the aspiration: "May they protect us and the Sasana!" Similarly, may all beings from Avīci up to Akaniṭṭha, including our departed relatives, share in this merit of our preaching and listening to the Dhamma, and if they are in any woeful states, may they be released from them, reach happy states, walk on the path of Dhamma, and through the realization of the paths and fruits of Stream-entry, Once-returning, Non-returning, and Arahantship, or through their aspired Bodhi, escape from this terrifying saṃsāric suffering (*dukkha*) and find peace in the supreme, deathless, great Nibbāna! Having made such an aspiration, now recite those stanzas and transfer the merits.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_011.html" class="doc-btn">← Previous Sermon (011)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_013.html" class="doc-btn">Next Sermon (013) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 076 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_075.html" class="doc-btn">← Previous Sermon (075)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_077.html" class="doc-btn">Next Sermon (077) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 076</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_076_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_076_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_076_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #76</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.11)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Dūraṅgamaṃ ekacaraṃ, asarīraṃ guhāsayaṃ;</p>
+<p>ye cittaṃ saññamessanti, mokkhanti mārabandhanā.</p>
+<p>From:</p>
+<p>Dhammapada 37 (Cittavagga)</p>
+<p>Dear Listeners,</p>
+<p>Beings in this world travel from country to country to see marvelous and wonderful things. They construct spacecraft and travel to other planets. By inventing instruments like microscopes and telescopes, they reveal wonderful details about things close at hand and things far away. But, pious friends, more wonderful than all of these things is this mind of ours. It was our Buddha who properly demonstrated to the world the way of the mind, the nature of the mind, and the great power of the mind. Our Buddha revealed to the world that it is because of this running mind that we wander in this *saṃsāra* for such an extremely long time, and that the place where the mind is brought to a halt is Nibbāna. Precisely by seeing the way of this running mind, we are able to bring forth a systematic program of practice that helps to halt the mind. The background story related to the stanza we have taken as our theme is indeed an excellent illustration of the behavior of a running mind.</p>
+<p>In the city of Sāvatthī, there lived a good young man from a certain family. Having heard the Dhamma from our Buddha, that young man went forth and ordained under the name Saṅgharakkhita. Within a few days of ordaining and receiving higher ordination, he attained Arahantship. This venerable monk had a nephew. To remember the venerable monk, the nephew's parents also named him Saṅgharakkhita. Society knew him by the name 'Bhāgineyya Saṅgharakkhita'. 'Bhāgineyya' means nephew; thus, he was known as 'Nephew Saṅgharakkhita'. After this boy reached youth, he too went forth and ordained under his maternal uncle, the venerable monk.</p>
+<p>Thus, he ordained as the novice monk Bhāgineyya Saṅgharakkhita. Having ordained and received higher ordination, he went to a village monastery to observe the rainy season retreat. At the end of the rainy season, from the offering made—the *vassāvāsika* offering—this monk received a piece of cloth seven cubits long and another piece of cloth eight cubits long. When he received this offering, this monk thought: "I must offer this eight-cubit piece of cloth to my preceptor, my teacher monk. I will use the seven-cubit piece of cloth." Having formed this great intention, after the rainy season, he set out to see his teacher monk. On the way, he went for alms, and while the teacher monk had gone to the village for alms, he entered the monastery, swept the venerable monk's cloister walk and chambers, performed the familiar duties, prepared water, and waited for the venerable monk to return.</p>
+<p>Then, when the venerable monk arrived, he went forward to meet him, took his bowl and robes, performed those duties with great respect, made a seat ready for him, and having brought that eight-cubit piece of cloth, placed it at the feet of the venerable monk, saying, "Venerable Sir, please accept and use this offering." Offering it thus, he took the palm-leaf fan and stood fanning the venerable monk. The venerable monk said to his pupil, "My robes are complete. I have no need of this cloth. You may use this yourself." Monk Bhāgineyya Saṅgharakkhita said, "Alas, Venerable Sir, from the moment I received this, my only intention was to offer it to you. Please use it." Even though he said so, the teacher monk did not wish to accept it. "It would bring great blessings to me if you would use this, Venerable Sir," Monk Bhāgineyya Saṅgharakkhita pleaded repeatedly, but the preceptor refused it. And then, this monk's mind became displeased.</p>
+<p>"Alas! In lay life, this venerable monk was my maternal uncle. Even though he is now my teacher monk, he does not wish to accept or use what I offer. Therefore, what is the use of this monkhood to me? I will return to the lay life," he thought. Then he wondered, "When I become a layman, what livelihood will I pursue? Maintaining a household is not easy; what job shall I do?" Then a way occurred to him: "I will sell this eight-cubit piece of cloth and buy a she-goat. Goats breed very quickly. I will sell the offspring as they are born and make money. Having earned money, I will take a wife. To that wife, a son will be born. Then, seating my wife and son in a carriage, I will come to visit my teacher monk, having named that son 'Saṅgharakkhita'. Then, while coming along the way, I will say to my wife, 'Give that child into my hands.' But the wife will say, 'You drive this carriage; I will look after the child.' Saying so, before they go far, due to the wife's negligence, the child falls right in front of the moving carriage wheel. The wheel runs over the child. Then, in anger, I will strike that wife with the goad, saying, 'When I asked for the child, you could not give him, and now you could not even protect him!' and I will beat her with the stick." Whom did he strike? He struck the head of his teacher monk, the Arahant! What did he strike with? The palm-leaf fan!</p>
+<p>This venerable monk possessed supernormal powers (*abhiññā*). He was a great Arahant. He could see how another person's mind was working. Reflecting on it, he thought, "Why did my pupil strike my head with the palm-leaf fan like this?" Then he saw the thoughts that had been working in his mind. Thereupon, the senior monk said: "Saṅgharakkhita, you could not strike your wife, but what is the fault of this old elder?" At that moment, a great sense of urgency (*saṃvega*) arose in this young monk. "Alas, I am ruined! My teacher monk saw how my mind was working." Out of great shame, he dropped the palm-leaf fan right there and began to run. A group of novices ran after him, caught him, and brought him before the Buddha. Seeing them from afar, the Buddha asked, "Why are you bringing this monk by force?" They replied, "This young monk, having become dissatisfied with the monkhood, started to run away. We caught him and brought him here." The Buddha asked, "Why, monk, having ordained in such a Dispensation (*Sāsana*), do you wish to return to the lay life like this?" Then, this monk recounted the entire sequence of events, the way his mind had been working. The Buddha then comforted his mind: "That is the nature of this mind. Do not let your mind be weakened by this. The mind is something that wanders far like this. Such is the nature of the mind." Giving a discourse, he uttered the Dhamma stanza we mentioned at the beginning:</p>
+<p>> *Dūraṅgamaṃ ekacaraṃ,*</p>
+<p>> *asarīraṃ guhāsayaṃ,*</p>
+<p>> *Ye cittaṃ saññamessanti,*</p>
+<p>> *mokkhanti mārabandhanā.*</p>
+<p>In this stanza, four characteristics of the mind are mentioned—four aspects of the nature of the mind. *Dūraṅgamaṃ* means wandering far; *ekacaraṃ* means traveling alone. The nature of the mind is to wander far, and it also travels alone. *Asarīraṃ* means bodiless (having no physical body). *Guhāsayaṃ* means dwelling in a cave—hiding inside a cave. Those (*ye*) who restrain (*saññamessanti*) the mind (*cittaṃ*) which has this kind of nature, will be freed from the bond of Māra (*mārabandhanā*)—the bond of defilements of Māra, the bond of *saṃsāra*. That is to say, they realize Nibbāna. Thus, he taught a stanza of such profound meaning.</p>
+<p>As mentioned in that story, having heard this stanza and the sermon, even that monk Bhāgineyya Saṅgharakkhita attained the fruit of Stream-entry (*Sotāpatti-phala*), precisely by seeing the peril (*ādīnava*) of how his own mind had operated. For many people, understanding arises based on their own downfall. When one sees the peril, from then on, a keen interest arises to develop energy, mindfulness, concentration, and faith. Perhaps for this reason, and due to his past merit, that monk attained Stream-entry, and it is mentioned that a large number of others also realized the Paths and Fruits.</p>
+<p>Now let us try to understand the meaning of this valuable stanza a little further. It is worthwhile to consider the lessons we can extract for our lives from this stanza and story. Every single point mentioned about this mind is extremely deep.</p>
+<p>*Dūraṅgamaṃ* (wandering far) is said because, according to the object the mind takes, it can travel very fast and very far. When we think of the Akaniṭṭha Brahma world, the mind goes to that Akaniṭṭha Brahma world. It travels that far, and with such rapidity. The Buddha declared, "I do not see any other thing in this world that changes, transforms, or turns as rapidly as the mind." So, this mind spins and turns extremely quickly, faster than any wheel. Just as it turns rapidly, it also goes very far—*dūraṅgamaṃ*. Scientists say that light is the fastest thing in the universe. Be that as it may, there is nothing as fast as the mind. The mind travels far with such immense speed.</p>
+<p>Next, *ekacaraṃ* means traveling alone, according to its own whim. "Traveling alone" means that, while the physical body of monk Saṅgharakkhita was right next to his teacher monk, his mind wandered off all alone. It conjured up many dreams about the future, like daydreaming. It went very far into the future. The mind has a nature of wandering aimlessly at its own whim. Next, *asarīraṃ* (bodiless). We recognize a person based on their body. We recognize someone by their color, signs, and so on. But the mind has no body by which to recognize it. Moreover, when we think of a journey, there is a body associated with it. But the mind has no body. Therefore, when the mind wanders, it is difficult to grasp where it went—*asarīraṃ*.</p>
+<p>*Guhāsayaṃ* (dwelling in a cave): the "cave" refers to this very cage of a body. This is indeed a cave. A cave is a place where one can hide. The primary elements (*mahābhūta*) of earth, water, fire, and wind are called *dhātus* (elements) or *mahābhūtas* (great elements). To put it briefly, this body is almost like a place haunted by "great ghosts"—that is, the great elements (*mahābhūta*). Every one of us has a body created from these four elements, known as the great elements. The mind is hidden inside this body. It is not easy to point out and say, "The mind is in such-and-such a place." Thus, all four terms—*dūraṅgamaṃ*, *ekacaraṃ*, *asarīraṃ*, *guhāsayaṃ*—indicate the subtlety of the mind. The mind travels very far. It also wanders alone according to its whim. Furthermore, this mind has no physical body for us to run after and catch. When that monk started running, four or five people went and caught him. But when the mind starts running, even twenty or thirty people running cannot catch it. The nature of the mind is such that the more you chase it, the further it runs. Thus, all of these show the subtlety of the mind—traveling far, wandering alone, having no body, and dwelling inside a cave. The stanza declares that whoever restrains, tames, or trains a mind that is so mysterious and incomprehensibly subtle, will be freed from the bond of Māra.</p>
+<p>Just as he revealed the nature of the mind, the Buddha also showed the way of taming and taming this mind—the manner of taming indicated by the word *saṃyama* (restraint). In some instances in this Dhamma, this mind is compared to a wild bull. Indeed, like a wild bull, this mind is something ready to run wild without submitting to any control. It breaks loose and runs away. What then is the method shown in this path of Dhamma pointed out by the Buddha? Just as a wild bull is tamed by being tied to a post with a rope, the mind must be tamed. What is this post? The post is shown as the *kammaṭṭhāna* (meditation subject). Pious friends, *kamaṭahana* means *kammaṭṭhāna*. The meditation subject is a certain topic chosen for meditation. This is called *kamaṭahana*. *Ṭhāna* means place. *Kamma* means work or action. In modern terms, it is like a workplace or workshop. The workplace of the meditation practitioner is the topic of meditation—some specific subject. If it is loving-kindness meditation, it is "May they be well." If it is recollection of the Buddha, it is a word like "Araham" or "Buddho"—some meditation topic. This is the *kamaṭahana*, or the post. On this post, one must tie it with a rope. What is the rope? The Buddha has pointed that out too: *sati*. *Sati* means mindfulness. This wild bull must be tied to that post of the meditation subject with the rope of mindfulness.</p>
+<p>What is done by that? It dispels the unwholesome states (*akusala*) that flow into the mind. It also has the nature of preventing future unwholesome states from flowing in, a state of not getting caught up in them. We can easily understand this through an illustration or a sight commonly seen even in this area. Sometimes, near a paddy field, we see a bull tied to a post. Why is it tied? If by chance the bull eats the paddy crop in the field, trouble will come to the bull from the owner of the field, and trouble will also come to the bull's owner. Therefore, it is tied to a post. But because a bull is a bull, what does it do? It goes on grazing on the grass and gradually, almost unconsciously, starts eating the paddy in the field. Right then, when the rope by which it is tied tightens around its neck, it becomes aware. Through this awareness, the bull is pulled back toward the post. Again and again, it grazes on the grass and wanders back toward the field, and again it is pulled back this way by the rope. Pious friends, it is exactly like this that mindfulness operates. Through this mindfulness, the mind is kept from wandering into unsuitable areas, allowing it to roam only within its proper domain.</p>
+<p>In the Dhamma, a word that goes hand in hand with *sati* is *sampajañña*. Usually, *sampajañña* is translated as "clear comprehension." But a better word is "awareness" or "attentiveness" (being aware). In society, a word like "reminding" is used. But that is done by others; this is not like that. This is a self-awareness. Imagine someone faints and loses consciousness. After this unconscious person is taken to a hospital, let us say they regain consciousness. As soon as they regain consciousness, they look around, asking, "Where am I?" and search for an answer. That means they are trying to become aware. In the same way, it was without mindfulness that Monk Bhāgineyya Saṅgharakkhita was building daydreams about the future. Thus, the moment his teacher monk spoke those few words, he became aware. Mindfulness returned. That is what is called *sampajañña*. The terms that assist the meditator, therefore, are mindfulness and awareness (*sati-sampajañña*), which go together. Along with mindfulness, due to the application of mindfulness, awareness arises, and through that, defilements are suppressed.</p>
+<p>In this way, the Buddha has pointed out a path of Dhamma based on this mindfulness and awareness. It is called the four foundations of mindfulness (*satipaṭṭhāna*). We call the Buddha "Buddha," which implies that we are his children—the children of the Buddha. Not only the Sangha, but anyone who has gone to the Buddha for refuge with faith, when they call him "Buddha," it signifies that they are children of that Buddha. The Buddha on one occasion declared: "Monks, wander in your father’s domain, your ancestral pasture. If you wander in your father’s domain, Māra will not find an opportunity." What is this father's domain? "Father" refers to himself. The Buddha points out the pasture as the four foundations of mindfulness (*satipaṭṭhāna*). Here, the four foundations of mindfulness are shown: contemplation of the body, contemplation of feeling/sensation [*vedanā*], contemplation of the mind, and contemplation of mind-objects. What are these four foundations of mindfulness shown by the Buddha in the Satipaṭṭhāna Sutta? It refers to a very simple form of awareness. The method employed by the Buddha is indeed wondrous.</p>
+<p>Contemplation of the body is a certain kind of awareness regarding the body. That is, the activity of the body. In maintaining postures and so on, when walking, one walks with the understanding, "This is walking, this is walking." Next, when sitting, lying down, or reclining, one gives that understanding to the mind: "This is reclining." What is achieved by this? The scattering nature of the mind is halted. The mind gets scattered due to delusion. It was because he forgot that he had a palm-leaf fan in his hand while fanning his teacher monk, and forgot that he was standing behind his teacher monk—due to lack of mindfulness or delusion—that he behaved in that manner. If that monk had thought even slightly, "I am fanning, fanning, I am fanning here," if he had that awareness that "this in my hand is the palm-leaf fan," then that scattering of his mind would have been prevented. But what happened was the exact opposite.</p>
+<p>That is why the Buddha points out, at a very basic level, to conduct oneself with a certain awareness of what one is doing and saying. The primary postures of the body—going and coming, sitting and standing—every one of them is reflected upon as, "I am going, sitting, standing." That awareness comes through reflection. "Reflection" means maintaining mindfulness that "the body is in such and such a posture." So much so that the Buddha points out that not only going and coming, but however the body is disposed, one knows it as it is. One constantly directs the mind to the way the body is disposed. In that way, regarding the body.</p>
+<p>Next is the contemplation of feeling [sensation / *vedanā*]. How feeling [sensation / *vedanā*] comes and goes. Pleasant feeling, painful feeling, and neutral feeling which is called equanimity. One is aware of how every single feeling arises and passes away. Through this understanding, the scattering nature of the mind is eliminated. When there is a rubber coating on an electric wire, the electric shock does not strike. In the same way, through understanding, when one proceeds with understanding, the mind does not scatter. That is the kind of thing the Buddha points out.</p>
+<p>Contemplation of the mind means that due to various attachments, or due to hatred, or delusion, the mind takes on different colors, as it were. In other words, the mind changes. According to the way it changes, one recognizes it: "Lust has arisen in me, hatred has arisen in me, delusion has arisen in me"—thus recognizing the state of the mind. Next, the thoughts running and working within the mind. One understands those thoughts as just thoughts. If that monk, while all these thoughts were arising, had thought, "This is only a thought, this is only a thought. No trade or other activity of mine is actually taking place. Here, it is only the mind that is at work"—if he had that understanding, such a great upheaval would not have occurred. From this, it is clear that the four foundations of mindfulness (*satipaṭṭhāna*) pointed out by the Buddha are what belong to all of us who are children of the Buddha.</p>
+<p>That is the pasture (*gocara*). *Gocara* means the area where cattle roam—the domain belonging to cattle. In the ordinary world, there is the term "pasture." But its basic idea—the word "pasture"—is often derived from cattle, referring to the area belonging to cattle where they are meant to graze. In the same way, the Buddha points out the four foundations of mindfulness (*satipaṭṭhāna*). He shows that the mind must constantly be made to wander within the four foundations of mindfulness. Within that wandering lies precisely that awareness which goes hand in hand with mindfulness and clear comprehension. Through this awareness, the scattering nature of the mind is prevented.</p>
+<p>*Anupassanā* means "contemplating" or "seeing in accordance with." In this body, it is a contemplation of the body in the body. Looking at the body in the body, one understands the nature of the body. "This is the nature of the body; this is how the body functions." Next, "this is the nature of feeling [*vedanā*]." One understands each of these conditions. That is what is called contemplating. Or else, to explain the word *anupassanā*, we know that after a carpenter planes a piece of wood, he casts a peculiar look at it. He lets the piece of wood speak for itself, as it were, to see whether it is perfectly level or not. He casts a special glance at it like that. Similarly, one directs one's own attention towards all these things.</p>
+<p>Not thinking, "this is beautiful" or "this is strong," but if there is something in the body, one understands it just as it is. It is the same with feeling [sensation / *vedanā*], and the same with the mind. Whether the thoughts that enter the mind are good or bad, one reflects on each of them in that manner. Through this reflection, understanding grows, wisdom grows. It is through understanding, when wisdom is developed to a high level, that one is able to realize Nibbāna one day. It is with such wisdom that one is able to be freed from all defilements and realize even that noble state of Arahantship.</p>
+<p>Likewise, the Buddha has pointed out that breathing in and breathing out—which we constantly do unconsciously—is a very wonderful thing. Every Buddha attained Buddhahood through this mindfulness of breathing (*ānāpānasati*). *Ānāpāna* means breathing in and breathing out. That a Buddha emerges through this is a wondrous thing when one thinks about it; it is the simplest thing in the world. From the day of birth until death, this flow of breath back and forth is what takes place. Yet, within this lies the way to attain that highest wisdom. From this, we can see what an invaluable thing the Buddha has pointed out to us. Normally, inhaling and exhaling, the breath going up and down, happens unconsciously. Practicing to do that consciously is what is called *ānāpānasati*. In *ānāpānasati*, *sati* means mindfulness. One establishes mindfulness on the two processes: breathing in and breathing out.</p>
+<p>Through this, a great understanding arises. To put it briefly, the lack of understanding of this in-breath and out-breath is a primary cause for the persistence of the notion of "I" and "mine," the view of self, which strongly holds onto the view of "I" and "mine." What we call life or vitality is indeed just this breath. But if one knows its true nature, one would think, "Where is an 'I' here?" Because we are constantly drawing in a portion of the wind blowing in the world. Sometimes it is clean air that we draw in. Then, we expel it along with the waste inside, like a bad toxic gas. Yet, within this process, we construct an "I." The foolishness of this is understood precisely when one develops mindfulness of breathing (*ānāpānasati*). This is a process that happens naturally, and it is an effort to perform this natural process with awareness. It is indeed something that must be practiced gradually.</p>
+<p>Through the process of inhaling and exhaling, one understands that in this breath, there is only the drawing in of external air, letting it operate inside, and then expelling it. Then, to engage in this with attention, reflection is helpful. By applying reflection to each of these, and by focusing one's attention, one understands its true nature. When the nature of this in-breath and out-breath is understood in this very manner, one sees impermanence [inconstancy / *anicca*] through this itself. Every bit of it is impermanent [inconstant / *anicca*].</p>
+<p>Likewise, when directing the mind to the in-breath and out-breath, one realizes that what we think of as an easy thing is actually a great suffering [unsatisfactoriness / *dukkha*], a great trouble. That is, with what great difficulty we inhale and exhale! This is understood when its subtle aspect is revealed. Furthermore, it is only for a very short moment that we can live on an inhaled breath. We must exhale it and take another. No matter how fragrant—even if we inhale the scent of flowers or air filled with perfumes—we cannot hold it in. Such is the nature of this body that after a short while, we must expel it. Because of this, the understanding of suffering [unsatisfactoriness / *dukkha*] also arises.</p>
+<p>Next, if something is impermanent [inconstant / *anicca*] and of the nature of suffering [unsatisfactoriness / *dukkha*], there is nothing here that can be taken as "I" or controlled. "I cannot control this inhaling and exhaling. This too is of a highly unsatisfactory nature." Thus, the notion of "I" and "mine" gradually slips away, revealing not-self [non-self / *anattā*].</p>
+<p>In this way, what the Buddha points out through the four foundations of mindfulness is to reflect wisely on the bodily processes, going and coming, and all other activities. Not in a wrong way, but wisely. That is called radical attention [wise attention / *yoniso manasikāra*]. Not according to one's own wishes, but according to how they actually occur. One develops the understanding: "In this way, this occurs; in this way, this occurs." Through developing such understanding, there emerges the realization that everything has a nature of arising, persisting, and passing away. Every single one of these—postures, going and coming, standing and sitting—has a beginning, a middle, and an end. It begins, there is a middle phase, and then it ends. Actually, there is only a beginning and a wearing away. Between this beginning and wearing away, or between arising and passing away, we construct a "persistence." What we call "persistence" is actually a state of impermanence between arising and passing away. This is called *ṭhitassa aññathattaṃ* (the alteration of that which persists); what is called "persistence" is constantly changing. Within it, there is a subtle alteration. It does not remain, yet we regard it as persistence.</p>
+<p>This fact is understood in an increasingly subtle manner if one practices that mindfulness of breathing (*ānāpānasati*). When breathing, it is nothing complex; one simply inhales mindfully, and exhales mindfully. That is the basic training, the primary taming. Through this, the Buddha has specifically pointed out that, as a benefit of this mindfulness of breathing, the meditation of *ānāpānasati* especially cuts off thoughts (*vitakka*). Pious friends, *vitakka* means thoughts. How much time in daily life is wasted if one spends it building castles in the air about the future, or regretting the past! Preventing both of these, bringing the mind back, and living in the present moment is what a meditator does in the true sense. That is a great saving, a great economy. Think about yourself in daily life. How much do we waste time thinking about the past? How much do we ruin and waste time building castles in the air about the future? Thus, if someone makes an effort through these meditations to live in the present moment, it is a great saving for them. It is a saving, and as mentioned earlier, Māra the defilement cannot enter.</p>
+<p>Because, like the rubber insulation of an electric wire, there is understanding in everything and through everything. Due to that understanding, the mind does not scatter in that brief moment. Through that, concentration (*samādhi*) emerges. It is to keep the mind from scattering that the Buddha has employed this method. This is a very subtle method, a method employed for living in the present moment. "When walking, one knows: 'I am walking.' When sitting, one knows: 'I am sitting.' When standing, one knows: 'I am standing.' When lying down, one knows: 'I am lying down.' In whatever way the body is disposed, one knows it in that way." Next, when inhaling, one inhales with the very understanding, "I am inhaling." When exhaling, one exhales with that understanding.</p>
+<p>When practiced in this manner, one might think, "This is something that requires special dedication; therefore, it can only be done by monks." No, pious friends. Sometimes, lay devotees came to the Buddha and said, "Venerable Sir, although we lead household lives, if at certain times we live with our minds established in the four foundations of mindfulness (*satipaṭṭhāna*), we experience and realize a great solace during those times." Similarly, the Buddha told the monks, "Monks, if you have compassion for your friends, companions, and relatives, you should teach them the four foundations of mindfulness, establish them in them, and explain them to them." Thus, the Buddha gave his permission.</p>
+<p>This also shows that these four foundations of mindfulness (*satipaṭṭhāna*) are common to all of us. Everyone who says "Buddha" should understand that their father's domain/pasture is indeed the four foundations of mindfulness. The "pasture" also means true nourishment. We consume so much food. With this food, we only increase *saṃsāra*. But it is through this nourishment of the four foundations of mindfulness, pointed out by the Buddha, that we can one day end the suffering of *saṃsāra* and realize the supreme Nibbāna. Therefore, one should especially maintain mindfulness and clear comprehension (*sati-sampajañña*) regarding one's daily activities, as well as practicing this mindfulness of breathing (*ānāpānasati*).</p>
+<p>Let alone other things, the Buddha states in this Satipaṭṭhāna Sutta that not only major postures, but walking forward, returning, bending and stretching limbs, looking ahead, looking aside, and all other activities should be done with mindfulness and clear comprehension. Nay, even in passing stool and urine. When even the smallest things of daily life are done with mindfulness and wisdom established, through that, wisdom grows.</p>
+<p>It is because of the lack of correct understanding of our body, the lack of correct understanding of sensations/feelings [*vedanā*], the lack of correct understanding of the mind, and the lack of understanding of the thoughts that enter the mind, that we wander in this *saṃsāra* for such a long time. Therefore, what the Buddha brings out through the four foundations of mindfulness cannot be taught by another, nor can it be shown by another. To see the true state of things in the world, some have invented microscopes—microscopes, telescopes, and so forth. Placing a very subtle thing under a microscope, they look at its interior. But, pious friends, the real microscope is not the one invented by science; it is this "contemplation" (*anupassanā*). If we were to approximate a Sinhala word for *anupassanā*, we might say "contemplating" or "seeing in accordance with." It is like the carpenter inspecting the knots in wood, looking at it to understand its true nature. When looked at, it is not something complex. It is simple. To reveal the true nature of everything, one looks at it with equanimity. Not thinking "it is mine" or "how can there be a fault in it?" but "this is of the body, this is of the physical frame," not "my body." Regard it as just a body.</p>
+<p>That is why, when the Buddha preached on the four foundations of mindfulness, he did so not only regarding oneself, but also regarding others. Sometimes, we learn not only from our own body. There are things to be learned also from what happens to the bodies of others. A person who thinks their own body is beautiful may experience a sense of urgency (*saṃvega*) when they see the decaying state of another's body. That is why the Buddha sometimes showed the condition of others' bodies to those who possessed pride and intoxication, thereby opening the way for their understanding. In whatever way, taking both one's own body and others' bodies as objects, one understands the true nature of this body.</p>
+<p>Next, the contemplation of feeling—the true nature of feelings, and the nature of the mind. Even regarding the nature of the mind, sometimes when intense anger arises in us, we do not see its perilous side. But when someone else is angry, we see how distorted their face becomes due to that anger. From that, we see its perilous side. We think, "Look how distorted someone becomes due to anger."</p>
+<p>In this manner, what is done by the four foundations of mindfulness is to bring about a true understanding of one's body and one's life as it wanders in *saṃsāra*. Primarily, by applying the mind to this inhaling and exhaling, those thoughts (*vitakka*) are cut off, and thoughts are not allowed to arise. Thoughts generally arise because of not being aware that this process of inhalation and exhalation is taking place. If one keeps the mind focused on just that, then during that brief time, there is no room for the mind to scatter. That is how it is.</p>
+<p>Next, through this mindfulness, concentration (*samādhi*) arises. Concentration (*samādhi*) means one-pointedness—the unification of the mind. *Ekaggatā* means one-pointedness. Therefore, the opposite of the mind's scattering nature is one-pointedness. Once the scattering mind is restrained, the mind gradually becomes calm. Let us say a wild bull, having pulled this way and that, and tried as much as possible to escape, pulls here and there. In the end, when it cannot escape, it goes and lies down right next to the post. Or, let us consider the bull tied near the field; it always tends to wander toward the crop. It drifts there almost unconsciously. Then, the rope reminds it. It is reminded by the rope called mindfulness. Thereupon, it returns to the post of the meditation subject (*kammaṭṭhāna*).</p>
+<p>In this way, let us understand the practical value of these teachings through those similes. These things pointed out by the Buddha can be put into practice in daily life, each according to their own level. A point comes when the bull realizes, "I cannot go beyond this. This is my portion," and grazes freely within that area. Similarly, if someone has chosen a certain meditation subject (*kammaṭṭhāna*)—say, recollection of the Buddha (*buddhānussati*), using the word "Buddho, Buddho"—upon hearing the word "Buddho," a person of faith experiences a profound feeling. So much so that, during the time the Buddha lived, even Brahmins who were accustomed to associating with past Buddhas, when they heard, "There is a Buddha!" experienced a immense, wondrous concentration (*samādhi*), a wondrous transformation, solely through the faith that arose from that. Similarly, through the very word "Buddha," when one constantly reflects on it—this constant reflection is called *anussati*, *buddhānussati*. The meditation of *buddhānussati* means mindfulness that follows after the Buddha. Just like "contemplating" (*anupassanā*) or the "microscope", here it is the mindfulness that follows—mindfulness that follows after the Buddha.</p>
+<p>Then, if one constantly brings to mind even one quality of the Buddha in that way, the result is that the scattering nature of the mind is prevented. Whenever the mind tries to scatter, one implants this word "Buddho" into the mind. It is like a mantra. However, it is not something recited without meaning like a magical formula. With faith, contemplating and recollecting the Buddha, one constantly gives the word "Buddho, Buddho" to the mind. Sometimes, at the beginning, one may have to say it silently. When thoughts come breaking in, to suppress them, one may have to repeat it almost verbally for a short while. After doing this for a considerable time, almost automatically, whenever the mind starts wandering far, the meditation subject (*kammaṭṭhāna*) presents itself. After some time, once one is accustomed to it, without one even knowing, when defilements arise, the necessary weapon presents itself.</p>
+<p>Similarly, let us say someone starting loving-kindness meditation (*mettā-bhāvanā*) constantly reflects on a phrase like "May they be well." If necessary, they may even say that phrase—not by shouting, but in the mind, saying "May they be well"—constantly giving it to the mind. This is done in alignment with the heart; it is not just a mechanical repetition. When that feeling is maintained for a long time, there is no opportunity for those defilements to enter, as there is no room left for them.</p>
+<p>What then is accomplished by this *satipaṭṭhāna* method? Dispelling arisen defilements and preventing unarisen defilements from arising. It is through this that the mind is made calm. The scattering nature of the mind. The Buddha has pointed out that the mind scatters in five ways. These are called the hindrances (*nīvaraṇa*). The mind scatters due to sensual thoughts. Next, the mind scatters due to thoughts of hatred. Then, due to the sluggish nature of the mind, such as sloth and torpor, the mind's workability is lost. Due to restlessness and worry, one regrets things one could not do in the past. In that way, due to various regrets, the mind scatters. Or else, due to doubt, the hesitation that wonders, "Is this right or wrong?" Because of these scattering tendencies of the mind called hindrances (*nīvaraṇa*), and because of the mind's unworkability, the mind does not become concentrated or one-pointed. Just like a turbulent reservoir, no useful work can be derived from it.</p>
+<p>The Buddha shows that in order to concentrate this, one should take up a certain meditation subject (*kammaṭṭhāna*)—some meditation topic suitable for one's temperament. If one is of a hateful temperament, then loving-kindness meditation (*mettā-bhāvanā*). If of a lustful temperament, contemplation of foulness (*asubha-bhāvanā*). If faith is lacking, develop recollection of the Buddha (*buddhānussati*). If a sense of urgency is lacking, mindfulness of death (*maraṇasati*), constantly reflecting on some short phrase like *Maraṇaṃ niyataṃ, jīvitaṃ aniyataṃ* (Death is certain, life is uncertain). If one practices this constantly, it is a great protection for them.</p>
+<p>The cause for all the crimes and things that happen due to sudden anger in daily life can be clearly seen from the behavior of that monk Bhāgineyya Saṅgharakkhita we mentioned. Due to the displeasure that arose in that monk—displeasure toward that Arahant—it was not actually a matter of revenge, but because of it, thinking "I am leaving, I am returning to lay life," and then, from that point, thoughts of lust and so forth arose, and he spent the rest of his time wandering in a dream world. Indeed, like falling from the sky, a great sense of urgency (*saṃvega*) arose in him in the end when he realized that his teacher monk knew his state of mind. From this, we can see that in daily life we must constantly monitor how our mind is working. We look after this body in so many ways. We bathe it, feed it, and give it drink. In addition to setting up whatever protective measures we can, we even employ others for this purpose. But another person cannot protect this mind in that way. One must protect it oneself. It is something one must protect oneself. One must do this oneself. That is why the Buddha declared: *Tumhehi kiccaṃ ātappaṃ, akkhātāro tathāgatā* (You yourselves must make the effort; the Tathāgatas are only teachers). Even the Buddha cannot grant us our Nibbāna. He can only point out the path to it. For that, we ourselves must do what needs to be done. What needs to be done is what is pointed out there: namely, the development of the four foundations of mindfulness (*satipaṭṭhāna*).</p>
+<p>According to the leisure one gets in daily life, perhaps by taking some time off if possible, or on free days, on a Poya day. Although there are ordinary observances of precepts, many people do not have much interest in meditation. After observing precepts, they spend their time talking about household matters or about what is happening in the country and the world. Instead of doing that, on such an occasion, one should actually withdraw, thinking, "Now I have received a good opportunity to develop the four foundations of mindfulness." Working quietly and alone, directing the mind to one's postures, inhalation and exhalation, and observing them, one begins to understand their nature of impermanence [inconstancy / *anicca*], suffering [unsatisfactoriness / *dukkha*], and not-self [non-self / *anattā*]. Insight (*vipassanā*) means a special kind of seeing.</p>
+<p>Looking through microscopes, scientists obtain various insights. Those are kinds of knowledge obtained in relation to certain external things. That is mere knowledge, not wisdom. No matter how vast a store of knowledge scientists gather, no matter what series of academic degrees they hold, their daily lives are often unsuccessful. They have no strength to overcome the problems of daily life. They have no strength to control the mind. Falling into grave dangers and crimes, they ruin their lives. What is the use of accumulating that vast store of knowledge when, if you look at the library, it is full of books, but indeed no wisdom has accumulated within? That is why only the Buddha points out the path to this wisdom. This wisdom is a light that illuminates the inside.</p>
+<p>The Buddha has pointed out wisdom as a light. There are four lights in this world. The Buddha points out these four lights as: the light of the moon, the light of the sun, the light of fire, and the light of wisdom. Whichever of these lights there may be, the light that is superior to all of them is the light of wisdom—the radiance of wisdom. It is to develop this radiance of wisdom that, by reflecting and gradually through awareness of one's own activity, one develops understanding. As that understanding increases, mindfulness is developed. Next, concentration is developed. Next, its true nature (*yathā-bhūta*). "True nature," pious friends, refers to the impermanent nature of all these things. As one understands impermanence deeper and deeper, one sees that everything has an arising and a passing away. Between those two, there is something like a "persistence." Although we call it persistence, it is just a semblance of persistence. It is within that that we think so highly of "I" and "mine."</p>
+<p>But when one realizes, "This is indeed the world; in this entire *saṃsāra*, what is actually taking place here is a kind of performance, or rather, something like an illusion," a disenchantment arises, recognizing, "There is nothing here to be taken seriously." It is through that disenchantment that one can one day be liberated from this *saṃsāra*. Generally, when people hear the words "disenchantment with *saṃsāra*," many pull a sour face. Nowadays, some very wealthy people, even when they go to a house of mourning, are often terrified. When they see it, they do not even like the word "death." That they will have to leave their wealth behind and depart one day is something most people dislike. But, pious friends, one day we will have to face this truth. Therefore, the Buddha states: do not wait until it is too late, but make an effort to become aware of this truth. Not making others aware. There is no liberation for oneself by making others aware. It is only by becoming aware oneself that one attains liberation.</p>
+<p>That very awareness is called *sampajāna*—*sampajañña*. By reflecting in accordance with mindfulness, one understands: "This body grows, this body persists, this decays. These feelings arise—pleasant or painful feelings arise, persist, and pass away." Next, through these, one gains a deep, profound understanding. It is through that that one understands the three characteristics of impermanence [inconstancy / *anicca*], suffering [unsatisfactoriness / *dukkha*], and not-self [non-self / *anattā*], and attains the Paths and Fruits known as Stream-entry, Once-returning, Non-returning, and Arahantship. Understanding means the turning of that Wheel of Dhamma within one's own mind-stream (*citta-santāna*). Through the understanding of impermanence, the understanding of arising and passing away, when this is deeply understood, a genuine disenchantment regarding these things arises. What causes one to go on far in *saṃsāra* is craving [thirst / *taṇhā*]. Gradually, the power of this craving [thirst / *taṇhā*] decreases. Next, through this disenchantment, one realizes, "There is nothing in any of this to be grasped. There is nothing to be taken as 'I' or 'mine'." It is at that very moment, at some point through insight knowledges (*vipassanā-ñāṇa*), that one gets the strength to attain that noble fruit of Stream-entry and be freed from the four woeful planes. Thereafter, by further turning that Wheel of Dhamma within one's mind-stream, through the realization of the Paths and Fruits of Once-returning, Non-returning, and Arahantship, one can free oneself from this entire mass of *saṃsāric* suffering—such as birth [arising / *jāti*], decay and death [aging and death / *jarāmaraṇa*], sickness, and death—and find solace in the supreme, great deathless Nibbāna.</p>
+<p>Therefore, we must bring forth the path to this from that very running mind we spoke of earlier. Precisely by seeing the peril and the undesirable results of a running mind, we are able to bring forth some effort, some course of action, to halt this running mind. Perhaps the reason why Monk Bhāgineyya Saṅgharakkhita attained Stream-entry on that occasion was because he saw the perilous side. Understanding that "because my mind ran wild, I ended up in such a situation," he must have engaged in that activity with mindfulness, at least while the Buddha was preaching the Dhamma.</p>
+<p>Therefore, you, pious congregation, should think about this occasion of listening to the Dhamma. Usually we say, "May we realize Nibbāna by the merit of listening to the Dhamma," and everyone says "Sādhu." It is far more valuable if we direct our minds to what we actually did during this listening to the Dhamma. Pious friends, through this listening to the Dhamma, we gained the strength to bring forth several valuable virtues within our mind-stream. Faith. Now, when everyone listens to the Dhamma of the Buddha, faith is present there. Next, due to that very faith, there is an application of energy. Dispelling sleepiness, with energy, keeping the mind awake, one engages in this listening to the Dhamma. Thereby, faith is developed. Next, energy is developed. Likewise, when listening awake and alert, from that comes mindfulness, attentiveness. The mind following along with this Dhamma—that is the development of mindfulness. Not unmindfulness, but mindfulness. Thus, having developed that mindfulness, some people, while listening to the sermon, feel a good concentration, a one-pointedness of mind, a deep calmness right on the seat they are sitting on. A concentration.</p>
+<p>Next, through that concentration, while the Dhamma is being preached, even if it is a sermon heard a hundred times, a profound understanding arises. That is what is called wisdom. Indeed, "such is the nature of *saṃsāra*, the nature of my body, the nature of life—it is impermanent [inconstant / *anicca*], suffering [unsatisfactoriness / *dukkha*], and not-self [non-self / *anattā*], isn't it? If so, there is nothing in this to be grasped. There is nothing here to generate craving [thirst / *taṇhā*] for"—when such a deep understanding arises within oneself, it is through that understanding that, even while the Buddha was preaching the Dhamma, people penetrated the Paths and Fruits such as Stream-entry. Therefore, one should understand that, as a benefit of this listening to the Dhamma, what we can experience at this very moment is faith, energy, mindfulness, concentration, and wisdom.</p>
+<p>Among the requisites of enlightenment pointed out by the Buddha, these are shown as the spiritual faculties that assist in reaching Nibbāna. It is not through the external faculties of eyes, ears, nose, and so on that one sees Nibbāna. It is by generating and developing those qualities of faith, energy, mindfulness, concentration, and wisdom that one is able to realize Nibbāna. Therefore, you should bear in mind that today, on this valuable Poya day, you, pious congregation, have been able to develop those very benefits for yourselves through this listening to the Dhamma—namely, faith, mindfulness, concentration, and wisdom. Developing them further, and as far as possible according to the time you get, by devoting some leisure or taking time off if possible to engage in meditation activities along this path of the four foundations of mindfulness (*satipaṭṭhāna*), you should make the aspiration: "May this listening to the Dhamma, and the strength of determination accumulated through it, help us to escape from this extremely fearsome suffering of *saṃsāra* as quickly as possible and realize the supreme, great deathless Nibbāna!"</p>
+<p>Furthermore, it is not only we who seek the realization of Nibbāna; every being in the heavenly worlds who has not yet seen Nibbāna, and every wise person in this entire universe, is looking to escape from this suffering of *saṃsāra*. Therefore, we do not merely reap the benefits of this listening to Dhamma for ourselves; there is also the custom of sharing the merit. Accordingly, you should reflect: "May whatever assembly of Sasana-protecting deities and Brahmas there be, as well as all the guardian deities and spirits presiding over this place—may all these deities, having rejoiced in this merit of our Dhamma preaching and Dhamma listening, realize the supreme, great deathless Nibbāna through their own aspired Bodhi!" Thus you should aspire. "May whatever relatives who have passed away in our name, and whoever from the Avīci hell up to the Akaniṭṭha Brahma world who desires merit and seeks Nibbāna—may every one of them, having rejoiced in this merit of listening to and preaching the Dhamma, find solace in the supreme, great deathless Nibbāna!" Aspiring in this manner, recite the stanzas and transfer the merit.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_075.html" class="doc-btn">← Previous Sermon (075)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_077.html" class="doc-btn">Next Sermon (077) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 093 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_092.html" class="doc-btn">← Previous Sermon (092)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_094.html" class="doc-btn">Next Sermon (094) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 093</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_093_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_093_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_093_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #93</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.115)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Asataṃ bhāvanamiccheyya, purekhārañca bhikkhusu;</p>
+<p>āvāsesu ca issariyaṃ, pūjā parakulesu ca;</p>
+<p>mameva katamaññantu, gihī pabbajitā ubho;</p>
+<p>mameva ativasā assu, kiccākiccesu kismici;</p>
+<p>iti bālassa saṅkappo, icchā māno ca vaḍḍhati.</p>
+<p>From:</p>
+<p>Dhammapada 74 (Bālavagga)</p>
+<p>Dear Listeners,</p>
+<p>The disposition of being unable to tolerate the happiness and prosperity of others is known as envy. Along with envy, other vices such as conceit, ingratitude, and avarice travel together. The skillful means employed by the Blessed One to discipline a monk who had fallen prey to these vices will be revealed today through the verses we have chosen as our theme, and the background story related to them.</p>
+<p>On this Duruthu Full Moon Poya day, which marks the beginning of a new year, you will be able to extract certain lessons from this Dhamma discussion to gather into your minds. These verses were expounded by the Buddha at the Jetavana Monastery in Sāvatthi, concerning a monk named Sudhamma. However, this story began in the town called Macchikāsaṇḍa. In the town of Macchikāsaṇḍa, there lived a wealthy, virtuous, and wise householder named Citta. One day, Venerable Mahānāma, one of the first group of five great Arahants, arrived in that town. Inspired by seeing his serene posture and demeanor while walking for alms, the householder Citta invited him to his home, escorted him there, and offered alms-food. At the end, having listened to the Dhamma expounded by him, he attained the fruit of Stream-entry (*Sotāpatti*).</p>
+<p>Due to the intense faith that arose at that very moment, with the intention of offering his park named Ambaṭaka Forest as a monastery for the Saṅgha, he poured water over the hands of Venerable Mahānāma and dedicated it. This monastery in the Ambaṭaka Forest became renowned as a place with spacious dwellings where monks arriving from any direction could reside. A senior monk named Sudhamma resided there as the resident monk.</p>
+<p>In the course of time, hearing of the reputation of the householder Citta, the two chief disciples, Ven. Sāriputta and Ven. Moggallāna, journeyed to Macchikāsaṇḍa with the intention of favoring this householder with the Dhamma. Hearing of their arrival, the householder Citta went forward about half a league to meet them, welcomed those venerable ones, escorted them back, and after performing the duties of host to the guests, invited the great Arahant Sāriputta saying, "Venerable Sir, please deliver a brief Dhamma talk to me." The great Arahant Sāriputta said, "Lay follower, we are weary from this long journey. Nevertheless, listen to a brief sermon," and delivered a short Dhamma discourse. Hearing that Dhamma, the householder Citta attained the fruit of Non-returning (*Anāgāmī*).</p>
+<p>Next, he invited the two chief disciples and a retinue of about a thousand monks to his home for the following day's alms-meal, saying, "Please visit my home tomorrow." After inviting the chief disciples, the householder Citta also said to the resident monk, Ven. Sudhamma, "Venerable Sir, you too may please visit my home tomorrow along with the chief disciples." Then, the monk Sudhamma became angry. Thinking, "He invited me, the resident monk, only after inviting these visiting monks," he rejected the invitation. Even though he was repeatedly requested several times, he refused. The householder Citta said, "Venerable Sir, the good or bad of this will be understood by your own course of action." Saying so, he went away and prepared a grand alms-meal and other requirements for the chief disciples.</p>
+<p>The monk Sudhamma also woke up early the next morning and thought, "I must go and see how the alms-meal has been prepared for the chief disciples." Thinking so, taking his bowl and robes, he departed and arrived at the home of the householder Citta, where the householder invited him to sit. He replied, "No, no, I will not sit, I am going on alms-round." Having said so, looking around at the vessels with the intention of insulting the householder Citta on account of his clan, he said, "Householder, your alms preparation is indeed magnificent. However, one thing is lacking." When asked, "What is it?" he replied, "Sesame cakes are lacking." This was done as an insult. In the lineage of the householder Citta, there had been someone who traded in sesame and sold sesame cakes. This was done as a caste-based insult.</p>
+<p>The householder Citta also spoke a fitting illustrative story in response. He told a sarcastic story, "Just like a young crow that tries to crow like a rooster, but in the end can produce neither the rooster's sound nor the crow's sound." Enraged by this, the Elder Sudhamma said, "Householder, here is your monastery; I am leaving," and departed. Traveling many leagues, he arrived before the Blessed One and reported the incident. The Blessed One rebuked the Elder Sudhamma himself, saying, "Monk, you have wrongfully insulted this faithful and devoted householder. Go now and ask his forgiveness."</p>
+<p>As seen in this text, a special disciplinary act called *paṭisāraṇīya-kamma* (the act of reconciliation) was enacted. This concerns asking for forgiveness if one has inappropriately insulted a layperson endowed with faith and devotion. Until that disciplinary matter is settled, certain privileges of the accused monk are temporarily suspended. Thus, this monk named Sudhamma had to return and ask for forgiveness from the householder Citta. However, he was unable to do it properly, and the householder Citta did not grant him forgiveness. When he returned and informed the Blessed One that the householder Citta did not forgive him, the Buddha amended that disciplinary act by adding another part: if the householder does not grant forgiveness at once in such a situation, a monk should be appointed as a companion messenger to go along, and that monk should ask for forgiveness from the householder on behalf of this monk. Otherwise, a certain Vinaya rule was laid down to confess the offense within the sight of the householder. The verse preached by the Blessed One as an admonition to the monk Sudhamma on that occasion is what we have set as our theme.</p>
+<p>A member of the Saṅgha should not do such things. One should not develop a sense of possessiveness, thinking, "this monastery is mine, these lay donors are mine." Showing that doing so causes conceit and envy to grow, and along with that Dhamma-principle, he uttered this very verse we mentioned earlier:</p>
+<p>*Asataṃ bhāvanamiccheyya*: "May people think that I possess virtues that are not actually within me!"</p>
+<p>*Purekhārañca bhikkhusu*: "May I be placed at the forefront by the monks! May I have a large retinue!"</p>
+<p>*Āvāsesu ca issariyaṃ*: "May I obtain ownership over the best dwellings! May I have lordship over the monasteries!"</p>
+<p>*Pūjā parakulesu ca*: "May I receive offerings from other families who are not my relatives!"</p>
+<p>*Mameva katamaññantu, gihī pabbajitā ubho*: "May both laypeople and monastics know that this and that—this monastery, this temple, this Uposatha hall, and everything—was built by me alone!"</p>
+<p>*Mameva ativasā assu, kiccākiccesu kismici*: "May both laypeople and monastics be dependent on me in every matter, big or small! May I alone be the leader!"</p>
+<p>*Iti bālassa saṅkappo, icchā māno ca vaḍḍhati*: "Such are the thoughts of the foolish monk; thus his desire and conceit increase."</p>
+<p>The Blessed One expounded these admonitory verses in this manner.</p>
+<p>The monk named Sudhamma, with great humility, traveled a long distance and grew weary, but was unable to obtain forgiveness. This time, he went with a companion monk authorized by the Saṅgha and asked for forgiveness. The householder Citta finally forgave him. He said, "Very well, Venerable Sir, I forgive you. If I too have committed any fault, please forgive me." He asked for forgiveness, and forgiveness was granted. Furthermore, it is mentioned there that due to the spiritual urgency (*saṃvega*) that arose within him, Ven. Sudhamma made great effort and attained Arahantship in that very monastery. Similarly, regarding the householder Citta, he is recorded in the history of the Dispensation as a highly valuable lay donor. After that incident, the householder Citta thought, "Without even seeing the Blessed One, the Teacher, I have attained the fruits of Stream-entry and Non-returning. Now I must go and see the Blessed One." Driven by the desire to see the Blessed One, he announced, "If there is anyone who wishes to go and see the Blessed One, let them come with me."</p>
+<p>Along with a large gathering of monks, nuns, laymen, and laywomen, loading 500 carts with goods and alms provisions, he set out for Sāvatthi. It is recorded that during this journey, they received miraculous assistance from both devas and humans. It is mentioned that they received such extraordinary help that it became unnecessary to even use the items carried in those carts. In the history of the Dispensation, a great praise of the householder Citta is recorded, stating even that a shower of flowers fell when he paid homage to the Blessed One.</p>
+<p>Moreover, when the Blessed One was appointing chief positions (*etadagga*) to his lay and monastic disciples, he designated the householder Citta as the foremost among laymen who expound the Dhamma. So, that is the extent of the story of the householder Citta. Reflecting on the behavior of the monk Sudhamma through this story, we can see that the reason the Elder faced such difficulties was that instead of bathing in the river of virtues of the visiting chief disciples, he developed envy regarding their virtues and the hospitality shown to them, alongside a conceit regarding the monastery where he resided. All these complications arose due to this. Underlying this is the vice of envy. Thus, this envy is a vice that acts like a parasite in both monastic and lay society.</p>
+<p>As you all know, the Blessed One has taught four categories of Dhamma known as the four sublime states (*cattāro brahmavihārā*): loving-kindness (*mettā*), compassion (*karuṇā*), altruistic joy (*muditā*), and equanimity (*upekkhā*). There, loving-kindness expresses the wish: "May all beings be well and happy!" It conveys the desire to bring about the welfare and happiness of others. Next, compassion expresses the intention to remove the harmful *Dukkha* (Suffering) that confronts beings. Altruistic joy is the nature of rejoicing and sharing in appreciation—saying "Sadhu, Sadhu"—wishing that the happiness obtained by beings may continue in that very manner. Bringing the mind to a state of neutrality, understanding that—according to the situation—good or bad actions (*kamma*) are one's own property, is known as the quality of equanimity. Therefore, the Blessed One has emphasized in various places the value of radiating these sublime states in all directions, strengthening the mind, and building these attitudes of loving-kindness, compassion, altruistic joy, and equanimity.</p>
+<p>Now, it is indeed the lack of these qualities that is visible in society. Even in these times, in many instances, we hear of various kinds of adverse news even within lay society. This is because, through competitive and selfish thinking, the tendency to advance oneself even by bringing down or killing another is visible in society. In the monastic order, many of these conflicts often occur precisely due to the aforementioned vices of envy and conceit, as well as stinginess (*macchariya*) regarding things, and the feeling of "this is mine, this is mine." So, having briefly mentioned these vices, we can next compare this with another valuable story.</p>
+<p>In the Dhamma text called the Saṃyutta Nikāya, an event is recorded which also occurred in that very Ambaṭaka Forest monastery in the town of Macchikāsaṇḍa. We present this account to you because it is an event from which we can take many valuable and exemplary lessons. At the end of that story, a certain riddle is presented. Please listen closely to see and try if you can think of the answer to that riddle. There are no prizes to be given. However, it is a story worth listening to carefully. It is in this manner:</p>
+<p>On one occasion, many senior monks were residing in the Ambaṭaka monastery in the town of Macchikāsaṇḍa. As was his custom, the householder Citta came and invited the chief elder and the community of monks to partake of an alms-meal at his home the next day. After they had arrived and were seated, the householder Citta asked the chief elder a Dhamma question. We will not pursue that Dhamma question at this moment, because we intend to point out a much more important matter. When the question was asked, the chief elder remained silent. He asked again. Still, he was silent. He asked a third time. Still, he was silent. Then, the most junior monk in that gathering of Saṅgha, the youngest monk named Isidatta, said to the chief elder, "Venerable Sir, may I answer that question for the householder Citta?" "Yes, very well, Isidatta, you may answer," he said. And so, Ven. Isidatta beautifully explained the answer, saying, "Householder Citta, you are asking this question, and here is the answer to it." Thereupon, the householder Citta was delighted, and after offering the alms-meal, the monks returned to the monastery. Upon returning, the chief elder said to Ven. Isidatta, "Friend, the way you answered that question was indeed excellent. I did not understand it. Therefore, if such a question arises another day as well, may the venerable one yourself come forward and answer." That was the first incident.</p>
+<p>Now, the second incident was similar. On another occasion, the householder Citta invited another group of monks. Just as before, the monks went and sat there. This time, the householder Citta asked an even deeper question regarding views (*diṭṭhi*). On that occasion too, the chief elder remained silent the first time, silent the second time, and silent the third time. Once again, Ven. Isidatta asked the chief elder, "Venerable Sir, may I answer the householder Citta?" "Very well, Isidatta, you may answer," he said. And he answered it thoroughly and correctly. The householder Citta was so pleased with Ven. Isidatta that he asked, "From which region has this Ven. Isidatta arrived?" "Householder, I came from the city of Avanti." Then the householder said, "In Avanti, there is a friend of mine whom I have never seen, named Isidatta. An unseen friend, what they call a pen-friend these days. I have heard that this clansman went forth as a monk. Do you know him, do you recognize him?" Ven. Isidatta remained silent. Then he asked, "Are you that clansman, Venerable Sir?" "Yes, householder." The householder Citta was exceedingly joyful. Now, not only had he answered the Dhamma question, but as it turned out, he was an old friend!</p>
+<p>Then, the householder Citta made a great invitation, "This Ambaṭaka Forest is extremely beautiful. I shall support you in every way with the four requisites." Thereafter, having served the alms-meal generously to the monks, the monks returned to the monastery. After returning, the chief elder again approached Ven. Isidatta and said, "Venerable friend, the way you answered that question was indeed excellent. I did not understand the answer to that question. If such a question arises another day as well, please come forward and answer it yourself." Now, here is the riddle. Ven. Isidatta has received a great delegation of authority from the chief elder to come forward at any time and answer any questions asked. And as it turns out, the great lay donor, the householder Citta, is his old friend.</p>
+<p>Now, what does Ven. Isidatta do? What do you think he will do? Everything one could possibly hope for has been received. In truth, Ven. Isidatta is the most junior monk among the community. For such a junior monk, a delegation of authority from a senior monk does not easily come. Nor does such a grand invitation come from such a prominent, great lay donor like the householder Citta. Now, what does Ven. Isidatta do? Here is what he did; see for yourselves if your answer was correct. The concluding sentence of that Sutta is as follows: we will try to translate that Pali passage into Sinhala as closely as possible. "Thereupon, the Venerable Isidatta, having put his lodging in order, taking his bowl and robes, departed from the town of Macchikāsaṇḍa. Having thus departed, he never returned again." That is what Ven. Isidatta did. See if what you thought was correct. When there was such a delegation of authority, and such an opportunity for gains, offerings, fame, and praise, why did Ven. Isidatta leave?</p>
+<p>Therein lies the lesson, merit-seeking friends. One does not receive ordination in this Dispensation for the sake of such things. They are a quagmire. They lead increasingly to one's downfall, and to the growth of those aforementioned defilements. Knowing this, Ven. Isidatta departed from that place. Moreover, there is another valuable aspect of that event. Look at the behavior of that chief elder. It is far more wonderful than the character of Ven. Sudhamma. With what profound respect for the Dhamma did that chief elder give permission to that young monk! Not only did he grant him permission to answer the householder, but he praised him and delegated the task for future occasions. Even though he had been delegated with this task, Ven. Isidatta, on the second day as well, did not say to the gathering, "Ask me any question, for the task has been delegated to me." Ven. Isidatta, in his humility, remained silent until the question was asked a third time. And only after systematically and customarily obtaining permission from the chief elder did he answer. Thus, on both sides—there was a wonderful respect for the Dhamma and humility on the part of the chief elder, whose specific name is not even mentioned in the book. And likewise was the humility of Ven. Isidatta.</p>
+<p>Thus, we have to understand that with deep respect for the Dhamma, Ven. Isidatta answered the question, not with any intention of standing out, but as a service of Dhamma to the world. That was all; nothing beyond that. Normally, one would expect that upon meeting an old pen-friend, one would say, "I am so-and-so." There was nothing of the sort here. Ven. Isidatta did not go to prove his identity to the householder Citta. Even when it was suddenly revealed, he remained silent. Such is the example Ven. Isidatta shows us. Most of all, what did he do when gains, offerings, fame, and praise began to flow in? He put his lodging in order, and without telling anyone, took his bowl and departed. Having gone, he never returned. There is a most valuable exemplar for the entire community of Saṅgha within this Dhamma story. If the story of Ven. Sudhamma deals any kind of blow to the Dispensation, this story is more than enough to completely erase it. Whether they are laypeople or monastics, it is virtue that we must bring to light. That is why, in the complication that arose with the householder, the Blessed One did not take sides, but laid the blame squarely on the monk Sudhamma. A wrong is a wrong, no matter who commits it. Whoever does it, a fault is indeed a fault. Thus, within that are those aforementioned vices.</p>
+<p>We now have to consider that whether in lay society or monastic society, a dangerous hazard that leads to downfall is this very thing called envy. In this day and age, we constantly hear beautiful words being used, such as prosperity, advancement, development, and progress. Similarly, millions are spent to uplift people's lives. Yet, it is like pouring water into a leaking vessel; something goes wrong, and no real progress is visible in society. One reason for this is precisely the aforementioned envy. Because of envy, one cannot feel happy about another's well-being. As you all know, there is a practice known as sharing of merit. Even among this gathering, we know that a few individuals join together to offer alms to this group, and others rejoice in it. There is such a custom of sharing and rejoicing in merit.</p>
+<p>If one can acquire merit by rejoicing in another's merit, then by rejoicing in the happiness that another receives, one can bring happiness to oneself and become virtuous. The world does not know this. Instead, one sees a great race in the world and in society to secure positions through irregular and unrighteous means. There are people in that race. However, that way of thinking is a journey undertaken by forgetting the four sublime states preached by the Blessed One, namely: loving-kindness, compassion, altruistic joy, and equanimity. In contrast, a person endowed with the quality of altruistic joy can look at another's happiness and rejoice. Without such joy, if one envies instead, what happens? Because it is a distorted mental state, as a consequence, one might be born blind, cross-eyed, mute, deaf, or crippled in the next life, as a result of that distorted mental retribution. Due to envy, even more serious and harmful things occur in society. If someone else reaches a goal that one could not reach, the tendency to destroy that person is seen in both lay and monastic societies. It was so then, and it is so today. The reason is the lack of that aforementioned quality of altruistic joy. One must think of another's happiness, rejoice in it, and share in that happiness.</p>
+<p>But now a question may arise in your minds: "Then is there no room for competition in society? People sit for examinations, there are competitions on the sports field. What are these competitions in society? They exist even in the form of examinations." Next, we have to consider that competition is merely an opportunity to sharpen one's skills and talents. For someone who does not understand this properly, mental distortions can arise within it. It is as a result of these that symptoms of depression are said to arise in today's youth. They aim for the highest targets but cannot reach them. Why can't they reach them? Because of that aforementioned envy, instead of developing themselves, they seek to bring down the one around them who is progressing. Therefore, even in an examination, if one violates the rules, casts them aside, and tries to obtain success through various wrong and improper ways, the standard of that progress will only decline; it will never rise.</p>
+<p>Thus, examinations exist to measure skill. Sports competitions exist to measure talent. The sports field becomes an arena of conflict, a battlefield, precisely due to the vice of envy. Instead, if one cultivates altruistic joy—though competition may be unavoidable for one's own preservation, and may be a social necessity for developing those skills and talents—to eliminate the harm that arises from it, one must strive to develop the quality of altruistic joy. Through this, the loser can praise the winner. Likewise, the winner can regard the loser as the one who enabled this victory, thereby building mutual goodwill. Instead of a combative environment, a truly friendly, peaceful, and genuine sporting attitude will arise on the sports field.</p>
+<p>Then, giving the right place to the deserving person and respecting skill will take place. Indeed, if our goal is to develop human skills, setting records means simply rejoicing in whoever sets them. It is not a matter of "he defeated me and won." One must rejoice in the fact that, using me as a support, making me a competitor, that person achieved success. Similarly, the strength to sincerely rejoice upon seeing another's progress is obtained only by cultivating the quality of altruistic joy within oneself. None of these are present in the economic theories we mention. They pour millions into them very rapidly, yet it flows out of a leaking, perforated vessel. It flows away due to these very adverse mental states.</p>
+<p>Sometimes we hear that some wealthy neighbors give books and support the education of poor children who are in difficulty. That is good. However, when those children complete their education and attain high positions, they are looked upon with a strange gaze. They say, "These kids who grew up eating and drinking from us are now trying to fly in the sky." Or sometimes, they even regret the help they gave, saying, "It is because we failed to crush them while they were still in the egg." Even if not in these exact words, you, merit-seeking friends, know what happens in society better than we do. In a highly dangerous manner, whether in lay or monastic society, such attitudes arise within those societies due to looking at things in a wrong way. Sometimes one might think these things are necessary for society; that without such competitive and adverse forces, society would not develop.</p>
+<p>A person who thinks so only needs to look at their own home. How do mothers and fathers in a home look at their children? These qualities of loving-kindness, compassion, altruistic joy, and equanimity are visible within the mother and father at home. That is why the Blessed One said, *"Brahmāti mātāpitaro"* (Mothers and fathers are called Brahma). You have heard much about looking after parents. That is why the mother and father are referred to as "Brahma." If this is successfully active within the family unit, how much progress will take place in a family? How much harmonious coexistence and happiness will arise?</p>
+<p>Now, looking at such a family, a mother who has carried a child in her womb, cleared its excrement, and done everything, does not develop envy when the child succeeds. She rejoices, saying, "My son is clever!" Yet, when a neighbor, having received one's help in that manner, attains a high position, one looks at it with a strange gaze. What is the reason? That "Brahma-hood" is confined only to the home. It is a sublime state restricted solely to the household. However, the Buddha shows that these four sublime states are to be radiated in all four directions, describing them as *'appamaññā'*—virtues that must be cultivated boundlessly. Therefore, boundless radiation means: whether it is mine or not, if someone becomes happy in this way, looking at it, it becomes a cause of joy for me, and I must share in that joy. This valuable quality is called altruistic joy.</p>
+<p>On other occasions, even if these are not analogies found in the texts, we present certain analogies so that they may strike the heart. Now, this quality of loving-kindness is a gentle quality, just like the mother's milk which is easy to digest as soon as an infant is born. Developing the thought, "May all beings be well and happy!" is the basic, starting quality. Thus, we see a wonderful relationship and growth within these four sublime states. Why did the Blessed One preach them in this manner? If he wished, the Blessed One could have placed equanimity at the beginning, compassion in another place, and altruistic joy elsewhere. He did not create such a confusion. He presented them systematically. It is this systematic order that we are trying to show. Thus, loving-kindness is like the mother's milk given to a small child. They say there is no food as delicious, nor any food as nourishing. They also say it is easy to digest. Similar is the thought: "May all beings be well and happy!"</p>
+<p>By radiating loving-kindness boundlessly, it is oneself who grows. One grows through that aforementioned soft, gentle quality, the quality of loving-kindness. Next, compassion means that in relation to that child, according to the situation, on occasions when the child falls into *Dukkha* (Suffering) and needs help, one tries to make the child comfortable through various means and offers assistance. Thus, it is the nature of delivering from *Dukkha* (Suffering). Thus, we take this as a general analogy, though it may not match one hundred percent. There is a saying in society, "My heart melted like a lump of butter." Thus, just as we spoke of milk, let us compare butter to compassion. Next, let us look at altruistic joy. We started with that. If we are to use the same milk analogy, what analogy can we give for altruistic joy? When looking at a vessel of curdled milk (*dhi-kiri*) which is very good, settled, and pleasant—representing the pleasant appreciation of another's happiness—does that thought not arise? Very calm and pleasant. Let us call curd altruistic joy.</p>
+<p>Next, what remains is equanimity. That is the deepest one. It is difficult even for an ordinary person to understand. One might think equanimity means looking away. It is not such a thing, but something far deeper. It is within equanimity that those very parents, who held the child close when it was small, rejoiced when it crawled and somehow stood up, saying, "My son is clever!" Then the child attained higher and higher social positions and developed. Next, at some point, they had to separate. By that time, the parents' hair and beards have turned gray. Now, they are indeed like Brahma-kings. Now, with the highest quality of equanimity, they maintain neutrality, thinking: "If their kamma is good for them, what is it to us?" That is the deepest quality, the quality of equanimity.</p>
+<p>As we said at the beginning, why did the Blessed One not place equanimity first? If equanimity were placed first, it would seem very easy. One would not even need to look at another. We could just go about our own work and bring it to an end. If we are to use an analogy for this, here is what we can say. We compare equanimity to ghee (*gitel*). Ghee is a very heavy substance. If you turn a pot of ghee upside down, it does not pour out; it is that solid. But can you milk ghee from a cow? You cannot milk ghee. It is only milk that can be milked. Therefore, the milk thus obtained is subjected to certain processes like churning, and in the end, ghee is produced. In the same way, equanimity is not merely closing one's eyes and ears. It is something far deeper. When loving-kindness matures, compassion matures, and altruistic joy matures, finally a profound understanding arises within the mental continuum.</p>
+<p>No matter how much we help, in the final analysis, the rest has to be done by each person themselves. Why? Because the Blessed One has declared: *'Kammasakā, kammadāyādā, kammayoni, kammabandhu, kammapaṭisaraṇā'* (beings are owners of their actions/kamma, heirs to their kamma, born of their kamma, related to their kamma, and have kamma as their refuge). Beyond this, there is nothing we can do. Kamma alone is one's inheritance, kamma alone is one's relative. Not us, but kamma. *Kammabandhu, kammapaṭisaraṇā*. No matter how much we try to be a refuge, we cannot go beyond that; kamma alone is one's refuge. It is by thinking in this manner that one develops equanimity. We understand the value of the four sublime states. It is thanks to the four sublime states practiced by parents that children are able to reach such heights. It is because of these four sublime states that a child can grow up receiving protection from parents, instead of being fed poison or exposed to various hazards. Therefore, think of it as an individual unit and as a social unit. If that is the situation within the family unit, we must understand that society is the same. The development and progress of society, and the development of the individual within society, proceed by passing through those four stages.</p>
+<p>Therefore, if each of us cultivates these virtues, what will exist there is not that aforementioned social competitiveness, but altruistic joy. There is a competition. However, if one is overwhelmed by it, becomes competitive, and in an irregular manner violates the rules—be it in an examination or on the sports field—and tries to jump into a position that does not belong to them by undermining others, one can never truly progress. The record of that progress will only decline; one can never progress as a nation or as a society. Therefore, we must close those deficiencies, those leaks. This cannot be done through economics alone. In this era that applauds material progress, some insult these teachings, saying, "The era of preaching sermons is over; now is the time of going to the moon." If one makes an effort to understand the value of these words of the Buddha and lives in society accordingly, then no matter what kinds of conflicts arise in one's life, by applying one of those four states, one develops the ability to prepare the mind, even to the point of realizing, "In the end, this kamma is my own property, it is not something done by another."</p>
+<p>Thus, we must contemplate the value of altruistic joy. Generally, we have to accumulate wealth to live. We acquire education. We must practice sharing them. We must practice sharing generously with our neighbors, fellow citizens, and the people of the world, according to our ability—both that wealth and the knowledge—without stinginess or possessiveness. We must reflect: by the help of how many people did we receive this wealth of knowledge accumulated over generations? The essence received from this earth, everything we have built with it—all of these are the final results of a great struggle for survival over generations, which we enjoy during this lifetime.</p>
+<p>To use an analogy, the life we spend having built a house in this long journey of saṃsāra should be considered like a life spent in a temporary wayside rest-house (*ambalama*). The travelers who gather at night in a rest-house pool the things they have brought—one person has rice in their bag, another has dhal, and another has coconut. Instead of separating it saying "this is my portion," if they combine these, put them in a vessel, cook, eat, and then depart on their separate ways—only in such a manner can we proceed in this society. Otherwise, like the story of the hypocrites who clenched their fists and pretended to drop their handful of rice, if everyone does the same, they will have to drink water instead of eating a pot of rice. That is precisely the situation in society. If, instead of thinking about what we can give to society and to others, our ultimate goal becomes scraping away and consuming even the little they have, we will never be able to achieve true progress.</p>
+<p>Let us think about this falling rain. If we do not look at the rain carefully, there is one thing we will fail to see. It is something that always happens in this society and in this world. Ants have a custom: during the dry season, they work day and night to gather food. They carry it away. If we look closely, we can see how defensively organized they are as they carry it into their nests. Suddenly, an unseasonal rain falls. When the unseasonal rain comes, what happens? The gathered food, the eggs carried in their mouths—everything is washed away. Such is the situation of events occurring in the world. If we were to take a movie with a camera that magnifies small things, it would not be much different from the videos and pictures of the tsunami you saw in the media recently. Therefore, the very same condition of the ant world exists here in the human world as well. Instead of trying to catch the sun and the moon during these few days we spend without knowing at what moment the next tsunami will hit, what should we do? If we step onto the Noble Eightfold Path shown by the Buddha to bring an end to the *Dukkha* (Suffering) of *Jāti* (Birth), *Jarāmaraṇa* (Decay and Death), sickness, and so forth, and if we practice these valuable qualities like the four sublime states which help prepare the mind for that path, that indeed is the maximum valuable benefit we must derive from our lives. We can be happy in our final moments because of that too.</p>
+<p>The thing that no one can eliminate, no matter what strategies are employed, is rebirth. Even if one can control another's birth, one cannot control one's own birth. One cannot control arising (*jāti*). It is this control that the Buddha declared after attaining Buddhahood: *'Natthidāni punabbhavo'*—now there is no more *Bhava* (Becoming) or rebirth. Only a Buddha, only an Arahant, has the strength to make that declaration. Until then, what we have to do... currently there is much talk about the tsunami coming from the sea. But in the ocean of saṃsāra, there are three tsunamis: decay/aging (*jarā*), sickness, and death (*maraṇa*). No one can escape from these three tsunamis. To escape from these three tsunamis, we must eliminate the aforementioned *Jāti* (Birth). Only when birth is eliminated can we eliminate decay, sickness, and death. Therefore, the path to escape those three tsunamis is what the Buddha has shown through the Noble Eightfold Path. Likewise, that liberation is the noble state of Nibbāna, referred to by names such as "the island" and "the cave." Therefore, if a human being has Nibbāna as their ultimate goal, aspiration, or target, the true peace that surpasses all other targets is that noble Nibbāna, attained by escaping the aforementioned decay, sickness, and death, and thereby escaping *Jāti* (Birth).</p>
+<p>The merit-seeking person walking on that noble path of Dhamma must contemplate: although there is a convention among the Saṅgha regarding the four requisites, one does not live for the sake of the four requisites. Alms-food, robes, lodging, and medicine are merely things used to help fulfill the noble purpose of life. They are not the ultimate goal. However, those who run along with the economics of the ordinary world think that this is the ultimate goal. They make these aforementioned requisites their ultimate goal, neglecting other virtues. Why does a human being live? Why do we keep this body alive? Why do we sustain it for so long, like an old vehicle with various pieces patched together and welded using modern medical methods? If we think merely about living a long time, the crow is far above us. They say it lives for a hundred years. But is merely keeping a human alive for a longer time the goal? That is why the Buddha declared that living even a single day in accordance with the Dhamma is what is valuable. You know there is a series of verses in the Dhammapada stating that rather than living a hundred years without seeing arising and passing away—that is, living without seeing *Anicca* (Impermanent)—living a single day beholding impermanence is far more valuable. That indeed is the true essence of virtue.</p>
+<p>In an era where people talk about 'core values' or 'essential virtues,' if we are to use that term, this is what we must contemplate: why do we need these essential virtues? Precisely to escape from those three tsunamis. No one else can escape from them. We spend time thinking, talking, and dreaming up various concepts through prolific conceptualization about the tsunami that comes from the great ocean. But before that, we are overwhelmed by those aforementioned tsunamis—be it decay, sickness, or death. This is the reality of saṃsāra. Therefore, we must protect that Dhamma, the message declared by the Buddha to escape from it. We protect it not for any other reason, but so that if there is anyone anywhere capable of understanding it, they can make use of this Dhamma, realize it, and secure the opportunity to end this *Dukkha* (Suffering) of saṃsāra.</p>
+<p>That is why we said that we must generously give the wealth and knowledge we acquire for the sake of the beings of the world. In doing so, just as we mentioned regarding those competitions, our ultimate goal should be to raise our life goals from a low state to a higher state. Day by day, they are degenerating into a lower state. When considering this world of fashion, what is it that these young men and women regard as great? What do they target? Whether it comes from the West or is bred internally. Yet, this is a precious life. Why is it called a precious life? Animals do not have that capacity; animals cannot cultivate virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*). Only a human being possesses that capability. The Buddha has declared to us how extremely rare it is to obtain a human existence. If we have obtained such a rare human existence, and if life is so beset with disasters, and if there is no certainty about tomorrow, we must wisely contemplate what we ought to do at this very moment, today.</p>
+<p>Therefore, just as each of us contemplates these things, we must definitely attain that realization. It is mentioned there regarding the Buddha that he initially felt hesitant to expound the Dhamma. In truth, a Buddha attains Buddhahood through both great compassion and great wisdom. Then, to that great wisdom, it was clear: "Who will understand a Dhamma like this? Who is capable? How will the world, bound by defilements, comprehend it?" That is why it is recorded in the scriptures that the Blessed One hesitated to expound the Dhamma. It is mentioned that on that occasion, Mahābrahma arrived and requested him to teach. In any case, when the Buddha looked out of great compassion, he saw that among the buds in a lotus pond, some flowers were ready to bloom. With that realization, just like thinking of the flower buds waiting for the sunlight, the Buddha expounded the Dhamma. Recalling that story, what we must do is—if there are any obstructive factors in realizing those aforementioned truths, or if there are deficiencies in our virtues like *sīla*—to correct them and develop concentration (*samādhi*). We cannot say what our past meritorious power is like.</p>
+<p>In the Dhamma stories of the past, it is mentioned that the beggar on the street who lacked even a single meal, the leper Suppabuddha, attained the fruit of Stream-entry (*Sotāpatti*) after listening to the Dhamma from the Blessed One. The Blessed One did not expound the Dhamma solely for the wealthy treasurers or princes seated in the front rows, but for that poor leper seated at the very edge who was capable of understanding the Dhamma. In this manner, we must realize that our Dhamma cannot be restricted by classes, statuses, caste divisions, class divisions, or clan divisions. We must consider the entire world to be like a school without divided classrooms.</p>
+<p>Thinking thus, even though there were many other things you could have done on this valuable Duruthu Poya day, you have observed this highly noble virtue (*sīla*), spent the day in meditation, and listened to this Dhamma sermon. If there is anything to be taken from it, you must take it and strive diligently. Before the lamp of the Dispensation goes out, we must aspire: "May the power of this wholesome merit serve as a supportive condition to realize in this very life the noble, deathless Nibbāna which delivers us from the three tsunamis, through the penetration of the paths and fruits of Stream-entry, Non-returning, and Arahantship."</p>
+<p>Likewise, may all beings in this universe, including devas and brahmas, who are capable of sharing in the merits of expounding and hearing the Dhamma, rejoice in this merit of Dhamma-sharing! And may they all attain peace through the noble, deathless Nibbāna by whichever Bodhi they aspire to! With these aspirations, let us recite these verses.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_092.html" class="doc-btn">← Previous Sermon (092)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_094.html" class="doc-btn">Next Sermon (094) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

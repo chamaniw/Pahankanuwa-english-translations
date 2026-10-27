@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 073 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_072.html" class="doc-btn">← Previous Sermon (072)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_074.html" class="doc-btn">Next Sermon (074) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 073</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_073_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_073_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_073_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #73</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.110)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Ayoge yuñjamattānaṃ, yogasmiñca ayojayaṃ;</p>
+<p>atthaṃ hitvā piyaggāhī, pihayattānuyoginaṃ.</p>
+<p>Mā piyehi samāgañchi, appiyehi kudācanaṃ;</p>
+<p>piyānaṃ adassanaṃ dukkhaṃ, appiyānañca dassanaṃ.</p>
+<p>Tasmā piyaṃ na kayirātha, piyāpāyo hi pāpako;</p>
+<p>ganthā tesaṃ na vijjati, yesaṃ natthi piyāppiyaṃ.</p>
+<p>From:</p>
+<p>Dhammapada 209–211 (Piyavagga)</p>
+<p>Dear Listeners,</p>
+<p>None of us like to be separated from those who are dear (pleasant) to us, nor do we like to be united with those who are undear (unpleasant). However, by having to face both of these situations, we often fall into suffering (*dukkha*). That is why the Supreme Buddha, the Teacher of the Three Worlds, included these two circumstances within the Truth in His sermon on the [Four Noble] Truths. Likewise, the Buddha also explained to us the path to be freed from this twofold suffering (*dukkha*). From today’s thematic verses and their corresponding background story, we will be able to gather certain important matters, matters of great significance to our lives. The Buddha uttered these three verses based on the improper conduct of three individuals who had entered the order.</p>
+<p>In the city of Sāvatthī, a certain family had an only beloved, pleasing son. One day, after listening to an appreciative sermon (*anumodanā dāna*) delivered by the Sangha who had been invited to their home for alms, this boy developed a desire to ordain and asked his parents for permission. The parents did not give permission because of their deep affection for the child. The son thought, "I must go secretly from my mother and father and ordain." As if understanding this intention, whenever the father left the house, he would entrust the mother to watch over this child. When the mother left the house, she would entrust the father to guard and look after the child. One day, when the father had gone out, the mother was spinning thread at the doorway of the house, leaning against one doorpost and stretching her leg across to the other doorpost. You can imagine it. What is implied by this is that she was blocking the child, guarding him so that he could not go outside. So, this son also thought, "Even by tricking mother, I must go and ordain." He said, "Mother, please move your leg a bit, I need to go to the toilet," and went outside, quickly ran away, obtained permission from the Sangha, and ordained. The father returned home and asked the mother, "Where is our son?" "He was right here in this direction," said the mother. They looked and looked, but he was not there. Later, thinking he might have gone to the temple, they went to check and saw that he had ordained. The father cried out, "Oh son, do not destroy me!" and pleaded in various ways, but the boy did not wish to return home. The father also thought, "Now there is no point in staying, I too must ordain," and so the father also ordained. The mother was waiting for these two to return. When the son and the father were delayed, she thought they might have gone to the temple. When she went and looked, both of them had ordained. She thought, "Why should I stay at home without these two?" and she too went and ordained at a nunnery.</p>
+<p>Now, indeed, all three of them had ordained. But despite being ordained, they spent the whole day gathering together at the nunnery, constantly engaged in conversation. A state arose where they could not live without one another. Perhaps the child did not have this attachment earlier, but it arose because of the parents coming there. Because of this, various kinds of criticism arose among the Sangha and the bhikkhunīs. When the bhikkhus complained to the Buddha about this matter, He summoned all three of them and inquired, "Is this story true, that you remain in one place speaking with each other all day long like this?" Then they replied, "Yes, Venerable Sir, that is so; we cannot live without one another." Then the Buddha admonished them: "It is precisely because of that quality of being dear (affection) that all these troubles arise. After ordaining, there is no room for household love (*gehasita pema*) as in the lay life. Therefore, one must engage in that work [of practice]." Admonishing them, He uttered these three thematic verses.</p>
+<p>*Ayoge yuñjamattānaṁ, yogasmiñca ayojayaṁ, atthaṁ hitvā piyaggāhī, pihayattānuyoginaṁ.*</p>
+<p>He who applies himself to what should not be applied to, and does not apply himself to what should be applied to, abandoning his own good and grasping after dear things, will one day, upon seeing those who apply themselves to the true ordained life, have to regret with envy. That is the general meaning of the first verse.</p>
+<p>The second verse:</p>
+<p>*Mā piyehi samāgañchi, appiyehi kudācanaṁ, piyānaṁ adassanaṁ dukkhaṁ, appiyānañca dassanaṁ.*</p>
+<p>Do not associate with those who are dear, never associate with those who are undear. Not seeing the dear is suffering (*dukkha*), and seeing the undear is also suffering (*dukkha*).</p>
+<p>The third verse:</p>
+<p>*Tasmā piyaṁ na kayirātha, piyāpāyo hi pāpako, ganthā tesaṁ na vijjanti, yesaṁ natthi piyāppiyaṁ.*</p>
+<p>Therefore, do not regard any person or any thing as dear. Do not take them as dear. Why? Because when one is separated from dear ones, separated from dear things, it is felt as a great suffering (*dukkha*), a trouble, a bad thing. Here is the conclusion stated at the end: For whomsoever there is no such thing as dear or undear, they have no knots (bonds). Thus, what this shows is that all knots (bonds) arise because of the state of dear and undear. It is mentioned that upon hearing these verses, many people attained the Paths and Fruits. However, those three said, "Oh Blessed One, as for us, we cannot remain separated in that way," and all three disrobed. They went home. No matter how much they said they could not separate, it is not that they are still living today; they must have had to separate someday. But they were unable to discipline themselves to the word of the Buddha.</p>
+<p>If we think about the essence to be taken from this story, we see that in most instances, upon hearing the Buddha’s instruction, various people achieved results. But in this case, that medicine was not taken. Now you, devotees, know that doctors give medicine for indigestion—either to go upwards or downwards, either as an emetic or a purgative. Now here, it was like vomiting. They left; that is the kind of thing that happened here. When we look at the end, that boy actually had a good intention of renunciation (*nekkhamma*), but he did not get an opportunity for it because of the parents' affection for their son. It was because of their attachment to that child that they went and ordained, and in the end, that itself became an impediment (*palibodha*).</p>
+<p>The word "impediment" (*palibodha*) is used in the sense of an obstacle. It has the meanings of trouble and obstacle. There is something called the "impediment of relatives" (*ñāti-palibodha*). In ordinary daily life, relatives are the ones who come to help. Relatives are prominent. But in the ordained life, relatives are sometimes a great trouble to that journey. That journey to Nibbāna is a journey that must be traveled alone. Why is it called the impediment of relatives? Because with relatives, there are not only saṁsāric attachments but sometimes even in this life, various clingings and bonds come to the mind. Even for an ordained person, it is difficult to protect oneself when the impediment of relatives arises. Likewise is the "impediment of the lay family" (*kula-palibodha*). That means the connections to those lay households. Now, in this case, because of the parents ordaining, it was not only an impediment of the lay family, but in the end, it became home itself. These three made the ordained domain into a home.</p>
+<p>From this, we see that the value lies in protecting that state of ordained life. Next, despite trying so hard to protect and keep that child, the child ran away. But in the end, he was not able to complete his goal. The parents themselves ultimately became an obstacle to him. Similarly, based on that story, the Buddha highlighted and showed that dear state—household love (*gehasita pema*). What is called lay love is the love between one another belonging to the lay life, such as maternal love, paternal love, filial love, affection for the son, and so on. The trouble arises from this. That these are obstacles to the path to Nibbāna. These verses contain a vast wealth of meaning; if we analyze them further, it may not be immediately understood by someone.</p>
+<p>*“Ayoge yuñjamattānaṁ”*</p>
+<p>*Ayoge* means that which should not be applied to. When taken in the dispensation’s sense, it is unwise attention (*ayoniso manasikāra*)—unwise reflection. There is a method of reflection belonging to the ordained, which is wise reflection. What is here is unwise reflection. If someone applies himself to what should not be applied to, if there are wrong reflections, only then do all other mistakes happen. Because of the attachment toward his parents, even that boy was ultimately unable to continue his ordained life. Likewise,</p>
+<p>*“yogasmiñca ayojayaṁ”*</p>
+<p>One does not apply oneself properly to what should be done in application (*yoga*). 'Yoga' or practicing application in this Dhamma actually means the proper way of reflection highlighted by the Buddha, which is wise attention (*yoniso manasikāra*). When any defilement arises, instead of looking outward, one must look inward: "Where did these start?" They started from within. That is what is meant by *yoniso*. One must look at the place of origin, the place where it arose. It is by looking in that way that one understands one's shortcomings properly. If one engages in unwise attention (*ayoniso manasikāra*) and abandons wise attention (*yoniso manasikāra*), likewise,</p>
+<p>The meaning in the dispensation of "abandoning the good" (*atthaṁ hitvā*) is the development of virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*), and the realization of Nibbāna. Abandoning those, and *“piyaggāhī”*—grasping the dear thing. What is the dear thing? Mother and father. For the parents, it is that child. Because of grasping that dear thing, they abandoned the idea of Dhamma. Because they grasped what is dear, and abandoned the good, what must have ultimately happened to them is stated by the Buddha even in the final line of that very sermon:</p>
+<p>*“pihayattānuyoginaṁ”*</p>
+<p>This means that at some point when those three are back home, and they get to know that the bhikkhus with whom they associated even for a short time have meditated, become Arahants, and are experiencing the great supramundane bliss, envy will arise in them. Along with envy, they will have to regret: "Alas, we lost this opportunity. A valuable opportunity was received but slipped away, didn't it?" That is what is expressed by the final word.</p>
+<p>Having said this, what does the Buddha declare in conclusion? "Therefore, *mā piyehi samāgañchi*—do not associate with the dear. *Appiyehi kudācanaṁ*—never associate with the undear." The reason is stated at the end: *piyānaṁ adassanaṁ dukkhaṁ, appiyānañca dassanaṁ*—separation from the dear is suffering (*dukkha*), and seeing the undear is suffering (*dukkha*). Finally, He says: *tasmā piyaṁ na kayirātha*—therefore, do not make anything dear. Because when one has to separate from the dear, even though it is suffering (*dukkha*) to oneself, one has to bear it. It is with the final two lines that He presents an eternal principle:</p>
+<p>*Ganthā tesaṁ na vijjanti, yesaṁ natthi piyāppiyaṁ*</p>
+<p>For whomsoever there is no distinction of dear and undear, they have no knots (bonds).</p>
+<p>Thus, He uttered those few valuable verses. Through this, we see that because they could not overcome their affection for their son, even though those parents entered the ordained life, they could not benefit from it. However, there is an exemplary story regarding this in this discourse.</p>
+<p>Once, there was a monk named Venerable Saṅgāmajī ordained in the Dispensation. That Venerable Saṅgāmajī went to a distant region, meditated, became an Arahant, and returned to Jetavana Monastery to pay respects to the Blessed One. Venerable Saṅgāmajī's former wife came to know that the monk had arrived. 'Former' means his previous wife; she came carrying their child. When she came to see Venerable Saṅgāmajī, Venerable Saṅgāmajī was seated in meditation under a tree. This woman brought the child and said to Venerable Saṅgāmajī, "I am a mother with this child. You are the father of this child. Please support me." The monk did not even look. He remained seated in meditation. She said it a second time. Still nothing. She said it a third time. Still, he remained silently in meditation. Then what did this woman do? Placing the child in front of him, she said, "Here, monk, support your child then!" and turned and walked away. After going a short distance, she turned and looked. She saw that Venerable Saṅgāmajī was neither looking at the child nor speaking, remaining just as he was. Then this woman came back, said, "These monks do not even have affection for their child," took the child back, and went away.</p>
+<p>The Buddha was watching this with His divine eye. Having watched, it is said He uttered a certain verse of solemn utterance (*udāna*). What was that solemn utterance?</p>
+<p>*Āyantiṁ nābhinandati, pakkamantiṁ na socati,*</p>
+<p>*Saṅgāmuttaṁ tamahaṁ brūmi, brāhmaṇanti.*</p>
+<p>"Seeing his former wife arriving, he did not rejoice; when she departed, he did not grieve. Saṅgāmajī, who is freed from the bond—him I call a true Brahmin, an Arahant." The Buddha declared this solemn utterance. There is a great example there. Affection for the son, past attachments and bonds—there is none of that. There is neutrality, equanimity (*upekkhā*). That is the conduct appropriate for the ordained life.</p>
+<p>Now next, let us also reflect upon the matter of the Buddha’s advice to abandon both the dear and the undear. Actually, as a starting point, what we have to think is that it is bad to make the word "dear" dear, and it is bad to make the word "undear" undear. Escaping from both, one must reach a state of neutrality. There is a fondness for dear things. There is an aversion for undear things. Instead of those two, one must develop equanimity (*upekkhā*). Why was it said that knots are tied? It is mentioned in the Satipaṭṭhāna Sutta, where the terms *piyarūpaṁ sātarūpaṁ* (dear nature, pleasant nature) are shown. Whatever is of a dear nature and of a pleasant nature, it is precisely there that craving (*taṇhā*) lodges. Craving (*taṇhā*) is born and craving (*taṇhā*) lodges in what one thinks of as dear. That is why, although normally everyone is fond of dear things, the Buddha points out that it is a dangerous thing. Within this state of being dear, the bonds of saṁsāra are knotted.</p>
+<p>How are they knotted? Craving (*taṇhā*) is described as a seamstress. It is by this craving (*taṇhā*) that knots are tied. Next to craving (*taṇhā*) is grasping (*upādāna*). Regarding things of a dear nature, craving (*taṇhā*) arises. Through craving (*taṇhā*), grasping (*upādāna*)—which is called holding—arises. It is through that holding that the knots of becoming (*bhava*) are tied. Now, just as in sewing, a knot is tied. It is pulled, isn't it? In sewing, there is a pulling of the thread by the needle, and behold, a knot is formed there. It is something of that sort. That is why craving (*taṇhā*) is called a seamstress. Knots are tied not only regarding the dear; they are also tied regarding the undear. You devotees have heard about the enmity between Devadatta and the Bodhisatta in the Serivāṇija Jātaka. The ill-will developed by the merchant Serivāṇija over the golden bowl, thinking "I must take revenge." Even from an undear thing, a knot is tied in the form of revenge; there too, a knot is tied. Thus, knots are tied by the dear, and knots are tied by the undear. What is to be understood is that knots are tied through both lust (*rāga*) and hatred (*dvesa*).</p>
+<p>Therefore, the Buddha, on various occasions, expounded to the Sangha the methods to stop this tying of knots. Even though it was expounded to the Sangha, there are certain things to be taken even by the lay devotees. On one occasion, the Buddha says that because of the dear state, one develops a desire for those things. Because of the undear state, one develops a state of disgust, a feeling of aversion. The path to overcome this is shown as follows: "Monks, a certain monk must from time to time generate this kind of practice, this kind of thought. What is it? From time to time, let him dwell perceiving the repulsive in the unrepulsive (*appaṭikūle paṭikūlasaññī*). Let him do it as an exercise: 'At this moment, I dwell with the perception of the repulsive in the unrepulsive.' At another time, let him practice generating the perception of the unrepulsive in the repulsive (*paṭikūle appaṭikūlasaññī*). Next, thirdly, it is shown: let him generate the perception of the repulsive in both the unrepulsive and the repulsive. Fourthly, it is shown: let him generate the perception of the unrepulsive in both the repulsive and the unrepulsive. Finally, it is shown: avoiding both the repulsive and the unrepulsive, let him dwell with equanimity, mindful, and clearly comprehending (*upekkhako vihareyya sato sampajāno*)."</p>
+<p>Of those matters mentioned, some might be difficult to understand. Let us understand them in this way. Why is it said to generate the perception of the repulsive in the unrepulsive? Because lust (*rāga*) and hatred (*dvesa*) arise in someone regarding a dear, pleasing thing. That is not repulsive. A dear form, a beautiful form—that is not repulsive. But there, one diligently develops the perception of the repulsive (*paṭikūla-saññā*). What is the reason? The aspiration: "May my mind not be overcome by lust (*rāga*)!" There, indeed, the Buddha says this for a practical purpose. The Buddha expounds this as a discipline to be practiced by the Sangha to overcome such situations when they arise in their lives. Why do we attribute repulsiveness to that unrepulsive thing? You devotees have heard about the perception of the foul (*asubha-saññā*), haven't you? What is called meditation on the foul (*asubha-bhāvanā*). In the present times, we often hear some people saying—perhaps out of fear that the world will cease because of the concepts of developing [renunciation] in this existence—that developing the perception of the foul (*asubha-saññā*) will cause great disgust. But the Buddha states that to subdue and thin out that lust (*rāga*), one must develop the meditation on the foul (*asubha-bhāvanā*). That is what He says. Next, what is the second point? *Paṭikūle appaṭikūlasaññā*—the perception of the unrepulsive in the repulsive. Sometimes people say, "I do not even want to see those things." You know those words, don't you? In such situations, one develops the perception of the unrepulsive. That means, because knots are tied through hatred (*dvesa*) as well. That is why. The others are mixed situations.</p>
+<p>There are situations where one must perform such exercises. Generating the perception of the repulsive toward both the repulsive and unrepulsive. Generating the perception of the repulsive toward both the unrepulsive and repulsive. When we show examples, it will be understood at some point. The final state is the most important thing. That is, discarding both attitudes of repulsive and unrepulsive, and dwelling with equanimity (*upekkhā*), neutrally, mindful, and with wisdom. What is its benefit? It helps to eradicate lust (*rāga*), it helps to eradicate hatred (*dvesa*), and it helps to eradicate delusion (*moha*). Thus, all three—lust (*rāga*), hatred (*dvesa*), and delusion (*moha*)—are eradicated in that final state mentioned.</p>
+<p>If we look to clarify this a bit more, we can say, regarding the first point, that meditation on the foul (*asubha-bhāvanā*) and the perception of impermanence (*anicca-saññā*) are shown as the path that helps to generate the perception of the repulsive in the unrepulsive. By meditation on the foul (*asubha-bhāvanā*), one can generate a perception of the repulsive in the unrepulsive, and one can also do so by the perception of impermanence (*anicca-saññā*). "Even though they look beautiful now, how many days will they remain like this?" There is no need to say more than that. By applying that to the perception of impermanence (*anicca-saññā*), one can stop the mind from wandering far and keep it right there. That is how the perception of impermanence (*anicca-saññā*) also helps.</p>
+<p>Next, regarding the unrepulsive in the repulsive, let us think about a person. There, loving-kindness (*mettā*) is what helps. The highest state of loving-kindness meditation (*mettā-bhāvanā*) is the perception of the beautiful (*subha-saññā*). Everything one looks at is beautiful. Then, when one takes that undear person and thinks, "May he be well!", through the reason that he too desires happiness, one turns them into something unrepulsive. There, it is an eradication of hatred (*dvesa*). Likewise, there is another method: resolving to the perception of elements (*dhātu-saññā*). "The very same four elements (*dhātu*) present here are present there as well." In that way, one brings the mind to neutrality.</p>
+<p>Two methods that help to overcome hatred (*dvesa*) are shown there. Sometimes, an insect might have fallen into the plate of rice one is eating. Sometimes, one might shout at that. There, one generates a perception of the unrepulsive regarding that repulsive thing. It could be a strand of one's own hair that has fallen into the plate of rice. When it falls, it is not dear. One does not go to shout about that undear thing. One sets it aside. One generates a perception of the unrepulsive regarding that repulsive thing. Or else, some dead insect is lying there. One does not develop a disgust out of hatred (*dvesa*) for it. One puts it aside, unless it is to the extent of stopping the meal. In this way, one sometimes has to stop the occasions where the mind goes into hatred (*dvesa*). We can imagine, now, for doctors in relation to their profession, when examining patients, they sometimes have to protect their minds from both sides. There could be patients who are outwardly very beautiful in form. There, too, one must protect the mind. Likewise, in surgeries required for the illness, a feeling of aversion can arise there too. Generally, it is not only for the ordained life. Depending on the situation, in that way, one generates the perception of the repulsive in the unrepulsive, in order to remove lust (*rāga*). One generates the perception of the unrepulsive in the repulsive. With the good intention of curing that person, surgeons have to touch things that an ordinary person would not even like to lay hands on. Behold, when we reflect in this manner, whether dear or undear, the Buddha pointed out that within both dear and undear are precisely those knots. The Buddha declared to be freed from them.</p>
+<p>You devotees might have heard. When speaking about Dhamma and meditation for lay devotees, there is a discourse called the *Abhiṇha-paccavekkhitabba Sutta*, which expounds five facts that must be frequently reflected upon and contemplated by everyone, whether lay or ordained, woman or man. One is:</p>
+<p>*“Sabbehi me piyehi manāpehi nānābhāvo vinābhāvo”*</p>
+<p>"I must undergo change and separation from all that is dear and pleasing to me." He says to frequently contemplate this thought. What is the reason? What does the Buddha point out as its benefit? People have a desire-and-lust (*chandarāga*) toward dear ones. Because of the excess of that desire-and-lust (*chandarāga*), beings sometimes engage in misconduct through body, speech, and mind. What helps to prevent them from exceeding that limit is frequently contemplating the thought: "I have to be separated from all that is dear and pleasing." The Buddha has declared that this must be practiced by everyone, without distinction of lay or ordained.</p>
+<p>Now, since you devotees have a greater preference for hearing stories, let us tell another short story. Perhaps it is one that is frequently heard. Visākhā is known as Migāramātā. One day, that great female lay disciple Visākhā came to see the Buddha during the daytime with wet garments and wet hair. The Buddha asked, "Why, Visākhā, are you in this state?" Then she said, "Venerable Sir, my very dear and pleasing granddaughter has died." She had come in great grief indeed. When such a death occurred, it might have been a custom at that time to bathe and go directly in those wet clothes. Then the Buddha asked, "Would you like it if all the people in this city of Sāvatthī were to become your children and grandchildren?" "Oh yes, Venerable Sir, I would like that very much," she said. Then the Buddha asked, "How many people die in Sāvatthī in a single day?" "On some days, about ten, nine, or eight. There is never a day when not even one person dies." "In that case, Visākhā, you would never be without wet hair and wet clothes mourning for your children and grandchildren!" Behold, then Visākhā said, "I do not want that many children!" At that moment, the Buddha uttered a very valuable verse; mentioning just its meaning is sufficient.</p>
+<p>He said, "Whatever diverse sufferings (*dukkha*) arise in the world, all of them arise through the concept of the dear." Various manifold troubles arise because of the word "dear." Thus, it is through this very word "dear," which we all make dear, that manifold sufferings (*dukkha*) arise. The Buddha concludes it with the idea: for whomsoever there is no dear or undear, they have no suffering (*dukkha*) at all. They are sorrowless, free from grief.</p>
+<p>In other instances, quarrels, disputes, slanders—all such sufferings (*dukkha*) that exist—arise through being attached to something as dear. On one hand, there are conflicts arising from the loss of that dear thing, or from someone stealing it. On the other hand, by being unable to control the sorrow arising from separation from dear ones, one falls into various kinds of troubles. In that way, the Buddha expounds the danger (*ādīnava*) of the dear state, meaning that craving (*taṇhā*) becomes established because of regarding something as dear. If one has no dear or undear, he has no knots. That is the final lesson.</p>
+<p>The Buddha showed that the meditations helping to neutralize the mind according to the situation are indeed the perception of elements (*dhātu-saññā*) and the meditation on the foul (*asubha-bhāvanā*). These are not things that do not exist, but the reality. Normally, it is the foul nature of a body that exists. But at first glance, what appears is a dear nature. Even there, we specifically speak of a conscious body as foul. This living body, the body of a living person with consciousness (*viññāṇa*)—that too is foul. But if the mind is not directed to it, it is not seen. Hair of the head, hair of the body, nails, teeth, and so forth are called parts of filth because they are filthy. These are filthy not because the Buddha said so. Not a single one of these is fragrant, nor is it something that can be kept for a long time. When taken separately, these are not dear. But there is a dear nature in the body projected by these—the living body.</p>
+<p>Likewise, you devotees know well the deceased body shown as the meditation on the foul (*asubha-bhāvanā*). Applying it to oneself:</p>
+<p>*“Yathā idaṁ tathā etaṁ, yathā etaṁ tathā idaṁ”*</p>
+<p>(As this body is, so is that; as that is, so is this.) One does not need to wait until one dies. In those days, there were charnel grounds. In charnel grounds, dead bodies were cast away. Seeing that, one contemplates: "I too am subject to this state, am I not? One day, I will come to this, won't I? This body too is of the same nature. That body too is of the same nature." Behold, in this manner, for a person who has systematically developed the mind attitudinally through this training, the mind that has gone toward lust (*rāga*) can be controlled. Likewise, the sorrow and grief arising from attachment to these—some are tempted to commit suicide when a dear, pleasing person is suddenly lost. What is shown by this is that they had been thinking of them as immortal. After death, that beautiful world they had projected slips away.</p>
+<p>Now, dear devotees, we hear a vast amount of talk about positive thinking (or optimistic thinking). Holding hands with the material world, huge crowds are drawn toward positive thinking. In a short while, you devotees will not even get to hear this noble message of crossing over from this world, which the Buddha preached to us. Instead, they look at the "beautiful" (optimistic) side of everything. The Buddha declared: "There is a side of gratification (*assāda*); I do not say there is not. But the gratification (*assāda*) is little; the danger (*ādīnava*) is much more." It is precisely because of that danger (*ādīnava*) that the Buddha says this saṁsāra is a fearful place. Life cannot be maintained forever. Amidst how many illnesses and troubles is this life maintained! And only the person who maintains this daily knows the heap of filth inside it. Indeed, that is why it is called a walking toilet. Such is the body. However, it is apparent that a stream of thought is spreading, covering up those aspects and training people toward optimistic thinking. One must reflect on this. Through this, what arises are indeed those kinds of dangerous crimes, suicides, sexual crimes, and such things. Things we do not even think of happen. When we look at the animal world, like dogs and cats now. That is what will be seen on the streets in a short while as we walk along; restraint is lost. We showed that this training declared by the Buddha is important even for the lay life.</p>
+<p>Let us think: if a doctor, without this training, starts to act regarding his patients, what kind of things would happen? That is why the Buddha declared this. Ultimately, protecting the mind depending on the situation through the perception of the repulsive in the unrepulsive and the unrepulsive in the repulsive. Finally, even higher than that, as its supreme purpose, by transcending both—surpassing them—and discarding both the repulsive and unrepulsive, dwelling with equanimity (*upekkhā*), neutrally, mindful, and with wisdom. Where the mind has taken to equanimity (*upekkhā*), there indeed is complete liberation. That is what is called sorrowlessness. That must be done with effort.</p>
+<p>It is by bringing out that equanimity (*upekkhā*) at least to some extent that one actually has to develop the Four Foundations of Mindfulness (*Satipaṭṭhāna*). That is why, devotees, in the Satipaṭṭhāna Sutta, there are a few words shown as a basic qualification when a meditator (*yogāvacara*), whether a bhikkhu or a layman, enters into the Four Foundations of Mindfulness (*Satipaṭṭhāna*). Some present various analyses on:</p>
+<p>*“vineyya loke abhijjhādomanassaṁ”*</p>
+<p>(having removed covetousness and displeasure in the world). To develop mindfulness and clear comprehension—which means being mindful and clearly comprehending (*sato sampajāno*)—the primary requirement shown is *“vineyya loke abhijjhādomanassaṁ”*. There, it is not ignorance (*avijjā*); what is called *abhijjhā* is extreme greed, intense attachment. It is by controlling both that intense attachment and displeasure that one must develop the Satipaṭṭhāna. Because what is called the reality, seeing things as they are (*yathābhūta*), is understood only in the state freed from those two mentioned factors. It is when the mind is withdrawn from the dear and undear, from lust (*rāga*) and hatred (*dvesa*), that the realization of things as they are (*yathābhūta*) can be achieved. Therefore, having removed both intense clinging and displeasure, one dwells contemplating the body in the body. One dwells contemplating feelings (*vedanā*) in feelings (*vedanā*). One dwells contemplating mind in the mind. Regarding the objects that come to the mind, one can see those objects simply as objects. Because there, a neutral mind is required. Some might think that *abhijjhā-domanassaṁ* means the abandonment of the hindrances (*nīvaraṇa*). One does not need to think that far. Because the Four Foundations of Mindfulness (*Satipaṭṭhāna*) are developed precisely for the abandonment of the hindrances. The hindrances (*nīvaraṇa*) mean those respective factors of sensual desire (*kāmacchanda*), ill-will (*vyāpāda*), sloth and torpor (*thīna-middha*), restlessness and worry (*uddhacca-kukkucca*), and doubt (*vicikicchā*), which obstruct meditation and concentration. There is no need to go that far here. Because if so, there would be nothing new to say about those hindrances in the Four Foundations of Mindfulness (*Satipaṭṭhāna*).</p>
+<p>At the very least, at a minimum, one must start seeing things as they are (*yathābhūta*) after removing that intense greed and displeasure. One must have the ability to look at one's body neutrally. Neutrally. Without separating it as "this is my body" or "this is another's body", looking at this as internal (*ajjhatta*)—that which is with me—and that as external (*bahiddhā*)—that which is outside. Inside and outside. Now, in this day and age, using the word "scientific" is also somewhat risky. But we can say there is something of this sort here: "internal and external." It is not a matter of "mine" and "another's." It is the body present here, and the body present outside. That is why:</p>
+<p>*“Yathā idaṁ tathā etaṁ, yathā etaṁ tathā idaṁ, ajjhattañca bahiddhāca kāye chandaṁ virājaye.”*</p>
+<p>"As that is, so is this; as this is, so is that." In that manner, the Dhamma points out to eradicate the desire (*chanda*), the attachment, regarding the body internally and externally. It begins, indeed, with a neutral mind. The final, highest state of that neutrality is equanimity (*upekkhā*). It is in the highest state of equanimity (*upekkhā*) that one is freed from everything. When we look at that training in the end, we cannot even separate it as inside and outside. The conflict in the entire world—the conflict between oneself and others, the conflicts among various nations, tribes, and within households—when analyzed, what is here is something like the conflict between the internal and the external.</p>
+<p>Or else, to say it in another way, we can also call it a battle between the grasped (*upādinna*) and the ungrasped (*anupādinna*). What is called "grasped" (*upādinna*) is this consciousness (*viññāṇa*), mind, and body that we brought from the mother's womb. What is outside, which we prey upon for this, is "ungrasped" (*anupādinna*). It appears like a battle between those two. It tries to prey on external things for this, to protect this body. Within that, attachments and conflicts arise. But the Buddha points out, and also the Great Arahant Sāriputta points out, that what is present here are the four elements (*dhātu*)—earth, water, fire, and wind—and what is outside are the very same four. Contemplating them as elements in that manner is what is called the perception of elements (*dhātu-saññā*). Through the attention to elements (*dhātu-manasikāra*), the mind can be brought to neutrality. Through loving-kindness (*mettā*), without generating faults towards people, and with the perception of beings, based on the premise that "everyone desires happiness," it is through "May they be well!" that we overcome hatred (*dvesa*). But deeper and more in the domain of wisdom (*paññā*), what brings this mind to neutrality is the perception of elements (*dhātu-saññā*). What is present here is earth, water, fire, and wind; what is present there is also those same four. The values given to them are changed. According to likes and dislikes, according to dear and pleasing qualities. Some think in this way: "The four elements of the person I deeply love are not like the ones here." Or they might think, "The body of another animal is not that valuable; mine is highly valuable; I can make that animal my food." What is done here is the pacification of that distinction, bringing the mind neutrally to reality: "Here, there are only four elements (*dhātu*)."</p>
+<p>All this is done for the sake of transforming the mind. The Buddha declares: "If wholesome states arise in a certain way, reflect in that way. If unwholesome states arise in a certain way, do not reflect in that way." Therein lies the distinction between wise attention (*yoniso manasikāra*) and unwise attention (*ayoniso manasikāra*) that we mentioned earlier. Wise reflection, meaning wise attention (*yoniso manasikāra*), is: if reflecting in a certain way removes the internal unwholesome states of lust (*rāga*), hatred (*dvesa*), and delusion (*moha*), that is called wise attention (*yoniso manasikāra*). Unwise attention (*ayoniso manasikāra*) means: if reflecting in a certain way increases lust (*rāga*), hatred (*dvesa*), and delusion (*moha*), that is unwise reflection. The method of separating from those two is present within all these meditations. We must apply it according to the situation. It cannot be done just as we please. One must apply oneself. That is why one is called a meditator (*yogī*). 'Yoga' means application. Without applying oneself, it cannot be done suddenly in an instant. Because in this saṁsāra for a long time, having sometimes been animals, demons, various defiled habits might have become deposited within our mental continuum. It is only through the systematic development called meditation that one can be freed from them. That is why the Buddha points out the path in that way.</p>
+<p>Within the word 'yogī' is "application." How should the person who applies himself do so? *Yoniso*—by applying the mind to the very source, to the very place where something arises, not by applying the mind to the far end. "To this place, these start from here," is what the Buddha declared. Lust (*rāga*), hatred (*dvesa*), and delusion (*moha*)—all of them. One cannot purify the minds of humans by destroying all the fancy, luxurious things in the external world. This is the place that must be corrected. We cannot say, "Let us destroy all enemies in the external world, and on that day we shall live in peace and comfort." Here is where the entanglement lies. The Buddha declared: "Lust (*rāga*) is here, hatred (*dvesa*) is here, and delusion (*moha*) is here." Then He declared the path to eradicate them. To say further, especially within neutrality—therein lies hidden this wisdom (*paññā*).</p>
+<p>You devotees might have heard of a seesaw ride between suffering (*dukkha*) and happiness. Such a seesaw ride is what exists between the dear and undear. We like the dear thing; we dislike the undear thing. We seek to acquire the dear thing; we seek to remove the undear thing. There too lies a seesaw ride. That is why the Buddha declares to separate from both dear and undear and come to the middle. When one comes neutrally to that place, what is there? Just as going according to the aforementioned perception of elements (*dhātu-saññā*), there is nothing to be taken as "I am" (*asmi*). Here there is only a heap of elements (*dhātu*). One understands that all those divisions made to separate a person are things attributed according to our own defilements. What is the Buddha declaring so much? The question of suffering (*dukkha*). That is why the Buddha, in the incident of Visākhā as well, declared: "Whatever sufferings (*dukkha*) arise in the world, whatever sorrows arise, all of them arise because of the dear state."</p>
+<p>Because of regarding them as dear, one develops attachment to them. When one cannot keep that attached thing in that way, when it is obstructed, hatred (*dvesa*) arises. Within that indeed does the entire world exist. The Buddha declares to apply the mind to the "Dhamma-nature" of these. When the mind is applied to the Dhamma-nature, what is there is peace. What is ultimately expected through the Foundations of Mindfulness (*Satipaṭṭhāna*) is that these are merely phenomena (*dhammatā*) existing relative to each other. It is by dividing these with fences and gates that we have created a mass of suffering (*dukkha*). Even if we look at ourselves, what is taken in from one end goes out from another. Taking it as a single unit, we grasp it as "mine, mine". Taking a breath thinking "I", having taken it, even that has to be exhaled. Even in that situation, though taken with a perception of compactness (*ghana-saññā*) as "mine", there is no possibility of taking it as a single unit. It is to the person who sees through insight (*vipassanā*) that this begins to be understood little by little.</p>
+<p>Because ordinary worldly people need to conduct daily life conventionally, they forget those rapid changes, arisings, and passings-away in practical terms. Therein lies ignorance; therein lies delusion. It is within that delusion that worldly people lead their lives. Saṁsāra itself is entirely a delusion. If one wants to develop saṁsāra, one must nourish delusion. The Buddha declares the crossing over from this saṁsāra, crossing over from the world. To cross over from the world, it is not delusion, not *moha*; where there was delusion, one must bring forth wisdom (*paññā*). It is for the purpose of bringing forth wisdom (*paññā*) that the mind is brought to neutrality. Only then can the reality of the world, that truth as it is, be seen. You devotees know very well that through virtue (*sīla*), separating from those coarse levels of harming and troubling others to satisfy one's own wants—physical and verbal actions of violence—and separating from [harmful] thoughts, one tries to become neutral to that extent. Next, in concentration (*samādhi*), the mind is gradually released. Without the mind going after unnecessary views, releasing the mind from the defilements flowing into it that destroy the value of the present moment, one places and unifies the mind on some object. That is what is called cutting off the defilements. Next, attention—wise reflection—is carried out. Through wise reflection, one sees those things that were held onto until now, things taken with the perception of compactness (*ghana-saññā*), things thought to be real. What is here is a flow of arisings and passings-away. A continuity (*santati*), a flowing river. Inhalation and exhalation too are a flow, a flowing river, a continuity, not a single thing. Inhalation and exhalation are not two either. Inhalation is not one thing either. There too exists a heap of ripples. A heap of ripples. There is a vast number of breath-waves. Other things are also like that.</p>
+<p>What we take as "this body". From eating food and all other activities, what is seen is impermanence (*aniccatā*). The Three Characteristics (*tilakkhaṇa*) preached by the Buddha and revealed to the world. Because of impermanence (*aniccatā*) itself, because of being harassed by both arising and passing-away, there is suffering (*dukkha*). Some try to generate a perception of the beautiful (*subha-saññā*) within this impermanence. Someone might say: "Now we get a headache. When that headache ceases, it is pleasant, isn't it? So that headache is good." Someone is said to have said so. There are some in the lunatic asylum who go on banging their heads against the wall continuously. Why? Because when they stop banging their heads, it is pleasant, isn't it? Based on that logic, such madmen also exist. In that way, even within the perception of impermanence (*anicca-saññā*), some see a pleasure—an optimistic way of thinking. Such a thing also goes on. Regarding impermanence (*aniccatā*), it is an outright rejection of the Buddha's word, a rejection of the Three Characteristics. The Buddha declared:</p>
+<p>*“Yad aniccaṁ taṁ dukkhaṁ, yaṁ dukkhaṁ tad anattā”*</p>
+<p>(What is impermanent is suffering, what is suffering is non-self). Whatever is impermanent (*anicca*) is suffering (*dukkha*). Whatever is suffering (*dukkha*), there it is non-self (*anattā*). There is nothing to be taken as "I." The Buddha declares that everything is afflicted by impermanence (*aniccatā*). There is a word of the Buddha: "Pleasant feeling (*vedanā*) is pleasant while it persists, and painful when it changes. Painful feeling (*vedanā*) is painful while it persists, and pleasant when it changes." But the logic is: nobody invites suffering (*dukkha*) saying "it is pleasant when it changes", do they? Only those foolish individuals invite it in that way. It does not remain in that way either. Even in what is called neutrality, there are defilements. The Buddha points to Nibbāna far above the kind of neutrality the world thinks of. The seesaw ride between pleasure and pain, as well as between dear and undear—it is when one comes to the middle of this seesaw that it is caught. What is it? How is this seesaw constructed? The underlying value is caught. What is that value? The conceit "I am" (*asmi-māna*). That is why the Buddha points out that ultimately, where the conceit "I am" (*asmi-māna*) is completely eradicated, there indeed is Nibbāna. There is the end of becoming (*bhava*). There is the halting. There is rest. There is peace.</p>
+<p>You devotees, at this moment, must have gained some understanding of the supramundane values highlighted by the Buddha. Whether lay or ordained, the ultimate goal belonging to every Buddhist is Nibbāna. Therefore, even if something that belongs to everyone is preached on certain occasions addressing the bhikkhus, we cannot cast it aside saying "it does not belong to us." Hence, you devotees must take what should be taken from these and be energetic.</p>
+<p>On this valuable day, you devotees started with virtue (*sīla*), having undertaken a very valuable virtue (*sīla*) early in the morning. Seated on the stage prepared by that virtue (*sīla*), you must have had an opportunity to unify the mind with a meditation familiar to each of you. If this Dhamma was understood deeply in some insight-oriented way by that unified mind, I believe it helped you, using that as support, to develop your wisdom (*paññā*). Without saying "it is impossible", but generating the perception of "it is possible", I aspire that this mass of merit accumulated may definitely be a supportive condition (*upanissaya*) to eradicate this saṁsāric suffering (*dukkha*) in this very life, before this Dispensation declines.</p>
+<p>Likewise, may whatever beings from Avīci to Akaniṭṭha who wish to rejoice in this merit of preaching and hearing the Dhamma, by thus acquiring it, find peace in the supreme deathless Nibbāna through their aspired Bodhi! Recite these verses:</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_072.html" class="doc-btn">← Previous Sermon (072)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_074.html" class="doc-btn">Next Sermon (074) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 102 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_101.html" class="doc-btn">← Previous Sermon (101)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_103.html" class="doc-btn">Next Sermon (103) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 102</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_102_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_102_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_102_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #102</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.81)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Yo ca vassasataṃ jīve apassaṃ dhammamuttamaṃ,</p>
+<p>ekāhaṃ jīvitaṃ seyyo passato dhammamuttamaṃ ti.</p>
+<p>From:</p>
+<p>Dhammapada 115 (Sahassavagga)</p>
+<p>Dear Listeners,</p>
+<p>In the latter part of life, parents usually cultivate a certain sense of security in the hope of receiving care and attention from their children. Accordingly, it is natural for parents with many children to feel a greater sense of security. Nonetheless, due to children who measure their parents' virtues in terms of money and material wealth, a situation sometimes arises where parents are left with absolutely no support or refuge.</p>
+<p>Our Buddha Supreme, the Blessed One, declared this verse, which we have taken as our theme today, to help a mother who had fallen into such a helpless state through the Dhamma. In the city of Sāvatthī, there was a certain family with seven sons and seven daughters. Having reached the appropriate age, they got married and lived comfortable lives. In the meantime, the father passed away. So, this mother continued to utilize their wealth and property. The children came and said, "Mother, now that father is gone, why do you still keep this wealth? Is it that we cannot look after you?" After remaining silent several times, since they repeatedly kept saying this, she thought, "Indeed, my children will look after me," and divided all her wealth into equal portions, distributing them among the children.</p>
+<p>However, after some days, when she went to her eldest son’s house, her daughter-in-law would say, "Look at that, it seems our mother-in-law is coming here every day as if she gave two shares to the eldest son." Next, she went to the second son's house. There too, a similar thing happened after a few days. She went to her daughters' houses; it was the same there as well. Moving from place to place like this, this mother realized, "Now indeed, there is no hope of help from these children. I must live as a bhikkhunī (nun)," and went to the nunnery to request ordination. Those bhikkhunīs ordained this elderly lady. Regardless of her ordained name, she is introduced to us in the Dhamma by the nickname that stuck to her: 'Bahuputtikā Therī'. When looked at realistically, the only thing that mother received or inherited from her children was that name: "The mother of many children."</p>
+<p>In any case, Bhikkhunī Bahuputtikā was ordained with her livelihood in mind. However, developing a profound sense of urgency (*saṁvega*) regarding *saṁsāra*, thinking, "Now I am advanced in age," she started to practice meditation (*bhāvanā*) with great energy, remaining sleepless day and night. She also performed the duties and services due to the other bhikkhunīs very well. It is mentioned that while doing these chores, the way she meditated was by clinging to pillars and holding onto them during the night to practice meditation. Furthermore, fearing that she might fall while walking in meditation (*caṅkamanaya*) in the dark, and to ward off sleepiness, she would hang onto branches of trees to meditate. Having meditated so intensely, when her mind reached a certain level of development at the appropriate moment, the Buddha, likely perceiving this state, sent forth a light from within His Fragrant Chamber (*Gandhakuṭī*) and addressed Bahuputtikā, delivering a sermon. He concluded it with the verse we have chosen as our theme:</p>
+<p>*Yo ca vassasataṁ jīve apassaṁ dhammamuttamaṁ*</p>
+<p>"Though one should live a hundred years, without seeing the supreme Dhamma,</p>
+<p>*Ekāhaṁ jīvitaṁ seyyo passato dhammamuttamaṁ.*</p>
+<p>Better is a single day's life of one who sees the supreme Dhamma."</p>
+<p>The Buddha delivered a Dhamma discourse containing this verse. Hearing it, it is recorded in the story that Bahuputtikā Therī attained Arahantship together with the four analytical knowledges (*paṭisambhidā*). In this short story, there is a good lesson for children as well as parents. If we contemplate the lesson regarding children in this series of events, it is evident that some children are in the habit of measuring their parents' virtues according to the proportion of the inheritance they receive. That is why they spoke in that manner: "Did you give us two shares?" But they did not contemplate that the greatest inheritance they received—the greatest gift from their parents—was the gift of life.</p>
+<p>It is not just after a child is born, but even while in the mother’s womb, during those ten months, there was a possibility of dying a thousand times. Preventing those occurrences, making the child subsist on the very food she consumes, and undergoing ten-fold suffering (*dukkha*), the mother protects the child. Sometimes she also suffers from pregnancy cravings (*doḷaduka*), which some define as "the suffering of two hearts." Declining even the agreeable, wholesome food and drinks she herself prefers, with a wondrous sacrifice, a mother protects the child and brings the child into the world, risking her own life. Looked at in this way, even while in the mother's womb, a vast portion of that inheritance of life has already been received.</p>
+<p>Furthermore, after birth, you all have heard the saying that she turned her blood into milk to feed the child. In that manner, mothers nourish their children during that initial period. In doing so, mothers do not perform calculations regarding their children. It must be because similar incidents occurred in this country that an ancient poet wrote a poem about this entanglement between children and parents. In that poem, there is a line that goes: "Did I measure out the milk I gave you, my son?" Those mothers do not measure when they give milk. But children treat their parents according to the ratio of the inheritance. Thus, it is mentioned in various stories that such an attitude existed not only in modern times but also in the past. These are human weaknesses, and there are places where the Buddha delivered Dhamma discourses fitting those occasions.</p>
+<p>You all must have heard this often. When the Buddha appeared in ancient Indian society, the brahmins regarded Brahmā as supreme. Worshipping and paying homage to this Brahmā was a practice in households. Instead of that, the Buddha introduced that it is not the invisible Brahmā, but the mother and father who are the real Brahmās living in one's own home. This is why the Buddha declared, *"Brahmā ti mātāpitaro"* (Mother and father are called Brahmā) and so on. Parents are indeed the Brahmās.</p>
+<p>The Buddha declared this with valid reasons. Because according to the Dhamma, the four qualities of loving-kindness (*mettā*), compassion (*karuṇā*), sympathetic joy (*muditā*), and equanimity (*upekkhā*) are known as the *brahmavihāras* (sublime abodes). Since a mother and a father actually cultivate these four qualities directing them towards their child, the Buddha with good reason identified them as Brahmās.</p>
+<p>Even if we consider these four briefly: in loving-kindness (*mettā*), there is the wish to care for and comfort the child in infancy. In compassion (*karuṇā*), there is skillful means (*upāyakusalatā*). In the mischievous years, it is with the help of compassion, motivated by love for the child, that a mother protects the child so that they do not fall into danger, preventing dangerous situations, sometimes through gentle ways and sometimes through strict measures. Next, as the child grows bodily and progresses in studies, the parents cultivate in their hearts the valuable quality of sympathetic joy (*muditā*), which is the opposite of jealousy—rejoicing in another's happiness. Finally, in old age, they make various sacrifices for their children. They even prepare their minds to separate from their children.</p>
+<p>In this story, too, that mother did not resort to aggressive courses of action; she understood the nature of the world and *saṁsāra*. Realizing, "Even though I have so many children, this is all I receive," she sought the refuge of the Dhamma and was ordained to receive the support of the most supreme Dhamma. Some pious lay disciples who have many children might also think, "We can live our final days clinging to the bodies of these children." But Bhikkhunī Bahuputtikā obtained a much greater shelter and refuge, in a transcendent (*lokuttara*) sense, by meditating while hanging onto those lifeless pillars and tree branches. To realize that supreme Dhamma and to end the suffering (*dukkha*) of *saṁsāra*, that mother...</p>
+<p>So, we must contemplate that this cannot be called a fault of the children alone. Some mothers and fathers, no matter how old they get, play with and pamper their children without limit; and after the children's affairs are finished, they spend their time looking at the faces of and pampering their children's children, and their children's children, not knowing what will happen to themselves. Likewise, children also hand over their next generation to their parents. Instead of looking after their parents, other tasks and responsibilities are assigned to them. Thus, both parties are responsible for this. There is a good example here regarding this as well. At that stage, one should cultivate equanimity (*upekkhā*), establish oneself in the Dhamma, and incline towards quiet seclusion where one can calmly understand the nature of *saṁsāra* and the nature of life through one's own body in a meditative manner. Furthermore, the care of parents has been further expounded as a duty of children—not only providing food, drinks, and so on, but also paying homage, bowing down, and doing all such things for parents as one would do for Brahmā.</p>
+<p>On one occasion, the Buddha delivered a highly powerful sermon regarding the care of parents. Without any specific reason, but so that it would serve as an example to the world, He made this statement: "Monks, there are two persons whom it is difficult to sufficiently serve and look after. Who are the two? The mother and the father." Next, He points out three valuable matters. First, He indicates: "If a son, living for a hundred years, were to carry his mother on one shoulder and his father on the other shoulder, and for a hundred years were to attend to them, bathing them, feeding them, and even cleaning the urine and excrement voided by those decrepit parents on his shoulders, attending to them with his own hands as he carries them, he still would not have sufficiently served them or truly repaid his debt to his mother and father." Similarly, He says: "Monks, if a child, with the intention of serving his parents, were to establish them as rulers of this great earth filled with the seven treasures, even that would not be doing enough." Finally, the Buddha declares: "If a son establishes his faithless parents in the attainment of faith (*saddhā-sampadā*), establishes his unethical parents in the attainment of virtue (*sīla-sampadā*), establishes his stingy parents in the attainment of generosity (*cāga-sampadā*), and establishes his unwise parents in the attainment of wisdom (*paññā-sampadā*), that son has not only done enough, but he has served his parents more than enough."</p>
+<p>According to that, it becomes clear that what children have to do, if their parents are living with them, is to give them sufficient leisure and quietude to practice giving (*dāna*), virtue (*sīla*), and meditation (*bhāvanā*). The physical care and attention, or even granting them kingship, cannot compensate for that. Truly, while growing oneself in virtues such as giving and virtue, if there is any lack of these in one's elderly parents, providing them with the necessary quietude and comfort to develop them is the service rendered through the Dhamma. Thus, three aspects are mentioned here. It is to the service done with one's own hands that the Buddha gave that first simile—the first illustration. Next, it is with the idea of providing comfort that kingship was mentioned. Lastly, what is spoken of is the service through the Dhamma. So, even while remaining as a layperson, one can serve one's parents through the Dhamma in this manner. If someone ordains, they can perform that supreme service mentioned above for a mother or father at an even higher level. That is one discourse. There are many such discourses.</p>
+<p>You all must have heard it in the *Parābhava Sutta*, where when pointing out the causes of a person's ruin, the Buddha declares: "If a son or child, having the ability, does not support or look after his elderly mother and father, that is a cause of his ruin." In another similar discourse, the Buddha states: "Monks, one who behaves wrongly towards four persons is ruined as if he has dug his own grave, is censured and blamed by the wise, and accumulates immense demerit. Who are the four? One’s mother, father, the Tathāgata, and the Tathāgata's disciples." Regarding these four groups, it is preached that if anyone behaves wrongly towards them, they meet destruction as if they had dug their own grave.</p>
+<p>Furthermore, you all have heard of the five heinous crimes (*pañcānantariya-kamma*) in accordance with the Dhamma. Where the results of actions (*kamma-vipāka*) are shown in the Dhamma, the Buddha has pointed out that there are five extremely dangerous, most grave evil deeds. They are called *ānantariya-kamma* (crimes with immediate retribution). They lead inevitably to hell (*apāya*) in the very next life. Even there, the Buddha mentions the parents: killing one's mother, killing one's father, killing an Arahant, drawing blood from the Buddha's body with hostile intent, and finally, causing a schism in the Saṅgha. By listing these as *ānantariya-kamma*, the Buddha has highlighted the significance of parents.</p>
+<p>The reason for this is that the greatest inheritance children receive from parents is the inheritance of life. In addition, the fundamental advice to steer and correct one's life is also received from parents. That is why they are called *pubbācariyo* (first teachers). *"Brahmā ti mātāpitaro, pubbācariyā ti vuccare"*—Parents are called Brahmās, and they are also called the first teachers. Furthermore, it is said: *"āpādakā posakā, imassa lokassa dassetāro"*—they bring up, nourish, and show this world to their children. Since they have done such a vast heap of assistance for their children, the Buddha has extolled the virtues of parents to such an extent. That is with respect to children living as householders.</p>
+<p>Regarding the ordination of children, it is also mentioned in various places in the discourses, especially in the Vinaya Piṭaka. On one occasion, King Suddhodana came to meet the Buddha and said, "Venerable Sir, I would like to ask for a boon." The Buddha immediately replied, "The Tathāgatas are not in the habit of granting boons." "No, Venerable Sir, what I am asking is something allowable and extremely proper." "Very well, speak," He said. Then King Suddhodana said, "Ah, Venerable Sir, when the Blessed One went forth (ordained), it caused me immense suffering (*dukkha*). Next, when Nanda was ordained, that too caused me great suffering. When Rāhula was ordained, it caused me an unbearable, extremely vast suffering." It is a father speaking, not a mother. He further says, "Venerable Sir, love for a son is something that cuts through the outer skin, the inner skin, the flesh, and the sinews, and enters into the marrow of the bones. Therefore, I request that a rule be enacted not to ordain children without the permission and consent of their parents."</p>
+<p>The Buddha accepted this and laid down a rule: "Monks, henceforth do not ordain anyone without the parents' permission. If you do so, there will be an offense of wrongdoing (*dukkaṭa*)." In this context, indeed, one should not think of the Buddha as having violated a rule earlier. What the Buddha saw was the necessity of saving someone from *saṁsāra*. That is not something to be censured according to the Dhamma. However, as a special privilege, as a boon to King Suddhodana, He enacted that rule in that manner.</p>
+<p>Furthermore, it is mentioned concerning those who have ordained: though generally there is no connection with lay households, special privileges are shown regarding parents. On one occasion in the Vinaya, this kind of incident regarding the four requisites is mentioned. Once, a certain bhikkhu received many robes. For some reason, that bhikkhu felt like giving these robes, or at least the robe-cloth, to his parents. The Saṅgha reported this to the Buddha. The Buddha expressed Himself thus: "Monks, when it comes to parents, what can I say? I permit it. I allow you to give those robes to your parents. However, do not give them to inappropriate places or inappropriate people. That would cause the faith of those who offered them with faith to decline. If you do so, there will be an offense of wrongdoing (*dukkaṭa*). But I allow you to give them to your parents." Thus, He gave a special permission to ordained children even regarding robes.</p>
+<p>Similarly, regarding almsfood (*piṇḍapāta*): if there are occasions when parents have nothing to eat or drink, there is permission to give a portion of that food one has obtained through alms-gathering to one's parents. Next, regarding medicines: if the parents do not receive medicines and have no caregiver, one can give the medicines one receives to one's parents. One can also attend to one's mother without touching her body. Next, for one's father, the Buddha allowed attending to him as one would attend to a novice (*sāmaṇera*), even performing tasks like bathing and rubbing the body.</p>
+<p>In this manner, there are many other occasions where special favor was shown toward parents. In the Vinaya rules, the Saṅgha is forbidden from traveling during the three months of the rains retreat (*vassa*). However, seven special occasions are pointed out. Two of these are that if there is some need concerning one's mother or father, whether a message has arrived or not, permission is given to go during the rains retreat. Whether they asked to return or not, if the need is seen, there is permission to go.</p>
+<p>From this, we can see that even in the ordained life, the Buddha gave a special place to the care of parents. Not only in that ancient Indian society but also today, as virtues decline more and more, various problems arise in households because people do not bring these Dhamma matters to mind. The Buddha highlighted those virtues largely for the progress of both parties—for their spiritual progress.</p>
+<p>Next, as we said, there is a lesson in this for parents too. What is that? The exemplary character of Bahuputtikā Therī is what should be taken there. When her children finally stopped caring for her, that Therī might have thought, "This is a flaw of *saṁsāra*." Cultivating the equanimity (*upekkhā*) appropriate for that advanced age, thinking, "Now indeed, let them live happily, I must ordain," she ordained. Moreover, having ordained, she did not just idle there for her livelihood. Performing her duties and observances, she meditated in that manner. Here lies the most valuable example.</p>
+<p>Just as the Buddha declared, she obtained support through the Dhamma, meditating intensely during the night. That is a great encouragement even for the elderly. A lot of things can be learned from this very body. Old age is an opportunity where one can clearly realize through direct experience (*pratyakṣa*) the three characteristics (*tilakkhaṇa*)—the impermanent (*anicca*) and unsubstantial (*anattā*) nature of decay (*jarā*). If there is leisure for that, and if one directs one's mind to it, one can benefit a great deal from it, generating disenchantment (*nibbidā*) towards this *saṁsāra*. Thus, the story of Bahuputtikā Therī is a fine example of this.</p>
+<p>Next, if we contemplate this Dhamma, it was said in that verse: "even if one lives a hundred years without seeing the supreme Dhamma..." By "supreme Dhamma," what we must understand is the transcendent (*lokuttara*) Dhamma—the Dhamma of Nibbāna. Rather than living a hundred years without seeing that supreme Dhamma, living even a single day seeing the transcendent Dhamma is more valuable. That was proven by the life of Bahuputtikā Therī.</p>
+<p>According to the Buddha's verse, if there was still some small thing lacking in that Therī, it was because the noble courage and advice were contained within that verse that she was able to attain that realization. Through that, even we can contemplate the values of life. Today, we generally value grandfathers living for a hundred years. But even a grandfather's life is of no use if spent without making even an effort to understand such a supreme Dhamma. The person who lives a single day seeing the Dhamma is far more valuable than that. What we have to contemplate from that story is that if one lives even a single day seeing the supreme transcendent Dhamma, that life is what is truly valuable. Sometimes, parents think, "I have many children, so I will live as long as I can," having the objective of a long life and longevity. But that Therī, risking her life, sacrificing sleep day and night, escaped from *saṁsāra*.</p>
+<p>That is also what we have to contemplate. Understanding the true nature of life and *saṁsāra* in the world is the most valuable thing in a life. You, pious devotees, know that the path leading to that is through virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*). If we contemplate from the perspective of insight (*vipassanā*), we must see the three characteristics (*tilakkhaṇa*)—namely, the impermanent (*anicca*), suffering (*dukkha*), and unsubstantial (*anattā*). That is why it is said, "the life of one who sees the supreme Dhamma for even a single day is valuable."</p>
+<p>Sometimes, a person might think that insight (*vipassanā*) means chanting, "*Anicca, dukkha, anattā; anicca, dukkha, anattā*." Truly, pious devotees, insight meditation (*vipassanā-bhāvanā*) is not a matter of saying, but of seeing. And that seeing is not seeing with the physical eye, but seeing with the eye of wisdom. If one thinks in that way, we can go on repeating "*Anicca, dukkha, anattā*" like a mantra. That is like painting a picture. It is not like that; one must dive deep into these five aggregates (*pañcakkhandha*). How does one dive deep? With a concentrated mind, through the method of attention, through radical attention / wise attention (*yoniso manasikāra*)—by reflecting wisely, by reflecting rapidly, one must understand the nature of these five aggregates. That is what is called "penetrative wisdom" (*nibbedhikā paññā*). One must see its true state with penetrative wisdom. Not merely with the physical eye. Sometimes, people create confusions due to a lack of proper understanding of these things.</p>
+<p>In the past, there is an account of such a confusion being created. A certain meditation master told his disciple to practice the meditation on rise and fall (*udayabbaya-bhāvanā*). Devotees, "udayabbaya" means that in order to deeply understand impermanence (*aniccatā*), one must see both the arising and passing away. The Pāli words for arising and passing away are *udaya* and *vaya*. That is what is called *udayabbaya*. The knowledge of this arising and passing away is called the "knowledge of rise and fall" (*udayabbaya-ñāṇa*). So, the disciple was sent to see this.</p>
+<p>The disciple went to the edge of a pond. Having gone there and sat down in a secluded spot, with eyes wide open, he kept repeating, "Arising and passing away, arising and passing away, arising and passing away" (*udayabbayaṁ, udayabbayaṁ, udayabbayaṁ*). While he was repeating this, a crane landed in the water. Now, in the Pāli language, water is called *udaka*, and a crane is called *baka*. Since the mind is easily distracted, he saw this crane land in the water. Consequently, without even realizing it, the meditator who was repeating "arising and passing away, arising and passing away" started saying "water-crane, water-crane" (*udaka-bakaṁ, udaka-bakaṁ*).</p>
+<p>Such confusions arise when one thinks that insight (*vipassanā*) is merely a matter of memory or reciting words. But, devotees, it is something seen with insight-wisdom, with that deep penetrative wisdom (*nibbedhikā paññā*) that pierces through. For that, mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*) must be developed. The method of seeing this is also mentioned in the Dhamma. Generally, when speaking simply, we say: "Form is impermanent (*anicca*), feeling (*vedanā*) is impermanent, perception (*saññā*) is impermanent." We keep saying it like that.</p>
+<p>But certain discourses show us that it is not a mere saying. In those discourses, the way of seeing the arising and passing away is stated as follows: *"Iti rūpaṁ, iti rūpassa samudayo, iti rūpassa atthaṅgamo."* "Iti" means "thus" or "such". *"Iti rūpaṁ, iti rūpassa samudayo, iti rūpassa atthaṅgamo"*—"Such is form, such is the arising of form, such is the passing away of form." It goes on in the same way: "Such is feeling (*vedanā*), such is the arising of feeling, such is the passing away of feeling."</p>
+<p>What do we understand from that word "such" (*iti*)? It is not a chant; rather, form, feeling, etc., are captured by the attention (*manasikāra*) of insight as they arise. One reflects on them in the proper manner. It is not a mere uttering of words. A feeling (*vedanā*) has arisen: "This is such-and-such a feeling." A pleasant feeling arose, persisted, and passed away. A painful feeling arose, persisted, and passed away. A neither-painful-nor-pleasant feeling arose, persisted, and passed away. The same applies to perception (*saññā*). In this way, when looking at the side of the five aggregates and contemplating, one gradually goes deeper.</p>
+<p>In some instances, the world is introduced in the Dhamma as the world of the five aggregates (*pañcakkhandha-loka*). The discourses of the Buddha are described as having "manifold methods" (*nānā-naya*), presented in the Dhamma under various subjects as appropriate. In certain instances, it is called the world of the five aggregates. In another instance, it is shown as the world of the six sense-bases (*saḷāyatana-loka*). The six sense-bases are the eye, ear, nose, tongue, body, and mind. Mind (*mana*) means the thought/intellect. Thus, these six doors—eye, ear, nose, tongue, body, and mind—are introduced as the six sense-bases. Nowadays, we use the word "institutions" (or "departments") for the Sinhala word *āyatana*. Regardless of those institutions, these six sense-bases that every single person possesses are constantly working.</p>
+<p>Even within these six sense-bases, the base that acts like a central station is the mind-base (*manāyatana*). All the messages brought in from the eye, ear, nose, tongue, and body bases are collected and deposited in the mind-base. The world associated with these six sense-bases is called the world of the six sense-bases (*saḷāyatana-loka*).</p>
+<p>You, pious devotees, must have often heard that the Buddha gave a simile for each of these aggregates (*khandha*). Form (*rūpa*) is compared to a lump of foam. Feeling (*vedanā*) is compared to a water bubble. Perception (*saññā*) is compared to a mirage. preparations / preparations (*saṅkhāra*) are compared to the trunk of a banana tree. Consciousness (*viññāṇa*) is compared to a magician’s illusion. These are not similes given as poetic embellishments. These are similes that must be directly experienced. Through what does one directly experience them? Through the eye of wisdom. An occasion when they are directly experienced through the eye of wisdom arrives during insight meditation (*vipassanā-bhāvanā*).</p>
+<p>When one brings those to attention (*manasikāra*) with a well-concentrated mind, the nature of the elements composed of the four great elements—earth (*paṭhavī*), water (*āpo*), fire (*tejo*), and wind (*vāyo*)—is understood. Just as a lump of foam, which accumulates when something gets stuck in a flowing river, appears from afar with the perception of solidity (*ghana-saññā*) as a solid thing, but when inspected closely is found to be just a lump of foam; in the same way, understanding regarding this body arises through insight (*vipassanā*).</p>
+<p>It is the same with feeling (*vedanā*). Just like the bubbles of water that arise and vanish in an instant when raindrops fall during a shower, so is this thing called feeling. To one who contemplates deeply on feeling through the contemplation of feeling (*vedanānupassanā*), this understanding arises as a direct experience. How true are the similes declared by the Buddha! They wonderfully demonstrate through those similes that this is merely a collection of arisings and passings away, and there is no "thing" there.</p>
+<p>Next, the same is true regarding perception (*saññā*), which is like a mirage. In that too, there is that mirage-like nature. A mirage is something one runs toward, thinking it exists in the distance. If one lives seeing the arising and passing away of the five aggregates, an occasion arises where perception is understood. Regarding preparations (*saṅkhāra*), the simile of the banana trunk shows their coreless, essenceless nature—that they are just a heap of fibrous sheaths. Likewise, this stream of thoughts such as intention (*cetanā*), this formative power of the mind, this preparation (*saṅkhāra*)—this is not something done by a "self". Ultimately, one sees that instead of a "self", there is only a succession of thoughts arising and passing away extremely rapidly, like a heap of fibrous sheaths.</p>
+<p>Next is consciousness (*viññāṇa*). The nature of consciousness is compared to an illusion. Why was consciousness compared to an illusion? What does a magician do? He shows a non-existent thing as if it exists. One feels how wondrous this Dhamma is! Because consciousness (*viññāṇa*) displays a non-existent thing as if it exists, the cessation of consciousness is called Nibbāna. One experiences the cessation of consciousness in this very life. That is what is called Nibbāna. There is nothing that has been destroyed there.</p>
+<p>The very nature of consciousness is non-existent; but because of the deceptive, illusory nature of consciousness, the ordinary world thinks it exists. That is what they grasp as a "soul" or "self" (*attā*). Even if other things are not grasped, it is consciousness (*viññāṇa*) that is grasped as "I, I, I." Yet, the Buddha compared consciousness itself to a magician's illusion. Now, if an illusion means showing a non-existent thing as existing, then what the world is holding onto is a non-existent thing. But failing to understand this non-existence is called ignorance (*avijjā*); that is why there is the entire span of becoming (*bhava*), or the accumulation of *kamma*, etc.</p>
+<p>If at any moment one understands that deceptive nature of consciousness, it is just like a spectator of a magic show who, having been deceived up to that point, later stands behind the stage and catches the magician’s tricks, realizing: "This is empty, there is nothing in it." It is something like that. Then, the non-existent is seen exactly as non-existent. That is what is called understanding it as void (*suñña*), empty, and hollow. It is as things to be directly experienced that the Buddha pointed out those similes. They were not declared out of mere whim or as poetic ornaments. That is how He points out the nature of the five aggregates (*pañcakkhandha*).</p>
+<p>Next, regarding the six sense-bases (*saḷāyatana*), those six we mentioned earlier: eye, ear, nose, tongue, body, and mind. Why are these called "bases" (*āyatana*)? Because a production takes place within them. *Kamma* is produced within them. Grasping the objects that come to these bases tightly through ignorance (*avijjā*), making them into two aspects as "this is I, this is the world, this is the eye, this is the form," and through the coordination established therein, *kamma* is accumulated as wholesome (*kusala*) and unwholesome (*akusala*), ultimately leading one to go on and on in this *saṁsāra*.</p>
+<p>The Buddha declares that through insight (*vipassanā*), one must understand the emptiness (*suññatā*) of these things as they really are (*yathābhūta*). For that, there are some wonderful similes given by ancient elders of the past, similes used to realize that Dhamma. Now, when lightning flashes during a rainy time like this, the ordinary world, or some uneducated person of that past era, thought of this lightning as a real thing. But this lightning did not come from somewhere. After that lightning ceased here, it did not go anywhere else either. It merely arose and passed away due to various causes and conditions (*hetu-paccaya*).</p>
+<p>Sometimes, a person might think that lightning flashing means lightning was somewhere and came when it rained, and after it ceased, it went somewhere. That is a delusion. This thing called lightning arises due to a multitude of causes. We give it a name. We grasp it as a thing. We falsely perceive solidity (*ghana*). But in reality, just as it arose, it passes away. That is the nature of things (*dhammatā*). Thus, various similes such as lightning, a mirage, and a rainbow were pointed out in the past because their nature can be understood through them. The path leading to that is what is called insight (*vipassanā*). It is by reflecting on that impermanence (*aniccatā*), on those arisings and passings away in a more and more subtle manner, that this understanding can be obtained.</p>
+<p>We spoke, indeed, of a production in the sense-bases of the ordinary world. The production in those bases is generally carried out in a coarse, gross manner. Behold, a form is seen. Then, an effort is made to identify it accordingly. If one thinks, "this is so-and-so, this is my friend, a person I am very fond of," a certain train of thoughts flows based on that. The moment one thinks, "this is a resentful person, an enemy," another train of thoughts goes. There, one has grasped it as two ends: "this is the eye" and "this is the form."</p>
+<p>But in reality, if we look at it, the entire series of events here is merely a certain picture cast upon the screen of the eye. It is only a certain vision falling on the eye, on the screen of the eye. On the basis of that vision, a vast train of thoughts is generated. Having generated it, one accumulates *kamma* oneself. Beyond that, even if one thinks about a sound, it is the same. A sweet sound is heard. Something like a song is heard. Then, thinking it is a good song, one generates certain attachments and so on within. But in insight (*vipassanā*), at a certain point, one understands that all of this is a heap of movements, a heap of vibrations. Or else, it is completely like the simile of the banana trunk mentioned for preparations (*saṅkhāra*); there is only that here. There is nothing to be taken as a "thing".</p>
+<p>So, the journey toward that understanding is what is called insight (*vipassanā*). First, this is a form; not only that form, but one attributes to the form: "this is beautiful, this is good," and next, "it has such-and-such features." That is what is called "grasping signs"—in terms of signs (*nimitta*) and features (*anuvyañjana*). They grasp signs. Next, they further decorate those signs with secondary details. That is what is meant by saying one has recognized a person. But ultimately, it is only the shadow cast in the eye.</p>
+<p>Just like what is cast in a camera, there is the play of the pupil in the eye. According to the shadow cast in the eye, a certain feeling or thought is generated in the mind. Next, due to ignorance (*avijjā*), it is stimulated and presented as a thing, causing the world to wander in *saṁsāra*. At the furthest end of that train of thoughts lies that kind of collection of thought-conceptions (*vitakka*). Closer to this side lies perception (*saññā*)—that recognition. Past experiences help in that recognition. It is in association with them that one generates thoughts like: "Ah, this is so-and-so, this is the person who did me such a wrong, this is the person who did this to me." It is by relying on those past perceptions (*saññā*) that these recognitions and so forth are made.</p>
+<p>So, the Buddha shows that a train of thoughts going in that manner is like a deer running after a mirage. Instead of that, what does the wise person do? Sitting right there, they understand the true nature of this mirage. Likewise, the Buddha declares that one should try to gain a true understanding of the objects encountered by these six doors. This is what is introduced in the Dhamma as wise attention (*yoniso manasikāra*).</p>
+<p>Wise attention (*yoniso manasikāra*) means making an effort to understand by directing the mind to the very source where something arises. What that deer does is forget the place of arising. Not knowing that it arose due to a defect or limitation in its own eyes, it mistakes that far-away mirage for a real thing, as water, and runs after it.</p>
+<p>But it is shown in the Dhamma that the root here is ignorance (*avijjā*), the lack of knowing that this is something arising due to a collection of causes and conditions (*hetu-paccaya*). That train of thoughts grows as quickly as possible. Once it goes into thoughts (*vitakka*), and after getting entangled in them, after getting entangled as conceptual proliferation (*papañca*), one ultimately spends one's time daydreaming.</p>
+<p>The Buddha points out that without grasping it in terms of signs (*nimitta*), the practitioner of insight (*vipassaka*), or the meditator engaged in insight (*vipassanā*), should try to end that reflection right there by noting the seen object generally as "a form, a form." One ends it by taking it into the mind twice as "a form, a form," not letting it go beyond that. "A form, a form." Likewise, "a sound, a sound." One does not go to analyze it. One does not even try to generate thoughts (*vitakka*), generate conceptual proliferation (*papañca*), or conjure daydreams about it.</p>
+<p>"This is merely a certain form cast on the screen of the eye, or just a vision." Next, "that is merely a sound striking the eardrum, only a certain vibration or movement striking the eardrum." In that manner, in a way that becomes wise attention (*yoniso manasikāra*), one directs the mind back to the place where it arose. That is an extremely difficult task. For that, one must have a highly concentrated mind. To unify the mind with a concentrated mind and break it off right there in that manner, equanimity (*upekkhā*) is truly necessary—a state of neutrality. Releasing the mind as much as possible from the two extremes of attraction and repulsion, reflecting on it right there...</p>
+<p>Truly, these are things that come and go. But it is through holding and grasping (*upādāna*) them, and further accumulating various things on top of them, that the journey of *saṁsāra* takes place, and one gets caught in the momentum of *kamma*. Instead, the Buddha brings this sense-base as quickly as possible to a much simpler state. Although described as simple, what takes place there is a going deep.</p>
+<p>The ordinary world says they live in that manner because living in the conventional world of daily life requires it. But what happens through that is that one keeps spinning on and on in *saṁsāra*. However, at some point, this understanding must be gained. It is for this reason that the Buddha advises us to apply attention (*manasikāra*) subtly and bring the mind to equanimity (*upekkhā*) as quickly as possible.</p>
+<p>So, in that manner, without even letting it proceed to perception (*saññā*), ultimately that feeling (*vedanā*), that experiencing... This feeling also has two sides. You all know them as pleasant and painful. In the middle of those two, there lies one called neither-painful-nor-pleasant (*adukkhamasukha*). The ordinary world does not even understand it, because it is of a nature that is not easily grasped by the mind. Regarding the neutral, there is mostly a lack of understanding. There is ignorance (*avijjā*) regarding neutral feeling (*vedanā*).</p>
+<p>That neutral feeling can be revealed and recognized bit by bit when practicing the establishments of mindfulness (*satipaṭṭhāna*). Applying mindfulness well to one's body, to feeling (*vedanā*), to the mind, and to the thoughts that enter the mind, living in the present moment and maintaining mindfulness (*sati*), behold, one understands: there is a thing called pleasant feeling (*vedanā*), there is painful feeling, and there is also a neutral, neither-painful-nor-pleasant feeling. It is in the middle of these, indeed, that we find the path to liberation (*vimutti*). That is the place for equanimity (*upekkhā*).</p>
+<p>Equanimity (*upekkhā*) means looking with neutral impartiality. That is an extremely difficult task. But the insight-practitioner (*vipassaka*), putting in effort, releases the mind from those two extremes of attraction and repulsion and watches how they come and go right there. Now, if you are waiting on the roadside and there is a vehicle you are expecting, you look at it with great interest. But if a vehicle goes by for which you have no particular liking or disliking, you see it coming, and you see it going. If it is nighttime, you see the headlights in front, and next, you see the taillights behind—that is all.</p>
+<p>Just like that, without grasping those strange signs, reflecting on those incoming objects right then and there to end them, the method of rapid reflection is what the Buddha points out as insight (*vipassanā*). As one goes on practicing in this way, at some point the realization dawns: "Behold, isn't this displaying a non-existent thing? Isn't this mind projecting a non-existent thing as if it exists?" That cannot be demonstrated to another; it is something one must directly experience (*pratyakṣa*) oneself, having traveled along that path of insight.</p>
+<p>So, that is exactly why the Buddha pointed out form as a lump of foam and so forth through those similes. Ultimately, this is an illusion, something displayed by a magician. Because if we take it as "I", we recognize the things of that world beyond it, give them names, and generate attraction and repulsion regarding them. That might be helpful for life in the conventional world. But it does not help in escaping from *saṁsāra*. It is not that. That is a subordination to the physical eye.</p>
+<p>If so, instead of that, the Buddha points out that one must gradually bring forth insight-wisdom (*vipassanā-paññā*). It is to that wisdom, as declared by the Buddha, that these five aggregates (*pañcakkhandha*) are understood as entirely suffering (*dukkha*). What is meant by saying the five aggregates are entirely suffering (*dukkha*)? A far broader meaning than what the ordinary world calls suffering is conveyed in this statement. One sees its impermanence (*aniccatā*). There is only a multitude of movements here. Wherever any of these is grasped, there is suffering (*dukkha*).</p>
+<p>Therefore, what is to be done here is to reflect on each and every thing as it comes, and firmly cultivate dispassion (*virāga*), non-attachment toward them. Going forward in that manner, ultimately, at some point, no matter which of these comes, a state that withstands them—an equanimity regarding preparations (*saṅkhārupekkhā*)—arises. Thus, seeing the three characteristics (*tilakkhaṇa*) as impermanent (*anicca*), suffering (*dukkha*), and unsubstantial (*anattā*), one must engage in attention (*manasikāra*) deeper and deeper.</p>
+<p>Truly, in everything, this is not the work done by that meditator who went to the edge of the pond in the story we told earlier; this is not a saying, but a seeing. A seeing with the eye of wisdom. Through that, wisdom having matured, at some point one sees in all of this...</p>
+<p>That is a state where, even though the eyes, ears, nose, etc., exist and one is wide awake, one is not caught by the objects perceived so far; a state where their emptiness (*suññatā*) is understood. That is what is called the cessation of becoming (*bhava-nirodha*). That is to say, in the ordinary world there is the continuation of becoming (*bhava*); the cessation of this continuation is shown by the Buddha in this very manner. That is something to be directly experienced through wisdom.</p>
+<p>So, if anyone has obtained that direct experience, they are a Stream-enterer (*Sotāpanna*), Once-returner (*Sakadāgāmi*), Non-returner (*Anāgāmi*), or at the highest, an Arahant. That very direct experience is what is called the concentration of the fruit of Arahantship (*arahattaphala-samādhi*) and so forth. In that concentration, that meditator can experience the liberation (*vimutti*) they have attained—liberation from *saṁsāra*. One can spend a considerable amount of time in the bliss of that liberation. That is what is called Nibbāna in this very life—*diṭṭheva dhamme*. Having attained Nibbāna in this very life means deeply understanding, through that wisdom, the voidness (*suññatā*) and emptiness of this world visible to us. The importance of that understanding truly emerges at the moment of death.</p>
+<p>You, pious devotees, have also heard about the signs that appear to a dying person, such as the sign of *kamma* (*kamma-nimitta*) and the sign of destiny (*gati-nimitta*). When the person struggling between life and death realizes that they can no longer hold onto this side, something else is presented to the mind: "Here, then, hold onto this." Driven by the momentum of past *kamma*, something comes forward according to *kamma*.</p>
+<p>What is meant by struggling between life and death in this life? One struggles to remain in this very world. But this body cannot withstand it. An occasion comes when one must leave this behind. Yet, due to the attachment to this, due to the attachment to the cage of this body, one struggles to remain right here because of that craving (*taṇhā*). Grasping (*upādāna*) means holding on. When the moment comes when one clearly understands that one has to let go, another sign appears to the mind. So, one grasps that.</p>
+<p>That might sometimes be the fires of hell (*apāya*). It might be the sign of the womb of an animal. But because of that desire for existence, that sign is tightly grasped by the mind. That is held as grasping (*upādāna*). Right there is becoming (*bhava*). Thus, nowadays many people do not talk about the cessation of becoming (*bhava-nirodha*), but about something called an intermediate existence (*antarābhava*). But in truth, our attention should be focused on that very cessation of becoming (*bhava-nirodha*).</p>
+<p>However, that cannot be thought out at that moment. As we said before, if one is a grandfather who has lived with attachment to children, wealth, and everything, and at the moment of death thinks, "I will gain a sudden understanding and bring this life to a state of non-arising," that will not work. One must directly experience (*pratyakṣa*) it through wisdom while still alive. To the person who has directly experienced it through wisdom, at the moment of death, that mind of Nibbāna arises effortlessly.</p>
+<p>The mind of Nibbāna is this cessation of becoming (*bhava-nirodha*). In short, the mind comes to the voidness, the emptiness of the continuation of becoming (*bhava*). The mind comes to voidness (*suññatā*). Then, there is no attraction or repulsion there. Such is indeed Nibbāna. Those who have understood it in this very life enjoy that bliss of Nibbāna in this very life by way of concentration (*samādhi*). Its ultimate, most valuable occasion is its spontaneous presentation at that moment of death we mentioned.</p>
+<p>In the language of the ordinary world, that Nibbāna is like dying without dying. Physically, one lives in this world. But with the mind, having understood the corelessness of this becoming (*bhava*), one lets go of these five aggregates (*pañcakkhandha*). One is holding onto the five aggregates with the mind. No one is holding onto the five aggregates with their physical hands. With what does one hold them? With the mind. One holds them as grasping (*upādāna*) because of craving (*taṇhā*). Where there is craving, there is grasping.</p>
+<p>Words like "the destruction of craving" (*taṇhā-nirodha*) are used to describe Nibbāna. When that craving is destroyed, if that lack of holding is directly experienced in this very life, then at the time when this body must truly be abandoned, such a state presents itself effortlessly. At that moment, it emerges spontaneously because it has been practiced beforehand, or because one has directly experienced it. Because of the most valuable direct experience obtained in life, it presents itself effortlessly. That is the state of the cessation of becoming (*bhava-nirodha*).</p>
+<p>It is mentioned that an Arahant sometimes passes away (*pariNibbāna by setting fire to their own body. A person might get frightened: "What is this? Alas, what a great suffering (*dukkha*) they endured!" Even you, pious devotees, sometimes throw an abandoned set of clothing into a fire to burn it. At that moment, you do not feel that you yourself are burning. Just like that, having abandoned these five aggregates from the mind itself, they set fire to it by entering into the attainment of the fire element (*tejo-dhātu-samāpatti*). This, indeed, cannot be understood by the ordinary world.</p>
+<p>In that manner, the highest liberation (*vimutti*) that can be achieved with the mind, the highest equanimity (*upekkhā*), is what is called Nibbāna. The journey toward that is what is spoken of in this practice in various ways as virtue (*sīla*), concentration (*samādhi*), wisdom (*paññā*), and as calm (*samatha*) and insight (*vipassanā*). If you, pious devotees, have understood that goal correctly, if you travel on that path correctly, if your perfections (*pāramī*) are fulfilled, if the effort you make is correct, and if you have the association of noble friends (*kalyāṇa-mitta*) correctly, it is still possible to directly experience these.</p>
+<p>We must apply our wisdom and contemplate both of these lessons shown in this story. In the world, there have always been two aspects called good and bad. There are two aspects called merit and demerit, wholesome (*kusala*) and unwholesome (*akusala*). What the Buddha did was make these understood. He introduced the dark side and the bright side. These members of the Saṅgha—the ordained ones—are those who come from the lay world itself. It is by developing certain virtues while in that lay world, and subsequently by their maturing, that they gradually enter the ordained life.</p>
+<p>Even if we contemplate lay life, virtues such as gratitude are important. Through them, gradually gaining a deep understanding of one's life, at some point, whether in the ordained life like Bahuputtikā Therī or in lay life, one must cultivate that equanimity (*upekkhā*). Cultivating equanimity, one must understand this nature—the nature of decay (*jarā*) and unsubstantiality (*anattā*)—which means that none of these can be kept under one's control. One must understand this.</p>
+<p>Using old age as an aid, as one loses attachment to this body, recognizing it as something that must be abandoned, something that one will have to abandon, one becomes able to directly experience through wisdom the state of destroying or letting go of that craving (*taṇhā*) which remained unappeased in this mind for so long. If at any moment one has abandoned these five aggregates (*pañcakkhandha*) from the mind itself, the bliss received at that moment is what we point to as the supremely peaceful bliss of Nibbāna—it is called "unfelt bliss" (*avedayita-sukha*). Every other pleasure obtained in the world in connection with feeling (*vedanā*) was pointed out by the Buddha as suffering (*dukkha*). That painful feeling is suffering (*dukkha*) needs no special explanation. That pleasant feeling is suffering is understood when it changes. Neutral feeling is not felt at all. The Buddha points out a vision of not grasping even a single one of these.</p>
+<p>For that, starting with the neutral feeling (*vedanā*) mentioned at the beginning, as one gradually goes deeper, at some point the corelessness and impermanence (*aniccatā*) of these are understood. There, within the six sense-bases (*saḷāyatana*), without letting them proceed to thoughts (*vitakka*) and so on, one sees them as quickly as possible at the minimal level. All of this occurs due to the collision between the two divided aspects: the eye and the form. Next, creating two aspects as the ear and the sound, all of this occurs due to their collision.</p>
+<p>Now, people play games by dividing into two sides. It is because the two sides are divided that the entire game exists. Just like that, one creates two sides: "this is the eye" and "this is the form." This can be understood from the story of the deer. Thus, thinking "this is the eye, this is the form," one runs after it. Thinking "this is the ear, this is the sound," next one goes after it. At some point, escaping from that kind of situation is what is called the stilling of preparations (*saṅkhāra-upasama*). The Buddha points out that these preparations (*saṅkhāra* / preparations) are indeed the greatest suffering (*dukkha*).</p>
+<p>There is an occasion when this very preparation taking place in the mind is deeply understood as suffering (*dukkha*). It is that cessation of preparations (*saṅkhāra-nirodha*) that the Buddha points out. If there is no such preparation, there is no aspect of their result (*vipāka*) either. It ends right there. Now, why are they called *kamma*-born preparations? It is because these *kamma* accumulated by us over a long period are what, moment by moment, through our consciousness (*viññāṇa*)... if one turns every single one of them to equanimity (*upekkhā*) and lets them go, they pass away without being grasped; right there is liberation (*vimutti*).</p>
+<p>So, there is an instruction in this verse necessary for traveling on this path of Dhamma, which says that living even a single day seeing that supreme Dhamma is enough. Even if one does not become a grandfather or a grandmother, it does not matter; if one lives even a single day and directly experiences (*pratyakṣa*) that, one must understand that as the truly valuable life. Thus, today, this pious group of people has undertaken virtue (*sīla*) to some level that supports this path, and it is by establishing yourselves in that virtue that you perform all of this. Next, you have also practiced meditation (*bhāvanā*) according to your capacity.</p>
+<p>Indeed, if there is a listener who listens with the attention (*manasikāra*) of meditation even during a Dhamma-hearing, one can even generate knowledges (*ñāṇa*) through that, if the power of one's perfections (*pāramī*) is present. In that very manner, you have listened to a Dhamma sermon that supports your life and supports this Nibbāna.</p>
+<p>If through this, any powers such as faith (*saddhā*), energy (*viriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*)—which assist Nibbāna as mental powers—have arisen, may this wholesome deed of hearing the Dhamma (*dhamma-savana-maya-kusala*), by relying on those powers and with the support of the association of noble friends (*kalyāṇa-mitta*), definitely be a supportive condition for this pious group to attain, as quickly as possible during this era of the decline of the Buddha's dispensation (*Buddha-sāsana*), before the dispensation declines, liberation from the dangerous suffering (*dukkha*) of *saṁsāra* including birth (*jāti*), decay/aging (*jarā*), sickness, and death (*maraṇa*) through the penetration of the paths and fruits (*magga-phala-paṭivedha*) of Stream-entry (*Sotāpanna*), Once-returning (*Sakadāgāmi*), Non-returning (*Anāgāmi*), and Arahantship, and to realize the supreme, deathless Great Nibbāna!</p>
+<p>Likewise, may whoever wishes to rejoice in this wholesome merit of delivering and hearing the Dhamma, including our relatives from the Avīci hell up to the Akaniṭṭha heaven, by rejoicing in it, realize the supreme, deathless Great Nibbāna as quickly as possible through their aspired Bodhi (awakening)! Wishing thus, please recite this verse.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_101.html" class="doc-btn">← Previous Sermon (101)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_103.html" class="doc-btn">Next Sermon (103) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

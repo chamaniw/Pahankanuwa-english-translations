@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 029 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_028.html" class="doc-btn">← Previous Sermon (028)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_030.html" class="doc-btn">Next Sermon (030) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 029</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_029_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_029_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_029_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #29</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No. )</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Uṭṭhānakālamhi anutthahāno, yuvā balī ālasiyaṁ upeto; Saṃsannasaṅkappamano kusīto, paññāya maggaṁ alaso na vindati.</p>
+<p>From:</p>
+<p>Verse 280 from the Maggavagga (Chapter on the Path) of the Dhammapada</p>
+<p>Dear Listeners,</p>
+<p>Our Teacher of the Three Worlds, the Blessed One, constantly reminds us that energetic striving (*uṭṭhāna-viriya*) is essential to make a life successful. Whether lay or ordained, He often censured a life spent lazily and sluggishly. He praised the value of ridding the mind of laziness, raising it up, and acting with wakefulness. Today, the verse we have taken as our theme, along with its corresponding story, highlights the danger of laziness as well as the value of energetic striving (*uṭṭhāna*).</p>
+<p>This Dhamma verse was delivered by the Buddha at Jetavana monastery concerning a certain monk named Tissa. Five hundred clansmen of Sāvatthī, having heard the Dhamma from the Buddha and gaining confidence, ordained in the Dispensation. Having ordained and completed the basic duties necessary for monks—since their main goal of ordination was the goal of Nibbāna—and in order to fulfill this, they took meditation subjects (*kammaṭṭhāna*) from the Buddha and departed to a remote forest area to meditate. While on the way, one monk thought, "This forest life is full of trouble. I should stay close to the Buddha," and turned back.</p>
+<p>Meanwhile, the other four hundred and ninety-nine monks went to a remote forest, meditated with great diligence throughout the rainy season, attained Arahantship, and returned to Jetavana monastery to declare their attainment to the Buddha. On their way, while walking for alms in a village about a league (*yojana*) away, a certain lay devotee offered alms to the group of monks. Having heard the sermon of appreciation, he became pleased and invited them, saying, "Venerables, please visit here tomorrow as well."</p>
+<p>So, these monks arrived at Jetavana in the evening. When they went to see and pay respects to the Buddha, the Buddha conversed with them very warmly in friendly welcome. This was seen by that lazy monk who had turned back. Seeing this, a feeling akin to jealousy arose in the lazy monk's mind: "Do you see? The Buddha converses with them without end. Since I do not possess any path-fruition (*magga-phala*), He does not even talk to me. Today itself, I will become an Arahant and act in such a way that the Buddha will converse with me in friendly welcome."</p>
+<p>Those monks also informed the Buddha, "We received such an invitation on our way. May we have permission to go for alms to that village tomorrow?" Having obtained permission, they departed to their dwellings. Thereupon, the aforementioned monk Tissa, intending to meditate intensely throughout the night, went to the walking path (*caṅkamana*). But as he was doing an unfamiliar task, in his sleepiness, he fell over a rock on the path and broke his thigh bone. As he wailed and screamed, those monks had to come, attend to this monk, and give him first aid. While doing so, dawn broke. The sun rose. Then these monks thought, "It is now too late to go for alms to that distant village," and thus canceled their journey.</p>
+<p>Later, when they went to pay respects to the Buddha, the Buddha asked, "Why, monks? Did you not say yesterday that you would go for alms? Why did you not go?" Then the monks explained, "We had such a complication. Our Venerable brother so-and-so went to meditate throughout the night, fell, and injured himself. While we were attending to him, dawn broke, and because of that, we could not go." Thereupon, the Buddha declared, "Indeed, monks, it is not only now; in the past too, because of this same individual, this group lost a certain benefit and opportunity that was to be received." And He related the relevant Jātaka story.</p>
+<p>In the past, the Bodhisatta was a world-renowned teacher (*Disāpāmokkha Ācariya*) in the city of Takkasilā. He had a group of five hundred pupils. One day, this group of pupils went to the forest to gather firewood. Among them was a certain lazy young man. Seeing a *Varuṇa* (garlic pear) tree at the entrance of the forest, he thought: "Why should I enter this forest? I have already found a firewood tree right here, haven't I? I can sleep for a while until this group goes into the forest, gathers wood, and returns." So, spreading his upper robe under the tree, he fell asleep. When the other four hundred and ninety-nine students returned with their bundles of firewood, that young man was snoring away in deep sleep. So, waking him up, the other young men went ahead to the hermitage.</p>
+<p>Thereupon, rubbing his eyes in a hurry, the young man climbed the *Varuṇa* tree, and as he was breaking a branch, it struck his eye, injuring it. Covering his injured eye, he gathered those green, wet *Varuṇa* sticks, carried them like a bundle of firewood, and threw them on top of the firewood pile brought by the others in the kitchen. Meanwhile, the world-renowned teacher said to his pupils: "Today I received an invitation from such-and-such village. People from a somewhat distant village are coming to have a protective ritual performed and hope to give a donation. Therefore, go there early tomorrow morning and bring my share back as well." (By 'share' he meant the requisites, etc., received). Since it was difficult to set out on an empty stomach in the morning, he told them to cook some gruel, eat, and then depart.</p>
+<p>Early in the morning, these pupils woke up the maidservant and asked her to cook gruel for them. The maidservant took the *Varuṇa* wood, which was at the very top of the woodpile, put it in the hearth, and blew and blew. But the hearth would not light (since the wood was wet). In this manner, time passed until finally dawn broke. Thus, thinking, "Now it is too late," they canceled the planned journey. When they went to the teacher, and he asked, "Why? Did you not go?" they explained the matter. "Our friend, this young man, went to gather firewood, and due to his laziness, made such a mess. Ultimately, as a result of that, we could not go," they told the story. At that point, the Bodhisatta, who was the world-renowned teacher, recited a verse:</p>
+<p>> *Yo pubbe karaṇīyāni,*</p>
+<p>> *pacchā so kātum icchati;*</p>
+<p>> *varuṇakaṭṭhabhañjo va,*</p>
+<p>> *sa pi pacchā manutappati.*</p>
+<p>></p>
+<p>> (He who wishes to do later what should have been done beforehand, repents later, just like the youth who broke the *Varuṇa* wood.)</p>
+<p>"If someone wishes to do later what should be done beforehand, that person will experience regret, just like this young man who went to break *Varuṇa* branches."</p>
+<p>Having related this account, the Buddha declared: "At that time, I was the teacher. Those five hundred monks were that group of pupils. And Tissa Bhikkhu was the very young man who slept under the *Varuṇa* tree." Having related this story, He then recited the verse we mentioned earlier, applying it to the present situation:</p>
+<p>> *Uṭṭhānakālamhi anutthahāno, yuvā balī ālasyaṃ upeto;*</p>
+<p>> *saṃsannasaṅkappamano kusīto, paññāya maggaṃ alaso na vindati.*</p>
+<p>"The meaning of that verse is: One who does not exert himself when it is time to rise, who, though young and strong, is full of sloth, whose thoughts are depressed, who is lazy and sluggish—such a person does not find the path of wisdom (*paññā*)."</p>
+<p>We have now told two stories. Let us now convey the essence of these stories in a way that the little lay devotees here can understand.</p>
+<p>There was a Hare and a Tortoise who were friends. One day, the Hare says to the Tortoise, "Friend, let's run a race." The Tortoise also said, "Alright." So, they said, "That *Ahala* (golden shower tree) post visible in the distance is the winning post. Let's start from near this tree. Ready? One... two... three..." The Tortoise set off in a scramble. Without even looking back, he ran and ran with great effort on his short, little legs. Having run all the way to the *Ahala* post, when he turned back and looked, the Hare was fast asleep. Why? The Hare had thought, "By the time that Tortoise gets there, I can reach it in a bound or two." So the Hare slept. There are stories like that as well.</p>
+<p>From this, we can reflect: what was the primary purpose of ordination for those four hundred and ninety-nine monks out of the group? They ordained to put an end to all *Dukkha* (Suffering), didn't they? To realize Nibbāna, didn't they? Giving priority to that, they departed to the forest for meditation, difficult though it was. For the Buddha has declared: "Monks, newly ordained novice monks in this Dispensation should be directed to practice the four foundations of mindfulness (*satipaṭṭhāna*). They should be instructed in this." In this manner, the Buddha declared on one occasion.</p>
+<p>According to this, it is clear that the four foundations of mindfulness (*satipaṭṭhāna*) is the training that should be given to newly ordained monks. Thus, taking a meditation subject (*kammaṭṭhāna*) directly related to the four foundations of mindfulness (*satipaṭṭhāna*) from the Buddha, those monks set off to develop those very four foundations of mindfulness (*satipaṭṭhāna*). Yet, perhaps Tissa Bhikkhu thought: "There is no point in entering the forest like this group. The Buddha is right here. I can become an Arahant whenever I feel like it." Thinking thus, attempting to achieve in a single night what those other monks accomplished in three months, he fell and broke his hip bone. That is what happened there.</p>
+<p>It is the same with the other story, the Jātaka tale. The lazy youth thought: "There is no need to exhaust myself by going into the forest to chop wood. I have found a firewood tree right here. When they return, I can wake up. Then I can climb the tree and get my work done." Thinking so, he slept. And that was the consequence of his actions.</p>
+<p>Thus, we can understand that when one abandons energetic striving (*uṭṭhāna-viriya*) and gives way to sluggishness and laziness... there is a saying, isn't there, "the lazy person has divine eyes" (meaning they make excuses or project things)? Procrastination... negligence (*pamāda*). These are the traits of a lazy person. "It is raining today; I can't. It is too hot today; I can't." That is the nature of a lazy person. Indeed, there is an excuse for everything. If one presents some excuse and gives pride of place to laziness, all three stories show us that one will only end up in regret. Therefore, let us now reflect a bit more on the important words found in this verse.</p>
+<p>We spoke about energetic striving (*uṭṭhāna-viriya*). Now, this verse mentions a time. When we speak of the "time to rise" (*uṭṭhānakāla*), and when we consider a day, what is that time? What is the waking hour? In ancient times, that waking hour was known as the *Brahma-muhūrta*—waking at the "sublime hour." Before dawn, at the break of day. Now, monks are instructed to wake up even before dawn. Waking up in the early hours of the morning should be a valuable principle in one's life. For since ancient times, it has been said that tasks undertaken by rising at the *Brahma-muhūrta*, the sublime hour, become successful. Things studied and memorized are well-retained. Therefore, it is a precious opportunity, like an auspicious moment. In contrast, the Buddha described *ussūraseyyā*—sleeping until the sun rises. That is an extremely lazy practice. The Buddha has pointed out its dangers on many occasions. One must wake up before dawn.</p>
+<p>Whether lay or ordained... Now, you lay devotees have often heard about the lay life. An occasion where the Buddha pointed out various factors for securing well-being and happiness in this life for a layperson is in the *Vyagghapajja Sutta* to Dīghajāṇu, the son of the Koliyans. What is the first of those factors? Accomplishment in energetic striving (*uṭṭhāna-sampadā*). That means performing one's livelihood skillfully, diligently, and on time, without procrastinating. That is regarding the lay life. Next, not only that, it is also mentioned in the *Parābhava Sutta*, which outlines the causes of ruin, the causes of decline. One who is fond of sleep (*niddāsīlī*), one who does not rise at the proper time (*anuṭṭhātā*), the lazy one (*alaso*)—it is expressed through such words that such a person meets with ruin. In this way, the Buddha has pointed out the dangers of laziness and sloth in many places.</p>
+<p>It has been laid down especially for the monks. Now, lay devotees might sometimes think: "We are the ones who have work. As for the monks, they just consume the alms they receive and spend the day lazily in solitude." That is the common conception. However, the Buddha has instructed the monks that they must rise even before laypeople do—even before dawn. Not only that, there is a special discourse called the *Uṭṭhāna Sutta*. When one recites this sutta, even a sleeping person gains the energy to wake up. When reading it, one imagines the Buddha taking a torch of that era, going up to the sleeping monks, and saying: "Arise!"</p>
+<p>> *Uṭṭhahatha nisīdatha,*</p>
+<p>> *ko attho supitena vo;*</p>
+<p>> *āturānañhi kā niddā,*</p>
+<p>> *sallaviddhāna ruppataṃ.*</p>
+<p>It is spoken in this manner: "Arise, sit up! What need have you of sleep? For those who are afflicted, pierced by the dart of *Taṇhā* (Craving) and suffering, what sleep can there be?" In this way, the Buddha rouses the monks. There are several such verses, and they are highly energetic.</p>
+<p>They are spoken to awaken the monks. For to practicing monks (*yogāvacara*), sleep is a major obstacle. In *saṃsāra* (the round of rebirths), what we have done most is sleep. Dogs, donkeys, cattle, sleep for most of the day. In the animal realm, the general habit is to sleep most of the time. That habit manifests in us even in this human life. To break that habit, on many occasions, the Buddha pointed out the dangers of sluggishness, showed its causes, and constantly urged us to make an effort to overcome them.</p>
+<p>In one place, the causes that lead to laziness and sleep—or let us say, the causes for the reduction of energetic striving (*uṭṭhāna-viriya*)—are shown:</p>
+<p>> *Middhaṃ tandi vijambhika,*</p>
+<p>> *arati bhattasammado;*</p>
+<p>> *etehi na ppakāsati,*</p>
+<p>> *maggo ariyo ihāṇinaṃ.*</p>
+<p>This means that beings cannot fulfill the Noble Path, which conduces to wisdom, because of these very factors: sloth (*middha*), laziness (*tandi*), stretching and yawning (*vijambhikā*)... Next, *arati* means discontent or lack of delight in the practice of the Dispensation, and *bhattasammada* means food-torpor ("rice-drunk"). Food-torpor means that if one eats excessively, one has to lie down and sleep like a pig.</p>
+<p>You lay devotees must have heard the story of King Kosala. Whether lay or ordained, consuming food beyond moderation can cause laziness. Especially for the monks, the Buddha has advised that no matter how much almsfood is available, and no matter how much the donors wish to serve, they should stop eating when there are still four or five mouthfuls of rice left, and fill the remaining space with water. That is a specific practice laid down for meditators (*yogāvacara*). Its meaning is to eat with moderation—not to eat excessively up to the limit of one's throat, but to stop a few mouthfuls short and drink water for the rest. In this way, the Buddha has shown a method to eliminate the food-torpor called *bhattasammada* for those who wish to sustain energetic striving.</p>
+<p>The dangers of laziness are shown in many other instances as well. In one simile, the Buddha even shows the danger of associating with lazy people. In that simile, it is as follows: suppose a person falls into the great ocean. Hoping to be saved, this person clings to a small plank of wood, a tiny piece of wood. Just as that small piece of wood sinks in the great ocean along with the man clinging to it, so is the association with a lazy person. In the same way, one also sinks along with them. Therefore, do not associate with the lazy; avoid them. Instead, associate only with those who possess initiated energy (*āraddha-viriya*), with virtuous friends (*sappurisa*). It is shown in this manner too.</p>
+<p>The Buddha highlights mindfulness (*sati*) and diligence (*appamāda*) in various ways during this rare human life and opportunity. As the saying goes, *khaṇakicco loko*—the world is bound by duties tied to the moment. This world is a place where tasks must be done on time. While laypeople think of "doing things on time" only in terms of lay affairs, when we think of the Dispensation, if we do not act in a timely manner, we will have to regret it. Since ancient times, it has been said that we have obtained this opportunity of the moment (*khaṇa-sampatti*) which is free from the eight unfortunate states. This is said in various ways. Everyone has heard this, but in addition to that, what we have to say now is to consider this as the "very last drop of oil" in the lamp of the Dispensation. I must tell you devotees that only the last drop of oil remains in this lamp of the Dispensation. If we do not make use of this last drop of oil, what lies ahead is an era of great upheaval and great darkness. A dark age is coming. If we do not make use of that final drop of oil before that, we will have to regret, just like Tissa Bhikkhu, like that young man, and like that hare.</p>
+<p>It is so. The truth of the matter is that sleepiness affects everyone. To what extent? It presented itself as a powerful obstacle even to the Great Arahant Moggallāna. His past karma was powerful. You have heard, haven't you, that there were past deeds like killing parents, etc.? It was with great difficulty, not as easily as Ven. Sāriputta, that he attained the goal. Yet, so highly developed was his strength of perfections (*pāramī*) that the Buddha constantly monitored Ven. Moggallāna. He monitored him from afar. Why? Because he was one to be entrusted with a grave responsibility in the Dispensation. According to his aspiration (*patthanā*), he was to become a chief disciple. Not only that, he was worthy of the foremost position among those of psychic power. Therefore, in accordance with those qualifications, the Buddha trained this disciple, monitoring him from afar.</p>
+<p>Such an occasion is mentioned as follows: Ven. Moggallāna was meditating in a forest in a certain village of the Magadha country. The Buddha, staying in the Bhesakalā forest of the Bhangga country, was observing with His divine eye (*dibba-cakkhu*) how this disciple was meditating. Ven. Moggallāna was nodding in sleep. The moment He saw this, just as a strong man might stretch out his bent arm or bend his outstretched arm, the Buddha, by psychic power, appeared right there. When Ven. Moggallāna prepared a seat and the Buddha sat upon it, the Buddha asked: "Moggallāna, are you nodding?" "Yes, Venerable Sir," he replied.</p>
+<p>"Well then, Moggallāna, I will tell you some remedies. Try these out." Now, you devotees often hear about sleeping pills. These are not sleeping pills; these are "waking pills." The Buddha here gives Ven. Moggallāna seven waking pills. Listen to them one by one. Try to remember them, especially the meditating devotees (*yogāvacara*). Even for others, by trying out at least a few of these steps practically, you can understand the value of the Buddha's cognitive vision. The Buddha shows seven marvelous steps, such that even modern psychiatrists can study them and think deeply about them.</p>
+<p>The first step is this: "If, at the time sleepiness approaches, there was a certain thought or a certain perception (*saññā*), do not direct your mind to that perception. Do not think much about that perception." That is the first step. What is demonstrated there is the application of mindfulness and clear comprehension, the application of attention. "What am I thinking about? It is because of this very thought that sleepiness came upon me." Thus, one removes it. When one does so, sleepiness might go away. Sleepiness might go away, but sometimes it might not. If the sleepiness is so powerful, then comes the second step. Just as doctors say, "If this doesn't work, take the next pill," in the same way, He gives the second pill. What is it?</p>
+<p>"In that case, Moggallāna, direct your mind to the Dhamma you have learned and heard. Maintain your mind upon it in the form of thought-conception (*vitakka*)." Why? You can engage the mind. When thoughts flow, they break through the sleepiness. Therefore, direct your mind to a certain portion of the Dhamma. Thereby, sleepiness might go away. It might go away, or it might not. If it does not go, He gives the third pill. What is the third pill?</p>
+<p>Recite that portion of the Dhamma aloud. What is the idea there? Reciting means saying it out loud. The ears also wake up. When listening to one's own voice, the mind awakens. Here is the third psychological method to awaken the mind. Even if you are in a forest, it does not matter. Recite aloud a portion of a verse or something. Recite it. Then sleepiness might go away, or it might not. If it does not go away, then the fourth step is given. As for this step, since children nowadays do not receive it in school, they must try to do it themselves. What is it?</p>
+<p>"In that case, Moggallāna, pull both earlobes with your hands." In the past, when the teacher pulled the earlobe until it became warm, the answer to the math problem would come, wouldn't it? Nowadays, teachers cannot do those things. Therefore, children must pull their own ears. Then they wake up, and the ears become warm. This is not said in jest. There is a deep meaning here. Two actions are shown there: "Pull both ears, Moggallāna, and rub your limbs and body with your palms." That means warming up the body. When pulling the ears, that part also gets warm. Next, one rubs the body with the palms. Thereupon, sleepiness might go away. It might go away, or it might not. If sleepiness does not go away even with that, then He gives the fifth pill. What does He say?</p>
+<p>"In that case, Moggallāna, rise from your seat, go and splash some water on your face." Next, along with that, there are a few more instructions. Splash water on the face. Now, one tries to awaken the eyes to make the sleepiness go away. Everyone knows about splashing water on the face. In addition, it is stated: "If it is daytime, look into the distance. Look towards a distant direction." This is an exercise for the eyes. Open wide the eyes that are closing due to sleepiness, and look into the distance. If it is nighttime, look at the stars in the sky. Through this, one gives an exercise to the eyes. Then sleepiness will go away. If sleepiness still does not go away, He next says—He states something special there, like a meditation:</p>
+<p>"In that case, Moggallāna, attend to the perception of light (*āloka-saññā*)." Most people probably have not even heard of this "perception of light." It is a certain technique shown by the Buddha to make the mind alert. Let us say during the daytime, when there is bright sunlight, one looks out of a window or an opening for a short while and takes the perception of light into the mind. "At such-and-such time, I was looking like this." Then, that perception of light—whether round or square—impresses itself well upon the mind. At night, one can take this perception even from a lamp. Having deposited this perception of light in the mind, one recalls it at that moment. When sleepiness comes, by directing the mind to that perception of light, the mind becomes alert. It is an extremely subtle method.</p>
+<p>This perception of light is so deep that in some places it is described as a concentration meditation (*samādhi-bhāvanā*) that helps bring about knowledge and vision (*ñāṇa-dassana*). If one develops that perception of light in the correct manner, it is described thus:</p>
+<p>> *Yathā divā tathā rattiṃ,*</p>
+<p>> *yathā rattiṃ tathā divā.*</p>
+<p>The night becomes just like the day, and the day is like the night. It is as if one can see through the darkness of night. Although it is completely dark, to the practicing meditator (*yogāvacara*), it is as if seeing with open eyes; there is no sleepiness... not even a trace of sleepiness in the vicinity. It is alert to that extent. How alert? To the extent of seeing through the darkness. This is a very powerful wakefulness. It is stated there: "Just as the day is, so is the night; just as the night is, so is the day." To that, further words are applied:</p>
+<p>> *Vivaṭena cetasā apariyonaddhena sappabhāsaṃ cittaṃ bhāveti.*</p>
+<p>"With an open mind... a mind that is open and free from clutter, a luminous mind. That word is extremely valuable: *sappabhāsaṃ cittaṃ*—'Develop a luminous mind, Moggallāna.'" That is the sixth step. If, even after doing so, sleepiness still persists, then He gives the seventh step:</p>
+<p>"In that case, Moggallāna, go to the walking path." Here, He gives permission to change postures. "Go to the walking path." And what is to be done upon going to the walking path? That too is explained in a few marvelous words. Some explain this in various ways today. Let us state how we understand it. Having gone to the walking path, the words *pacchāpure-saññī* are used. Make a determination to walk with the "perception of behind and before." Although the "perception of behind and before" is explained in various ways, as it occurs to us: in walking, there are two feet—the front foot and the back foot. That "perception of behind and before" means directing the mind to the foot that is behind and to the foot that one intends to place in front. That is all the mind is directed to. In that way, the mind is well-maintained without letting it wander outside. Not only that, further words are used: *antogatehi indriyehi*—"with the senses turned inward." This does not mean looking around, looking at animals, just because one has gone to the walking path. It means turning the senses inward, walking with full attention. *Abahigatena mānasena*—"without letting the mind go outside, without it being scattered externally."</p>
+<p>> "Walk with the perception of behind and before, with the senses turned inward, and with a mind that has not gone outside."</p>
+<p>So, that is the seventh step. In this way, seven steps were given. Seven pills were given. Let us assume that even after giving these seven pills, sleepiness still comes intensely. The Buddha gave a remedy even for that:</p>
+<p>"In that case, Moggallāna, mindful and clearly comprehending (*sati-sampajañña*), lie down in the lion's posture (*sīha-seyyā*)." This does not mean just going and collapsing on one's side. You devotees know what the lion's posture is. When you look at a reclining statue of the Buddha, you can see how He lies down: the head rests on the right palm, and the left foot is placed over the right foot. It is an extremely calm posture. That is what is prescribed for the monks, for the meditators (*yogāvacara*): to lie down on the right side in the lion's posture. Thus, the Buddha says to Ven. Moggallāna: "In that case, Moggallāna, if these pills do not work, I give you permission to sleep." Yet, even that must be done in a specific way. There are many rules for that as well: lying down with mindfulness and clear comprehension in the lion's posture, with one foot over the other, but not just mindlessly. *Uṭṭhānasaññaṃ manasikaritvā*—"having established the perception of rising in the mind."</p>
+<p>Nowadays, people sleep after setting an alarm clock. But when it rings, they turn it off without even realizing it. In those days, there were no such things. By some method, they would impress upon the mind: "I will rise before dawn," or "I will rise when the rooster crows"—there must have been some such perception in those days as well. In any case, go to sleep keeping the perception of rising as the very last thought. Next, the result of that is shown. It does not stop there. "Moggallāna, after rising..." Within what we call "rising," two things occur. We easily say "waking up in the morning." But it is the meditators (*yogāvacara*) who experience it truly. First, the mind awakens. It is only after the mind awakens that the eyes open. Now, what was placed in the mind last? The thought: "As soon as the mind awakens, I must rise." That is the value of lying down with the perception of rising (*uṭṭhānasaññā*).</p>
+<p>Thus, as soon as the mind awakens, He next says: "Moggallāna, as soon as you awaken, do not remain rolling around in bed." The words *seyyāsukhaṃ middhasukhaṃ*—the pleasure of lying down, the pleasure of torpor—are used. Without clinging to the side or to the contact of the bed, without rolling this way and that, without groaning in sleepiness and turning from side to side, one must rise immediately. One must rise immediately. It was with so many factors and with such a specific set of instructions that the Buddha gave permission even for sleep. It was by following that observation and practicing those instructions that Ven. Moggallāna ultimately stood before us as a chief disciple. To that extent is sleepiness, which is called *thīna-middha* (sloth and torpor).</p>
+<p>Now, regarding this, you devotees must have heard that there are five hindering dhammas called *nīvaraṇa* (hindrances) which obstruct both our concentration (*samādhi*) and wisdom (*paññā*). *Nīvaraṇa* means a nature that covers or blocks. There are five factors that act as obstacles both to our mind's one-pointedness and to the vision of wisdom (*paññā*). They are identified by the Pāli words: *kāmacchanda*, *vyāpāda*, *thīna-middha*, *uddhacca-kukkucca*, and *vicikicchā*. They are: sensual thoughts, thoughts of ill-will, sleepiness, laziness—which constitute *thīna-middha*. Here is our theme: through the body, the body shrinks back and is not eager to work. The mind is the same: there is inactivity of the mind; the mind is highly sluggish, inclined to sleep. These two are what is called *thīna-middha*. Those two go together: the inactivity of both body and mind. The others are: *uddhacca-kukkucca*, which is restlessness and remorse, and *vicikicchā*, which is doubt. These are the five hindrances (*nīvaraṇa*).</p>
+<p>Our discourse is about the third one. This hindrance of *thīna-middha* is an obstacle especially for monks and those devoted to meditation. It is to conquer this that the Buddha has shown various techniques, just as He did here for Ven. Moggallāna, to break through sleepiness. For if one succumbs to sleepiness as soon as it arrives, that opportunity is lost. If one goes and collapses on one's side the moment the eyes begin to close, one can never realize Nibbāna. That is why the Buddha, having utilized all seven "pills," gave permission to lie down only when they failed. So marvelous is this Dispensation!</p>
+<p>If the life of monks is conceived of as consuming alms, eating even beyond moderation, and rolling around in sleep—which is what some think lazy monks do—the true monk's life is the one disciplined according to that very battle cry of the Buddha in the *Uṭṭhāna Sutta*: "Arise! Sit up!" That is the valuable life. It is by doing so that one can escape from *saṃsāra*. It is how one can take advantage of the opportunity of the moment (*khaṇa-sampatti*). If one does not do so, what happens? The opportunity slips away, and like the aforementioned Monk Tissa, like that young man, and like that hare, one has to regret not doing what should have been done at the proper time. So it is, clearly. Thus, conquering the hindrance of *thīna-middha* helps everyone, whether lay or ordained, to elevate themselves and live.</p>
+<p>Next, let us now consider: just like this hindrance of *thīna-middha*, as we declared at the very beginning regarding the task of ordination, even according to the formula of ordination, the goal is to bring an end to this *Dukkha* (Suffering) of *saṃsāra*. For that task, He instructed us to engage in the four foundations of mindfulness (*satipaṭṭhāna*). Not only that, at the time of His passing (*pariNibbāna, the Buddha showed the way to protect this Dispensation. Just like the discussion today on "How do we protect this Dispensation?" we hear that there are various kinds of dangers. So, everyone's talk now is about protecting this Dispensation.</p>
+<p>The Buddha also had reflected on this. At the time of His *parinibbāna*, He reflected and declared in this manner:</p>
+<p>"Monks, what are those dhammas that I have declared having known them with direct knowledge? What are those dhammas? The four foundations of mindfulness (*satipaṭṭhāna*), the four right endeavors (*sammappadhāna*), the four bases of psychic power (*iddhipāda*), the five spiritual faculties (*indriya*), the five spiritual powers (*bala*), the seven factors of enlightenment (*bojjhaṅga*), and the Noble Eightfold Path (*ariya-aṭṭhaṅgika-magga*)."</p>
+<p>"It is in these thirty-seven factors of enlightenment (*bodhipakkhiya-dhamma*), monks, that you must engage. They must be practiced, they must be developed frequently. For what purpose? For the long-lasting existence of this Buddha-Dispensation." Therefore, for the long-lasting existence of the Buddha-Dispensation, the method shown by the Buddha is the training in these thirty-seven factors of enlightenment (*bodhipakkhiya-dhamma*).</p>
+<p>Although this is said, perhaps no one will accept it. However, because the Dispensation intended by the Buddha is a Dispensation of virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*), it is not something that exists externally elsewhere to be exhibited, shown to foreigners, or shouted about with pride. It is this group of qualities to be developed within one's own mind. If at any moment this is lost, the Buddha-Dispensation is not there.</p>
+<p>Think of a relic casket. Thinking that the wood of the existing casket is not good enough, one might place it in a sandalwood casket. Over that casket, another might place a silver casket. Yet another might place a gold casket. Another might encrust it with gems. Having done all this, let us assume that a relic exhibition is held, and when a large crowd gathers and the casket is opened on that day, the relics are not there. They have disappeared. They have disappeared. Yet that casket remains beautiful. Thereupon, people will say, "Alas, there are no relics in the casket!" and walk away. A similar thing can happen to this Dispensation if we do not develop within our minds those very qualities that the Buddha, at the time of His passing, knew with His Buddha-wisdom.</p>
+<p>Thus, no matter how much noise we make, if we expect the long-lasting existence of the Dispensation—the very word *ciratthitiya* is used—one must develop those mentioned qualities. And that must be done in a timely manner. That is why we said that the very last drop of oil in the lamp of the Dispensation is burning now. If you do not make your lives successful by the light of that drop of oil, you must understand that next, you will have to face an age of great darkness.</p>
+<p>So now, you lay devotees must reflect: the mind can become weak. It is while carrying all these duties, children's affairs, lawsuits, and illnesses that many of you came here today and observed the precepts. It is extremely difficult. This journey leading to Nibbāna is a difficult task. Yet, yet, like that tortoise, one must tread this path without looking back. In the end, in that race, even if no one else follows, one's peace depends entirely on how close one gets to the winning post.</p>
+<p>Otherwise, no matter what wealth, titles, power, degrees, or honors one has accumulated, when Māra (Death) comes and knocks on the door, one's eyes close to the world with absolute zero. "Alas, is all this empty? I did all this, but I did not do what was truly to be done! During this extremely rare period of a Buddha's appearance, having obtained a highly precious human birth, I did not benefit from the opportunity to put an end to the *Dukkha* (Suffering) of *saṃsāra*, did I? I procrastinated, didn't I? I had that young and strong energy in the body. I had the strength, I was young. Yet, during that time, I was busy doing other things. I postponed it, thinking: 'I can do this whenever I want. I know everything. I even know the entire Tripitaka.' If one remains procrastinating in this way, one falls into that very regret of not doing what was to be done at the proper time.</p>
+<p>*Khaṇakicco loko*—as for laypeople, they think of the 'world' as lay life and lay work, and the world is a place where things must be done on time. It is so in this country as well. Especially in those countries called "developed," you devotees must have heard—if you do not board a vehicle on time, that opportunity is lost. Thus, running and running, there are even people to push you inside the vehicle. To such an extent is the concept of "time" in lay life that they are terrified of missing the time. One must arrive at the workplace on time. There is such a huge pile of duties. If the time is missed, everything is ruined. Such is the layperson's concept.</p>
+<p>In the ordained life, that concept is often weak. One sleeps like the hare. 'We can do this someday. By the time that tortoise crawls here, we can easily do it.' We postpone. And there are excuses to postpone. Yet, whatever those excuses may be, when Māra comes and knocks on the door, one realizes, just like Monk Tissa: "We did not do what was to be done on time, did we? Such a valuable opportunity, a journey started with such a valuable noble purpose—has it become empty?"</p>
+<p>Therefore, whether anyone else comes or not, without looking back, you devotees must try to get closer to the winning post, even if by that tortoise-pace. If we miss this moment too, we have nothing to say about the dark age that follows. How it will be, or where it will end—the world situation is that dangerous.</p>
+<p>Now, of help to this very effort are the thirty-seven factors of enlightenment (*bodhipakkhiya-dhamma*), of which we just mentioned only the names. Today, many do not even know what they are. When asked, "What is the Buddha-Dhamma? What did the Buddha preach?" they immediately start listing a long string of book names from the bookshelves—the Nikāya texts, this and that. They recite a list. But they do not know what the Dhamma actually preached by the Buddha is.</p>
+<p>Yet the Buddha Himself, at the time of His passing (*pariNibbāna, declared: "I have preached only this much. I have preached only these thirty-seven factors of enlightenment (*bodhipakkhiya-dhamma*)." Therefore, that is what we must bring to the fore. They are not things merely to be spoken about. They are practical things. What is called the four foundations of mindfulness (*satipaṭṭhāna*) is something to be practiced. What is called the four right endeavors (*sammappadhāna*) is something to be developed within oneself. It is so with every one of them. They must be directly experienced. No matter how many carpentry tools there are, if there is no one who knows carpentry to teach, or if there is no one with practical experience, that carpenter's workshop is of no use. It is the same with these mentioned dhammas. If one does not develop them, one cannot provide the association of a virtuous friend (*kalyāṇa-mitta*) to another. One will not have the strength to say, "This must be done at this moment." The Dispensation consisting of virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*) ends right there.</p>
+<p>So, to put it briefly, the four foundations of mindfulness (*satipaṭṭhāna*) is indeed the primary training. In fact, if we call the battle against defilements (*kilesa*) a battle against Māra, or if we call the effort made for Nibbāna in this Dispensation a war against Māra, there is nothing wrong in thinking that the practicing soldier (*yogāvacara*) receives his basic training on the battleground of the four foundations of mindfulness (*satipaṭṭhāna*).</p>
+<p>Within that lies mindfulness and clear comprehension (*sati-sampajañña*), which means mindfulness and proper wisdom, or awareness. With mindfulness and awareness regarding the body—one's own body and the bodies of others—regarding feelings and sensations (*vedanā*), regarding the mind, and regarding the thoughts that arise in the mind—that is what is meant by the four foundations of mindfulness (*satipaṭṭhāna*). Thus, as one observes them just as they arise, applying mindfulness and wisdom, one sees both their arising and passing away. It becomes directly realized that there is no self (*attā*) here. No matter how much one shouts, saying, "This is *Anattā* (Not-self), this is *anattā*," that mere saying is not insight (*vipassanā*). As we have said on a previous occasion, insight (*vipassanā*) is a seeing, not a saying. If it is a seeing, one must engage in it. When engaging in it, one sees: "Alas, is form (*rūpa*) such a thing? Is feeling/sensation (*vedanā*) such a thing? Is this form like a lump of foam? Is feeling/sensation (*vedanā*) like a water bubble? Is perception (*saññā*) like a mirage? Are formations (*saṅkhāra*) like a banana trunk? Is consciousness (*viññāṇa*) like an illusion?" These similes beautifully spoken by the Buddha are not poetic metaphors. These are true things understood by the meditator (*yogāvacara*). They come as direct realizations. These are not just beautiful similes told by the Buddha. Every single one of them is highly meaningful.</p>
+<p>The Buddha also said that the more deeply one reflects on them, the more this True Dhamma (*saddhamma*) is realized. This form is a lump of foam; feeling/sensation (*vedanā*) is a water bubble. This is understood when one observes that body and those feelings/sensations with a concentrated mind (*samādhi*), applying the aforementioned mindfulness and clear comprehension. What was previously grasped through the solid perception (*ghana-saññā*) as 'I' and 'mine' begins to be seen as a series of arisings and passings away. It is through these arisings and passings away that this insight-wisdom (*vipassanā-paññā*) matures. Along with that, concentration (*samādhi*) also grows.</p>
+<p>It is when one carries this out that it is called the right endeavors (*sammappadhāna*). Since we have analyzed these in detail on many occasions, we cannot say everything in this brief moment. To put it briefly, on the battleground of the four foundations of mindfulness (*satipaṭṭhāna*), the meditator (*yogāvacara*) enters with his weapon. Having made his meditation subject (*kammaṭṭhāna*) his weapon, it is through that weapon that he receives this training. Through wielding that weapon, next come the four right endeavors (*sammappadhāna*):</p>
+<p>*   For the non-arising of unarisen defilements,</p>
+<p>*   For the discarding of arisen defilements,</p>
+<p>*   For the bringing forth of unarisen wholesome states,</p>
+<p>*   For the preservation of arisen wholesome states.</p>
+<p>This is what is called the four right endeavors (*sammappadhāna*).</p>
+<p>While this is being done, there are the four bases of psychic power (*iddhipāda*) present within oneself: *chanda* (desire/zeal), *viriya* (energy), *citta* (mind/determination), and *vīmaṃsā* (investigation). Do not misunderstand this word *chanda*. This is not the contemporary meaning (like political votes); in the Dispensation, it refers to wholesome desire (*kusala-chanda*) used to realize Nibbāna—this must be specifically mentioned. So: *chanda*, *citta*, *viriya*, and *vīmaṃsā*. That *chanda* is the powerful desire within oneself to escape from this *saṃsāra*. That is the desire (*chanda*) here. Next, the energy (*viriya*) applied in accordance with that. Next, *citta* is the power of determination for it. *Vīmaṃsā* is the wisdom, the investigating intellect, required for it. One gains an understanding of these four bases of psychic power (*iddhipāda*).</p>
+<p>Through these, next, five spiritual faculties (*indriya*) of a unique kind, which were not present within oneself before, emerge: faith (*saddhā*), energy (*viriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*). The meditator (*yogāvacara*), shutting out those five external physical senses, brings forth these five spiritual faculties (*indriya*). In *saṃsāra*, we have often looked at and tasted those things that seek prey through the five physical senses. It is these five spiritual faculties (*indriya*) that he now tries to develop: faith (*saddhā*), energy (*viriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*). If one wishes, one may call them spiritual faculties. Thus, as one develops those faculties (*indriya*), by utilizing them, one gains the strength to conquer whatever obstacles arise. That is why those five are also presented as powers (*bala*): the power of faith (*saddhā-bala*), the power of energy (*viriya-bala*), the power of mindfulness (*sati-bala*), the power of concentration (*samādhi-bala*), and the power of wisdom (*paññā-bala*).</p>
+<p>Thus, as one develops these powers, the next stage of alignment is the factors of enlightenment (*bojjhaṅga*). *Bodhi*, devotees, means "awakening"; it also carries the meaning of "realization." Principally, it means awakening. Why? In *saṃsāra*, there is a sleep. We slept for so long in *saṃsāra* under the deep darkness of ignorance (*avijjā*). Therefore, we must awaken through the light of wisdom (*paññā*). We must bring forth that perception of light. This effort is to bring forth that light of wisdom (*paññā*). That is also why they are called the factors of enlightenment (*bodhipakkhiya-dhamma*).</p>
+<p>Therefore, the "side" (*pakkha*) to which a Buddhist belongs is this side of enlightenment (*bodhi*). One must direct the mind towards the dhammas belonging to the side of enlightenment. There are thirty-seven factors of enlightenment (*bodhipakkhiya-dhamma*). Thus, you devotees must constantly reflect on these factors of enlightenment (*bodhipakkhiya-dhamma*). Among them, there are seven special factors of enlightenment (*sambojjhaṅga*). They are: mindfulness (*sati*), investigation of states (*dhamma-vicaya*), energy (*viriya*), rapture (*pīti*), tranquility (*passaddhi*), concentration (*samādhi*), and equanimity (*upekkhā*). Gradually, starting from mindfulness in one's mind, a systematic alignment occurs. A highly awakened state of the mind arises. Once that awakened state comes, the final alignment—just like a soldier who has passed all tests and steps out fully equipped—is the Noble Eightfold Path (*ariya-aṭṭhaṅgika-magga*). It is through this that everything is culminated.</p>
+<p>Having completed the four foundations of mindfulness (*satipaṭṭhāna*), the right endeavors (*sammappadhāna*), the spiritual faculties (*indriya*), powers (*bala*), and factors of enlightenment (*bojjhaṅga*), this ultimately culminates in a state where all eight factors arise simultaneously in a single supramundane (*lokuttara*) mind-moment. Through an extremely powerful noble concentration (*samādhi*), a marvelous concentration that cannot be compared to any other concentration in the world or any mundane concentration, one breaks through the levels of defilements (*kilesa*). Through the penetration of the path and fruit (*magga-phala*) of Stream-entry, Once-returning, Non-returning, and Arahantship—attainments for which we all hope, and for which people chant "Sādhu" when they are merely spoken of as words—one is able to directly realize Nibbāna, the escape from *saṃsāra*, which is the ultimate goal of ordination or of a lay Buddhist life, and for which we always aspire.</p>
+<p>Therefore, devotees, even without further elaboration, you must reflect from this on what you ought to do, what must be done at this moment. According to the principle *khaṇakicco loko*—if the Dispensation is such a thing, something to be developed within our own minds, and not something to be exhibited to the world by counting heads, then we must understand that as long as there is even a handful of people practicing these principles in this country, the Buddha-Dispensation will endure. That is how we must understand it. If there are no such practices and it is only an empty mass, then no matter how much one shouts with external show that the Dispensation exists, there is no Dispensation there. That is why we gave that simile of the relic exhibition. On the day the relic casket is opened, one sees that the relics are not there. Similarly, if those thirty-seven factors of enlightenment (*bodhipakkhiya-dhamma*) declared by the Buddha at the time of His passing are not present within our minds, there is no Dispensation there.</p>
+<p>Therefore, having well-retained these points, if you devotees proceed with this tortoise-pace despite many difficulties and troubles, your peace at the final moment will depend entirely on how close you have got to the winning post. Therefore, as usual, a large number of you, having observed a higher virtue (*sīla*) than the virtue of your daily lives, and established in the practice of virtue on this valuable day amidst various difficulties and troubles, have developed your concentration power (*samādhi*) and cultivated thoughts related to wisdom (*paññā*) and insight (*vipassanā*), or your respective meditation subjects (*kammaṭṭhāna*).</p>
+<p>Now, we always preach this sermon not for any other purpose—not to develop *saṃsāra*, but to escape from *saṃsāra*. Thus, through listening to this sermon, those things that support the spiritual faculties (*indriya*) like faith (*saddhā*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*) have also been developed in your minds. May you aspire that this indeed becomes a decisive supportive condition (*upanissaya-sampatti*) for directly realizing the noble Dhamma of Nibbāna in this very life, as quickly as possible, before this lamp of the Dispensation goes out, through the penetration of the path and fruit (*magga-phala*) of Stream-entry, Once-returning, Non-returning, and Arahantship for which you hope.</p>
+<p>Likewise, may all beings, from the lowest hell (*Avīci*) to the highest heaven (*Akaniṭṭha*), including your own departed relatives, who are able to share in the wholesome merit of listening to this Dhamma, share in this merit and realize the supreme goals they hope for! May we, and everyone else, receive the strength and power to benefit from this Buddha-Dispensation! With this aspiration, please recite these verses and share the merits.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_028.html" class="doc-btn">← Previous Sermon (028)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_030.html" class="doc-btn">Next Sermon (030) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

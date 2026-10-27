@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 091 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_090.html" class="doc-btn">← Previous Sermon (090)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_092.html" class="doc-btn">Next Sermon (092) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 091</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_091_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_091_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_091_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #91</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.33)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Cutiṃ yo vedi sattānaṃ, upapattiñca sabbaso;</p>
+<p>Asattaṃ sugataṃ buddhaṃ, tamahaṃ brūmi brāhmaṇaṃ;</p>
+<p>Yassa gatiṃ na jānanti, devā gandhabba-mānusā;</p>
+<p>Khīṇāsavaṃ arahantaṃ, tamahaṃ brūmi brāhmaṇaṃ.</p>
+<p>From:</p>
+<p>Dhammapada 419–420 (Brāhmaṇavagga)</p>
+<p>Dear Listeners,</p>
+<p>There has always been a great curiosity among the people of the world regarding birth (*uppatti*) and death, which are considered the beginning and the end of a life. Many people seek answers to the questions: "From where did we come to this world?" and "Where do we go after death?" Especially after our own relatives and friends pass away, many of us desire to know the place of their rebirth. For yogis who developed the special, supernormal knowledges (*abhiññā*) through serenity meditation (*samatha bhāvanā*)—even those outside the Buddha’s dispensation—there existed a certain limited ability to state where someone was born after death. However, it was the Supreme Buddha, the Teacher of the Three Worlds, who presented the deepest and purest vision of birth and death to the world. It is two verses related to that supreme vision that we have placed as our topic. From the background story related to them, we can also gain some understanding of that supreme vision.</p>
+<p>During the time of the Buddha, there lived a Brahmin named Vaṅgīsa in the city of Rājagaha. This Brahmin was capable of tapping on the skull of a deceased person and stating where that person was reborn. He was able to say whether they were reborn in hell, the realm of hungry ghosts, the animal realm, the human world, or the deva world. Seeing this ability, other Brahmins gathered and thought, "We can use this man to make a living off the entire world"—meaning, they could obtain the gains and honor of the world. They dressed this man in red robes, gave him a strange appearance, and took him from village to village, market town to market town, and province to province, saying to the people, "Pay a certain fee and ask this man about the place of rebirth of your deceased relatives." Thus, a large number of people found out the place of rebirth of their relatives in this manner.</p>
+<p>In this way, this group gradually came to different regions and lodged in a place close to the Jetavana monastery in Sāvatthi. The next morning, seeing the faithful lay people going to listen to the Dhamma from the Buddha, they asked, "Where are you going?" When the lay people replied, "We are going to listen to the Dhamma from our Teacher," the Brahmins tried to persuade them, saying, "What is the use of that Teacher? Our Brahmin Vaṅgīsa has such a special power, make use of it instead." However, these faithful devotees debated with them, saying that their Teacher was far superior to this Vaṅgīsa. Finally, the Brahmin Vaṅgīsa and the group of Brahmins went to the Buddha to determine who indeed was the more clever of the two.</p>
+<p>Knowing this matter beforehand, by the time they arrived, the Buddha had brought the skulls of a person reborn in hell, a person reborn in the deva realm, a person reborn in the human realm, and a person reborn among animals, along with another skull of an Arahant. In this manner, he prepared and placed five skulls there. When the Brahmin Vaṅgīsa arrived, the Buddha asked if he could perform such a feat. When he replied, "Yes, I can," the Buddha said, "Very well then, tap on this skull and say where this person is reborn." He correctly stated the rebirth of the one who was born in hell. The Buddha praised this with "Sādhu" and said, "Very good." Next, he gave correct answers regarding the ones born in the animal realm, the human realm, and the deva world, for each of which the Buddha expressed appreciation. Fifthly, when asked where the person was reborn after tapping on the Arahant’s skull, the Brahmin Vaṅgīsa was utterly speechless.</p>
+<p>While he stood there without an answer, the Buddha asked, "What is it, do you not know the place of rebirth?" He replied, "I cannot understand it." Then the Buddha said, "But I know." Hearing this, the Brahmin Vaṅgīsa invited the Buddha, "Then please teach me that mantra. If only I could know that!" Vaṅgīsa said this thinking that if he could acquire that knowledge as well, he could bring the entire Jambudvīpa (India) under his sway. The Buddha replied, "We do not give out mantras in that way. We only teach that mantra to those who ordain under us." "Ah, in that case, I shall ordain," he replied.</p>
+<p>With the intention of obtaining the mantra, the Brahmin Vaṅgīsa ordained. Having ordained, he received higher ordination. Devout devotees, when one ordains, the first meditation subject (*kammaṭṭhāna*) given is the *tacapañcaka* meditation—the five parts of the body ending with skin, which belong to the meditation on foulness (*asubha bhāvanā*). To this Brahmin, the Buddha gave the meditation on these thirty-two parts of the body, starting with the *tacapañcaka*. It was indeed a perfect fit. It was also like a mantra. For, these devotees, even the lay mothers, everyone knows this recitation: *atthi imasmiṃ kāye: kesā, lomā, nakhā, dantā, taco...* Reciting this in this manner is what is done initially. Especially at ordination, they are made to recite these parts in forward and reverse order (*anuloma-paṭiloma*): *kesā, lomā, nakhā, dantā, taco; taco, dantā, nakhā, lomā, kesā*. In this way, forward and backward—from beginning to end, and from end to beginning. They are made to recite this to accustom the mind to that meditation subject. In this manner, this meditation subject was given.</p>
+<p>While this Brahmin was practicing this meditation subject, from time to time, his friend, the other Brahmin, would come and ask, "How is it? Have you learned the mantra?" "I will learn it soon and come," this Brahmin would reply. As he went on reciting and practicing in this manner, to put it in ordinary terms, he became an Arahant without even realizing it. That is to say, he attained Arahantship. This means that this Brahmin was also not an ordinary person; he must have practiced these things in past saṃsāra. The meditation subject struck a chord. He had a great eagerness; there was desire (*chanda*); there was commitment. Thus, as he went on meditating, he gradually attained Arahantship. After attaining Arahantship, when the other Brahmin returned and asked, "How is it, have you learned the mantra? Are you joining us again?", he replied, "Now, I cannot leave this monkhood." Hearing such a statement, the other bhikkhus who associated with him generally understood that this bhikkhu had attained Arahantship.</p>
+<p>Thinking so, those other bhikkhus went to the Buddha and said, "This Brahmin claims to have attained something he has not attained." The Buddha declared, "Not so, O monks. This son of mine has destroyed all defilements and attained Nibbāna. This son of mine named Vaṅgīsa has obtained the purest vision regarding passing away (*cuti*) and rebirth (*paṭisandhi*)—that is, death and birth." Expressing this, he uttered the two verses mentioned earlier:</p>
+<p>> *Cutiṃ yo vedi sattānaṃ,*</p>
+<p>> *uppattiñceva sabbaso,*</p>
+<p>> *asattaṃ sugataṃ buddhaṃ,*</p>
+<p>> *tamahaṃ brūmi brāhmaṇaṃ.*</p>
+<p>"He who knows in every way the passing away and rebirth of beings, unattached (*asatta*), well-gone (*sugata*), awakened (*buddha*)—him I call a Brahmin." Here, 'Buddha' means one who has realized the Four Noble Truths. To such a person, I say he is a true Brahmin. In this dispensation, the word 'Brahmin' is applied to an Arahant, not to one born of a certain clan. It is the Arahant who is called the true Brahmin. Next, the other verse states:</p>
+<p>> *Yassa gatiṃ na jānanti,*</p>
+<p>> *devā gandhabbāmānusā,*</p>
+<p>> *khīṇāsavaṃ arahantaṃ,*</p>
+<p>> *tamahaṃ brūmi brāhmaṇaṃ.*</p>
+<p>"He whose destination (*gati*) is unknown to gods, gandharvas, and humans, with taints destroyed (*khīṇāsava*), an Arahant—him I call a Brahmin." These are the two verses the Buddha declared on that occasion. It is recorded that some bhikkhus attained path and fruit (*magga-phala*) upon hearing them. Thus, from this story and these verses, we can extract important points necessary for shaping our lives and walking the path to Nibbāna.</p>
+<p>Now, it is stated in this very verse that the Arahant has obtained a most pure understanding regarding both Birth (*jāti*) and death. Furthermore, after an Arahant passes away, the place where he has gone cannot be stated by anyone—not even by gods or humans. What is the reason for this? Devout devotees, you know well that attaining Arahantship, which is Nibbāna, means bringing this saṃsāric existence to an end. There is no room to be born anywhere else. Like a lamp that has gone out, that person does not take birth (*jāti*) anywhere again. That is why they cannot be seen.</p>
+<p>Moreover, that liberation is attained by understanding Birth (*jāti*) and death in a very deep manner. It is through that very understanding that it is abandoned—the concept of Birth (*jāti*) and death. Now, when we speak of 'birth' in the world, it refers to coming forth from a mother’s womb, or from eggs, or in various other ways; there are also beings like devas and hungry ghosts who undergo spontaneous birth (*ōpapātika*). The Buddha has declared that this Birth (*jāti*) occurs because of the ignorance (*avijjā*) and Craving (*taṇhā*) within a being. If we consider ignorance very briefly, it can be explained as the feeling of 'I am' (*asmi-māna*) that exists in everyone, even in animals. Based on the physical body one gets, or rather based on the five aggregates—Form (*rūpa*), Feeling (*vedanā*), Perception (*saññā*), preparations (*saṅkhāra*), and Consciousness (*viññāṇa*)—the feeling of 'I' and 'mine' arises. It is taken as 'I'. To reinforce that taking as 'I', one grasps it as 'mine'.</p>
+<p>Here lie ignorance and Craving (*taṇhā*). If taken as 'I', that defines ignorance; next, the feeling of 'mine' is associated with Craving (*taṇhā*). It is, in truth, the Grasping (*upādāna*) of these five aggregates. The Buddha gave a new etymology and definition even to the word 'being' (*satta*). If we take the basic meaning of the word *satta* (being), it means 'one who exists' or 'the real one'. *Sat* means that which exists. Therefore, *satta* means 'the one who exists'. We often say 'this person' or 'that person' using the word 'existent'. But the Buddha analyzed the word *satta* on one occasion. The reason for this was that a venerable monk named Rādha asked the Buddha, "Venerable Sir, the world speaks of a 'being, a being' (*satto, satto*). To what extent and in what manner is one called a 'being'?" What was the Buddha's answer to that?</p>
+<p>"Rādha, whatever desire (*chanda*), lust (*rāga*), delight (*nandī*), and Craving (*taṇhā*) there is for Form (*rūpa*)—it is in the sense of being attached (*satta*), strongly attached (*visatta*) to that Form that one is called a 'being'."</p>
+<p>Desire (*chanda*) means liking. Lust (*rāga*) means attachment. Delight (*nandī*) means rejoicing. You have heard of Craving (*taṇhā*); it means the idea of longing or desire. Thus, a being is found where there is attachment, liking, and longing for Form (*rūpa*). The same is said of Feeling (*vedanā*). Form, Feeling, Perception (*saññā*) meaning recognition. preparations (*saṅkhāra*) mean the intentions, aspirations, etc., that arise as various constructs in the mind; the collective of various activities is called preparations (*saṅkhāra*). Next, Consciousness (*viññāṇa*), the mind. Thus, according to the Dhamma analysis, a 'being' (*satta*) exists because of taking these five as 'I' and 'mine', or because of being attached within them. In this way, we can understand why the first verse stated *asattaṃ*, which means 'unattached'. It means one who is unattached. The first verse declared, "him I call a true Brahmin who is unattached (*asattaṃ*), who has walked the path of practice, and realized the Four Noble Truths." There too, *asattaṃ* is used in the sense of being unattached. Therefore, viewed according to the Dhamma, a 'being' (*satta*) is a person who is attached to these five aggregates. If one is to be freed from this state of being a 'being', from this existence, that attachment must be broken. That attachment must be turned into non-attachment. What helps to turn attachment into non-attachment? Disgust (*nibbidā*) towards that existence, especially towards this body, helps. That is why the Buddha gave the meditation on foulness to that Brahmin. The Brahmin had performed feats by tapping on other people's skulls. Except for tapping on others' skulls, this person had not bothered to tap on his own skull to hear its hollow, empty sound.</p>
+<p>What did the Buddha do? Now, when reciting the thirty-two foul parts of the body, the eighth part is bone (*aṭṭhi*). *Kesā, lomā, nakhā, dantā, taco, maṃsaṃ, nahāru, aṭṭhi*. Thus, here, the word *aṭṭhi* (bone) would have naturally stood out to the Brahmin Vaṅgīsa. Without his even knowing, this became a meditation subject. He had used it as a trick to deceive the world and receive the world's status and honors. The Buddha, utilizing that very thing, gave him this meditation on foulness in accordance with his character. We are trying to understand how the Brahmin Vaṅgīsa, through the Buddha's skill in means (*upāya-kosalla*), attained Arahantship according to a marvelous method of the Buddha's great compassion. We can understand the reason for this. While reciting these thirty-two parts of the body, the Brahmin Vaṅgīsa must have gained a deep realization regarding this *aṭṭhi*—this skeleton.</p>
+<p>This is something we too can reflect upon—this skull. Within the very things we discard as useless, worn-out things, there lies a power that can bring us Nibbāna, a power that gives the taste of liberation. When looking at a skull, when looking at the skull of a deceased person, one develops a wonderful sense of urgency (*saṃvega*) regarding this existence, regarding this life we take so seriously. When looking at a skull—even if it belonged to someone who spent their entire life looking at beautiful things in the world, once they die and only the skull remains, where the two eyes were, there are no eyes. Even for one who spent their entire life listening to fine music, performing as a musician, once they die and become a skull, where the ears were, there are no ears. Next, when looking at men and women who went about seeking pleasant scents and perfumes, when the skull is left, where the nose was, there is no nose. Next, even for those people who went about seeking delicious food, holding dinner banquets and seeking tasty things, once they die and the skull remains, where is the tongue? Not a trace of it. In this way, no matter how beautiful a body was molded, smeared with various paints and ointments, presented to the world, and entered into great beauty contests as a beautiful form—once it becomes a skull, where is that flesh, skin, and delicacy? There is nothing. So, there lies the skull, helping to understand the Three Characteristics (*tilakkhaṇa*)—Impermanent (*anicca*), Suffering (*dukkha*), and Not-self (*anattā*).</p>
+<p>He tapped on others' skulls but did not think of his own skull. In truth, for a meditation subject to be complete, one must either start from the external and complete it internally. 'External' means looking at others' skulls and, based on that, reflecting on one's own skull as well. Otherwise, starting from one's own skull, from one's own body, one must complete it with others' bodies. This must be understood as a universal law of nature (*dhammatā*). The foulness of this body is a natural law of the body. If one thinks only of one's own body as foul, some might feel like committing suicide. But liberation is found when one understands this as the nature of the world, as a natural law (*dhammatā*).</p>
+<p>In this way, using this, we can train it as our own daily meditation. For, this is the meditation on foulness given by the Buddha; even when the word is spoken, we feel a sense of disgust. But when viewed practically, a wondrous thing takes place here. To escape from the state of a 'being' (*satta-bhāva*) mentioned earlier, to eliminate attachment, to eliminate that rejoicing (*nandī*), lust (*rāga*), attachment, Craving (*taṇhā*), desire, and thirst, one must develop disgust towards the body. Relinquishment is not grasping the body and throwing it away. It is not suicide. Grasping is also done with the mind. Grasping is aided by thoughts (*vitakka*); it is grasped with the hand of thoughts. The nature of this mind is to think (*vitakka*) about something and grasp it. Taking signs (*nimitta*) in regard to things that arise as preparations (*saṅkhāra*) in one's mind as attraction and aversion, it develops attachment towards them. Towards Form (*rūpa*), and then towards the experience of Feeling (*vedanā*) that comes based on that Form. Towards those feelings as perceptions (*saññā*), recognizing them as a woman, a man, a house, a door, etc. Then, according to those perceptions, all the intentions, aspirations, desires, and activities that arise in our mind. In this way, finally, by separating one from another, we give them names, and they are recorded in our mind in some way in Consciousness (*viññāṇa*).</p>
+<p>In this way, these are merely five heaps. But they appear to us as one due to the perception of solidity (*ghana-saññā*). The world takes them as one, calling it 'Form'. "This is my form, my feeling, my perception"—based on these, one gets the feeling that "I exist." This is merely a conceit (*māna*). In truth, there is no existence. What exists here is a series of arisings and passings away. To realize this, one must arouse insight knowledges (*vipassanā-ñāṇa*). It is merely a multitude of arisings and passings away. Because this happens extremely subtly and rapidly, the world does not see it. Now, even in flowing water, when looking at that water, it looks like a silver stream. Going near a waterfall, it looks like a silver wall. When going a bit closer to that waterfall and looking at it, when the water hits the rocks and scatters, dispersing as droplets, then the feeling of a 'multitude' arises at least to some extent. Even more subtly, to the insight meditator, the perception of a multitude (*rāsi-saññā*) arises regarding these. The perception of solidity (*ghana-saññā*) is broken. When the perception of a multitude is thus established, and a deep understanding of arising and passing away arises, the mind's attachment to these is naturally broken—not because anyone said so, not because of anyone's words, not because the Buddha said so, and not because others forced one to do it. By seeing this true state as it really is (*yathā-bhūta*), which is Suffering (*dukkha*), disgust (*nibbidā*) naturally arises within oneself. One becomes disgusted with what is worthy of disgust. If one becomes disgusted with something not worthy of disgust, then the world can blame them.</p>
+<p>This state has always been thus. The nature of the body in the world is just this. But due to ignorance (*avijjā*), the world does not see it. By the time it is seen, by the time that moment arrives, one has decayed and grown old. When that stage is reached, the mind is weak. There is no strength to realize it. That is why the thought of 'existence' or what we think of as the saṃsāric journey takes place again. Now, as long as the attachment to these five aggregates, or rather to our parts starting with Form, is not thinned out, the world takes them with the feeling of 'I' and 'mine' and only seeks to reinforce this Becoming (*bhava*). Throughout the entire life, even at the moment of death, when Māra is pulling, one somehow seeks to remain, to maintain this life.</p>
+<p>Next, what is called passing away (*cuti*)—after slipping away from there, due to that very attachment, one grasps whatever becomes manifest according to kamma as 'I' and 'mine'. One settles down there again, taking root. This is what is called the saṃsāric journey. But instead of the feeling that 'we are traveling in saṃsāra', what did the Buddha present as a deep vision? The Buddha declared that after an Arahant dies, they are not born anywhere. One might feel sad: "While there are deva worlds and brahma worlds, why did this Arahant take such pains to put an end to birth?" But the Buddha declared that this entire Becoming (*bhava*), this existence, is like a fire. Now, to truly understand the Truth of Suffering (*dukkha-sacca*) does not mean removing one part, discarding it like a department, and taking the rest as pleasant (*sukha*). At some point, the realization must come that the entire existence, these five aggregates themselves, are Suffering (*dukkha*). Until that realization comes, one has to use that special seeing called insight (*vipassanā*) to assist oneself. Once such disgust (*nibbidā*) arises, this is abandoned naturally. Just as if a highly repulsive dog carcass were placed on someone's shoulder, a natural revulsion arises and it is pushed away. It is something done effortlessly. In the same way, when someone sees through wisdom (*paññā*) at some point, they realize there is no substance in this existence. This is Impermanent (*anicca*). It has no nature that brings relief or happiness; it is Suffering (*dukkha*). Likewise, there is no soul (*atta*), no being (*satta*), no 'I', no person (*puggala*) settled within this to be taken as such.</p>
+<p>Although in worldly convention we speak of a 'being' or a 'person', in truth there is no such person. There is only a belief that such a one exists. What exists in the world is only a conceit (*māna*) regarding existence. This is the deepest point of this vision. Eliminating that, removing that delusion (*moha*) and ignorance (*avijjā*), is what is expected through Arahantship. It never really existed. The Buddha declared: "Only suffering arises when it arises; only suffering ceases when it ceases" (*dukkhaṃyeva uppajjatī uppajjamānaṃ, dukkhaṃ nirujjhati*). What is born is suffering; what ceases is suffering. There is nothing to be known here as a 'person' except suffering. The Buddha explains this suffering, this fire of suffering, more clearly on some occasions using the metaphor of fire. Let us think about how a fire spreads. A fire breaks out in one part of a forest. After it is burnt out, let us assume the other part of the forest is on the other side of the road. How does the fire catch the other part? We say the fire catches. For that fire to catch, the wind assists it. Blown by the wind, the embers catch the other forest, and immediately it too catches fire. We say the fire spread there, or the fire went there. This existence is a similar thing. There is that Craving (*taṇhā*), the thirst of Craving (*taṇhā*). There is the delusion called ignorance (*avijjā*). As long as that is present, what happens? There is Grasping (*upādāna*). It is on this Grasping (*upādāna*) that Becoming (*bhava*) depends.</p>
+<p>Now, we know that often in dramas, according to what is grasped—let us say someone comes limping, holding a walking stick, we call him a beggar, a pauper. It is according to that manner of grasping. Next, when they brandish it, we think of them as a bandit, when shown in a drama. When someone comes onto the stage brandishing that same piece of wood, we call them a great bandit, a murderer. In the same way, this being is designated solely according to what is grasped. But in truth, what exists here is a fire. The spreading of this fire is what is called Becoming (*bhava*). It is also shown as eleven fires in terms of Birth (*jāti*), Aging and Death (*jarāmaraṇa*), sickness, etc. The extinguishing of this fire is what is called Nibbāna.</p>
+<p>Nibbāna means extinguishing. This extinguishing comes from the correct understanding of this. If at some point this is realized, there is nothing to be taken as 'I' or 'mine' within these five aggregates. If the realization comes that every single one of these changes very momentarily, very rapidly, moment by moment—at that moment, it slips away. It slips away from the mind; it is abandoned. The path leading up to that is shown as the practice—virtue (*sīla*), concentration (*samādhi*), wisdom (*paññā*), etc., or the Noble Eightfold Path. It is training the mind to this, training the mind to this vision. It is through this that one gains this deepest understanding of Birth (*jāti*) and death. Transcending the perception of a being or a person, there is only a certain conceit here, a worldly conceit, or rather a convention (*sammuti*). We separate this birth—just as one would build fences in flowing water to separate a portion—in this long saṃsāric existence, we say "behold, it has started" at such a state as being born from a mother's womb or conceiving in a mother's womb. Next, after dying, we say "behold, the end."</p>
+<p>We see this beginning and end in a very limited sense. But to the Buddha-eye, what appeared here was a great mass of suffering (*dukkhakkhandha*), a flowing torrent of suffering. What is it? Grasping (*upādāna*) various things. Being overwhelmed by the very thing grasped, being tormented by it, and finally falling down. Falling down, and grasping another. When looking at the existence of one's own life, this becomes clear to you, even when looking at the history of one's own life. In childhood, when parents brought a new thing, a toy, with what Craving (*taṇhā*) and desire did we grasp it! Similarly, when a good dress was received, we wore it with great pride. But as one's body grew and the mind matured, those things were abandoned naturally. In the same way, the Buddha, like this toy metaphor, has also used the metaphor of playhouses (*kīḷā-geha*) on some occasions to help develop disgust towards the five aggregates. This is mentioned in a certain discourse preached to this very Venerable Rādha.</p>
+<p>"Rādha, when boys and girls—meaning children in their childhood—build playhouses, they build sandcastles, playhouses of clay. They are attached to them in that childhood stage of playhouses. When they grow up and reach adulthood, when they mature in age, they kick those playhouses, scatter them, and prepare for the work that lies ahead." This metaphor—even in daily homes, dolls that were cradled with great love, later when those children grow up, they break their legs, discard them, and scatter them. The same is true of playhouses.</p>
+<p>Based on that metaphor, the Buddha next says something profound: "In the same way, O monks, just as one would kick, shatter, and throw away those playhouses, one scatters Form (*rūpa*). One scatters Feeling (*vedanā*). One scatters Perception (*saññā*). One scatters preparations (*saṅkhāra*). One scatters Consciousness (*viññāṇa*)." That means, regarding that too—scattering is not done by hitting anyone, or by hitting one's own body, or by committing suicide. As a vision that penetrates through wisdom, one sees through insight (*vipassanā*) that what exists here is indeed something that scatters, just as those playhouses were scattered. What exists here is a scattering nature. That scattering state is not visible. This body too scatters. Form scatters. Feeling scatters—just as a stream of water scatters. Even when we reflect on this flowing stream of water that is heard, though it looks beautiful, the moment it hits a rock, it scatters. Similarly, Form scatters. This is seeing the scattering nature. 'Scattering' does not mean kicking and throwing away here; it means seeing that scattering nature. In the same way, every single thing is understood by insight wisdom as the perception of a multitude. No matter how much we grasp this as one, just as when one takes a handful of sand in a desert and it slips through the fingertips and scatters, not a single one is caught by wisdom. Ultimately, as wisdom develops further and further, there is nothing of these to be grasped. Where it is grasped, it is abandoned naturally.</p>
+<p>When a handful of hot sand is taken into the fingers, it flows through the fingers. In the same way, when the mind is directed towards insight wisdom, when it is directed towards penetrating wisdom, one gains an understanding regarding Form: here lies only a multitude of arisings and passings away occurring extremely rapidly. Feeling is also like that. Perception is also like that. The same is true of the mind. The mind too is something that arises and passes away extremely rapidly in this manner.</p>
+<p>Now, this journey leading up to that realization is called insight meditation (*vipassanā bhāvanā*). Next, through everything such as the meditation on bones (*aṭṭhika*), what we especially do is address the heavy attachment within a being towards this body. The senses of eye, ear, nose, etc.—the sense organs are located in this body-cage. Accordingly, the sensory objects coming from the sense organs of animals—the things caught by the senses—are used by animals as attraction and aversion to maintain a life. Similarly, humans consider the things within the range of their senses as beautiful or ugly (*subha-asubha*). But as the Buddha declared, in the end, what must arise in every instance is the perception of foulness (*asubha-saññā*). What was taken as beautiful (*subha*) is understood as foul (*asubha*). What was taken as permanent is understood as Impermanent (*anicca*). The nature of what was taken as pleasant turning into Suffering (*dukkha*) is understood. What was taken as 'I' and 'mine' is understood as Not-self (*anattā*)—its worthlessness, hollow nature, and emptiness are realized. This is what is called coming from the distorted vision to the undistorted vision. 'Distorted' (*vipariṭa*) is just like the way things appear when turned upside down, or when looking with the head down. Then he is in such a state. He considers the Impermanent as permanent. He considers the foul as beautiful. He considers that which is painful as pleasant. He considers the Not-self as self. It is to eliminate this vision that insight meditation is used. There too, objects come through these five senses. Objects flow into the mind. In walking this path, the colorful nature of these objects, their nature of pulling the mind, must be destroyed by some device—by an insight device.</p>
+<p>That is, the Buddha declared it as Wise attention (*yoniso manasikāra*). What exists in the world is unwise attention (*ayoniso manasikāra*). The world does not reflect on something in the way it is caught at the point where the object begins. Enslaved by those objects, dragging along them further and further, in a way where a limit cannot be found, where the thread cannot be untangled—that is how the world reflects. That is called unwise attention (*ayoniso manasikāra*). This worldly being is dragged away by the object. Going to a city, there are so many things to catch the eye. There are so many things to catch the nose, to catch the ear. Thus, going into these, they are deluded and finally entangled in a great mass of Suffering (*dukkha*). Instead, the insight meditator attempts to subdue, to reduce, as much as possible, that mind-agitating nature of the object through the very method of attention (*manasikāra*). That is called Wise attention (*yoniso manasikāra*). It returns right to the birthplace where those thoughts arise. It is not leaping out of it and running far away; it is not running after a mirage.</p>
+<p>What helps with that? We said earlier that we grasp an object through thoughts (*vitakka*). Through thoughts. Thoughts are woven about them day and night. You know that if you think about someone you are attached to, or something you are attached to, or a possession, you spend sleepless nights in this web of thoughts, daydreaming endlessly, and dreaming at night as well. Such is the nature. That is what is called Becoming (*bhava*). That is what is called the fire. This fire of Suffering (*dukkha*) is kindled, blown and kindled, by thoughts. What is the path to be taken to subdue these thoughts?</p>
+<p>The Buddha has shown a very beautiful metaphor there too, as a metaphor that helps in taming the mind. We know that when looking at a tortoise, when a danger comes to the tortoise, what the tortoise does is draw its four limbs and head inside its shell. According to that metaphor, the Buddha has shown: "Just as that tortoise draws in its four limbs and head, tuck in the mental thoughts (*manovitakka*), the thoughts that arise in the mind." "Tuck them inside." Tucking in thoughts means not letting thoughts wander far. To do that, one must reflect. One must reflect with wisdom. One must reflect diligently. For, this mind acts extremely rapidly. The moment a form falls on the eye, immediately, if ignorance and delusion are present, extremely rapidly, one is in a dream world. There, one is lost. Otherwise, one has already committed many other terrible crimes. The same is true when a sound is heard by the ear. The dangers coming from these need not be said anew. When reflecting on the lives of animals and human lives in the world, according to the incidents we hear of, we can understand that the mind acts extremely rapidly and gets entangled in terrible crimes. One gets entangled even in grave kammas that cause rebirth in planes of misery, in hell.</p>
+<p>But what is done to suppress this? In insight attention (*vipassanā manasikāra*), it is not following after the form seen, not following after the signs (*nimitta*) and features (*anubyañjana*) of that form. 'Sign' (*nimitta*) means some basic characteristic. 'Feature' (*anubyañjana*) means the minor, additional details that follow that characteristic. If we see someone coming from afar, we think, "Ah, it must be so-and-so." When they come closer, looking at the other limbs and parts, we confirm, "Yes, it is indeed that person." Such is the nature. One feels that it is difficult to maintain life without that. But to assist in escaping from this saṃsāra, as a special training, without taking those signs and features of what comes to the eye, realizing: "This is a form, a form; in whatever way it is taken, this is a form." Now, we are sometimes deluded by a painting painted on the wall of some art gallery. Looking at that painting, it is sometimes perceived as three-dimensional. One even feels like walking through the middle of this wall. If a beautiful house and its doorway are painted on the wall, one might go wrong. One might even go and crash into the wall, perceiving it as three-dimensional. Similarly, because of the way our senses are constructed, because of a collection of saṃsāric habits we have developed by traveling in saṃsāra for a long time, when we see a form, it appears to us like something created. What is shown to the world is only the part presented forward through painting, washed with great difficulty in various ways, or through various fashions. The feeling and understanding that "inside this lie those thirty-two parts" does not arise.</p>
+<p>Instead, one thinks of this as three-dimensional and gets attached to it. This is so regarding Form. It is the same regarding Sound. Very sweet music—now, if some music is fed into this machine, when that machine operates in a certain way, it can be turned into outright wailing. That is why the Buddha has declared, "I call music a wailing." In truth, music is close to wailing. In this way, when considering everything subtly, we can say that what exists here is either only a multitude of arisings and passings away occurring extremely rapidly. There is nothing here as a 'thing'. A multitude of arisings and passings away. When a firebrand (*alāta-cakka*) is whirled around, it appears as a circle. Such is the state. To gain this understanding, such attention (*manasikāra*) is utilized. Instead of letting the mind fall into a state of attachment through thoughts, reflection is done instead. It is briefly considered as "this is this." Briefly considering, or rather taking it as "this is merely a form," the mind is brought to equanimity (*upekkhā*). Even if it is sweet music, taking it as "it is merely a sound-measure, merely a sound," the mind is brought to equanimity there.</p>
+<p>It is through this training that the mind-agitating nature of that object is gradually broken. That has to be done according to the occasion, stage by stage. Then it is understood that what exists here is merely a collective of active processes (*kriyā-mātra*). In truth, merely a collective of active processes. Now, those scientists, regarding that material world, the physical world, through their various scientific instruments and mathematical sciences, are heard to have arrived at a certain conclusion. In truth, there is no such 'thing' as a thing. What exists here is actually some bundle of energy, a mass of energy. They do not even have words to describe these. To that extent, the understanding regarding the external world has come.</p>
+<p>Even more subtly, the Buddha declared the state of this mind and the state of this body: these are extremely rapid arisings and passings away, a heap of arisings and passings away, and there is nothing to be taken as a 'thing'. Whether it is a mass of energy, or rather the word preparations (*saṅkhāra*) is what is applied there. Under such a condition, because there is no essence in this Becoming (*bhava*), there is nothing here to be taken as happiness. There is nothing to be taken as 'I' and 'mine'. That is why the Buddha has shown the scattering nature of these. To say "scatter these" means to understand their scattering nature. The same is true of the mind. The final trump card to make this existence permanent is this Consciousness (*viññāṇa*). It is by arriving here that other philosophers were deluded, thinking that the soul resides in Consciousness (*viññāṇa*). It is true that Form is Not-self (*anattā*). It is true that Perception is Not-self (*anattā*). It is true that Feeling (*vedanā*) is Not-self (*anattā*). The same is true of Perception and preparations (*saṅkhāra*). But Consciousness (*viññāṇa*)—this which we call the mind—they think, "this indeed is the soul." This is the greatest delusion.</p>
+<p>That is why the Buddha compared Consciousness (*viññāṇa*) to a magic show shown by some magician. One is deluded by this. For, enveloped within this very delusion in the mind, one tries to unravel the delusion. For someone who is enveloped within delusion, it is absolutely impossible to be freed from that delusion if they do not have the proper attention (*manasikāra*). Thus, through those wrong reflections called unwise attention (*ayoniso manasikāra*), one can never escape from this delusion. Proper reflection is what is called insight attention (*vipassanā manasikāra*). Grasping (*upādāna*) an object is what is called Becoming (*bhava*). Grasping (*upādāna*) an object, hugging it, standing within it, and settling down in it—that is what is called Becoming (*bhava*). Instead, what is done here? Without letting the object enter inside, it is expelled from there itself. Recording: "this is a form." That is ended right there. By that training—saying twice "a form, a form" or "a sound, a sound" etc.—the mind-agitating nature of that object is eliminated. For, it is within the object that an existence arises. Becoming (*bhava*) means existence. Then, Nibbāna means the cessation of becoming (*bhava-nirodha*). The stopping of existence. The Buddha declared existence as a fire. Accordingly, the stopping is the extinguishing. If existence is the fire, the stopping is the extinguishing. This is what is called Nibbāna. It is not some other world, nor is it a great place where one can consume the deathless like a delicious food. It is this freedom from death. Now, ordinary worldly people think we expect to make this life eternal. When that is impossible, we try to become eternal by going to some other place. But the Buddha, as a true physician, declares: here lies the non-understanding of the cause of the disease. A wrong analysis exists here. It must come back to the word we mentioned earlier. It is upon an absolute delusion that one tries to reinforce this existence called 'I'. There is no 'I' here. There is nothing to be taken as a person here.</p>
+<p>What exists here is that fire. Just as it was said about the forest fire spreading, this is merely the spreading of a fire. That is what that Venerable Thero who wrote our *Lōväḍa Saňgarā* in the past beautifully expressed:</p>
+<p>> *Dara räsa gini äviluṇu kaḷa nibaňdē,*</p>
+<p>> *gini misa dara yäyi yana nama noye dē.*</p>
+<p>> *Ema lesa ekkoṭa vadahala muniňdē,*</p>
+<p>> *duka misa kayakaäyi yana nama noye dē.*</p>
+<p>"When a heap of firewood has caught fire, continuously, the name 'firewood' no longer applies; it is called only 'fire'. In the same way, the Lord of Sages declared that when brought together, it is only Suffering (*Dukkha*); the name 'body' no longer applies."</p>
+<p>After a heap of firewood catches fire, one does not go to call it a pile of wood again. It is indeed a heap of fire. "When a heap of firewood has caught fire, continuously, the name 'firewood' no longer applies; it is called only 'fire'." It is no longer called firewood; it is called only fire. "In the same way, the Lord of Sages brought them together" and showed: "it is only Suffering (*Dukkha*); the name 'body' no longer applies." This cannot be called a body; it is a heap of suffering. Using this, adjusting to this, feeding, watering, bathing, and protecting this is indeed suffering. Moment by moment, breath by breath, this is suffering. Thus, it is to understand that nature of suffering deeply that insight (*vipassanā*) is directed. This fire—the nature of fire is always to grasp. When a fire catches a heap of wood, we say the fire grasps the wood. On the other hand, it can also be said that the wood grasped the fire. When the fire grasps the wood, the wood grasps the fire.</p>
+<p>This is, as was said, like a forest fire spreading; there is a small push. This push is what is called Craving (*taṇhā*). It is through this push, this thirst of Craving (*taṇhā*), that we grasp. The Craving (*taṇhā*) that arises in our minds regarding something. That is where it must be broken then. That is why it is said that the destruction of Craving (*taṇhā*) is Nibbāna. That is why it is said that Craving (*taṇhā*) is the cause of Suffering (*dukkha*). There is an unquenchable thirst within us. Especially the thirst for Becoming (*bhava*). The thirst for sensual pleasures (*kāma*). That is an obvious, coarse part. More subtly, there is the Craving (*taṇhā*) for becoming (*bhava-taṇhā*). There is a great desire for this existence. But the deepest disgust towards existence arises only when one realizes that those who obtained brahma-existence or deva-existence go and wander there for aeons (*kalpa*). This is a monotonous existence. "Behold, you asked for it, so here it is given"—as if saying so, an existence for aeons is given in the brahma worlds. That is the danger of the Craving (*taṇhā*) for becoming (*bhava-taṇhā*).</p>
+<p>But the world desires existence. "Somehow I must exist." As that maintenance of 'I', what is grasped in the end when groping in the thirst of Craving (*taṇhā*) within the darkness of ignorance? Not what one expects, but a Becoming (*bhava*) that presents itself according to the kamma one has done. If one lived as a hungry ghost, no matter how much one asks for the pleasures of the deva world, it is the ghost-existence that is received. If one lived as an animal, a beast-like human, no matter how much one expects to be a good king or a deva-like state, according to those actions done, an animal existence, two animal eyes, ears, a nose—that is what is received. Thus, in hell and other even more terrifying places, kamma accumulates according to one's actions. "Behold, if you are asking for it, I shall give it to you"—so it is given. That is what is called Māra.</p>
+<p>Then, what we do with Māra is a long tug-of-war. To win a tug-of-war in the ordinary world, we must pull harder than the person pulling from the other side. But to escape from this saṃsāric suffering, a completely opposite strategy is what the Buddha has told us to adopt. The time when Māra pulls is what we call gasping for breath (literally: "pulling life"). Māra pulls there; we pull here. So, our last thread is the thread of life. Like the last thread of a rope. After all other threads are pulled, the other relatives also gather and pull this person, to establish the existence of the world. They chant pirith around the bed, preach the Dhamma, to keep them alive for another hour. But in the end, after all those pullings—the relatives' pullings and other doctors' pullings—fail, what does one pull? One gasps for breath. One pulls that thread of life. No matter how much one pulls this, because it is merely a thread of life, it is Māra who wins. When Māra pulls to that side, where does one go and fall? Seeing some sign (*nimitta*) that one expects, one is born there. That is why the Buddha declared, "Die before you die." Die to Form (*rūpa*), die to Feeling (*vedanā*), die to Perception (*saññā*), die to preparations (*saṅkhāra*), die to Consciousness (*viññāṇa*). That dying is what is called cessation (*nirodha*), ceasing.</p>
+<p>The Arahant realizes this. The moment of letting go of these five aggregates is called the concentration of the fruit of Arahantship (*arahatta-phala samādhi*). At that moment, those preparations (*saṅkhāra*) are stilled, and that momentum, that sign (*nimitta*), becomes signless (*animitta*). What is taken as a sign is some object. The sign-nature of that object is erased in that insight. This becomes signless (*animitta*). Next, if we took some sign of something, we try to stand upon it. We try to grasp it. We expect a support, a footing. In the end, there is no place to establish oneself. That is called unestablished (*appatiṭṭhita*). Next, having established oneself, what does one do? One expects an existence. One expects a soul-nature. Instead, this is understood as void (*suñña*), empty, hollow, and worthless.</p>
+<p>In this way, it is through three gateways to liberation (*vimokkha-mukha*)—namely, the Signless (*animitta*), the Desireless (*appaṇihita*), and the Void (*suññatā*)—that one reaches Nibbāna. What helps to attain that state is that subtle insight wisdom. The beginning of that wisdom is attention (*manasikāra*)—Wise attention (*yoniso manasikāra*). Through proper reflection, a deep understanding of the world gradually arises within someone. According to that arising, at some point, the Form which one had embraced, grasped, and taken ownership of naturally slips away from the mind. It is grasped with the mind; it slips away from the mind. It must be abandoned from the very place where it is grasped. That is indeed how the fire of Suffering (*dukkha*) is extinguished. Grasping (*upādāna*) this is Suffering (*dukkha*). Where it is grasped, next lies bondage (*bandhana*). Subject to that, and then according to that—if we grasp some object, some possession, we burn according to the harm done to that possession. The same is true if we grasp a person. It is so everywhere. Such is the way.</p>
+<p>Therefore, as the Buddha declared, the one who walks the path of the Dhamma understands not only that this entire existence is Suffering (*dukkha*), but also that this is a fire. One is caught in this fire moment by moment. This is what is called Grasping (*upādāna*), in a very subtle manner. The existence in which these are burnt within this multitude of graspings is what we call existence. Now, once a fire starts, if firewood is given to it, it blazes up. This existence is just like that. For a long time in saṃsāra, due to defilements, according to desires, according to cravings, according to that Grasping (*upādāna*), we have received an existence. If we want this existence to continue, we can take it further. We can give more and more firewood. We must decide for ourselves whether we are going to add firewood to this, or whether we are going to pull out and remove the firewood that has been put, and somehow extinguish it.</p>
+<p>There, if we consider the Four Noble Truths declared by the Buddha in brief, what exists here is that the entire existence is Suffering (*Dukkha*). The five aggregates themselves are Suffering (*Dukkha*). We usually stop at saying "birth is suffering, aging is suffering." The entire existence is Suffering (*Dukkha*). Underlying this is Craving (*taṇhā*). The state where this Craving (*taṇhā*) is stilled, where this thirst is quenched, is the extinguishing. That extinguishing is Nibbāna. The path to that extinguishing is shown as the Noble Eightfold Path in terms of Right View (*sammā-diṭṭhi*), Right Intention (*sammā-saṅkappa*), etc.—correct seeing, correct thoughts and aspirations, correct speech, correct action, correct livelihood, correct effort, correct mindfulness, and correct concentration. That is the Four Noble Truths, the vision presented by the Buddha. That is the deep vision of life and death.</p>
+<p>Therefore, instead of tapping on others' skulls, before we die, before this becomes a skull, we must tap on this, and see with these very eyes our state when we have no eyes. Similarly, the state when we have no ears. Will not this body-cage of ours reach that state? Therefore, in the manner of "as this is, so is that; as that is, so is this" (*yathā idaṃ tathā etaṃ, yathā etaṃ tathā idaṃ*), develop that meditation subject regarding the external and apply it to oneself. Reflecting on one's own body and projecting it onto others' bodies, in whatever manner, arouse insight (*vipassanā*), and it is through the realization of the paths and fruits of Stream-entry (*Sotāpatti*), Once-returning (*Sakadāgāmi*), Non-returning (*Anāgāmi*), and Arahantship (*Arahatta*) that someone realizes the noble fruit of Arahantship.</p>
+<p>Realizing that the true benefit of the birth of a Buddha for that vision is obtained at such a moment, you too have listened to the Dhamma on a valuable Full Moon day like today, this valuable Full Moon day that marks the end of the rains retreat (*vassa*). Even during this moment, the qualities that assist in Nibbāna—namely, faith (*saddhā*), energy (*viriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*)—must have developed, even in a small measure, within your minds.</p>
+<p>As the benefit of that—not merely as the general benefit of listening to the Dhamma, but through the growth of such fundamental virtues in the mind—may you gain the strength and power to escape from all saṃsāric Suffering (*dukkha*) and realize the noble, supreme, deathless Nibbāna through the realization of the paths and fruits even in this very life! Furthermore, we must share these merits with the protective assembly of devas and brahmas who are acting tactfully at this moment to protect the Dispensation (*Sāsana*) and to allow this noble Dhamma of Nibbāna to be revealed to the world. May their Dhamma-aspirations also be fulfilled. May their paramis develop and may they realize Nibbāna through one of the three forms of enlightenment (*bodhi*)!</p>
+<p>Similarly, if there are any beings from Avīci hell up to the Akanitā heaven, including deceased relatives who have passed away in your names, who are waiting to rejoice in the merits of this Dhamma-sermon and Dhamma-listening, may all of them, through this sharing of merits, end all saṃsāric Suffering (*dukkha*) as they wish and be comforted by the noble, supreme, deathless Nibbāna! With that aspiration, recite these verses and share the merits.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_090.html" class="doc-btn">← Previous Sermon (090)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_092.html" class="doc-btn">Next Sermon (092) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 033 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_032.html" class="doc-btn">← Previous Sermon (032)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_034.html" class="doc-btn">Next Sermon (034) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 033</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_033_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_033_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_033_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #33</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No. )</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Passa cittakataṁ bimbaṁ, arukāyaṁ samussitaṁ; Āturaṁ bahusaṅkappaṁ, yassa natthi dhuvaṁ ṭhiti.</p>
+<p>From:</p>
+<p>Verse 147 from the Jarāvagga (Chapter on Old Age) of the Dhammapada</p>
+<p>Dear Listeners,</p>
+<p>The Buddha realized that the perception of beauty (*subha-saññā*) regarding this bodily cage is a powerful bond that binds beings to *saṃsāra*. He taught the perception of foulness (*asubha-saññā*) to shatter this perception of beauty which nurtures defilements like lust, because the disillusionment with *saṃsāra* generated through it assists in liberation.</p>
+<p>From today’s thematic verse and the relevant story, we will be able to bring to light many facts that align with this matter. This verse of Dhamma was preached by the Buddha while residing at the Veḷuvana monastery in Rājagaha. This sermon was delivered concerning Sirimā, the famous courtesan of that city. This Sirimā of Rājagaha was the younger sister of the physician Jīvaka. She, who was a highly renowned courtesan of supreme beauty, on one occasion listened to the Dhamma from the Buddha and attained a fruit of the path [the fruit of Stream-entry]. The very next day, she offered a grand alms-giving to the Saṅgha led by the Buddha and obtained permission to offer ration-meals (*salāka-bhatta*) daily to eight monks in her home. There was a system of ration alms called *salāka-bhatta* in those days. Daily, eight monks were selected by the ration system, the lottery-rice system, and they would journey there. This woman, with great faith, offered the alms-food in an extremely exquisite manner. She offered alms-food sufficient for three or four monks to just one monk.</p>
+<p>One day, a certain monk who partook of the alms-food at Sirimā’s house went to a temple several leagues (*yojanas*) away. In the evening, when the Saṅgha assembled, the monks asked this monk, "Where did you partake of alms-food today?" So he replied, "I came after consuming the eight portion-meals of Sirimā." They asked, "How is it? Does she give alms well?" "Oh, it is beyond description! She offers alms in an extremely delicious manner, enough for two or three monks. However, her physical beauty is far more exquisite than the alms-food," he said. He even went on to describe her physical beauty in detail. Hearing this, a young monk who was present there conceived a thought: "Somehow, I must see this woman." Setting out that very day, by the time dawn broke the next morning, he arrived in that area and obtained the turn for the ration meal (*salāka-bhatta*).</p>
+<p>Meanwhile, a certain event took place at Sirimā’s house. Almost immediately after the monks had departed having consumed alms the previous day, Sirimā fell seriously ill; she removed her ornaments and lay down on her side. By the time the monk arrived for his turn of the ration-meal (*salāka-bhatta*) the next day, she was so weak she could not even get up. When informed that the monks had arrived, she told her maidservants, "Then you all prepare and offer the alms-food." After the alms-food was offered, Sirimā finally approached the monks with the help of those maidservants. Being supported and trembling all over, she came and paid homage to the monks. Due to some agitation (*saṃvega*) caused by this, that young monk did not even eat the alms-food there. Taking his bowl, he returned to the monastery, placed the bowl aside without eating, and lay down. Though other monks urged him to eat, he took no food. In this manner, three days passed.</p>
+<p>Meanwhile, on the evening of that very day, Sirimā passed away due to that illness. The King sent a message to the Buddha: "Sirimā, the sister of physician Jīvaka, has passed away." The Buddha sent a message back to the King: "Do not cremate Sirimā’s body. Keep it protected in the cemetery so that dogs and jackals cannot get close to it." After three days had passed in this manner, by the fourth day, that body, like a burst pot of cooked rice, like a nest of worms, began to ooze worms from its nine openings.</p>
+<p>And then, in accordance with the Buddha’s skillful means (*upāya-kusala*), the King had the drum beaten: "Everyone in this city, except for the children left to guard the houses, must come to the charnel ground. Anyone who does not come will be fined eight *Kahāpaṇas*." He also invited the Buddha and the Saṅgha of monks. When the Buddha and the Saṅgha were preparing to set out, the other monks near the young monk said, "Look, the Teacher is going to see Sirimā." As soon as the word "Sirimā" was heard, this monk scrambled up and asked, "What did you say?" They replied, "The Buddha is going to see Sirimā. Are you coming?" He said, "Oh, indeed I must go!" and got up, discarded the rice which had gone stale by then, washed his alms-bowl which had rusted, hung it over his shoulder, and set out.</p>
+<p>By that time, the fourfold assembly had gathered there. The Buddha asked the King, "Whose body is this?" The King replied, "This is the body of that Sirimā." "Then, beat the drum in the city and auction this Sirimā," the Buddha said. To speak in terms of those times, the auction bid started at a thousand *Kahāpaṇas*, which was the amount Sirimā charged for a day. They beat the drum announcing: "Anyone who wishes to pay a thousand *Kahāpaṇas* and take this body of Sirimā, let him take it." There was not a sound from anyone. "Then reduce the price," the Buddha said. Five hundred *Kahāpaṇas*, one hundred, fifty, ten, one *Kahāpaṇa*, and at least a *kākaṇika*—an extremely small coin in those days. Even when that was said, no one was ready to take her. Then, he said to take her even for free. Yet, no one was ready to take her.</p>
+<p>Then the Buddha declared: "Monks, do you see? The body of Sirimā, for whose companionship they used to pay a thousand *Kahāpaṇas* a day, no one is ready to take now even for free. This is the nature of the body." It was on that occasion that he uttered this valuable verse:</p>
+<p>> *Passa cittakataṃ bimbaṃ, arukāyaṃ samussitaṃ;*</p>
+<p>> *Āturaṃ bahusaṅkappaṃ, yassa natthi dhuvaṃ ṭhiti.*</p>
+<p>Every single word is extremely profound. *'Passa cittakataṃ bimbaṃ - arukāyaṃ samussitaṃ'* — look at this image (*bimbaṃ*), this statue-like body which is beautifully adorned and held upright, filled with sores. *'Āturaṃ bahusaṅkappaṃ - yassa natthi dhuvaṃ ṭhiti'* — in this diseased body which awakens many prolific thoughts, there is no changelessness, permanence, or stable duration (*ṭhiti*). This is what is conveyed by the verse.</p>
+<p>It is recorded that after listening to this sermon, that monk attained the fruit of Stream-entry (*Sotāpatti-phala*). It is also mentioned that a large crowd of people attained realization of the Dhamma. From this story, we can reflect on how, according to the Buddha’s skillful wisdom, he held a certain auction to demonstrate the reality of that body. It did not yield even as much income as a flower-basket auction held nowadays. Yet, as a priceless income, supramundane paths and fruits were attained due to that auction. So, it was to reveal the actual state of the body that the Buddha used every single word in this verse.</p>
+<p>*'Passa cittakataṃ bimbaṃ'* — though adorned with various sorts of grooming and fashions, this image (*bimba*), as it is called, is like a statue. This statue, held upright and supported by bones and sinews, is diseased (*ātura*). Even if we do not consider the illnesses mentioned in the *Girimānanda Sutta*, there are at least six basic illnesses inherent to the body, namely: cold (*sīta*), heat (*uṇha*), hunger (*jighacchā*), thirst (*pipāsā*), defecation (*uccāra*), and urination (*passāva*).</p>
+<p>One feels cold, one feels heat, one feels hunger, one feels thirst, and one is compelled to defecate and urinate—this is the reality of this body. Another indicator of this diseased state is that the body cannot be kept in a single posture. Like a sick person, one is constantly forced to change the postures of the body. Such is the nature of the body. Yet, it is *bahusaṅkappaṃ*—it is an image that awakens the poetic imaginations of the world, of artists, painters, and poets. *'Āturaṃ bahusaṅkappaṃ'*; but in this, *'yassa natthi dhuvaṃ ṭhiti'*, there is no stability, which is what the Buddha declared. Thus, by listening to this verse and the sermon, and by realizing the true nature of the body, a vast crowd attained Dhamma-realization on that occasion.</p>
+<p>Even if we reflect on that monk, we can extract a certain lesson. Sometimes even a small child blows soap bubbles. Having blown a soap bubble, when it looks beautiful, they chase after it. In the end, when it bursts, what state is it reduced to? Something similar happened to that young monk. He came from far away to see the beauty of Sirimā. But by then, she was a sick Sirimā, ill and trembling, being supported by others. Then, three or four days later, as soon as he heard that name, he rose and came, thinking that today at least he could behold her beauty. But in the end, it was a corpse like a nest of worms. That alone was sufficient for the picture of the body he had hitherto imagined to shatter, and through that, to see the danger (*ādīnava*). In this *saṃsāra*, there are three lessons to be learned.</p>
+<p>There are three stages known as gratification (*assāda*), danger (*ādīnava*), and escape (*nissaraṇa*). The side of gratification refers to the gratification, the sensory enjoyment, derived from forms in relation to the five-fold cords of sensual pleasure. The Buddha does not deny that it exists. The Buddha says that if there were no such gratification, the world would not run after gratification. That is acknowledged. But far greater is the aspect of danger (*ādīnava*). It is because of this danger that those who once ran after gratification eventually see its danger and become disillusioned. If, at the moment of disillusionment, the Dhamma is properly understood, one then reaches the state described as the third stage. That is escape (*nissaraṇa*). Escape means departing from it, detaching from it, being liberated. What assists in this escape is the Buddha’s teaching on the three characteristics (*tilakkhaṇa*): impermanent (*anicca*), suffering (*dukkha*), and non-self (*anattā*). That escape is what we have in this world to lead us towards Nibbāna.</p>
+<p>It is this very matter that the Buddha brought to light through this story and the verse. This is a very systematic aspect found in the Dhamma. There is a highly famous and valuable sutta in the Majjhima Nikāya called the *Mahā-dukkhakkhandha Sutta*. It shows how the Buddha, in a most marvelous manner through dialogue with the monks, using a question-and-answer method, tried to drive home these points. On one occasion, he asks the monks:</p>
+<p>"Monks, suppose there is a maiden of the Khattiya class—she is described as a maiden there—or of the Brāhmaṇa class, or of the householder class, who is about fifteen or sixteen years of age, neither too tall nor too short, neither too thin nor too fat, neither too dark nor too fair, possessing exquisite beauty of complexion. What do you think, monks? Is her beauty at that time supreme? Does she possess supreme physical beauty?"</p>
+<p>"Yes, Venerable Sir."</p>
+<p>"Well, monks, whatever pleasure and joy arise in dependence on beauty—that is the gratification (*assāda*) of beauty."</p>
+<p>Thus, the Buddha declared the gratification of forms (*rūpa*) there, and the monks agreed. Whatever happiness and joy arise while she is in that beautiful state, that is the aspect of gratification. Next, the Buddha begins:</p>
+<p>"Now monks, on a later occasion, when that same sister has reached eighty, ninety, or a hundred years of age, decrepit, bent like a crooked rafter, with broken teeth, grey hair, bald-headed, wrinkled skin, and blotched body—what do you think, monks? Has her former beauty vanished, and has the danger (*ādīnava*) appeared?"</p>
+<p>"Yes, Venerable Sir."</p>
+<p>"Furthermore, monks, on a later occasion, that same sister is seen afflicted, severely ill, lying in her own excrement and urine, lifted up by others and put to bed by others. What do you think, monks? Has her former beauty vanished, and has the danger appeared?"</p>
+<p>"Yes, Venerable Sir."</p>
+<p>The Buddha confirms that this too is a danger of forms. Next, he says:</p>
+<p>"Furthermore, monks, on a later occasion, that same sister is seen discarded in a charnel ground, dead for one, two, or three days, bloated, livid, and oozing purulent matter. What do you think, monks? Has her former beauty vanished, and has the danger appeared?"</p>
+<p>"Yes, Venerable Sir."</p>
+<p>"This too is a danger of forms."</p>
+<p>"Furthermore, monks, on a later occasion, that same sister is seen being devoured by crows, by vultures, by hawks, by dogs, by jackals, or by various other creatures, reduced to a worm-infested carcass. What do you think, monks? Has her former beauty vanished, and has the danger appeared?"</p>
+<p>"Yes, Venerable Sir."</p>
+<p>"This too, monks, is a danger of forms."</p>
+<p>"Furthermore, monks, on a later occasion, that same sister is seen discarded in the charnel ground as a skeleton held together by sinews, with flesh and blood adhering to it. What do you think, monks? Has her former beauty vanished, and has the danger appeared?"</p>
+<p>"Yes, Venerable Sir."</p>
+<p>"This too, monks, is a danger of forms."</p>
+<p>"Furthermore, monks, on a later occasion, that same sister is seen discarded in the charnel ground as a skeleton held together by sinews, fleshless, smeared with blood. What do you think, monks? Has her former beauty vanished, and has the danger appeared?"</p>
+<p>"Yes, Venerable Sir."</p>
+<p>"This too, monks, is a danger of forms."</p>
+<p>"Furthermore, monks, on a later occasion, that same sister is seen discarded in the charnel ground as a skeleton held together by sinews, without flesh and blood. What do you think, monks? Has her former beauty vanished at that moment, and has the danger appeared?"</p>
+<p>"Yes, Venerable Sir."</p>
+<p>"This too is a danger of forms."</p>
+<p>"Furthermore, monks, on a later occasion, that same sister is seen with her bones disconnected and scattered in all directions—here a hand-bone, there a foot-bone, here a shin-bone, there a thigh-bone, here a hip-bone, there a back-bone, here a skull. At that moment, what do you think, monks? Has her former beauty vanished, and has the danger appeared?"</p>
+<p>"Yes, Venerable Sir."</p>
+<p>"This too is a danger of forms."</p>
+<p>"Furthermore, monks, on a later occasion, that same sister is seen with her bones turned white, of the color of a conch-shell, after more than a year has passed, piled up in a heap. And then, after still more time has passed, those bones are seen rotted and crumbled into dust. What do you think, monks? Has the beauty she possessed when she was fifteen or sixteen years of age vanished, and has the danger appeared?"</p>
+<p>"Yes, Venerable Sir."</p>
+<p>"This, monks, is the danger of forms."</p>
+<p>"And what, monks, is the escape (*nissaraṇa*) from forms?"</p>
+<p>The Buddha declares the escape as well:</p>
+<p>"Monks, the removal of desire and lust (*chanda-rāga-vinaya*) for forms, the subsiding of desire and lust, the abandoning of desire and lust—that is, the freeing of attachment, craving, and passion towards them—this is the escape from forms, the departure from forms."</p>
+<p>In this manner, a scenario where the Blessed One presented and illustrated the stages of gratification, danger, and escape step-by-step to convince the monks is recorded in that *Mahā-dukkhakkhandha Sutta*.</p>
+<p>We must realize from this why the Buddha did all this: it was for the abandoning of desire and lust (*chanda-rāga-pahāṇa*). Liberation from forms means managing one’s thoughts in a way that eradicates the attachment to forms. It is to bring to the fore disillusionment, disillusionment with *saṃsāra* (*saṃsāra-nibbidā*).</p>
+<p>The Buddha has expressed this matter on another occasion in a valuable verse:</p>
+<p>> *Na te kāmā yāni citrāni loke,*</p>
+<p>> *Saṅkapparāgo purisassa kāmo;*</p>
+<p>> *Tiṭṭhanti citrāni tatheva loke,*</p>
+<p>> *Athettha dhīrā vinayanti chandaṃ.*</p>
+<p>*'Na te kāmā yāni citrāni loke'* — the beautiful things in the world are not themselves sensual pleasures. *'Saṅkapparāgo purisassa kāmo'* — the lust of conceptualized intentions, the attachment to one's own thoughts and desires, is what is truly designated as sensual pleasure; this is what is sensual pleasure for a man. *'Tiṭṭhanti citrāni tatheva loke'* — diverse beautiful things exist in abundance in the world. However, *'Athettha dhīrā vinayanti chandaṃ'* — the wise rid themselves of the desire (*chanda*), the wish, the attachment towards them.</p>
+<p>This, then, is the goal of the Dhamma. If, by understanding their aspect of danger (*ādīnava*), the attachment to them is at some point removed from the mind, at that moment, one gains the strength to liberate the mind. It is at that moment that a train of deep thoughts based on impermanence (*anicca*) arises in the mind as insight-knowledges (*vipassanā-ñāṇa*), leading to the realization of Nibbāna as the state of the paths and fruits (*magga-phala*).</p>
+<p>So, in order for us to proceed to this step, the Buddha declared the diverse things in the world and their aspects: *'Appassādā'* — their aspect of gratification (*assāda*) is little, *'Ādīnavā ettha bhiyyo'* — the aspect of danger (*ādīnava*) is much. It is through the understanding that danger is much, and by paying closer attention to danger, that at some point disillusionment (*nibbidā*), the weariness with *saṃsāra*, arises. It is shown as a natural law of Dhamma: *'nibbidā-virāga-vimutti'*. Disillusionment (*nibbidā*) means weariness, that is, disillusionment with *saṃsāra*. Through that disillusionment, faded lust or dispassion (*virāga*), which is non-attachment, arises. It is from that non-attachment that the liberation of mind (*citta-vimutti*) occurs. These are the points of Dhamma that we can bring to light from this story.</p>
+<p>Devout friends who read the *Satipaṭṭhāna Sutta* know this very matter; the stages presented as the nine charnel-ground contemplations (*nava-sīvathika*) are what the Buddha highlighted in that great discourse. They represent the true nature of the body relevant to the contemplation of the body (*kāyānupassanā*). Indeed, it is through knowledge and vision of things as they are (*yathābhūta-ñāṇadassana*)—which means understanding the actual facts about the body, understanding the actual facts about both the body and the world—that disillusionment (*nibbidā*) with *saṃsāra* arises. Having developed the knowledge of things as they are, one cannot remain without being disillusioned with *saṃsāra*. This is a law of Dhamma. Simultaneously with the arising of the knowledge of things as they are, disillusionment with *saṃsāra* occurs naturally. This is because the knowledge of things as they are encompasses those aforementioned states: gratification is little, danger is abundant. Moreover, everything is subject to the three characteristics: impermanent (*anicca*), suffering (*dukkha*), and non-self (*anattā*). Turning the mind away from them is what is called the abandoning of desire (*chanda-pahāṇa*).</p>
+<p>This state is shown in the *Satipaṭṭhāna Sutta*. Not only the establishment of mindfulness, but there is also a system of thought leading to extremely deep insight (*vipassanā*)—referred to as *satipaṭṭhāna* meditation—within the *Satipaṭṭhāna Sutta*. On this occasion, the Buddha gave a certain mental picture to the minds of the monks. First, in the *Mahā-dukkhakkhandha Sutta*, the picture of the beautiful complexion of a fifteen or sixteen-year-old maiden was presented like a soap bubble. Only after that did he show how it bursts. Similarly, here too, and in the *Satipaṭṭhāna Sutta*, having systematically shown the true state of the body, and not limiting it to another's body, there is a method in the *Satipaṭṭhāna Sutta* of applying it to one's own body. There is a specific word used to describe that: *'upasaṃharati'*. *'Upasaṃharati'* means one applies it to one's own body; one directs it towards one's own body.</p>
+<p>Now, in the passages of the *Satipaṭṭhāna Sutta* that illustrate the nine charnel-ground contemplations, they begin with the simile *'seyyathāpi'*, meaning "just as one would see such and such a form." It starts with: "just as one would see a body of this sort thrown into a charnel ground..." But it ends with: *'so imameve kāyaṃ upasaṃharati'* — "he applies this very vision to himself." He directs it toward himself and understands: *'Ayampi kho kāyo evaṃ dhammo evaṃ bhāvī etaṃ anatīto'ti'* — "This body too is of such a nature, it will become like this, it is not exempt from this fate." Thus, one applies it to oneself, realizing "my body is not something that has transcended this state."</p>
+<p>This matter is systematically shown in the *Satipaṭṭhāna Sutta* as a teaching that leads to a deep insight (*vipassanā*) of this sort, through both the aspect of "internally" (*ajjhatta*) and "externally" (*bahiddhā*), and then considering them together as "internally and externally" (*ajjhatta-bahiddhā*). To describe this matter with a simile: when a knife is sharpened on a whetstone or a leather strop, sometimes one strokes it upward. At other times, one strokes it downward. At yet other times, one strokes it rapidly both upward and downward. Why is that? Not only must the two sides be sharpened, but the cutting edge itself must be honed. The cutting edge is properly sharpened precisely in that third stage. Stroking upward, upward, upward; downward, downward, downward; and then upward and downward, upward and downward, upward and downward—that is how the cutting edge is properly formed. Tempering is given to the dull knife.</p>
+<p>Something similar happens in this insight (*vipassanā*) too. A person indeed uses another's body as an aid in the manner described. One cannot do it to oneself after one dies! So, one visualizes the corpse of someone who has died, or imagines it. Nowadays, there are various ways to even see such things. In those days too, they were easily seen in charnel grounds. In modern times, one can see them at least as images. But extracting the meaning therefrom is the primary thing. "Just as one would see"—based on what has been seen, or by imagining it in the mind, one then applies that state to oneself. When cultivating this as a meditation, at the moment of its culmination, there is a state where it is subtly applied to one's own body, like the simultaneous upward-and-downward strokes mentioned earlier. It is precisely there that the knowledge of things as they are (*yathābhūta-ñāṇa*) emerges. It is precisely there that the knowledge of things as they are emerges.</p>
+<p>Therefore, teachers of old say that, according to temperament, some start from their own body and understand: "just like this body, so is that other body." Another person starts from another’s body and culminates their insight (*vipassanā*) by applying it to their own body. Regarding various individuals, for those who possessed conceit regarding physical beauty like Khemā and Rūpanandā, the Buddha created and showed another body, demonstrating how it decays. "Am I not just like that? Will this not happen to me too?"—he made them think thus. Now here too, that monk who had thought so highly of Sirimā’s body must have finally realized: "Is not this very state the fate of this body too?" It was through that realization that his insight (*vipassanā*) was perfected.</p>
+<p>So, that distinction between inside and outside, called "external" (*bahiddhā*), is an artificial distinction we have created. Inside, there are the four elements; outside too, there are the four elements. Such is the state of the bodies inside; such is the state of the bodies outside. Yet, due to our ignorance (*avijjā*) and delusion (*moha*), we separate these and create attachment and aversion towards them. The Buddha brings to light that he who first reflects on the internal must, at some point, also reflect on the external body. Finally, the state where the two merge is what exists as "internally and externally" (*ajjhatta-bahiddhā*). It is at that moment that insight (*vipassanā*) culminates in a marvelous way. Some practitioners of insight may have even had the direct experience, while reflecting on a skeleton, of realizing: "Oh, is not my body this very thing?" Sometimes, just like a modern X-ray, one's own body and external bodies might be seen in some instances. This is natural. Natural, that is, for insight-knowledge (*vipassanā-ñāṇa*). It is understood by the eye of insight, though invisible to the ordinary eye.</p>
+<p>We have heard in stories of the past the account concerning Venerable Tissa, who, upon seeing a set of teeth, saw a skeleton walking down the road. We can see from this: a monk who had intensely developed the perception of bones (*aṭṭhika-saññā*), while walking for alms, saw a certain woman who, having quarreled with her husband, was traveling along a forest path. That woman laughed aloud lustfully. Hearing the sound, the monk looked. When he looked, only her teeth were visible. Because of restraint, he did not look further. Utilizing the teeth, his meditation object (*kammaṭṭhāna*) emerged. Later, when the husband who came searching for the woman asked if a woman had passed by, the monk replied: "Whether it was a woman or a man, I do not know. But a skeleton did go by." He did not speak a falsehood. What he expressed at that moment was precisely what appeared to his insight-knowledge (*vipassanā-ñāṇa*), to his eye of insight. Such things, or a bloated corpse (*uddhumātaka*) or similar meditation objects, when cultivated by a devout practitioner, can be realized directly. So that is the moment when the dull knife rubbed on the whetstone becomes thoroughly sharp. Through that arises the knowledge of things as they are. There is no difference between these two.</p>
+<p>This is mentioned in the Dhamma literature as the Buddha's word; in the Sutta Nipāta, there is a valuable discourse known as the *Vijaya Sutta*, which contains verses on relinquishing desire for the body (*kāya-vicchandanika gāthā*), functioning like a complete meditation guide. It states this natural law in brief:</p>
+<p>> *Yathā idaṃ tathā etaṃ, yathā etaṃ tathā idaṃ;*</p>
+<p>> *Ajjhattañca bahiddhāca, kāye chandaṃ virājaye.*</p>
+<p>*'Yathā idaṃ tathā etaṃ'* — as this body is, so is that body. *'Yathā etaṃ tathā idaṃ'* — as that body is, so is this body. *'Bahiddhā ca'* — inside and outside, *'kāye chandaṃ virājaye'* — one should fade out desire (*chanda*), wish, and attachment for the body. That is the natural law demonstrated by this. What a marvelous Dhamma is contained within this! When observing by way of contemplation of the body (*kāyānupassanā*), while practicing the meditation on foulness (*asubha-bhāvanā*) or any other meditation object, at the moment insight (*vipassanā*) culminates, the distinction between inside and outside fades away.</p>
+<p>Moreover, there is another aspect which sometimes becomes a problem for some devout friends who contemplate the *Satipaṭṭhāna Sutta*. Just as "internally" (*ajjhatta*) and "externally" (*bahiddhā*) are mentioned separately and then combined as "internally and externally" (*ajjhatta-bahiddhā*), there are other riddle-like passages mentioned in the *Satipaṭṭhāna Sutta*:</p>
+<p>> *Samudayadhammānupassī vā kāyasmiṃ viharati,*</p>
+<p>> *Vayadhammānupassī vā kāyasmiṃ viharati,*</p>
+<p>> *Samudayavayadhammānupassī vā kāyasmiṃ viharati.*</p>
+<p>Its meaning is that at each step, when describing the various parts of the body in the section of contemplation of the body (*kāyānupassanā*), one abides seeing their nature of arising, observing the side of arising (*samudaya*). Likewise, contemplating the nature of vanishing (*vayadhammānupassī*), one abides observing how it wears away. From time to time, one contemplates how the body arises, how the body is sustained through food, etc. Similarly, one observes how this wears away. Next, combining the two, just like sharpening that knife, *'samudaya-vayadhammānupassī vā kāyasmiṃ viharati'* — it is said that one abides seeing both arising and vanishing at once. This too must be understood in that manner. It is even deeper than the previous one. The sharpest honing regarding impermanence (*anicca*) occurs when arising (*samudaya*) and vanishing (*vaya*) are seen simultaneously. That moment is called "penetrative wisdom" (*nibbedhika-paññā*). It is a penetration, a piercing through. To which side does a highly sharp cutting edge belong? To which of the two sides does it belong? It is a subtle state that is hard to conceive. Just like that, what was previously divided into two as "arising" and "vanishing", when eventually merged, at the last moment, emptiness (*suññatā*) and voidness are deeply understood. Right there is Nibbāna.</p>
+<p>Now, just as we mentioned *samudayadhammānupassī* and *vayadhammānupassī*, what is to be said about that external distinction is that it applies to both the conscious (*saviññāṇaka*) and the unconscious (*aviññāṇaka*). The conscious body is also foul (*asubha*). It is within the conscious body that one carries out the meditation on the thirty-two repulsive parts of the body—on the impurities contained in this body. There too, what is often presented as the perception of foulness (*asubha-saññā*) or foulness meditation (*asubha-bhāvanā*) is the section concerning this conscious body. On the other hand, looking by way of the nine charnel-ground contemplations, it is the unconscious body—the body devoid of consciousness (*viññāṇa*). In both of these, the state of foulness is present. Thus, by reflecting on this according to the division of "one's own" and "another's", one develops disillusionment through that perception of foulness. Furthermore, for the practitioner (*yogāvacara*) who observes their nature of arising and nature of vanishing, there comes a point where these two gradually merge and are understood deeply. Therein lies the most profound part of the Dhamma. It is from here that one proceeds to a highly profound part of the Dhamma. One must not be afraid of it.</p>
+<p>We all have heard, when speaking of Nibbāna, a word called *saṅkhata* [prepared / formations / formations]. The meaning of the word *saṅkhata* is "prepared" or "put together." "Prepared" means, in modern terms, an artificial thing, a fabricated thing, something constructed by the mind. Next, when speaking of Nibbāna, for which many express approval, Nibbāna itself is called the *asaṅkhata-dhātu* [The Unprepared / Unconditioned / Uncompounded]. Something called *asaṅkhata* is also mentioned in the Dhamma. Thus, *saṅkhata* is on one side, and *asaṅkhata* is on the other. It is from here that we proceed to the analytical exposition of the Dhamma. The Buddha has declared:</p>
+<p>*"Tīṇimāni, bhikkhave, saṅkhatassa saṅkhatalakkhaṇāni."*</p>
+<p>— "Monks, there are three characteristics of the prepared (*saṅkhata*)." What are these characteristics?</p>
+<p>*"Uppādo paññāyati, vayo paññāyati, ṭhitassa aññathattaṃ paññāyati."*</p>
+<p>In everything that is prepared (*saṅkhata*), meaning put together, an arising, a birth, is observed. A wearing away, a vanishing, is observed. Between those two, *'ṭhitassa aññathattaṃ paññāyati'* occurs; even within that part described as "standing" or "existing," there is a process of changing into something else (*aññathābhāva*). *'Ṭhiti'*, meaning stability or existing, refers to that which persists, that which is present. But even in that "present" state, there is constant change. Right there is a profound matter. As we said earlier regarding sharpening on a whetstone or a strop: upward, upward, upward; downward, downward, downward; and finally, upward and downward, upward and downward, upward and downward. Now, therefore, there is that *uppāda* [arising].</p>
+<p>Now, *saṅkhata* [the prepared] refers to something constructed, demarcated by the mind. Within that demarcated thing, we see an arising. That is on one side. On the other side, we see it wearing away. But in the middle, there is *ṭhiti*—an existence, a persistence, that we ourselves have fabricated. The Buddha points out that this *ṭhiti* or stability, this state we imagined as "existing," is in truth merely a rolling-over from beginning to end. Existence, meritorious friends, is in reality a rolling-over. Thus, we call a rolling-over, a turning thing, "existence." There is not even a single moment when it does not roll over. We imagine that it does not turn. Regarding this body, we sometimes say, "Now having been beautifully young, it has started to decay. Now old age has appeared." But the Buddha says that from beginning to end, it is decay. From birth itself, there is decay. From the hair that is born, everything decays. Yet, we establish a convention: "Now the body exists. Look, only now has it started to decay." This is an illusion, a conceptualization of the mind. Thus, at the moment when this is realized, just as when both *samudaya* and *vaya* merged, it is at that point that *'ṭhitassa aññathatta'* is understood—there is a moment when it is realized that even the state assumed to be "stable, existing, remaining" is constantly undergoing change. It is then that there is no place to grasp. There remains nothing to grasp.</p>
+<p>It is because of grasping (*upādāna*) that there is a stable duration (*ṭhiti*). That is the secret. It is because of grasping that there is stability. Where there is grasping—as it is said, *"upādāna-paccayā bhavo"* [dependent on grasping is becoming/existence]—where there is grasping, there is becoming (*bhava*). Where there is letting go, there is cessation. Where there is letting go, there is the cessation of becoming (*bhava-nirodha*). This is the secret that the Buddha brought to light as the natural law of this universe, which no one else was able to solve.</p>
+<p>Thus, in the ordinary world, we speak as if one escapes from the prepared (*saṅkhata*) and, in the unprepared (*asaṅkhata*) element, which is the eternal element of Nibbāna, becomes cooled, comforted, and resides eternally. That is entirely an illusion. Here lies this natural law. Within that impermanence (*anicca*) are the three characteristics of the prepared (*saṅkhata*): arising, vanishing, and the alteration of that precarious existence in between. That stability (*ṭhiti*), this existence we assumed as "duration," is a precarious state trapped between arising and vanishing. The precarious nature of that state is realized only when that insight-knowledge (*vipassanā-ñāṇa*) becomes sharp. It is not uniform even for a single moment. Therefore, within that itself lies letting go. It is solely due to grasping (*upādāna*) that the state of "stability" (*ṭhiti*) exists.</p>
+<p>Next, the Buddha declares the characteristics of the unprepared (*asaṅkhata*):</p>
+<p>*"Na uppādo paññāyati, na vayo paññāyati, na ṭhitassa aññathattaṃ paññāyati."*</p>
+<p>There is no issue regarding the unprepared (*asaṅkhata*). In the unprepared (*asaṅkhata*), there is no arising, there is no vanishing, and there is no such thing as the alteration of something existing. Thus, we can understand through this that the Buddha demonstrates how, through grasping (*upādāna*), through holding on, one conceptualizes what is actually impermanent (*anicca*) as permanent (*nicca*). One imagines it so. Then, that assumed "stability" is merely a mental fabrication, just an imagination. A mental fabrication means just an imagination; it is not a real thing.</p>
+<p>Therefore, at the moment when that is understood, simultaneously with that understanding, one realizes: "this is a grasping (*upādāna*) generated due to craving (*taṇhā*)." That young monk blew that soap bubble based on the name "Sirimā," imagining in his mind the exquisite beauty of that courtesan. He came with that mental picture. In the end, what did he see? It was a state imagined by the mind. It was not in accordance with reality. At the moment when that is realized, it is through letting go that the unprepared (*asaṅkhata*) element is said to be realized. It is not some other world. Precisely because that grasping had existed in the mind, when the alteration of what was assumed to be "stability" is understood, automatically one sees: "this is a dangerous thing; wherever it is grasped, it shatters." In that deep insight (*vipassanā*), there is a moment when the practitioners realize this. There is nothing to grasp anywhere in preparations / formations / volitional activity (*saṅkhāra*).</p>
+<p>What is meant by "formations" (*saṅkhāra*)? What is meant by seeing the impermanence (*anicca*) of formations? A heap of preparations. What does it mean to say that all these preparations shatter? It is precisely because they are prepared that they shatter. For, in everything that is prepared, there is that arising and vanishing, and in between, a stability we have projected upon it. That is what is meant by *'ṭhitassa aññathattaṃ'*. Within the state of stability (*ṭhiti*), constant change is always operating.</p>
+<p>This matter is mentioned in the Udāna Pāḷi in a highly marvelous verse. There is a most marvelous, profound verse declared by the Buddha after attaining supreme enlightenment on the banks of the Nerañjarā River, having abided for seven days in the bliss of liberation. It is a highly marvelous, deep sutta that some devout friends constantly recollect. The relevant parts of that sutta read as follows:</p>
+<p>> *"Ayaṃ loko santāpajāto phassapareto rogaṃ vadati attato,*</p>
+<p>> *Yena yena hi maññati, tato taṃ hoti aññathā;*</p>
+<p>> *Bhavasatto loko bhavapareto bhavamevābhinandati,*</p>
+<p>> *Yadabhinandati taṃ bhayaṃ, yassa bhāyati taṃ dukkhaṃ;*</p>
+<p>> *Bhavavippahānāya kho panidaṃ brahmacariyaṃ vussati."*</p>
+<p>There is great depth in these words that came from his sacred mouth. *'Ayaṃ loko santāpajāto phassapareto'* — "this world" means the people of the world. *'Santāpajāto'* — afflicted, *'phassapareto'* — plagued by contact (*phassa*). *'Ayaṃ loko rogaṃ vadati attato'* — this world speaks of a disease as self, speaks of an illness as self. They designate a heap of illnesses as self. *'Yena yena hi maññati, tato taṃ hoti aññathā'* — in whatever way they think, in whatever way they conceptualize by mental fabrication, through that very thing it becomes otherwise. It was said to become otherwise in order to shatter that fencing in, that thinking "I exist within this portion." It is because of that very thing that its alteration becomes manifest. That is why they fear that aforementioned shattering.</p>
+<p>Then, he explains it further: *'Aññathābhāvī bhavasatto loko bhavapareto bhavamevābhinandati'*. The world, which is bound to becoming (*bhava*), plagued by becoming, delights only in becoming, even though its very nature is to alter into something else. The nature of the world is to roll over constantly, without stopping even for a single moment, without remaining even for a single moment. Yet, they do not know this. Because of this, the beings of the world attach to it. *'Bhavasatto loko bhavapareto'* — not only do they attach, but they also become enslaved; they are overwhelmed by craving for becoming (*bhava-taṇhā*). *'Bhavamevābhinandati'* — they delight only in becoming [existence].</p>
+<p>Next, the Buddha declares: *'Yadabhinandati taṃ bhayaṃ'* — whatever they delight in is a source of fear. "Fear" means danger. It is a danger, a hazardous thing. What do they delight in? In becoming (*bhava*). Becoming, however, is something constantly subject to alteration. By delighting in it, fear arises; they fall into danger. That is *'yadabhinandati taṃ bhayaṃ'*. *'Yassa bhāyati taṃ dukkhaṃ'* — what they fear is suffering (*dukkha*). What do they fear? They fear that very alteration. They grasp a world that is subject to alteration, yet they do not like alteration. That is why *'yassa bhāyati taṃ dukkhaṃ'*. What do they fear? They fear its changing, its alteration. That itself is suffering (*dukkha*). *'Bhava-vippahānāya kho panidaṃ brahmacariyaṃ vussati'* — it is for the abandoning of that state of becoming (*bhava*), that state imagined as "existence," for its letting go, that this holy life is lived.</p>
+<p>Thus, the Buddha expressed the essence of his Dhamma on that day through those few short lines of Udāna verses. It is those very points we brought to light through the *Satipaṭṭhāna Sutta*. Next, at the end of that Udāna verse, the Buddha further declares that whatever ascetics and brahmins there had been in the world attempting to solve this saṃsāric riddle, or to solve the problem of liberation, they went to two extremes. The Buddha states there that whatever ascetics and brahmins tried to solve the problem of becoming through becoming—that is, by way of eternity—tried to solve this saṃsāric riddle through an eternal existence, they too have not escaped saṃsāra. They too are not liberated. This is the view of becoming (*bhava-diṭṭhi*), the eternity view (*sassata-diṭṭhi*). Next, the other extreme is called the view of non-becoming (*vibhava-diṭṭhi*), which is the annihilation view (*uccheda-diṭṭhi*).</p>
+<p>Devout friends have heard, and those who have an understanding of the Dhamma know, that there are those two extremes. The middle path (*majjhimā paṭipadā*) is what is found in our Dhamma. On the two sides lie that eternity view and the annihilation view. This second one mentioned is the view of non-becoming (*vibhava-diṭṭhi*). There was another group of ascetics and brahmins who, adopting the annihilation view, tried to escape from *saṃsāra* through it. They too misunderstood. They too did not comprehend the matter properly. Saying "once this bodily cage is destroyed, it is all over" does not offer escape. As long as ignorance (*avijjā*) and craving (*taṇhā*) remain, this saṃsāric stream of phenomena—that stream of the prepared (*saṅkhata*) and formations (*saṅkhāra*)—continues. That is why the Buddha did not go to either of those extremes.</p>
+<p>Instead, the Buddha declares where liberation lies. At whatever moment, by the destruction of all grasping (*sabbupādānakkhayā*), by letting go of all grasping, and by the relinquishment of all acquisitions (*sabbūpadhipatinissaggā*)—grasping (*upādāna*) means holding on. Acquisitions (*upadhi*) mean that which has been grasped and accumulated. Now, devout friends constantly exert themselves to grasp wealth and various other things, heaps of material possessions. Thinking about them, they generate grasping (*upādāna*). Once those are obtained, they accumulate them as savings, deposit them as treasures, and try to protect them as acquisitions (*upadhi*). But the Buddha demonstrates that all this is a source of fear. These are things subject to alteration. Therefore, it is through grasping them that the aforementioned suffering (*dukkha*) and fear arise.</p>
+<p>Therefore, the solution provided by the Buddha is neither an eternal existence nor thinking "life ends here" and indulging in pleasures as one pleases, nor seeking liberation through various other rites and rituals. It is the understanding of this very situation. Here, when that grasping (*upādāna*) done through ignorance (*avijjā*), through that lack of understanding, is let go, what is let go along with grasping is precisely what is called acquisitions (*upadhi*)—which are held by grasping to confirm one's sense of "I-ness." When looked at ultimately, these are none other than the five aggregates of grasping (*pañc'upādānakkhandha*) that we have accumulated.</p>
+<p>It is just like hanging onto something. Relying upon something. If that onto which one hangs is let go at some point, there is a fall. If one relies upon something, when that bottom layer decays, there too is a fall. Thus, this is what is contained within the two words: grasping (*upādāna*) and acquisitions (*upadhi*). That very grasping ultimately leads to acquisitions (*upadhi*) for one's existence (*bhava*). Devout friends may have heard that word *upadhi*. The Buddha declares, to consider it in brief: money, vehicles, wife and children, lands, and everything one regards as one's assets.</p>
+<p>It is in those things that one seeks security, safety, and protection. Yet, even as one looks on, they shatter and crumble to dust. To whatever extent the grasping of them is firm, to that same extent there is suffering (*dukkha*). If they were let go in the mind beforehand, in the manner of the abandoning of desire and lust (*chanda-rāga-pahāṇa*), at that moment, there is nothing there. A state arises where one can say, "there is nothing in it." Right there is Nibbāna.</p>
+<p>Thus, Nibbāna means—do not misunderstand this when said—Nibbāna means "there is nothing." If there is "a thing," then all these problems arise. That is what is contained within the two words: the prepared (*saṅkhata*) and the unprepared (*asaṅkhata*). Within these natural phenomena which are empty, impermanent (*anicca*), suffering (*dukkha*), and non-self (*anattā*), the being conceptualizes "a thing" as a mental fabrication. That which was taken as "a thing"—that itself is what goes on and on in *saṃsāra*; it is that very stream of preparations (*saṅkhāra*). That mental energy generated through ignorance (*avijjā*) and craving (*taṇhā*), creating more and more forms, is what we carry along in this *saṃsāra*. In short, if at some point, through insight-wisdom (*vipassanā-paññā*), having seen that state, one understands the true nature of those wrong concepts that caused acquisitions (*upadhi*) and grasping (*upādāna*), and beholds the emptiness, the voidness of the world, it is at that moment that liberation exists.</p>
+<p>That is why the Buddha declared to the young Brahmin Mogharāja, who possessed highly profound understanding:</p>
+<p>> *Suññato lokaṃ avekkhassu, Mogharāja sadā sato;*</p>
+<p>> *Attānudiṭṭhiṃ ūhacca, evaṃ maccutaro siyā;*</p>
+<p>> *Evaṃ lokaṃ avekkhantaṃ, maccurāja na passati.*</p>
+<p>"Mogharāja, look upon the world as empty. *'Suññato lokaṃ avekkhassu, Mogharāja sadā sato'* — always mindful, look upon the world as empty. *'Attānudiṭṭhiṃ ūhacca'* — the view of self (*attānu-diṭṭhi*) refers to the conceit "I am" (*asmi-māna*), the deepest sense of "I-ness." Uprooting that, *'evaṃ maccutaro siyā'* — thus one overcomes death, crosses over the bondage of Māra. *'Evaṃ lokaṃ avekkhantaṃ, maccurāja na passati'* — one who looks upon the world in that manner as empty is not caught by Māra. He is not seen by Māra. That is why on many occasions, when Māra came to trouble him, the Buddha said: "You cannot grasp me." Why he cannot be grasped is because of having let go of everything. The portion that Māra can catch is the prepared (*saṅkhata*), that which is grasped. Māra is precisely there. So that is why the Buddha declared:</p>
+<p>*"Yaṃ yaṃ hi loke upādiyanti, teneva māro anveti."*</p>
+<p>— whatever things in the world we grasp, Māra follows after through that very thing. Māra possesses himself of that grasped thing, and through it, repeatedly inflicts suffering (*dukkha*) upon us in *saṃsāra*.</p>
+<p>Therefore, it is for that noble Nibbāna, which is the letting go of those grasping, the graspings of acquisitions (*upadhi*), that this devout group on this valuable day observed virtue (*sīla*), in accordance with the gradual training (*anupubba-sikkhā*), gradual action (*anupubba-kiriyā*), and gradual practice (*anupubba-paṭipadā*) declared by the Buddha as the middle path. Next, established in that virtue, you cultivated meditation by way of tranquility (*samatha*) and insight (*vipassanā*). Their supreme fruit is the deathless Nibbāna that we all aspire to. It is not an eternal state as mentioned, but the liberation of mind (*citta-vimutti*) itself. That is a state realizable in this very life. After that, there is no problem. May you gain the strength to reach a state where you can say, "there is nothing," just like the Buddha.</p>
+<p>Although we express this in words, when this comes as a direct experience, if the necessary deep work for it has not been done in previous lives, one must prepare to do it in this life. If one thinks "this is all there is to be done," there is no question of when it will be finished. With the thought "this is all there is to be done," may the power of merit generated today, the virtue observed, and the meditation practiced, certainly be a supportive condition for the fulfillment of the noble Dhamma aspirations of these devout friends, to escape from all saṃsāric suffering such as birth (*jāti*), decay (*jarā*), sickness, and death (*maraṇa*), and to find peace in the supreme deathless Nibbāna.</p>
+<p>Likewise, may all beings from Avīci up to Akaniṭṭha, including the relatives of these devout friends, if they hope for saṃsāric liberation, realize that supreme deathless Nibbāna through whichever Bodhi they have aspired to, by the merits of listening to this Dhamma. Having aspired thus, recite these verses and share the merits:</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_032.html" class="doc-btn">← Previous Sermon (032)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_034.html" class="doc-btn">Next Sermon (034) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

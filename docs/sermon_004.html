@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 004 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_003.html" class="doc-btn">← Previous Sermon (003)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_005.html" class="doc-btn">Next Sermon (005) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 004</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_004_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_004_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_004_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #4</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No. )</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Yogā ve jāyatī bhūri,</p>
+<p>ayogā bhūrisaṅkhayo;</p>
+<p>Etaṃ dvedhāpathaṃ ñatvā,</p>
+<p>bhavāya vibhavāya ca;</p>
+<p>Tathāttānaṃ niveseyya,</p>
+<p>yathā bhūri pavaḍḍhati.</p>
+<p>From:</p>
+<p>Verse 282 from the Maggavagga (Chapter on the Path) of the Dhammapada</p>
+<p>Dear Listeners,</p>
+<p>The Sublime Dhamma expounded by the Teacher of the Three Worlds, the Buddha—that Buddha-word—is indeed a path of practice that helps one escape the suffering of *saṃsāra* and realize Nibbāna. Therefore, no matter how comprehensively one studies the Buddha's teachings, complete with commentaries and sub-commentaries, or commits them to memory, if one does not walk this path of practice consisting of virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*), the ultimate purpose of the Buddha's teaching is not fulfilled. One cannot realize Nibbāna. Meditation is especially essential for realizing Nibbāna. Without meditation, no one can attain Nibbāna. The word that conveys this meaning of engaging in meditation is '*yoga*'. In other religions, the word '*yoga*' may be used in various other senses. However, in our Dhamma, '*yoga*' refers to meditative attention—to meditation and reflection. '*Ayoga*' means non-application to meditation. Thus, '*yoga*' is application to meditation, and '*ayoga*' is the lack of application to meditation. It is to demonstrate the difference between these two that we have chosen as our theme today this verse uttered by the Buddha.</p>
+<p>The background story related to this verse is a highly exemplary tale. During the time when the Buddha was residing at Jeta Grove, there was a senior elder named Poṭhila. This Ven. Poṭhila was an expert in the *Tipiṭaka*, having committed it entirely to memory, and was an acharya who taught the Dhamma to five hundred pupils. Judging by the standards of today, you all know how various degrees are awarded—he was an elder worthy of being honored with great titles such as *Tipiṭakācāriya* or *Tipiṭaka-vāgīssarācāriya*. Yet, despite Ven. Poṭhila being so full of book learning, he did not turn his mind toward meditation. He did not think about his own Nibbāna, or his own release from *saṃsāra*, no matter how many pupils he taught. The Buddha, thinking of this monk, felt a sense of urgency (*saṃvega*). "Alas, even though he is so highly educated, he still has not thought about his own Nibbāna." What was the device the Buddha used to instill a sense of urgency in this monk? When Ven. Poṭhila came to pay respects, the Buddha would address him as "Empty Poṭhila" (*Tuccha-Poṭhila*). However the word '*tuccha*' is used in society, its literal meaning is 'empty'. Thus: "Come here, Empty Poṭhila. Welcome, Empty Poṭhila. Sit down, Empty Poṭhila. Ah, well, go now, Empty Poṭhila. There goes Empty Poṭhila." In this manner, whenever Ven. Poṭhila approached, the Buddha would use those words—the word '*tuccha*'. This monk felt a deep sense of urgency. "Alas! The Buddha—my Teacher—addresses me with this word 'empty', me, who am so highly educated and who teaches such a vast number of pupils!" Now, why did the Buddha out of great compassion give him this "insulting nickname"? It was to arouse in that monk a sense of urgency regarding deliverance from *saṃsāra*, and also to shatter the pride born of his learning and his large following.</p>
+<p>For one who is practicing virtuous qualities in this Dispensation (*Sāsana*), while engaged in activities like meditation, it becomes necessary to receive various instructions under the guidance of a teacher. To receive such instructions, humility is indispensable. This monk must have thought, "Now I know everything." An already filled pot cannot be refilled; it must be emptied before it can be filled. It was with this intention of emptying him and shattering his pride that the Buddha began addressing this monk as "Empty". Yet, this monk did not become angry because of it. He did not harbor ill-will or hatred toward the Buddha, thinking, "He is disrespecting me." Understanding his own position, he then decided, "Now I must abandon all these pupils and leave. I must go to some forest monastery, go to a remote forest, and meditate." Having made this resolution, the next morning he taught his pupils for the last time. As soon as the very last pupil departed, in a manner unseen and unnoticed by anyone—almost in disguise, or rather, simply unnoticed—he departed before dawn. Having traveled hundreds of leagues away, he arrived at a certain forest monastery. In that forest monastery, there resided thirty monks—all of whom were Arahants. This elder approached the chief monk of the monastery and requested, "O venerable sir, please be my refuge." That is, to help him achieve Nibbāna. This elder first said, "Alas, are you not a person of such vast learning? It is from people like you that we too have to learn." "Alas, do not say so, venerable sir! I have come seeking refuge. Please give me a meditation subject (*kammaṭṭhāna*) for Nibbāna." To break his pride further, the chief monk sent him to the second monk. That monk sent him to the next. In this manner, they passed him along until he was sent to a newly ordained seven-year-old novice monk (*sāmaṇera*) who sat at the very end of the entire community of monks. This novice was no ordinary person; he was an Arahant. When Ven. Poṭhila approached, this young novice, who was indeed a great Arahant, was sewing a robe in a quiet spot. Ven. Poṭhila came up to the novice, paid respects, and pleaded, "Venerable good sir, please be my refuge; please help me." Then this novice also said, "Alas, venerable sir, you are an elder who is very elderly, learned, and of great erudition. When we ourselves ought to learn from you, why do you speak like this?" "No, no, do not say so. I have come with the hope of realizing Nibbāna. Please help me. If you tell me to, I am even prepared to jump into fire." Thus he expressed his obedience. To remove any remaining pride and test his obedience, the young novice pointed to a pond nearby and said, "If so, venerable sir, step into that pond over there." Ven. Poṭhila, who was wearing fine, valuable robes, stepped into the pond just as he was. As soon as he stepped in, and the edge of his robe was barely wet, the young Arahant novice called out, "Come back, venerable sir!" and then began to deliver the lesson.</p>
+<p>You, devout listeners, can imagine what that scene must have been like. A seven-year-old novice—how cute and delicate a novice, yet an Arahant! And the other monk, highly learned, gray-haired, and possessing a very imposing appearance. Yet, that elder sat squatting, ready to learn this lesson in order to realize Nibbāna. He was prepared to learn from this seven-year-old novice a lesson he had been unable to learn for so long. What was the lesson given by this Arahant novice? He gave a simile that anyone can take deeply or simply: "Then, venerable sir, let us suppose there is an anthill with six holes. A monitor lizard enters through one of those six holes. If one wants to catch this lizard, what should one do? One must block five of the holes and watch over the single hole through which the lizard entered. By watching there, one can catch the lizard. In the same way, venerable sir, we have six sense bases—like the anthill, in this body of ours. Various objects enter through these six sense doors. If we want to 'catch' those objects that have entered—here, 'catching' means understanding in a deep sense. As is commonly said nowadays: 'I couldn't catch what was said.' It is that kind of catching that is meant here. Catching the lizard means truly understanding the real nature of the object—various objects, which we call 'sense-objects' when we think of various things. Truly understanding the real nature of the object is what is meant by catching the object. Just as one blocks the five holes to catch the lizard, among these six sense bases, one must close the five doors of the external senses, namely the eye, ear, nose, tongue, and body, and engage in guarding the door of the mind (*manas*), also called 'the mind' (*sita*). That is the idea." There was no need for further elaboration. No sooner had the young novice spoken this simile than Ven. Poṭhila’s past merits came to the fore, and he understood it deeply. Immediately upon that realization, the Buddha, who had been watching this event from hundreds of leagues away, using his Buddha-knowledge to further encourage Ven. Poṭhila—to inspire him to apply himself to the meditation subject—uttered the verse we took as our theme:</p>
+<p>> *Yogā ve jāyati bhūri,*</p>
+<p>> *ayogā bhūrisaṅkhayo;*</p>
+<p>> *etaṁ dvedhāpathaṁ ñatvā,*</p>
+<p>> *bhavāya vibhavāya ca;*</p>
+<p>> *tathāttānaṁ niveseyya,*</p>
+<p>> *yathā bhūri pavaḍḍhati.*</p>
+<p>"*Yogā ve jāyati bhūri*"—*yoga* means application to meditation, meditative attention. Through that meditative attention, one can gain wisdom as vast as the earth itself; one can obtain a great result. "*Ayogā bhūrisaṅkhayo*"—but if there is no such meditative attention, no such application, what happens is the decay of wisdom. Wisdom is destroyed; understanding fades away. "*Etaṁ dvedhāpathaṁ ñatvā bhavāya vibhavāya ca*"—knowing these two paths, this fork in the road, fully understanding these two paths branching in opposite directions, one toward progress (*bhava* / becoming) and the other toward decline (*vibhava* / non-becoming); "*tathāttānaṁ niveseyya yathā bhūri pavaḍḍhati*"—"conduct oneself in such a way that wisdom may grow, walk that path, turn onto that path." This is how the Buddha advised Ven. Poṭhila through this verse. It is recorded that, encouraged by this advice, Ven. Poṭhila applied meditative attention with great speed and became an Arahant. From this, we can understand that there is a depth in that verse sufficient to aid one in attaining Arahantship. Why? Because the Dhamma he had studied was presented as a meditation subject through that simple simile of the monitor lizard and the anthill by the novice monk.</p>
+<p>Now, we can draw many lessons from this story. Let us first look at that. First of all, we see in this story the difference between book learning (knowledge) and wisdom. This is something that many people confuse nowadays. Ours is an era overflowing with knowledge. What with science and various other arts and crafts—if you look at a library, it is filled with books. There is such an abundance of knowledge overflowing in the world. But wisdom is not that. Wisdom is a subtle understanding. Most people lack it. Especially, wisdom here means the deep understanding that leads to the realization of Nibbāna—the deep understanding of the Four Noble Truths. Most people do not have that. They do not strive for wisdom either. Instead, they carry a heavy burden of knowledge, spend their lives crushed by its weight, and in the end, when they die, they might be born in woeful states, as animals or hungry ghosts (*petas*). Why? Because one cannot escape *saṃsāra* with a mere burden of knowledge. For wisdom, one must travel the path of virtue, concentration, and wisdom (*sīla-samādhi-paññā*) and undergo training in it. Or to put it in another way—wisdom means unifying the mind through some meditation subject, developing the three characteristics of impermanence (*anicca*), suffering (*dukkha*), and not-self (*anattā*), and realizing the Paths and Fruits. The difference between these two is clearly illustrated here: although the elder Ven. Poṭhila possessed qualifications worthy of receiving various high academic degrees, he had not realized Nibbāna, the true purpose of the Buddha's teaching. He had not even attained the stage of a Stream-enterer (*sotāpanna*). Yet that seven-year-old novice, a newly ordained monk whom we call a "little monk," was no ordinary little one but a great Arahant. Such is the vast gulf between book learning and wisdom.</p>
+<p>Furthermore, when we think of the word "empty" used by the Buddha, which might appear as a form of disparagement, we can understand that the primary quality needed to practice a meditation subject and train according to it is humility. Although Ven. Poṭhila had shortcomings initially, how humbly did he seek refuge from the novice at that moment! This is exemplary for everyone—an incident worthy of drawing a lesson in discipline. Thus, he demonstrated the quality of humility, setting an example for the world. Despite his vast learning, he humbly and respectfully sought advice from one who had supramundane realization. Ven. Poṭhila has given us a wonderful example.</p>
+<p>On the other hand, look at the simile that was given, and also the training that demonstrated the spiritual majesty of that novice. He told Ven. Poṭhila to step into the pond, and the elder obeyed that majesty. Next, the simile given by the young monk: the simile of the monitor lizard entering an anthill. This 'anthill' carries a profound meaning. The simile of the anthill is shown in the Dhamma itself. This physical frame, born of parents, nourished by food and drink, and constructed from the four primary elements—earth, water, fire, and wind (or *paṭhavī, āpo, tejo, vāyo*)—is compared to an anthill. The six holes of this anthill are the six doors. The five external sense bases—eye, ear, nose, tongue, and body—are like the five external holes. Why are they called "holes"? They are "doors". Through these doors, we receive various objects. The eye sees forms, the ear hears sounds, the nose smells odors, the tongue tastes flavors, the body feels touch, and the mind receives thoughts. Thus, objects stream in through these six doors. Yet, there is a specialty here. It is the mind that experiences, that "consumes," the objects that stream in through the five external senses—eye, ear, nose, tongue, and body. If we were to view this like a picture, the five external senses are situated around the periphery, with the mind in the center. All the messages—sensory messages—from those five are deposited in the mind. If we think of the anthill, we can imagine that the mind is like the topmost hole of the anthill. It is the principal one. The five external senses are like the five holes around it. We can contemplate it in this way for a moment. We usually think that the eye apprehends the object, or the ear apprehends the object. But from wherever they are received, they ultimately deposit in the mind.</p>
+<p>The mind is foremost. This is one of the most special and supreme statements in the Buddha's teaching. Though modern science may not give it such consideration, the Buddha's teaching accords the primary place to the mind. The first two verses of the Dhammapada begin with the words: "*Manopubbaṅgamā dhammā, manoseṭṭhā manomayā*." This is like a fundamental principle of the Buddha's teaching. "*Manopubbaṅgamā dhammā*"—'*dhammā*' here refers to the things that are objects of the mind. We can call them "things." Mind precedes everything we consider to be "things." The mind is foremost in these. "*Manoseṭṭhā*"—the mind is supreme. "*Manomayā*"—when we truly ponder over it, they are mind-made; they are fashioned by the mind. Regarding what is taken as a "form" or a "sound" and so forth, it is the aspect connected to the mind that the Buddha highlights. These are, as it were, constructed by the mind itself. Therefore, it is through the mind itself that this problem must be resolved. What does it mean to resolve the problem through the mind itself? It is by reflecting on (attention to) the incoming objects. Through reflecting on these objects, one understands their true nature—their true nature according to the Dhamma. What do ordinary people do? They run after the form that meets the eye to see it better. They run after the sound that meets the ear. These are perceptions (*saññā*). The Buddha compared perceptions to a mirage. What is a mirage? During the hot season, due to atmospheric and climatic conditions, a deer sees a shimmering, flickering phenomenon on the ground, mistakes it for water, and runs after it. The more it runs, the further away it recedes. That is why it is called a mirage, or *mṛgatṛṣṇikā* (the deer's thirst). The thirsty deer runs after it. The Buddha compared perceptions to that very mirage. If so, how much do we exhaust ourselves trying to see a form clearly nowadays, such that microscopes are not enough, telescopes are not enough! To that extent we analyze and analyze them. Yet, that does not bring us closer to the Dhamma. It does not bring us closer to seeing the reality expounded by the Buddha. It does not ultimately help us comprehend the three characteristics of impermanence (*anicca*), suffering (*dukkha*), and not-self (*anattā*).</p>
+<p>The same applies to sound and other sense-objects. People run far after these. What is the danger (*ādīnava*) of this running? Why do they run? It is because of desires for them. Running after these perceptions causes the growth of defilements known by various names such as craving (*taṇhā*), desire, and greed. Instead of that, what one is told to do—especially in insight (*vipassanā*) meditation—is to note (or contemplate) each of these things briefly. That yogi, the practitioner (*yogāvacara*), is traveling the path to Nibbāna, a journey to Nibbāna. Now, even if we are traveling a long distance, if we are heading toward a destination, but we keep stopping our vehicle everywhere because "here is a beautiful view" or "here is a good song" and stay to watch and listen, we will not be able to complete our journey. It becomes a cause for delay. Therefore, one who seeks Nibbāna diligently, when applying oneself to that yogic practice, to meditation, to meditative attention, does not chase after a form that is seen. One does not run after it. Instead, one presents to the mind: "Form, form," noting it in that manner twice as "this is merely a form." That is what is called noting, meditative attention. "Form, form." Similarly with a sound—if it is a song, without analyzing who sang it or what kind of song it is, the meditator seated in meditation finishes it right there by noting: "Sound, sound." "Sound, sound." Likewise with smells—whether an odor or a fragrance. That too is a certain sensation—an odor or fragrance. One notes it briefly and finishes it right there. In this manner, even if a thought arises, without letting that thought grow or proliferate, one notes it as a thought. One notes it as "merely a thought." It is through this that, instead of running after the mirage, one can halt the mind. Halting this running mind is the specific training done here.</p>
+<p>What have we been doing for a long time in this *saṃsāra*? Just as the deer runs after the mirage, we ran after the perceptions received through our senses. There is never any satisfaction. The deer runs to quench its thirst, but its thirst only increases, and it cannot find water to end it, because there is no water there. Similarly, we run after a "thing" conjured up by our minds to satisfy our desires. The things we conceive as "things"—those "things" are indeed those sense-objects. But not a single one of them can be grasped by us. Their true nature cannot be caught. We cannot be satisfied by looking with the eye or hearing with the ear. Instead, the Buddha tells us to close those five doors and note the things that come to the mind in the manner described. Even the arising thought is noted as a thought—without submitting to that thought, without allowing it to grow. Recognizing it as "thought, thought," one finishes it right there. In this way, like "nipping it in the bud," this insight attention is what is meant here by "catching the monitor lizard"—it is understanding the true nature of the object. These "monitor lizards"—these objects—have been deposited in the mind in a highly subtle manner for a long time throughout this long *saṃsāra*. The objects we created in the past *saṃsāra* due to perceptions entering the mind lie, as it were, dormant within the mind. They wake up and try to escape through the five external senses. A certain past perception regarding a form seen by the eye arises—emerging from within the mind—and grasping the external form, one runs after it, thinking, "Ah, what a beautiful form!" "Ah, what a good song!" "What a sweet sound!" and runs after it. These also emerge from the mind. Once they emerge and begin running through the five external senses, they cannot be stopped again. Instead, what does one do? The meditator closes those five doors, denies them entry, treats them briefly, nips them in the bud, and remains watchful of the mind. What is used to aid this watchfulness? That is what is called mindfulness and full awareness (*sati-sampajañña*). *Sati* means mindfulness. *Sampajañña* can be called "clear comprehension" or "awareness"—the capacity to understand something, meaning a capacity for comprehension. Thus, we can say mindfulness and understanding. With mindfulness and understanding, one—not informing others, but oneself—becomes aware of something. "Its nature is such." If it is a form, that too is a mirage. That too is a perception. Therefore, without running after it, one stops right there, noting "it is merely a form, it is merely a sound."</p>
+<p>It is through such noting that one can gradually free oneself from perception (*saññā*). And having freed oneself from perception, wisdom can emerge—that deep understanding. What is that deep understanding? As the Buddha declared, there is an impermanent (*anicca*) nature in everything in this world. One must realize this impermanence for oneself. Through this noting, one gains the capacity to realize it. If we contemplate impermanence in a bit more detail: in everything, there is an arising and a passing away. It is this arising and passing away that is called impermanence (*anicca*). Be it form, feeling (*vedanā*), perception, preparations (*saṅkhāra*), or consciousness (*viññāṇa*)—this entire fivefold group of grasping (the five aggregates / *pañcupādānakkhandha*) is impermanent. It is these five heaps called the five aggregates that we refer to as "I" and "mine". This is a heap of form. Sometimes we take a photograph and proudly say, "This is my form." What was recorded there? A series—a continuity (*santati*)—of forms that change with extreme rapidity. This is presented as a single entity by that perception, like a mirage. There is such a tendency in the world to present things in this way. Due to the weakness of our sensory apparatus, we do not see that rapid change. This is called the perception of compactness (*ghana-saññā*). Everything in the world has a way of appearing as a "compact thing", a "real thing", a "true thing", a "permanent thing". Just as the mirage seen from afar is thought to be water, though there is only a shimmering, vibrating mass there. Similarly, not only what is far away, but also this body of ours right here changes with extreme rapidity, moment by moment. That is form. Feeling (*vedanā*) is also like that. People say, "Oh, my feeling," thinking of it as a single thing. But there too, when one notes with mindfulness and understanding in the manner of meditative attention, one sees that there is a vast array—a heap—of feelings. Perception (*saññā*) is also a heap of layers. It is with a heap of perceptual layers that we recognize someone. We take that heap of layers as a single entity with extreme rapidity through the perception of compactness—as a form. Likewise, our intentions called preparations (*saṅkhāra*). They too arise and pass away with extreme rapidity. Even consciousness (*viññāṇa*), though we call it "the mind" or "my mind", arises and passes away with a speed "beyond comprehension". While such a state of affairs exists in the world, we generally take these through the perception of compactness as a single entity and refer to them as "I" and "mine". When we say "I", if there is an "I", there must also be something belonging to me. Thus, by dividing these two, we create this *saṃsāric* knot: "I" and "my things". In this way, a delusion (*moha*) is created due to the perception of compactness.</p>
+<p>When someone engages in that meditative attention, gaining some concentration (*samādhi*), they steady the mind. First, they stop the running mind by not allowing it to run—by remaining watchful of the mind. Then, as they note even more deeply, they see that here there is only a heap of arising and passing away. There is no "thing" that arises and no "thing" that passes away. In the end, even what was taken to be a "thing"—even that is not there. The feeling arises that here there is only a vibrating mass. Although we say "thing" in common parlance, regarding this object—even this object called a "thing"—it is seen that there is nothing here to cling to. Why? Because that perception of compactness is removed, and it is seen as a mere mass—everywhere, wherever one looks. As that realization draws near to a practitioner (*yogāvacara*), they perceive their own body, feelings (*vedanā*), perceptions (*saññā*), and everything else as a vibrating mass. This cannot be shown to another; it is realized by oneself. That is what is called "realization" (*pratyakṣaya* / direct experience). Through such an understanding, next, a disenchantment (revulsion / *nibbidā*) arises: "Is it not a mere thing of arising and passing away that I have been clinging to and desiring as 'I' and 'mine'?" Furthermore, when the effort to recreate these ceases, what is increasingly seen is their dissolution, their breaking-up nature. Due to that dissolution, a fear arises. If we are holding onto something, clinging to something for refuge, when that thing we are holding onto breaks, we feel a certain fear and urgency (*saṃvega*). In the same way, as the practitioner contemplates the five aggregates in this manner, the realization comes: "There is nothing to be taken here. There is nothing to hold onto. This is a highly dangerous state. We are singing joyfully while sitting on a pile of crumbling foundations throughout this entire *saṃsāra*." Therefore, indeed, it is due to delusion (*moha*) and ignorance (*avijjā*) that we have traveled for a long time in *saṃsāra*, like the deer running after the mirage. Instead, when that understanding emerges here, when wisdom arises, it is seen that this form, feeling (*vedanā*), perception (*saññā*), preparations (*saṅkhāra*), and consciousness (*viññāṇa*) that were taken as "I" and "mine" are all changing with extreme rapidity, breaking up. They arise and pass away. In this way, the insight knowledges mature.</p>
+<p>Therefore, we must consider the value of this attention (*manasikāra*). Attention is something done entirely within the mind. The meditator does not do anything visible in the world, like a hen sitting on her eggs. What they do is not seen. Yet, it is through this attention occurring within the mind that their wisdom grows. It is difficult for ordinary people to understand this. Through this meditative attention, someone at some point gradually comes to realize: "Throughout this entire *saṃsāra*, I have been engaged in a futile journey due to ignorance and craving (*taṇhā*). Taking this crumbling thing, this rapidly changing thing, as 'I' and 'mine', I have spent this *saṃsāra* overwhelmed by a torrent of defilements, a heap of defilements. We undergo various births (*jāti*) according to our kamma." As this understanding deepens and deepens, one gains the strength to let go of this. Now, when we say "letting go" (or abandoning), one might get the feeling that something held in the hand is slipping away. If viewed in that way, a question arises: "How can one let go of the five aggregates?" Although we use the word "letting go", what occurs here is something quite different. As the practitioner notes in that manner, they see this arising and passing away, and next, they see its breaking up. They begin to perceive it as breaking up even faster than it arises. Consequently, a certain fear arises, a sense of urgency (*saṃvega*) arises. Likewise, the danger (*ādīnava*) of this becomes clear—the realization that there is nothing to hold onto. Next, the understanding arises that one must be released from this. The path to that release is indeed that disenchantment (revulsion / *nibbidā*). Now we know that if a young man or woman who likes to look neat and well-groomed, having dressed up to go to a nice festival, suddenly has a dead dog, a dead snake, or a dead human corpse thrown onto their shoulders, how quickly they would shake their shoulders to fling it off! Similarly, when that realization about their dangerous nature arises, a certain disgust, a disenchantment, emerges from within the mind. This disenchantment is not something one talks about to others. This disenchantment arising from within oneself is used as an aid to escape from *saṃsāra*. Why? Because bondage in *saṃsāra* is based on craving (*taṇhā*), desire, and attachment called grasping (*upādāna*)—the mind's holding onto things. What we have here is a holding on by the mind. Right now, we are not holding onto anything with our hands. But you, devout listeners, know well how many things we hold onto with our minds! What does it mean to "own" this entire world? It is a holding on by the mind. How did kings who conquered the entire world own the world? They held onto it with their minds, through craving (*taṇhā*). They thought, "This is mine." Even this physical frame of ours does not belong to us, in truth. For they say there are eighty families of worms living inside it—and lice on the head. It belongs to all of them. This is called "common to many" (*bahu-sādhāraṇa*). This body is something common to all. Similarly, our gardens and lands belong also to thieves and enemies, to monkeys and wild beasts. Yet, "ours"—everything is ours. Our country is ours, our village is ours, our world is ours—we commonly refer to all of these as ours. But when we look at the reality, not a single one of these is ours. The Buddha declared this truth, which is generally considered bitter. Bitter though it may be, if it is the truth, we must accept it.</p>
+<p>It is through such a vision of truth that one is able to escape from *saṃsāra*. The path that helps in this is this meditative attention. Therefore, you all should contemplate today. One might think that these stories we present as similes are things that cannot be put into practice in daily life. But how did that seven-year-old novice attain such a supreme state, the state of Arahantship? Was it by reading books? Was it by acquiring vast knowledge? No. It was through meditative attention. That little monk caught the monitor lizard in the anthill correctly. Because he closed the five holes of the five external senses and caught the lizard correctly through the hole called "the mind," he became an Arahant. Thus, the seven-year-old novice taught Ven. Poṭhila a highly practical lesson for daily life. We too must make use of it. We must make it a practical thing in our daily lives. We often say "it is impossible in this day and age." Yet, through this simile, we see that we can create a place for this meditative attention even in our daily lives. Some might wonder, "How can things stop with mere noting, as described? Don't we have to run after these in daily life?" But the meditator does not contemplate from such a narrow perspective. For a long time, we have been living in this great deception. A great deception called ignorance (*avijjā*) or delusion (*moha*) has been created because of these five senses. To understand their true nature, a certain training is required, as declared by the Buddha. First, one must restrain body and speech by undertaking some virtue (*sīla*), just as you have undertaken virtue on this occasion. Established on that virtue, to concentrate the mind means to unify the mind. It is to a unified mind that this reality becomes visible. A scattered mind does not perceive the reality of the world. Therefore, removing the causes that distract the mind, one must steady the mind on some meditation subject.</p>
+<p>Once the mind is unified in that manner, if this noting is done properly, one gradually begins to realize that regarding what we took as a single entity—taken through the perception of compactness—here there is only a mass, a heap. Why is it perceived as a heap? It is because each part is perceived separately. Now, looking at a broom, when we examine it closely to see if it is "a broom," we see that here there is only a heap of coconut-leaf midribs. Then, each midrib is seen separately. Within that separate seeing lies those phenomena of Name-and-Form (*nāmarūpa*). That is a moment when a certain deep aspect of the Dhamma, namely Name-and-Form, is understood. Now, according to the Dhamma expounded by the Buddha, in truth, there are only Name-and-Form here. There is no "I" here. That is the Buddha's teaching. Although we commonly think of "Name" (*nāma*) as just a name, it actually refers to these five factors: feeling (*vedanā*), perception (*saññā*), intention (*cetanā*), contact (*phassa*), and attention (*manasikāra*). Even in our daily life, we experience some feeling, and based on that feeling, we form a certain recognition (perception). Based on that recognition, we think—intention. Through those thoughts, we make a certain contact, an attention to a certain point. This is what is called Name phenomena.</p>
+<p>Next, what is the Form (*rūpa*) part of this? What is considered Form is the four primary elements: earth, water, fire, and wind (*paṭhavī, āpo, tejo, vāyo*). These four elements are mixed in a highly subtle manner. In what we call water, the other elements are also present. But because the water element (*āpo-dhātu*) is more prominent in it, we call it water. In this way, these four great elements (*mahābhූta*) are like four ungraspable spirits mixed together in a wondrous manner. It is from these four elements that our body is constructed. Now, we protect this body as "I" and "mine", keeping others at a distance, looking after it, cleaning it; but after this physical frame dies and is put in a cemetery or graveyard, how will others recognize it? In the end, everything turns to earth. It is by taking the essence of this earth as food that our body was built up. Over a long period—twenty, thirty, or a hundred years—this physical frame was built up. Next, when it decays, it turns to earth again. Arising from earth, it becomes earth. That is what is there. Thus, there are only the four elements. But we do not realize this in daily life. The mind does not perceive it. This is understood in a highly subtle manner by the meditator. So, that is what is called Form. In the language of the meditator, when one says "Form," what is understood? The four elements: earth, water, fire, and wind. While others say, "This is a beautiful form," "an attractive form," "how beautiful this form is!", to the one with deep wisdom, the understanding arises: "What is here? Just the four elements."</p>
+<p>The same applies to what is called the mind, or the Name phenomena part. There too, there is a feeling (*vedanā*) that is directly experienced. There is a perception (*saññā*) formed through it. Even while sitting now, there is some feeling, such that one can say, "Ah, it hurts over there in that spot." Next, there is a recognition: "Did a mosquito bite?" A feeling arises. Next, there comes a perception of touch—of the point of contact. All of this is done through attention (*manasikāra*), which is noting. In the final analysis, it is noting. It is through noting itself, then, that one understands the emptiness of an object. We began with the story of "Empty Poṭhila"—about emptiness. That was in another sense. But here, what ultimately comes is an emptiness called voidness (*śūnyatā*). This means seeing through the object. What ordinary people do is run after an object, like the deer running after the mirage. What the practitioner (*yogāvacara*) does is stop, look at the object, and see through the object. Seeing through the object means seeing the impermanence (*anicca*) of the object. What was taken as an object is something that arises and passes away with extreme rapidity. Now, let us suppose we are looking at a candle flame. That large candle flame looks beautiful, yellow, or with a hint of red, appearing in a beautiful form. How does this appear when that meditative attention is developed? It appears like a mass of candle flames arising and passing away with extreme rapidity. It is not a single flame. Similarly, let us think of a stream of flowing water, or water pouring from somewhere. Now, a stream of water in a conduit or a waterfall appears from afar like a silver wall. When one looks closely, in the end, what is there is a stream of water falling and breaking with extreme rapidity, not remaining the same for a single moment. It is also seen dispersing. It is perceived as a single entity because of the perception of compactness. But to that understanding, to wisdom, it is ultimately understood that there is no "thing" here to be taken as one. "No thing." This object is finally seen through. This is a wondrous thing. It begins with the object; it begins with noting the object. But it ends with seeing the emptiness of the object—seeing through the object.</p>
+<p>It is through that seeing through that one ultimately realizes for oneself that there is nothing here to be held onto as "I" and "mine". Only if there is an "I" can there be something belonging to me; if there is no "I", there is also nothing belonging to me. Furthermore, one realizes that the perception of "I" here is a kind of ignorance, a delusion, deposited in the mind for a long time due to ignorance (*avijjā*), which society incites and tries to maintain. This realization cannot be understood by shouting it to society. No one can make another do it by merely explaining it. Why was Ven. Poṭhila unable to understand this despite learning so many books? The Buddha declared this Dhamma, this Well-expounded Dhamma, as *sandiṭṭhiko*, *akāliko*, *ehipassiko*, *opanayiko*, *paccattaṁ veditabbo viññūhi* (to be personally realized by the wise), and so on. Why? Because this is something that must be realized by the wise, each for themselves. No one else can make one realize it. The path to be applied for that is what was called *yoga*—meditative attention, proper meditative attention.</p>
+<p>Taking some meditation subject—let us say, mindfulness of breathing (*ānāpānasati*)—even through this process of inhalation and exhalation that remains with us from birth to death, some can arouse this wisdom. This is a very well-known fact. Although we say "I take a breath," what is here is actually a series of breath-waves. Exhaling a breath is also a mass of waves, of vibrations. But this wave-like nature is generally not perceived. Why is it not perceived? "I am breathing." "This is my breath." Let us suppose we took a breath filled with the fragrance of beautiful flowers with great pleasure. Or we breathed in something like the scent of joss sticks. "I" took a breath, but it cannot be retained. That is the cosmic law (*dhammatā*). No matter how eagerly we took that breath, we cannot retain it. The chest gets tight. Therefore, that breath must be exhaled. Within that exhalation, there is a similar mass of vibrations. So, in the final analysis, one has to say that what arises is a mass of vibrations, and what passes away is also a mass of vibrations. In the end, that too passes away, and those vibrations are perceived in a highly subtle manner. This cannot be understood through external instruments, no matter how subtle those instruments may be. It is understood through the wisdom developed within oneself. It is through this understanding that one is able to let go of the five aggregates. Even if one commits suicide thinking, "I must get rid of this physical frame," one does not escape the problem. It only worsens. Next, one is born again somewhere according to kamma. Nowadays, many people sacrifice their lives, calling it "life sacrifice" or "life dedication," for some thing or person they love—viewing it as a great thing. One cannot escape *saṃsāra* in that way, because there are so many kammic potentials embedded in consciousness (*viññāṇa*). Instead, what is advised is to realize those supramundane states through wisdom.</p>
+<p>There are four stages of release from this *saṃsāra*, namely Stream-entry (*sotāpanna*), Once-returning (*sakadāgāmi*), Non-returning (*anāgāmi*), and Arahantship. Within our minds, there are forces that drag us down to the four woeful states—sinful forces. The supramundane wisdom of the Stream-enterer has the power to destroy those unwholesome forces. A Stream-enterer is not born more than seven times in *saṃsāra*. Furthermore, they do not fall into the four woeful states. That is the greatest guarantee obtained from Stream-entry itself. That is why the Buddha declared the Fruit of Stream-entry to be supreme, more than lordship over the entire world, more than universal monarchy, more than going to heaven. For a universal monarch is a righteous king, but in the ordinary world, a kingship is a position where committing sin is almost unavoidable. As a result of those sins committed, they are next born in terrible hells, as hungry ghosts, or as demons. But the Stream-enterer is released from the four woeful states. That is the first supramundane state. Next, the Once-returner returns to this world only once more. They may be born in heaven and return to the human world only once. These are named according to how they shorten *saṃsāra*. Non-returning is the third stage. They do not return to this world. They end *saṃsāric* suffering in the Brahma realm itself and attain final Nibbāna (*pariNibbāna) as a noble Arahant. That is the state of Non-returning. Arahantship is this final life. After this life, there is no further birth (*jāti*). Birth is suffering (*jāti dukkha*)—although ordinary people celebrate birth with great festivities as birthdays. What a suffering birth is! Yet the child does not remember it, and sometimes the mother does not remember it either. Not only that, if we look with our eyes wide open, according to the state of the world, is it not because of birth (*jāti*) that all these troubles arise? Even this physical frame of ours is due to this birth (*jāti*). Due to the craving (*taṇhā*) and mental grasping (*upādāna*) we created in the past, we received a certain body according to kamma. Sometimes one might be born blind, mute, or deaf, and how much suffering must one undergo because of that? Well, let us suppose one is born without any such defects, with all limbs intact. Even then, to nourish this body, to survive, from the day of birth, only if parents and others feed and look after us can we live. When the time comes that we can no longer depend on them, then through the sweat of our brow, getting soiled in mud, undergoing various hardships, we must earn a living. Such is the situation for protecting this life—for maintaining this physical frame. Thus, that is the suffering born of birth (*jāti*). Next, what comes together with birth is aging (*jarā*). From the very day of birth, we age. We usually say we have grown old, reached old age, by setting a certain limit—saying it is after forty or thirty-five years. But in truth, this aging begins from birth itself. Even the hair on our head that is born keeps aging. When this aging accelerates, ailment and disease come. Gradually, sickness also joins and worsens this problem. In the end, this culminates in death (*maraṇa*).</p>
+<p>It is because of these four—birth, aging, sickness, and death (*jāti, jarā, vyādhi, maraṇa*)—that the Buddha abandoned such royal luxury and departed. Other sufferings in the world are minor. They can increase or decrease. These four are common to everyone. Therefore, if someone contemplates this *saṃsāric* state with wisdom, instead of running after that vast array of knowledge held by the world as conventional truth, what they must do is apply themselves to this path of practice—to *yoga*—declared by the Buddha, just as Ven. Poṭhila did in the end when he learned that "lesson." One must turn away from *ayoga* (non-practice) and engage in *yoga* (practice). *Yoga* means meditative attention. In this way, one must approach those who can give instructions on a meditation subject, receive instructions from them, and—humbly like Ven. Poṭhila—walk that path of the Dhamma. For a long time in *saṃsāra*, we have been running in a futile race. Like the deer running after the mirage, in this life, we set certain goals in our childhood. A small child looks at the lives of adults and develops desires for their lands and houses, the vehicles they use, and so on. Those very things are given to the child as toys, and are placed before them on the day they are first fed solid food. Those are the target objects of their parents' desires. It is those objects that the little child goes and grasps on that first feeding day. Next, the child dedicates their entire life to that grasped object. Those are the toys of small children. There is no need to speak separately of the toys of grown-up children. They spend their entire lives chasing after them. Sometimes they sacrifice their lives. But in the end, they are empty things. One can never escape *saṃsāra* through such things.</p>
+<p>Instead, what must be done is to stop that running and try to halt the mind, using the object of a meditation subject. Even to the robber Angulimāla, that bandit, the Buddha said, "I have stopped, you too stop." It is just like that. This stopping is what the world needs—not running. Everyone invites us to run. Halting this running is what is called meditative attention. To help in this, by nipping the incoming objects at the sense doors in the bud through a meditation subject, noting them in a highly subtle manner—endowed with mindfulness and full awareness (*sati-sampajañña*)—one becomes able to realize for oneself the three characteristics of impermanence (*anicca*), suffering (*dukkha*), and not-self (*anattā*) expounded by the Buddha. If everything changes, if everything is of the nature of arising and passing away, if one is oppressed by them, if they break up with extreme rapidity, this is a highly dangerous thing—this is suffering (*dukkha*). If we keep patching up and using a vehicle whose parts are falling apart, how troublesome is that? What a suffering! Similarly, this body of ours—even if we take food and drink, we must nourish it again in a few hours. We take this inhalation with great pleasure, smelling a nice flower, but we have to exhale it. The same applies to other things. Because of this breaking-up nature, this changing nature, this mutability (*vipariṇāma*), the Buddha declared this to be *dukkha* (suffering). Identifying these three marks should be the goal of everyone's life: the characteristic of impermanence (*anicca*), the characteristic of suffering (*dukkha*), and the characteristic of not-self (*anattā*). If this is suffering, if it is something painful, if there is indeed no pleasure here, how can one proudly claim it as "I" and "mine"? It breaks up precisely because it cannot be kept under one's control. If it could be called "mine," it should behave as I wish. But this is not such a thing. In a way we did not expect, at a moment we did not expect, the things we desire, the things we hold onto, the things we possess, change, break, and are destroyed—they are separated from us. Such is the nature of this *saṃsāra*.</p>
+<p>The one who has directly realized this nature with wisdom attains that supreme bliss of Nibbāna, which is called the calming of all preparations (*sabba-saṅkhāra-samatha*) expounded by the Buddha. Nibbāna means Nibbāna. Throughout this entire world, throughout this entire *saṃsāra*, there is a burning. Wondrously, the world burns within and without. The Buddha declared: "Monks, everything is burning." The eye, the ear, the nose, and all these are burning. The world lives amidst such a multitude of burnings. Through the Dhamma expounded by the Buddha, having escaped from these burnings, he showed the path to that supreme Nibbāna. That path of practice is what is called the Buddha's teaching. Its essence is the application of that practice. Therefore, you, devout lay disciples, having undertaken the valuable Noble Eight Precepts (*ariya-aṭṭhaṅgika-sīla*) on this valuable Uposatha day—and there are those here who have undertaken even more valuable precepts—having restrained body and speech in whatever manner, have now listened to several Dhamma points related to the Buddha's teaching. Through this—by means of the similes and other examples we presented—even if you adopt only the practical aspects necessary for your daily lives, if not everything, that is sufficient. Next, what is important is that in your daily life—not as a mere experiment, but incorporating it into your lifestyle, incorporating it into your daily routine, dedicating at least a short time of the day to this meditative attention, even a few minutes, or if possible, when you have free time, or even by taking leave—you turn toward this, and apply your life to that supreme task, duty, and purpose of *saṃsāric* release, the realization of Nibbāna, which has been neglected due to falling into negligence in this long *saṃsāra*.</p>
+<p>At this moment, within this Dhamma sermon, we believe that several valuable Dhamma teachings helpful for Nibbāna have been deposited in your minds. You listened to this with faith (*saddhā*). Faith is a highly valuable quality. So much so, the Buddha declared this faith to be a spiritual faculty (*indriya*) as well as a spiritual power (*bala*) that aids in realizing Nibbāna. Mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*)—we believe that you have gained the strength to develop these to some extent by listening and reflecting on this Dhamma sermon. Therefore, by applying a pure mind, body, and speech with the strength you have received, which is considered the benefit of listening to the Dhamma today, if a great mass of wholesome states (*kusala*) has arisen, let us now share all those merits with those who expect them and wish to receive them.</p>
+<p>Whatever sublime mass of wholesome merit we have gathered through this preaching and listening to the Dhamma on this occasion, may the guardian deities of the Dispensation, the assembly of Devas and Brahmas, and especially all the deities presiding over this place, rejoice in this mass of merit! According to their own aspirations, may they realize the supreme, deathless, great Nibbāna through one of the three Bodhis (Awakenings)! May they protect the Dispensation and us! We must make this aspiration. Similarly, may all beings—including one's own departed relatives—from the Avīci hell to the Akanitṭha heaven, who wish for merit and seek Nibbāna, rejoice in this noble merit and realize the supreme, deathless, great Nibbāna as quickly as possible through their aspired Bodhi. Reciting these verses, share the merits:</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_003.html" class="doc-btn">← Previous Sermon (003)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_005.html" class="doc-btn">Next Sermon (005) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

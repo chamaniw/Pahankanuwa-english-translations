@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 027 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_026.html" class="doc-btn">← Previous Sermon (026)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_028.html" class="doc-btn">Next Sermon (028) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 027</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_027_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_027_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_027_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #27</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No. )</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Appamādarato bhikkhu, pamāde bhayadassivā; Abhabbo parihānāya, nibbānasseva santike.</p>
+<p>From:</p>
+<p>Verse 32 from the Appamādavagga (Chapter on Heedfulness) of the Dhammapada</p>
+<p>Dear Listeners,</p>
+<p>By attaining supreme enlightenment on a Vesak Full Moon Poya day such as today, the Teacher of the Three Worlds, the Fully Enlightened Buddha, discovered the path to cross over from *Bhava* (Becoming). This discovery made through a noble quest (*ariya pariyesana*) is indeed the most sublime discovery in the world—the discovery of the path to cross over from *Bhava* (Becoming). The Blessed Buddha obtained on that day the realization that helps the beings of the world, who have been bound to *Saṁsāra* for an infinite period of time, to understand what those fetters binding them to this *saṁsāric* *Bhava* (Becoming) are, and to attain liberation by cutting those fetters.</p>
+<p>The stanza we have taken as our theme today, as well as the story related to it, speaks precisely of those *saṁyojanas* (fetters)—the story of those bonds.</p>
+<p>This stanza was preached concerning a certain monk who went to a deep forest to meditate after obtaining a meditation subject (*kammaṭṭhāna*) from the Buddha. Having obtained the meditation subject and gone to the forest, he meditated but, unable to achieve any higher attainment, he thought: "There must be some shortcoming in my meditation subject. I must go and clarify my meditation subject by meeting the Blessed One again." Thinking thus, he set out with the hope of coming to Jetavana monastery. On his way, he saw a forest fire. As the forest fire was spreading, this monk quickly climbed a high rock nearby and escaped from the fire. However, he kept watching how this forest fire was spreading. While watching it, with a deep sense of urgency (*saṁvega*), he thought: "Just as this fire goes on burning up all the *Upādāna* (Grasping)—which means the firewood or whatever else it catches—similarly, in the effort to cross over from the world through the knowledge of the path of Arahatship (*arahatta-magga-ñāṇa*) that I aspire to, will not the *vipassanā* (insight) knowledges that must be aroused also burn up those bonds that bind one to the world with the fire of that knowledge?" In this manner, a certain thought arose in that monk's mind.</p>
+<p>The Buddha, staying at Jetavana, saw this monk's train of thoughts and, in order to direct it toward Nibbāna, uttered this stanza—which is referred to in the commentaries as an *obhāsa gāthā* (a stanza uttered through sending forth light). Such incidents are mentioned on many occasions. The Buddha, through psychic power, made himself appear as if standing before that monk, and uttered this stanza so that it could be heard by him:</p>
+<p>*"Appamādarato bhikkhu, pamāde bhayadassivā;*</p>
+<p>*aṇuṁ thūlaṁ dahan, aggīva gacchati."*</p>
+<p>The monk who delights in heedfulness and sees danger in heedlessness moves forward like a fire, burning all fetters, large and small. In this way, He uttered a stanza that leads to and encourages those insight knowledges (*vipassanā-ñāṇa*). Approving the thought-movement of that monk, the Buddha declared through this stanza, "Yes, monk, just so, like that fire burning, insight knowledges go on burning away those *saṁyojanas* (fetters)." Hearing this, it is said that the monk attained Arahatship right there, and came to see the Buddha to declare his liberation.</p>
+<p>When we reflect on this story, for that monk, the forest fire was not merely a sight—a mere spectacle. For us, a forest fire is only a sight. But for him, it became an object of *vipassanā* (insight). A forest fire—perhaps not everyone has heard of this word—often occurs in forests naturally. During a severe drought, when all the trees are dried up, when a storm comes, two trees rub against each other. Rubbing, rubbing, rubbing against each other, they catch fire. Having caught fire, those two trees themselves are burnt down. Next, catching all the surrounding trees, leaves, and vegetation, it gradually spreads in a terrifying manner, consuming everything it encounters. Now, that is a deeply moving sight. It is by directing that sight toward Nibbāna that the monk aroused insight knowledges in that manner.</p>
+<p>Now, if we reflect a little, to the Buddha, the entire world appeared as a place on fire. There are certain sutta discourses, highly wondrous discourses. There are suttas of a nature that arouse a sense of urgency, like the *Ādittapariyāya Sutta*. Some of them are truly marvelous. There is a discourse preached by the Buddha at Gayāsīsa, near Buddhagaya, to a thousand monks; the discourse is very short, but it ends stating that all those thousand monks attained Arahatship. It is an extremely powerful discourse. It begins: *"Ādittaṁ"*—"All is burning, monks." Everything is on fire and burning. Next, the Buddha analyzes: "And what, monks, is that 'all'?" There, 'all'—which is called *sabbaṁ*—is analyzed: the eye and forms, the ear and sounds, the nose and smells, the tongue and tastes, the body and *Phassa* (Contact), the mind and mind-objects (*dhamma*, the word used there for what comes to the mind). All these are on fire. They are on fire and burning. With what are they burning, monks? Next, He says—and you may have heard of this—about the eleven fires: with the fires of greed (*rāga*), hatred (*dosa*), and delusion (*moha*). Not only those three. Next, He speaks of a multitude of fires of *Dukkha* (Suffering) such as *Jāti* (Birth), *Jarāmaraṇa* (Decay and Death), lamentation, pain, grief, and despair. It is with these fires that the eye and forms, the ear and sounds, and finally, the mind and mind-objects, and everything else, are burning. There is a great fire within the worldly being. The Buddha saw everything as having caught fire.</p>
+<p>So, the statement that this entire *Bhava* (Becoming) is a fire might sometimes be difficult for someone to understand. Next, if we reflect a little on this fire, according to our day-to-day understanding, we use the word 'firewood-fire' (*gindara*). The fire catches the wood. The wood burns. Thus, within that word 'fire' both are present. If we think about it a little, for this wood, the word used in the Pali language is *Upādāna* (Grasping). In those analyses of the Dhamma, we can say that the word *Upādāna* is used in two senses. There is the sense of 'grasping/holding' and there is the sense of 'the thing grasped' (fuel). Grasping/holding is the primary meaning. Then, the five aggregates of grasping (*pañcupādānakkhandha*) are groups of *Upādāna*. It is these groups that we call "I" and "mine," according to the Buddha's description. A group of form is called the form aggregate of grasping (*rūpupādānakkhandha*). A group of *Vedanā* (Feeling)... all these are designated by the name *Upādāna*. Thus, when we say *Upādāna*, just as it means 'grasping/holding', it also means 'the thing grasped'. In the sense of 'the thing grasped', it is firewood, or some kind of fuel. So, a fire has caught hold of its *Upādāna* (fuel). After catching hold of it, what happens? In the end, there is no distinction between the fire and the firewood.</p>
+<p>The story of this being burning with those fires of *Dukkha* (Suffering) has been shown in a simple poem that we can understand, by the great Thera of Vīdāgama in the past, in the *Lowäda Saňgarāva*. In a very simple poem:</p>
+<p>> *When a heap of firewood has caught fire constantly,*</p>
+<p>> *It is called 'fire', and the name 'firewood' no longer applies;*</p>
+<p>> *In the same manner, joining them together, the Sage declared:*</p>
+<p>> *It is but Dukkha, and the name 'body' no longer applies.*</p>
+<p>After a heap of firewood catches fire, it is only called 'fire' and the name 'firewood' is no longer suitable; it "does not apply." In the same way, the Buddha brought together the fire and the firewood that is caught by the fire, and declared: "It is but *Dukkha* (Suffering), and the name 'body' no longer applies." It is not fitting to call this a "body."</p>
+<p>Now, that eye, ear, nose, etc., are in this body, aren't they? What are mentioned in the Dhamma as *āyatanas* (sense-bases)—all those six *āyatanas* are within this body. So, saying that all these six *āyatanas* are on fire means precisely that. The entire body is on fire. That is why we all talk about the Four Noble Truths of the Buddha. We say, "*Dukkha-sacca*, *Dukkha-sacca*" (the truth of suffering/unsatisfactoriness/stress), and some say, "I have already understood it." But *Dukkha* (Suffering) is not fully understood. It is at the moment *Dukkha-sacca* is understood that those two, the firewood and the fire, come together. Once one realizes that what was set apart as a "heap of firewood" is burning completely, there is only fire there. One cannot call it "firewood." However, seeing various troubles in this world, some people say, "I have understood *Dukkha*." But when full realization comes, it is to such an extent that it cannot be separated; it is pure *Dukkha*. Pure *Dukkha*. The Buddha refers to this as the "entire mass of suffering" (*kevala-dukkhakkhandha*) when analyzing this *Dukkha*. In brief, the entire five aggregates of grasping (*pañcupādānakkhandha*)—these five grasped groups—are called *Dukkha* according to that very vision.</p>
+<p>Once the fire catches the firewood, a point comes where the firewood cannot be separated. There is only a pure heap of fire. So, that is it. The path leading there is the path of *vipassanā* (insight). Then, how does one gain this understanding regarding this? What is the path leading to this realization? For that too, we find guidance in other suttas shown by the Buddha Himself. He speaks concerning those six *āyatanas* (sense-bases).</p>
+<p>A certain monk asks the Blessed One, requesting a meditation subject (*kammaṭṭhāna*) on how to destroy this *Dukkha* (Suffering)—how to bring an end to this *saṁsāric* *Dukkha*. Then the Buddha declares: "One must understand this *Anicca* (Impermanent)." The eye is *Anicca*, and forms are *Anicca*. The ear is *Anicca*, and sounds are *Anicca*. Everything is *Anicca*. But the perception of impermanence (*anicca-saññā*) is not present in the ordinary worldling. Instead, what is present is the perception of permanence (*nicca-saññā*). They separate the eye and separate forms, treating them as things that actually exist. According to the Buddha's vision, all these change moment by moment. That word is used in various ways: it fluctuates (*calaṁ*), it decays (*vayaṁ*), it passes away. Everything fluctuates, decays, trembles. It is changing into another state, rapidly. But the worldling does not perceive it. Therefore, they separate them.</p>
+<p>Separating them as eye and forms, ear and sounds—it is within that, indeed, that the bondage arises. Now, regarding this bondage, a very good simile-story comes. It is a dialogue between the chief disciple Ven. Sāriputta Maha Thera and Ven. Mahā Koṭṭhita Maha Thera. Ven. Mahā Koṭṭhita asks Ven. Sāriputta: "Is the form a bond for the eye, or is the eye a bond for the form? Is the sound a bond for the ear, or is the ear a bond for the sound?" There is talk about a bond, a *saṁyojana* (fetter), isn't there? So, what is the *saṁyojana* here? Does the form become a bond to the eye, or does the eye become a bond? Does the sound become a bond to the ear, or does the ear become a bond to the sound? In this manner, he asks about all six. Finally, "Is the mind-object a bond to the mind, or is the mind a bond to the mind-objects?" Then Ven. Sāriputta declares: "No, friend Koṭṭhita. The form is not a bond to the eye, nor is the eye a bond to forms. The sound is not a bond to the ear, nor is the ear a bond to sounds. Rather, the desire-and-lust (*chandarāga*)—the attachment following desire—that arises in-between, conditioned and supported by those two, is the bond here." So, we usually consider the form seen by the eye to be the bond. But here it is shown that the desire-and-lust (*chandarāga*)—the attachment following desire—arising due to those two, is the bond. To illustrate this, a very good simile is given:</p>
+<p>"Friend Koṭṭhita, if a black ox and a white ox are bound together by a single strap or chain, like a yoke, and if someone were to say that the white ox is the bond for the black ox, or that the black ox is the bond for the white ox—would that assertion be correct?" Then Ven. Koṭṭhita says: "No, friend. Why? The white ox is not the bond for the black ox, nor is the black ox the bond for the white ox. Rather, the strap or the bond by which the two are bound together is the real bond there."</p>
+<p>"Just so, the form is not the bond for the eye, nor is the eye the bond for forms. The desire-and-lust (*chandarāga*)—the attachment, the *Taṇhā* (Craving)—that arises because of those two is the bond there. That is why the Buddha declared that to bring an end to *Dukkha* (Suffering), one must destroy *Taṇhā*, destroy *chandarāga*. Although we might think of this as very deep, some meditators get insights through this. Why? The understanding to cross over from the entire world is gained precisely from this world of the six sense-bases (*saḷāyatana*) which we have so far taken to be 'the world'. The Buddha defines 'the world' as these six sense-bases—called the *saḷāyatana*. The six sense-bases we have are the eye, ear, nose, tongue, body, and mind. Now, the word *āyatana* might have various meanings these days. But in truth, what we have to do is the management of these six sense-bases. However, what is mostly done is mismanagement. That is why we are bound to *Saṁsāra*. What is the management? It is understanding the *Anicca* (Impermanent) nature of these sense-bases, according to the word of the Buddha. The eye is *Anicca*. It changes moment by moment. It changes into another state. Forms too are like that—gaining that deep understanding, through the application of mindfulness on this body. Those meritorious friends who meditate know this; by applying mindfulness and clear comprehension (*sati-sampajañña*), they gradually understand deeply that all these change moment by moment. It is through that, indeed, that *Taṇhā*, or *chandarāga*, gradually loosens. If that *Anicca* nature is established in the mind to some extent, if it is realized by the mind, to that extent the understanding arises that there is nothing here to cling to or to clash with. *Chandarāga* means the attachment created according to desire."</p>
+<p>So, such is the situation. There are numerous Dhamma discourses by the Buddha regarding these six sense-bases. Even in this day and age, if practicing yogis apply wisdom, if they manage these sense-bases correctly, and if they make an effort to understand the reality of the objects that come as prey to these sense-bases, then they will understand their fluctuating nature. Now, even in motion pictures, what is done is that by sending a film strip rapidly, a certain illusion (hypnosis) is created. A perception of permanence (*nicca-saññā*) is created toward those scenes, toward those images. Sometimes, due to a mechanical fault or a delay, one suddenly realizes, "Here, what is passing is only a collection of images." That illusion which creates the perception of compactness (*ghana-saññā*) is deposited in this *Viññāṇa* (Consciousness). That is a magical nature. That is why the Buddha points out on some occasions: "The eye is *Anicca* (Impermanent), forms too are *Anicca*."</p>
+<p>"Next, the eye-consciousness (*cakkhu-viññāṇa*)—which is the consciousness regarding the eye, arising because of those two—is also *Anicca*. A person does not see merely because there is an eye. He does not see merely because there are forms. At the moment when the eye and forms come together through attention, a consciousness regarding the eye (*Viññāṇa*) arises. The Buddha declares that this eye-consciousness too is *Anicca*. Next, after the eye-consciousness arises, through that, *Phassa* (Contact) emerges. A certain impingement occurs. That too is *Anicca*. Next, due to that impingement (*Phassa*), a certain *Vedanā* (Feeling) arises. That too is likewise *Anicca*. In this very manner, the Buddha reminds us. Within that very process that takes place—within the process arising from the impingement of the eye and forms—there is only *Anicca* (Impermanent). It is fluctuating, changing, turning into another state, and undergoing reverse change. Then, how can those things that arise because of them be permanent? Finally, the Buddha declares: for example, the consciousness (*Viññāṇa*) arising from the impingement of the eye and forms is *Anicca*. The contacts (*Phassa*) arising because of that consciousness are *Anicca*. How can the *Vedanā* (Feeling) and so forth that arise based on that contact be permanent? Whether it is a pleasant, painful, or neutral feeling, every single one of them has that same nature of changing. It is when that understanding comes, indeed, that in the end, that [grasping] slips away."</p>
+<p>In books, generally, the *saṁyojanas* (fetters) are explained very simply. It is said that if one wants to realize Nibbāna, one must break ten *saṁyojanas*, and one can list those ten at once. What are the ten? Perhaps you have heard of them. On the path leading to Nibbāna, there are ten bonds binding us to *Saṁsāra* that must be broken.</p>
+<p>They are shown as *saṁyojanas* (fetters) as follows:</p>
+<p>1. *Sakkāya-diṭṭhi* (View of existing group/body)</p>
+<p>2. *Vicikicchā* (Skeptical doubt)</p>
+<p>3. *Sīlabbata-parāmāsa* (Adherence to rules and rituals)</p>
+<p>4. *Kāmarāga* (Sensual lust)</p>
+<p>5. *Vyāpāda* (Ill-will)</p>
+<p>6. *Rūparāga* (Lust for form-existence)</p>
+<p>7. *Arūparāga* (Lust for formless-existence)</p>
+<p>8. *Māna* (Conceit)</p>
+<p>9. *Uddhacca* (Restlessness)</p>
+<p>10. *Avijjā* (Ignorance)</p>
+<p>*Sakkāya-diṭṭhi* means taking the five aggregates—namely, form (*rūpa*), *Vedanā* (Feeling), perception (*saññā*), *Saṅkhāra* (preparations), and *Viññāṇa* (Consciousness)—as a self. Each of them is considered as a self in four ways. There too, what is present is that perception of compactness (*ghana-saññā*).</p>
+<p>Likewise, *vicikicchā* (skeptical doubt). One holds tightly to the notion of "I". Thinking that there is someone called "I" based on this body, one rolls over and over in a heap of doubts and hesitations, such as: "Did I exist in the past? Will I exist in the future?" and so forth. One conjures up [notions] through that. That too is a bond binding one to *Saṁsāra*. Next, *sīlabbata-parāmāsa* (adherence to rules and rituals) means, as some people think, that through difficult vows and practices—like some brahmins immersing themselves in cold water, or Jain ascetics undergoing various forms of self-mortification—by holding tightly to these, liberation is attained. In the end, that too is a bond.</p>
+<p>Next, everyone knows that *kāmarāga* (sensual lust) is a force that pulls one downwards, to that *Bhava* (Becoming) we mentioned. Likewise, *vyāpāda* (ill-will) means anger—the two: attraction and repulsion (clinging and clashing). Next, what are mentioned as *rūparāga* and *arūparāga* are indeed more subtle forms of that very *Taṇhā* (Craving). Due to spending a long time in *Saṁsāra*, beings have a power in their minds to create various mind-born images. In the end, they grasp onto these, even if they have let go of external things. That is why, even if they have attained high states of jhāna, they still have certain desires that come from deep within—a kind of subtle desire. It is in correspondence to those that Brahma worlds and so forth are created.</p>
+<p>Such is the highly dangerous situation present within this *Bhava* (Becoming). One cannot easily escape. Some go and get trapped there—in those subtle cravings such as *rūparāga* and so on. Next, as a result of all that, there are *māna* (conceit) and *uddhacca* (restlessness). *Māna* arises from taking things as "two", like separating the firewood and the fire. Because of that very thing, *uddhacca* (restlessness/unquietness) arises. Finally, *avijjā* (ignorance). Within that itself is found the ultimate end of the perception of permanence (*nicca-saññā*) that starts with *Sakkāya-diṭṭhi* (View of existing group/body). It is only when that perception of permanence is completely removed that the emptiness of the world is understood.</p>
+<p>So, if we speak of those ten in that manner, they are shown as things that are destroyed through path-knowledges (*magga-ñāṇa*). However, if we take this as something that is more directly and practically helpful to the practicing yogi in meditation, it is, as the Buddha said, the bond that exists between these two in these suttas:</p>
+<p>the eye and forms,</p>
+<p>the ear and sounds,</p>
+<p>the nose and smells,</p>
+<p>the tongue and tastes,</p>
+<p>the body and *Phassa* (Contact),</p>
+<p>the mind and mind-objects (*dhamma*).</p>
+<p>On another occasion, the Buddha, addressing the Saṅgha, declared:</p>
+<p>"Monks, I will teach you a dyad (two things)." When it is said, "I will teach you two," one might think of various things. But here too, the Buddha presents the teaching in this way: "Monks, I will teach you a dyad. What is the dyad? The eye and forms, the ear and sounds, the nose and smells, the tongue and tastes, the body and contacts, the mind and mind-objects." He does not stop there. "Monks, if anyone were to say there is another dyad apart from this, that talk of his would be completely empty. He would not be able to provide any proof either." What is shown by this is that the Buddha's real dyad is just this. If one takes "two" as a duality, it is precisely this division into two:</p>
+<p>The eye—separated from forms;</p>
+<p>The ear—separated from sounds;</p>
+<p>The nose—separated from smells.</p>
+<p>Taking each of them as "things". This notion of "things"—no matter what the level of education of these meritorious friends may be, while the story of the ten *saṁyojanas* (fetters) might be understood by those who have read books, this talk is for everyone, since everyone is a manager of these *āyatanas* (sense-bases), aren't they? So, to abandon that mismanagement and to manage them properly, try to realize this very understanding. That is to say, the Buddha declares that as long as we separate the eye and forms, and separate the ear and sounds, so long will that bond, so long will that idea of impingement (clashing) remain. That is why it was called "a dyad" (two). If there are "two" in the world, it is precisely this kind of division into two. It is within that division, indeed, that the forest fire we mentioned earlier arises—from the friction of two dry trees. Rubbing, rubbing, rubbing against each other, at some point, a fire is produced.</p>
+<p>It is in that very same way that the Buddha declared concerning this *Viññāṇa* (Consciousness). There is no such thing as consciousness on its own. There is no separate consciousness apart from this. It must either be eye-consciousness (*cakkhu-viññāṇa*), which is consciousness regarding the eye; or it must be ear-consciousness (*sota-viññāṇa*), which is consciousness regarding the ear; or it must be nose-consciousness (*ghāṇa-viññāṇa*), which is consciousness regarding the nose; or it must be tongue-consciousness (*jivhā-viññāṇa*), which is consciousness regarding the tongue; or it must be body-consciousness (*kāya-viññāṇa*), which is consciousness regarding the body; or it must be mind-consciousness (*mano-viññāṇa*).</p>
+<p>There are six such types of consciousness (*Viññāṇa*). There is no consciousness on its own. This too is shown on one occasion through a simile. Now, there is no such thing as just "fire", is there? We can either call it a paper fire, or a wood fire. In that manner, if a fire arises dependent on a certain *Upādāna* (Grasping), dependent on some fuel like wood, it is designated by that name. There there is no such thing as a mere "fire" in the world. Even when a matchstick catches fire, it has to be called a "matchstick fire" thereafter. Such is the situation. It is in that very same way that *Viññāṇa* (Consciousness) is explained.</p>
+<p>Within it, there is this nature of separating. It is through that separating, indeed, that impingement (clashing) exists next. Thus, if one understands at some point—after those two trees rubbed together and caught fire, those two trees themselves are gone, and whatever the fire catches, it moves forward burning and burning it. It goes on burning up everything. What remains then is a pure sheet of flame. There might have been very beautiful flowering trees and good fruits in that forest. But in the end, they are all just firewood. Before the fire, they are all just firewood. In that way, it goes on burning, burning them up.</p>
+<p>It must have been on seeing this that the monk then thought: "Just like this fire, so too are these insight knowledges (*vipassanā-ñāṇa*). They go on burning and burning up all *saṅkhāras* (Preparations / preparations / Volitional activity) that they encounter. They go on burning and burning whatever they meet ahead." With what do they burn them? With that very perception of impermanence (*anicca-saññā*). Through the perception of impermanence. It is extremely powerful. At the moment when it is thoroughly impressed upon our minds that "every single one of these is *Anicca*, *Anicca*", then, without taking them as "two", here there is completely a heap of fire. Just as it was said in that poem:</p>
+<p>> *When a heap of firewood has caught fire constantly,*</p>
+<p>> *It is called 'fire', and the name 'firewood' no longer applies;*</p>
+<p>> *In the same manner, joining them together, the Sage declared...*</p>
+<p>This is understood as pure *Dukkha* (Suffering). As long as those two are separated, next, dividing them as agreeable and disagreeable, one creates attachment or repulsion in various ways. It is as a direct result of this, indeed, that whether it be wholesome or unwholesome (*kusala* or *akusala*), merit or demerit, created over a long period in *Saṁsāra*, through them, conjuring up world after world, this being goes on in *Saṁsāra* for an infinite time.</p>
+<p>Out of those ten, the first five are called the lower fetters (*orambhāgiya-saṁyojana*). They are all forces that pull downwards. There is a group of fetters that pull one down to the planes of misery (*apāyas*), to such lower realms of *Bhava* (Becoming). There is also a kind of fine thread that pulls one upwards, to the Brahma worlds. Thus, pulled by these, the being spends a long time in *Saṁsāra*.</p>
+<p>The Buddha taught this vision regarding the fire. Now, the ordinary worldling is frightened by this vision of fire. But that monk did not merely rejoice in having escaped from the forest fire. Climbing up that rock, he did not just satisfy himself thinking, "Now I am safe from the forest fire." He reflected on the purpose for which he had come. To derive benefit from it, he turned that sight (*dassana*) into insight (*vipassanā*). Just as this fire goes on burning and burning everything it encounters, so indeed, as one goes deeper and deeper into the understanding that every part of *saṅkhāras* (Preparations / preparations / Volitional activity) caught by the insight knowledge is *Anicca* (Impermanent), subject to change, subject to fluctuation, subject to turning into another state—then, that very momentum is lost. That bond is destroyed.</p>
+<p>So, what is the path of meditation that helps in this understanding? Next, the question is that there are various paths of meditation. Some people think: "When we just watch the mind as it goes, we can understand the state of this mind." They let the mind run as it runs. Letting it run, they think, "Someday it will be understood by us." That is not the correct method. For that too, the Buddha has shown a simile, an extremely valuable simile. In fact, the more one thinks about it, the deeper it gets. The Buddha gives a simile as follows:</p>
+<p>"Monks, suppose a certain man binds a snake with a very strong rope. He binds the snake tightly with a rope. Next, he binds a crocodile. Similarly, next, he binds a bird with a rope. He binds a dog with a similar rope. He binds a jackal with a similar rope. Next, he binds a monkey with a similar rope. Having bound those six, he joins those six ropes together and ties a knot. Tying a knot in the middle, he just lets them go. After letting them go, what happens? Those six pull in six different directions."</p>
+<p>"The snake pulls toward its anthill,</p>
+<p>the crocodile pulls toward the water,</p>
+<p>the bird pulls toward the sky,</p>
+<p>the dog pulls toward the village,</p>
+<p>the jackal pulls toward the cemetery,</p>
+<p>the monkey pulls toward the forest.</p>
+<p>They pull in six different directions. Now, imagine for a moment these six bound by these six ropes pulling. Next, the Buddha says: having pulled and pulled, getting exhausted—indeed, they would be pulling in each direction—after getting exhausted, whichever of these six animals is the strongest, all the others are pulled along according to that animal. Suppose all are overcome by the strength of the crocodile. Lo, the crocodile drags all of them into the water. Such is the simile given here. Next, just so, it is said there that those six animals have their own separate feeding grounds (*visaya*). Their feeding grounds are different. Whether they are feeding grounds or habitats, they are different. Therefore, they pull toward those sides. What is this simile given for? This is said about those six *āyatanas* (sense-bases). The eye, ear, nose, tongue, body, and mind. These are given as the similes for them. But the simile does not end there. That is what happens when they are dragged along."</p>
+<p>In short, that simile is shown to demonstrate the difference between the lack of sense restraint (*indriya-asaṁvara*) and sense restraint (*indriya-saṁvara*). That simile mentioned above is about the lack of sense restraint. If they are just let go, bound by a knot in the middle, in the end, pulling this way and that, someone wins. They are dragged along that path. If one just watches the mind, that is exactly what happens. Next, the Buddha says there, that is the state of one who has not developed mindfulness directed to the body (*kāyagatāsati*). If someone has not developed *kāyagatāsati*, the functioning of those six *āyatanas* of that person is shown by that simile.</p>
+<p>Next, He shows the simile regarding the restraint developed through that by one who has developed mindfulness directed to the body (*kāyagatāsati*). That too carries forward that same simile to some extent. Suppose someone binds a snake with a rope in the same way. A crocodile, a bird, a dog, a jackal, and a monkey. Instead of tying a knot in the middle of those six ropes, what does he do? He binds them to a very strong post. He binds them to a very strong post. Then, those six pull and pull and pull. They pull until they are exhausted. Having pulled, what do they do? All six come and lie down, leaning against the post. A few beautiful words are used there. That is, having come to the post and leaning against it, all six lie down exhausted. Now, imagine the difference. What is spoken of there is indeed sense restraint (*indriya-saṁvara*).</p>
+<p>Thus, the Buddha shows: according to that second simile, such is the state of the person who has developed mindfulness directed to the body (*kāyagatāsati*). Whichever way those senses pull, in the end, they come and stop near the post of the meditation subject (*kammaṭṭhāna*).</p>
+<p>That is why, meritorious friends, the method of letting the mind go in the manner mentioned earlier, giving room to whatever thoughts that arise, and thinking "someday an understanding will come to us"—that is the method I mentioned at the beginning. Instead of that, what the Buddha points out is this *kāyagatāsati*. In short, there are numerous meditations that fall under *kāyagatāsati*. Generally, we speak of the thirty-two impure parts of the body. Apart from that, in some places, even the ten kinds of foulness (*asubha*) showing the nature of the body can be included in *kāyagatāsati*. Whichever it may be, there must be a certain stability. Consider the difference here. There must be a certain stability.</p>
+<p>To restrain this scattering mind, the mind that tends to scatter through the senses, some meditation subject (*kammaṭṭhāna*) is necessary. Even the word *kammaṭṭhāna*—since the meaning of old words is not well understood these days, we have sometimes translated it into modern Sinhala. If *kamma* means 'work', and *ṭhāna* means 'place' or 'ground', then *kammaṭṭhāna* means a workplace, a spiritual workplace. A person who has no workplace, no work, no job, is a vagrant, isn't he? In contrast, the person who has a workplace thinks about the workplace, focuses his mind on the workplace, and goes to the workplace. Just so, the workplace belonging to the practicing yogi working for Nibbāna is the *kammaṭṭhāna*, *kāyagatāsati*. Thus, for the one who has developed *kāyagatāsati*, the ability to establish that very sense restraint we spoke of is what the Buddha shows here through this profound simile. I called it profound because its meaning is deep, but on examination, it is simple. What is shown by the simile of those six animals is the eye, ear, nose, tongue, body, and mind. Many people talk about the five senses these days. Some try to limit it to five to make it easy. In some countries, ordinary people take "senses" to mean only these five senses—the five sense-faculties. The unique feature of Buddhist philosophy is the teaching of six senses—not five, but six. Therefore, the mind cannot be left out. It is in the mind, indeed, that everything is deposited. To what extent? There too, on one occasion, the Buddha gives a simile, a fitting simile:</p>
+<p>"The five sense-faculties, namely the eye, ear, nose, tongue, and body, consume what is corresponding to them.</p>
+<p>The eye consumes forms,</p>
+<p>the ear consumes sounds.</p>
+<p>The eye does not consume sounds, does it? Each has its own distinct feeding grounds. The nose consumes smells. But all that is consumed is brought and deposited in the mind-faculty (*manindriya*) in the middle. Everything comes and gathers in the mind. Then, if we have spent an infinite period of time in this *Saṁsāra*, the perceptions (*saññā*), the subtle perceptions of all those experiences—that which is indicated by various subtle words like *āsava* (cankers) and *Anusaya* (Underlying tendency)—are embedded within our *Viññāṇa* (Consciousness). They are embedded in our mind; they are embedded in our intellect. So, that indeed is the most subtle bond. It revolves between the mind and mind-objects, between thought and thoughts. Thus, when looking at them as faculties, or as bases (*āyatanas*), there are six here according to Buddhist philosophy. Therefore, this problem cannot be solved by limiting it to five. Some try to take only those five existing in the world and escape through them. It is not that easy. The most subtle is this mind. What has been received from the others over an infinite time, having consumed those respective preys, all the levels of perceptions obtained from them—the *anusayas* (Latency / Underlying tendencies), etc.—have come and deposited in the mind. The mind, in that respect, is extremely subtle. That is why the mind is said to be the forerunner of all things: 'Manopubbaṅgamā...'"</p>
+<p>Finally, there is a wondrous revolution among those thoughts. To understand all this, one must bring that very perception of impermanence (*anicca-saññā*) here in the manner mentioned regarding the body. Instead of the perception of permanence (*nicca-saññā*) held so far regarding the eye and forms, the ear and sounds, and everything else, one must direct one's attention (*manasikāra*) so that the perception of impermanence (*anicca-saññā*) is developed. It is through that mismanagement, indeed, that lack of restraint arises. If proper management is done regarding these sense-bases (*āyatanas*), then gradually—when speaking of those insight knowledges (*vipassanā-ñāṇa*), and you may have heard of this—if we explain this *Anicca* (Impermanent) in more detail, it means arising and passing away. It is called *udayabbaya* (arising and passing away). A multitude of arisings and passings away. In the entire world, there is only arising and passing away. It is not visible due to that perception of compactness (*ghana-saññā*). The perception of compactness means the perception of permanence. To the deluded person covered in ignorance, who looks at the world believing everything is permanent, the feeling comes that all these things exist. He says even this bodily cage exists. Form exists, sound exists. He has that feeling. But by applying mindfulness and clear comprehension (*sati-sampajañña*) deeply, and reflecting on each of them with concentration (*samādhi*), at some point, one realizes that there is only a multitude of fluctuations here. Just as we said about the motion picture, a multitude of fluctuations. Subtle fluctuations—there is nothing in this to be taken as permanent anywhere. Inside, there is a multitude of fluctuations; outside, there is also a multitude of fluctuations. It is because of our ignorance (*avijjā*) that we separate them as "eye" and "form". Every single one of them changes moment by moment. That is why the Buddha gives various similes like a mirage. Every single one of them changes moment by moment. But due to ignorance—due to the ignorance bound over a long period—beings of the world hold tightly to all of them with the perception of compactness. Through that, indeed, as a result, they start to rub together and catch fire in that manner. When this understanding comes, lo, one understands in some way that there is only a pure heap of fire here, and nothing to be separated.</p>
+<p>So, the path leading to that is what we called the *kammaṭṭhāna* (meditation subject). A means to settle the mind. It is like the post we mentioned earlier. When an ox is tied to a post near a field or a meadow, no matter how much the ox pulls, it cannot pull away to the other field, can it? It comes back and lies down right there. That is what is written in the books about the *kammaṭṭhāna*. The *kammaṭṭhāna* is sometimes shown as a post. That post helps as a stable point to tame that running mind. When a wild bull runs, if one hangs onto its tail without any foothold (leverage), one has to face a great disaster. Some foothold (leverage/momentum) is necessary. That foothold is indeed concentration (*samādhi*). One must make an effort to concentrate the mind. A certain *kammaṭṭhāna* helps in that.</p>
+<p>Be it some part of that body—hair of the head, hair of the body, nails, teeth, and so forth—or else a state of foulness (*asubha*) like a bloated corpse, one must try to bring the mind to it as a *kammaṭṭhāna* (meditation subject) whenever it runs away. It is only then, in the manner mentioned in that second simile, that those six animals run this way and that, and having run and run and got exhausted, in the end, they somehow come right to the foot of the post, lie down, and settle. Otherwise, what happens is that, as in the first case, if they are let go with just a knot tied, running this way and that, the strongest one—if the eye is the strongest—will in the end go toward that. When there is a multitude of such temptations, a person, falling under some temptation according to his temperament, in the end destroys his own spiritual practice. Instead of that, the Buddha declares: "This is the method. For concentration (*samādhi*), a certain *kammaṭṭhāna* is necessary." Therefore, practically, we must understand through this talk we have made, that according to the Buddha's vision, there is nothing permanent here. There is nothing to be taken as permanent. The perception of permanence (*nicca-saññā*) exists in the worldling only because of ignorance (*avijjā*). In a highly dangerous manner in this world, because of being limited for so long, worldlings have separated things in this way as "two" (dyad).</p>
+<p>But when looking at this from all sides, even looking from within, what are present are only the four elements (*dhātus*). Not only the Buddha, but also Ven. Sāriputta Maha Thera points out that what is inside is also the earth element (*pathavī-dhātu*). What is present in things like the eye, ear, and nose is also the earth element. What is present in the external world is also the earth element. This body is something constructed from the four elements of earth (*pathavī*), water (*āpo*), fire (*tejo*), and wind (*vāyo*). Similarly, what is present externally is also those four. But through this, because of that ignorance (*avijjā*), because of that *Taṇhā* (Craving)—which is why it is called craving and *Upādāna* (Grasping)—it is the momentum taken through *Taṇhā* that is present here. Due to the force of craving developed in this *Saṁsāra* over an infinite time, the being takes a certain momentum. That is why one grasped tightly (*upādāna*) to this body that is inside, spiritually speaking. It is to keep this body alive, indeed, that we use all these things to assist us.</p>
+<p>Now, when looking at the lives of animals, every animal goes in search of prey. That prey, even alive, is put inside—inside the body. Now, that is not limited only to animals; we can say it is the same even for human beings. Even alive, they put it inside. Why? Because of the attachment to this body which has been tightly grasped (*upādinna*). It is this that we carry through *Saṁsāra* for a long period of time. So, the Buddha points out that this is precisely what has to be broken: this momentum taken through *Taṇhā* (Craving). It is as a result of that momentum, indeed, that each *Bhava* (Becoming) is created for us. This is what is meant by creating a *Bhava* through our thoughts.</p>
+<p>Now, we spoke of *Dukkha-sacca* (the truth of suffering/unsatisfactoriness/stress) by comparing it to a pure fire. Then it becomes clear to us that what lies beneath it is *Taṇhā* (Craving). It is to that very *Taṇhā* that the term *chandarāga* was used—the attachment following desire. To put it in another word, it is *Taṇhā*. Then, as long as that *Taṇhā* exists, due to that strong *Upādāna* (Grasping), the worldly being holds tightly to some portion of those four elements. Now, we treat our human body as a great thing, casting it in this way, renovating it, piecing together parts, and trying to keep it alive for a long time—trying to keep it from dying. Similarly, other living beings prey on others to maintain their tightly-held bodies. But due to the multitude of mental impulses generated through that, as a result, more and more *Bhava* (Becoming) are created. That is the nature of *Saṁsāra*.</p>
+<p>So, the only way to escape from this dangerous *Bhava* is to burn down, with the insight knowledge itself, those two trees that assisted that fire. It was because of the friction of those two trees, indeed, that all this happened. They rubbed together because of holding to the perception of permanence (*nicca-saññā*). For that, in *vipassanā* (insight), the perception of compactness (*ghana-saññā*) is dismantled. What should be present next in the practicing yogi is the perception of a heap (*rāsi-saññā*). What is called "the perception of compactness" is like taking a heap of mud, gluing it together with the sap of *Taṇhā* (Craving), and making a lump or ball out of it. The perception of a heap (*rāsi-saññā*) is, let us say, like the situation in a desert. Now, with a heap of mud, we can take a lump of mud in our hand and make something like a ball. But in a desert, if the sand of the desert is completely dry—as it is said in ancient books: "A handful of sand grasped in the fist does not remain." If one takes a handful of sand, it does not remain in the fist. It just flows away. Why? That is a heap (*rāsi*). It exists there as a collection. But in the world, because of that *Taṇhā*, we roll everything together in that manner and take it as "one", as "compact". That is what is called the perception of compactness (*ghana-saññā*). The perception of a heap (*rāsi-saññā*) means that the insight meditator begins to understand everything he looks at in a subtle manner.</p>
+<p>A "mat"—we take it as one thing. The mind gets bound to its pattern. But to the insight meditator, a unique understanding comes: "This is not a mat; here is something that deceives through a pattern." It makes one take it as one, but in truth, if looking at it from one level, here is only a heap of rushes running this way and that. There is only a heap of rushes here—a heap (*rāsi*). When we make this heap according to some form, according to a pattern, we take it to be "a mat". Not only do we take it as a mat, but if that mat is stolen, because of that, because of its loss, one even generates anger through *Taṇhā* (Craving). Because of taking it as one, one generates strong craving. To the insight meditator, it begins to be understood that there is no "one" here. Here is a heap. Just as was said about that mat, so indeed is one's own interior—the interior is exactly the same. Let alone other things, it is shown there that because that continuity (*santati*) is seen as a group, sometimes the object taken is seen as one. Even that process is seen as one. The worldling takes every single one of them as "one"—"going," "coming," every single one. But keeping mindfulness according to mindfulness and clear comprehension (*sati-sampajañña*), one gradually realizes that, let alone other things, even in what we take as "in-breathing"—which we take as two—in-breathing is also a great process. A process is what is present there. A heap of breath-ripples. A heap of breath-ripples goes up; a heap of breath-ripples goes down. Now, when an old person lifts something heavy, he does it trembling, doesn't he? There is a multitude of fluctuations there, isn't there? Imagine it like that. Then, just so, in our process too, such a perception of compactness (*ghana-saññā*) operates. "I went," "I came"—we take every single one of them as "one".</p>
+<p>But to the insight meditator, it is gradually understood that within every single one of these, what are present are *saṅkhāras* (Preparations / preparations / Volitional activity). That indeed is what is called *saṅkhāras*. A heap of *saṅkhāras*. A heap of preparations. It is indeed through a heap of preparations that even a motion picture is produced, isn't it? Through a heap of preparations. The person who is deluded on seeing that motion picture has no understanding of this. Here are the beautiful dances of actors and actresses. Our minds are tempted by them. But in the end, when we look, what is done by that machine is the creation of a certain illusion (hypnosis). It creates a certain illusion by running a multitude of pictures rapidly. Lo, if one takes the perception of compactness (*ghana-saññā*) there too, within that process... in that same way, in our actions too, we have a habit of taking things that become our objects as compact. Because of *Taṇhā* (Craving), because of desire, this appears and is understood by us as "one". Just as that deer took that shimmering mirage to be water.</p>
+<p>That is why the Buddha declared every single one of these to be a mirage. Be it the perception (*saññā*) seen by the eye! Or the perception taken by the ear—sound, music. What we take as "music"—sometimes it could be extremely sweet music. If, due to some fault in that machine, or else as there are new methods now, if that tape is run slowly, even the most delightful music of the most talented singer in the world in the end becomes a wailing, a crying. That is why the Buddha called singing a wailing. In truth, that is what is present there. Similarly with dancing. Even dancing, even drama, is a madness. It is said to be like jumping about in madness. Here, there is a multitude of fluctuations in everything. But to the person who sees, who watches these with lust (*rāga*) or hatred (*dosa*), these become "one", "a thing". So, he conjures up in his mind: "That is a dance." It is because of the delusion (*moha*) arising in the mind that every single one of these appears as "one". Then, gradually going toward that very understanding is what the Buddha points out here.</p>
+<p>If at any point that perception of impermanence (*anicca-saññā*) goes deep, everything is finished there. Sensual lust (*kāmarāga*) is finished; lust for existence (*bhavarāga*) is finished; ignorance (*avijjā*) is finished. In this manner, the Buddha has pointed out the value of the perception of impermanence in an extremely powerful way: "Monks, in one who has developed the perception of impermanence deeply, when developed, it uproots all sensual lust, then lust for existence, and finally, completely destroys ignorance." In that manner, the Buddha has declared regarding the perception of impermanence (*anicca-saññā*). Then, it is according to that perception of impermanence that perception arises: *"Yadaniccaṁ taṁ dukkhaṁ"*—whatever is *Anicca* (Impermanent) is *Dukkha* (Suffering). If this is a heap of *saṅkhāras* (Preparations / preparations / Volitional activity), a heap of preparations, if it is something that must be repaired constantly, when reflecting on this bodily cage, that indeed is what the practicing yogi feels. As the mind is applied more and more to the effort taken to look after this, every single thing—the fate of the food consumed, the fate of the water drunk—how every single one of them goes on decaying, that very fluctuating, decaying manner begins to become manifest. He sees that same state even regarding those things in the external world that he is attached to. It is then, indeed, just as was said, "When a heap of firewood has caught fire," that the understanding comes: "This is purely a heap of *Dukkha*." It is right there that the First Truth of the Four Noble Truths is correctly understood.</p>
+<p>At the stage when insight knowledges (*vipassanā-ñāṇa*) mature, starting from arising and passing away (*udayabbaya*), then dissolution (*bhaṅga*), fear (*bhaya*), and disadvantage (*ādīnava*) are shown as a system of insight knowledges. In that manner, after seeing a multitude of arisings and passings away, next, dissolution is seen. It is seen clearly. It is called the knowledge of dissolution (*bhaṅga-ñāṇa*)—seeing everything dissolving everywhere. It goes on breaking down. Because of that, a fear arises—a wondrous kind of fear (*bhaya-tuppaṭṭhāna-ñāṇa*). "In all of this, there is nothing to hold onto. Everything breaks down right where it is grasped." Because of that fear, next, the disadvantage is understood. "What is this? This is an extremely dangerous place—this *Saṁsāra*." It is called the knowledge of disadvantage (*ādīnavānupassanā-ñāṇa*). Next, because of the disadvantage, a weariness toward *Saṁsāra* called *nibbidā* (disenchantment/revulsion) arises. "I must escape from this somehow." These arise very rapidly. Because of that disenchantment, next, one looks: "Where do I escape? Which way do I escape?" (*muñcitukamyatā-ñāṇa*). Lo, next, what helps in that is developing even more deeply those perceptions of impermanence (*Anicca*) and non-self (*Anattā*) given by the Buddha. Thus, indeed, through a system of insight knowledges that gradually advance, one gains the ability to cross over from *Bhava* (Becoming) which we mentioned at the beginning. So, this is the story from the beginning to the end.</p>
+<p>What are called *saṁyojanas*—the ten *saṁyojanas* (fetters) mentioned—are broken later on, as a result of that. However, what we have to do fundamentally is, regarding those sense-bases (*āyatanas*) we mentioned, to understand those *saṁyojanas* related to our six sense-bases, and with the help of those similes we mentioned, using sense restraint and so forth to support us, and using the *kammaṭṭhāna* (meditation subject) to support us, if we develop our meditation, then that message of crossing over from *Bhava* (Becoming) given by the Buddha on a Vesak Poya day like this can indeed be understood.</p>
+<p>Usually, on a Vesak day, we are accustomed to hearing mostly sermons that speak only of the biography of the Buddha, developing only devotion (*saddhā*). But we thought on this occasion, now, more and more, Nibbāna is being hidden. The deepest part of this Buddha Sasana is slipping away more and more. Therefore, on this valuable Poya day, we give this message of crossing over from *Bhava* (Becoming)—which the Buddha brought forth through His knowledge of supreme enlightenment—to these meritorious friends on this occasion in these few words.</p>
+<p>Therefore, may the mass of merit accumulated by these meritorious friends through listening to the Dhamma so far, and likewise by establishing themselves in high virtue (*sīla*) and practicing meditation, serve as a support (*upanissaya*) to further develop those insight (*vipassanā*) powers developed by them throughout *Saṁsāra*, and to realize the supreme, deathless Great Nibbāna as quickly as possible through the penetration of the paths and fruits of Sotāpanna, Sakadāgāmi, Anāgāmi, and Arahat.</p>
+<p>Similarly, may whatever beings there are, from the Avīci hell up to the Akaniṭṭha Brahma realm—including the departed relatives of these meritorious friends—who expect to share in the merit of listening to the Dhamma or of this Dhamma preaching, by sharing in this merit, realize the supreme, deathless Great Nibbāna as quickly as possible, in accordance with their aspirations. May you aspire thus. Now, let us share the merit by reciting the stanzas in this manner.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_026.html" class="doc-btn">← Previous Sermon (026)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_028.html" class="doc-btn">Next Sermon (028) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

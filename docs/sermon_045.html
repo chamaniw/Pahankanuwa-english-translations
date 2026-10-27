@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 045 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_044.html" class="doc-btn">← Previous Sermon (044)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_046.html" class="doc-btn">Next Sermon (046) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 045</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_045_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_045_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_045_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #45</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.209)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Kiṃ pattinamāhu bhikkhunaṃ, sorataṃ kena dantamāhu; Buddhoti kathaṃ pavuccati, puṭṭho me bhagavā vyākarohi. Pajjena katena attanā, parinibbānagato vitiṇṇakaṅkho; Vibhavañca bhavañca vippahāya, vusitavā khīṇapunabbhavo sa bhikkhu. Sabbadhi upekkhako satimā, na so hiṃsati kañci sabbaloke; Tiṇṇo samaṇo anāvilo, ussadā yassa na santi sorato so. Yassindriyāni bhāvitāni, ajjhattaṃ bahiddhā ca sabbaloke; Imañca parañca lokaṃ viditvā, kālaṃ kaṅkhati bhāvito sa danto. Kappāni viceyya kevalāni, saṃsāraṃ ubhayaṃ cutūpapātaṃ; Vigatarajamanaṅgaṇaṃ visuddhaṃ, pattaṃ jātikkhayaṃ tamāhu buddhan'ti.</p>
+<p>From:</p>
+<p>Sabhiya Sutta (Sn 3.6) from the Sutta Nipāta</p>
+<p>Dear Listeners,</p>
+<p>During the time when the Buddha appeared, there was a group of people in India (Dambadiva) who made the search for truth the supreme goal of their lives, known in society by the name 'Paribrājaka' (wanderers). The general meaning of that word 'Paribrājaka' is 'one who walks everywhere.' They did not walk everywhere in vain; they were searching for the truth. In their search for truth, they mostly made use of the question-and-answer method. When they met a teacher who proclaimed a certain philosophy, they would present a list of questions. If they received appropriate answers, they often had the humility and love of truth to become a disciple of that teacher. A good example of this is found in the *Sabhiya Sutta* of the *Sutta Nipāta*, in the account of Sabhiya the wanderer. There are several past stories about Sabhiya the wanderer mentioned in the commentaries with slight variations. In addition to the background story given in the *Sutta Nipāta*, according to those accounts, in the past, during the time of Kassapa Buddha, Sabhiya the wanderer was a monk who had ordained in that Dispensation (Sāsana). Seven monks, seeing how the Sāsana of Kassapa Buddha was falling into decline, became deeply moved by emotion (*saṁvega*), entered a forest, climbed a mountain cliff with the help of a ladder, threw the ladder down, and began to meditate with intense effort, with the thought, "We will realize Nibbāna somehow." Among those seven monks, one monk attained Arahantship with higher knowledges (*abhiññā*) in a single night. Although he went for alms-round by air the next morning and brought that food to offer to the other six, those six did not accept it. On the second day, the second monk attained the state of a Non-returner (*Anāgāmī*) with higher knowledges, and he too went for alms-round in the same way and offered it to the remaining five. It is said that they did not accept it, considering it a conceptual proliferation / prolific conceptualization (*papañca*) or a delay, and meditated without food. That Arahant monk passed away into Parinibbāna. The Anāgāmī monk was reborn in the Suddhāvāsa Brahma world. The other five monks, meditating with life-sacrificing effort without food, passed away on the rock itself. Having passed away, according to those books, they wandered in the heavenly worlds, etc., for an entire interval between Buddhas (*buddhantara*), and were reborn in different places during the time of our Buddha. They are recognized in the Dhamma in this manner: Pukkusāti, Kumāra Kassapa, Bāhiya Dārucīriya, Dabba Mallaputta, and Sabhiya Paribrājaka. These five are found in the Sāsana in later times.</p>
+<p>Regarding Sabhiya the wanderer, it is also mentioned that he was born as the son of a female wanderer (*paribrājikā*), gained a good understanding of the Vedas and other sciences, and established a hermitage. One night, the aforementioned Suddhāvāsa Brahma-king, with the intention of making Sabhiya the wanderer meet the Buddha, came during the night, addressed him as "Sabhiya," and taught him twenty questions. He advised him that if any recluse or brahmin could answer these twenty questions, he should ordain under that teacher and practice the holy life. Accordingly, Sabhiya the wanderer went to meet the famous teachers of that time—as you may have heard: Pūraṇa Kassapa, Ajita Kesakambalī, Pakudha Kaccāyana, Nigaṇṭha Nātaputta—and asked them these questions. Instead of answering these questions, they became angry and agitated. They even asked Sabhiya the wanderer himself for their meaning. He too was unable to answer. Then, his disillusionment was such that Sabhiya the wanderer thought it would be better to return to lay life and enjoy the fivefold sensual pleasures. Then he remembered that although the ascetic Gotama was very young in age, perhaps he might know the answers to these questions. Having thought so, he traveled a long distance to Rajagaha. He went and met the Buddha at Veḷuvanārāma. Having met him, he addressed him in verse, saying that he had come with such doubts and hesitation, and requested the Buddha to answer these questions. When he invited the Buddha, the Buddha very gently and reassuringly said: "Very well, I shall answer the questions you ask. Ask them in sequence." It was indeed a long series of questions, twenty questions in total. Sabhiya the wanderer presented those twenty questions in five verses, four questions per verse. However, the Buddha answered each question individually with twenty verses, one verse for each question. The first four questions asked are what we have taken as our topic today:</p>
+<p>*By what attainment is one called a monk (bhikkhu)?*</p>
+<p>*By what is one called gentle (sorata)? How is one called tamed (danta)?*</p>
+<p>*How is one called a Buddha?*</p>
+<p>*O Blessed One, being questioned by me, please explain this.*</p>
+<p>This was his request.</p>
+<p>Now, the Buddha answers them:</p>
+<p>*Pajjena katena attanā*</p>
+<p>Through the path cultivated by himself,</p>
+<p>*Parinibbāṇagato vitiṇṇakaṅkho*</p>
+<p>Having reached Parinibbāna (ultimate extinguishment) and crossed over doubts,</p>
+<p>*Vibhavañca bhavañca vippahāya*</p>
+<p>(Vibhava means the annihilationist view, bhava means the eternalist view) Having abandoned those views and becoming / existence (*bhava*),</p>
+<p>*Vusitavā khīṇapunabbhavo sa bhikkhu*</p>
+<p>Having lived the holy life in the Sāsana and destroyed rebirth (renewed existence), he is indeed a monk (bhikkhu).</p>
+<p>In the next verse, the word *sorata* (gentle/mild) is explained:</p>
+<p>*Sabbadhi upekkhako satimā*</p>
+<p>Mindful and equanimous everywhere,</p>
+<p>*Na so hiṁsati kañci sabbaloke*</p>
+<p>He does not harm anyone in the entire world,</p>
+<p>*Tiṇṇo samaṇo anāvilo*</p>
+<p>A recluse who has crossed over, unperturbed,</p>
+<p>*Ussadā yassa na santi sorato so*</p>
+<p>In whom there are no swellings/prominences (such as craving, conceit, and views), he is called *sorata*.</p>
+<p>Next, in the other verse, the word *danta* (tamed) is explained:</p>
+<p>*Yassindriyāni bhāvitāni bahiddhā ca sabbaloke*</p>
+<p>Whose faculties (*indriyas*) are developed, both internally and externally, in regard to the entire world,</p>
+<p>*Imañca parañca lokaṁ nibbidha*</p>
+<p>Having penetrated this world and the next,</p>
+<p>*Kālaṁ kaṅkhati bhāvito sa danto*</p>
+<p>With a developed mind, awaiting his time (death), he is indeed *danta*.</p>
+<p>And finally, it is said:</p>
+<p>*Kappāni viceyya kevalāni, saṁsāraṁ ubhayaṁ cutūpapātaṁ,*</p>
+<p>*vigata rajamanaṅgaṇaṁ, visuddhaṁ pattaṁ jātikkhayaṁ tamāhu buddhaṁ.*</p>
+<p>*Kappāni viceyya kevalāni*</p>
+<p>Having scrutinized with wisdom all constructs (*kappas* - things fashioned by the mind through craving and views),</p>
+<p>*Saṁsāraṁ ubhayaṁ cutūpapātaṁ*</p>
+<p>Likewise, having investigated with wisdom the entire saṁsāra with its dual aspects of passing away and arising,</p>
+<p>*Vigata rajaṁ*</p>
+<p>Free from defilement,</p>
+<p>*Anaṅgaṇaṁ*</p>
+<p>Free from blemish,</p>
+<p>*Visuddhaṁ*</p>
+<p>Pure (referring to the Buddha),</p>
+<p>*Pattaṁ jātikkhayaṁ tamāhu buddhaṁ*</p>
+<p>Having attained the destruction of birth / arising (*jāti*), him they call 'Buddha'.</p>
+<p>So, the Buddha answered the four questions asked by Sabhiya the wanderer in a single verse, using four verses. Sabhiya the wanderer was highly pleased and went on to ask many other questions. We will not detail them individually. But before that, something must be said about the nature of these questions. Based on the basic structure of these questions, they seem to revolve around twenty key terms related to the spiritual life that were in common social usage at that time. As already mentioned: *bhikkhu*, *sorata*, *danta*, *buddha*, etc. Further on, there are words like *brāhmaṇa*, *nahātaka*, *samaṇa*, *vedagū*, etc., which were accepted terms in society at that time, and their true meaning is what is being asked.</p>
+<p>In this regard, we can observe something special. The Buddha's fourfold analytical knowledge (*catu-paṭisambhidā*) shines throughout this sutta. So much so, that after being answered with these twenty verses, Sabhiya the wanderer was satisfied and ordained in the Sāsana. This word we use, 'Sivu-pilisimbiyā' (four analytical knowledges), is *Catu-paṭisambhidā*. Since the four *paṭisambhidā* are explained very briefly in books, many people often come and ask us about them. In the Dhamma, they are shown as: *Attha*, *Dhamma*, *Nirutti*, and *Paṭibhāna*. *Attha* (meaning/effect) is explained as the matter/result before us—the cause and effect that stands before us. *Dhamma* (cause/text) is the underlying cause. *Nirutti* (language/linguistic expression) is the understanding of the words and language used to describe them. *Paṭibhāna* (ready wit/intellective response) is the analytical comprehension of illumination, which everyone knows as the wisdom of understanding. The uniqueness here is that when a certain question or word is presented, the Buddha has the ability to see the distinctions of meaning within it—many distinctions of meaning within a single word. This is called *atthanānatta* (diversity of meanings). He has the ability to see these distinctions, express them, make them clear, and convince others. Next, he has the strength to bring out the underlying Dhamma behind those meanings—the *dhamma-pabheda* (distinctions of natural laws/principles). Next, those with this *paṭisambhidā* have great power in using the appropriate *nirutti* (linguistic expression/etymology) to present them, in mastering language and penetrating words. Finally, *paṭibhāna* is, as you all know, specific insights such as similes, metaphors, etc. Similes and metaphors that help to clarify and convince others of those aforementioned points. This special understanding is what is contained within this analytical knowledge (*paṭisambhidā-ñāṇa*).</p>
+<p>Let us give only a few examples of this. This is a long sutta. Apart from what was just said, the next question the wanderer asks is: "Who is a Brahmin?" In the definition given by the Buddha, it is said: *Sabbapāpaṁ bāhita*—one who has warded off all evil. This means he has discarded all sins. In that sense, he becomes a *brāhmaṇa*. In the Sāsana, the word *brāhmaṇa* refers to the Arahant monk. Next, *kevalī*. *Kevalī* means "one who has attained unity." Among brahmins, it refers to union with Brahma. But here it is not used in that sense, but in the sense of *saṁsāraṁ aticca kevalī*—one who has transcended saṁsāra. In this manner, there are many meanings in this verse, especially regarding *nirutti* (etymology). Similarly, the word *samaṇa* (recluse) is explained in the sense of *samitāvī*—one who has quieted both merit and demerit. Both merit and evil have been quieted. Through this, the aspect of quietening of all preparations / preparations / volitional activity (*sabba-saṅkhāra-samatha*) is shown. In the Buddha’s Sāsana, a *samaṇa* is one who has quieted both merit and demerit. Next is the word *nahātaka* (one who has bathed/cleansed). This is frequently used among brahmins. As you have heard, it was the custom of brahmins to go down into the water three times a day to wash away their sins. Instead of this, the Buddha says here: *Ninhāya sabbapāpakāni ajjhattaṁ bahiddhā ca sabbaloke*—having washed away those evil states (*pāpaka dhamma*) regarding the entire world, both internally and externally. Not that kind of external cleansing. In that sense, this refers to the Arahant monk.</p>
+<p>Next, regarding the word *nāga*, he asks, "How does one become a *nāga*?" For this, the Buddha uses an etymology (*nirutti*): *āguṁ na karoti kiñci*—since he does no wrong (*āgu* means wrong/sin). In the sense of doing no wrong whatsoever in the world, he is called *nāga*. Observe how the etymology is applied. Then, having broken all bonds, with the power of a bull elephant (*nāga*), it is shown in the Dhamma as being liberated from all fetters (*saṁyojana*). Next is the term *khettajina* (conqueror of fields). This is also a word with a deep meaning. The ordinary meaning of *khettajina* is "one who has won fields." The Buddha explains it as: *khettāni viceyya kevalāni dibbaṁ mānusakañca brahmakhettaṁ*—having understood all fields: divine, human, and brahma fields; *sabbakhettamūlabandhanā pamutto*—liberated from the root-bond of all fields. Here, we can understand what "fields" means. As you may know, it is said in the Dhamma: *kammaṁ khettaṁ viññāṇaṁ bījaṁ taṇhā sineho*—karma is the field, consciousness (*viññāṇa*) is the seed, craving / thirst (*taṇhā*) is the moisture. Thus, cutting the root of the field means being liberated from all wholesome and unwholesome karma. The same meaning is used to explain the next word, *kusala* (skilful/wholesome): *kosāni viceyya kevalāni dibbaṁ mānusakañca brahmakosaṁ*—the person who has the true meaning of *kusala* is one who has dismantled the tendency to enter into "sheaths" (*kosa*) such as divine, brahma, etc. *sabbakosamūlabandhanā pamutto*—in the sense of having cut the root-bond that leads to those sheaths, he is called *kusala*. Similarly, the word *vedagū* (one attained to knowledge) is explained. Everyone knows *vedagū* as one who has mastered the three Vedas. But the Buddha explains it in a novel way: *vedāni viceyya kevalāni*—understanding all those "vedas" concerning brahmins and recluses. But next, he says: *sabbavedanāsu vītarāgo*—passionless towards all feelings / sensations (*vedanā*). Based on that word (*veda*), the Buddha brings out feeling / sensation (*vedanā*) itself. Bringing out the fact of feeling / sensation (*vedanā*) that everyone has, he states: *sabbaṁ vedaṁ aticca vedagū so*—in the sense of transcending all feeling / sensation (*vedanā*), he is called *vedagū* in this Sāsana. In this manner, many other points are shown. Next, the meaning of the word *anuvidita* (fully understood). *Anuvidita* means having understood something thoroughly. There too, the Buddha presents a deep Dhamma principle:</p>
+<p>*anuvicca papañca nāmarūpaṁ, bahiddhā ca rogamūlaṁ,*</p>
+<p>*sabbatogamūlabandhanā pamutto, anuvidito tādi pavuccate tathattā.*</p>
+<p>Having thoroughly understood Name-and-Form (*nāmarūpa*) created by the world through this conceptual proliferation / prolific conceptualization (*papañca*). That indeed is *bahiddhā ca rogamūlaṁ*—the root of all disease, both internally and externally. The one liberated from the bond of the root of all disease is called an *anuvidita* (fully understood) person, the "such-like" (*tādi*).</p>
+<p>Finally, even if we do not speak of everything in detail, what is particularly visible is the word *paribbājaka* (wanderer). At the beginning, we mentioned the ordinary meaning of *paribbājaka*—wandering from place to place. Or, if one prefers, wandering in search of truth. But the Buddha, according to the etymology and phonetic resonance of the word *paribbājaka*, shows that it means the complete avoiding (*parivajjana*) of all evil deeds, and having avoided them, *pariññācārī*—faring with full understanding. Next, in the sense of being external to them. Then it says: *pariyantaṁ akāsi nāmarūpaṁ*—*pariyanta* means the end/limit. In the sense of having seen the end of Name-and-Form (*nāmarūpa*), he is called a *paribbājaka*. All the remaining terms were presented by the Buddha after enriching them with further aspects. Hearing this, Sabhiya the wanderer was highly pleased and then uttered seven verses of praise to the Buddha. This is a very long sutta. The faith (*saddhā*) that arose in Sabhiya the wanderer was such that he immediately rose from his seat and thought: "I was unable to obtain anything from those other teachers. Let alone answering, they did not even listen to them. In contrast, the Buddha explained them so well in this manner." With this thought, he thanked the Buddha with seven verses of praise. We will mention only the first verse because of its special meaning.</p>
+<p>In the first verse, it is said:</p>
+<p>*Yāni ca tīṇi yāni ca saṭṭhi, samaṇappavādasitāni bhūripañña,*</p>
+<p>*saññānisitāni osaraṇāni, vineyya oghantamagā.*</p>
+<p>This is a verse that is somewhat difficult to understand. We will analyze it as time permits. There is a very deep meaning in it. *Yāni ca tīṇi yāni ca saṭṭhi samaṇappavādasitāni bhūripañña*—"O One of vast wisdom, whatever sixty-three assertions of recluses (*samaṇa-ppavāda*) there are..." The nature of those assertions of recluses is *saññā-nisitāni*—resting on perception and words/letters. Regarding those sixty-three assertions of recluses, having understood each of them, they are next described as *osaraṇāni*—things that have the nature of pulling inwards (resorts). *vineyya oghantamagā*—having removed them, he went to the end of the flood (*ogha*). The Dhamma speaks of a fourfold flood—the swift-flowing currents that sweep the world away. He reached the end of the swift-flowing currents. Having declared this, he says a series of verses in praise. The final verse of that series is also of special value:</p>
+<p>*Puṇḍarīkaṁ yathā vaggu, toyena na upalippati,*</p>
+<p>*evaṁ puññe ca pāpe ca, ubhaye tvaṁ na lippasi,*</p>
+<p>*pāde vīra pasārehi, sabhiyo vandati saññuno.*</p>
+<p>The verse concludes in this manner:</p>
+<p>*Puṇḍarīkaṁ yathā vaggu toyena na upalippati*—Just as a beautiful white lotus, a white lily, is not smeared or defiled by water,</p>
+<p>*evaṁ puññe ca pāpe ca ubhaye tvaṁ na lippasi*—in the same way, you are not smeared by both merit and demerit.</p>
+<p>*pāde vīra pasārehi sabhiyo vandati saññuno*—"O Hero, stretch out your feet; Sabhiya bows down to the Wise One."</p>
+<p>Having declared this, and in addition, as in the usual suttas, expressing his faith by saying, "Magnificent, Lord! Magnificent, Lord!" and stating that he has taken refuge in the Triple Gem, he then asks permission from the Buddha to receive ordination and higher ordination (*upasampadā*). "May the Blessed One ordain me, may he give me higher ordination." Then the Buddha states: "Sabhiya, there is a practice in this Sāsana of mine: if someone who was previously a sectarian (*titthiya*) wishes to ordain in this Sāsana, he must undergo a four-month probationary period (*parivāsa*). After that probationary period, only if the monks give their approval and are willing, is he ordained. However, I can show favor by considering the difference in persons (*puggala-vemattatā*)." Then Sabhiya, showing great faith, says: "O Blessed One, if there is such a rule in the Sāsana, I am willing to undergo the probationary period not just for four months, but even for four years. Thereafter, if the Bhikkhus are willing, let them ordain me." Even though he said so, the Buddha gave ordination and higher ordination to Sabhiya the wanderer immediately. Then, as mentioned in many places, having gone into seclusion and strived diligently, not long after, Venerable Sabhiya attained Arahantship.</p>
+<p>Thus, according to this story of Sabhiya, on one hand, this sutta is important for gaining an understanding of the four analytical knowledges (*catu-paṭisambhidā*). We have only briefly highlighted it. We understand that the Buddha used key terms to convey entirely new meanings, as seen in the way he explained words like *brāhmaṇa*, *nahātaka*, etc. He gave a new, deeper meaning to the words existing in society. That indeed is the power to penetrate language. Next, the skill to handle it, to explain it in a way that is comprehensible and fitting, using similes, etc. That is one aspect. Next, as we mentioned, for some reason, the first of the verses presented by Sabhiya the wanderer: *Yāni ca tīṇi yāni ca saṭṭhi samaṇappavādasitāni bhūripañña*—here, sixty-three assertions of recluses (*samaṇappavāda*) are mentioned. This often becomes a problem for scholars. We are familiar with the sixty-two views of the *Brahmajāla Sutta*. The commentaries explain how the sixty-three are formed by adding the dogma of self-illusion / view of existing group/body (*sakkāya-diṭṭhi*) to the sixty-two views mentioned in the *Brahmajāla Sutta*. However, as we can see, this is not very acceptable, because we find evidence for this. In the Sutta Piṭaka itself, in the Saḷāyatana Saṁyutta of the Saṁyutta Nikāya, in a question asked by Citta the Householder and answered by Venerable Isidatta, we can see that this commentarial view is unacceptable. The question is as follows: Citta the Householder asks Venerable Isidatta: "Venerable sir, in the presence of what do the sixty-two views in the Brahmajāla arise? In the absence of what do they not arise?" Then the answer given by Venerable Isidatta is: "When the dogma of self-illusion / view of existing group/body (*sakkāya-diṭṭhi*) is present, the sixty-two views arise. When the dogma of self-illusion / view of existing group/body (*sakkāya-diṭṭhi*) is absent, those views do not arise." Therefore, we can see that if those sixty-two views arise due to the dogma of self-illusion / view of existing group/body (*sakkāya-diṭṭhi*), it is difficult to accept the dogma of self-illusion / view of existing group/body (*sakkāya-diṭṭhi*) as the sixty-third view.</p>
+<p>Then the next question arises: "What is it then?" In this regard, we have a valuable sutta in the Gahapati Vagga of the Dasaka Nipāta of the Aṅguttara Nikāya, which gives us a clue. We think of Anāthapiṇḍika the Householder as the chief supporter of the Buddha, at most an Upāsaka who is a Stream-enterer. That the Householder was no ordinary person is seen from the way he answered the questions asked by several wanderers of other sects. The incident is described as follows: One day, while Anāthapiṇḍika the Householder was on his way to Jetavana to see the Buddha, he thought it was too early to see the Buddha and the Saṅgha, and turned aside into a certain monastery of another sect. When he entered and sat down, those sectarians asked Anāthapiṇḍika the Householder: "Householder, what is the view of the recluse ascetic Gotama?" Then Anāthapiṇḍika says: "Venerable sirs, I do not know fully what the view of the Buddha is." Then they say: "So, you do not know the view of the Buddha. Tell us then, householder, what is the view of the monks?" Anāthapiṇḍika says: "I do not know the view of the monks fully either." Then they say: "Well, then you do not know the view of the recluse ascetic Gotama, nor the view of the monks. Tell us, householder, what is your view?" Then Anāthapiṇḍika the Householder answers: "That is not difficult for me to say. But before that, please tell me your views."</p>
+<p>When he said so, one of the wanderers said: "The world is eternal. This alone is the truth, everything else is false. This is my view." Another wanderer says: "The world is not eternal. This alone is the truth, everything else is false. This is my view." A third says: "The world is finite. This is the truth, everything else is false." "Loko sassato, loko asassato, loko antavā..." and so on. These are the ten undeclared (*avyākata*) questions. Next, a fourth comes forward and says: "The world is infinite—this is my view." Consider this briefly in this manner. Next, a fifth comes forward and says: "The soul and the body are the same (*taṁ jīvaṁ taṁ sarīraṁ*)." Here, *jīva* is used in the sense of a self/soul. Another says: "The soul is one thing, the body is another." After these six had spoken, four more come forward. One says: "The Tathāgata exists after death." In those days, *Tathāgata* meant the supreme person, who had attained the highest state in any teaching (*uttama-puriso parama-puriso paramapattipatto*). "He exists after death—this is my view." The next one says: "The Tathāgata does not exist after death"—that is the eighth. The ninth says: "The Tathāgata both exists and does not exist after death—this is my view." The tenth says: "The Tathāgata neither exists nor does not exist after death." These are the ten undeclared questions to which the Buddha did not give answers, which we have introduced in previous suttas.</p>
+<p>Having said so, these wanderers then ask: "Well, now we have stated our views. Householder, now you tell us, what is your view?" From this point onwards, listen very carefully. That Anāthapiṇḍika the Householder was no ordinary person can be understood from the answer he gives. "Now, if any venerable sir said: 'The world is eternal, all else is false,' that view arose through unwise attention (the opposite of *yoniso manasikāra*)." This means that all these views were created through unwise attention / lack of radical attention / wise attention. "They are preparations / preparations / volitional activity (*saṅkhata*), volitionally thought out (*cetayita*), and dependently arisen (*paṭiccasamuppanna*)." Then, a sectarian says: "Ah, well then, tell us what your view is. Is your view that what is volitionally thought out (*cetayita*), prepared (*saṅkhata*), is impermanent / inconstant (*anicca*), and that this is your view? Are you not attached to that view?" Then Anāthapiṇḍika the Householder says (expressing it in a unique way): "Whatever exists in that manner as volitionally thought out (*cetayita*), prepared (*saṅkhata*), and dependently arisen (*paṭiccasamuppanna*), that is *sudiṭṭhaṁ*—I have seen it well with wisdom. I have seen it with wisdom as impermanent / inconstant (*anicca*). But I do not grasp even that. Along with that, I have seen the escape (*nissaraṇa*) from those views, the departure from them." Try to understand this. There is a very deep point here. Since Anāthapiṇḍika says this as a householder, it should not be impossible for you to understand this as well. If we look at this from the perspective of insight (*vipassanā*), Anāthapiṇḍika the Householder does not grasp even the view: "All preparations / preparations / volitional activity (*saṅkhata*) are impermanent / inconstant (*anicca*), suffering / unsatisfactoriness / stress (*dukkha*), and not-self / non-self / unsubstantial (*anattā*)." Why? Because he says: "I know the escape (*nissaraṇa*) beyond that." Remember that word. "I have seen the escape from those views. Therefore, I do not grasp anything."</p>
+<p>After he said this, the sutta continues as follows: Having said this, those sectarians and wanderers, unable to give an answer, sat down in silence, downcast. Anāthapiṇḍika the Householder departed and told this incident to the Buddha. "I went to the monastery of the wanderers and they asked me these words, and I answered them in this manner." Then the Buddha said: "Sadhu, sadhu, householder! Very well, very well, householder! In this way, from time to time, you should refute those foolish men. You have presented such an argument." Having said so, after Anāthapiṇḍika the Householder departed, the Buddha addressed the Bhikkhus and said: "Bhikkhus, even a monk of a hundred rains (*vassa*) should answer sectarians in the very same way Anāthapiṇḍika the Householder did." This is something extraordinary. Although Anāthapiṇḍika the Householder understood it, you might not fully understand the point here. Let us relate that point to the verse. The verse says:</p>
+<p>*Yāni ca tīṇi yāni ca saṭṭhi, samaṇappavādasitāni bhūripañña,*</p>
+<p>*saññānisitāni osaraṇāni, vineyya oghantamagā.*</p>
+<p>That is, *samaṇappavāda* means the assertions among recluses. It speaks of sixty-three assertions. Regarding them, it says *saññā-akkara-saññā-nisitāni*—resting on perceptions and letters, as we briefly mentioned earlier. Next, *osaraṇāni*—they pull inwards. If *nissaraṇa* means escape, departure, then *osaraṇa* (resort/inflow) means pulling towards this side. *Osaraṇa* is an extraordinary word. Sabhiya Paribrājaka uses it to mean things that drag one down into the world, not things that lead to escape. Therefore, *osaraṇāni vineyya oghantamagā*—having abandoned all those sixty-three, he went to the end of the flood (*ogha-anta*). We mentioned the fourfold flood—crossing over the swift currents of saṁsāra means crossing over the four currents of sensual desire (*kāma*), becoming / existence (*bhava*), views (*diṭṭhi*), and ignorance (*avijjā*). Through that crossing over, the Buddha transcended all sixty-three assertions of recluses. To clarify this point further, in the *Brahmajāla Sutta*, the Buddha, after explaining the sixty-two views, does not grasp even that analysis of the sixty-two. Why? Because *anupādā vimutto tathāgato*—the Tathāgata, without grasping / holding / fuel (*upādāna*), saw the nature of those views with wisdom, but does not grasp them. He does not grasp even that vision, even that understanding. Instead, *anupādā vimutto*—he is liberated through non-grasping. Similarly, in another place, Vacchagotta Paribrājaka asks the Buddha: "Master Gotama, do you have any standpoints of views (diṭṭhigata)?" The Buddha answers: "Standpoint of views (diṭṭhigata), Vaccha, is something that the Tathāgata has put away (*apanītaṁ etaṁ tathāgata-ssa*)." For what reason? Because the Tathāgata has seen with wisdom. What has he seen? A process (practical path): "Such is form, such the arising of form, such its passing away; such is feeling / sensation (*vedanā*), such the arising of feeling / sensation, such its passing away; such are preparations / preparations / volitional activity (*saṅkhāra*), such the arising of preparations / preparations / volitional activity, such their passing away; such is consciousness (*viññāṇa*), such the arising of consciousness, such its passing away." "I have seen with wisdom the arising and passing away of the five aggregates of grasping / holding / fuel (*pañcupādānakkhandha*). But I do not grasp even that vision. I do not cling to it. Instead, having seen it with wisdom, having abandoned all those *sabba-maññita-mathita*—all those fabrications of the mind, *anupādā vimutto*—I am liberated through non-grasping."</p>
+<p>This matter might raise a question for someone: "Do we have to abandon even Right View (*sammā-diṭṭhi*)?" That is where the question lies. We are holding onto Right View as something great. If the sixty-third view, as we said, is Right View, then even that must be abandoned. If it is abandoned, what happens? If even that is abandoned, our 'Buddhism' is gone. This is where we must recall the *Alagaddūpama Sutta* (The Simile of the Snake Sutta). You may know from our sermons and books that the uniqueness of that sutta lies in the simile of the raft (*kulla*) and the simile of the water-snake (*alagadda*). There are two special similes. Regarding the simile of the raft, the Buddha declared, not only in the *Alagaddūpama Sutta* but also afterwards, reminding the Bhikkhus: "I have taught this Dhamma for the purpose of crossing over, not for the purpose of grasping."</p>
+<p>Let us dismantle the raft in that story of the raft. What is there when you dismantle it? There may be branches of trees on this shore, creepers, etc. These are gathered to make the raft. For what was this made? To hold onto? To decorate? No, isn't it? It is solely for crossing over. How does one cross over? Why was a raft mentioned instead of a ship? *hatthehi ca pādehi ca vāyamamāno*—using the raft as support, one must make an effort with hands and feet to cross over with this raft. After crossing over, one does not carry the raft on one's shoulders. Why? Because the raft has no value once one has crossed over. What does this show us? Right View (*sammā-diṭṭhi*) is solely, solely for the purpose of crossing over, not for the purpose of grasping. If, like other things, we grasp even that, what are we grasping? Those very perceptions and letters. We too are doing exactly what those others did. It is very difficult to understand this. Now, the opposite has happened. Whichever it may be, through our grasping, we say, "This alone is the truth (*idam eva saccaṁ*)." We can show another reason for this.</p>
+<p>We have mentioned in some of our sermons a term that appears in several places: *dvayatatā* (duality). A term that has been suppressed/forgotten in our tradition—the talk about duality. The Buddha is one who has transcended this duality. That is why the Buddha says here: *puññapāpa-pahīna*—one who has abandoned both merit and demerit. It is said in many other places in this manner. There is a Dhammapada verse: *Yassa pāraṁ apāraṁ vā, pārāpāraṁ na vijjati*—speaking of Arahants and Buddhas: "For whom there is neither the far shore nor the near shore, nor both the far and the near shore." This is the state of being freed from duality. This is a very deep matter. Because through crossing over, in the end, one does not grasp even the knowledge that helped one to cross over: *anupādā vimutto*. That is why a distinction is shown here. Here, the term used is *samaṇappavāda* (assertions of recluses), not even the word *diṭṭhi* (view). That is why we say to make Right View straight/upright. Right View actually arises in a person at the stage of the Path (*magga*). Until then, there is only a vocabulary. True, it has a practical value. It is made of words and letters in common usage, just as the raft was made of trees and branches. One must use Right View like the raft, solely for crossing over, not for grasping. This is the idea. At the same time, we have the word used by Sabhiya the wanderer: *osaraṇāni*—if we grasp them, we will be dragged back to this side. Escape and departure lie in abandoning (*nissaraṇa*). In this, a wonderful aspect of the Dhamma is revealed. That is why we said Anāthapiṇḍika the Householder was no ordinary person. From one perspective, it might seem like a small thing. The true vision of the Path of Stream-entry (*sotāpatti-magga-ñāṇa*). As you say: *diṭṭhiñca anupagamma, sīlavā dassanena sampanno*—"not clinging to views, but endowed with vision." That is why Anāthapiṇḍika spoke without fear. Look at what a wonderful praise the Buddha gave to Anāthapiṇḍika! Why can't you think of going in that direction? Look at how wise his way of answering was. He told the others to state their views. After they stated them, he analyzed them. All of them are generated by unwise attention (*ayoniso manasikāra*). They are conditioned/prepared (*saṅkhata*) things made by the mind. Every one of them is impermanent / inconstant (*anicca*). If you grasp them, you are grasping what is impermanent. If it is impermanent, it is suffering / unsatisfactoriness / stress (*dukkha*). If it is suffering, and you grasp it, you cannot go beyond. That is the deep meaning spoken of there. Instead, Anāthapiṇḍika said in the end: "I see an escape (*nissaraṇa*) beyond that." That escape is the escape that comes after crossing the flood (*ogha-taraṇa*) shown by the Buddha. There are many words related to that escape (*nissaraṇa*) in the Dhammapada, etc., which people are sometimes unable to understand, showing liberation from duality.</p>
+<p>Someone might doubt: "How can we abandon both merit and demerit?" Here, this does not mean dismantling the raft while still on this shore. Such dismantling is what is described in the second simile of the *Alagaddūpama Sutta*, the simile of the water-snake. If you grasp a water-snake by its tail, the snake will bite you. Theorizers grasp it in that way. "The Buddha has said to abandon merit and demerit; saṁsāra grows through performing merit and demerit." That is going to the other extreme. A stage comes when these must be abandoned. In this regard, we have often used a simile from the *Visuddhimagga*. While a stream is flowing rapidly, a person who wishes to cross it has a method. He grasps a creeper hanging from a tree on this side and swings. Having swung back and forth, as soon as he reaches the other side, he lets go of the creeper. If he does not let go of the creeper, he will swing back to this side, won't he? That creeper is what is called preparations / preparations / volitional activity (*saṅkhāra*). The practitioner (*yogāvacara*) looks at all these as preparations / preparations / volitional activity (*saṅkhāra*). Preparations / preparations / volitional activity are impermanent / inconstant (*anicca*). If they are impermanent, they are suffering / unsatisfactoriness / stress (*dukkha*). If they are suffering, they are not-self / non-self / unsubstantial (*anattā*). Isn't that what the Buddha declares? He tells Vacchagotta Paribrājaka when explaining the five aggregates of grasping / holding / fuel (*pañcupādānakkhandha*): "I have seen with wisdom: *n'etaṁ mama, n'eso ham asmi, na me so attā*—'This is not mine, this I am not, this is not my self.'" But I do not grasp even that view, because I have crossed over using it as support. He says he has reached the state of non-grasping (*anupādā vimutto*). If one at least directs the mind to the fact that there are two extremes. Those who do not train in this path at all, without even expecting them, take the word of the Buddha wrongly and go to the other extreme. Like grasping the snake by its tail. They try to dismantle the raft and finish the job even before crossing over. But on the other hand, there are those who carry the raft on their shoulders. Now, most of the people among us are of this kind. They carry the raft back and forth on this very shore. They do not even have the hope of crossing over. And that raft is now very large, getting larger and larger. They carry it back and forth. That is why it is said in the Dhammapada:</p>
+<p>*Appakā te manussesu, ye janā pāragāmino,*</p>
+<p>*athāyaṁ itarā pajā, tīram evānudhāvati.*</p>
+<p>"Few are those among men who go to the far shore; the rest of mankind only run up and down this shore."</p>
+<p>Such is the case here. Therefore, we say all this not to make you take it as a view (*diṭṭhi*), but to awaken you. To keep you awake. What is our practice for? As we always say, learning (*pariyatti*) is for practice (*paṭipatti*). Practice (*paṭipatti*) is for penetration (*paṭivedha*). Next, even if we look at the sequence of purification, in the *Rathavinīta Sutta* etc., which we showed on a previous occasion, this entire True Dhamma is encompassed.</p>
+<p>A successful sermon—it may not be successful, but a rich sermon can be delivered by presenting a single word. What is that word? *yāvadeva*—the meaning of this word, friends, is "solely/merely/just for." Now, I do not know if that word is used in common parlance. The word *yāvadeva* means "solely for this purpose." That is what we showed in the *Rathavinīta Sutta*, etc., through various similes of the relay chariot. In the end, when you look at it, there is no winner. One is for the sake of another, one is for the sake of another. King Kosala, in his urgent journey from Sāvatthi to Sāketa, had chariots prepared; because the horses were tired, after running one stage, he would leave that chariot and mount another. Leaving that, he would mount the third. Going on in this manner, after reaching Sāketa, if someone asked: "Great King, how did you come?" he would have to tell the whole story. Not by the first, nor by the second, nor by the third. But using them as support, and not without them either. Such a wonderful state exists in this Dhamma. That indeed is the Middle Path (*majjhimā paṭipadā*). Because the world exists in the dual views of "it is" (*atthi*) and "it is not" (*natthi*). All views exist within these two. Therefore, one must purify one's view. One purifies it not by going down into the river like the brahmins, but by engaging in this. Through that engagement, when at some stage a practitioner (*yogāvacara*) uses that Buddha-teaching on the three characteristics (*tilakkhaṇa*) and reaches the destined state, it becomes a direct vision (*dassana*), through the *opanayika* (leading-onwards) quality of the Dhamma; on such occasions, they see through an inner light, or rather, through penetration. That is what is called the Dhamma-eye (*dhamma-cakkhu*).</p>
+<p>Anāthapiṇḍika the Householder was one in whom that Dhamma-eye had arisen. That is why he spoke without fear. "I do not take even this as a view. I do not take even the understanding of *n'etaṁ mama, n'eso ham asmi, na me so attā* as a view. I know the escape (*nissaraṇa*) beyond that," he said. That is the crossing over the fourfold flood. How beautifully this was presented to Sabhiya the wanderer for the first time will be understood if the entire sutta is read carefully. By means of the four analytical knowledges (*catu-paṭisambhidā*), the Buddha wonderfully used each word existing in that society as a vehicle to present his Dhamma. Using its meaning (*attha*), text/nature (*dhamma*), linguistic expression (*nirutti*), and the analytical response (*paṭibhāna*) that followed. According to this, we must reflect. When we say Right View (*sammā-diṭṭhi*), many people think of something connected with books, or rather, that word. They are not unnecessary. They are helpful to the one who is striving to cross over with them. For others, it is like grasping the snake by its tail. They reject them at the very beginning, dismantle the raft, and meet with disaster. One must understand this Middle Path well. Today's sermon will help in that. Since this is a long sutta, we cannot translate each and every part. We have only briefly highlighted them. In this light, one must understand that the four analytical knowledges (*catu-paṭisambhidā*)—just as for a Buddha, Venerable Sāriputta says that the four analytical knowledges arose in him two weeks after his higher ordination. It is mentioned in the Dhamma in this manner. Those who have the ability to penetrate language and explain things in a convincing manner through the four analytical knowledges. It is mentioned that those with such ability attain that state in no long time. For all this, what helps is not reciting the Dhamma like parrots. Reflecting on them by means of such deep suttas, and trying to understand them by applying the insight (*vipassanā*) gained through the power of tranquility (*samatha*), a stage comes when even the raft can be abandoned—that indeed is the deepest part of this Dhamma. This is wonderfully shown in various places in the *Sutta Nipāta*. Just as abandoning both the far shore and the near shore, abandon both merit and demerit. Abandon both black and white. That talk is meant to bring out this point. A wonderful thing that is not found in any other philosophy is found here within the sixty-third assertion of recluses. Not for the purpose of grasping / holding / fuel (*upādāna*), but for the purpose of crossing over.</p>
+<p>I believe you understand these to some extent. In this light, we must reflect on the noble conduct and the noble character of Sabhiya the wanderer, and the depth of the verses spoken by the Buddha in reply. In our life as practitioners (*yogāvacara*), whether lay or ordained, we must not merely memorize the theoretical side (*pariyatti*). We must understand them. Penetrating it deeply and comparing it with our own direct experience in daily life. This is nothing foreign. Within this very fathom-long body, endowed with perception (*saññā*) and mind, lie the world, the origin of the world, the cessation of the world, and the path leading to the cessation of the world, as the Buddha has declared. Therefore, one does not need to go far. Search for these. Having scrutinized them with wisdom within one's own five aggregates, seeing their impermanent / inconstant (*anicca*) nature: if something is impermanent / inconstant (*anicca*), it is suffering / unsatisfactoriness / stress (*dukkha*); if it is suffering / unsatisfactoriness / stress (*dukkha*), there is nothing to be taken as "mine"—it is through this line of thought, by cultivating insight (*vipassanā*), that it becomes a direct vision (*dassana*). Therefore, by means of these few words, may you shape your lives as practitioners (*yogāvacara*), and may you be able to end this suffering / unsatisfactoriness / stress (*dukkha*) of saṁsāra as quickly as possible and cross over to the noble, deathless Nibbāna. Furthermore, from Avīci to Akaniṭṭha, whatever beings wish to rejoice in this merit of sharing and hearing the Dhamma, through that rejoicing, may they be comforted by the noble, deathless Nibbāna through a Bodhi of their aspiration. With these aspirations, recite these verses.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_044.html" class="doc-btn">← Previous Sermon (044)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_046.html" class="doc-btn">Next Sermon (046) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

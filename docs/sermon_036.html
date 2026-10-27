@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 036 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_035.html" class="doc-btn">← Previous Sermon (035)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_037.html" class="doc-btn">Next Sermon (037) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 036</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_036_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_036_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_036_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #36</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.119)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Anekajātisaṁsāraṁ, sandhāvissaṁ anibbisaṁ; Gahakārakaṁ gavesanto, dukkhā jāti punappunaṁ. Gahakāraka diṭṭhosi, puna gehaṁ na kāhasi; Sabbā te phāsukā bhaggā, gahakūṭaṁ visaṅkhataṁ; Visaṅkhāragataṁ cittaṁ, taṇhānaṁ khayamajjhagā.</p>
+<p>From:</p>
+<p>Dhammapada Verses 153-154, spoken by the Buddha at Enlightenment</p>
+<p>Dear Listeners,</p>
+<p>The Tathāgata, the Fully Enlightened One, attained supreme Enlightenment (*sambodhi-ñāṇa*) after practicing severe austerities for six long years. Out of matchless, heroic effort, a wondrous, joyful utterance (*udāna*)—two verses expressing the supreme liberation from *saṃsāra* that he had personally realized—gushed forth from his sacred lips. Today, on this noble Vesak Full Moon Day, which marks two thousand five hundred and fifty years since the *Parinibbāna* of the Fully Enlightened One, I have chosen this profoundly deep Dhamma as the theme for our sermon. According to the texts, the Buddha related the background of these two inspired verses (*udāna gāthā*) in response to a question raised by his personal attendant, Venerable Ānanda.</p>
+<p>We can find many highly important facts about the life of the Buddha in the form of discourses directly from his sacred lips in various suttas. The Buddha once described to the Saṅgha in the *Ariyapariyesana Sutta* the Great Renunciation made by Prince Siddhartha in quest of supreme Enlightenment as a "Noble Quest" (*ariya pariyesana*). The Blessed One describes how that decisive thought and determination matured and took shape within him in this manner:</p>
+<p>"Monks, before my Enlightenment, while I was still an unenlightened Bodhisatta, being myself subject to birth/arising (*jāti*), I sought what was also subject to birth/arising. Being myself subject to decay, I sought what was also subject to decay. Being myself subject to sickness, I sought what was also subject to sickness. Being myself subject to death (*jarāmaraṇa*), I sought what was also subject to death. Being myself subject to sorrow, I sought what was also subject to sorrow. Being myself subject to defilement, I sought what was also subject to defilement. But then, this thought occurred to me: 'Why, being myself subject to birth/arising, do I seek what is subject to birth/arising? Why, being myself subject to decay, sickness, death, sorrow, and defilement, do I seek what is subject to decay, sickness, death, sorrow, and defilement? What if, being myself subject to birth/arising, understanding the danger (*ādīnava*) in what is subject to birth/arising, I were to seek the unborn, supreme security from bondage, which is Nibbāna? What if, being myself subject to decay, sickness, death, sorrow, and defilement, understanding the danger in them, I were to seek the undecaying, the un-ailing, the deathless, the sorrowless, the undefiled, supreme security from bondage, which is Nibbāna?'"</p>
+<p>The Buddha declared that a mental revolution of this nature occurred within Prince Siddhartha at that crucial moment.</p>
+<p>Now, those among you who are well-acquainted with the life of the Buddha can understand why Prince Siddhartha, upon receiving the news of the birth of a son—whom people nowadays would call a 'precious son'—uttered: "*Rāhulaṃ jātaṃ, bandhanaṃ jātaṃ*" ("An impediment/bond is born, a fetter has arisen"). Based on our previous explanation, you can easily comprehend why the typical affection, joy, and delight that arise in a father's heart when a child is born in a home did not arise in Prince Siddhartha. Indeed, as you well know, the meaning of the word *Rāhula* is related to the astronomical Rahu that seizes the moon or the sun. In ancient lore, that which covers or obscures the light and splendor of the sun and moon was regarded as Rahu. Thus, let us consider: if Prince Siddhartha had not made that Great Renunciation on that day due to his affection and attachment for his son Rāhula, would the Buddha-sun, which illuminates the three worlds, have arisen today? Would a Vesak moon have shone for us today? From this, you can appreciate the value of the Noble Quest (*ariya pariyesana*). Through this very explanation, you can also understand what is meant by the "Ignoble Quest" (*anariya pariyesana*).</p>
+<p>What is the Ignoble Quest? The Buddha explained this at the very beginning of that discourse:</p>
+<p>"Someone, being himself subject to birth/arising, seeks what is subject to birth/arising. Being subject to decay, he seeks what is subject to decay. Being subject to sickness, he seeks what is subject to sickness. Being subject to death, he seeks what is subject to death. Being subject to sorrow, he seeks what is subject to sorrow. Being subject to defilement, he seeks what is subject to defilement." This is the Ignoble Quest.</p>
+<p>Therefore, according to those words of the Buddha, we are compelled to say that many of the researches and investigations considered supreme in the modern world actually fall under the category of this Ignoble Quest. This world, overwhelmed by the craving/thirst for becoming/existence (*bhava-taṇhā*), is not prepared to accept even the Buddha’s statement that "birth/arising is suffering (*dukkha*)." Yet, we know that when describing the Noble Truth of Suffering (*dukkha-ariya-sacca*), the Buddha declared: "*jātipi dukkhā*"—"birth/arising itself is suffering/stress (*dukkha*)." Why? Because along with birth/arising (*jāti*), decay, sickness, death (*jarāmaraṇa*), sorrow, and defilement follow hand in hand. Usually, when a child is born in a family, we think it is an occasion to celebrate. However, my pious friends, the parents of that child, who comes crying out of the mother’s womb, are not ready to realize that First Noble Truth of Suffering (*dukkha*). Instead, they rejoice. They harbor joyful expectations in the manner described before. Thus, this verse begins with this very question of birth/arising (*jāti*).</p>
+<p>But before presenting and explaining the verse, I wish to bring to light a few other background factors. We mentioned that the Bodhisatta practiced severe austerities for six years. On one occasion, in the *Mahāsīhanāda Sutta*, the Buddha roared a great lion's roar to the Saṅgha, led by the chief disciple Venerable Sāriputta, detailing how wondrous and extreme his six years of austerities were. He declared that his practice during those years of severe self-mortification was so intense that no other ascetic in the world who practiced severe penances could even come close to it. That is why it is called the "Great Lion's Roar" (*Mahāsīhanāda*). So marvelous and wondrous was that discourse that Venerable Nāgasamāla, who was fanning the Buddha at the time, exclaimed: "Venerable Sir, it is wonderful! Venerable Sir, it is marvelous! Hearing this Dhamma discourse, my hair has stood on end!"</p>
+<p>Having practiced such incredibly severe self-mortification for six long years without any result, he finally adopted the Middle Path (*majjhimā paṭipadā*), as we have all heard, and sat at the foot of the Bodhi Tree—on what we call the "Unconquered Seat" (*aparājita pallaṅka*)—on that memorable Vesak Full Moon Day. However, he sat there having resolved upon the highest form of effort known as "effort of four factors" (*caturanga-samannāgata-vīriya*). This four-factored effort is described thus: "Let only my skin, sinews, and bones remain! Let my flesh and blood dry up! What can be achieved by human strength, human energy, and human valor shall be achieved, and there shall be no relaxing of my effort until that state is reached." He resolved upon this great, foremost effort. It was when this effort bore fruit, after tasting the nectar of Nibbāna and experiencing its bliss, that the two verses we took as our theme gushed forth from his lips. An *udāna* refers to an inspired utterance—a sigh of relief. It contains the sigh of relief and the joyful exclamation that naturally escape someone who has successfully accomplished a momentous task. We should understand these two inspired verses (*udāna gāthā*) in this light.</p>
+<p>Now let us try to understand the meaning of these verses. Let us first recall the two verses once more:</p>
+<p>> *Anekajātisāraṃ sandhāvissaṃ anibbisaṃ*</p>
+<p>> *Gahakārakaṃ gavesanto dukkhā jāti punappunaṃ*</p>
+<p>></p>
+<p>> *Gahakāraka diṭṭhosi puna gehaṃ na kāhasi*</p>
+<p>> *Sabbā te phāsukā bhaggā gahakūṭaṃ visaṅkhitaṃ*</p>
+<p>> *Visaṅkhāragataṃ cittaṃ taṇhānaṃ khayamajjhagā*</p>
+<p>Now, if we try to render this into a poetic form (*gī*) according to the old linguistic style, it can be expressed as follows. (These words might be somewhat difficult to comprehend, but we shall explain them. This Sinhala rendering has been done with the intention of keeping it as close as possible to the poetic style of the *udāna* verses uttered by the Buddha):</p>
+<p>> Through many a birth in the cycle of existence, alas, I ran seeking,</p>
+<p>> Without finding the builder of this house.</p>
+<p>> Painful indeed is birth/arising (*jāti*) again and again.</p>
+<p>> Oh, builder! I have seen you!</p>
+<p>> You shall not build this house again.</p>
+<p>> All your rafters have been broken by me,</p>
+<p>> Shattered is the ridgepole.</p>
+<p>> The mind has reached the state where preparations/preparations (*saṅkhāra*) are stilled,</p>
+<p>> I have seen the end of cravings/thirsts (*taṇhā*).</p>
+<p>To explain the meaning of these two verses more clearly: "*Anekajātisāraṃ sandhāvissaṃ anibbisaṃ*"—the Buddha declares that he wandered through this *saṃsāra* undergoing various births and existences. How? "*Gahakārakaṃ gavesanto*"—seeking the builder who constructed this house. But unable to find him, he was born in this *saṃsāra* for so long. "*Dukkhā jāti punappunaṃ*"—"repeated birth/arising (*jāti*) is suffering/unsatisfactoriness (*dukkha*)." Then it says: "*Gahakāraka diṭṭhosi*"—"O house-builder, I have seen you." "*Puna gehaṃ na kāhasi*"—"You cannot build a house again. You shall not construct a house anymore." "*Sabbā te phāsukā bhaggā*"—"I have broken all your rafters." "*Gahakūṭaṃ visaṅkhitaṃ*"—"The ridgepole, the roof-peak, or the main dome of the house has been shattered." "*Visaṅkhāragataṃ cittaṃ*"—"My mind has reached the Unprepared state (*visaṅkhāra*), free from all preparations/preparations (*saṅkhāra*); it has attained Nibbāna." "*Taṇhānaṃ khayamajjhagā*"—"I have realized, directly experienced, the destruction and exhaustion of all cravings/thirsts (*taṇhā*)." This is the meaning of those verses.</p>
+<p>Now, consider this: here, the Buddha first highlighted the suffering of birth/arising (*jāti-dukkha*). Why did he wander for so long seeking the house-builder? Because he wanted to tear down this house. To break it down. But he did not find him. "*Dukkhā jāti punappunaṃ*"—"repeated birth/arising is suffering." What does the house-builder do? He builds houses again and again. And those houses that are built decay and collapse, as mentioned earlier. This is a great suffering (*dukkha*).</p>
+<p>A Buddhist poet has presented this matter in the form of a riddle-like quaternary verse (*daham gæṭa sivupada*). Some of the elders here might have heard it:</p>
+<p>> *Kandē gedara naidēṭayi kiyannē*</p>
+<p>> *Dirana gewal numba kumaṭada tanannē*</p>
+<p>> *Geyak hæra geyak notanā indinnē*</p>
+<p>> *Gen giyadā geṭa ginilā tæwennē*</p>
+<p>> (O craftsman of the house on the hill,</p>
+<p>> Why do you build these decaying houses?</p>
+<p>> Why do you not remain without building house after house?</p>
+<p>> When you leave the house, you burn it and suffer.)</p>
+<p>Looking at the poem, it seems easy to understand. But I do not think its true meaning is fully grasped. It is doubtful if you have correctly understood even what "the house on the hill" (*kandē gedara*) means. Who is this craftsman (*naidē*) of the house on the hill? Who is this craftsman of the house on the hill who builds these decaying houses?</p>
+<p>Before understanding that craftsman (*naidē*), we must understand "the house on the hill" (*kandē gedara*). My pious friends, "the house on the hill" refers to the house of the five aggregates (*pañcakkhandha* - a play on the word *kandha*, which means both aggregate and hill/mountain). This house closest to us is indeed the house of aggregates. Who is the craftsman (*naidē*) of this house? The master and leader of this house of aggregates is consciousness (*viññāṇa*).</p>
+<p>Although we say this, the commentaries (*aṭṭhakathā*), in explaining these verses, identify the house-builder (*gahakāraka*) as craving/thirst (*taṇhā*). Most of you have probably heard it explained that way. However, to our understanding, identifying it as craving/thirst is not quite appropriate here. Why? Because if that were the case, there would be no reason to mention "the destruction of cravings" (*taṇhānaṃ khayaṃ*) in the plural in the very last line. For this and several other reasons, it appears to us that the craftsman of the house on the hill, or the house-builder, is consciousness (*viññāṇa*).</p>
+<p>Let us try to present this with more reasoned evidence. You may have heard that the Buddha gave several profound similes to illustrate the five aggregates: form (*rūpa*) is compared to a lump of foam; feeling/sensation (*vedanā*) to a water bubble; perception (*saññā*) to a mirage; preparations/preparations (*saṅkhāra*) to a banana trunk; and consciousness (*viññāṇa*) to an illusion or magic trick (*māyā*). Thus, it is due to the illusory nature of consciousness (*viññāṇa*) that it acts as the house-building craftsman. Indeed, it is consciousness (*viññāṇa*) that has built this house. What is the "house" here? It is what we call this individual existence (*ātmabhāva*), or the five aggregates themselves. In other words, it is this cage of Name-and-Form (*nāmarūpa*). Therefore, consciousness (*viññāṇa*) is the primary aid in constructing this physical cage. That is why consciousness (*viññāṇa*) is called the house-building craftsman.</p>
+<p>To further substantiate this point, let us use the words of the Buddha himself. On one occasion, the Buddha preached to the monks about the four kinds of nutriment (*āhāra*). There are four nutriments for the maintenance of beings that have already come to be, and for the support and assistance of those seeking birth/arising (*jāti*). What are these four nutriments, monks? Physical food, gross or subtle, which is taken into the mouth—this is physical nutriment (*kabaḷīkārāhāra*). This is what we normally consider as food. Secondly, contact (*phassa*) is shown there as a nutriment. Thirdly, mental volition (*manosañcetanā*)—the volitions active within the mind—is shown. Fourthly, consciousness (*viññāṇa*) is shown as a nutriment.</p>
+<p>Elsewhere, the Buddha mentions—a monk named Moliya Phagguna asked: "Venerable Sir, who consumes the nutriment of consciousness (*viññāṇāhāra*)?" He asked this thinking of a person who consumes food. The Buddha replied that the question itself was incorrect. There is no person who consumes the nutriment of consciousness. The correct way to ask is: "For what is it a nutriment? For what is it a condition (*paccaya*)?" That is how one should ask. If asked thus, the answer is: consciousness (*viññāṇa*) is the nutriment, the condition, for the arising of future becoming (*āyatiṃ punabbhava* / renewed existence). From this, it is clear that it is not craving/thirst (*taṇhā*) but consciousness (*viññāṇa*) that actually conditions future birth/arising (*jāti*).</p>
+<p>The Buddha has expressed this even more deeply in various suttas. On one occasion, he explained this to Venerable Ānanda. Today, many people are trapped in stories about intermediate states (*antarābhava*) and the like. Great philosophers have grasped these and created complications. Now, another term that goes hand-in-hand with consciousness (*viññāṇa*) is Name-and-Form (*nāmarūpa*). Let us clarify this first. You may have heard about this consciousness (*viññāṇa*) to some extent, but if we contemplate its background—let us state that first.</p>
+<p>In the Dhamma of Dependent Arising (*paṭicca-samuppāda*), it is said: "*avijjā-paccayā saṅkhārā, saṅkhāra-paccayā viññāṇaṃ*" (with ignorance as condition, preparations/preparations arise; with preparations/preparations as condition, consciousness arises), and so forth. Thus, conditioned by ignorance, preparations/preparations (*saṅkhāra*) arise; conditioned by preparations/preparations, consciousness (*viññāṇa*) arises. So it is said. Conditioned by consciousness (*viññāṇa*), Name-and-Form (*nāmarūpa*) arises. It is this Name-and-Form (*nāmarūpa*) that we actually take as "the house," "the self-identity" (*ātmabhāva*), as "me" and "mine." There is nothing wrong with calling this physical cage Name-and-Form (*nāmarūpa*). Why? Because it is said that Name-and-Form (*nāmarūpa*) descends into the mother's womb, taking birth as an individual, as a self-identity, only if consciousness (*viññāṇa*) descends into it.</p>
+<p>That is to say, it is stated that a child is born only when consciousness (*viññāṇa*) and Name-and-Form (*nāmarūpa*) grow together and become complete in the mother's womb. If, at any stage, consciousness (*viññāṇa*) departs from the mother's womb, Name-and-Form (*nāmarūpa*) will not come to growth as a living being; it remains merely a lump of flesh. From this, we can understand something. Similarly, the Buddha states that if the consciousness (*viññāṇa*) of a young boy or girl were to be cut off or cease during childhood, Name-and-Form (*nāmarūpa*) would not grow. Let us call this Name-and-Form (*nāmarūpa*) the physical cage that we refer to as "me" and "mine"—that is more appropriate. What we identify as a person is merely a nominal form. Based on the four great elements—earth (*paṭhavī*), water (*āpo*), fire (*tejo*), and wind (*vāyo*)—this is a "form" (*rūpa*) existing only as a perception of form (*rūpa-saññā*). These four elements cannot be separated from one another. It is a form merely in name. Feeling/sensation (*vedanā*), perception (*saññā*), volition (*cetanā*), and attention (*manasikāra*) are shown as mental factors (*nāma-dhamma*). There, too, there is nothing to be grasped as a substantial entity. It is this Name-and-Form (*nāmarūpa*) that we regard as our self-identity (*ātmabhāva*). And the Buddha declares that this Name-and-Form (*nāmarūpa*) arises due to consciousness (*viññāṇa*).</p>
+<p>Next, let us contemplate the story about illusion (*māyā*). It is not easy to understand the true nature of consciousness (*viññāṇa*). The Buddha illustrates this with another simile, presenting the previously mentioned comparison as a story. The Buddha says to the monks: "Monks, suppose a magician—in modern terms, a conjurer or illusionist—performs a magic show at a crossroads. A person sees it and is deluded. But in the end, if one looks at the reality, the magician was merely showing what is non-existent as if it existed. It is a deception. Yet, the world, failing to understand this nature of consciousness (*viññāṇa*), gets deceived by it. That is why they wander long in *saṃsāra*." This is the understanding that the Buddha reveals through Dependent Arising (*paṭicca-samuppāda*). The darkness of ignorance—what is ignorance? In the language of magic, ignorance is not knowing the "trick" behind the magic; it is not knowing the magician's secret. Do not try to interpret it too literally; we explained it in this manner according to the context of Dhamma analysis. It is like darkness—the darkness of delusion (*moha*). It is within this darkness of delusion that one derives pleasure from a magic show. If, at some point, one sneaks behind the stage and discovers the magician's secrets, the magic disappears for him. Such is the nature of a magic show. The very same thing that is done in a magic show is found nowadays in various things like motion pictures, teledramas, etc., in the world. Within all of these, the very same delusion (*moha*) is active. Particularly in cinema, we know how the darkness of ignorance operates. No one who is enjoying a movie thinks at that moment: "It is the darkness of ignorance that allows me to enjoy this." At that moment, it does not occur to them: "It is because of this darkness that these things appear so beautiful on the cinema screen." Immersed in that darkness, they enjoy it through that very delusion (*moha*). That is ignorance (*avijjā*). Unless a Buddha discovers it, an ordinary person cannot find it.</p>
+<p>Thus, it is through the preparations/preparations (*saṅkhāra*) active within that ignorance that one derives pleasure. Those preparations/preparations (*saṅkhāra*) are what operate within that person’s mind, speech, and body upon seeing the movie—all of which occur within that delusion. That is what is called preparations/preparations (*saṅkhāra*). That is preparation/construction (*saṅkharaṇa*). Kamma is accumulated through this preparation/construction.</p>
+<p>It is due to these preparations/preparations (*saṅkhāra*) that we exist in this long *saṃsāra*. When we contemplate *saṃsāra*, it is through the kamma-force of these preparations/preparations (*saṅkhāra*)—the kamma-force created by thinking of "me" and "mine"—that a future birth/arising occurs. That kamma will inevitably yield results; it goes on giving results. Because of this, forms are projected. Accordingly, Name-and-Form (*nāmarūpa*) and the like arise in the mother's womb. As said before, if consciousness (*viññāṇa*) departs from the mother's womb at any point, it takes birth elsewhere, like an echo. Such is the situation. If we take this both in relation to this life and in a deeper sense, as a natural law (*dhammatā*), the deceptive or illusory nature of a magic show, a movie, or hypnotism occurs due to darkness. Based on that darkness, preparations/constructions (*saṅkhāra*) occur in the mind, or the physical organs are decorated for the purpose of deception. Actually, in the past, the word *saṅkhāra* was used for the make-up and dressing-up of actors and actresses. All those decorations are deceptions. It is due to ignorance (*avijjā*), due to darkness, that one is deluded by these deceptions. At some point—as you know, when one is enjoying a movie, if the lights are fully turned on suddenly—the cinema screen vanishes. It becomes blank. Something similar happens when the light of wisdom (*paññā-āloka*) arises. When the light of wisdom arose in the Buddha, all preparations/preparations (*saṅkhāra*) were stilled. That is why he said: "*visaṅkhāragataṃ cittaṃ*" (the mind has attained the Unprepared).</p>
+<p>Right there, we can understand the rest of it. If we regard the magician as consciousness (*viññāṇa*), we can understand this verse in a much more meaningful way. "*Visaṅkhāragataṃ cittaṃ*"—preparations/preparations become de-prepared (*visaṅkhāra*). If preparations/preparations (*saṅkhāra*) perform a deception, when that deception is removed, they become "un-preparations" (*visaṅkhāra*). They are preparations/preparations (*saṅkhāra*) only in name. Such is the state of that mind. The liberated mind of the Buddha is free from the pressure of preparations/preparations (*saṅkhāra*). That is what the Buddha declares to be the highest happiness in the world: "*sabba-saṅkhāra-samatha*"—the stilling of all preparations/preparations (*saṅkhāra*) occurs when the darkness of ignorance is removed. Thus, one ran in *saṃsāra* because of the darkness of ignorance. If we regard the preparations/preparations accumulated due to that darkness of ignorance as kamma, they cause repeated birth/arising (*jāti*). Through the ripening of those accumulated kamma-forces, more and more houses are built, giving an opportunity to Māra (the death-agent). That is what we call Māra. He builds and kills. Houses are built and broken. This is exactly what the illusion of consciousness (*viññāṇa*) shows us. In this manner, we can understand that the "house-builder" (*gahakāraka*) in this verse is consciousness (*viññāṇa*).</p>
+<p>Next, "O house-builder, you are seen! You shall not build the house again." This can be understood in the same way we described how a child's life in the mother's womb can slip away. For a house to be built again, for a future becoming (*āyati punabbhava* / renewed existence) to occur, it is consciousness (*viññāṇa*) that assists. The Buddha declared that there is a mutual relationship between consciousness (*viññāṇa*) and Name-and-Form (*nāmarūpa*). There is a wonderful thing there. Consciousness (*viññāṇa*) supports the existence of Name-and-Form (*nāmarūpa*). The moment it is gone, there is no Name-and-Form (*nāmarūpa*) in the mother's womb. As you know, what is conventionally called the embryonic form (*kaḷala-rūpa*) arises in the mother's womb. It is like a photograph. At the moment of death, through the kamma-force grasped by the final thought-process, consciousness (*viññāṇa*) goes and establishes itself, first as a shadow-like image. This is what grows over nine months and finally comes out crying as a child—a "golden son" or a "golden daughter." This, my pious friends, is the reality, and there are valuable discourses of the Buddha to further clarify this if evidence is needed.</p>
+<p>On another occasion, when describing birth/arising, the Buddha declared: "*kammaṃ khettaṃ, viññāṇaṃ bījaṃ, taṇhā sineho*"—"Kamma is the field, consciousness (*viññāṇa*) is the seed, and craving/thirst (*taṇhā*) is the moisture." Thus, the seed of consciousness (*viññāṇa*) falls into the field of kamma and grows, aided by the moisture of craving/thirst (*taṇhā*).</p>
+<p>There is another discourse that expresses this point even more meaningfully, concerning the Arahant Nun Selā. A verse uttered by Māra, who came to challenge the Arahant Nun Selā, is mentioned in the Dhamma. Since reciting too much Pali might be an obstacle for you, I will only give the meaning. What is the question asked by Māra? He uses a unique word there: "*bimba*" (image/reflection). *Pratibimba* means reflection. The word *bimba* is also used for a statue, a model, a likeness, or an image. Thus, the word *bimba* is used here for the physical cage. Māra asks: "Who created this image (*bimba*)? By whom was it created? Who is its creator?" Māra presents the concept of a creator. "Who is the creator who made this physical cage? Where did it arise? Where does it cease?" Māra asks several such questions.</p>
+<p>In her reply, Sister Selā says: "This image (*bimba*), this reflection, this model, is not self-made, nor is it made by another. But due to a cause, due to a certain cause, it has arisen. With the breaking up of that cause, it ceases." Next comes the most important part of the verse, which we can connect to the words of the Buddha we discussed earlier. Sister Selā gives a simile: "Just as a seed planted in a field grows when aided by the soil's nutrients and moisture, so too this arises due to causes and conditions, and with the destruction of those causes and conditions, it ceases." This is all Sister Selā says. But if we add the Buddha's words we mentioned earlier as a commentary here, we can understand that what the Nun meant here is that the seed of consciousness (*viññāṇa*) in the field of kamma grows like a seed, aided by the nutrients and moisture, and thus this image (*bimba*)—this physical cage—manifests in the world.</p>
+<p>In truth, we are briefly presenting many Dhamma points that would require hours to explain, so that you may understand them at your respective levels—at least through the help of similes. From this, too, we can understand that the magician, or the house-builder, is consciousness (*viññāṇa*). The light of wisdom (*paññā-āloka*) is what helps us to see the true nature of consciousness (*viññāṇa*). When the light of wisdom arises, it is seen that consciousness (*viññāṇa*), too, arises due to causes and conditions. The cause and condition is Name-and-Form (*nāmarūpa*). Conditioned by Name-and-Form (*nāmarūpa*), consciousness (*viññāṇa*) exists. Their mutual support is conditioned by the background factors of the darkness of ignorance (*avijjā*) and the preparation/construction called preparations/preparations (*saṅkhāra*). This house is constructed through some preparation/construction. That preparation/construction consists of kamma performed through mind, speech, and body: bodily preparations (*kāya-saṅkhāra*), verbal preparations (*vacī-saṅkhāra*), and mental preparations (*mano-saṅkhāra*). As you know, it is said that if one does bad kamma, one goes to hell; if one does good kamma, one goes to heaven. Whichever it is, a preparation/construction takes place. We usually say that the cause for this preparation/construction is ignorance (*avijjā*). What is ignorance (*avijjā*)? It is the feeling of "me" and "mine." This feeling of "me" and "mine" is contrary to the understanding of causes and conditions. The Buddhas describe this as a sequence of causes and conditions. But the ordinary worldling, who has fallen into the dogma of self-illusion (*sakkāya-diṭṭhi* / view of existing body), thinks: "I am doing it, I am doing it." If "I" am doing it, then "I" must also take responsibility. Those two go hand-in-hand. That is what kamma and its result (*vipāka*) mean. There, one cannot escape by saying "it was not I who did it." Therefore, if a kamma is done with a sense of "me" and "mine," the result of that kamma inevitably follows. That is a natural law (*dhammatā*). This aspect can be understood well through that. That is what was said about the house-builder (*gahakāraka*).</p>
+<p>Next, there are other parts of this verse that need to be explained. "O house-builder, you are seen! You shall not build the house again." This has been understood from what was said. The Buddha cannot have a house built again because he saw the true state. Because of that sight, kamma was exhausted; the kamma-force was destroyed. Just as someone who has discovered the trick behind a magic show will not go back to the magician to watch his magic, the Buddha understood this in every way. This is something that arises due to causes and conditions; it is devoid of substance. That is why, in the end, after giving the simile of the magic show and the magician, the Buddha asked the monks: "Monks, what substance is there in a magic show?" The answer is that it is devoid of substance. Yet, the entire world thinks there is some core or substance in it. Other religionists ultimately grasp and hold onto consciousness (*viññāṇa*). They regard it as something with a core, a substance, as something real and permanent. But the Buddha strikes at that very point. It is merely a false show. It is because we do not know the secret that we are deceived by it. The moment the secret is known, that consciousness (*viññāṇa*) ceases. The magic becomes non-magic. Something of that nature happens. Consciousness (*viññāṇa*) ceases. Thus: "You shall not build the house again."</p>
+<p>Now, it was said here: "*sabbā te phāsukā bhaggā*" (all your rafters are broken). This, too, needs to be explained. The Buddha next addresses the house-building craftsman: "Oh, builder! I have seen you! You shall not build the house again. I have broken all your rafters (*gonæs*)." We used this old word (*gonæs*) in consideration of this verse. The word *gonæs* is not in common usage today. My pious friends, *gonæs* refers to rafters. In the sense that they support the roof, they are called *gonæs*. However, the commentaries explain these rafters in another way. The commentaries explain rafters as "the remaining defilements" (*avasesa kilesā*). Why did they say so? Because craving, too, is a defilement (*kilesa*). Thus, the builder is craving, and the remaining defilements are the rafters. However, to our understanding, there is a deeper meaning here. These rafters represent the six sense-bases (*saḷāyatana*). Some of you may not know what the sense-bases (*āyatana*) are. They are the six bases: eye, ear, nose, tongue, body, and mind. These are called the internal sense-bases (*ajjhattika-āyatana*). The objects that range within them, as you know, are forms, sounds, smells, tastes, tangibles, and thoughts (*dhamma*). *Dhamma* here means mental objects, things that become objects of the mind. Thus, there is a base between the two—between the eye and forms is the eye-base (*cakkhāyatana*), between the ear and sounds is the ear-base (*sotāyatana*), and going on in this manner, there is also a base between the mind and thoughts, between the mind and ideas. We can think of this as the two ends of a rafter. Therefore, we have to explain this simile of the rafters through the six sense-bases (*saḷāyatana*). Why? Because after Name-and-Form (*nāmarūpa*) is born, these very sense-bases become active. The eye runs after forms, just as a deer runs after a mirage. The ear runs after sounds, after sweet voices. In this manner, this running occurs between the two. That is why the six sense-bases are the rafters. Indeed, is it not these six that support the entire roof of defilements? These six rafters support all defilements. It is not appropriate to show them separately as defilements. To prove this further, let us say: "*sabbā te phāsukā bhaggā*"—those rafters are also broken. Why? Because once the secret of Name-and-Form (*nāmarūpa*) and consciousness (*viññāṇa*) is seen, the six sense-bases (*saḷāyatana*) that arise due to Name-and-Form (*nāmarūpa*) do not function anymore. If the deer recognized—if it understood: "What appears here is a mirage, this is not water, but some natural weather phenomenon"—the deer would not run after it. The deer would then abandon that perception of water. Something similar is meant by the cessation of the sense-bases (*āyatana-nirodha*). We can understand that according to the Buddha's cessation of ignorance (*avijjā-nirodha*), all other cessations occurred: preparations/preparations (*saṅkhāra*), consciousness (*viññāṇa*), Name-and-Form (*nāmarūpa*), and the six sense-bases (*saḷāyatana*). To put it another way, these sense-bases are factories of defilements. We have six factories of defilements. Thus, these sense-bases become deactivated once wisdom arises. It is through these that kamma is accumulated. Therefore, "*sabbā te phāsukā bhaggā*" (all your rafters are broken).</p>
+<p>Next, it says: "*gahakūṭaṃ*". *Gahakūṭa* means the ridgepole, the roof-peak of a house. That has been shattered. Here, the commentaries say that *gahakūṭa* refers to ignorance (*avijjā*). We, too, accept that it is ignorance (*avijjā*). Indeed, it is from ignorance (*avijjā*) that all of this arises. It comes starting from "*avijjā-paccayā saṅkhārā*". This ignorance (*avijjā*) is indeed the ridgepole. For this gabled house, the six rafters are those we mentioned: eye, ear, nose, tongue, body, and mind. These operate through ignorance (*avijjā*). It is through ignorance (*avijjā*) that objects are presented to them—defiled objects. Following them, ignorance (*avijjā*) is indeed the ridgepole of this house-builder. Therefore, if at any point this gabled house, this roof, is completely shattered, it cannot be built again. That is why: "*gahakūṭaṃ visaṅkhitaṃ*". In the word *visaṅkhita*, the word *saṅkhāra* is present. The builder had made some preparation/construction so that this ignorance remained unseen. But now, that has been entirely deactivated and shattered.</p>
+<p>"*Visaṅkhāragataṃ cittaṃ*". Therefore, my mind—the Buddha declares: "My mind has attained the Unprepared state (*visaṅkhāra*)." In other words, it is the stilling of preparations/preparations (*saṅkhāra*). Where preparations/preparations (*saṅkhāra*) are stilled, there is no place for preparations/preparations (*saṅkhāra*). To put it another way, once the light is turned on in a cinema hall, no matter what colorful things are projected onto the screen, there is nothing for the viewer to grasp. The movie has stopped for him. Similarly, here too, preparations/preparations (*saṅkhāra*) have become de-prepared (*visaṅkhāra*). "*Visaṅkhāragataṃ cittaṃ*". Through that itself, when the deceptive nature of preparations/preparations (*saṅkhāra*) is destroyed, craving/thirst (*taṇhā*) ends right there. If it is a movie, at that moment, one cannot enjoy or relish it. Likewise, the end of cravings/thirsts (*taṇhā*) is right there.</p>
+<p>This is a very profound verse. However, within the limited time, we have made an effort to explain it to some extent. What we must further contemplate within this is, as stated before, this repeated birth/arising (*jāti*) that we grasp as happiness in this life—in other words, the craving for becoming/existence (*bhava-taṇhā*). Deep within beings lies this craving for becoming/existence. There is never an end to this craving/thirst (*taṇhā*). Craving/thirst (*taṇhā*) is a thirst. As explained through the simile of the mirage, when this thirst within beings cannot be quenched in this life, if they have not realized the state of Nibbāna as their final thought, some sign (*nimitta*) appears to that mind. You may have heard about this in relation to kamma, described in the books as the sign of kamma (*kamma-nimitta*) or the sign of destination (*gati-nimitta*). Some sign appears. Why? Because this illusion is taken as real. Thus, they ran after the mirages of the world. They ran all their lives. They ran after the mirages seen by the eye, the mirages heard by the ear, and all other mirages. They ran and ran, yet there was no satisfaction. No satisfaction. By the time they reach there—suppose we find something we most desire to see with the eye, and we buy it for a large sum of money. After a few days, we get tired of it. We look for "something better." In this luxury-oriented world, you yourselves know this. At great expense, we acquire the most valuable thing our neighbor has. After a few days, it becomes outdated. We go in search of the next thing. Beings run after such a wondrous mirage. It is the same with songs. They become outdated. Then we look for another. It goes on like this. Finally, at the moment of death, because there is no satisfaction, those signs appear to the mind.</p>
+<p>Many people who come to us say: "I do not want to be born again. I really do not like to be born again." Although they say so, they are not ready to make the necessary sacrifice for it. If birth/arising could be avoided merely by saying so! One cannot end the suffering of birth/arising (*jāti-dukkha*) in that way. It is for this that the Buddha, in the *Satipaṭṭhāna Sutta*, preaches: "*yam p'icchaṃ na labhati tam pi dukkhaṃ*" (not to get what one wants is suffering). In the analysis of the Noble Truths in the *Satipaṭṭhāna Sutta*, the Buddha explains: "*yam p'icchaṃ na labhati tam pi dukkhaṃ*." When it is said that "not to get what one wants is suffering," an ordinary person might think: "I want to buy a car. If I cannot get it, that is suffering—that is what the Buddha is saying." But that is not what the Buddha is teaching. In that analysis, it is explained thus:</p>
+<p>"In beings subject to birth/arising (*jāti*), monks, such a wish arises: 'Oh, if only we were not subject to birth/arising...' But this cannot be attained merely by wishing." That is the meaning of "*yam p'icchaṃ na labhati tam pi dukkhaṃ*." What the Buddha meant by "not getting what one wants is suffering" is not about failing to acquire those worldly things. It is about these supramundane matters of escaping from *saṃsāra*. Similarly, it is shown: "in beings subject to decay, such a wish arises: 'Oh, if only we were not subject to decay.'" Even if one thinks so, this is not something that can be achieved merely by wishing and praying. It is only by walking on the path that must be trodden, by walking on that path, that decay is brought to an end—by ending birth/arising (*jāti*). Therefore, keeping birth/arising (*jāti*) while trying to eliminate decay is a foolish task. An ignorant task. We can never attain an eternal, permanent life. I hear that in wealthy countries nowadays, they perform various surgeries to hide decay. Furthermore, they use various methods to preserve beauty. No matter how much they do, decay cannot be prevented. Along with it, sickness also comes, hand in hand with decay. Then comes death (*jarāmaraṇa*). This is the nature of *saṃsāra*. One cannot escape from this merely through wishes. That is what the Buddha reminds us in the *Satipaṭṭhāna Sutta*.</p>
+<p>What is the path to this? It is understanding. It is wisdom. Because it is due to lack of understanding, due to delusion (*moha*), that all this occurs. We are running after an illusion. The path to eliminating that delusion (*moha*) is what the Buddha realized on that Vesak Day. That is what we call Nibbāna—cooling down / extinguishing. Many people do not even understand that Nibbāna means extinguishment. The Buddha shows this as a bliss of stilling that the world cannot understand. In another way, it is shown as a bliss that is not felt (*avedayita-sukha*). No. Happiness lies where feelings/sensations (*vedanā*) are stilled. The world thinks that painful feelings are our trouble, and grasps pleasant feelings as happiness. But the Buddha declares that whether it is pleasant feeling or painful feeling, or even neither-painful-nor-pleasant feeling, which is the neutral middle feeling—all of them are suffering/stress (*dukkha*). Why did he declare them all as suffering? A pleasant feeling is felt as pleasant only as long as it lasts. When it changes, it is suffering/stress (*dukkha*). A painful feeling is felt as painful while it lasts; when it changes, it is felt as pleasant. Yet, my pious friends, because of that, none of us should wish for suffering. It seems this has now been turned into an argument to raise questions about the law of impermanence (*aniccatā-dhamma*). The nature of painful feeling is that it changes. Simply because it changes, it comes back again and again. Therefore, no one welcomes suffering, in expectation of the happiness that arises from its stilling. The neither-painful-nor-pleasant feeling that lies between pleasure and pain was regarded highly by the ancient yogis and sages—it is peaceful. But that, too, is not permanent. That, too, changes. It is when all of these are abandoned, when all preparations/preparations (*saṅkhāra*) are stilled, and feeling/sensation (*vedanā*) is also removed, that we have what is called Nibbāna.</p>
+<p>During the Buddha's time, some people, such as a certain wanderer (*paribbājaka*), even asked the Venerable Mahā Sāriputta: "How can this be happiness when there is no feeling? What happiness can there be where there is no feeling?" Then the Venerable Mahā Sāriputta replied: "The very absence of feeling is itself happiness." "*Yaṃ kiñci vedayitaṃ taṃ dukkhasmiṃ*"—whatever is felt, whether pleasant, painful, or neither-painful-nor-pleasant, was seen by the Buddha as suffering (*dukkha*). Thus, the stilling of all preparations/preparations (*sabba-saṅkhāra-samatha*) includes everything. Feelings/sensations (*vedanā*), perceptions (*saññā*)—all of these ultimately rest on consciousness (*viññāṇa*). This consciousness (*viññāṇa*), which we regard so highly—which we take as a core—is in truth merely an illusion. According to Buddhist teachings, the fact that consciousness (*viññāṇa*) is an illusion is not found in any other doctrine. Elsewhere, it is regarded as something with a core. But the Buddha points out that through ignorance (*avijjā*), through not knowing—what is ignorance? It is a lack of knowledge due to which one initiates a course of action that ends in suffering (*dukkha*). When explaining ignorance, it is defined as not knowing the Four Noble Truths. It is due to not knowing these truths that one initiates a process that causes suffering (*dukkha*). Thus, due to ignorance, a certain process is initiated. Its final result is suffering (*dukkha*). If, at some point, one understands this correctly as merely a combination of causes and conditions, without a sense of "me" or "mine"—at that moment, through the "dissolution of causes" (*hetu-bhaṅgā*), when the cause is eliminated, the effect ceases. Then, a wondrous thing happens between consciousness (*viññāṇa*) and Name-and-Form (*nāmarūpa*): when Name-and-Form (*nāmarūpa*) ceases, consciousness (*viññāṇa*) ceases; when consciousness (*viññāṇa*) ceases, Name-and-Form (*nāmarūpa*) ceases. It is just like two sheaves of reeds leaning against each other: if one is pulled away, both fall. The Buddha has shown in the Dhamma, in the form of Dependent Arising (*paṭicca-samuppāda*), that this entire existence depends on a relationship of causes and conditions, on mutual conditioning.</p>
+<p>But the world stands on the perception of permanence (*nicca-saññā*). It is to the being who stands on this perception of permanence that, at the final moment, some sign grasped by him presents itself as a sign of kamma (*kamma-nimitta*) or a sign of destination (*gati-nimitta*), as mentioned before. Then, inevitably, that sign goes and, as the embryonic form (*kaḷala-rūpa*), a field is prepared in some mother's womb according to kamma. If one is to be born blind, it is prepared accordingly; if deaf, accordingly. It may be an illness or a deformity that the mother and father do not have. Yet, that sign falls into the embryonic form, takes root, is nourished in the mother's womb, and finally comes out crying as a blind, deaf, mute, or crippled child. This is the force of kamma. It is the sign that was grasped. This is the terrifying nature of this *saṃsāra*. It happens in a way we did not expect. If we have not shattered the roof-peak of this house, if we have not broken the rafters, if we have not deactivated them through the realization of the paths and fruits and the realization of Nibbāna, then, according to the sign grasped, a future birth/arising occurs. Along with it, one brings all of those things: decay, sickness, death—all of them.</p>
+<p>Thus, if at any point—if we contemplate more deeply—what is done by the mind of an Arahant? One trains oneself to see what the world has hitherto regarded as permanent as impermanent (*anicca*). Now, we come to the Three Characteristics (*ti-lakkhaṇa*) that we have all heard of. Why did the Buddha show these Three Characteristics in brief? Because through the meditation on these Three Characteristics, that sign is gradually worn away. The delusive power of the sign is gradually worn away. The more we see it as impermanent (*anicca*), its ultimate end is described as the "signless deliverance of mind" (*animitta-cetovimutti*). The three gateways to Nibbāna are shown as the signless (*animitta*), the undirected (*appaṇihita*), and the void (*suññata*). The signless (*animitta*) means that by developing the perception of impermanence (*anicca-saññā*), as one approaches the realization of the paths and fruits, at that final gateway, no sign of anything presents itself to the mind. At that moment, a wondrous peace and bliss are felt. It is when these signs are present that the perception of permanence operates: "Will these decay? Will these break? I must protect them." All of this occurs. Therefore, if no sign presents itself to the mind, that is a great peace. Similarly, it is due to these signs that desire arises. What we call *praṇidhi* (aspiration/direction) is desire or the target. Thus, *appaṇihita* (the undirected) means that desires disappear. When the sign slips away, the desires, wishes, and expectations that rested on that sign are stilled right there. This is the undirected (*appaṇihita*). When this happens—why do we harbor desires? It is because of that sense of self, is it not? It is based on the perception of self within that "me, me." According to the Dhamma, the culmination of the perception of impermanence (*anicca-saññā*) is called the "signless liberation" (*animitta-vimokkha*). One approaches the signless gateway by understanding the danger in signs.</p>
+<p>Next, if someone contemplates the characteristic of suffering (*dukkha-lakkhaṇa*), for some, the characteristic of suffering is understood more deeply. Wherever they look, they see: "This is a great suffering, a great trouble." For the one who understands thus, the desire called *praṇidhi* gradually thins out, and they arrive at the gateway of the undirected (*appaṇihita*), where desires have thinned out, reaching a state of peace as they approach the gateway to Nibbāna. Next, as not-self (*anattā* / unsubstantial)—particularly for wise people, when they contemplate with wisdom, they see that in none of this is there anything to be taken as "me." As they go on understanding it as a heap of causes and conditions, at some point they realize: "This is void (*suññata*), empty." If one sheaf of reeds is leaning against another, neither can stand alone. This is the primary principle of the conditioning of causes and conditions—Dependent Arising (*paṭicca-samuppāda*). That is the natural law (*dhammatā*). Nothing stands alone. There must be at least two supporting each other. That is why: "*avijjā-paccayā saṅkhārā, saṅkhāra-paccayā viññāṇaṃ*"—it goes on and on, everything proceeding conditioned by something else. Therefore, there is no substance in this. There is no core of a self. For the person who can see thus—for the person who has developed the vision of not-self (*anattā*)—the final gateway that opens is the void (*suññata*).</p>
+<p>What we have expressed now—you have all heard about developing the perception of impermanence (*anicca-saññā*). To put it simply, the perception of permanence (*nicca-saññā*) exists in the world. The perception of pleasure (*sukha-saññā*) exists in the world. The perception of self (*atta-saññā*) exists in the world. Contrary to these, the Buddha has declared: develop the perception of impermanence (*anicca-saññā*); develop the perception of suffering (*dukkha-saññā*); develop the perception of not-self (*anattā-saññā*). When these reach their culmination, as one approaches Nibbāna, the one who has approached these three gateways of Nibbāna—the signless (*animitta*), the undirected (*appaṇihita*), and the void (*suññata*)—finally attains that light. Through the realization of the paths and fruits—Sotāpanna, Sakadāgāmi, Anāgāmi, and Arahant—he reaches the state where all preparations/preparations (*saṅkhāra*) are stilled, and is liberated from all the suffering of birth/arising (*jāti*) and the like in this *saṃsāra*.</p>
+<p>Therefore, on this valuable day, we have presented some ideas to you according to the occasion, regarding a profound verse that would normally require many hours to analyze. What is expected is not to argue and debate using these ideas. One must be eager to realize these through the very path of Dhamma trodden by the Buddha—the path of virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*). May this hearing of the Dhamma be a strong support and a source of merit for you to achieve the height of your meditation and realize the noble, deathless Nibbāna, liberating yourselves from all the suffering of birth/arising (*jāti*) and the like in this *saṃsāra*, by virtue of the many wholesome thoughts you have accumulated on this precious day through morality, meditation, and listening to the Dhamma. Likewise, may all deities from the Avīci hell up to the Akaniṭṭha heaven, along with our departed relatives and everyone who has listened to this Dhamma sermon, be empowered by the merit of hearing this Dhamma to attain the peace of the noble, deathless Nibbāna through their aspired Bodhi. Let us share the merits by reciting these verses.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_035.html" class="doc-btn">← Previous Sermon (035)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_037.html" class="doc-btn">Next Sermon (037) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

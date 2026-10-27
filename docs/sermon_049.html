@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 049 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_048.html" class="doc-btn">← Previous Sermon (048)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_050.html" class="doc-btn">Next Sermon (050) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 049</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_049_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_049_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_049_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #49</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.204)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Kumbhakāro pure āsiṃ, Ghaṭīkāro mātāpettibharo āsiṃ; Kassapassa upāsako, virato methunā dhammā; Brahmacārī nirāmiso. Ahuvā te sagāmeyyo, ahuvā te pure sakhā.</p>
+<p>From:</p>
+<p>Ghaṭīkāra tradition, connected with the Ghaṭīkāra Sutta (MN 81)</p>
+<p>Dear Listeners,</p>
+<p>This noble Vesak Full Moon Poya Day is the day on which the extremely rare, miraculous event of the arising of a Buddha in the world naturally comes to our minds. Although it is an event that occurs very rarely, we, as Buddhists, believe that the arising of a Buddha in the world takes place in accordance with a certain natural law (*dhammatā*). This matter becomes very clear to us, especially through the Sutta discourses in which our Blessed One spoke about the Buddhas of the past. The *Ghaṭīkāra Sutta* in the *Majjhima Nikāya* is one such discourse. As an introduction to that Sutta discourse, we presented as our theme two verses extracted from the *Ghaṭīkāra Sutta* in verse form, found in both the *Devatā Saṁyutta* and the *Devaputta Saṁyutta* of the *Saṁyutta Nikāya*. On an occasion when the Blessed One was residing at Jetavana monastery in Sāvatthi, during the night, the Brahmā king Ghaṭīkāra—these Brahmā kings are also referred to by the names *devatā* (deities) and *devaputta* (sons of devas)—came during the night, paid homage to the Blessed One, stood to one side, and gave a piece of news or information to the Blessed One. What was that? It was the fact that seven Non-returner (*anāgāmi*) bhikkhus who had passed away in this Dispensation, immediately upon being born in the Aviha Brahmā world, attained the Fruit of Arahantship and achieved liberation. The names of those seven bhikkhus are mentioned as follows: Upaka, Palagaṇḍa, Pukkusāti, Bhaddiya, Bhaddadeva, Bāhudantī, and Piṅgiya. The Brahmā king came and declared that these seven had attained Arahantship immediately upon birth in the Aviha Brahmā world. At the same time, while that verse dialogue was taking place, this Brahmā Ghaṭīkāra related his past history in the two verses we quoted earlier.</p>
+<p>"In the past, I was a potter in the village of Vehaḷiṅga (*Kumbhakāro pure āsiṁ Vehaḷiṅge*)."</p>
+<p>"In the past, I was a potter doing the work of Ghaṭīkāra."</p>
+<p>"I was one who supported his mother and father (*Mātāpettiharo āsiṁ*)."</p>
+<p>"I was a lay disciple of Kassapa Buddha (*Kassapassa upāsako*)."</p>
+<p>"Abstaining from sexual intercourse, I was a celibate free from sensual attachments (*Virato methunā dhammā brahmacārī nirāmiso*)."</p>
+<p>"I was a co-villager with you (*Ahuvā te sagāmeyyo*)."</p>
+<p>"In the past, I was your friend (*Ahuvā te pure sakhā*)."</p>
+<p>After he said this, the Blessed One also confirmed that fact, saying, "Yes, indeed we are old friends." That old friendship is revealed to us in the aforementioned *Ghaṭīkāra Sutta* of the *Majjhima Nikāya*. The origin (*nidāna*) of that Sutta is recorded in the books as follows.</p>
+<p>On one occasion, while the Blessed One was wandering on a tour in the Kosalan country with a large community of bhikkhus, he stopped at a certain place, stepped off the road, and at a certain spot, displayed a gentle smile. Ven. Ānanda thought, "What is the cause, what is the reason for the Blessed One to display a smile at this place and at this moment?" Knowing that the Tathāgatas do not smile without a cause, he arranged his robe over one shoulder, paid homage, and asked the Blessed One, "What is the cause, what is the reason for the Blessed One to display a smile?" When asked thus, the Blessed One revealed a certain history: "Ānanda, in the past, in this very region, there was a market town called Vehaḷiṅga. It was depending on that market town that Kassapa Buddha resided. Ānanda, right here was the monastery of Kassapa Buddha. Sitting right here, Kassapa Buddha gave advice to the Saṅgha." When this was said, Ven. Ānanda folded his double-layered outer robe into four, prepared a seat, and invited the Blessed One: "In that case, Venerable Sir, let the Blessed One sit on this seat. Thereby, this place will become a site used by two Buddhas." The Blessed One agreed and sat there. He then continued to relate that story further: "Kassapa Buddha resided depending on that village of Vehaḷiṅga. His monastery was right here. Kassapa Buddha had a chief attendant named Ghaṭīkāra, who was a potter. A potter by the name of Ghaṭīkāra. That potter Ghaṭīkāra had a very dear and close friend named Jotipāla. Now Ānanda, on one occasion, this potter Ghaṭīkāra said to the young man Jotipāla: 'Come, Jotipāla, let us go and see the Blessed One. Seeing such Buddhas is highly acclaimed. Come, let us go.' When he said this, the young man Jotipāla rejected it, saying: 'What is the use, Ghaṭīkāra? What is the use to me of seeing that bald-headed recluse?' For a second and a third time, Ghaṭīkāra the potter made this request. But the young man Jotipāla did not wish to go and see the Blessed One. Then the potter Ghaṭīkāra said to his friend Jotipāla: 'In that case, let us go to the river to bathe. Take your bathing requisites,' and they went to the river. Even there, the potter Ghaṭīkāra said to his friend: 'Jotipāla, the monastery of that Blessed One is very close by. Come, Jotipāla, let us go to the Blessed One.' Then, once again, the young man Jotipāla said: 'What is the use, Ghaṭīkāra? What is the use of seeing that bald-headed recluse?' and rejected it three times. Thereupon, Ghaṭīkāra grabbed the young man Jotipāla by his waist-cloth and said: 'Come, let us go and see the Blessed One.' Even so, the young man Jotipāla released his waist-cloth and rejected it, saying: 'There is no use in going,' and refused. This happened three times. Next, both of them bathed in the river. After bathing, when they came ashore, this potter Ghaṭīkāra grabbed the young man Jotipāla by his hair-lock. Holding him by the hair-lock, he said: 'Come, Jotipāla, the monastery is right here, very close. Come, let us go and see the Blessed One.' At that moment, the young man Jotipāla thought, 'I am a Brahmin. Although this potter Ghaṭīkāra is of a low caste, for him to grab me by my hair-lock like this after bathing, there must indeed be something of great value here.' Having undergone a certain awakening, he said: 'In that case, let go of my hair-lock. I will come to see the Blessed One.' Thereupon, going to Kassapa Buddha, the potter Ghaṭīkāra paid homage with great faith and sat to one side. The young man Jotipāla exchanged polite and friendly greetings and sat to one side. The potter Ghaṭīkāra introduced his friend: 'Venerable Sir, this Jotipāla is a very dear companion of mine. Please preach some Dhamma to him,' thus requesting the declaration of the Dhamma. The Blessed One delivered a Dhamma talk to both the potter Ghaṭīkāra and the young man Jotipāla, giving them a gladdening Dhamma instruction. After listening to it, as the two of them arose, paid homage to the Blessed One, and were leaving, the young man Jotipāla asked the potter Ghaṭīkāra: 'Why, Ghaṭīkāra, having heard such Dhamma, do you not ordain?' Then the potter Ghaṭīkāra replied: 'Why, Jotipāla, don't you know that I am one who supports his blind and elderly parents?' Then Jotipāla said: 'In that case, I shall ordain.' Once he said that, Ghaṭīkāra took him back to the Buddha and said: 'This is my friend, Jotipāla, who wishes to ordain. May the Blessed One ordain him.' Thereupon, the Blessed One ordained the young man and gave him higher ordination (*upasampadā*)."</p>
+<p>Two weeks after that ordination and higher ordination ceremony, the Blessed One set out on a tour towards Vārāṇasī with the community of bhikkhus. Having arrived in Vārāṇasī—behold these wonderful events! Kassapa the Blessed One resided in the Isipatana Deer Park in Vārāṇasī. At that time, the name of the King of Kāsī was Kikī. Kikī, the King of Kāsī, heard that the Blessed One had now arrived in Vārāṇasī and was residing in Isipatana. The King came with his retinue. When the King came to see him, paid homage, worshipped him, and sat down, the Blessed One gladdened the King with a talk on the Dhamma. King Kikī invited the Blessed One, along with the Bhikkhu Saṅgha, to the palace for the almsfood the following day. The Blessed One accepted the invitation. The following day, once the preparations had been made and the King sent word, the Blessed One proceeded to the palace with the community of bhikkhus. The King personally served the almsfood to the Blessed One and the community of bhikkhus, and at the end of the meal, he sat near the Blessed One and said: "Venerable Sir, please spend this rainy season (*vassa*) in Vārāṇasī. I shall attend on the Saṅgha in this manner," thus making an invitation for the rains-residence. Then Kassapa Buddha said: "Great King, I have already accepted an invitation for the rains-residence. Therefore, I cannot accept this." When he said this, the King requested for a second and a third time. Sadness (*domanassa*) arose in the King's mind over the rejection of his invitation. The King asked: "Is there an attendant for the Blessed One who is superior to me?"</p>
+<p>The Blessed One declared: "There is, Great King. In the village of Vehaḷiṅga, there is a potter named Ghaṭīkāra. He is my chief lay disciple. Great King, your mind became sad because I rejected this. But the mind of this potter Ghaṭīkāra would never harbor such displeasure or sadness towards me." Saying this, Kassapa Buddha went on to declare numerous virtues of the potter Ghaṭīkāra to the Great King. "Great King, as to what kind of person this lay disciple, the potter Ghaṭīkāra, is: he has gone for refuge to the Buddha, gone for refuge to the Dhamma, gone for refuge to the Saṅgha; furthermore, abstaining from taking life and so forth, he observes the five precepts with excellent understanding. He possesses unwavering confidence (*aveccappasāda*) in the Buddha—what is called *aveccappasāda* is the pure faith in the Triple Gem that arises through the realization of the Paths and Fruits (*magga-phala*), through the realization of the Dhamma. He possesses unwavering confidence in the Buddha, which arises from realization. He is possessed of such confidence in the Dhamma, and likewise in the Saṅgha." Explaining that aspect, he continued further as follows: "Moreover, this potter Ghaṭīkāra partakes of food only once a day. He leads a celibate life. Not only that, but this Ghaṭīkāra does not handle money, gold, silver, pearls, or gems. What does he do instead? Since he is a potter, he must obtain clay, mustn't he? Instead, this potter Ghaṭīkāra does a very wonderful thing: he does not dig the earth with his own hands. He brings clay from the collapsed banks of the river, or from earth piled up by mice, fashions vessels, shapes them, and even then, he does not sell them for money. Having made them, he places them in front of his house and tells people: 'Take these vessels, and leave for our use something like rice, mung beans, or chickpeas.' That is his trade. He is one who possesses such a wonderfully righteous livelihood. He also supports his blind parents. Furthermore, finally, he declares that this potter Ghaṭīkāra, having destroyed the five lower fetters (*orambhāgiya-saṁyojana*) that drag one down in this *saṁsāra*, is a person who has attained the stage of a Non-returner (*anāgāmi*)."</p>
+<p>The Blessed One did not stop there; he went on to relate certain unusual incidents. You lay devotees will find them amazing. The incidents you will hear next are of a wonderfully fresh fragrance, unique to the era of a Buddha's arising. He declared several such incidents: "Great King, on one occasion when I was residing in the market town of Vehaḷiṅga, while walking for almsfood (*piṇḍapāta*), I went to the house of this potter Ghaṭīkāra. Since only his blind parents were there, I went and asked: 'Where has Bhaggava gone?' The Blessed One addresses the potter Ghaṭīkāra as 'Bhaggava'. Those blind parents said: 'Venerable Sir, your attendant has gone out of the house at this moment. There is rice in the pot, and soup in the soup bowl. Please take and partake of it.'" This is what they said to the Blessed One. "Then, having been given permission by the parents, I took rice from the pot and soup from the soup bowl, and sat there and partook of it. After I partook of it and departed, the potter Ghaṭīkāra returned home and asked his parents: 'Who has taken rice from the rice pot and soup from the soup bowl and eaten?' Then they said: 'Son, Kassapa Buddha came, and when he inquired thus, we gave him permission, and he partook of it.' Thereupon, the potter Ghaṭīkāra said: 'It is a great gain for me, a massive gain, that the Blessed One places such trust in me!' He expressed the joy (*pīti*) that arose due to that event. Because of that joy, the potter Ghaṭīkāra experienced that joy and happiness (*pīti-sukha*) for two whole weeks, and his blind parents experienced it for one week."</p>
+<p>He then related another such incident: "On another day, while I was again on almsround, I went to the house of the potter Ghaṭīkāra and asked his parents: 'Where has Bhaggava gone?' On that occasion too, he had gone out of the house. They said: 'There are flour-cakes (*kumāsa-piṇḍa*) in the pot, and soup in the soup bowl. Please take and partake of it.' I took those flour-cakes along with the soup from the soup bowl, partook of them, and departed. When the potter Ghaṭīkāra returned and asked: 'Who has taken these flour-cakes?', and was told that the Blessed One had come and taken them, he exclaimed: 'A valuable thing, a great gain has come to me, that the Blessed One came to my house and partook of food with such trust!' Here too, it is said that due to that joy, the potter experienced that joy and happiness for half a month—two weeks—and his parents experienced that joy and happiness for a week."</p>
+<p>Then, the Blessed One related yet another unique incident to King Kikī: "Great King, on another occasion when I was residing in the village of Vehaḷiṅga, the roof of my hut began to leak due to the rain. I told the bhikkhus to go and see if there was any thatch at the house of the potter Ghaṭīkāra. Then the bhikkhus said: 'Venerable Sir, there is no loose thatch at the house of the potter Ghaṭīkāra. However, there is thatch covering his roof.' 'In that case, go and bring that thatch.' The bhikkhus went and began to take the thatch that was on the roof of that house." Now, there is a slight difference of opinion there. In modern translations, it is often presented not as the roof of his house, but as the roof of the potter's workshop. However, the Commentaries (*aṭṭhakathā*) indicate that it was indeed the roof of the house. In any case, this was a very miraculous event that occurred. When the Saṅgha was taking the thatch from the roof, the blind parents asked: "Who is removing the thatch from the roof?" Then they replied: "We are bhikkhus. The hut of the Blessed One is leaking. We are taking it for that." "Take it, please take it!" said the blind parents, expressing great joy. Then the bhikkhus took the thatch from that roof and thatched the hut of the Blessed One. When the potter Ghaṭīkāra returned home—the Blessed One is still speaking to the King—he asked his parents: "Why is there no thatch on this roof?" Then they told him: "The bhikkhus took this thatch." Even on that occasion, the potter Ghaṭīkāra said: "A great gain has come to me! Such trust has been placed in me by the Blessed One." There too, it is mentioned that the potter experienced that joy and happiness (*pīti-sukha*) for half a month, and his parents for about a week. Not only that, but a miracle is also recorded here. For three whole months, the sky was the only roof over the house of the potter Ghaṭīkāra. Yet, it is said that it did not get wet in the rain. That is to say, there was no roof, but it did not get wet in the rain. Greatly miraculous things regarding this are mentioned in the Commentaries. Be that as it may, the Blessed One declared these events to the King. When he said this, the King exclaimed: "A massive gain has come to this potter Ghaṭīkāra! A massive gain!" Expressing his appreciation, the King, in order to manifest his delight, sent five hundred cartloads of red hill-rice, along with suitable condiments and provisions, to the market town of Vehaḷiṅga through his royal officers. When the royal officers who brought it said: "Venerable Sir, the King requested us to hand these over to you," the potter Ghaṭīkāra replied: "Kings are people with many duties and much business. Let these remain for the King himself. I have no use for them," and rejected them. The Blessed One declared: "Such a person, Great King, is the potter Ghaṭīkāra."</p>
+<p>Next, the discourse is concluded; that *Ghaṭīkāra Sutta* ends like this: "Ānanda, perhaps you may think that the young man Jotipāla was someone else. But, Ānanda, I myself was the young man Jotipāla. I was that young man Jotipāla." This is a very wonderful story. Anyone listening to this might be astonished. This Bodhisatta, who was destined to become the next Buddha, when invited by his friend as many as nine times, saying, "Come, let us go see the Blessed One," said, "What is the use of seeing that bald-headed recluse?" Even for a Bodhisatta, actions of this nature are called "abuse of noble ones" (*āriyūpavāda*). Disparaging a Buddha is a grave unwholesome deed (*akusala*). The reason for this is shown to be Brahmin pride, or whatever it was, which led to it being uttered nine times. There are various opinions regarding this matter. In the Pāli canon, there is a section called the *Pubbakammapiloti Apadāna*. In that section, our Blessed One on one occasion gives an account to the bhikkhus of the past unwholesome deeds (*kamma*) that affected his life. On that occasion, it is shown there: "Being the young man named Jotipāla, because of the disparagement I directed towards Kassapa Buddha in that era, the Path to Supreme Enlightenment was obstructed for me for six years, and I was compelled to practice self-mortification (*dukarakiriyā*) for those entire six years. My mind was inclined to perform those self-mortifications." Now, we know that not every Buddha practiced self-mortification. The reason he had to practice self-mortification for six years was that he followed the teachings of the Nigaṇṭhas in that direction until he found the Middle Path. This occurred, as mentioned, as a result of the disparagement directed at Kassapa Buddha. Some say that unwholesome results do not affect Buddhas. But you devotees know that even for the Blessed One, and likewise for Ven. Moggallāna the Great Arahant—who was so highly psychic-powered—various events of this kind are mentioned, where he was beaten until his bones were crushed in his final moments because of having killed his parents in a past life. Even after attaining Arahantship, one must pay off those remaining kammic debts in a severe manner. Why? Because the attraction is towards this physical body; both wholesome energy and unwholesome energy are attracted to this body. Even Arahants experience gain and loss; the eight worldly conditions (*aṭṭha-lokadhamma*) are common to all. One must understand it in this way.</p>
+<p>Through this story, you lay devotees can obtain a very important lesson and an excellent example. Indeed, the life of this potter Ghaṭīkāra was a truly wonderful life; it culminated in the Brahmā world. At that time, he had to take care of his parents. It was due to that sacrifice that he did not ordain. As he told the young man Jotipāla, the reason he did not ordain after hearing such Dhamma was to support his parents. How did he live? It was a highly miraculous life. What a pure livelihood (*ājīva*) it was, in a way that lay devotees of today cannot even imagine! That is to say, he did not handle money. He did not dig the earth with his own hands, and he did not engage in deceptive trade under the name of commerce. He supported his parents in that very manner. Consider this: it was because he performed service to the Buddha while supporting his parents that the potter Ghaṭīkāra was appointed to the position of chief attendant. Now, in the case of our Blessed One, it was always a member of the Saṅgha (Ven. Ānanda) who was the attendant. This is a very wonderful thing. The chief attendant of Kassapa Buddha was this layman. Furthermore, in addition to those virtues of the potter Ghaṭīkāra, think of what a valuable spiritual friend (*kalyāṇa-mitta*) he was! Even when his friend refused nine times, without quarreling with him, he advised him repeatedly, and finally, even dragging him by his hair-lock, he directed the young man Jotipāla towards the monastic life. What a precious spiritual friend! According to our books, even after an intervening period between two Buddhas (*buddhantara*) had passed, and finally while residing in the Brahmā world, he continued to perform that very act of spiritual friendship.</p>
+<p>This is an account from the *Nidānakathā* of the *Jātaka Commentary*, which you devotees must have heard many times. When our Blessed One, as Prince Siddhartha, renounced the world and went to the far bank of the river Anomā, deciding to ordain, and cut his own hair with his sword—reminiscent of being held by the hair-lock—it was that very spiritual friend, the Brahmā king Ghaṭīkāra, who brought the eight monastic requisites (*aṭṭha-parikkhāra*), as recorded in the books. Thus, as you lay devotees can understand, the character of Ghaṭīkāra is a great example. At the same time, we see that the Buddha was not biased. Had he accepted the invitation of a king, a king's invitation for the rains-residence, it would have been highly advantageous for the bhikkhus and the Blessed One. Yet he rejected all of that. It is virtue (*guṇa*) that Buddhas respect. It is virtue, not power or status. For this reason, accepting the rains-residence invitation made by that poor potter, he rejected the King's invitation. Next, look at the greatness of that potter Ghaṭīkāra: he rejected all the red hill-rice sent by the King in so many carts. He lived by making pots after bringing clay with great difficulty. See how a person who did such work, carrying on one hand the heavy responsibility of supporting his blind parents, and on the other hand, serving as the chief attendant of the Blessed One—with all of this, how did this person live? In that very manner, possessing a highly righteous livelihood, while observing virtue (*sīla*), he led a wonderfully miraculous life. If we go a bit deeper, from this story into the deeper aspect of the Dhamma, let us now direct our minds along the message brought by the Brahmā king Ghaṭīkāra.</p>
+<p>You devotees have heard that this stage of Non-returner (*anāgāmi*) is the state just below that of an Arahant. To say something about it, ten fetters (*saṁyojana*) that bind one to this *saṁsāra* are mentioned in this Dhamma. Among them, the fetters that drag one downwards are called lower fetters (*orambhāgiya-saṁyojana*), namely: the dogma of self-illusion (*sakkāya-diṭṭhi*), doubt (*vicikicchā*), adherence to rules and rituals (*sīlabbata-parāmāsa*), sensual lust (*kāmarāga*), and aversion (*paṭigha*). Those five fetters drag one downwards. After transcending them and becoming a Non-returner, there remain the higher fetters (*uddhambhāgiya-saṁyojana*) that pull one upwards. What are they? Attachment to form (*rūpa-rāga*), attachment to the formless (*arūpa-rāga*), conceit (*māna*), restlessness (*uddhacca*), and ignorance (*avijjā*). Those five still remain. They are extremely subtle, and that is why Non-returners have not yet attained Arahantship, but remain in that stage. Furthermore, why is it called *anāgāmi*? Because they do not return to a mother's womb. They have absolutely no energy left to go to a mother's womb. Instead, they are born in the Pure Abodes (*suddhāvāsa*), of which there are five worlds. Some of you may have heard of them: Aviha, Atappa, Sudassa, Sudassī, and Akaniṭṭha. Thus, the highest point of existence (*bhava*) is considered to be Akaniṭṭha. Those five are the Pure Abodes, and among them, this word "Akaniṭṭha" is a puzzle to many. As far as we understand, it is precisely due to these higher fetters that these Non-returners are called "those of upward stream" (*uddhamsoto*). Normally, a stream flows downwards. When caught in a stream, the tendency is to be dragged downwards. But here, what is meant by *uddhamsoto* is a journey towards final extinguishment (*pariNibbāna. That is why Akaniṭṭha is considered the highest point of existence. Now we speak of "from Avīci to Akaniṭṭha."</p>
+<p>Next, the Blessed One has delivered a special discourse concerning those Brahmā worlds and the manner in which Non-returners attain Arahantship, in the *Sattaka Nipāta* of the *Aṅguttara Nikāya*, titled *Satta Purisagatiyo* ("Seven Destinations of Persons"). "Seven Destinations of Persons" means that the Buddha has illustrated the manner in which seven types of Non-returner persons attain Arahantship, using unique similes as follows. Let us first state those similes. The Blessed One preaches: Just as when an iron slab that has been heated all day—now, when an iron slab is beaten on an anvil in a smithy, sparks of fire arise, sparks leap up; let us call it a flake, a tiny flake—in the first instance, when that iron slab is beaten, a spark or flake arises, and as soon as it arises, as soon as it leaps up, it is extinguished right there. That is the first instance. Next, the second instance is shown as follows. We shall state the similes first. While beating that iron slab in the smithy, that spark leaps up, goes high into the air, and is extinguished up there. The third instance is where that spark goes high and, as it descends towards the earth, is extinguished before it hits the ground. Those are the three instances. Those three instances are shown, devotees; now, when describing Non-returner persons, not only in that Sutta but also in other places, they are divided into five categories or five groups according to the manner in which they attain Arahantship. Let us state that first. It is mentioned as follows: they are divided into five categories: *antarā-parinibbāyī*, *upahacca-parinibbāyī*, *asaṅkhāra-parinibbāyī*, *sasaṅkhāra-parinibbāyī*, and *uddhamsoto-akaniṭṭhagāmī*. However, those five categories are shown here as seven. Now, those first three categories we mentioned belong to the *antarā-parinibbāyī*—attaining final extinguishment (*pariNibbāna in-between. Now, understand that the spark represents the kammic velocity, or rather, the force of preparations / preparations (*saṅkhāra-bala*), the energy of preparations / preparations (*saṅkhāra-sakti*), that the Non-returner person carries. To show how quickly this happens after passing away from here, it is compared to when that iron slab is beaten and a spark arises, and immediately upon arising, it is extinguished. In the second instance, it goes some distance and is extinguished. In the third instance, it flies through the air and is extinguished before hitting the ground. All three of these instances belong to the *antarā-parinibbāyī*. Next, it is said that the iron flake flies through the air and is extinguished after falling onto the ground. This illustrates the *upahacca-parinibbāyī*. In this case, they attain Arahantship after some delay. Next, the simile the Blessed One shows is that as the iron is cut, a piece, a flake, or a spark, let us say, flies through the air and falls onto a small heap of wood-chips or a heap of grass. Falling there, it burns it up and is extinguished. This is called *asaṅkhāra-parinibbāyī*. There are some very subtle distinctions here. Then, the next instance is shown where that spark falls on a large heap of grass or a large heap of wood-chips. Falling there, it burns it, and after completely burning up that large heap of grass or heap of wood-chips, it is extinguished. This is called *sasaṅkhāra-parinibbāyī*. Next, it says that in the final instance, falling on a large heap of grass or wood-chips, it burns it completely, but does not stop there. It burns the nearby bushes, and burns parks and gardens. Burning along in this way, it reaches some water, a rock, or a road, and being deprived of fuel (*indhana*), it is extinguished. That final instance is what is called *uddhamsoto-akaniṭṭhagāmī*. That is to say, this simile was spoken to illustrate the case of that Non-returner person who, passing through the Brahmā worlds of Aviha, Atappa, Sudassa, and Sudassī, finally attains the liberation of the Fruit of Arahantship in the Akaniṭṭha Brahmā world. From this simile of the spark shown to us, what we must understand is that what the Blessed One called Nibbāna is extinguishment. This entire becoming / existence (*bhava*) is burnt up. To apply our simile further, think for a moment: we highlighted in our discourses on Dependent Co-arising (*paṭicca-samuppāda*) that the secret of this becoming / existence (*bhava*) lies between consciousness (*viññāṇa*) and Name-and-Form (*nāmarūpa*). This is proved in one place in the series of verses we selected as our theme, where the Brahmā king Ghaṭīkāra indicates the attainment of Arahantship by those seven bhikkhus with this kind of statement, in this verse:</p>
+<p>> *‘Yattha nāmañca rūpañca*</p>
+<p>> *asesaṁ uparujjhati’*</p>
+<p>"Where Name-and-Form are ceased without remainder,"</p>
+<p>> *‘Taṁ dhammaṁ pariññāya*</p>
+<p>> *acchiduṁ bhavabandhanaṁ’*</p>
+<p>"Having fully understood that Dhamma, they have cut the bond of becoming / existence (*bhava*)." That they, having understood this, cut the bond of becoming / existence is what is declared in that verse. From this, it is clear that the bond of becoming / existence lies between this Name-and-Form (*nāmarūpa*) and consciousness (*viññāṇa*). As we have said before, if we think about it for a moment to understand that simile, the collision between consciousness (*viññāṇa*) and Name-and-Form (*nāmarūpa*) is like the beating of that heated iron slab. It is through this that all the six sense-bases (*saḷāyatana*) arise—as we said before, from preparations / preparations (*saṅkhāra*) caused by ignorance (*avijjā*), and then through that energy, becoming / existence (*bhava*) is built up. Kamma and so forth are also built up by that. Finally, we understand from what was said about those Brahmā kings; according to the books, even Non-returner Brahmā kings, sometimes even after attaining Arahantship, remain for aeons (*kalpas*), because the lifespan in those Brahmā worlds is extremely long. That is why it is often said that the human world is the best place to attain Arahantship. Even after attaining Arahantship in those places, there is still an existence that has no real meaning. What is the reason? One has to exhaust the extremely subtle kamma attracted to this body, attracted to this existence, as long as the life-faculty (*jīvitindriya*) persists. Therefore, they say that lifespans of aeons exist in those realms. Even after attaining Arahantship, those Brahmā kings sometimes have to remain. For this reason, because the lifespan in the human world is very short, it ends right there. All those affairs are finished. That is why Ven. Sāriputta said: "I do not wish for death, nor do I wish for life. I wait, like a worker waiting for his wages." He waits for death. That is why in the final moments of the Blessed One, as recorded in the *Mahāparinibbāna Sutta*, even such a supreme Buddha did not easily get even a little water. Even so, through various remnants of kamma, even the Blessed One's life was spent amidst a great mass of suffering / unsatisfactoriness / stress (*dukkhakkhandha*) related to the eight worldly conditions. You devotees have also heard about other Arahants. Take Aṅgulimāla, who killed so many people; it is recorded in the books about him, in the *Aṅgulimāla Sutta*. Even after attaining Arahantship, when he went on almsround, he would sometimes return with his head broken and blood flowing, having been hit by discarded potsherds or clods thrown by lay devotees. Why? Because of that kammic attraction. Even if they did not throw them intentionally at him, when boys threw stones, they would go and hit Ven. Aṅgulimāla's head. Therefore, one must contemplate the danger inherent in this becoming / existence (*bhava*). As long as this cage of a body remains, Buddhas, Paccekabuddhas, and Arahants all have to experience those kammic results (*kamma-vipāka*). The cycle of kamma is that dangerous. It was within such a cycle of kamma that the young man Jotipāla, due to some delusion or pride, rejected the invitation nine times in that manner; one cannot think that no unwholesome deed was committed thereby. As recorded in the books, the Blessed One himself declared to the bhikkhus on a certain occasion: "It was due to such and such kamma that I suffered in this way in my life." We must take this as a lesson. It is said that the reason he practiced self-mortification for six years was also due to this. That is one aspect.</p>
+<p>Even if we look at it from the other side, we spoke about the state of a Non-returner (*anāgāmi*). What is meant by Akaniṭṭha? In terms of becoming / existence (*bhava*), if one passes away from a deva world or a Brahmā world, one usually goes to a lower realm. But here, a very wonderful thing happens. Suppose one does not attain Arahantship in the Aviha Brahmā world itself. Next, think of that simile of the spark. If the spark is not extinguished as soon as it falls—being "extinguished" means attaining Arahantship. Otherwise, if it is not extinguished in the air, or after falling, then at least in those wood-chips... that is how the story goes. Because they progressively take birth in the Brahmā worlds of Aviha, Atappa, Sudassa, Sudassī, and Akaniṭṭha. The reason for this, in an indescribably subtle manner, depends on the strength of wisdom (*paññā-sakti*) of each individual; all of this is ignited and cleared through wisdom. According to this force of preparations / preparations (*saṅkhāra-sakti*), until that strength of wisdom is fully developed, even for the Non-returner person... That is why the Blessed One declared on one occasion: "Just as even a tiny bit of feces is foul-smelling, I do not praise becoming / existence (*bhava*) even for a single moment." Becoming / existence is that dangerous. In the same way, consider, devotees, the danger in preparations / preparations (*saṅkhāra*), which the Blessed One has explained and highlighted in another discourse. A verse is mentioned in the *Dhammapada*, which some people interpret very superficially:</p>
+<p>> *Jigacchā paramā rogā*</p>
+<p>> *saṅkhārā paramā dukhā*</p>
+<p>> *Etaṁ yathābhūtaṁ ñatvā*</p>
+<p>> *nibbānaṁ paramaṁ sukhaṁ*</p>
+<p>We explained this on one occasion. When one says "hunger is the ultimate illness," doctors might object. If one tries to interpret it, one would have to say that the biggest sickness in the world is hunger. Who would accept that? They would point to other things. But why it is called the greatest illness, the ultimate (*parama*), is because even if all other illnesses are eliminated, this subtle illness we pointed out—this illness called the digestive fire (*jaṭharāgni*)—is indeed the most dangerous illness. *Jigacchā paramā rogā*: that is why people say "it is a sickness that makes one groan involuntarily"; hunger is that dangerous. It must be taken as a simile for that.</p>
+<p>*Jigacchā paramā rogā, saṅkhārā paramā dukkhā*: preparations / preparations (*saṅkhāra*) are indeed the ultimate suffering / unsatisfactoriness / stress (*dukkha*). We do not think so; we think that our troubles—illnesses, pains, worries, and various other disasters—are the great suffering. But the Buddhas declare: *saṅkhārā paramā dukkhā*—preparations / preparations themselves are suffering / unsatisfactoriness / stress (*dukkha*). Preparations / preparations (*saṅkhāra*) arise due to ignorance (*avijjā*). Why? Because as long as one remains in the darkness of ignorance, preparations are prepared. Some are gross, some are subtle. Some bring about kammic results. Some maintain becoming / existence (*bhava*) continuously. These are called preparations for becoming / existence (*bhava-saṅkhāra*). It is because of unfinished preparations for becoming / existence (*bhava-saṅkhāra*) that those Non-returners are born in a separate world and spend aeons in that manner. When one thinks about it, it is a very wonderful thing. We have given similes for this, for you devotees to understand. The existence in those Brahmā worlds is like a spinning top, which from a distance appears perfectly still. But it is spinning at high speed. In the same way, becoming / existence is sustained by the velocity of these preparations / preparations (*saṅkhāra-vega*). In those Brahmā worlds, it is a meaningless existence, yet one is compelled to wear them out. The difference between that and Arahantship is found in the Suttas. If we try to explain it using those passages, it is stated as follows. Sometimes, when describing Arahantship, it is said: *asmimāna-samugghātaṁ pāpuṇāti diṭṭheva dhamme nibbānaṁ*—"one attains the uprooting of the conceit 'I am' (*asmimāna*) and Nibbāna in this very life." It is said that the conceit "I am" is eradicated from its root. As long as the conceit "I am" (*asmimāna*) is not uprooted from its root, the suffering of *saṁsāra* is not ended. Thus, that conceit, the conceit "I am", still remains within the Non-returner person. In some places, it is stated in another way: that Non-returner person is said to have attachment to the Dhamma (*dhamma-rāga*) and delight in the Dhamma (*dhamma-nandī*). Attachment to the Dhamma also ultimately becomes a bond. It is said that by that very attachment to the Dhamma (*teneva dhamma-rāgena*) and by that delight in the Dhamma (*tena dhamma-nandiyā*), they do not return to this world, which is why they are called Non-returners. From this, it is clear that those are the subtle attachments (*bandhana*) existing in the world.</p>
+<p>This is further revealed in a Sutta we have mentioned before in these discourses, namely the *Khemaka Sutta*. When a bhikkhu was sent to inquire about the health of Ven. Khemaka, he replied: "I do not see any of these—form, feeling / sensation (*vedanā*), and so forth—as 'this I am' or 'this is my self (*attā*)'. Yet, I am not an Arahant either." When he said this, those sixty bhikkhus did not believe it. "How can this be?" they thought. "If one does not see the five aggregates (*pañcakkhandha*) as 'I' and 'mine', one must indeed be an Arahant." Being unable to avoid it, Ven. Khemaka went, taking his walking staff, and explained it to the bhikkhus using two similes. Let us recall those two similes. He gave two wonderful similes. Suppose the scent of a certain flower wafts. We know that the scent is present. But we cannot say whether that scent comes from the petals, from the stalk, or from the pollen. In that very manner, this Venerable One says: "None of these appear to me as self. Yet, a very subtle underlying tendency (*anusaya*) of the conceit 'I am' (*asmi*) remains within me." Thus he gave the simile of the flower. Likewise, Ven. Khemaka gave another subtle simile on that occasion. Just as a washerman washes a soiled cloth. Using something like the soap we use today—let us call it soap for the sake of the simile—applying something like soap, he removes the dirt from the cloth and hands it back to the owner. Although the cloth is washed and the dirt is gone, yet the scent of the soap still remains, the scent of the soap still remains. When the owner places it in a chest or wardrobe, after some time, even that scent fades away. What is shown by this is how subtle it is. The journey from there onwards consists of the extremely subtle fetters: attachment to form (*rūpa-rāga*), attachment to the formless (*arūpa-rāga*), conceit (*māna*), restlessness (*uddhacca*), and ignorance (*avijjā*). It is through their binding that those Pure Abodes (*suddhāvāsa*) exist; if they are not ended right here in this very life, those like Upaka and Pukkusāti, who had developed their minds over a long period in *saṁsāra* and became Non-returners, attained Arahantship immediately upon birth in the Aviha Brahmā world, as declared by the Brahmā king on that occasion. However, some Brahmā kings spent aeons in that manner. Yet, it is not a downward journey. A downward journey is one that goes according to the force of kamma (*kamma-sakti*), the velocity of kamma (*kamma-vega*). This is not like that. This is a far more subtle velocity of preparations / preparations (*saṅkhāra-vega*). Many speak of these things in a confused manner. But it is through the preparing (*saṅkhāra*) caused by ignorance (*avijjā*) that the two, consciousness (*viññāṇa*) and Name-and-Form (*nāmarūpa*), rotate, just like a water-wheel; it is through this rotation that the six sense-bases (*saḷāyatana*) and kamma are produced. Keep that in mind. We spoke about mental factors (*nāma-dhamma*). Look at feeling / sensation (*vedanā*), perception (*saññā*), volition (*cetanā*), contact (*phassa*), and attention (*manasikāra*). We take volition (*cetanā*) as the middle finger. When the Buddha says, "Volition, O bhikkhus, I declare to be kamma" (*cetanāhaṁ bhikkhave kammaṁ vadāmi*), you devotees must bear in mind: within those mental factors (*nāma-dhamma*), there is the moment when kamma is prepared. It is through the collision of consciousness (*viññāṇa*) and Name-and-Form (*nāmarūpa*) that the kamma affecting numerous future lives is prepared. The Blessed One has declared this as well:</p>
+<p>> *‘Nāhaṁ, bhikkhave, sañcetanikānaṁ kammānaṁ katānaṁ upacitānaṁ appaṭisaṁviditvā vyantībhāvaṁ vadāmi’*</p>
+<p>The Blessed One shows there the danger of kamma: "Bhikkhus, I say that accumulated kamma does not wear away without giving its result." When it is said that it does not wear away without giving its result, one feels afraid. But the Blessed One explains it further in a subtle manner; if one had to experience the result of every single kamma committed, as the Nigaṇṭhas claim, one could never escape from *saṁsāra*. But the Blessed One presents a wonderful analysis there. We have explained these in detail before. The Blessed One divides them into three parts: some kamma is experienced in this very life (*diṭṭhadhamma-vedanīya*) and thus ended. Other kamma is experienced in the next birth (*upapajja-vedanīya*) and thus ended. Yet other kamma is experienced in subsequent periods (*aparāpariya-vedanīya*). Thus, it was in a deep sense that he said all kamma wears away according to the manner in which kammic results are experienced. But the manner of wearing away varies. That is why we spoke of the liberation of mind through loving-kindness (*mettā-cetovimutti*) on a previous occasion, concerning certain wholesome deeds (*kusala-kamma*). It is through their vast energy that the ability to wear away kamma exists. That is why within this Dispensation, one can end the suffering of *saṁsāra* and realize Nibbāna. But just because this was said, we must not think that this is an easy task. On one hand, that cycle of kamma operates in a terrifying manner. Let us consider it this way. Even when we are told to observe virtue (*sīla*), and all these things, it does not mean one does them only as long as one lives in the world. On occasions that present themselves, without even knowing it, just like the young man Jotipāla—did he do it intentionally?—those words escaped his mouth nine times, even though he was to become a Buddha next. Thereby, a great unwholesome deed was accumulated. Devotees, understand it in this way. As long as ignorance (*avijjā*) remains in any of us, preparations / preparations (*saṅkhāra*) accumulate; a preparing is performed. Through that preparing, the aforementioned collision between consciousness (*viññāṇa*) and Name-and-Form (*nāmarūpa*) takes place with extreme rapidity. Now, many interpret the phrase "swiftly changing is the mind" (*lahuparivattaṁ cittaṁ*) very simply, as if the mind spins like turning a stick. It is not so. We have shown that *lahuparivattaṁ cittaṁ* means a turnaround, a translation. A turnaround between what? A turnaround between consciousness (*viññāṇa*) and Name-and-Form (*nāmarūpa*). With extreme speed, that consciousness grasps and releases Name-and-Form. It grasps another and releases it. Within that velocity, various unique values are derived from it. That is to say, with an unimaginable velocity. It is precisely because of this velocity that it appears to us as a single, continuous thing. For this very reason, the true nature of this world is veiled by the perception of compactness (*ghana-saññā*) and so forth. Through insight (*vipassanā*), through radical attention / wise attention (*yoniso manasikāra*), one must progressively understand the mental and physical phenomena (*nāmarūpa-dhamma*), and understand this state which goes as "tangled within, tangled without" (*anto jaṭā bahi jaṭā*).</p>
+<p>We have analyzed these on a previous occasion. Between name and form, there is a wonderfully strange tangle called "tangled within" (*anto jaṭā*). The great elements (*mahābhūta-dhamma*) are recognized through those aforementioned mental factors (*nāma-dhamma*): feeling / sensation (*vedanā*), perception (*saññā*), volition (*cetanā*), contact (*phassa*), and attention (*manasikāra*). These great elements are things that cannot even be recognized directly; according to the state of existence we acquire, an animal recognizes them in one way. A human recognizes them in another way. A deva recognizes these great elements in yet another way. Mental factors (*nāma-dhamma*) are what go along with such great elements. That is the danger in Name-and-Form (*nāmarūpa*). That Name-and-Form is, from that side, a tangle within (*anto jaṭā*). Next, mental consciousness. We said that Name-and-Form has a nature of being reflected in consciousness (*viññāṇa*). This is just a reminder. What is reflected in consciousness is called "name" (*nāma*). That is why on various occasions, papers are presented analyzing physical phenomena (*rūpa-dhamma*) in a highly academic manner nowadays. Nevertheless, we have shown in a very simple way: this form (*rūpa*) is a perception of form (*rūpa-saññā*). It is only the form created in the mind based on the elements, through those mental factors (*nāma-dhamma*). Remember the story about Narcissus. The very drama played with that shadow is what goes on throughout this entire *saṁsāra*. Narcissus, because of the reflective nature of his image in the water, repeatedly tried to embrace the water-deity and died. We too, not knowing the reflective nature present in consciousness, take these things presented to us as real things and run after a mirage; that is why the Blessed One preached in that manner. The serious becoming / existence (*bhava*) arising through this proceeds, on one hand, in a subtle manner. In this way, those like attachment to form (*rūpa-rāga*) go up to the highest point of existence, up to the Akaniṭṭha Brahmā world. That is precisely why the Blessed One said: *saṅkhāras are the ultimate suffering / unsatisfactoriness / stress* (*saṅkhārā paramā dukkhā*). The subtlest of all suffering / unsatisfactoriness / stress in the world is preparations / preparations (*saṅkhāra*). Then, how does one destroy preparations? By destroying ignorance (*avijjā*).</p>
+<p>Devotees, bear in mind that passage we took as the theme of our sermons on Nibbāna:</p>
+<p>> *‘Etaṁ santaṁ etaṁ paṇītaṁ*</p>
+<p>> *yadidaṁ sabbasaṅkhārasamatho*</p>
+<p>> *sabbūpadhipaṭinissaggo taṇhakkhayo*</p>
+<p>> *virāgo nirodho nibbānaṁ’*</p>
+<p>"This is peaceful, this is excellent, namely, the stilling of all preparations (*sabba-saṅkhāra-samatha*), the relinquishment of all assets (*sabbūpadhi-paṭinissagga*), the destruction of craving / thirst (*taṇhakkhaya*), dispassion (*virāga*), cessation (*nirodha*), Nibbāna." This can also be connected to the simile of the spark we discussed. "This is peaceful, this is excellent." What is *sabba-saṅkhāra-samatha*? It is because all preparations (*saṅkhāra*) are not stilled (*samatha*) that one goes to those Brahmā worlds. Along with the stilling of all preparations, there is *sabbūpadhi-paṭinissagga*. "Assets" (*upadhi*) means those assets built up in this *saṁsāra*—the five aggregates of grasping; as long as one does not relinquish them, one has to experience that suffering / unsatisfactoriness / stress. Therefore, *sabbūpadhi-paṭinissagga* means past preparations, future preparations, and present preparations. All of them must be relinquished. The state where all of them are relinquished is *sabbūpadhi-paṭinissagga*. Going hand in hand with that is *taṇhakkhaya*—the destruction of craving / thirst. *Virāgo*—all those things are washed away. *Virāga* means fading away of lust, complete non-attachment; along with that, the cessation of becoming / existence (*bhava-nirodha*). This cycle, which has been spinning for so long, ends right there. It culminates in Nibbāna. That is "Nibbāna is the ultimate happiness" (*nibbānaṁ paramaṁ sukhaṁ*). Devotees, you are going forward in a very difficult time. Even though you devotees bless us in various ways, we are compelled to remind you that we will not live much longer. Therefore, at this moment, you must strive to accomplish your own work. If you devotees have gained some strength from this discourse on this Vesak day, instead of just listening and throwing it away, if you make use of it to support your own practice, keeping the life of the lay disciple Ghaṭīkāra as your exemplar, and try to walk this path of Dhamma, you must firmly believe that you can, at the very least, at the very least, become a Non-returner (*anāgāmi*). No matter what anyone says, today's discourse is special. Making this the basis to strengthen your future journey in the Dhamma, and using the virtue (*sīla*) observed by you devotees today—especially on this noble day of Vesak—may everyone receive the strength to make their Dhamma studies and meditation fruitful with more and more diligence in the coming year, and to reach the supreme goals they aspire to! This is my wish.</p>
+<p>If there is anyone from Avīci up to Akaniṭṭha who wishes to rejoice in this merit of preaching and hearing the Dhamma, may they, by so rejoicing, realize the noble, deathless, great Nibbāna through a Bodhi of their aspiration! Say these verses with this thought.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_048.html" class="doc-btn">← Previous Sermon (048)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_050.html" class="doc-btn">Next Sermon (050) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

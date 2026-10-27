@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 013 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_012.html" class="doc-btn">← Previous Sermon (012)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_014.html" class="doc-btn">Next Sermon (014) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 013</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_013_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_013_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_013_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #13</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No. )</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Manopubbaṅgamā dhammā, manoseṭṭhā manomayā; Manasā ce pasannena, bhāsati vā karoti vā; Tato naṃ sukhamanveti, chāyāva anapāyinī.</p>
+<p>From:</p>
+<p>Verse 2 from the Yamakavagga (Chapter of Pairs) of the Dhammapada</p>
+<p>Dear Listeners,</p>
+<p>The very appearance of a Buddha in the world is an event that demonstrates the miraculous power of the mind. We can see the ultimate limit of development, purity, and clarity of a mind through a Fully Enlightened Buddha, the Tathāgata. Likewise, when such a Buddha appears in the world and preaches the Dhamma, it is to guide us to develop, purify, and clarify our own minds. In this great program, this serious task of escaping from saṃsāra, which is called liberation from saṃsāra, and release from the suffering (*dukkha*) of saṃsāra, it is our mind that is primary. It is by utilizing this mind—and not by other scientific methods—that we can escape from saṃsāra. This mind of ours becomes narrow or broad, small or large; these changes occur according to the object the mind takes. The Buddha has demonstrated this with illustrations on many occasions. If our mind takes a small object, the mind becomes small; if it takes a large object, it becomes large. Now, from the background story of the verse we have taken as our theme, we can gain a good understanding of this functioning of the mind.</p>
+<p>In Sāvatthī, there lived an extremely wealthy but highly miserly Brahmin. Since this Brahmin had never given anything to anyone, based on that behavior, society gave him the nickname "Adinnapubbaka" [One who has never given before]. The Sinhala meaning of Adinnapubbaka is "never given before." He got this name—this Brahmin—perhaps because people in those days, just like now, were very clever at giving nicknames. This Brahmin had an only son, who was very pleasant. He loved his son dearly because he was his only child. However, he loved his wealth even more. Therefore, when the time came for his son to have his ears pierced as per the custom of that society, this Brahmin thought: "If I summon a goldsmith for this task, my wealth will be ruined. Therefore, I must make the earrings myself." He hammered out two small pieces of gold and hung them on the child's ears. Consequently, the child was also given a nickname by society based on the ornament hanging from his ear: "Maṭṭakuṇḍalī." "Maṭṭa-koṇḍol"—earrings of flattened gold—meaning a stud or earring, because he hung such a thing on his ear.</p>
+<p>Thus, in this way, perhaps because this child lived a very miserable life, by the time he was about sixteen years old, he contracted jaundice—a severe case of jaundice. His mother, the Brahmin woman, told the Brahmin to go and bring a physician. This Brahmin said, "Can't you see how my wealth will be destroyed if I bring a physician?" Having said that, instead of bringing one, he went to physicians and, in a roundabout, casual manner, tried to find out their remedies. He asked what medicines are given for such and such illnesses. Physicians, too, often give casual answers to such roundabout questions. And so, the physicians casually said that the bark of such and such trees is good for such illnesses. This Brahmin returned home, searched for these barks, and treated his son with this home-made, quack medicine. This quack medicine did not work. The child's illness became critical and aggravated, reaching an incurable state. At last, when there was no other choice, the Brahmin went and brought a physician. The physician, upon seeing him, immediately realized: "If I undertake to treat this patient, my reputation will be ruined." Therefore, he quietly slipped away, saying, "I have some other business, please call another physician."</p>
+<p>Then the Brahmin realized that the child was now on the verge of death. Next, he thought, "When my son dies, those who come to the funeral house will see the wealth inside my home." Thinking so, he laid the dying child on the porch, out on the veranda. On this very day, the Buddha, as was His custom, emerged from the attainment of Great Compassion in the early dawn and surveyed the world, whereupon Maṭṭakuṇḍalī appeared in His Buddha-eye. That knowledge of the attainment of Great Compassion is a wondrous knowledge unique only to a Buddha. It is a wondrous kind of attainment that arises in a Buddha, backed by the wisdom and great compassion developed throughout the entirety of saṃsāra. When the Buddha emerges from this attainment and surveys the world, He mostly sees those who have performed various merits under past Buddhas, which have now matured. At any rate, Maṭṭakuṇḍalī, who was preparing to end his life in this miserable manner, appeared in the Buddha-eye of the Buddha.</p>
+<p>Thus, out of great compassion, the Buddha, surrounded by the community of bhikkhus, walked for alms along the street where the Brahmin's house was located. When He reached the house, the Buddha saw that the child was lying down facing the inside of the house—that is, facing the wall. Seeing this, the Buddha, in order to draw his attention, projected a Buddha-ray, a single ray of Buddha-light, in that direction. When the light fell upon the wall, the child turned and looked. Upon seeing the physical form of the Buddha, a great clarity and faith arose in him, and he thought, "Alas, because of my foolish father, I did not get the opportunity to see such a Buddha, to attend on Him, to listen to the Dhamma, or to offer alms." Then he tried to raise his two hands to place them on his forehead in worship. However, due to his weak state, he could only join his fingers. Then he thought, "All I can do now is to clarify my mind," and with his whole heart, without any doubt, dedicating his entire mind, he clarified his mind toward the Buddha. As he was looking at the Buddha, the Buddha thought, "This merit is enough for him," and He departed from there. Just as the Buddha walked out of sight—beyond the range of vision—the child Maṭṭakuṇḍalī passed away, dying with that very clarified mind, and was reborn in the Tāvatiṃsa heaven as a young deva adorned with golden ornaments in a golden mansion of thirty leagues.</p>
+<p>Having been reborn there, he then looked to see how he obtained this celestial fortune. All such devas reflect in this manner: "How did I come to this state?" Then he saw the condition of his father, the Brahmin. After burning the corpse, the Brahmin went to the cemetery every day and wept, crying, "Where is my only son? Where is my only son?" The young deva saw this behavior of the Brahmin. Seeing this, Maṭṭakuṇḍalī Deva thought he should teach him a lesson. In the likeness of Maṭṭakuṇḍalī, but as a youth adorned with golden ornaments, he came near the cemetery and began to weep. The Brahmin, seeing this young deva—perhaps because he resembled his own child—felt a special affection and asked, "Why are you weeping?" Then the deva said, "I have obtained a golden carriage frame. Because I cannot find good wheels for it, I am planning to die of grief," implying he would commit suicide. Then the Brahmin said, "If you want, I will make wheels for you out of gold, silver, or brass, however you want." When he said this, the young deva replied, "I have no use for other wheels; I want the sun and the moon." Then the Brahmin said, "Why is this foolish child wishing for something he cannot obtain?" Then the young deva said, "I am wishing for the sun and the moon, which are visible. You are wishing for a deceased son, wishing for someone who cannot be seen. Who of us two is the greater fool?" Hearing this, wisdom dawned on the Brahmin. He also extinguished his grief. Having extinguished it, he thanked Maṭṭakuṇḍalī Deva and declared, "I have extinguished my grief." He then asked, "Who are you?" The deva replied, "I am your son. Having clarified my mind in my final moment, as the result of that wholesome thought, I obtained this rebirth." Then the Brahmin said, "I never saw you giving alms, observing virtue, or listening to the Dhamma. How did you obtain this state?" Then Maṭṭakuṇḍalī Deva declared, "When the Buddha came here, I clarified my mind. As a result of that bright, clarified mind, I obtained this state." Then he advised the Brahmin, "You too, go to the Triple Gem for refuge and undertake the five precepts. See the Buddha, give alms, listen to the Dhamma, and gather merit in that way." Having said this, Maṭṭakuṇḍalī Deva disappeared.</p>
+<p>The Brahmin too went to see the Buddha, invited Him for alms, and prepared alms at his home. The Buddha and the community of bhikkhus arrived for the alms. Even a crowd of wrong-viewed people gathered at the Brahmin’s house. On this occasion, after offering the alms and after the meal was finished, the Brahmin questioned the Buddha: "Without giving alms, observing virtue, or listening to the Dhamma, is it possible to obtain celestial fortunes merely by clarifying one's mind toward you?" Then the Buddha declared: "Why, Brahmin, did not your own son tell you this?" When the Buddha declared this, some in the crowd developed doubts. "How can one obtain such great fortune merely by clarifying the mind?" The Buddha then resolved that Maṭṭakuṇḍalī Deva should arrive there along with his celestial mansion. Accordingly, the young deva arrived at that spot with his mansion, descended from it, paid homage to the Buddha, and stood to one side. The Buddha, by questioning the young deva himself about the action he had performed, cleared the doubts of the crowd through a question-and-answer dialogue. The crowd then developed great confidence. "How wondrous is the quality of the Buddha! Merely by clarifying one's mind toward a Buddha, one can obtain such fortune!" They developed great joy and faith. To clarify this matter further, the Buddha, based on this event, gave a highly valuable Dhamma message to the world through the verse we mentioned earlier:</p>
+<p>Mano pubbaṅgamā dhammā – mano seṭṭhā manomayā</p>
+<p>Manasā ce pasannena – bhāsati vā karoti vā</p>
+<p>Tato naṁ sukhamanveti – chāyā’va anapāyinī</p>
+<p>That is to say, "Mind precedes all mental states; mind is their chief, they are mind-made." Here, "dhamma" is generally explained as the mental states that arise in the mind, such as feeling (*vedanā*), perception, and volition. Mind precedes all of them; mind is supreme to them. They are formed and created by the mind. Because this is so, "If with a pleasant mind one speaks or acts, happiness follows him, like a shadow that never departs." The Buddha declared that the pleasant results of that action follow the person who performed it, just like one's own shadow. The meaning of this verse is so deep that, upon hearing it, not only Maṭṭakuṇḍalī Deva but also the Brahmin Adinnapubbaka attained the fruit of Stream-entry. That is to say, perhaps their past matured merits surfaced upon hearing this verse. Not only that, it is said that eighty-four thousand beings attained Dhamma-realization. Here, "thousands" includes devas as well. When we preach the Dhamma, it is not only the visible humans who listen, but various non-humans, devas, and spirits who wish to escape from the suffering of saṃsāra and have faith in the Triple Gem also listen. Especially when the Buddha preaches the Dhamma, everyone listens. That is why those who reaped the benefits are mentioned in thousands.</p>
+<p>Therefore, we must reflect on this verse. We must also bring the lesson from the background story of this verse close to our lives. From every Dhamma sermon and every verse, we must gather some lesson, some Dhamma message for our life. Listening to the Dhamma is not something where merit is gathered merely by the act of hearing. Therefore, we can understand that this story is an excellent illustration of how the mind is primary to everything. When we look at the life led by Adinnapubbaka, this fact becomes clear to us. No matter how much wealth this Brahmin had, he was poor in mind. From this, we can see that being rich or poor is not something that happens through wealth alone. Even if one has great wealth, if that person is miserly, he is always poor in mind. Due to his miserliness, he thinks, "This is not enough," or "I am still poor. I am not truly rich yet." Thus, despite having so much wealth, the Brahmin Adinnapubbaka was poor in mind—a very destitute person. Moreover, the darkness and narrowness of a miserly mind were visible in what the Brahmin said and did. From this, we can see that this mind is primary to everything. Furthermore, there is the darkening of the mind and its illumination. This is something that must be contemplated very deeply. The Buddha has declared that there is a class of dark qualities, and likewise, a class of bright, illuminating qualities.</p>
+<p>"Abandoning dark qualities, let the wise person develop bright qualities," the Buddha declared. Dark qualities—meaning greed, hatred, and delusion—these are black/dark qualities. Non-greed, non-hatred, and non-delusion are bright qualities. These are illuminating qualities. They are called *sukka-dhamma*. In this way, we see that the Brahmin had darkened his mind due to dark qualities. On the other hand, when we reflect on it, the young child Maṭṭakuṇḍalī was not as rich as the Brahmin. At the moment of death, he was extremely poor and helpless, having only the two pieces of gold hanging from his ears. Yet, how did he obtain such a celestial state of existence? He became rich in mind. He enriched his mind. How did he enrich his mind? We must reflect on this well. He enriched his mind by taking the most sublime, supreme gem in the world as the object of his mind. Among all the gems in the world, the Buddha-gem is supreme and foremost, as the Buddha Himself declared. This is also mentioned in the Ratana Sutta:</p>
+<p>'Yaṁ kiñci vittaṁ idhavā huraṁvā</p>
+<p>Sagge su vā yaṁ ratanaṁ paṇītaṁ</p>
+<p>Na no samaṁ atthi tathāgatena'……</p>
+<p>It is mentioned in this manner. If there is any wealth or gem in the world—in this world, or in another world, or in the celestial worlds—none of those gems is as valuable as the Buddha-gem, the Tathāgata. Moreover,</p>
+<p>'Yaṁ kiñci ratanaṁ loke</p>
+<p>Vijjati vividhā puthu</p>
+<p>Ratanaṁ buddhasamaṁ natthi</p>
+<p>Tasmā sotthi bhavantu te'</p>
+<p>There are verses of blessing like this. Whatever diverse gems exist in the world, there is no gem equal to the Buddha-gem. Not only that, the Buddha Himself had to declare—since the world did not recognize the Tathāgata—that a Fully Enlightened Buddha is the supreme person in the world. In the Aggappasāda Sutta, the Buddha declared:</p>
+<p>"Bhikkhus, to whatever extent there are beings—whether footless, two-footed, four-footed, multi-footed, with form or formless, percipient or non-percipient, or neither-percipient-nor-non-percipient—the Tathāgata, the Worthy One, the Fully Enlightened One, is declared supreme among them. Those who have confidence in the Buddha have confidence in the supreme. And for those who have confidence in the supreme, the result is supreme."</p>
+<p>"Bhikkhus, to whatever extent there are beings... [gloss of the Sinhala text] among all these beings, the Tathāgata, the Worthy, Fully Enlightened One is supreme and foremost. Bhikkhus, those who clarify their minds toward the supreme Buddha, clarify their minds toward the foremost person in the world. The result of clarifying the mind toward the foremost person—toward the foremost object—is also supreme," the Buddha declared in the Aggappasāda Sutta. From this, we see how immensely fruitful it is to clarify the mind toward the Buddha. Sometimes we might think, "How can one obtain such fortune merely by clarifying the mind for a single moment?" Especially in this era, it is a time when the mind goes toward external things rather than the mind itself. The world talks a lot about their size, magnitude, and wondrous nature. They doubt the power of this unseen mind, the power that can be generated in a single moment. "How can one obtain such a great fortune by doing just this?" But we must reflect: the functioning of the mind is extremely rapid and swift. Within this swiftly functioning mind, a power that brings immense fruits can be generated in a single moment. Here, Maṭṭakuṇḍalī clarified his mind toward the Buddha for only a brief moment, a short time. Even that is not necessary. If, for a very brief moment, like the snapping of fingers, some clarity or opening occurs in the mind, through that, one can reap highly valuable and immense benefits. You know—let us think of a dark night. Like the rain-stormy nights we have these days, let us think of a night where the darkness is so thick it cannot be pierced. If lightning strikes for a single moment in such a night, in that very brief instant, everything around becomes clearly visible. In the same way, an opening is created in the mind according to the clear object one takes, according to the object toward which one clarifies the mind. In such a dark night, one can get a lot of work done from the light of lightning that appears for a brief moment. There are those in the past who worked in this way. There are stories of the past; just like the marksmen of today, the archers of those days demonstrated their skills (it is mentioned in this way): to show his skill and win prizes, or to set records, an archer stands ready with his arrow in the dark night. He waits for the lightning to strike. Far away, a very fine hair taken from a horse's tail is hung. Now, what is the feat to be performed? He must split this horsehair with his arrow. He stands ready for this. The moment the lightning strikes, he shoots. If he does this correctly, he is a skilled archer. This is given as a simile—he performed such a great feat within a split second. You have heard our Buddhist poets express this:</p>
+<p>"If the flash of lightning is missed</p>
+<p>When shooting a horsehair from afar in the dark, one misses.</p>
+<p>If one does not achieve the path and fruit of Nibbāna now</p>
+<p>When this lightning-like body is obtained, it will be missed in the future."</p>
+<p>Lōvəḍa Saňgarāva - 25</p>
+<p>If one manages to shoot the horsehair in the dark at that precise moment, then one can reap the benefits. Many people talk about this "instant" (moment) nowadays. "We must work swiftly in this life." We are talking about the moments within this life. But the Buddha declares that our entire human existence is just a single moment, a brief instant. He declares this with reasons. To us, this seems like a long time. But when compared and contrasted with the life spans of the Brahma realms which last for aeons, this human life of less than a hundred years is like a single moment. This life, which we think of as so grand and in which we spend a few years in this long saṃsāra, is actually a single moment. Therefore, the Buddha refers to this entire human life as a single moment. The Buddha particularly demonstrates that the human existence obtained during the time of a Buddha's arising is not just a moment, but a consummation of the moment (*khaṇa-sampatti*). It is described as an extremely rare opportunity, a rare moment—a consummation of the moment. If one is born in a region where one can listen to the Dhamma, with the capacity for understanding and wisdom to practice the Dhamma during the time of a Buddha's arising, that is called *khaṇa-sampatti* (the consummation of the moment). It is an extremely valuable moment. That is the moment the poet illustrated. "When this lightning-like body is obtained" refers to this human existence. This human body exists for such a brief moment, just like a flash of lightning. Therefore, we must understand this moment, as Buddhists, looking at this entire human life as a single moment.</p>
+<p>If we reflect in this way, generating wholesome thoughts and performing meritorious deeds is not something we should wait to do until our final moment, like Maṭṭakuṇḍalī did. We should not entertain the wrong view that we can go to heaven by doing this only at the moment of death. Sometimes, some people think this way nowadays. They gather wealth unlawfully and commit various crimes. At the final moment, they expect to summon a bhikkhu, listen to a little Dhamma, and go to heaven. Maṭṭakuṇḍalī was able to do that because he was someone who had fulfilled perfections and developed himself under past Buddhas; but things do not succeed for everyone just because of that. In truth, Maṭṭakuṇḍalī Deva obtained such a state due to a certain natural law (*dhammatā*), a deep principle concerning kamma. For, beings are born in various places according to their kamma. However, what is called *āsanna-kamma*—the kamma generated in accordance with the sign (*nimitta*) that appears at the moment of death—is extremely powerful. That is why the Buddha walked there to give Maṭṭakuṇḍalī an opportunity to purify his near-death mind and perform merit. But not everyone can perform that feat. Sometimes, due to the unwholesome deeds done during one's lifetime, another sign appears, and one is forced to take birth in a bad destination. The archer shot the horsehair in that manner only after putting in effort and training for a long time. It is not something that can be done all at once. What we have to understand here is that we must not wait until the near-death moment or old age. Thinking of our entire life as a single moment, we must always strive to generate this mind—this pleasant, clarified, pure, and bright mind—within ourselves. For, if those dark qualities present themselves, we will fall into darkness. If we bring forward bright qualities, we will be born in a good place. Not only that, we can gradually draw closer to Nibbāna. Nibbāna means liberating the mind from these dark qualities of greed, hatred, and delusion.</p>
+<p>From this, we can understand the value of this moment, and also that this is something that must be practiced and trained constantly. Just as the archer strives in this regard, a Buddhist must always keep watch over the mind. "Are the states arising in this mind things that lead to the mind's clarity, or are they things that agitate it?" Now, the word for clarity—here, "pasanna" means clarity. In the case of Maṭṭakuṇḍalī Deva, what is mentioned is the fruit of that clarified mind. We can understand the value of clarity: after a rain, when water flows with mud, looking very unpleasant, what is the state of our mind? Next, when we look at clear, pure water, our mind becomes clear. In the same way, when we collect a noble object, a supreme object like the Buddha into our mind, when we bring it close to our mind, our mind becomes clear. Therefore, the word that goes hand in hand with faith (*saddhā*) is *pasāda* (clarity/confidence). It is said, "saddhā-pasannena" [clarified with faith]. Clarity goes together with faith. From this, we see that faith in the Triple Gem is an extremely important thing. A mind lacking faith in the Triple Gem is darkened by doubt, hesitation, and skepticism—just like troubled, muddy water. But if someone develops faith in the Buddha, a great clarity arises in the mind along with it. This is something that you can realize even in your day-to-day life.</p>
+<p>That Maṭṭakuṇḍalī Deva clarified his mind by seeing the physical form, the body, of the Buddha. Although we do not get to see that physical body of the Buddha now, we can see His Dhamma-body. We can see the quality-body of the Buddha. Therefore, what we specifically have to understand here is the value of the 'recollection of the Buddha' (*buddhānussati*). Contemplating the qualities of the Buddha. Through the qualities of the Buddha, we can see the Buddha. If we contemplate the ninefold qualities of the Buddha, direct our mind toward those qualities like *Arahant*, bring forward some quality that suits our mind, and train ourselves to bring up some word like "Arahant, Arahant, Arahant" or "Buddho", "Sammā-sambuddho" constantly in our mind like a meditation, we can obtain great clarity and a light for our day-to-day activities. As stated in the verse, if someone speaks or acts with a pleasant mind, a clarified mind, the happy results follow him like his shadow. It is our mind that provides light to the words we use and the actions we perform. When this mind is clarified, a great light is created in the mind, like a flash of lightning on a pitch-black night.</p>
+<p>Therefore, to constantly bring up clarity toward the Triple Gem in the mind, one must practice contemplating the qualities of the Buddha as the recollection of the Buddha (*buddhānussati*). While traveling in a vehicle, while in a city—now there is no specific time. We must think that every moment is the near-death moment now. Especially when thinking about these times, some people think of the near-death moment as being eighty or ninety years old, surrounded by children and grandchildren. Now we must step out onto the road thinking we are in our near-death moment. Such is the state of affairs. Therefore, we must be much more mindful of the mind. If we pass away—if we die suddenly—at a bad time, when the mind is corrupted, darkened, or muddied, where will we go and be born? In a dark place. Either in hell, the ghost realm, or the demon realm. We said that there are two groups: dark qualities and bright qualities. There are two factions in this mind. Whatever factions there may be in the world, we must be concerned about the factions in this mind, because we carry our mind wherever we go. Therefore, the dark faction in this mind consists of greed, hatred, and delusion. These three are the prominent figures of that dark faction: greed, hatred, and delusion. There are many other subsidiary qualities associated with them. Next, the bright qualities that support Nibbāna are non-greed (*alobha*), non-hatred, and non-delusion. At first glance, there seems to be nothing there when we say "non-greed" (*alobha*). What is this non-greed? It is sometimes difficult to understand. This non-greed means turning away from greed. Turning away from greed may sometimes be thought of as a small thing. This is not a small thing. This is called a mental factor of abstinence (*virati-cetasika*)—the thought of abstaining.</p>
+<p>This thought of turning away (abstaining) is a very powerful thing. Now, something that mainly supports this is virtue (*sīla*), the undertaking of virtue. Undertaking the precepts. On this occasion, for you to abstain from killing living beings—indeed, when undertaking the precepts, one must pronounce the word "veramaṇī" [abstinence] well. "Pāṇātipātā veramaṇī sikkhāpadaṃ samādiyāmi"—I undertake the precept of abstaining from destroying life, from killing living beings. This is a promise one makes to oneself, that "I accept this and put it into practice." Though one declares this in front of the Saṅgha, it is actually a promise to oneself. Or, one places it in one's mind: "I will spend this day in this manner, based on this practice." Then, for the person who has resolved thus, let us say an occasion arises—either for food, for pleasure, or to settle a grudge—where he feels like killing someone or an animal. The moment that thought arises, he can push it aside through non-hatred. He brings forward loving-kindness (*mettā*), compassion (*karuṇā*), sympathy, and non-harming (*avihiṃsā*), recalls the virtue he has undertaken, and abstains from it. Taking this as an illustration, that moment is an extremely valuable moment—the power of the mind to turn away. That is what is called the mental factor of abstinence (*virati-cetasika*). It is called *sampatta-virati* [abstinence when confronted with an opportunity]. That is, the opportunity to commit a sin arose, but one does not do it. One withdraws one's hand. Say, to commit a theft—he knows it is a valuable thing belonging to someone else. It is right in front of him, and no one is around. All he has to do is look around and quietly extend his hand. But at that moment, the mind says, "Do not do that." Why does it feel that way? It is because of undertaking that virtue: "Adinnādānā veramaṇī sikkhāpadaṃ samādiyāmi." Accordingly, we see that this undertaking of virtue is no small matter. It is not merely a custom—nowadays, at every meeting or festival, to show that one is a Buddhist, they repeat the undertaking of virtue. But when we reflect on its depth, how powerful and important a thing is it? It is the first step in our life. Thus, in this way—it is called "by way of substitution of opposites" (*tadaṅga-vasena*)—the mind distances itself from the defilements. For each such moment, by applying a wholesome thought, one distances the unwholesome thought. One must also accumulate wholesome thoughts within oneself for this. One must develop loving-kindness to overcome hatred. To overcome greed, one must develop giving, generosity, and the quality of sacrifice. To overcome delusion, one must utilize understanding, wisdom, reflection, wise reflection, and contemplating things as they really are. Therefore, the moment we say "non-greed, non-hatred, non-delusion," it seems as if there is nothing there. But if we analyze and reflect on it, we are talking about a power here—called *virati* [abstinence]—that can subdue and drive away those unwholesome qualities that come from outside as visitors and enemies.</p>
+<p>This is not a feat that can be done all at once. Therefore, we must constantly develop the mind by way of meditation. The Buddha mentions three words when declaring meditation: "āsevati, bhāveti, bahulīkaroti." One constantly associates with a wholesome object. If it is the recollection of the Buddha, one constantly associates with a word like "Arahant, Arahant, Arahant" or "Buddho," like one's companion at home, constantly bringing it up and living with it—*āsevati*. *Bhāveti* means one develops it. When one says it a second time, a greater power comes to the mind than the first time. Saying that word "Buddha" ten times, a thousand times, a million or a billion times, one's faith in the Triple Gem develops more and more. This is not merely reciting it as a mantra. The heart must function along with it. A clarity must arise in the heart. In the same way, if one develops loving-kindness, using the words "may they be well and happy," one must constantly associate with that meditation object according to what one has chosen. One must strive to develop the mind through that—this is meditation (*bhāvanā*).</p>
+<p>Next, there is a word, *bahulī-kamma*—*bahulīkaroti*, making much of it. That means not just for a day or two, or for an hour or half-hour, but abundantly. One must strive oneself. No matter how many activities one has in day-to-day life, if one has understood the value of one's mind—we take so much trouble for this body. To nourish this body, to bathe it, wash it, adorn it, all of this. This "foul body that is left behind." How much do we attend to it? Yet, we do not think about the value of the mind even for a very brief moment of the day. It is this mind that helps us to escape from saṃsāra, and also to bring about a good destination (*sugati*). If one reflects in this way, one becomes keen about meditation. In the manner described by *āsevati, bhāveti, bahulīkaroti*, one must constantly bring up a wholesome object to the mind and live with it. Even if it seems difficult or troublesome at first, once it is practiced, one can do it effortlessly, as if naturally—almost automatically. When one puts on a pair of spectacles for the first time, it is a great nuisance. But after a few days, one can work very easily with those spectacles. After some time, one even looks for them while they are on one's face, asking, "Where are my spectacles?" Why is this? To that extent, the spectacles have become a part of one's body.</p>
+<p>The meditation object is also like that. Then, to the person who has developed the recollection of the Buddha, when danger comes—nowadays, people sometimes scream, "Budu Amme!" [Oh Buddha, Mother!]. According to past customs, the word "Budu" [Buddha] has been integrated into our society. But that is not a mechanical utterance when pain arises. It is from the whole heart—Maṭṭakuṇḍalī obtained that state by clarifying his mind with his whole heart, not by saying it merely as a custom or a mantra. One must reflect in that manner. One must reflect on the maximum benefit one can gain from every story and strive to reap it. One must reflect on the maximum benefit and strive to reap it. According to the matters stated in this verse, we see that our mind is primary to the words we use and the actions we perform. That is the uniqueness of the Buddha's Dhamma. Nowadays, there are various scientific methods of thinking. They are often formulated according to wrong views. Because they give priority to physical and external things. Because they are clearly visible and possess colorful qualities, we are deceived by them. But the Buddha has pointed out the truth. In this long saṃsāric journey of ours, what is primary, what goes ahead—what helps our actions (*kamma*) to become good or bad—is this mind that arises in us.</p>
+<p>"Mano pubbaṅgamā dhammā – mano seṭṭhā manomayā"</p>
+<p>Not only that, they are created by the mind itself. According to this story, it is very clearly shown. That celestial body of Maṭṭakuṇḍalī was created by the mind itself. It was visible to humans. Beings present at that time saw: "Alas, by merely clarifying his mind toward the Buddha at the final moment, the Brahmin’s son obtained such a celestial state of existence with golden ornaments, didn't he?" That is why, through that very faith, the other necessary qualities gathered in his mind and he attained the realization of the paths and fruits. Therefore, very valuable and deep Dhamma is contained within this story which we might think of as simple.</p>
+<p>Thus, creating an opening in the mind at each such moment is what is done through practicing virtue and other qualities. This is the purification or clarification of the mind by way of substitution of opposites (*tadaṅga-vasena*). There are three stages in this effort of development. They are mentioned in the Dhamma as *tadaṅga* [substitution of opposites], *vikkhambhana* [suppression], and *samuccheda* [eradication]. What is done through virtue (*sīla*)—in observing the precepts—is that at each moment, one presents a wholesome thought and drives away the unwholesome. Next, a slightly more established and developed stage than that is concentration (*samādhi*). That too is like this: if one develops meditation through the recollection of the Buddha and the like, and controls the running mind—the mind that runs after various things and objects—through some good meditation subject, through the words "may they be well and happy" or through some meditation object like "Buddho" or "Arahant," after some time, the mind becomes calm. This calming is called concentration (*samādhi*). The qualities that darken the mind are referred to in the Dhamma as hindrances (*nīvaraṇa*). Sensory desires, ill-will, sloth and torpor, restlessness and worry, and doubt—all of these are suppressed, and just as the mud settles and the water in a pond becomes clear, an occasion comes when the mind is clarified. That is called concentration (*samādhi*). That is also a stage one can experience through a meditation subject—a very special state where the mind's clarity is greater than before.</p>
+<p>Next, finally, the stage that goes even deeper is called eradication (*samuccheda*). There are those heavy defilements, the underlying tendencies (*anusaya*), which we have carried along throughout saṃsāra. They lie suppressed. To dry them up, to eliminate them, one must develop wisdom (*paññā*). By reflecting on this entire body, on this life, as impermanent (*anicca*), suffering (*dukkha*), and not-self (*anattā*), and developing insight (*vipassanā*), at some point, the mind becomes illuminated. It becomes illuminated by wisdom. The qualities that support this are, as stated in the Satipaṭṭhāna Sutta, mindfulness and clear comprehension (*sati-sampajañña*), developing mindfulness, and wise attention (*yoniso manasikāra*). If one reflects in that manner and develops meditation so that wisdom grows, and if one develops the three characteristics of impermanence, suffering, and not-self, then at the moment of realizing the paths and fruits, through insight-wisdom, one can generate the power within the mind to destroy the lower layers of those unwholesome deeds, or defilements, that we carry throughout saṃsāra.</p>
+<p>Thus, virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*)—this is the Dispensation (*sāsana*); this is what belongs to us. Many people explain the Buddha's Dispensation in various ways. But the Buddha's Dispensation is actually the cultivation of virtue, concentration, and wisdom within one's own mind-stream (*citta-santāna*). What helps in this, the first necessary thing, is our understanding of the value of this mind of ours—that the mind precedes everything, that the mind is chief, and that these are made by the mind. Regarding those celestial states of existence, it is very well known how they are made by the mind itself. Leaving that aside, though we do not think about it day-to-day, let us say the potter who makes a vessel like a pot makes it with some mental picture or plan of that pot, and according to that, he takes a lump of clay and creates a pot. Likewise, if someone manufactured everything that is in front of us, the first perception (*saññā*) of that manufacturing occurred in the mind. A plan arose. Even when building a building, it is the same. So, where did this plan arise? In the mind. Later, using the four great elements—earth (*paṭhavī*), water (*āpo*), fire (*tejo*), and air (*vāyo*)—when it appeared as a form (*rūpa*), then next, we are deceived by it. Humans think this is the great thing. But many people do not think about the plan that lies beneath this. What the Buddha did was to remind the world of this. It is through that alone that one can escape from saṃsāra. Therefore, one must reflect with wisdom. This is what is called right view (*sammā-diṭṭhi*). Wrong view (*micchā-diṭṭhi*) means giving priority to unsuitable, improper, or wrong things. Right view, correct vision, means bringing forward those qualities that help one escape from the suffering of saṃsāra, in the manner declared by the Buddha.</p>
+<p>Therefore, according to this verse, we must reflect. We must reflect on our own lives—regardless of age limits. "How am I leading my life? Is it in the way the world says, in the way society goes, or in the way pointed out by the Buddha?" Reflecting thus, one must prepare a plan necessary for one's day-to-day life. In this plan, there must be a place for virtue (*sīla*). There must be a place for concentration (*samādhi*). There must be a place for wisdom (*paññā*). "A place" means understanding their values and leading one's day-to-day life in a way that brings them forward. On this occasion, you undertook virtue—the eight precepts with right livelihood as the eighth (*ājīva-aṭṭhamaka-sīla*). Through this, you can liberate the mind by way of substitution of opposites (*tadaṅga-vasena*). Just like the archer shooting the horsehair by the light of lightning, in those minor moments when unwholesome thoughts present themselves—when a thought to do wrong arises—you present your virtue and drive it away. Next, if someone has developed the power of concentration, he can experience the mind's clarity, pleasantness, and light for a longer period. Next, through the realization of the paths and fruits—Stream-entry, Once-returning, Non-returning, and Arahantship—if someone has developed wisdom, developed insight-knowledges, and obtained that liberation from saṃsāra, then he can experience the most valuable state in the world—the purest state of one's mind.</p>
+<p>Therefore, you must reflect on utilizing this Dispensation of the Buddha, on utilizing the human existence we have obtained. This is an extremely rare thing. Even devas sometimes say that this human existence, this human world, is the best place to realize Nibbāna. Though it is a short, brief period, if utilized properly during this time, this human mind can be elevated to the highest state. That is why Buddhas are born only in the human world. That is why a Buddha arises and appears only in the world. Reflecting in that way, you must take advantage of the opportunity you have received. From every Dhamma sermon, you must gain some lesson for your life, reflect on the defilements that arise in the mind as dark, and to drive them away, you must develop those wholesome qualities called *sukka-dhamma* in your mind: generosity, loving-kindness, wisdom, and Dhamma-realization. On this occasion, even by listening to the Dhamma, you can clarify your mind. For, through the Dhamma, we see the Buddha. When listening to the Dhamma, the doubts, worries, and hesitations in one's mind are removed, and a clarity arises in the mind. Clarity of mind is extremely necessary. It is through that that the true nature of the world is seen. When the mind is darkened, darkened by delusion (*moha*), the true nature is not seen. Therefore, one's words go wrong, and both words and actions incline toward the unwholesome and sinful side. Therefore, this saṃsāra is generally a journey that inclines toward defilements, inclines toward darkness. To escape from this, one must generate a great power.</p>
+<p>In truth, when we consider the meanings of the two words *kusala* and *akusala*, *kusala* means being skilled. *Akusala* means being unskilled. In this saṃsāric journey, inclining toward the plane of misery is being unskilled; inclining toward good destinations is being skilled. Next, having to continue in saṃsāra is being unskilled; bringing the suffering of saṃsāra to a swift end is being skilled. Reflecting in this way, what we call mundane and supramundane *kusala*—this *kusala* means being skilled, being skilled. This being skilled, like the archer, is not something that can be done all at once. This must be developed over a long time. Therefore, from today itself, you must strive at every moment—without thinking there is no time. In day-to-day life, people say there is no time. But everyone has time that is wasted. This can be well recognized; although you may not hear it in Dhamma sermons, there is a word often heard in society: "loitering" [wasting time/loitering]. This wasting of time is a time when rust accumulates in the mind, a time when the mind is darkened. This wasting of time is often heard of in day-to-day life, especially in cities: "I went to such and such an office and wasted time there." Wasting time on the road. This occasion is an extremely good opportunity to bring forward your practiced meditation subject—let us think of the Buddha-gem; like taking a gem from one's pocket, looking at it, and rejoicing, on such occasions, if you bring forward the Buddha-gem—the supreme gem in the world mentioned here—in a way invisible to others, not because others would snatch it, as they might have no use for it anyway—but by bringing forward the Buddha-gem: "Buddho, Buddho, Buddho" or "Arahant, Arahant, Arahant," then he has made use of that wasted time. Or, "may they be well and happy," some meditation subject he has taken. Or, the in-breaths and out-breaths of one's body, which is called mindfulness of breathing (*ānāpānasati*). If one utilizes those wasted, spent times, then without even knowing it, he becomes a meditator. In the end, almost without knowing it—we say "without knowing it" because the behavior of the mind is so wondrous—if the mind has matured, at unexpected moments, one even obtains the realization of the paths and fruits almost without knowing it.</p>
+<p>In the past, when the Buddha preached the Dhamma, the saying that someone became an Arahant or a Stream-enterer even while listening to a sermon is sometimes misunderstood by modern intellectual scholars. "We too can do it that way," they think. It was only to those minds that had practiced and trained in those qualities over a long period under past Buddhas or in past dispensations, and developed them to a high level, requiring only a tiny bit more, that the realization of the paths and fruits could be obtained so swiftly. One should not think that everyone is like that. But the lesson we have to take from it is: if someone wants to obtain such a state in such a short time, it must be practiced over a long period. It must be trained. One must strive to create opportunities for that within one's own life.</p>
+<p>Thus, on this valuable Uposatha day, you undertook a valuable virtue—the eight precepts with right livelihood as the eighth (*ājīva-aṭṭhamaka-sīla*). If this is not merely a custom, reflecting on each one—what is present here is a set of principles concerning the control of body and speech—this is virtue (*sīla*). To protect it, the mind must support it. The mind supports it through what was called the mental factor of abstinence (*virati-cetasika*)—that mind of turning away. One must bring forward the mind of turning away from these stated matters. Saying "do not do these things" is easier. That is why the Buddha has applied the word *veramaṇī* [abstinence] in these qualities of virtue. Scholars sometimes think there is nothing in this. It is in this that something exists. Therefore, this eight precepts with right livelihood as the eighth—if one directs the mind well even when undertaking this virtue, that moment is also an occasion when a great opening is created in the mind. "I did these things before. From now on, I will not do them," one places a resolution in the mind. That is a great thing. If that resolution was taken in the morning, and if one was able to protect it throughout the day, a clarity, confidence, and happiness arise in one's mind in the evening. Such is virtue. Next, likewise, if one has practiced some meditation subject in day-to-day life—on those wasted times mentioned earlier—without saying it is difficult or there is no time, during whatever leisure moments or times one can be happy and rejoice, if one brings forward that meditation subject and develops the mind, then without even knowing it, one grows in concentration (*samādhi*). At some point, the mind can even fall into absorption (*jhāna*). Having worked hard and contemplated that meditation subject, when one lies down on the bed, one may obtain absorption even while on the bed.</p>
+<p>It was by doing so that lay devotees of the past, like Nakulāmātā, Nakulapitā, Citta the Householder, and Anāthapiṇḍika, obtained such high states. Those were not lives spent being immersed in matters of money; such was not the way of Buddhist lay devotees, upasakas and upasikas, during the Buddha's time. Inclining toward the Dhamma, somehow finding time for the Dhamma, they were able to develop concentration in that way. Next, what is more valuable is finally utilizing that concentration to understand the true nature of the world—its impermanent (*anicca*), suffering (*dukkha*), and not-self (*anattā*) nature—through the very events that happen in day-to-day life. In truth, every event that happens in the world can be placed within these three characteristics: impermanent, suffering, and not-self. This is a three-character sign. This sign can be seen everywhere. Wherever one looks. But for that, proper reflection must be present. There must be correct vision, which is called wise attention (*yoniso manasikāra*). For the person with correct vision, insight can be developed through the streams, brooks, and rivers flowing in this world, the fruits and flowers falling from these trees, and through everything. The three characteristics of impermanent, suffering, and not-self can be seen. In that way, one must reflect well on how one can guide one's mind in day-to-day life. Without putting this off saying "I cannot," and thinking "I must clarify my mind only in old age or at the near-death moment to go to a heaven like Maṭṭakuṇḍalī," if one thinks so, then this Dhamma sermon has been understood in a wrong way. It has been understood in a perverted way. That is not how one should think. There is a saying in this world: "If it is this much for that, how much would it be for this?" In that way, if one can do such a great thing with the mind in a brief moment, what can one not do when it is well developed? One must reflect in that manner.</p>
+<p>Reflecting thus, today, through the undertaking of virtue, and through listening to the Dhamma and clarifying the mind toward the Triple Gem, you made a beginning in traveling on the path of Dhamma declared in this verse. We must aspire: "May this store of merit generated through that, by cultivating and developing within our mind-stream the spiritual faculties and powers (*indriya* and *bala* qualities) that support Nibbāna—such as faith, energy, mindfulness, concentration, and wisdom—enable us, if possible in this very life, through the realization of the paths and fruits of Stream-entry, Once-returning, Non-returning, and Arahantship, to realize this noble Dhamma of Nibbāna, and escaping from all saṃsāric suffering (*dukkha*) such as birth (*jāti*), aging (*jarā*), sickness, and death (*maraṇa*), to attain the peace of supreme Nibbāna."</p>
+<p>Likewise, to whatever extent there is a host of right-viewed devas and brahmas protecting the Dispensation, and likewise, whatever devas and deities residing in this sacred place who wish for merit and wish for Nibbāna, may they all rejoice in this merit of our preaching and hearing of the Dhamma. Having rejoiced, may they all realize supreme Nibbāna through their aspired enlightenment (*bodhi*). Whatever relatives have passed away and departed to the world beyond, and not only that, whatever beings from Avīci hell up to the Akanitha heaven who wish for merit and wish for Nibbāna, may they all rejoice in our merit of preaching and hearing the Dhamma. Having escaped from their miserable destinations and walking on the path of Dhamma, may they all attain the peace of supreme Nibbāna as quickly as possible. Now, let us share merit by reciting verses in this manner.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_012.html" class="doc-btn">← Previous Sermon (012)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_014.html" class="doc-btn">Next Sermon (014) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

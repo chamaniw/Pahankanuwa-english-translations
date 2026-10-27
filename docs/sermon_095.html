@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 095 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_094.html" class="doc-btn">← Previous Sermon (094)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_096.html" class="doc-btn">Next Sermon (096) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 095</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_095_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_095_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_095_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #95</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.179)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Na gaṇe care vimano hoti samādhi dullabho,</p>
+<p>nānājanasaṅgaho dukkho, iti disvāna gaṇaṃ na rocaye;</p>
+<p>Na kulāni upabbaje muni, vimano hoti samādhi dullabho,</p>
+<p>so ussukko rasānugiddho, atthaṃ riñcati yo sukhāvaho;</p>
+<p>Paṅko ti hi naṃ pavedayuṃ, yāyaṃ vandanapūjanā kulesu,</p>
+<p>sukhumaṃ sallaṃ durubbahaṃ, sakkāro kāpurisena dujjaho ti.</p>
+<p>From:</p>
+<p>Itivuttaka (It 93)</p>
+<p>Dear Listeners,</p>
+<p>Today, this Vesak Poya day, is generally recognized by Buddhist devotees as the day of the threefold festival (*Te-maṅgula*). It is an occasion when three memorable events in the life of the Tathāgata Fully Enlightened Buddha—namely, his birth, Supreme Enlightenment (*Sammā-Sambodhi*), and Parinibbāna—naturally come to our minds. Of these, if we are to speak of today in particular, as we celebrate this Vesak Poya day dawning in the Buddhist Era 2555 as the 2600th Sambuddhathva Jayanthi, the Supreme Enlightenment comes to our minds in a very special way. For that very reason, today we hear much in the country about "lining up in practice" (*paṭipatti*). Indeed, in terms of lining up in practice in this Dispensation (*Sāsana*), the greatest example to the world was set by the Great Arahant Mahākassapa. Praise, eulogy, and honor of a kind that no other disciple received was bestowed upon the Great Arahant Mahākassapa by the Teacher of the Three Worlds, the Blessed Buddha. To put it briefly, he was the ultimate exemplar, the very personification of the practice in the Dispensation. He is specifically mentioned in this way: on various occasions, the Buddha declared various eminent monks as foremost (*etadagga*) in different categories. Among the monks who observed the ascetic practices (*dhutaṅgadhara*), the position of foremost was awarded to the Great Arahant Mahākassapa. Ascetic practices (*dhutaṅga*), dear devotees, are thirteen rigorous practices in this Dispensation. Thus, as he was exceptional in fulfilling these thirteen, the foremost position among those who observed ascetic practices was awarded to him. It is mentioned in the scriptures that he fulfilled the perfections (*pāramī*) for a long period in the dispensations of past Buddhas to attain this position.</p>
+<p>In the time of our Buddha, he was born as the son of the Brahmin Kapila in the Brahmin village of Mahātittha in the Magadha country, and was known by the name of Pipphalī youth (*Pipphalī Māṇavaka*). At the age of twenty, due to the compulsion of his parents, this Pipphalī youth had to marry a Brahmin maiden named Bhaddā Kāpilānī of the city of Sāgala in the Madda country. However, since both of them possessed minds in which the inclination for renunciation (*nekkhamma*) was highly matured through saṃsāric practice, they lived a celibate life (*brahmacariya*) in the lay home. After the passing of their parents, both of them unanimously and inconspicuously adopted the garb of ascetics, left the lay life, and took to the road. Upon reaching a fork in the road, Pipphalī youth reflected, "It is not proper for the two of us to travel together on this single journey," and they parted ways, taking two different roads. As this Pipphalī youth was proceeding forward, some sources mention that the Buddha, perceiving this journey through his spiritual power, went forward to meet him. In any case, Pipphalī youth got the opportunity to see the Buddha. He saw the Buddha seated at a place called Bahuputtaka Cetiya on the road leading from Rājagaha to Nālandā. Seeing him, he recognized: "This is my Teacher, the Blessed Fully Enlightened Buddha." Falling at his feet with utmost faith, he declared his discipleship: "The Blessed One is my Teacher; I am your disciple." Even there, it is specifically mentioned that the Buddha—seeing the spiritual strength in Pipphalī youth (whom we shall call Pipphalī youth for now)—declared: "If anyone were to falsely claim before such a disciple that he possesses knowledge and vision (*ñāṇa-dassana*), etc., that person's crown would split, his head would split." At that point, there is also something unique. From then on, the Buddha addressed Pipphalī youth by the name 'Kassapa'. This has been a puzzle to scholars. Some think that 'Kassapa' must have been the clan name (*gottanāma*) of this Pipphalī youth.</p>
+<p>Thus the Buddha, addressing Kassapa—as we shall call Venerable Kassapa from here on—gave three instructions, saying: "Kassapa, you should train yourself in this way." The first instruction: "You should establish a keen sense of moral shame and moral dread (*hiri-ottappa*), or rather, respect, towards all members of the Saṅgha, whether elders (*thera*) or newly ordained (*navaka*)." The second instruction: "Whatever Dhamma you listen to, you should listen with attentive ears, reflecting on its meaning associated with the wholesome (*kusala*)." The third instruction: "Mindfulness directed to the body (*kāyagatāsati*), which brings happiness, should never be abandoned from the mind under any circumstances and should be cultivated." These are the three instructions. The unique nature of these three instructions is explained later in those books. It is said that by means of these three instructions, the Buddha conferred higher ordination (*upasampadā*) on Venerable Mahākassapa. This is designated as a unique higher ordination known as *ovāda-paṭiggahana* (acceptance of instruction); by the mere acceptance of these three instructions, Venerable Mahākassapa received higher ordination.</p>
+<p>Next, as the description is brief, some parts are difficult to follow. We have to assume that the Buddha, having given those instructions, arose from his seat and departed, and Venerable Kassapa followed behind him. After walking a certain distance, the Buddha wished to sit at the foot of a tree. As he approached the foot of a tree, Venerable Kassapa folded his double-robe (*saṅghāṭī*) made of fine silk into four folds, prepared a seat, and requested the Buddha: "Venerable Sir, out of compassion for me, please sit upon this double-robe of mine." Having sat upon it, the Buddha touched it and said: "Kassapa, this double-robe of yours is very soft." Then Venerable Kassapa said: "Venerable Sir, out of compassion for me, please accept this double-robe." Then the Buddha asked: "Kassapa, are you able to wear this rag-robe (*paṃsukūla*) made of coarse hemp that I am wearing?" After he replied, "I can, Venerable Sir," the Buddha exchanged his double-robe with Venerable Kassapa's double-robe of fine silk. At the same time, according to the texts, the faith he developed through receiving and wearing an extremely rare object that had touched the Teacher's body was so great that, at that very moment, he resolved to observe all the thirteen ascetic practices (*teles-dhutaṅga*). He undertook the thirteen rigorous practices such as forest-dwelling (*āraññika*), alms-food-gathering (*piṇḍapātika*), rag-robe-wearing (*paṃsukūlika*), and three-robe-possessing (*tecīvarika*). Later on, on one occasion, the Great Arahant Mahākassapa himself revealed all these personal details to Venerable Ānanda. It is based on that account that we are stating this.</p>
+<p>Thus, we have to assume that he either walked right behind the Buddha or stayed in some quiet place. The Great Arahant Mahākassapa later declared: "For only seven days did I eat the alms-food as a non-arahant," which means eating the alms-food as a debtor. He declared that on the eighth day, he partook of alms-food free of debt, as an Arahant who had attained the analytical knowledges (*paṭisambhidā*). Thus, to a monk of such virtuous qualities, the Buddha on a later occasion in the presence of the Saṅgha declared that foremost position: "Foremost among my disciples who observe ascetic practices is this Mahākassapa." So, that was an introduction we made about the Great Arahant Mahākassapa. Because of his virtuous qualities, he lived in a way that praised the practice and served as an exemplar to others. It is mentioned in the texts that on one occasion, he uttered those three verses we mentioned earlier as an admonition to the monks. Now let us look at the meaning of those verses. Looking at them, there is not much of an aesthetic sweetness of sound. There is a sweetness of meaning. There is not much acoustic flavor, but there is a flavor of meaning.</p>
+<p>*Na gaṇe purakkhato care*: This is an admonition given to monks. "One should not wander about surrounded by a crowd."</p>
+<p>*Vimano hoti samādhi dullabho*: The mind of one who wanders surrounded by a crowd becomes distracted/deranged. Concentration (*samādhi*) becomes difficult for them to attain.</p>
+<p>*Nānājanasaṅgaho dukkho*: Associating with and entertaining various people of diverse tastes is suffering (*dukkha*). Saying it is *dukkha* means it is a hindrance to one's practice.</p>
+<p>*Iti disvāna gaṇaṃ na rocaye*: Seeing this fact, understanding this matter, do not delight in gathering a following. That is the first admonition. Next, he says:</p>
+<p>*Na kulāni upabbaje muni*: "The sage should not frequent lay families." He should not draw close. This means association with householders is not good.</p>
+<p>*Vimano hoti samādhi dullabho*: Here too, it is said that by living in association with householders, the mind becomes distracted, and likewise, concentration deteriorates.</p>
+<p>*So ussukko rasānugiddho*: Why does one go near lay families? Desiring flavorful food, etc. Therefore, by being eager for flavorful food, in the end,</p>
+<p>*Atthaṃ riñcati yo sukhāvaho*: One neglects the true spiritual goal (*attha*), which brings true happiness—namely, the qualities of virtue (*sīla*), concentration (*samādhi*), etc.</p>
+<p>*Paṅko ti hi naṃ pavedayuṃ, yāyaṃ vandanapūjanā kulesu; sukhumaṃ sallaṃ durubbahaṃ*: "For that which is honor and worship among lay families has been declared as a mire, a subtle dart difficult to extract."</p>
+<p>*Sakkāro kāpurisena dujjaho*: "Honor is difficult for a base person to abandon."</p>
+<p>This is the admonition contained in those verses. What has been summarized there is the fundamental purpose of his practice in the Dispensation, as well as his advice to the Saṅgha.</p>
+<p>From there on, we can find a large number of extraordinary discourses (*suttas*). There is a large section of the Dhamma dedicated specifically to him in the Saṃyutta Nikāya, which one can find under the name *Kassapa Saṃyutta*. From those connected discourses, it is clear how much respect and consideration the Buddha showed towards the Great Arahant Mahākassapa. He showed a level of respect that was not even shown to the chief disciples. Why? For no other reason than his dedication to the practice. Thus, there is an excellent *sutta*—in a way, we cannot say it is very popular, but it is extremely valuable—called the *Candūpama Sutta* (The Moon-Simile Discourse). With a beautiful simile, the Buddha explains it like this:</p>
+<p>*Candūpamā, bhikkhave, kulāni upasaṅkamatha, apakasseva kāyaṃ, apakasseva cittaṃ, niccanavakā kulesu appagabbhā.*</p>
+<p>We brought this up because of the excellent words in it. Addressing the monks, the Buddha declares: "Monks, approach lay families like the moon, keeping both body and mind drawn back." Next, *niccanavakā* means that the moon is always new. The moon is always new; similarly, although it appears close, it is far away and cannot be touched. *Niccanavakā* (ever-new). The simile is used in that manner. *Kulesu appagabbhā*—the Buddha declares that when visiting lay families, one should behave like the moon, without engaging in impudent activities or words, and without behaving in a coarse manner.</p>
+<p>Then, along with that, the Buddha gives further similes. "Just as, monks, a man might look down into an abandoned well, or into a mountain cleft (*pabbata-visama*) or a mountain precipice, or at a broken riverbank (*nadī-vidugga*)—how would he look down? Keeping his body and mind drawn back, drawn back in fear of falling in." He gives two such similes there as well. Having given these similes to show how monks should associate with householders, he then says: "Monks, Kassapa is just like that. Kassapa is an exemplar for this. Kassapa behaves in that manner."</p>
+<p>The Buddha carries that discourse further. He asks the monks: "Monks, what kind of monk is suitable to approach lay families?" When asked thus, on many occasions the monks would answer: "We can only learn this Dhamma from the Blessed One, for we do not understand it ourselves. If the Blessed One explains it to us, we shall bear it in mind." When they expressed their lack of knowledge, what did the Buddha do? He raised his hand and waved it in the air. Like a true teacher, to draw their attention, he raised his hand and waved it in the air. Then he declared: "Monks, just as this hand does not stick to the air, does not get bound to it, and is not caught by the air, so too should one approach lay families—without the mind sticking to those lay families, without being bound to them, without being caught by them." He declared this, which perfectly fits the moon-simile mentioned earlier. In that manner, keeping the mind drawn back, one should approach lay families. "Furthermore, one should go with the thought: 'May those who wish to make merit, make merit!'—as a benefit to others. Without any envy towards others receiving gains." The Buddha declared that one should behave in this way, adding: "Kassapa approaches lay families in this manner." Having said that, the Buddha gave him such wonderful honor by saying: "If I am to give you an admonition, the one who is suitable is Kassapa, or someone like Kassapa."</p>
+<p>On another occasion, the Buddha asked the monks: "What kind of monk's teaching of the Dhamma is impure? What kind of monk's teaching of the Dhamma is pure?" Then too, the monks said: "O Blessed One, we do not understand; please explain it to us." Thereupon, the Buddha declared: "If any monk teaches the Dhamma with the thought, 'Oh, if only they would listen to my Dhamma teaching! Having listened, if only they would gain confidence! Having gained confidence, how wonderful if they would offer me gains and honor in accordance with it!'—such a Dhamma teaching is impure." Next, he explained what is pure: "If any monk teaches the Dhamma to lay people thinking, 'This Dhamma is well-proclaimed (*svākkhāto*), visible here and now (*sandiṭṭhiko*), timeless (*akāliko*), inviting to come and see (*ehipassiko*), leading onwards (*opanayiko*), and to be personally experienced by the wise (*paccattaṃ veditabbo viññūhi*)—it possesses these six qualities. Oh, may this audience listen to this Dhamma! Having listened, may they understand it! Having understood it, may they practice accordingly!'—and if he teaches thus, reflecting on the excellence of the Dhamma (*dhamma-sudhammatā*), and out of compassion (*kāruñña*), empathy (*anuddayā*), and sympathy (*anukampā*) for that audience, then that is a pure Dhamma teaching." He added: "Monks, Kassapa teaches the Dhamma in this manner." There too was praise. There are many such *suttas*.</p>
+<p>Next, in another *sutta*, it is stated as follows: Suddenly, the Buddha asks the monks, "What kind of monk is suitable to be *kulūpaga*?" We have to explain this word. *Kulūpaga* means one who approaches families—that is, one who visits lay homes. We have to understand that, although detailed descriptions are lacking, in the past, some monks, while on their alms-round, went right inside houses and some partook of food there. There are such faithful donors who say, "Venerable Sir, please come inside; this alms-food is ready." Or some donors are prepared to offer alms-food and distribute alms-food daily. They are always ready to serve alms-food. Such are the ones we must think of as *kula* (families). Thus, a *kulūpaga* monk is one who associates with such lay homes, or rather, a monk who frequently goes to lay homes for alms-food.</p>
+<p>Then, regarding the monk with improper thoughts, the Buddha declares: "If a monk goes to lay homes thinking: 'First of all, they must give to me. They cannot fail to give me alms-food. They must give a lot; they cannot give a little. They must give choice food; they cannot give coarse food. They must give quickly; they cannot delay. They must give respectfully; they must bow well and offer it respectfully, they must not offer it disrespectfully.' If a monk goes to lay homes with such thoughts, and for whatever reason does not receive alms-food that day, he gets angry. His mind becomes upset. Or if he receives only a little, he feels the same. Or if he receives coarse food, or if they offer it disrespectfully, without proper bowing and worship, then that monk becomes displeased. He falls into sorrow and displeasure because his expectations were shattered. Such a monk is unsuitable to be *kulūpaga*."</p>
+<p>Then the Buddha declares: "What kind of monk is suitable to be *kulūpaga*, to frequently approach families? If a monk thinks: 'How can it be that one should receive from others' homes exactly as one wishes? Let whoever wishes give in a suitable manner,' and goes to lay homes without any such special expectations—to such a monk, it is all the same whether he receives or does not receive; nothing of that sort occurs in his mind." Having said this, there too the Buddha declares: "Kassapa is just like that. Kassapa approaches families in that manner." Truly, there are many such diverse *suttas*.</p>
+<p>Furthermore, if we are to mention other instances where he received praise from the Buddha, there is another *sutta* where the Buddha declares to the monks: "Monks, as I wish, whenever I wish, I enter and dwell in the first absorption (*jhāna*). Kassapa, too, enters and dwells in the first *jhāna* in the same way. In the same way, the second *jhāna*, the third *jhāna, the fourth *jhāna*. The other formless absorptions, then the attainment of cessation (*nirodha-samāpatti*), then the knowledge of recollecting past lives (*pubbenivāsanussati-ñāṇa*), the divine eye (*dibba-cakkhu*), the divine ear (*dibba-sota*)—he mentions all of these. I too enjoy them, and Kassapa too..." Look at how wonderfully the Buddha placed the Great Arahant Kassapa on an equal footing with himself.</p>
+<p>Next, there are many other *suttas* revealing the Buddha's care that you, dear devotees, must have heard; for instance, in the Book of Parittas, there is the *Mahākassapa Sutta*. When the Great Arahant Mahākassapa was observing such rigorous practices, it was not that he never fell ill. On one occasion, he was extremely sick. He was residing in the place often mentioned by its ancient name, the Pipphalī Cave. He lived in the Pipphalī Cave. Thus, on one occasion, the Great Arahant Mahākassapa was dwelling there extremely afflicted, suffering, and gravely ill (*ābādhito dukkhito bāḷhagilāno*). The Buddha visited him there, asked about his well-being, and said, "Then, Kassapa, listen to this," and expounded the seven factors of enlightenment (*bojjhaṅga*). It is mentioned that upon hearing this, the Great Arahant Mahākassapa's illness was cured.</p>
+<p>Similarly, another occasion is mentioned—perhaps right after this—in the *suttas*: on one occasion, as soon as the Great Arahant Mahākassapa recovered from being so gravely ill, he thought of going for alms. At that time, five hundred deities prepared to offer him alms. They thought, "Let us gain merit by offering alms-food to this Venerable One who is going out after recovering from illness." For it is the deities who know the value of merit; humans often do not know it. When the deities reflect, they understand that all these luxuries they enjoy are due to merit. Thus, they scramble to perform those meritorious deeds. However, since the Great Arahant Mahākassapa possessed the divine eye, he saw this. Rejecting the alms-food that the five hundred deities were trying to offer, where did he go? To the poor street of the city, the weavers' street. He went for alms on the street where the poorest people lived. There are many such instances.</p>
+<p>On another occasion, there is also a certain incident. It is mentioned in the Dhamma that when the Great Arahant Mahākassapa arose from the attainment of cessation (*nirodha-samāpatti*), the alms-food offered to him brings great fruit and great benefit; offering the first meal after seven days of fasting is a major wholesome act. On that occasion, regardless of the deities, he reflected—nay, he would look to see who is the most suitable person to be blessed with this merit. In such instances, it is mentioned that he saw a very faithful female lay devotee guarding a paddy field, who was making puffed rice. Venerable Mahākassapa walked to that place. With great faith, that woman offered the puffed rice and made a wish: "May this be a supportive condition for me to attain the Dhamma that the Venerable One has attained." That is a long story. In the end, what is said is that as she was walking along the ridge of the field, she was bitten by a snake and fell dead on the spot. But where did her mind go? To a celestial mansion in the Tāvatiṃsa heaven. She was known as Lājā-devadhītā, and she had a mansion decorated with garlands of puffed rice. Then she reflected: "How did I get this merit?" She saw that it was by offering a small alms-gift to Venerable Mahākassapa. What did she do next? She came secretly at night, and towards dawn, she would sweep and clean the area around Venerable Mahākassapa's hut. For two or three days, Venerable Mahākassapa thought it must be some disciple doing this. One day, looking through the keyhole, he saw a light. It was a goddess doing this. Venerable ones like Mahākassapa, who are highly dedicated to the practice, would never allow even room for gossip, such as "a woman is coming here to sweep." So he turned her away. Even though she pleaded, "Oh, please let me perform this meritorious deed," he snapped his fingers. Snapping fingers has a certain power, like saying, "Go away!" It is said that after he snapped his fingers, she went up to the sky and wept, and the Buddha even uttered an inspired utterance (*udāna*) about this incident. At the end of that incident, the Buddha, having perceived it, uttered an inspired utterance of joy, showing how exemplary he was.</p>
+<p>Next, let us explain step-by-step, even if not everything. Next, we hear of the time when the Great Arahant Mahākassapa had become worn out by old age. The Buddha said to the Great Arahant Mahākassapa: "Kassapa, you are worn out by old age. You are now advanced in years. That rag-robe made of coarse hemp is heavy. Therefore, begin to use robes offered by householders. Also, abandon that rigorous practice of gathering alms-food and accept the invitations of householders. Instead of living always in the forest, come and reside near me." The Buddha made this gentle request to the Great Arahant Mahākassapa. What did he say? "Venerable Sir, for a long time I have been a forest-dweller (*āraññika*), and I speak in praise of the forest-dwelling practice to others. For a long time I have been a rag-robe wearer (*paṃsukūlika*), and I speak in praise of the rag-robe practice to others. In the same way, I possess only three robes (*tecīvarika*). In this same manner, I have observed the quality of contentment, living in secluded solitude, etc." Mentioning these virtuous qualities one by one, he said: "I have not only been practicing these all this time, but I also speak in praise of these qualities to others."</p>
+<p>Thereupon the Buddha asked: "Kassapa, seeing what benefit do you do this?" The Great Arahant Mahākassapa replied: "Venerable Sir, seeing two benefits I do this. One is for my own pleasant dwelling in this very life (*diṭṭhadhamma-sukhavihāra*), for happiness in this world." You, dear devotees, might wonder: what is the happiness of living in the forest? What is the happiness of going for alms? Because his true happiness is concentration (*samādhi*), and these practices are conducive to concentration. He explained it this way: "I find delight in the practices I observe as a pleasant dwelling in this very life. Furthermore, my hope, my intention, is to be an exemplar for future generations (*pacchima-janatā*)—meaning the future lineage of monks. By way of *diṭṭhānugati* (following what is seen), they will take it as an example. Thinking, 'Those disciples observed such practices for a long time,' and out of compassion for the future generations, the future lineage, I observe this practice." Then the Buddha declared: "Sadhu, Sadhu, Kassapa! You are practicing well for the welfare of the multitude, for the happiness of the multitude (*bahujana-hitāya bahujana-sukhāya*). You observe this practice for the benefit and welfare of many, including the world of devas." Having uttered words of approval, he said: "In that case, Kassapa, continue to wear those robes of coarse hemp. Continue to live on alms-food. Continue to dwell in the forest." See how the Buddha gave pride of place to the practice!</p>
+<p>Thus, the character of the Great Arahant Mahākassapa was a truly wonderful one. Next, let us proceed step-by-step to another significant event in the life of the Great Arahant Mahākassapa. Indeed, one might think, would even the deities come near someone wearing such coarse hemp rags? But they are drawn to the fragrance of virtue. There are several beautiful incidents of this kind. Calling them beautiful means they are both miraculous and illustrative of the value of Mahākassapa's character. Next, we turn to the events in the *Mahāparinibbāna Sutta*. You, dear devotees, have heard many of them. We have also mentioned them in our books. Seven days after the Buddha passed into Parinibbāna, amidst various offerings by deities and humans, the Malla princes prepared a funeral pyre for the physical remains of the Buddha at the place called Makuṭa-bandhana Cetiya, and placed the Blessed One's body upon the pyre. Having prepared everything in the manner explained to Venerable Ānanda, they placed the body on it. By this time, the Great Arahant Mahākassapa was traveling from the city of Pāvā to Kusinārā along with about five hundred monks.</p>
+<p>While traveling in this way, they sat at the foot of a tree for a short while. At that time, an Ājīvaka ascetic was coming on the road from Kusinārā to the city of Pāvā, carrying a Mandārava flower that had fallen from the sky as a rain from the deities at the site of the Parinibbāna—a rare thing indeed. Seeing him coming from afar, the Great Arahant Mahākassapa asked: "Friend, do you know anything about our Teacher?" Then this Ājīvaka replied: "Yes, friend, I know. It has been exactly seven days today since the Ascetic Gotama attained Parinibbāna. It is from there that I picked up this flower." It is said that among the followers of the Great Arahant Mahākassapa, the monks who were not yet Arahants wept, raising their clasped hands to their heads, and lamented, saying: "Too soon has the Blessed One attained Parinibbāna! Too soon has the eye of the world vanished!" Uttering such laments, they wept.</p>
+<p>Meanwhile, there was a monk named Subhaddha, who was a *vuddha-pabbajita*—one ordained in old age. Such people are sometimes difficult to discipline. In any case, while the others were lamenting, this Subhaddha said: "Do not weep, do not lament! We are now free from that Ascetic Gotama. For so long we were harassed by him saying, 'This is allowable, this is not allowable.' Now we can do whatever we want. Whatever we like, we can do." The monk Subhaddha spoke thus, and it struck a blow to the heart of the Great Arahant Mahākassapa. Yet, he did not say anything at that moment. Instead, to comfort the other monks, he said: "Friends, such is the nature of preparations (*saṅkhāra*). They do not last forever. As the Buddha frequently declared, we must part from all that is beloved and pleasing; that is the nature of preparations (*saṅkhāra*)." In this way, he consoled them.</p>
+<p>Now, we go back to the site of the Parinibbāna, at Makuṭa-bandhana. By that time, the physical remains had already been placed upon the pyre. Four Malla princes, full of devotion and selected for the task, tried to light the pyre. But the fire would not catch. When such issues arose, whom did they consult? There are many such incidents recorded there—they consulted Venerable Anuruddha. For he was the foremost among monks possessing the divine eye. Thus, they asked Venerable Anuruddha: "Why is this?" Venerable Anuruddha replied: "Your intention is one thing, but the intention of the deities is another." "What is the intention of the deities?" "The intention of the deities is this: the Great Arahant Mahākassapa is currently traveling with five hundred monks from Pāvā to Kusinārā. Until he arrives and pays homage to the feet of the Buddha, this pyre will not catch fire." When that was said, the next events unfolded as follows: a short while later, having arrived near the place, the Great Arahant Mahākassapa stepped forward. From that point, the incident is described like this:</p>
+<p>Arranging his robe over one shoulder, he circumambulated the pyre three times, and having the feet of the Buddha's body revealed, he paid homage to them. Similarly, after the other five hundred monks circumambulated and paid homage to the pyre, the pyre caught fire on its own. From this we can see how great was the power of the virtue of the Great Arahant Mahākassapa; until he arrived, the Buddha's pyre would not ignite. If we are to speak further in this manner, on many occasions, the Buddha would say to the Great Arahant Mahākassapa: "Kassapa, preach the Dhamma to this group." Then the Great Arahant Mahākassapa would reply: "Venerable Sir, I cannot teach the Dhamma to them. They are highly undisciplined." This was not said out of disrespect to the Buddha, but rather meaning: "These people are like this; there is no use in preaching to them now, so to speak." This is recorded on several occasions.</p>
+<p>On many occasions, the Buddha would say: "If anyone is to admonish these monks, it is either I or this Kassapa." Such was the wonderful consideration the Teacher showed to the Great Arahant Kassapa. Why he did so—exchanging his robe and showing such great respect—is explained by some in the texts as having been done by looking into the future. It was done with the future of the Dispensation in mind, thinking of the refuge that would arise for the Dispensation after the Buddha's Parinibbāna. An incident related to this is mentioned in the texts.</p>
+<p>Thus, after the Buddha attained Parinibbāna and all the funeral rites were completed, the Great Arahant Mahākassapa addressed the monks present—specifically, the Arahants, of whom there were many—and related that incident: "While I was traveling from Pāvā to Kusinārā, as I sat under a tree, an ascetic came carrying a flower." Having related the entire incident mentioned earlier, he said: "At that time, while all the other non-arahant monks were weeping, that Subhaddha, ordained in old age, said such-and-such a thing. This is not a good sign. Therefore, friends, before this Dhamma and Vinaya decline, and before the non-Dhamma and non-Vinaya shine in their stead, let us rehearse the Dhamma and Vinaya." When he proposed this, those Venerable Ones invited Venerable Mahākassapa himself, saying: "Then, Venerable Sir, select those who are required for this." He appointed—or rather, nominated—four hundred and ninety-nine Arahants.</p>
+<p>Then, the other monks made a request: "Although Elder Ānanda is not yet an Arahant, he is not one who would go astray out of favoritism, malice, fear, or delusion (the four biases). Moreover, he has memorized all the Dhamma and Vinaya under the Buddha's guidance. Therefore, let us appoint him as well." Thus, allowing room for this, Venerable Mahākassapa did not appoint him directly by himself; for if he did, someone might think, "Why appoint a non-arahant when there are so many Arahants present?" Allowing the group itself to propose it, Venerable Mahākassapa then appointed Venerable Ānanda. We have described the subsequent events on other occasions; what was done by Venerable Ānanda is recorded in detail in the books containing the history of the Dispensation.</p>
+<p>Thus, the Great Arahant Mahākassapa went to King Ajātasattu and requested: "During the first month, let us carry out *khaṇḍaphulla-paṭisaṅkharaṇa*—repairing the broken and dilapidated temples—and in the next month, prepare a place for us to hold the rehearsal. Construct a pavilion at the entrance of the cave near the Vebhāra mountain, for these five hundred to hold the Council." King Ajātasattu prepared all of this at the highest level. Then, on the very day before the Council was to be held—which can also be considered a miracle, because the Buddha had previously declared, "Ānanda, you are a person of merit, you will surely become an Arahant"—Venerable Ānanda, although he had been selected, did not possess what we might call in modern terms an "Arahant certificate." Thus, he felt a sense of inadequacy, thinking: "It is not proper for me to attend the Council as a non-arahant."</p>
+<p>It is described in the texts that he spent the entire day practicing meditation with strong determination, focusing on mindfulness directed to the body (*kāyagatāsati*). Then, after washing his feet, he went to his bed. It is said that as he was bending down to lie down, before his head even touched the pillow—that is, being freed from all the four postures (as you know, the four postures are sitting, standing, walking, and lying down)—at that moment of being freed from the four postures, his mind, which had some restlessness due to excessive effort, became tranquil. In a most wonderful way, his mind was freed from the taints (*āsava*), and he became an Arahant.</p>
+<p>Thus, with him too as an Arahant, when all five hundred held the rehearsal, the Great Arahant Mahākassapa held the chief position. To put it briefly, acting as the questioner (*pucchaka*), Venerable Mahākassapa first questioned Venerable Upāli regarding the Vinaya and, having asked the questions, established the Vinaya. Next, he questioned Venerable Ānanda regarding the Dhamma, asking about various aspects and suttas of the Dhamma, and brought those points to light. Looking at it from this perspective, it is because of the Great Arahant Mahākassapa that we can understand today why the Buddha showed him such great consideration by looking into the future. It was because of him that the First Council took place. If any prosperity of the Dispensation arose from it, we must think of the Great Arahant Mahākassapa and particularly offer him our gratitude (merit) for it.</p>
+<p>Based on the strength of his practice—we are not going to relate everything—Venerable Mahākassapa stepped forward during various issues that arose at that time. Some questions arose—I am not saying all—and he, looking into the future, decided: "Let us preserve this so that further decline does not occur, otherwise lay devotees will say to us: 'Even before the Blessed One's funeral pyre has cooled down, look at how these people are behaving as they please!'" It is mentioned that by taking decisions in various instances in that manner, they rehearsed the Dhamma and the Vinaya.</p>
+<p>Therefore, in this regard, we must reflect on the virtuous qualities of the Great Arahant Mahākassapa. For we usually think: "These are impossible things," or, "Why undergo so much suffering?" But, dear devotees, the ascetic practices (*dhutaṅga*) in this Dispensation are not self-mortifying vows like those performed by the Nigaṇṭhas (Jains); they are highly relevant to the monastic life—all of those practices we mentioned.</p>
+<p>Nowadays, as you know, it is quite different. It is not like what is described in those verses. In one way or another, it is all about gathering a following. Thus, in contrast, what is shown in these verses is what happens to someone who gathers a following: *vimano*—the mind becomes distracted/deranged. Because one has to please those lay followings. *Nānājanasaṅgaho dukkho*—by following the tastes of this and that person, in the end, the virtue (*sīla*), etc., of the monk are gone. There is no concentration (*samādhi*), nor anything else. On top of that, when gains and honor begin to pour in, the Buddha has given various wonderful similes for them. The Buddha described what happens to a bird caught in a Verambha wind: its wings fly in one direction, its legs in another, and its head in yet another direction. Such things happen due to being caught in that wind. These matters are clearly personified in the life of the Great Arahant Mahākassapa. It must be because he demonstrated these through his own example that the Buddha showed him such wonderful respect and consideration everywhere. He held him up, saying: "Here is the exemplar."</p>
+<p>On one hand, he might not have been popular. But regarding that too, we have related a very wonderful story in other sermons. We have told you, dear devotees, before. On one occasion, the Buddha was walking for alms along with a large group of monks. You can imagine it was a large crowd. But keeping away from that crowd, the Great Arahant Mahākassapa was walking far behind. For he had undertaken the practice of gathering alms-food (*piṇḍapātika*) and wandering alone. Therefore, he was far behind. Meanwhile, some children—carrying boxes of oil-cakes (*kāvum*) to go and enjoy themselves in some garden—passed by. It is mentioned that instead of offering the oil-cakes to the group led by the Buddha, they paid homage with great respect to the Great Arahant Mahākassapa and offered them to him. Such a story is also recorded. One might wonder:</p>
+<p>But those little children possess an attraction towards virtue that adults lack. They must have sensed the value of these Venerable Ones. They do not measure by clothes, nor by other things. Such stories are truly miraculous. Therefore, when reflecting on the teachings of the Dispensation, we must realize that the value of qualities like ascetic practices (*dhutaṅga*) lies in their helpfulness to the Dhamma. Solitude is especially necessary. These practices, like forest-dwelling, exist not merely in name, but for the purpose of developing one's qualities of virtue (*sīla*), etc., and concentration (*samādhi*), without being entangled with householders (*asaṃsaṭṭha*). It is these that the Great Arahant Mahākassapa called "pleasant dwelling in this very life" (*diṭṭhadhamma-sukhavihāra*). How do people think of "pleasant dwelling in this world" nowadays? They think of comfortable, luxurious things. But in the past, what the Buddha and those Venerable Ones referred to as *diṭṭhadhamma-sukhavihāra* was that wonderful happiness attained through concentration (*samādhi*)—a happiness that transcends the fivefold sensory pleasures. Thus, what is most conducive and suitable for that happiness is solitude, a quiet environment, dwelling in seclusion, and being unassociated (*asaṃsagga*)—the solitude of being away from crowds.</p>
+<p>If one wishes to preserve virtuous qualities, and similarly, if one wishes to understand what the Buddha declared in the Dhamma from within—to understand it deeply from within—then one must realize that Dhamma. One must see the Dhamma. It is said, *jānaṃ passaṃ*—knowing and seeing. Knowing correctly. Furthermore, when speaking of this Dhamma, the Buddha often declared it as *sātthaṃ sabyañjanaṃ*—with meaning and with phrasing. Today, mostly only the phrasing (letter) is valued in the Dhamma. Only the letter. If it is not beautiful enough, they add tunes to it. Now, in these verses we quoted, there is no tune. No music has been infused into them. Yet, the letter too is important. For the letter can be distorted through that music.</p>
+<p>That is why the Buddha declares: *Dunnikkhittassa padabyañjanassa attho pi dunnayo hoti*—if the phrasing and words of a sutta discourse are placed incorrectly, their meaning also becomes difficult to understand. Let us consider a *paritta*. If songs or tunes are added to a *paritta* chanting, the words are chanted in a distorted manner so that the meaning of the words is corrupted. It is very beautiful to listen to, but what happens through that? A person who does not know the Pali language, who does not even know the grammar, attributes other meanings to them, combining words in strange ways. For that very reason, first of all, we must protect the Dhamma in order to be protected by the Dhamma. But how do we protect the Dhamma? By multiplying books through technological media? Not in that way. In this Dhamma, we must preserve both the phrasing (letter) and the meaning. We must preserve the phrasing. Then, if one does not know the meaning, how can one preserve the phrasing? One cannot preserve the phrasing without knowing the meaning. Sometimes, the meaning is not what one thinks it is. In the past, the monks, as far as possible, realized that taught Dhamma and preserved the phrasing as well. Sometimes we can see how deep the meaning of a brief verse uttered by the Buddha is when monks who are expert in clarifying the meaning, like the Great Kaccāna, explain the meaning of a small verse in a wonderful, highly profound manner. The Buddha approves of those explanations. Today, one cannot even imagine such things.</p>
+<p>What do they do now? To understand a verse, they place dictionaries on both sides. They look up the meanings of words: "This is the meaning." From that perspective, one must know the meaning of a word. Next, merely knowing it is not enough. One must make it meaningful to one's life. To make the Dhamma meaningful, one must practice the Dhamma, one must see it. That is why the Buddha taught even those rigorous practices which are disregarded in modern times. It is for no other reason. Generally, those who enter the monastic life were previously householders. At that time, in the lay world, they sought beautiful clothes, beautiful ornaments, and such things. Therefore, to break those attachments, sometimes rigorous practices are needed. Wearing that rag-robe (*paṃsukūla*), wearing discolored robes—these are done for no other reason than to discipline one's own mind.</p>
+<p>It is mentioned in a wonderful way how a person coming from a lay background of various fashions and styles gets accustomed to those rag-robes (*paṃsukūla*). In modern times, one cannot even imagine it. While walking on the alms-round, he sees a discarded piece of cloth. Stepping on it with his left foot, tearing it with his right foot, he picks it up, puts it in his bag, and brings it back to stitch it onto his robe. Why is this? Through this, he trains himself to remove from his mind the attraction to the fashions of the lay world, in order to discipline his mind—not to show off to the world. That is the point. The same applies to other things. To eliminate greed for food, there are corresponding ascetic practices (*dhutaṅga*). Next, to increase energy, there are rigorous ascetic practices (*dhutaṅga*) where one hardly sleeps at all. These are not done to tell the world; rather, if one recognizes certain shortcomings in oneself, the Buddha has shown how to resolve them by undertaking and observing these rigorous practices. They help in attaining one's Nibbāna, and those absorptions (*jhāna*) and attainments (*samāpatti*). Therefore, simply talking about their value is not enough.</p>
+<p>Even in his worn-out old age, the Great Arahant Mahākassapa demonstrated to the world in a wonderful way those two aspects mentioned earlier: first, his own pleasant dwelling in this very life (*diṭṭhadhamma-sukhavihāra*), because those practices helped him preserve the qualities of virtue (*sīla*), etc., which he had observed with a desire for concentration (*samādhi*); and second, by thinking of the future of the Dispensation. There are certain suttas that speak of the future. Seeing certain signs of that time, it is mentioned in those very suttas that in the past, monks enjoyed great respect in such-and-such a way. In later times, monks who abandon these practices and follow those fashions receive great respect: "Oh, with how much compassion for people do these monks behave! They do all the work we have in our homes, don't they? They do all the work of our children, don't they?" There, the path is lost.</p>
+<p>That is precisely what the Great Arahant Mahākassapa meant: the mind becomes distracted (*vimano*), and concentration (*samādhi*) is lost. Pleasing householders is not done in that way. One pleases householders by setting an example for them. By setting an example for householders, inspired by those who lived in the past, there arose wonderful lay disciples like Citta the Householder, who had realized the Dhamma. So much so, they could engage in meaningful Dhamma discussions on an equal footing with the monks—not mere arguments. They saw that Dhamma within to that extent. Lay disciples like Citta the Householder, who could expound those teachings, are mentioned in a wonderful way. Thus, in the past, both the laity and the clergy preserved the Dhamma in that manner, with its meaning and its phrasing (*sātthaṃ sabyañjanaṃ*); they preserved both the phrasing and the meaning. They integrated it into their lives and made their lives meaningful. They realized their ultimate goal (*sadattha*), the noble meaning, which is the noble, deathless Nibbāna.</p>
+<p>Today we spoke at such length because we are talking about a practice (*paṭipatti*). Everyone speaks about the practice, urging to "line up in practice." You, dear devotees, should consider what kind of lining up this is: is it a gathering of followings in that manner, carrying banners to gather crowds, or is it a lining up through practice by properly listening to the Dhamma and practicing accordingly?</p>
+<p>In any case, we have seen a large number of people observing the precepts today. We rejoice in their turning towards the practice in that regard. We pray that this sermon may be an encouragement to proceed further on that path of practice. May these people, becoming stronger through the virtue (*sīla*) they have observed, the meditation they have practiced, and this Dhamma they have heard, not think of the future dispensation of Maitreya Buddha before the lamp of this Dispensation is extinguished. The Dhamma is still present in this Dispensation; it can still be practiced by those who are able. Therefore, making such a determination and continuing these efforts, may this Dhamma teaching be a supportive condition for successfully practicing the Dhamma and meditation to escape from this saṃsāra, which is filled with various sufferings (*dukkha*) such as the extremely terrifying birth (*jāti*), decay/aging (*jarā*), sickness (*vyādhi*), and death (*maraṇa*), and to realize the noble, deathless Nibbāna through the penetration of the paths and fruits starting from stream-entry (*sotāpatti*). Furthermore, if there is anyone in the universe who wishes to share in the benefits of this wholesome deed of Dhamma teaching, may they, by sharing in it, realize this noble, deathless Nibbāna through the Bodhi of their choice. With this wish, please recite this verse:</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_094.html" class="doc-btn">← Previous Sermon (094)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_096.html" class="doc-btn">Next Sermon (096) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

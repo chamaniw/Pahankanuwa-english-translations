@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 030 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_029.html" class="doc-btn">← Previous Sermon (029)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_031.html" class="doc-btn">Next Sermon (031) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 030</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_030_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_030_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_030_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #30</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No. )</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Pāṇḍupalāsova dānisi, yamapurisāpi ca te upaṭṭhitā; Uyyogamukhe ca tiṭṭhasi, pātheyyampi ca te na vijjati. So karohi dīpamattano, khippaṁ vāyama paṇḍito bhava; Niddhantamalo anaṅgaṇo, dibbaṁ ariyabhūmimehisi.</p>
+<p>From:</p>
+<p>Verses 235-236 from the Malavagga (Chapter on Impurity) of the Dhammapada</p>
+<p>Dear Listeners,</p>
+<p>It is the Wheel of Dhamma (*Dhamma-cakka*) that helps to break the power of the Wheel of Kamma (*Kamma-cakka*) which operates within the cycle of Samsāra. Liberation dawned upon the worldly beings, who are subject to the Wheel of Kamma and go from suffering to suffering (*Dukkha* to *Dukkha*), through the Wheel of Dhamma brought to light by the Blessed One. By contemplating the danger of the results of kamma, one can arouse the spiritual urgency (*saṃvega*) necessary to enter the path of Dhamma. Today, the background story (*nidāna kathā*) relevant to the verses chosen as our theme also illustrates how severe results of kamma ripen in this very life, and how one has to undergo those consequences.</p>
+<p>In Sāvatthī, there lived a cattle-butcher. For over fifty years, he made a living by slaughtering cattle, having the best portions of the meat of the slaughtered cows cooked to eat with his wife and children, and selling the rest. One day, after selling the beef, this man got ready to go and bathe. He told his wife, "Keep that good piece of meat for me," handed it to her, and left. Now, while he was away bathing, a friend of this man came and said to the wife, "Someone has arrived at our house, is it possible to buy some meat?" She replied, "Your friend finished selling the meat and went to bathe. There is no meat left to sell now." When he asked, "Is there not even a little bit?" she said, "Only this piece of meat kept aside for cooking is left." This man, thinking that the butcher would never willingly give up this piece of meat, took it by force and went away. Later, when the cattle-butcher returned and sat down to eat, his wife placed before him a plate of rice with leafy greens. The man asked, "Where is the meat?" She replied that there was no meat. "Why? Didn't I give you a piece of meat?" Then the wife told him the story: "A friend of yours came and asked for meat, and though I refused, he took it by force." The butcher declared, "I cannot eat this rice!" She said, "No, no, there is nothing else to be done now. Please eat what is there."</p>
+<p>Then, pushing the rice away in great anger, this man took a knife, went to the back of the house, reached his hand into the mouth of a bull tethered there, pulled its tongue out, and cut it off from the root. He brought it inside, roasted it over the embers of the fire, and got ready to eat it. No sooner had he taken a mouthful of rice and placed the roasted piece of tongue in his mouth, than his own tongue—by the immediate retribution of his kamma—was severed and fell into his plate of rice. Thus, with blood dripping, the man began running up and down the house on all fours like an animal. Seeing this, his wife said to the son who was nearby, "Son, do you see this result of kamma? This may fall upon you too. Therefore, without even looking for me, save your life and flee!" So the boy bowed down to his mother and departed from the house. In the meantime, the bull also died. That man, screaming in agony and behaving like a bull, died and was reborn in hell (*niraya*).</p>
+<p>With that, the story of the cattle-butcher ends. From there onwards is the account of the cattle-butcher's son. Now, this youth went to Taxila and, as the story goes, trained under a goldsmith master. Having trained well, one day, the master goldsmith had to go to his village and entrusted this youth with making a certain ornament. When the master returned, he saw that the youth had crafted it exceptionally well. Pleased, and thinking, "Now he can earn his own livelihood," he followed a custom of the world-renowned teachers (*disāpāmokkha*) of that era—similar to conferring a degree, they would give their daughter in marriage to the best pupil. So, he gave his daughter to him. The goldsmith, who was the cattle-butcher's son, led a "successful life," as we would say today, with children. In the course of time, this man's sons went to Sāvatthī and settled there, but the father remained in Taxila.</p>
+<p>The children of the butcher's son who had gone to Sāvatthī, having heard the Dhamma from the Buddha and having become deeply faithful, thought: "Our father is now very old. He lives without performing any meritorious deeds. We must perform some merit on his behalf." Thus, they invited their father to their home and prepared to offer an alms-giving (*dāna*) to the Saṅgha led by the Buddha. When the Buddha and the Saṅgha arrived, they offered the alms-giving in a grand manner. These days, you, meritorious friends, often hear about the "death-alms" (*mataka-bhatta*), which is given after parents or relatives have passed away. But what is described here is a special kind of alms-giving. It is called *jīva-bhatta*. This alms-giving is offered on behalf of one’s living father. So, we can imagine that when the elderly man was present, they had him touch the offerings or used some other method to instill in his mind the awareness that this was his own alms-giving, and they offered the alms to the Saṅgha led by the Buddha.</p>
+<p>After the alms-giving, they invited the Blessed One, saying, "We offered this alms-giving on behalf of our father; please deliver an appreciation of merit (*anumodanā*) for our father." At that moment, the Buddha delivered a sermon. Perhaps the Buddha saw that there was some wholesome potential (*kusala-saktiya*) in this son of the cattle-butcher. Aiming at that, He delivered a sermon. At the end of that sermon, we can understand that He uttered two verses summarizing the essence of the teaching, which we have chosen as the theme of today's sermon.</p>
+<p>Let us look at the general meaning of those verses. *Paṇḍupalāsova dānisi*—*paṇḍupalāsa* means, now, when leaves of trees are close to falling, they turn a pale yellow color, don't they? They turn a brownish, pale yellow color. So, the Buddha gives that very simile to this elderly lay devotee. "You are now like a pale, withered leaf ready to fall from a tree." Next, *yamapurisā pi ca te upaṭṭhitā*—"the messengers of death (*yamapurisa*) stand ready to receive you." *Uyyogamukhe ca*—*uyyogamukha* means like standing at the doorway, ready to depart on a journey; "you have now arrived at the point of readiness to depart for the next world." *Pātheyyampi ca te na vijjati*—"you have no provisions for the road, no journey-meal." *Pātheyya* means road provisions or a journey-meal, or a packet of rice. There is no packet of rice. Thus, the first verse was spoken in a way that would arouse a sense of spiritual urgency (*saṃvega*) in that old man.</p>
+<p>Then the next verse: *So karohi dīpamattano*—"Therefore, make an island for yourself. Establish a refuge." *Khippaṃ vāyama paṇḍito bhava*—"Strive quickly, become wise." *Niddhantamalo anaṅgaṇo*—"Having removed your rust/impurities, become free from defilements." Having become defilement-free, *dibbaṃ ariyabhūmimehisi*—"go to the divine Ariya-realm." The books explain "the divine Ariya-realm" (*dibbaṃ ariyabhūmi*) not as a mere heaven world, but as those Pure Abodes (*Suddhāvāsa*), the Brahma-worlds where Non-returners (*Anāgāmis*) are reborn. It is mentioned that He uttered the verse in this manner, urging him to go to those worlds.</p>
+<p>It is said that upon hearing this verse, this elderly man—the son of the cattle-butcher—attained Stream-entry (*Sotāpanna*). However, the story continues further. On a subsequent day, the children invited the Buddha again for alms on behalf of their father. On the second day too, they offered alms to the Saṅgha led by the Buddha in the same manner, and invited the Buddha to give a sermon. On that occasion, the two verses delivered by the Buddha were somewhat similar to the earlier verses. As a specific difference, we have to note that although not the entire verse was different, the second verse ended with "you will not come again to birth and decay" (*na puna jāti-jaraṃ upehisi*), whereas the first one said, "you will go to the divine Ariya-realm" (*dibbaṃ ariyabhūmimehisi*). "If you strive in this way and quickly become wise, you will not come again to Birth / Arising (*Jāti*) and Decay." That verse was deeper and more heart-touching. Having heard the sermon with those verses—we must understand that it was not just those two verses, even though they are mentioned, but according to the Buddha’s style of preaching, He usually delivered a gradual instruction (*ānupubbī-kathā*) in such instances, starting with talk on giving (*dāna-kathā*), morality (*sīla-kathā*), and heaven (*sagga-kathā*). It is said that after hearing that sermon, the man attained the stage of a Non-returner (*Anāgāmi*). This refers to the cattle-butcher's son.</p>
+<p>There are the two sides of the story. We started by speaking of the Wheel of Kamma (*Kamma-cakka*) and the Wheel of Dhamma (*Dhamma-cakka*), didn't we? If the Wheel of Kamma alone had been allowed to operate, the cattle-butcher's son would have gone to hell. But now, having taken refuge in the Buddha’s Wheel of Dhamma, he finally became a Non-returner (*Anāgāmi*). Therein lies the difference. Within this too, there is a profound meaning. Now, from here on, let us analyze this story step by step. From the beginning of this story, it is very clear that the cattle-butcher, in an extremely cruel manner, cut the tongue of that bull just to satisfy his own tongue, because his meal lacked the taste of meat. How cruel is that? Because of that, the result (*vipāka*) of that action was received right there. Such results are frequently mentioned in many Dhamma stories. Even nowadays, you might hear of such things. This is called "kamma-equivalent result" (*kamma-sarikkha-vipāka*)—a result that corresponds exactly to the action. Behind the house, the bull was running here and there without a tongue; inside the house, the cattle-butcher was running here and there without a tongue, bellowing like a bull. How about that for kamma? It matches perfectly, doesn't it? And after that, ultimately, hell (*niraya*). Thus, he showed a preview, a rehearsal, a demonstration of the suffering of hell to his wife and son.</p>
+<p>It was because of the spiritual urgency (*saṃvega*) aroused by that demonstration that the son bowed down to his mother and left forever. He went straight to the city of Taxila. How much pain and urgency (*saṃvega*) must he have felt to abandon his own mother? Anyway, that is visible on that side. Based on this, you can contemplate a great deal. You might be reminded that even more cruel killings occur in present times. Even though such immediate results do not happen for every single one of them, we have to understand that sometimes, due to the sheer strength of the kamma-force that granted them this human existence, they are still able to withstand those evil deeds. But when the fall comes, it falls. They fall into hell, or else they have to undergo the results in animal births (*tiracchāna-yoni*) and so on. We all know these things through Dhamma stories, don't we? So, that is what we have to take from the first part of the story.</p>
+<p>How dangerous is this state, like that of the cattle-butcher, of being greedy for the taste of meat? We can see its drawback (*ādīnava*). The two go together. Cattle are slaughtered for meat. Is it because he did not have enough of it that the cattle-butcher reached a state where he could not eat a meal of rice without the taste of meat, and went on to cut the bull's tongue? Meat is not something that one can ever eat enough of to be fully satisfied. If so, the cattle-butcher should have been the first to be disgusted by it. You can contemplate these matters in connection with this story. Let us stop there and proceed to the next part of the story, as there are certain things we can extract from it in the brief time we have.</p>
+<p>Now let us see: the son eventually became a goldsmith. Though there are no extensive details, he must have been a highly skilled, certified goldsmith. Next, when we think about his children—though it is not explicitly mentioned—we can understand their virtuous nature from the very meritorious deed they performed on behalf of their father. How valuable that is! Nowadays, indeed, there is a custom of offering alms-giving (*dāna*) with the intention of sharing merits through an appreciation sermon (*anumodanā-bhaṇa*) for many years after parents have passed away, even though they might have been well looked after while alive. Some people, perhaps, never look after their parents while they are alive, go abroad to enjoy luxury as they please, and then, upon hearing of their parents' death, return and hold alms-givings just to show off to the world. But a much rarer concept—and the highest form of service one can perform for living parents—has been taught by the Blessed One. You must have heard those teachings on many previous occasions.</p>
+<p>The Blessed One once declared that there are two people in the world whom it is not easy to repay, to serve and finish serving. That is to say, there are two people in the world whom one can never fully repay or settle one's debt of gratitude to. Who are they? One's mother and father. Next, the Blessed One explains this in detail in a very wonderful way. If a son, even if he had a lifespan of a hundred years, were to carry his mother on one shoulder and his father on the other shoulder, and attend to all their needs, even cleansing their excrement and urine while carrying them, even then, he would not have repaid his debt to his mother and father. Likewise, if a son were to establish his mother and father in supreme sovereignty, as rulers over this great earth filled with the seven treasures, even then, he would not have repaid his debt. But, if a son establishes faithless parents in faith (*saddhā*); if he establishes unvirtuous parents in virtue (*sīla*); if he establishes stingy parents in generosity (*cāga*); if he establishes ignorant parents in wisdom (*paññā*); then that son has not only helped his parents, he has not only helped them sufficiently, he has helped them more than enough—so teaches the Blessed One.</p>
+<p>In truth, this refers to a son like the Ven. Sāriputta Maha Thera, who, having entered the monastic life and become accomplished in those virtues, helps his mother and father in that manner; that is the highest level. Now, what did these children do here? They recognized the Buddha. Thus, they must have developed a deep concept of faith (*saddhā*) as well as a profound sense of gratitude regarding parent-care. Bearing this in mind out of gratitude, they invited their father and offered a *jīva-bhatta* (alms offered while alive), not a *mataka-bhatta* (death-alms). They did not wait until he died. They offered it as a *jīva-bhatta*. As a result of this, the faithless son of the cattle-butcher grew in faith (*saddhā*). He who lacked virtue (*sīla*) grew in virtue. He who lacked generosity (*cāga*) grew in generosity. And the culmination of his accomplishment in wisdom (*paññā*) was his attainment of Non-returning (*Anāgāmi*).</p>
+<p>So we can understand the value of the operation of the Wheel of Dhamma (*Dhamma-cakka*) and the children’s care of their parents. Next, let us contemplate the depth of these verses, as far as we can see. We cannot directly express things that lie within the domain of the Buddha's knowledge (*Buddha-ñāṇa*). The Buddha must have seen some supporting condition (*upanissaya-sampatti*) and kamma-force within this butcher's son, even though he grew up in such a harsh environment. We can only comment on what is visible to us through these verses. Indeed, it appears that the Buddha preached two pairs of verses within those two days. What was the first line of the verse preached on the first day? That simile is an extremely deep one. Addressing this elderly lay devotee, He says, "You are now like a pale, withered leaf." Now, when a leaf turns yellow and is about to fall from the tree, it detaches and falls at the slightest breeze, doesn't it? So, by means of that, He explained his old age. Next, what happens after falling? Or rather, to remind him of where he is heading, He spoke the second line: *yamapurisā pi ca te upaṭṭhitā*—"the messengers of death (*yamapurisa*) stand ready to receive you." Thus, He gave an indication of his destination. We have to think that, willingly or unwillingly, the butcher’s son must have assisted in his father’s trade. He must have spent his life eating beef in the same manner. If his life had ended in that way, that would have been his destination. The messengers of death (*Yama-dūta*) are now ready to receive you.</p>
+<p>Likewise, *uyyogamukhe ca tiṭṭhasi*—"you are standing at the threshold of departure, as if you have stepped out of the doorway to begin a journey; now the time of departure has come. You are standing fully prepared." Next, *pātheyyampi ca te na vijjati*—"you have no provisions for the road." Even though you are ready to depart, what of it? With that first verse, the Buddha aroused spiritual urgency (*saṃvega*). Spiritual urgency (*Dhamma-saṃvega*) was aroused regarding himself. He reminded him of the absence of wholesome deeds within himself. At the same time, the cattle-butcher's son must have remembered his past. The moment he fled from home in terror, the livelihood his father did—all of that must have been recalled through this story of the messengers of death (*yamapurisa*). Thus, a certain spiritual urgency (*saṃvega*) was aroused. It is through spiritual urgency (*saṃvega*) that one gets inclined towards the Dhamma.</p>
+<p>Then the second verse: *So karohi dīpamattano*. With the second verse, He energized him. Through the first verse, He showed him his state and aroused spiritual urgency (*saṃvega*). Through the second verse, He inspired effort. *So karohi dīpamattano*—"Therefore, make an island for yourself." The boat of your life is about to capsize; find an island. Find a refuge. *Khippaṃ vāyama paṇḍito bhava*—"Strive quickly, become wise." Next, *niddhantamalo anaṅgaṇo*—"Having removed your rust, become free from defilements." Now, this elderly man was a wise man of sorts, a master goldsmith who had graduated. So, making use of that cleverness, what was he to do next? *Niddhantamalo anaṅgaṇo*—as a goldsmith, this man possessed the skill to remove rust and impurities to shape gold. Now, it was not that which had to be done. He had to remove the rust of the mind and become free of defilements. Next, *dibbaṃ ariyabhūmimehisi*—"If you do so, you will go to the divine Ariya-realm." The Buddha brought this to light. Hearing this, and directing his mind towards it, that man must have attained Stream-entry (*Sotāpanna*); that is how we have to understand it.</p>
+<p>And then, the second occasion. We do not know how he spent that day. That man, practicing diligently in accordance with the Buddha’s teaching, thinking, "Now I must fashion my mind," must have applied that skill with which he once made gold ornaments to the satisfaction of his teacher. Indeed, in certain suttas that speak of training the mind, the Buddha uses this very simile of the goldsmith. Just as a goldsmith kindles a fire—those who know the goldsmith's craft would have seen how he holds a piece of raw gold over the fire, blows on it, heats it, and from time to time moistens it with water, and from time to time lets it cool down; in this way, through systematic effort, he crafts gold ornaments. Similarly, using that simile, the Buddha states that if one is to fashion the mind for Nibbāna, if one is to direct the mind towards insight meditation (*vipassanā*) and other meditative practices, what is required are concentration (*samādhi*), energy (*viriya*), and equanimity (*upekkhā*). As shown in those factors, one does not continuously develop concentration alone. Just as the goldsmith heats the gold from time to time, moistens it with water from time to time, and lets it cool for a while from time to time, so should one systematically develop concentration, systematically develop energy, and systematically develop equanimity from time to time. We mentioned this as an additional point, but through this, we can understand that the wise son of the cattle-butcher, the goldsmith, had now developed spiritual urgency (*saṃvega*) and had entered the fruit of Stream-entry (*Sotāpanna-phala*). We do not know how he spent the rest of that day, but it is said that after hearing the sermon on the second day, he became a Non-returner (*Anāgāmi*).</p>
+<p>Thus, based on this, what we have to understand is that when we contemplate the Wheel of Dhamma (*Dhamma-cakka*), there is something unique about it. When we reflect on the virtues of this Dhamma, there are six terms that are regularly used, which you, meritorious friends, recite almost daily: *svākkhāto*, *sandiṭṭhiko*, *akāliko*, *ehipassiko*, *opanayiko*, *paccattaṃ veditabbo viññūhi*. These are the wonderful qualities of this Dhamma. While the Wheel of Kamma (*Kamma-cakka*) rolls on in that manner, the Wheel of Dhamma rolled by the Buddha is so powerful that, as you know from many Dhamma stories, there are instances where the Buddha gave just a brief piece of advice, uttered a single verse, and people attained not only Stream-entry but even Arahantship.</p>
+<p>That is the wonder of the Wheel of Dhamma. For, when it comes directly from the mouth of the Buddha, the Dhamma is perfectly well-proclaimed (*svākkhāta*). There is no lack or shortcoming. Through his direct realization (*pratyakṣa-jñāna*), He knows the inclinations and Latency / Underlying tendency (*Anusaya*) of each individual. When the Buddha directs his Buddha-knowledge (*Buddha-ñāṇa*), the past histories of all those individuals are fully seen. The past momentum of kamma, the kamma-forces, the good and the bad, are all fully seen—this is the knowledge of inclinations and underlying tendencies (*āsayānusaya-ñāṇa*). Likewise, if they had practiced meditation in various past births, the Buddha even sees the meditation objects (*kammaṭṭhāna*) they used to support that practice. It is with that understanding that the Buddha preaches a word of Dhamma to someone. That is the quality of His teaching.</p>
+<p>Because it is well-proclaimed (*svākkhāta*), the Dhamma preached by the Buddha as well-proclaimed can be seen in this very life, right before one's eyes, as *sandiṭṭhika* (directly visible). This is a wonderful thing about this Dhamma. Likewise, it is *akālika* (timeless), yielding results right then and there without delay. There is no need to wait and see in the next world; it is right here. Thus, it is *akālika*. *Ehipassiko* (inviting trial/investigation) means that this Dhamma has an "invite to come and see" quality. As soon as one puts the Dhamma into practice, one can experience its results for oneself. *Opanayiko* (leading onwards) means that the Dhamma has a quality of pushing one forward, stage by stage. One factor connects to and leads to the next. When one fulfills one virtue, it leads and connects to the next. We have often spoken to you at length about these matters, such as the wonderful connection between Right View (*sammā-diṭṭhi*) and Right Thought/Intention (*sammā-saṅkappa*) in the Noble Eightfold Path. There is no need for someone else to come and push. Once you place yourself at one point, it proceeds naturally. Just as a person climbing a flight of stairs, when they lift one foot and place it down, the other foot is already raised; similarly, as one proceeds rightly, one is prepared for Right Thought, and as one goes into that, Right Speech (*sammā-vācā*) follows. In this way, from whichever point you take it, the Dhamma has an *opanayika* quality. It has a quality that leads onward. *Sandiṭṭhiko, akāliko, ehipassiko, opanayiko*. And because of these, *paccattaṃ veditabbo viññūhi*—if one is a wise person (*viññū*), even if one does not have much academic learning—for instance, this man was a certified goldsmith, but even without such qualifications, even if one is an ordinary farmer—if, through the power of past merits, one has practiced insight meditation (*vipassanā-bhāvanā*) in the past, then to such a wise person, the truth of the Dhamma is *paccattaṃ veditabbo*—directly knowable and realizable by oneself.</p>
+<p>It must be due to that quality that this man, who was bound for hell, became a Non-returner (*Anāgāmi*). Instead of going to hell, he became a Non-returner. Thus, one can understand something from this. This is one aspect of the story—the value of the Dhamma. When we generally speak of "the cattle-butcher's son," we think of someone branded by society, someone marginalized. But there is a wonderful impartiality in this story. Even though this cattle-butcher's son had not engaged with the Dhamma before like his children who offered the alms-giving did, yet, due to his past wholesome potential and because the Buddha's sermon was directed precisely at him, he attained such a state. Therefore, we must not brand such a person. There is always room for someone to reform. Once the Buddha aroused spiritual urgency (*saṃvega*) in him, that man recalled the traumatic event of his past, how he had abandoned his mother and left his home. He must have remembered what had been forgotten through this vision, which brought about such deep spiritual urgency (*saṃvega*). Along with that, the fear of hell arose. Once spiritual urgency (*saṃvega*) was combined with that, he understood what had to be done. Now, he did not know whether death would come tomorrow or even today. With great spiritual urgency (*saṃvega*), that man must have applied his mind to the Dhamma principle brought to light by the Buddha. Whichever way it was, he attained that state.</p>
+<p>Now let us return to the beginning of the story. We all know that his story involves wrong livelihood (*micchā-ājīva*). Trading in meat is a wrong livelihood, just like trading in poison or weapons, because it leads to violence and harm. It leads to the killing of living beings. That is one aspect. From the perspective of livelihood (*ājīva*), that cattle-butcher was directly headed on the path to hell. In addition to that, it is worth contemplating the attachment to the taste of meat that arose in him. Why? Various arguments are put forward, and those arguments are also presented by the tongue. But let us think a little about this tongue. This tongue is a very sensitive organ, the most sensitive organ in our body. Now, when we speak of delicious food, even if the food is not actually present, what happens to the tip of the tongue? Saliva starts to flow, doesn't it? It is that kind of thing. Thus, such a sensitive organ is hidden within this tongue. In the course of endless Saṃsāra, we have been animals of various kinds, demons and monsters, and the kamma-momentum of having eaten meat with relish is accumulated within these. A good opportunity to awaken those is the addition of meat to this.</p>
+<p>There is another companion that goes along with the taste of meat: intoxicating liquor. If those two go together, they can go a long way. It might even be a shortcut to the world of the gods. When the taste of meat and the taste of liquor go together, there is no lack of anything. Here, even without the taste of liquor, the cattle-butcher, after taking a good bath and when his mind was quite calm, committed such a cruel deed. When the taste of liquor is also added to that, what is it that cannot be done? You have heard of many such occurrences in this society. Now they have become common events. Behind five-star hotels and entertainment complexes, there are yards. At any time, an animal can be brought, prepared as requested, and served to the table with or without seasoning—but certainly with spoons and forks—to be consumed. In this way, a lifestyle is now developing that takes us back to a primitive, savage era.</p>
+<p>Likewise, when thinking about livelihood (*ājīva*), the easiest farming is today scientifically demonstrated as sowing seeds and harvesting a good yield within a few days. Through such livelihoods, one can become wealthy very quickly. Support is received from everywhere, and everyone is heard talking about such people. Some are amazed, saying they are progressing rapidly. That might be so in terms of money. But we must consider where they will end up falling.</p>
+<p>Indeed, for all of that, encouragement for such livelihoods is received from our tongue. Because of that greed for the taste of meat, one is tempted to commit such cruel things. Likewise, the inability to eat without meat. Because we cannot eat without that putrid taste, we extend our support to the cattle-butcher or the meat merchant. That is what is taught in the Dhamma. If the precept of refraining from taking life (*pāṇātipātā veramaṇī*) is kept properly:</p>
+<p>> *Pāṇaṃ na hane na ca ghātayeyya,*</p>
+<p>> *navānujāññā hanataṃ paresaṃ.*</p>
+<p>></p>
+<p>> "One should not kill a living being, nor cause others to kill, nor approve of others killing." Whether knowingly or unknowingly, we cannot say—but in whatever way, we want meat for our food.</p>
+<p>So, we must obtain it from somewhere, and it must be supplied from somewhere. That is all. But indeed, it is because of this desire for meat that we have to understand that wrong livelihood (*micchā-ājīva*) has received such support. Then, one must contemplate particularly about cattle-slaughter. The Blessed One has declared: *"Tayo rogā pure āsuṃ"* (Formerly there were three diseases). It is mentioned that in the very ancient past, there was such a time. The Dhamma mentions wonderful things about this world-system (*loka-dhātu*) during times when humans had long lifespans. As the Buddha's word, we have to accept them. In the ancient past, humans had only three diseases: desire, hunger, and Decay.</p>
+<p>That was all. There were desires, there was hunger, and they fell into Decay—those were the only illnesses. But these became ninety-eight after they began killing cattle. Slaughtering cattle is particularly significant; indeed, among the brahmins in India, and not only according to the environment of India but even if we think about human life today, the cow is the foster-mother. Sometimes there is no milk to drink from the mother in modern times. From the very beginning, they drink cow's milk. So, she is the foster-mother. It is not surprising that people are cruel enough to kill the foster-mother, perhaps because they even kill other mothers in this day and age.</p>
+<p>One must think about how severe the consequences of these actions are. Moreover, the cow is a very innocent animal. All of this has been mentioned by the Blessed One in the Dhamma. Cattle-slaughter is particularly distinct. It is also mentioned in the Dhamma that killing animals with highly developed minds, such as elephants or cattle, is extremely dangerous. One should not think that eating fish is fine because of this. Some people do not eat meat but eat fish. They do not realize that fish is also flesh. They think fish is a different kind of creature altogether. Meat is the flesh of large animals like cows, not fish—so they eat fish. However that may be, the root of that concept lies in the tongue. It is that very tongue that presents various arguments. Such is the situation. We must consider where we are going. No matter how much this world is puffed up with great progress, suddenly, even sea water comes and sweeps it all away. After all that prosperity is beautifully shown, that is the nature of Māra. It is like throwing one up only to smash them down.</p>
+<p>So, a millionaire, within a matter of days, finally dies either from some terrible accident, a fatal accident, or from an accident from the outside. If not, from some severe painful disease from within—diseases that are karmically correspondential (*kamma-sarikkha*). We hear of many such accounts. Even in modern times, those who brutally slaughtered cattle, killed animals, or slaughtered chickens, fall victim to painful diseases that remind them or force them to recall the cruel tortures they inflicted, and they go to ruin. Sometimes, efforts are made to hide these as secrets, in order to encourage this wrong livelihood (*micchā-ājīva*). But this is the eternal truth of kamma:</p>
+<p>> *Yādisaṃ vapate bījaṃ tādisaṃ harate phalaṃ,*</p>
+<p>> *Kalyāṇakārī kalyāṇaṃ pāpakārī ca pāpakaṃ.*</p>
+<p>This is the farming that the Blessed One presents: the farming of kamma. In whatever way one sows, in that way must one harvest. *Kalyāṇakārī kalyāṇaṃ*—if one sows good, one can harvest good; one can reap a good harvest. *Pāpakārī ca pāpakaṃ*—by sowing evil seeds, one can never obtain good results, even if it might temporarily seem so. That is the word of the Buddha. The danger of the Wheel of Kamma (*Kamma-cakka*) is visible to us through this. Shaping our life and shaping our livelihood (*ājīva*) is something that belongs to us. Livelihood (*ājīva*) does not just happen on its own. One must make a great effort for it. Applying the mind to Right Livelihood (*sammā-ājīva*) helps to bring forth that Right Effort (*sammā-vāyāma*). Right Livelihood means a correct living. Indeed, the biggest problem for everyone, once they leave the protection of their parents and enter society, is the question of employment. Once parental protection is gone, one must earn a living. What is easy for that? People choose whatever can make them wealthy quickly and easily. They present it, saying, "Why, this can be done in a matter of days." But that is the point: one must be prepared to harvest exactly what one sows.</p>
+<p>So, one must contemplate in this way with wisdom, looking at society. That very cruelty, the cruelty shown towards animals, is what people now show towards one another. Sometimes, people suddenly discover that the food they have been relishing in some restaurant for so long was actually human flesh. Then, even vomiting is not enough to make amends. But after some time, these things become normal, and that savage nature of killing and eating one another in the past might re-emerge. If there is a population problem, the easiest way to solve it is by killing and eating one another. That is what happened in the past. In the past, many did not have that population problem. The minds of humans are drawn to such cruelty from these small things. Now, that man could not eat a single meal of rice without the taste of meat. Even having eaten it every day, it was still not enough. Once that craving (*taṇhā*) for taste has arisen, somehow or other, it does not matter how, it must be obtained.</p>
+<p>It is through that, then, that one is tempted into other evils. Even if we do not do it ourselves, we get someone else to do it, and arguing that there is nothing wrong with it, we enjoy and relish it. But through this, there is a progressive decline of virtues in this society. Likewise, this current wave regarding the economy. One must contemplate with wisdom, no matter how much aid is given. Aid is even given to these things from areas where it should not be given. But we do not need those. We make our own honest, Dhamma-conforming refuge, and the determination to live according to the word of the Buddha—that itself is why it is said that an effort, a special energy (*viriya*), is required to protect that livelihood (*ājīva*). There are various things that cause defilements to arise in the mind. One must not give way to them. Otherwise, one could trade in weapons. One could trade in poison. One can earn a great deal from those too. The Blessed One has shown those too as wrong livelihoods (*micchā-ājīva*), because they lead to harm and violence towards living beings.</p>
+<p>According to this, we must contemplate through all of this: no matter how much we talk about the Dhamma of the Buddha, if we do not live accordingly, we can never obtain the expected results. Therefore, the responsibility of shaping one's daily lifestyle lies with oneself. Just as with livelihood (*ājīva*), the greed for the taste of meat must be abandoned through a firm determination. If one observes a certain principle, that principle becomes a strength and help to observe another principle. When a person addicted to liquor abandons that desire for liquor, they can develop a great strength in their mind. Taking refuge in that, they can proceed forward on the path of Dhamma. It is the same with this matter.</p>
+<p>So we see from these Dhamma stories where these actions lead. The Blessed One has shown the consequences of the unwholesome deed of taking life (*pāṇātipāta*). Regarding that unwholesome deed of taking life, He speaks directly of *lohitapāṇi*—hands wet with blood. The person who lives by slaughtering animals in a very brutal manner goes to one of the four states: hell (*niraya*), the animal realm (*tiracchāna-yoni*), the hungry ghost realm (*peta-yoni*), or the demon realm (*asura-yoni*). Next, even if they somehow obtain a human birth, it is said that they will be short-lived. Many proofs of this are received not only from the Blessed One but also from the Ven. Mahā Moggallāna Maha Thera. We have mentioned a very good incident regarding this matter of the cattle-butcher on previous occasions.</p>
+<p>On one occasion, Ven. Moggallāna Maha Thera and Ven. Lakkhaṇa Maha Thera were residing on the Vulture's Peak (*Gijjhakūṭa*). One day, Ven. Moggallāna Maha Thera said to Ven. Lakkhaṇa, "Let us go to Rājagaha for alms." Next, as they were descending the Vulture's Peak, at one spot, Ven. Moggallāna Maha Thera smiled slightly. The smiles of these Arahants are highly meaningful. Ven. Lakkhaṇa asked, "Why did you smile?" He replied, "Ask this in the presence of the Blessed One. I will not say it now." Next, after collecting alms and finishing their meal, they went to the presence of the Blessed One. There, Ven. Lakkhaṇa asked Ven. Moggallāna Maha Thera, as agreed, "Why did you smile slightly earlier during the day?" Then, in front of the Blessed One and the Saṅgha, Ven. Moggallāna Maha Thera revealed the matter:</p>
+<p>"As I was descending the Vulture's Peak, I saw a skeleton flying through the air. Vultures, crows, and hawks were pecking at it between its ribs. That skeleton was flying along, screaming and crying out in pain. I smiled at that moment, thinking, 'How amazing that such forms of existence (*ātma-bhāva*) actually exist!'" Hearing this, the Blessed One declared before the Saṅgha: "Monks, I too saw that extraordinary being with my divine eye (*dibba-cakkhu*). However, I did not declare it because if I had said so, people might have said, 'Why can't we see it?' and if they had corrupted their minds towards Me, it would have turned out badly for them. They might even have gone to hell (*niraya*), thinking that the Blessed One speaks untruths. That is why I did not say it. Now, I have a witness." The Blessed One began by saying, "My disciples live with eyes open, they live with wisdom. Such things are visible not only to Me, but also to My disciples."</p>
+<p>Then, the Blessed One, with this witness, explained that the one who went like a skeleton was a cattle-butcher. A cattle-butcher who had lived in this very city of Rājagaha. As a result of carrying out that cattle-slaughtering kamma, he had boiled in hell (*niraya*) for many years, many hundreds of years, many thousands of years, many hundreds of thousands of years, and had now obtained this form of existence (*ātma-bhāva*). Thus, having scraped off the meat of those cows, the skeleton is often seen in those butcher shops. This man was now like that skeleton. Yet, when those birds and other creatures pecked at him, that form of existence (*ātma-bhāva*) screamed in agony. There are extraordinary, living forms of existence (*ātma-bhāva*) in this world that are not visible to the ordinary physical eye. They are visible only to those with the divine eye (*dibba-cakkhu*).</p>
+<p>Another story of the same kind occurs right alongside that. A piece of meat was flying through the air. Vultures and crows were pecking at it too. That piece of meat was flying through the air, crying out. What was this piece of meat? That too was a certain form of existence (*ātma-bhāva*). In the past, he was a cattle-butcher. In this manner, many accounts regarding bird-slaughterers and others are mentioned alongside this, as consequences of killing animals. So, those hungry ghost existences (*peta-ātma*) and demon existences (*yakkha-ātma*) in this world are obtained as the residual results, the tail-end of that committed kamma. The actual result is experienced in hell (*niraya*). Having suffered the pain of hell for aeons, hundreds of thousands of years, they obtain those hungry ghost existences (*peta-ātma-bhāva*) which are visible only to those with the divine eye. Coming even closer to this side, they obtain human births, and we occasionally hear of children born like demons, deformed individuals without hands or feet. Furthermore, wonderful illnesses occur according to past kamma-forces, according to dangerous kamma-forces. We must understand that underneath those lie such kammas.</p>
+<p>Therefore, the unwholesome deed of taking life (*pāṇātipāta*) is an extremely serious matter. That is why it is presented as the first precept. Something that supports that is violence towards animals. The root of all of that is the nature of the animal world, where one devours another. An animal does not wait until the other dies. We can see certain animals where the final lament of the animal is heard from inside the stomach of the other animal—such as when water monitors swallow a creature, sometimes frogs. The final sound is heard from the stomach. Such is the habit of swallowing alive. That is why the Blessed One has declared that once one falls into the animal world, it is extremely difficult to come back up. What is the reason? The Blessed One describes the nature of hell and the animal world as: *"aññamaññabhādikā vattati dubbalabhādikā"*—in the animal world, it is mostly not animals like cattle, but meat-eating animals devouring one another. Likewise, *dubbalabhādikā*—the weak are devoured. Especially regarding creatures in the ocean. This is called the law of the fish (*matsya-nyāya*)—one preys upon another. So, if a human behaves in this way, it does not conform to humanity.</p>
+<p>In truth, this is now becoming a pattern. There is not much desire for a dead animal. It is the same with wild animals. It is the habit of wild animals to prey upon the living along with their warm blood. Now, this is very modern. Before an animal draws its last breath, we must take the meat that can be taken from that animal to satisfy our tongue. That is the newest method. In those hotels, they do not wait until they die. People do these things themselves. When those forks and spoons and other external things are removed, what is actually present here is a return to a savage era. So, we must contemplate these things with wisdom. We grasp large, deep matters, but we do not make an effort to reform these weaknesses that appear ordinary in daily life but go a very long way. Instead, we present various arguments and try to "save our own skin." Even if you save your skin, meritorious friends, you cannot save your mind. The body too will eventually be joined with terrible actions at some point.</p>
+<p>Therefore, contemplating these things, you, meritorious friends, have observed a certain virtue (*sīla*) on this valuable day. Virtue (*sīla*) means gentleness/taming. To that gentleness, all of what has been mentioned belongs. Abstaining from killing animals. Abstaining from stealing. Such abstinences—we must constantly remind ourselves of the word *veramaṇī*. The most valuable word in a training precept (*sikkhāpada*) is this. *Veramaṇī* means abstinence/refraining. Thus, doing is easy, refraining is difficult. It is through doing the difficult thing—it is that training (*sikkhana*) that helps us to shape our lives. Only then does one become tamed. That is how an elephant or a horse is tamed. How much effort does an elephant-trainer or a horse-trainer make to tame that animal? A wild animal. So, we too must tame ourselves, not just because someone else told us to. What helps in that is faith (*saddhā*) in the Triple Gem.</p>
+<p>The Blessed One did not tell us this to give us pain. As mentioned, the Blessed One brought this Wheel of Dhamma to light for us to put an end to suffering, with the help of the Wheel of Dhamma which rescues those suffering. It is in accordance with that that these precepts, such as virtue (*sīla*), are given. Not as a burden, but for our own well-being. When we say "our own well-being," it is not only well-being in this life. Life does not end here. If life ended here, it would not matter how we lived. But not only the Blessed One, even the yogis of the past have shown that we go on for an endless time in Saṃsāra, being born and dying in various forms of existence. The Blessed One has declared:</p>
+<p>> *Na taṃ kammaṃ kataṃ sādhu, yaṃ katvā anutappati,*</p>
+<p>> *Yassa assumukho rodaṃ, vipākaṃ paṭisevati.*</p>
+<p>></p>
+<p>> "That deed is not well done which, having done, one repents, and the result of which one undergoes weeping with a tearful face."</p>
+<p>Thus, some might say, "Even if we commit this kamma now, we will not know it later. We won't be there. It won't be 'us.' We won't remember." One cannot escape in that way. At the moment of experiencing it, one cries, "Oh, how did this happen?" not knowing why. Within that experiencing, suffering (*Dukkha*) belongs to oneself. This is because of having done it knowingly. Even if one does not know, or does not know that so-and-so did it, one still has to undergo the experience. That is what the Blessed One has declared. Only after going to a skilled doctor do we realize that we ate something unwholesome in our childhood without knowing it. That ultimately comes out, perhaps in modern times, as a disease like cancer. Only then do we remember, "Oh, we took that delicious food!" and later this doctor says, "This is the cause."</p>
+<p>Similarly, the Buddha points out to the world: though you now appear healthy and well, there is a certain toxic seed in the mind that is required for this disease. Until that is removed, you cannot be healthy. One must contemplate in that way. So, one cannot escape through those various arguments, saying, "Upon being reborn, that is not us." As the result of kamma, one has to take that responsibility at some point. Contemplating in that way, one must set one's life right. That elderly son of the cattle-butcher was a true wise man (*paṇḍito*) at his final moments. Nowadays, "wise" (*paṇḍita*) is used to describe academic learning. Here, "wise" does not refer to academic learning. It is not academic learning that the Blessed One urged him to do quickly. He told him to quickly purify the mind—that is wisdom. That is true wisdom.</p>
+<p>Therefore, everyone is invited to become that kind of wise person. It is worth making that phrase, *khippaṃ vāyama paṇḍito bhava*, a guiding motto for one's life in accordance with these verses. Now, if this Dhamma sermon—which helps you to shape your lives, your daily living, and shows the wonderful nature of this Wheel of Dhamma—has served to bring forth faith (*saddhā*), energy (*viriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*), which are the Dhamma-forces, the spiritual faculties (*bala-dhamma*) that aid in the realization of Nibbāna, may all of that, supported by the association with noble friends (*kalyāṇa-mitta*), definitely serve as a supporting condition (*upanissaya*) to quickly escape from all the suffering of Saṃsāra, such as Birth / Arising (*Jāti*), Decay, sickness, and death, and to realize the supreme, deathless Nibbāna—the fruit of the path through the realization of the stages of Stream-entry (*Sotāpanna*), Once-returning (*Sakadāgāmi*), Non-returning (*Anāgāmi*), and Arahantship. Likewise, if there are any beings, from the lowest Avīci hell to the highest Akaniṭṭha heaven, who expect to share in the merit of this Dhamma-preaching and Dhamma-hearing, may all of them, by sharing in this merit, realize the supreme, deathless Nibbāna! Praying thus, let us recite these verses:</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_029.html" class="doc-btn">← Previous Sermon (029)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_031.html" class="doc-btn">Next Sermon (031) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 085 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_084.html" class="doc-btn">← Previous Sermon (084)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_086.html" class="doc-btn">Next Sermon (086) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 085</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_085_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_085_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_085_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #85</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.182)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Na idaṃ anayena jīvitaṃ, nāhāro hadayassa santiko;</p>
+<p>Āhāratthitiko samussayo, iti disvāna carāmi esanaṃ;</p>
+<p>Paṅkoti hi naṃ pavedayuṃ, yāyaṃ vandana-pūjānā kulesu;</p>
+<p>Sukhumaṃ sallam durabbahaṃ, sakkāro kāpurisena dujjaho ti.</p>
+<p>From:</p>
+<p>Itivuttaka (It 93), Saṃyutta Nikāya (SN 17)</p>
+<p>Dear Listeners,</p>
+<p>The lion’s roar is a fearless, heroic sound that puts to flight the roars of all other animals. The Teacher of the Three Worlds, the Fully Self-Enlightened One, who is the Lion of the Sakyans, compared His Dhamma teaching to a lion’s roar. Likewise, He instructed His disciple Sangha to utter lion's roars that would silence other sectarians. Accordingly, among the Sangha of monks who uttered lion’s roars, Ven. Piṇḍola Bhāradvāja, the Great Arahant, attained the foremost position (*etadagga*). The two verses uttered by him, as found in the *Theragāthā*, are what we have chosen as our theme today.</p>
+<p>According to what is stated in the *Apadāna Pāḷi*, the cause for Ven. Piṇḍola Bhāradvāja to receive the foremost position among those who roar the lion's roar was a wholesome deed done during the time of Padumuttara Buddha. Having been born as a lion king, he saw the Buddha who had entered his cave and sat in the attainment of cessation (*nirodha-samāpatti*). After the Buddha emerged from that attainment of cessation, the lion king offered a lotus flower and roared a lion’s roar. It is mentioned in this manner. In this Buddha-dispensation, he was born in the city of Kosambī as the son of King Udeni’s chief Brahmin priest and was known by the name Bhāradvāja. Upon reaching youth, he taught the Vedas and other sciences to other young Brahmins. However, he had a certain weakness. Due to his craving (*taṇhā*) for food—an excessive craving (*taṇhā*) to eat—he was subject to weakness. Because of this, it is said he incurred the displeasure of his students. Later, this Brahmin Bhāradvāja went to the city of Rājagaha and saw the gains and honors (*sakkāra*) received by the Buddha and the Sangha of monks. He then ordained in the dispensation, yet because of his greed and craving (*taṇhā*) for food, he became known by the name "Piṇḍola" (the alms-seeker), and that tendency affected him for a long time.</p>
+<p>However, gradually submitting to the advice and instruction of the Buddha, and practicing the ascetic practices (*dhutaṅga*) such as forest-dwelling (*āraññaka*) and alms-seeking (*piṇḍapātika*), he developed the virtues of fewness of wishes and contentment. Having conquered the aforementioned weaknesses, he practiced insight meditation (*vipassanā*) and became a great Arahant endowed with supernormal knowledges (*abhiññā*). Having attained this—it is mentioned that Arahants sometimes declare their Arahantship in the presence of the Buddha—Bhāradvāja Maha Arahant told the Sangha of monks that besides declaring his Arahantship before the Buddha, "If anyone has any doubt regarding the supramundane path (*magga*) or fruit (*phala*), let them question me." Because he roared such a lion’s roar, and due to this trait of his character, the Buddha declared Ven. Piṇḍola Bhāradvāja foremost among the monks who roar the lion’s roar.</p>
+<p>The occasion for preaching these two verses is recorded in the texts as follows: Out of compassion for a miserly, wrong-viewed Brahmin whom he had associated with during his lay life, Ven. Piṇḍola Bhāradvāja on one occasion preached a sermon on giving (*dāna-kathā*). That miserly Brahmin thought, "He is preaching to destroy my wealth." With his mind corrupted in this way, he nevertheless said, "I will give you a single meal of rice, a single offering of alms." Then, Ven. Piṇḍola Bhāradvāja said, "Give it not to me, but to the Sangha." At this, the Brahmin thought, "See that! He is directing me to give alms not just to himself, but to a large crowd." He corrupted his mind there too. However, as it is stated here, the next day, upon hearing Ven. Sāriputta explaining the benefits of an offering dedicated to the Sangha (*saṅghagata-dakkhiṇā*), he cleared away his displeasure.</p>
+<p>Furthermore, Ven. Piṇḍola Bhāradvāja uttered these two verses to show this Brahmin that he did not preach with any such personal motive:</p>
+<p>> *Na idaṃ anayena jīvitaṃ, nāhāro hadayassa santiko;*</p>
+<p>> *āhāratthitiko samussayo, iti disvāna carāmi esanaṃ.*</p>
+<p>> *Paṅkoti hi naṃ pavedayuṃ, yāyaṃ vandana-pūjanā kulesu;*</p>
+<p>> *sukhumaṃ sallaṃ durabbahaṃ, sakkāro kāpurisena dujjaho.*</p>
+<p>He uttered these two verses. Let us first give the brief meaning.</p>
+<p>*Na idaṃ anayena jīvitaṃ*: This monastic life I lead is not one followed to seek requisites through wrong livelihood (*micchā-ājīva*). "Anaya" means "I am not leading this life by illegal or unrighteous methods"; it means "do not think in that manner."</p>
+<p>*Nāhāro hadayassa santiko*: "Food is not close to my heart." Taken in several senses, food is not something that is close to the heart.</p>
+<p>*Āhāratthitiko samussayo*: "Samussaya" refers to this body, this cage of aggregates, or this form-aggregate (*rūpakkhandha*); this is something that exists and subsists because of food.</p>
+<p>*Iti disvāna carāmi esanaṃ*: "Seeing this fact, I wander in search of alms."</p>
+<p>*Paṅkoti hi naṃ pavedayuṃ, yāyaṃ vandana-pūjanā kulesu, sukhumaṃ sallaṃ durabbahaṃ*: That is, the wise ones like the Buddhas declare that the homage and offerings, the worship and respect received from lay households, are a swamp, and likewise a subtle arrow that is difficult to extract.</p>
+<p>*Sakkāro kāpurisena dujjaho*: Honor, gains, and respect (*sakkāra*) are difficult for a low, unworthy person (*kāpurisa*) to discard—this is the idea contained in these two verses.</p>
+<p>However, if we analyze these verses deeply, many points can be brought out. Now, this must have been said in a way that does not get caught up in wrong livelihood (*micchā-ājīva*). When Ven. Piṇḍola Bhāradvāja preached the Dhamma to that miserly Brahmin, the Brahmin thought, "He is preaching expecting something from me." When the Brahmin said, "I will give you a single meal of rice," the monk declined it, saying, "Do not give it to me, give it to the Sangha." He rejected it. That is indeed a noble quality. Next, he declared this to show that there was no mind within him of seeking requisites in the wrong way of livelihood (*ājīva*). Furthermore, in the saying "food is not close to the heart" (*nāhāro hadayassa santiko*), many valuable points are contained.</p>
+<p>In the *Theragāthā* and elsewhere, and also the Buddha Himself, has preached about this food in a wonderfully deep manner, especially about the craving (*taṇhā*) for taste. In the *Theragāthā*, speaking of the craving (*taṇhā*) for taste, it says: *“rasataṇhāya gadhito hadayaṃ nāvabujjhati”* (one who is bound by the craving for taste does not awaken the heart). There too, the heart is mentioned. One who is greedy, bound by taste, does not awaken the heart. That is to say, they do not awaken to the realization of the paths and fruits (*magga-phala*), to Nibbāna. Likewise, *“rasesu anugiddhassa ñāṇe na ramati”* is also found in the *Theragāthā*. The mind of one who has greed for tastes does not delight in wisdom and concentration. These are the defects in the craving (*taṇhā*) for taste.</p>
+<p>Likewise, this craving (*taṇhā*) for food is a powerful force within beings. Furthermore, to eliminate the weakness of over-eating in Ven. Piṇḍola Bhāradvāja, the Buddha preached the Dhamma on many occasions. Not only for him, but for the sake of the Sangha of monks. On one occasion, the Buddha declared: "How, monks, does a person become moderate in eating (*mattaññū*), knowing the proper measure in food?" There, the Buddha gives wonderfully amazing similes. He declares: "Monks, just as a man applies an ointment to a wound or sore on his body only until that wound heals, in that same way, one should take food considering it merely as medicine."</p>
+<p>There is another simile: when someone is carrying a load with a vehicle, like a cart or chariot of those times, they apply a lubricant, a kind of grease, to the axle where it rubs against the wheel. Food should be taken thinking of it like applying that grease. That is to say, on the journey of carrying this bodily cage, this burden of the five aggregates (*pañcakkhandha*), towards Nibbāna, one should use this food as the oil and grease that helps the wheel turn.</p>
+<p>Next, there is an occasion where the Buddha spoke to Ven. Nālaka regarding taste, saying: *“khuradhārūpamo bhava”*—that is, *“khuradhārā”* means the blade of a razor (the edge of a razor). There, that simile is a wonderfully amazing one. Honey is smeared on the edge of a razor. One has to eat the honey. Must one not do so while protecting the tongue? The Buddha has spoken of such highly sensitive things. To protect the mind from the craving (*taṇhā*) for taste, one should bring that simile to mind: *“khurūpamaṃ madhunālittaṃ”*—how carefully must one lick the honey smeared on the edge of a razor, without cutting the tongue! Having said that, the Buddha declares: "Think of it in that way, and to cross over this desert of *saṃsāra*, consume food just as one applies oil and grease to a chariot."</p>
+<p>Next, many might have heard to some extent a wonderfully amazing simile, producing the deepest sense of spiritual urgency (*saṃvega*), given by the Buddha. Indeed, to convey the idea that food is something that makes the heart tremble, the Buddha on one occasion addressed the Sangha and told a long story-like illustrative simile: "Monks, suppose a husband and wife, along with their only beloved son, prepare to travel a long desert road, taking a small portion of rice or some small provisions for the journey. When they had gone some distance into the desert, their food ran out. Then this husband and wife thought: 'Now our food is finished. We still have a long way to travel. Rather than all three of us dying, it is better that we kill this child, prepare his jerky and dried meat, and eating that, let us cross the desert.' Thus, this husband and wife killed their beloved son, made food-provisions from his flesh, and went on that desert road." Having said this, the Buddha asks: "How do they travel, how do they eat that food?" The Buddha explains this in a deeply moving, sensitive manner: beating their breasts, crying "Where is our only son?", beating their breasts they eat that food.</p>
+<p>Then the Buddha asks: "Monks, do that husband and wife eat the flesh of their only son for play, for fun, or for entertainment? Or to increase bodily intoxication and pride? Or to beautify the body? Or to make it fair-skinned?" The Sangha of monks declare, "No, venerable sir, not for any of those." "Is it not solely for the purpose of crossing over the desert?" The monks say, "Yes, indeed, Venerable Sir." "In the same way, monks, should you consume food: solely to cross over this desert of *saṃsāra*." Thus, here, the Buddha has given a heart-trembling, wonderful simile.</p>
+<p>Unfortunately, the commentators, in a highly uncritical manner, added a novel prolific conceptualization (*papañca*) to this story, thereby reducing its urgency-inducing (*saṃvegajanaka*) aspect. What many get to read in Vinaya-compilation books is that when the food ran out, this husband and wife sat under a tree and started a discussion. The husband says to the wife, "Kill me, and the two of you go on." The wife says, "Kill me, and the two of you go on." Understanding that this cannot be done properly, the mother then sends the child to the father saying, "Oh, I cannot kill him, you kill him." The father sends him to the mother, saying, "I too cannot kill him." While going back and forth in this manner, the child gets exhausted, dies naturally on his own, and then the mother and father eat his flesh. What a foolish thing to do! Without understanding the meaning of that valuable simile taught by the Buddha, they tried to modify this story in a non-violent way. Through that, the deep meaning given by the Buddha was suppressed. What is mostly found is that meaning imported from the commentaries.</p>
+<p>Yet, how deep is that which is in the words of the Buddha! It is not an encouragement of killing (*pāṇātipāta*). Rather, what the Buddha demonstrated there is the gravity and severity of this *saṃsāra*. Now, perhaps you virtuous friends might think that this is an attack launched by the Buddha against meat-eating. No, virtuous friends. Even regarding vegetarian food, if a single grain of rice on our plate could speak, it would tell a heart-trembling story. That rice grain would tell us through how much blood and tears it was born. Therefore, as a whole, there is no meat or vegetarian issue here; as a whole, this food—indeed, this simile is applied to what is called physical food (*kabaḷīkārāhāra*). Four kinds of food are shown in the Dhamma, and among them, this is to show the urgency-inducing state of this physical food (*kabaḷīkārāhāra*) which beings consume in the form of morsels to maintain life.</p>
+<p>Therefore, one must take that simile exactly as it is, without trying to embellish it with new decorations. In that way, the Buddha gave various kinds of similes to eliminate the craving (*taṇhā*) for food. What we have to understand from those similes given regarding the craving (*taṇhā*) for taste is that they were meant to prevent excessive eating like that of Ven. Piṇḍola Bhāradvāja, which occurs due to the lack of the virtue of moderation in eating, of knowing the measure in food (*bhojane mattaññutā*). Furthermore, regarding becoming intoxicated with taste, being greedy for taste through food, the Buddha says that if at any point one conquers that craving (*taṇhā*) for taste, one has abandoned the attachment to the five cords of sensual pleasure (*pañca-kāmaguṇa*). Next, if one removes the craving (*taṇhā*) for food and understands food correctly, the Buddha declares that there will not remain any defilement (*kilesa*) for that person to return to this world. They become a Non-Returner (*anāgāmī*), because through that, the lust for the five cords of sensual pleasure (*pañca-kāmaguṇika-rāga*) is conquered. Food, therefore, goes that far. That is why the Buddha has shown it so deeply.</p>
+<p>Next, "food is not close to the heart" (*nāhāro hadayassa santiko*) can be understood in this way. As said in that broad, heart-trembling manner, this food is prepared and comes to us. Therefore, we must understand that fact. But the point told to us is *“āhāratthitiko samussayo”*. "Samussayo", virtuous friends, means the Buddha looked at this as just something piled up. In the word "samussaya" is the meaning of a pile. In some places, another phrase is used to describe the body: *“mātāpettikasambhavo odanakummāsūpacayo cātummāhābhūtiko”*—born of mother and father, made of the four great elements, and nourished and accumulated by boiled rice and bread-crumbs/gruel. This means it is a heap, an accumulation, a gathering of those things. Thus, with the arising of food, this body arises. From another perspective, since it is stated that it is subject to saṃsāric food, Ven. Piṇḍola Bhāradvāja declares: *“samussayo iti disvāna carāmi esanaṃ”*—because the body needs food, because it subsists on food, I wander in search of alms, walking for alms. Thus it is regarding food.</p>
+<p>Now, in the next verse: *“paṅkoti hi naṃ pavedayuṃ - yaṃ vandana-pūjanā kulesu”*, the worship and respect received from lay households is a swamp. Regarding this gain, honor, and respect (*sakkāra*), the Buddha has wonderfully explained its danger in many discourses in the *Lābhasakkāra Saṃyutta*. For, when one is overcome by gain, honor (*sakkāra*), and fame, those virtuous qualities are suppressed in a most dangerous manner. Instead, one might even go to states of misery and hell (*apāya*). Here, Ven. Piṇḍola Bhāradvāja, since he spoke this after attaining Arahantship, declares it in this way. This too is indeed a teaching of the Buddha. The Buddha has taught that this is a swamp. It is something in which one can sink. Likewise, it is a subtle arrow. Once this arrow pierces, one does not know that the arrow has pierced. It is such a subtle arrow. It is difficult to extract too. *“Sakkāro kāpurisena dujjaho”*—it is said that for a low person (*kāpurisa*), discarding this honor (*sakkāra*) is difficult. Although he preached thus, on one occasion, even he faced severe censure from the Buddha, even after he had attained Arahantship.</p>
+<p>That is a different story, found in the Vinaya *Cullavagga*. In the commentaries, it has been greatly elaborated in various ways with many novel things added. Let us now tell the story briefly as mentioned in the Vinaya *Cullavagga*. It is stated there as follows: On one occasion, the financier (*seṭṭhi*) of Rājagaha received a sandalwood knot—you can imagine, from a large sandalwood tree, a knotted portion—this financier received it. Having received it, the financier thought: "Now, I will have a sandalwood bowl turned from this sandalwood knot. I will use the sandalwood powder produced during the turning for my own consumption." Thinking thus, he had a bowl turned by someone from that sandalwood knot. After that, an idea came: "Now I must offer this bowl to someone." Thinking so, what did this financier do? He put the bowl in a bag, hung it on a bamboo pole, and raised it high into the sky using several bamboo poles. Then, he declared as a challenge: "If there are Arahants in this world, if there are those with supernormal powers (*iddhi*), let them go through the air and take this bowl."</p>
+<p>Then, having heard this—the Vinaya book records it as follows. You know that during the Buddha's time, there were six teachers. All six of them are mentioned. Pūraṇa Kassapa went to meet this financier and said, "I am an Arahant. I too have supernormal powers (*iddhi*). Give that bowl to me." Then the financier said, "No, go through the air and take it." Next, Makkhali Gosāla said in the same way, "I too am an Arahant, endowed with supernormal powers." "If so, go and take it." They too could not. In this way, all six teachers—Pūraṇa Kassapa, Makkhali Gosāla, Pakudha Kaccāyana, Sañjaya Belaṭṭhiputta, Nigaṇṭha Nātaputta, and Ajita Kesakambalī—came and asked for the bowl. But they could not display supernormal wonders (*iddhi-pāṭihāriya*) and take it as requested.</p>
+<p>The next event mentioned is this: One day, during that time, Ven. Mahā Moggallāna and Ven. Piṇḍola Bhāradvāja were walking for alms in Rājagaha. Having heard of this matter, Ven. Piṇḍola Bhāradvāja said to Ven. Moggallāna, "Venerable Moggallāna, you are an Arahant, and also endowed with supernormal powers (*iddhi*). That bowl belongs to you. Rise into the air and take it." Ven. Moggallāna said to Ven. Piṇḍola Bhāradvāja, "Bhāradvāja, you too are an Arahant. You too have supernormal powers (*iddhi*). You do this." So, in the end, what did Ven. Piṇḍola Bhāradvāja do? He rose into the air, took that sandalwood bowl, and flew through the air three times around Rājagaha. While he was flying, the financier, coming outside with his wife and children, saluted him with clasped hands raised to his head, saying, "Oh Bhāradvāja, please descend to our house." Once Ven. Piṇḍola Bhāradvāja descended, the financier of Rājagaha filled that bowl with very valuable delicacies and offered it.</p>
+<p>Ven. Piṇḍola Bhāradvāja, taking that bowl, walked back to the monastery. While he was walking, the townspeople heard about this and, shouting and making an uproar—don't you know, when such a thing happens, even nowadays, if someone rises even six inches, not to say that high, what a big deal it would be! Everyone is just waiting to see. So, in those days too, a huge crowd followed him as he walked to the monastery. The Buddha asked Ven. Ānanda, "Ānanda, what is this shouting and uproar?" Then Ven. Ānanda explained the matter.</p>
+<p>Then the Buddha, having assembled the Sangha of monks, spoke in their midst. Imagine: when a mistake is committed by someone like Ven. Piṇḍola Bhāradvāja, the Buddha does not use the words He uses when censuring others—He does not say *“mōgha purisa”* (foolish man) or "empty man". Instead, He often addresses them either as "Brahmin" or by name. On this occasion, He asked, "Bhāradvāja, is it true, Bhāradvāja, that you did such a thing?" "Yes, Venerable Sir." Then the Buddha censured him thoroughly. He censured him severely: "How can you do such an improper thing, Bhāradvāja, which is unbecoming of ascetics? Why do you perform such an ugly act as displaying supernormal wonders (*iddhi-pāṭihāriya*) to laypeople for the sake of this miserable sandalwood bowl?" Thus, the Buddha uttered words of censure so grave that they cannot even be spoken on this occasion, and finally, what did He do as punishment? "Monks, break this sandalwood bowl. Smash it into pieces and give it to the monks to prepare eye-ointment." Likewise, He banned it: "From today, displaying supernormal wonders (*iddhi-pāṭihāriya*) as superhuman states (*uttarimanussadhamma*) to laypeople is prohibited. It must not be done. If anyone displays supernormal wonders, they commit an offense of wrongdoing (*dukkaṭa*)." According to Vinaya rules, it becomes an offense. He also laid down another rule declaring wooden bowls as improper. He told the Sangha of monks that they should not use wooden bowls. Such was the severe censure received by this Arahant monk, Ven. Piṇḍola Bhāradvāja. Now, one might think, why was this?</p>
+<p>We can think about it at least slightly in this way: In Ven. Piṇḍola Bhāradvāja’s character, there was that lion-like quality of accepting challenges. But what he did was a wrong act. The Buddha—not to mention others, but even to the two chief disciples, Ven. Sāriputta and Ven. Moggallāna—on certain occasions, when a mistake occurred, He would find fault with them. Here too, He censured him strongly. So, through that matter, we can understand the meaning of that verse. It must be because he learnt that lesson that Ven. Piṇḍola Bhāradvāja—now indeed it is clear—told his old friend in that way: "This gain and honor (*sakkāra*) is a swamp. It is a very subtle arrow." Because it is a bad example for this dispensation, the Buddha censured him in that manner on that occasion and banned it.</p>
+<p>Next, as a reason for this, we can also point out that on one occasion, when the Buddha was staying in the Pāvārika Mango Grove in Nālandā, a householder's son named Kevaḍḍha came to the Buddha and said: "Venerable Sir, this Nālandā is very prosperous. Also, there are many here who have great faith in the Blessed One. To increase those who have faith, please appoint some monk to display supernormal wonders (*iddhi-pāṭihāriya*). Then, many more will gain confidence." Then the Buddha rejected it: "Kevaḍḍha, I do not teach the monks in this way: 'Go and display supernormal wonders (*iddhi-pāṭihāriya*) as superhuman states (*uttarimanussadhamma*) to laypeople.'" A second and a third time Kevaḍḍha made this request. On that occasion, the Buddha declared: "Kevaḍḍha, there are three kinds of wonders (*pāṭihāriya*). What are they? The wonder of supernormal power (*iddhi-pāṭihāriya*), the wonder of mind-reading (*ādesanā-pāṭihāriya*), and the wonder of instruction (*anusāsanī-pāṭihāriya*)." The Buddha then explains each one of them.</p>
+<p>"Kevaḍḍha, suppose a certain monk"—first He explains what the wonder of supernormal power (*iddhi-pāṭihāriya*) is. There is a whole series of supernormal powers called *iddhividha* often mentioned in the discourses, extending finally up to the Brahma-world. Flying through the air, walking on water, and such wonderfully amazing series of supernormal powers are explained by the Buddha. "Suppose a certain monk displays a wonder of supernormal power, and a layperson who has faith and confidence goes to someone who lacks faith and confidence and says, 'Such and such a monk showed supernormal powers in this and this way.'" The Buddha explains: "Then that other person might say: 'There is a charm and science called Gandhārī. Through that science, too, such wonders of supernormal power are displayed. This is not such a great thing.'" Having explained this, the Buddha says: "That, Kevaḍḍha, is the disadvantage (*ādīnava*) I see, because of which I am disgusted by supernormal powers. I do not regard the wonder of supernormal power highly." The Buddha explained this with reasons.</p>
+<p>Next, He explains the wonder of mind-reading (*ādesanā-pāṭihāriya*). The wonder of mind-reading means that certain people have the power to look into other people's minds. Seeing the way thoughts and reflections (*vitakka*) arise in someone's mind, they reveal them: "At this moment, these and these things are in your mind." To demonstrate its disadvantage, the Buddha explains: "Suppose a person with faith sees a monk performing the wonder of mind-reading in that way, and goes to someone without faith and says, 'So-and-so has such a power to read people's minds.' Then that other person says, 'There is a charm called Maṇikā. Those who know that charm can also read people's minds in that way. This is not a great thing.'" Therefore, the Buddha pointed out: "Because of that disadvantage, I do not regard mind-reading highly."</p>
+<p>Instead, the Buddha declares the wonder of instruction (*anusāsanī-pāṭihāriya*). What is the wonder of instruction? It is briefly shown in this way. A deep meaning is contained in it as well:</p>
+<p>*“Evaṃ vitakketha, mā evaṃ vitakkayittha, evaṃ manasikarotha, mā evaṃ manasākattha, idaṃ pajahatha, idaṃ upasampajja viharatha.”*</p>
+<p>In this way, the wonder of instruction is shown in six phrases.</p>
+<p>Its meaning: *“Evaṃ vitakketha”*—think thoughts and reflections (*vitakka*) of this kind. *“Mā evaṃ vitakkayittha”*—do not think thoughts in that and that way. *“Evaṃ manasikarotha”*—attend to things in this and this way. *“Mā evaṃ manasikarotha”*—do not attend to things in that and that way. *“Idaṃ pajahatha”*—abandon this. *“Idaṃ upasampajja viharatha”*—attain and dwell in these and these qualities. Thus, the two sides of what should be done and what should not be done. That is what the Buddha calls the wonder of instruction (*anusāsanī-pāṭihāriya*). The Buddha explains this wonder of instruction at greater length. The entire training and practice (*paṭipadā*) of the Dhamma, which contains those mentioned points, belongs to the threefold training of virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*).</p>
+<p>You virtuous friends have heard of the six qualities of the Dhamma. We have expressed on many occasions that what is contained within *“svākkhāto bhagavatā dhammo sandiṭṭhiko akāliko ehipassiko opanayiko paccattaṃ veditabbo viññūhi”* is indeed this same wonder of instruction. It is a wonder; it is not something that someone else displays and about which one makes a doubtful conclusion. The wonder of instruction is something that one realizes oneself, understands, and becomes free from doubt. A very deep saying is contained within those few phrases. The Buddha invites—rather than the Buddha inviting, as we have stated on many occasions, it is the Dhamma itself that challenges there. That is why the Dhamma is called "come and see" (*ehipassika*). That is what *“ehipassika”* means. This is a well-expounded (*svākkhāta*) Dhamma. It is for an ill-expounded (*durakkhāta*) teaching that wonders and miracles of that other kind are needed to inspire faith in someone. By showing strange and novel things, making people watch with mouths wide open, they might think, "It is indeed so," and sometimes there is also room for doubt. Those are the wonders mentioned earlier.</p>
+<p>The wonder of instruction (*anusāsanī-pāṭihāriya*) means that one enters that path oneself and realizes it oneself. That is *svākkhāta* (well-expounded). *Durakkhāta* is a wrongly preached teaching. The Buddha declared on some occasions that in a dispensation with a wrongly preached teaching (*durakkhāta*), the person who does not exert effort is the one who lives happily. The one who exerts effort suffers, because no benefit can be derived from that teaching. But in the well-expounded Dhamma (*svākkhāta*), it is the energetic person who lives happily. The energetic person obtains those results. The one who lacks effort lives in suffering (*dukkha*). What does that difference show? An ill-expounded teaching (*durakkhāta*) is not leading-out (*na niyyānika*). If they teach certain things saying "do these," it is called *durakkhāta* because one cannot reach the intended goal through them. But in the well-expounded Dhamma (*svākkhāta*), this is the expected goal, and what is called leading-out (*niyyānika*) has the power to lead to that expected goal. That is its quality. Because it is well-expounded (*svākkhāta*), we have explained this in detail on a previous occasion.</p>
+<p>"Sandiṭṭhiko" means in this very life. There are two words: *sandiṭṭhika* and *samparāyika*. Sandiṭṭhika means something that can be experienced in this very life. Samparāyika is its opposite—in the next world, meaning "go and see" (after death). In those teachings that are *samparāyika*, it is "go and see". In our Dhamma, it is "come and see!". Come and look. Therefore, it is *sandiṭṭhika*. There is no need to go to the next world and see; if one walks on this path properly, it can be realized in this very life. That is what *sandiṭṭhika* means. Then, one can realize it oneself right before one's eyes in this very life. Because there is no such thing as waiting for the next birth (*jāti*) or after death, it is *akālika* (timeless / immediate). The quality of giving results without delay. You virtuous friends have heard of these: *sandiṭṭhika*, *akālika*. Then there is *ehipassika*: "come and see!" Then each person can see for themselves. *Opanayika* means that step by step, this Dhamma, this practice (*paṭipadā*), has the power to lead the one who enters it onward.</p>
+<p>That is, the Buddha has given similes for this on various occasions. For example, the *Cūlahatthipadopama Sutta* shows that when someone who goes to catch elephants enters the forest, seeing a small footprint or sign of the elephant they are looking for, they do not make a conclusion based solely on that. As they go further, they find more and more signs. Having gone in that way, only when they see the elephant with their own eyes do they know the difference. Likewise, this Dhamma is step by step, through the aforementioned direct realization. That direct realization itself is there. Sometimes in this Dhamma, it is mentioned as *sappaṭihāriya* (with wonders) and *appaṭihāriya* (without wonders). On some occasions, the Buddha speaks of the teachings of other sectarians and gives a strange simile like this: someone declares, "I am in love with the beauty queen of this country (*janapada-kalyāṇī*). I love her very much." Then someone asks, "What kind of person is this beauty queen? Is she dark? Fair? Tall? Short? Do you know any of these?" "No, I don't know anything." Then, it is something without cause or evidence. It is loving a beauty queen whom one does not know. That is a meaningless act.</p>
+<p>Likewise, another simile is shown. Suppose a carpenter is making a ladder, or building a staircase. Then someone comes there and asks, "For which mansion is this staircase?" He does not know of any such mansion. He is just building a staircase. He cannot show: "I am building this for such and such a mansion." That is indeed the simile the Buddha gives regarding a non-leading-out (*aniyyānika*), sectarian teaching. But in this Dhamma, one can show: "It is for this." It is for this Nibbāna. This fact has been shown on many occasions with a very simple point, a simple simile, or a simple illustration. Now, suppose a Brahmin comes and asks the Buddha, "What is this sandiṭṭhika, akālika quality of your Dhamma?" Then the Buddha asks, "Brahmin, when greed is present in you, is there not some restlessness, some defilement in your mind?" "Yes, there is." "Once that greed is eliminated, is your mind not peaceful?" "Yes." There itself it is. Likewise with hatred and delusion. This Dhamma does not need those other strange wonders. One can directly realize its wonder from within, because this Dhamma exists based on those very factors of greed, hatred, and delusion. Thus, one can directly realize it.</p>
+<p>To whatever extent greed is present, to that extent there is suffering (*dukkha*). To whatever extent greed is less, to that extent there is peace. In that way, through a simile and a brief illustration, the Buddha demonstrates that this Dhamma is *akālika*. No one else needs to come and say so; everything is contained within *ehipassika*, *opanayika*, and *paccattaṃ veditabbo viññūhi*. Thus, carrying it out step by step, through *paccattaṃ veditabbo viññūhi*, the wise can see this within their own minds and directly realize it.</p>
+<p>Let us return to those few passages mentioned earlier. It can be said that the entire Dhamma is contained within those first few words: *“Evaṃ vitakketha, mā evaṃ”*. Within the world, there are various thoughts of sensual desire (*kāma-vitakka*), thoughts of ill-will (*byāpāda-vitakka*), thoughts of harmfulness (*vihiṃsā-vitakka*) etc. Do not think in accordance with them. Do not maintain thoughts in that way. Maintain thoughts in this way—the opposite. Maintain thoughts of loving-kindness (*mettā*), compassion (*karuṇā*), etc. That is the training regarding thoughts (*vitakka*). Next, going deeper: *“Evaṃ manasikarotha”*—attend to things in this and this way. Not in a way that defilements (*kilesa*) arise, but in a way that defilements do not arise—this is radical attention and wise attention (*yoniso manasikāra*). Do not attend to things in a way that defilements arise: *“Mā evaṃ manasikarotha”*. Next, He tells directly about what should be done and what should not be done, just as shown in the virtues of *sīla* and so on: *“Idaṃ pajahatha, idaṃ upasampajja viharatha”*—abandon these and these things; attain and dwell in these and these things. Instead of the aforementioned unwholesome states, attain and dwell in jhānas and so on. Thus, the entire True Dhamma is within those phrases. From there, the Buddha explains this practicing path of instruction step by step.</p>
+<p>Then, that is the wonder within the Buddha's Dhamma. It is not that story of flying through the air as mentioned earlier; indeed, because this Dhamma must be seen from within one's own heart, or through one's own direct realization, that is why *“paccattaṃ veditabbo viññūhi”* means each person must realize this for themselves. In this way, the Buddha demonstrated His path of practice (*paṭipadā*).</p>
+<p>What we have to consider is that the aforementioned acceptance of challenges was a saṃsāric strength of Ven. Piṇḍola Bhāradvāja. However, because he acted without reflection in an improper manner, he received censure in that way. Yet, in the Dhamma itself, there is also the Buddha's praise of him. Likewise, on certain occasions, it is recorded in the *Udāna Pāḷi* as follows: Ven. Piṇḍola Bhāradvāja was sitting in meditation near the Buddha. While he was sitting with body erect, in concentration, the Buddha uttered an inspired utterance (*udāna*), a joyful declaration. It is mentioned there that he was forest-dwelling (*āraññaka*), alms-seeking (*piṇḍapātika*), rag-robe-wearing (*paṃsukūlika*), practicing those ascetic qualities (*dhutaṅga*), and endowed with the virtues of fewness of wishes and contentment. Thus, his character is an example for us from one perspective.</p>
+<p>The character of Aṅgulimāla is an example from one side. Within the word "Aṅgulimāla" itself, a side of his character is shown. Regarding Ven. Piṇḍola Bhāradvāja too, within the word "Piṇḍola" is the greed for alms-food, the lack of the quality of moderation in eating. Yet, at a certain point, he developed those ascetic practices (*dhutaṅga*), fewness of wishes, and contentment to such an extent that the Buddha even uttered a certain verse as an inspired utterance of joy on that occasion.</p>
+<p>There was another occasion mentioned regarding Ven. Piṇḍola Bhāradvāja. On one occasion, after he attained Arahantship, he went and declared in the presence of the Buddha, while the Sangha of monks was listening, "Now all taints (*āsava*) within me are destroyed; there is no further rebirth." Then the monks asked, "Seeing what benefit did the Venerable Piṇḍola Bhāradvāja make such a declaration to the Blessed One?" The Buddha declared on that occasion, "This monk Piṇḍola Bhāradvāja achieved this through the development of three faculties. What are they? Mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*)." There, the Buddha declares, "If mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*) are developed to the utmost limit, it ends in the destruction of taints (*āsavakkhaya*), which is Arahantship itself." There are such instances where Ven. Piṇḍola Bhāradvāja received the praise of the Buddha.</p>
+<p>On one occasion, the Buddha declared, when Ven. Ānanda was also present: "Monks, this gain, honor, and respect (*sakkāra*) is an obstacle even to Arahants—that is, even to those whose taints are destroyed (*khīṇāsava*)." Then Ven. Ānanda asked, "How, Blessed One, is it an obstacle to Arahants?" Then the Buddha explained: "Ānanda, I do not say that it is an obstacle to the unshakable liberation of mind (*akuppā cetovimutti*), which is the attainment of the fruit of Arahantship (*arahatta-phala-samāpatti*). But apart from that, if those Arahants, being energetic and resolute (*ātāpī pahitatto*), have attained certain pleasant abidings of concentration (*jhāna*), which are called 'pleasant abidings in this very life' (*diṭṭhadhamma-sukhavihāra*)..."</p>
+<p>"Diṭṭhadhamma-sukhavihāra" means dwelling in happiness in this very life. So, that happiness experienced by those Arahants as pleasant abiding in this very life is lost because of gain, honor, and respect (*sakkāra*). Next, He says: "Ānanda, therefore, this gain, honor, and respect (*sakkāra*) is extremely dreadful and harsh. Resolve, Ānanda, to remain unsubdued by the gain, honor, and respect (*sakkāra*) that arise." In that way, on certain occasions, the Buddha has declared.</p>
+<p>From this, we can understand that, according to the Buddha's teaching, if one is overcome by the world's gain, honor (*sakkāra*), and praise, one's virtuous qualities will be entirely suppressed. Not only that, even if one is an Arahant, one's seclusion (*viveka*) is lost. To set an example for this, on certain occasions, the Buddha—now, someone might think, "The Buddha has finished doing everything that had to be done; why should He go into seclusion?"—on certain occasions, the Buddha directly declares: "Monks, I wish to go into seclusion for three months." On that occasion, He expresses His love for seclusion in this way: "This life spent crowded with kings, great ministers, sectarians, sectarian disciples, laymen, and laywomen is troublesome and full of suffering (*dukkha*)." That is to say, there is no pleasant abiding in this very life (*diṭṭhadhamma-sukhavihāra*). "I am going into seclusion for three months. Let no one come to meet me, except the single monk who brings alms-food."</p>
+<p>There, the Buddha gave an example through His own life, by His love of seclusion, for both of those aforementioned matters. It was to show the lack of attachment to the gain and honor (*sakkāra*) arising from mixing with people, and the lack of being subdued by them, that the Buddha went into seclusion in that manner. It was as a lesson to the world. For, there are those subtle bonds within them. Sometimes, that arrow is not visible to many after they are subdued by them. The virtuous qualities are suppressed. Likewise, it is a bad example to the world. Those things related to the monastic life, such as the virtue of seclusion, are lost. One gets caught up in the current of the world.</p>
+<p>Regarding gain, honor (*sakkāra*), and praise, the Buddha has given wonderfully amazing similes on certain occasions. He said that getting caught in them is just like a bird flying in the sky getting caught in a Vērambha wind. A Vērambha wind must have been something like a whirlwind in those days. When a bird is caught in a Vērambha wind, its two legs go in one direction, its feathers in another direction, and its head in yet another direction. "Such a thing happens, it becomes like a bird caught in a Vērambha wind, if one is subdued by gain, honor, and respect (*sakkāra*); that is what happens to a person, to a monk." For, next, someone takes away his robes, another takes his bowl, and in the end, his monkhood is also lost. In this way, he goes to ruin. That is why the Buddha said that this gain, honor, and respect (*sakkāra*) is a swamp. It is easy to sink into them, but it is not visible from the outside. It is an extremely subtle thorn. Thus, through being subdued by fame and so on, the virtuous qualities—not only of a monk journeying towards Arahantship, but as mentioned there, it was shown as an obstacle even to Arahants.</p>
+<p>When the Buddha says *“kāpurisena”*, the word *“kāpurisa”* is used for a low, unworthy person. Especially, the character of Devadatta is a good example of this. Even before Devadatta went to ruin, and also afterwards, the Buddha uttered a prophecy about the future through a certain valuable series of similes, which you virtuous friends must have heard:</p>
+<p>> *Phalaṃ ve kadaliṃ hanti, phalaṃ veḷuṃ phalaṃ naḷaṃ;*</p>
+<p>> *sakkāro kāpurisaṃ hanti, gabbho assatariṃ yathā.*</p>
+<p>*“Phalaṃ ve kadaliṃ hanti”*—when the bunch of fruit arises on a banana tree, the tree is finished. *“Phalaṃ veḷuṃ”*—you have heard "if bamboo, reeds, or bananas blossom/fruit, they go to ruin," that is how it has come into Sinhala too. When bamboo or reeds blossom—"veḷu" means bamboo, "naḷa" means reed—their fruit is their ruin. *“Phalaṃ veḷuṃ phalaṃ naḷaṃ”*. Likewise, *“sakkāro kāpurisaṃ hanti”*—gains and respect (*sakkāra*) destroy the low, unworthy person. One final simile is given: *“gabbho assatariṃ yathā”*—"assatarī" means a she-mule. When the she-mule conceives her offspring, she dies. In this way, through similes, the Buddha showed: although this appears to the world as a great thing, in the end, it causes one's own ruin. There is a separate section called the *Lābhasakkāra Saṃyutta* where the Buddha, in various ways, demonstrates the dangerous nature of this gain, honor, and respect (*sakkāra*).</p>
+<p>For, it is natural that ordinary worldly people are drawn towards those offerings and worship, and through that, without even knowing it, the monastic purpose becomes distant. If one is subdued by them, one forgets what journey one is on. That is precisely why many monks discarded all of that and went into seclusion. One cannot recognize the happiness of seclusion once one is subdued by those things. Therefore, the censure that the Buddha directed at Ven. Piṇḍola Bhāradvāja was not, indeed, a censure made personally to him, but we have to think that He gave a great example to the world through it. Performing such censure even to an Arahant was so that the monks would remember it.</p>
+<p>Likewise, because it was an improper thing, that sandalwood bowl was broken into pieces—that is how some big cases are resolved; the Buddha has laid down rules in a wonderfully amazing manner. In that way, by breaking into pieces that which was obtained in a wrong manner—it is specifically shown in the Vinaya books that when luxury items or improper things are received, they are not even given to someone else. They must be broken and discarded. Here too, it was the same. He ordered these to be broken into pieces and given to make eye-ointment. Next, He completely banned even the display of wonders, because it does not lead to the progress of the dispensation. The Buddha-dispensation values only the wonder of instruction (*anusāsanī-pāṭihāriya*). That is why the Buddha told the householder Kevaḍḍha: "I am ashamed by those other two wonders." He uses that word. He had obtained both of those wonders by His own super-knowledge (*sayaṃ abhiññā*). Yet, "I am even ashamed to use them," because a person without confidence and pleasure might corrupt their mind regarding them in the manner mentioned.</p>
+<p>This wonder of instruction (*anusāsanī-pāṭihāriya*) can be spoken by anyone without fear; starting from the five precepts (*pañca-sīla*), it becomes directly realized by them. That wonder of the Dhamma is what was called "come and see" (*ehipassika*). "Come and see" is through the Dhamma. Therefore, through these things we must understand the value of the dispensation. This is an era where a wonderfully strange distortion regarding the value of the dispensation is occurring. You virtuous friends can reflect on this: Ven. Piṇḍola Bhāradvāja, on one hand, conquered his weaknesses and reached a state where he received great praises and inspired utterances (*udāna*) from the Buddha. Along with that, if even Arahants have certain weaknesses, the Buddha brings them out and demonstrates the true path of the Dhamma to the world.</p>
+<p>Now, in this present era too, one must reflect in accordance with that. Everyone is running here and there, looking for those common wonders: "Who has become an Arahant? Who is displaying supernormal powers?" Having lost the opportunity to directly realize this wonder from within themselves—which is the work they have to do—if they hear of something even slightly, even a tiny bit, they fly there like a crow. Having eliminated that tendency, we must recognize the true value of the Dhamma, and through this wonder, this Dhamma—this *sandiṭṭhika*, *akālika*, *ehipassika*, *opanayika* Dhamma—it is this wonder-endowed (*sappaṭihāriya*) Dhamma whose wonders we must directly realize for ourselves. Through this sermon, we can add many things to our lives. We must add to our practice those various points mentioned about the craving (*taṇhā*) for taste.</p>
+<p>So, for this long, you virtuous friends have indeed dedicated your lives to these qualities of virtue (*sīla*) and so on, walking this journey of the Dhamma, solely to end this suffering (*dukkha*) of *saṃsāra* through that noble, supreme, deathless Nibbāna, which is the discarding of all that is expected. Taking the essence that can be derived from this sermon, as quickly as possible, before this lamp of the dispensation is extinguished, may this sermon also be a supportive condition (*hetu-vāsanā*) for you to realize the noble, supreme, deathless Nibbāna through those paths and fruits (*magga-phala*) of Stream-entry (*sotāpanna*), Once-returning (*sakadāgāmī*), Non-returning (*anāgāmī*), and Arahantship, which are your highest goals! May whatever living beings there are, from Avīci to Akaniṭṭha, rejoice in this meritorious deed of sharing the Dhamma, and through that rejoicing, may they realize the noble, supreme, deathless Nibbāna through their aspired Enlightenment (*bodhi*)!</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_084.html" class="doc-btn">← Previous Sermon (084)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_086.html" class="doc-btn">Next Sermon (086) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

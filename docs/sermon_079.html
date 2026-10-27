@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 079 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_078.html" class="doc-btn">← Previous Sermon (078)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_080.html" class="doc-btn">Next Sermon (080) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 079</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_079_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_079_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_079_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #79</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.134)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Apārutā tesaṃ amatassa dvārā,</p>
+<p>ye sotavanto pamuñcantu saddhaṃ;</p>
+<p>vihiṃsasaññī paguṇaṃ na bhāsiṃ,</p>
+<p>dhammaṃ paṇītaṃ manujesu brahmeti.</p>
+<p>From:</p>
+<p>Ariyapariyesana Sutta (Majjhima Nikāya 26), Vinaya Piṭaka (Mahāvagga), Saṃyutta Nikāya (SN 6.1)</p>
+<p>Dear Listeners,</p>
+<p>The Esala Full Moon Poya Day reminds us of the occasion when the Fully Enlightened Buddha, the Teacher of the Three Worlds, delivered the *Dhammacakkappavattana Sutta* at the Deer Park in Isipatana, Varanasi. It was the moment the Wheel of Dhamma was set in motion. According to the history of the Sasana, today we have chosen as our theme a stanza that highlights certain important factors that formed the background to that miraculous event of setting the Wheel of Dhamma in motion.</p>
+<p>While addressing a group of monks gathered at the hermitage of the Brahmin Rammaka in Savatthi, the Buddha, expounding a certain phase of His life story—disclosing it—brought to light a series of events related to this stanza. The Buddha declared that after attaining Supreme Enlightenment, having spent several weeks experiencing the bliss of liberation (*vimutti-sukha*), while He was staying at the foot of the Ajapala Banyan tree, a thought of this nature occurred to Him:</p>
+<p>“This Dhamma I have discovered is extremely deep. It is very difficult to explain to others. It is peaceful, refined, beyond mere logic, the deep Dhamma of Dependent Arising (*paṭicca-samuppāda*), the Dhamma of Nibbāna. It is difficult to understand for those who are trapped in attachment, who remain with *Taṇhā* (Craving) within attachment. Even if I preach the Dhamma, if they cannot understand it, it will only be a weariness and fatigue for me.” Thus the Buddha expressed His hesitation to preach the Dhamma. But knowing that the Buddha was disinclined to teach, Sahampati Brahma of the Brahma world felt deep compassion and, knowing the thought of the Buddha, realized:</p>
+<p>“The world is perishing, the world is being destroyed, if the Tathagata, the Fully Enlightened One, does not preach the Dhamma to the world!” At that very moment—as quickly as a strong man would stretch his bent arm or bend his stretched arm—he appeared before the Buddha, paid homage, and made an invitation: “May the Blessed One preach the Dhamma to the world! May the Sugata preach the Dhamma! There are those in the world with little dust in their eyes who have the capacity to understand the Dhamma.” He then made this invitation to the Buddha in three stanzas.</p>
+<p>“In the past, in this Varanasi, the Dhamma has been presented by various teachers with defilements. But may the Blessed One preach this pure Dhamma! May He open the doors of the Deathless!” he invited. The Brahma also presented a simile: “Just as a man standing on a rocky peak would look upon the people all around, may the Blessed One, the Tathagata, who has ascended the palace of Dhamma, look down upon the world of beings who are sunk in this samsaric *Dukkha* (Suffering) such as *Jāti* (Birth), *Jarāmaraṇa* (Decay and Death), sickness, and so forth.” Then, as a special invitation in the final stanza, he declared:</p>
+<p>*“Uṭṭhehi vīra vijitasaṅgāma satthavāha anaṇa vicara loke;*</p>
+<p>*Desassu bhagavā dhammaṁ, aññātāro bhavissanti.”*</p>
+<p>“Arise, O Hero, victor in battle (who has conquered the battle of defilements)! O Caravan leader (*satthavāha*), wander in the world debtless. May the Blessed One preach the Dhamma to the world! There will be those who understand!” Thus the Brahma made his supplication and invitation.</p>
+<p>At that moment, the Blessed One declares that, taking into account both the invitation of the Brahma and the Great Compassion for the world which He had cultivated throughout samsara, He surveyed the world with the Eye of a Buddha (*buddha-cakkhu*). When He surveyed with the Buddha-eye, He saw: those with little dust in their eyes, those with much dust in their eyes, those who have developed spiritual faculties such as faith (*saddhā*), energy (*viriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*), those who have not developed them, the good, the bad, and also those who have fear of the next world, those who can easily understand the Dhamma, those who cannot, and so on—the Buddha explained to the monks that these various levels of understanding appeared to Him.</p>
+<p>Then, to illustrate this, He declared a simile. Just as in a pond of blue, red, or white lotuses, some blue, red, or white lotuses are born in the water, grow in the water, and remain nourished entirely under the water. Some blue, red, or white lotuses rise to the surface of the water and stand level with the water. Yet other blue, red, or white lotuses rise completely out of the water and stand undefiled by the water. In the same way, the various levels of understanding among the people of the world appeared to the Buddha through the simile of the lotus pond. Seeing this, in acceptance of the Brahma's request, the Buddha uttered this stanza. This is the stanza we chose as our theme today:</p>
+<p>*“Apārutā tesaṁ amatassa dvārā, ye sotavanto pamuñcantu saddhaṁ;*</p>
+<p>*vihiṁsasaññī paguṇaṁ na bhāsiṁ dhammaṁ paṇītaṁ manujesu brahme ti.”*</p>
+<p>“Open to them are the doors of the Deathless. For whom? Let those who have ears release faith. I open those doors to those with ears, those with hearing.” Let those who have ears release faith. Let them direct their faith towards it. *Vihiṁsasaññī paguṇaṁ na bhāsiṁ, Dhammaṁ paṇītaṁ manujesu brahme.* “O Brahma, thinking it would be a mere weariness, I did not initially preach this refined Dhamma to the world, but now I open the doors of the Deathless to those who have ears, let them release faith!” Thus, with this stanza, the Buddha made the decision to preach the Dhamma, saying He had opened the doors of the Deathless. Thereupon, the Brahma King, being delighted, circumambulated the Buddha and returned to the Brahma world.</p>
+<p>The Buddha then contemplated: “To whom shall I preach the Dhamma first?” according to their levels of understanding. First, He thought of Alara Kalama, who had been a teacher to Him, or rather, who had met Him during the Noble Quest (*ariya-pariyesana*) and had helped Him to a certain extent. This Alara Kalama was wise. He was someone who had suppressed defilements for a long time. He had the capacity to understand things quickly. He was capable of realizing this Dhamma very soon. Just as He thought of preaching the Dhamma to Alara Kalama, deities came and said: “Venerable Sir, the teacher Alara Kalama passed away a week ago.” Then the Buddha thought: “A great loss has occurred. If Alara Kalama were alive, he would have understood this Dhamma quickly.” Next, He contemplated: “Who else?” and remembered the other teacher, Uddaka Ramaputta. Just as He thought: “This Uddaka Ramaputta is also wise, capable of understanding the Dhamma quickly,” deities came and informed Him: “Last night, Uddaka Ramaputta passed away.” At that moment too, the Buddha thought: “That too is a great loss. If Uddaka Ramaputta were alive, he would have understood the Dhamma quickly.”</p>
+<p>Then, thirdly, He contemplated: “To whom shall I preach this Dhamma?” He then thought with gratitude: “When I was practicing extreme self-mortification (*dukarakiriya*), these five monks were of great help to me. They are capable of understanding this Dhamma quickly.” Next, He looked to see where they were residing. He saw that they were staying at the Deer Park in Isipatana, Varanasi. Then the Blessed One set out from there to preach the Dhamma to them. On the way, between Gaya and the Bodhi tree (Bodhgaya), the Blessed One declared that He met an Ajivaka named Upaka. This Ajivaka Upaka saw the extremely serene manner of the Blessed One, saw the purity of His complexion, and questioned Him: “Friend, your faculties are so pure, so serene. Your complexion is bright. Whose Dhamma do you follow? Who is your teacher?” Then He replied: “I have no teacher.” The Buddha then uttered a series of stanzas: *Sabbābhibhū sabbavidūhamasmi...* ('I am the conqueror of all, the knower of all...'), declaring that He had attained Supreme Enlightenment and Buddhahood.</p>
+<p>Furthermore, *“Na me ācariyo atthi, sadiso me na vijjati”* (“I have no teacher, my equal is not found in the world. I am the Worthy One, the Fully Enlightened One in this world”), thus He introduced Himself. However, for some reason, this Ajivaka Upaka asked, “Then, according to what you say, you are the Infinite Victor (*anantajina*)?” and having heard this, said, “It may be so, friend,” shook his head, took a different path, and departed.</p>
+<p>Next, the Blessed One, journeying by stages towards Varanasi, finally approached the Deer Park in Isipatana. The five monks saw Him from afar and made an agreement among themselves: “Friends, here comes the recluse Gotama. The recluse Gotama is coming, having abandoned his self-mortification. Having reverted to a life of abundance (*bāhulika*), a life of luxury, he is coming in search of us. Let none of us stand up for him. Let us not pay him the respect of receiving his bowl and robe. If he wishes, let us merely set out a seat for him to sit on.” Thus they agreed. But the Blessed One expressed to the monks that as He drew closer and closer, they were unable to abide by their agreement. Spontaneously, as it were, one of them came forward and received My bowl and robe. Another from among the five prepared a seat. Another prepared water to wash My feet. However, although they performed these hospitable services, they addressed me with the term “friend” (*āvuso*) and by my name.</p>
+<p>Then the Blessed One declared: “I told the five monks: 'Monks, do not address me by name or as 'friend'. I have discovered the nectar of Nibbāna. I have realized the Dhamma. I have attained Supreme Enlightenment. Therefore, it is not proper to address me in this manner. Lend your ears, bend your ears, I shall preach the Dhamma to you. By listening to this Dhamma, you will realize that purpose for which you went forth into homelessness.'” But the five monks did not believe it at first. “How can that be, recluse Gotama? When you could not achieve it even after practicing such severe self-mortification, now that you have abandoned that effort and become a *bāhulika*, or rather, turned towards a life of luxury, how could you have found it?” Thus they did not believe it. Even when the Blessed One declared it a second and a third time, the five monks did not accept it.</p>
+<p>Finally, the Buddha said: “Monks, have I ever spoken to you in this manner before? Monks, have I ever made such a statement to you before?” As soon as they heard this, the attitude of the five monks changed, and they replied, “No, indeed, Venerable Sir.” The five monks, who had addressed Him as “friend” (*āvuso*) until then, now said, “No, indeed, Venerable Sir.” From this, we must learn something. What the Blessed One used there was nothing other than the miracle of truth (*saccā-pāṭihāriya*). Through the miracle of truth, those five monks were subdued. Being subdued, from that moment on, they were ready to bend their ears. It was on that occasion that the Blessed One said, “Then, monks, give ear. I shall preach this Dhamma,” and delivered the *Dhammacakkappavattana Sutta* discourse we mentioned.</p>
+<p>In the *Dhammacakkappavattana Sutta*, within this matter of setting the Wheel of Dhamma in motion, there are valuable points. We will try to bring out briefly only the main points as appropriate to the occasion. Actually, the Buddha directed this sermon to these five monks. Their view (*diṭṭhi*) was *attakilamathānuyoga*—the idea that liberation can be attained through self-mortification, by giving pain to the body. To help remove this, the Buddha presented the Noble Eightfold Path which He had discovered as the Middle Path (*majjhimā paṭipadā*). Right at the beginning of that discourse, He said: “Monks, there are these two extremes that should not be pursued by one who has gone forth. What are they? *Kāmasukhallikānuyoga*—which is being attached to and immersed in the pleasure of the five cords of sensual desire. It is low, vulgar, common (*pothujjanika*), fit for worldlings, ignoble (*anariya*), and unbeneficial (*anatthasaṁhita*). It is something that does not bring welfare, but leads to harm.” Introducing it thus, He called *kāmasukhallikānuyoga* one extreme. Then, as the second extreme, *attakilamathānuyoga* (self-mortification). This is not low and vulgar, but it is *“dukkho, anariyo, anatthasaṁhito”*—it is *Dukkha* (Suffering), ignoble, and unbeneficial.</p>
+<p>So, having bypassed those two extremes, the Tathagata has awakened to the Middle Path. It is described as *cakkhukaraṇī, ñāṇakaraṇī*—giving rise to vision, giving rise to knowledge, leading to understanding, wisdom, and liberation (*vimutti*). Then, that Middle Path is the Noble Eightfold Path. You all know this: Right View (*sammā-diṭṭhi*), Right Thought (*sammā-saṅkappa*), Right Speech (*sammā-vācā*), Right Action (*sammā-kammanta*), Right Livelihood (*sammā-ājīva*), Right Effort (*sammā-vāyāma*), Right Mindfulness (*sammā-sati*), and Right Concentration (*sammā-samādhi*). This Noble Eightfold Path was then presented as the Middle Way.</p>
+<p>Next, the Buddha briefly pointed out the truth. That is the Noble Truth He discovered, the Noble Truth of *Dukkha* (Suffering). You have heard many times of the Four Noble Truths: *Dukkha*, Samudaya (Origin), Nirodha (Cessation), and Magga (Path). It is here, for the first time, that the Buddha introduces them to the world. Each of these is introduced with the designation “Noble” (*ariya*). The Noble Truth of *Dukkha*, then Samudaya, the cause for the arising of *dukkha*. Then, the cessation of *dukkha*, which is Nibbāna. Then, the path, the practice leading to it. That itself was shown as the Middle Path.</p>
+<p>The Noble Truth of *Dukkha* was introduced as: *jātipi dukkhā, jarāpi dukkhā, vyādhipi dukkho, maraṇampi dukkhaṁ, appiyehi sampayogo dukkho, piyehi vippayogo dukkho, yampicchaṁ na labhati tampi dukkhaṁ, saṅkhittena pañcupādānakkhandhā dukkhā*—thus was *dukkha* described. *Jāti* (Birth), *Jarāmaraṇa* (Decay and Death), sickness, death, association with the unpleasant, separation from the pleasant, not getting what one wishes. In short, in brief, the five aggregates of grasping (*pañcupādānakkhandhā*)—namely *rūpa* (form), *Vedanā* (Feeling), *saññā* (perception), *Saṅkhāra* (preparations), and *viññāṇa* (consciousness)—these five aggregates of grasping are *dukkha*. Thus He introduced the mass of suffering, the Noble Truth of *Dukkha*. Next, as the second, the Truth of Origin (*samudaya-sacca*), He declared the nature of *Taṇhā* (Craving). *Yāyaṁ taṇhā ponobhavikā*—this *taṇhā* is what causes renewed *Bhava* (Becoming). *Nandīrāgasahagatā*—accompanied by delight and lust. *Tatra tatrābhinandinī*—seeking delight now here, now there. He then showed it to be threefold: *kāma-taṇhā*, *bhava-taṇhā*, and *vibhava-taṇhā*. *Kāma-taṇhā* is the craving for the five cords of sensual pleasure; *bhava-taṇhā* is the desire for becoming, to wander in samsara; and *vibhava-taṇhā* is the craving associated with the view of annihilation (*uccheda-diṭṭhi*), which runs counter to *bhava-taṇhā*, moving along with the concept of a self (*atta-saññā*) towards self-annihilation. Just as *bhava-taṇhā* is connected to the view of eternalism (*sassata-diṭṭhi*), *vibhava-taṇhā* is bound up with the view of annihilation.</p>
+<p>To escape this existence, they seek a practice like suicide. But the Buddha does not approve of such things. As you know, within the Middle Path, there is a complete transformation of one's personal identity, starting from Right View and leading up to Right Concentration. The Buddha declared that it is along such a path of liberation that one gives rise to vision, knowledge, and wisdom. So, He declared the nature of that craving. Next, as the Truth of Cessation (*nirodha-sacca*), He showed: *tassāyeva taṇhāya asesavirāganirodho*—the remainderless fading away and cessation of that very craving, its giving up, its relinquishment, which is the Truth of Cessation. That is what was shown as Nibbāna. Then, the path to it is the aforementioned Middle Path. As the Truth of the Path (*magga-sacca*), there are the eight factors starting from Right View and leading up to Right Concentration.</p>
+<p>Having thus briefly introduced the Four Noble Truths, He then presents another unique analysis. Regarding each of these truths, the Buddha declares: concerning this Noble Truth of *Dukkha*, first there arose in Him the initial realization, “This is the Noble Truth of *Dukkha*.” Next, “This Noble Truth of *Dukkha* is to be fully understood” (*pariññeyyaṁ*). The world has only a partial, incomplete understanding of this. It must be fully understood. Therefore, the word used regarding the Noble Truth of *Dukkha* is: the Noble Truth must be fully understood (*pariññeyyaṁ*). That realization arose in the Buddha.</p>
+<p>Then, thirdly, it is said: “I have achieved full comprehension (*pariññātaṁ*).” These three phases are what is called the “three rounds” (*tiparivaṭṭaṁ*). Finally, the Four Noble Truths are mentioned as having three rounds and twelve aspects (*tiparivaṭṭaṁ dvādasākāraṁ*). For some, this has been a puzzle: a Dhamma Wheel of three rounds and twelve aspects. How do these twelve aspects come about? Now, concerning the Truth of *Dukkha*: first, “This is the Truth of *Dukkha*.” Finding out something anew is itself a turn. The first turn is identifying, “This is the Noble Truth of *Dukkha*.” Next, the realization that this can be overturned from within one's own mind-stream, that this can be put into practice, is *pariññeyyaṁ*—‘it must be fully understood.’ When that full understanding is completed, the wheel has turned and is complete: *pariññātaṁ* (‘it has been fully understood’). There, indeed, you have the three rounds (*tiparivaṭṭaṁ*) or three revolutions.</p>
+<p>Next, regarding the Truth of Origin (*samudaya-sacca*) as well: the origin is identified as craving (*taṇhā*), as mentioned earlier. First, the realization arose, “This is the Noble Truth of the Origin of *Dukkha*.” Regarding this, there is “abandoning” (*pahāna*): if it is craving, it must be abandoned, dispelled, removed. So, those three words are mentioned regarding the Truth of Origin: “This is the Noble Truth of the Origin of *Dukkha*”; next, “This Noble Truth of the Origin of *Dukkha* is to be abandoned” (*pahātabbaṁ*); and finally, “It has been abandoned by me” (*pahīnaṁ*)—it has been expelled from the mind-stream.</p>
+<p>Next, regarding the Truth of Cessation (*nirodha-sacca*): cessation is what comes about through the destruction of that craving. That cessation is the cessation of *Bhava* (Becoming), the cessation of craving. Regarding this, it is mentioned as something to be realized, to be personally experienced. He understood that cessation is something to be realized, and then He realized it: *sacchikātabbaṁ* (‘to be realized’) and *sacchikataṁ* (‘realized’). Here too, there are three: “This is the Noble Truth of the Cessation of *Dukkha*”; “This Noble Truth of the Cessation of *Dukkha* is to be realized”; and “It has been realized by me.” Thus, that aspect too is complete.</p>
+<p>Next, the Truth of the Path (*magga-sacca*). When these are done, the path is already developed. So, regarding the path, it is said: *bhāvetabbaṁ*—the Truth of the Path is to be developed. It can be developed. And “It has been developed” (*bhāvitaṁ*). Now, there you have the four—the Four Noble Truths. If you divide each into three in this way, there are twelve aspects (*tiparivaṭṭaṁ dvādasākāraṁ*). The Blessed One declares to the five monks: “Monks, as long as my knowledge and vision (*ñāṇadassana*) regarding these Four Noble Truths in their three rounds and twelve aspects was not completely purified, I did not claim to be Fully Enlightened (*sammā-sambuddha*). Only when it was purified did I make that declaration.” Thus He convinced the monks.</p>
+<p>From this, what we have to understand is—and some of you might know this—that initial vision is obtained during the path-knowledge of Stream-entry (*sotāpatti-magga-ñāṇa*). Although a general understanding of the Noble Truths is obtained in that manner, it was when they were fully put into practice and perfected that the Buddha attained Arahatship or the aforementioned Supreme Enlightenment. That is what is meant by saying “it was purified”. In this way, the Buddha declared: “When my knowledge and vision of the three rounds and twelve aspects was complete, I set in motion this Wheel of Dhamma, which cannot be turned back by any deity, Mara, Brahma, or anyone else in the world.” That indeed is what is called *dhammaccakkappavattana*. He set the Wheel of Dhamma in motion there. Having set that Wheel of Dhamma in motion within His own mind-stream, He also introduced it to the world. It is mentioned that by the time the Buddha finished preaching, from among the five monks of the human world, Venerable Kondañña attained the Path of Stream-entry. This is indicated there by the words: *“yaṁ kiñci samudayadhammaṁ sabbaṁ taṁ nirodhadhammaṁ.”*</p>
+<p>So, we can understand that the realization within the Fruit of Stream-entry (*sotāpatti-phala*), if expressed briefly, can be described by those few words: *“yaṁ kiñci samudayadhammaṁ sabbaṁ taṁ nirodhadhammaṁ.”* “Whatever is of the nature to arise, all that is of the nature to cease.” That is the principle of Dependent Arising (*paṭicca-samuppāda*). So there too is a wheel. There is a wheel concerning arising and ceasing. You know that even though the twelve-fold Dependent Arising (*paṭicca-samuppāda*) was not explicitly mentioned here, even laywomen chant it in forward and reverse order (*anuloma-paṭiloma*). Within that too, there is a wheel: due to ignorance (*avijjā*), *Saṅkhāra* (preparations) arise, and so on, until finally this mass of suffering called the five aggregates of grasping (*pañcupādānakkhandhā*) is built up. At whatever point ignorance is abandoned, the five aggregates of grasping cease. That is what was briefly mentioned here.</p>
+<p>So, looking at this sutta, we might not understand how Venerable Kondañña became a Stream-enterer. But once they abandoned the view (*diṭṭhi*) they had held, once they abandoned the extreme of *attakilamathānuyoga* (self-mortification)—and they had already abandoned the extreme of *kāmasukhallikānuyoga* when they entered the ascetic life—then, when the Buddha presented the Middle Path in terms of Right View and so forth, the strength of the path-factors (*maggāṅga*) developed within the ascetic Kondañña, and he obtained that realization. The very principle of Dependent Arising is what is found within the Four Noble Truths. *Dukkha*—if there is suffering, there must be a cause for it. When the cause is abandoned, suffering is abandoned. There too, a circular nature (wheel-like nature) exists.</p>
+<p>If anything exists in the world, there is a cause for it. When the cause is removed, by the cessation of the cause, that suffering also ceases. Thus, in every aspect, there is that wheel. It was by the turning of that Wheel of Dhamma within the ascetic Kondañña that there arose the realization: *“yaṁ kiñci samudayadhammaṁ sabbaṁ taṁ nirodhadhammaṁ.”* What is meant by “whatever” (*yaṁ kiñci*)? It is the very five aggregates of grasping (*pañcupādānakkhandhā*) mentioned earlier. If it is due to ignorance that one grasps these five aggregates of grasping, then, at the point where ignorance ceases, where misunderstanding is replaced by understanding, where the view of self (*atta-diṭṭhi*) is abandoned, where the view of self that caused *kāma-taṇhā*, *bhava-taṇhā*, and *vibhava-taṇhā* is removed—there, indeed, that realization comes to a person. It was because this was realized internally that the Eye of Dhamma (*dhamma-cakkhu*) arose in Venerable Kondañña. It is said, *cakkhuṁ udapādi, ñāṇaṁ udapādi* (‘the eye arose, the knowledge arose...’)—this is what is called the arising of the Eye of Dhamma. It is mentioned that after this Eye of Dhamma arose in the ascetic Kondañña, the Buddha granted him ordination by the formula of *ehi bhikkhu* (‘come, monk’).</p>
+<p>After this event occurred, at that very moment, the Buddha uttered an inspired utterance of joy (*udāna*): *“Aññāsi vata bho Kondañño, aññāsi vata bho Kondañño”* (“Kondañña has indeed understood, Kondañña has indeed understood!”). It is because of this that he received the name “Aññā Kondañña” from that day onwards. When we consider how the Wheel of Dhamma that had turned within His own mind-stream was successfully set in motion within one of those five, we can call it a transformation that occurred not only within this human world. It was at that moment that—as many like to hear in protective chants (*paritta*)—the news of the Wheel of Dhamma being set in motion spread from heaven to heaven, from Brahma world to Brahma world. When we speak of the Wheel of Dhamma rolling, it is an upward rolling that takes place here. An upward rolling. Starting from the earth-dwelling deities (*bhumma devas*), it rolled through the six devalokas, and then to the Brahma worlds. It rolled onwards as the reverberating sound of this event. The news that the Blessed One had set the Wheel of Dhamma in motion in the Deer Park at Isipatana spread up to that point. So, that is the essence of what is contained in the *Dhammacakkappavattana Sutta*.</p>
+<p>Now, if we think a bit more about this Wheel of Dhamma, many things in the world exist as a wheel. The wheel of time (*kāla-cakka*). If we think about the wheel of time, let us first think about a day. At the end of the daytime, there is the night. At the end of the night, there is the daytime. This is how the wheel of time operates within a day. Thus it goes on through days, weeks, months, and years. Finally, in terms of aeons (*kalpa*). Even if we look at aeons, there too, the Dhamma mentions aeons of contraction and expansion (*saṁvaṭṭa-vivaṭṭa kalpa*). There is a cyclical form concerning this world. A wheel of time operates in that manner.</p>
+<p>It is the same with the wheel of authority (*āṇā-cakka*). The wheel of authority is—like in ancient times, by the beating of drums, or let's say when a rebellion arose in a neighboring province, a king would send his ministers and generals to suppress it, and after they returned, they would report back. Then they would be given gifts and rewards. That reporting back. There too, the wheel rolls out and returns. It is a similar thing here. So, how was this reported back at the end of the Wheel of Dhamma? That is what is mentioned at the end of this sutta: *“ayañca dasasahassī lokadhātu saṅkampi sampakampi sampavedhi, appamāṇo ca uḷāro obhāso loke pāturahosi atikkammeva devānaṁ devānubhāvaṁ”*—so the sutta concludes. Just like that reporting back, through the shaking of this entire ten-thousand-fold world system and the spreading of this boundless, magnificent light, it became evident to the world that this Wheel of Dhamma had been set in motion. The wheel of authority is also like that.</p>
+<p>There is another matter. You may have heard about kings in the Dhamma stories—in this day and age, some people might not believe it. But if we speak of the Buddha's words, for example, there is the *Mahāsudassana Jātaka*. The Buddha speaks of a Wheel-turning Monarch (*cakkavatti*) named Mahāsudassana in the *Mahāparinibbāna Sutta* as well. Mention is made of a kingdom called Kusāvatī. Wonderful, miraculous things are mentioned there concerning the Wheel-turning Monarch Mahāsudassana of the past. The Wheel-Treasure (*cakka-ratana*) that arises for such a king. It is said that the Wheel-Treasure appears to a Wheel-turning Monarch on a Uposatha day, when he has ascended to the upper terrace of his palace and is observing the eight precepts of the Uposatha. It is with the help of this Wheel-Treasure that he conquers the four quarters, the entire world. This is how it is mentioned in the Dhamma. A Wheel-turning Monarch is described as *dhammiko dhammarāja*—a righteous king. There is a concept of a righteous reign. The Wheel-Treasure is one of the seven treasures that arise for such a highly meritorious king. In the account of King Mahāsudassana, it is mentioned that since he had heard previously that such a Wheel-Treasure arises only to a Wheel-turning Monarch, he sprinkled water on the Wheel-Treasure from a ceremonial vessel and made a determination: “May this Wheel-Treasure roll forth.” That Wheel-Treasure rolled forth to the four quarters, and the kings of those various countries accepted the sovereignty of this Wheel-turning Monarch and became his subjects. They became subjects not through war, as is mentioned there. Even though he went with a fourfold army, how did the Wheel-turning Monarch subdue them? By establishing them in the five precepts (*pañca-sīla*).</p>
+<p>“Do not destroy life. Do not steal. Do not commit sexual misconduct. Do not lie. Do not drink intoxicants. You shall rule your own territory which belongs to you.” It is through these instructions that he subdues them. This is the kind of story mentioned regarding the Wheel-turning Monarch. But there too, it was said that the Wheel-Treasure is a highly miraculous Wheel-Treasure. It is described as *sahassāraṁ sanābhikaṁ*—that is, with a thousand spokes (*ara*), a rim, and a central hub. A great wheel with a thousand spokes, a rim, and a hub in the center. That wheel rolls forth, and the king and his army follow it. Sometimes, rolling even across oceans, having conquered the kingdoms of the four quarters, it finally returns and stands as if planted firmly in the capital city. There too, it is a turning. Just like the turning of the wheel of authority.</p>
+<p>In accordance with that concept, you might remember the prophecy uttered by the ascetic Asita during the Bodhisatta's infancy. “If he remains in the lay life, he will become a Wheel-turning Monarch. If he goes forth, he will become a Fully Enlightened One (*sammā-sambuddha*).” So, you can understand what this Wheel of Dhamma means in relation to that concept of Supreme Enlightenment. That is why the Wheel of Dhamma is said to have three rounds and twelve aspects (*tiparivaṭṭaṁ dvādasākāraṁ*). The Wheel-Treasure of a Wheel-turning Monarch has a thousand spokes, a rim, and a hub, being complete in every way (*sabbākārasampannaṁ*). Similarly, this Wheel of Dhamma of the Tathagata, the Fully Enlightened One, concerning the Four Noble Truths, is *tiparivaṭṭaṁ dvādasākāraṁ*—three rounds, three revolutions, and twelve aspects according to the Four Noble Truths. So, that is the setting in motion of the Wheel-Treasure.</p>
+<p>What is meant by *dhammaccakkappavattana*? Instead of the Wheel-Treasure of the Wheel-turning Monarch which crossed the ocean to other lands by the power of its motion, the Buddha’s Wheel of Dhamma rolled upwards. The Wheel of Dhamma set in motion within His own mind-stream finally rolled upwards from the earth-dwelling deities through the heavens to the Brahma worlds, up to the Akanittha Brahma world. Next, it was that sound, reverberating as a great noise, through which light and other wonders spread throughout the world. In the same way, we can understand the value of this concept of the Wheel of Dhamma. Within the mind-stream, just as everything exists in a single wheel, within this Dependent Arising (*paṭicca-samuppāda*) too, there is this *yaṁ kiñci samudayadhammaṁ*—whatever is of the nature to arise, all that is of the nature to cease. This cyclical nature of the world shown by the Buddha is also expressed here through the setting in motion of the Wheel of Dhamma.</p>
+<p>Thus, we can understand the transformation that took place in the world due to the setting in motion of the Wheel of Dhamma. The transformation in the mind-streams during the Buddha’s time, and also through the spreading of the Dhamma across lands, the entire essence of the Dhamma is summarized within these Four Noble Truths. Everything can be gathered into the Four Noble Truths. Within it lies the law of Dhamma (*dhamma-niyāma*) related to Dependent Arising (*paṭicca-samuppāda*), namely: *yaṁ kiñci samudayadhammaṁ sabbaṁ taṁ nirodhadhammaṁ*. Therefore, due to this setting in motion of the Wheel of Dhamma, we especially commemorate the Esala Full Moon Poya Day as the occasion when the greatest transformation in the world took place.</p>
+<p>In the world, there is the extreme that “everything exists”. There is the extreme that “everything does not exist”. There are two extremes called the view of eternalism (*sassata-diṭṭhi*) and the view of annihilation (*uccheda-diṭṭhi*). Bypassing both, the Buddha showed the path. Due to ignorance (*avijjā*) in their mind-streams, worldlings build up this mass of suffering called the five aggregates of grasping (*pañcupādānakkhandhā*), remaining trapped within them for a long time in this samsara. If at any point this ignorance is removed, then the preparations (*Saṅkhāra* (preparations) caused by ignorance—the preparations arising through the view of self—are removed. It is due to those *saṅkhāra* that there arises the concept of two: “this world” and “this is I” (*so loko, so attā* / this is the world, this is my self).</p>
+<p>Through that, a cycle of *viññāṇa* (consciousness) and *nāmarūpa* (name-and-form) is formed. It rotates like a whirlpool within the mind-stream. As a result of this, it proceeds through *Taṇhā* (Craving) and *upādāna* (grasping/holding/fuel) towards *Bhava* (Becoming). It is a transformation leading to Nibbāna—which is the cessation of *bhava*—that the Buddha presented through this Dhamma. Many people consider this Wheel of Dhamma merely as an ordinary symbol. But one must contemplate the depth within it. The Buddha had the capacity, through the powers He possessed, to become a Wheel-turning Monarch.</p>
+<p>On one occasion, when a Brahmin named Sela saw the Buddha, he uttered a series of stanzas in wonderful praise of the Buddha. This is mentioned in the Dhamma as the *Sela Sutta*. As soon as the Brahmin Sela heard the word “Buddha”—that a Buddha had appeared—such great faith arose in him that he asked Keniya, the ascetic who had told him the news: *“Buddhoti bho Keniya vadesi?”* (“Did you say 'Buddha', Keniya?”). *“Buddhoti bho Sela vadāmi.”* (“'Buddha', indeed, I say, Sela.”). After repeating this, great faith arose, and seeing the thirty-two marks of a Great Man (*mahāpurisa-lakkhaṇa*) on the Buddha's body, out of deep devotion, the Brahmin Sela said: *“Rājā arahati bhavituṁ”* (“You are worthy to be a king, a Wheel-turning Monarch, and as a Wheel-turning Monarch, you should subdue the entire world to yourself”), expressing this out of his faith. At that moment, the Buddha replied: *“Rājāhamasmi Sela.”* (“I am indeed a king, Sela.”) *“Rājāhamasmi Sela, dhammarājā anuttaro.”* (“I am a king, Sela, the supreme King of Dhamma.”)</p>
+<p>Consider this: some might think that when the Buddha says this, referencing the concept of kingship, it might lead to a reduction in respect towards the Buddha. But the Buddha introduced Himself: “I am the King of Dhamma.” Not a Wheel-turning Monarch of that sort. He told the Brahmin Sela: *“Rājāhamasmi Sela, dhammarājā anuttaro.”* The supreme King of Dhamma. “I indeed am the king.” Next, the Brahmin Sela did not stop there. He asked: “Then who is your general?” “My general is Sariputta.” “Sariputta rolls the wheel after me.” That is why the chief disciple, Venerable Sariputta, is called the *Dhammasenāpati* (General of the Dhamma). That we refer to the Buddha as *Buddharāja* or *Dhammarāja*—the King of Dhamma—is according to His own words. Similarly, referring to him as *Dhammasenāpati* is also according to that concept of kingship. From this, we can understand that the alternative path available to our Lord of the Triple World was to become a Wheel-turning Monarch. Instead, He became a *Dhammarāja*.</p>
+<p>So, the status of a Wheel-turning Monarch is what the worldly consider to be the highest position. Thinking from a worldly perspective, in an era when a Buddha does not appear, a Wheel-turning Monarch enjoys the highest pleasures in the world. These are mentioned in the Dhamma in a way that is unbelievable to some—pleasures lasting eighty-four thousand years. It shows that they lived a righteous life at the lay level, but with a wonderful luxury that would make those who live luxurious lives today feel ashamed. Thus, it is the highest concept of the lay world. One can easily think of a lay person as a king who conquers the entire world, subduing the whole world merely by establishing them in the five precepts—there is a wonderful concept within the Wheel-turning Monarch concept.</p>
+<p>Yet, it is due to a great mass of merit (*puññakkhandha*) that on a Uposatha day, while observing the precepts on the upper terrace of the palace, these seven treasures, including the Wheel-Treasure, arise for such a king. The Buddha, however, attained the supramundane (*lokuttara*), supreme state of a King of Dhamma, which surpasses that. That is what He declared to the Brahmin Sela: “I am the King of Dhamma, the supreme King of Dhamma. My general is Sariputta. This Wheel of Dhamma that I have set in motion, Sariputta rolls it further.” Also, you can think of another sutta among these discourses which serves as a reason, namely the *Saccavibhaṅga Sutta* of the Majjhima Nikāya. On one occasion, the Buddha assigned the chief disciple, Venerable Sariputta, to analyze this sutta which He had preached in brief—the *Dhammacakkappavattana Sutta*. Venerable Sariputta presented a detailed analysis of it. The Buddha approved of this. Then we can understand from Dhamma literature that the General of Dhamma rolled that Wheel of Dhamma further, in accordance with what the Buddha had set in motion.</p>
+<p>Accordingly, we must understand that what we have to roll now is this very Wheel of Dhamma within our own mind-streams. To roll that Wheel of Dhamma, we must bring about that aforementioned transformation. Nowadays, everyone talks about attaining Stream-entry (*sotāpanna*) and ending samsara. Everyone who comes to us says: “I do not want to be born again.” But some have mistaken the path to it. There are those who say that if someone keeps the five precepts properly, by that alone they are a Stream-enterer. In defining certain states, sometimes its essential basic requirements are mentioned, along with ancillary factors. Ancillary means not directly, but additional matters are also pointed out by the Buddha. Taking hold of such parts, some people think that if someone keeps the five precepts properly, they have become a Stream-enterer by that alone. But from this very *Dhammacakkappavattana Sutta*, we can see the transformation that occurred, expressed in a few words regarding Venerable Kondañña: *yaṁ kiñci samudayadhammaṁ sabbaṁ taṁ nirodhadhammaṁ*. Therefore, attaining the Fruit of Stream-entry is a major transformation that occurs internally, within the mind-stream.</p>
+<p>How does that happen? If we contemplate according to the Dhamma, not only from this sutta but also with the help of other Dhamma discourses, it happens through a deep disillusionment (*nibbidā*), a disgust towards this suffering we are grasping as the five aggregates of grasping (*pañcupādānakkhandhā*). This is called *nibbidā*. On certain occasions, the Buddha declared the fundamental principle to distinguish between Dhamma and non-Dhamma. If something is non-Dhamma, non-Vinaya, the Buddha makes this statement: *“Netaṁ ekanta-nibbidāya, virāgāya, nirodhāya, abhiññāya, sambodhāya, nibbānāya saṁvattati”* (“This does not lead to complete disillusionment, to fading away (dispassion), to cessation, to direct knowledge, to self-awakening, to Nibbāna”).</p>
+<p>From this, we can understand that if it is the Dhamma, it must lead to that *nibbidā*—samsaric disillusionment. It must lead to dispassion (*virāga*). That is the principle to identify whether something is Dhamma or non-Dhamma. Accordingly, we can understand—just as it arose within the ascetic Kondañña at that moment—there was absolutely no question regarding the pleasure of the five cords of sensual desire. There was only the question of *attakilamathānuyoga* (self-mortification). He must have realized, by hearing the words *bhava-taṇhā* and *vibhava-taṇhā*, that this too was based on the view of self (*atta-diṭṭhi*). We cannot comprehend the capacity of their understanding. We can only give a slight hint. Such noble ones were complete with merit. But as far as we can see according to the law of Dhamma, without clinging to such narrow viewpoints, the insight (*vipassanā*) taught by the Buddha is presented in three special words. For us Buddhists, it is familiar to the tongue. Even if it is unfamiliar to the heart, it is familiar to the tongue. Whatever happens, we say: *“aniccaṁ, dukkhaṁ, anattā”*. We are used to it almost like a song. But this must sink deep into that depth, so that samsaric disillusionment is completed. If some things are done partially, that transformation does not take place.</p>
+<p>Now, we also spoke about this Dhamma: through the attainment of Stream-entry, which is called the state of a trainee (*sekha*), the initial vision is obtained. What is meant by *sotāpanna*? We often hear even those words being explained in a distorted manner. *Sota* does not mean “ear”; *sota* means a stream, a current. If a log of wood falls into the water of a river, it flows down to the ocean and stops there. The state of having entered that stream of Dhamma so firmly is what is called *sotāpanna*. One has joined the stream of Dhamma. Going outside the stream of Dhamma, or going against it, is the momentum of the world. That is what happens within the pleasure of the five cords of sensual desire. The stream of preparations (*saṅkhāra*) caused by ignorance—whether meritorious or demeritorious—builds up these five aggregates of grasping. That indeed is what is called *Taṇhā* (Craving). It arises again and again. At the moment of death, the grasping (*upādāna* / holding / fuel) caused by that unabandoned craving presents karma: *“kammaṁ khettaṁ, viññāṇaṁ bījaṁ, taṇhā sineho”*—in the manner that karma is the field, *viññāṇa* (consciousness) is the seed, and *Taṇhā* (Craving) is the moisture; sprouting thus, we go on this samsaric journey.</p>
+<p>If we are to end that, according to the hints given by the Buddha, one must follow that line of thought that leads to *nibbidā*, samsaric disillusionment, and dispassion (*virāga*) which is non-attachment. Yogis would know that these three characteristics (*tilakkhaṇa*) are shown in various ways of contemplation: sometimes as three, as eleven, as eighteen, or as forty-odd, depending on how these three characteristics are understood by each individual. Where they are shown as eleven, they are: *aniccatoti, dukkhatoti, rogatoti, gaṇḍatoti, sallatoti, aghatoti, ābādhatoti, paratoti, palokatoti, suññatoti, anattatoti*—and so on. This shows how it is understood by each individual. The five aggregates of grasping—each aggregate must be contemplated as impermanent (*anicca*), as suffering (*dukkha*), as a disease, as a tumor, as a dart, as a calamity, as an affliction, as alien, as disintegrating, as empty, as non-self (*anattā*), in various ways so that a turning away arises.</p>
+<p>What is shown through various meditations like the meditation on foulness (*asubha-bhāvanā*) is the method to generate that aforementioned *nibbidā*. Why should we generate *nibbidā*? Complete disillusionment. It is when complete disillusionment (*nibbidā*) arises that non-attachment (*virāga*) comes about. Through non-attachment, dispassion is attained. Liberation, which is close by, is revealed through dispassion. It is through dispassion that the door to liberation is opened. Through liberation, there is the letting go of these five aggregates of grasping. It is not an active letting go, but it gets let go of to some extent. If a dead rat snake carcass or a dog carcass falls onto the shoulders of someone who likes to be well-dressed, they do not make an effort—spontaneously, as it were, they shake their shoulders and throw it off. In the same way, if the mind, through those methods of meditation, personally experiences the five aggregates of grasping as impermanent, suffering, and non-self—if each of these is understood as a great suffering, a trouble, a dart, a tumor, a disease, an affliction, as belonging to others, as something that breaks, as empty, as hollow—then, at that moment, a great disillusionment arises through direct experience, and the five aggregates of grasping are let go of. It is by that letting go that one touches liberation. That is what is called touching Nibbāna, personally experiencing Nibbāna.</p>
+<p>What is meant by extinguishment? If those are the burnings, where that burning is absent, there is extinguishment (Nibbāna. Many people have made a plaything of this word Nibbāna. Thinking of it as some other world, they conceptualize Nibbāna in a way that increases the craving for becoming (*bhava-taṇhā*). But within the Dhamma, the Truth of Cessation (*nirodha-sacca*) is the very destruction of that craving: *tassāyeva taṇhāya asesavirāganirodho*. The remainderless fading away and cessation of that very craving, its abandoning. It is nothing other than that.</p>
+<p>That matter is found within the Four Noble Truths themselves. If this becoming (*bhava*), these five aggregates of grasping, arise due to certain causes and conditions, then, where those causes and conditions are absent, there indeed is Nibbāna. That is what we have to understand. The path to it is the Noble Eightfold Path. Even there, it is not a matter of developing it marginally or retail-wise; it is the occasion when it is completed in depth at the moment of the Path and Fruit (*magga-phala*). At that single moment, all eight factors of the Noble Eightfold Path—just like a path that was crooked until then becomes straight—arise powerfully from Right View to Right Concentration, in a single moment, in a single mind-moment. That Truth of the Path is what arises in that mind at the stage of the Path of Stream-entry, Once-returning, Non-returning, and Arahatship. The Noble Eightfold Path, which was developed little by little until then, becomes straight and emerges as a powerful Noble Concentration (*ariya-samādhi*) in a single moment. It is through that Noble Concentration that the five aggregates of grasping are let go of. Through that letting go, one experiences a state of cessation of becoming (*bhava-nirodha*) in this very life (*diṭṭheva dhamme*). There indeed is liberation. That is liberation. So, we must understand that this is what we should target. We must remove those wrong concepts. Stream-entry is not a story about *sota* falling into the ear or eye. A simile is given: like a log of wood that has fallen into a river going to the ocean. If that direct experience is obtained, that is the trainee (*sekha*). From then onwards, the completed state is called the non-trainee (*asekha*). When this Wheel of Dhamma is turned four times in four stages on the path leading to Arahatship—when those three characteristics are powerfully developed and turned four times—there indeed is Supreme Enlightenment.</p>
+<p>At that stage, the Buddha said He was purified. Although that state is not as all-encompassing as Supreme Enlightenment (*sammā-sambodhi*), the history of the Sasana is proof that one can realize it within Arahatship through one's own capacity. You, on a day like today, must recognize that Wheel of Dhamma. You must know where to turn it. Not from country to country, from land to land, as the Wheel-turning Monarch turned it. It must be turned within one's own mind-stream, in four ways, in four manners, at four stages. Then, the reverberation of that—the supremacy of that Wheel of Dhamma—spread up to the Akanittha Brahma world at that moment.</p>
+<p>Thus, on this valuable day, we commemorated the core meaning, the essence within the preaching of the *Dhammacakkappavattana Sutta* in Isipatana, Varanasi. We must renew that today. In accordance with that Wheel of Dhamma, to shape our lives, may the virtue (*sīla*) observed, the meditation practiced, and the Dhamma heard up to this point, definitely serve as a cause and support (*hetu-upanissaya*) for all of you. I wish.</p>
+<p>May all beings from the Avici hell up to the Akanittha Brahma world rejoice in the mass of merit accumulated through this preaching of Dhamma and listening to Dhamma. By rejoicing in it, may they make it a support to realize the supreme, great, deathless Nibbāna through a Bodhi of their aspiration. Likewise, to maintain this Sasana for a long time, may you all, with a correct understanding of this Wheel of Dhamma, by fulfilling virtue, concentration, and wisdom (*sīla, samādhi, paññā*), if you have those aspirations, realize the supreme, great, deathless Nibbāna in this very life through the realization of the paths of Stream-entry, Once-returning, Non-returning, and Arahatship, and be released from all samsaric suffering! May you be free from suffering! Chant this stanza.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_078.html" class="doc-btn">← Previous Sermon (078)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_080.html" class="doc-btn">Next Sermon (080) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 099 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_098.html" class="doc-btn">← Previous Sermon (098)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_100.html" class="doc-btn">Next Sermon (100) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 099</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_099_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_099_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_099_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #99</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.118)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Abhivādanasīlissa niccaṃ vuḍḍhāpacāyino,</p>
+<p>cattāro dhammā vaḍḍhanti: āyu vaṇṇo sukhaṃ balaṃ.</p>
+<p>From:</p>
+<p>Dhammapada 109 (Sahassavagga)</p>
+<p>Dear Listeners,</p>
+<p>Human beings employ various strategies and seek many methods to accomplish the qualities of lifespan (*āyu*), beauty (*vaṇṇa*), happiness (*sukha*), and strength (*bala*), which support the existence of a life. The Teacher of the Three Worlds, the Supreme Buddha, declared that these things, which everyone desires, can be obtained even through paying homage to elders and showing them respect and honor. It is this matter that we hope to present to these devotees today, on this Bak Full Moon Poya Day, which coincides with the New Year, by means of the stanza that declares this and the story that serves as an illustration of it. The Buddha preached this Dhamma stanza concerning a child named Dīghāyu. The story unfolds as follows.</p>
+<p>In the city of Dīghalambika, there lived two brahmins who practiced asceticism for forty-eight years. They practiced the asceticism of the holy life (*brahmacariya*). After forty-eight years had passed, one of them had a thought that since his lineage would end after him, he should live a lay life. Thinking so—as mentioned in the books, he sold his ascetic merits to another, or did something of that nature—to put it briefly, he took a wife along with a hundred *Kahāpaṇas* (gold coins) and a hundred cows. While living such a lay life, one day, when his old ascetic friend visited the city, this couple took their child and went to receive blessings from that ascetic. Having gone there, first, the brahmin handed the child to the mother and paid respects. The mother then handed the child to the father and paid respects. To both of them, the ascetic said, "May you live long!" Then they made the child pay respects. At that moment, the ascetic remained silent. So, the brahmin asked: "Venerable Sir, when both of us paid respects, you said 'May you live long,' but why did you say nothing when our son paid respects?" Then the ascetic said: "I see a life-threatening danger for this son." When asked how long he would live, he replied: "This life will only survive for seven days." When asked if there was any way to prevent it, he said: "I do not see any such way. But perhaps the Ascetic Gotama might know." Then the brahmin said: "But if I go to the Ascetic Gotama, the asceticism I have practiced for so long will be lost." The ascetic replied: "If you have affection for your son, you must go. You will have to go and meet the Ascetic Gotama and ask." Thereupon, the brahmin, his wife, and the child went to the Blessed One.</p>
+<p>Having gone there, just as before, when the brahmin paid respects, the Blessed One said, *"Dīghāyu hotu"* (May you live long). When the wife paid respects, He also said, *"Dīghāyu hotu."* But when the child paid respects, He remained silent. When asked why, the Blessed One in the same manner declared, "There is a life-threatening danger for this child. He will only live for seven days." When asked, "Is there a way to prevent it?" He replied, "There is. If you wish to do it, practice in this way." "What is it, Brahmin? You must erect a pavilion in front of your house, place a small chair or seat in the middle, arrange eight or sixteen seats around it for the Saṅgha, and conduct a chanting of *Paritta* (protective verses)." Then the brahmin said, "I can construct the pavilion and do those things. But from where will I get the Blessed One's disciples?" The Buddha replied, "I will take care of that." When the pavilion was made and the brahmin came and reported that everything was prepared, the Blessed One directed the Saṅgha to go there.</p>
+<p>After the Saṅgha arrived, they seated the child on the small chair in the middle and conducted the chanting of *Paritta* continuously for seven days. On the seventh day, the Blessed One also arrived there. When the Blessed One arrived, deities from all the world-systems assembled there. Next, it is mentioned what this life-threatening danger actually was. It was like this: a *yakkha* named Avaruddhaka (not *avurudda* meaning "year", but his name was Avaruddhaka) had served the Yakkha King Vessavaṇa (Vesamuni) for twelve years and obtained a boon. What was the boon? It was to take that child. He was not taking the child to cuddle him, of course. So, he received the boon to take the child. This *yakkha* was waiting for the right moment to come. However, the Saṅgha were chanting *Paritta* there. Furthermore, after the Blessed One arrived, the *yakkha* could not even get close, because when that assembly of deities gathered, there was a custom among the deities that when highly powerful deities arrive, the lesser deities must step back. They moved further and further back, and in the end, the *yakkha* Avaruddhaka could not even get near.</p>
+<p>Then, that fatal hour passed. When dawn broke on the eighth day, the child was still alive. So the parents brought the child, placed him at the feet of the Blessed One, and made him pay respects. The Blessed One said, *"Dīghāyu hotu."* On that occasion, He wished long life for that child. "Venerable Sir, how long will this child live?" they asked. He replied, "He will live for one hundred and twenty years." That was a marvelous thing. Then, the story continues as follows: When that child grew up and reached the age of understanding, he went about performing meritorious deeds with great faith (*saddhā*) accompanied by another five hundred lay devotees (*upāsaka*). The Saṅgha discussed this in the Dhamma assembly hall: "How wondrous! This child, who was destined to die in seven days, has now obtained a lifespan of one hundred and twenty years and is moving about with such a crowd." While this conversation was going on, the Saṅgha also thought, "There must be some method for prolonging lifespan, and that is why this happened."</p>
+<p>The Blessed One, having arrived there, asked what topic they were discussing. When the monks told Him the news, He said, "Yes, monks, there is a way to prolong one's lifespan," and uttered the stanza we have taken as our theme. It is a stanza that these devotees are constantly accustomed to hearing—one we usually recite at the end of a Dhamma sermon as a blessing for these devotees, which we have brought to the beginning today. He uttered that stanza:</p>
+<p>*Abhivādanasīlissa niccaṃ vuḍḍhāpacāyino,*</p>
+<p>*Cattāro dhammā vaḍḍhanti: āyu vaṇṇo sukhaṃ balaṃ.*</p>
+<p>For one who is habituated to bowing down, constantly honoring the elders, four qualities increase: lifespan, beauty, happiness, and strength. This is the meaning of this stanza. So, in this story, we see on one hand the act of paying homage which leads to the increase of lifespan, which is highly appropriate for this occasion. In the homes of these devotees, perhaps even today, during the time called the "auspicious period for meritorious deeds" (*puṇya kālaya*), which is also referred to as the "non-asterism period" (*nonäkatha*), in many households, as a New Year custom, they offer a sheaf of betel leaves to elders and pay respects. When we look at this in connection with our theme, the passing of a year shows us the waning of our lifespan. A certain turning point where one's lifespan expires is the birthday. Here, the concept of a collective New Year in the cycle of time can be thought of as everyone's birthday, so to speak.</p>
+<p>In the past, the ancient Sinhalese, on this day in the month of Bak which they regarded as the New Year, designated a period of pause called the *nonäkatha*. It is a novel thing, a cycle that does not stop spinning. Pausing this cycle for a moment in one's mind, they create a "non-asterism period" (*nonäkatha*) with the help of those astrological calculations. It seems that since those engaged in various daily activities had no time even to perform meritorious deeds, they designated the time without an auspicious asterism (*näkatha*) as the "period for meritorious deeds" (*puṇya kālaya*). In any case, during that period of meritorious deeds, one must resolve to obtain a new vigor, a new life, by offering a sheaf of betel leaves to one's elders, bowing to them, and asking for forgiveness. There is a custom of paying homage and showing respect to parents, clan elders, and also to the Saṅgha, who are like clan deities, and to all elders. Consider its meaning. Furthermore, it is mentioned in this story that although the ascetic saw that the child's life would last only seven days, he did not see a way to prevent it. Yet, he honestly declared, "Perhaps the Ascetic Gotama can," and directed them in that direction. Next, since the Blessed One also saw that this fatal danger could not be averted by the mere paying of respects alone, He put forward the idea of a chanting of *Paritta*.</p>
+<p>What is meant by the word *paritrāṇa* is protection from all sides. What is the deep meaning of this word *paritta* or *pirit*? It is providing protection from all sides. How is this protection provided? These devotees know very well how it is done during these *Paritta* ceremonies. A blessing is performed through an assertion of truth (*saccakiriya*) regarding the veracity of the Triple Gem. There, by saying *"saccena suvatthi hotu"* (by this truth may there be well-being) and so forth, they recollect the all-pervading power and the strength of virtues of the Buddha-gem, the Dhamma-gem, and the Saṅgha-gem, and make an assertion of truth based on them. There is a great power in that word. There is a great energy in the word that spreads throughout the universe. Along with the word goes this power of blessing, the assertion of truth, and what follows it. Just as the child was seated in the middle and the *Paritta* ceremony was held on that occasion, today, in this era, we see that the vessel of *Paritta* water and the *Paritta* thread are placed in the middle while the Saṅgha sit around and chant *Paritta*. That is the concept behind treating *Paritta* water and *Paritta* thread as being endowed with great power.</p>
+<p>Thus, we can understand that, on one hand, just like that act of paying homage, the chanting of *Paritta* also helps to prevent dangers and accidents—here, a *yakkha* named Avaruddhaka is mentioned. There are certain invisible forces, such as non-human afflictions and so forth. The strength and power of the Triple Gem help to dispel them. That is what is specifically mentioned in this story on this occasion. When we think about lay life in the ordinary world, even when we look among parents and relatives, we usually consider those who are older in age as elders. But when we think about the Dispensation (*Sāsana*), the concept of an elder is different. These devotees have heard that even a young child who is ordained on that very day receives homage and offerings from laypeople. Similarly, one must pay respects to those who are senior in ordination. There is a monastic custom of paying respects according to the number of rains retreats (*vassa*) since higher ordination (*upasampadā*). A situation where one can witness a miracle of the Dispensation is when a mother, who has carried her child in her womb for ten months, nourished him with milk made from her own blood, scolded and punished him in various ways during his mischievous childhood, offers him to the Dispensation—even if he is a seven-year-old child—and then she pays respects to that child. When she pays respects to that child, the child does not bend down and pay respects to the mother saying *mātupādaṃ namāmahaṃ* (I bow to my mother's feet) as before. Instead, as declared and taught by the Blessed One, the supreme way a monastic can minister to parents is by helping them grow in faith (*saddhā*), virtue (*sīla*), generosity (*cāga*), and wisdom (*paññā*). In terms of offering that assistance, with that determination, and recollecting the majesty of virtue (*sīla-teja*) associated with the monastic life, they bestow this blessing: *Abhivādanasīlissa...* and so on.</p>
+<p>In one way or another, he blesses the mother. Then, even though her child, her darling child, had paid respects to her until then, the mother sheds tears of joy seeing him accept her homage unflinchingly, now as a darling of the Dispensation. She does not feel hurt thinking, "My child paid respects to me all this time, but today he does not." Regarding him as a darling of the Dispensation, the mother wipes away her tears of joy and steps aside. Through that miracle of the Dispensation, we see that the order of seniority in the Dispensation is different. However, this concept of the order of seniority did not exist at the very beginning. There is a story mentioned in the Dhamma about how it came to be. We can imagine how much chaos arises in society when there is no such order of seniority. In the Vinaya Piṭaka, which outlines the history of the Dispensation, the following incident is recorded:</p>
+<p>On one occasion, when Anāthapiṇḍika the householder had prepared Jetavana monastery and constructed all the dwellings, he sent a messenger to the Blessed One. At that time, the Blessed One was traveling back from the city of Vesālī to accept the offering of Jetavana. Meanwhile, a group of unruly monks known as the group-of-six (*chabbaggiya*), who constantly violated Vinaya rules, arrived early and claimed ownership of the lodgings and dwellings of Jetavana, saying, "This is for our preceptors, this is for our teachers, and this is for us." Thus they took possession of them. Then, the Blessed One arrived there. In the meantime, the Venerable Sāriputta, the Chief Disciple, was traveling somewhat behind. Although the Blessed One and the retinue of monks managed to get dwellings, there was no dwelling for the Venerable Sāriputta; there was not even a place for him to sleep. So, he spent that night under a tree. In the early morning, the Blessed One got up and coughed. As a signal, He cleared His throat slightly. Then, the Venerable Sāriputta also coughed to indicate his presence. "Who is there?" the Blessed One asked. "Venerable Sir, it is I, Sāriputta," he replied. "What are you doing there?" He asked. Thereupon, the story came to light: because the group-of-six monks had arrived early and seized the lodgings, we had to step back. That was the situation.</p>
+<p>The next morning, when daylight broke, the Blessed One assembled the Saṅgha and asked if that story was true. "How could these foolish men (*mogha-purisa*) do such a thing? If they behave in this way, what will happen in the future? How could they do this, showing no regard for seniority, to the extent of leaving no room even for the Chief Disciple?" Then, the Blessed One asked the monks: "Who is worthy of the best seat (*aggrāsana*), that is, the first seat? Who is worthy of the best water (*aggrudaka*), that is, to receive water first? Who is worthy of the best alms (*aggapiṇḍa*), to receive alms-food first?" When asked, some monks said, "Those ordained from the brahmin caste." Others said, "Those ordained from the householder (*gahapati*) caste." Some said, "To the Suttantikas who have well-memorized the Suttas." Another said, "It is proper for those versed in the Vinaya (*vinayadhara*)." Another said, "To the Dhamma preachers (*dhammakathika*)." Yet another said, "The first seat should be given to those who have attained the first absorption (*jhāna*)." Others said, "The second, third, or fourth absorption." Other monks answered, "Those who have attained the paths and fruits—Stream-entry, Once-returning, Non-returning, and Arahantship—or those who have attained direct knowledges (*abhiññā*)." Because those monks did not have a proper understanding, they gave various answers of this sort. Then, the Blessed One first presented an exemplary story. That story is mentioned not only in the Vinaya Piṭaka but also in the Jātaka Book under the name Tittira Jātaka, with minor variations. According to the facts mentioned in the Vinaya, it is as follows:</p>
+<p>The Blessed One declared: "Once upon a time, near the Himalayas, there stood a large banyan tree. In association with that banyan tree, a partridge, a monkey, and an elephant lived in great friendship. These three thought: 'It is not proper for us to live like this without showing respect and honor to one another. Let us somehow identify who is the elder among us, and live paying respect and hospitality to that elder, and following that elder's advice.' To find out, 'How shall we know our age?' the partridge and the monkey asked the elephant what was the oldest event he could remember. The elephant said: 'I remember when this banyan tree was just a sapling; when I walked over it, its topmost tender shoot rubbed against my belly. I remember even that time.' Next, the elephant and the partridge together asked the monkey: 'What is the furthest past you can recall?' The monkey said: 'When I was small, as a baby monkey, sitting on the ground, I used to nibble the tender shoot of this banyan sapling.' Next, the elephant and the monkey asked the partridge: 'What is your past memory regarding this banyan tree?'</p>
+<p>'Over in such-and-such a place, there stood a large banyan tree. Having eaten a fruit from that banyan tree, I voided my excrement here. It is from that seed that this banyan tree grew. Although I am just a partridge, even at that time I was of considerable age.' Thus, the partridge was the eldest. If one looks at physical size, how massive is the elephant? The monkey is also large. Yet, this small partridge was senior in age. So, what follows is that—having identified the elder—the elephant and the monkey lived showing respect and honor to the partridge, abiding by the partridge's advice. Next, the Blessed One says that the partridge established the other two in the five precepts (*pañcasīla*). He himself also kept the five precepts. Having kept them and fulfilled that noble custom of showing respect and honor to the elder, it is mentioned in the Vinaya book as a unique holy life. The term used is *Tittiriya Brahmacariya* (the holy life of the partridge).</p>
+<p>For the well-being of those three, the Dhamma uses the term *Tittiriya Brahmacariya*. *Tittira* means partridge. The Blessed One declared that by practicing this unique holy life initiated by the partridge, those three animals were reborn in happy realms (*sugati*). Having declared this, He said, "Monks, even those animals understood the importance of seniority and acted accordingly. Why then do you, who are ordained in this well-expounded (*svākkhāta*) Dhamma and Vinaya, not show respect to elders?" He also declared the benefits of paying homage to elders through a certain stanza. The story concluded by stating that if someone fulfills the custom of paying respects and showing honor to elders, they are praised in this world and reborn in a happy realm.</p>
+<p>When that same story is mentioned in the Jātaka Book, the identification of characters is also given. Here, an elephant, a monkey, and a partridge were mentioned. Who were these three? In the past, the elephant was Venerable Mahāmoggallāna, the monkey was Venerable Sāriputta, and the partridge was the Teacher of the Three Worlds, the Buddha himself. This is how they are identified in the Jātaka Book. So, this exemplary story was presented to put forward the monastic concept regarding the order of seniority, the line of succession. Along with that, the Blessed One declared that in this Dispensation, the one ordained first, the senior monk, should receive homage and respect from the one ordained later, and He detailed at length in the Vinaya Piṭaka who is worthy of homage and who is not. Drawing from this story, if we relate this to society, these devotees had a good custom in the past that went hand-in-hand with village life, among villagers. Instead of just treating everyone the same, they respected elders based on age, and even if they were not from the same family, they regarded the entire village as one family, addressing others as elder brother (*ayyā*), younger brother (*mallī*), younger sister (*naṅgī*), elder sister (*akkā*), mother (*ammā*), and father (*tāttā*). It was very pleasing to the ear. There was such a practice in the past. Thus, in agricultural and other work, it was like a family working together. They all bore the burden together. That sense of seniority helped to maintain the bonds of unity.</p>
+<p>Indeed, even if we reflect on that banyan tree, a banyan tree itself is a miracle. It is a tree grown from a tiny seed. Looking at a massive banyan tree, one can learn many things. As revealed in the previous story, this banyan tree grew from a banyan seed in the excrement voided by that partridge. We can imagine that the excrement might have fallen between a stone or two. Yet, enduring great storms and various hot seasons, the tree grew gradually and became a great banyan tree providing shade to everyone. Thus, even by looking at a banyan tree, we see we can learn something from its long existence. It is the same with a human being. Even if they do not have a high education or high positions, through many experiences in the university of life, an elder, to a certain extent, becomes someone worthy of respect and honor. Now, many young children sometimes have a habit of making fun of elderly people. One should not think in that way. One must look at elders just as one looks at that banyan tree. By living up to that point amidst various life troubles, being subject to the eight worldly conditions (*aṭṭha-loka-dhamma*), the vast store of experience they gain can be of help to oneself as well. But that help can only be received if one conducts oneself in that manner—showing proper respect and hospitality without making fun of them. Therefore, that is also the custom of the New Year. If one lives according to that concept of seniority, not only towards parents and elders at home but also towards neighbors, then with mutual cooperation, the home becomes a village. It is when we relate it to lay life in this way that the value of this story lies.</p>
+<p>At the same time, we must constantly contemplate another aspect revealed by this story. If we orient this towards Nibbāna, it was mentioned at the beginning of the story that one of the two ascetics decided to return to lay life to protect his lineage. This is called inheritance or ancestry (*praveṇiya*). That was in agreement with his ascetic doctrine, because in Brahminism there is a teaching about four stages of life (*āśrama*). Life is divided into four stages. During childhood and youth, one must study. During youth, one must enjoy the fivefold sensual pleasures. In the third stage, one should incline towards the religious side, the practice of a sage (*muni-vṛtti*). In the final stage, when approaching death, one must die as a yogi. In this way, dividing the mundane (*lokiya*) and the supramundane (*lokuttara*) fifty-fifty, some people in Brahminism spent their lives. The other concept is that even for an ascetic, that was an accepted practice in Brahminism; there was nothing strange about it. Why did those brahmins return to lay life after keeping the holy life (*brahmacariya*) for forty-eight years? It was to carry their family lineage forward. Although that side is not directly mentioned in the story, it is worth considering. This is because the concept of Nibbāna in this Dispensation of the Blessed One is different from that Brahmin doctrine. It is for this reason that when the Blessed One ordained even seven-year-old children, when large crowds joined the Buddhist Dispensation, leaving behind their wives and children, causing a huge social transformation, some people accused the Blessed One: *"Aputtakattāya paṭipanno samaṇo Gotamo, vedhavyāya paṭipanno samaṇo Gotamo, kulupacchedāya paṭipanno Gotamo"*—"The Ascetic Gotama is bent on making families childless; the Ascetic Gotama is bent on making women widows (for when husbands leave, they become widows); Gotama is bent on destroying clans." Yes, they said it is a practice that destroys the clan, the lineage, ending the lineage right there. Such accusations were leveled against the Blessed One. The Blessed One, however, told the monks that this noise would not last long, and to dispel that noise, He asked them to recite a certain stanza. That stanza declares that the Ascetic Gotama guides this crowd through Dhamma, not through non-Dhamma (*adhamma*). Therefore, there is nothing wrong with this.</p>
+<p>Next, there is another account mentioned in the Vinaya Piṭaka, which we will mention only briefly because it is somewhat related to this. In the Vinaya Piṭaka, there is the first *Pārājika* training rule concerning sexual intercourse, which is the practice of laypeople. Even if we look at the story of the monk that led to the formulation of this training rule, we can see that the values and virtues of our Dispensation are different from Brahminism. There, it is said that the monk named Sudinna Kalandakaputta had ordained with great faith (*saddhā*). However, he had ordained after living a lay life, and while he was married and had a wife, his wife's mother came and made an inappropriate proposal: "Because there is no child, the wealth belonging to our family might be confiscated by the king. Therefore, we need a child." She made such an improper proposal. Agreeing to that, the monk Sudinna Kalandakaputta compromised his virtue (*sīla*). Due to that wrong conduct which later led to deep regret, the Blessed One rebuked the monk Sudinna Kalandaka, calling him a foolish man (*mogha-purisa*), and laid down the first training rule concerning abstaining from the *Pārājika* of sexual intercourse. From this, we can see that the doctrine of the Brahmin era was like trying to save both the porridge and the beard (wanting to have it both ways)—one must protect this world and at the same time realize Nibbāna, or rather, obtain liberation according to their views.</p>
+<p>The Blessed One's Dhamma is not like that. According to the Blessed One's Dhamma, this entire world is a hospital. Therefore, as quickly as possible, at whatever age, if the thought of renunciation (*nekkhamma*) arises in someone, it is proper to put it into practice. It is not about those ideas of social, economic, or physical values. Considering the rarity of the Buddhist Dispensation and the rare opportunity for realizing Nibbāna, He gave permission to ordain even young children. Although not explicitly stated in this story, what is being discussed here is something opposite to that Brahmin doctrine. Next, the chanting of *Paritta* was mentioned here. We must understand the value of this *Paritta* chanting. In the Ratana Sutta and other discourses, what is specially described are the virtues of the Buddha-gem, the virtues of the Dhamma-gem, and the virtues of the Saṅgha-gem. Similarly, there are certain *Parittas* like Mahāsamaya and Āṭānāṭiya where it is described how the entire universe, even the *yakkhas*, bow down to the majestic power of the Blessed One's virtues. That is why these *Parittas* are said to be endowed with great power.</p>
+<p>For what do we employ all of these? It is to protect our lifespan, and along with that lifespan, to protect beauty, happiness, and strength. If the lifespan increases to some extent, it is parallel to that that the qualities of beauty, happiness, and strength increase. Generally, everyone wishes for these four qualities. However, what is more valuable, more valuable than all of these, is wisdom (*paññā*). Lifespan, beauty, happiness, strength, and wisdom. Thus, to obtain this wisdom, we cannot be satisfied with mere listening to *Paritta* or mere paying of respects. Thinking even more deeply, at whatever age, if one has understood the value of this Dhamma, by practicing it, one must personally realize this liberation from Saṃsāra, which is an extremely rare thing. If that determination to make an opportunity for this arises, anyone has the space to walk that path of Dhamma in this Dispensation.</p>
+<p>In walking that path of Dhamma, we know that once it is completed, as said before, even a young child becomes worthy of receiving homage from his parents. This is because it is an extremely difficult thing. For a long time in this Saṃsāra, we have come enjoying the treasures of the five cords of sensual pleasure (*pañca-kāma*), staying within lay houses, subject to lay values. Similarly, at this moment, these devotees, by keeping the eight precepts (*aṭṭhasīla*) on this Poya day, separate themselves from certain comforts and luxuries belonging to their daily life until now, and habituate themselves to a simple life. Yet, for a long time in this Saṃsāra, we lived submerged in various things belonging to sensual pleasures that cause negligence (*pamāda*). In renunciation (*nekkhamma*), one has to gradually abandon all of that. That is why, as soon as he is ordained, even that young child becomes worthy of receiving homage from his parents.</p>
+<p>Indeed, we must reflect that to maintain a life, we obtain the qualities of lifespan, beauty, happiness, and strength through paying respects to parents and so forth, and through listening to *Paritta*. But for what do we maintain a life? For what do we obtain a lifespan? For what do we obtain strength? We must do all of this for the sake of escaping from this Saṃsāra. For that, then, one must strive to obtain that wisdom (*paññā*). Wisdom is a Dhamma in this Dispensation that must be understood by each according to their own capacity (*ñāṇa*). There is a path to be traversed for that, namely, virtue, concentration, and wisdom (*sīla, samādhi, paññā*). It is on that path that these devotees are traveling now, practicing Dhamma and meditation as spiritual practitioners (*yogāvacara*). One must reflect: if on a New Year's day like this, one has obtained a lifespan through certain meritorious deeds related to that period of meritorious deeds, and has obtained the parallel beauty, happiness, and strength necessary for a life, then next, one must ask oneself the question: "For what purpose do I live?"</p>
+<p>During the pause that presents itself, in which direction should we steer our lives? Is it towards that world-prolonging practice of being born and dying in Saṃsāra over and over again? We call it *lokavaḍḍhana*—that is, the expansion of the world. The Buddha declared that going on being born and dying in this Saṃsāra over and over again is a practice. Expanding the world means expanding the cemetery. On one occasion, speaking about Mount Vepulla—isn't this Mount Vepulla?—the Blessed One said that if the skeletons left behind by a single human being during a single eon (*kappa*) were gathered together, they would be larger than this Mount Vepulla. Thus, we have gone on leaving behind skeletons in this way for an infinite time, which also decay in time; such research has been carried out extensively. There is no end to this.</p>
+<p>Only a Buddha shows the end, through the Noble Eightfold Path. Through the Middle Path, He showed the world the most valuable thing in this life: *paññā narānaṃ ratanaṃ*—wisdom is the supreme gem for human beings. Earlier, only lifespan, beauty, happiness, and strength were mentioned. But these devotees have heard that sometimes five qualities are shown: lifespan, beauty, happiness, strength, and wisdom. One must obtain wisdom by walking on the path proper for it. That begins with virtue (*sīla*). Thus, on a day like today, this New Year is not only for young children; both children and elders regard this day as a rare opportunity to fulfill customs and duties related to the New Year, mostly related to lay life, and spend the day for that purpose. Yet, even on such a day, this group of devotees, contemplating wisely, should ask: what is the truly rare thing? Is it just a New Year's day that comes once a year, or is it a day obtained in this rare human life? The Poya day. Thus, which is more valuable—the New Year or the Poya? You must resolve this yourself. If the New Year is valuable, if the sound of firecrackers is more valuable, one is pulled towards that side. If the Poya is valuable, if the sound of Dhamma is more valuable, one is pulled towards this side.</p>
+<p>Different individuals behave in various ways according to their own concepts of values. Likewise, if avenues of entertainment are what is desired for the New Year, they are drawn to them. Instead, if spending a peaceful, more simple life is the valuable opportunity to be gained from a New Year, one must contemplate that this Bak Poya which came along with this New Year is a good opportunity to understand one's own inclination and comprehension of values. Thus, we are pleased that these devotees, having entered upon this path of virtue, have undertaken the eight-factored Uposatha precepts (*uposatha aṭṭhaṅga-sīla*), and some have even undertaken the ten precepts (*dasa-sīla*), thereby understanding the value of virtue. Furthermore, within that virtue is a training, a preparation for monastic life. It has been pointed out on many occasions: why was the layperson told to observe precepts on the four Poyas? It is to gradually incline from lay life towards monastic life, to provide an opportunity for dwelling in seclusion, meditation, and so forth. Similarly, as directly mentioned in the Dhamma, one observes the eight precepts on Poya with the determination: "For this one day and one night, I shall observe the practice that the Arahants perform and follow every day." There is such a deep meaning in undertaking the precepts.</p>
+<p>Reflecting in that way, on this valuable day, these devotees should rejoice that they spent today on the most valuable thing. Next, systematically coordinating these is up to you. Based on this wealth of virtue (*sīla-sampatti*) that has been obtained and gathered, or the virtue that is kept, each one must develop the aspects of meditation called serenity and insight (*samatha, vipassanā*), as pointed out by the Blessed One, by unifying the mind around a certain meditation subject (*kammaṭṭhāna*). Lay life does not merely consist of things related to the five cords of sensual pleasure (*pañca-kāma*) going towards various objects. In this era, with various machines and instruments, these devotees spend a highly restless day, day in and day out. There is no peace even at night, spending the day agitated amidst a deluge of globalized news that comes with relentless noise and clamor. That is the kind of situation that exists.</p>
+<p>While on one hand it appears that such a highly dangerous situation is arising, on the other hand, some people rejoice: "In this era, what the brahmins and monks of the past did by going to the Himalayas and deep into difficult forests with so much toil, we can now easily obtain as 'divine eye' and 'divine ear' if we have money." Indeed, we see those devices placed in many people's ears, don't we? They have "divine eyes" and "divine ears." Next, traveling through the sky is also possible if there is money, just like boarding a bus. What is lacking then? Direct knowledges (*abhiññā*). There is no need to toil for them. If we look at the world according to modernized physical concepts, spending a lay life of that sort seems to have a good side. But along with that, these devotees know that we are gradually moving towards the side of the brute beast. It is a journey towards a beastly society. This is because, departing from those practices of virtue (*sīla*) and so forth, forgetting those virtues such as showing respect and honor to elders, listening to them, and listening to their advice, giving place instead to external showiness, to a showy and self-indulgent life, we see in society a life spent respecting only wealth, status, office, and so on.</p>
+<p>In the past, there were various concepts such as *vayovuḍḍha* (senior in age), *guṇavuḍḍha* (senior in virtue), and *tapovuḍḍha* (senior in asceticism). In the ordinary world, "senior in age" is the concept. In the Dispensation, there are concepts like "senior in virtue" and "senior in asceticism"—senior in ascetic practice, senior in virtuous qualities. That is why we pay respects even to that young child. However, instead of such a concept of seniority, society goes towards those offices, wealth, and so on, and pays respects to them. They pay respects to wealth, they pay respects to status. But we must reflect that through a life of that sort, a terrible decline in human ethics takes place. It moves towards a beastly society. That decline can spread to a point where one cannot even walk on the streets. Therefore, at least a few of us must think mindfully about these things. Indeed, what the world needs is example. Today, we constantly hear that Dhamma is preached endlessly. Perhaps because of that, we also hear criticisms about preaching the Dhamma. But that is not the point. If at least a few who listen to the Dhamma present an example through their own lives, that is what is valuable. Thus, it is not the preaching of the Dhamma, but the way of listening to the Dhamma and the lack of enthusiasm to practice it that is the cause of this decline. Therefore, irrespective of the country's situation, each one must reflect wisely: no matter how long this short lifespan we have received is—it is said that the child lived for one hundred and twenty years. Although it was one hundred and twenty years, we see according to the Dhamma that he did not spend that time on bad things. He gathered another five hundred lay devotees. Recollecting that he obtained that lifespan by being saved from the *yakkha* Avaruddhaka due to the power of the Buddha, the power of the Dhamma, and the power of the Saṅgha, that child was later known as Prince Āyuvaḍḍhana. It is mentioned that he spent a life in accordance with the Dhamma accompanied by a group of five hundred lay devotees.</p>
+<p>We too must reflect that because of the virtuous life we lead day by day during this year, this lifespan we have received, perhaps various unwholesome kamma (*akusala-kamma*) destined to ripen in our lives are worn away naturally through leading good lives; or we hear of situations where one escapes with just a scratch. We must reflect that we were fortunate enough to face another year because of the good life we spent. Taking that as a foundation, what we must do is to be further enthusiastic about it. Thus, as said before, in terms of virtue (*sīla*)—the one who had no interest at all in the permanent five precepts (*nicca-pañcasīla*) must strive to keep the permanent five precepts. Next, not being satisfied with that, one must try to undertake the eight precepts (*aṭṭhasīla*) on at least one Poya. The one who has undertaken them on one Poya must, in this way, gradually conduct their life and existence on that side so that there is growth in their virtue over two or four Poyas. Next, regarding one's values, one's virtues, in accordance with the concept of "simple living and high thinking" as mentioned earlier, instead of unnecessary lives, one must understand the true virtues pointed out by the Blessed One, and through such a light life, strive to unify the mind, establishing the mind in concentration (*samādhi*) with the help of a certain meditation subject (*kammaṭṭhāna*).</p>
+<p>What is there to do next with that concentrated mind? It is not to direct the mind towards this entire world or other worlds, searching and seeking after them. The Blessed One declared: "It is in this very fathom-long carcass, endowed with perception and mind, that I declare the world, the origin of the world, the cessation of the world, and the way leading to the cessation of the world." Recollecting that word of the Buddha, if one has correctly understood one's own five aggregates (*pañcakkhandha*), it is the same with the five aggregates of others. One must train oneself to look at them in terms of the method of the establishment of mindfulness (*satipaṭṭhāna-naya*) from the four aspects of contemplation of the body (*kāyānupassanā*), contemplation of feeling/sensation (*vedanānupassanā*), contemplation of mind (*cittānupassanā*), and contemplation of mind-objects (*dhammānupassanā*), internally and externally (*bahiddhā*). Our understanding of the four establishments of mindfulness (*cattu-satipaṭṭhāna*) becomes deep. As it becomes deeper, next, gradually, one's understanding of those thirty-seven aids to enlightenment (*sattatisa-bodhipakkhiya-dhamma*) such as the right strivings (*sammappadhāna*), bases of spiritual power (*iddhipāda*), faculties (*indriya*), powers (*bala*), and so forth, also develops. Through that, in the end, one enters the Noble Eightfold Path.</p>
+<p>Today, we see various highways and expressways being constructed in the world. Those expressways might sometimes be a shortcut to bring about a quick death. All of those expressways are defeated by this Noble Eightfold Path, known as the Middle Path, which the Blessed One introduced to the world. Concerning this Noble Eightfold Path, the Blessed One declared: *"Eso maggo natthañño, dassanassa visuddhiyā"*—this is the path, there is no other, for the purification of vision. Therefore, entering upon that path is ultimately the purpose of this training that begins with the four establishments of mindfulness. It is through that path, at some point, with the systematic development and complete transformation of personal character through right view (*sammā-diṭṭhi*), right intention (*sammā-saṅkappa*), right speech (*sammā-vācā*), right action (*sammā-kammanta*), right livelihood (*sammā-ājīva*), right effort (*sammā-vāyāma*), right mindfulness (*sammā-sati*), and right concentration (*sammā-samādhi*), that one gets the ability to finally end this suffering of Saṃsāra (*saṃsāra-dukkha*) through those supramundane paths of Stream-entry, Once-returning, Non-returning, and Arahantship.</p>
+<p>These devotees must contemplate that on a valuable day like today, the goals they should set are not to gather even more material wealth in the coming year than the personal wealth gathered so far in this year to lead a luxurious life. Understanding deeply this unsatisfactoriness of Saṃsāra (*saṃsāra-dukkha*) shown by the Blessed One, one must firmly establish in one's mind the determination to make an effort in the coming year that is hundreds and thousands of times stronger than the effort made so far to end this suffering (*dukkha*).</p>
+<p>Until then, by undertaking this valuable virtue, next by listening to this Dhamma, and during that time developing meditation to the best of one's ability, this group of devotees has gathered a vast store of merit (*kusala-sambhāra*) in every aspect of giving, virtue, and meditation (*dāna, sīla, bhāvanā*). Providing alms (*dāna*) to this virtuous group is also no small task. These devotees fulfilled that too, participating in those activities themselves. Thus, many valuable virtues of giving, virtue, and meditation were gathered today. Moving forward with this very power that has been gathered from all of this, as quickly as possible, before this lamp of the Dispensation is extinguished, with the help and support of one's spiritual friends (*kalyāṇamitta*), succeeding in Dhamma and meditation, accomplishing the meditation subjects, and through the realization (*paṭivedha*) of the paths and fruits of Stream-entry, Once-returning, Non-returning, and Arahantship, being released from all this suffering of Saṃsāra (*saṃsāra-dukkha*), may this benefit of listening to the Dhamma be an absolute support and decisive condition (*upanisraya*) to attain the supreme, deathless, great Nibbāna. Wish for this.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_098.html" class="doc-btn">← Previous Sermon (098)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_100.html" class="doc-btn">Next Sermon (100) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

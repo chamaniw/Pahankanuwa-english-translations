@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 089 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_088.html" class="doc-btn">← Previous Sermon (088)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_090.html" class="doc-btn">Next Sermon (090) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 089</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_089_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_089_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_089_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #89</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.91)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Pāmojja-bahulo pasanno, Buddhasāsane;</p>
+<p>Adhigacche padaṃ santaṃ, saṅkhārūpasamaṃ sukhaṃ.</p>
+<p>From:</p>
+<p>Dhammapada 381 (Bhikkhuvagga)</p>
+<p>Dear Listeners,</p>
+<p>If we consider the cultivation of dispensation virtues as a form of agriculture, faith (*saddhā*) is taken as the seed-paddy. The reason why faith receives such a fundamental place is that when there is no clarity or devotion towards the Teacher, the necessary energy to walk the path of practice shown by Him does not arise. The disciple with strong faith receives the strength to act according to the word of the Buddha with supreme commitment. Today, we hope to present the verse that expresses this, along with the story that serves as evidence for it.</p>
+<p>There lived a young Brahmin named Vakkali in the city of Sāvatthī. One day, seeing the Buddha walking for alms, this young Brahmin Vakkali felt an extraordinary fascination with the beautiful physical form of the Buddha. To such an extent that, not being satisfied with just following behind Him, he thought, "How good if I could keep seeing the Buddha every day!" and for that very purpose, he was ordained in the dispensation. Even after being ordained, what he did was not Dhamma discussion, meditation, or chanting, but gazing continuously at the Buddha. At every possible opportunity, he kept gazing at the Buddha. This was like a great nuisance to anyone. But the Buddha patiently endured it. He waited until the wisdom and understanding of Elder Vakkali developed a little. Having watched thus, waiting for the right time, at one point He admonished Elder Vakkali: "Vakkali, what is the use of gazing at this foul body? He who sees the Dhamma, sees me." He gave that advice.</p>
+<p>Even though He said so, due to the faith that Ven. Vakkali had, there was a situation where he could not remain without seeing the Buddha. So, when the rainy season (*vassa*) approached, the Buddha journeyed to the city of Rājagaha. Needless to say, Ven. Vakkali also went. On the day of entering the *vassa*—which is the starting day of the three months of the rainy season—the Buddha thought, "Now indeed, I must do something to arouse spiritual urgency (*saṃvega*) in Vakkali," and dismissed him saying, "*Apehi, Vakkali*"—"Depart, Vakkali!" and sent him away.</p>
+<p>Then Ven. Vakkali was filled with great grief. "Alas, how can I live for three months without seeing the Buddha?" Abandoning even the desire for life, he climbed the Vulture's Peak (*Gijjhakaṭa*) and planned to commit suicide. Thinking thus, when he was on the very verge of jumping from that cliff, the Buddha realized this situation, thinking: "If he does not receive some consolation from me now, Vakkali will miss the opportunity to attain the fruits of the Path." As Vakkali was preparing to jump, the Buddha uttered the verse which we have set as today's theme:</p>
+<p>> *Pāmojja-bahulo bhikkhu, pasanno buddhasāsane;*</p>
+<p>> *adhigacche padaṃ santaṃ, saṅkhārūpasamaṃ sukhaṃ.*</p>
+<p>What this short verse says is that the monk who is dedicated to this Buddha's dispensation and is abundant in joy and delight, attains that auspicious, blissful, peaceful Nibbāna,, which is called the calming and stilling of preparations (*saṅkhāra*). Such is the message contained within it.</p>
+<p>Having said that, He did not stop there; the Buddha manifested His physical form to Vakkali through psychic power. Next, the Buddha invited Vakkali to come, saying "*Ehi*" ("Come!"). Although He had driven him away earlier saying "*Apehi*", on this occasion He said, "Come, Vakkali, do not be afraid," and then it is mentioned that He uttered three verses. "Vakkali, do not be afraid. Look at me. Come. I shall pull you up from this mud-mire. Just as the sun caught by Rāhu is freed from Rāhu, or the moon caught by Rāhu is released from Rāhu, I shall protect you." He uttered verses declaring that He would be his refuge.</p>
+<p>As it is described there, Vakkali got to hear this just as he was preparing to jump. According to the explanation, Ven. Vakkali, who was in deep grief and spiritual urgency (*saṃvega*), experienced a tremendous joy and rapture, a great happiness. "The Buddha drove me away before, but now the Buddha is inviting me!" Because the Buddha had shown Himself through psychic power as if standing right before him, he jumped solely out of that faith. Yet, without meeting with disaster, he next appeared right beside the Buddha. What is shown to have happened in the interim is that he deeply realized the subtle meaning expressed in that verse, and it is mentioned that he attained Arahantship together with the analytical knowledges (*paṭisambhidā*).</p>
+<p>Indeed, there are instances in the Dhamma where instantaneous realization of this kind is mentioned, such as attaining Arahantship even while falling from the top of a bamboo tree. But this is a special event. To show the power of this faith, after all these events took place, the Buddha, as was His custom to declare those with special skills in various areas to be chief, declared Ven. Vakkali as the chief among the monks who are liberated through faith (*saddhādhimiutta*). He declared that among the monks in the entire dispensation who are excessive in faith and inclined towards faith, Ven. Vakkali is the foremost, the chief.</p>
+<p>This story is found in various books with diverse differences. Now, if we consider this event as something that occurred in accordance with the Dhamma, we can present its deep meaning in this way. You, devout listeners, may already know that seeing Nibbāna,, is not something that can be done with these eyes, ears, nose, and so forth. Rather, it is by developing five internal spiritual faculties (*indriya*) within oneself that Nibbāna,, can be attained. These faculties are identified as follows: faith (*saddhā*), energy (*viriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*).</p>
+<p>These very faculties of faith, energy, mindfulness, concentration, and wisdom must be developed within oneself to see Nibbāna,. Not only must they be developed, but these faculties must also be balanced. For some individuals in saṃsāra, those with high faith find their faith becoming excessive, crossing the limit. For those with high wisdom, sometimes that faculty can also become excessive. For those where it is excessive, the Buddha sometimes has to balance it, to bring it to a state of equilibrium, just as He balanced Ven. Soṇa’s energy by giving the simile of the lute.</p>
+<p>Ven. Vakkali's faith became excessive. However, the Buddha patiently endured that matter until the right opportunity arrived. That matter means: Ven. Vakkali went behind Him wherever He went. Having gone thus, only after his intellectual capacity had matured to a certain extent did He say: "What is the use of looking at this foul body? If one sees the Dhamma, that is all there is." That is why He said it is equivalent to seeing Me.</p>
+<p>Next, at the final moment, what we have to understand is that through the very revolution of mind that arose in Ven. Vakkali, he realized Nibbāna,, which is called the calming and stilling of preparations (*saṅkhāra*). Such things are within the domain of Buddha-knowledge (*Buddha-ñāṇa*). The Buddha sees what is called *puggala-vemattatā*, the diversity of individuals. According to their diversity, the Buddha sometimes tames that disciple through gentle methods, and sometimes through harsh methods, by virtue of His quality of "charioteer of men to be tamed" (*purisadhamma-sārathī*). In the beginning, He drove him away harshly: "Why should Vakkali keep looking at this foul body?" and sent him away. Next, He dismissed him harshly, saying "Depart!" Then He invited him to come. Preparations (*saṅkhāra*) are things we construct with this mind, aren't they? So, when the attachment created towards the beauty of the Buddha's form went beyond limits, when he was told to separate from it, a great grief arose: "There is no use in my living anymore."</p>
+<p>In this world, we hear many such stories regarding mundane things. What we have to consider here is that the beauty of the Buddha's form is not a beauty of form that increases defilements; it is a beauty of form that stilled defilements. That is the only difference. Therefore, following behind the Buddha is like reading a Dhamma book; associating constantly with the Buddha is of the same nature. The Buddha is one who speaks as He acts and acts as He speaks (*yathāvādī tathākārī*): "How He speaks, so He acts; how He acts, so He speaks." Thus, the Buddha's conduct, posture, movements, everything is like a Dhamma book. That is why He told him to wait until his wisdom matured. Ven. Vakkali did not simply follow behind Him. The Buddha knows that when a faithful person associates with Him, there are things to learn from Him.</p>
+<p>What we have to think, even if it is not explicitly written in the books, is that during that period of time, while following behind the living Buddha, Ven. Vakkali, through being fascinated by that beauty of form, recognized who the Buddha was through his faith—the very things we learn from the Buddha’s biography. Having recognized Him, that was why he became bound to such a degree. In that situation, the Buddha sought to direct that extreme faith towards the side of wisdom, saying: "What is the use of looking at this foul body? One sees Me only if one sees the Dhamma." So, that too must have struck his heart.</p>
+<p>Finally, there is a deep meaning in that verse. Giving space to faith, He expressed the value of abundance of joy; what is shown there is the necessity of faith for Nibbāna,. Devotion (*prasāda*) and joy (*pāmojja*) are things that arise through faith. They may not be accessible to intellectualists in this day and age. However, there is a special quality in faith: it instills virtuous qualities in the heart and gives the strength to act in accordance with the Teacher's word. To such an extent that the jump he intended as a useless sacrifice of life—as a suicide—he jumped instead towards the Buddha. Yet, there was no disaster. The Buddha, with His psychic power, supported his power of perfections (*pāramī*), and no harm befell Ven. Vakkali. We must understand that in the interim, while in the supportless sky, he realized that noble state of Nibbāna, which is the calming of preparations (*saṅkhāra*). This is the explanation we can see in this Dhamma story.</p>
+<p>Be that as it may, what we primarily have to contemplate is the value of this faith. How valuable is faith? Now, you devout laymen know, what is the chief organ of the animal called the elephant, the organ it puts forward? The trunk. Thus, in one place in the Dhamma, where the organs and parts of the elephant are compared to various aspects of the Dhamma, the Buddha has shown: "*Saddhā-hattho mahānāgo*"—"Faith is the trunk of the great elephant (the Dhamma-bodied elephant)." When we think about the trunk, you know that any task requiring strength and power, like uprooting trees and rolling rocks, the elephant does with its trunk. Likewise, the tip of the trunk is so delicate that it can even pick up a needle fallen on the ground; it can perform that feat as well.</p>
+<p>So, here we have to understand that when Ven. Vakkali's faith was directed towards the side of wisdom, he realized Nibbāna, which is called the calming and stilling of preparations (*saṅkhāra*). He must have understood that all of this was a conflict arising within his own mind. First, he was in deep grief, and then a great joy arose. Underlying all of this is a heap of preparations (*saṅkhāra*) constructed within himself. Therefore, where preparations (*saṅkhāra*) are calmed and stilled, that is what is called Nibbāna,. He must have realized this.</p>
+<p>Thus, as mentioned, some people have excessive wisdom and low faith. So, in one way or another, the Buddha reveals the necessity of faith according to the occasion. The supreme, leading place given to faith among virtuous qualities is also revealed by the simile of the elephant. Similarly, in many other places, the value of faith is revealed, just as the seed is primary in farming. Next, the application of one's energy is mentioned. In another place, in the *Āḷavaka Sutta*, a question asked by the yakkha Āḷavaka is about the four torrents of saṃsāra—sensual desire, becoming (*bhava*), views, and ignorance—sometimes shown as a single torrent. He asked the Buddha: "*Kathaṃ su taratī oghaṃ?*"—"How does one cross over the flood?" How does one cross over this torrent of saṃsāra? The answer given by the Buddha to that was: "*Saddhāya taratī*"—"One crosses over the flood by faith."</p>
+<p>Now, think about this a little, devout laymen. In the rainy season, a certain stream flows very strongly and rapidly. The opposite bank is visible. A person sitting on this bank keeps thinking, "This water must be cold, this water is flowing very fast. If I jump into this..." He keeps reasoning in this manner. He does not even step into the water. Can he cross over? No. If someone jumps into this, with a sacrifice of life, with the determination of "death or crossing"—if they have that much of a desire to go to the other side—jumping with the resolution "death or crossing", then, with great difficulty, cutting through that rapid torrent, they can cross over. That is the power of faith. Within faith, there is maximum commitment.</p>
+<p>Indeed, the Buddha has shown another good, valuable simile for this. In the *Cūḷagopālaka Sutta*, there is a simile of a cowherd, which is a highly valuable simile. The Buddha narrates it as a story: There was a certain wise cowherd in the country of Magadha, in the last month of the four months of the rainy season—when you can imagine that those streams and rivers are flowing heavily—who drove his herd of cattle across the Ganges river. Not from an unsuitable place, but being wise, with an understanding of the other shore as well as this shore, he drove them from the ford (*panthota*). A ford means a crossing point, a shallow place. He did not drive the cattle through a deep place, but through a shallow place.</p>
+<p>Next, the method of driving the cattle is also shown. First, he made the leader bulls cross over. So, the leader bulls went forward, cutting through the rapid current. Next, looking at the leader bulls, the strong, untamed, playful, young-bull-like cattle went behind them. They too cut through the rapid current in that manner. Having watched this, thirdly, the heifers and young steers were crossed over. Next, the weak calves crossed over, cutting through the rapid current. To such an extent, the Buddha declares, that finally even the calf born that very day, following its mother—you know how a cow makes a certain sound when searching for her calf, "lowing" (*gōrāva*), which is the sound cattle make—making that sound, that newborn calf also crossed the rapid current.</p>
+<p>The Buddha did not stop by just stating the simile; next, He presented the meaning of the simile. What the Buddha presents here is the manner in which He crosses the world over. Like those leader bulls are the Arahants. Thus, the Arahants were crossed over. Looking at that, those playful, young cattle are the Non-returners (*anāgāmī*). Watching the Non-returner cattle go, next are the Once-returners (*sakadāgāmī*), represented by those heifers and young steers. Next, as the weak calves, are those who are Stream-enterers (*sotāpanna*). Finally, as that calf born that very day, the Buddha shows a specific class of persons called the Dhamma-followers (*dhammānusārī*) and Faith-followers (*saddhānusārī*). That is, there are some people with excessive wisdom who gain impetus from that and cross over with that momentum. Faith-followers are those who have excessive faith; these two types of persons, the Dhamma-followers and Faith-followers, are given in the simile as the calf born that very day. In the Dhamma, they are shown as those who have entered the path to obtaining the fruit of Stream-entry.</p>
+<p>So, how were all those feats accomplished? In a systematic manner. He crossed them over from the right place, from the right ford. Having declared so, how does the Buddha finally conclude it? "Monks, like the cowherd, I have good skill and understanding of this world, and good understanding of the world beyond; I have a good understanding of the territory belonging to Māra, and a good understanding of the territory not belonging to Māra; further, I know the ford (*panthota*) exactly. Therefore, if anyone thinks it is fit to listen to my word, if anyone thinks it is fit to establish faith in me, it will be for their welfare and happiness for a long time." Thus, the Buddha showed the value of faith in association with that story.</p>
+<p>So, when we focus our mind on the way those cattle went, we see that through that example—the example of the cattle going in front—the next cattle received the perception: "We can go to the other side." Seeing them go, the next ones went, and in this manner, even the calf born that very day crossed over. This is the kind of thing that is present within faith. The power of faith: without folding one's arms and staying back saying, "It is cold, how can one cross over from this?" one must jump. One must jump with the resolution "death or crossing." Only if one jumps and swims with such commitment, maximum commitment, can one reach the other shore. For that, what is needed is faith. Intellect is also needed, indeed, but without faith, none of that can be done.</p>
+<p>So, from that, the momentum one receives from faith is visible. That is why the Buddha declared that one crosses over by faith. How does one cross over this rapid torrent? It is with faith as the forerunner. The other things follow. It is in accordance with faith that energy (*viriya*) emerges. Now, there is a certain relationship among those five faculties we mentioned. Without faith... no. It is in the quality of energy that mindfulness (*sati*) emerges. Next, it is mindfulness itself that, when maintained for a long time, becomes concentration (*samādhi*). It is to a concentrated mind that the right understanding, which is called true wisdom (*paññā*), arises. What is spoken of here is not an intellectualism done by reasoning and so on; the true understanding, the understanding accompanied by the true Dhamma, comes from wisdom. For that, one must develop these five faculties.</p>
+<p>For some people, due to various causes in saṃsāra and due to associating with Buddhas, faith becomes strong. Now, it is said that Ven. Vakkali had in the past made an aspiration to become the foremost disciple in faith. It was because of such strong faith that he followed behind the Buddha in that manner. As we have shown, it was not a mere following. Gazing at the Buddha does not mean increasing defilements, but calming and stilling them. The Buddha possessed a beauty of form that calmed and stilled defilements. Not only that, His maintenance of postures and everything else was like a Dhamma book. During the time Ven. Vakkali followed behind Him, wisdom must have developed naturally, in such and such a manner. From this story, we can understand that its final result was the Buddha helping him by means of that miracle and providing refuge. This is a miraculous story. There are many such things in the Dhamma.</p>
+<p>Next, if we contemplate further on this, among the things the Buddha declared about faith, another question asked by that very yakkha Āḷavaka was: "*Kiṃ sūidha vittaṃ purisassa...*"—"What is a man's best wealth in this world?" There too, the Buddha brought faith to the forefront: "*Saddhīdha vittaṃ purisassa...*"—"Faith is a man's greatest wealth in this world." Why did the Buddha do so? You, devout laymen, have heard about the noble wealth (*ariya-dhana*) of a Stream-enterer (*sotāpanna*).</p>
+<p>> *Saddhā-dhanaṃ sīla-dhanaṃ, hiri-ottappiyaṃ dhanaṃ;*</p>
+<p>> *suta-dhanaṃ ca cāgo ca, paññā me sattamaṃ dhanaṃ.*</p>
+<p>In some places, it is shown as seven kinds of wealth. In others, as five. Shown as seven, they are: faith (*saddhā*), virtue (*sīla*), shame (*hiri*), fear of wrongdoing (*ottappa*), learning (*suta*), generosity (*cāga*), and wisdom (*paññā*). Next, when shown as five, it is not that shame and fear of wrongdoing are discarded, but because they are naturally implied when virtue is mentioned: faith (*saddhā*), virtue (*sīla*), learning (*suta*), generosity (*cāga*), and wisdom (*paññā*). Thus, the five noble wealths are faith, virtue, learning (which is Dhamma-knowledge), generosity (which is the quality of relinquishment), and wisdom. There is such a classification of Dhamma.</p>
+<p>If we analyze that wealth of faith (*saddhā-dhana*) a bit further: the wealth of faith is such that, in this day and age, taking refuge in the Triple Gem in this dispensation has also become a great problem for some people. A problem they cannot resolve. Intellectualism has become distorted to such an extent. They do not even properly know the meaning of "*Buddhaṃ saraṇaṃ gacchāmi, Dhammaṃ saraṇaṃ gacchāmi, Saṅghaṃ saraṇaṃ gacchāmi*." What is meant by this? Now, we know that all of us in this world, in saṃsāra, are helpless. We must accept that. It is natural for helpless people to seek a refuge, a shelter. Before the Buddha appeared, those who had fallen into this suffering (*dukkha*) of saṃsāra, when parts of that suffering (*dukkha*)—the loss of their loved ones, destruction of property, onset of illness, loss of employment, in various ways—gradually surfaced from underneath, what did we do to cover it up? We went to trees, rocks, and shrines.</p>
+<p>The Buddha declared that if any help is received from those, it is only a limited help. A true security, a true refuge and shelter, cannot be obtained through trees, rocks, and shrines. The true refuge is taking refuge in the Buddha, taking refuge in the Dhamma, taking refuge in the Saṅgha. So, what is contained within that? By taking refuge in the Buddha, one has made the Buddha-jewel one's own. By taking refuge in the Dhamma, one has made the Dhamma-jewel one's own. By taking refuge in the Saṅgha, one has made the Saṅgha-jewel one's own. Thus, regarding the Triple Gem, it is said in the blessing verses:</p>
+<p>> *Yaṃ kiñci ratanaṃ loke, vijjati vividhā puthū;*</p>
+<p>> *ratanaṃ buddhasamaṃ natthi, tasmā sotthī bhavantu te.*</p>
+<p>How is an act of truth (*sacca-kiriyā*) performed? "Whatever jewels exist in the world, diverse and manifold, there is no jewel equal to the Buddha-jewel. By this truth, may there be well-being for you!" Thus, it declares a truth strong enough to say this.</p>
+<p>What is meant by this is that the person who seeks the shelter and refuge of the Buddha-jewel, through taking refuge in the Triple Gem, deposits that very Triple Gem in his heart, which no one can steal. Furthermore, all other deposits are lost when banks collapse. But this faith cannot be stolen by anyone. For one who has strong faith, even if one cuts open his chest, that faith cannot be pulled out. It is that wonderful. Therefore, through that faith, the Triple Gem becomes one's own (*māmaka*). One becomes able to say: "The Triple Gem is mine." *Māmaka* means "mine": "The Buddha-jewel is mine, the Dhamma-jewel is mine, the Saṅgha-jewel is mine." That itself is a great strength. That itself is a great wealth. That is why it was called the wealth of faith (*saddhā-dhana*) there.</p>
+<p>For that very reason, devout laymen, in answering the question, "To what extent is one a lay disciple (*upāsaka*) in this dispensation?" the Buddha replied that by merely taking refuge in the Triple Gem, saying "*Buddhaṃ saraṇaṃ gacchāmi, Dhammaṃ saraṇaṃ gacchāmi, Saṅghaṃ saraṇaṃ gacchāmi*," one becomes a lay disciple (*upāsaka*). Observing the precepts is an additional thing. To be an *upāsaka*, taking refuge itself is sufficient. Not only that, to this day, when ordaining a novice monk (*sāmaṇera*), although a precept is given, a ten-fold precept is given indeed, it is called "*saraṇāgamana-pabbajjā*." Even today, it is declared that one is established in the monkhood by the mere act of taking refuge. Therefore, taking refuge is such a powerful thing; it is not something to be taken lightly. Though said easily, if one said "*Buddhaṃ saraṇaṃ gacchāmi, Dhammaṃ saraṇaṃ gacchāmi, Saṅghaṃ saraṇaṃ gacchāmi*" and made a mistake the first time, one might refrain from saying it the second time. If it went wrong the second time, one might refrain from saying it the third time. But why is it said three times? It is because it is that much realized by oneself. From this too, it is clear that faith is such a fundamentally important thing. That is why it was called the wealth of faith (*saddhā-dhana*).</p>
+<p>This faith arises in various ways for each individual. Today, more than two thousand five hundred years have passed since the parinibbāna (extinction/extinguishment) of the Buddha. Even in this day and age, one is fascinated by a description of the Buddha's virtues by a talented poet from the East or West. One is fascinated by a prose description of the Buddha's virtues by a talented writer. One is fascinated by a statue by a talented sculptor. In this modern era, such sculptors may sometimes not be found, in an age dominated by material gain of rupees and cents. But when we visit places like Anurādhapura and Polonnaruwa of the past, we see how those internal strengths we mentioned—faith (*saddhā*), energy (*viriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*)—were applied to the chisel to carve such wondrous statues. Not only ordinary people from East and West, but great scholars, scientists, and various kinds of philosophers even in this day and age have been fascinated upon seeing those statues. Such is the Buddha statue. This is not just a stone. What is called a Buddha statue is something capable of softening a heart of stone. It is not something to be taken lightly. If one takes it as just a stone, that is a misunderstanding.</p>
+<p>So, the matter is true. The Buddha transcends all praise (*vaṇṇanā-visayātikkānta*). No writer can ever exhaust the praise of the Buddha. Similarly, no sculptor can fully represent the form of the Buddha. However, taking the Buddha’s virtues into the heart at each level, and employing faith (*saddhā*), energy (*viriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*) as guides—not as something done for money, but if one performs that task with complete dedication—upon seeing that statue carved in stone, even a heart of stone will soften. In the same way, seeing a Buddha image drawn by a talented painter, faith arises in another. Thus, we can understand that Ven. Vakkali's following behind the Buddha was not a journey undertaken out of a mere shallow thought. If one is so fascinated by the Buddha's virtues merely by seeing a stone-carved Buddha statue, a painted Buddha portrait, or by reading a poem, a eulogy, or a book, we can imagine how it must have been to see the living Buddha!</p>
+<p>Therefore, in accordance with that, we must understand that there are things for us to learn even from the faithful Ven. Vakkali. Perhaps even intellectualists have much to learn. For, that maximum commitment emerges from correctly recognizing the Teacher. At another time, the Buddha declared this, calling it a "fourfold declaration" (*catuppada-veyyākaraṇa*)—an exposition consisting of four statements. On a certain occasion, the Buddha declared the value of this faith as a four-phrase declaration. "Monks, regarding the faithful disciple who has entered this dispensation and practices the path, it can be said in this way. The faithful disciple is recognized in this manner." Next, the words used by that disciple are shown.</p>
+<p>"The Blessed One is the Teacher, I am the disciple. The Blessed One knows, I do not know." Now, perhaps there are scholars who know more than even the Buddha in this day and age. But look at how the true, faithful disciple thinks: "The Blessed One is the Teacher, I am the disciple. The Blessed One knows, I do not know." This is what must be brought to the fulfillment of practice in this dispensation. Only such a person can jump in that manner, just as he jumped from the cliff, thinking, "The Buddha will surely catch me," without thinking, "This is cold," but cutting through the great rapid torrent. Only one with such faith can jump with the resolution "death or crossing" and cross over. That is the first one mentioned. What is the disciple's attitude? That very one mentioned.</p>
+<p>Next, in the second phrase, the Buddha shows: what is the second quality of the faithful disciple who has entered this dispensation and practices? For that disciple, this dispensation is supportive of growth. There is a certain word used for that: *ruhamaniyaṃ* (nourishing/conducive to growth). Likewise, another word is used: *ojavantaṃ*, meaning sapful/rich. In the simile, it is shown that if the soil is fertile and moisture is present, the fallen seed sprouts well. We can also recall what was said about the seed of faith (*saddhā-bīja*). Thus, for the faithful disciple, this dispensation is a suitable ground for growth. A fertile soil. A soil with moisture. Not some dry, hard ground. That is what is said there, which is another characteristic by which the Buddha recognizes a faithful disciple.</p>
+<p>Next, thirdly, He shows how to recognize the faithful disciple. Regarding the faithful disciple, this is the state; how? That disciple begins with the firm determination: "Let only skin, sinews, and bones remain! Let the flesh and blood dry up! Whatever goal can be achieved by manly strength, manly energy, and manly effort, until that state is reached, there shall be no relaxing of energy." One must enter the task with this strong resolution. This is called the four-fold energy (*caturaṅga-samannāgata-viriya*). The Buddha also finally sat at the terrace of enlightenment (*Bodhi-maṇḍala*) in that manner. That is what must be present within a faithful person. "Let only skin, sinews, and bones remain! Let the flesh and blood dry up! Whatever goal can be achieved by manly strength, manly energy, and manly effort, without attaining it, there shall be no turning back or relaxing." This is the third characteristic.</p>
+<p>The final characteristic is shown: for the faithful disciple in this dispensation, there are two fruits that can be obtained. If there is a remnant of grasping (*upādāna*), of defiled holding and so forth, he becomes a Non-returner (*anāgāmī*). If not, the fruit of Arahantship. That is all. For the faithful disciple, the true result is either Non-returning or Arahantship. Nothing less than that. The Buddha has shown the value of faith there to such an extent.</p>
+<p>Next, we must contemplate that they did so upon seeing the Buddha's form. Not only that, some recognized the Buddha—not to mention other things—even by the Buddha's voice, and not only humans. There is a Dhamma story: when the Buddha was preaching the Dhamma near the banks of the Gargarā pond, a frog did not understand the Buddha’s words. However, the Buddha's voice is said to be a truly wonderful voice. It is called the "eightfold Brahma-voice" (*aṭṭhaṅga-samannāgata-brahmasara*), described as a Brahma-voice possessing eight characteristics. Hearing the Buddha preaching in that voice, that frog came out of the pond; a cowherd who came there, perhaps an old cowherd, accidentally placed his walking stick on the frog’s head and stood on it. Then, that frog died, and was eventually born in the heavenly world by the name of Maṇḍūka Devaputta (the frog deity-son). Later, in divine form, he came to see the Buddha, listened to the Dhamma, and it is shown that he became a Stream-enterer (*sotāpanna*). See, even a frog became a Stream-enterer! With the help of faith, even a frog became a Stream-enterer. So, there is that story of Maṇḍūka Devaputta. Regarding that voice, there are lengthy explanations and reasons given for why it is "endowed with" (*samannāgata*) those characteristics. It was extremely sweet, and also a deep voice that made the meaning clear. The Buddha possessed a wonderful wealth of voice that resonated and echoed.</p>
+<p>Next, other scholars of that time were the Brahmins who had mastered the Three Vedas. How did they develop faith in the Buddha? They did so by looking at books. When looking at books, it is stated in their texts that if someone appears in the world with the thirty-two marks of a Great Man (*dvattiṃsa-mahāpurisa-lakkhaṇa*), there are only two destinies or paths for that person, that man. If he remains a layman, he becomes a wheel-turning monarch (*cakkavatti*). If he goes forth into homelessness, he becomes an Arahant, a Fully Enlightened Buddha (*Sammā-Sambuddha*) in the world. Since it was so stated in their books, those Brahmins who believed in the books recognized the Buddha by the thirty-two marks of a Great Man.</p>
+<p>There are many such stories. The Brahmin named Brahmāyu sent his disciple Uttara Māṇavaka, a young Brahmin, to see whether these thirty-two marks of a Great Man were indeed present on the Buddha. So, it is said that Uttara Māṇavaka, the young Brahmin, followed behind the Buddha like His shadow for seven months. Just like detectives follow behind in this day and age, this young man Uttara Māṇavaka followed behind the Buddha for seven entire months to see if these things were true. He saw those marks of a Great Man, and not only that, in the end he came and gave a very long description to the Brahmin Brahmāyu. Not only that, he described the way the Buddha eats, how He walks for alms, how He preaches the Dhamma, how He remains silent, and the uniqueness shown in each of His postures. Having given a very long description, how does this Uttara Māṇavaka finally conclude? "It is in such and such a manner. Venerable Gotama, indeed, is even more than this." He ends with "even more than this," which means He transcends praise: "It cannot be fully contained." Hearing that, the Brahmin Brahmāyu developed great faith right then and there, and it is mentioned that he subsequently went and finally became a disciple.</p>
+<p>Similarly, it is mentioned that the Brahmin Bāvarī, who had a large group of disciples, also recognized Him through the marks of a Great Man in the same way. The Brahmin Sela was also like that. Especially, we can also contemplate the news about the Brahmin Sela. Here too, a certain matted-hair ascetic (*jaṭila*) named Keṇiya—*jaṭila* means a Brahmin who performed various vows to such an extent that his hair grew long enough to be entwined with his flesh—even though that *jaṭila* was not a disciple of the Buddha, had developed some faith towards the Buddha and went to invite the Buddha and the congregation of about two hundred and fifty monks for an alms offering. He gathered his relatives and prepared the alms at his hermitage. They built fireplaces, chopped firewood, washed vessels, and prepared seats in the alms-hall.</p>
+<p>While doing these things, the Brahmin Sela, a friend of the *jaṭila* Keṇiya and a master of the Three Vedas, arrived with three hundred disciples to visit his friend. Seeing the massive preparations, he asked: "What is this, Keṇiya? Is there some wedding celebration? Or is there a sacrifice (*yāga*)? Or is there an invitation to King Bimbisāra along with his royal army for a feast tomorrow? What is this preparation for?" "No, no, it is none of those. I have invited the Tathāgata, the Fully Enlightened Buddha, I have invited the Venerable Gotama." The moment that word "Buddha" was uttered, that word itself was sufficient. "Did you say 'Buddha', Keṇiya?" "Yes, Sela, I said 'Buddha'." "Did you say 'Buddha'?" Asking thus three times, out of the faith that arose therefrom, the Brahmin Sela also eventually went in search of the Buddha and became a disciple. Thus, we see that the educated people of that time also developed faith from the physical marks of the Buddha—that unique, wonderful beauty of form which belongs only to a Buddha in accordance with the power of perfections (*pāramī*), which was unseen by others.</p>
+<p>Next, various other educated people, seeing the power of the Buddha's wisdom, the depth of His teachings, the way He presented facts during debates and arguments, discarded their pride, became humble, and developed faith in that manner too. For those highly proud individuals who could not be bent otherwise, like the Kassapa brothers, the Buddha broke and destroyed their pride by performing miracles in competition. Why did He generate faith in these people in various ways? Not for anything else, but for their own liberation. That is the Buddha's duty. The quality of "charioteer of men to be tamed" (*purisadhamma-sārathī*) is visible here; we can see it through these events. He possesses that special skill, like a charioteer, in taming individuals who can be tamed. His Buddha-knowledge and miracle-working power were all applied not for anything else, but to remove the darkness of delusion, to remove defilements like pride, and to establish them on the path to Nibbāna,.</p>
+<p>In those days, the world utilized various objects to develop faith in the Buddha. The beauty of His form; some hearing His voice; seeing the meaning in the words He preached; making use of wisdom-powers of reasoning and conceptualizing, and thoughts. Some through those marks of a Great Man. In various ways like this, they developed faith in the Buddha, because faith is fundamental. Without faith, one cannot walk this path. When speaking about faith, there are a few other words related to it, such as *adhimokkha* (determination/decision). The meaning of the word *adhimokkha* is "releasing" or "letting go". It is with the help of faith that energy is released. Otherwise, one holds back a part for oneself. Now, those of you who meditate know that one performs a dedication of life (*jīvita-pūjā*) to the Triple Gem. What is the meaning of that? One offers one's life to the Triple Gem. That is that commitment. Without rejecting the invitation made by the Buddha through those verses—"Come, Vakkali, do not be afraid. Look at me. I shall save you"—Ven. Vakkali accepted it, jumping with the thought: "This must be true." That is indeed commitment.</p>
+<p>Just as a person going to war commits himself for his country, one who expects Nibbāna,, dedicates his life to the Triple Gem. "May my life be offered to the Buddha-jewel! May my life be offered to the Dhamma-jewel! May my life be offered to the Saṅgha-jewel!" This is done through faith. Thus, taking refuge contains the pledge of faith. It is because of the pledge of faith that this taking of refuge is necessary. Without it, one cannot proceed. In another place, the Buddha shows—sometimes presenting His dispensation program with a simile—that just as the great ocean gradually becomes deeper, in my dispensation too, there is a gradual journey. There are three terms used for that: gradual training (*anupubba-sikkhā*), gradual action (*anupubba-kiriyā*), and gradual practice (*anupubba-paṭipadā*). "In my dispensation there is a gradual training, a gradual course of action, and a systematic path of practice that proceeds step-by-step." Next, He explains what it is.</p>
+<p>There too, what is taken at the beginning is faith (*saddhā*). Only when faith arises in a person does he approach the Teacher. It is said: "*Saddhā-jāto upasaṅkamati*"—"Having born faith, he approaches." Having approached, he does not just stand there; he performs what is called *payirupāsana*—sitting close by. He prepares to listen to the Dhamma. Sitting down, he listens to the Dhamma with faith. With faith, he came to the Teacher. Next, he sits down to one side—"sat down on one side." While sitting thus, what does he hear? The Dhamma of the Buddha. Sitting there, he gets to hear it. When he gets to hear the Dhamma, without putting it into devices like machines to take home in order to win, he retains that Dhamma in his mind right there. Having retained it, he does not stop there. This is not a retaining done to pass exams. Next, what does he do with that retained Dhamma? Like taking out gold and gems from one's pocket to look at them, he examines its meaning from time to time. Even without looking at books, those are recorded in his mind. Taking them out, he examines the meaning: "What is this Dhamma declared by the Buddha? What is its meaning?" While examining the meaning, here is the next step: a state of being able to agree with those teachings arises (*dhamma-nijjhānakkhanti*).</p>
+<p>After a certain understanding of the Dhamma arises, next a great desire (*chanda*) is born. The understanding arises that one must act according to it. A great desire (*chanda*) means a strong need. It is not the "vote" (*chanda*) one hears about in the country. What is called *chanda* in the Dhamma is zeal/desire. That great desire arises. According to that desire, one must make an effort. One exerts effort, applies energy (*viriya*). Next, while exerting that effort, next it is said that one "weighs/balances" (*tulanā*). That refers to the idea of balancing, balancing the spiritual faculties. Sometimes, when doing something new, one might apply excessive energy. A moment comes when one realizes this and balances that too. In a long-distance running race, if one runs the very first lap at excessive speed, one cannot win. One must pace oneself. Having gone well thus, when the right time comes, only then does one make that final sprint. Similarly, there is a weighing/balancing. Having done so, in the end, with a sacrifice of life, applying the four-fold energy as mentioned before, one obtains Nibbāna,.</p>
+<p>That is the very process the Buddha refers to as gradual training (*anupubba-sikkhā*), gradual action (*anupubba-kiriyā*), and gradual practice (*anupubba-paṭipadā*). There are many factors there, but at the beginning is faith. If one does not approach the Teacher with faith, let alone bowing down, he will not even sit down. Then, having sat down, next is listening to what the Teacher declares, isn't it? A proud person will not do that either. Sitting down, next he tells the Teacher what he knows. He goes to teach the Blessed One. Then, he cannot proceed to the path of Arahantship. He lends an ear to what the Blessed One says. He does not speak of other things, but talks on Nibbāna,, doesn't he? He contemplates in accordance with that. Next, he retains it well.</p>
+<p>Without saying, "I know more than that, I have read it in books, I have such and such degrees, what is being said is what we already know," he retains well what was said by the Buddha. Having retained it, without thinking, "I have understood it merely by retaining it," it is something that must be thought over and brought out again. Just as a gem is cut and polished from the right angles to bring out its value, so too one examines the meaning of the Dhamma. When examining, then it becomes visible: "Indeed, what was said here is no small matter. Nibbāna,, is contained within these few words!" Behold, realization arises.</p>
+<p>Only after that, thinking "there is nothing else to do but this task," does he generate desire (*chanda*) and apply effort. So, from this too, we can understand the value of this faith. These five wealths are demonstrated in one instance by the simile of a tree. That a growing sal tree is indeed a sal tree is recognized early on by its leaves. There is an old saying of ours, which you may have heard: "A growing tree is known by its two cotyledons." When a seed germinates, from those two seed-leaves of that seed, one can recognize whether it is a growing one or not. If those two cotyledons are healthy, that tree grows. Similarly, if the foliage is healthy, it shows richness. Faith is compared to that healthy foliage. The wealths are faith (*saddhā*), virtue (*sīla*), learning (*suta*), generosity (*cāga*), and wisdom (*paññā*). Next, virtue is the bark (*paṭṭā*) of that tree. Bark means the outer skin. Like bark to a tree is virtue. The bark of the tree develops in accordance with that foliage. The sapwood (*eḷaya*) is compared to generosity (*cāga*). Finally, there is wisdom (*paññā*). Wisdom is the heartwood (*araṭuva*). The heartwood does not grow on its own, does it? There are those who come looking only for the heartwood of the Dhamma. They do not need any other practice. Will those who go looking only for the heartwood obtain any heartwood?</p>
+<p>Next, we must understand, what was the meditation Ven. Vakkali performed through the vision of the Buddha? It was recollection of the Buddha (*Buddhānussati*). In this day and age, we recollect the Buddha by organizing the vast heap of the Buddha's virtues into nine words. In those days, in an era without media like we have now, the news that a Buddha had appeared went out to the world through that very passage of Buddha-virtues which you recite, starting with: "*Iti pi so bhagavā arahaṃ...*" "Thus indeed is the Blessed One: accomplished (*arahaṃ*), fully enlightened (*sammā-sambuddho*), endowed with clear vision and virtuous conduct (*vijjā-caraṇa-sampanno*), sublime (*sugato*), knower of the worlds (*lokavidū*), incomparable leader of men to be tamed (*anuttaro purisa-damma-sārathi*), teacher of gods and men (*satthā deva-manussānaṃ*), enlightened (*buddho*), blessed (*bhagavā*)." Behold the nine virtues.</p>
+<p>The news that a Buddha had arisen spread in that way. Then, merely upon hearing it, some associated with Buddhas. Nothing much more was needed. Merely upon hearing that passage, they came in search of the Buddha. Within those nine virtues lies the strength of the Buddha. We spoke of the quality of *purisadhamma-sārathī*—the power of taming individuals. The Buddha Himself declares it. We refer to the Buddha as the Great Compassionate One. Yet, in some places, the Buddha took harsh courses of action; what was the reason for that? It was according to the occasion. It was indeed out of compassion. To use a simile, just as a mother or father, when a small child puts a pebble or something else in his mouth, pulls it out even if it causes bleeding—that indeed is done out of compassion. The Buddha Himself declares: "I tame through gentle means (*saṇhena pi vinemi*), I tame through harsh means (*pharusena pi vinemi*), and I tame through both gentle and harsh means (*saṇhapharusena pi vinemi*)." Sometimes I tame through gentle courses of action, sometimes through harsh courses of action, and sometimes by connecting and combining both of them.</p>
+<p>On other occasions, the Buddha declared to Ven. Ānanda: "I do not train disciples like a potter carefully moving wet, unbaked clay pots. I do not train disciples with fear and hesitation." Next, a few words are used there: "*Niggayha niggayhāhaṃ, Ānanda, vakkhāmi paggayha paggayha.*" Even without the direct translation, when spoken it is understood: "Repressing again and again, Ānanda, I shall speak, and supporting again and again." What is its meaning? He explains next: "*Yo sāro so ṭhassati*"—"Let only those who have heartwood, who have essence, remain. I do not need mere heads (numbers), I do not need crowds. It is enough for me to have those who have the true heartwood and are dedicated to the task; with this thought do I train disciples." That is indeed a place where the Buddha spoke according to His quality of *purisadhamma-sārathī*. "Not like a potter touching unbaked clay vessels with fear and care do I train these disciples." In that manner, harshly, through harsh courses of action. Repressing (*niggayha*), and supporting (*paggayha*), what is the idea? May they take only the heartwood, may they become the heartwood. Only when the heartwood is taken does one become the heartwood. Thus, from this too, the vast heap of virtues of the Buddha is visible. Through all of this, it is recollection of the Buddha (*Buddhānussati*) that grows within us.</p>
+<p>Where recollection of the Buddha (*Buddhānussati*) is spoken of, the Dhamma shows what the benefits of *Buddhānussati* are: when a noble disciple develops the meditation of recollection of the Buddha based on those nine virtues or even on one of them, such as "*Iti pi so bhagavā...*", at that time the disciple's mind is not overwhelmed by lust (*rāga*), not overwhelmed by hatred (*dosa*), not overwhelmed by delusion (*moha*). "*Rāga-dosa-moha-pariyuṭṭhitaṃ*." Next, it is said that the mind becomes upright. Further, it is said that the mind rises above the mud-mire of the five-fold sensual cords (*pañca-kāma*).</p>
+<p>Shown as the benefits of *Buddhānussati*: when one develops *Buddhānussati*, one's mind temporarily departs from those mentioned states of lust, hatred, and delusion. Similarly, departing from the five-fold sensual cords, it becomes as if risen from a heap of mud, a mire. Not to mention other things, you may have heard it said of the disciple who develops *Buddhānussati* that his mind becomes like the perfumed chamber (*gandha-kuṭi*) of the Buddha. The one who constantly develops the Buddha's virtues is just like the perfumed chamber where the Buddha dwells. For, when the Buddha is beside oneself, at a moment of associating with the Buddha, is there any room for the mind to go towards a defilement? When the Buddha is watching from behind, is there room for defilements? As we said of that beauty of form, it is not a beauty of form that increases defilements; it is one that stills the mind. Even today, why does one become devoted, why does one develop clarity and faith upon seeing a peaceful, beautiful statue, a form, or a painting created according to those Buddha-virtues? It is because of its nature of calming and stilling defilements.</p>
+<p>So, the power of faith is described as devotion (*prasāda*), clarity. That is why it is said to be like the water-clearing gem (*udaka-prasādaka-māṇikya*). Turbid water is cleared, and the mind becomes pure. Close to turbid water lies negligence (*pamāda*). Turning happiness and joy into rapture (*pīti*), and rapture into tranquility (*passaddhi*), which is calm, elevating it from there to concentration (*samādhi*), and next proceeding to insight (*vipassanā*)—there lies Nibbāna,. Behold, those are the benefits of *Buddhānussati* spoken of through this.</p>
+<p>Through the short verse we quoted today, just as we pledged, the value of faith is demonstrated. The value of its strength is demonstrated. We have much to learn even from Ven. Vakkali in this age of intellectuals. Therefore, through all of this, you devout laymen must contemplate that on this valuable Poya day, we should resolve with a feeling like "death or crossing" on that path of practice. Only if we enter this path of practice can we see and recognize the Buddha—not through reasoning. May today's sermon be supportive in walking that path! Successfully conducting your Dhamma studies and meditations, through the power of this sermon, may this wholesome strength and the benefit of hearing the Dhamma be a supportive cause for you to cross over all saṃsāric suffering (*dukkha*) including birth (*jāti*) and decay and death (*jarāmaraṇa*) expected in this very life, and be stilled in that noble, deathless Nibbāna,! Similarly, if there are any parents, deceased relatives who have passed away in your name, and any classes of beings (*bhūta*) from Avīci up to Akaniṭṭha who desire merits and desire Nibbāna, may they all, by rejoicing in this wholesome deed of Dhamma preaching and Dhamma hearing, cross over all saṃsāric suffering (*dukkha*) through whichever of the Enlightenments (*bodhi*) they aspire to, and be stilled in the noble, deathless Nibbāna,! With this thought, with this aspiration, we must recite these verses and share merits.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_088.html" class="doc-btn">← Previous Sermon (088)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_090.html" class="doc-btn">Next Sermon (090) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

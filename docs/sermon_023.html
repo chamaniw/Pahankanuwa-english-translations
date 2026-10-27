@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 023 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_022.html" class="doc-btn">← Previous Sermon (022)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_024.html" class="doc-btn">Next Sermon (024) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 023</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_023_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_023_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_023_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #23</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No. )</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Anikkasāvo kāsāvaṃ, yo vatthaṃ paridahissati; Apeto damasaccena, na so kāsāvamarahati. Yo ca vantakasāvassa, sīlesu susamāhito; Upeto damasaccena, sa ve kāsāvamarahati.</p>
+<p>From:</p>
+<p>Verses 9-10 from the Yamakavagga (Chapter of Pairs) of the Dhammapada</p>
+<p>Dear Listeners,</p>
+<p>The supreme inheritance that the world receives from a Fully Enlightened Buddha is the Dispensation of the Buddha (*Sambuddha Sāsana*). We consider that safeguarding this *Sambuddha Sāsana* for a long time for the welfare and happiness of gods and humans is the duty of every Buddhist. If we are to fulfill that duty properly, we must possess a correct understanding of its spiritual and dispensational values. That is why on this Vesak Full Moon Day, we chose these two verses as our theme.</p>
+<p>The Buddha preached these two verses at the Jetavana monastery, focusing on a certain incident concerning Ven. Devadatta. On one occasion, the two chief disciples, Ven. Sāriputta and Ven. Moggallāna, having obtained permission from the Buddha, journeyed from Sāvatthī to Rājagaha with their respective entourages of five hundred monks each. The residents of Rājagaha, coming together collectively—in groups of two or three, or fifteen—began to offer alms and engage in works of charity for the chief disciples and their retinues. One day, when Ven. Sāriputta was organizing a meritorious deed, he declared:</p>
+<p>"O lay devotees, if someone gives alms himself but does not encourage others to establish themselves in the practice of giving—meaning, he does not inspire others to give alms—such a person will obtain wealth and material resources in whatever future births (*jāti* / arising) they are born, but will not obtain the wealth of having a retinue of followers. Another person does not give alms himself but encourages others to do so. In the future, that person will not receive wealth and material resources, but will only receive the wealth of a retinue of followers. Yet another person neither gives alms himself nor encourages others to do so. Such a person will obtain neither wealth nor a retinue in their future births (*jāti* / arising). Fourthly, it is shown that another person gives alms himself and also encourages others to establish themselves in that practice of giving. (What we now call collecting donations is 'establishing others in practice'.) Such a person, in future births (*jāti* / arising), will receive both wealth and a retinue," so he declared.</p>
+<p>A certain wise man who was listening to this thought: "I must act in a way that I obtain both of these blessings." After the crowd departed, he approached Ven. Sāriputta and said, "Venerable Sir, I invite you and the Sangha to alms tomorrow." Ven. Sāriputta asked how many monks were in his retinue, and when he was told there were about a thousand, the man declared, "I hope to offer alms to all those thousand monks tomorrow." Ven. Sāriputta consented by silence.</p>
+<p>Now, even though this man said this, he made the invitation without any prior preparation. Walking through the streets of the city, he rallied the people, crying out: "Mothers and fathers, I have invited a thousand monks for tomorrow. Bring whatever alms-materials you can, according to your means. Let us gather in one place and prepare the alms!" Thus he encouraged the people. Accordingly, a large number of people took responsibility for ten, twenty, or even a hundred monks, and brought alms-materials to the venue. A certain wealthy devotee brought a saffron robe worth a hundred thousand coins and gave it to the organizer of the alms—the lay devotee—saying, "If there is any shortage of alms-materials, sell this robe and settle the expenses. If there is no such shortage, offer this robe to any monk of your choice."</p>
+<p>So, the alms-giving went very well the next day. There was no shortage of anything. This robe, this saffron robe, remained. The alms-organizer said to the gathering, "A certain person offered me this highly valuable robe. All the alms-giving activities are now finished. To whom shall we offer this robe?" Then someone said, "Let us offer it to Ven. Sāriputta, the Chief Disciple, the Arahant." Another group said, "This Ven. Sāriputta only comes and goes during the harvest season. But Ven. Devadatta is not like that. He is like the water kept in our homes. He is there for all our auspicious and inauspicious occasions. Therefore, let us give it to Ven. Devadatta." Since there were two factions, the alms-organizer held a small vote at the alms-hall. Here is the result of the vote: Ven. Devadatta won by a majority of four votes as the person worthy of receiving that robe worth a hundred thousand. The faction of the Chief Disciple Ven. Sāriputta, the General of the Dhamma, lost.</p>
+<p>Somehow or other, they gave that robe to Ven. Devadatta. When Ven. Devadatta cut it, dyed it, and wore it, walking about in the city, the people felt a certain displeasure at his behavior. Perhaps he walked about in an arrogant manner, wandering here and there. People began to say, "This robe is suitable for Ven. Sāriputta, but certainly not for Devadatta." Sometime after this incident, a certain monk came from Rājagaha to Sāvatthī to see the Buddha. When the Buddha was inquiring about the health and welfare of the two chief disciples from that monk, that monk related this incident. Then the Buddha said, "Monk, not only in this life, but in the past too, Devadatta wore a robe unsuitable for him and was reviled by others," and he related a certain Jātaka story.</p>
+<p>In the past, there was an elephant hunter in Benares who killed elephants. He lived by going into the forests, killing elephants, and selling their tusks, claws, meat, and so on. In some forests, there were large herds of elephants. In one forest, the elephants had a custom: whenever they saw the Paccekabuddhas living in the forest, before going to find food, they would bow down at the knees of the Paccekabuddhas and then depart. One day, this elephant hunter saw this incident. He fell into reflection: "Why do these elephants bow down to these Paccekabuddhas? It must be because of the robe. If I too can get a robe, I can carry out this elephant hunting very well." Having thought thus, what did he do next? When a Paccekabuddha had entered a pond to bathe, the hunter stole the robe left on the bank. Wearing it, what was his next trick? Wrapping the robe from his head downwards, he hid his elephant-killing weapon, his tool.</p>
+<p>Thinking it was a Paccekabuddha, the elephant herd would bow as they went past. After the herd had passed, the elephant hunter would strike and kill the very last elephant with his weapon, sell its tusks and so on, and throw the remaining flesh in the forest.</p>
+<p>While this was going on for some time, the Bodhisatta became the leader of that elephant herd. The Bodhisatta realized that his herd was diminishing. Reflecting on the cause, he suspected, "This danger must be coming from that particular person." Letting the other elephants go ahead, he walked last, at the very end, one day. When the Bodhisatta, the elephant king, approached after the other elephants had gone, the elephant hunter cast aside the robe and struck with his weapon. Since the Bodhisatta elephant king was alert, he jumped back, avoided the weapon, and then leapt forward to catch the man, saying, "Was it not you who destroyed my herd?" What did the hunter do then? Shielding himself behind a tree, he held the robe out in front of him. When he held the robe in front, the Bodhisatta elephant king thought: "If I destroy this man who is now holding this robe, it would be an insult to hundreds of thousands of Buddhas, Paccekabuddhas, and Arahants. It would mean erasing that respectful fear from my mind." Therefore, without killing him, he spared him, but admonished and condemned him: "You are wearing a garment suitable only for those who are free from passions!" and disgraced that man.</p>
+<p>Having related that past event, the Buddha said to that monk: "That elephant hunter was indeed Devadatta. In the past, too, he did such a thing." And then he uttered those two verses we took as our theme:</p>
+<p>"Whoever, not having cast out the stains of defilements, devoid of self-control and truthfulness, wears the saffron robe, is not worthy of the saffron robe."</p>
+<p>"But whoever has cast out the stains of defilements, is well-established in moral virtue, endowed with self-control and truthfulness, is indeed worthy of the saffron robe." This is the meaning contained in those verses.</p>
+<p>Now let us consider what lessons we can learn both from this primary incident and from the Jātaka story. When we think of the lighter side of this story, even the exemplary action of that alms-organizer can be taken as a lesson for us. Even in these times, regarding meritorious deeds such as alms-givings, there is a practice called *sammādam kirīma* (collecting donations). Indeed, this word *sammādam* is mentioned in the Dhamma as *samādāna* (encouraging or taking upon oneself). Now, you are very familiar with the term *sīla-samādāna* (undertaking moral virtue). You are not so familiar with the term *dāna-samādāna* (undertaking giving), but instead, there is the term *sammādam* for alms. That too expresses the same idea: making others accept the practice of giving. It was because they accepted it that those people contributed according to their ability. This is indeed in accordance with the Dhamma declared by the Buddha, which Ven. Sāriputta pointed out here. It is something that leads to obtaining the wealth of a retinue of followers. Why? When one encourages others in giving, acting as a spiritual friend (*kalyāṇa-mitta*), that too is a wholesome act—inclining others toward the wholesome. So, to cultivate both these types of wealth, we see that the wise man organized that alms-giving with great honesty and fairness. He started without any prior preparation for a thousand monks. Not only did he complete everything in a single night and finish the alms-giving, but he also did not use the extra robe in an inappropriate way. According to the intention of the person who offered it, he held a vote and gave it to the one chosen by the vote, regardless of whether that person was truly suitable.</p>
+<p>Next, we must also reflect a little on what was expressed there regarding Ven. Devadatta. Popularity is not a yardstick for virtue. In terms of popularity, the Chief Disciple Ven. Sāriputta lost to Ven. Devadatta. Yet, Devadatta did not practice in a manner suitable for that robe. It was because of this that he became the target of public blame. Moreover, Ven. Devadatta did not stop there. Having obtained a robe that even the Chief Disciples did not receive, he was driven further by the pride that arose within him. The Buddha has declared: "*Dāruṇo lābhasakkāro*"—"Gain, honor, and renown are dreadful, bitter, and harsh." Why? Because through them, some people use their popularity in a dangerous manner, attempting to live their lives in an unrighteous way. This is exactly what happened to Ven. Devadatta. What did Ven. Devadatta do next? He thought, "If I am to obtain gain, honor, fame, and praise, I must secure the royal patronage of some king." Thus, Prince Ajātasattu, who had a claim to the kingdom of Magadha, came to his mind. He used a certain tactic to win over Prince Ajātasattu. Ven. Devadatta possessed supernormal knowledges (*abhiññā*) and the power to perform psychic wonders (*iddhi*). So, by psychic power, he manifested a body wrapped in terrifying snakes to frighten Prince Ajātasattu, appearing on his lap. After the prince was frightened, he transformed back to his normal form and won him over. Prince Ajātasattu was won over by those psychic powers. From then on, Prince Ajātasattu went to see Ven. Devadatta twice a day, morning and evening, with five hundred chariots. He also sent five hundred dishes of highly delicious food to Ven. Devadatta. When the monks reported this matter to the Buddha, the Buddha declared: "Monks, do not be envious of the gain, honor, fame, and praise of Ven. Devadatta. The acquisition of these gains and honors will lead only to the decline and ruin of Ven. Devadatta. Just as when a fierce dog gets a sniff of bile on its nose, it becomes even more fierce and violent, so does Ven. Devadatta behave." Thus he made a prediction about the future.</p>
+<p>Likewise, Ven. Devadatta then persuaded Prince Ajātasattu, telling him to kill his father, King Bimbisāra, and quickly become king, saying, "I will kill the Buddha and take over the empire of the Dhamma." Actually, the root cause for this was an earlier incident when Ven. Devadatta stood up while the Buddha was preaching the Dhamma to a gathering and requested, "Venerable Sir, the Blessed One is now old and advanced in years. Hand over the congregation of monks to me. Let the Blessed One retire and dwell in quiet ease." The Buddha censured him. "I would not hand over the leadership of the Sangha even to the Chief Disciples; how then should I hand it over to one like you?" he rebuked. Angered by this, Ven. Devadatta, with the assistance of Prince Ajātasattu, plotted to assassinate the Buddha. Prince Ajātasattu tortured his father to death in a horrific manner, committing a grave karma of immediate retribution (*ānantariya-kamma*). After securing the kingdom of Magadha, Devadatta came and said, "Now you have accomplished your task; now help me with mine." Then he devised schemes to assassinate the Buddha.</p>
+<p>The first scheme he employed was sending archers when the Buddha was dwelling quietly in the forest. He assigned one archer to shoot the Buddha. To ensure this archer was killed on his return, he stationed two other archers on that path. To kill those two on their way back, he stationed four others on another path. To kill those four, eight others. To kill those eight, sixteen others. Ven. Devadatta planned this assassination of the Buddha through such an extraordinary, cunning, and conspiratorial plot to keep it an absolute secret. However, when the man who went to shoot the Buddha approached, his body became stiff due to the Buddha's spiritual majesty, and unable to do it, he confessed his mission. The Buddha preached the Dhamma to him and sent him back by another path. Likewise, through the power of the Dhamma, all those other men stationed on the path—in groups of two, four, eight, and sixteen—came to see the Buddha, listened to the Dhamma, became faithful, and did not carry out the intended task.</p>
+<p>When Ven. Devadatta came to know of this, he thought, "Now I must kill the Buddha myself." He climbed the Gijjhakūṭa (Vulture Peak) mountain and, while the Buddha was walking up and down below, hurled down a massive boulder. While the boulder was falling, two other rocks emerged through the Buddha's spiritual majesty and stopped the boulder. However, a splinter of stone struck the sole of the Buddha's foot, causing a severe and painful wound. The physician Jīvaka had to treat it. By this act, Devadatta fell into the grave *ānantariya-kamma* of shedding the blood of a Buddha with malicious intent.</p>
+<p>Since he still could not assassinate the Buddha, what did Ven. Devadatta do next? He bribed the elephant keepers and arranged to release the elephant Nālāgiri, having fed it alcohol, onto the path where the Buddha and the Sangha were walking. As the elephant Nālāgiri came charging in a terrifying manner, kicking up dust, the Buddha directed a mind of loving-kindness (*mettā*) and subdued the elephant, making it kneel down. When all three attempts failed, a huge public protest arose among the citizens and residents of the city, saying that King Ajātasattu was helping such a sinful person. King Ajātasattu was forced to withdraw all the support he had been giving to Devadatta. At this point, Ven. Devadatta thought: "How can I regain gain and honor?" Then a sinful thought occurred to him: to create a schism in the Sangha (*saṅgha-bheda*)—to split the monks and take a group of the harmonious Sangha with him to start a separate dispensation. Along with the arising of this sinful thought, his previously held psychic powers vanished. Later, Ven. Ānanda informed the Buddha of this news. The Buddha declared: "Behold, then, Devadatta is going to bind himself to another extremely grave *ānantariya-kamma*." Paying no heed to any advice or admonition, Ven. Devadatta presented five special demands—the five precepts (*pañca-vara*)—to the Buddha, things that ordinary people would easily find appealing. When the Buddha rejected these five demands, he won over five hundred newly ordained monks to his faction and went to Gayāsīsa—the noble place we now call Bodh Gaya—and started a separate dispensation. Placing two disciples, Kokālika and Kaṭamorakatissa, on either side as his chief disciples, he started a dispensation with the demeanor of a Buddha. This continued for a short time. Meanwhile, on one occasion, the Buddha sent the two chief disciples, Ven. Sāriputta and Ven. Moggallāna, to bring this group back. When they arrived, Ven. Devadatta was preaching the Dhamma in the manner of a Buddha. He was deceived into thinking that the two chief disciples had also joined his side. Having preached the Dhamma to some extent, he delegated the preaching of the Dhamma to them in his place and went to sleep. In the meantime, the two chief disciples presented the Dhamma correctly, turned the minds of all of Devadatta's followers back, and returned through the air with that group to see the Buddha.</p>
+<p>Kokālika, Ven. Devadatta's chief disciple, woke Devadatta up—it is said he kicked him in the chest to wake him—and told him what had happened. Due to the intense shock and grief, Ven. Devadatta began to vomit blood. It is said he vomited warm blood. Because of that mental shock and vomiting of blood, Ven. Devadatta suffered terrible physical pain for nine months. In his final moments, hoping to see the Buddha, he told his followers, "Take me to Jetavana." When this news arrived, the monks told the Buddha, "Ven. Devadatta is coming." But the Buddha declared, "In this life, Devadatta will not get to see me again. In whatever manner he comes to Jetavana, he will not see me." Initially, his followers were reluctant to carry him, saying, "When you were healthy, you harbored such hatred toward the Buddha, and now you ask us to carry you?" Then Devadatta said, "Even so, the Blessed One has no hatred toward me." Somehow he persuaded them. So, the followers placed Ven. Devadatta on a litter and carried him near Jetavana. Placing the litter by the side of the pond near Jetavana, those who brought him went down to the pond to bathe. Meanwhile, Devadatta, sitting on the litter, put his feet on the ground. As his feet touched the ground, the earth split open, flames emerged from the Avīci hell, and it is recorded that he went down to the Avīci hell. It is said that at that final moment, Ven. Devadatta uttered a certain verse taking refuge in the Buddha.</p>
+<p>So, that was the fate of Ven. Devadatta. In the beginning, the Buddha pointed out that the cause for this was gain and honor. Gain and honor are extremely dreadful things. It was because of the pride of obtaining the robe that should have rightfully gone to the Chief Disciple Ven. Sāriputta, as mentioned at the beginning of this story, that he went on to seek further popularity, gain, and honor, and got entangled in such a multitude of sinful deeds. Accordingly, we can understand that, as the Buddha also declared, gain and honor are extremely dangerous. The Buddha explained the misfortune that befell Ven. Devadatta to the monks through four similes: "Monks, a banana tree bears fruit only for its own destruction. So too does a bamboo tree; if it flowers, the bamboo tree is destroyed. If a reed flowers, the reed is destroyed. If a she-mule becomes pregnant, she dies because of that pregnancy. In the very same way, gain, honor, and renown have arisen only for the destruction of Devadatta." Thus he declared. Accordingly, we can understand that popularity, gain, and honor often lead human beings toward dangerous, unwholesome actions.</p>
+<p>Furthermore, when we reflect on this Jātaka story, we can extract certain advices of contemporary relevance. In this Jātaka story, it was mentioned first of all: what did the elephant hunter use for his elephant hunting? A robe stolen from the Paccekabuddhas. Devout lay devotees, in our Dhamma books, this robe is described as the "banner of the Arahants" (*arahaddhaja*). What is meant by the "banner of Arahants"? Now, let us imagine a pageant (*perahera*) coming. We understand who is in the pageant by the flag carried at the front. Similarly, when one sees the robe, what is the thought that arises? It is the thought: "This is either an Arahant or a group of people practicing the path to Arahantship, striving for Arahantship." That is the thought that arises when a group of people wearing this robe approaches. That is why it is called the banner of Arahants. But if this banner of Arahants is put forward for other purposes, for other fronts, it is just like the elephant hunter using the robe stolen from the Buddha for elephant hunting.</p>
+<p>Therefore, the most valuable thing is to protect the banner of Arahants as a banner that represents that journey toward Nibbāna, that aim, that objective, the journey toward Arahantship. We mentioned earlier about protecting a dispensation. We can draw that idea from this Jātaka story. Furthermore, in some other places, this robe is also referred to as a suit of armor. Now, King Dhammāsoka had a brother named Prince Tissa, who had obtained the position of sub-king. However, Prince Tissa, having developed a strong aspiration for Nibbāna, was ordained in the dispensation. He was so fond of solitude that in the Dhamma texts, he is referred to as Ven. Ekavihāriya. This royal prince became a monk who loved to live alone. After ordination, so strong was his aspiration for Nibbāna that he uttered a certain verse to reveal his hope for Nibbāna. The idea expressed in that verse is this: "I am entering the forest wearing this armor. I will not come out of the forest without ending the battle against defilements and becoming an Arahant." Thus, it is clear that armor—devout lay devotees, armor is a garment used in war, in battle, to protect against arrows. So, using the robe as armor for the battle against defilements, as a protection for the battle against defilements, is appropriate. But presenting the robe to escape the consequences of committing other wrongs and bad actions is not in accordance with the dispensation. It is not something aligned with the dispensation. It would be just like the elephant hunter who, when punishment drew near for the crime of killing elephants, took off the robe and held it out in front of him. Thus, we can understand various matters and advices through the medium of this Jātaka story.</p>
+<p>So, from all this, we see that dispensational values can be overshadowed by gain, honor, fame, and praise. That is why the Buddha constantly highlighted their danger. On certain occasions, the Buddha compared this to a dung beetle. When a dung beetle gets a pile of dung, a ball of dung, it rolls it along, full of pride. The Buddha gave this simile, saying that when a monk says very proudly, "I have invitations from such and such places; I have no shortage of the four requisites," if he speaks like this, he is just like that dung beetle. The Buddha has shown this in a way that conveys censure. Moreover, we now know that once caught in the wave of gain and honor, the valuable virtues that are considered the eternal values of the Sangha are lost. What are those virtues? Fewness of wishes (*appicchatā*), contentment (*santuṭṭhitā*), and ease of maintenance (*subharatā*). Fewness of wishes means having few desires, being satisfied with little. If one gets caught in the wave of luxury and extreme luxury coming from lay society, one is swept away. Just like a sandcastle on the beach being washed away and destroyed by wave after wave during the monsoon season, that virtue of fewness of wishes is destroyed by luxurious and extremely luxurious invitations. Everyone can understand something from this. Likewise, contentment—the virtue of being content with what one receives. That too belongs to the monks. Contentment with the four requisites. Contentment with the eight requisites (*aṭṭha-parikkhāra*). The monks who were content with the eight requisites. Eight requisites. Now, I do not know if we can even count how many they are. The things considered essential as requisites are increasing day by day. Similarly, ease of maintenance—meaning being easy to support. As monks gradually lean toward a luxurious life, the responsibility falling on the lay followers to support them becomes heavier and heavier.</p>
+<p>Likewise, an important point is that the Buddha has shown that a true monk should not maintain improper relationships with laypeople. Now, at the alms-hall, the Devadatta faction praised Devadatta by saying, "Ven. Sāriputta only comes during the harvest season. But Ven. Devadatta helps us in all matters, weddings and funerals, just like a water vessel kept at home." Like a vessel of water: anything, anytime, you can take it, drink it, use it. If a monk falls to that level, there is a risk of him going down the path of Devadatta's objectives. Such a dangerous thing is popularity. As soon as popularity arises, next comes the expectation of office—gaining positions. Through that, without even realizing it, one is directed toward an undisciplined path contrary to the dispensation. Instead, what the Buddha points out is that monks should remove improper lay associations and lead their lives in a manner that accords with their ultimate goal, the path to Nibbāna. Leave alone other things, even treating laypeople in an improper way is called "corrupting families" (*kula-dūsana*). Why is the word *kula-dūsana*—corrupting families—used? Because it corrupts their faith. It is with great faith, deep faith, immense faith, that lay devotees offer the four requisites to the Sangha. Maintaining relationships with laypeople in an irregular, improper manner causes that faith to be corrupted. We see this from the actions of Ven. Devadatta.</p>
+<p>Yet, in society generally, it is those with such attitudes who are respected, who become popular, and to whom most people give their votes. We must bear in mind that if the dispensation is to last for a long time, we must give our vote to the wholesome desire—to the wholesome side. To that side. Thus, we were able to extract a large number of such matters from this story.</p>
+<p>The Buddhas introduce a Sambuddha Sāsana to this world having truly understood the nature of this saṃsāra (round of rebirths). The Buddha has declared in various sutta discourses that whatever one receives, whether it is kingship, the status of a treasurer, or the status of a wheel-turning monarch, all of it is impermanent (anicca). Sometimes, in these times, some people read with great desire the parts in those sutta discourses concerning the wealth of wheel-turning monarchs. But they ignore the ending of the suttas: "Monks, all this is impermanent (anicca). Those wheel-turning monarchs are no more, those queens are no more, those princes are no more. All that wealth is now destroyed. Therefore, be disillusioned with preparations / preparations / volitional activity (saṅkhāras). All these preparations / preparations / volitional activity (saṅkhāras) are impermanent (anicca)." It is in this manner that the Buddha brings forward past stories, stories of wheel-turning monarchs, and so on. Accordingly, what is shown is the nature of suffering / unsatisfactoriness / stress (dukkha) in this saṃsāric life. It is true that by putting patches on these, lay life is maintained to a certain extent. But it is from among the lay devotees that a monk is born into the world at some point. In situations like this, whatever lifestyles you may have, whatever clothes and ornaments you may have at home, putting them aside, removing them, and turning to a simple life for this one day, you get an opportunity to reflect deeply on your life and the world, away from your homes. Through such a beginning, if someone reflects deeply on their life, on their saṃsāric becoming / existence (bhava), and at some point develops disillusionment—disillusionment with saṃsāra—it is at that moment that they enter the monastic life.</p>
+<p>What, then, is the purpose of ordination? *Pabbajjā* means crossing over from this suffering (dukkha) of saṃsāra. A person enters ordination with the primary objective: *sabbadukkhaniassaraṇa nibbāna sacchikaraṇatthāya*—for the sake of release from all suffering (dukkha) and the realization of Nibbāna. Even today, when the monastic robe is tied around the neck, that phrase is recited. This ordination is for the sake of realizing Nibbāna, which is the departure from all suffering (dukkha). Then, what is meant by the preservation of the dispensation? When we think of the Sangha in the dispensation, you have heard the term "the Great Sangha of the Eight Noble Individuals" (*aṭṭha-purisa-puggala*). Why is this Great Sangha of the Eight Noble Individuals a special concept for the lay devotee? Because, when viewed from the perspective of lay life, Nibbāna is a very distant thing, a very remote path. But these Eight Noble Individuals are those who give us the understanding that people like us have also traveled this path on various occasions and have put an end to the suffering (dukkha) of saṃsāra. Those eight individuals who are walking on that path and who have reached the fruits of that path—namely, Sotāpanna, Sakadāgāmi, Anāgāmi, and Arahant—are like a lamp-post, a row of lamps on the path to Nibbāna. Through them, we receive a certain light, knowing: "We too can walk on this path." That is the value within the Sangha Sāsana, the dispensation. As long as these monks practice on that path to Nibbāna, so long—as the Buddha also declared on his deathbed—as long as they fulfill those thirty-seven factors of enlightenment (*bodhipakkhiya-dhamma*), this world will not be empty of Arahants. Because, if one understands the practical aspect of the Dhamma shown by the Buddha and acts accordingly, practices accordingly, one can attain these even today. If we do not properly understand the values of such a salvific Sambuddha Sāsana, and instead use the robe merely as a flag or a suit of armor, the dispensation will decline rather than endure for a long time for the welfare and happiness of gods and humans.</p>
+<p>This is indeed the lesson we can draw from this story. We must reflect: how do we enter this path? Through virtues such as moral virtue (*sīla*). The Buddha has shown that concentration (*samādhi*) is built on the foundation of moral virtue (*sīla*). It is based on that concentration (*samādhi*), which is one-pointedness of mind, that one can understand deeply the three characteristics—impermanent (anicca), suffering (dukkha), and not-self (anattā)—according to reality (*yathābhūta-ñāṇa*), whether one is a layperson or a monk. Therefore, taking the lives of the monks and Arahants as an example, today a large number of lay devotees have abandoned their luxurious lifestyles and, with the understanding of practicing like an Arahant for this one day, have undertaken the eight precepts of the Uposatha. Thus, the very practice of such a path shows that even within you, the lay devotees, there is a deep goal. We think: "Someday, we must escape all this saṃsāric suffering." Not only the trials and tribulations of this lay life, but if the word of the Buddha is true, we have suffered in this saṃsāra for a long time not only as humans, but also as animals, demons (*yakṣas*), hungry ghosts (*pretas*), and hell-beings. If a Buddha Sāsana has arisen, that Buddha Sāsana can be considered the greatest inheritance received from a Buddha only because of the Sangha who are dedicated to realizing the path to Nibbāna. As long as the Sambuddha Sāsana is protected, lay devotees can feel that even the practice they carry out, even the practice of moral virtue (*sīla*) they perform, is meaningful. If there is no such thing, if there is no goal, no lamp or light ahead, then lay devotees too will remain submerged in that very luxurious life, dragging the Sangha into that same life, and wandering in saṃsāra for another long period of time.</p>
+<p>Therefore, we must always reflect upon and bring to light the Dhamma. That Nibbāna which the Buddhas have brought to light. Even though we consider it as just a word, Nibbāna is the cooling, the extinguishment, obtained by crossing over from the suffering (dukkha) of saṃsāra—or rather, that peace realized in this very life. This goal, then, is the objective of every Buddhist. Whatever meritorious deeds they perform, such as giving alms, or offering a flower or a lamp, these devotees pray: "By the merit and benefit of offering these flowers, may I attain Nibbāna." In every act, they make the aspiration: "Nibbāna-paccayo hotu*"—may this be a condition for Nibbāna. Instead of keeping it merely as an aspiration, if we are to put it into practice, we must walk on the path of moral virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*). The values belonging to that path are those we mentioned: fewness of wishes (*appicchatā*), contentment (*santuṭṭhitā*), and ease of maintenance (*subharatā*). Those qualities.</p>
+<p>Furthermore, you know that in the *Karaṇīyametta Sutta*, which is frequently used and recited with great devotion by both laity and clergy, it is mentioned: "*kulesu ananugiddho*"—not being greedily attached to families. That is how one practices the path to Nibbāna. As mentioned earlier, the brother of King Dhammāsoka was a sub-king. But after becoming a monk, he went into the forest as an *ekavihāriya* (solitary dweller) and, with strong determination, resolved not to lay down his armor until he became an Arahant. Why did he act with such firm resolve? Because he understood the dispensational values correctly. Why? Because it is only during the appearance of a Buddha (*buddhōtpāda*) that one gets the opportunity to escape from saṃsāra. Someone might say: "Even before a Buddha arises, Paccekabuddhas also arise and attain Nibbāna, do they not?" But what is the limitation of Paccekabuddhas? Although they are considered superior to Arahants, they cannot make others understand the path to Nibbāna. By their presence, one can collect great merit by offering alms and so on, but they cannot point out the path to Nibbāna. That can be done only by a Fully Enlightened Buddha (*Sammā Sambuddha*). Therefore, if such a path has been shown, and if such a Dhamma exists, living in accordance with that Dhamma is indeed what is meant by preserving the Sambuddha Sāsana.</p>
+<p>Someone might say: "In the past, when the Dhamma was recorded in palm-leaf manuscripts, there was a risk of it being destroyed by mold and termites. But now we have various modern devices." (Referring to whatever names you call them by). We see that the words we speak are also being recorded somewhere. But will a dispensation recorded in such a way be preserved? We must consider that even if these are written in gold and preserved, if they are not deposited in our hearts, they are of no use. In the future, when people look at them, they will just be like illegible stone inscriptions—just a pile of incomprehensible words. That is the state it has reached today. This is why those great scholars, who are called learned, fall into trouble when they try to understand this Dhamma. They cannot understand it. Why? Because they do not practically walk on this path. It is only by walking on the path of moral virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*) that this Dhamma can be understood.</p>
+<p>What is even more important is this: now, to someone training on the path to Nibbāna, instructions related to completing their meditation activities on a daily basis can be given only by those who themselves practice them—only by those who have practically realized them. No matter how many carpentry tools are piled up, if there is no carpenter to teach how to use them, one cannot engage in that craft. Similarly, even if parts of this Dhamma are preserved in books and various other media, if there are no people walking on that path, or who have walked on that path, capable of giving advice on the problems that arise when practicing it, the dispensation can be said to end right there. Such a situation might indeed arise. If, instead of bringing this Dhamma close to our lives, we keep it at a distance, analyzing it, engaging in more and more conceptualization (*vitakka* / reasoning), with the motive of earning money, then the dispensation will not be preserved. Instead, if one knows even a little and puts it into practice, training in moral virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*), and can realize for oneself those states shown by the Buddha, it is through that that the dispensation is preserved.</p>
+<p>Regarding the dispensation, a threefold dispensation is mentioned: learning (*pariyatti*), practice (*paṭipatti*), and penetration (*paṭivedha*). Learning (*pariyatti*) means studying and memorizing the Dhamma. No matter how much of that exists, if it is not put into practice, it is entirely a pile of words, a pile of mantras—just a pile of useless mantras. Next, penetration (*paṭivedha*) refers to the realization achieved by putting it into practice. Penetration (*paṭivedha*) means seeing through. At some point, one must see through the three characteristics—impermanent (anicca), suffering (dukkha), and not-self (anattā)—with wisdom (paññā). One must realize it. As the Buddha has shown: "*paccattaṃ veditabbo*"—this Dhamma is "*paccattaṃ veditabbo viññūhi*"—to be realized by the wise, each for themselves. If we are to realize it, we must walk on that path we mentioned.</p>
+<p>So, you have made a good start: this undertaking of moral virtue (*sīla*). Along with that, we can think that today you also got an opportunity to practice your meditation subjects to some extent according to the path of meditation. At the same time, if someone, reflecting deeply and from the perspective of insight (*vipassanā*), has deeply understood the impermanence (anicca) of this life, of this body, according to the principles shown by the Buddha, it is at that moment that wisdom (paññā) is said to have emerged through insight. This reality must be seen through within this very five aggregates (*pañcakkhandha* / name-and-form) at some point through meditation. Everything we think is permanent is impermanent (anicca). Everything we think is pleasant is suffering (dukkha). Everything we think is beautiful, or think of as "self" or "mine"—we must understand the true nature of these things which the world perceives in a perverted, distorted way (*vipallāsa*). The path leading to that understanding is the path of meditation.</p>
+<p>Therefore, these wise lay devotees must reflect: on a Vesak day like today, we must protect these dispensational values, without any distinction between laity and clergy. If we are to protect them, we must understand them correctly. We must understand them according to the word of the Buddha. What do we have to protect? Is it those factors that help us practice this path of Nibbāna, which supports the dispensational survival shown by the Buddha? Or is it those various goals brought by the world from the West? If we shape our lives according to those competitive invitations coming from lay life, turning toward that lifestyle, then just as it becomes difficult to protect those virtues shown by the Buddha, such as fewness of wishes (*appicchatā*), contentment (*santuṭṭhitā*), and ease of maintenance (*subharatā*), the dispensation will become completely corrupted and degraded through improper lay relationships.</p>
+<p>It becomes corrupted. Lay devotees develop a certain respect for the monks, thinking: "These monks are carrying out something that we cannot do in the lay life. Supporting them with the four requisites is our duty as good people." Thus, with great faith, even while depriving themselves of food and drink, they offer food, drink, clothing, and the four requisites to the monks. Therefore, a great responsibility lies on the monks: if they, walking on the path shown by the Buddha, realize that Dhamma of Nibbāna brought to light by the Buddha, the lay devotees will accumulate a vast mass of merit. It is with this intention that the Buddha declared: "*Anuttaraṃ puññakkhettaṃ lokassa*"—they become an incomparable field of merit for the world. But if one acts in that practice like Ven. Devadatta, merely fulfilling the wishes of the lay devotees who look upon them as a field of merit, regardless of popularity, it only paves the way for the decline of the dispensation.</p>
+<p>We place these few points in your minds out of concern for the long endurance of this dispensation. So, today you have listened to the Dhamma for about an hour. Likewise, at your own level, you have undertaken a certain moral virtue (*sīla*) and disciplined your body and speech through virtues like moral virtue (*sīla*). Everyone should resolve: "Understanding the nature of this saṃsāra, whether as a layperson or a monk, walking on this path of meditation, and as quickly as possible through the association of spiritual friends (*kalyāṇa-mitta*), by penetrating the paths and fruits of Sotāpanna, Sakadāgāmi, Anāgāmi, and Arahant, may this listening to the Dhamma definitely be a supportive condition, a strong dependency, for escaping all this saṃsāric suffering and realizing the noble, deathless, great Nibbāna!" Likewise, may all beings, including our departed relatives from the Avīci hell up to the Akaniṭṭha heaven, rejoice in this merit of listening to and teaching the Dhamma! Having rejoiced, may they realize the noble, deathless, great Nibbāna through their aspired Bodhi (Enlightenment)!</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_022.html" class="doc-btn">← Previous Sermon (022)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_024.html" class="doc-btn">Next Sermon (024) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

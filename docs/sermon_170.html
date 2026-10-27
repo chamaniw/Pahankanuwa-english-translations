@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 170 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_169.html" class="doc-btn">← Previous Sermon (169)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <span></span>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 170</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_170_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_170_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_170_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #170</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.143)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Ramaṇīyāni araññāni,</p>
+<p>yattha na ramatī jano,</p>
+<p>vītarāgā ramissanti,</p>
+<p>na te kāmagavesino.</p>
+<p>From:</p>
+<p>Dhammapada Verse 99 (Arahanta Vagga)</p>
+<p>Dear Listeners,</p>
+<p>The Blessed One pointed out the forest environment as the most suitable environment for the yogic practitioner (*yogāvacara*) who enters meditation with Nibbāna as his goal. Just as in the Buddha’s discourses, the inspired utterances (*udāna* verses) of the Elders and Nun-Elders also praise the bliss of solitude experienced by a yogic practitioner (*yogāvacara*) in a forest environment. The verse chosen as our theme today is also an instructive utterance issuing from the sacred mouth of the Blessed One, showcasing the value of the forest. The occasion for the preaching of this verse is said to be a problem that arose for an alms-gathering monk who, having received a meditation subject (*kammaṭṭhāna*) from the Blessed One, went to meditate in a deserted park.</p>
+<p>After his almsround, he went to an abandoned, deserted park and sat in meditation under a tree. At that time, a courtesan of that city—referred to in ancient times as a *nagara-sobhini* (city-beauty), a prostitute—was waiting for a certain man with whom she had made an appointment to meet at a particular spot. He did not arrive. Wandering here and there, she entered that deserted park and saw this monk seated in meditation. Seeing him, she thought, "This too is a man; I must seduce him," and approaching him, she began to display various feminine wiles, clapping and laughing. It was the custom of the Blessed One to constantly observe, from where He sat with His divine eye, those monks who, having received meditation subjects (*kammaṭṭhāna*) from Him, departed for the forests. Not to mention other instances, it is often mentioned in Dhamma stories that He helped even the Great Venerable Moggallāna as occasion demanded. Here too, the Blessed One saw the absurd behavior of this woman who had come there. Seeing this, from within His Perfumed Chamber (*gandhakuṭi*), He projected a ray of light, appeared before that monk, and uttered this thematic verse, conveying the idea: "O monk, those places where sensualists cannot find pleasure are delightful to those free from passion." It is a short but extremely valuable verse.</p>
+<p>*"Ramaṇīyāni araññāni, yattha na ramatī jano"*</p>
+<p>Forests and jungles, of the sort where ordinary people do not find pleasure, are delightful. Why are they delightful?</p>
+<p>*"Vītarāgā ramessanti, na te kāmagavesino"*</p>
+<p>Passion-free noble ones develop an attachment to, or delight in, such places. Why? Because they are not seekers of sensual pleasures.</p>
+<p>It is said that upon hearing this verse, that venerable monk directed his thoughts in a manner fully aligned with that meditation, attained Arahantship, and went to visit the Blessed One. Thus, from this short story, we can comprehend the meaning presented by the Blessed One in this verse. The delight in the forest that the Blessed One points to here is not the kind of attachment imagined by the pleasure-seekers and aesthetes of the world. The monk did not go for his meditation to a beautiful park where young men and women walk hand in hand enjoying themselves. He went to an abandoned, deserted park. Yet, a disappointed courtesan came there and created that entanglement. However, directing his mind in accordance with the Dhamma, he aroused a delight in Nibbāna and triumphed over that situation.</p>
+<p>Based on this matter, there is much for us to reflect upon. The first word of this verse is "delightful" (*ramaṇīya*). When one hears this word, due to its inherent charm and the poetic feelings it evokes, it is difficult for someone even to comprehend the reason why the Blessed One employed that word. This verse clearly demonstrates the difference between the pleasure and attachment (*rati*) experienced by sensualists, and the bliss experienced by passion-free noble ones, or yogic practitioners (*yogāvacara*).</p>
+<p>Why is it necessary to say something about this? In the Dhamma, two words are mentioned: *rati* (delight/attachment) and *arati* (dislike/discontent). Sometimes, the word-pairs *rati* and *abhirati* (intense delight), and *rati* and *anabhirati* (non-delight/discontent) are also mentioned. This needs to be explained. The Buddha's advice to a monk is that neither *rati* nor *arati* is good. Here, *rati* refers to sensual delight (*kāma-rati*). Therefore, sensual delight is not good. Similarly, what is meant by *arati*? Dislike or lack of delight regarding higher wholesome qualities (*adhikusala-dhamma*). A monk, therefore, should possess delight in higher wholesome qualities. That "non-delight" (*arati*) means longing for the lay life. That is not good.</p>
+<p>This same idea of *arati* is referred to in some places as *anabhirati* (discontent). In the books, we read about dissatisfied monks who are tired of the monkhood and spend their time thinking about the household life, wondering when they can go back home. This is called *anabhirati*. Why? Because *abhirati* is a high-level delight—that is, the delight in higher wholesome qualities, in Dhamma discussions, and meditation. It is due to the lack of this *abhirati* (sublime delight) that one becomes attached to sensual delight (*kāma-rati*). So, we must not confuse the two. When looking at it from the perspective of the Dhamma, *rati* mentioned there refers to sensual delight. *Anabhirati* refers to the lack of delight in higher wholesome qualities. That too is not good. Therefore, it is *abhirati* that we must develop—*abhirati*.</p>
+<p>In this concept of *abhirati*, there lies the very same idea of "delightful" (*ramaṇīya*), but in a noble sense. It is the delight in Nibbāna. It is called *nibbānābhirati*—delight in Nibbāna. That is wholesome. Just because the word "delightful" (*ramaṇīya*) is used, one must not think that all of this should be viewed from the perspective of an ordinary aesthete or pleasure-seeker. In the past as well as today, we sometimes hear of people going to these forests, not with bottles of alcohol, but those forest hermitages exist for the bliss of solitude. Three kinds of solitude (*viveka*) are mentioned in the Dhamma: physical solitude (*kāya-viveka*), mental solitude (*citta-viveka*), and solitude from substrates (*upadhi-viveka*). First, physical detachment, *kāya-viveka*, is necessary. Being in the midst of a crowd, known as *gaṇa-saṅgaṇikā* (socializing), often leads to the decline of one’s spiritual strength. Therefore, separating oneself from the crowd, at least occasionally, is physical solitude. Next, physical solitude serves as a support for mental solitude (*citta-viveka*), which means removing the hindrances (*nīvaraṇa*) and concentrating the mind. This must be attained in solitude, in silence. The silence of the forest environment and the natural surroundings support this. Finally, *upadhi-viveka* (solitude from substrates) means letting go of these five aggregates of grasping (*pañc-upādānakkhandha*) and experiencing the highest, supreme liberation of Nibbāna in an insight-oriented (*vipassanā*) sense.</p>
+<p>Yet, pleasure-seekers who pay little attention to these matters sometimes enter a forest carrying a camera. Then, only the blooming flower is captured by the camera, not the fading flower. The pleasure-seeker’s camera never captures the fading flower; it only captures the blooming flower. However, the yogic practitioner (*yogāvacara*) who enters that same forest carrying his subject of meditation (*kammaṭṭhāna*) captures in his meditative attention (*manasikāra*) not only the blooming flower, but also the fading flower and the falling leaf. Furthermore, the pleasure-seeker has no liking for the perception of impermanence (*anicca-saññā*), the perception of foulness (*asubha-saññā*), or the perception of loathsomeness (*paṭikūla-saññā*) taught in this Dhamma; he finds them utterly repulsive. He does not even want to hear about them. But the yogic practitioner enters those forests bearing those meditation subjects in mind, in order to develop them: attention to foulness, loathsomeness, and the perception of the impermanent (*anicca*).</p>
+<p>It is not only the aforementioned pleasure-seekers who misunderstand these matters, but also certain aesthetes of this era who stand behind them. In the Dhamma, especially in the verses of the Elders and Nun-Elders, one finds the word "delightful" (*ramaṇīya*), along with descriptions of nature. Seizing upon these, some aesthetes forget that this Dhamma is a philosophy of dispassion (*virāga*) aimed at escaping *saṃsāra*, which is the very essence of the teaching. Like a greedy child picking raisins out of a cake, they gather the aesthetic portions of those verses and write theses, even doctoral dissertations, on aesthetic appreciation. Yet, this only suppresses the true essence of the Buddha's Dhamma. For what purpose did the Blessed One praise the forest environment? The yogis and yogic practitioners (*yogāvacara*) of the past spent their time with these verses as their background. They saw the impermanent (*anicca*) nature within the natural environment. From the flowing river, the falling leaf—from all of these, they learned something. They did not separate them from the teaching.</p>
+<p>The yogic practitioner (*yogāvacara*) does not enter the forest with the distortions (*vipallāsa*) of the ordinary world—which regard the impermanent (*anicca*) as permanent, the foul as beautiful, the painful (*dukkha*) as pleasant, and the not-self (*anattā*) as self. Rather, he enters carrying the opposing, Dhamma-aligned perceptions. Moreover, while the forest environment, rock caves, and life among wild beasts strike fear into the ordinary pleasure-seeker, the yogic practitioner, with a mind of loving-kindness (*mettā*), experiences a unique bliss in that forest life, uniting with those animals in mind even if not speaking with them in words. Pleasure-seekers cannot understand this, nor is it captured by a camera. We must remind ourselves of these matters because spiritual values are increasingly being swept away by the great flood of worldliness. In order to direct our attention to these things, some valuable stories from the Buddha's life are contained in this literature.</p>
+<p>A very valuable occasion is when the Blessed One spent a cold night in the Siṃsapā (Aṭṭeriya) forest on a cattle path in the city of Āḷavī. That morning, the royal prince Hatthaka Āḷavaka, while walking for exercise, entered this forest, saw the Blessed One seated on a bed of Siṃsapā leaves, paid homage, sat to one side, and asked: "Venerable Sir, did the Blessed One sleep in comfort?" The Blessed One replied: "Yes, prince, I slept in comfort. Of those in the world who sleep in comfort, I am one." Then Hatthaka Āḷavaka said: "Venerable Sir, this is a winter night. It is the time of *antaraṭṭhaka* (the cold winter peak), when the snow falls and the cold is most severe. Furthermore, this ground is very rough, trodden by the hooves of cattle. The leaf-bed on which you sit is thin. The leaves on the trees are sparse. The Blessed One’s robes are thin and cold. The wind blowing around, the biting wind (*veramba* wind), is freezing. Yet, the Blessed One says, 'Prince, I slept in comfort. Of those in the world who sleep in comfort, I am one.'"</p>
+<p>Then the Blessed One said: "Well then, prince, I will ask you a question. Answer as best as you can. Prince, suppose a householder or a householder's son has a gabled house (*kūṭāgāra*) plastered inside and out, let's call it a large mansion. In it, there is a large couch (*pallaṅka*). To describe it in modern terms, there is a highly luxurious bed with velvet spreads, and pillows and mattresses on both sides. On that bed lies this prince, this householder. Nearby, a lamp is burning. There are also four attendants to serve his every need. What do you think, prince? Does that householder or householder's son sleep in comfort?" "Yes, Blessed One, he is indeed one of those in the world who sleep in comfort."</p>
+<p>Then the Blessed One asks: "What do you think, prince? Could there arise in that householder or householder's son those physical and mental fevers born of lust (*rāga*) that would cause him to sleep in discomfort (*dukkha* - suffering)?" "Yes," the prince had to answer in that instance. Then the Blessed One declares: "If such fevers of lust and physical fevers arise, they have been cut off at the root in the Tathāgata. That is why the Tathāgata sleeps in comfort." In the same way, He asks: "Could there not arise in that householder or householder's son those physical and mental fevers born of hatred (*dosa*)?"</p>
+<p>After the prince replies, "Yes," the Blessed One states that in the Tathāgata, those too are abandoned. "And the fevers born of delusion (*moha*)? They too are abandoned." Next, the Blessed One utters an inspired utterance declaring that the Tathāgata always sleeps in comfort. From this, we can understand that external things merely serve as a background for spiritual bliss. Yet, looking only at the exterior, one cannot comprehend this. Many such stories are mentioned in the Dhamma.</p>
+<p>There is another such incident regarding the venerable monk Bhaddiya. At the time when the six Śākyan princes, including Anuruddha, went forth into homelessness together, Bhaddiya, who was actually not just a prince but a ruling king of the Śākyan clan, renounced his kingship and went forth. Having gone forth, whether he went to a forest, to the root of a tree, or to an empty place (*suññāgāra*), he would exclaim, "Aho sukhaṃ! Aho sukhaṃ!" The meaning of those Pāli words is, "Oh, what bliss! Oh, what bliss!" Hearing this, a group of monks thought that the Venerable Bhaddiya, having become dissatisfied with the holy life, was reflecting on his former royal happiness and expressing regret, sighing for it. They reported this to the Blessed One.</p>
+<p>The Blessed One said: "Go in my name and tell him that the Teacher calls him." So, he was summoned. Having summoned him, the Buddha asked Ven. Bhaddiya: "Bhaddiya, is it true that whether you go to a forest, to the root of a tree, or to an empty place, you go about exclaiming 'Aho sukhaṃ, aho sukhaṃ'?" "Yes, Venerable Sir." "Why do you say so?" Then Ven. Bhaddiya replied: "Venerable Sir, when I was ruling as king, there were various security arrangements inside the inner palace and outside the inner palace. There were security arrangements inside the city and outside the city. There were security arrangements inside the district and outside the district. Even with all those security arrangements, I lived in constant fear of my life, in terror, agitation, and suspicion. But now, having entered the forest, I live in peace like a wild deer in the woods—in solitude, in bliss, without any fear whatsoever. That is why I exclaim in joy, 'Aho sukhaṃ!'" From this, we can see that Ven. Bhaddiya too was not thinking about royal pleasures, but was using that forest environment to experience the bliss of liberation attained through meditation.</p>
+<p>There are many such Dhamma stories. Because ordinary people are very easily drawn away, the Blessed One, on many occasions, demonstrated the value of forest-dwelling not only through advice but also through His own example. A fine instance of this, which occurred not long after the Buddha's enlightenment, is recounted thus: When He traveled to the brahmin village of Icchānaṅgala in the Kosala country, He resided with a group of monks in the Icchānaṅgala forest tract near that village.</p>
+<p>At that time, a monk named Nāgita was attending on the Blessed One. The following morning, those brahmin householders heard that the Blessed One had arrived. It was through the well-known formula, "Itipi so bhagavā arahaṃ sammāsambuddho...", that the rumor of a Buddha's arising spread in those days. Hearing this, those brahmin householders, thinking, "It is a great gain for us to see an Arahant," prepared delicious food and drinks, came to the entrance of the forest grove, and were making a great uproar, shouting and clamoring.</p>
+<p>The Blessed One asked Ven. Nāgita: "Nāgita, what is this? Who are these people making such a clamor like fishermen? Who are these shouting like fishermen at a fish landing, fighting over fish?" Ven. Nāgita replied: "Venerable Sir, these are brahmin householders who have brought delicious food prepared for the Blessed One and the community of monks. May the Blessed One accept it!" Then the Blessed One said: "Nāgita, I have no need for fame, requisites, and retinue. I do not wish to be entangled with them," speaking in a rebuking tone. Once again, Ven. Nāgita pleaded: "Venerable Sir, please accept it! Wherever the Blessed One goes, a great crowd follows due to His fame. These brahmins and householders have prepared excellent alms." Again, the Blessed One declared: "Nāgita, I have no use for this fame and requisites. If one has the bliss of renunciation (*nekkhamma-sukha*), the bliss of seclusion (*paviveka-sukha*), the bliss of peace (*upasama-sukha*), and the bliss of self-awakening (*sambodhi-sukha*), one would not long for the excrement-like pleasure of gains, honor, and fame." The Blessed One went on to deliver a discourse as an admonition to Ven. Nāgita. The sermon is described in this manner:</p>
+<p>"Nāgita, sometimes I see a monk sitting in concentration (*samādhi*) in a village monastery. I think: 'Although this monk is sitting in concentration, before long, either a novice (*sāmaṇera*) or a monastery attendant (*ārāmika*) will come and break his concentration.' Therefore, I am not pleased with the concentration or the dwelling of a monk in a village monastery." Then He says: "But, Nāgita, sometimes I see a monk nodding off in the forest. I think: 'Now this monk will dispel this drowsiness and direct his mind towards the perception of the forest (*arañña-saññā*).' For once one goes to the forest, there is a perception regarding the forest. 'Withdrawing his mind from diversity (*nānatta*), he will apply his mind to the forest-perception—to that perception— and concentrate his mind.' Therefore, even if that monk is nodding off, I am pleased with his forest-dwelling."</p>
+<p>He continues: "Furthermore, Nāgita, sometimes I see a forest monk sitting, but his mind is not concentrated. Yet I think: 'Now this monk, in due course, will concentrate his unconcentrated mind and protect that concentration.' I am pleased with that monk’s forest-dwelling. Next, the Blessed One adds: 'Behold, I see a certain monk sitting concentrated in the forest. I think: "Now this concentrated monk will quickly realize the liberation of Nibbāna and protect that mind." I am pleased with this monk's forest-dwelling.' Next, the Blessed One declares: 'I see a monk dwelling in a village monastery. Gains, offerings, and praise flow to him as a village-dweller. When these arrive, this monk loses his desire for forest-dwelling and secluded dwelling, and being overcome by them, he begins to dwell in villages, market towns, and kingdoms. I find no pleasure in that.'"</p>
+<p>"'But sometimes I see gains, offerings, and praise flowing to a forest monk. Dispelling them, he does not succumb to them, but continues to spend his life in accordance with that secluded dwelling and forest-dwelling. I am pleased with that monk's way of life.'" All of this He expressed to the monk Nāgita. The final statement made by the Blessed One is extremely powerful:</p>
+<p>"Nāgita, such is my love for forest-dwelling that when I am traveling on a long journey alone, along a solitary path, if I see no one ahead of me and no one behind me, I experience such ease that, not to mention anything else, even easing myself (passing excrement and urine) becomes comfortable for me." This is what the Blessed One is declaring. When I am in a forest environment where no one is visible either in front or behind, I do not have to worry even about such matters. Those activities are highly convenient for me. By this, the Blessed One is demonstrating secluded dwelling and its immense value. We must understand these as spiritual values of the Dispensation (*Sāsana*).</p>
+<p>And the very same point presented to us by the Blessed One in connection with that Icchānaṅgala forest grove is what He demonstrated through His own life. On certain occasions, almost suddenly, the Blessed One would declare to the monks: "Monks, I wish to spend three months in seclusion (*paṭisallāna*)." This word *paṭisallāna* is also a highly valuable word in the Dispensation. Many people may not even know it. Practicing *paṭisallāna*—going into secluded retreat—is somewhat difficult. It is like withdrawing from society. The idea is to withdraw for meditation. *Paṭisallīna* means being withdrawn for meditation. So the Blessed One says: "I wish to spend three months in *paṭisallāna*," meaning He wishes to separate Himself from the crowd and dwell in the ease of seclusion for meditation. He further says: "Let no one approach me, except the single monk who brings me alms-food." Let no one else come for the entire three months except the monk who brings alms-food. The Blessed One lived in that manner.</p>
+<p>You must have heard of another extremely valuable incident. It is a highly wondrous event. A group of monks in the city of Kosambī quarreled over a minor matter, dividing themselves into factions. Although the Blessed One admonished them, showing examples from various Jātaka stories, they did not accept them. Those monks even used words to the effect of: "We will settle this quarrel among ourselves. Let the Blessed One attend to His own bliss of solitude; we will show our own capabilities." The Blessed One reflected: "This life I spend in the midst of a crowd crowded with monks, nuns, laymen, laywomen, kings, royal ministers, heretics, and disciples of heretics is very difficult for me. I live in discomfort (*dukkha* - suffering) surrounded by this crowd. Let me go alone into seclusion for a comfortable dwelling."</p>
+<p>Without even telling His attendant in His forest monastery at Kosambī, the Blessed One went on His almsround, set His lodging in order Himself, took His bowl and robe, and set out, wandering by stages, eventually arriving at the well-known Pārileyyaka forest. How must the community of monks have felt? Without informing even His attendant, without telling the monks, He took His bowl and robe, walked a considerable distance by stages, and arrived at the Pārileyyaka forest. In that forest grove, known in those days as the Rakkhita forest tract of Pārileyyaka, He sat at the root of a tree. At that time, as a wondrous event, there was another parallel incident taking place.</p>
+<p>This incident concerns a certain elephant king who lived in the Pārileyyaka forest, now known as the Pārileyya elephant. Even though it was an animal, we all know that the elephant is far more intelligent than ordinary animals. That elephant too had a train of thoughts similar to the one the Blessed One had: "My living in the midst of a huge herd of elephants, female elephants, and calves is a great hassle. Even if I break off a branch or leaf to eat, the calves come and snatch it away. I do not get to eat clean food. When I go down into the water, the calves come and muddy it, so I cannot even drink clean water. When I bathe and come out of the water, the female elephants rub against my body. This is a great nuisance. Let me also go into solitude." Thus, through some natural law, the Pārileyya elephant entered that forest, saw the Blessed One, and due to some past merit, developed great faith. It is recorded that he attended on the Blessed One in a most wondrous manner. He cleaned the area around the root of the tree, brought water with his trunk, and attended on Him for three months—this is indeed mentioned in the Dhamma.</p>
+<p>Even a wild animal experienced oppression at some point due to living in crowded conditions. In the Dhamma, there is such a thing as a comfortable dwelling (*phāsu-vihāra*). Regarding going into solitude, He Himself declares: "I go into solitude, into secluded dwelling as one withdrawn (*paṭisallīna*), seeing two benefits. One is a pleasant dwelling in this very life (*diṭṭhadhamma-sukhavihāra*)." This means that the forest environment is the best place to properly experience the bliss of concentration (*samādhi-sukha*) and the bliss of fruition (*phala-sukha*) attained by the Blessed One. That is one. The other benefit, the other reason, is pointed out as "out of compassion for later generations" (*pacchima-janatā-anukampā*). When we hear "out of compassion for later generations," we might think: "Why? Isn't it a great loss when the Blessed One leaves? Can we imagine a Jetavana monastery without the Blessed One? When the Blessed One departs like that, it might seem as if there is no compassion."</p>
+<p>But why was it said to be out of compassion for later generations? It was to set an example for the Dispensation (*Sāsana*). "Later generations" refers to the monks who would join the Dispensation after His passing. It allowed them room to reflect: "The Blessed One had nothing more to do; He had done everything that needed to be done and had fully secured His own liberation. Yet, even the Blessed One, who was complete in every way, went into solitude from time to time. He went into solitude for three months." It is that example which is meant there. "Compassion for later generations" meant setting an example. He gave an example to the world. Similarly, the Great Arahant Mahākassapa, who was the foremost keeper of the ascetic practices (*dhutaṅga*) in this Dispensation, observed the thirteen ascetic practices. The Blessed One showed special appreciation and praise for him who observed strict practices such as forest-dwelling (*āraññaka*), alms-gathering (*piṇḍapātika*), and triple-robe wearing (*tecivarika*). All of this served as an example to prevent potential states of decline in the future Dispensation.</p>
+<p>In the same way, we must reflect on these trees and plants. We must love these trees and plants; we must plant trees. We all know that three major events in the Blessed One's life took place under a tree: His birth, His Self-Awakening (*sambodhi*), and His final passing (*pariNibbāna. Thus, within a tree, there are many elements that help the world realize the truth. There is much to learn from a tree. In nature, we can obtain a vast array of lessons from a tree. In the ancient verses of the Elders, those like the Elder Tālapuṭa reflected from the perspective of insight (*vipassanā*): "When shall I become like a tree?" Because trees and plants have no consciousness (*viññāṇa*). One might think that trees and plants are far more fortunate than us. The leaves fall, but they do not cry. New shoots appear, but they do not laugh. Flowers bloom, but they do not laugh. Flowers fade, but they do not cry. Thus, these trees and plants live in harmony with nature and the natural environment. From this, the yogic practitioner (*yogāvacara*) can learn many things—the impermanent (*anicca*) nature, the not-self (*anattā*) nature, and also shelter: the shelter provided by a tree.</p>
+<p>Not only during the Buddha’s time, but even before that, many yogis lived right under trees in the Himalayas because it was easier to realize reality within a natural environment. Instead of the artificial, unnatural, and sometimes anti-Dhamma lives highlighted in society, one can draw out many lessons from nature, from a silent environment, and from the natural lives of wild beasts, to apply to one's own Dhamma studies and meditation.</p>
+<p>Furthermore, not to mention anything else, living alone is often shown to support diligence (*appamāda*). The understanding that there is no time to delay within these unstable life affairs helps one walk the path of practice declared by the Blessed One. It is for these reasons, as you all know, that in some discourses regarding meditation such as the Satipaṭṭhāna Sutta, it is constantly mentioned: *araññagato vā rukkhamūlagato vā suññāgāragato vā* (gone to the forest, to the root of a tree, or to an empty place). Here, *araññagata* means entering the forest in that manner; *rukkhamūlagata* means at the root of a tree; and *suññāgāra* means empty houses. Empty houses are not suitable places for pleasure-seekers. Yet, empty houses—those empty places (*suññāgāra*)—as well as mountains, mountain caves, and even straw-stacks and such places of seclusion, are recorded as places where monks went for secluded meditation.</p>
+<p>Why this secluded dwelling? It is to understand the deep portions of this Dhamma. In the Dhamma, regarding wisdom (*paññā*), three levels of knowledge are mentioned: that consisting in learning (*sutamayi*), that consisting in reflection (*cintāmayi*), and that consisting in mental development (*bhāvanāmayi*). For that wisdom consisting in learning, study, reading books, and memorizing the scriptures (*pariyatti*) serve as supports. Through that, one recognizes the Buddha’s word. One understands what must be done. Next, it is not enough for this to merely register in the mind in a general way. One must apply one's mind to it. When one understands it properly, one can arrive at certain conclusions through reflection (*cintāmayi*). This, too, occurs only if done with *yoniso manasikāra* (wise attention). If one begins to think in a distorted manner, as the aforementioned aesthetes do—gathering places where the word "delightful" (*ramaṇīya*) is mentioned in the Buddha’s discourses to argue: "The Blessed One has shown the value of this *saṃsāra*. Who are these people presenting distorted interpretations such as meditation on foulness (*asubha-bhāvanā*)?"—we see such arguments raised in certain articles by modern scholars. Seeing the descriptions of nature containing the word "delightful," some present arguments depicting meditation on foulness, attention to loathsomeness, and so forth as distorted things, as things that should not be practiced. But we must reflect with wisdom. We must apply wisdom consisting in reflection. *Yoniso manasikāra* means reflecting with wisdom. Otherwise, by following mere logic, one can arrive at wrong conclusions based on various other false views and dogmas. Now, even if the understanding obtained through wisdom consisting in reflection confirms to some extent the understanding obtained through learning, in order to directly realize it, meditation is absolutely necessary.</p>
+<p>You know that Buddhist meditation has two aspects: serenity (*samatha*) and insight (*vipassanā*). Serenity, in particular, means concentrating the mind. When thinking about concentration (*samādhi*), especially regarding the first absorption (*jhāna*), it is said: *"saddakaṇṭakā jhānā vuttā bhagavatā"* (sounds are a thorn to the absorptions, so said the Blessed One). In the initial absorptions, sound is a thorn (*kaṇṭaka*). A *kaṇṭaka* means a prickle or thorn. That is why the Blessed One mentioned that a certain monk might be sitting in concentration in a village monastery, but someone might come and break it. It can easily be broken due to sounds. That is why those yogis of the past were constantly drawn to those quiet forest areas—because in those forest areas, that bliss of solitude, that silence is present.</p>
+<p>Today, we know that you are forced to spend your lives in the midst of a great clamor, not only during the day but even at night. Even if such pleasure-seekers do not visit the ancient forest hermitages, protecting them means not only protecting them from external dangers but also preserving the forest environment itself. In order to protect the aforementioned solitude of the monks who spend their time in those hermitages, wise lay supporters (*dāyakas*) must reflect that support should not be offered through the gains, offerings, and praise of the kind Ven. Nāgita thought of.</p>
+<p>In order to preserve those aspects and dimensions of the forest environment praised by the Blessed One as conducive to meditation, merit-seeking lay supporters must also render whatever timely help they can regarding the trees, plants, and surrounding environment, even if not one hundred percent. Furthermore, they themselves must derive benefit from it. For this life is extremely short. Even though we are able to understand this Buddhas' speech, the word of the Buddha, we keep wishing for an opportunity to delve deep into it. Sometimes that opportunity may not even come. But at our level, even if there is no great forest, we should go under a tree, or under a Bodhi tree, and mentally visualize that Bodhi tree which stood in the center of Gayāsīsa in the great forest, and build up that concept of "the root of a tree" (*rukkhamūla*). For environment is extremely necessary.</p>
+<p>Today, there is much talk about environmentalism. It seems there are many environmentalists. Yet, their love for the environment goes only to that physical level we mentioned. There is no spiritual value. If the value of a human being lies in spiritual strength, then what is needed is an environment that helps preserve those spiritual values. We must reflect on that too. We must plant trees and plants. We must protect trees and plants. A forest, a woodland must be protected for those very reasons, by anyone who desires solitude.</p>
+<p>Sometimes, the lives in forest hermitages are disturbed by businessmen and brokers coming in search of firewood and such things. These are open secrets in society. Moreover, as mentioned earlier, pleasure-seekers turn those places into hideouts for their meetings—for meetings of defilements (*kilesa*). If you, devout friends, distance yourselves as much as possible from such trends, reflect on the antiquity of ancient forest lands, and take an interest in protecting and preserving the solitude of the monks at least to some extent, it will help preserve the valuable qualities of the Dispensation. Furthermore, using that example as occasion permits, you can also bring forth those concentration qualities into your own lives. Developing that serenity (*samatha*) and then insight (*vipassanā*), you must strive to develop a concentrated mind in accordance with it. *Samāhiṃ, bhikkhave, bhāvetha, samāhito yathābhūtaṃ passati.* "Monks, develop concentration! One who is concentrated sees things as they really are." This is the advice of our Buddha. Those "things as they really are" are what we spoke of: the impermanent (*anicca*) nature, the not-self (*anattā*) nature, and the foul nature. This is the reality, the true nature of everything in the world.</p>
+<p>Therefore, if the yogic practitioner (*yogāvacara*) does not get caught up in aestheticism, he strives to develop that understanding. That is what insight (*vipassanā*) means. Seeing only the arising side of the world, thinking only about tomorrow morning, is how this world of worldlings (*puthujjana*) runs this great race. Going round and round on this merry-go-round of *saṃsāra*, seeing only the arising side of the world, they see only the blooming flower and close their eyes to the fading flower. Yet, the Blessed One reminds us that within an eon (*kappa*), within a body (*kaya*), within a day, and within a week, both arising and ceasing operate.</p>
+<p>Seeing that is what is called insight (*vipassanā*)—a special seeing. For that special seeing, a concentrated mind is necessary, as explained. Concentration grows by suppressing the thoughts (*vitakka*) brought about by the hindrances (*nīvaraṇa*). That is what is called "village-perception" (*gāma-saññā*). In the Dhamma, the village-perception is mentioned as a perception of diversity (*nānatta-saññā*). Within a village, there is the perception of diversity. When living in a house, in a village, as you well know, there are numerous massive entanglements of this era of globalization. These remain inside one's head.</p>
+<p>Therefore, one must free the mind from them to some extent if one is to walk the path of the Dhamma. For that, drawing out a concentration theme (*samādhi-nimitta*) given by the Blessed One, even if there is no forest, one must go under a tree in one's home garden, and make an effort to establish concentration even by mentally imagining a forest. Choosing silent times, even with difficulty, one must try, for concentration grows within silence. Next, through that concentrated mind, instead of the farces of the world, instead of the farces of a city, one can see the reality of society, without hiding anything, within such a silent life in a natural environment. One can see the reality of the world—both arising and ceasing. There, too, the Blessed One specifically shows that in this person who has hitherto seen only the side of arising (*samudaya*), there arises a great delight regarding cessation (*nirodha*), regarding Nibbāna; that is what is called *rati*. One must develop a delight in Nibbāna—*nibbānābhirati*. One must develop a delight in cessation (*nirodha*). One must delight in escaping from this *saṃsāra*—escape (*nissaraṇa*). Escape instead of wandering (*saṃsaraṇa*).</p>
+<p>For the sake of escape, having developed a concentrated mind as explained, reflect on the existence of natural trees and plants within that very silent environment. This body, which we have fed, watered, and spent money to maintain, will also one day become fertilizer for these trees and plants, will it not? Are these trees and plants not growing out of bodies that have decayed and dissolved into the earth, fertilized by them? Thus, one must see the equality of the four elements (*cattāro dhātuyo*). The four elements outside are earth (*paṭhavī*), water (*āpo*), fire (*tejo*), and wind (*vāyo*). This body, this form that we protect with such love, also contains earth, water, fire, and wind.</p>
+<p>You have heard that, as pointed out by the Blessed One, hair of the head, hair of the body, nails, teeth, and so forth belong to the earth element; urine, feces, saliva, and so forth belong to the water element; inhalation and exhalation belong to the wind element; and the heat in the body belongs to the fire element. In this way, the four elements within the body and the four elements in the external world—in those trees, plants, mountains, and rivers—are identical. That is why the Elders like Tālapuṭa said: "When shall I balance this five-aggregate body and the external trees and plants equally? When shall I weigh them as equal?"</p>
+<p>Today, we do not regard them as equal. We do not even grant those trees and plants the right to live. In a heartless manner—it is true that trees and plants do not have minds or hearts, but we destroy them in a heartless manner, sometimes acting with what seems like hatred towards nature, without any compassion for them. Instead, if we reflect: "What is there and what is here is the same. This cherished body will also one day become fertilizer. There is nothing special other than that." Thus, by reflecting humbly in that manner, one can draw out insight (*vipassanā*) even from those things.</p>
+<p>When the trees, plants, and other existing things in a forest environment are captured by the eye of insight (*vipassanā*), they yield profound insights that cannot be found in books or seen by ordinary people. In the past, they brought realization to Buddhas, Paccekabuddhas, Great Arahants, and sometimes even to ancient yogis and sages. Although we did not specifically state it as our theme, it is fine to regard this as an eco-friendly discourse of sorts. Yet, this is not merely the environmental struggle as imagined by the world. It has a far more valuable meaning than just protecting the physical environment. We cannot say our life is saved merely because we can breathe. We must reflect on why we breathe. Even if we live for a hundred years breathing well in an environment with a good atmosphere, it is of no use if we fail to realize the ultimate Dhamma declared by the Blessed One through that life.</p>
+<p>Let us look again at the meaning of the verse spoken by the Blessed One. *Ramaṇīyāni araññāni, yattha na ramatī jano*. The ordinary world has no liking for environments suitable for solitude. Instead, they seek sensual pleasures and enter them for that. Yet, the yogis of the past, as well as Buddhas, Paccekabuddhas, and Great Arahants, attained the highest spiritual heights within the forest. When we look at a tree, a leaf, or a forest, we must understand: "Here is an excellent environment to draw out the most valuable parts of our spirituality." Just as we protect it, we must also derive as much benefit from it as possible. Sometimes we look at the external world and search for the age of a rock or the soil of a mountain, using archaeological or various physical measurement methods. We conduct research on measurements and standards of things that are thousands or billions of years old—concerning the age of this earth, the age of these rocks. We measure the age of ancient things using various figures representing, in the words of the Buddha, billions of eons. But without being satisfied with that, we must reflect: if this earth grew over such a long period—a long period exemplified by these things—if these rocks, mountains, and rivers grew over such a vast span of time, how many times during that interval have we been born in this *saṃsāra*, not only as humans, but as animals, hungry ghosts (*petas*), demons (*yakkhas*), and hell-beings? That too is a lesson we can draw from the environment. Seeing a massive rock, a scientist might say that it took millions of years for it to solidify and form, and he might stop there. But we must project that onto ourselves. That rock has no consciousness (*viññāṇa*). It grew, indeed. But during that span of time, if the Buddha’s word is true, what did we do while being born in this *saṃsāra* throughout that endless time? In the words of the Blessed One, it was *kaṭasivaḍḍhitaṃ*— we multiplied the cemeteries. In other words, we piled up skeletons.</p>
+<p>If we condense this and look at it through the lens of the Four Noble Truths preached by the Blessed One, we see that the impermanent (*anicca*) nature of the entire external world, its instability, its changeability, as well as the numerous changes in the internal spiritual world—the Blessed One brought all of these together into a single word: *dukkha*. In Sinhala, it is just two letters, *du-ka*. Thus, what we have to study, what we have to understand, what we have to directly realize, is this very *dukkha*. We all say we understand *dukkha*, but we lack that full comprehension (*pariññā*). When the full comprehension of *dukkha* arises, simultaneously, the craving (*taṇhā*) lying beneath it is understood. Next, everyone knows that abandoning craving is what must be done. *Dukkhaṃ pariññeyyaṃ*—*dukkha* must be fully understood. Whenever the craving (*taṇhā*) underlying it arises, it must be removed. Right there, then, lies the cessation of craving, the destruction of craving, which is Nibbāna—that extinguishing.</p>
+<p>All of this is contained within the Four Noble Truths. We watch the accumulation of worldly knowledge grow through things like globalization. We wait for scientists to reveal all of these things to us. Yet, what the Blessed One presented to us was not worldly science. The world dwells in ignorance (*avijjā*). What a Buddha brought to light is true science (vision/knowledge - *vijjā*). That is precisely what is found in this Dhamma of the Four Noble Truths. Therefore, we must strive to understand that.</p>
+<p>Whether we think of ourselves as individuals or as a group, each must accomplish this for oneself. The things that support this are those three kinds of solitude: physical solitude (*kāya-viveka*), mental solitude (*citta-viveka*), and solitude from substrates (*upadhi-viveka*). Therefore, no matter how much we live in society within our physical environment, we must occasionally seek solitude, find a space to breathe, and incline towards meditation. Next, being energetic through that, and without thinking that these are impossible in this era, one must make some effort to concentrate the mind within daily life. Relying on and associating with a meditation subject (*kammaṭṭhāna*) like a friend—in accordance with the words *āsevita, bhāvita, bahulīkata* (cultivated, developed, practiced frequently)—one does not go with the world's current. As one gradually inclines towards the Dhamma, parts of that current are naturally abandoned. The yogic practitioner (*yogāvacara*) realizes their tastelessness and vanity. Departing from them, and gradually following what is valuable, when the mind becomes concentrated to some extent, one is able to understand the true nature of the Dhamma.</p>
+<p>It is to reach that level of life that you, devout friends, left your homes on this Poya day and undertook a valuable virtue, the Uposatha virtue (*uposatha-sīla*), on this precious day. Resolving to spend at least today in emulation of the lives of the Arahants, and using that virtue as a support, I trust you will make a greater effort than usual in your Dhamma studies and meditation today. Next, it is in order to derive the proper benefits from that concentrated mind through insight (*vipassanā*) that we constantly hold these Dhamma sermons in the afternoon. Therefore, through the Dhamma sermon preached today, you have not only recognized the core values presented by the Blessed One to the world, but you have also understood how we must use our environment to live accordingly.</p>
+<p>If you have aroused any wholesome strength (*kusala-sakti*) through the virtue you kept, the meditation you practiced, and this Dhamma you have heard, may that wholesome strength help dispel all obstacles to your meditation, bring near all supportive conditions, and may this merit serve as a supportive condition to end this journey of *saṃsāra* as quickly as possible through the realization of the paths and fruits of Stream-entry (*Sotāpatti*), Once-returning (*Sakadāgāmī*), Non-returning (*Anāgāmī*), and Arahantship, and to find peace in the supreme, deathless, great Nibbāna! May you make this aspiration. And may all beings, from the Avīci hell up to the Akanitṭha heaven, who wish to rejoice in this merit of preaching and hearing the Dhamma, find peace in the supreme, deathless, great Nibbāna through their preferred mode of awakening (*bodhi*)! With this aspiration, let us recite this verse:</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_169.html" class="doc-btn">← Previous Sermon (169)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <span></span>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

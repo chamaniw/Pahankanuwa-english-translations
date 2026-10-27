@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 017 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_016.html" class="doc-btn">← Previous Sermon (016)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_018.html" class="doc-btn">Next Sermon (018) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 017</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_017_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_017_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_017_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #17</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No. )</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Asāre sāramatino, sāre cāsāradassino; Te sāraṃ nādhigacchanti, micchāsaṅkappagocarā. Sārañca sārato ñatvā, asārañca asārato; Te sāraṃ adhigacchanti, sammāsaṅkappagocarā.</p>
+<p>From:</p>
+<p>Verses 11-12 from the Yamakavagga (Chapter of Pairs) of the Dhammapada</p>
+<p>Dear Listeners,</p>
+<p>One can achieve true progress and development only if one has enough inner strength to abandon the essenceless and accept what is essential. The life of a person who has the wrong attitude of seeing the essenceless as essential and the essential as essenceless is a complete failure. It is because our ancient Sri Lankan ancestors possessed the noble principle of abandoning the essenceless the moment they saw the essential that the Dispensation of the Buddha (*Sambuddha Sāsana*), brought to this island of Lankā by the Great Arahant Mahinda on a Poson Full Moon Poya Day like today, took deep root in this country. The two verses we have taken as our theme today express this very valuable principle, which also serves the future of that Dispensation.</p>
+<p>The occasion for preaching these two verses arose in connection with certain events in the lives of the chief disciples of this Dispensation, the Venerable Sāriputta and Moggallāna. After these two Venerables, Sāriputta and Moggallāna, entered this Buddha-Dispensation, joined the community of monks, and attained Arahantship, the Buddha gathered the Sangha and conferred upon them the titles of Chief Disciples. On that occasion, a certain critical discussion and whispering arose among the monks regarding the way the Buddha conferred these titles. They murmured that the Buddha had acted with bias, like someone distributing alms based on personal favor. "If Chief Disciple positions were to be given, they should have been given to the group of five monks who ordained first. Otherwise, they should have been selected from the fifty-five monks headed by the clan-son Yasa. Or else from among the thirty of the *Bhaddavaggiya* group. Or perhaps from among the thousand monks led by Uruvela Kassapa." While the monks were engaged in such talk, expressing what was like an accusation against the Buddha, the Supreme Buddha asked, "What are you discussing, monks?" When they explained the matter, He replied, "No, monks, I do not confer titles out of favoritism. I confer titles according to each individual’s past aspirations and the power of their perfections (*pāramīs*)." Then, in great detail, He explained the past meritorious deeds and the definite prophecies received by Venerable Aññā Koṇḍañña, the clan-son Yasa, and others individually, and finally declared how the two, Sāriputta and Moggallāna, had received their definite prophecy to become Chief Disciples from the Buddha Anomadassī.</p>
+<p>After all these accounts were related, the two Venerables, Sāriputta and Moggallāna, approached the Buddha, paid homage, and in front of the assembly, recounted how they had engaged in the search for truth before coming to the Buddha. To mention that story briefly, it is as follows. Many of you may have already heard the valuable life story of these two. There were two Brahmin villages named Upatissa and Kolita near Rajagaha. Two meritorious Brahmin youths were born into the leading families of these villages. They received the names Upatissa and Kolita. These families had been friends for generations. Similarly, these two became extremely close friends and began to do everything together. In their youth, after completing their education, they, like other young people, turned to recreational activities and made it a habit to attend a certain public festival called the *Giragga-samajja* (Mountain-top Festival) held annually in Rajagaha. It must have been something like the variety shows or musical nights of today—a festival held on a mountain peak.</p>
+<p>Although this had been their custom, on one particular year, while watching the *Giragga-samajja* festival—perhaps because their wisdom accumulated over saṃsāra had matured and ripened by then—they did not laugh where they usually would have laughed. They did not show excitement or sorrow where others did. They did not distribute gifts as usual but looked on as if disillusioned. When they spoke to each other, they found they shared the same thoughts. What was the thought? "There is nothing of value here. There is no essence. This is essenceless. All these people who are dancing, playing music, and singing here will be dead before a hundred years pass. It is far more valuable for us to go in search of the path of liberation from this saṃsāra." Thus, they both agreed and discussed their next step. "If we expect liberation, we must receive ordination. From whom shall we receive ordination?" At that time in Rajagaha, there was a well-known wanderer (*paribbājaka*) named Sañjaya, who had a large following. They decided to go there and ordain. Sending back their carriages and royal retinues, they took ordination under the wanderer Sañjaya along with five hundred companions. Having ordained, because they possessed extremely sharp wisdom, within a few days they learned everything that the wanderer Sañjaya knew, and they asked their teacher, "Do you know anything beyond this?" When he replied, "No, this is all I know. I cannot tell you anything beyond this," they realized that staying there was essenceless. They agreed, "We must search for the truth individually. Whichever of us finds the path of liberation, or Nibbāna first, must inform the other." They went to various places, met teachers, and began to hold discussions and ask questions. Not a single teacher was able to answer their questions. On the contrary, these two were able to answer the questions posed by those teachers.</p>
+<p>As time went on, the Buddha, having accepted the Veluvana Monastery, was residing in Rajagaha. One day, Venerable Assaji, one of the first group of five monks, was walking for alms. On that day, the wanderer Upatissa—whom we now know as Venerable Sāriputta—having finished his meal, left his dwelling and was heading towards the wanderers' monastery when he saw this Venerable monk. He thought, "I have never seen such a person before. I have never seen anyone with such peaceful senses and such a composed posture. He must be either an Arahant or one who has entered the path to Arahantship. It is not appropriate to speak to him right now while he is walking for alms," he thought. So he followed him from behind. When the Venerable monk finished his alms-round and was preparing to eat his meal, Upatissa prepared a suitable seat for him, offered water from his own water vessel, and performed all the duties of an attendant. After the meal was finished and all service was complete, he asked the Venerable monk, "Friend, who is your teacher? What is the Dhamma you follow? Your faculties are so serene, and your complexion is exceptionally bright and radiant." He then requested, "Please tell me that Dhamma."</p>
+<p>Then, Venerable Assaji very humbly replied, "I am but a novice, recently ordained. I cannot deliver a long discourse or explain the Dhamma in detail." Then the wanderer Upatissa said, "My name is Upatissa. It is enough if you tell me just a little. There is no need for many words. I only want the meaning—the core essence. If you speak just that much, I will understand." At that moment, Venerable Assaji recited a verse of immense depth—a precious verse that presents the entire essence and fundamental law of Dependent Arising (*Paṭiccasamuppāda*).</p>
+<p>*“Ye dhammā hetuppabhavā – tesaṃ hetuṃ tathāgato āha*</p>
+<p>*tesañca yo nirodho – evaṃ vādī mahāsamṇo”*</p>
+<p>"Of those phenomena that arise from a cause, the Tathāgata has declared the cause, and also their cessation. Such is the doctrine of the Great Ascetic." This is the meaning of that verse.</p>
+<p>So profound was this verse, and so sharp was the wisdom and meritorious potential of the wanderer Upatissa, that upon hearing just the first two lines of the verse, he attained the fruit of Stream-entry (*Sotāpatti-phala*). The moment he heard, "Of those phenomena that arise from a cause, the Tathāgata has declared the cause," he had already entered the stream. After the verse was completed, the wanderer Upatissa asked the Venerable monk, "Where does our Teacher reside?" When told it was Veluvana Monastery, he inquired about the path and said, "I have one more task. I have a friend to whom I made a promise that if I found the truth, the deathless, or Nibbāna, I would inform him. I will fulfill that promise and then come. Please go ahead." Sending Venerable Assaji ahead, the wanderer Upatissa returned to the wanderers' monastery. As he was arriving, his friend Kolita saw him from afar and thought, "Today my friend does not look his usual self. He has an exceptionally serene and joyful appearance. Surely, he must have attained Nibbāna." When Kolita asked for details, the wanderer Upatissa recounted the story of how he met the monk and recited the verse in full. Upon the completion of that verse, the wanderer Kolita also became established in the fruit of Stream-entry.</p>
+<p>Then the wanderer Kolita said, "Let us now go to meet the Buddha." However, because Upatissa was someone who always respected his teachers, he thought of their former preceptor, the wanderer Sañjaya, and said, "Let us go and tell this new discovery to our teacher as well. Perhaps he will understand the Dhamma upon hearing this verse. Even if he cannot, he might at least go to see the Buddha." So they went to find their teacher.</p>
+<p>Seeing them, the wanderer Sañjaya asked, "How is it, my children, have you found the truth?" When they related the news, he did not show much faith. After hearing everything, he said, "Then you two may go. As for me, I cannot go." When they asked, "Why?", he replied, "Having been a teacher for so long, I cannot now become a disciple, a pupil. To use a simile, it would be like having been a water-pot and then becoming a ladle or a spoon." You know that it is the water-pot that provides water to others, while a ladle or a spoon is used to take from it. That was the simile he used. "Having been like a water-pot before, how can I now become like a ladle or a spoon? It would demean me." Saying this, he refused to go. When they pleaded again, saying, "Do not say so, teacher. Such a supreme person, a Buddha, has arisen in the world. The Dhamma has arisen, the Sangha has arisen. This is a rare opportunity!"—he asked, "My children, are there more fools or wise people in this world?" Upatissa and Kolita replied, "Fools are in the majority." "Very well, then. Let the fools come to me, and let the wise go to the wise Ascetic Gotama." Thus he rejected their invitation.</p>
+<p>As soon as the two of them departed after this conversation, a large portion of Sañjaya's disciples set out to go with them. Seeing this, it is recorded that the wanderer Sañjaya spat warm blood from his mouth due to intense grief. Such was his sorrow.</p>
+<p>That is the account we wished to mention. Sāriputta and Moggallāna related this entire story to the Buddha in front of the Sangha on that occasion. Finally, they remarked, "Despite all our efforts, our teacher, the wanderer Sañjaya, did not come."</p>
+<p>Upon hearing this, the Buddha declared, "Such is the nature of the world. Because of his wrong view and mistaken ideas, Sañjaya regarded the essenceless as essential and the essential as essenceless. But because of your wisdom and intelligence, you two understood the true essence and attained it." Praising them, He uttered the two verses we mentioned earlier:</p>
+<p>*“Asāre sāramatino – sāre cāsāradassino*</p>
+<p>*te sāraṃ nādhigacchanti – micchāsaṅkappagocarā”*</p>
+<p>Those who conceive of the essenceless as essential, and who hold the view of the essential as essenceless, being governed by wrong thoughts, never arrive at the true essence. Having stated one side in this manner, He declared the other side:</p>
+<p>*“Sārañca sārato ñatvā – asārañca asārato*</p>
+<p>*te sāraṃ adhigacchanti – sammāsaṅkappagocarā”*</p>
+<p>But those who understand the essential as essential, and the essenceless as essenceless, directing their thoughts in accordance with right thoughts, arrive at the true essence. This is the meaning of the verse.</p>
+<p>These are two highly valuable verses containing very profound ideas. From both this narrative and the two verses, we can extract many lessons on a day like today regarding the Dispensation of the Buddha and our own lives. Now, if we look closely at the first verse, its best illustration is found within the very story we just recounted: the character of the wanderer Sañjaya. His character is depicted by that first verse. Why? Because *asāre sāramatino*—he took the essenceless to be essential, and consequently, took the essential to be essenceless. As a result, a precious opportunity slipped away. It is shown that he lacked the capacity even to see the Buddha because of falling prey to wrong thoughts. To explain further in the light of the meaning of this verse: what is meant by "essenceless" in the phrase *asāre sāramatino*? When we reflect on why the wanderer Sañjaya hesitated to go to the Buddha, we can see what those essenceless things were.</p>
+<p>He had a large following, gains, offerings, fame, and praise. These were the things that the wanderer Sañjaya held in high esteem. Yet, all of these are completely essenceless. Thus, he took the essenceless to be essential. He thought, "I have a large following—even if they are fools, they are numerous. I have great strength of numbers." Furthermore, out of pride, he thought, "I am a teacher; I cannot now become a disciple." These are foolish thoughts. Accordingly, "wrong thoughts" (*micchā-saṅkappa*), in terms of the Noble Eightfold Path, refers to thoughts of sensual desire, thoughts of ill-will, and thoughts of harmfulness, as you all must have read many times. Thoughts connected to sensual desires, hatred, and cruelty. Once one is overcome by such thoughts, one is continuously drawn in that direction.</p>
+<p>Thus, that view, that perspective, and that attitude are expressed by the first verse. Sañjaya is an excellent example of this. Indeed, if we reflect on it, this is true not only of that time but also of today. The majority of people in the world are of that very type. Moreover, many people easily drift into wrong view. They easily succumb to wrong views. What is called "essenceless" basically falls under the side of wrong views. In fact, although we speak of wrong view, what is sometimes more dangerous than outright falsehood is what we call "half-truths." Devotees, "half-truths" are incomplete truths; at first glance, they appear to be true, but upon looking inside, they are empty, false, and hollow, containing various flaws.</p>
+<p>There is an ancient term used in this Dispensation for such half-truths: *muggasuppatā* (literally, mung-bean soup). It means being "like mung-bean soup." You can understand this: when you eat rice with mung-bean curry, you occasionally bite into half-cooked, hard wild beans. Sometimes, those hard, unboiled beans are in the majority. It is just like that. That is, it is only half-cooked. Such are these half-truths. These half-truths are just like that. And just like in those days, "mung-bean soup" is extremely popular today. A large crowd is drawn to this mung-bean soup. If you look at society, you will see it for yourselves. Such is the state of society.</p>
+<p>Furthermore, when reflecting on wrong view, the Buddha declared that among all the faults in this world, the supreme or greatest fault—called *parama-vajja* (the ultimate fault)—is wrong view. Why is that? He states this with reasons. Someone might think, "Why? Surely we have freedom of thought. What does it matter to others if we adopt whatever view we want?" But the primary cause of a person's ruin in life is wrong view. The Buddha demonstrated the danger of wrong view to the Sangha with an excellent illustration and simile.</p>
+<p>First, He declared the fact: "Monks, the bodily actions, verbal actions, and mental actions of a person with wrong view all conform to that very wrong view. Whatever intention he forms, whatever aspiration, whatever goal, whatever activity he undertakes—all of it conforms to that wrong view." "Then, what is their result, their disadvantage? Consequently, he has to experience severe unwholesome results, suffering (*dukkha*), and painful, undesirable consequences." Then comes the simile: "Just as, monks, when a seed of neem, or a bitter cucumber seed, or a bitter gourd seed is planted in moist soil, whatever soil-nutrients and moisture it draws in all work to produce a bitter fruit; it produces only a bitter fruit." "In the same way, the entire conduct of a person holding wrong view leads to bad, improper, and undesirable results."</p>
+<p>Then He declared the opposite side: "Similarly, monks, all bodily, verbal, and mental actions of a person with right view are nurtured in accordance with that right view. Likewise, his intentions, aspirations, expectations, goals, and activities conform to that right view and ultimately yield good results and benefits. The simile for this can be understood in the same way. Just as, monks, when a grape seed, a grain of hill-paddy, or a sugar-cane seed is planted in moist soil, whatever soil-nutrients and moisture it draws in yield a sweet and delicious fruit; in the same way is right view." Thus He showed the difference between the two.</p>
+<p>From this, we can understand that the majority of people in the world are drawn towards "mung-bean soup" and drift along the path of wrong views. Now, regarding the second verse: the best illustration for this—which you can easily understand even without my mentioning it—is the life of the two Venerables, Sāriputta and Moggallāna. Their lives demonstrate this clearly. Indeed, when we speak of the Chief Disciples of this Dispensation, we must all remember that, next to the Buddha Himself, it is from the Chief Disciples that we should draw inspiration and example. Indeed, looking back at their exemplary past, we see that they possessed the strength of character to humbly cast aside the essenceless and accept what is essential. This was demonstrated on several occasions even during their lay life.</p>
+<p>The first instance was mentioned in the story itself. In youth, variety shows and musical nights are the kind of entertainments that everyone frequents. But once the wisdom accumulated through saṃsāra matures, there comes a point when one becomes weary of them. As we have mentioned in previous Dhamma sermons: if we take the entire world as a school, there are three grades in it: gratification (*assāda*), danger (*ādīnava*), and escape (*nissaraṇa*). The majority of the world remains in the class of gratification. Most people run after the five cords of sensual pleasure. Then, at some point, due to the maturation of intelligence and through experience, the danger—the defective aspect of these things—begins to appear. Once that is seen, one passes into the class of escape, through renunciation (*nekkhamma*) and ordination. Here too, when their wisdom matured, what these two had previously thought of as essential appeared to them as essenceless. There was no laughter or joy as before. They sat with solemn faces, filled with disillusionment. While everyone around them was dancing and enjoying themselves, because the wisdom of these two had matured, they saw it all as essenceless.</p>
+<p>Consequently, the next step they took was to abandon all their wealth and go forth into ordination. Yet even that ordination was not in the right place; it was under the wanderer Sañjaya. Even there, they did not settle down, simply saying, "This is my teacher." Having learned whatever was to be learned, they realized there was no essence there either. They abandoned that too. Then they began to search for the truth. While searching, the best illustration of their natural inclination towards what is truly essential is seen in the moment they met Venerable Assaji and made that request: "I do not need many words. Tell me the true essence." When this was said, Venerable Assaji recited that highly valuable verse, which, though seemingly simple, contains the core meaning of the entire True Dhamma, the very essence of the deep doctrine of Dependent Arising (*Paṭiccasamuppāda*). Hearing just the first two lines of that verse, the wanderer Upatissa understood the truth, realizing the Noble Truths—and subsequently, the wanderer Kolita did the same upon hearing it. Here we must understand—even without a lengthy analysis of that verse—briefly, as the mature devotees among you must know, that there is this doctrine called Dependent Arising (*Paṭiccasamuppāda*). When many people take precepts, they often recite the twelve links: "With ignorance as condition, preparations (*saṅkhāra*); with preparations as condition, consciousness (*viññāṇa*)," and so on. But, devotees, this alone is not the core of Dependent Arising. The true core is what is stated in that verse. What is it? "Of those phenomena that arise from a cause, the Tathāgata has declared their arising and also their cessation." The fundamental doctrinal principle presented there, if we express it briefly, is mentioned elsewhere in the Dhamma:</p>
+<p>*“Imasmiṃ sati idaṃ hoti*</p>
+<p>*imassuppādā idaṃ upajjati*</p>
+<p>*imasmiṃ asati idaṃ na hoti*</p>
+<p>*imassa nirodhā idaṃ nirujjhati”*</p>
+<p>When this exists, this is.</p>
+<p>With the arising of this, this arises.</p>
+<p>When this does not exist, this is not.</p>
+<p>With the cessation of this, this ceases.</p>
+<p>That is the fundamental principle, the axiom. Within it lies the essence of the entire doctrine of Dependent Arising. Regarding the things that the world considers as a soul, as eternal, as permanent, the wondrous law that the Buddhas bring to light—a law always present in the world but hidden from beings due to the darkness of ignorance—is the marvelous causal relationship between things called Dependent Arising. This is what is revealed by this verse. Therefore, because of the sharp wisdom of the wanderer Upatissa, upon hearing just the first two lines, he realized the fruit of Stream-entry through the path-knowledge of Stream-entry.</p>
+<p>Here too, we see the appreciation of what is truly essential. Through this, we can see that no matter how many essenceless things there are in the world towards which people drift, our effort should be to gradually abandon the essenceless and acquire the essential, so that progress may develop within us. It is of no use to cling to the essenceless for however long. You must have heard a common saying in society about the "tradition of the bundle of hemp"—like the man who clung to the bundle of hemp. There is a long story behind it. Briefly, it is as follows. The story underlying this proverb is quite humorous. Two friends left their village and went from village to village in search of wealth. On their way, they first came to a village where hemp was abundant and easily obtained, even discarded. So, both of them tied up two large bundles of hemp. Carrying these, they went to the next village. There, they found plenty of hemp thread. The wise friend said to the other, "We are carrying this hemp to make thread. Now that hemp thread is available here, let us throw away the hemp and take the thread instead." The other replied, "No, no. I have tied this bundle of hemp very securely. I cannot throw it away. You do as you please." So, one friend took the hemp thread, while the other carried the old bundle of hemp. When they went to the next village, they found hemp cloth. Once again, the wise friend made the same suggestion: "We are carrying this thread for the sake of cloth. Let us throw away the thread and take the hemp cloth instead." "No, not even that. I will carry this bundle which I have brought with such difficulty." So he went on. Thus they went from village to village. To cut the story short, in the next village there was cotton cloth, in the next iron, then bronze, then silver, and in the next gold, in abundance—free to be taken. Out of the two, the wise friend eventually threw away his bundle of silver and tied up a bundle of gold. The other friend was still carrying his bundle of hemp. Having shouldered that bundle of hemp, he refused to let it go. Finally, they returned to their village. Upon their return, the family of the hemp-carrier was deeply disappointed and grieved, thinking, "Is this what he carried and brought back after all this time?" Meanwhile, at the home of the one who brought the bundle of gold, his wife and children were filled with joy and delight.</p>
+<p>That is the parabolic story. Since you enjoy hearing stories, I related this as well. The proverb itself is common in society, but some might not understand its background meaning, so it is good to know it. This is because most people lean in that direction. They grasp tightly to the essenceless, looking for some temporary comfort in it. Now, why did the wanderer Sañjaya follow those half-truths? Because the majority of people are drawn to them. He regarded having a large following—if one can gather a crowd and gain gifts and honors—as the ultimate achievement. He did not strive to achieve liberation, the escape from saṃsāra, which is the supreme essence, the fundamental purpose of life, of ordination, and of renunciation (*nekkhamma*).</p>
+<p>Accordingly, we can understand that even when we think of the future of this Dispensation, if we are to preserve this Dispensation of the Buddha, we must understand its true essence, highlight that essence, and lead our lives accordingly. Indeed, the Buddha on one occasion declared to the Great Arahant Mahā Kassapa one of the reasons that leads to the decline of the Dispensation. Indeed, after the passing away of the Buddha, it was Venerable Mahā Kassapa who was most dedicated to preserving the Dispensation. Perhaps because of this, on one occasion, the Buddha declared to Venerable Kassapa: "Kassapa, this True Dhamma does not disappear until a counterfeit of the True Dhamma arises in the world—a counterfeit that looks like the True Dhamma." The simile given for this is as follows: When we say "gold," we use the word commonly. In ancient texts, there is a distinction made between processed gold and raw gold. Gold that is heated, refined, and fashioned is called processed gold, while raw gold is gold in its natural state, referred to as *jātarūpa*. Even that genuine gold disappears from the world not due to anything else, but because of the emergence of counterfeit gold. In modern terms, when "imitation" gold arises, genuine gold disappears from the market. People are deceived into thinking it is genuine gold. The Buddha declared that something similar happens to the True Dhamma.</p>
+<p>Thus, it is not external religions of wrong view that can destroy this Dispensation—this Dhamma. It can be destroyed from within. Why? Because "counterfeit of the True Dhamma" (*saddhamma-patirūpaka*) means teachings that look like the True Dhamma. This too is just like that "mung-bean soup." Many are likely to be drawn to it. Buddhist devotees must be mindful of this when thinking about the future. You must understand the true essence of the True Dhamma. What is that essence? A Buddha arises in the world to provide a solution, through the path of liberation, to this riddle of saṃsāra which no other teacher has been able to solve. It is to reveal this liberation from saṃsāra. In short, Nibbāna is the ultimate goal and the essence. This is shown in the Dhamma, where the Buddha Himself, on one occasion, used the simile of a sal tree in the *Mahāsāropama Sutta*. Some people go away carrying the leaves, twigs, and branches of a sal tree, thinking they are what is valuable. Others take the bark, others the softwood. But it is only a rare person who takes its heartwood—the truly valuable part. Similarly, there is such a distinction between what is valuable and what is not in this Dispensation. Suppose someone ordains or commits to these practices. Next, gains and favors pour in. These are like the leaves and branches. Next, virtue (*sīla*) is like the bark. That too is a great thing, far better than the former. But even that is not the heartwood. Beyond that lies concentration (*samādhi*), which is like the softwood. Passing through all of these, finally, there is the fruit of Arahantship, which is Nibbāna—the liberation achieved through the realization of the paths and fruits. That alone is the heartwood, the essence of this Dispensation.</p>
+<p>Therefore, if a Dhamma sermon forgets about Nibbāna, sets it aside, and instead highlights mundane goals that offer only temporary relief—whereas in the past, Dhamma preachers culminated every single sermon with Nibbāna—today, sermons often end not with that, but with common, mundane aspirations. Many people prefer this, thinking, "If we can resolve the temporary problems of our daily lives, that is a great thing." But to be satisfied with such temporary relief is like regarding the essenceless as essential. It is like completely wasting this extremely rare human existence. Thus, in these Dhamma sermons as well, we must remember that whether one is a layperson or a monk, if one commits to this path of practice, one can attain liberation from saṃsāra through the realization of the paths and fruits.</p>
+<p>A certain Brahmin once came and asked the Buddha, "Venerable Sir, is it the layperson or the monk who attains those supramundane states in this Dispensation?" The Buddha replied, "That question should not be asked in that way. It is a question that must be answered with a distinction. For, whether one is a layperson or a monk, if they walk on this path of practice, they can realize the paths and fruits." Thus He answered. Accordingly, we must understand that the essence to be derived from a Dhamma sermon is indeed to obtain a peace of a kind that has not been found in our lives throughout this long saṃsāra. For, in the Dhamma accounts we see, read, and hear the Buddha declaring that even the Bodhisatta, countless times and on incalculable occasions, by virtue of his meritorious power and the strength of his perfections, had attained the position of a Wheel-turning Monarch (*Cakkavatti*). The luxuries and pleasures of such a Wheel-turning Monarch are described in various suttas—and when one reads them, it is truly astonishing. They describe an almost endless, marvelous abundance of sensual pleasures. Yet, those sutta discourses culminate by showing even those to be essenceless. "All of these—all these preparations (*saṅkhāra*)—are impermanent (*anicca*), monks. All of them, including that Wheel-turning Monarch and his kingdoms, are no more. They are now destroyed, subject to that law of impermanence." It is to show their essencelessness that the Buddha describes even things like the domain of a Wheel-turning Monarch. But, devotees, the common trend today is to take the physical progress of ordinary, daily life—which cannot even begin to compare to that of a Wheel-turning Monarch—magnify it, present it as the essence, and preach the Dhamma in a way that draws a large crowd toward it. This is like the approach of Sañjaya. Through this, the True Dhamma quickly disappears, and the Dispensation rapidly declines.</p>
+<p>Therefore, on a day like today, we must reflect on these things, wise devotees. For there is always a tendency among crowds to run simply because others are running. When there is a large crowd, if one person runs, the others run too, without even knowing the reason. Later, they find there is nothing to be gained; it is empty, and they all turn back. Then they see people running to another place, and they run there too. They run and run, spending all their resources to get there, only to find there is nothing there either. Thus, they spend their entire lives running here and there, as if chasing a mirage. You can find illustrations of these stories in what you see, hear, and read in daily life. What I am saying is just a general observation. From all of this, we must understand one thing: we must have firm confidence that we have the ability to bring out the essence of the Buddha's Dispensation and go a considerable distance in our daily lives. Whether lay or ordained, if one applies oneself, the results can be realized even today. But it is not something easily achieved; we must understand this. What is good and essential cannot be obtained easily. Cultivating grass is easy, but the yield is minimal. Farming, on the other hand, is difficult; it is done with great effort and sweat, but the harvest is abundant. Similarly, you must consider what you are planting in your own mind. Is it something like grass? Or is it the cultivation of virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*), which is done with great effort? The Buddha has pointed this out. He compared it to farming, advising us to quickly cultivate these qualities of virtue and so on, just as a farmer works quickly when the rain comes.</p>
+<p>Why is this said? Because this is an extremely rare opportunity. That is why the Buddha presented the word "heedfulness" (*appamāda*) as the most valuable, primary word in the entire True Dhamma. Walk on this path of liberation with heedfulness, and secure your release from saṃsāra. For saṃsāra is dangerous. Saṃsāra is indeed perilous. If one has not achieved a state of assured destiny through at least the fruit of Stream-entry (*Sotāpatti-phala*), even those who are now leading good lives—we cannot say when life will end—may, despite their present goodness, exhaust the meritorious power that granted them this human life. Then, a past unwholesome karma may surface, causing them to be reborn in the animal realm, the ghost realm (*peta*), or as a demon (*yakṣa*). Because saṃsāra holds such a terrifying nature, the Buddha urged us to regard this obtained human existence—which even the devas hold in high esteem—as something precious, and to strive to derive the maximum benefit from it.</p>
+<p>Of course, in this Dhamma, those physical and mundane purposes are indeed mentioned to a certain extent. Some of you might think, "But isn't it stated in our *Maṅgala Sutta* that there are thirty-eight blessings? Doesn't it mention caring for one's wife and children, and all those other things?" But, devotees, all of those blessings culminate in the blessing of Nibbāna. The thirty-eighth blessing is the blessing of Nibbāna. That is probably why Nibbāna is declared at the end as the "supreme blessing" (*parama-maṅgala*). Indeed, that is the ultimate blessing. Therefore, if one's wisdom is to develop, one must not settle right there, clinging to the bundle of hemp, but must make true use of this human existence. Indeed, the human mind is a mind of wonder, possessing a power beyond comprehension in this entire universe. You can easily understand this today through the feats performed by scientists who have developed their intellect in the name of science. Yet, far more wondrous are the feats performed in the past by the Buddhas, Paccekabuddhas, and Great Arahants who developed the power of their perfections. Perhaps because those are somewhat difficult, or because their results are not glaringly obvious to the ordinary world, people do not show much interest in them. Nevertheless, one must contemplate the danger of saṃsāra. Therefore, in a Dhamma sermon, we must constantly remind ourselves of that word: heedfulness (*appamāda*). Furthermore, there are what are called the grounds for urgency (*saṃvega-vatthu*). These are things that help arouse effort: the danger of saṃsāra, the perilous nature of life, birth (*jāti*), aging (*jarā*), sickness (*vyādhi*), death (*maraṇa*), and the fear of lower realms. One must constantly contemplate such matters, including the mindfulness of death (*maraṇasati*). When contemplating these, one's effort increases.</p>
+<p>These are what we must take as the essence of this Dhamma. Through them, instead of falling into heedlessness, drifting along with saṃsāra, and holding onto mundane things as grand, we aim at the cessation of existence rather than its continuation. "We have run an essenceless race in this saṃsāra for so long. We have run after a mirage. At least now, we must bring an end to this." With this understanding, we must enter the path of practice that leads to the heartwood shown by the Buddha, namely: virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*). The true heartwood is that state of liberation which relinquishes everything, freed from the five aggregates (*pañcakkhandha*). The Buddhas, entering the attainment of fruition (*phala-samāpatti*), experience that very supreme blessing, that state, and its true power. And the greatest relief obtained through that is release from saṃsāra. To reach that state, one must walk the path of virtue, concentration, and wisdom; one must engage in meditation (*bhāvanā*). Yet, commonly, some people think of meditation merely as something done to cure physical ailments, or as something done blindly because others do it. Today, it has almost become a fashion, a trend, to say, "We, too, meditate." But it is not something to be done merely for the sake of saying so. Meditation means the genuine development of the mind. It must be done systematically. It involves establishing a certain concentration through serenity (*samatha*), and then maintaining one's attention—insight attention (*vipassanā-manasikāra*)—in a way that realizes the three characteristics of the world: impermanence (*anicca*), suffering (*dukkha*), and not-self (*anattā*).</p>
+<p>Through that, when the essence is recognized, the abandoning of the essenceless becomes natural. Indeed, this cannot be prevented. We know that when a tree grows, its withered and dry leaves fall off. As new buds sprout at the top, the old leaves drop from below. This cannot be stopped; it is natural. In the same way, as you develop through Dhamma-knowledge and meditation, the things you previously held in high regard—such as musical nights and variety shows—will appear as essenceless, as mere theatrical dramas (*nāḍagam*). But one should not worry, thinking, "If we go on like this, won't we lose our means of entertainment? Won't sources of income disappear? Won't the world become a joyless place?" Some might argue in this manner. It is to such people that we sometimes refer as "world-expanders" (*lokavaḍḍhana*). The Buddha declared: *Na siyā lokavaḍḍhano*—"One should not be a world-expander." For all this time, what we have done is expand the world and expand the cemetery. Now, in this rare era of a Buddha's appearance, what remains to be done is to escape from this world, to escape from the entirety of saṃsāra.</p>
+<p>We possess the capacity within us to achieve that liberation. The power of our perfections may sometimes be hidden, but the human mind has the ability to bring it forth, even in a young child. When it is said in this Dispensation that a seven-year-old child can attain Arahantship, what a wondrous power of the mind is demonstrated! One must constantly reflect on the leading-out (*niyyānika*) quality of this Dispensation, and its timeless (*akālika*) quality, meaning that the fruit can be harvested right here on this earth, at this very moment. Thus, when contemplating the qualities of the Dhamma—such as *sandiṭṭhika* (to be seen for oneself), *akālika* (timeless), and *ehipassika* (inviting to come and see)—one develops a stronger desire to walk this path. For this is not a futile journey. To the extent that this Dhamma grows in one's mind, the results are present right there. Those benefits are immediate. As one reaps those benefits, one becomes increasingly motivated to walk this path.</p>
+<p>At the same time, from the other side, through the grounds for urgency (*saṃvega-vatthu*) and the happenings in society, one must draw lessons regarding the suffering nature of saṃsāra. Many of the sights we see—some of them are covered up in society. It is like a trap set by Māra. Things that would bring disillusionment with society and the world are covered up. There is even an attitude in the world that says, "Do not look at those things." But the Buddha brings them to light through practices such as the meditation on foulness (*asubha-bhāvanā*). At first, the things pointed out by the Buddha might seem unpleasant. Indeed, we sometimes compare them to a myrobalan fruit (*nelli*). When you first bite into a myrobalan, it is bitter, but later it leaves a sweet taste. That is why it is called *āmalaka*—the deathless. Similarly, there is an apparent bitterness to this Dhamma at first glance. But when one applies oneself to it, for the practitioner, it has a wondrous taste. One must reflect in this way. One should not judge by external polish, pomp, and appearance, just because the majority of people are drawn to them. No matter what, what Sañjaya said is true: there are only a few wise people in the world, and the majority are fools. But we should not simply accept that statement and settle down in one place. Even in a school, although there are different grades, everyone hopes to pass. Just because one is in a certain class or grade, one does not remain there forever. Why do we sit for exams? It is to pass to the next class. Once we get there, we do not settle down saying, "This is my class now." We sit for another exam and go to a higher class, and so on. It is the same here. There must be progress in this saṃsāra. Remaining stagnant in one place is what is called the "tradition of the bundle of hemp."</p>
+<p>Therefore, contemplate these matters wisely on a valuable day like today. Preserving this Dispensation is not something done through external things like buildings and golden fences. Those, too, may be necessary to inspire faith in the Dispensation. But in truth, this is like a message that travels from heart to heart. Therefore, it is to the extent that the heart is purified. Suppose the parents' hearts are pure; they walk the path of the Dhamma, practicing generosity, virtue, and meditation—cultivating virtue, concentration, and wisdom. That message is received by the child. The child then passes it on to his or her child. In this way, the lay lineage continues. It is the same among the Sangha. When teachers and preceptors among the Sangha grow through these practices, the message is transmitted to their disciples. That is how a Dispensation endures. Nowadays, when people speak of the Dispensation, they think of it as if it has been written off as the sole property of the Sangha. But the Buddha described it as something resting on four pillars: the fourfold assembly of monks (*bhikkhus*), nuns (*bhikkhunīs*), laymen (*upāsakas*), and laywomen (*upāsikās*). Therefore, from the side of the lay donors, it should not be thought: "Our task is simply to acquire wealth, by hook or by crook, righteously or unrighteously, offer a portion of it to the Sangha, and secure heavenly bliss." Rather, they must understand that they, too, must walk the path of the Dhamma. There is no need to expound on this at length now. When one examines the *Maṅgala Sutta* mentioned earlier, it becomes clear. The lay Buddhist, beginning life in a good environment, gradually associates with the Sangha, discusses the Dhamma, and ultimately goes towards Nibbāna. This sequence is contained even in the *Maṅgala Sutta*, which lay devotees recite so often. It shows us that our lives must be a gradual movement towards progress, not stagnation in one place.</p>
+<p>I trust these points will suffice for this meritorious gathering. You should reflect on this and decide the course of action you should take. Indeed, in daily life today, what can be easily said of everyone, given the lifestyle and social conditions, is that this Dhamma journey is not an easy one. Finding time for Dhamma and meditation is difficult. Daily life passes through various daunting economic and social pressures. But, as we have said on previous occasions, we must use all of these as a support to escape from saṃsāra, to complete this task quickly. That is what is called a "blessing in disguise." Indeed, were it not for such challenges, some might be tempted by luxury, incline towards the unrighteous path, and end their lives without deriving any benefit from this Dhamma. But if someone understands the suffering (*dukkha*) of life, the suffering of saṃsāra, and realizes through the hardships of this life, "We must have suffered like this for an infinite time; therefore, we must find a solution to this"—then, even with difficulty, they will incline towards the practice of virtue, concentration, and wisdom taught by the Buddha. Once they incline in that direction, if they can find even a small opening to dedicate five or ten minutes a day to meditation, then as their interest, desire (*chanda*), and commitment gradually grow, they will realize for themselves that they actually have more time. In this way, a certain sacrifice must be made. By sacrifice, I do not mean material wealth, but time. Indeed, people today are extremely hesitant to sacrifice their time. They are that busy. There is that much work. There is also a tendency to want everything done easily, which is a result of modern science. What we used to do with great effort can now be done easily. It is true that we also occasionally benefit from this indirectly. With the turn of a small key, what was once done with great difficulty is completed effortlessly. But we should not assume that the Dhamma is the same. It was because they had fulfilled their perfections over an immensely long period that individuals like Venerable Sāriputta understood the Dhamma in a very short time, just by hearing a single verse. We should not conclude from this that the Dhamma requires no effort on our part. How long must Venerable Sāriputta and others have strived, fulfilling their perfections, to realize Stream-entry from just two lines of a verse?</p>
+<p>Thinking in this way, we must realize that if we do not possess such meritorious power, we must build that meritorious power by engaging in these practices. That is why it is called a sacrifice. That time and effort—which we spend on other things—must be spent on this Dhamma. For we will not always have the opportunity to do this. The path to Nibbāna is open only during the era of a Buddha's appearance. Reflecting thus, you must preserve the Dispensation within yourselves. It is the Dispensation preserved within oneself that we refer to when we say "the Dispensation has protected a nation." We can make such a statement only if the Dispensation grows within each individual in that manner. Otherwise, that Dispensation is merely something that attracts tourists, something existing only for show, to be visited here and there. That is not true progress. It is empty and hollow. Therefore, if everyone walks on the path of the Dhamma and becomes a spiritual friend (*kalyāṇa-mitta*), then through that spiritual friendship, this Dispensation will grow. That is why the Buddha declared to Venerable Ānanda—when Ānanda once remarked, as we often remind you, that spiritual friendship constitutes half of this holy life—"Do not say so, Ānanda. This entire holy life is spiritual friendship." Therefore, everyone’s aim should be to develop the collection of virtues associated with the blessing of spiritual friendship and, at one's own level, to serve one's children at home, relatives, friends, and colleagues at work with the Dhamma to the best of one's ability, explaining it as far as one knows—not wrong views, but if one truly knows "this is good," then one must explain it. By encouraging them in this way, it is through such a journey that the progress of the Dispensation is secured.</p>
+<p>I trust that these few words have conveyed something that this meritorious gathering can remember and practice on a Poson Full Moon Poya Day like today. You have observed a certain level of virtue (*sīla*) according to your capacity. Virtue is something extremely necessary for this society—this discipline. Even if we look at it from the other side, we see a society where terrible, unvirtuous crimes are committed. Having observed valuable virtue and turned your minds towards meditation, you have listened to a Dhamma sermon for about an hour. If through this, a certain degree of faith (*saddhā*), energy (*viriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*) has arisen in you, that itself will at some point become a spiritual faculty (*indriya*) and a spiritual power (*bala*), granting you the strength to realize the supramundane paths and fruits, and to find peace in the supreme, deathless Nibbāna. Therefore, you should make the aspiration that through this listening to the Dhamma, this supportive condition (*upanissaya-sampatti*) may, not just in some distant future but in this very life, with the help of this power and through association with spiritual friends, grant you the strength and capacity to progress along the paths of Stream-entry, Once-returning, Non-returning, all the way to Arahantship. Let us also aspire that the guardian deities and Brahmās who protect the Dispensation, and indeed any beings from Avīci to Akaniṭṭha who wish to rejoice in these merits, including our departed relatives, may rejoice in the vast collection of merit accumulated today through this preaching and listening to the Dhamma, and by doing so, realize the supreme, deathless Nibbāna through whatever form of awakening (*bodhi*) they have aspired for!</p>
+<p>With that in mind, let us share merits by reciting the verses in this manner.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_016.html" class="doc-btn">← Previous Sermon (016)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_018.html" class="doc-btn">Next Sermon (018) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

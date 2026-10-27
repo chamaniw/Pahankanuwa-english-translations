@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 010 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_009.html" class="doc-btn">← Previous Sermon (009)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_011.html" class="doc-btn">Next Sermon (011) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 010</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_010_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_010_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_010_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #10</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No. )</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Vācānurakkhī manasā susaṃvuto, kāyena ca akusalaṃ na kayirā; Ete tayo kammapathe visodhaye, ārādhaye maggaṃ isippaveditaṃ.</p>
+<p>From:</p>
+<p>Verse 281 from the Maggavagga (Chapter on the Path) of the Dhammapada</p>
+<p>Dear Listeners,</p>
+<p>This Duruthu Full Moon Poya Day is significant to us Buddhists because it marks the historical event of the arrival of our Lord Buddha, the Leader of Peace and the Teacher of the Three Worlds, at Kelaniya. Nevertheless, for many who think according to the conventional global calendar, this particular Duruthu Poya may also be significant as the first Poya day of a new year—and indeed, of a new century.</p>
+<p>This is a time when many people in this country, as well as around the world, look at this calendar—at the numbers on the calendar—expecting a new era, a new dawn. Expecting a new dawn from the calendar alone, without any regard for one's own philosophy of life, and without making an effort to rectify the shortcomings in one's way of living, is a great delusion. Indeed, if one truly expects a new dawn, a new era in one's life, one must examine one's philosophy of life, depart from the path of decline, and enter upon—tread upon—the Path of Dhamma traversed by the Buddhas, the Paccekabuddhas, and the Great Arahants. The stanza we have taken as our theme today presents that very Path of Dhamma in an extremely concise and simple manner. The background story (*nidāna-kathā*) of this stanza also illustrates the fate of a monk who, seeking a "new dawn" or a "new era," fell into an unrighteous path.</p>
+<p>Once, when the Buddha was residing at the Veluvana Monastery in Rajagaha, the Venerable Maha Moggallana, who possessed great psychic power, and the Venerable Lakkhana were descending from Vulture's Peak (Gijjhakuta mountain). At one spot, Venerable Maha Moggallana smiled gently. Seeing this, Venerable Lakkhana asked him for the reason. Venerable Maha Moggallana replied, "Friend, I shall not reveal the reason here. You may ask me in the presence of the Buddha."</p>
+<p>Thus, both of them went on their alms round in Rajagaha and thereafter approached the Buddha. Having arrived at the Veluvana Monastery, Venerable Lakkhana questioned him in the presence of the Buddha: "Friend, why did you smile in that manner?" At that point, Venerable Maha Moggallana explained, "At that moment, I saw a certain immense hungry ghost (*preta*) form. Its body was human-like, but its head was like a pig's head. Furthermore, in its mouth was a pig's tail, and worms were oozing from its mouth. Seeing this, I thought, 'What an extraordinary form! I have never seen such a form before,' and thus a smile arose in me." Hearing this, the Buddha expressed his approval, saying, "It is clear that my disciples dwell with eyes to see. I too beheld this. I saw this creature at the very site of the Bodhi tree when I attained Enlightenment. However, I did not declare it until now because, had people disbelieved my words and thought it to be a falsehood, many would have bound themselves to unwholesome karma and been reborn in hell. Now, since Moggallana has stated this matter and serves as a witness, I also confirm it. What Moggallana said is true."</p>
+<p>Thereupon, the Sangha asked, "Venerable Sir, what was the past unwholesome karma committed by that person to acquire such a hungry ghost state?" It was at this moment that the Buddha related the story of the past.</p>
+<p>During the era of Kassapa Buddha—when speaking of the era of Kassapa Buddha, you meritorious people should bear in mind that the maximum human lifespan was twenty thousand years. This is worth fixing in your minds first. It is mentioned in the Dhamma: epochs with lifespans of twenty thousand years. Not only that, but forty thousand, sixty thousand, and eighty thousand during the eras of certain Buddhas, and even longer periods. When reflecting on this, you meritorious people can realize how our lives—we who leap, dance, and make merry just because a century has passed—resemble the fleeting lives of ephemerids (mayflies) when compared to the lifespans of such long-lived humans. Be that as it may, it was to the era of Kassapa Buddha that the Buddha now directed the minds of the Sangha. During that time, two monks lived in a village monastery in perfect harmony. The senior monk had sixty rains-retreats (*vassa*) since higher ordination, while the junior monk had fifty-nine. Despite the difference of just one rains-retreat, the junior monk was extremely humble, carrying the senior monk's bowl and robes like a novice monk (*sāmaṇera*) and performing all the duties and services. They spent their time in deep harmony, like two children of the same mother—as if born from the same womb.</p>
+<p>While they were living in this manner, a Dhamma-preaching monk arrived at that place. That day happened to be a sermon day. Since those monks were accustomed to listening to the Dhamma, they invited this preaching monk to deliver a short sermon. When he preached the Dhamma, the two resident monks expressed great joy.</p>
+<p>The following day, they went to the village for alms together with this monk. After the alms round, the senior monk invited the preaching monk to deliver a sermon to the laypeople. When he preached, the people were highly pleased and invited him for the next day as well. In this manner, this monk became very popular, going on alms rounds to the surrounding villages together with the two resident monks.</p>
+<p>Meanwhile, an idea—an evil, unwholesome idea—occurred to this monk: "Alas, these are two superficial, foolish monks. I must find a way to expel them from here and take over this monastery." Thinking thus, he devised a scheme. What was the scheme? One day, he went to the senior monk—the elder thera—and, pretending to have a great secret to share, said, "Venerable Sir, there is something I must tell you." When the senior monk urged him, "What is it? Tell me, tell me," he sighed, "Oh, expressing this matter might lead to great harm," and refrained from saying it. Similarly, he went to the second monk, started with, "I have something to tell you," and then withdrew without saying it.</p>
+<p>He repeated this on the second and third days until the curiosity and suspense of the two monks was heightened. Once it was sufficiently raised, the senior monk said one day, "Speak, speak, it does not matter." Then the schemer asked, "Venerable Sir, do you trust that second monk fully?" The elder replied, "Of course, we are highly harmonious like children born from the same womb. Up to now, I have not seen any fault in that venerable one." "Even so, Venerable Sir, ever since the day I arrived, that monk has been telling me to be cautious when associating with you, to watch out for you." Upon hearing this, the senior monk conceived great anger toward the second monk. An aversion (*dosa*) arose in him: "Alas, how could he say such things to a visiting monk?" Next, the visiting monk went to the second monk and uttered a similar slander—it was not just slander, it was an outright lie. Once this was said, that monk too was alienated and divided.</p>
+<p>The next day, the two monks, who usually went on their alms round harmoniously together, departed separately. Having completed the alms round, the second monk arrived first at the refectory. Seeing the senior monk approaching, he hesitated whether to go forward to receive his bowl and robes as was his custom. Thinking, "No matter, I must perform my duty," he stepped forward. As he approached, the senior monk rebuked him: "Impolite monk, you are not worthy of holding my bowl and robes." Then the two started speaking. "Do you think I am trying to hold onto this monastery?" The other monk responded in kind—one can well imagine how their verbal clash transpired. Having argued in this manner, what was the result? One monk departed through the front door, while the other departed through the back door. They both left. Then, the cunning preaching monk came forward under false pretenses, saying, "No, no, do not go, do not go!" acting as if he wanted to settle the dispute. When the departing monks said, "You yourself stay here," he remained.</p>
+<p>When the preaching monk went to the village for alms the next day, the people asked, "Where are our two monks?" When he replied, "Those two intimate monks of yours had a dispute, quarreled, and departed," the foolish among the laypeople believed it to be true. However, the wise ones realized, "Most certainly, it is this monk who has schemed to make them leave." In any case, the two resident monks went separately to distant areas. Because of this incident, the defilements, such as anger, that arose in their minds were so intense that they were unable to concentrate their minds or practice meditation. Thus, a long period of time passed.</p>
+<p>When we say "a long period of time," what is the next event described? The Buddha states that after one hundred years—one must understand this "one hundred years" in the context of the twenty-thousand-year lifespan of that era—by sheer coincidence, both of these monks arrived as visitors at a hermitage in a distant region. The resident monks of that monastery assigned the exact same dwelling to both of them. Thus, just as the senior elder entered first and sat on the bed in the dwelling, the second monk also arrived. This was a wondrous and extraordinary coincidence. Recognizing him upon his arrival, tears began to flow from the eyes of the senior monk. Filled with sorrow, the second monk's eyes also welled up with tears, and after hesitating to speak, he asked, "Venerable Sir, during all the time I associated with you, did you observe any fault in me, either in body or speech?" "No, no, I saw nothing of the sort." "Then why did you say such things to that newly arrived monk, telling him not to trust me?" "Alas, I said no such thing!" "I too was told a similar thing about you."</p>
+<p>Then they realized that they had been divided because of the words of that cunning monk. Thereupon, the two reconciled, confessing their offenses (*āpatti*) to each other. They then decided, "We must now go and drive away that cunning monk." Arriving back at their former monastery, the preaching monk saw them from afar and came forward to receive their bowls and robes. The senior monk, perhaps empowered by the majesty of the Dhamma, snapped his fingers and said, "A person like you is not worthy of staying here," uttering words to banish him. Unable to endure it, that monk departed, abandoning the place. That is the story.</p>
+<p>In connection with this, the Buddha declared that, due to that grave unwholesome karma, the preaching monk was boiled in the Avici hell for an immensely long time—for an entire interval between two Buddhas (*buddhantara*), from the time of Kassapa Buddha until the present Buddha's era. As a residual result—like the very tip of the tail of that unwholesome karma—he has now acquired this hungry ghost state. This, indeed, is the event.</p>
+<p>Having declared this, and using this incident as a background and foundation, the Buddha delivered the aforementioned Dhamma stanza to the world as an admonition, showing the consequences of leaving the mind, body, and speech unrestrained and directing them in a sinful manner:</p>
+<p>*Vācānurakkhī manasā susaṃvuto*</p>
+<p>*Kāyena ca akusalaṃ na kayirā*</p>
+<p>*Ete tayo kammapathe visodhaye*</p>
+<p>*Ārādhaye maggaṃ isippaveditaṃ*</p>
+<p>"Vācānurakkhī" means being guarded in speech. "Manasā susaṃvuto" means being thoroughly restrained in mind or thought. "Kāyena ca akusalaṃ na kayirā" means not committing any unwholesome deed with the body. This means guarding all three doors of action (mind, body, and speech). "Ete tayo kammapathe visodhaye" means, "Purify these three pathways of action. Various actions arise through these three doors; purify those pathways of action." By purifying them in this manner, "ārādhaye maggaṃ isippaveditaṃ"—"one accomplishes and abides by the path taught and declared by the Buddhas and other Seers." This is the admonition.</p>
+<p>Now, let us first consider the lessons we can draw as guidance from this story related to the stanza. From this narrative, we see how two harmonious monks were alienated by combining lying and slandering, and how, driven by the burning desire to possess what was not theirs—which relates to stealing (*adinnādāna*)—the instigator devised such a verbal strategy and course of action, which resulted in his falling into that terrible state.</p>
+<p>Let us particularly reflect on this "Sukara Preta" (Pig-faced Hungry Ghost)—so named because of his pig-like mouth. Even today, there is a great deal of interest among certain people in this "unseen world." A curiosity about spirits and hungry ghost states has emerged in modern times. This current event shows us that there indeed exist individuals with eyes capable of seeing this unseen world. Venerable Maha Moggallana saw it with his divine eye (*dibba-cakkhu*). However, because Venerable Lakkhana could not see it, Moggallana refrained from speaking of it there, knowing that voicing it might lead Venerable Lakkhana to generate unwholesome thoughts (doubt or disbelief). Similarly, the Buddha, despite having seen it Himself, did not declare it until a witness was available. The eye that sees this unseen world is the divine eye. This divine eye has the power to see not only spirits and hungry ghost realms, but other worlds as well—hell, the demon (*asura*) realm, and even the deva and brahma worlds.</p>
+<p>Thus, we must understand that such a power exists. The Dhamma mentions three kinds of eyes: the physical eye (*maṃsa-cakkhu*), the divine eye (*dibba-cakkhu*), and the wisdom eye (*paññā-cakkhu*). In Sinhala, these are referred to as *masäsa*, *diväsa*, and *pänäsa*. *Pänäsa* refers to the eye of wisdom. Today, some rationalizers might argue, "We do not see such beings; therefore, no such things exist." In the Dhamma, it is stated that for those who cannot develop the divine eye to claim that no divine eye exists is like a blind person claiming that the sun, the moon, and the stars do not exist.</p>
+<p>On the other hand, since there is an interest in this unseen world, we can also say something in that regard. Nowadays, many people, especially Western psychologists, use fancy terms like "extrasensory" or "parapsychological." They try to conduct investigations into these spirit realms and present their findings to the world. This is somewhat like children's play. For their parapsychological research, they often rely on techniques like hypnotism and mesmerism, trying to uncover details about these spirit worlds. However, from the perspective of the Dhamma, to truly realize this for oneself—since hearsay only leads to doubt for many—the divine eye is necessary. By cultivating virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*), and particularly by attaining the meditative absorptions (*jhāna-samāpatti*) and generating the special mental powers known as direct-knowledges (*abhiññā*), one can transcend the physical eye and bring forth the divine eye. Those who possess this divine eye can see such worlds. It was by utilizing this power that Venerable Maha Moggallana and the Buddha, on numerous occasions, demonstrated how beings in the world fare according to their karma.</p>
+<p>If we reflect a little further on this hungry ghost state, we see that the physical body itself is often formed in direct correspondence to one's karma. Considering that monk, he had an immense body fitting the grand status he had desired. However, because of the impure words he had spoken, his head was like that of a pig. The cunning knot he tied to acquire the monastery manifested as the pig's tail protruding from his mouth, and worms oozed from his mouth. Such is the condition. Hungry ghost states with such grotesque forms, resulting from the use of bad words to sow discord and division among others, are frequently mentioned.</p>
+<p>Not only this, but there are many other parallel suttas. In the section of the Dhamma known as the *Lakkhaṇa Saṃyutta*, many other visions beheld on Vulture's Peak are recorded as dialogues between Venerable Maha Moggallana and Venerable Lakkhana. To mention a few of these terrifying hungry ghost forms: on every occasion when Moggallana saw them, he later revealed the details in the presence of the Buddha, as mentioned earlier. At those times, the Buddha briefly explained the past history of each hungry ghost. There is an entire series of such suttas. Since they are similar, we shall mention them here. It is recorded that on one occasion, Moggallana saw a skeleton flying through the air. As it flew, crows, vultures, and hawks kept pecking and tearing at the flesh between its ribs, while the skeleton went wailing through the air. That form was once a cattle-butcher in Rajagaha. In another instance, a piece of meat was flying through the air, and vultures kept pecking at it while it screamed—this was a hungry ghost in the form of a lump of meat. The karma attributed to him was that of a bird-hunter in Rajagaha. Next is mentioned a flayed human form flying through the air, pecked at by birds in the same manner; this was a sheep-hunter. Then, Venerable Maha Moggallana saw another hungry ghost whose body hairs were like swords. These swords would fly up into the air and fall back, cutting up its own body; this was a pig-hunter of Rajagaha. Another state is described: a headless hungry ghost flying through the air, with its eyes and mouth on its chest, being pecked at by birds and wailing as it flew. The Buddha explained that this was a public executioner (*cora-ghātaka*) of Rajagaha. The Buddha even provided his name, "Hārika the executioner," who used to decapitate captured thieves. Furthermore, another hungry ghost is described as submerged up to his head in a cesspit; he was an adulterer. On another occasion, Venerable Maha Moggallana saw a flayed woman flying through the air—not by psychic power, but in a hungry ghost state—pecked at by birds; she was an adulteress.</p>
+<p>There are many such states of existence. Furthermore, what is especially worth remembering in this day and age is that Venerable Maha Moggallana saw the form of a monk flying through the air—not by psychic power. The double-layered outer robe (*saṅghāṭī*) of this monk-figure was ablaze, his waistband was ablaze, and his alms-bowl was ablaze. Burning and scorching, he flew through the air. He was an evil monk during the era of Kassapa Buddha. Similarly, an evil nun (*bhikkhunī*), an evil male novice (*sāmaṇera*), and an evil female novice (*sāmaṇerī*) were seen flying through the air, burning in flames. These are things we must keep in mind.</p>
+<p>We perceive this as immense suffering (*dukkha*). In almost all these cases, the Buddha points out that these beings first paid the gravest part of their unwholesome karma in hell—being boiled in the great Avici hell—and that they acquired these hungry ghost states only as the residual portion of that unwholesome karma. Thus, there are numerous instances in the sutta discourses where the Buddha explains the results of karma in this manner.</p>
+<p>In this light, even without my saying it, you meritorious people can understand how we can bring about a new era. Let us now reflect on the stanza again. Examining its words in more detail, "vācānurakkhī" means "guarding one's speech." Usually, you meritorious people have heard of the ten unwholesome courses of action (*dasa-akusala*): killing, stealing (*adinnādāna*), and sexual misconduct—which are the three bodily offenses. Next are the verbal offenses: false speech, slanderous speech, harsh speech, and frivolous or empty talk—which, as mentioned in the *ājīva-aṭṭhamaka-sīla* (eightfold virtue with right livelihood) that some have observed today, are the offenses committed through speech. The offenses of the mind are listed as *abhijjhā*, which is covetousness—not *avijjā* (ignorance)—meaning the intense greed to possess what belongs to others. Next is *vyāpāda*, which is ill-will or anger. Finally, *micchā-diṭṭhi*, which is wrong view. These are the unwholesome actions committed by the mind or intellect. Here we have "vācānurakkhī"—giving primary place to speech because this story centers on the unwholesomeness of speech. "Vācānurakkhī manasā susaṃvuto"—being well-restrained in mind means turning away from those mental offenses. "Kāyena ca akusalaṃ na kayirā" means abstaining from the three bodily offenses. Thus, guarding these three doors of action is what must be done if anyone born in this human world expects progress. As stated in the *Parābhava Sutta*, "He who loves Dhamma prospers, he who hates Dhamma declines"; indeed, the one who loves the Dhamma is the one who truly prospers in the world, whereas the one who hates the Dhamma falls into decline and ruin.</p>
+<p>In the world, however, people often argue to the contrary. Some say there is "no place" for one who lives according to the Dhamma. "A place" is reserved for those who turn their backs on the Dhamma and live by wrong livelihood (*micchā-ājīva*), employing various schemes and legal loopholes. If one uses some legal loophole to possess what belongs to another, that very loop can tighten around one's own mouth. Therein lies such a dangerous situation. According to the Buddha's word, what "place" is reserved for them can be understood from the facts discussed: hell, the animal realm, the hungry ghost world, and the demon (*asura*) realm. That is where it is. If anyone desires "such a place," they may shape their philosophy of life according to that kind of conduct.</p>
+<p>From this, we can understand that if we wish to live in this highly rare human state we have attained without falling into such terrifying conditions, we must be mindful of this mind, body, and speech declared by the Buddha and other Seers. "Vācānurakkhī" means we must guard our speech. Sometimes, without our even realizing it, a lie slips out, or slander, harsh words, or various idle chatter. Thus, we must maintain a guard over our words. We must have restraint over our mind. Otherwise, without realizing it, we adopt wrong views (*micchā-diṭṭhi*)—due to associating with bad friends we acquire erroneous views. Or we generate thoughts of anger, or intense greed. The monk mentioned here also possessed *abhijjhā*—the intense, corrupt greed to make what belonged to others his own. Slander, lying, and theft—all of these were present in that monk's course of action, and their consequences are what the story illustrates.</p>
+<p>If we constantly guard ourselves in this manner in our daily lives, the result in this life itself, as declared by the Buddha—which you meritorious people may have heard of—is that if a layperson lives a highly virtuous life, they enjoy a precious happiness that others do not experience. This is called the "bliss of blamelessness" (*anavajja-sukha*). From the inner sense of "I have done no wrong," a great relief arises in a person. The opposite of this is remorse or regret. This is also stated in the Dhamma—the Buddha explains the difference between the fool (*bāla*) and the wise person (*paṇḍita*) in a certain sutta. The monk in this story might have thought, because he was a preacher of the Dhamma and because the resident monks behaved very simply, "I am the wise one." Yet, what he accomplished through that "wisdom" of his was that very painful result. The ordinary world thinks in the same way. If someone lives humbly according to the Dhamma, they are deemed a fool. Nowadays, wisdom is recognized by the letters after one's name or the titles before it. But that is not how the Buddha distinguished between the fool and the wise person.</p>
+<p>The fool is defined thus: *dubbihita-cintī, dubbhāsita-bhāsī, dukkaṭa-kammakārī*—one who thinks bad thoughts, speaks bad words, and does bad deeds; that person is a fool. The wise person, on the other hand, is defined as: *suvihita-cintī, subhāsita-bhāsī, sukaṭa-kammakārī*—one who thinks good thoughts, speaks good words, and does good deeds; that person is a wise person. Drawing a distinction between the two, the Buddha demonstrates the inner suffering (*dukkha*) and remorse that the fool experiences due to his foolishness—no matter how prominent he might appear in society. This is why the Dhamma describes four kinds of fear (*bhaya*) experienced by a person who leads a wrong life: the fear of self-reproach (*attānuvāda-bhaya*), the fear of reproach by others (*parānuvāda-bhaya*), the fear of punishment (*daṇḍa-bhaya*), and the fear of an evil destination (*duggati-bhaya*). One's own mind blames oneself; one receives the blame of others—specifically of the wise, not just anyone; next, one gets caught in the clutches of the law and suffers punishment; and even if one escapes all of these, one ultimately goes to an evil destination.</p>
+<p>Here, the Buddha further analyzes the "fear of self-reproach," which is the blaming of one's own mind, presenting it in three stages. First, when a fool who has committed those offenses—such as killing, stealing (*adinnādāna*), and sexual misconduct—walks through the village or city, or stands in an assembly or at a crossroads, he hears others talking about those very sins. They may not be speaking about him specifically, but when they talk about killing or theft, his mind blames him from within: "Indeed, have I not done such things as well?" These thoughts come to his mind, and he is saddened: "These bad things discussed are present in me too." That is the first stage. In the second stage, he sees or hears that a king—as described in the context of those times—has caught and punished people who committed those offenses. Beholding or hearing of this, a great dread arises in his mind: "Alas, I too have done these things! If I am caught by the king, will I not have to undergo such torture?" Thus, he laments, suffers, and regrets. Thirdly, this very remorse is described as follows: when he is sitting on a chair, reclining on a bed, or lying on the ground, the shadow or reflection of his past deeds (*kamma-chāyā*) comes to his mind. The Buddha gave a simile to illustrate this: just as in the evening, the shadow of a great mountain gradually lengthens and hangs over, falls upon, and envelops the mountain, even so, the shadow of the past unwholesome deeds of that fool hangs over, oppresses, and clings to his mind.</p>
+<p>Some, based on this simile, might think that unwholesome karma floats in the sky and that this is a simile for it. That is not what is meant here. As you meritorious people know, when describing wholesome and unwholesome states, the Dhamma uses the simile of a shadow. Likewise, what is spoken of here is this shadow. This shadow is a source of grief, not of joy. It is for one's remorse. When we speak of "evening," we know that as the sun sets, the shadow lengthens. Similarly, the unwholesome deeds committed in the past affect a person's mind. These must be experienced in this life itself—in the visible world. It is said that these consequences begin to flow from the very moment the unwholesome act is committed. If "result" (*vipāka*) means a ripening, it does not ripen all of a sudden. It is not that one suddenly falls into hell only after death; it "festers" within the mind. It ripens within the mind in the form of remorse, as described. Festering in this manner, as we often hear—not only during the Buddha's time but in the present day as well—certain people burn with regret at the moment of death.</p>
+<p>You meritorious people may have heard of many such well-known incidents from the Buddha's time. For instance, Cunda the pig-butcher lived right behind the Veluvana Monastery. He was highly skilled at his trade—doing on his own what people today do with government aid. He caught pigs, slaughtered them, and earned his living. However, at the moment of death, he ran to and fro squealing like a pig, wailing in agony, and after undergoing immense suffering, he was reborn in the Avici hell. We will hear of similar events in the future as well. We might hear of even more such cases as our economy grows, built upon wrong livelihood. Thus, there is no great need to cite proofs only from books; a time is coming when these can be observed in daily life. The consequences of living life as human-pretas or human-demons (*yakshas*) are demonstrated in this very world. This is highly significant. In the future, those parapsychological researchers and Western scientists will have plenty of work to do, coming here to conduct research and earn degrees. Yet, many who follow them merely turn this into an intellectual exercise, constantly "studying" these matters, writing books, and obtaining degrees, rather than learning the lesson to refine their own lives and philosophy of life. It is not for such a purpose that we have presented these illustrations. It is not for you meritorious people to write books and obtain degrees, but to reform your lives, so that the new century—the new year—may truly become a new dawn, a new era for you.</p>
+<p>Therefore, we must reflect whether we want to be a fool or a wise person in this world, according to what was declared by the Buddha. To be a wise person, there is no need to pass examinations, according to the word of the Buddha. Today, the word "paṇḍita" (scholar/wise person) carries a meaning related strictly to academic learning. However, the Buddha gave it a different meaning. This is because wisdom depends on foresight. If one's path is short-sighted, then no matter how many degrees one possesses, that person is not a wise person. When reflecting on this, it becomes clear. The Buddha is called the "Knower of the Worlds" (*Lokavidū*)—the noble person who knew everything there is to know about this world. The Buddha needed no worldly degrees. The true value of the Buddha is contained in those nine supreme qualities.</p>
+<p>The Buddha, knowing through His Sambuddha-wisdom, pointed out in a very simple manner how one becomes a wise person and how one becomes a fool in the world, along with the disadvantages and benefits thereof. Thus, we must realize that reforming our lives does not require much. We have these three doors of action, and they are open to society—to the external society. Therefore, we must open and close these three doors properly. Guarding the three doors means, for instance, if we face scarcity and our neighbor's bunch of bananas is hanging nearby, or hanging over our garden, or if there is some unattended property without an owner in sight, we do not take it with a thieving mind. Or, if we desire delicious food, we do not slaughter an animal. In this manner, our mind prompts us to do various things. If we open the door in that direction, harm is caused to others.</p>
+<p>In the analysis of wholesome (*kusala*) and unwholesome (*akusala*) actions in the Dhamma, if we truly examine the word *kusala*—even today, "kusalatā" means "skillfulness" or "dexterity"—if skillfulness is dexterity, then *kusala* actually means being skillful. However, the Buddha's explanation of being "skillful" or "unskillful" is different from modern definitions. Who is the truly skillful one? True wholesomeness is identified as non-greed (*alobha*), non-hatred (*adosa*), and non-delusion (*amoha*). Let us first speak of the unwholesome. The roots of the unwholesome are defined as greed (*lobha*), hatred (*dosa*), and delusion (*moha*), which are the three defilement roots that have long existed in the minds of beings. The processes of action that arise through body, speech, and mind due to these three roots are defined as unwholesome—viewing it from one angle, taking them as roots. Next, the very thoughts that help one depart from that greed, hatred, and delusion—generating concepts of non-greed, non-hatred, and non-delusion, and the actions performed, words spoken, and thoughts conceived accordingly—can be defined as wholesome.</p>
+<p>In another sense, humans do not live only with other humans. Considering the relationships described in this Dhamma, we may well regard other animals as our parents or children in previous lives; in this long saṃsāra, we have been born even in those animal states. Sometimes, one's deceased parents might be reborn as dogs or cats in one's own home. When we reflect in this manner, the entire universe is a single society. It is toward this society that our three doors of action are open. Thus, if anyone, overcome by those unwholesome roots, commits those bodily offenses of killing, stealing (*adinnādāna*), and sexual misconduct; or uses words of falsehood, slander, harshness, and frivolous talk through the door of speech; or harbors intense, corrupt greed (*abhijjhā*), ill-will (*vyāpāda*), and wrong views (*micchā-diṭṭhi*) in the mind—that person not only falls into that foolish state, but must also experience their painful results at that very moment. We must reflect in this way. That is what is called "unwholesome" or "unskillful." What is this unskillfulness? For what reason does the Buddha call it unskillful? This saṃsāric journey is highly perilous. If one does not travel carefully, one falls into trouble; one falls into great abysses. It is that very abyss which is indicated by these words: *"apāyaṃ duggatiṃ vinipātaṃ nirayaṃ upapajjati"*—"one is reborn in the plane of misery, the bad destination, the lower world, hell."</p>
+<p>*"Apāya"* means turning off the road while driving. Suppose a vehicle skids off the road. Next, *"duggati"* (bad destination) is like sliding along a ditch for some distance. *"Vinipāta"* (lower world) means falling down a steep precipice. Finally, *"niraya"* (hell) means being smashed to pieces. Think of it in this way. This might not be a textbook simile, but I share it because it helps to focus the mind. These four words are used: *"apāyaṃ duggatiṃ vinipātaṃ nirayaṃ upapajjati."* These four words apply to the person who has committed sins. In that manner, he skids off the road onto the bad side, slides down the ditch, and finally falls down the precipice and is destroyed. That is how one falls into hell. Avoiding this is skillfulness—wholesomeness. While avoiding these bad places like hell, one also draws closer to Nibbāna. What is Nibbāna? Nowadays, we hear some people argue: "If you perform meritorious deeds, it prolongs saṃsāra; therefore, none of those are needed." On the other hand, there is an opinion that meditation is unnecessary. Regardless of how they argue, what we must understand is that the skillfulness shown by the Buddha consists of escaping the path to hell and drawing as close as possible to Nibbāna. What is Nibbāna? Nibbāna means the soothing peace of liberating the mind from greed, hatred, and delusion. It is the ultimate peace; it is coolness. If greed, hatred, and delusion are three fires, Nibbāna is the state of coolness (*sītibhāva*) established in one's mind upon extinguishing those three fires—an exceptionally wondrous, comforting peace. That is what is called Nibbāna—the ultimate peace. It is not something hanging in another world, nor is it something floating in the sky. Nowadays, even Buddhist thinkers who follow scientists have become accustomed to thinking of all these things as external to themselves. You meritorious people may often see in books that when they discuss karma and rebirth, they treat them as if they have nothing to do with themselves—as things to be known through worldly scientific research. Whether these affect you or not will be realized only at the moment of death, on one's deathbed.</p>
+<p>Therefore, if one does not put this knowledge to use, it is utterly useless. In that case, there is no real knowledge; that person is a fool, a simpleton. If one is a wise person, then as mentioned, one must be *subhāsita-bhāsī, suvihita-cintī, sukaṭa-kammakarī*. One's thoughts, words, and courses of action must be aligned with the Dhamma. Turning away from greed and drawing closer to non-greed is drawing closer to Nibbāna. Drawing closer to non-hatred is drawing closer to Nibbāna. Drawing closer to non-delusion is drawing closer to Nibbāna. This is because Nibbāna is defined as the culmination of the path of non-greed, non-hatred, and non-delusion. If we think of this as a journey for a moment—as you meritorious people have all heard—the saṃsāric journey is driven by greed, hatred, and delusion. If we think of a race or a journey, it goes from one place to another. Likewise, abandoning those three saṃsāric targets of greed, hatred, and delusion—turning our backs on them—and seeking the peace of Nibbāna, turning away from those three fires and traveling toward Nibbāna: this journey is what is called non-greed, non-hatred, and non-delusion. Every thought that aids in this is a support for Nibbāna, something that leads to Nibbāna. Thus, when performing acts of giving and merit, various wholesome intentions (*kusala-cetanā*) arise in one's mind. When giving alms, within that intention of generosity, the mental factor of non-greed (*alobha-cetasika*) is present, along with compassion and faith (*saddhā*). Furthermore, there are moments when the sense of "I" and "mine" vanishes—when one detaches from what is one's own and places it in the hands of another. How, then, can this not be a support for Nibbāna? Indeed, they support Nibbāna. What accumulates in this manner is what ultimately yields the fruit of Nibbāna in one's mind at some point—the fruit of Nibbāna. If one aspires for Nibbāna, it will yield that fruit. Additionally, by suppressing the unwholesome deeds that lead to hell as described, one is reborn in happy destinations—the deva and brahma worlds, which are the places of birth arising as the benefits of that wholesome side. These too are visible to the divine eye. Parapsychological research may not discover much about them; what those researchers are likely to find in abundance, now and in the future, are examples relating to the hungry ghost and spirit worlds, because the majority of people go in that direction.</p>
+<p>Be that as it may, you meritorious people must reflect: if we are indeed commencing a new century as described, what is a century? When we consider the long-lived epochs of Kassapa Buddha, and even more so of Kakusandha, Konagamana, and other Buddhas, a single year to us is like the blink of an eye. Reflect on how time flies, meritorious people. When looking back at the moment we thought of as the beginning of last year, it feels like it was just yesterday. Yet, within this brief span, worldly people make merry on a grand scale. Meanwhile, what is happening? Our lives are slipping away; our lives are running out. What makes a life precious? It is having acquired a body free from physical disabilities during the era of a Buddha's appearance—a body that can be directed toward the Dhamma and live in accordance with the Dhamma. Those who have undergone those hungry ghost existences as described are the ones who, when they finally obtain a human birth, suffer the consequences by being born with various physical disabilities. It is only when you meritorious people are free from such physical disabilities and possess the intellectual capacity to comprehend the Dhamma that this lifespan becomes precious. Though short, it is extremely valuable; you must regard it as precious as a gem, for there are still things you must accomplish. This is a highly precious opportunity to bring this saṃsāric journey to an end. Therefore, what assists in this is the accumulation of virtuous qualities.</p>
+<p>Thus, the proper guidance and purification of the mind, body, and speech mentioned briefly here can be explained in various ways. It can be categorized as giving (*dāna*), virtue (*sīla*), and meditation (*bhāvanā*), which encompasses the three bases of meritorious activity (*puñña-kiriya-vatthu*). Viewed in another way, as direct supports for Nibbāna, it is virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*). Virtue is what has been emphasized here in particular. It is through virtue that one develops concentration. Some think of virtue as unnecessary. The Buddha declared that if someone has to perform heavy labor requiring physical strength, they must stand on a sufficiently firm ground to do so. One cannot lift a heavy load while standing in a mud pit. You meritorious people know this. Can you lift a heavy sack while standing in mud? You would only sink further. That is why you undertake virtue in the form of the five precepts (*pañca-sīla*), the eight precepts of right livelihood (*ājīva-aṭṭhamaka-sīla*), the eight Uposatha precepts, or the ten precepts. It is on the foundation of that virtue that one concentrates the mind. This is because it is difficult to concentrate the mind if those regrets—the remorse described in the story of the fool and the wise person—flood into the mind. To prevent such regrets from arising, one must first discipline the body and speech. That is what is called virtue. One may have committed countless sins in saṃsāra, but at this moment—as you meritorious people who have observed the precepts today can reflect, regardless of other days—today, I stand upon the principles of virtue. Standing upon those principles of virtue and relying on that strength, one can settle the mind and attain concentration.</p>
+<p>Concentration (*samādhi*) means removing the mental hindrances (*nīvaraṇa*) that obstruct mental one-pointedness—such as sensual thoughts, angry thoughts, sloth and torpor, restlessness and worry, and skeptical doubt—and settling the mind on a wholesome object of meditation. Once settled, that concentrated mind is directed to comprehending reality as declared by the Buddhas—the impermanent (*anicca*), suffering (*dukkha*), and not-self (*anattā*) nature of existence. It is insight (*vipassanā*) that assists in this comprehension. As insight, this is something that must be seen within one's own mind; it is not something that can be acquired from books, nor is it something that can be obtained by conducting "parapsychological research" in that outward manner. That research must be conducted internally. This is called the "noble quest" (*ariya-pariyesana*). What the Buddha conducted was also this noble quest. Therefore, on a precious day like today, you meritorious people too must resolve to conduct this noble quest. The beginning of that resolve, as declared here, is to make every effort to guard the three doors of mind, body, and speech. No matter what problems or difficulties arise in your daily life, if you do not guard these three doors, the consequences that await you have been declared by the Buddha. Stating that beings are "owners of their karma, heirs to their karma" (*kammassakā kamma-dāyādā*), He showed that what one truly takes along, what truly belongs to one, is the good or bad one has done. That, indeed, is one's inheritance in saṃsāra.</p>
+<p>Bearing this in mind, on this precious Full Moon Day, you meritorious people listened to many points of the Dhamma taught by the Buddhas, which assist in cultivating a true philosophy of life and bringing about a genuine new dawn. Recalling the Buddha who preached these teachings—not as something preached by me, for it is based on the Buddha's discourses that I have shared these matters—and generating faith and devotion toward the Triple Gem, you must firmly resolve to maintain your constant virtue (*nicca-sīla*), whether it be the five precepts or the eight precepts of right livelihood. Furthermore, to derive benefit from it, you must firmly resolve to spend this year dedicating yourselves to meditation.</p>
+<p>During this time, having restrained your mind, body, and speech, and having observed virtue, you listened to the Dhamma in a manner that cultivates faith (*saddhā*), energy (*viriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*). We must share this great store of merit accumulated through your listening and our preaching of the Dhamma. No matter what dangers threaten our Dispensation (*Sāsana*), there exists an assembly of right-viewed guardian deities, including the devas and brahmas who associated with the Buddhas, to suppress this tide of decline. Whether you meritorious people see them or not—may they rejoice in these merits! May they continue to protect this Dispensation! Likewise, we must transfer these merits to our departed relatives. Directing our own lives toward the Dhamma of Nibbāna through this path of virtue, concentration, and wisdom, may we realize the supreme, deathless Nibbāna through the penetration of the paths and fruits of Stream-entry (*Sotāpatti*), Once-returning (*Sakadāgāmitā*), Non-returning (*Anāgāmitā*), and Arahantship. Wishing thus, let us now recite the stanzas to transfer merit:</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_009.html" class="doc-btn">← Previous Sermon (009)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_011.html" class="doc-btn">Next Sermon (011) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

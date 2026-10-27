@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 125 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_124.html" class="doc-btn">← Previous Sermon (124)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_126.html" class="doc-btn">Next Sermon (126) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 125</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_125_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_125_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_125_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #125</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.174)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Etaṃ nāgassa nāgena, īsādantassa hatthino;</p>
+<p>sameti cittaṃ cittena, yaṃ eko ramati vane ti.</p>
+<p>From:</p>
+<p>Dhammapada 325 (Nāgavagga)</p>
+<p>Dear Listeners,</p>
+<p>In the society of the Buddha’s time, four animals were frequently highlighted in Dhamma literature as being considered noble and majestic creatures. The lion, the noble thoroughbred horse, the bull, and the elephant—these four animals were accepted in the world of that era as noble creatures. For this very reason, in many instances, one sees the names of these animals being applied to the Buddha as titles of honor or epithets. Not only that, even the Buddha himself, in certain instances when employing similes, compared himself to these four animals. Now, what is contained in this verse chosen as our theme is an occasion where the Buddha compared himself to a king elephant. The background story (*nidāna kathā*) related to this is as follows:</p>
+<p>During the time the Buddha was residing at Ghositārāma in the city of Kosambi, a great dispute, shouting, quarreling, and conflict arose among the bhikkhus of Kosambi over a minor Vinaya issue. They did not accept even the advice and admonitions of the Buddha. Then, perhaps due to the inability to settle this conflict, the Buddha’s mind inclined toward seclusion. He thought to himself:</p>
+<p>"Now I am residing with difficulty in a crowded environment thronged with bhikkhus, bhikkhunīs, laymen, laywomen, kings, royal ministers, heretics, and disciples of heretics. It would be well if I could leave this crowd and dwell in the happiness of seclusion."</p>
+<p>Considering this, the Buddha on that day went for alms in the city of Kosambi, returned after the almsround, partook of the meal, set his lodging in order, and without informing even his attendant bhikkhu or telling the bhikkhu Sangha, took his bowl and robes and departed alone toward the Pārileyyaka forest. In due course, having arrived at the Pārileyyaka forest, he prepared to reside under a Sal tree—later known as Bhaddasāla—in a forest tract later known as the Rakkhita Forest Grove.</p>
+<p>At that very same time, a certain king elephant had also grown weary of living in the elephant herd and felt a desire to spend his time in seclusion, thinking in this manner:</p>
+<p>"Now I live in a restless environment crowded with bull elephants, she-elephants, and baby elephants. I only get to eat the grass left over after other elephants have eaten the tender shoots. Other elephants come and eat even the branches I break off for myself. I only get to drink water muddied by other elephants wading into the pool. When I bathe at the bathing place and climb out, she-elephants rub against my body. It would be well if I could leave these things behind and live in seclusion."</p>
+<p>Thinking thus, that king elephant also came to that Sal tree in the Rakkhita Forest Grove where the Buddha was residing. Having arrived and seeing the Buddha, he conceived confidence (*prasāda*), cleared away the plants and weeds from the spot with his trunk, and, as stated in the story, even provided the Buddha with drinking water, water for washing, and consumer water. While the Buddha too was residing there in seclusion, such a thought occurred to him: "Previously, I resided with difficulty in a crowded environment thronged with bhikkhus, bhikkhunīs, laymen, laywomen, kings, royal ministers, heretics, and their disciples. Now I reside here in comfort, peacefully, and in solitude."</p>
+<p>Simultaneously, a thought occurred to that king elephant as well: "Previously, in the manner mentioned before, I lived without seclusion amidst bull elephants, she-elephants, and baby elephants. I got to eat only the grass whose tender shoots were eaten by others. Others ate the branches I broke. I had to drink muddy water. She-elephants came and rubbed against my body. Now there is none of that. I can eat fresh grass. There is no one now to eat the branches I break. I can drink clean water." In this manner, a certain thought regarding the happiness of seclusion arose in the mind of the king elephant too. On that occasion, the Buddha, combining the happiness of seclusion he was experiencing and the thought that had arisen in the mind of the king elephant, uttered a joyful utterance (*udāna*) as an inspired verse, which is the verse we presented as our topic on this occasion:</p>
+<p>> *Etaṃ nāgassa nāgena īsādantassa hatthino*</p>
+<p>> *sameti cittaṃ cittena yaṃ eko ramati vane ti*</p>
+<p>In this, the mind of this elephant, who has tusks like plow-poles, and my mind, which is like an elephant’s, agree. In what? In delighting in dwelling alone in solitude in the forest. From that story, we can see an occasion where the Buddha, reflecting on that secluded dwelling, compared himself and that elephant.</p>
+<p>We can see a very moving story that you have heard many times. It exists in later literature with various ornate descriptions. What we present at this moment is the event of the taming of the elephant Nālāgiri as recorded in the Vinaya Pitaka. To assassinate the Buddha, the Thera Devadatta first sent archers. When that was unsuccessful, while the Buddha was walking up and down (*caṅkamana*) on the path below Gijjhakūṭa, he rolled down a boulder from above onto his head. When that too failed, what did he do next?</p>
+<p>The king had a very fierce elephant named Nālāgiri, who killed people and was in rut (*mada*). Devadatta conspired with the elephant keepers to release this elephant when the Buddha came for alms. Thereafter, when the Buddha was walking down the street for alms together with the Sangha of bhikkhus, the elephant keepers released the elephant Nālāgiri and turned him into that street. Even from afar, the elephant saw the Buddha, raised his trunk, spread his ears, lifted his tail, and ran toward the Buddha. Then the bhikkhus said, "Venerable Sir, this man-killing elephant Nālāgiri has entered this street. Let us turn back." Then the Buddha said, "Do not fear, bhikkhus, come. It is impossible to end the life of a Tathāgata through the efforts of another (*parūpakkamena*)." A second and third time the bhikkhus made the request. But the Buddha kept walking straight forward. Meanwhile, the citizens of the city had climbed onto roofs, upper storeys of palaces, and balconies, and were watching. Among them, foolish people lacking faith said, "Now indeed, this excellent, beautiful recluse will be destroyed by the elephant!" Faithful and wise people said, "After a long time, we will get to see a Nāga battling with a Nāga." "Nāga" (noble elephant / great man), dear devotees, is a name for an elephant. Thus, they said a noble being is battling with another noble being. Then, on that occasion, the Buddha suffused and projected a mind of loving-kindness (*mettā-citta*) toward the approaching elephant Nālāgiri. By the power of that mind of loving-kindness, this elephant lowered his trunk and, in a fully tamed manner, came and stood before the Buddha. While stroking the elephant’s temples (*kumbhasthala*), the Buddha uttered these two verses.</p>
+<p>It is that primary first verse that we are reciting to you on this occasion, because of its significance:</p>
+<p>> *Mā kuñjara nāgamāsado*</p>
+<p>> *na hi nāgahatassa kuñjara*</p>
+<p>> *sugati hoti ito paraṃ*</p>
+<p>"Kuñjara" too, dear devotees, is a name for an elephant. Addressing this elephant, the Buddha declares: "*Mā kuñjara nāgamāsado*"—O elephant, do not attack this elephant, this Nāga. Do not clash with this Nāga. "*Na hi nāgahatassa kuñjara, sugati hoti ito paraṃ*"—O elephant, for one who harms this Nāga, there will be no happy rebirth hereafter. Furthermore, he declared, "O elephant, do not fall prey to intoxication and negligence. Those who succumb to negligence do not go to a happy destination (*sugati*)." When the Buddha addressed the elephant in this manner, as stated there, the elephant took the dust trodden under the Buddha’s feet with the tip of his trunk, sprinkled it on his head, and backed away as far as he could be seen. Backing away in this manner, he returned to the elephant stable and stood there.</p>
+<p>Afterward, he abandoned his fierce nature. Seeing this, the astonished citizens expressed the Buddha’s virtues in a verse that you may have heard:</p>
+<p>> *Dantī dameh' aṅkusena kasāhi ca*</p>
+<p>> *adaṇḍena asatthena mahāmaunī damesi naṃ*</p>
+<p>"Some tame animals with sticks, with goads, or with whips. But this Great Sage tamed the elephant without sticks, clubs, or any weapons." Thus, this too is an instance where the Buddha compared himself to an elephant.</p>
+<p>Even more detailed is a valuable sutta in the Aṅguttara Nikāya called the *Nāga Sutta*, which compares the vast collection of the Buddha’s virtues with the limbs and body parts of an elephant. The background story of this *Nāga Sutta* is as follows: The Buddha, having resided at Jetavana in Sāvatthī, went for alms, returned, partook of his meal, and said to the Venerable Ānanda, "Ānanda, let us go to the palace of Migāramātā." That was the Pubbārāma built by Visākhā, so called, to spend the afternoon in seclusion. So, having gone to the Pubbārāma with Venerable Ānanda, he spent the entire afternoon in meditation. Rising from meditation in the evening, he said to Venerable Ānanda, "Ānanda, let us go to the Pubbakoṭṭhaka to cool our bodies a bit." "Pubbakoṭṭhaka," dear devotees, was a bathing place nearby, a famous bathing place.</p>
+<p>So, having gone with Venerable Ānanda, the Buddha bathed, climbed out, and stood with only his undergarment on, waiting for his body to dry. At that very moment, the royal elephant of King Pasenadi of Kosala, named Seta ("Whitey"), was climbing out after bathing at the bathing place. He was climbing out amidst a great sound of musical instruments—being a royal elephant, after all. He climbed out after bathing amidst the sound of music. The people seeing him praised him, saying, "This is an inspiring, beautiful, handsome, great Nāga!" They said, "This is a true Nāga." On that occasion, a monk named Udāyī was standing near the Buddha. There were many individuals named Udāyī; this Venerable Udāyī appears to have been someone with great intellectual intuition, much like Venerable Vaṅgīsa. He asked the Buddha:</p>
+<p>"Venerable Sir, is it only to the elephant that people say, 'This is a true Nāga, a great Nāga'? Or do they say so to other animals and other large-bodied creatures as well?" Then the Buddha declared: "Udāyī, an elephant is called a Nāga. Likewise, a horse is called a Nāga. Likewise, a bull is sometimes called a Nāga. A tree is called a Nāga. Humans, too, are sometimes called a Nāga. But, Udāyī, in this world with its devas and humans, the one who does not commit '*āgu*'—the Pali word meaning 'wrong'—he is the one who can truly be called a Nāga." That is, he was declaring this with reference to himself.</p>
+<p>Now, there the Buddha gave a novel etymology. The Buddha gives etymologies for many words, as those among you who know the Dhamma must have heard. That is: "*Āguṃ na karotīti nāgo*"—He is a "Nāga" in the sense that he commits no wrong (*āgu*). Thus, it was expressed there that he himself is a Nāga in that sense. Venerable Udāyī, saying "Wonderful, marvelous!", expressed great appreciation and joy, and asked, "Permit me, Venerable Sir, to make a eulogy of this Buddha-Nāga." Then, he declared a long series of verses.</p>
+<p>Beginning with, "This peaceful, tamed, great and noble man, worshipped by devas and humans, is the true Nāga, superior to all animals called Nāgas," he then said, "I shall now praise that Buddha-Nāga." Next, he amazingly connects the limbs of the elephant to the ocean of the Buddha’s virtues. This is indeed very deep. Let us explain it according to our understanding and as time permits.</p>
+<p>First, he says that the two front legs of this Buddha-Nāga are discipline (*dama*) and harmlessness (*avihiṃsā*)—for we can understand that an elephant usually attacks with its two front legs. The front legs of the Buddha-Nāga are discipline and harmlessness. Next, the two hind legs are austerity (*tapas*) and the holy life (*brahmacariya*). The hind legs are compared to austerity and the holy life. Next, the trunk—the trunk of this Buddha-Nāga is faith (*saddhā*). As you know, the trunk is the main organ of an elephant. Normally, an elephant performs heavy, rigid work with it; similarly, it can do very delicate work, like picking up a needle, with it. Here, the trunk of this Buddha-Nāga is faith. Next, the two white tusks of this Buddha-Nāga are equanimity (*upekkhā*). Because they are evenly positioned, the two tusks are compared to equanimity. Then comes a great simile: the neck of the Buddha-Nāga is mindfulness (*sati*). The neck is compared to mindfulness.</p>
+<p>There is an amazingly deep matter here. In the commentaries (*aṭṭhakathā*), this matter is explained simply. Why is mindfulness compared to the neck of the Buddha? Now, some of you who have read the *Mahāparinibbāna Sutta* may know of a well-known event recorded in Dhamma literature. When the Buddha was journeying to Kusinārā for his parinibbāna, the manner in which he cast his final look toward the city of Vesālī is described as looking with an "elephant-look" (*nāgāpalokitaṃ apaloketvā*). This is because he does not turn just a part, but turns his entire body. This is frequently mentioned as a characteristic of the physical posture of Buddhas, or as a characteristic of their behavior. Even regarding Kakusandha Buddha, it is mentioned in Dhamma literature that he turned and looked with his entire body. What this indicates is full attention. Similarly, behind the Buddha, to investigate whether he was indeed a Buddha, the young Uttara—a disciple of Brahmāyu Brahmin—followed the Buddha for seven months, and finally declared in his eulogy of virtues: "This recluse Gotama turns with his entire body; he does not look by turning halfway or partially." An elephant too has this very characteristic. If you look closely at the behavior of an elephant, you may see this. When an elephant turns its neck, its entire body turns. This is a very special, wonderful characteristic of the elephant. Then one might think, "Then how does an elephant behave in a battle?" In relation to that, we read of an event from recent times, not from the Dhamma.</p>
+<p>A certain hunter, in a deep forest, suddenly witnessed a battle between a lion and an elephant. I remember reading that description. That person was not someone who knew anything about these things, but his description of that battle was very amazing. Whenever the lion prepared to spring onto the elephant’s temples (*kumbhasthala*), the elephant turned directly toward the lion, springing and turning very fast. This means the ability to respond with the entire body. Within that lies complete attention. Thus, in presenting mindfulness as a characteristic of the elephant, it shows the ability to direct full attention to something. Likewise, the reason mindfulness of the Buddha was compared to the elephant’s neck is because of that. For we know there is a special difference between the behavior of a monkey or macaque and the behavior of an elephant. That is the matter concerning the neck.</p>
+<p>Next, Venerable Udāyī says that the elephant’s head is wisdom (*paññā*), reflection on the Dhamma (*dhamma-cintā*), and investigation (*vīmaṃsā*). Wisdom, investigating intellect, and Dhamma reflection are compared to the elephant’s head. Everyone knows the elephant has a large head. Wisdom is compared to the head. Next, the belly of this elephant is the Dhamma. It is filled with Dhamma—the large belly of this elephant, the belly of this Buddha-Nāga. Next, the tail of the elephant is compared to seclusion (*viveka*). Although the commentators say a story about the tail—that just as an elephant drives away flies with its tail, when he needs seclusion he drives away people; the commentator explains it as driving them away by striking with the tail. But we can think that the tail is the peaceful, quiet limb of the elephant’s body. Be that as it may, Venerable Udāyī thus compared the vast collection of the Buddha’s virtues to an elephant, using the elephant to symbolize the Buddha’s virtues.</p>
+<p>That eulogy goes on even further. The simile of a white lotus is applied to the Buddha. You too have likely heard this simile often used to describe the Buddha. Just as a beautiful, pure, fragrant white lotus is born in the water, grows in the water, yet remains unsmeared by mud and unsmeared by water, in the same way, the Tathāgata is born in the world, arises in the world, yet lives unsmeared by the world. His supramundane (*lokuttara*) virtues are shown through the lotus. Next, a simile concerning the Dhamma or the spiritual meaning of the Buddha is given. Here, a somewhat unusual simile is told. The lives of the Buddha and the Arahants are indeed a puzzle to the world. The lotus simile is presented to show this in a simple way. After the lotus rises above the mud and water, neither mud nor water smears it; even if water touches it, it just rolls off to the other side.</p>
+<p>Just like that, here a large log of wood is shown. Think for a moment: a log of wood is pulled out of a bonfire. Then, because it does not burn with blazing flames like that bonfire, it is said to be stilled/extinguished (*nivuna*) to that extent. This is shown as an illustration of the Nibbāna element (*nibbāna-dhātu*). For during the lifetime of the Arahants and the Buddha, in their daily activities like taking food and drink, the five faculties operate because they are not cut off or broken—since life is present. But because of the realization attained—due to the destruction of lust, hatred, and delusion—they are said to be stilled/extinguished. They are stilled. That is why it is said the Buddha "saw" Nibbāna. But the occasion when this is completed, when it ends, is: *'Sarīraṃ vijahaṃ nāgo parinibbisati anāsavo'*—"Relinquishing the body, the taintless Nāga (the Buddha-Nāga) finally attains parinibbāna." At some point, like a burning log of wood that is completely extinguished when it receives no more firewood, that state is called *parinibbāna*. It is called *anupādisesa-parinibbāna* (extinguishment without residue). At the end of the Buddha’s life, that fire was extinguished to the very point of not obtaining another birth. Thus, Venerable Udāyī praised the Buddha with a series of deep and meaningful verses as a eulogy.</p>
+<p>Now let us go to another elephant story. There was a queen of King Udena of Kosambi named Māgandiyā. This Queen Māgandiyā harbored a grudge against the Buddha because he had once disparaged her beauty. Due to that grudge, Queen Māgandiyā bribed the citizens of the city to insult and drive away this recluse when he came for alms, by calling him a camel, an ox, etc. Consequently, when the Buddha was walking for alms together with the Sangha of bhikkhus, those citizens followed behind them uttering obscene words. Then Venerable Ānanda said to the Buddha, "Blessed One, we cannot live in this city. People insult us with such obscene words wherever we go. Let us go to another city." Then the Buddha asked, "Well, if that happens in that city too?" "Then, Blessed One, let us go to another city." "No, Ānanda, that is not right. A problem must be solved right where it arises. I am like an elephant entered into battle. It is the duty of the elephant entered into battle to endure the arrows of insults and abuse." Therefore, the Buddha rejected that proposal, and next, in relation to this, comparing himself to an elephant entered into battle, he uttered this verse. Perhaps you have heard it:</p>
+<p>> *Ahaṃ nāgo va saṅgāme*</p>
+<p>> *cāpāto patitaṃ saraṃ*</p>
+<p>> *ativākyaṃ titikkhissaṃ*</p>
+<p>> *dussīlo hi bahujjano*</p>
+<p>"Like an elephant entered into the battlefield, I shall endure arrows shot from the bow (abusive words); for indeed, many people are undisciplined." There too, the Buddha compared himself to an elephant.</p>
+<p>You must have heard of another valuable occasion: an occasion where the footprints of the Buddha were compared to the footprints of an elephant. There are two suttas called *Hatthipadopama* (Simile of the Elephant's Footprint). Here we take the *Cūḷahatthipadopama Sutta*. In that *Cūḷahatthipadopama Sutta*, such an event is mentioned: A wanderer named Pilotika, who had conceived faith in the Buddha, was walking along the road when he met the Brahmin Jāṇussoṇi coming toward him. At that time, Jāṇussoṇi had no faith in the Buddha.</p>
+<p>When asked, "Where are you coming from?", the wanderer Pilotika made a great praise of the Buddha in this manner: "Just as an elephant hunter—those elephant-keepers and others who go to catch elephants are called *nāgavaṇṇika*—a skilled elephant hunter, entering a forest where elephants live, if he sees a large elephant footprint in length and width, comes to the conclusion by those very footprints, those tracks of the elephant, 'There is a large elephant in this forest.' Likewise, I too saw four footprints of the recluse Gotama. It is having seen them that I came to know: 'The recluse Gotama is a Fully Self-Awakened One (*Sammā-Sambuddha*), the Dhamma is well-proclaimed, and the Sangha is practicing well (*supaṭipanna*).'"</p>
+<p>Next, the wanderer Pilotika describes those four elephant footprints in this manner: "When royal scholars, kṣatriya scholars, who are highly recognized in the country, whom others cannot tame, and who are skilled in debate, come to the recluse Gotama, having heard his Dhamma discussions, they finally become lay followers (*upāsaka*) or disciples of the Buddha. Just like kṣatriya scholars, brahmin scholars, householder scholars, and recluse scholars—scholars skilled in debate of these four kinds—come to the Buddha and finally become disciples of the Buddha. Seeing that, just as an elephant hunter recognizes an elephant from a footprint, I knew: 'This is a great Fully Self-Awakened One (*Sammā-Sambuddha*), the Dhamma is well-proclaimed, and the Sangha is practicing well (*supaṭipanna*).'" At this, the Brahmin Jāṇussoṇi alighted from his carriage, bowed in the direction of the Buddha, and said, "I must see the Buddha."</p>
+<p>Accordingly, when he approached the Buddha, Jāṇussoṇi mentioned how the wanderer Pilotika had praised the Buddha in this manner. Then, the Buddha said to the Brahmin Jāṇussoṇi, "No, Brahmin, the elephant footprint simile is not complete with just that. I will tell you how it is completed." Thereupon, a very valuable sutta was preached under the name *Cūḷahatthipadopama Sutta*. To show how great the historical value of this sutta is, you may have heard that the *Cūḷahatthipadopama Sutta* is recorded as the sutta preached by the Great Arahant Mahinda upon arriving in Sri Lanka to inspire the Sri Lankan people for the first time. So, the Buddha explains it in this manner:</p>
+<p>From this sutta, one understands how profound the all-knowing Buddha’s understanding of elephants was.</p>
+<p>"Brahmin, when a skilled elephant hunter, such an elephant-catcher, enters the forest, he sees a very wide and long footprint. If that elephant hunter is skilled, he does not immediately come to a conclusion upon merely seeing it, 'This is indeed the noble elephant I am searching for.' Why is that? Because in that forest, there are also stunted she-elephants named Vāmanikā, who have large footprints of that sort. Therefore, he does not abandon the search, nor does he come to a conclusion based on that alone. He goes further. Going further, he sees not only footprints of that kind, but also marks of branches broken off at high places. Yet, the elephant hunter does not decide on that alone, 'This indeed is the mark of the elephant I am searching for.'" Because there, the Buddha declares, there is another class of she-elephants named Kāḷārikā who can likewise break high branches. "Going further, he encounters places where tusk-slashes have been made. Yet, the elephant hunter does not come to a decision on that alone either, because there is still another class of she-elephants who can leave such marks. It is only when he finally goes and actually finds the elephant he was searching for, that the truly skilled elephant hunter comes to a certain conclusion." Next, the Buddha connects this to the Dhamma in this manner:</p>
+<p>A wise person does not immediately decide with absolute certainty, "Indeed, the Buddha is Fully Self-Awakened, the Dhamma is well-proclaimed, and the Sangha is practicing well." It is through walking this path of training (*sikkhā-magga*) that one realizes it for oneself. From there, it is shown how a bhikkhu who has entered this Dispensation, gradually practicing the designated training, gradually attaining the jhānas, path-factors, and fruits, and finally, after attaining Arahantship, realizes for himself: "Indeed, the Buddha is Fully Self-Awakened, the Dhamma is well-proclaimed, and the Sangha is practicing well" through personal realization. Through this, the Buddha gives an amazingly wonderful message to the world. Faith (*saddhā*) is not an absolute, blind faith; the stage where faith is confirmed through help is personal realization. By realizing it oneself. In relation to that, it is shown that a bhikkhu attains the states of jhāna. He does not stop with that. Likewise, he attains direct knowledges (*abhiññā*). Still he does not stop. It is only when he finally ends suffering (*dukkha*) and destroys the taints (*āsava-khaya*) that he can properly recognize the Buddha. It is then that he can understand that the Dhamma is visible here and now (*sandiṭṭhika*), timeless (*akālika*), and inviting one to come and see (*ehipassika*). It is then that he can understand that the Sangha is practicing well (*supaṭipanna*). From this, a deep understanding regarding the Buddha as well as the Dhamma arises in a person.</p>
+<p>Even the scholars who talk about faith in this day and age should understand this point. Just as the skilled elephant hunter, not being satisfied with that much, went on searching for more and more signs, so one must realize for oneself through personal realization the Dhamma, the Full Self-Awakening of the Buddha, etc. Until one realizes it, it is not suitable to establish absolute faith. That is only one faculty (*indriya*). Making use of faith, using it as an aid, one goes further forward. Faith grows gradually. That is why we frequently reminded you that this Dhamma is visible here and now (*sandiṭṭhika*), timeless (*akālika*), and inviting one to come and see (*ehipassika*). The *ehipassika* quality of the Dhamma means that as one goes forward, one finds more and more signs. The moment of true realization is the moment one realizes the Dhamma preached by the Buddha. Thus, the *Cūḷahatthipadopama Sutta* is extremely important in that regard for educated people.</p>
+<p>Furthermore, concerning the practice (*paṭipadā*) we just spoke of, there is an equally valuable sutta called the *Dantabhūmi Sutta*. There, too, it is indeed that same practice that is described. It is a very deep sutta on one hand. There, the Buddha on one occasion, addressing the novice (*sāmaṇera*) named Aciravata, compared this practice to the process a mahout uses to tame an elephant. A long explanation is given to that recluse. Let us explain it briefly. The king’s mahout, or elephant hunter, has the duty of catching new royal elephants from the forest and taming them when they are brought back. An amazing, detailed analysis of taming elephants is found as a simile in the *Dantabhūmi Sutta*. In its components, the Buddha has compared them one by one in an amazing way, leading up to Arahantship in this Dispensation. If we take it briefly, it is shown as follows:</p>
+<p>The king’s mahout goes to catch a good elephant in the forest, taking the royal elephant along. Let us call him the state elephant (*maṅgala-hatthī*). Having gone, he catches that wild elephant and binds him to the neck of this royal elephant. Having bound him, he brings him to some secluded place in the forest, to a place where there are not many trees and leaves. Having brought him, he plants a large iron post firmly and binds this elephant to it. Having bound him, the Buddha shows in an amazing way the method by which that elephant is tamed. That mahout summons people who speak pleasant words and makes the elephant listen to those words. The Buddha further shows:</p>
+<p>The wild elephant has "forest conduct" (*āraṇyaka sīla*)—that is, forest habits, wild habits. Eliminating those wild, restless habits, intoxication, etc., and creating a liking for the village, that mahout feeds him well from time to time. In that manner, through a subtle training, he makes him abandon the wild elephant’s wild habits, wild conduct, forest habits, wild behaviors, dust, heat, and tames him in a manner suited to the village. Having tamed him thus, gradually, next, the Buddha shows an extremely rigorous stage of training in an amazing manner. Now, this is not just an elephant that drags logs; he is the king’s elephant. He must have amazing strength to go to the battlefield. According to that description, an elephant receives an amazingly wonderful training that is almost beyond imagination. Having trained the elephant gradually in this manner, making him obedient to the mahout, next, what is done is shown:</p>
+<p>Finally, how is this elephant trained to go to the battlefield and endure those arrow strikes? Sitting on top of the elephant is a mahout holding a lance (*tomara*)—do not understand "tomara" merely according to the modern Sinhala word. In any case, it is a sharp weapon used for such work. There are also mahouts with lances standing on the ground. A mahout stands in front. Not only that, next, they hang a large wooden board from his trunk, so that he cannot use his trunk. In that manner, a board is hung from the elephant’s trunk. On his head sits a mahout with a lance, and they are also all around him. So at that time, the elephant has nothing to do but be disciplined.</p>
+<p>Next, it is said that the elephant’s discipline is such that the elephant does not shake his ears, does not shake his trunk, and does not shake his tail. He remains completely, entirely still. The word "*āneñja*" (imperturbable/unshakable) is applied there. Remember that word: "*āneñja*" means unshakable. The elephant is brought to an unshakable state. Then, because there are people with lances all around him in that manner, there is no way for the elephant to move. It is the occasion when he has developed calmness, restraint, and discipline to the point where he can remain completely still. That is the elephant’s final test. Thereafter, if that elephant is taken to the battlefield, he does not retreat. He becomes capable of enduring those arrow wounds, lance wounds, or whatever, in the manner described. Then, the Buddha presents that story of the elephant, and next, shows the practice of this Dispensation in an amazing way. Therein we have much to contemplate; some of it is not immediately visible on the surface.</p>
+<p>In this Dispensation, likewise, some person leaves the lay life and ordains. The Buddha compares ordination to the open space (*abbhokāsa*). Here, I forgot to mention a word for the open space, which is *abbhokāsa*. It is a word equivalent to open air or open space. Then, just as that elephant was brought from the forest to an open space, this wild animal living in the lay home is brought to the secluded place of this open space of the ordained life. Next, a post is planted. What is the post? The four establishments of mindfulness (*satipaṭṭhāna*). This elephant is bound to the post of the four establishments of mindfulness. This is the first step. Having bound him thus, just as that mahout did, the Buddha from then on shows: "One must behave in this and this manner, one must eat food in this and this manner," showing the path of training contained in mindfulness—the subtle path of training. What is that done for? That is shown next. Regarding the aforementioned elephant, it was said to be the abandoning of wild habits. Here, what is spoken of is the abandoning of vulgar, lay habits (*grāmya-gatiya*). Whatever thoughts, wishes, behaviors, lay conduct, or rather, the lack of virtue brought from the lay home—if those are present, to eliminate them, he is bound to the post of the four establishments of mindfulness and directed to the aforementioned path of training. It is the teachers who do this on behalf of the Buddha. That is what we have to understand.</p>
+<p>In this manner, gradually taming him, the path of training is shown. Next, directing him to meditation, he is established in the jhānas. Among them, the fourth jhāna in particular is described by that word "*āneñja*". "*Āneñja*" means an unshakable state of the mind; the fourth jhāna is an incredibly unshakable, powerful jhāna-strength. Likewise, there are subtle states like the sphere of infinite space (*ākāsānañcāyatana*), etc. Based on the powerful jhāna of the person who has attained that fourth jhāna, dwelling in that imperturbability (*āneñja*), he exercises psychic powers, great direct knowledges (*abhiññā*), flying through the air, etc., which are almost beyond our imagination. That word "*āneñja*" shows us, just like the taming of that elephant, the most rigorous stage of the elephant’s training. Then, even more than the stillness brought about through those jhāna-strengths, the most powerful stillness is obtained through Arahantship. That is why it is said of the Buddha that he is endowed with an amazingly wonderful state of stillness, unshaken by the eight worldly conditions (*attha-lokadhamma*).</p>
+<p>Now, recall the simile the Buddha declared about that elephant during the occasion of Māgandiyā's conspiracy. "Like an elephant entered into the battlefield, I endure these arrow strikes." Just as he compared himself to the elephant, the practice by which the worldly people are tamed is contained within that *Dantabhūmi Sutta*. That is worth contemplating. That is, then, who is the mahout? There is also a part not explicitly explained there.</p>
+<p>If it is not a disparagement to the Buddha, we can think of it like this. What did that royal mahout do to tame this wild elephant? He took the state elephant (*maṅgala-hatthī*) to the forest. Having gone to the forest, he bound that wild elephant to the neck of the state elephant. If we take this simile deeply, one might think it is inappropriate, but what is done through binding the robe-strap (the act of ordaining) is the first sign of entering the class of the Buddha’s state elephant. It is like binding it to the Buddha’s neck. Let us think of it like that for a moment. Then, it was after binding him to the state elephant’s neck that they went to the secluded place. After bringing him, from then on, the manner in which the teachers and preceptors tame that wild elephant is described. Placing him in the four establishments of mindfulness, guiding him along that training, they finally, gradually, develop him and even make him attain those jhāna-strengths. Likewise, they make him a disciple capable of displaying great, marvelous direct knowledges.</p>
+<p>That shaking nature (*iñjana*) present in this entire saṃsāra is craving (*taṇhā*) itself. Where there is no craving (*taṇhā*), there is no grasping (*upādāna*). The mind that has developed such a powerful stillness that it is no longer dragged further into saṃsāra is called Arahantship. When the Buddhas and Arahants in moments of seclusion dwell in the attainment of the fruit of Arahantship (*arahatta-phala-samāpatti*), it is said that even if a thunderbolt strikes, they do not hear it—it is that state. We have likely explained to you before an event recorded in the *Mahāparinibbāna Sutta*. Once, when the Buddha was resting in a chaff-house, a rainstorm with great claps of thunder occurred, and two farmers and four oxen were struck by lightning and killed. But when the Buddha came outside and asked, "Why have these people gathered?", they said, "Why, Blessed One, were you not right here?" "Yes, I was." "Did you not hear it?" "No, I did not hear it." "Were you asleep?" "No, I was not asleep, I was awake." That person could not fathom it. That is why it is said: escaping from all this shaking nature (*iñjana*) produced through these six sense bases—the nature of being dragged into the world through the eye, ear, nose, tongue, body, and mind—that complete silence is called in the Dhamma "noble silence" (*ariya-tuṇhībhāva*). Silent to the whole world. Such indeed is what is meant by having ended the suffering (*dukkha*) of saṃsāra and attained noble, deathless Nibbāna.</p>
+<p>Accordingly, we can understand how important this elephant simile is. You have likely heard of a matter connected to the biography of the Buddha in the Jātaka Commentary's introduction. To show how symbolic this elephant is to the Buddha, the occasion of Queen Mahāmāyā conceiving the Bodhisatta Siddhattha is described as her dreaming of a white baby elephant holding a white lotus entering her womb. In any case, we must contemplate that this elephant is a very valuable animal for teaching us the Dhamma. Venerable Udāyī showed us that it can be used to help us learn the virtues of the Buddha.</p>
+<p>Using this elephant as a simile, what we presented through this "Elephant Sermon" is the virtues of the Buddha, the virtues of the Dhamma, and the virtues of the Sangha. Just as you believe in the Triple Gem and have devotion toward the Triple Gem, using that Triple Gem as a guide, just as one follows that elephant's footprint, one must go to that final place mentioned. We wish that this Dhamma sermon may be an aid for that! We pray that the stream of wholesome thoughts developed by you through listening to this Dhamma sermon so far, and if any support is received for that practice, utilizing that too, may this Dhamma sermon be a supportive condition for you to quickly attain the noble, deathless Nibbāna—the realization of the paths and fruits starting from Stream-entry (*Sotāpatti*)—before the lamp of this Dispensation is extinguished! At the same time, from the Avīci hell up to the Akaniṭṭha heaven, if there are any beings who wish to rejoice in such a wholesome deed of Dhamma preaching and Dhamma listening, may they, through that rejoicing, be released from states of misery, reach happy states of existence, and quickly be comforted by the noble, deathless Nibbāna through the bodhi of their aspiration! Wishing thus, let us recite these verses.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_124.html" class="doc-btn">← Previous Sermon (124)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_126.html" class="doc-btn">Next Sermon (126) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

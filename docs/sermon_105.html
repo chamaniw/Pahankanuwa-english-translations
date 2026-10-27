@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 105 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_104.html" class="doc-btn">← Previous Sermon (104)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_106.html" class="doc-btn">Next Sermon (106) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 105</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_105_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_105_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_105_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #105</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.154)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Passāmi loke sadhane manusse,</p>
+<p>Laddhā dhanaṃ na dadanti mohā;</p>
+<p>Luddhā dhanaṃ sannicayaṃ karonti,</p>
+<p>Bhiyyo va kāme abhipatthayanti.</p>
+<p>Rājā pasayha pathaviṃ vijitvā,</p>
+<p>Sassāgarantaṃ mahimāvasanto;</p>
+<p>Oraṃ samudassa atittarūpo,</p>
+<p>Pāraṃ samudassapi patthayetha.</p>
+<p>Rājā ca aññe ca bahū manussā,</p>
+<p>Avītataṇhā maraṇaṃ upenti;</p>
+<p>Ūṇā va hutvāna jahanti dehaṃ,</p>
+<p>Kāmehi loke nahi atthi titti.</p>
+<p>From:</p>
+<p>Itivuttaka (It 26)</p>
+<p>Dear Listeners,</p>
+<p>It is apparent to us that *Taṇhā* (Craving) is the cause of the *Dukkha* (Suffering) of *saṃsāra* (the round of rebirths), since the Noble Truth of the Origin of Suffering has been introduced as *taṇhā*. It is also stated in the Dhamma that the conduit of *Bhava* (Becoming) which pushes *bhava* forward is *taṇhā*. Likewise, on certain occasions, the Buddha has declared that the destruction of *taṇhā* itself is Nibbāna.</p>
+<p>The few verses we have chosen today as our theme also form a set of verses that demonstrate the disadvantageous aspect of *taṇhā*. These verses are found in a series of verses delivered by the great Arahant Raṭṭhapāla. The Venerable Raṭṭhapāla is the monk who attained the foremost position among the monks in this Dispensation who went forth out of faith. His life story is one that demonstrates the power of the thought of renunciation (*nekkhamma-saṅkappa*). Even during his lay life, he was known as the clansman Raṭṭhapāla. The Kuru country was one of the most prosperous regions in India. Raṭṭhapāla was the son of the chief householder Brahmin of the village named Thullakoṭṭhita in the Kuru country. On one occasion, while the Buddha was wandering in the Kuru country accompanied by a large community of monks, He arrived at this market-town, the village of Thullakoṭṭhita. At that time, having heard that the Tathāgata, the Worthy One, the Fully Self-Awakened One, had arrived, and having previously heard His ninefold virtues, that group of Brahmins came to listen to the Buddha’s Dhamma sermon, considering it a great gain to see such Arahants. Simultaneously, the clansman Raṭṭhapāla also arrived there. While the Buddha was preaching the Dhamma, it occurred to the clansman Raṭṭhapāla: "According to how this Blessed One preaches the Dhamma, it is not easy to lead this pure holy life (*brahmacariya*) of the Dispensation while living the household life. Therefore, I must go forth from the home life, shave off my hair and beard, don the yellow robes, and practice these observances." He made this firm resolution. After the Dhamma sermon, having waited until the other people had left, the clansman Raṭṭhapāla approached the Buddha and said:</p>
+<p>"Venerable Sir, Blessed One, if I have correctly understood the Dhamma preached by the Blessed One, according to that, it is not easy to protect that pure holy life while living this household life. Therefore, please let me go forth, please give me the higher ordination (*upasampadā*)."</p>
+<p>The Buddha asked, "Raṭṭhapāla, have you obtained the consent of your parents?" When he replied that he had not, the Buddha declared, "The Tathāgatas do not ordain anyone without the parents’ consent." Then the clansman Raṭṭhapāla said, "In that case, Blessed One, if I can obtain permission in some way, I will act accordingly." With great determination, he went home and spoke to his parents:</p>
+<p>"Mother, Father, according to the Dhamma preached by the Blessed One, as far as I understand, it is impossible to protect this pure holy life within this household life. Therefore, I wish to go forth. Please give me your consent for ordination; give me permission." Then the parents said, "You are our only dear and beloved son. We have brought you up without any pain or trouble. We do not wish for you to be separated from us even by death. How can we give you permission to separate from us while you are still alive? We will certainly not give our consent." Three times the clansman Raṭṭhapāla asked for permission from his parents in this manner. Three times they refused. Then the clansman Raṭṭhapāla lay down right there on the floor. Saying "either ordination or death," he began a hunger strike in that manner. Then the parents did not know what to do. Even though the parents came again and again to implore the clansman Raṭṭhapāla, who had been without food for several meals, he did not get up.</p>
+<p>With the parents’ consent, the friends and companions of the clansman Raṭṭhapāla came and made a request on behalf of the parents: "Raṭṭhapāla, you are the only dear and beloved son of your parents. Therefore, while enjoying these fivefold sense-pleasures, remain in the household life and perform whatever meritorious deeds you can. Get up and act in the way your parents expect." They implored him. But the clansman Raṭṭhapāla remained completely silent. Since making the request three times was of no use, these friends got together and thought, "If he remains like this, Raṭṭhapāla will die right here." They went to the parents and presented it as an accusation: "If this continues, Raṭṭhapāla will face death due to starvation. If you two give permission for this clansman Raṭṭhapāla to go forth, at least after he has gone forth, you will be able to see him. If in any way he becomes dissatisfied with the life of a monk, where else can he go? He will come back home." When they presented these reasons to the parents, the parents said, "In that case, we give our consent. But after he has become a monk, he must come to see us." Then, on behalf of the parents, those friends went and told him, "Now your parents have given their consent."</p>
+<p>Then the clansman Raṭṭhapāla got up, took food and drink, restored strength to his body, and went to the Buddha and declared, "Now I have received the consent of my parents." The Buddha ordained the clansman Raṭṭhapāla and gave him the higher ordination. About two weeks after ordaining and giving him the higher ordination, the Buddha, along with the community of monks including Venerable Raṭṭhapāla, returned to Sāvatthī. After arriving at Jetavana monastery in Sāvatthī, the clansman Raṭṭhapāla dwelt solitary, secluded, and by meditating diligently, he soon attained the fruit of Arahantship. Although the exact time is not directly mentioned in the Sutta after he became an Arahant, after a certain period of time had elapsed, Venerable Raṭṭhapāla approached the Buddha and said, "Blessed One, I wish to go and see my parents." Then the Buddha, having looked into Venerable Raṭṭhapāla's mind and understanding that he could not be turned back to the household life in any way, said, "Very well, Raṭṭhapāla, do as you wish." Then Venerable Raṭṭhapāla put his lodging in order and wandered back to the village of Thullakoṭṭhita.</p>
+<p>Upon arriving, he did not go straight to his parents’ house. Having arrived on the previous day, he stayed at the Migāsīla park of King Koravya of the Kuru country. Having stayed there, the next morning he entered the village of Thullakoṭṭhita for alms. He went towards his father’s house. At that time, the father of the clansman Raṭṭhapāla was having his hair cut by a barber in the middle hall. Seeing a monk passing by, he said loudly enough to be heard, "These bald shavelings were the ones who took my son away." Hearing this, Venerable Raṭṭhapāla knew that his father was displeased. However, in accordance with his state of having few wishes, as he went to the back of the house, the maidservant of that house—that is, the maidservant who had looked after and raised the clansman Raṭṭhapāla during his childhood—was preparing to throw away some stale rice, the stale rice from the previous night. Venerable Raṭṭhapāla said, "Sister, if you intend to throw away that rice, put it into this bowl." While the maidservant was putting the rice into the bowl, she recognized Venerable Raṭṭhapāla’s hands, feet, and voice, and realized, "This is our young master." Realizing he was the master, she ran and told Venerable Raṭṭhapāla’s mother, "Do you know what has happened? Venerable Raṭṭhapāla has arrived!" The mother went and told the father. By the time the father came running, Venerable Raṭṭhapāla, as mentioned in the Sutta, was eating that stale rice near a wall. Then the father said, "Raṭṭhapāla, is this how you eat? Shouldn’t you have entered the house?" When he came to his own house and said this, Venerable Raṭṭhapāla replied, "Householder, where is a house for us? Where is a house for those of us who have gone forth into the homeless life? We have no home. Furthermore, when we came, you did not give us alms, nor did you say there was none. Instead, you insulted and scolded us." Then the father said, "No, no, please come inside to eat." Venerable Raṭṭhapāla said, "Today my meal is finished with this." "Then please accept an invitation for tomorrow’s meal," the father invited. Venerable Raṭṭhapāla accepted the invitation through silence.</p>
+<p>The next day, along with preparing the alms-food, this householder, Venerable Raṭṭhapāla’s father, did something: he gathered all the gold and treasure belonging to him and his wife, as well as the gold and treasure inherited through generations from father to son, in a hall and covered it with mats. Furthermore, in that part of the story, it is revealed to us that Venerable Raṭṭhapāla had two or more wives. As mentioned there, he also told those former wives to dress up in the manner they used to when they pleased the clansman Raṭṭhapāla during his lay life. Having prepared everything, he sent a message saying, "The meal is ready." After Venerable Raṭṭhapāla arrived at the house and sat down, the father removed the mats, showed the treasure, and said, "This is the gold and treasure from your father’s side. This is the gold and treasure from your mother’s side. This is the gold and treasure inherited from our ancestors. You can take charge of these, return to the lay life, and perform meritorious deeds while living the household life." Then Venerable Raṭṭhapāla said, "Householder, if you will do what I say, load all this gold and treasure onto carts and dump it in the middle of the River Ganges. Why? Because due to this gold and treasure, you will experience a great deal of sorrow, lamentation, pain, grief, and despair." While he was saying this, his former wives—referred to in the Dhamma as *purāṇa-dutiyikā*—came, worshipped Venerable Raṭṭhapāla’s feet, and asked, "Our lord, of what kind are the celestial nymphs for whose sake you are practicing this holy life in the Dispensation?" The common belief was that ordination was practiced to go to heaven. Then Venerable Raṭṭhapāla replied, "Sisters, we do not practice this holy life in expectation of celestial nymphs." Hearing the address "Sisters," it is mentioned that those two women fainted and fell right there. When such a entanglement and commotion arose, Venerable Raṭṭhapāla said in a firm voice to his father: "Householder, if you are giving us alms-food, give it. Otherwise, do what must be done." When he spoke in this way, the merchant offered the alms-food.</p>
+<p>It is said that after finishing his meal, Venerable Raṭṭhapāla stood up and uttered a series of verses. In that collection of verses, he first described the worthlessness of those women’s adornments. This body, which is bound together by skin, flesh, bones, and sinews, has open wounds that are decorated with clothes, gold, silver, pearls, and gems; they are painted in red and other colors and beautified, which is good for deceiving fools. But for those who seek the further shore of *nibbāna*, these are of no use. Finally, he gave a simile: some deer-hunters set a bait to catch animals. Applying that very simile, he said, "The hunter set the bait, but we, having eaten the bait, go away without getting caught in the trap." Although it is not mentioned in the Sutta, in the commentaries, it is said that he departed through the air. The father had hoped, perhaps, to forcibly make him disrobe, and that is why he was sorrowful. In any case, what is mentioned in the Sutta is that after reciting those verses, Venerable Raṭṭhapāla said, "We have eaten the bait, but we go away without being caught in the hunter’s trap," and he went to the Migadhīra park of King Koravya.</p>
+<p>This King Koravya said to his park-keeper, "Today I intend to go to the park for amusement; go and clean the park." While the park-keeper was cleaning the park, he saw Venerable Raṭṭhapāla sitting under a tree meditating for his day-abiding. Having seen him, he went and told King Koravya, "Your Majesty, that clansman Raṭṭhapāla who went forth from this region, whom you often praise, has arrived and is sitting under a tree over there." The king said, "In that case, I do not need the park amusement today. Put that food and drink aside. Today I am going to attend on Venerable Raṭṭhapāla." The king went and offered the seat on which he would sit on his elephant to Venerable Raṭṭhapāla. When Venerable Raṭṭhapāla said, "My seat is here; you may sit there and speak," the king addressed Venerable Raṭṭhapāla, and from their discussion, the matters of the Dhamma indeed came forward.</p>
+<p>Because the ordination of the clansman Raṭṭhapāla was a question for the king, the king asked several questions. The king said, "In the world, a person goes forth due to four reasons—due to four kinds of loss. It is only when one falls into four kinds of loss that one goes forth." This must have been a prevalent concept at that time. What are they? Loss through aging, sickness, wealth, and relatives. First, he said, "Some people go forth when they are worn out by old age. This is explained as loss through aging (*jarā-pārijunñatā*). Some people, after growing old from youth, think: 'Now there is no use in my living to accumulate new wealth or to protect what I have. I must go and become a monk.' Prompted by the loss caused by aging, they take that as a basis and go forth. But, Venerable Raṭṭhapāla, you have no such problem. You are young, with black hair. Therefore, why did you go forth? Having heard what, having known what, did you go forth?" He stated this as the first point. Along with it, he stated the second point, namely, loss through sickness (*vyādhi-pārijunñatā*). That is, "Some people, after becoming subject to diseases and ailments, think: 'I have no way out. I cannot earn more money, nor can I protect what I have. I must go and become a monk.' Thus, some people go forth because of sickness. Why did you go forth while being completely healthy?" he asked. The third point he asked was loss of wealth (*bhoga-pārijunñatā*). "Some people, having been very wealthy, when their wealth gradually diminishes, think: 'I cannot generate wealth anymore. Therefore, I must go and become a monk.' But Raṭṭhapāla, you are the son of the chief, immensely wealthy householder in the village of Thullakoṭṭhita. You have no problem regarding that. Why did you go forth?" The fourth point was loss of relatives (*ñāti-pārijunñatā*), due to the loss of relatives. "Some people have many relatives. At some point, when their relatives are gone, this person thinks: 'There are obstacles to my accumulating wealth and other activities. I must go and become a monk.' But, Venerable Raṭṭhapāla, you have no such problem. You have a large number of relatives in this village." Then he posed the question: "If it is none of these, why did you go forth?"</p>
+<p>Then Venerable Raṭṭhapāla declared four Dhamma summaries. "Great King, it is not because of those things that I went forth. The Blessed One has declared four Dhamma summaries (*dhammuddesa*). Having heard them, and having seen the truth of those matters, I went forth." It is mentioned in the texts that the Buddha visited the village of Thullakoṭṭhita and delivered a certain sermon, and having heard that sermon, the clansman Raṭṭhapāla conceived the idea to go forth. But the content of that sermon is not found elsewhere in the Tipiṭaka; yet within this very Sutta, through the words of Venerable Raṭṭhapāla himself, we get to know what matters the Buddha preached to the clansman Raṭṭhapāla that aroused such a great desire for ordination within him. At least a fraction of it is revealed. These are shown as the main points. Venerable Raṭṭhapāla told King Koravya on that occasion, "It is after hearing the four Dhamma summaries (*caturo dhammuddesā*) that I made the decision for this ordination."</p>
+<p>What is the first one? *Upanīyati loko addhuvo* [The world is swept away, it is impermanent]. Often, when this summary is stated all at once, it is not understood. It is understood only when it is explained. However, in order to facilitate a discussion about them, Venerable Raṭṭhapāla first gave only those four summaries to King Koravya.</p>
+<p>What is the first summary? *Upanīyati loko addhuvo*. *Loka* (The world) is a place that is being swept away—the meaning of the word *upanīyati* is "being pushed forward." The world is a place that is being pushed forward. Likewise, *addhuvo* means inconstant or unstable. Thus, the world is an *Anicca* (Impermanent) place that is being pushed forward. The second point, what is the second Dhamma summary? *Attāṇo loko anabhissaro*. The world is a place that has no shelter, no protector, no lord. Everyone knows that "lord" (*issara*) means a god who can do everything. Thus, the world is a place with no lord, no shelter. That is the second summary. Next, the third point: *Assako loko sabbaṃ pahāya gamanīyaṃ*. The world is a place where there is nothing of one’s own. Likewise, it is a place where one has to go leaving everything behind. That is the third summary. The fourth summary: *Ūṇo loko atitto taṇhā-dāso*. The world is a place where there is always some deficiency. *Atitto* means insatiable. That is, a place with no satisfaction or contentment, a place enslaved to *Taṇhā* (Craving). The world is a place that always has some deficiency, lacks satisfaction, and is enslaved to *taṇhā*. When those four Dhamma summaries were declared, it was a question for the king. The king asked, "How am I to understand this?" regarding each one. Venerable Raṭṭhapāla took them one by one and explained them. It is within this that the valuable Dhamma emerges for us.</p>
+<p>He asked, "How is *upanīyati loko addhuvo* to be understood?" The king asked about these one by one. Thus, he answered as the king asked. "Now, Great King, do you remember when you were twenty or twenty-five years old? At that time, in training elephants, training horses, in the art of the sword and bow, and in battle, how were your abilities?" Then the king replied, "I had great strength and ability regarding those. So much so, that at that time, during my youth, it occurred to me that I was endowed with psychic power, and that there was no one equal to me." Thus, he reminded him of his youth. Next, Venerable Raṭṭhapāla asked, "Great King, are you the same now?" "Now I am about eighty years old. Now my body is like this: when I intend to place my foot here, the foot lands over there. I have degenerated to that extent." Venerable Raṭṭhapāla presented this as a direct, experiential proof: "It is because of this that the Buddha has declared that the world is a place that is constantly being led forward by aging, and that it is *addhuvo*—inconstant, unstable. That youthfulness cannot be kept forever." When this was stated, the king also accepted it: "It is wonderful, it is marvelous! How beautifully the Blessed One has stated this matter!" and he accepted it.</p>
+<p>Then the second point. How the king speaks about the second point is even more of a question for him. *Attāṇo loko anabhissaro* [The world is without shelter, without a lord]. This was a question for the king, so the king himself asked first: "Now, how can you say this, Venerable Raṭṭhapāla? I have a fourfold army—elephants, cavalry, charioteers, and infantry. Whenever any danger comes to me, they will come forward to protect me. Why do you say this?" Then, instead of talking about war, Venerable Raṭṭhapāla asked the king another story. "Great King, do you have any chronic illness?" Then the king said, "I have a severe wind-ailment (*vātā-bādha*). Sometimes, when the wind-ailment worsens, my relatives surround me and say: 'Now, now King Koravya will die, he will pass away to the next world.' There are occasions when it becomes that severe for me." When the king accepted this, then Venerable Raṭṭhapāla asked, "Well then, Great King, can you say to those relatives: 'Please, all of you, share this severe pain of mine and experience it, so that it will be easier for me and my pain will be reduced'—is it possible to do that?" "No, no, Venerable Raṭṭhapāla, I have to experience my pain myself; there is no ability to share it with anyone else." Then he said, "That is what the Buddha declared: *attāṇo loko anabhissaro*—the world is a place with no protection, no shelter, no lord. This is what the Blessed One declared." Ultimately, one has to bear one's pain by oneself; no one else can reduce this.</p>
+<p>Then the king accepted that as well: "How wonderful, how marvelous is this thing that the Blessed One has declared!" Then the third point, which was also a problem for the king, so he first presented it with an argument: *Assako loko sabbaṃ pahāya gamanīyaṃ*. "How can you say there is nothing of one's own in the world? I have gold, treasure hidden in this earth, and so much wealth and grain. How can you say there is nothing of one's own in the world?" Then Venerable Raṭṭhapāla asked:</p>
+<p>"Well, now you enjoy these fivefold sense-pleasures with all this gold and treasure. After you die and pass away, can you take them with you?" The king replied, "No, I have no ability to take them. I will have to go and experience according to my *kamma* (actions). This wealth cannot be taken with me. It does not follow behind me." After understanding this, Venerable Raṭṭhapāla said, "It is because of this that the Buddha declared: *assako loko sabbaṃ pahāya gamanīyaṃ*—there is nothing in the world that is one’s own; one has to go leaving everything behind." The king accepted that as well: "How wonderful, how marvelous is this thing that the Blessed One uttered!"</p>
+<p>Next, the final point: *Ūṇo loko atitto taṇhā-dāso*. Venerable Raṭṭhapāla himself explained this. "The world is a place where there is always some deficiency, a place with no satisfaction, a place enslaved to *taṇhā*." He asked the king, "Great King, now you rule over this highly prosperous kingdom of Kuru. If at some point, a messenger comes from the eastern direction as your subject and says: 'Great King, I have seen a certain highly prosperous city in the eastern direction, and you can conquer that city very easily'—what would you do?" Then the king said, "I would conquer that city and that province and make it a colony of my kingdom." Next, Venerable Raṭṭhapāla asked, "Well, if a messenger comes from the western direction and says the same, that there is such a region and province, what would you do?" "I would conquer that as well." "If a messenger came from the southern direction, or from the northern direction, and said so, it would be the same." From this, it is clear that there was no satisfaction within the king, even though he was ruling such a vast kingdom. Then Venerable Raṭṭhapāla declared, "This is what the Buddha declared: the world is a place that constantly has some deficiency, a place with no satisfaction, no contentment, a place that has fallen into enslavement to *taṇhā*." He made him realize this point. Then the king accepted that as well, saying "It is wonderful, it is marvelous!" The Sutta states that the discussion ended there. From that point, there is a series of verses uttered by Venerable Raṭṭhapāla.</p>
+<p>Now we come to the first three verses of that series of verses, which we took as our theme today.</p>
+<p>*Passāmi loke sadhane manusse* [I see in the world wealthy men]</p>
+<p>*Laddhāna cittaṃ na dadanti mohā* [Who, having acquired wealth, do not give it away out of delusion] — They do not give it to anyone out of delusion.</p>
+<p>*Dhanaṃ sannicayaṃ karonti* — Greedily they accumulate and pile up wealth.</p>
+<p>*Kāme abhipatthayanti* — They yearn for more and more sense-pleasures.</p>
+<p>*Rājā pasayha pathaviṃ vijitvā* [A king, having forcibly conquered the earth]</p>
+<p>*Sassāgarantaṃ mahimāvasanto* [ruling over the land bounded by the ocean]</p>
+<p>*Oraṃ samudassa atittarūpo* [unsatisfied with this side of the sea] — Unsatisfied with this side of the ocean,</p>
+<p>*Pāraṃ samudassapi patthayetha* [would yearn for the further shore of the ocean as well] — He wishes to acquire the country on the other side of the ocean as well.</p>
+<p>*Rājā ca aññe ca bahū manussā* [The king and many other people]</p>
+<p>*Avītataṇhā maraṇaṃ upenti* [meet death with craving (*taṇhā*) unexhausted] — Without removing *taṇhā*, they meet death.</p>
+<p>*Ūṇā va hūtvāna jahanti dehaṃ* [They abandon the body incomplete indeed / with a sense of deficiency] — They abandon the body with some deficiency. No one abandons the body with a sense of satisfaction. At the time of abandoning the body, one feels some deficiency. The war is not yet over; it has not yet been acquired; some deficiency is felt.</p>
+<p>*Kāmehi loke nahi atthi titti* — This is the principle: there is absolutely no satisfaction regarding sense-pleasures in the world.</p>
+<p>The verses do not end there; there is another set of verses. We will state only their general meaning as the occasion demands. Next, it says that the person, having spent his life without satisfaction in that manner, at the final moment, the last breath he draws is a sigh of grief. As if saying, "I have more things to acquire," he dies in that manner with a sigh of grief. We intend to explain the meaning of these verses to these devotees, not merely as a word-by-word meaning, but a general meaning so that it is better understood. From there, it describes what the living do regarding that deceased person. Those relatives, with disheveled hair, lament, saying, "Oh, we thought he was immortal. But he is dead!" Sorrowing in this manner, they wrap that person in a single cloth—you must have heard how they treat the dead in India. They wrap him in a single cloth, take him, and finally place him on the funeral pyre, poking him with an iron poker, turning him over and over, as they cremate bodies in India. It is not like here where they cremate with great honors and respects; it is done in a very simple, detached manner. It is as if one has no right to take anything more than that single cloth. They wrap him in a cloth, take him and burn him, and because they must do it while saving firewood, they poke him with iron pokers, turning him this way and that. Experiencing those things, that person’s body burns. Next, what do the heirs do? They take away those belongings, the things belonging to this person. And that deceased person goes according to his own *kamma*.</p>
+<p>Accordingly, Venerable Raṭṭhapāla further demonstrates the Dhamma regarding that departure. One can never conquer this aging with wealth; one cannot conquer the world with wealth. Beings in the world, out of delusion, out of lack of understanding, commit various evil deeds and, just like a thief who went to break into houses is caught in the act and suffers punishment, they experience various sufferings in this *saṃsāra* according to their own *kamma*. Therefore, one can never escape from this *saṃsāra* with that wealth. But it can be subdued only with wisdom (*paññā*). Therefore, he declared as a principle: *Tasmā hi paññāva dhanena seyyo* — therefore, wisdom is far superior to wealth. It is through that that one has to bring an end to the *Dukkha* (Suffering) of *saṃsāra*. Likewise, various beautiful sense-pleasures exist in the world in various attractive ways. But ultimately, one falls into *dukkha* because of them. What is demonstrated by this is that seeking the path to *nibbāna*, arising of wisdom, is what must be done in the world. This is the essence of the Raṭṭhapāla Sutta that has been declared to these devotees.</p>
+<p>As we said before, on one hand, the power of renunciation of Venerable Raṭṭhapāla is revealed. For many, when they read the Raṭṭhapāla Sutta, there have been occasions where the spirit of renunciation has emerged from it itself. We have heard of many such instances where, having read the Raṭṭhapāla Sutta, the sense of urgency (*saṃvega*), the sense of urgency regarding *saṃsāra*, arose, and relying on the strength of his character and that noble intention, some have even entered the monkhood. That is why he is foremost in faith. Along with faith goes the desire (*chanda*), that is, the intense urge to practice these monastic duties in accordance with that faith. It is because of that strong earnestness that he conducted a hunger strike—not like the fasts conducted by some members of the Sangha in this day and age. Because he did not get permission from his parents to leave the household life and go forth, he lay down right there on the floor as a hunger strike. Saying "either death or ordination."</p>
+<p>In the end, although his parents implored him as much as they could, saying "Stay as a layman and perform whatever meritorious deeds you can; many say fifty-fifty is possible," Venerable Raṭṭhapāla did not agree to such a thing. As we see it, these four Dhamma summaries are not found in the entire Tipiṭaka literature elsewhere. In fact, if King Koravya had not come forward, we would not have even got to hear these four valuable Dhamma summaries. From this, we have to think about how many valuable things in the Buddha’s teachings we have lost. We must try to protect at least what is left. It is after hearing these four Dhamma summaries of the Raṭṭhapāla Sutta that Venerable Raṭṭhapāla understood so deeply. With the firm resolution that "according to how this Blessed One preaches, this cannot be done while staying in the household life," he came and presented such a great hunger strike to his parents, and finally obtained their consent for his ordination.</p>
+<p>Not only that, in the next instance we see his state of having few wishes; we can imagine the way he spent his monastic life with few wishes. Coming even to his own house, he did not introduce himself according to the words spoken by his father, saying, "No, no, I am not some other monk, I am your son." As he was passing by that house, he saw that stale rice being thrown away. He accepted it with few wishes. He said, "If it is something to be thrown away, give it into this bowl." Saying so, it was possible to take it. What that Venerable monk received as his food that day, having come to his own house, was only that little stale rice.</p>
+<p>Next, the way he addressed his father was also as "Householder." It is a word that completely demonstrates his departure from the lay life. Next, on the following day, just like a deer-hunter setting a trap, that foolish father piled up all the gold and treasure and dressed up those former wives. *Purāṇa-dutiyikā* means remnants. If we look at the monastic life, former wives are like remnants. Bringing forward those remnants and having them decorated, he tried to catch this monk. But he did not yield to them. It is said that by the very word "Sisters" used to address them, those women fainted. In any case, he was not caught in them. Then, perhaps because he thought some suspicion or demerit would arise in his father, he said: "Householder, if you are giving us alms-food, give it. Now you have invited us. If you are giving, give it; otherwise, we are leaving." After he spoke in that manner, the father gave that food. Then, in accordance with that very power of renunciation, having freed himself from there, he went to the park. Through the Dhamma discussion held in the park, it becomes further clear to us how deep an understanding Venerable Raṭṭhapāla had regarding the disadvantageous aspect of *Taṇhā* (Craving). Having heard just one sermon, and having gone and meditated according to that sermon, he had ultimately attained Arahantship by the time he wandered back there.</p>
+<p>Through that, we can think about the disadvantages of *taṇhā*. In our day-to-day life, various words like *Taṇhā* (Craving), desire, greed, and stinginess are used. The Buddha has shown the severe nature of this *taṇhā* as the Noble Truth of the Origin of Suffering (*dukkha-samudaya-ariya-sacca*). These devotees have heard much about the Four Noble Truths—the Truth of Suffering (*dukkha-sacca*) as *Jāti* (Birth), *jarā* (decay and death / aging and death), sickness, etc. On various occasions, the Buddha has introduced this word *taṇhā* with the phrase: *yāyaṃ taṇhā ponobhavikā nandirāgasahagatā*...</p>
+<p>If there is any *taṇhā*, there is a word *ponobhavikā* [leading to renewed existence]. The word *ponobhavikā* is applied as an adjective to this *taṇhā*. Its meaning is that within this *taṇhā*, there is a nature of causing renewed *Bhava* (Becoming), of creating *bhava* again and again. At the beginning, it was mentioned that there is another name for *taṇhā*, namely *bhava-netti* [the conduit of becoming]. It is called *netti* because it leans forward. Then, why does this *taṇhā* lean forward in that manner? Because of *ūṇo* — deficiency. At the moment of death, it is due to *taṇhā* that one is directed towards another birth. It is inclined in that direction. There is no satisfaction there. *Taṇhā ponobhavikā* — it causes renewed *bhava*, and likewise, *saddhiṃ* [accompanied by delight and lust], it has the nature of delighting and clinging in those various places.</p>
+<p>That demonstrates the uneven or toxic nature of *taṇhā*. They are shown in a threefold way as *kāma-taṇhā* (craving for sense-pleasures), *bhava-taṇhā* (craving for becoming/existence), and *vibhava-taṇhā* (craving for non-existence). These devotees have heard of them. Likewise, *taṇhā* for this *Bhava* (Becoming) is extremely subtle. By taking this existence as "I" and "mine" through the arising of *Sakkāya-diṭṭhi* (View of existing group/body), a being has to remain, live, and exist in some way or other to consolidate that existence. In that manner, *bhava-taṇhā* is extremely subtle. Next, due to that very momentum, when the things one expects are lost, even thoughts of committing suicide arise—which is called the view of non-existence (*vibhava-diṭṭhi*). This is a question many people ask. That is the opposite side of that firm grasping of "I" and "mine." If there is something one likes, there is clinging to it. If there is something one dislikes, there is conflict with it. In any case, this problem cannot be solved by committing suicide. Having discarded both the eternalist view (*sassata-diṭṭhi*) and the annihilationist view (*uccheda-diṭṭhi*), the Buddha, by presenting the teaching of *Anattā* (Not-self), demonstrated that there is no being or person here. Through that, gradually, in the end, there is no room for *taṇhā*. The Dhamma of the Buddha is shown in such a way that there is no basis (*nimitta*) for *taṇhā*. The true nature of *taṇhā* is apparent to us from these.</p>
+<p>In this day and age, something many people talk about is: when one dies here and is born in another place, what is it that goes? What goes? Some try to solve this scientifically and physically. They think that when someone who dies here is born in another world, there is actually a connection that can be understood physically. But the Dhamma principle shown by the Buddha here is *taṇhā ponobhavikā* [craving leading to renewed existence]. Within *taṇhā* itself, there is that power of going to another *bhava* and creating a *bhava*. Indeed, there are deep portions of the Dhamma regarding this matter that are frequently used in certain Dhamma discussions.</p>
+<p>On one occasion, the wanderer Vaccha-gotta came and asked directly: "When one abandons this body and arrives at another body, what is it that connects to this?" Prior to that, he had asked the Buddha for a simile. When a tree is burning in a certain forest fire, and while that fire is spreading, its *upādāna* — within the word *upādāna* there is also the meaning of firewood that assists the fire, which means fuel, grasping. What the fire grasps is what we call fuel. It is by grasping firewood that a fire burns. In the same way, the Buddha declares that at the moment of death, *taṇhā* itself becomes the *Upādāna* (Grasping). *Taṇhā* itself receives the power for that grasping. To show the manner in which it receives it, He spoke of that simile of the spreading fire. In the spreading of a forest fire, when there is one tree, what helps that fire to grasp another tree is the wind, the air. It is when the wind pushes it that the fire spreads to the other tree. In the same way, the Buddha declares that when a being abandons this *bhava* and is born in another place, the connection between the two is not through a physical thing as mentioned. It is *taṇhā* —</p>
+<p>Thus, if *taṇhā* exists as the *netti* (conduit), it can be expected that it goes further. If there is a conduit of something, it goes forward along with it. In the same way, within *taṇhā*, within the momentum of *taṇhā* itself, there is the nature of going to another *bhava* and creating another *bhava*. If we explain this more deeply—since we have spoken about this in several Dhamma sermons, it may not be so difficult for these devotees to understand. Because many people talk about a journey of *viññāṇa* (consciousness), we showed that there is a constant rotation between *viññāṇa* and *nāmarūpa* (name-and-form). The object called *nāmarūpa* that falls into *viññāṇa* — it is that object that is grasped. If that object—be it a near one, a distant one, a Brahma world, or a hell—is grasped through *taṇhā* that falls into the mind, then that very conduit of *taṇhā* is sufficient. A person does not need to go from here again. In ordinary physical concepts, a journey is explained as something that was here going to another place, so that it either is seen or can be grasped somehow by means of some instrument. This is not such a thing. Through *taṇhā* which is within this mental power itself—it is said there is no river equal to *taṇhā* (*natthi taṇhāsamā nadī*). It flows in such a wonderful way. Then, that very momentum of *taṇhā* is sufficient to direct that being to another *bhava*. What is it that is grasped by that *taṇhā*? It is that very shadow, the object that falls, that is projected in *viññāṇa*. That object which comes at the moment of death—which many people these days talk about as *kamma-nimitta* (sign of kamma), *gati-nimitta* (sign of destination), etc.—that arriving sign is firmly grasped through *taṇhā* by the force of *kamma*. Then, that itself is sufficient for someone to obtain a birth. That is exactly what the Buddha declared: the destruction of *taṇhā* is like the breaking of that conduit. Then it is ended right there.</p>
+<p>The story ends there. As long as the conduit of *taṇhā* exists, it grasps that object of *nāmarūpa* (name-and-form) which falls into *viññāṇa*, whatever it may be. Because they have not destroyed their defilements, we previously described that firm grasping in beings, born of ignorance (*avijjā*) and delusion (*moha*), when discussing *nāmarūpa*, etc. Those primary great elements (*mahābhūta*) of earth, water, fire, and wind which assist this form (*rūpa*) have been wrongly grasped by us. We have no understanding of them through our wisdom. Likewise, feeling (*vedanā*), perception (*saññā*), volition (*cetanā*), contact (*phassa*), and attention (*manasikāra*) — this is what is called *nāmarūpa*. Thus, if *viññāṇa* is not freed from that *nāmarūpa*, it goes and gets trapped due to that momentum of *taṇhā*. It is in that manner, in accordance with the Dhamma, that we have to understand the way renewed *Bhava* (Becoming) is created. That is why the Buddha pointed to *taṇhā* itself as the cause of this *saṃsāric* *Dukkha* (Suffering), of this journey of *saṃsāra* again and again. Even in this day and age, these devotees can experience that something which has been emptied is ready to suck in something. If there is a deficiency in something, it is ready to fill that deficient place.</p>
+<p>In the same way, due to this momentum of *taṇhā*, people wish for a *bhava*. Even if they wish for a *bhava*, it is not the *bhava* they want that they get, but the *bhava* for which they have obtained the qualification, according to their *kamma*. Even if that person was thinking of going to heaven, if what he has done are evil deeds, what he sees clearly at the moment of death is a pit of fire. Such is the situation. That is why it is called *ponobhavikā* [leading to renewed existence] regarding this *taṇhā*. This *ponobhavikā* nature, the joining of one *bhava* with another *bhava*, is something that constantly takes place in our mental continuum. That very same thing is what takes place at the moment of death as well. The difference is only the abandoning of this physical frame, yet what happens is that very same thing. It is that very rotation between *viññāṇa* and *nāmarūpa* that goes on. Next, having made the body one takes one's own, if one has become a human being again, through the six sense-bases (*saḷāyatana*) as the six bases, they again make them *nāmarūpa* and cultivate another world. Creating worlds in this manner—the Buddha demonstrates all of these as things done through this momentum of *taṇhā*. Although we speak of that appeasing of *taṇhā* in a grand way, one must try to practice it in daily life in a way that one can experience it. If any *taṇhā* has arisen in one’s mind, first one must understand the agitation of the mind caused by that *taṇhā*. Generally, the difference between the state when *taṇhā* is absent and when *taṇhā* has arisen can be observed by oneself, with mindfulness and clear comprehension (*sati-sampajañña*): "What has happened here?" Next, indeed, without running after the objects associated with *taṇhā*, if one reflects with a little calmness and makes an effort to appease it, that is what assists in *nibbāna*. *Taṇhakkhaya* [the destruction of craving] is a name for *nibbāna*. The destruction of *taṇhā*. Then, in this day and age, disputants ask: "Then, is not wishing for *nibbāna* also a desire?" That is a foolish question. Why? Because everything that people in the world wish for, the moment they get it, they dislike it and wish for another. Disliking that, they wish for another, like running after a mirage. But if someone wishes for *nibbāna*, keep in mind that *nibbāna*, as an equation, is understood as *taṇhakkhaya* [destruction of craving]. The Buddha has declared that this cooling, which is called the word *nibbāna* and is considered a goal, is none other than the appeasing of *taṇhā*. Therefore, we must understand that our target is the destruction of *taṇhā*. If the destruction of *taṇhā* is the target, then regarding what that disputant said about generating desire for it, what does generating desire for it mean? What does one do with desire for it? What is there to do? If the complete destruction of *taṇhā* is the target, then one must go step by step to destroy that *taṇhā* little by little, little by little. It is when it is destroyed little by little, little by little, that at one point it can be completely destroyed.</p>
+<p>Ordinary people obtaining those various objects through that *taṇhā* is, to use a simile, like adding straw to a fire. As much as it is given, the fire grows. But if the destruction of *taṇhā* is made the target, the more it is reduced, the more the fire is extinguished. Now, it will be easy for these devotees to understand why the Buddha declared to the monk Rādha: *Taṇhakkhayo virāgo nibbānaṃ* [The destruction of craving, dispassion, is extinguishment]. Because people in the world have made this *nibbāna* into a thing, making it a part of *bhava-taṇhā* (craving for becoming/existence). For those who understand it by completely distorting the Dhamma in that manner, making it a *nibbāna* of "Siyadoris" in the next world as we mentioned before, that is how they make such an argument. But the Buddha showed that it is within *taṇhā*, which is shown as the origin of suffering (*dukkha-samudaya*), that one runs after this *saṃsāric* mirage. Instead, the Buddha presented a target: the destruction of *taṇhā*. Then, through that desire for the destruction of *taṇhā*, when that *taṇhā* is reduced little by little and completely finished, at some point, there lies peace. Another word for the destruction of *taṇhā*, or rather for *nibbāna*, is the subduing of thirst (*pipāsa-vinaya*). After one's thirst has been subdued, even if one tries to make that person drink the most delicious beverage, it is of no use. There is no thirst.</p>
+<p>There is a short Dhamma story preached by the Buddha on one occasion. Sometimes, the Buddha brings out a highly profound Dhamma through ordinary events that happen in the world. To say it briefly, on one occasion, when the Buddha was arriving at the Brahmin village named Thūna, those Brahmins, as a show of opposition to the Buddha's arrival, blocked the well from which the Buddha would drink water with various branches, leaves, and stones. Saying "We will not give water to this ascetic Gotama to drink." Having arrived at that village, the Buddha asked the Venerable Ānanda to fetch some water. Venerable Ānanda said, "These Brahmins have put stones into all these wells." "No, Ānanda, go and fetch it," the Buddha said. When Venerable Ānanda went, through that Buddha-power, all those stones vanished, water filled up, and the well overflowed. After Venerable Ānanda brought the water, the Buddha expressed the Dhamma matter through a verse:</p>
+<p>> *Kiṃ kayirā udapānena, āpā ce sabbadā siyuṃ;*</p>
+<p>> *Taṇhāya mūlato chetvā, kissa pariyesanaṃ care.*</p>
+<p>Actually, He did not ask for water because He wanted water due to thirst. It seems He asked for water to teach some lesson. When the meaning of that verse is stated, these devotees will understand. The Buddha says:</p>
+<p>*Kiṃ kayirā udapānena, āpā ce sabbadā siyuṃ* — If there is water always, what is the use of a well?</p>
+<p>*Taṇhāya mūlato chetvā, kissa pariyesanaṃ care* — Having cut off *taṇhā* from the root, searching for what else should one wander?</p>
+<p>There is a profound matter here. That is, the subduing of thirst; after thirst is subdued, there is no need for water anymore. People who like *bhava* expect to give various things to these Arahants and Buddhas. But after thirst is subdued, there is no further need. It was to demonstrate this matter that the Buddha uttered that Udāna verse: *Kiṃ kayirā udapānena*, if there is water always, what use is a well? Likewise, to say that thirst has been subdued means water is not needed anymore. If water is not needed, there is no need to drink. There is no need to try to make them drink anymore. That is it. Thus, when we think deeply, what the Buddha demonstrates is the matter that the destruction of *taṇhā* itself is *nibbāna*.</p>
+<p>Thus, it is through *taṇhā* that people create a renewed *bhava*. It is not enough to merely say this in words. In one’s own life, one must be mindful to control, to some extent, what we identify by words such as greed, stinginess, desire, and *taṇhā*, and through that, even if we cannot do it to the extent of Venerable Raṭṭhapāla, we can gradually incline towards the right side. It is not that there are no people with strength to that extent. First, one must understand the disadvantages (*ādīnava*) of *taṇhā*. Next, one must understand the advantages (*ānisaṃsa*) of abandoning them. The final advantage is, as said to Rādha: "The destruction of craving (*taṇhakkhaya*) indeed, Rādha, is *nibbāna*" — that noble, great deathless *nibbāna* attained by being freed from all the *dukkha* of *saṃsāra* such as *Jāti* (Birth), *jarā* (decay and death / aging and death), sickness, and death.</p>
+<p>These devotees must reflect wisely on the example of Venerable Raṭṭhapāla, as well as those four Dhamma summaries preached by him, which we would never have got to hear if he had not preached them, and which we heard today. Understanding their value, may this virtue (*sīla*) you observe, this meditation you practice, and this Dhamma you listen to, definitely be a strong supportive condition (*upanissaya*) for that aforementioned liberation from *saṃsāra*! May these devotees be able to quickly attain that noble, great deathless *nibbāna* obtained through the penetration of the paths and fruits (*magga-phala*) starting from Stream-entry (*Sotāpanna*)! One must wish in this manner. Likewise, if there is any being up to the Akanitṭha heaven who expects to rejoice in this merit of preaching the Dhamma and listening to the Dhamma, through rejoicing, may they attain that noble, great deathless *nibbāna* through their aspired Bodhi (Enlightenment)! With that aspiration, recite this verse.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_104.html" class="doc-btn">← Previous Sermon (104)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_106.html" class="doc-btn">Next Sermon (106) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

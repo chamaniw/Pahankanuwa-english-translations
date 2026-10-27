@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 052 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_051.html" class="doc-btn">← Previous Sermon (051)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_053.html" class="doc-btn">Next Sermon (053) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 052</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_052_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_052_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_052_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #52</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.160)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Sabbhireva samāsetha, paṇḍiteh'atthadassibhi; Atthaṃ mahantaṃ gambhīraṃ, duddasaṃ nipuṇaṃ aṇuṃ. Dhīrā samadhigacchanti, appamattā vicakkhaṇāti.</p>
+<p>From:</p>
+<p>Khuddaka Nikāya</p>
+<p>Dear Listeners,</p>
+<p>The Buddha has declared that the greatest blessing one can obtain through association with the virtuous (*sappurisa*) and through association with noble friends (*kalyāṇa-mitta*) is the opportunity to listen to Dhamma discussions directly relevant to Nibbāna. The Buddha designated those members of the Sangha who possessed a special skill in conducting such Dhamma discussions by the title 'Dhamma-speakers' (*dhamma-kathika*). In accordance with this special skill, it was the great Arahant Puṇṇa Mantāniputta who attained the foremost (*etadagga*) position among the Dhamma-speaker monks in this Dispensation of the Buddha. A verse of Dhamma declared by him as an utterance of joy after attaining Arahantship is what we have taken as our theme today: *Sabbhireva samāsetha* – "Associate only with the virtuous, with wise sages who see the true benefit." *Atthaṁ mahantaṁ gambhīraṁ duddasaṁ nipuṇaṁ aṇuṁ, dhīrā samadhigacchanti appamattā vicakkhaṇā* – "The wise, diligent and discerning, realize the great, deep goal, hard to see, subtle, and infinitesimal"—this is the meaning of this verse.</p>
+<p>Venerable Puṇṇa Mantāniputta was born into a Brahmin family in a Brahmin village in the city of Kapilavatthu. He is mentioned in the Dhamma as a nephew of Venerable Aññā Koṇḍañña. It is recorded in the texts that at the very inception of this Dispensation, Venerable Puṇṇa Mantāniputta, as a young Brahmin layman, went to Venerable Aññā Koṇḍañña, received ordination and higher ordination (*upasampadā*) from him in the city of Rājagaha, returned to Kapilavatthu, and having developed insight meditation (*vipassanā-bhāvanā*) there, attained Arahantship. Furthermore, after attaining Arahantship, he instructed a large retinue of about five hundred disciples according to a course of talk highly praised and spoken of by the Buddha, known as the "ten bases of talk" (*dasa kathāvatthu*). Devotees, these "ten bases of talk" are ten types of talk declared by the Buddha that help cut away the defilements, bring out mental strength, and are directly relevant to absolute disenchantment, dispassion, cessation, calming, and Nibbāna. They are designated as follows: *appiccha-kathā* (talk on wanting little), *santuṭṭhi-kathā* (talk on contentment), *paviveka-kathā* (talk on seclusion), *asaṁsagga-kathā* (talk on aloofness / non-association), *vīriyārambha-kathā* (talk on arousal of energy), *sīla-kathā* (talk on virtue), *samādhi-kathā* (talk on concentration), *paññā-kathā* (talk on wisdom), *vimutti-kathā* (talk on deliverance), and *vimutti-ñāṇadassana-kathā* (talk on the knowledge and vision of deliverance). Let us try to understand these ten bases of talk briefly. *Appiccha-kathā* means talk concerning the quality of fewness of wishes and having little desire. *Santuṭṭhi-kathā* means talk expressing the benefits and quality of being content with what one receives. *Paviveka-kathā* means talk praising the value of living in deep physical and mental seclusion. *Asaṁsagga-kathā* means talk on living apart from crowds, dwelling away from groups for the sake of meditation, and the benefits thereof. *Vīriyārambha-kathā* means talk expressing the value of arousing energy for the sake of Nibbāna. *Sīla-kathā* means talk spoken about the value of virtue (*sīla*). *Samādhi-kathā* means talk on the value of concentration (*samādhi*). *Paññā-kathā* means talk related to wisdom (*paññā*). *Vimutti-kathā* means talk concerning deliverance and Nibbāna. *Vimutti-ñāṇadassana-kathā* refers to talk regarding the knowledge and vision of deliverance, which is the direct knowledge and vision of the realization that yields deliverance. He constantly encouraged his disciples by speaking to them about these very ten bases of talk.</p>
+<p>Having received assistance from those talks of the great Arahant Puṇṇa Mantāniputta, that group of disciples quickly attained Arahantship. Having attained Arahantship, they on one occasion requested permission from their preceptor (*upajjhāya*), saying: "We wish to go and see the Blessed One. Now our monastic task is complete." Then, Venerable Puṇṇa Mantāniputta thought: "If I go to see the Buddha surrounded by this large group of disciples, it would not harmonize with my talk on aloofness (*asaṁsagga-kathā*) and the benefits of living apart from crowds." Therefore, he told his disciples to go ahead of him. The occasion of those disciples going and visiting the Buddha is what is first recorded in the *Rathavinīta Sutta* of the *Majjhima Nikāya*. In the *Rathavinīta Sutta*, it is told as follows: On one occasion, the Blessed One was residing in the Veluvana monastery in the city of Rājagaha. At that time, a large number of 'native-born' (*jātibhūmaka*) monks—devotees, 'native-born' means they were from the Buddha's birthplace—who had journeyed from his birthplace to see the Buddha arrived, paid homage to the Buddha, and sat to one side. Then the Buddha asked them this question: "Monks, who among the native-born monks is held in such high esteem and honor by his fellow-celibates (*sabrahmacārī*) through a recital of his virtues? In what manner is this done?" The Buddha described him: "Himself of few wishes (*appiccha*), he talks to the monks on wanting little. Himself content (*santuṭṭha*), he talks to the monks on contentment and its benefits. Himself fond of deep physical seclusion, he talks to the monks on the benefits of seclusion (*paviveka-kathā*). Himself living apart from crowds (*asaṁsagga-kathā*), he talks to the monks on the benefits of living apart from crowds. Himself with energy aroused (*vīriyārambha-kathā*), he talks to the monks on the benefits of arousing energy. Himself endowed with virtue, he talks to the monks on the benefits of being endowed with virtue. Himself endowed with concentration, he talks to the monks on the value of concentration. Himself endowed with wisdom, he talks to the monks on the value of matters related to wisdom. Himself having attained deliverance, he talks to the monks on the value of attaining deliverance. Himself having attained the knowledge and vision of deliverance, he talks to the monks on matters related to the knowledge and vision of deliverance. Who is it among the native-born monks that is thus respected and honored with such a reputation and praise of virtue?" the Buddha asked.</p>
+<p>The disciples of Venerable Puṇṇa Mantāniputta declared: "Venerable Sir, it is the Venerable Mantāniputta who is respected and honored with such a reputation among the native-born monks." While this conversation was taking place, the chief disciple, Venerable Sāriputta, was seated near the Buddha. He thought: "It is a great gain, a grand blessing for the Venerable Puṇṇa Mantāniputta that his disciples speak of his virtues in this manner in the presence of the Buddha, and that the Buddha too approves of it." Then, Venerable Sāriputta thought: "If only I could meet Venerable Puṇṇa Mantāniputta, if only I could get an opportunity to have a Dhamma discussion with him!"—such a thought arose in Venerable Sāriputta. Next, as recorded in this sutta, the Buddha, having resided in Rājagaha for some time, set out on tour by stages and arrived at Jetavana monastery in the city of Sāvatthi. Having heard that the Buddha had arrived at Jetavana, Venerable Puṇṇa Mantāniputta put his lodging in order and journeyed by stages to Jetavana monastery in Sāvatthi. In due course, he went to see the Buddha, paid homage to him, and sat to one side. The Buddha engaged in friendly greetings, and delivered a Dhamma talk to Venerable Puṇṇa Mantāniputta that was encouraging and gladdening. Having listened to that Dhamma talk, Venerable Puṇṇa Mantāniputta set out for the forest for his day's abiding (*divāvihāra*—day's abiding means spending the daytime in secluded meditation).</p>
+<p>At that moment, a certain monk who was present there went to Venerable Sāriputta and said: "Venerable Sāriputta, Venerable Puṇṇa Mantāniputta, whose virtues you constantly praise, has just visited the Buddha, listened to a Dhamma talk, and has now departed to the Blind Men’s Grove (*Andhavana*) for his day's abiding." Venerable Sāriputta quickly took his sitting rug (*nisīdana*) and set out. Having set out, while Venerable Puṇṇa Mantāniputta was walking to the Blind Men’s Grove, he followed him from behind at a distance keeping just his head in sight, in a manner unnoticed by him. Venerable Mantāniputta entered the Blind Men’s Grove and sat at the foot of a tree in meditation. Venerable Sāriputta also entered the Blind Men’s Grove and sat at the foot of another tree in meditation. Both Venerables spent the entire afternoon in meditation. Rising from meditation in the evening, Venerable Sāriputta went to Venerable Puṇṇa Mantāniputta, exchanged friendly greetings, and asked him a Dhamma question: "Friend, is it under the Blessed One that you live the holy life (*brahmacariya*)?" (Living the holy life means, is it under the Blessed One that you spend your monastic life?) "Yes, friend," he replied. Next, Venerable Sāriputta asked: "Friend, is it for the sake of purification of virtue (*sīla-visuddhi*) that you live the holy life under the Blessed One?" Venerable Puṇṇa Mantāniputta replied: "No, friend." Then Venerable Sāriputta asked: "Then is it for the sake of purification of mind (*citta-visuddhi*)?" "No, friend." "Is it for the sake of purification of view (*diṭṭhi-visuddhi*)?" "No, friend." "Is it for the sake of purification by overcoming doubt (*kaṅkhāvitaraṇa-visuddhi*)?" "No, friend." "Is it for the sake of purification by knowledge and vision of what is and what is not path (*maggāmagga-ñāṇadassana-visuddhi*)?" "No, friend." "Is it for the sake of purification by knowledge and vision of the way (*paṭipadā-ñāṇadassana-visuddhi*)?" "No, friend." "Is it for the sake of purification by knowledge and vision (*ñāṇadassana-visuddhi*)?" "No, friend." Thus, he replied "No" to all seven questions.</p>
+<p>Before proceeding further with this Dhamma discussion, it is necessary to briefly explain to you, devotees, what these seven purifications (*visuddhi*) are. 'Purification of virtue' (*sīla-visuddhi*) means the purity obtained by abstaining from wrong actions of body, speech, and livelihood, according to the respective levels of a layman or a monk. 'Purification of mind' (*citta-visuddhi*) means the purity obtained by cleansing the mind of the hindrances (*nīvaraṇa*) that obstruct mental concentration. 'Purification of view' (*diṭṭhi-visuddhi*) means the purity obtained by separating the mind from wrong views (*micchā-diṭṭhi*). 'Purification by overcoming doubt' (*kaṅkhāvitaraṇa-visuddhi*) is the purity obtained by removing doubts and hesitations regarding existence in *Saṁsāra*. 'Purification by knowledge and vision of what is and what is not path' (*maggāmagga-ñāṇadassana-visuddhi*) means the purity obtained by freeing the mind from the defilements of insight (*vipassanupakkilesa*) such as light, etc., that present themselves during insight meditation, and by correctly distinguishing what is the path from what is not the path. 'Purification by knowledge and vision of the way' (*paṭipadā-ñāṇadassana-visuddhi*) means the purity obtained by removing the defilements that obstruct the practice leading to Nibbāna. 'Purification by knowledge and vision' (*ñāṇadassana-visuddhi*) means the purity obtained by eradicating the defilements that obstruct the supramundane path. These seven purifications are what are known as the 'seven stages of purification' (*sapta-visuddhi*) in this Dispensation. Thus, Venerable Sāriputta questioned Venerable Puṇṇa Mantāniputta one by one as mentioned before: "Is it for the sake of purification of virtue?" "No." "Is it for the sake of purification of mind?" "No." "Is it for the sake of purification of view?" "No," and so on. After he had said this, Venerable Sāriputta, echoing those "No" responses, presented them again and asked his second question:</p>
+<p>"Friend, just now when I asked you whether you live the holy life under the Blessed One for the sake of purification of virtue, you said 'No'. You also said 'No' to purification of view. When asked if it was for purification by overcoming doubt, you said 'No'. When asked if it was for purification by knowledge and vision of what is and what is not path, you said 'No'. When asked if it was for purification by knowledge and vision of the way, you said 'No'. When asked if it was for purification by knowledge and vision, you said 'No'. If so, friend, for what purpose do you live the holy life under the Blessed One?" This was the question asked by Venerable Sāriputta. Venerable Puṇṇa Mantāniputta replied: "Friend, it is for the sake of final liberation without grasping (*anupādā-pariNibbāna*) that I live the holy life under the Blessed One." Devotees, when you hear the words *parinibbāna* or *parinirvāṇa*, you might think it refers to the final moment of an Arahant's life. That is not what is meant here. It refers to the complete extinguishment (Nibbāna attained by not grasping anything (*upādāna* – grasping/fuel). It is a moment realized in this very life, realized during the attainment of the fruition of Arahantship (*arahatta-phala-samāpatti*). So, Venerable Puṇṇa Mantāniputta replied: "It is for the sake of that complete extinguishment through non-grasping, that I live this holy life."</p>
+<p>Then, Venerable Sāriputta presented a series of questions to Venerable Puṇṇa Mantāniputta: "Friend, is purification of virtue itself final liberation without grasping?" "No, friend," Venerable Puṇṇa Mantāniputta replied for the second time. "Is purification of mind final liberation without grasping?" "No, friend." "Is purification of view?" "No." "Is purification by overcoming doubt?" "No." "Is purification by knowledge and vision of what is and what is not path?" "No, friend." "Is purification by knowledge and vision of the way?" "No, friend." "Is purification by knowledge and vision?" "No, friend." He stated that not one of these is final liberation without grasping. Then Venerable Sāriputta asked: "Then, friend, does final liberation without grasping exist apart from these states?" "No, friend," he replied. Now, a sort of riddle has arisen. It seems contradictory. Thereupon, Venerable Sāriputta pointed out that apparent contradiction with another series of questions.</p>
+<p>"Now, friend, you said that purification of virtue is not final liberation without grasping. You said purification of mind is not it either. You said purification of view is not it. You said purification by overcoming doubt is not it. You said purification by knowledge and vision of what is and what is not path is not it. You said purification by knowledge and vision of the way is not final liberation without grasping. You said purification by knowledge and vision is not final liberation without grasping. Furthermore, when asked whether final liberation without grasping exists apart from these states, you also replied 'No'. How, friend, am I to understand the meaning of your words? How should I understand what you are saying?" Venerable Sāriputta thus highlighted that apparent contradiction. Now, it is at this point that Venerable Puṇṇa Mantāniputta gave the correct explanation. "Friend, if the Blessed One had declared purification of virtue to be final liberation without grasping, he would have declared something that is still accompanied by grasping (*sa-upādāna*) to be final liberation without grasping (*anupādā-pariNibbāna*). Devotees, you must have heard the word *upādāna*. It means grasping or holding. *Anupādā* means not grasping. Here, what is the reason given by Venerable Puṇṇa Mantāniputta? If, in some way, the Buddha had said that purification of virtue is *anupādā*, he would have shown something with grasping to be final liberation without grasping. The same applies to purification of mind. If the Buddha had shown purification of mind to be final liberation without grasping, there too, he would have presented something still accompanied by grasping as final liberation without grasping. Having spoken of all seven in this manner, the sentence he said at the end is even more important: "Friend, if there were final liberation without grasping apart from these seven states, then the worldling (*puthujjana*) would have already attained final liberation." For the worldling does not possess these seven; not even one of these seven is possessed by the worldling. Having said this, to clarify further, Venerable Puṇṇa Mantāniputta said: "Well then, friend, I will give you a simile to make this matter clear. For some wise people in this world understand the meaning of what is said by means of a simile." And then he gave this simile. If there is anyone who has not understood this line of argument so far, try to understand it through the simile that follows. The simile that Venerable Puṇṇa Mantāniputta gave next is a very wonderful one. It goes like this:</p>
+<p>"Friend, while King Pasenadi of Kosala is residing in Sāvatthi, some urgent business arises for him to go to the city of Sāketa—which was also a city belonging to the King of Kosala. For the sake of such urgent journeys, seven relay-chariots (*ratha-vinīta*) have been placed for King Pasenadi of Kosala along the long road, at intervals. Leaving Sāvatthi, this King of Kosala mounts the first chariot at the palace gate. Having traveled in the first chariot and reached the second chariot, he dismounts from the first chariot and mounts the second chariot. Having traveled in the second chariot and reached the third chariot, he dismounts from the second chariot and mounts the third chariot. You can now imagine the rest in this manner. Traveling from the third chariot to the fourth, he dismounts from the third and mounts the fourth. From that, he reaches the fifth; from the fifth, he reaches the sixth; and finally, from the sixth, he changes to the seventh chariot. It is by means of the seventh chariot that the King arrives in the city of Sāketa."</p>
+<p>"Afterwards, his relatives, well-wishers, and friends in Sāketa ask the King: 'Your Majesty, did you travel from Sāvatthi to Sāketa in this very chariot?' How, then, should King Pasenadi answer? How should he answer so that it would be a correct reply?" Raising that question, Venerable Puṇṇa Mantāniputta immediately explained the manner in which the King would reply: "The King would say, 'While I was in Sāvatthi, some urgent business arose for me to go to Sāketa. Seven relay-chariots were stationed. I set out in the first chariot. By means of that chariot, I reached the second. I left the first chariot and mounted the second. By means of the second chariot, I reached the third, and left the second chariot... and in this manner, it is by means of the seventh chariot that I have now arrived.' The King would have to explain the entire sequence of events." That was the simile given.</p>
+<p>The significance of the simile—meaning the Dhamma point highlighted by the simile—was then brought out by Venerable Puṇṇa Mantāniputta: "In the same way, friend, *sīla-visuddhi yāvadeva citta-visuddhatthā*." Because an important phrase is mentioned there, we stated it in Pali. If we look for a Sinhala meaning for the Pali phrase *yāvadeva*, we must use the word 'merely' or 'solely'. It means 'solely for the sake of that'. Thus, purification of virtue is solely for the sake of purification of mind. Purification of mind is solely for the sake of purification of view. Purification of view is solely for the sake of purification by overcoming doubt. In this manner, each purification assists the next purification. Finally, it is shown that going in this manner, purification by knowledge and vision (*ñāṇadassana-visuddhi*) assists in the final liberation without grasping (*anupādā-pariNibbāna*). Therefore, one cannot obtain purification by knowledge and vision all at once. It is only by going through that lineage of purifications that one realizes Nibbāna through purification by knowledge and vision. Final liberation without grasping means that even purification by knowledge and vision is not grasped. I repeat: let alone anything else, even purification by knowledge and vision is not grasped. He clarified the Dhamma principle by explaining that it is by relinquishing one stage through another that one arrives at the complete extinguishment of non-grasping, where absolutely nothing is held.</p>
+<p>Gladdened by this, Venerable Sāriputta asked: "Friend, what is your name? How do your fellow-celibates address you?" Then Venerable Puṇṇa Mantāniputta replied: "My name is Puṇṇa. My fellow-celibates know me as Mantāniputta." Thereupon, Venerable Sāriputta, expressing his joy, exclaimed: "It is wonderful! It is marvelous! The manner in which the Venerable Puṇṇa Mantāniputta has answered these deep questions. It is a great gain for his fellow-celibates to have the opportunity of associating with someone like you. Even if they had to carry the Venerable Puṇṇa Mantāniputta around on their heads on a cushion of silk, to associate with him and serve him would be a great gain. We too have received a great gain in meeting you and holding such a Dhamma discussion." Thus he expressed his deep joy and appreciation.</p>
+<p>When Venerable Sāriputta spoke in this manner, Venerable Puṇṇa Mantāniputta also asked: "What is your name, friend? How do your fellow-celibates address you?" Then Venerable Sāriputta said: "My name is Upatissa. My fellow-celibates know me as Sāriputta." Thereupon, Venerable Puṇṇa Mantāniputta exclaimed: "Oh! Indeed, I have been conversing with a disciple who is like the Teacher himself! I did not know that you were Venerable Sāriputta. Had I known you were Venerable Sāriputta, I would not have addressed you simply as 'friend' (*āvuso*). Then, I would not have explained this line of argument and these similes in this manner!"—and he praised him in the same way. "If any fellow-celibates get the opportunity to associate with a monk who has the ability to present such deep questions in such a systematic manner, like the Venerable Sāriputta, it is a great gain. If they could carry such a monk around on their heads and serve him, it would be a great gain. For us too, to see Venerable Sāriputta and to hold a discussion with him is a great gain." Thus he expressed his appreciation and joy. Next, the *Rathavinīta Sutta* ends with a very valuable passage, the meaning of which is as follows: The discourse ends by noting how these two great tuskers (*ubho mahānāgā*) in this Dispensation rejoiced in each other’s well-spoken words, praised one another for the discussion they held, and expressed mutual appreciation.</p>
+<p>From this alone, this Dhamma discussion may not be completely clear to you, devotees. We shall now provide an exposition on it. Before that, let us highlight an exemplary lesson that this modern era can draw from this sequence of events. We all know that Venerable Sāriputta was no ordinary person. He was the chief disciple. Yet, when the disciples of Venerable Puṇṇa Mantāniputta came before the Buddha and praised his virtues, with what a great quality of empathetic joy (*muditā*) did he think! Even though he was such a wise person, he thought with profound empathetic joy: "Oh, if only I could meet this Venerable one someday and speak with him." Furthermore, as soon as he heard that Venerable Puṇṇa had arrived in Sāvatthi, he immediately took his sitting rug and set out. Even though he went, and no matter how hurried he was, see what a valuable quality is shown there: he did not barge in abruptly. He did not barge in demanding, "Are you the Venerable Puṇṇa?" Instead, he walked slowly behind Venerable Puṇṇa Mantāniputta at a distance, keeping just his head in sight. When Venerable Puṇṇa sat in meditation, he too sat in meditation under another tree. He spent an entire afternoon waiting for the right opportunity. There too, we see his precious quality. That is an exemplary lesson for this era. Those great masters of the past did not highlight their personal identity; they highlighted the Dhamma. They gave priority to the Dhamma, not to building up a personal image. They strove to present the Dhamma for the benefit of future generations to build up this Dispensation. That is why Venerable Sāriputta did not say as soon as he arrived: 'I am the chief disciple of this Dispensation, Sāriputta Mahā Thera.' He did not introduce himself in that manner. Instead, without even asking 'who are you' or 'where are you from', he simply started. Through a few Dhamma questions, Venerable Puṇṇa Mantāniputta recognized Venerable Sāriputta, and Venerable Sāriputta recognized Venerable Puṇṇa Mantāniputta. This is a valuable lesson for this era.</p>
+<p>Furthermore, if we are to say something more in connection with this story, a question that many people ask these days is about the 'four analytical knowledges' (*catu-paṭisambhidā*). In Dhamma talks everywhere, we hear about Arahants possessing these four analytical knowledges. So, almost everyone asks: what are these four analytical knowledges? Let us try to present how these four are utilized, in a manner we can understand. Devotees, the four analytical knowledges are: *Attha*, *Dhamma*, *Nirutti*, and *Paṭibhāna*. *Attha* (meaning/effect) refers to whatever phenomenon is right in front of us. What is before us is merely cause and effect; we see the effect. We do not immediately see the underlying cause behind it. *Attha-paṭisambhidā* is the comprehension of the presented effect—its correct understanding. *Dhamma* (cause/principle) refers to the underlying natural law or cause. *Dhamma-paṭisambhidā* is the knowledge of the cause. *Nirutti-paṭisambhidā* (analytical knowledge of language/expression) means presenting that cause to make others understand it. It is the linguistic aspect concerning grammar, language, and explanations, adapting debates or arguments to the occasion according to how they present themselves. Then, *Paṭibhāna-paṭisambhidā* (analytical knowledge of perspicuity/inspiration) is the capacity to strike upon appropriate similes, etc., to drive that point home to the mind as a whole, presenting its essential meaning in a timely manner.</p>
+<p>Now, if we analyze this in the light of our story, Venerable Sāriputta asked Venerable Puṇṇa Mantāniputta: "Friend, for what purpose do you live the holy life under the Blessed One?" That was the question. When that question was presented, what was the answer? The underlying cause—the natural law. It was declared by Venerable Puṇṇa Mantāniputta: "It is for the sake of final liberation without grasping (*anupādā*) that I live this holy life." But that cannot be understood by someone all at once. It is not that Venerable Sāriputta did not understand it. These explanations are for our sake. This was a discussion conducted by Venerable Sāriputta for our sake, acting as if he did not know, in disguise as it were, without asserting his greatness. We must be deeply grateful to Venerable Sāriputta. Next, through the questions and answers presented, we see the *nirutti-paṭisambhidā*—the analytical knowledge of expression of Venerable Puṇṇa Mantāniputta. To the questions raised, he said 'yes' where 'yes' was due, and 'no' where 'no' was due. Finally, in a situation where neither 'yes' nor 'no' applied, he brought out the fact that it is neither 'yes' nor 'no', but this is the reality. This belongs to *nirutti-paṭisambhidā*. Yet, no matter how much is said, an ordinary person cannot fully comprehend this story; it remains just a heap of words. It is the next part that clarifies the Dhamma talk, as illustrated by the story of King Pasenadi of Kosala.</p>
+<p>Now, from that point on, devotees, let us try to understand the part relevant to this Dhamma principle using the simile. In our society today, there is a thing called running races. In these running races, we have heard of what is called a relay race. In a relay race, the baton is the symbol, and that baton symbolizes momentum/energy. So, in order to complete a relay race, the team must run collectively in stages, carrying the baton. Think about it: the first runner runs as fast as possible to hand it over to the next runner. The second runner waits impatiently to receive it. What is present there is expectation. This is what we call relativity—that is, one thing is relative to another.</p>
+<p>Thus, in running by stages, it is just like what was said about the chariots. He traveled in the first chariot with the expectation of the second chariot. Leaving the first chariot and mounting the second, while traveling in the second chariot, he was looking forward to the third chariot. That is the kind of process taking place here. Within this sequence of purifications, what is present is the ultimate goal called final liberation without grasping (*anupādā-pariNibbāna*). It brings out the momentum required for Nibbāna, which is the non-grasping of anything. One does not grasp purification of virtue. One does not grasp purification of mind. One does not grasp purification of view. Not a single one is grasped. But if one simply discards them, then even the worldling would have attained Nibbāna. So, one cannot simply discard them either. That is why, in the final part of the discussion, Venerable Puṇṇa Mantāniputta declared: "Not one of these is final liberation without grasping. Yet, there is no final liberation without grasping apart from these. If we say there is final liberation apart from these, then the worldling too would have already attained final liberation." There is a very deep matter within this.</p>
+<p>Next, we can show this as a part of the Middle Path itself contained in this Dhamma. The characteristics of the Middle Path are spread throughout this. It is in direct relation to this Middle Path that you, devotees, have heard to some extent about dependent arising (*paṭicca-samuppāda*). Think about the word *paṭicca*. *Paṭicca* implies two things, connected to each other—one thing exists for the sake of another, there is a connection between the two. The second chariot waits for the first chariot to arrive. The third chariot waits for the second chariot to approach. Such a dependent (*paṭicca*) nature is what exists in the world. The river of *Saṁsāra* is a flowing river. Even though we show it in parts, it flows continuously. It is a continuity (*santati*). That is why the Buddha brought to light a natural law inherent in the continuity of existence in the world. He brought to light a group of Dhamma principles, a Dhamma continuity, relevant to the path leading from existence to cessation. Those are these seven Dhamma stages. To make use of each one without grasping a single one—that is a truly wondrous thing. That is why, on certain occasions, the Buddha expressed this natural law in a single sentence: *"Iti kho, bhikkhave, dhammā dhamme abhisandenti, dhammā dhamme paripūrenti apārā pāraṁ gamanāya."* "Thus, monks, Dhamma states flow into Dhamma states, Dhamma states fill up Dhamma states, for the sake of going from this shore to the other shore." Going from this shore to the other shore is done in that manner.</p>
+<p>This is not a journey undertaken by any 'someone'. No 'someone' goes to realize Nibbāna. It is a movement from suffering (*dukkha*) to the cessation of suffering (*dukkha-nirodha*). Otherwise, it would become a doctrine of self (*atta-vāda*), whereas this is a teaching of non-self (*anattā*). These are the difficulties everyone faces. The relevance to dependent arising (*paṭicca-samuppāda*) and non-self (*anattā*) is contained within this simile. In truth, what exists in these practices is indeed a collection of Dhamma states. They flow systematically from one to another toward the Dhamma. Through this flowing, they reach completion. Through the flowing of purification of virtue, it joins with and completes purification of mind. Purification of mind flows into purification of view. It is in this manner that the Buddha declared in that short sentence. Here, when we describe the Middle Path, we can summarize it in two words. We mentioned the word 'relative' (*sāpekṣaka*). To understand that, we spoke of the relay race running in stages. The next valuable word is 'practical' (*prāyogika*). Practical means that for a certain purpose, the King had a journey he had to complete quickly. He had to generate the necessary momentum/energy for it. To generate that, he used seven chariots in that manner. He did not hold onto a single chariot, yet he utilized them. He relinquished them all. This is what is called 'practical'. If the Middle Path is to be correctly fulfilled, we must remember both of these words. For one supports the other. Not a single one possesses absolute value. There is nothing to be grasped in any single stage. One merely assists the next. For Nibbāna is ultimately shown by the Buddha as final liberation without grasping (*anupādā-pariNibbāna*)—a complete extinguishment through non-grasping.</p>
+<p>Within the path leading to it, too, on one hand, it is relative. The various stages and factors are interconnected. In the order of dependent arising (*paṭicca-samuppāda*), as cause and effect, they are wondrously linked to one another. Just because these are relative, they cannot be rejected either. If rejected, one would have to say that even the worldling has attained Nibbāna. Nor does it happen automatically. That is the greatest problem in this *Saṁsāra*. One cannot discard them all, nor can one hold onto them. The Buddha brought to light how one, in a very subtle manner, makes use of one stage for the sake of another. If we are to express this matter in two words, we can describe the Middle Path as 'relative and practical'. 'Relative' (*sāpekṣa*) means those causes and conditions (*hetu-paccaya*) are bound to one another. Within the word *paṭicca*, there is the meaning of being interconnected, in a manner that they support one another. Likewise, 'practical' (*prāyogika*) means something taken up for a specific purpose or goal, not just for nothing.</p>
+<p>Now, if we direct our minds to another sutta regarding these two points—briefly, as appropriate—many devotees who know this Dhamma would have heard of that valuable discourse, the *Alagaddūpama Sutta*. It is a sutta discourse delivered by the Buddha on one occasion addressing the Sangha. Let us mention only the essence: *"Kullūpamaṁ vo, bhikkhave, dhammaṁ desessāmi nittharaṇatthāya, no gahaṇatthāya..."* The Buddha shows the matter concerning crossing over *Saṁsāra*. When a person traveling on a long journey comes across a great expanse of water, and there is neither a ship nor a bridge to cross over, what is there to do? He collects grass and branches nearby, binds a raft, and with the help of his hands and feet, crosses over with the aid of the raft. Having crossed over, if he were to carry the raft on his shoulders out of gratitude, that would be a foolish act. That is one extreme. But in that manner, another extreme is also shown in that sutta. If one says 'I don't want any of those rafts at all', then another thing is shown by a different simile. *Alagadda* actually means a water-snake. A person who does not know how to catch a water-snake catches it by the tail. As soon as he catches it by the tail, it turns around and bites him. "We only want final liberation without grasping (*anupādā-pariNibbāna*). We do not need all this talk of purification of virtue and purification of mind. We only want *anupādā-parinibbāna*." There, they have caught it by the tail! There are many who catch it by the tail in this manner. "We don't need virtue (*sīla*), we don't need concentration (*samādhi*); we can directly attain final liberation without grasping. We don't need to perform meritorious deeds, we don't need *Saṁsāra*, we don't need anything." Those are the ones who catch the snake by the tail. Yet, we must remind ourselves that the Middle Path lies between those two extremes. These must be considered relatively. We do not grasp them, nor do we abandon them prematurely. If caught by the tip of the tail, it is wrong. Utilizing the raft means arousing one's energy. What is represented by the raft is actually the Noble Eightfold Path. The Eightfold Path is not a path constructed by the world; it is a path one must construct for oneself. That characteristic of the Noble Eightfold Path is what was illustrated by the Buddha in the simile of the raft. One gathers branches from here and there, binds them together, and constructs a raft in that manner. Not carrying it on one's shoulders means that not a single factor of it is held onto / grasped. The other aspect is that if one discards all of these, then that person falls into the extreme where the worldling would be said to have attained Nibbāna. Through that, he goes to ruin. There were such people even during the time of the Buddha, like Ariṭṭha and others. When the Buddha declared certain things to be obstructive states, and Ariṭṭha asserted 'These are not obstructive,' the Buddha strongly admonished him, calling him a 'foolish man' (*mogha-purisa*), and ultimately laid down disciplinary rules forbidding monks from even associating with those holding such wrong views. But such things are common in this day and age. That is taking things in the wrong way. Therefore, the Middle Path means correctly combining, synthesizing, and understanding both the relative aspect and the practical aspect.</p>
+<p>The confusion arising from the inability to understand this is mentioned in another place. In the *Sutta Nipāta*, there is a discourse called the *Māgandiya Sutta*. The Brahmin Māgandiya asks the Buddha a question in verse. It concerns what the wise call 'inner peace' (*ajjhatta-santi*). "How is that obtained?" Inner peace refers to Nibbāna itself. The Brahmin asks how this inner peace is to be attained. The answer the Buddha first gave to this was very much like the answer given by Venerable Puṇṇa Mantāniputta. The Buddha declared: *"Na diṭṭhiyā na sutiyā na ñāṇena, sīlabbatenapi visuddhimāha."* He answered in that manner: "I do not say that purification is attained by view (*diṭṭhi*), nor by learning (*suta*—meaning knowledge obtained through hearing, etc.), nor by knowledge (*ñāṇa*), nor by vows and observances (*sīlabbata*)." Having said that as one side, he also stated the other side: *"Adiṭṭhiyā assutiyā aññāṇā, asīlatā abbatā no pi tena."* "Nor is it obtained without view, without learning, without knowledge, without virtue, or without vows." Having first said that it cannot be obtained by view, learning, knowledge, or vows and observances, he next said that it cannot be obtained without them either. When this was stated, the Brahmin Māgandiya—unlike Venerable Sāriputta who asked follow-up questions for our sake, this Brahmin asked out of ignorance: "You said it is not by view, not by learning, not by knowledge, and not by vows and observances. Yet in the very next breath, you say it is not without view, not without virtue, and not without knowledge, stating the opposite. If we look at it this way, to me, this seems to be a delusion (*mohumeva dhammaṁ*)—a great delusion!" The Buddha briefly explained: one utilizes these states, yet one does not grasp a single one of them—*ete ca nissajja anuggahāya* (relinquishing these, not grasping them). It is through non-grasping that one realizes this inner peace.</p>
+<p>The dogmatists of the past did not arrive at Nibbāna because of this very deep aspect. A certain group firmly grasped views, etc. They held onto them. Another group, under teachers like Sañjaya Belaṭṭhiputta, discarded everything. Some wriggled like eels, avoiding any commitment by saying 'no, no'. The Buddha does not declare either of those. This is a practical purpose. Often, when explaining dependent arising (*paṭicca-samuppāda*), the Buddha gives a simile of rivers flowing: when it rains on a mountain peak, the water flows down according to the low-lying lands, filling up the creeks, streams, and rivers, and finally flows into the ocean. Likewise, when the water level of the ocean falls, the water levels of the creeks and streams fall. Such a natural law exists in the world—one stage assisting another, from one to the next. Yet, from the past, as mentioned in the oldest historical texts like the Vedas, the undeveloped mind thought that someone was residing inside these phenomena. Let alone other things, you devotees would have heard that even lightning, thunder, etc., were regarded as things done by 'someone'—that the rainbow, fire, etc., occurred because someone lived inside them. Such thinking is refuted by dependent arising (*paṭicca-samuppāda*). The Buddha shows that there is no creator here. Likewise, there is no one who can create deliverance for us. There is no god, Brahma, or Lord Creator. What exists here is merely a lineage—understand this through a lineage of Dhamma states.</p>
+<p>With ignorance (*avijjā*) as condition, certain preparations (*saṅkhāra* / preparations) are prompted to operate. Because of not knowing the Four Noble Truths, the end result of accumulating those preparations is suffering (*dukkha*). Through those actions, wholesome and unwholesome deeds are accumulated within a heap of preparations. The texts illustrate this with a simile: performing unwholesome actions and committing sins in *Saṁsāra* is like giving hot water to a cow being led to the slaughterhouse. Performing wholesome deeds is like giving cold water to a cow being led to the slaughterhouse. Whichever water it drinks, it will meet its death. The accumulation of preparations is just like that. What the Buddha points to is the journey leading to the stilling of preparations (*saṅkhāra-samatha*). Where preparations are stilled—that indeed is where suffering ends. Because of not knowing the Four Noble Truths, there is an accumulation of preparations. Having separated oneself as a 'person' from the world, from this nature—the person who calls himself a 'hero' or speaks of 'truth' thinks in a peculiar way. People talk about being eco-friendly and such. However eco-friendly they might be, the eco-friendliness shown by the Buddha in meditation is like this: the internal earth element (*paṭhavī-dhātu*)—hair of the head, hair of the body, nails, etc.—and the external earth element are one and the same. That is true eco-friendliness—being one with the environment. Blood, phlegm, snot, urine, etc., are the same as what is found outside. Through such attention to the elements (*dhātu-manasikāra*), the Buddha shows that the environment and this bodily cage which this person grasps as 'I' and 'mine' are the same. Yet, it is through this separation that this person travels endlessly in *Saṁsāra*. That very separation is what is called consciousness (*viññāṇa*). This consciousness, which is said to be something trees and plants do not possess, this consciousness which we hold in high regard—the Buddha shows it to be a great suffering (*dukkha*). That is the greatest suffering. He calls it an illusion. Caught up in that illusion, this being is born again and again in *Saṁsāra*, going from becoming (*bhava*) to becoming. Therefore, to bring birth (*jāti*) to an end, one must gain comprehension of those Four Noble Truths. Through that comprehension, one must still the preparations. The path leading to that stilling is the Noble Eightfold Path.</p>
+<p>That was something no other sages or anyone else could discover. It belongs only to a Fully Self-Awakened One (*sammā-sambuddha*). Even though Paccekabuddhas also realize it, why is it that, like a dream seen by a mute person, they cannot explain it to the world? Because this natural law is beyond the sphere of reasoning (*atakkāvacara*). It cannot be grasped by logic. It is precisely because it cannot be grasped by logic that Venerable Puṇṇa Mantāniputta had to debate in that manner with Venerable Sāriputta. It does not yield to reasoning. One cannot say 'yes', nor can one say 'no'. Something of that nature is what is present here. It is such a deep Dhamma that is called *atakkāvacara*. Devotees, you would have heard that the Dhamma is *atakkāvacara* (beyond reasoning). Usually, one must say either 'yes' or 'no', like in a court of law. Logic operates in a world constructed by words, dividing and pieceing things together. Thus, human beings are deluded within the very language of this world. We can imagine how difficult it is to show the path of deliverance using that very language.</p>
+<p>The Buddha spent seven weeks pondering how to declare this realized Dhamma, this Dhamma of dependent arising (*paṭicca-samuppāda*), to the world, and who would understand it. It was not out of craving (*taṇhā*) that he hesitated to teach the Dhamma, but, as we can see, due to the depth of the Dhamma. It is extremely subtle. Just now it was mentioned as *duddasaṁ*—hard to see. In the *Ariyapariyesana Sutta*, the Buddha declares two matters that are extremely difficult for the world to understand. These are: this very specific conditionality (*idappaccayatā*) along with the word *paṭicca*—dependent arising. "With this as condition, this comes to be; with the absence of this, this does not come to be." In that manner, it is because that principle of specific conditionality is so difficult for the ordinary world to understand, and likewise this state of Nibbāna—which is the stilling of all preparations (*sabba-saṅkhāra-samatha*) and the relinquishment of all—is so difficult for the world to understand, that the Buddha was hesitant to teach it. After the Great Brahma made his request, the Buddha delivered this extremely deep Dhamma for the sake of the world.</p>
+<p>The Buddha declares that whether Tathāgatas arise or do not arise, this natural law always remains: *"Uppādā vā tathāgatānaṁ anuppādā vā tathāgatānaṁ, ṭhitāva sā dhātu dhammaṭṭhitatā dhammaniyāmetā idappaccayatā paṭiccasamuppādo."* Whether Tathāgatas arise or do not arise, that element, that stability of Dhamma, that orderliness of Dhamma, specific conditionality, dependent arising, always stands. Whether Tathāgatas arise or not, this natural law, specific conditionality, is always in the world. Next, the Tathāgata awakens to that natural law, comprehends it. *"Abhisambujjhitvā abhisameti, ācikkhati deseti paññāpeti paṭṭhapeti vivarati vibhajati uttānīkaroti."* Having awakened to it and comprehended it, the Tathāgatas declare it, teach it, describe it, set it up, open it, analyze it, and make it plain. *Uttānīkaroti*—analyzing it and showing it, saying 'look at this', bringing down that deep Dhamma which is placed high up, making it plain and saying 'behold this'. In that manner, the Fully Self-Awakened One analyzed and showed this Dhamma, this deep principle, which cannot be understood by the ordinary world. We must realize at this moment that it is this very Dhamma that great Arahants like Venerable Sāriputta and Venerable Puṇṇa Mantāniputta discussed through their Dhamma discussions, acting as if in disguise, for our sake. Venerable Sāriputta could have gone directly and announced: 'I am the chief disciple.' Had he said so, that inspired perspicuity (*paṭibhāna*) of Venerable Puṇṇa Mantāniputta would not have arisen. Now, when we go to someone, it is through the Dhamma discussions we hold that things are brought to light. When a question is asked, it is through that question that similes occur to us on how to explain this to a person. That is a natural occurrence. Similarly, in this instance too, wishing for a Dhamma discussion with Venerable Puṇṇa Mantāniputta, Venerable Sāriputta went in disguise, as it were, without revealing his identity, acting as if he did not know, and asked: "If this is so, how does that come to be?" Through that, we have received such a valuable Dhamma discussion within this *Rathavinīta Sutta*.</p>
+<p>That was something no other sages or anyone else could discover. It belongs only to a Fully Self-Awakened One (*sammā-sambuddha*). Even though Paccekabuddhas also realize it, why is it that, like a dream seen by a mute person, they cannot explain it to the world? Because this natural law is beyond the sphere of reasoning (*atakkāvacara*). It cannot be grasped by logic. It is precisely because it cannot be grasped by logic that Venerable Puṇṇa Mantāniputta had to debate in that manner with Venerable Sāriputta. It does not yield to reasoning. One cannot say 'yes', nor can one say 'no'. Something of that nature is what is present here. It is such a deep Dhamma that is called *atakkāvacara*. Devotees, you would have heard that the Dhamma is *atakkāvacara* (beyond reasoning). Usually, one must say either 'yes' or 'no', like in a court of law. Logic operates in a world constructed by words, dividing and pieceing things together. Thus, human beings are deluded within the very language of this world. We can imagine how difficult it is to show the path of deliverance using that very language.</p>
+<p>The Buddha spent seven weeks pondering how to declare this realized Dhamma, this Dhamma of dependent arising (*paṭicca-samuppāda*), to the world, and who would understand it. It was not out of craving (*taṇhā*) that he hesitated to teach the Dhamma, but, as we can see, due to the depth of the Dhamma. It is extremely subtle. Just now it was mentioned as *duddasaṁ*—hard to see. In the *Ariyapariyesana Sutta*, the Buddha declares two matters that are extremely difficult for the world to understand. These are: this very specific conditionality (*idappaccayatā*) along with the word *paṭicca*—dependent arising. "With this as condition, this comes to be; with the absence of this, this does not come to be." In that manner, it is because that principle of specific conditionality is so difficult for the ordinary world to understand, and likewise this state of Nibbāna—which is the stilling of all preparations (*sabba-saṅkhāra-samatha*) and the relinquishment of all—is so difficult for the world to understand, that the Buddha was hesitant to teach it. After the Great Brahma made his request, the Buddha delivered this extremely deep Dhamma for the sake of the world.</p>
+<p>The Buddha declares that whether Tathāgatas arise or do not arise, this natural law always remains: *"Uppādā vā tathāgatānaṁ anuppādā vā tathāgatānaṁ, ṭhitāva sā dhātu dhammaṭṭhitatā dhammaniyāmetā idappaccayatā paṭiccasamuppādo."* Whether Tathāgatas arise or do not arise, that element, that stability of Dhamma, that orderliness of Dhamma, specific conditionality, dependent arising, always stands. Whether Tathāgatas arise or not, this natural law, specific conditionality, is always in the world. Next, the Tathāgata awakens to that natural law, comprehends it. *"Abhisambujjhitvā abhisameti, ācikkhati deseti paññāpeti paṭṭhapeti vivarati vibhajati uttānīkaroti."* Having awakened to it and comprehended it, the Tathāgatas declare it, teach it, describe it, set it up, open it, analyze it, and make it plain. *Uttānīkaroti*—analyzing it and showing it, saying 'look at this', bringing down that deep Dhamma which is placed high up, making it plain and saying 'behold this'. In that manner, the Fully Self-Awakened One analyzed and showed this Dhamma, this deep principle, which cannot be understood by the ordinary world. We must realize at this moment that it is this very Dhamma that great Arahants like Venerable Sāriputta and Venerable Puṇṇa Mantāniputta discussed through their Dhamma discussions, acting as if in disguise, for our sake. Venerable Sāriputta could have gone directly and announced: 'I am the chief disciple.' Had he said so, that inspired perspicuity (*paṭibhāna*) of Venerable Puṇṇa Mantāniputta would not have arisen. Now, when we go to someone, it is through the Dhamma discussions we hold that things are brought to light. When a question is asked, it is through that question that similes occur to us on how to explain this to a person. That is a natural occurrence. Similarly, in this instance too, wishing for a Dhamma discussion with Venerable Puṇṇa Mantāniputta, Venerable Sāriputta went in disguise, as it were, without revealing his identity, acting as if he did not know, and asked: "If this is so, how does that come to be?" Through that, we have received such a valuable Dhamma discussion within this *Rathavinīta Sutta*.</p>
+<p>Not only that. It was not for nothing that Venerable Puṇṇa Mantāniputta received the foremost position among the Dhamma-speaker monks. Even Venerable Ānanda on one occasion states: 'When we were newly ordained monks, the Venerable Puṇṇa Mantāniputta was of great assistance to us in explaining deep Dhamma points.' There are such records in the texts. On this occasion, the mass of virtue (*guṇa-kkhandha*) of Venerable Puṇṇa Mantāniputta, and automatically the mass of virtue of Venerable Sāriputta, have been presented through this sermon. Through that dialogue, you, devotees, had the opportunity to hear many Dhamma points relevant to the seven purifications, the ten bases of talk, and so forth. Now reflect: to derive benefit from this Dispensation means that starting from this virtue (*sīla*) which we have established, strengthening it with concentration (*samādhi*), and next through insight-wisdom (*vipassanā-paññā*), through the realization of the paths and fruits, we can attain that state called final liberation without grasping (*anupādā-pariNibbāna*).</p>
+<p>As time permits, you, devotees, must contemplate these matters deeply, bear them in mind, and without stopping there, bring them close to your lives. To derive the true benefit of this Dhamma and the Dispensation, you must strive to realize these Dhamma principles for yourselves. I wish that through the virtue practiced by you devotees today, through the meditation developed, and through this Dhamma talk heard, it may serve as a supportive condition to realize as quickly as possible those noble goals you aspire to. Likewise, if any being from the lowest hell (*Avīci*) to the highest heaven (*Akaniṭṭha*) wishes to share in these merits by hearing such a Dhamma sermon and listening to the Dhamma, may they by sharing in these merits find peace in the supreme deathless Nibbāna through their aspired Bodhi. With this aspiration, recite these verses and share the merits.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_051.html" class="doc-btn">← Previous Sermon (051)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_053.html" class="doc-btn">Next Sermon (053) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

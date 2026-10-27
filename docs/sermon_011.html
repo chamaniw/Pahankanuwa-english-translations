@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 011 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_010.html" class="doc-btn">← Previous Sermon (010)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_012.html" class="doc-btn">Next Sermon (012) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 011</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_011_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_011_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_011_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #11</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No. )</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Pathavyā ekarajjena, saggassa gamanena vā; Sabbalokādhipaccena, sotāpattiphalaṃ varaṃ.</p>
+<p>From:</p>
+<p>Verse 178 from the Lokavagga (Chapter on the World) of the Dhammapada</p>
+<p>Dear Listeners,</p>
+<p>Despite the inclement weather on this full-moon Poya day of Vap, you have gathered here today to listen to a certain word of Dhamma—a section of the Dhamma—of the Buddha. What Buddhist devotees expect by listening to the Dhamma is to obtain some light for their lives, to shape their lives. The Buddha has introduced this human life we have obtained as something extremely rare. Human life is rare, and it is also a valuable life. However, the value of this humanity does not come automatically. The value or worthlessness of a life is determined, we must say, by the way of life we lead. Even if someone lives for a hundred years, if that person spent their life with worthless things, with substance-less things, then that life is entirely fruitless and empty.</p>
+<p>Therefore, it is the duty of a Buddhist devotee to live understanding the true values, the true virtues—the real worth of a life. Generally, what are considered valuable in the world are money, gold, silver, pearls, and gems. However, the Buddha introduced far more noble things to the world through the Dhamma. The Poya day is a very valuable day to live by understanding those values introduced in accordance with the Dhamma—and to shape one's life accordingly. We learn from Dhamma stories that even during the time of the Buddha, great lay devotees used this Poya day to help their children understand and realize the true worth of life. Now, particularly, the story and the background narrative that led to the preaching of the verse we have chosen as our theme today is very similar to this.</p>
+<p>You have all heard of the great merchant Anāthapiṇḍika. During the time the Buddha lived in this Dispensation, the great merchant Anāthapiṇḍika was pre-eminent among lay disciples—worthy of being placed at the very forefront. He was rich not only with crores of wealth but also rich in Dhamma knowledge; he was a great lay disciple who had also realized the fruit of Stream-entry, which is considered a noble supramundane state. The mansion of Anāthapiṇḍika was entirely an alms hall. That is to say, it is mentioned in the Dhamma as a merchant's mansion where the Buddha and the great Saṅgha, or rather hundreds of monks, were regularly served with alms and other requisites daily.</p>
+<p>Feeling that if his son "Kāla" (whose name means "time" or "black") spent his time in this manner, he would become a miserable, wretched person (*kālakaṇṇi*), the merchant Anāthapiṇḍika thought of a device—that he must introduce this child to the Triple Gem. One Poya day, Anāthapiṇḍika spoke to his son and said, "Son, if you go to the monastery, observe the precepts, listen to the Dhamma from the Buddha, and return, I will give you a hundred gold coins (*masuran*)." The child then made him promise three times, asking, "Will you really give it, father? Will you really give it, father? Will you really give it, father?" and having secured the agreement, went to the Jetavana monastery and observed the precepts. However, he had no interest in listening to the sermon. He slept in a corner, and when he returned to the mansion the next morning, the merchant instructed the servants, "My son has returned after observing the precepts; serve him food and drink well." But this child, just like some young children do, declared, "I will not eat until I am given the money promised to me," so the merchant had to give him the money first. It was only after taking that bag of gold coins in one hand that the child even took his food.</p>
+<p>Next, when another Poya day arrived, Anāthapiṇḍika thought about it and, as an addition to this device, said, "Son, if you go to the monastery, observe the precepts, listen to the Dhamma from the Buddha, and learn a single verse of Dhamma and return, I will give you a thousand gold coins." Because of his desire for this money, the child went to the monastery, observed the precepts, went right to the front where the Buddha was preaching the Dhamma, and sat down. He prepared to listen to the sermon with the intention of somehow learning just one verse of Dhamma and running back to get the money.</p>
+<p>The Buddha saw this child's mind. He must have also seen that, despite leading such a life, there was some spiritual potential (*puṇya-shaktiya*) within this child. In any case, the Buddha employed a certain device—a skillful, expedient device. What was it? He began to preach the Dhamma in such a way that the child could not grasp the verse. The child's expectation was to somehow learn a verse of Dhamma, go back, and obtain the money from his father. But the Buddha continued to preach the Dhamma, and the boy could not grasp even a single verse. Somehow it kept slipping away. In this manner, the Buddha began to preach. The boy listened with great attentiveness. Why? Because of his desire for the money; yet he could not grasp even a single verse. He missed the first verse. Then the next, and the next. Thus, he was forced to listen right until the end of the sermon. But the Buddha's Dhamma preaching was so wonderful that by the end of it, this child had attained that noble supramundane state called Stream-entry—he had attained the state of an Ariya (Noble One).</p>
+<p>However, no one else knew about this. The next day, when the Buddha and the Saṅgha walked to the mansion of the merchant Anāthapiṇḍika for alms, the boy followed behind very calmly. Having reached the house, the great merchant Anāthapiṇḍika offered alms to the Buddha and the Saṅgha and prepared to serve food to this boy at a seat on the side. The merchant was surprised to see how calm the boy was. The child who previously declared, "I will not eat until I am given the money, the gold coins," was now eating very calmly. The boy too was thinking, "It would be better if my father does not mention this matter of money in front of the Buddha." He was that embarrassed. He felt embarrassed even about listening to the Dhamma out of greed for money. But the merchant did not know about this. Therefore, he prepared to bring and give the money. The child rejected it. He said he did not want it. Thereupon, the merchant said to the Buddha, "Exalted One, my son's behavior—his manner—today is very different. On the previous occasion, he would not eat until the promised money was given. Today, even after pleading, he refused to take the money." The Buddha then declared, "Merchant, today your son has received something far more valuable than this money—indeed, more valuable than the sovereignty of a Wheel-turning monarch over the entire earth, more valuable than going to heaven, more valuable than lordship over all the worlds. That is why he is not interested in that money." Having declared so, He uttered the verse we mentioned earlier:</p>
+<p>Sole sovereignty over the earth,</p>
+<p>or going to heaven,</p>
+<p>or lordship over all the world—</p>
+<p>better is the fruit of Stream-entry.</p>
+<p>"Sole sovereignty over the earth"—more than ruling as a Wheel-turning monarch over this great earth; "or going to heaven"—more than going to the heavenly realms; "or lordship over all the world"—more than supreme lordship over all the worlds; "better is the fruit of Stream-entry"—the Buddha declared on that occasion that the fruit of Stream-entry, that supramundane state, is far superior.</p>
+<p>Thus, according to this, we can understand that owing to the efforts of the merchant Anāthapiṇḍika, the child obtained that state of Stream-entry, which is considered one of the highest states in the world. This fruit of Stream-entry, this state, is a massive transformation that occurs in the mind. It is called attaining the state of an Ariya. The freedom one gains by attaining this state is so great that one will never again be reborn in the lower realms (*apāya*) of this *saṃsāra*. The mind never falls to a state low enough to lead to the lower realms. That is the most distinct power seen in attaining Stream-entry. Furthermore, if one is to be reborn in *saṃsāra*, it is at most seven times. To attain the fruit of Stream-entry means to precisely and deeply realize the Four Noble Truths. It also means deeply understanding the Three Characteristics—the three marks of existence—known as *anicca* (Impermanent), *dukkha* (Suffering), and *anattā* (Not-self). The change that occurs within the mind through this realization is so profound that such a person will never again be born in the lower realms. Moreover, they will be reborn in *saṃsāra* at most seven times. Having been reborn thus, they will somehow, in one way or another, become an Arahant and attain final Nibbāna (*pariNibbāna). Such a wonderful transformation takes place in a person's mind through the state of Stream-entry. Therefore, such a vast transformation, a change, occurred in that child named Kāla due to listening to the Dhamma on that day.</p>
+<p>Regarding the fruit of Stream-entry, the Buddha has declared its value—as expressed here. The position of a Wheel-turning monarch is a great thing that worldly people desire, yet why is Stream-entry said to be superior to all of these? Even if one rules over the great earth as a Wheel-turning monarch, there is still the possibility of falling into the lower realms due to past unwholesome kamma committed in *saṃsāra*. However, a Stream-enterer will never go to the lower realms. That is why the fruit of Stream-entry is declared to be superior to everything else. The Buddha has illustrated the value of the fruit of Stream-entry on many occasions. On one occasion, taking a little soil onto the tip of his fingernail, he asked the Saṅgha: "Is the soil on this fingernail greater, or is the soil of the great earth greater?" Then the monks replied: "Venerable Sir, Blessed One, the soil on your fingernail is very little. The soil of the great earth is much greater." Based on that simile, the Buddha declared: "Even so, monks, the amount of suffering (*dukkha*) from which a Stream-enterer has freed himself in *saṃsāra* is like the soil of the great earth. The remaining suffering yet to be endured, the suffering that remains to be exhausted, is extremely small, like the soil on the fingernail—very little indeed." A Stream-enterer experiences such immense freedom. The fruit of Stream-entry is the first of the supramundane states. In this Buddha's Dispensation, there are four paths and fruits: Stream-entry, Once-returning, Non-returning, and Arahantship. It is through these that Nibbāna is realized. Finally, it is through the state of Arahantship that one is completely appeased in the supreme Nibbāna and brings an end to the suffering of *saṃsāra*. Thus, the Buddha declared that even the fruit of Stream-entry is such a noble achievement.</p>
+<p>Now, you might wonder: how did this young child achieve such a great thing? How did he attain such a noble supramundane state? This can indeed strike someone as astonishing. How did a child who had never served the Saṅgha in that manner, who stayed away from seeing the Buddha, achieve such a massive victory, such a high state, by listening to just one Dhamma sermon of the Buddha? This is a good opportunity for us to think deeply. Generally, such high states are achieved—as you lay disciples know—by practicing meditation (*bhāvanā*) extensively. How, then, did this child achieve it? Someone might ask: was it without meditation? But, friends, Nibbāna cannot be attained without meditation. So, let us examine what kind of meditation existed within this child.</p>
+<p>Although this is not detailed in the story, we can infer from certain clues within it what the meditation in this child's mind was. Regarding everything in this world, regarding this life, the Buddha has declared three characteristics. Everything is *anicca* (Impermanent). Everything, when viewed ultimately, is *dukkha* (Suffering). Likewise, nothing can be taken as "I" or "mine"—it is *anattā* (Not-self). There is an extremely deep Dhamma present here. This is what is called the "Three Characteristics" (*Ti-lakkhaṇa*), the three marks found throughout the entire world. These three marks do not fall within ordinary understanding. They are not apparent to the ordinary worldling. This is understood only by deep insight (*vipassanā*)—by a wisdom that has penetrated deeply. How, then, did that child obtain this understanding? Generally, this is attained by meditating according to a subject of meditation (*kammaṭṭhāna*). What, let us think, was Kāla’s subject of meditation? Kāla’s meditation subject was the merchant Anāthapiṇḍika’s words: "Son, if you go and learn a verse of Dhamma and return, I will give you a thousand gold coins."</p>
+<p>Thus, this child must have gone to the temple holding that bag of gold coins in his mind, with the thought, "I will somehow listen to a verse of Dhamma and get these gold coins." With a certain concentration of mind born from that, he prepared to listen to the sermon. But how did the Buddha purify this meditation subject, organize it, and bring it close to Nibbāna? Knowing this situation, the Buddha began to preach the Dhamma in such a way that the child could not grasp even a single verse. Then the child tried to grasp the first verse. To that boy, every verse of Dhamma uttered by the Buddha must have appeared as a bag of gold coins. Even for any of us, sometimes we see things we deeply desire as if in a dream, do we not? If there is a strong desire for something, that is what appears to the mind. In the same way, due to his desire for the bag of gold coins, as he sat in front of the Buddha listening to the Dhamma, every verse appeared to him as a bag of gold coins. So he tried to grasp that first bag of gold coins. Simultaneously, it somehow slipped away. He tried to grab the next one. "Ah, I missed that one," then he tried to grab the next. Thinking in this manner, the child listened to the Dhamma preached by the Buddha, verse by verse. At that moment, as he went on a little, with each bag of gold coins slipping away, he must have thought: "I can't grasp even one of these! They are all passing away. Everything here is *anicca* [Impermanent]. Not a single one can be grasped. They come and go. The only thing present here is the preparation to grasp a verse."</p>
+<p>Now, you occasionally see written on white cloths hung on the road in front of funeral houses, "Sabbe saṅkhārā aniccā." Such a Dhamma phrase is written. What is the meaning of this? "Sabbe saṅkhārā aniccā"—"All preparations are *anicca* [Impermanent]"; "Aniccā vata saṅkhārā"—"preparations are indeed *anicca* [Impermanent]." What is meant by these preparations (*saṅkhāra*)? In words we can easily understand, they are preparations, getting ready, or designing/constructing. Let us think about "preparation." If we consider "Aniccā vata saṅkhārā" in a way we can understand at a funeral, what did this person do while alive? Every single deed they did was a series of preparations. What this person did throughout their entire life was a massive pile of preparations and designs. If they performed meritorious or demeritorious deeds, if they did various things through body, speech, and mind, all of those—when viewed from one perspective—were a vast multitude of preparations and getting ready. When we reflect on life, all the activities we do from morning till night, when examined, are just a series of preparations. It is like preparing to go on a journey. Even in-breathing and out-breathing, this respiration itself, is a whole series of preparations. Thus, the only thing that deceased person did throughout their entire life—without fail—was breathing. When this breathing too comes to an end, all the preparations and designs that this person made for living come to an end there. They are *anicca* [Impermanent]; there is no permanent state. It is the same with everything.</p>
+<p>Now, if we reflect on this child, he expected to grasp a Dhamma verse. But when looking later, there was only the preparation to grasp the verse. He prepares, but it does not work. He looks at the next one; there too is a preparation. In this way, the child must have realized: "This is what is called *saṅkhāra* [preparations]. Here there is only a mass of preparations. All of these are *anicca* [Impermanent]." These preparations, these constructions, are all *anicca* [Impermanent] because not a single verse of Dhamma can be grasped. It slips away. This was due to a certain device employed by the Buddha. Thereupon, this child looks within his own mind. What is happening inside this mind? Inside the mind, bags of gold coins are arising with great rapidity—thoughts like bags of gold coins. In that manner, the bag of gold coins comes and goes; it arises and ceases. When reflecting deeply on impermanence (*aniccata*), what is present here is just arising and ceasing, coming and going. Seeing this state, the child must have realized: "These are *saṅkhāra* [preparations]—all of these are merely a pile of preparations, of getting ready. They come and go, come and go." Then, the effort made to grasp these preparations (*saṅkhāra*), which are by nature coming and going, is indeed the effort to grasp that Dhamma verse.</p>
+<p>After a while, the child must have felt a sense of fatigue in this. The effort he was making was futile. Not a single one succeeded. Thus, after a short while, to the point of being fed up with it, to the point where the thought of the bag of gold coins vanished, this appeared as a great burden. He tries to "grasp" every verse, but none are caught. Going on like this, the child must have realized the second characteristic declared by the Buddha: "All of this is *dukkha* [Suffering]." All these preparations (*saṅkhāra*) are *anicca* [Impermanent]. Whatever is *anicca* [Impermanent] is *dukkha* [Suffering]. *"Yadaniccaṃ taṃ dukkhaṃ"*—"What is impermanent is suffering," the Buddha declared. Then, next, the Buddha declared another thing: *"Yaṃ dukkhaṃ tadanattā"*—"What is suffering is *anattā* [Not-self]; it cannot be taken as 'I' or 'mine'." That part too, perhaps, the child understood. Now, minds like bags of gold coins arise and slip away. Not a single one stays. That nothing stays, that there is no essence or core in any of them, is what is meant by *anattā* [Not-self]. There is nothing to take as "I" or "mine"—nothing to "grasp." There is no core. Thoughts all arise and are swept away. Next, this child reflects deeply on the nature of these thoughts. "This here is entirely a mass of thoughts. They arise and pass away. There is no core. There is nothing here to grasp as 'I' or 'mine', nothing to catch."</p>
+<p>The simile given by the Buddha for this word "*saṅkhāra*" [preparations] is a highly remarkable simile. We can easily understand it. The Buddha has declared: *"Saṅkhārā kadalūpamā"*—"preparations are like a wild banana tree trunk." You all know what a banana trunk is. Now, the Buddha shows this like a good story. Suppose there is someone who has never seen a banana tree. Going into a forest, that person sees a banana tree for the first time. Looking at it, this banana trunk appears very straight. He assumes that there must be a heartwood inside. He cuts it at the top and bottom, shoulders it, and brings it home, thinking, "I can make a wardrobe or a chair from its heartwood." Having brought it, he peels off the first layer of this banana trunk—it is the Buddha who gives this simile, not us; we are only adding other details to explain it further—expecting to find heartwood. But when he looks, there is another sheath. There is yet another sheath. He peels off the sheaths one by one. Finally, he reaches the core of the banana tree. There is only a pile of sheaths. Looking at it in this way, that person realizes for the first time by himself that there is no heartwood at all in a banana tree.</p>
+<p>That is the kind of simile the Buddha gives for the word "*saṅkhāra*" [preparations]. Now, so that we can understand this, we used Sinhala words like "a preparation," "getting ready," or "a construction." Thus, when we reflect on the things done throughout this entire life, every single one of them has that kind of nature: one thing is for the sake of another, and that for the sake of another. When we look at each of them, not one has any heartwood. They are all *anicca* [Impermanent]. Because of this impermanent nature—now, in a small child's life, there are wishes and expectations. Whether those expectations are fulfilled or not, in a few days they become a youth. The youth too has various expectations—even before those are fulfilled, they are either destroyed, and then, without even realizing it, old age arrives. The old person too has various expectations. Before those can be fulfilled, perhaps, death arrives. In this manner, throughout the entire life, there is only a pile of preparations and designs.</p>
+<p>In that manner, the child named Kāla too must have understood that there is no heartwood here, no heartwood, and that it cannot be maintained under one's control—through his own subject of meditation (*kammaṭṭhāna*), his theme of meditation. What was the meditation? This bag of gold coins. Through that very bag of gold coins, the child must have understood: "Now, other things too are just like this." It is said that in this Dispensation, seven-year-old children became Arahants. This was not through reading books or possessing some great scholarly qualification or degree. What happens is the transformation that occurs within the mind. The child reflects. If there is spiritual potential (*puñña-shaktiya*), they realize a deep Dhamma through a small incident. This is what must have happened to Kāla too. Through this meditation on the bag of gold coins, because of the method and manner in which the Buddha preached the Dhamma, the factors relevant to meditation must have gradually emerged for this child through that bag of gold coins.</p>
+<p>This Dhamma is something spoken of regarding meditators—that these preparations (*saṅkhāra*) must be contemplated as *anicca* [Impermanent], *dukkha* [Suffering], and *anattā* [Not-self]. When speaking of these preparations—though we have given various names to all of these, a meditator considers them as *nāmarūpa* [Name-and-Form]. When we say *nāmarūpa* [Name-and-Form], we can understand that here there is only a pile of names and a pile of forms. Though we have placed names in the world as "such-and-such things," when looking at them from within, in the way they appear to the mind, the Buddha has shown the phenomena present here in this manner. What is present here is: there is *vedanā* [Feeling]; there is *saññā* [perception]; there is *cetanā* [volition]; there is *phassa* [Contact]; and there is *manasikāra* which means attention. *Vedanā*, *saññā*, *cetanā*, *phassa*, *manasikāra*—these five phenomena are introduced as name-phenomena (*nāma-dhamma*). Now, in the world, we have given names like "table" or "chair" to various things. Now we speak of "gold coins." But it is not the gold coins that are actually felt by the mind; when reflecting deeply, that child too must have understood that although a name has been placed in the world, and though these are called "gold," what is present here inside this mind is only this much. There is a certain feeling (*vedanā*); because of the expectation to obtain this, there is a pleasant feeling (*sukha-vedanā*). Along with that, there is a certain perception (*saññā*) that gold, or gold coins, are something extremely valuable. There is a volition (*cetanā*) to obtain them—an expectation, that thought. When that Dhamma verse is heard, there is a certain impact, a contact (*phassa*) in the mind. Corresponding to that contact, there is attention (*manasikāra*)—a directing of the mind towards it. This is all that happens inside the mind. Thus, while the Buddha was preaching the Dhamma, the child realized, with every verse preached: "This is all that is happening in my mind. There is no gold coin received. There is nothing valuable or special here. This is all there is." That is the understanding of name-phenomena.</p>
+<p>Next, what are called form-phenomena (*rūpa-dhamma*) are: no matter how beautiful all the things existing in the world are, painted with various colors and having shapes and sizes, all of them are constructed and made of the four elements (*dhātu*) introduced in the Dhamma as *paṭhavi* (earth), *āpo* (water), *tejo* (fire), and *vāyo* (wind). Earth (*paṭhavi*) refers to the primary element of hardness found in the ground, trees, rocks, etc. Water (*āpo*) refers to—for instance, it is raining at this moment—this cohesive element. We recognize the water element through the ocean and reservoirs. Fire (*tejo*) is heat, and wind (*vāyo*) is motion or air. In this way, our physical body-shell and all other things are made up of earth, water, fire, and wind. This is all that is here. Even if one speaks of gold coins, whether it is heated gold, refined gold, or raw gold, in all of these there are only the four elements mentioned. When reflecting on everything in this manner, one recognizes that there is only a mass of feelings (*vedanā*), a mass of perceptions (*saññā*), a mass of volitions (*cetanā*)—a mass of thoughts and expectations—contact (*phassa*), and attention (*manasikāra*). Next, for everything else in the world—valuable or worthless—there are no such stories at all; through that understanding that within everything there are only these four elements, one is able to attain the deep states of this Dhamma. This is what is called contemplating in terms of *nāmarūpa* [Name-and-Form]. Perhaps for Kāla too, in that manner, those warm expectations regarding the bag of gold coins vanished, and he thought: "This is a futile exercise. When I look at it next, what am I doing? While I am listening to the Buddha’s Dhamma verse, I am thinking and thinking about these bags of gold coins." Thereupon, gradually, Kāla’s desire for the gold coins vanished. A sense of disillusionment arose regarding them. Indeed, disillusionment regarding *saṃsāra* helps in attaining these supramundane states. We read in the Dhamma about some who attained these noble states—like Paṭācārā, Kisāgōtamī, and others—when some terrible disaster occurred in their lives, they then reflected, "This is the nature of this world." Similarly, here too, because of this situation, Kāla understood that these are futile endeavors. Having realized this impermanence, the nature of suffering, and the nature of not-self, he abandoned his cravings for the bag of gold coins.</p>
+<p>As he let go of that craving, the Dhamma verse preached by the Buddha began to be understood. Friends, there is a great miracle, a great wonder in this Dhamma of the Buddha. What is it? The more one tries to grasp this Dhamma, the more it slips away; the more one lets go, the more it is grasped. Now, this child looked to grasp the Dhamma; his expectation was to grasp a verse of Dhamma, go home, and get those gold coins. But when trying to "grasp" the Dhamma verse, the Dhamma slipped away. Now, as he let go of this—the more he let go of his craving for the gold coins—the Dhamma verse began to be grasped. Thus, from this, we can understand that what helps us comprehend this entire Dhamma is letting go. What is done through giving (*dāna*), observing the precepts (*sīla*), and all other things is letting go. The more you let go, the more the Dhamma is grasped. That is what, in the end, through such a great transformation in his mind, contributed to Kāla attaining that kind of supramundane state—the state of Stream-entry. He might also have been someone who had practiced meditation in past lives in *saṃsāra*. We can understand that although, due to some unfortunate circumstance, he lived in that manner during the early part of this life, through the Buddha’s skillful means, those insight-knowledges (*vipassanā-ñāṇa*) emerged within this child, and he attained the noble fruit of Stream-entry.</p>
+<p>Now, through this story, we can draw out several highly valuable points. First, when reflecting on the device employed by the merchant Anāthapiṇḍika, it serves as a great example for parents of today. On a Poya day, he used a certain device to bring his child closer to the Triple Gem. Indeed, the inheritance one should give to one's children is the inheritance of faith (*saddhā*) and the inheritance of Dhamma. In that way, the merchant Anāthapiṇḍika made an effort to bring his child closer to the Triple Gem, even by putting money at stake—by giving a promise of money. That too is a wonderful example.</p>
+<p>Similarly, there is also an example we can take for our own lives here. What is it? We can bring forth Nibbāna from the very life problems we face. The problem that Kāla faced in his life was to somehow grasp a Dhamma verse and obtain those gold coins. Out of that very problem, the child brought forth Nibbāna. To do that, a certain transformation must take place within the mind. Life problems are something everyone—every single person—has. They face various disasters and difficulties. But the world does not know how to attain those noble states by utilizing them. For that, a certain special transformation must occur. First, a change must occur in the way we look at the world. This is called attitude (*ākalpaya*). The Buddha has shown that way of looking. How does the ordinary worldling look at the world? *"Anicce nicca-saññā"*—there is a nature in the world of considering the impermanent as permanent, a perception of the impermanent as permanent. Similarly, *"Dukkhe sukha-saññā"*—there is an understanding, a feeling in the world that thinks what is painful is pleasurable. *"Asubhe subha-saññā"*—that is, although there is nothing that can be taken as beautiful, good, or pure, it appears as good. Likewise, *"Anattane atta-saññā"*—taking even what cannot be taken as self, as "I" or "mine," as "I" or "mine." The Buddha declared that there are four such wrong understandings in the world. They are called distortions (*vipallāsa-dhamma*), perverted views. Perverted views are entirely wrong ideas, just like turning things upside down. Therefore, instead, what Buddhists must do on every occasion is to make an effort to establish the correct attitude. What is that correct way? One must practice contemplating the impermanent (*anicca*) as impermanent. One must practice contemplating the foul (*asubha*) as foul. One must train the mind to think of the not-self (*anattā*)—that which cannot be taken as "I" or "mine"—as not belonging to oneself.</p>
+<p>Now, that is exactly what happened within that child. While listening to the sermon, he first assumed this was a permanent thing, a pleasurable thing, and with such thoughts and a great desire and expectation for the bag of gold coins, he began to listen to the sermon. But later, due to the Buddha’s skillful means, gradually that realization came: "There is nothing to be taken here. This is *anicca* [Impermanent], painful (*dukkha*), there is nothing beautiful (*subha*). There is nothing here to be taken as 'mine'." Thus, a change occurred in his way of looking at the world. Next, another similar thing—if we are to bring out the Dhamma from our life problems—is contemplation. We direct our mind to all these things and try to gain an understanding of them—contemplation. This contemplation, too, is often done in a wrong way in the world. The Buddha refers to this as *ayoniso manasikāra*. If we translate *ayoniso manasikāra* into simple, understandable English, it is unwise attention, "unwise"—or "improper," contemplating in a way that is not correct. An illustration of this is: here, when the Buddha was preaching, that child first began to contemplate the Dhamma verse with the bag of gold coins in mind. Deep down—at the back of his mind—was the thought of the bag of gold coins. When contemplating the Dhamma verse with the intention of obtaining the bag of gold coins in this manner, the Dhamma verse was not properly understood. That is wrong contemplation. Many people in the world, when contemplating various things, do so in a wrong way. But correct contemplation is called wise attention (*yoniso manasikāra*). Thinking of all these as things arising from within, realizing: "Here there is only a pile of feelings (*vedanā*), a pile of perceptions (*saññā*), a pile of expectations (*cetanā*), a pile of contacts (*phassa*), a pile of attentions (*manasikāra*)"—and that in this way, there are only these four elements called *paṭhavi*, *āpo*, *tejo*, and *vāyo*. In this manner, contemplating their true nature, the reality of things as they are. That is what needs to be developed. This contemplation, gradually developed, helps in realizing Nibbāna. We must abandon our wrong contemplation and practice contemplating in the correct manner.</p>
+<p>Furthermore, there is another thing—something related to this very contemplation. Generally, when people in the world contemplate various things, they try to grasp them tightly—this is called *parāmarsa* (grasping). During the Buddha's time, there were some people—those who believed they could attain Nibbāna or escape from *saṃsāra* by living like cattle, by observing such vows. This is called *parāmarsa*. But in this Dhamma, the correct way of directing the mind to things is shown as *sammarsa* (comprehending). In meditation, that contemplation is done by the mind—just like "touching with the hand," it is merely "touching with the mind." To understand this too, let us go back to the simile of the banana tree trunk. That person mentioned earlier—the one who saw the banana trunk for the first time—shouldered the banana tree and embraced it tightly, thinking, "There is heartwood inside this." This kind of embracing, grasping, is what is called *parāmarsa*. By doing so, one can never see Nibbāna. One cannot be freed from this suffering (*dukkha*). Instead, what is there to do? Just as with that banana trunk, after peeling off one sheath, it is only when you gently feel it that you find there is another sheath. You touch one sheath, and then gently feel further. As that sheath ends, there is another sheath; under that, another sheath. In that manner, you gently feel it. This is a comprehension (*sammarsa*). This is not physical touching; indeed, what the meditator does is touching with the mind, touching with thoughts. Regarding gold, silver, pearls, gems, trees, rocks, beds, chairs, tables, and all such things, the understanding first comes based on the names given to them in the world, according to the values assigned to them. "A very valuable thing, something every home must have." In this way, as craving grows in the world, one grasps it with the mind. But when reflecting gently, what is present here? The understanding comes that this is an empty thing, a hollow thing. In the end, the realization comes that it is only something constructed inside the mind, something embraced by the mind. Just as when gently feeling that banana trunk, peeling sheath after sheath, one ultimately understands that there is no heartwood, similarly, here there is only a mass of thoughts, a mass of thoughts. There is nothing to take as "I" or "mine." A multitude of thoughts arise and pass away.</p>
+<p>It is when thinking and reflecting in that manner that the Dhamma is understood most deeply. The Buddha has declared as the Four Noble Truths—that this entire saṃsāric existence, the five aggregates called form (*rūpa*), feeling (*vedanā*), perception (*saññā*), preparations (*saṅkhāra*), and consciousness (*viññāṇa*), are all *anicca* [Impermanent], *dukkha* [Suffering], and *anattā* [Not-self]. Every single one of them is painful. This is the Truth of Suffering, the truth regarding suffering in the world. This suffering arises due to the craving (*taṇhā*) that the world has for them. It was because of the craving (*taṇhā*) that child had for that bag of gold coins that so much suffering arose for him when he went to listen to the Dhamma verse. Thus, then, the understanding of that suffering arose. Underneath that suffering lies craving (*taṇhā*). The state where this craving (*taṇhā*) is destroyed, where it is appeased, is called Nibbāna. When the child abandoned his desire for the bag of gold coins and next began to comprehend the Dhamma, Nibbāna was realized. What helps in that is what is called the Noble Eightfold Path: right view (*sammā-diṭṭhi*), right intention (*sammā-saṅkappa*), right speech (*sammā-vācā*), right action (*sammā-kammanta*), right livelihood (*sammā-ājīva*), right effort (*sammā-vāyāma*), right mindfulness (*sammā-sati*), and right concentration (*sammā-samādhi*)—that is, correct view; correct thoughts that follow correct view; correct action that follows correct thoughts; correct livelihood that follows correct action; correct effort—the endeavor made to purify the mind; the correct mindfulness—the *sati*—arising therefrom; and correct concentration—the unification and composure of the mind—arising in association with that mindfulness. In this way, the Eightfold Path is that fourth truth. It is through the realization of these Four Noble Truths that anyone—whether great or small, whether a seven-year-old child or a person of sixty or seventy years—attains the paths and fruits. It is by deeply understanding such profound Dhamma. This is not something merely spoken in words, but a Dhamma to be realized entirely within. When reflecting accordingly on the benefits that can be derived from this Dhamma for life, if one understands them correctly, one can raise every one of them to meditative attention (*bhāvanā-manasikāra*) through one's very life problems in daily life, and integrate a multitude of virtuous qualities—a multitude of meditative wholesome states (*kusala-dhamma*)—into one's mental continuum (*citta-santāna*), which will assist in one's Nibbāna. Thus, this is the lesson to be taken as an example from the Dhamma story of the young child named Kāla.</p>
+<p>In this world, no matter how many things appear black (or dark), they can be made white (or bright) by abandoning that wrong understanding of the Dhamma, by abandoning the wrong contemplation called unwise attention (*ayoniso manasikāra*), and by training oneself in correct contemplation called wise attention (*yoniso manasikāra*). If one abandons that attitude of looking at the world in a wrong way and trains oneself to look at the world in the correct way, then that person can, perhaps even in this very life, in the midst of their daily activities, bring out meditation subjects (*kammaṭṭhāna*) from those very activities and attain the realization of the paths and fruits. Even during the Buddha's time, it is mentioned in various stories that some Elders (*Theras* and *Therīs*) and monks became Arahants upon seeing a lamp go out—when preparing to sleep, just as they went to lower and extinguish the lamp's flame, they became Arahants. Some, seeing a forest fire, and some, seeing a mass of foam floating on water; it is said that they realized Nibbāna by seeing various such things, in this very manner. Through every one of them, they gained a deep understanding of the world. Relying on one illustration found in the world, when the power to wisely think, "Other things too are just like this," arises, then that person is able to attain the realization of those supramundane paths and fruits. In this day and age, just as during the Buddha's time, and perhaps even more, we hear of various kinds of sufferings, disasters, and difficulties in this world and society. Through those very things, we can bring forth Nibbāna.</p>
+<p>Similarly, the bag of gold coins mentioned in relation to Kāla—just like that bag of gold coins, nowadays on the streets we hear so much about "jackpots" (*jayamalu*) or "fortune bags" (*vāsanāmalu*). There may be thousands or lakhs of people who buy lottery tickets hoping for these jackpots and fortune bags. Not everyone wins these jackpots or fortune bags. It does not matter if they are not obtained. Through them, just as the child named Kāla did, one must try to draw closer to the Dhamma. What is present here? Whether this jackpot, this fortune bag, is obtained or not, this is the nature of life. Everything is *anicca* [Impermanent]. All efforts made towards impermanent things are painful (*dukkha*). If the truth in the world is of this nature, there is nothing here to take as "I" or "mine." There is no essence, no heartwood. All of these must be abandoned at the moment of death. All those collections of wealth, relatives, and friends taken as "I" and "mine" must be left behind. In the end, the relatives gather and hang a banner saying *"Aniccā vata saṅkhārā"* or *"Sabbe saṅkhārā aniccā"*. By the time they hang those, that person has already died. There is no time then to make an effort towards those supramundane states. All of it—the entire life—is, as we said, a collection of designs, a collection of preparations. It is just like how some people who are preparing to go on a journey sometimes dream. It is as if they are preparing to go on a long journey, a pilgrimage or a pleasure trip. They prepare, but there is some deficiency. They run back to complete that too—concerning clothes and accessories. While doing so, suddenly they wake up, and they do not even get to go on the journey. That is the kind of thing done throughout the entire life. From a small child to an old person, the entire life is a series of designs, of preparations. But the painful nature within this is not understood. Just like the person who shouldered the banana trunk, the pile of sheaths is not seen. It is in order to see that pile of sheaths that we practice meditation. As the mind becomes composed, more and more composed, it is seen that what is present here are only these phenomena coming from within the mind: *vedanā* [Feeling], *saññā* [perception], *cetanā* [volition], *phassa* [Contact], and *manasikāra* [attention]. What is present here in the external things of this world and in our bodies is only the four elements called *paṭhavi*, *āpo*, *tejo*, and *vāyo*, out of which everything is constructed. There is nothing beyond this. For an infinite time in *saṃsāra*, it is after these very things that we have run. The realization arises in oneself: "What is present here is only a running, only craving (*taṇhā*), only a thirst."</p>
+<p>It is when that realization arises that one is able to attain that state of Stream-entry, which, as the Buddha declared, is nobler than Wheel-turning sovereignty, nobler than going to heaven, and nobler than lordship over all the worlds. If that state is attained, one will undergo birth (*jāti*) in *saṃsāra* at most seven more times. If one further develops the Noble Eightfold Path one has entered upon, and goes on meditating even more deeply, then that person is able to attain the second path and fruit called Once-returning (*Sakadāgāmi*), leaving only one more return to this world, and free themselves from the rest of the suffering of *saṃsāra*. If one develops meditation even deeper beyond that, by turning once again that wheel of Dhamma one has set in motion, one reaches the state of Non-returning (*Anāgāmi*), and without returning to this world, realizes Nibbāna in the Brahma world itself. Striving even further beyond that, meditating deeply, one is able to completely eradicate these defilements (*kilesa*) and, being freed from the entire suffering of *saṃsāra* such as birth (*jāti*), aging (*jarā*), sickness (*vyādhi*), and death (*maraṇa*), be appeased in the noble, supreme Nibbāna.</p>
+<p>Thus, in reliance on this story of the merchant's son named Kāla, we were able to establish our minds on the path to Nibbāna. We can declare without any hesitation that if one goes very deep into even a single Dhamma verse preached by the Buddha, Nibbāna is present there. If we take a single drop from this Dhamma-ocean of the Buddha, the taste of liberation (*vimutti-rasa*), the taste of Nibbāna (Nibbāna-rasa*), is present in every one of them. Just as wherever one takes a drop of water from the great ocean, there is the taste of salt, similarly, even if one takes a single short verse of Dhamma from the Dhamma-ocean, through it we can direct our mind all the way to Nibbāna. For someone who has developed meditation subjects in *saṃsāra*, they can realize Nibbāna even at the moment of listening to the Dhamma. The Buddha has declared that the realization of the paths and fruits can be attained not only on the meditation seat, but at five occasions; these are called "stages of liberation" (*vimuttāyatana*). Liberation (*vimutti*) means freedom—freedom from *saṃsāra*. *Āyatana* means a place or basis where that freedom can be obtained. Five such bases have been shown. What are those five bases? One can attain it while listening to the Dhamma (*dhammaṃ suṇantassa*). It was while listening to the Dhamma that this child named Kāla realized Nibbāna. When listening to the Dhamma, when the mind is well focused on it and the moment of deep contemplation arrives, then that supramundane state can be attained. Another can attain it while teaching the Dhamma (*dhammaṃ desentassa*)—even while preaching the Dhamma, when keeping the mind on that Dhamma, to oneself—just as when food is prepared and served on a day when guests arrive, it can satisfy not only the guests but also others; in that same way, it is shown that some monks attained realization at the moment of preaching the Dhamma. Similarly, while reflecting on the Dhamma (*dhammaṃ manasikarontassa*)—when one withdraws to a side and reflects on a deep point of the Dhamma, suddenly a correct and deep realization arises, and Nibbāna can be realized through such path-and-fruit realization. For some others, while reciting the Dhamma (*dhammaṃ sajjhāyantassa*)—when reciting the Dhamma with a well-concentrated mind, then too, as the mind becomes composed and concentrated, a deep realization regarding it arises, and they are able to attain fruits such as Stream-entry. They can even become Arahants. Next, finally, it is shown through some meditation sign (*samādhi-nimittaṃ*)—which is what is generally considered as meditation in the world—that by systematically developing meditation based on a meditation sign, one can also succeed. In this way, if one engages in activities such as listening to the Dhamma, teaching the Dhamma, and reflecting on the Dhamma in daily life, those paths and fruits can be realized. Accordingly, in our daily lives as well, we must make an effort to draw the benefits that can be gained from this Dhamma for our own lives, in reliance on this story.</p>
+<p>Today, therefore, this meritorious assembly has accumulated a vast amount of wholesome merit (*kusala*) on this occasion by listening to this Dhamma. Listening to the Dhamma is not merely a common custom; if one listens to the Dhamma directing the mind toward Nibbāna, it becomes a strong supportive condition (*upaniṣraya*) for Nibbāna. The reason we obtained this human rebirth, the reason we have an inclination and leaning toward the Dhamma, is because we have developed and practiced these over a long period. Thus, this listening to sermons supports us even in *saṃsāra*. On those occasions, if someone makes an effort, they can attain the noble realization of the paths and fruits through a Dhamma verse, just like the child named Kāla. Therefore, on this occasion, you have observed the precepts and listened to the Dhamma. You have generated a multitude of wholesome volitions (*kusala-cetanā*). You have performed a vast amount of merit. May you make the aspiration: "May these wholesome merits of listening to the Dhamma, this merit, these wholesome supportive conditions, enable us to realize the supreme bliss of Nibbāna through the progressive paths and fruits, beginning with Stream-entry, in this very life!"</p>
+<p>Likewise, share this accumulated mass of merit, wishing: "May all beings, including the guardian deities of the Dispensation and any deities or spirits residing in this place, rejoice in this merit and be appeased in the noble, supreme Nibbāna, which is known as the deathless and decayless (*ajarāmara*)!"</p>
+<p>In the same way, make the aspiration: "May any departed relatives and friends, and all beings throughout this world-system—from the Avīci hell up to the Akaniṭṭha heaven—who hope for Nibbāna, rejoice in this noble merit, and being freed from all saṃsāric suffering such as birth (*jāti*), aging (*jarā*), sickness (*vyādhi*), and death (*maraṇa*), be appeased in the noble, supreme Nibbāna, which is known as the deathless and decayless (*ajarāmara*)!" Having made that aspiration, at this moment, recite these verses and share the merit.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_010.html" class="doc-btn">← Previous Sermon (010)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_012.html" class="doc-btn">Next Sermon (012) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

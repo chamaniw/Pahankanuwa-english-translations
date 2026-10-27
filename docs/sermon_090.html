@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 090 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_089.html" class="doc-btn">← Previous Sermon (089)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_091.html" class="doc-btn">Next Sermon (091) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 090</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_090_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_090_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_090_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #90</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.105)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Appamādaratā hotha, sacittam anurakkhatha;</p>
+<p>Duggā uddharathattānaṃ, paṅke sanno va kuñjaro.</p>
+<p>From:</p>
+<p>Dhammapada 327 (Nāgavagga)</p>
+<p>Dear Listeners,</p>
+<p>Diligence (*appamāda*) can be considered as the very beginning (the letter 'A') of the practice leading to Nibbāna taught by the Lord Buddha, the Teacher of the Three Worlds. There is a depth within this concept of the Dispensation (*sāsana*) that is absent in the word "diligent" as we use it in ordinary daily life. Being diligent in guarding the mind from defilements is what is considered diligence in this Buddha-Dispensation. Today, we hope to present a Dhamma verse and its related story that clarifies this. The Lord Buddha preached this Dhamma verse at the Jetavana monastery, based on an incident concerning an elephant named Bhaddaka belonging to King Kosala.</p>
+<p>In his youth, this elephant named Bhaddaka was extremely powerful, but as time went on, he grew weak with decay and death / aging and death (*jarā*) and, one day, descended into a large lake and got stuck in the mud. As he lay there, stuck in the mud and unable to get out, people began to talk, saying, "Alas! Even such a strong elephant has now fallen to this state." When the King heard of this talk, he ordered the elephant trainer to rescue the elephant. What did that wise elephant trainer do? Within the sight of the elephant, he displayed the likeness of a military battalion marching out to war. Next, he had the war drums beaten. At that moment, the elephant thought, "This is indeed the time to go to war," and with great haste, he arose from that mud heap. When the community of bhikkhus saw this and reported it to the Lord Buddha, the Lord Buddha said, "Yes, bhikkhus, it is so. That elephant pulled himself out of the swamp by his own efforts. In the same way, what you must do is make a proper effort, arouse energy, and pull yourselves out of this swamp of defilements." Declaring thus, he uttered this Dhamma verse in relation to it:</p>
+<p>*Appamādaratā hotha* — Delight in diligence!</p>
+<p>*Sacittam anurakkhatha* — Guard your own mind!</p>
+<p>*Uddharathattānaṁ paṅke sanno va kuñjaro* — Just like an elephant stuck in the mud, lift yourself out of this difficult terrain of defilements. This is the meaning contained in that verse.</p>
+<p>Now, when we reflect on this verse and the story here, the skillful means (*upāya-kosalla*) employed by this elephant trainer is especially important for this era; it is highly valuable and exemplary for us. Furthermore, it shows how that elephant, despite being so weak, rescued himself through effort and energy, motivated by the battle scene presented according to the situation. Why do we say this is relevant to this era? We must reflect on the decline of the virtues of the Dispensation among both the laity and the clergy.</p>
+<p>Let us take a simile for a moment: let us identify this Dispensation as the "Sāsana Elephant". This Sāsana Elephant is currently stuck in a vast swamp, unable to get out. About two thousand and several hundred years ago—around two thousand five hundred years ago—this elephant was extremely powerful and majestic, endowed with a great store of spiritual virtues, namely virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*). But now, due to various reasons, it is stuck in the swamp of defilements, unable to get out. In truth, we all know that everything is impermanent / inconstant (*anicca*). Our bodies are impermanent / inconstant (*anicca*). The Dispensation too is impermanent / inconstant (*anicca*). Yet, how much do we spend and how hard do we strive just to keep this impermanent / inconstant (*anicca*) body—which is subject to decay—alive for even one more day to enjoy the pleasures of the five senses? We spend millions, replace wearing parts, and undergo marvelous surgeries just to devise ways to live for one more day, do we not?</p>
+<p>Therefore, if we spend so much to keep this bodily cage alive for a single day for the sake of the pleasures of the five senses, how much more effort should we make to keep the Buddha-Dispensation alive for even one day—the very Dispensation that helps one to be liberated forever from birth / arising (*jāti*), decay and death / aging and death (*jarāmaraṇa*), sickness, and the like? There is no room to remain indifferent, saying "it is impermanent / inconstant (*anicca*)." If we are to think about keeping it alive, what steps must we take? In these times, various slogans come to the forefront regarding the preservation of this Dispensation. However, if we recall a valuable verse used not only by our Buddha but even by the Buddhas of the past, we will find the true slogan. What is it?</p>
+<p>*“Ārabhatha nikkhamatha,*</p>
+<p>*yuñjatha buddhasāsane;*</p>
+<p>*Dhunātha maccuno senaṁ,*</p>
+<p>*naḷāgāraṁ va kuñjaro.”*</p>
+<p>"Begin! Go forth! Apply yourselves to the Buddha's Dispensation! Destroy the army of Death, like an elephant crushing a reed hut!"</p>
+<p>So, with whom is this battle fought? It is fought with the mass of inner defilements within one's mind. Therefore, it is by battling this mass of defilements that the Dispensation is preserved. What is the reason for this? Now, we generally think of the Dispensation as temples, monasteries, statues, and stupas. But these are merely symbols of the Dispensation. What is symbolized by them? What do they represent? They represent the three virtues of virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*). These virtues exist within a person's mind. Thus, protecting these virtues is what is called preserving the Dispensation. It is said here, "*Ārabhatha yuñjatha buddhasāsane*". Through this, we see that the Lord Buddha highlighted the strength within us to preserve this Dispensation.</p>
+<p>There is a latent power within us to initiate something. Similarly, to a certain extent, we all possess the power to execute and sustain that course of action once initiated. Furthermore, we have the power to move forward, overcoming thousands of troubles, dangers, and obstacles in implementing it. In the Dhamma, these are identified as the element of initiation (*ārambha-dhātu*), the element of launching (*nikkama-dhātu*), and the element of exertion (*parakkama-dhātu*). The element of initiation is that very power to begin. We have that within us, as well as the power to initiate and carry it out. Next, what is called the element of exertion (*parakkama-dhātu*)—valour or persistence—is the ability to overcome the obstacles that arise in the course of applying oneself to it. That is exactly what we must understand. When it says "*Yuñjatha*" (apply yourselves), it means that without applying oneself to the Buddha-Dispensation, one cannot protect it. The Buddha-Dispensation cannot be protected by handing it over to others, or to those external symbols. To protect the Buddha-Dispensation, one must apply oneself to the Buddha-Dispensation. That is why it says "*Yuñjatha buddhasāsane*". Only then can we rout the army of Māra and protect this Dispensation. Now, if we reflect on this Buddha-Dispensation, everyone knows a valuable verse—one that almost everyone has heard, and some even use as a protective mantra—which was uttered even by the Buddhas of the past:</p>
+<p>*“Sabbapāpassa akaraṇaṁ,*</p>
+<p>*kusalassa upasampadā;*</p>
+<p>*Sacittapariyodapanaṁ,*</p>
+<p>*etaṁ buddhāna sāsanaṁ.”*</p>
+<p>"To avoid all evil, to cultivate the wholesome, to purify one's own mind—this is the instruction of all the Buddhas."</p>
+<p>This is the Dispensation of all Buddhas. If this is the Buddha-Dispensation, what is implied by it? "To avoid all evil" refers to virtue (*sīla*). "To cultivate the wholesome" refers to concentration (*samādhi*). Sometimes, it is written in books that one "attained the first absorption (*jhāna*) and dwelt in concentration." The word "attained" (or entered upon) is used there. So, one attains the wholesome, approaches it. Having restrained the body and speech, the mind, free from remorse, is released from the hindrances (*nīvaraṇa*), and at some point, concentration is established through a meditation subject (*kammaṭṭhāna*). That is why it says "to cultivate the wholesome." Next, "to purify the mind"—</p>
+<p>In truth, the mind is purified at the highest level through wisdom (*paññā*). That is why, in response to the question asked by Ālavaka the Yakkha, the Lord Buddha stated: "*Paññāya parisujjhati*"—one is purified through wisdom. It is through wisdom that the mind is purified. Therefore, what is called "*Sacittapariyodapanaṁ*" here is indeed that purification of the mind, the purification of one's own mind. It is through this purification that the Buddha-Dispensation is completed. Ultimate purification is, in truth, through wisdom—through insight-wisdom (*vipassanā-paññā*). Because of these matters—virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*)—we can understand that if we hope to take any step to preserve this Dispensation, the initial step is personal example. One must be an example oneself. That is why it was said that without an example, without applying oneself to the Buddha-Dispensation, one cannot preserve the Buddha-Dispensation.</p>
+<p>Then, if we look back at history, we must indeed remember Emperor Dharmashoka (Asoka) of India (Jambudīpa), even if we do not call him one of our own kings. No matter what we think, pious people who have deeply studied world history have made marvelous statements about King Dharmashoka. They say that in the royal chronicles of the world, which mention tens of thousands of kings, the name of Great King Dharmashoka shines uniquely and peerlessly like a star, and none can come close to him. What is the reason for this? Having won a war, he abandoned warfare and made a sincere effort to beat the drum of Dhamma instead of the war drum. The stone pillars and inscriptions discovered up to this day reveal how sincere and humble King Dharmashoka's efforts were. Moreover, he made known to the world the internal revolution and remorse he felt due to the destruction of hundreds of thousands of people in the Kalinga war, sincerely recording it on rocks and inscriptions as if asking for forgiveness from his subjects, promising never to do such a thing again. Thus, he made an effort to avoid evil at a state level. It is the view of historians that there is no one else in history who strove so greatly and made such an effort at a state level to bring about social reform and social transformation through an internal revolution of his own mind as King Dharmashoka did. If we consider this further, those inscriptions marvelously record how he, previously known as Candashoka (Asoka the Fierce), sent ministers (*mahāmātra*) throughout the country, advising people of various religions and the righteous to live in accordance with the Dhamma, presenting relevant rock inscriptions and Dhamma edicts, making an astonishing effort.</p>
+<p>Not only that, today we usually hear people talk about human compassion, about humanity. King Dharmashoka went a step further. He made a sincere effort to practice not just human compassion but universal compassion (*karuṇā*). Those inscriptions reveal that he banned the slaughter of animals for sacrifices, for entertainment, or for food. He also advised against harming even domestic creatures. Next, the program of giving safety (*abhaya-dāna*) was initiated from the royal palace itself. In a certain inscription, showing the sincerity and humility of King Dharmashoka, it is written as follows: "Before this inscription was carved, hundreds of thousands of animals were slaughtered in the royal kitchen. But by the time this inscription is being carved, that number of slaughtered animals has been reduced and reduced, so that now only two peacocks and one deer are killed. And even that deer is not killed every day. My hope is to stop the slaughter of even these three animals in due course." What a sincere statement!</p>
+<p>When carving on stone, if someone wanted to show off their pride to people living centuries in the future, they could have written, "Today, not a single animal is killed." Instead of that, while traversing the path and practice of giving safety (*abhaya-dāna*) by his own strength, he had this recorded as an encouragement to others. While pulling himself out of the pit he had fallen into, he also tried to lift others out. This is what we call "exemplary character". An exemplary character is indeed a silent sermon.</p>
+<p>If any success occurred during the reign of King Asoka, as it is said, that transformation took place after twelve years. If something occurred within ten or twenty years, the secret lay in the effort to incline society towards the Dhamma through an exemplary character arising from an internal revolution of the mind. That is the lesson we must take. As historians also point out, that is indeed the most valuable example. We read about the Wheel-turning empires (*cakkavatti*) in ancient texts and feel pleased, regarding them as having marvelous comforts that are impossible to implement practically. Even if we, as Sinhalese, think so, a certain king in Jambudīpa made such a sincere effort. Therefore, a certain lesson from that is helpful to this era. If we think about the Dispensation, that king offered his own son and daughter to the Dispensation so that he might gain the right to be an inheritor of the Dispensation. Not only that, we all know from historical accounts that he made a great effort to preserve the Dispensation in his own land as well as to spread the Dispensation to other lands.</p>
+<p>In short, everyone knows that we received the heritage of the Dispensation through those two children. When we think in this manner, we can understand that it is through such exemplary characters that we must undertake the task of rescuing the Dispensation from the swamp.</p>
+<p>The Lord Buddha once declared to Venerable Mahā Cunda that one who is himself sunk in a swamp cannot pull another out of the swamp. In the same way, the Lord Buddha stated that one who is himself untamed, undisciplined, unextinguished, and unrestrained cannot tame, discipline, extinguish, or restrain another. According to this advice of the Buddha, we can understand that, at whatever level, whether lay or ordained, it is only through an exemplary character that the Dispensation must be rescued. This is the matter revealed to us by the story of Dharmashoka. But if we reflect on this society, and the biographical stories that emerge in society, the youth mostly get to hear and read about the stories of defeated characters. Novels, short stories, and plays about fictional, defeated characters are highly popular and widespread in society. However, just as that elephant trainer reminded the elephant of his heroic youth, what we must do is recall the characters of the heroic elders (*theras* and *therīs*) of the past, and the heroic lay disciples (*upāsakas* and *upāsikās*), and focus our minds on them. We must take examples from them. It is through this that one can bring forth the perception of capability. Although that elephant was so weak, it was through the perception of capability that he gathered his strength. Generally, there is no instrument to measure a person's energy in daily life. Energy—that energy mentioned as the element of initiation (*ārambha-dhātu*), the element of launching (*nikkama-dhātu*), and the element of exertion (*parakkama-dhātu*)—emerges only when other necessary conditions are gathered together.</p>
+<p>Now, to rescue this Sāsana Elephant, to bring forth that energy, what is needed first is faith (*saddhā*). Next, mindfulness (*sati*). Next, the four kinds of supreme effort/energy are mentioned in the Dhamma, which you may have heard of: restraint (*saṁvara*), abandonment (*pahāṇa*), cultivation (*bhāvanā*), and preservation (*anurakkhana*). Preventing the defilements, or the unwholesome thoughts flowing towards oneself, is restraint and so on. Next, expelling the unwholesome thoughts already present within oneself; arousing the wholesome thoughts not yet present within oneself; and stabilizing the wholesome thoughts already present within oneself through cultivation (*bhāvanā*)—these are the four kinds of energy contained within the concept of energy. Thus, mindfulness (*sati*) and faith (*saddhā*) assist energy. If the perception of capability is not aroused, that elephant would not have been able to climb out. His own task—now, a military battalion is ready to go to war, and the war drums are heard. Then, that past was remembered. Remembering his majestic past, he stood up.</p>
+<p>In that way, if one can arouse the perception of capability within oneself, there is a strength to bring forth that majestic state once again. What is this? It is virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*). "Avoiding all evil"—that is the first step. If such a beginning is made, next within it are the qualities of virtue and so on. You know very well that within the undertaking of virtue (*sīla-samādāna*) itself, that voluntary, self-exerted effort to rise is embedded in the word "*samādiyāmi*". "*Pāṇātipātā veramaṇī sikkhāpadaṁ samādiyāmi*"—not because someone else said so, but of my own accord, I undertake the precept of refraining from destroying life, and I will observe this practice. So, there lies self-exertion. It is something done voluntarily. It is not something done under compulsion. Taking this as a determination, and established in that determination, one restrains body and speech. In that way, if someone has aroused that perception of capability, that person is able to rise from the swamp in which they are stuck. Some are stuck in killing; others are stuck in theft. Some are stuck in sexual misconduct. Others are stuck in lying. Still others are stuck and immersed in intoxicants.</p>
+<p>In such a situation, one must reflect that one has to rise from the very place where one fell. For that, the Lord Buddha has pointed out the concept of the perception of capability. What is needed for that is faith (*saddhā*). Now, those stories of the elders (*theras* and *therīs*), and the stories of the lay disciples (*upāsakas* and *upāsikās*) mentioned in Dhamma literature, do not seem to be given much place in these times. Leave aside other things, even in the Jātaka stories, when reading them, they sometimes give the impression that there were animals with more noble virtues than the humans of today. Therefore, it is by arousing such a perception of capability that one must rise from this. The first step for that is these practices of virtue (*sīla*) to restrain body and speech. Whether it be the Five Precepts (*pañca-sīla*), Right Livelihood Eightfold Precepts (*ājīva-aṭṭhamaka-sīla*), the Eight Uposatha Precepts (*uposatha-aṭṭhaṅga-sīla*), the Ten Precepts (*dasa-sīla*), or the monastic virtue (*bhikkhu-sīla*)—undertaking some precept or system of precepts, taking it to heart, and correcting one's behavior accordingly, automatically provides an example to the world, even without shouting out loud.</p>
+<p>Furthermore, the Lord Buddha declared that if someone observes the precept of refraining from destroying life, it is equivalent to giving infinite and boundless safety (*abhaya-dāna*). That was the kind of thing King Asoka also tried to do. We too must think in that way. Through our practice, we should impress upon our minds the set of ideas presented by King Dharmashoka, especially regarding the hundreds of thousands of lives taken daily on this "Island of Dhamma" (*Dhammadīpa*). If one implements these on a personal level, then automatically, whatever one's position may be, those who see, hear, and associate with one will imitate it as an example. We have all heard the saying, "Example is better than precept." What is the reason for this? Precept is what is heard by the ear; example is what is seen by the eye. No matter what kind of things are heard by the ear, if what is seen by the eye is not in agreement, what is heard by the ear is not believed. This is such an era.</p>
+<p>Instead of shouting to be heard by the ear, if one corrects one's behavior to be seen by the eye—not for show, but sincerely—and if one strives to protect one's behavior in those institutions and homes, at least at a minimum level through the aforementioned virtues of virtue (*sīla*) and so on, through the Five Precepts (*pañca-sīla*), then that too will spread like an epidemic. However, unlike a disease, it is not something that brings bad results. This is precisely what is called the "fragrance of virtue", the "scent of morality". The Lord Buddha declared this to Venerable Ānanda. On one occasion, Venerable Ānanda asked, "There are various kinds of fragrances such as the scent of flowers, the scent of roots, and the scent of heartwood. All these fragrances go only with the wind. Is there a fragrance that goes against the wind?" When asked, the Lord Buddha declared, "Ānanda, there is such a fragrance. If in any village, hamlet, or city, a woman or a man is devoted to the practice of observing the Five Precepts (*pañca-sīla*), and is likewise generous and has faith (*saddhā*) in the Triple Gem, the renown of that woman or man's virtue spreads not only among humans but also among the gods. It is just like a fragrance that goes not only with the wind but also against the wind."</p>
+<p>That is how we must understand the story of exemplary character. Here, there is no one who has not heard of the story of Angulimāla. Everyone has heard of it to that extent. But rather than understanding the depth within that story, some merely enjoy its narrative flavor. Now, we have a custom in our Dispensation—which we too have to perform when ordaining a new monk—of discarding the lay name and giving a monastic name, a new name. Thus, by giving names in this manner, there are plenty of Kāśyapas, Ānandas, and Rāhulas. But in this entire Dispensation, there is only one Angulimāla. No one wants to take that name, and we do not want to give it either. We do not give it thinking they might feel hurt. Yet, what an exemplary character Angulimāla is!</p>
+<p>Even though his name did not change, within that character of Angulimāla, there was a marvelous transformation just like that of Candāśoka to Dharmāśoka. If we briefly bring that story to mind—we have mentioned it on previous occasions, and you have heard it often in the media—I will only recall what is necessary to bring it to mind. So, how did the Lord Buddha tame Angulimāla? He had killed hundreds of thousands—they say more than a thousand—and sometimes, when he cut off the fingers and hid them, they rotted, and he forgot to count them. Perhaps he killed more than a thousand people. Having killed in this way, when he was preparing to kill his own mother, the Lord Buddha arrived. Then, Angulimāla saw the Lord Buddha and ran after him. The Lord Buddha walked at his normal pace. Then Angulimāla said, "Stop, monk, stop!" What did the Lord Buddha say? "I have stopped, Angulimāla." Now, although we call Angulimāla a bandit, in modern terms, he was like a university graduate; therefore, he understood the deep meaning of those words. Next, he asked what was meant by "I have stopped." "I have stopped by refraining from destroying life. You are still running along this path of destroying life. That is why I said so."</p>
+<p>Understanding the deep meaning within that, he threw away his weapons right there, and that is when Angulimāla, whose name in the past had been Ahimsaka (The Harmless One), truly became harmless in the full sense of the word. But despite his becoming harmless, the rumors about Angulimāla in society were so great that after the Lord Buddha ordained him and brought Ven. Angulimāla back to Sāvatthi, to Jetavana monastery, King Kosala, unaware of this, prepared his army to search for Angulimāla. When the king came to visit the Lord Buddha before setting out, the Lord Buddha asked him, "Where are you going?" The king said, "Such a dangerous bandit is destroying villages and market towns. I am going to capture him." The Lord Buddha extended his right hand and said, "Great King, this is Angulimāla." At that, the king became extremely terrified. Even though Angulimāla was ordained and in the form of a monk, King Kosala trembled with fear. If so, how would ordinary people have treated Ven. Angulimāla when he went for alms (*piṇḍapāta*)? Would he have received alms?</p>
+<p>It is said in the Dhamma literature that when Ven. Angulimāla came, we can imagine that people would shut their doors as if saying, "Look, the killer is coming!" He did not receive alms properly. In the beginning, Ven. Angulimāla faced various kinds of harassment. Moreover, it was not just the harassment regarding alms. When he went to meditate, what came to Ven. Angulimāla's mind? He began to visualize the way people cried out and wailed, begging for their lives when he was killing them. Consequently, because he could not concentrate his mind, Ven. Angulimāla was unable to attain concentration (*samādhi*). In such a situation, one day, while walking for alms, Ven. Angulimāla noticed some commotion in a house and realized, from the behavior of the people there, that a pregnant mother was in a grave condition trying to give birth. He went and reported this distress to the Lord Buddha, and when he expressed his feelings about this suffering, the Lord Buddha realized, "The time has come to treat Ven. Angulimāla." What was the medicine given? He said, "In that case, Angulimāla, go and perform an Act of Truth (*sacca-kiriyā*) for that sister in this way: 'Since I was born, I have never intentionally destroyed the life of a living being. By this truth, may you and the child in your womb be well!'"</p>
+<p>When this was said, Ven. Angulimāla said, "Blessed One, how can I say that? Would that not be a deliberate lie (*sampajāna-musāvāda*)? Is it not telling a conscious lie?" Then the Lord Buddha declared, "Very well, Angulimāla, change that Act of Truth slightly in this way, make a small amendment: 'Sister, since I was born in the Noble Birth (*ariya-jāti*), I have never intentionally destroyed the life of any living being.'" "Ah, that is possible!" he said. Not only did he say so, but he accepted it, went to that house, and as soon as he performed that Act of Truth for that pregnant mother, her childbirth was completed safely and without any danger. Even today, in homes, parents recall Ven. Angulimāla during such times because of his compassionate quality. It is by remembering the monk named Angulimāla that some blessing can be obtained in dangerous situations like childbirth.</p>
+<p>Now, at that point, people generally think: "How great was the Lord Buddha's compassion towards mothers, that he taught Ven. Angulimāla such an Act of Truth and gave us great relief!" This is the view of the world, the view of mothers. But in truth, the Lord Buddha gave this medicine to Ven. Angulimāla. The two difficulties he had previously faced were averted. The tendency of people to run away in fear at the mere sight of him ceased. Furthermore, until then, Ven. Angulimāla had identified his "self" with the behavior he had carried out ever since he was born from his mother's womb. He thought of that as his life. He came to understand the realization that through his ordination he was born anew, through the phrase "*ariyāya jātiyā*". Once it was said "born of the Noble Birth", a boundary was drawn there. Now, we are showing the secret contained within the determination of virtue (*sīla-adhiṭṭhāna*). What does one do through the determination of virtue? It places a certain limit, a boundary, in our mind to prevent remorse and other things that can arise in our mind. That is why in Dhamma literature it is mentioned that after this incident, the monk retired into solitude and soon, very quickly, attained the fruit of Arahantship.</p>
+<p>Through this, we can understand that the Lord Buddha employed a highly marvelous device, what we might call a skillful means. Through the power inherent in the All-Compassionate One, a unique strategy was employed here. While bringing welfare to mothers, he simultaneously resolved two problems that Ven. Angulimāla had. It was not about using popularity in an improper way; rather, he became dear to people through it. Moreover, the flowing into his mind of those past terrible events of his life, which had been an obstacle to his meditation, ceased at that point. This was because he realized directly through the Act of Truth the value of virtue (*sīla*). The value of undertaking virtue (*sīla-samādāna*) is what we have to take from the story of Angulimāla. I believe you understand this. That is, he used that precept as an Act of Truth. If Ven. Angulimāla, having killed so many people, ordained at some point in his life, and during the short period he observed the precept of refraining from destroying life, could present that to perform an Act of Truth which brings welfare and peace even to this day, then if you, pious devotees, observe even a single precept properly for a year, two years, ten years, or a lifetime—whether you perform an Act of Truth or not—how much peace can you bring to the world? In that way, we can understand that it is through personal example, by rising from this swamp of defilements through one's own efforts, and through an internal revolution of the mind, that we can preserve this Dispensation.</p>
+<p>One cannot pull others out while remaining sunk in the swamp oneself, no matter how much effort is applied. That is the kind of matter we have here. Therefore, the Lord Buddha preached the greatness of Angulimāla's character in a certain verse, the meaning of which you may have heard. Reciting verses constantly might distract some minds, so to give the meaning of the verse: "If someone, having previously fallen into negligence, subsequently releases their mind from negligence, that person illuminates the world like the moon freed from a dark cloud."</p>
+<p>It is mentioned in the Dhamma that a similar verse was uttered at the time of Ven. Angulimāla's final passing (*pariNibbāna. Due to the meaning of the word "Angulimāla" and the past of his character, there were bhikkhus at that time who did not even believe that Ven. Angulimāla had become an Arahant, as revealed by an account in the Dhamma literature. That is, when the Great Arahant Angulimāla passed away, a discussion arose among the bhikkhus, and they asked the Lord Buddha, "Where has Ven. Angulimāla been reborn?" Then the Lord Buddha declared, "Angulimāla is not reborn anywhere; he has ended life (*parinibbuto*)." Thus, even those bhikkhus had not believed until then that Ven. Angulimāla had become an Arahant. In the verse preached on that occasion, it is said: "Whosoever's previously committed unwholesome deed, evil, or sinful action is covered by subsequent wholesome deed—no matter how many sinful actions were committed before, if one has made a transformation of life by inclining towards the wholesome afterwards, that person's unwholesome is covered by the wholesome." The Lord Buddha demonstrated this idea there too using the same simile mentioned earlier: "just like the moon freed from a black cloud."</p>
+<p>Thus, such exemplary characters exist in our Buddhist literature. Instead of those defeated characters, what we must bring forward, and what we must direct our attention to—and where the youth must direct their attention—is these. There are numerous undefeated characters in the ancient stories of both the laity and the clergy. Even if we think of the character of the Lord Buddha, in certain instances mentioning Māra, it is said: "*Saṅgāme me mataṁ seyyo, yañce jīve parājito*"—"It is better for me to die in battle than to live as a defeated one." That is it.</p>
+<p>Therefore, what we have to think of is not taking defeated ones as our example, nor living as a defeated person. No matter how much we have fallen into defeat, even if we are defeated a hundred times, we must try to win at least once. The beginning of that winning is what is called the practice of virtue (*sīla*). Because of this, as mentioned before, only you know the swamps in which you are stuck. If one is stuck in the muddy water of destroying life—breaking the first precept through killing animals, harming living beings, and craving the taste of meat—one can rise through making some sacrifice, by giving safety (*abhaya-dāna*). If one makes an effort to rise from the swamps of theft, sexual misconduct, lying, drinking alcohol, and so on in which one has fallen, then while making that effort in daily life, one must strive to strengthen them further through the Five Precepts (*pañca-sīla*). In this way, separating oneself from domestic problems and strengthening these virtues is what is called observing the precepts on this full-moon day (*poya*). Let us consider what the lay disciples (*upāsakas*) of the past did, who undertook the precepts twice a month: if their virtue (*sīla*) became soiled amidst various unexpected troubles, obstacles, sufferings, and hostile dangers in lay life, they would wash it on the poya day, just like washing a soiled garment.</p>
+<p>Indeed, that is why we wear this white garment; if the white garment symbolizes anything, that is what it should symbolize. If there are any stainings of our virtue (*sīla*) in daily life, the full-moon day (*poya*) is the opportunity to restore them, to strengthen them. It is the pious person who gradually strengthens them in this way who can experience a highly marvelous happiness unknown to the world, called the blameless happiness (*anavajja-sukha*). A lay devotee who lives observing these virtues of virtue (*sīla*) and so on enjoys that blameless happiness—a wonderful happiness and comfort that others cannot even imagine. We have met such people at least occasionally. Pious devotees who have observed virtue (*sīla*) so purely that they can perform Acts of Truth through the power of their virtue are able to spend their daily lives very lightly, free from mental distress. Not only that, if one hopes to—whether lay or ordained—one can also proceed to the second step through a meditation subject (*kammaṭṭhāna*).</p>
+<p>In doing so, as you may have heard, what stand as hindrances to the one-pointedness of mind and concentration are those called the hindrances (*nīvaraṇa*). These are sensual thoughts, thoughts of ill-will, sloth and torpor, remorse regarding the past, restlessness regarding the future, and doubt or skepticism—things that scatter the mind. If one detaches the mind from these and establishes it on some meditation subject (*kammaṭṭhāna*), then, just as it is said, "cultivating the wholesome (*kusalassa upasampadā*)", one gains the strength to enter and dwell in some wholesome state such as the absorptions (*jhānas*). That is the level of concentration (*samādhi*). Next, the practice of purification that was initiated: the body and speech are purified, and by temporarily removing the hindrances, the mind is purified to a certain extent.</p>
+<p>But the Lord Buddha declared, "Ignorance is the ultimate stain (*avijjā paramaṁ malaṁ*)"—the rust of action. The greatest rust is ignorance. A Buddha is born precisely to remove that rust. Until then, no matter how much one strives, and whatever other paths or practices are shown, this rust of ignorance cannot be removed. Only a Buddha reveals to the world the necessary understanding of the Four Noble Truths, along with the deep Dhamma such as Dependent Arising (*paṭicca-samuppāda*) underlying it. If one understands those, and at some point cultivates insight (*vipassanā*) through the three characteristics of impermanence / inconstant (*anicca*), suffering / unsatisfactoriness / stress (*dukkha*), and not-self / non-self / unsubstantial (*anattā*) in this world—it is at such a moment that the rust of ignorance is removed. Having brought forth those insight-knowledges (*vipassanā-ñāṇa*) through a meditation subject (*kammaṭṭhāna*), and by cultivating them, one attains purification through wisdom, as stated by "*paññāya*". That is what is called liberation from the suffering / unsatisfactoriness / stress (*dukkha*) of saṁsāra. Therefore, we must understand that we cannot delegate the preservation of this Dispensation to anyone else. If we hope to preserve the Dispensation, we must establish the Dispensation within ourselves. We must develop it. We must attain it. In inclining this society towards the Dhamma, as mentioned before, it is not precept but example that is primary there.</p>
+<p>If we reflect according to these matters, the Dhamma of the Lord Buddha holds the potential for a person to develop such a grand life. The Lord Buddha did not cast anyone aside. For, in this long saṁsāra, we did not come all this way merely committing sins and doing bad things. Just because someone, according to social standards and as a result of past kamma, is born with physical or mental weaknesses, we cannot cast that person aside. It is the All-Compassionate Lord Buddha who reveals these things to us.</p>
+<p>Why is it said that individuals from whom it was least expected attained Arahantship or achieved the fruits of the path after hearing just one sermon of the Lord Buddha? Because the Lord Buddha knew the kammic force of each individual, their wholesome strength at those moments, and the turning of their wheel of merit. He could see the dispositions and latencies / underlying tendencies (*anusaya*) of those individuals; the Lord Buddha possessed such special knowledges. He also possessed the knowledge of skillful means. If a man or a woman had cultivated a certain meditation subject (*kammaṭṭhāna*) in past saṁsāra, then regardless of what else they had done, when given an instruction close to that meditation subject or when a verse was uttered to direct them in that direction, then, with the help of faith (*saddhā*) in the Lord Buddha and other relevant factors such as mindfulness (*sati*), that man or woman was able to attain even the fruits of the path. Therefore, it is mentioned that some attained this penetration of the fruits of the path even while a sermon was being preached. There are numerous such occasions, known as the bases of liberation, through which liberation can be attained: while listening to the Dhamma, while teaching the Dhamma, while discussing the Dhamma, while reflecting on the Dhamma, or while cultivating a specific concentration (*samādhi*).</p>
+<p>Therefore, instead of thinking that this comes merely by listening to sermons for convenience, one must arouse a fair amount of strong energy within oneself to bring forth the latent power within. One must bring it forth. That energy is what we called the element of initiation (*ārambha-dhātu*), the element of launching (*nikkama-dhātu*), and the element of exertion (*parakkama-dhātu*). When we reflect in this way on the stages of exercising that energy—as virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*)—we see that we should not delegate this Buddha-Dispensation to those external symbols. Sometimes those symbols may exist, but if the people live lives like beasts to such an extent that they cannot even recognize them, we cannot say that the Dispensation exists on that land merely because those symbols are present. If preserving the Buddha-Dispensation means only the piling up of such symbols, then we would have the opportunity to say that there are plenty of Buddha-Dispensations. Looking at the current buildings and so forth, they are more advanced than in the past. There are buildings, stupas, and Buddha statues—wonderful things that might amaze even foreigners.</p>
+<p>But if foreigners visiting this country get close to a person here and, upon associating with them, find that in terms of virtues they have degenerated to the point where it is hard to tell whether they are human or beast, can we say there is a Dispensation existing on that land? That is what we must reflect upon. Without any distinction between laity and clergy, if we reflect on this, that is how the aforementioned Sāsana Elephant—the Sāsana Elephant stuck in the mud—must be rescued.</p>
+<p>Therefore, on such a valuable day, we all must reflect. These things are not said to insult anyone; they are said because these are things that must be remembered and reminded to others. Placing one's own character at the forefront, and reflecting on the slight transformation that has occurred in one's life through turning to this path of Dhamma—just as we say, "if that much led to this, how much more would this lead to?"—we should resolve within our own minds: "if we make more effort, how far can we go, and how great a service can we render to others?" You know very well that a pious person who has developed meditation such as loving-kindness (*mettā-bhāvanā*) can sometimes perform marvelous things. That is through developing and purifying the mind, not in some indirect way, but through such mental power. In that way, as we constantly remind, the ways of helping someone in the world are not sufficient at an economic level alone; they must also be done at a righteous (*dhammic*) level.</p>
+<p>One cannot always be a help and refuge to someone merely by lending a hand or giving money. No matter how much wealth is given, there are situations where one cannot help them. One must develop within oneself the strength to offer a "change of heart" (*hita-māruvak*). The strength to offer a change of heart comes from being a spiritual friend (*kalyāṇa-mitta*). To be a spiritual friend (*kalyāṇa-mitta*), one must possess within oneself the strength to rise from that aforementioned swamp. In that way, when one becomes a spiritual friend (*kalyāṇa-mitta*) to society through virtues, then those unrestful conditions and seemingly unresolved problems in society might automatically resolve themselves, or at least the way to resolve them may be revealed. Pious devotees, you must then realize that in this time of the decline of the Dispensation, it is our great fortune to turn to virtues and, during today, even within this short time or few hours, to understand the value of practice, and that practice is more valuable than birth / arising (*jāti*).</p>
+<p>Reflecting on how even those like Angulimāla, or those who had births we might consider even lower, became so noble through practice, we must use this full-moon day (*poya*) to bring forth the strengths within us. Pious devotees, by determining and observing some valuable virtue (*sīla*)—whether the Ten Precepts, the Eight Poya Precepts, or the Right Livelihood Eightfold Precepts—you have obtained the opportunity today to reflect upon any shortcomings in your virtue and strengthen them, just like washing your garments. Furthermore, through applying yourselves to meditation and listening to this sermon we have delivered, every one of us as Buddhists, whether lay or ordained, should hold the aspiration—the target—of escaping from this dangerous saṁsāra of repeated birth / arising (*jāti*), from this wheel of kamma, and elevating our minds to what the Lord Buddha declared to us: "*Natthi dāni punabbhavo*"—"Now there is no more repeated becoming / existence (*bhava*)."</p>
+<p>This saṁsāra is a dangerous place. Even though we have met spiritual friends (*kalyāṇa-mitta*) at this time, next, in some country or land, we might be born among those of wrong view, born among beasts, born among yakkhas, born among hungry ghosts (*petas*), and turning again to unrighteousness, some may suffer / unsatisfactoriness / stress (*dukkha*) for countless eons. Because saṁsāra is so dangerous, the Lord Buddha showed the only way to escape from this wheel of kamma. What is there to do? As stated by "*paññāya*", we must, through this wisdom (*paññā*), suppress, thin out, eliminate, and cease the ignorance (*avijjā*) and craving / thirst (*taṇhā*) that we carry through saṁsāra, and understand them in this very life. If we remove the attachment to this pile of suffering / unsatisfactoriness / stress (*dukkha*) of the five aggregates and, at some point, attain the noble state of Nibbāna, that realization is experienced in this very world. That is what is called the noble state. There is no more birth / arising (*jāti*). The fear of death is ended right there. The Lord Buddha has shown us the way to experience such a state. Such an peerless, marvelous, and noble Dhamma we have received.</p>
+<p>If we do not take advantage of the Dhamma on such occasions, we will have to regret it at the moment of death. No matter how much wealth, grain, and resources we have, at the time we have to leave them behind, we will regret: "Alas! I did not train my mind. I trained my body by giving it various exercises, but I did not train my mind." Then, following that thought, there is no knowing where one will be born / arising (*jāti*). Therefore, you must strengthen your minds to take the maximum—not the minimum, but the maximum—advantage of this valuable and rare opportunity, and to make the greatest sacrifice.</p>
+<p>If you have obtained some help and support in generating those qualities of faith (*saddhā*), virtue (*sīla*), energy (*vīriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*) through listening to this Dhamma—which are the path leading to Nibbāna—aspire that: "By further developing these, and by associating with spiritual friends (*kalyāṇa-mitta*), may this wholesome power surely be a strong support for realizing the noble deathless, the noble Nibbāna through the penetration of the fruits of the path namely Stream-entry, Once-returning, Non-returning, and Arahantship." Likewise, if your departed relatives and all beings from the Avīci hell to the Akanistha heaven hope to escape from this suffering / unsatisfactoriness / stress (*dukkha*) of saṁsāra, and hope to rejoice in this Dhamma sermon, may they rejoice in this merit and be comforted by the noble, great Deathless Nibbāna through the Bodhi of their aspiration. Keeping this aspiration in mind, recite these verses and share the merit.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_089.html" class="doc-btn">← Previous Sermon (089)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_091.html" class="doc-btn">Next Sermon (091) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

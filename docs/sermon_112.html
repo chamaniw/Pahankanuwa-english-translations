@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 112 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_111.html" class="doc-btn">← Previous Sermon (111)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_113.html" class="doc-btn">Next Sermon (113) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 112</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_112_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_112_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_112_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #112</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.30)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Na kahāpaṇavassena, titti kāmesu vijjati;</p>
+<p>appassādā dukhā kāmā, iti viññāya paṇḍito;</p>
+<p>api dibbesu kāmesu, ratiṃ so nādhigacchati;</p>
+<p>taṇhakkhayarato hoti, sammāsambuddhasāvako ti.</p>
+<p>From:</p>
+<p>Dhammapada 186 (Buddhavagga)</p>
+<p>Dear Listeners,</p>
+<p>On this invaluable Esala Full Moon Poya Day, let us highlight several points relevant to a precious Dhamma discourse delivered by our Buddha. Generally, worldly people think that if they can eliminate poverty and lack, they can lead a happy life; almost everyone holds this view. However, our Buddha demonstrates that as long as Craving / Thirst (*taṇhā*) is present, the world cannot eliminate Suffering / Unsatisfactoriness / Stress (*dukkha*). Why is this? Because as long as Craving / Thirst (*taṇhā*) exists, lack and scarcity will only grow. The root cause of the growth of lack and scarcity is indeed Craving / Thirst (*taṇhā*). Therefore, it is only by eliminating Craving / Thirst (*taṇhā*) that Suffering / Unsatisfactoriness / Stress (*dukkha*) can be eliminated.</p>
+<p>This is why our Buddha, even in His very first sermon—the Dhammacakkappavattana Sutta, delivered on the Esala Full Moon Poya Day—introduced Nibbāna by the name of the destruction of craving (*taṇhakkhaya*). Thus, it is only by eliminating Craving / Thirst (*taṇhā*) that one can completely free oneself from the Suffering / Unsatisfactoriness / Stress (*dukkha*) of Saṃsāra. According to worldly concepts, people imagine that if a rain of coins were to fall, they could satisfy all their needs, and the entire world could live in prosperity.</p>
+<p>But the Buddha declared that even if a rain of *kahāpaṇas*—a rain of gold coins—were to fall in that manner, this Craving / Thirst (*taṇhā*) could never be brought to an end. Craving / Thirst (*taṇhā*) is something that grows and proliferates like a tree or a vine. Therefore, the more one receives, the more the desire arises for "yet more"; a feeling of "this is enough" never arises in Craving / Thirst (*taṇhā*). It only says, "this is still insufficient." Even in this modern era, various kinds of "rains" fall in the form of lucky draws and bags of fortune. It is difficult to think that any of these can completely resolve the trials and tribulations of our lives. Indeed, the stanza we have chosen as our theme today, as well as its background story, speaks of a story concerning gold coins.</p>
+<p>At the time when our Buddha was residing in Jetavana, a certain young man left the household life and ordained. Having ordained, under the guidance of his preceptor, he went to a distant area to study under a teacher in order to learn the Vinaya and other disciplines. During that time, this monk's father fell extremely ill and drew near to death. The father deeply wished to see his son, the disciple of the Buddha, but there was no way to send a message. Therefore, at his final moment, thinking of his son and speaking deliriously, he handed over a hundred *kahāpaṇas* to his younger son—the monk's younger brother—saying, "This is for my noble son to obtain a bowl and robes," and then he passed away.</p>
+<p>Later, when the monk returned to Sāvatthi and visited his father's house, his younger brother fell at his feet, wept bitterly, and said, "At his final moment, our father declared this: he gave me a hundred *kahāpaṇas* for you to obtain a bowl and robes." When the brother asked what should be done with the money, the monk rejected it, saying, "We have no use for these *kahāpaṇas*." Even though he rejected it, later on, a kind of doubt and hesitation arose in this monk: "Why should I trouble myself going from house to house begging for alms? Would it not be better for me to find some employment, return to the lay life, and live comfortably? I can live with these hundred *kahāpaṇas* as my capital." With this thought, he lost interest in his studies and meditation, neglected his monastic duties and routines, and began to pass his time lazily. His physical complexion also became pale and wan. Seeing this, the other novice monks asked him, "What is the matter?" and the monk revealed his thoughts.</p>
+<p>Those monks and novices then escorted him to our Buddha. Our Buddha asked, "Why, monk, have you become disaffected? Why are you thinking of returning to the lay life? Why are you dissatisfied with the Holy Life?" When asked, the monk recounted the story. Then our Buddha did this: "Do you think you can sustain your livelihood with these hundred *kahāpaṇas*? Very well, then, instead of those hundred *kahāpaṇas*, go and bring a hundred pebbles." The monk gathered a hundred pebbles and returned.</p>
+<p>Our Buddha then began to calculate the accounts with them to see if this amount was sufficient to return to lay life. First, He asked him to set aside fifty of them: He told him to set aside fifty pebbles just for food, drink, and basic sustenance after returning to lay life. He set them aside. Next, He told him to set aside twenty-four *kahāpaṇas* to buy a pair of oxen if he was to engage in farming. Then, He told him to set aside such and such numbers of pebbles for a plough, spade, sickle, axe, and so forth. In the end, when they looked, those hundred pebbles were insufficient. The hundred *kahāpaṇas* were not enough even as basic capital.</p>
+<p>Then our Buddha declared: "Do you see now, monk? How can you satisfy your Craving / Thirst (*taṇhā*) with these hundred *kahāpaṇas*? Not only for you, but even for the great King Mandhātā—who possessed such immense psychic power that at the mere snap of his fingers a rain of seven treasures fell waist-deep over an area of a league, who lived for an incredibly long time, and who ruled over the heavenly worlds through the reigns of thirty-six Sakkas—even he was unable to eradicate his Craving / Thirst (*taṇhā*). He passed away to the next world without being able to fulfill his Craving / Thirst (*taṇhā*)." Having related this Jātaka story, our Buddha uttered these two verses at the end:</p>
+<p>> *“Na kahāpaṇavassena, titti kāmesu vijjati;*</p>
+<p>> *appassādā dukhā kāmā, iti viññāya paṇḍito.*</p>
+<p>> *Api dibbesu kāmesu, ratiṃ so nādhigacchati;*</p>
+<p>> *taṇhakkhayarato hoti, sammāsambuddhasāvako”ti.*</p>
+<p>*"Na kahāpaṇavassena titti kāmesu vijjati"*—Not even by a rain of *kahāpaṇas* or a rain of gold coins is there any satisfaction, fulfillment, or contentment regarding sensual pleasures (*kāma*). Next:</p>
+<p>*"Appassādā dukhā kāmā"*—Sensual pleasures and the objects of sensual pleasure do have a side of gratification (*assāda*), a side of enjoyment, but it is exceedingly minor. It is very little. However, when looking at their undesirable consequences and disadvantages (*ādīnava*), they entail much Suffering / Unsatisfactoriness / Stress (*dukkha*). *"Appassādā dukhā kāmā"* means gratification is little, but Suffering / Unsatisfactoriness / Stress (*dukkha*) is abundant.</p>
+<p>*"Iti viññāya paṇḍito"*—The wise person, having understood this matter,</p>
+<p>*"Api dibbesu kāmesu ratiṃ so nādhigacchati"*—does not develop an attachment even to heavenly sensual pleasures. The true disciple of the Buddha does not develop an attachment even to the bliss of the heavenly worlds; the wise one does not form an attachment to it.</p>
+<p>*"Taṇhakkhayarato hoti sammāsambuddhasāvako"*—In what does the true disciple of the Fully Enlightened One find delight? He finds delight in *taṇhakkhaya*, which means the destruction of craving, the exhaustion of thirst. The name *taṇhakkhaya* is used for Nibbāna itself. Nibbāna is defined in the sense of the eradication of craving. Our Buddha declared that the true disciple of the Fully Enlightened One finds delight in that extinguishment.</p>
+<p>Therefore, this story and these verses are highly exemplary for us. There are lessons in this story and these stanzas that serve as models for our lives. When we reflect on this story, dear devotees, money is something indispensable for lay life. Indeed, our Buddha once declared—in response to a question that arose regarding the Sangha—that if money is allowable to someone, then the fivefold sensual pleasures and the fortunes of sensual pleasures are also allowable to them. This is because money is like an invitation to the lay life.</p>
+<p>Now, that father leaving a hundred *kahāpaṇas* for the sake of that monk was just like an invitation to become a layman. And that monk was preparing to accept that invitation. Our Buddha changed the monk's mind through a timely simile and a timely course of action. Generally, however, you devotees know that leaving the lay life, which is leaving Saṃsāra, requires getting away from gold, silver, money, and other such things that belong to these sensual objects.</p>
+<p>According to the Noble parlance, returning to lay life from the monkhood is referred to as "death." According to the Noble parlance and monastic usage, when someone who has ordained gives up the robes and leaves, it is considered a death, a demise. Often, in monastic terms, money is referred to as a "serpent." You devotees know that when a serpent bites, death is often the result. A similar thing was about to happen to that monk. Just like being bitten by a serpent, a multitude of thoughts about the lay life arose in that monk, to the point of slipping away from his monkhood. Our Buddha removed it through a timely step. Thus, we should consider this as one of the lessons to be drawn from this story. Furthermore, our Buddha made him understand the troublesome nature of lay life through the demonstration He conducted by having that monk bring those pebbles.</p>
+<p>You devotees know very well about a critical problem that heavily affects lay life—the great effort and immense struggle to balance income and expenditure in living a household life. The gravity of this was made clear to that monk through the question of whether these things could be done with a hundred *kahāpaṇas*. In this way, our Buddha's supreme skill-in-means (*upāya-kosalla*), His knowledge, and His wisdom are revealed to us through the story associated with these verses.</p>
+<p>When we contemplate these verses, we see that what our Buddha has expressed here is an eternal, timeless truth. Why is it said that even a rain of *kahāpaṇas* cannot quench one's desires? Often, we do something thinking that if we obtain it we will be happy and can live our lives well. But even as we receive those things, our minds bend toward more and more luxurious things. In this era, when we look at things commercially, invitations to a luxurious life are everywhere, prompting people to spend in a way that does not match their income.</p>
+<p>Therefore, to live peacefully and happily in such a society, even if you devotees cannot renounce everything and ordain, you must try to cultivate a simple lifestyle and noble thoughts in your lay lives. For one who does not understand the value of this simple life, accepting the invitations presented by this commercial civilization leads to falling into a terrifying abyss of debt. Among the forms of happiness necessary for lay life, "the happiness of debtlessness" (*anaṇa-sukha*) is highlighted. But this becomes extremely difficult if one's desires and Craving / Thirst (*taṇhā*) are intense. Therefore, it is to help even ordinary lay devotees understand the disadvantages of these desires that our Buddha has preached here that even a rain of *kahāpaṇas* cannot bring satisfaction or contentment regarding those sensual pleasures and desires.</p>
+<p>Similarly, *"appassādā dukhā kāmā"*—the nature of sensual pleasures is such that they bring little gratification, minor pleasure, and brief happiness, but their disadvantages (*ādīnava*) are abundant. This is the fact that must be understood by the wise. Even heavenly fortunes and heavenly bliss, though subtle, are still part of the fivefold sensual pleasures. Therefore, without developing an attachment even for those, one must strive to gradually thin out this Craving / Thirst (*taṇhā*), to exhaust it, to extinguish it—which is the liberation from craving called Nibbāna. This is the message our Buddha gives.</p>
+<p>Indeed, what many people do to quench their Craving / Thirst (*taṇhā*) is to give it whatever it asks for. This is like giving water to a feverish patient. You cannot satisfy a feverish patient by giving them water every time they ask for it. A true physician examines the root cause of the disease and administers medicine; then, the demand for water naturally ceases. In the same way, our Buddha shows that there is absolutely no end to be found in these desires. Even a multi-billionaire is a pauper when compared to the great King Mandhātā we mentioned. King Mandhātā was so incredibly powerful that through his psychic and meritorious power, a rain of seven treasures fell when he clapped his hands. Yet, even with such a rain of seven treasures, he could not be satisfied. Since Craving / Thirst (*taṇhā*) is of this nature, it is only when one removes this Craving / Thirst (*taṇhā*) from one's mind-stream that true peace is obtained.</p>
+<p>When a certain householder named Potaliya came to discuss with our Buddha, the Buddha illustrated the disadvantageous side of these sensual pleasures using seven magnificent similes. You devotees may have heard some of these before.</p>
+<p>The first simile is explained by our Buddha in this way: A dog, tormented by extreme hunger, goes to a slaughterhouse or a butcher's shop and waits for something to be given. The butcher or his apprentice takes a bone from which all meat has been stripped, leaving only a bone smeared with a bit of blood, and throws it to the dog. The dog picks it up and, because of the trace of blood, tries to gnaw it to find satisfaction. What happens? Sometimes its mouth gets cut, and in the end, it is its own blood that it drinks. In this way, the dog only gets exhausted; its hunger is never actually appeased. Following this simile, our Buddha says to the householder Potaliya: "In the same way, remember that the Blessed One has preached that the gratification (*assāda*) of these is very little, while the Suffering / Unsatisfactoriness / Stress (*dukkha*) is abundant; their disadvantages (*ādīnava*) are great, and they are full of fear." To keep this simile in mind, we can call it the "Simile of the Meatless Bone." This is the first simile.</p>
+<p>Next, He gives another simile: A vulture or a hawk takes a piece of meat and flies up into the sky. Seeing this, other vultures and hawks chase after this bird and peck at it to snatch that piece of meat. If the bird does not let go of the piece of meat, what will happen? It will either face death or suffer grave injury and fall. Sensual pleasures are just like that, says the next simile. From this, we can contemplate deeply that every single simile given by our Buddha is actually like a meditation subject (*kammaṭṭhāna*). There is immense depth in them.</p>
+<p>We can relate this to today's society: it is not just one person who desires these sensual objects or any given thing. There is a vast crowd competing for them. Someone snatches it and flies off like that hawk, and a crowd chases after them. If they do not let go of it, if they cling to it, they will face disaster from the others. Such is their nature. Because so many people desire them, one has to face them in a highly competitive manner and suffer thereby. This is the lesson we must draw from this simile, which we can call the "Simile of the Piece of Meat."</p>
+<p>Thirdly, He gives a simile: A person takes a grass torch—nowadays we have flashlights, but in those days when walking in the dark they would carry a fiery torch. Here, it is a grass torch made of grass. Carrying it, they walk against the wind. What happens as they walk against the wind? The embers and sparks of that torch blow back onto their own hand. Their hand will be burnt if they do not let go of that grass torch. Sensual pleasures, too, can be compared to that grass torch. What does this show? It shows that by pursuing these sensual objects, many people end up burning their own hands. The side of their disadvantages (*ādīnava*) is that dangerous. They do not know it, but our Buddha showed that the danger of sensual pleasures is just like carrying a grass torch against the wind.</p>
+<p>Next, He gives another simile: the Simile of the Pit of Glowing Embers. Suppose there is a person who loves life and hates death. In one place, there is a pit of glowing embers, deeper than a man's height, filled with blazing, glowing embers. Two strong men come, grab that man by his two arms, and drag him toward that pit of embers. Step by step, that man knows, "If I fall into this, I will face either death or suffering equivalent to death." But he has no choice; he is being dragged toward it. Sensual pleasures are compared to this pit of glowing embers.</p>
+<p>Contemplating deeply, we can understand that sensual pleasures are desires. The strength of these desires is such that they drag a person along, just as if they were being dragged by someone else. When a weak man is dragged by two strong men, our Buddha explains that he twists and turns. He twists and struggles to escape from it, but he cannot. Yet he knows that if he falls, he will be destroyed. Our Buddha preached this simile to indicate that such is the nature of those desires. But in all these, our Buddha provides similes to help one develop equanimity (*upekkhā*) toward them. When these desires arise, one can reflect: "The Blessed One has preached this truth."</p>
+<p>With this in mind, we must maintain equanimity toward them. Because of intense desire, you devotees know how often we hear nowadays of people killing others or committing suicide in various ways. Why do they do this? It is due to the force of their thoughts. It is like jumping into a pit of glowing embers. Instead of being dragged, here it is like jumping in. But why do they jump? They are dragged by their own thoughts. Being "dragged by the two arms" represents being dragged by those thoughts. If there is no control over those thoughts, one goes, falls into the pit of embers, and dies. This is the Simile of the Pit of Glowing Embers.</p>
+<p>Next, our Buddha gives another simile: Suppose a poor person borrows fine clothes and ornaments to go to a wedding or festival—you devotees know about borrowing things, even vehicles as mentioned in the Suttas, which also happens today. They do not own a vehicle, they walk on foot, but because they want to show off at the wedding, they borrow someone else's vehicle, even if it means getting into debt. Not only the vehicle, but there must also be people to match it. Our Buddha explains this with specific reasons.</p>
+<p>To show off at a festival, out of pride, a person borrows a vehicle, fine garments, jewelry, and even a retinue to display as their personal wealth. They travel through the middle of the city with all these fortunes. The onlookers who see this say, "Oh, how wealthy this person is! This is how a person of great fortune enjoys their wealth!" Seeing the splendor and fortune of this person, the townspeople speak in this manner. While they are saying this, the owner of the vehicle comes and demands the vehicle back. The owner of the fine garments reclaims them, or even snatches them away if they are not returned. If they have an urgent need, they will snatch them. The owner of the jewelry reclaims them. In the end, what is left for this person?</p>
+<p>This is how the disadvantages of sensual pleasures are shown. All these are demonstrated to be like borrowed goods. The things we think of as our sensual pleasures are actually like items borrowed from others, which must be returned later. Often in today's highly competitive society, in order to appear superior to one's neighbors, people run into debt or degrade themselves to acquire these comforts and fortunes. But even though they acquire them, they live in great fear within their hearts: "If these owners suddenly come and demand them back urgently, what will happen to me?" Such is the state. That is the nature of sensual pleasures. Because of the inability to be satisfied, the inability to find contentment, and due to that competitive nature, one can fall into such Suffering / Unsatisfactoriness / Stress (*dukkha*). That is what our Buddha demonstrates to us through this simile.</p>
+<p>Next, He gives another simile, which is very easy to understand and is stated without much detail: Suppose a person sees in a dream a beautiful forest, lovely gardens, and exquisite ponds. They look at these in their dream. Suddenly, they wake up. Once awake, where are those scenes? Those extremely delightful scenes, those sights they were enjoying—where are they? None of them are there. In the same way, our Buddha declared that these sensual pleasures are like a dream.</p>
+<p>We think of dreams as things seen only at night. But there are also daydreams. In this day and age, many people live on daydreams, dreaming about the future in that manner. These desires look very beautiful from afar. But when one experiences them, one has to face their disadvantages (*ādīnava*); that is what this simile indicates. Their emptiness is highlighted by this simile of a dream: "It is as false as an ointment applied in a dream." Someone comes and applies ointment to your eyes in a dream, and it feels very strong, but when you wake up and look, there is nothing. Such a simile is also shown.</p>
+<p>Next, our Buddha declares another simile: A person enters a forest looking for fruits. In that forest, they see a tree laden with fruits. They think, "I can climb this tree," and they climb it. Having climbed it, they eat the ripe fruits and even fill their pockets. While they are engaged in this, another person comes along also looking for fruits. This second person sees the tree, but they cannot climb it. In their hand, they have a sharp axe. Since they cannot climb, they begin to chop down the tree at its root. If the first man who climbed the tree does not climb down quickly, when the tree falls, he will fall with it and face either death or grave Suffering / Unsatisfactoriness / Stress (*dukkha*). Our Buddha declared that sensual pleasures are just like that. This is also a simile to be contemplated.</p>
+<p>What this shows is how many people, and in what ways, draw close to these sensual objects. You devotees know that in a competitive society, some obtain jobs, offices, and titles through right means, while others obtain them through wrong means. Sometimes, the one who obtained it through right means has to face dangers from the one who comes to obtain it through wrong means. It is because of such occurrences that this simile shows the terrifying consequences one has to experience. What one has acquired with great effort and trouble, another is waiting to snatch away through wrong means, thereby forcing one to face hazards.</p>
+<p>In this way, our Buddha has shown through seven similes that there is absolutely no satisfaction in these sensual pleasures of the world. Although they have a side of gratification (*assāda*), it is minor, and they are full of much Suffering / Unsatisfactoriness / Stress (*dukkha*) and disadvantages (*ādīnava*). Because of this, our Buddha declared as an eternal truth that the only true peace for the world is the sublime Nibbāna, which is the destruction and elimination of Craving / Thirst (*taṇhā*).</p>
+<p>If we contemplate this deeply, what is the cause of Craving / Thirst (*taṇhā*)? It is the notion of "I" and "Mine." While all other religions validate this notion of "I" and treat it as something real, our Buddha declares, according to the doctrine of Non-self (*anattā*), that although this "I" exists in conventional usage, it is not a reality; it is an illusion, the Dogma of self-illusion (*sakkāya-diṭṭhi*). Arising simultaneously with the notion of "I" is the notion of "Mine." The moment that concept of "I" is created by ignorance (*avijjā*), Craving / Thirst (*taṇhā*) supports it as "Mine." Our Buddha declared that it is due to this ignorance (*avijjā*) and Craving / Thirst (*taṇhā*) that we wander in this Saṃsāra for a long time. As the solution to eradicate this, our Buddha states that it is only by gradually thinning out that intense Craving / Thirst (*taṇhā*), and through meditation and insight, developing this power of wisdom (*paññā*) within the mind, that this Craving / Thirst (*taṇhā*) can be exhausted.</p>
+<p>But short of that, lay devotees can understand this: when someone observes the Eight Precepts on a Poya day like this, and refrains from taking food at improper times—living according to the practice of the Arahants—wearing white robes and leading a simple life, showing no attachment to their comfortable lives or fine ornaments, they are gradually thinning out that Craving / Thirst (*taṇhā*). They are eliminating the coarse, rough side of Craving / Thirst (*taṇhā*).</p>
+<p>Furthermore, you devotees know that this Sasana of the Buddha can, on one hand, be described in terms of giving (*dāna*), virtue (*sīla*), and meditation (*bhāvanā*). Through giving, one eliminates the attachment to the physical objects of sensual pleasure (*vatthu-kāma*). Sensual pleasure (*kāma*) is desire. Desire has two aspects: objective sensual pleasure (*vatthu-kāma*) and defilement-sensual-pleasure (*kilesa-kāma*). The attachment to objects is the coarsest level. That is something that can be done somewhat easily. That is the first lesson: giving (*dāna*). Sacrificing something, whether food or something else, to the poor, travelers, beggars, or toward the Triple Gem. Through this, one removes the stain of stinginess (*maccheramala*) that naturally accompanies the ordinary lay mind at that moment.</p>
+<p>If metal objects are left in a place without care, in the end, you do not see the object you expected; you see only a pile of rust. The lay mind is just like that. The rust that binds the lay mind is called the stain of stinginess (*maccheramala*). This is why our Buddha declared a series of praise-titles for the lay devotee who is engaged in giving: *“vigatamalamaccherena cetasā agāraṃ ajjhāvasati muttacāgo payatapāṇi vossaggarato dānasavibhāgarato”*—living the household life with a mind free from the stain of stinginess, always ready to give, hands clean, delighting in relinquishment, and delighting in sharing gifts.</p>
+<p>You devotees who perform meritorious deeds like giving know that after giving, a great joy and peace arises within you; that is a spiritual joy (*nirāmisa prīti*). *“Vossaggarato”* means finding delight in relinquishment. Next, *“dānasaṃvibhāgarato”*—delighting in distributing gifts, considering wisely what is appropriate for the recipient; one can derive happiness through that giving. This shows that one can develop a delight in *taṇhakkhaya*—the eradication of craving. Generally, the word for delight, *“rati”*, is used in a negative sense. But here, delight is used in a wholesome sense: delighting in the eradication of craving. It is this delight that must be practiced by the true disciples of the Fully Enlightened One (*sammā-sambuddha-sāvaka*).</p>
+<p>At the lay level, when a person gives away items they previously held as "I" and "Mine"—things they could have enjoyed for their own comfort—to the Triple Gem, to the poor, or even to an animal, out of a mind of faith or compassion, their Craving / Thirst (*taṇhā*) is thinned out for that brief moment. Greed, Craving / Thirst (*taṇhā*), and stinginess are cut away.</p>
+<p>Thus, giving is the primary step toward the destruction of craving. Virtue (*sīla*) also does a similar thing. On this occasion, you devotees have observed the Eight Precepts based on Right Livelihood, and even higher precepts. Through virtue (*sīla*), one disciplines body and speech. In truth, it is through the mind itself; the mind is chief. What we do with body and speech are the things dictated by the mind. We must establish discipline over them. This is what virtue (*sīla*) does.</p>
+<p>Worldly people gladly engage in killing animals for fun, as a livelihood, or for food. But one abstains from it. Stealing—there is nothing new to say about that. The easiest way to get rich without exerting effort is stealing; taking what belongs to others by force, stealth, or any other means. But one abstains from that too. There, too, one makes a sacrifice. By restraining body and speech through virtue (*sīla*), one makes a sacrifice, letting go of things that are pleasing to oneself. Pleasing things mean sexual misconduct, lying, taking intoxicants, harsh speech, and so on.</p>
+<p>Because worldly beings have done these things repeatedly throughout Saṃsāra, the mind is quickly drawn to them. To abstain from them, a special power of determination is required. This determination is what is developed through the undertaking of virtue (*sīla*). When this determination is made in front of the Sangha, it is better remembered by the mind. The effort to live within that determination is what is called guarding virtue (*sīla*). Through that guarding, the happiness of blamelessness (*anavajja-sukha*) arises within oneself—the joy, happiness, and gladness of living blamelessly. One can live peacefully without remorse.</p>
+<p>It is in such a person that meditation (*bhāvanā*) establishes itself. Having developed the power of sacrifice through giving (*dāna*), freeing oneself from unnecessary things and accustomed to a simple life, and then disciplining body and speech through virtue (*sīla*) to establish restraint and a peaceful mind free from remorse—basing oneself on that mind, one next enters into meditation (*bhāvanā*). Meditation (*bhāvanā*) means resting the mind on a sign of concentration (*samādhi-nimitta*) through tranquility (*samatha*).</p>
+<p>A sign of concentration (*samādhi-nimitta*), used as a subject of meditation (*kammaṭṭhāna*), is not the unwholesome things that the worldly mind thinks of. Even to shoot a human or an animal, a certain application of mindfulness and concentration is required to hit the target. But that is wrong concentration (*micchā-samādhi*) and wrong mindfulness (*micchā-sati*). There is a focusing and unification of mind on an object, but it leans toward the unwholesome side. Through that, Suffering / Unsatisfactoriness / Stress (*dukkha*) grows within Saṃsāra, leading to birth in hell and other bad destinations.</p>
+<p>Instead, one must take a wholesome object. Either through recollection of the Buddha (*buddhānussati*) using terms like *Arahant*, *Sammāsambuddha*, or *Bhagavā*, or through loving-kindness meditation (*mettā-bhāvanā*) wishing "may all beings be well and happy," or through the meditation on foulness (*asubha-bhāvanā*), impermanence (*anicca*), or mindfulness of death (*maraṇassati*) with short themes like "life is inconstant, death is constant"—bringing such a subject of meditation (*kammaṭṭhāna*) close to one's life and calming the mind through it. An effort is made to calm the scattered mind.</p>
+<p>The deepest level of this Craving / Thirst (*taṇhā*) is called Latency / Underlying tendency (*anusaya*). It is not something easily grasped. The level of Latency / Underlying tendency (*anusaya*) is extremely subtle. The Craving / Thirst (*taṇhā*) visible in the external world is what we call desire, greed, attachment, and stinginess. But there is an extremely subtle layer to this. It can only be brought to light by a concentrated mind. No one else can expose this for you; it is something one must recognize for oneself. To recognize it, calming the mind in some manner is fundamentally necessary. Once the mind is calmed, then, through proper reflection according to the Buddha's word—called Radical attention / Wise attention (*yoniso manasikāra*)—one observes how this mind operates.</p>
+<p>These cravings arise within the mind. No matter how exquisite things are in the world, no matter how beautiful the things displayed in shops are, or whatever advertisements are shown, Craving / Thirst (*taṇhā*) does not arise from those external things; it arises from deep within the mind. True, they become objects, but the secret lies in the ignorance (*avijjā*) within the mind. It is to make that ignorance (*avijjā*) grow and to feed the latent tendency of craving (*taṇhā-anusaya*) that those other things assist. Thus, identifying this is what must be done by oneself.</p>
+<p>In this way, the meditative mind gradually keeps watch over the objects that come to the mind. Instead of letting those objects drift far away—for normally, an object is something that drags our minds away... how does it drag us? Through whatever we see, a sign (*nimitta*) comes to us.</p>
+<p>A minor sign (*nimitta*) comes to us: "this is a woman," "this is a man," or "this is something pleasant," "this is something unpleasant." To that sign, we add more and more thoughts, becoming subservient to it and running after it. This is called accessory features (*anuvyañjana*). It is like adding curries to rice. We support the object that came to the mind and go in that very direction. The final end of that is the disaster we mentioned in the similes—succumbing to those desires. Since such is the nature of the mind, what does the meditator (*yogāvacara*) do? Instead of paying attention to those external objects, they look at their own mind, at how the mind operates. That, too, must be done properly in accordance with the subject of meditation (*kammaṭṭhāna*). It does not mean just watching the mind run.</p>
+<p>But gradually applying that Wise attention / Radical attention (*yoniso manasikāra*), one must focus attention on this scattered mind that is drifting away. Next, in that object, there are features that attract our minds. There are various signs (*nimitta*). Disregarding them, one notes very briefly: "form, form," "sound, sound," "scent," or "touch," and so forth. One gradually applies that noting to suppress the mind-captivating or mind-dragging nature of the object.</p>
+<p>By doing so, in the end, before the mind is agitated by the impact of the object and the mind, or by the objects coming through the five doors of eye, ear, nose, and so on, one develops the power to quickly remove them from the mind. In a split second, one subjects the mind to equanimity (*upekkhā*). Our Buddha has shown those seven similes precisely to assist in bringing the mind to equanimity (*upekkhā*). Anyone who contemplates deeply on each of these similes will develop a sense of equanimity (*upekkhā*) toward the sensual objects of the world.</p>
+<p>If that equanimity (*upekkhā*) is developed, the invitations coming from all sides will not affect one intensely. No matter how the world regards them, the feeling arises: "I have no use for them." For my simple life, for my life of few wishes, these are of no use. These are forces that drag one into Saṃsāra. What I want is to escape from Saṃsāra. To escape from Saṃsāra means to eradicate that grave ignorance (*avijjā*) called "I" and that Craving / Thirst (*taṇhā*) called "Mine."</p>
+<p>The journey toward that is what is done through the Noble Eightfold Path. The Four Noble Truths revealed to the world by our Buddha on a day like today contain just this. Although we need not repeatedly state that birth is Suffering / Unsatisfactoriness / Stress (*dukkha*), decay is Suffering / Unsatisfactoriness / Stress (*dukkha*), illness is Suffering / Unsatisfactoriness / Stress (*dukkha*), when we think about it carefully, every single one of them is seen to be Suffering / Unsatisfactoriness / Stress (*dukkha*).</p>
+<p>But in a deep sense, how does our Buddha's description of Suffering / Unsatisfactoriness / Stress (*dukkha*) conclude when considered in brief? In brief, all these five aggregates of grasping (*pañcupādānakkhandhā*)—called Form, Sensation / Feeling (*vedanā*), Perception, Formations / Preparations / Volitional activity (*saṅkhāra*), and Consciousness (*viññāṇa*)—which the worldly being clings to as "I" and "Mine," are themselves Suffering / Unsatisfactoriness / Stress (*dukkha*). These are Impermanent / Inconstant (*anicca*). There is no power in them to maintain them as "I" and "Mine."</p>
+<p>The similes given regarding those sensual pleasures demonstrate that none of these can be maintained under one's control. One cannot say they belong to oneself. They are like borrowed goods, or like things others are waiting to steal. There is a state in all these things where one cannot say they are one's own. That is the very danger and disadvantageous nature (*ādīnava*) therein.</p>
+<p>Thus, Suffering / Unsatisfactoriness / Stress (*dukkha*) was explained. Next, our Buddha declared that the cause of Suffering / Unsatisfactoriness / Stress (*dukkha*) is Craving / Thirst (*taṇhā*), presented as craving for sensual pleasures (*kāma-taṇhā*), craving for becoming/existence (*bhava-taṇhā*), and craving for non-becoming/non-existence (*vibhava-taṇhā*). There is an attachment to the objects met by these eyes, ears, nose, and so forth. Similarly, there is an attachment to continuing in this Saṃsāra, to remaining in Becoming / Existence (*bhava*). The reason for this is that one's desires are never satisfied. One dies with one's hopes unfulfilled. Everyone harbors certain hopes toward their final moments, thinking, "These questions will be resolved." But by the time of death, there are still a multitude of hopes.</p>
+<p>Because of those hopes, because of that Craving / Thirst (*taṇhā*)—which is called the leash of existence (*bhavanetti*)—there is a projecting forward. As a result of that projected Craving / Thirst (*taṇhā*), another Becoming / Existence (*bhava*) arises. The desire to maintain this existence in Becoming / Existence (*bhava*) is because one has grasped the notion of "I." Because of grasping (*upādāna*) that "here is an I, here is something belonging to me," there is an underlying desire in the subconscious mind to be born again in Becoming / Existence (*bhava*). In accordance with that desire, at the moment of death, there is a nature of grasping onto what is presented karmically.</p>
+<p>Next is craving for non-existence (*vibhava-taṇhā*). Some people think that everything ends with this life, or that something must be destroyed, and that by destroying it we can obtain happiness. But one cannot solve this problem by committing suicide. Our Buddha declares that what must be destroyed here is Craving / Thirst (*taṇhā*). Many people these days consider suicide or sacrificing one's life as the solution to these problems. But the problem cannot be solved through that. It is only by properly understanding this problem and generating wisdom (*paññā*) that one can escape from it. That is why Craving / Thirst (*taṇhā*) is the cause, as we stated at the beginning of the sermon.</p>
+<p>The remainderless relinquishment and elimination of that very Craving / Thirst (*taṇhā*) is what was introduced as Nibbāna. It is like quenching a thirst. This saṃsāric crowd of beings is like a herd of animals running after a mirage out of thirst. When the true nature of the mirage is realized, the running stops. Similarly, the state where that Craving / Thirst (*taṇhā*) is stilled is Nibbāna.</p>
+<p>The path to it is the Noble Eightfold Path. The Noble Eightfold Path consists of eight factors that help make a massive transformation in one's life. If we say it in simple terms, it is a proper vision of life, a proper philosophy of living. If we think carefully, everyone—both the thief and the good person—has some vision of life.</p>
+<p>But what is the correct vision of life? One must think in accordance with the teachings preached by our Buddha regarding good and bad, merit and demerit, in terms of Saṃsāra, and develop a good understanding of good and bad, merit and demerit. Furthermore, in a deeper sense, one must acquire a correct understanding of the Four Noble Truths—of Suffering / Unsatisfactoriness / Stress (*dukkha*), the cause of Suffering / Unsatisfactoriness / Stress (*dukkha*), the elimination of Suffering / Unsatisfactoriness / Stress (*dukkha*) called Nibbāna, and the path to it.</p>
+<p>The thoughts generated through that Right View (*sammā-diṭṭhi*) are Right Thoughts (*sammā-saṅkappa*). This includes the thought of renunciation (*nekkhamma-saṅkappa*), which is the thought of leaving the household life and realizing Nibbāna. Next, thoughts of non-ill-will (*avyāpāda-saṅkappa*), which are thoughts of loving-kindness opposed to anger. Then, thoughts of non-harming (*avihiṃsā-saṅkappa*), which are thoughts of compassion. Developing thoughts in this manner.</p>
+<p>Using words that follow those thoughts is Right Speech (*sammā-vācā*)—which, as in the virtue we undertook on this occasion, means disciplining speech by refraining from lying, slander, harsh speech, and idle chatter. That is with regard to correct speech.</p>
+<p>Next, to match those correct words, to practice what one preaches (*yathāvādī tathākārī*), one must strive to act in the very manner one uses speech. Abstaining from taking life, stealing, and sexual misconduct is Right Action (*sammā-kammanta*).</p>
+<p>Next, Right Livelihood (*sammā-ājīva*) means earning a living through right means. For many people these days, livelihood is a major problem. They just want to survive somehow. If one survives just somehow, one may have to give up one's humanity and live like animals, demons, or ghosts, depending on the job one does. Since one must be careful about this, one must avoid wrong livelihoods (*micchā-ājīva*)—which were mentioned on this occasion, such as trading in animals for slaughter, weapons, meat, intoxicants, and poisons—and accustom oneself to a good, righteous livelihood. That is Right Livelihood.</p>
+<p>The effort exerted for that is Right Effort (*sammā-vāyāma*), which is the correct exertion, correct effort, and correct energy regarding one's mind—expelling unwholesome thoughts that have arisen, preventing new unwholesome thoughts from arising, bringing wholesome thoughts into the mind, and protecting the wholesome thoughts already present. This fourfold effort is what actually leads one toward meditative, yogic activity.</p>
+<p>Thus, Right Effort. Next, the person who is careful about the mind must be highly mindful; they must possess mindfulness. Through this, they develop a good mindfulness regarding the four fields: the body, feeling/sensation (*vedanā*), the mind, and the objects of the mind. Next, it is through that development of mindfulness that concentration (*samādhi*), the settling of the mind on a subject of meditation (*kammaṭṭhāna*) for a long time, arises. In that manner, the Noble Eightfold Path culminates in Right Concentration (*sammā-samādhi*).</p>
+<p>Applying that concentrated mind to insight (*vipassanā*), and developing insight-knowledges called Right Knowledge (*sammā-ñāṇa*) and Right Deliverance (*sammā-vimutti*), it is through the penetration of the paths and fruits (*magga-phala*)—called Stream-entry (*sotāpatti*), Once-returning (*sakadāgāmitā*), Non-returning (*anāgāmitā*), and Arahantship—that one can completely remove that Craving / Thirst (*taṇhā*), free oneself from ignorance (*avijjā*), and attain the supreme, peaceful, and sublime Nibbāna declared by our Buddha.</p>
+<p>Therefore, on such a valuable day as today, having established yourselves in virtue (*sīla*) and listened to the Dhamma for about an hour, you should consider that you have actually been engaged in meditative reflection. During this time, you have had the opportunity to generate and direct in your mind-streams those valuable qualities of faith, energy, mindfulness, concentration, and wisdom (*saddhā, viriya, sati, samādhi, paññā*) which belong to the factors of enlightenment (*bodhipakkhiya-dhamma*) that assist in realizing Nibbāna.</p>
+<p>Furthermore, a great number of valuable Dhamma points that help shape your lives for the future were contained in this Sutta discourse. Making all of these your refuge, you devotees must strive, even as we see the decline of the Sasana in this day and age, to bring the light of Dhamma close to your lives. While moving toward a terrifying abyss, using the solace received due to your being Buddhists, and taking the support of noble friends (*kalyāṇa-mitta*), utilizing this rare appearance of a Buddha (*buddhopāda*) and your human birth, utilizing this opportunity of the moment (*khaṇa-sampatti*), and traveling on this path of practice presented as giving, virtue, and meditation (*dāna, sīla, bhāvanā*), or virtue, concentration, and wisdom (*sīla, samādhi, paññā*), may you, as quickly as possible, free yourselves from all this saṃsāric Suffering / Unsatisfactoriness / Stress (*dukkha*) and find peace in the sublime, deathless Nibbāna! You must wish that the power of the merit generated on this occasion may assist you in this!</p>
+<p>Similarly, when performing such meritorious deeds, there is a host of right-viewed deities and Brahma kings who rejoice in them. May all of them rejoice in this store of merit we have accumulated through preaching and listening to the Dhamma! Having rejoiced, may they realize the supreme, deathless Nibbāna through their own aspired enlightenment! May they provide protection to us and to the Dispensation! With this thought, you must share the merit with the deities. Likewise, may all your departed relatives and all beings from the lowest Avīci hell to the highest Akanitā heaven, who desire merit and desire Nibbāna, rejoice in this merit and find peace in the sublime, deathless Nibbāna! With that aspiration, now recite the stanzas and share the merit.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_111.html" class="doc-btn">← Previous Sermon (111)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_113.html" class="doc-btn">Next Sermon (113) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

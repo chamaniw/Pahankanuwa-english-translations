@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 088 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_087.html" class="doc-btn">← Previous Sermon (087)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_089.html" class="doc-btn">Next Sermon (089) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 088</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_088_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_088_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_088_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #88</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.37)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Anavaṭṭhitacittassa, saddhammaṃ avijānato,</p>
+<p>Pariplavapasādassa, paññā na paripūrati;</p>
+<p>Anavassutacittassa, ananvāhatacetaso,</p>
+<p>Puññapāpapahīnassa, natthi jāgarato bhayaṃ.</p>
+<p>From:</p>
+<p>Dhammapada 38–39 (Cittavagga)</p>
+<p>Dear Listeners,</p>
+<p>In this Dhamma, the idea of wishing to escape from Saṃsāra is often expressed by the word *nekkhamma* (renunciation). It is called the concept of *nekkhamma* (*nekkhamma-saṅkappa*). Generally, if we look at the simple meaning of the term *nekkhamma*, it carries the idea of departing from the lay life, of departing from sensual pleasures. However, when considered deeply, the ultimate goal of *nekkhamma* is Nibbāna. It is the liberation from Saṃsāra.</p>
+<p>You, listeners, know that whether lay or ordained, the path to be traveled, the program of work to be done by a Buddhist devotee is the development of the Noble Eightfold Path. The first step of that Noble Eightfold Path is Right View (*sammā-diṭṭhi*), which means right seeing. Next is Right Thought (*sammā-saṅkappa*), right thoughts and aspirations. One of the aspects belonging to Right Thought is this concept of *nekkhamma*. Right seeing means the understanding of the truth. If one understands to some extent these facts—that this Saṃsāric existence is *Dukkha* (Suffering), that its cause is *Taṇhā* (Craving), that the cessation of *taṇhā* is Nibbāna, and that the path to Nibbāna is the Noble Eightfold Path—it is based on that understanding that the concept of *nekkhamma* arises in a person. According to the degree of that understanding, if that understanding is insufficient, the concept of *nekkhamma* does not firmly establish itself in that person. In such instances, even if such a person ordains, or otherwise abandons the lay life, they cannot remain long in that state. It is the concept of *nekkhamma* that makes it possible to complete the work of Nibbāna. What helps most in this is faith (*saddhā*) and wisdom (*paññā*).</p>
+<p>The two verses we have taken as our theme today are those in which the Buddha demonstrated this point. From the background story (the origin story) provided for these verses, we can see an instance where the concept of *nekkhamma* was weakened and hindered due to the lack of faith (*saddhā*) in the mind, and the lack of such virtues and devotion. According to the story, it is as follows: A certain poor man lived in the city of Sāvatthī. One day, because a cow from his herd went missing, he entered the forest and searched for the cow until midday. Somehow, he found it and reunited it with the herd. By that time, because he was hungry and felt starvation, he went to the Jetavana monastery. Having arrived and paid respects to the Saṅgha, the Saṅgha understood that this man was hungry. The Saṅgha told him to take some of the food left over after they had eaten.</p>
+<p>While eating this food, this man thought: "Such delicious food is received here; how is this? Did the Saṅgha receive such exquisite food due to a special invitation?" Having finished eating, he asked the Saṅgha: "Venerable Sirs, did you go to a special invitation today?" They replied, "No, we always receive good food like this on our alms-round (*piṇḍapāta*)." Then he thought, "Even though I toil and exhaust myself the whole day, I cannot obtain food like this. Therefore, let me ordain." Having thought so, he obtained permission from the Saṅgha and ordained.</p>
+<p>Having ordained, he performed the duties and observances (*vata-pili-vata*) for the Saṅgha very well. But this person had no interest in meditation (*bhāvanā*). Furthermore, since the four requisites were received without lack in various ways during the time of the Buddha, when this person received food and drinks that were unavailable in his poor life, he ate as much as he wanted without any restraint, and very quickly became fat. As his body grew fat, his mind became thin. His mind subsequently became weak. He began to think about his home and household. Because of this, becoming disillusioned with the ordained life, he then returned to the lay life.</p>
+<p>Having become a layman, while doing his habitual farming activities, he fell back into that poor life. While doing those tasks, his body once again became emaciated. Next, he thought once more, "I must ordain." In this manner, he ordained again. Again, after a few days, he became a layman. In this way, this man disrobed and returned to the lay life six times. By the time the desire to ordain arose in this person for the seventh time, his wife was pregnant. On the day he formed this intention, he brought his plow and other equipment from the field, stored them somewhere in the house, and entered the bedroom to take his under-robe (*aṅdanaya*). It appears that he had kept these in his house as keepsakes to remind him of ordination. When he went to take them, his wife, exhausted from household chores, was sleeping flat on her back. Her clothes were disheveled. Saliva was drooling from her mouth, which was wide open, presenting a highly unsightly appearance like a corpse.</p>
+<p>By this time, the Saṅgha had given this man the nickname "Cittahattha" (ruled by his mind). Because he disrobed repeatedly under the sway of his mind, he had the name Cittahattha. The moment Cittahattha saw this, his mind was again directed toward ordination, because from this sight, the foulness of the bloated corpse (*uddhūmātaka-asubha*) was recalled. Devout devotees, *uddhūmātaka* means that even our own body, after death—the body we could not fatten even with a lifetime of effort—becomes bloated within two or three days. Thus, a bloated foulness was recollected from the sight of his wife. Next, saying "*Aniccaṃ*" (*anicca*: impermanent / inconstant), a great disillusionment, a disillusionment with Saṃsāra arose in him, and he left the house, hastily putting on his under-robe. His mother-in-law, who had gone to the neighboring house, became suspicious, thinking: "Why is he heading toward the monastery? There must be some reason." When she entered the house, she saw her daughter sleeping, woke her up by hitting her, and said, "Wake up, you miserable wretch! Having seen the way you lie there, your husband has left. You will not see him again." Then this woman said, "Oh, even though you say that, he will return. Where else would he go?"</p>
+<p>No matter what she said, while going along, practicing insight meditation (*vipassanā*) in a way that made sense to him by reciting "*Aniccaṃ*" (impermanent / inconstant), it is mentioned that that man, Cittahattha, attained the stage of Stream-entry (*sotāpatti*) on the way. Having attained Stream-entry, he went to the Saṅgha and requested ordination. The Saṅgha said, "What ordination for you? How many times have you ordained already? Your head is like a whetstone used to sharpen razors. There is no point in ordaining you," expressing their displeasure. Because this man pleaded, "Oh, please ordain me just this once," they ordained him. A few days after ordaining, this Cittahattha practiced meditation and very quickly, within a few days, became an Arahant possessing the four analytical knowledges (*paṭisambhidā*). However, the Saṅgha did not know of this attainment. They joked with him as usual: "Isn't it time to go home now? Why are you staying so long this time?" To this, Cittahattha replied: "Venerable Sirs, previously, during the time when I had connections and attachments, I went home. Now, I have no such thing. They have all been cut off. Now, therefore, I cannot go back home." By these words, he signaled to the Saṅgha that he had attained Arahantship. Hearing this, the Saṅgha did not believe him, and they went to the Buddha and stated: "Cittahattha is saying such things." Then, on that occasion, the Buddha declared: "It is true, monks. When my son Cittahattha's mind was restless and fickle, when he did not rightly understand the Dhamma, and when faith (*saddhā*) and devotion (*pasāda*) were not properly established, he was unable to attain that supramundane wisdom (*paññā*). Now, having transcended both merit and evil, he stands in the noble state of Arahantship." Expressing this idea, he uttered the two verses we presented earlier. If we look at the meaning of those two verses:</p>
+<p>*Anavaṭṭhitacittassa saddhammaṃ avijānato, pariplavapasādassa paññā na paripūrati.*</p>
+<p>"*Anavaṭṭhitacittassa*" means a restless, fickle mind—a mind that is not properly established in one place.</p>
+<p>"*Anavaṭṭhitacittassa saddhammaṃ avijānato*": one who has such a restless mind, and "*saddhammaṃ avijānato*", one who does not rightly understand the True Dhamma; "*pariplavapasādassa*" refers to floating faith, a devotion that is swept this way and that. For such a person, "*paññā na paripūrati*", wisdom does not fulfill. For a person whose mind is not firmly established, who has such a fickle mind, who has not properly understood the True Dhamma, and whose devotion, confidence, and faith are pulled this way and that, wisdom does not become fulfilled. Next, the other side is stated—namely, that good side, what is said regarding the state after becoming an Arahant:</p>
+<p>*Anavassutacittassa ananvāhatacetaso, puññapāpapahīnassa natthi jāgarato bhayaṃ.*</p>
+<p>"*Anavassutacittassa*" means possessing a mind moist-free of lust, having a mind undefiled by lust; "*ananvāhatacetaso*" means possessing a mind unassailed by hatred; "*puññapāpapahīnassa*" means one who has abandoned both merit and evil—shown as the nature of Arahants who are liberated from both merit and demerit; and "*natthi jāgarato bhayaṃ*", *jāgarato* means for the vigilant (awakened) person, there is no fear. There is no fear of Saṃsāra. "Awakened" or "vigilant" there refers to the qualities of wakefulness (*jāgara-dhamma*). These five qualities are described as faith (*saddhā*), energy (*viriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*). In this Dhamma, these are presented as qualities of wakefulness (*jāgara-dhamma*). They denote wakefulness. The five qualities that assist in remaining awake in accordance with the Dhamma are faith, energy, mindfulness, concentration, and wisdom. For one who possesses such qualities, such virtues, there is no such fear.</p>
+<p>So, this Dhamma verse was declared. A few days later, while the monks were gathered together talking, they discussed as follows: "Even though this Cittahattha possessed such supportive conditions (*hetu-sampatti*) to become an Arahant, isn't it amazing that he disrobed six times and returned to lay life in this manner?" Then the Buddha arrived there. When he asked, "Monks, what are you discussing?" and was told of this news, he said: "Monks, not only Cittahattha, but during the time I was fulfilling the requisites of enlightenment (*bodhi-sambhāra*), a similar thing happened to me as well." Thus, he related a similar event that happened to himself, detailing it through the Kuddāla Jātaka (Uddhālaka Jātaka).</p>
+<p>To state it briefly, in many past lives, he lived as an ascetic, cultivating absorptions (*jhāna*) and meditation. On one such occasion, the Bodhisatta was known by the name Kuddāla Paṇḍita (the wise Kuddāla). "Kuddāla" means a spade. As a custom, that ascetic went to the Himalayas to meditate for eight months. During the four rainy months, he would return to his hut, sow a certain type of bean, a grain-like bean, live on it, and when returning to the ascetic life, he would leave the spade blade and half a measure of beans at home. He would return after practicing asceticism for eight months. In this manner, he spent his life between the ascetic life and lay life six times. Having lived thus, when heading back to the Himalayas for the final time, he thought: "The obstacle to my ascetic life six times was not some grand thing, but this spade blade and these few beans. I must get rid of this." With this thought, he wrapped the measure of bean seeds in a piece of cloth, hung it on the spade blade, and took it to the riverbank. There, closing his eyes, he swung it three times around his head and threw it away. Why? Because if he saw where the spade blade fell, he might feel like picking it up again, as it was such a dear and pleasing object to him. Having thrown it in a way that he could not see where it landed, when he opened his eyes and looked, he could not tell where it was; it had fallen into the river water.</p>
+<p>Then, this Kuddāla Paṇḍita uttered a great shout of joy: "Jitaṃ me! Jitaṃ me!" (I have won! I have won!). At that moment, King Brahmadatta, having conquered his enemies, had come there and was bathing near the river. Hearing this, he approached Kuddāla Paṇḍita and asked: "Why are you shouting 'I have won'?" Then the Bodhisatta said to the King: "O King, you have conquered external enemies. I have conquered the internal enemy, the enemy of greed. Conquering external enemies is not the real achievement; in that, defeat is also possible. My victory is indeed supreme." Then, as described in that story of the Dhamma, gazing at the water of that river, he attained the absorptions (*jhāna*) through the water-kasina (*āpo-kasiṇa*), rose into the air, and preached the Dhamma. Consequently, the King, his retinue, and the kingdom abandoned their worldly life and became ascetics. Seven other kings also came in like manner, and thus a vast assembly of ascetics practiced Dhamma and meditation under Kuddāla Paṇḍita, and were reborn in the Brahma-world, as the Buddha narrated in that Jātaka story.</p>
+<p>Now we have here two stories: this contemporary story and the Jātaka story. We also have two verses. Let us try to extract points from these that can help our Dhamma life. When we look at the story of Venerable Cittahattha, we must say that it was so during the time of the Buddha, and it is so even today. Ordaining and disrobing are very common occurrences. Why? All of this happens because of the nature of the mind. In everything, we should look through *Yoniso manasikāra* (Wise attention), not merely at external events. These events show us how our minds behave. When we look at the life of Venerable Cittahattha, he was a poor man. Indeed, if we consider it, Cittahattha ordained the first time with a certain degree of disillusionment with Saṃsāra. For a poor man, the extent of *Dukkha* (Suffering) visible to him is the *dukkha* of poverty. One part of that *dukkha* of poverty is the difficulty of searching for food. You, devout lay devotees, know that the last of the objects of emotion (*saṃvega-vatthu*) which the Buddha showed us to contemplate frequently is "the search for current food" (*idāni āhāra-gavesana*), which means the *dukkha* we undergo in searching for food in this life. The others, as you know, are presented as *Jāti* (Birth), *jarā* (decaying / aging), *vyādhi* (sickness), and *maraṇa* (death) [the process of *jarāmaraṇa*: decay and death / aging and death], the *dukkha* endured in the lower realms in the past, and the *dukkha* to be endured in the future if we remain in Saṃsāra. Lastly, it refers to this life's...</p>
+<p>...Next, when considering the *dukkha* of poverty, only that small portion of the truth was understood by that person as *dukkha*. Therefore, after a few days, when his body grew fat, he thought: "Now, this is fine." Next, his mind became weak. Because he did not apply his mind to the Dhamma in the proper manner, he thought that merely by fattening his body, that *dukkha* had gone, that *dukkha* had ceased. If we consider what the suitable meditation subject (*kammaṭṭhāna*) for this temperament is, it is mentioned in the texts as follows:</p>
+<p>For a person who is attached to the fleshy, well-nourished parts of the body, a good and suitable (*sappāya*) meditation subject—the word *sappāya* is used to mean a good, fitting, or appropriate subject—is taught in the Dhamma as the *uddhūmātaka-asubha* (the foulness of a bloated corpse). *Uddhūmātaka*, as we mentioned earlier, means a body bloated after death. Within a few days, the body swells up in a highly surprising manner. It is such a bloated body. From this, we can understand that in reality, the reason Cittahattha disrobed six times was also because of his wife, due to his attachment to his wife. However, in the end, it was also his wife who provided him with the meditation subject to become an Arahant. That subject was the recollection of the bloated corpse (*uddhūmātaka-asubha*) through that sight. Similarly, when describing these meditation subjects, for instance, the perception of bones (*aṭṭhika-saññā*), the foulness of bones (*aṭṭhika-asubha*)—the contemplation on the skeleton—is said to be suitable (*sappāya*). It is said that for a person who is highly attached to teeth and bones, the skeleton is a suitable meditation subject. In this manner, it is described in the texts regarding meditation subjects that depending on each individual's temperament, a particular subject is more appropriate.</p>
+<p>In whatever manner, for Venerable Cittahattha, that sight helped him break both his attachment to fattening his own body and his attachment to his wife, and ultimately, to shatter the bonds of Saṃsāra and attain Arahantship. In this society, we encounter not only such sights but many other sights in our daily lives. The benefit we must derive from them in accordance with the Dhamma is to gain an understanding of the vanity (futility) of our journey in this long Saṃsāra. That is how we must reflect. Moreover, regarding Cittahattha, although at first glance here it seems his ultimate goal was just to feed his belly (livelihood/nourishment), that was indeed underlying it. That is to say, why did he ordain several times? When his body became weak, he remembered the exquisite food eaten by the Saṅgha, and then went back to fatten his body in that manner. When we look at it, in the end, it appears that Cittahattha regarded this Dispensation (*Sāsana*) as an institution for filling the stomach, and ordained whenever his body became weak.</p>
+<p>Now, this ordination is described in this Dhamma in its true sense; for a true ordination, there must be a good aspiration of renunciation (*nekkhamma*). A strong aspiration of renunciation. That strong aspiration of renunciation is described in the Dhamma as: *appaṃ vā bhogakkhandhaṃ pahāya, mahantaṃ vā bhogakkhandhaṃ pahāya*—abandoning either a small mass of wealth or possessions, or abandoning a large mass of wealth, whether it is a single spade or a vast fortune, and then ordaining. Similarly, *appaṃ vā ñātiparivaṭṭaṃ pahāya, mahantaṃ vā ñātiparivaṭṭaṃ pahāya*—abandoning either a small circle of relatives or a large circle of relatives, breaking those bonds, and departing liberated from them; only then can one lead this ordained life and make it successful.</p>
+<p>However, we know that in some Buddhist countries, there is the practice of ordaining as a social custom. It is difficult to consider that as highly wise. When one ordains as a custom, that aforementioned concept of renunciation does not properly operate. Without the power of renunciation, one cannot travel on this path to Nibbāna. It is precisely to gain that power—just as we can only move forward based on the very force with which we kick off from something—that the Buddha indicates we must abandon those things and depart. The example of this idea is also seen in this story. The Buddha's throwing away of the spade blade in the past is such an example. We can physically throw away some things, like the spade blade. But some things cannot be thrown away by hand; they must be removed by the mind. Those are the most difficult, because everyone holds onto the world with the mind. Yet, those too must be broken. Chiefly, at the beginning of renunciation, one must free oneself from the mass of possessions belonging to oneself. Only when one is freed from them can the mind subsequently be liberated. Otherwise, if this is done as a custom, or if one ordains with the motive of filling the stomach, or with other social requirements such as obtaining certificates, it does not become true renunciation.</p>
+<p>Nevertheless, the effort made by Venerable Cittahattha is seen in the end through a multitude of experiences. The futility of his efforts to fatten his body, and all of these things, were understood through that sight. He understood their futility. We can understand that it was in this manner that he attained Arahantship. He must have been someone who had cultivated meditation and possessed meritorious power in the past. In this way, we can extract several points from that story.</p>
+<p>Similarly, concerning food and other things related to the four requisites, the Dhamma states that we should consume and use them only after wisely reflecting and reviewing (*paccavekkhaṇa*), because otherwise, defilements (*kilesa*) will be generated through them. It appears that Cittahattha did not do this at the beginning. As soon as his body became fat, he went back; he ordained as if that were his ultimate goal. The Buddha has pointed out that food should be consumed or partaken of not for the purpose of fattening the body, as one eats in ordinary lay life, but with the wise reflection known as *paccavekkhaṇa*. First, regarding the purpose of this food: "I do not take this food for amusement, nor for beautifying, adorning, or fattening the body. I take this food merely for the maintenance (*yāpanā*) of this body, for its survival, for the realization of Nibbāna, and for the practice of the holy life (*brahmacariya*)—to sustain the body and lead this noble life." One must think in this manner at the time of taking food; this is the reflection on food. The other part is a meditation. That is, "This food is something made of the four great elements: earth (*paṭhavī*), water (*āpo*), fire (*tejo*), and air (*vāyo*). No matter how beautiful it looks, once it enters this filthy body, it becomes repulsive." It is through eating food while reflecting in this way that one can shatter the defilements that arise like that. It must be because he did not follow this method that Venerable Cittahattha's ultimate goal of Arahantship was delayed. In whatever way, we receive certain lessons from this story as well. For one who aspires to Nibbāna, the opportunities we receive in our daily lives must not be wasted. That is, at respective levels, not only through these sights, but also in this Saṃsāra where we travel for a long time, even the distinction between male and female does not belong to us. All of this is constantly changing. Furthermore, poor, rich, educated, uneducated—not only these, but not even a single human existence has been written down as guaranteed for us in this Saṃsāra. Saṃsāra is indeed a vast number of births and deaths occurring in an extraordinarily frightening and karmic manner.</p>
+<p>Therefore, the ultimate benefit to be derived from this entire Saṃsāra, the highest target, should be the strengthening of this renunciation (*nekkhamma*). Even when speaking of the disposition (*ajjhāsaya*) of Bodhisattas, the disposition toward renunciation (*nekkhamma-ajjhāsaya*) is mentioned first. Renunciation is placed at the forefront everywhere. Why? Because what is the ultimate result of all the myriad experiences in this entire Saṃsāra? It is the liberation from Saṃsāra. That must be the ultimate result. Because when Saṃsāra is understood, automatically, to that same extent, the desire to escape from it must arise in a person, provided that person has intelligence, wisdom, and a brain. Thus, in that manner, we can derive something from those stories.</p>
+<p>Next, in these verses declared by the Buddha, as you know, even in a single word there are very deep meanings. We can use them to nourish our Dhamma-knowledge in our daily lives. Here, it is mentioned: "*Anavaṭṭhitacittassa saddhammaṃ avijānato*." "*Anavaṭṭhitacittassa*" was explained as some people's mind being like—to use a simile—if one plants a post in a heap of chaff, it will not stand firm. It is not stable; it is unstable. The mind of some people is just like that. It is not properly established in one place. It is unstable and fickle. Or else, if a dwarf is placed on the back of a running horse, he cannot remain still in one position. In this manner, various similes illustrate that the mind is not properly established, but is restless and fickle. This refers to a person with such a mind, and "*saddhammaṃ avijānato*", a person who has no real understanding of the Dhamma. "True Dhamma" (*Saddhamma*) here is not explained as merely memorizing the Dhamma found in books. The Dhamma, we can say on one hand, is the Four Noble Truths. As mentioned earlier, that is the essence of the Buddha's Dhamma. On the other hand, it is presented as the thirty-seven factors of enlightenment (*sattis-bodhipakkhiya-dhamma*). That is a series of teachings starting from the Four Foundations of Mindfulness (*cattāro satipaṭṭhānā*). If we reflect on Venerable Cittahattha here as well, it was a meditation subject belonging to those Four Foundations of Mindfulness that helped him attain Stream-entry and Arahantship.</p>
+<p>In that way, "True Dhamma" (*Saddhamma*) does not mean simply reading a huge pile of books, memorizing them, and repeating them like parrots. To truly understand the True Dhamma means to compare it with one's own life and understand it deeply. When there is no such understanding in a person with a fickle mind, and likewise for one who is "*pariplavapasāda*"—such a person has no proper devotion. The word *pasāda* (devotion / clarity / confidence) goes hand in hand with faith (*saddhā*). Depending on the faith within a person, a devotion arises in the mind. It is according to that devotion that the person walks on that path, acts, and is inclined to practice Dhamma and meditation. Therefore, if a person's devotion is pulled this way and that, if it is drawn after this or that teacher, if there is no unwavering faith (*acala-saddhā*), pure and clear faith and devotion toward the Triple Gem, then that person cannot travel on this path to Nibbāna. If Venerable Cittahattha also had a deep faith and devotion toward the Dispensation at the beginning, then in that manner, the lay life...</p>
+<p>Similarly, you know that even in these times, there are many who run after various teachers. Sometimes they are Buddhists by name, claiming to have gone for refuge to the Triple Gem. But despite saying so, they go after various other teachers and philosophers, thereby delaying their journey to Nibbāna. They fall into delay. Wisdom does not fulfill in such minds. That is what is stated in the first verse. Wisdom means supramundane wisdom (*lokuttara-paññā*). Now, Venerable Cittahattha, relying on the meritorious power he had in the past, through his experiences, and by properly practicing what is called *Yoniso manasikāra* (Wise attention), ultimately reached that noble state in that manner. It is mentioned that while staying at home, having seen that sight and putting on his under-robe, Venerable Cittahattha attained Stream-entry on the way—something that some cannot achieve even after being ordained for forty or fifty years. Next, it is said that having gone, he became an Arahant in a few days.</p>
+<p>Therefore, we must think that such potentials may exist not only within Venerable Cittahattha but perhaps within us as well. If we utilize the events and experiences we encounter in our daily lives as needed, it may be possible for us too. Because understanding this Dhamma deeply occurs very instantly in this mind, and what helps most in that is the disillusionment with Saṃsāra. The word might be bitter, it might not be very pleasing. But to realize Nibbāna, one cannot cling to Saṃsāra. If there is, to some extent, the disillusionment with Saṃsāra called *nibbidā*, to that extent the door to Nibbāna is opened for that person.</p>
+<p>You have heard about the great Arahant Mahā Kassapa. Even though they lived as husband and wife during their lay life, they traveled the path to Nibbāna together from that time, and only at the final moment, upon ordaining, did they take two separate paths. No matter how many tasks they had to perform in their daily lives, wise people like them make the ultimate goal of their lives—when deeply considering children, other duties, and their relatives—the understanding of that *Dukkha* (Suffering) of Saṃsāra and the attainment of that state, which is the duty one has to fulfill for oneself in this Saṃsāra. Great, noble, highly meritorious beings like Venerable Mahā Kassapa, even when they lived as husband and wife, the result of the effort they made for Nibbāna was that in their final life, both attained Arahantship.</p>
+<p>In that manner, what we should consider as the true core of this Buddhist life is not those mundane goals. It is not about thinking that whatever our neighbor gets is supreme and that we must somehow acquire the wealth they acquire, or that we must educate our children like others' children and secure high degrees or positions, or that we must gain offices because others have gained them. Such various mundane goals are not what we should set for our lives. It is that supramundane goal which has been abandoned and neglected for so long in this Saṃsāra. This is not for telling the world, but if one lives by cultivating such goals within one's own mind-stream and discussing them with one's admirable friends (*kalyāṇa-mitta*), then for those individuals, in the aforementioned manner, this Dhamma realization can emerge from within, even at an unexpected moment.</p>
+<p>In that manner, one must develop the perception of capacity toward these supramundane qualities. Next, similarly, there must be a firm, unwavering faith (*acala-saddhā*). There must be unwavering faith toward the Triple Gem. No other teacher should be considered superior to the Buddha, nor superior to the Dhamma he declared. Neither scientific knowledge nor the views expressed by other mundane philosophers should be taken as superior to this Dhamma. Next, one must recollect the collection of virtues of his Saṅgha of the eight noble individuals (*aṭṭha-ariya-puggalā*). In short, the virtues of the Triple Gem mean the Teacher, the Dhamma he declared, and those eight categories of individuals who, having put the Dhamma into practice, successfully obtained the fruits, or who demonstrate the leading-out (*niyyānika*) nature of the Dhamma. That is why they are called the Saṅgha of the eight noble individuals. It is based on this that one can build faith and devotion (*pasāda*). One must understand its value. Next, "*Anavaṭṭhitacittassa*"—accordingly, without that devotion, that clarity, one cannot travel on this path of Dhamma.</p>
+<p>Devotion (*pasāda*) is a quality that goes hand in hand with faith (*saddhā*). Through faith, doubt and hesitation are removed from the mind, the darkness of the mind is dispelled, and a certain light comes. A certain kind of invigoration arises in the heart. When devotion also arises through that invigoration, only then can one exert energy from that point onward and accomplish those other tasks. The Buddha declared there that such people are able to approach wisdom. In this Dhamma verse, "*Anavassutacittassa*" was said to mean a mind *not* wet with lust, *not* defiled by lust. A person with a mind that is defiled cannot realize this Dhamma of Nibbāna. Similarly, "*ananvāhatacetaso*" refers to a mind unassailed by hatred. It is within these two—lust and hatred—that the world lives for a long time: attachment and aversion. The cause for both this attachment and aversion is delusion (*moha*), the illusion of "I" and "mine". These are indeed the three unwholesome roots that the Buddha declared must be removed in Saṃsāra.</p>
+<p>Therefore, the destruction of those defilements (*kilesa*) of greed, hatred, and delusion is what is called Nibbāna. So, here it was specifically said: those who have minds not wet with lust, and minds not hardened by hatred, and next, "*puññapāpapahīnassa*" refers to those who have abandoned both merit and demerit. How is liberation from both merit and demerit achieved? One can consider that a bit deeply. As long as we travel in Saṃsāra, no matter how hard we try, we cannot go on doing only merit. Both merit and demerit get done. We accept that merit is better than demerit. But even that, all of these are *Saṅkhāra* (preparations). Liberation from this Saṃsāra means the stilling of all *saṅkhāra* (preparations). Through accumulating *saṅkhāra* and karma, *Bhava* (Becoming) is brought about again and again. Rebirth is brought about. Even if one attains heavenly worlds or Brahma-worlds, they are not eternal. When falling from them, next, one might even go to the planes of misery (*apāya*). Because such a dangerous state exists in Saṃsāra, Buddhas have declared that this *Dukkha* (Suffering) cannot be ended by any other means than complete liberation from the entire Saṃsāra.</p>
+<p>Other teachers might point to various other goals because there is such a thing as *bhava-taṇhā* (craving / thirst for becoming) in the world. The desire for existence is highly subtle. The very cause of the desire for existence is delusion (*moha*). The feeling that there is someone who is "I" and "mine". All other teachers, even if they do not say it directly, in some devious or indirect way, give the idea that there really is an "I", that there is a soul (self). Only the Buddha, in accordance with the teaching of *Anattā* (Not-self), declared that there is nothing here but a mere mass of *dukkha*, a mere mass of *dukkha*, and there is no such thing as an "I" here. The Buddha indicates that "I" is a conceit (*māna*), an illusion—that is, that idea is merely a deluded view of foolish people who constructed it.</p>
+<p>However, that task must be realized by oneself. Even if one speaks in words, saying "there is no person called 'I'" and talks in various ways, if the idea of "I" remains inside the mind in the same way, one has not escaped from it. But that escaping, that breaking of the feeling of "I", has to be done stage by stage. What assists in that is wisdom—the weapon of wisdom. Then, when one attains that supramundane stage of Stream-entry, as you have heard, that rigid portion of taking "I" and "mine" which exists as a view—known as *Sakkāya-diṭṭhi* (View of existing group/body)—is severed. It is as a direct benefit of this that a Stream-enterer is born at most seven more times in this Saṃsāra. Because in that mind, there is no power to perform those deep karmas that lead back to the planes of misery (*apāya*). The result comes in exact proportion to the degree to which we grasp something tightly as *Upādāna* (Grasping). Due to wisdom, the feeling of "I" and "mine" is not rigid in that person; it does not rigidly hold sway. That is why they do not go to the animal realm. That is what is meant by escaping from the four lower realms of misery. A Stream-enterer does not have the kind of feeling "I" and "mine" that an animal has. Therefore, they cannot go to the animal realm. They do not go to bad places like the hells. Furthermore, if there were past karmas that would cause birth there, they too are destroyed by that supramundane wisdom.</p>
+<p>It is because of this that the Buddha praised that supramundane state in a highly marvelous manner. That karmic force cannot be broken in any other way. Thus, the wheel of karma (*kamma-cakka*) is broken by the wheel of Dhamma (*dhamma-cakka*). One can never escape from the wheel of karma by any other means. It is a highly marvelous wheel. As long as one remains in this Saṃsāra, karma is accumulated automatically. One cannot avoid it. One cannot live by closing eyes, ears, and nose either. In whatever manner, through the mind, these karmas are accumulated. According to those accumulated karmas, we are forced to be born and suffer in respective places as their result again and again. Even if there is no other *dukkha*, we are subjected at least to *Jāti* (Birth), *jarā* (decaying / aging), *vyādhi* (sickness), and *maraṇa* (death) [the process of *jarāmaraṇa*: decay and death / aging and death].</p>
+<p>While such a dangerous Saṃsāra exists, what is the solution presented by the Buddha? He gradually stills those *Saṅkhāra* (preparations) which cause that aforementioned karmic force. What assists in that stilling is that wisdom, that understanding. So, in the initial stage, in that manner, the power of those *saṅkhāra* (preparations) is broken to a certain level. Next, going further, when finally attaining Arahantship, a state is established in that person's mind where they can no longer accumulate karmas that construct a *Bhava* (Becoming) again in Saṃsāra. An Arahant does not accumulate karmas that construct a future *bhava*, but in daily life, they undergo the results of those past karmas; they experience their fruits and results. Similarly, in a highly subtle manner, minds that yield results only in this life—described as qualities of past impressions (*vāsanā-guṇa*)—are mentioned in various places. But those minds do not bring about a full karmic result. As we have seen, some flowers turn into fruits and become large fruits. Some flowers fall off while still in bud. Some fall off just as they begin to mature. In the same way, those thoughts do not have the power to weave karma, due to the light of wisdom.</p>
+<p>It is because of ignorance (*avijjā*), not knowing, and delusion (*moha*) that these *saṅkhāra* (preparations / volitional activity) and karmas are accumulated. When delusion is removed from a mind-stream, the ability to accumulate karma is also shattered; it gradually breaks. The Buddha presented the solution to this problem of escaping from Saṃsāra—which no one else could do—in this manner. Through the four stages: Stream-entry (*sotāpatti*), Once-returning (*sakadāgāmi*), Non-returning (*anāgāmi*), and Arahantship, the tendency of being subjected to the wheel of karma through accumulating karma under the temptation of Māra is removed from our mind-stream. That is why it is shown regarding the Arahant as "*puññapāpapahīnassa*"—liberated from both merit and demerit. They cannot perform merit or demerit of the kind that yields birth in Saṃsāra. In that mind-stream, the power to do so has been severed; it has dried up. It is said to have been dried up by wisdom. It is called the fire of knowledge (*ñāṇaggi*). By the light of wisdom, just as once light is brought to a dark place, one can no longer commit the follies done in the dark, that power which existed in the mind due to delusion and ignorance is gone.</p>
+<p>Now, you know that for a person who has properly applied their mind to this Dhamma, they either do not feel like committing certain sinful deeds, grave sins that great criminals can commit, or even if they try to do so, they cannot do them. In that very manner, the Buddha gradually subdues and disciplines this mind through the virtues of morality (*sīla*), concentration (*samādhi*), and wisdom (*paññā*), and ultimately presents the liberation of the entire Saṃsāra. That is what was declared as "*puññapāpapahīnassa*." Next, "*natthi jāgarato bhayaṃ*": for the vigilant (awakened) person, there is no fear. There is no fear of Saṃsāra. There is no fear of rebirth. What is this wakefulness? As we mentioned earlier, the five virtues of faith (*saddhā*), energy (*viriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*) are described in the Dhamma as qualities of wakefulness (*jāgara-dhamma*). We mention this frequently in these sermons because, although various other Dhamma points are mentioned, in daily life, it does not matter if you consider these—faith, energy, mindfulness, concentration, and wisdom—as the five fingers of your right hand. To that extent, they are things you can see within your mind in daily life. Even at this moment, you are sitting here. If you were to think about the economy of your daily life, or about the other chores of your daily life, not a single one of you could remain here for even a moment. So vast are the chores of lay life; yet, leaving all of them aside, you are here at this moment because of that faith in the Triple Gem. Due to that faith, a certain devotion and clarity (*pasāda*) arose. The power generated within that is what is called energy (*viriya*).</p>
+<p>Because of that faith, a mental power to remain like this was created: energy (*viriya*). Next, to listen to this Dhamma sermon, mindfulness (*sati*), awareness. If a state of tranquility is maintained properly so as to apply mindfulness, through that mindfulness, a power of concentration (*samādhi*), a one-pointedness of a kind not felt on other days, can be experienced. It is to that concentrated mind that various understandings regarding the Dhamma can subsequently come. These things we have expressed are not fabricated by us. They are found in many books, and perhaps you have heard them in various sermons on "Nibbāna" and so forth. However, even if the Dhamma is heard a hundred times, it is understood by each person in their own way, which is based on the preparation of each person's mind. If the mind is prepared and attuned to listen to the sermon, by observing some morality (*sīla*), being virtuous, and concentrating the mind on it, then deep understandings are received by that person. It is described in the Dhamma regarding those virtues like faith. Opposed to faith, on the opposing side, is doubt. In society, this exists as doubt, hesitation, and skeptical doubt (*vicikicchā*), thinking: "Is this right? Is this wrong? Is this useful? Is this of no use?"</p>
+<p>Suppose someone starts to meditate. Even after starting to meditate, if they doubt their meditation subject (*kammaṭṭhāna*), thinking "Will this work? Can this be done as they say?" and remain in such hesitation, they can never succeed in that meditation. It is the same with other things as well. Instead, faith (*saddhā*) means not thinking in two directions like "Will it happen or not? Will it succeed or not?" but placing faith right in the middle, thinking "This can happen, this is definitely leading-out (*niyyānika*), this will surely succeed," and only then can one do the work properly. It is mentioned regarding faith that it removes the dryness (unpalatability) toward the object one takes. For Venerable Cittahattha, the ordained life became unpalatable, and he recalled the taste of the lay life. For a person with faith, a certain taste is felt toward that life in the Dispensation, toward that life of meditation. A desire for it arises. A power is generated to completely give one's mind to it and do it. That is what is called faith. It is a power that comes from the heart as well. It is not only for the intellect, not only within the scope of the intellect. Even if we look at the meaning of the word *saddhā*, it means placing the heart, surrendering the heart. Surrendering the heart to the Buddha. You know that when a meditator dedicates their life to the Triple Gem, or dedicates it to the teacher, what does that mean? They surrender their heart to the Buddha, as if taking it by hand and giving it.</p>
+<p>Once done in that manner, it is not something that is in excess. One does not have two hearts. Thus, once it is given to the Buddha, there is nothing left to give to other teachers. But many people do not think in that way. Their faith is also like that—unstable, a faith that is pulled this way and that. In such a state, one cannot achieve progress. That is the quality of faith. Faith is fundamental. The Buddha has shown that faith is a seed (*bījaṃ*). For the entire life in the Dispensation, for the cultivation of virtues, the seed for cultivating virtues—like seed paddy—is faith. Because only where there is faith do all other virtues gather around it.</p>
+<p>Next, relying on that special power, that devotion (*pasāda*) cultivated in the heart according to faith, what is the function performed by energy (*viriya*)? Suppose an object is the object of a meditation subject (*kammaṭṭhāna*). To apply oneself to that object, there was a power of energy that uplifts that object. It lends a hand to something, or has an uplifting nature. Through that energy, interest is generated. In that manner, interest is generated in the meditation subject. When energy comes, the mind tells us to do it, to apply effort to it. There is no need to explain physical energy; you know it very well. Mental energy is also like that: when drowsiness and such things arrive, only when some arouse energy is their strength seen, thinking: "It is not that I cannot do these; I can." It is said that where there is no energy, the meditation subject hides. The meditation subject, the mind, has a tendency to hide. Removing the shrinking nature of the mind and awakening it, invigorating it—that is the nature present in this energy. When the power of energy is joined in this way, all of these are presented in the Dhamma as controlling faculties (*indriya*) and powers (*bala*).</p>
+<p>Because we derive certain benefits from our eyes, ears, nose, and so forth, they are called faculties (*indriya*). For seeing, the eye is chief. For hearing, the ear is chief. Similarly, to develop these virtues of the Dispensation, faith is also a faculty (*saddhindriya*). One arouses faith in instances when skeptical doubt (*vicikicchā*) and hesitation arise, thinking: "Didn't I surrender my heart to the Buddha at the beginning?"—in that manner. Likewise, energy. In instances when the mind shrinks like that, when drowsiness comes, one practices energy. Next, *sati* means mindfulness. Perhaps you think of mindfulness in terms of the moments of forgetfulness in daily life. But the virtue of *sati* in the Dhamma indicates being constantly established near oneself, helping in understanding—this is called presence (*upaṭṭhāna*). Being properly established near oneself, like a servant standing close to you, the ability to keep the mind always on that object. The ability to pay attention to something is mindfulness. Only a person with established mindfulness can proceed forward on this path of Dhamma.</p>
+<p>To such an extent that where there is no mindfulness, one falls into negligence (*pamāda*). Everything is brought to light by mindfulness. Now, what do we mean when we say, "Oh, I forgot"? It is the place where mindfulness was absent. Similarly, the meditation subject is sometimes lost where mindfulness is insufficient. This demonstrates that it is mindfulness that always brings things to light for us, presenting it to us, saying "Here is this." Next, it is through further cultivation of this very mindfulness that concentration (*samādhi*) is reached—a certain collected state of the mind, which is the nature opposite to the scattering and agitation of the mind. Our mind is often distracted and agitated. Our eyes, ears, and nose drag us this way and that. To concentrate the mind means to release the mind from those external objects that help it scatter, and to establish it in some wholesome object: establishing the mind in a mind of loving-kindness (*mettā*), or in the recollection of the Buddha (*buddhānussati*), or within some meditation subject, without letting it go elsewhere. While remaining in that state, we can also test some power of the mind. Then, we get the feeling: "While there is so much power, what a small fraction of the mind do we use in our daily life!"</p>
+<p>Not only that, when the mind is collected, through that, a marvelous physical ease—a certain happiness because of that very collectiveness—is received. That is the virtue of concentration (*samādhi*). All of this is done ultimately for the sake of wisdom (*paññā*). Because the Buddha declared: "Wisdom is the treasure of humans" (*paññā narānaṃ ratanaṃ*). The greatest treasure, the most valuable thing humans have, is wisdom. This capacity of wisdom exists within us. Now, even though Venerable Cittahattha committed such foolish acts, the things required for wisdom had existed within him. He did not read a big book on his way. Yet, it is said that he understood the True Dhamma. His wisdom developed. It was because he had the wisdom of insight (*vipassanā-paññā*), and by arousing it, that he attained Stream-entry and subsequently achieved other paths and fruits. Therefore, we must reflect that we have spent various long lives—as male, female, gods, or Brahmas—perhaps being inclined to the Dhamma, and meeting Buddhas. All of these are deposited within our minds. To such an extent that everything we have done in this entire Saṃsāra is preserved in a highly subtle manner; some are surprised when thinking about modern computers. But an even more marvelous power exists in our *viññāṇa* (consciousness), in our mind. All of this, not a single thing is lost. None of this disappears without yielding its result—both good things and bad things.</p>
+<p>Therefore, if there are Dhamma practices and meditations we performed in the past, their meritorious power exists within us as supportive conditions (*upanissaya-sampatti*). However, it must be aroused through effort. It is through that wisdom—coming to us from places we did not expect—that sometimes young children, or those considered uneducated, or those thought of as fools, or those without ordinary mundane intelligence, in the end are seen to attain that noble supramundane state. Why? Because they aroused that wisdom. That wisdom is indeed the light. In the Dhamma, wisdom is often described as "light has arisen" (*āloko udapādi*), like a state where light appears. To show the difference between knowledge and wisdom through a simile: suppose we want to beautify a certain brass tray. One method is to apply various colored paints to it. Another method is that we can bring out the natural luster of that brass tray by removing the layers of rust with a rust-removing substance. Between these two, we can see that the knowledge of the world is like applying paint. There is no end to it. Layers of paint are applied. What is meant by developing the knowledge of the entire world? It is applying layers of paint to this tray of ours. The layer applied today is not the layer of tomorrow. They keep on applying it, yet none of these brings out the true beauty and luster. The natural, inherent luster does not arise. Instead, what has to be done is the removal of that layer of rust. That is wisdom.</p>
+<p>The Buddha declared: "*Pabhassaramidaṃ, bhikkhave, cittaṃ, tañca kho āgantukehi upakkilesehi upakkiliṭṭhaṃ. Taṃ assutavā puthujjano nappajānāti, tasmā assutavato puthujjanassa cittabhāvanā natthīti vadāmi.*" "Monks, this mind is luminous. Luminous means there is a power to radiate light within it. But what has happened to it? It is defiled by visiting defilements (*āgantuka-upakkilesa*). It is like leaving that tray aside without caring for it, and letting rust form on it. The person who does not know the Dhamma does not understand this fact. That is why that person has no interest in meditation."</p>
+<p>On the other hand, it is shown: "*Pabhassaramidaṃ, bhikkhave, cittaṃ, tañca kho āgantukehi upakkilesehi vippamuttaṃ. Taṃ sutavā ariyasāvako yathābhūtaṃ pajānāti, tasmā sutavato ariyasāvakassa cittabhāvanā atthīti vadāmi.*" "Monks, this mind is luminous. But suppose someone has released it from visiting defilements, completely liberating it from them. When liberated, a certain luminosity emerges; the person who possesses Dhamma-knowledge understands this fact at their respective level. They realize it. Therefore, there is mental cultivation (*cittabhāvanā*) for that person; that person becomes interested in meditation." Now, one does not need to wait until the supramundane state arrives. You can reflect that if you had been engaged in various tasks in your respective homes in daily life, how vast a mountain of defilements (*kilesa*) would have had the chance to flow into the mind at this moment! Instead, while being in this state, to some extent, a luminosity of the mind, and perhaps that light of wisdom we mentioned, might have arisen. As the saying goes, "If it is so much for that, how much more would it be for this?" Based on this, when reflecting on supramundane wisdom, you can think that the layers of defilements in our mind—these defilements are shown by the Buddha to be much more subtle than what we generally think of as defilements.</p>
+<p>Sometimes, even what we assume to be knowledge, what we assume to be education, is also demonstrated to be defilements. Because underlying these is conceit (*māna*), within every single one of them. Next, much more subtle, even more than that, are the lust for form (*rūpa-rāga*), the lust for formlessness (*arūpa-rāga*), and so forth—even those desires to be born in heavenly worlds or Brahma-worlds, all of these are presented by the Buddha as defilements. Therefore, rejoice that at this moment, you have generated the power to develop those faculties (*indriya*) and powers (*bala*): faith, energy, mindfulness, concentration, and wisdom.</p>
+<p>May all deities, including the divine and Brahma assembly who protect the Dispensation, if they wish to realize and attain Nibbāna, share in these merits accumulated so far. Having shared in them, may they realize the noble, supreme Nibbāna through whichever of the three states of enlightenment (*bodhi*) they aspire to. Making that wish, similarly, may all departed relatives who have passed away, and likewise all beings from Avīci up to the highest plane of existence (*bhavāgra*) who desire merit and Nibbāna, share in these merits! By the mass of merit accumulated through this preaching and hearing of the Dhamma, may they realize the supreme, deathless, great Nibbāna! Similarly, maintaining our lives in a way that these virtues we have developed, such as faith and energy, mature within this very life, may we have the strength and power to be consoled by the supreme, deathless, great Nibbāna through the penetration of the paths and fruits of Stream-entry, Non-returning, and so forth, without delay in this very life! Wishing thus, recite this verse and share the merits.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_087.html" class="doc-btn">← Previous Sermon (087)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_089.html" class="doc-btn">Next Sermon (089) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

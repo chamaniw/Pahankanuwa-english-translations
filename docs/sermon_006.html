@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 006 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_005.html" class="doc-btn">← Previous Sermon (005)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_007.html" class="doc-btn">Next Sermon (007) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 006</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_006_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_006_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_006_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #6</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No. )</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Anupubbena medhāvī,</p>
+<p>thokathokaṃ khaṇe khaṇe;</p>
+<p>Kammāro rajatasseva,</p>
+<p>niddhame malam attano.</p>
+<p>From:</p>
+<p>Verse 239 from the Malavagga (Chapter on Impurity) of the Dhammapada</p>
+<p>Dear Listeners,</p>
+<p>Today is the Vesak full-moon poya day. The Vesak poya day is an extremely noble day for the Buddhist world, because all three events—the birth, the enlightenment, and the final passing away of our Greatly Compassionate Fully Self-Enlightened Buddha—took place on a Vesak full-moon day like today. In fact, Vesak day is the Buddhist New Year, the Vesak day on which the Buddhist Era begins. Various people in the world have different concepts of a new year. In the Western world, they have formed a sense of a new year at the beginning of January. Likewise, a sense of a year has been formed based on planetary movements. Similarly, we in the Buddhist world consider this Vesak full-moon poya day, as we recollect the Buddha, to be our New Year.</p>
+<p>Therefore, understanding this matter well and recollecting the virtues of the Buddha, today is a beautiful day, a peaceful day, and a pure day for the Buddhist devotee who wakes up in the morning. Buddhists offer various kinds of colorful decorations, offerings, and homage to the Greatly Compassionate One who, over an extremely long period of time—impossible to measure even in billions of eons—fulfilled the extremely difficult perfections (*pāramīs*), giving up His eyes, head, flesh, and blood, and attained Buddhahood, because the Buddha pointed out to them the path to Nibbāna which extinguishes the suffering fires of saṃsāra.</p>
+<p>In making decorations to pay respect and homage, we actually need to consider that there are two types of decorations we can make to honor the Buddha: external decorations and internal decorations. What is called external decoration is the decoration that can be seen outwardly on Vesak day, such as flags, Vesak lanterns, pandols, and so forth. What is called internal decoration is decorating one's own mind by spending this day observing precepts (*sīla*), listening to the Dhamma, and practicing meditation (*bhāvanā*), thereby cultivating in one's mind-state (*citta-santāna*) those virtues pointed out by the Buddha. This, then, is internal decoration. Similarly, when considering offerings, the Buddha Himself pointed out that respect and homage can be paid to Him through two types of offerings: material offerings (*āmisa-pūjā*) and offerings of practice (*paṭipatti-pūjā*). What is called material offering is offering oil, flowers, lamps, incense, food and drink, medicinal drinks (*gilān-pasa*), etc., to the Buddha. The offering of practice is the cultivation of those virtues of virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*), which constitute the path leading to Nibbāna pointed out by the Buddha. Out of these two types of offerings, the Buddha praised the offering of practice as the nobler offering. Thus, the faithful Buddhist devotee gradually directs the program that begins with external decorations toward internal decorations.</p>
+<p>Similarly, the beginning made with material offerings is gradually inclined toward the offering of practice. Indeed, the Buddha always exhorted and instructed us to bring about progress within ourselves in such a systematic way, regarding both decorations and offerings. There is a story, a simple little narrative, which clarifies this matter well, and is mentioned in the Dhamma commentaries as the background story (*nidāna*) to the verse we recollected earlier. One day, a certain brahmin—a faithful brahmin, who must have had some degree of faith in the Saṅgha—came to the place where the bhikkhus assembled in the morning to drape their robes before entering the village for alms-round, and just stood there watching. As grass had grown quite high in that place and there was morning dew, the brahmin saw that when the bhikkhus draped their robes, the corners of the robes became wet with dew. Having seen this, this lay devotee thought, "I must clean this place a little," and after the bhikkhus had left, he brought a hoe, weeded the grass, and prepared a circular, cleared area like a small threshing-floor. On the second day too, this person came and watched while the bhikkhus were setting out for the village for alms, probably to see if there was any shortcoming in the work he had done. While watching, he noticed that because the grass had been removed, there was now dust. Seeing that the corners of the robes were soiled with dust as the bhikkhus draped their robes, this lay devotee brought white sand after the bhikkhus had left, spread it, and eliminated the dust. On the next day as well, he came to the spot and watched in the same manner. On that day, the sun was shining harshly early in the morning. Seeing that the bhikkhus were sweating due to the sun's heat, he thought, "I must make a small shelter here," and after the bhikkhus had left, he prepared a small shed, a shelter. Again, on another day, he came and watched, and on that day it was raining heavily. Seeing that the bhikkhus were harassed by the rainstorm, he thought, "I must build a small hall here." Thus, he built a small hall there, a small hall for the bhikkhus to assemble when going for alms-round. Next, he thought, "Now I must offer this hall to the Saṅgha led by the Buddha." He invited the Buddha and the Saṅgha—it was not a grand place—conducted the Saṅgha around that hall, offered an alms-giving, and before the sharing of merits (*anumodanā*), this devotee declared to the Buddha: "Venerable Sir, Blessed One, I began this great meritorious deed in a very small way. First, I weeded the grass as mentioned before and cleared a small area like a threshing-floor. Next, I sprinkled some sand there. Next, I made a small shed. Next, I built a small hall in this manner, and now I have also performed an alms-giving." On that occasion, praising the brahmin, the Buddha declared: "So it is, Brahmin, a wise person, moment by moment, step by step, doing wholesome deeds, removes all defilement-rust from his own mind-state," and having said so, He uttered the verse we mentioned earlier. Indeed, that verse is an extremely simple one. It is also a verse so valuable that anyone can make it a motto for their life, and it is valuable enough to be memorized and used as a guiding principle. It is a verse found in the Malavagga of the Dhammapada.</p>
+<p>*Anupubbena medhāvī*</p>
+<p>*thoka thokaṃ khaṇe khaṇe*</p>
+<p>*kammāro rajatasseva*</p>
+<p>*niddhame malamattano*</p>
+<p>Its general meaning: "Medhāvī" means the wise person, the intelligent person. "Anupubbena" means gradually, step by step. "Thoka thokaṃ" means little by little. "Khaṇe khaṇe" means moment by moment. "Kammāro rajatasseva": "Kammāra" means a smith. Here it refers to a gold- or silversmith. "Rajatasseva" means as in the case of silver, or like working with silver. "Attano malaṃ niddhame": blows away the rust (or impurities) in one's own mind-state, just as a smith blows away the dross (rust) of silver. The meaning of the verse is that the wise person, the intelligent person called "medhāvī", removes the defilement-rust from his own mind-state. If the Buddha declared any verse, even if it is a single-stanza verse, each and every word in it conveys an extremely deep meaning, and moreover, it fits together so well and is organized in such a wondrous way that not even a single word can be removed. Furthermore, within every such verse, there is a Dhamma-potency capable of making a person realize Nibbāna.</p>
+<p>Such a valuable taste of liberation (*vimutti-rasa*) is contained in every such verse. Now, if we contemplate a little deeply on the terms mentioned in this verse: "Medhāvī" is applied to those who have, by birth, a good situational wisdom, a wisdom suited for the occasion, and whose intellect has matured through saṃsāric experience—those who have the strength of good wisdom and intelligence, even if they do not have much formal education. Such is the "medhāvī" person. The word "anupubbena" is an extremely valuable word—meaning "gradually" or "sequentially." It indicates systematic progress. A special characteristic of this Dhamma is systematic progress. There is a wonderful systematic progress in this Dhamma. If the Buddha pointed out any category of Dhamma, they fit into each other like the links of a chain. Furthermore, on one occasion, the Buddha declared to Pahārāda, the lord of the Asuras: *"Seyyathāpi Pahārāda, mahāsamuddo anupubbaninno anupubbapoṇo anupubbapabbhāro, na āyatakeneva papāto; evameva kho, Pahārāda, imasmiṃ dhammavinaye anupubbasikkhā anupubbakiriya anupubbapaṭipadā, na āyatakeneva aññāpaṭivedho."* "Just as, Pahārāda, the great ocean has a gradual slope, a gradual inclination, a gradual shelf, and not an abrupt precipice; in the same way, Pahārāda, in this Dhamma-Vinaya, in this Dispensation (*Sāsana*), there is gradual training, gradual action, gradual practice, and no abrupt penetration of final knowledge." Thus, the Buddha declared, comparing the Dhamma and the path of practice of this entire Dispensation to the great ocean.</p>
+<p>The great ocean—as you lay devotees know—the seashore is a very beautiful place where even a small child can gather seashells. Then, as one goes in little by little, one can step into the waves. It gradually becomes deeper and deeper. As one goes further in, it is extremely deep. In the same way, in the path of practice in this Dispensation too, anyone can approach and make a start at their own level. There is such a nature of the Dhamma drawing one in gradually, step by step. Thus, when speaking about deep matters, the entire Dispensation, or the path of Dhamma, the path of practice, is compared to the great ocean, considering its depth. In some other instances, where this Dhamma is shown as something that goes upward little by little, leading to higher things, the simile of a flight of stairs, a staircase, is used. Just as one climbs a staircase, this Dhamma takes one upward little by little, step by step. Thus, the simile of the great ocean shows its depth. It goes deeper and deeper. On the other hand, in the case of a staircase, like a flight of stairs to climb a mansion, one climbs it step by step and reaches the top. This is the wonderful characteristic of this Dhamma indicated by the word "anupubba"—gradual sequence. It takes one from one stage to another, signifying a systematic connection where each stage is linked to the next.</p>
+<p>Next, "thoka thokaṃ khaṇe khaṇe". These few words also carry a very deep meaning. Outwardly, they seem very easy and simple to understand, but the meaning beneath them is highly valuable. "Thoka thokaṃ" means little by little. "Khaṇe khaṇe" means moment by moment. If we examine the meaning of these words: little by little, or systematic progression. If one says "just a little," there is no systematic progression in that. When one says "little by little," it conveys a sense of systematic progress. If one says "just a moment," there is no systematic progress in that. When one says "moment by moment," there is systematic progress. Thus, what is shown here, what is given to the world here, is a certain "perception of possibility." A perception of possibility means the feeling that one can do something. This is not present in many people. Now, if we tell someone today about sermons, meditation, or other Dhamma activities—especially regarding the Dhamma—the response we often hear is, "Where is the time for such things? We have so much work. Where can we find time to do these? We don't even have time to breathe."</p>
+<p>They make various complaints of this sort. The best medicine for such people is what the Buddha has shown here: "thoka thokaṃ khaṇe khaṇe"—little by little, moment by moment. This practice, or rather this theory, this fundamental principle, is applied in the world in various ways to worldly matters as well. As you lay devotees know, there is the "savings campaign." No one has excess money to throw away, but everyone, thinking of their children and their future emergencies, saves little by little as and when they find the opportunity. A big task from a small beginning. In the same way, it is also found in this path of Dhamma. The Buddha gives us this idea here: without wasting time saying "we have no time, we have so much work," one can make a small beginning in these wholesome qualities (*kusala-dhamma*) and develop them systematically.</p>
+<p>He gives the world a perception of possibility with these few words: "thoka thokaṃ khaṇe khaṇe". One should not misunderstand this and think it is enough to do just a little and stop there. Little by little. The person who can do a little can bring a great deal closer through that little. If they do not engage in it even a little, it cannot be done at all. Similarly, if one applies oneself properly for one moment, that person can carry it forward from moment to moment. Now we know that a great river, which flows into the sea with a great roar, sometimes begins with just a few drops of water falling from a roof. In this way, everything gathers together and becomes a great thing. In another such place in the Dhammapada, the Buddha has shown another very appealing simile, on an occasion when He was speaking about performing meritorious deeds:</p>
+<p>*Māvamaññetha puññassa – na mandaṃ āgamissati*</p>
+<p>*Udabindu nipātena – udakumbhopi pūrati*</p>
+<p>*Pūrati dhīro puññassa – thoka thokampi ācinaṃ*</p>
+<p>"Do not underestimate merit, thinking, 'This small merit will not yield its results to me.' Do not think of it lightly, do not look down on it." Next, the simile given is: "Udabindu nipātena – udakumbhopi pūrati." When it rains and water drips from the roof little by little, if a pot is placed there, after some time the pot becomes full. "Udabindu nipātena..." Due to the falling of water drops, "udakumbhopi pūrati" even a water pot becomes full. Following that, based on that, one can think: "Pūrati dhīro puññassa – thoka thokampi ācinaṃ." "Dhīra" means the wise person. That wise person, the intelligent person, "thoka thokampi ācinaṃ"—the word "thoka thokaṃ" is used here too—accumulating little by little, "pūrati puññassa" becomes filled with merit. Thus the Buddha declared. In that light, we can understand that these few words, "thoka thokaṃ khaṇe khaṇe", are extremely valuable words.</p>
+<p>Let us also contemplate the next simile given: "kammāro rajatasseva". We said that the word "kammāra" is used here not for a blacksmith who hammers iron, but for a smith who works with gold and silver. We generally say goldsmith. But the simile given here is about silver. That too has been declared by the Buddha with a specific meaning. As you lay devotees know, silver is a substance with a bright white luster. It is a white object. But the condition regarding this white object is what is mentioned here: "kammāro rajatasseva niddhame malamattano". Yet, this silver has rust bound to it. When a smith finds a piece of silver bound with rust, he cannot remove its dirt all at once according to the theory mentioned; those who work with gold and silver know that they do this through a systematic process—heating it little by little, cooling it, letting it rest for a while, and so on. In the very same way, just as a smith removes the rust from silver, systematically, little by little, moment by moment, so should one "attano malaṃ niddhame"—remove the defilement-rust that has accumulated in one's own mind-state over a long period in saṃsāra. This is what the Buddha pointed out in that verse. Thus, through this, besides the perception of possibility, another deep idea is brought out. There is no need to explain anew that there is rust bound in our mind-state; we know it is rusted so much that a Buddha is hardly needed to tell us. We suffer because of it. Sometimes, the ordinary person does not know the nature of that rust—how powerfully it is bound. That is what the Buddha brings to light. But the more valuable point is that beneath that rust, there is a certain luster. That is something that gives great inspiration and courage to the world. The Buddha declared this fact in a wondrous way, in a way no other teacher has declared—the nature of this mind. He declared on one occasion that there is a natural luster in the mind, and that it has been covered by this defilement-rust.</p>
+<p>*"Pabhassarāmidaṃ, bhikkhave, cittaṃ, tañca kho āgantukehi upakkilesehi upakkiliṭṭhaṃ. Taṃ assutavā puthujjano yathābhūtaṃ nappajānāti, tasmā assutavato puthujjanassa cittabhāvanā natthීti vadāmi"*</p>
+<p>"Bhikkhus, this mind is luminous. Radiant. Bright. But 'tañca kho āgantukehi upakkilesehi upakkiliṭṭhaṃ'—it is defiled by adventitious, external impurities, adventitious defilements that have come from outside. 'Taṃ assutavā puthujjano yathābhūtaṃ nappajānāti'—the uninstructed ordinary person who lacks knowledge of the Dhamma does not understand this as it really is. 'Tasmā assutavato puthujjanassa cittabhāvanā natthීti vadāmi'—therefore, I say that the uninstructed ordinary person who lacks knowledge of the Dhamma does not take interest in the development of the mind (*citta-bhāvanā*), in meditation." Next, the other side is shown:</p>
+<p>*"Pabhassarāmidaṃ, bhikkhave, cittaṃ, tañca kho āgantukehi upakkilesehi vippamuttaṃ. Taṃ sutavā ariyasāvako yathābhūtaṃ pajānāti, tasmā sutavato ariyasāvakassa cittabhāvanā atthීti vadāmi"*</p>
+<p>"Bhikkhus, this mind is luminous. There is also an occasion when it is freed, released from those external defilements. The instructed noble disciple who has knowledge of the Dhamma understands this as it really is. Therefore, for the instructed noble disciple who has knowledge of the Dhamma, there is development of the mind. That person engages in meditation. Thus the Buddha declared." Accordingly, we can understand that this gives great courage to the world: there is a natural, inherent luster, a radiance in our mind-state, and there is a possibility of bringing out that radiance. If we begin to remove this rust systematically, little by little, moment by moment, then one day, depending on the strength one has accumulated continuously in saṃsāra and also on one's present effort, even an ordinary person can develop those supramundane states, those deep and extremely pure states that are beyond the comprehension of ordinary people, and achieve mental purity (*citta-pārisuddhi*). This is what is highlighted for us in this verse.</p>
+<p>Next, the Buddha has pointed out the course of action for this on various occasions and in various ways. Specifically, one is a simple simile. A simile which even a small child can understand, shown by the Buddha, is the simile He showed to the young Venerable Rāhula on how to purify this mind, and the advice given based on that. On one occasion, the Buddha asks the novice Rāhula: "Kiṃ maññasi, Rāhula, kimatthiyoādāso?"—"What do you think, Rāhula, what is a mirror for?" He asks what a mirror is for, just as one would ask a young child. Then Venerable Rāhula replies: "Paccavekkhaṇattho, bhante"—"Venerable Sir, it is for the purpose of looking at it with close attention, for reflection." Then, the Buddha, based on that simile, declares: "Evameva kho, Rāhula..."—and here He used that word "paccavekkhiitvā" (having reflected). "Paccavekkhiitvā" means looking back with close attention, considering with wisdom. "In the very same way, Rāhula, considering with wisdom, paccavekkhiitvā paccavekkhiitvā—reflecting again and again, one should perform bodily actions. One should perform bodily actions considering them with wisdom, reflecting again and again with wisdom. Similarly, regarding verbal actions, and regarding mental actions..." in this manner He declared the method of purifying the mind.</p>
+<p>Then He explains in more detail: "Rāhula, if you have to do some work with your body, before doing it, contemplate, reflect."—He uses that word "paccavekkhiitvā".—"Look at that action with wisdom, just as one looks into a mirror. Consider with wisdom: 'This action I am going to perform, will it lead to my own harm? Will it lead to the harm of others? Will it lead to the harm of both?' Contemplate in this manner beforehand. If, upon contemplating, you realize: 'If I do this work, it will have such-and-such bad consequences, it will turn out badly for me, badly for others, badly for both sides,' then refrain from doing that action." That is before doing it. Similarly, while doing it—if, by some chance, you did not realize it at the beginning, and are carrying it out. But, even while carrying it out—the Buddha declares next—reflect in the same manner while doing it. Look at that work with wisdom, just as one looks into a mirror: "If I continue this action in this way, will it lead to my own harm, to my ruin? Will it lead to the harm of others? Will it lead to the harm of both?" If you realize this while carrying it out, you must stop it right then and there, aborting it immediately, declared the Buddha. If, on the other hand, you realize: "No, this work I am carrying out does not harm me, it is good for me, it is for my benefit, for the benefit of others, for the benefit of both sides, it does not cause any harm," then continue with that action, He pointed out in that manner. That is while doing it. Not only that, but also after doing it. There are some actions that one does not understand before doing, nor while doing, but only after doing them does one understand their true nature. Therefore, after doing it as well, reflect in this very same way—look and see. "If I have performed an action through the body, did that action lead to my harm, to my ruin? Did it lead to the harm of others? Did it lead to the harm of both?" If it was so, if you realized it so, on that occasion—indeed, nothing can be done about it now, but—the course of action the Buddha points out there is a method belonging to the bhikkhus. That is to go to the Teacher, that is, the Buddha Himself, and declare, "Oh, such a mistake was made by me," as in the declaration of offenses (*āpatti-desanā*). Or else, go to one's elders among the bhikkhus and declare, "Such a mistake was made by me," and also promise, "I will not do such a thing again." That is what is called restraint in the future (*āyati-saṃvara*). One resolves not to do it again. That is how bodily actions are done. In the very same way, by that same theory, following that same method, consider verbal actions too—before doing, while doing, and after doing. Similarly, mental actions. Mental actions are the thoughts we have about various things. Contemplate on them too: "This flow of thoughts, these thoughts, do they lead to my welfare, to the welfare of others, to the welfare of both?" In this way, the Buddha pointed out that Dhamma principle on that occasion, based on the simile of the mirror.</p>
+<p>Then He declares it as a natural law (*dhammatā*): "Rāhula, whatever recluses and brahmins in the past purified their bodily actions, purified their verbal actions, purified their mental actions, they all did so following this very principle, this very method. Whatever recluses and brahmins in the future will bring about purity in their actions of body, speech, and mind, they will do so following this method. Recluses and brahmins of the present time also do so following this method." In this way, the Buddha declared this sutta discourse to Venerable Rāhula.</p>
+<p>The mirror used here is extremely useful to us. You lay devotees know about mirrors very well. There are mirrors in homes. There are even full-length mirrors in homes that show the entire body. But they show only the body. This is not a mirror that shows the body—it is a Dhamma-mirror. It is a mirror that shows the mind. This Dhamma, based on this, is entirely a mirror that shows the mind. It shows the impurity of the mind. Yet, from this, one can think: now for you lay devotees, when combing hair, or preparing and grooming the face, before doing so, you look in the mirror to see if there is any place on the face or hair that needs to be adjusted. You also look while doing it. After doing it, you look back again to see if there is any shortcoming in how well you have groomed yourself. In the very same way, one must look into this Dhamma-mirror. According to the principle shown in the Dhamma, whether it leads to the harm of others, to one's own harm, to the harm of both, and so on—it is the narrative of wholesome and unwholesome (*kusala-akusala*) that was spoken of there. If it leads to harm in that manner, it is unwholesome. If it does not lead to harm, it is wholesome. If it leads to welfare, it is wholesome. You can easily understand that. In that way, this is a Dhamma-mirror; this Dhamma is entirely a mirror. To what extent? A certain bhikkhunī who had attained Arahantship, a senior Arahant nun, declared regarding her own realization: *"Dhammādāsaṃ apekkhitvā"*—"I looked at my face in the Dhamma-mirror." Looking at the face here means looking at the mind. "I adjusted these by looking into the Dhamma-mirror," she said.</p>
+<p>In that light, we can understand that this advice given by the Buddha in the sutta discourse is helpful to us in our daily practical lives. The biggest problem for all of us is finding time. Next, how to do this—there is no perception of possibility. Also, how to make a start, how to carry it on. In this way, we have found excellent advice in these sutta discourses. Similarly, on another occasion, the Buddha delivered a sutta discourse containing a highly valuable simile.</p>
+<p>There is a sutta called the *Accharāsaṅghāta Sutta*. Lay devotees, "accharāsaṅghāta" means the snapping of fingers. You know what snapping fingers is. Sometimes, holding the thumb and the middle finger together, a small sound, a click, is made. Exorcists too, when performing rituals or when a demon needs to be driven away, snap their fingers in this manner. But here, in this discourse, the Buddha refers to the duration of a finger-snap. Only a very short time is taken for this. It implies a mere moment. In the *Accharāsaṅghāta Sutta*, the Buddha preaches, "Bhikkhus..."—He addresses the bhikkhus, but He is informing the beings of the three worlds of this matter—"Even for the short duration of a finger-snap, if any bhikkhu develops a mind of loving-kindness, even within that short duration of a finger-snap, of such a bhikkhu I say: he is one who acts in accordance with the Teacher's instruction, follows the Teacher's advice, and does not consume the alms-food given by the world in vain; he is one who lives without leaving the practice of absorption (*jhāna*) empty, without wasting it, and without failing to practice absorption. Thus I declare." That is to say, even for a mere moment, a short moment like a finger-snap, if someone develops a mind of loving-kindness, that too is a form of absorption (*jhāna*) to some small extent. It is, to some small extent, practicing in accordance with the advice shown by the Buddha. And because of that very reason, a certain strength is received from it for one's bhikkhu-hood, a value is added to it. That is why it was declared that such a person is fit to consume the alms-food.</p>
+<p>One should not misunderstand from this that meditation is something that must be limited only to a short duration like a finger-snap. But what is shown here is that if someone starts with a short time like a finger-snap, that person can carry that path of practice forward. Now we know that the big works in the world are done by those who obtained time from such short moments. If one trains the mind to do a valuable work in a short time, that person, while performing their various daily duties, can recollect the Buddha's advice—"There is a duration of a finger-snap available here, isn't there? I can apply that to meditation"—and walk on that path. In that manner, He declared regarding the mind of loving-kindness. Next, "Bhikkhus, if someone, even for the short duration of a finger-snap, develops the perception of impermanence (*anicca-saññā*), recollects impermanence—that is the meditation on impermanence. The meditation on that impermanence is insight (*vipassanā*). Next, similarly, the perception of suffering (*dukkha-saññā*), if they contemplate the nature of suffering in this saṃsāra—whatever is impermanent is suffering (*dukkha*). Next, if they contemplate that this painful thing is not-self (*anattā*), if they practice mindfulness of death (*maraṇasati*), if they develop recollection of the Buddha (*buddhānussati*), recollection of the Dhamma (*dhammānussati*), recollection of the Saṅgha (*saṅghānussati*)—if a bhikkhu practices these meditations even minimally, even for the duration of a finger-snap, I declare that bhikkhu to be one who acts in accordance with the Teacher's instruction." From this sutta discourse too, we can understand that what is given here is the "perception of possibility." A perception of possibility is given to "the beings of the three worlds." This duration of a finger-snap... now we took the simile of the "exorcist". The similes given by the Buddha are extremely deep and meaningful. Now we know, just as exorcists sometimes snap their fingers to drive away demons, here, by maintaining a wholesome mind for that short duration of a finger-snap, one secures an opportunity for the "demon of defilements", or rather that defilement-rust, to be removed. In that way, there too, what the Buddha pointed out is the value of engaging in these activities by generating a "perception of possibility" in one's daily life.</p>
+<p>Therefore, if one is to perform activities of this kind, there is something else that must be used as an aid. We are presenting what you lay devotees, these Buddhists, can practically use as an aid. One must also understand the importance of this kind of work. The Buddha brought this to light frequently on many occasions. In this Dispensation, this is known as the "sources of urgency" (*saṃvega-vatthu*). All vehicles and so on have a certain speed. To generate this speed, various fuels are added—whether it is regular or super. In the same way, to go on this journey of the Dispensation, a certain speed is required. That speed is called urgency (*saṃvega*). The fuel-like things that aid that speed are called the sources of urgency (*saṃvega-vatthu*). What are these sources of urgency? They are not things that can be touched with hands, nor can they be bought with money. But these matters—</p>
+<p>*Jāti jarā vyādhi cuti apāyā*</p>
+<p>*Atīta apāyatuka vaṭṭa dukkhaṃ*</p>
+<p>*Idāni āhāra gavesi dukkhaṃ*</p>
+<p>*Saṃvegavatthū imāni aṭṭha*</p>
+<p>Contemplating according to the Buddha's word: we have been born in this saṃsāra for an endless time. Thinking about this birth (*jāti*), or rather this birth itself, about this life—what a terrifying occasion birth is! Mothers know this, even if the young child does not. Next, from the moment of birth onward, is there not suffering (*dukkha*)? Birth is suffering. Thus, even if a Buddha does not say so, it is something the world must understand. In this age, however, they consider it something to celebrate. It is an occasion worthy of weeping—obtaining this birth. For an extremely long time in saṃsāra, we have committed this foolishness. The very first gift of that birth, the birthday gift, is death. If one is born, death is assured for that person. The next station on the way to death is aging (*jarā*). From birth—birth (*jāti*), aging (*jarā*). Aging is the second source of urgency. Birth, aging, next illness (*vyādhi*)—as one goes into aging, as the body decays, illness approaches more and more and aids it. Diseases. Next, falling away (*cuti*), and finally it ends in death. Thus: birth (*jāti*). Next, growing old, which is called aging (*jarā*); becoming aged. Next, illness. Next, death. Next, contemplating on the past according to the Buddha's word—how much suffering we have undergone in the past saṃsāra! Next, if we do not see Nibbāna, if we do not realize Nibbāna, how long in the future—according to the Buddha's word—we will travel in this saṃsāra from an extremely long, beginningless time, as the Buddha declared; then in the future too, we will have to suffer in the same way. The suffering of the past rounds of rebirths (*vaṭṭa-dukkha*) including the planes of misery (*apāya*). The foolishness of this spinning in one place in saṃsāra, the suffering caused by this—one must contemplate on this daily. Similarly, the effort made to search for food in this life. How painful is that? One must think about how animals struggle for this food. Sometimes, for wealthy people, obtaining food might seem like a small thing. Perhaps, like Venerable Anuruddha in the past declaring how rice is "born", thinking that food is obtained simply by its coming to the table. But how much does one toil throughout the day for this bit of food? That too is suffering (*dukkhaṃ*). In that way, these sources of urgency, the painful nature of life, of saṃsāra, must be contemplated upon constantly. Contemplating according to that urgency, then, like saving a little when thinking about emergencies and children, one must make an effort to apply the short moment available for some merit, for some Dhamma, for a sermon, or for meditation.</p>
+<p>It is due to the lack of such urgency (*saṃvega*) that ordinary Buddhists gradually move away from the Dhamma. Because of that, suffering increases in this world, and they accumulate suffering for the next world too. Thus, this Buddha-Dispensation is a program of removing a multitude of rust. The Buddha pointed out this rust. There are various kinds of rust in the world, but above all those kinds of rust, what is pointed out as the real rust is:</p>
+<p>*...malā ve pāpakā dhammā – asmiṃ loke paramhi ca*</p>
+<p>*Tato malā malataraṃ – avijjā paramaṃ malaṃ*</p>
+<p>In this world and the next, evil deeds are indeed a real rust. Committing sins is a major rust in the world, a well-known type of rust. Next, even more than that, "tato malā malataraṃ"—the greatest rust of all is: "avijjā paramaṃ malaṃ"—ignorance is the supreme rust, that lack of knowledge, that non-knowledge of the Four Noble Truths, that foolishness, that ignorance. The ignorance present in saṃsāric beings. That is the greatest rust. Therefore, it is to cut away this rust that the Buddha pointed out the Noble Eightfold Path as the Middle Way (*majjhimā paṭipadā*). There too, we have a gradual program. What is this Noble Eightfold Path? It is often limited only to words. Many do not understand its value. A wonderful Dhamma-way is present here: Right View (*sammā-diṭṭhi*), Right Intention (*sammā-saṅkappa*), Right Speech (*sammā-vācā*), Right Action (*sammā-kammanta*), Right Livelihood (*sammā-ājīva*), Right Effort (*sammā-vāyāma*), Right Mindfulness (*sammā-sati*), and Right Concentration (*sammā-samādhi*)—these eight factors are pointed out as the Noble Eightfold Path.</p>
+<p>If we express this in the language we understand, Right View (*sammā-diṭṭhi*) means "correct seeing." Here, "seeing" does not mean the sight seen by the eye. It is the vision of life—the view regarding life. The view regarding the world. It can be called correct seeing. Next, Right Intention (*sammā-saṅkappa*) means "correct thinking and wishing." Next, Right Speech (*sammā-vācā*) means "correct speaking"—correct words. Right Action (*sammā-kammanta*) means "correct doing." Right Livelihood (*sammā-ājīva*) means "correct living"—the method of maintaining life. Next, Right Effort (*sammā-vāyāma*) means "correct exerting"—effort. Right Mindfulness (*sammā-sati*) means "correct recollecting"—the right kind of mindfulness. Right Concentration (*sammā-samādhi*) means "correct unifying of the mind"—unifying the mind in the correct way. As time is insufficient to describe each of these in detail, to mention them briefly: Right View means everyone has a vision of life. Even a criminal, everyone has some vision of life. Even a grasshopper has a vision of life—which ends in burning. If someone's vision of life is correct, they can progress from that point onward. If someone's vision of life is wrong, there is ruin from that point onward. Thus, the first step is indeed the vision of life. That is pointed out in the Dhamma as Right View (*sammā-diṭṭhi*). On the one hand, if we point it out at a shallow level, considering only this saṃsāra, it is the understanding of good logic—the understanding of wholesome and unwholesome deeds. There are benefits of giving (*dāna*) and so forth in the world; there are fruits and results of wholesome and unwholesome kamma; there is this world, there is the next world; there is mother, there is father, and so on, pointed out as ten matters. It is a view that aids in performing wholesome deeds, in performing merit. It is a view that helps one not to go to planes of misery in this saṃsāra, but to go to happy realms.</p>
+<p>But going deeper than that is the Four Noble Truths. Right View is the understanding of the Four Noble Truths pointed out by a Fully Self-Enlightened Tathāgata Himself—that this entire saṃsāric existence, this very five aggregates (*pañcakkhandha*), is suffering (*dukkha*); that the cause of this suffering is craving (*taṇhā*); that the place where this thirst of craving is quenched is Nibbāna; and that the very path to that Nibbāna is this Noble Eightfold Path. If someone's vision of life is prepared in this manner, a certain transformation begins to occur within them systematically, little by little, moment by moment—just as when one steps onto the first step, as one foot is placed, the other leg rises. Thus, if this view called Right View, this vision of life, has arisen in someone, a subtle transformation regarding thoughts begins to occur systematically in that person. That is pointed out as the intention of renunciation (*nekkhamma-saṅkappa*), the intention of non-ill-will (*avyāpāda-saṅkappa*), and the intention of harmlessness (*avihiṃsā-saṅkappa*). Generally, "nekkhamma" means the idea of leaving the household life, the thought of renouncing the home. When saying this, one should not think it is something belonging only to the bhikkhus. Leaving the household life actually means that this saṃsāra is suffering. Now, even lay devotees sometimes declare in times of distress that they want to ordain. At least in the deeper mind of these Buddhist devotees, there is some inclination toward that ordination. They are aided in this by the sight of the bhikkhus, by associating with the bhikkhus, and so on. On such occasions, what arises in these devotees is the intention of renunciation (*nekkhamma-saṅkappa*)—the thought of renouncing. That is a wholesome thought. It is a wholesome mind. It is by the generation of thoughts of renouncing over an extremely long period of time that a person gets the strength even to ordain.</p>
+<p>In that way, the mind inclines toward the concept of renunciation. The intention of non-ill-will (*avyāpāda-saṅkappa*)—that is, thoughts of loving-kindness, thoughts opposite to anger. Next, the intention of harmlessness (*avihiṃsā-saṅkappa*)—refraining from violence and practicing harmlessness; thoughts of "may no being be harmed." These thoughts are called Right Intention (*sammā-saṅkappa*). Guided by those thoughts, that person's words also change next. Those words are: avoiding lying, slandering, harsh speech, and frivolous talk. That person tries to refrain from them. This is spoken of in the eightfold livelihood-precepts (*ājīva-aṭṭhamaka-sīla*) observed. Next, while speaking those good words, refraining from those evils, if they use truthful words, words that unite others, meaningful words, gentle words, then that person next thinks, "My actions must also be in accordance with my words"—to refrain from those wrongs called killing, stealing, and sexual misconduct. They try to refrain from destroying life, stealing, and sexual misconduct. This is Right Action (*sammā-kammanta*)—correct action; "correct doing" is that.</p>
+<p>Next, it does not stop there. Sometimes, a big problem for many in this day and age is the question of livelihood, the path of living. From various quarters, from various high places, support is given to drag one down to unrighteous paths. Because of that, the life of the Buddhist goes toward ruin on a large scale. Thus, wrong livelihood (*micchā-ājīva*) means incorrect ways of living. One must abandon them. The Buddha pointed out, as things that should not be done by a Buddhist devotee, as occupations that should not be done: trading in weapons, raising animals for slaughter, trading in flesh, trading in poison, trading in intoxicants. One must try to refrain from these and establish a righteous livelihood. Otherwise, that Buddhist path of life, that livelihood (*ājīva*), cannot be completed.</p>
+<p>If someone has established their livelihood in this way, even with difficulty, even with some sacrifice, it does not go to waste. It is through the effort applied for that, next, through that effort, that person enters the ground of practice, the ground of meditation, automatically. Automatically, they get the eligibility to enter. Because, through the effort made to establish one's livelihood, what is it that one does, what is being done inside the mind? There is a major work-share in that. That is what is called Right Effort (*sammā-vāyāma*)—"correct exerting." That is the real effort. It is not an effort made in the world. It is an effort made inside the mind. What is that effort? The effort applied to prevent unarisen unwholesome states from arising. The effort applied to discard arisen unwholesome states. The effort applied to arouse unarisen wholesome states. Next, the effort applied to protect, to consolidate arisen wholesome states. To consider briefly, then, within this fourfold effort, there is a very great, valuable meditation. It is through going on continuously in that meditation that Right Mindfulness (*sammā-sati*)—good recollecting, a good mindfulness—arises in that person. Just as if a guard were given a job—"Do not let bad people enter here, if there are bad people, drive them away from here, draw good people close, treat them well"—if a guard were given such a job, that person would have to perform that duty without sleep, without falling into negligence. In the very same way is that great upheaval that occurs in the mind-state of the devotee who exerts himself regarding his livelihood. Because of that great transformation, that great effort, exertion, and endeavor, a valuable quality, a very rare quality arises in that person systematically: Right Mindfulness (*sammā-sati*)—correct mindfulness, correct recollecting.</p>
+<p>When mindfulness properly emerges, what it is directed toward, contemplating in accordance with the Dhamma, is the four establishments of mindfulness (*satipaṭṭhāna*). One begins to think about the nature of this body. About the feelings (*vedanā*) arising in this body, about the nature of this mind, about the thoughts that come and arise in the mind—regarding these. This is what is called the four establishments of mindfulness (*satipaṭṭhāna*). Those four establishments of mindfulness are the sole way (*ekāyana-magga*) to Nibbāna. The sole way, an infallible path—those four establishments of mindfulness. Thus, through developing that establishment of mindfulness, next, if someone has gained the strength to maintain that mindfulness for a short time, as that time is gradually increased, that person can develop a certain concentration (*samādhi*). That person's mind can be settled. In that way, through correct unification of the mind, the mind can be unified on some meditation subject (*kammaṭṭhāna*). What is done by that is one-pointedness of mind (*cittekaggatā*). In this day and age, we use a word: "personality". To indicate the idea of a person's life, we say "personality." Actually, personality emerges here. Just as when one begins to build a stupa and places the pinnacle, if Right Concentration (*sammā-samādhi*) has arisen in some mind-state, that person's personality becomes unified. Reaching that state is what is called completing the Noble Eightfold Path.</p>
+<p>If someone has completed that Noble Eightfold Path supramundane-wise, right there is Nibbāna. This path of Dhamma is so wonderful that the Buddha has declared: this well-proclaimed (*svākkhāta*) Dhamma is *sandiṭṭhiko, akāliko, ehipassiko, opanayiko, paccattaṃ veditabbo viññūhi*. That is to say, this well-preached Dhamma, Dhamma-practices—these are practices that are not empty. This is a Dhamma with an "infallible practice that yields results properly." Therefore, it is well-proclaimed (*svākkhāta*). "Sandiṭṭhika" means that in daily life, one can see its results right here in this world, before one's eyes. They can be put into practice. As expressed in "thoka thokaṃ khaṇe... khaṇe", starting little by little, slowly, there are benefits to the extent that one performs. Next, similarly, it yields results according to the timeless (*akālika*) law. As we specifically declared, when the Noble Eightfold Path is completed, right there is Nibbāna. There is no need for another person to come and say, "Have you completed it now? Well then, I give you Nibbāna." That is the timelessness (*akālikatā*) of this Dhamma.</p>
+<p>Next, "ehipassika" means "come and see." The Dhamma itself draws one in. The Buddha does not say, "Come and see" in a promotional way. Often, street vendors on the pavements invite people, saying "Come and see." It is not that kind of thing the Buddha has shown here. It is the Dhamma itself that says, "Come and see." Just like saying, "Taste and see," it means "Put me into practice in this way and see if there are results." That is the meaning of "ehipassika"—"come and see." Similarly, "opanayika" means it has the strength to draw one from one stage to another. We said, according to the simile of the great ocean, it draws one from one to another. There is a systematic progress from one to another. Just as when climbing a flight of stairs, there is a connection from one step to another. Therefore, if one has made a beginning in this path of Dhamma at any point, if a proper beginning has been made, from that point onward there is progress for that person—not automatically, but if one applies oneself.</p>
+<p>In that manner, the Buddha pointed out the qualities of *ehipassika* and *opanayika*. Next, *paccattaṃ veditabbo viññūhi*. There is no need for another person to come and tell wise people; they can put it into practice and realize it for themselves, as the Buddha declared. Whether there is a result of this path of Dhamma, whether this saṃsāra can be ended in this very life, in the manner of *"diṭṭheva dhamme"*—right here in this life—whether that bliss of Nibbāna can be realized or not, one must perform it and see. In that way, the Buddha declared here. Therefore, there is no reason for these lay devotees to hold back regarding this path of Dhamma because of their lay status. In the past, even during the Buddha's time, Anāthapiṇḍika and others—when considering the wealthy of today, Anāthapiṇḍika was someone with wealth hundreds and thousands of times greater. Yet, he was a Stream-enterer (*sotāpanna*) lay devotee. The children of that lay devotee, that young devotee, also achieved the realization of the fruits of the path (*magga-phala*). The great lay woman devotee Visākhā, next Citta the householder, Hatthaka of Ālavī, and so on—there is a long list of lay names among those who achieved the realization of the fruits of the path.</p>
+<p>Those noble ones did not spend their time in vain. They applied the correct path of Dhamma at all times. They discussed the Dhamma with the Buddha, engaged in sermons and meditation—in that manner they spent their lives. In that way, Buddhist devotees who lead their lives successfully can reap the results of this path of Dhamma today too. Therefore, you lay devotees must contemplate: now today, especially because of the work and so forth in their lives, many people hold back in this day and age. Many speak of finding time for these works. And because of that very reason, they fall into negligence.</p>
+<p>This diligence (*appamāda*) is a fundamental word of the Buddha. Like the letter "A". These cannot be postponed. That is, we hear many say that it is after retirement that they can perform these sermons and meditations. But after retirement, other problems come. Or else, due to physical weaknesses, they cannot perform them. Thus, it is because of this postponing that we have traveled in this saṃsāra for such a long time. To generate fear of saṃsāra, the Buddha has delivered wondrous discourses on some occasions. There is a series of discourses called the *Anamatagga Saṃyutta*. On one occasion, to thirty bhikkhus who practiced meditation, who had arrived from the city of Pāvā, the Buddha delivered an extremely urgent (*saṃvegajanaka*), extremely wondrous discourse. So powerful was that discourse that it is declared that at the end of the discourse, those bhikkhus became Arahants. How was that discourse delivered? The Buddha began in this manner: "Bhikkhus, this saṃsāra is extremely long, its beginning cannot be seen. A beginning of this saṃsāra cannot be seen by anyone; of these beings who have traveled for an extremely long time, covered by ignorance (*avijjā*) and bound by craving (*taṇhā*), a beginning is not seen." Next He declares—asking a question to the bhikkhus—"Bhikkhus, what do you think? In this long time, as you traveled in this saṃsāra—is the blood shed by your being decapitated greater, or is the water in the four great oceans greater?" The bhikkhus respectfully declare, "Venerable Sir, if we have understood the Dhamma preached by the Blessed One properly, the blood shed by our being decapitated as we traveled in this saṃsāra during this extremely long time is indeed greater, and the water in the four great oceans is less." Next, the Buddha did not stop there: "Bhikkhus, when you were born as bulls, that is, born in the animal state as cattle, is the blood shed by your being decapitated greater, or is the water in the four great oceans greater?"</p>
+<p>There too, the bhikkhus had to answer continuously. Then He asks—now someone might think that this is a question about the blood shed by being born in those various births in the entire saṃsāra. But the Buddha asks, bringing out the matter of each individual animal: "Bhikkhus, when you were born as cows, born as buffaloes, born as goats, born as chickens, born as pigs, is the blood shed by your being decapitated, having been born in each of those births, greater, or is the water in the four great oceans greater?" To all of those, the bhikkhus reply: "Venerable Sir, if we have understood the Dhamma preached by the Blessed One properly, that shed blood itself is greater, and the water in the four great oceans is not greater." Having answered in that manner, by the time it ended, how deeply was the understanding of the nature of saṃsāra generated within those bhikkhus!—they had arrived there without any prior path-attainment or realization, but they had meditated well—at the end of that discourse, it is mentioned that they were freed from all defilement-rust, realized the extremely pure Nibbāna, and ended the suffering of saṃsāra.</p>
+<p>In that light, you lay devotees too must contemplate: on the dark side of this saṃsāra, there may be present in many—even though you are now living as lay devotees—meritorious qualities and meditations accumulated over endless time through spending many lives as ascetics, or appearing as bhikkhus in past dispensations. But, like sparks of fire under ashes, if we do not make some effort and exertion regarding them, we will not be able to perform sermons and meditation, and we will never be able to reap results from them. Therefore, what we have to think is to generate the "perception of possibility"—there may be a certain strength present within us, we may have fulfilled certain perfections (*pāramīs*) in saṃsāra; relying on them, and adding present effort to them, we must walk on this Dhamma-way. As the Buddha pointed out, gradually—just as wise people do—gradually, little by little, moment by moment, like a smith removing the rust of silver, we must resolve to remove the defilement-rust present in our own mind-states.</p>
+<p>Today—as we declared—is the Buddhist New Year. If we made such a resolution on a day like today, according to that resolution, daily recollecting such a verse, keeping it as a motto, we should apply even a short time—five minutes, ten minutes, or a minute—that is available to us before going to sleep. Now, what many say is, "We have no free time." Government holidays and so forth are received in plenty. Free time is not something given; it is something one must secure. Holidays are indeed received in plenty. But one has no free time. Free time is something that must be secured with effort. If there is the desire, if there is that speed called urgency (*saṃvega*), if one is trained in that Dhamma-way without negligence, that person has time, has a moment, can make a start at least little by little. Then, you lay devotees, based on this Dhamma sermon, to bring your own lives closer to the path of Dhamma, following the noble path of Dhamma preached by the Buddha, the Noble Eightfold Path, gradually and systematically practicing meditation, developing virtue, concentration, and wisdom—one must wish: may we, at some point, through the attainment of the supramundane paths of Stream-entry (*sotāpanna*), Once-returning (*sakadāgāmī*), Non-returning (*anāgāmī*), and Arahantship (*arahatta*), be freed from this entire suffering of saṃsāra and realize the noble, supreme, deathless Nibbāna. At this moment, even while listening to this sermon, if you listened to the Dhamma with a meditative mind-attention from moment to moment, all unwholesome states in your minds were dispelled, they were removed, and instead, a mass of wholesome thoughts, a refined mass of wholesome thoughts, was generated in your mind-states at this moment. One must wish: may that mass of wholesome thoughts aid the effort to see Nibbāna in this very age, may it be a supportive condition (*upanissaya*) for realizing Nibbāna.</p>
+<p>Similarly, now, this accumulated mass of merit—if we too have accumulated a mass of merit in the form of preaching the Dhamma, and you in the form of hearing the Dhamma—if there is an assembly of devas and brahmas, such as the guardian deities of the Dispensation who remain awake in this era of the Dispensation's decline, may those deities too... Next, in this place, in this sacred place, the lamp-post (*pahan-kaṇuva*)—especially as you know—is a place of special power. If there are any deities or other beings associated with such places, may all of them who desire merit rejoice in this merit of hearing the Dhamma and preaching the Dhamma. Having rejoiced, may they be freed from all saṃsāric suffering and realize the noble, supreme, peaceful, deathless Nibbāna through a wished-for enlightenment (*bodhi*). Thus we must share the merits with the deities. Similarly, if there are any beings, including your departed relatives, from the Avīci hell up to the Akaniṭṭha heaven, who wish to receive merit, may all of them rejoice in this merit and be comforted by the noble, deathless Nibbāna. With this wish, share the merits by reciting these verses:</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_005.html" class="doc-btn">← Previous Sermon (005)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_007.html" class="doc-btn">Next Sermon (007) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

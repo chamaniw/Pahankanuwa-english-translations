@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 119 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_118.html" class="doc-btn">← Previous Sermon (118)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_120.html" class="doc-btn">Next Sermon (120) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 119</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_119_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_119_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_119_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #119</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.85)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Saddhā bījaṃ tapo vuṭṭhi, paññā me yuganāṅgalaṃ;</p>
+<p>hiri īsā mano yottaṃ, sati me phālapācanaṃ;</p>
+<p>kāyagutto vacīgutto, āhāre udare yato;</p>
+<p>saccaṃ karomi niddānaṃ, soraccaṃ me pamocanaṃ;</p>
+<p>viriyaṃ me dhuradhorayhaṃ, yogakkhemādhivāhanaṃ;</p>
+<p>gacchati anivattantaṃ, yattha gantvā na socare;</p>
+<p>evamesā kasī kaṭṭhā, sā hoti amataphalā;</p>
+<p>etaṃ kasiṃ kasitvāna, sabbadukkhā pamuccatī ti.</p>
+<p>From:</p>
+<p>Kasibhāradvāja Sutta, Sutta Nipāta, Khuddaka Nikāya</p>
+<p>Dear Listeners,</p>
+<p>It was on an Esala Full Moon Poya Day such as this that our Teacher of the Three Worlds, the Fully Enlightened Buddha, revealed to the world with its deities the path to Nibbāna, which brings the suffering of saṃsāra to an end. For a world trapped within a lifestyle that only multiplies the suffering of saṃsāra, it is not easy to understand the value of the virtues that help one escape from that suffering. For this reason, on certain occasions, the Buddha had to use components of that very worldly lifestyle as illustrations to explain the value of those spiritual virtues. A few verses and a story demonstrating such an occasion are what we are going to present to you today.</p>
+<p>When the Buddha was residing in the brahmin village of Ekanālaka in the Magadha country, one day the brahmin Kasībhāradvāja was distributing food to the crowd gathered for the sowing festival at a place where five hundred plows were yoked. Seeing the Buddha standing on one side for alms, the brahmin challenged him in this manner: "Monk, I plow and I sow. Having plowed and sown, I eat. Monk, you too should plow and sow; having plowed and sown, eat." Then the Buddha replied to him in this way: "Brahmin, I too plow and sow. Having plowed and sown, I eat." Then the brahmin said: "We do not see any yoke, plow, goad, or draft-oxen belonging to the Venerable Gotama, which are the agricultural implements necessary for farming. Yet, the Venerable Gotama says, 'having plowed and sown, I eat.' How are we to understand this?" When asked, the Buddha uttered these few verses which we mentioned at the beginning:</p>
+<p>> *Saddhā bījaṃ tapo vuṭṭhi, paññā me yuganāṅgalaṃ;*</p>
+<p>> *Hiri īsā mano yottaṃ, sati me phālapācanaṃ.*</p>
+<p>Faith is the seed-paddy. Austerity is the rain-water. Wisdom is my yoke and plow. Shame of wrongdoing is the plow-pole. Mind is the yoke-strap. Mindfulness is my plowshare and goad.</p>
+<p>Next, he further declares:</p>
+<p>> *Kāyagutto vacīgutto, āhāre udare yato;*</p>
+<p>> *Saccaṃ karomi niddānaṃ, soraccaṃ me pamocanaṃ.*</p>
+<p>Restraint of body and speech, and moderation in food—controlling the stomach—these are my weeding, my protection, or in other words, the fence of the field. Truthfulness is my weeding. Gentleness [soracca], which is the supreme state of discipline, is the unyoking of the oxen.</p>
+<p>Then he further declares:</p>
+<p>Energy is my draft-ox, drawing the plow. That guiding of the plow leads to the security from bondage (*yogakkhema*), which is Nibbāna. *Yogakkhema* is a name for Nibbāna. That plow, drawn by the oxen, goes straight towards Nibbāna.</p>
+<p>> *Gacchati anivattantaṃ, yattha gantvā na socare.*</p>
+<p>That plow moves forward without turning back. To whatever place it goes where there is no sorrow—meaning, to the sorrowless Nibbāna—that plow goes without turning back. What is meant here is that it is unlike the plow in the brahmin's field, which reaches the end of the field and then turns back.</p>
+<p>> *Evamesā kasī kaṭṭhā, sā hoti amataphalā;*</p>
+<p>> *Etaṃ kasiṃ kasitvāna, sabbadukkhā pamuccatī’ti.*</p>
+<p>Plowed in this manner, this plowing of mine yields the fruit of the Deathless (*amata-phala*)—it yields the harvest of Nibbāna, which is the Deathless. Having done this plowing, one is released from all suffering; one can escape from the entirety of the suffering of saṃsāra. Here, as we mentioned earlier, the Buddha utilized the very implements connected to the brahmin's plowing. The brahmin spoke of plowing in the worldly, conventional field. Using those same concepts, the Buddha explained the cultivation of spiritual virtues in the field of this Dispensation and explained what its harvest is.</p>
+<p>In this challenge made by the brahmin, we can see the criticism raised by the brahminic society regarding the monastic tradition of the Saṅgha established by the Buddha. To the brahmins, there was something strange in this. This is because brahminic society is a priestly society. While living on the offerings and sacrifices made to the gods, they also engaged in farming as a livelihood and profession. That is why he is called Kasībhāradvāja. Bhāradvāja is a brahminic name, belonging to the priestly caste. "Kasī" means one engaged in agriculture—a farming brahmin. Thus, to a brahmin accustomed to such a lifestyle, when the Buddha came and stood with an empty bowl, it appeared as if he was just eating without doing anything. "What is the meaning of this? One must do a job to expect food"—with this idea, he raised that argument, or rather, made the challenge. But the monastic society established by the Buddha was a society that gave priority to spiritual cultivation. It exists within the cultivation of virtue. The significance and value of that venerable society lie therein. That is what the Buddha highlighted on this occasion, using the brahmin's own implements as analogies.</p>
+<p>Let us reflect a little on each of these virtues. Why did the Buddha show faith (*saddhā*) as the seed here? As we all know, the fundamental requirement for cultivating these dispensation virtues, for engaging in the practice of the Dispensation, is faith. A farmer starts farming only if there is seed-paddy. If there is no seed-paddy, he does not even begin farming. Moreover, seed-paddy refers to that which has the capacity to germinate. Dispensation practices done without faith are, metaphorically speaking, like cultivating hollow grain. Where there is no faith, there is only a crop of hollow grain. By showing faith as a seed here, we can understand its immense value. Faith is something connected to the heart. Placing the heart, as it were, one establishes faith in the Triple Gem—in the Buddha, the Teacher, the Dhamma, and the Saṅgha. Guided by that faith, the energy and strength to practice the spiritual virtues of the Dispensation arise.</p>
+<p>To explain this further, when a grain of paddy is germinated, it takes root. Similarly, it is through faith that the roots of virtue (*sīla*) are established and strengthened. Next, just as the sprout shoots up, just as the leaves grow from above, calm (*samatha*) and insight (*vipassanā*) can be developed. What helps this seed to grow is the rain. That is why the Buddha compared austerity (*tapas*) to rain. Austerity can be understood briefly as restraint of the senses (*indriya-saṃvara*). Ascetic practices (*dhutaṅga*), virtues of morality (*sīla*), and all such qualities belong to this. In brief, the restraint of the senses is austerity. It is through preserving the virtues of austerity, such as morality, that the seed of faith grows. Next, wisdom (*paññā*)—"wisdom is my yoke and plow" (*paññā me yuganāṅgalaṃ*). Just as the yoke goes foremost in plowing, wisdom goes foremost in this path of practice. You know that right view (*sammā-diṭṭhi*) is placed first even in the Noble Eightfold Path. It is explained as "right view is the forerunner" (*sammā-diṭṭhi pubbaṅgamā*). It goes ahead, it runs in front. Just as wisdom is primary, on the other hand, it is wisdom that goes deep. The work done by the plow is digging the earth. That is why wisdom is compared to both—the yoke and the plow. Moreover, it is with that plow that weed-roots and the like are uprooted. It is through wisdom that the roots of defilements (*kilesa*) are uprooted.</p>
+<p>In this way, we can understand the value of the simile given by the Buddha. "Wisdom is my yoke and plow." "Shame is the plow-pole" (*hiri īsā*). Standing in front of the plow, what helps to guide the yoke properly is the plow-pole. Here, *hiri* refers to the shame and fear of sin/wrongdoing. You may have heard that shame and fear (*hiri-ottappa*) are described as the guardian laws of the world (*loka-pālaka-dhamma*). In the protection of the virtues of the Dispensation as well, the fear and shame of sin stand guard. Although only shame (*hiri*) is mentioned here, the other (fear of wrongdoing) can also be understood—the shrinking nature of the mind is "shame, the plow-pole". "Mind is the yoke-tie" (*mano yottam*). It is through the mind that all of this is connected. The yoke, the oxen, the plow—all are connected by the tie of the mind. "Mindfulness is my plowshare and goad" (*sati me phālapācanaṃ*). The virtue of mindfulness, *sati*, is shown as the plowshare. Standing as a protection for the plow and going ahead to perform that task is the plowshare. Next, two functions of mindfulness are shown through two similes—the plowshare and the goad. Mindfulness is the plowshare and the goad. In some places in the Dhamma, mindfulness is explained as "mindfulness is the protective charioteer" (*sati ārakkha sārathī*). "Ārakkha" means it brings protection, and "sārathī" means the driver; it both guards and directs. It guides along the right path. Both are done by mindfulness, by the quality of *sati*. That is why it was compared here to the plowshare as well as the goad. It is out of fear of the goad that the oxen walk on the right path.</p>
+<p>Restraint in body and speech, and moderation in food—restraint of body refers to the three-fold physical restraint: abstaining from killing living beings, abstaining from taking what is not given, and abstaining from sexual misconduct. "Restrained in speech" (*vacīgutto*) means being restrained in speech—abstaining from lying, slandering, harsh speech, and frivolous talk. Next, "moderation in food" (*āhāre udare yato*) means consuming food in moderation. These matters are compared by the Buddha to the fence—the fence of the field. If there is no fence for the field, wild cattle will enter and eat it up. Similarly, the things that support the cultivation of these virtues are the aforementioned virtues of morality, such as restraint of body and speech, and moderation in food. Next, "truthfulness is the weeding of the field" (*saccaṃ karomi niddānaṃ*). The weeding of weeds is done by truthfulness. As soon as weeds grow, a good harvest cannot be obtained if the weeds of falsehood grow. Falsehood must be removed by means of truth. Wrong views (*micchā-diṭṭhi*), incorrect ideas, wrong beliefs, false doctrines—these must be uprooted using truth, with truth going foremost. They must be uprooted in time. Otherwise, in the end, instead of a harvest, what one gets is a heap of hollow grain. There is an old saying: "When it turns to hollow grain, the actual rice grains are few." The majority becomes falsehood; in the end, what remains are empty things, false things, and a bit of nonsense. There is nothing of real substance, and no real harvest is obtained. Therefore, truthfulness is utilized for weeding out the weeds.</p>
+<p>Gentleness (*soracca*), or docility, refers to the supreme state of discipline, culminating in Arahantship—the highest discipline which is perfected in Arahantship. It is at that stage that the oxen are unyoked, finally released from the burden of the yoke. One is released when that complete state of discipline is achieved. Energy (*viriya*) is compared to the oxen that draw the yoke together, drawing it evenly—the oxen drawing the plow. The two oxen must share the weight of the yoke equally. Similarly, energy is truly fruitful when there is balance of energy (*viriya-samatā*)—which means neither excessive energy nor deficient energy. If energy is excessive, there is restlessness (*uddhacca*). If energy is deficient, there is laziness (*kosajja*). The work must be done with the balance of energy between these two. To show this, the Buddha presented: "Energy is my draft-ox" (*viriyaṃ me dhuradhorayhaṃ*), just as the two oxen drawing the plow pull together as one. The pulling of the plow is done through energy, and that too with balance—with energy accompanied by balance.</p>
+<p>Next, it is further said: "leading to security from bondage" (*yogakkhemādhivāhanaṃ*). *Yogakkhema* is a name for Nibbāna. Actually, the word *yoga* comes from the word *yuga*. *Yuga* means a yoke. Entering into the work of this Dispensation is like putting one's neck to the yoke. It is such a great task. The words used in this context, such as duty (*dhura*), yoke (*yuga*), and bondage (*yoga*), all carry the connotation of the work done by those two oxen. In the past, many of these words etymologically arose from the context of cattle farming. Behind *dhura*, *yuga*, and *yoga*, there lies the story of the two oxen under the yoke.</p>
+<p>"Leading to security from bondage" (*yogakkhemādhivāhanaṃ*) means release from that yoke. What is shown by this is release from the suffering of saṃsāra. That is a name for Nibbāna. It goes up to that. "Without turning back" (*anivattantaṃ*)—it goes without stopping. As mentioned before, if it is the plow in a brahmin's field, it must go to the end of the field and turn back. This is not like that. "It goes without turning back" (*gacchati anivattantaṃ*); the plow goes on without stopping. To where? "Where having gone, they do not sorrow" (*yattha gantvā na socare*). To whatever place having gone they do not sorrow—meaning, to the sorrowless Nibbāna, to the Deathless—to that very place this plow goes. Having preached thus, the Buddha finally declares:</p>
+<p>When this plowing is done in this manner, it yields the fruit of the Deathless (*amataphala*); it yields the fruit of Nibbāna which is the Deathless. It is not an ordinary harvest. Having done this plowing, one is released from all suffering; one can escape from the entirety of the suffering of saṃsāra.</p>
+<p>When such a meaningful set of verses was uttered, the brahmin was inspired with faith. He immediately went, filled a large golden bowl with milk-rice, came back and offered it to the Buddha, saying: "Let the Venerable Gotama partake of this milk-rice. For the Venerable Gotama is indeed a farmer—a farmer who does the farming that yields the fruit of the Deathless." He accepted it in that way. At that moment, the Buddha declared in another verse: "It is not proper for me to partake of this milk-rice. For this is something obtained by chanting verses." By "chanting verses" (*gāthābhīgītaṃ*), he meant that partaking of this milk-rice as a reward or an offering received by reciting his own virtues in verses was not proper for him. "This is not fit for my livelihood; it is not fit, not allowable for Buddhas who maintain the purity of livelihood (*ājīva-pārisuddhi*)." Thus, he rejected it. "But if one offers food to a great sage whose taints (*āsava*) are destroyed, who is accomplished, that is like sowing in a supreme field of merit, yielding great fruit and great benefit"—this fact was also declared. Then, when the Buddha rejected the milk-rice, the brahmin asked: "Then to whom shall I give this?" At that moment, the Buddha declared: "Brahmin, I do not see anyone in this world, including the devas, maras, and brahmas, along with ascetics and brahmins, who can digest this milk-rice after consuming it. Therefore, throw this milk-rice either in a place devoid of green grass, or into water devoid of living beings."</p>
+<p>When this was said, the brahmin Kasībhāradvāja took that milk-rice and threw it into water devoid of living beings. As soon as it was thrown, that milk-rice began to hiss, sputter, and emit steam, making the sound "ciṭi-ciṭi, ciṭi-ciṭi". Seeing this, the brahmin, realizing it was a great miracle, felt a sense of spiritual urgency (*saṃvega*) and hair-standing goosebumps, and through that, he developed great faith in the Buddha. Then he expressed his faith with a certain statement: "Excellent, Venerable Gotama, excellent!" He then illustrated it with several similes and declared his taking refuge in the Triple Gem. "Just as one would upright what was overturned, or reveal what was hidden, or show the path to one who was lost, or hold up an oil lamp in the dark so that those with eyes could see forms, in the same way, the Dhamma has been made clear in many ways, with various similes, by the Venerable Gotama. I go to the Blessed One for refuge, to the Dhamma, and to the Saṅgha. May I receive the going-forth (*pabbajjā*) and the higher ordination (*upasampadā*)."</p>
+<p>Then, as mentioned in the story, in the end, the brahmin Kasībhāradvāja, having received the going-forth and the higher ordination, attained Arahantship before long. The story shows that he abandoned worldly farming and entered into the farming taught by the Buddha. From this, we can reflect on many things regarding those values of the Dispensation. What is the ordinary idea of the world? Building up the economy. There are various cultivation campaigns in the world for economic development. But we must realize that where this cultivation of virtue is absent, no matter how prosperous other cultivations make us, they can fall into decline and be destroyed when virtues disappear among human beings. If we reflect on this Dispensation, the monastic society of the Saṅgha is indeed established on principles completely different from those of the priestly society. It is not priestly, but venerable (*pūjya*). This is extremely clear when we constantly reflect on those virtues of the Saṅgha. When we think of the virtues of the Saṅgha, everyone recites words like: *supaṭipanno*, *ujupaṭipanno*, *ñāyapaṭipanno*, *sāmīcipaṭipanno*. What is spoken of there is the practice (*paṭipadā*). It does not speak of sacrifices, rituals, or offerings made to the gods, but of the practice, the conduct. The Saṅgha is *supaṭipanno*—meaning they have entered well upon the practice. *Ujupaṭipanno*—they have entered directly, straight upon this practice, without crookedness or deviousness. *Ñāyapoṭipanno*—they have entered upon the practice methodically, systematically. *Sāmīcipaṭipanno*—they have entered upon the practice properly, in a way that deserves the praise of "sādhu, sādhu". In all these, the emphasis is on the practice (*paṭipadā*).</p>
+<p>It is for this very reason that they are next described as *āhuneyyo*, *pāhuneyyo*, *dakkhiṇeyyo*, *añjalikaraṇīyo*. In the past, the word *āhuti* was used for offerings and gifts brought from afar. *Pāhuti* referred to food and hospitality offered to guests. Thus, because of their wealth of virtue, they are worthy of offerings brought from afar, and worthy of hospitality—worthy of being given even those things kept for guests if they arrive unexpectedly. *Dakkhiṇeyyo* is also an ancient brahminic word. *Dakkhiṇā* meant the fee or gift given to brahmins for their sacrifices and rituals. But here, that word is used because of that wealth of virtue. They are *dakkhiṇeyyo*—worthy of receiving such gifts because of their wealth of virtue, not because they perform sacrifices, rituals, or recite blessing verses or curses, but solely because of the aforementioned wealth of virtue. Next, *añjalikaraṇīyo*—worthy of having hands raised in reverent salutation above the head. This too is not because of anything else, but solely due to their wealth of virtue. It is because of their wealth of virtue that they are worthy of being worshiped.</p>
+<p>Within this passage on the virtues of the Saṅgha lies the answer to the brahmin. Otherwise, the error of the brahminic society and the ordinary world in describing these monks as idle idlers is evident from this. What, then, is the purpose of the monastic society established by the Buddha? In the end, it is described as *anuttaraṃ puññakkhettaṃ lokassa*—the establishing of an unsurpassed field of merit for the world. The brahmin prepares his field expecting a harvest that will temporarily satisfy physical hunger. But the Buddha helps to bring the mind-stream (*citta-santāna*) to a state that yields the fruit of the Deathless, called the nectar of Nibbāna—bringing the supreme bliss of Nibbāna, which is considered the most delicious and directly realizable thing in the world. In fact, though we speak of this "field of the Dispensation" (*sasun keta*), we cannot point to it and say it is in such-and-such a place. The field of the Dispensation is the mind-stream itself. To put it briefly, the discussion is entirely about the mind-stream. Wisdom, mindfulness, and all these Dhamma factors exist within the mind. Therefore, the mind-stream is the true field of the Dispensation shown by the Buddha.</p>
+<p>This is exactly what is said in this verse which you have heard so often:</p>
+<p>> *Sabbapāpassa akaraṇaṃ, kusalassa upasampadā;*</p>
+<p>> *Sacittapariyodapanaṃ, etaṃ buddhāna sāsanaṃ.*</p>
+<p>Abstaining from all evil, cultivation of wholesome qualities, and purifying one's own mind—this is the teaching of all the Buddhas. The mind-stream is the field. If that field is cultivated to finally yield that fruit of the Deathless, or the nectar of Nibbāna, then that field becomes a sacred thing—that mind-stream becomes a sacred object to the world. That is why they are called *anuttaraṃ puññakkhettaṃ lokassa*—an unsurpassed field of merit is prepared for the world. From this, the difference between the priestly society of the brahminic tradition and the venerable, monastic society of the Saṅgha becomes extremely clear to us. This is something we must recall and point out in this day and age. Likewise, we spoke about worldly cultivation. There, even this brahmin realized: "What the Venerable Gotama has introduced to me is far more valuable than this plowing I do with five hundred plows." Understanding this, he spoke in that manner and even asked for the going-forth and higher ordination from the Buddha. We can understand that there is profound depth even in the few similes he used while showing his submission to the Buddha. In many Sutta discourses, after the Buddha preaches the Dhamma, the passage that constantly occurs when the listener expresses their faith is the one used here. "Excellent, Venerable Gotama, excellent!" Next, a few similes are given. Let us now reflect on them.</p>
+<p>That constantly used passage shows the wonderful nature of the Buddha's style of preaching. It is the mental revolution that occurs within a person through his preaching that is shown by those words and similes. Through his teachings, according to each individual's capacity of comprehension, a complete mental revolution takes place. Actually, in some Sutta discourses, not all parts of the Buddha's preaching are recorded. Instead, it is briefly stated that "after the progressive talk (ānupubbī-kathā), he preached thus". Since everyone knows the progressive talk, it is often not mentioned. Here, the value of these similes is made very clear. That is why we thought of specifically speaking about it. What are those similes?</p>
+<p>"Just as, Venerable Gotama, one would upright what was overturned"—when something is overturned, its contents cannot be seen. Thinking it is useless, it is left overturned; but when it is uprighted, its true nature is seen. Such an understanding dawned upon this brahmin. What is the meaning of this? The brahmin was living within worldly society, within conventional values. According to conventional values, a person must eat. To do so, they must engage in some industry, craft, or employment. So, when someone comes without any job, holding an empty bowl and standing in front of a house, it seems like a useless act of eating for free. The brahmin was established on such wrong ideas. That is why it is like "uprighting what was overturned". Also, "like revealing what was hidden". Until the Buddha declared it, the brahmin did not know, he did not recognize what the true seed-paddy was, what the true rain was; he did not understand their deep meanings. Through the matters shown by the Buddha, those things became clear. The hidden virtues were revealed. Next, "one who was lost"—the brahmin was someone lost in saṃsāra. The path was shown. Next, "one who was in darkness"—the Buddha lit a lamp. Through that light of the Dhamma, the brahmin could see, because he had eyes; the brahmin was indeed a wise person.</p>
+<p>Regarding this Sutta, ancient teachers point out that the Buddha presented faith (*saddhā*) as primary here because the brahmin possessed wisdom (*paññā*) but lacked faith (*saddhā*). When the Buddha shed the light of the Dhamma, because the brahmin had eyes, he saw the truth. Thus, we can understand the value of those similes. In fact, those four similes are used to show the mental revolution that occurs within the disciple through the Buddha's style of preaching. It is not so clearly seen in every Sutta. Because it is extremely clear and prominent in this Sutta, we highlighted it. Through all these matters, we can see the limitations of worldly plowing as well as the value of the supramundane plowing shown by the Buddha.</p>
+<p>The Buddha expressed this same matter to some extent on another occasion, also while out for alms. Actually, close to this Sutta, there is another short incident. One day, the Buddha went for alms to the house of a brahmin named Udaya. The brahmin filled the bowl well and offered it. The Buddha returned. On the second day too, he went to that house, and on the second day too, the bowl was filled and offered. On the third day too, he went. On the third day, after offering the food in the bowl, the brahmin expressed the thought: "This monk comes again and again out of greed for taste"—meaning one who is greedy for taste. At that moment, the Buddha uttered a series of verses. The brahmin had said "again and again". "This monk comes here again and again"—the Pali word for "again and again" is *punappunaṃ*. In Sinhala, we say *puna punā*. "This monk comes here again and again." Using that very word, the Buddha uttered a series of verses, using the word "again and again" repeatedly.</p>
+<p>He said: "In this world, it is not only this alms-round of mine that is done again and again. Whatever things exist in this world, they are all done again and again." What are they? He goes on to say: "Again and again they sow the seed. Again and again the rain falls. Again and again they gather the grain and fill the granaries. Again and again beggars come and beg. Again and again donors give gifts. Having given gifts again and again, donors are born again and again in heaven." Next, he says the same regarding cattle farming: "Again and again those who milk the cows draw milk." You know that when the udder is squeezed once, all the milk does not come out; how many times must one labor for this? "Again and again the calf runs to the cow, and thereby falls exhausted and suffers." Next, he states a profound matter: "Again and again one enters the womb. Again and again one is born. Again and again one meets death. Again and again one is carried to the cemetery." Then he concludes with the Dhamma: "The wise person who has attained the path to the place where one is not born again, is not born again and again." When this series of verses was uttered, that brahmin too, probably because he was wise, understood the point, expressed his refuge in the same way, and took refuge in the Triple Gem.</p>
+<p>From this, we can realize that what exists in this world is a process of preparing *saṅkhāras* (formations/preparations). These must be prepared and repaired continually. By yoking five hundred plows or so, holding sowing festivals with great clamor, you cultivate and fill your granaries. For how many days? When it is finished, because you have to cultivate again and again, you set aside seed-paddy. Thus, the world moves within an endless cycle of repetition. It is the same with cattle farming, and the same with other activities. There is no end to any of it. There is no finality to anything. One has to keep preparing, repairing, and maintaining them. That itself is suffering (*dukkha*). "All preparations are impermanent" (*sabbe saṅkhārā aniccā*). These are preparations. The entirety of life is a heap of preparations. The food taken this morning is gone by nightfall. That food and drink, the air taken in for inhalation and exhalation—all these are wearing away. They arise and pass away. The effort to repair those that are lost is what is called "again and again". One must do these again and again. In all worldly cultivations, this is present—doing things again and again.</p>
+<p>The Buddha highlights a cultivation of virtue—a path of practice to escape from this suffering nature of repetition, from the entire suffering of saṃsāra. That path of practice is what is presented in this *Kasibhāradvāja Sutta*. That path of practice begins with faith (*saddhā*) and ends with wisdom (*paññā*). The host of other virtues within it was shown by the Buddha through various implements. Therefore, when we say the Buddha's Dispensation, it is the cultivation of virtue. There are indeed many things shown to others as the Buddhist Dispensation. Although they point to them as the Dispensation, if we look inside, if those aforementioned virtues are not there, there is no Dispensation. What the Buddha shows is the way of looking inward. In the end, one has to look inward. When one grows old, the eyes cannot see, and one cannot recognize the person nearby. One cannot look at the beauty of other external implements. Spontaneously, the mind turns to oneself, inward. "What is inside this?" If instead of virtues, there is a heap of unrighteousness, a heap of vices, sins, and crimes, that person will have to depart to the next world weeping and wailing. But if one can see inward: "I have preserved these and these virtues. Conventionally, I have achieved this. Supramundane states have been attained. There is no fear of hell, no fear of further rebirth." If such a realization is there when looking inward, that person alone has true peace. That is the path shown by the Buddha. It was to tread this path that the Buddha established this monastic society of the Saṅgha. That is where the difference lies between the priestly function and the venerable state.</p>
+<p>It was difficult for the brahminic society to understand this. Sometimes, it might be difficult for modern society to understand this as well. But as the Buddha's Dispensation, the Buddha always highlighted a specific truth that no one else in this saṃsāra had been able to discover. That is why we call him a Buddha. That truth is the Four Noble Truths (*cattāri ariya-saccāni*). Why was suffering (*dukkha*) called a Noble Truth? We all know suffering. Why should the Buddha teach this suffering anew? What we know is ignoble suffering (*anariya-dukkha*). Ignoble suffering means limited suffering—the suffering we have partitioned off as a separate department, separating the rest as pleasure (*sukha*). But the Buddha declares, to put it briefly—as you often express the meaning of suffering as birth is suffering, aging is suffering, separation from the loved is suffering, union with the unloved is suffering, and so on—but it concludes with, in brief, the five aggregates of grasping (*pañcupādānakkhandhā*) themselves are suffering. The aggregates of form, feeling, perception, preparations, and consciousness (*rūpa, vedanā, saññā, saṅkhāra, viññāṇa*) themselves are suffering.</p>
+<p>The five aggregates are suffering because they are all a heap of preparations. The preparations of the aggregate of form (*rūpakkhandha*) are those things connected with protecting this bodily cage. Food and drink, medicine for illness, patching up broken and fractured parts—in this way, carrying this bodily cage with the same license plate, applying various colors and paints, or begging from others, or buying parts with money to fit them together—even if we think of the body, it is such a journey. The others are also the same. The Buddha has declared that not one of these is permanent (*nicca*). When pleasant feeling (*sukha-vedanā*) passes away, it is suffering. Everyone looks for pleasant feeling. Escaping from a heap of painful feelings is what is called pleasure. That too is impermanent. Thus, between pleasure and pain, the world is engaged in a game of see-saw, like riding on coconut-leaf stems.</p>
+<p>There is no end to perception (*saññā*) either. They too are continually prepared. This heap of perceptions means recognitions. Its boundaries cannot be found. To the extent that one can proudly say they are a modern, advanced person, worldly beings toil day and night to complete their perceptions about this world. Next, because of that heap of perceptions, according to one's likes and dislikes, the preparations made through mind, speech, and body are the heap of preparations (*saṅkhāra-goda*). Because of that heap of preparations, there is a mountain of suffering. It does not end there. There are also many results (*vipāka*) of that heap of preparations—whether pleasant results or painful results. Not only in heaven or the human world, but even in the brahma worlds, there are pleasant energies experienced for aeons, and in hells, there are painful energies experienced for aeons, caused by those preparations (*saṅkhāra*). Next, consciousness (*viññāṇa*)—the mind that thinks "this is mine, this is I"—that too changes. Sometimes two people join together, thinking they have a mind that does not change, but without their knowing, the mind changes. The Buddha declares that although one can give an analogy for the change of the body, no analogy can be given for the change of this consciousness (*viññāṇa*). The mind changes so rapidly (*lahuparivatta*) that not even an analogy can be given. Here too, there is no soul (*attā*); nowhere is there a soul. A soul means one's permanent protection, something that can be maintained under one's control. The Buddha declares that in none of these five aggregates is there such a thing.</p>
+<p>By the word "is released" (*pamuccati*), the Buddha highlights the path by which beings are released from this aforementioned state of suffering. That path of release is the Noble Eightfold Path. You have heard this so often. As we said earlier, right view (*sammā-diṭṭhi*) is the forerunner. One treads a path with some understanding that "this is the correct path". The transformation of life that occurs according to that right view is what is called the cultivation of virtue within the mind-stream. The very path of life that the Buddha presented on that occasion to the brahmin Kasībhāradvāja, in a manner suited to the life of the Saṅgha, is what we generally call the Noble Eightfold Path.</p>
+<p>The systematic training of one's thoughts and intentions according to the right view first established is called right intention (*sammā-saṅkappa*). Removing unwholesome thoughts of sensual desire (*kāma-vitakka*), ill-will (*byāpāda-vitakka*), and cruelty (*vihiṃsā-vitakka*), one develops thoughts of renunciation (*nekkhamma-saṅkappa*)—which means the intention to escape from saṃsāra. Non-ill-will (*abyāpāda*) means thoughts of loving-kindness (*mettā*). Non-cruelty (*avihiṃsā*) means thoughts of compassion (*karuṇā*). Standing on the premise and hypothesis of the right view one has taken—that the entire world is sunk in a heap of suffering—when looking at the world, the three concepts that arise are those of renunciation, non-ill-will, and non-cruelty. When treading and training oneself in those concepts and thoughts, a certain restraint is established in one's speech as well. That is why there is abstaining from lying, slandering, harsh speech, and frivolous talk. Through the effort to act in accordance with that speech, the body is restrained from sins that cause suffering in saṃsāra and harm both oneself and others—namely, killing living beings, taking what is not given, and sexual misconduct.</p>
+<p>Next, the journey of connecting this more systematically with one's livelihood is called right livelihood (*sammā-ājīva*)—the correct way of living. Abstaining from wrong livelihoods (*micchā-ājīva*) which we mentioned as trade in human beings, trade in weapons/flesh, trade in poisons, trade in intoxicants, and such wrong trades, and leading a good and wholesome life is the purification of livelihood. Through the effort to purify it, there grows within oneself what is called right effort (*sammā-vāyāma*): the four-fold right effort of preventing unarisen evil thoughts from entering the mind, abandoning unwholesome states already present in the mind, developing unarisen wholesome states, and consolidating wholesome states already present. When engaged in that effort, through it develops right mindfulness (*sammā-sati*)—correct mindfulness. One has to act with good mindfulness. When that mindfulness becomes more stable and established, taking up some meditation object (*kammaṭṭhāna*), one can attain states of concentration (*samādhi*), right concentration (*sammā-samādhi*), and the absorptions (*jhāna*).</p>
+<p>This is what is called the Noble Eightfold Path. Within it too, there is a path of life. It is a systematic, complete transformation of the mind-stream. A complete reorganization of the mind-stream. In modern terms, we hear about the reorganization of various departments. But the highest level of reorganization of the individual mind-stream is what the Buddha has presented through this Noble Eightfold Path. Any energetic person can put this into practice and realize for themselves the change in the experience of their own mind-stream. Then, the stages of that realization are called Stream-entry (*sotāpatti*), Once-returning (*sakadāgāmitā*), Non-returning (*anāgāmitā*), and Arahantship. Through that one-pointed mind, through a one-pointed reorganization of character, one can understand the world through insight (*vipassanā*).</p>
+<p>Insight is a special seeing. To see specially, a pure, concentrated mind is necessary—an undistracted mind. When the mind is applied to pure concentration, the world is clearly seen. The true nature of reality (*yathā-bhūta*) is briefly shown by the Buddha in three words: as impermanent (*anicca*), suffering (*dukkha*), and not-self (*anattā*). These are merely three words. But to realize them, one must tread the aforementioned path. When that reorganization, starting from right view and going up to right concentration, is developed to a certain level, at some point, through a series of special insight knowledges (*vipassanā-ñāṇa*) arising in one's mind-stream, one understands the impermanence within these five aggregates. The impermanence of form, the impermanence of feeling, the impermanence of perception, preparations, and consciousness. Impermanence means the nature of arising and passing away. What we usually mean by impermanence is "it was there, and now it is gone"—that is all. But here, there is a nature of constantly arising and passing away. These operate in a very subtle manner within them. It is not seen. Because it is not seen, worldly beings, through the perception of compactness (*ghana-saññā*), grasp them as separate entities—"my form, my feeling" and so on. But to the insight wisdom, at some point, one directly realizes that change occurring in each of them.</p>
+<p>The worldly being wishes for the arising of this very five-fold aggregate. The person traveling in saṃsāra always waits for the sun to rise tomorrow morning. That is what is meant by being on the side of arising (*samudaya-pakkha*). "Although today was bad, tomorrow morning a good morning, a better morning will come"—thinking thus, they travel in saṃsāra. But tomorrow is just like today. The one who hopes for Nibbāna looks at the setting of the sun. Whichever way it is, even if the sun rises, it sets. The nature of all these is that they pass away. That is what agrees with the truth—this nature of cessation (*nirodha*). That is where Nibbāna lies. Worldly beings do not like to see that. They do not like to look at it. They do not like to direct their minds to it, because for so long in saṃsāra, they have kept their minds only on the side of arising (*samudaya*). But the Buddha declares that the truth lies there. "Whatever is of the nature to arise, all that is of the nature to cease" (*yaṃ kiñci samudayadhammaṃ sabbaṃ taṃ nirodhadhammaṃ*).</p>
+<p>If so, clinging to them, grasping them is not proper. If one grasps them, one is destroyed along with them, and suffering and trouble come. At some point, the five aggregates are let go of. That is what is called arriving at the fruit of Stream-entry. For the first time, that realization comes. By further sharpening the power of knowledge on that path, by further sharpening the realization of the Three Characteristics (*ti-lakkhaṇa*), through the realization of the path and fruit of Once-returning, Non-returning, and Arahantship, one is finally released from all suffering of saṃsāra and can find peace in the supreme and noble Nibbāna. We must reflect on this. We hear everyone talking about values and virtues in this world. We, as Buddhists, must value these virtues that the Buddha highlighted to the brahmin Kasībhāradvāja. We must bring them to light. We must shape our values of life according to them, and shape our path of practice accordingly. Within this very era of a Buddha's appearance, making as much effort as possible, developing one's virtue, concentration, and wisdom, it is good to resolve to escape from the suffering of saṃsāra.</p>
+<p>Thus, today many observed the Poya eight precepts. Likewise, at this moment, some observed the eight precepts of pure livelihood (*ājīvatthāmaka-sīla*). Established in those precepts, if there is any concentration or meditation you have developed, at least during this opportunity of hearing the Dhamma and preaching the Dhamma, having concentrated your minds, if you have gained some understanding from these, may they be a supportive condition (*upanissaya*) for your own realization of the Dhamma! Through the association with noble friends (*kalyāṇa-mitta*), developing your sermon-hearing and meditation, and with the help of this wholesome energy, may this merit of hearing the Dhamma lead to the realization of the supreme and noble Nibbāna through the realization of the paths and fruits of Stream-entry, Once-returning, Non-returning, and Arahantship within this very life! Make that aspiration.</p>
+<p>May all the realms of devas and brahmas, including our departed relatives from Avīci up to Akaniṭṭha, who wish to rejoice in the merits of this preaching and hearing of the Dhamma, rejoice! By doing so, may they all realize the supreme and noble Nibbāna through their aspired Bodhi! With this aspiration, let us recite these verses:</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_118.html" class="doc-btn">← Previous Sermon (118)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_120.html" class="doc-btn">Next Sermon (120) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

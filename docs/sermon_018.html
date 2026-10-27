@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 018 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_017.html" class="doc-btn">← Previous Sermon (017)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_019.html" class="doc-btn">Next Sermon (019) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 018</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_018_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_018_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_018_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #18</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No. )</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Sahassamapi ce gāthā, anatthapadasaṃhitā; Ekaṃ gāthāpadaṃ seyyo, yaṃ sutvā upasammati.</p>
+<p>From:</p>
+<p>Verse 100 from the Sahassavagga (Chapter of Thousands) of the Dhammapada</p>
+<p>Dear Listeners,</p>
+<p>While the Buddha was residing at the Jetavana monastery, a certain large group of people set out on a voyage by ship from a remote region of India (Jambudīpa). The ship broke apart in the middle of the ocean, and almost all of them drowned. One person, a man named Bāhiya, managed to grab hold of a wooden plank and, swimming with great difficulty, finally washed ashore at the port of Suppāraka. At this moment, this man did not even have proper clothing. Gathering pieces of wood and joining them with tree bark, he made himself a garment. Then he went for alms in the villages around the Suppāraka port. Because of his strange attire, people, thinking he was an Arahant, paid him great respect and made offerings to him. In the course of time, he became known as Bāhiya Dārucīriya. He was called "Dārucīriya" because he wore a garment made of bark (*valkalā*)—or tree bark. Thus, he spent his time living as an ascetic. Since everyone called him an Arahant, he thought, "Perhaps I too am an Arahant." Together with this thought, a deity who had been a relative of his in a past life came forward and said, "Bāhiya, you are not an Arahant, nor have you entered the path to Arahantship." "Then who in this world is an Arahant?" he asked. The deity replied, "Indeed, in the northern direction, in the city of Sāvatthi, lives the Teacher of the Three Worlds, the Blessed One. It is He who has attained this state."</p>
+<p>At that very moment, a great faith (*saddhā*) and a strong urge arose in him to see the Buddha. It was a vast distance—a journey of many leagues (*yojanas*). Staying only one night at each place along the way, he traversed this long road to find the Buddha. One morning, he arrived at the Jetavana monastery in Sāvatthi. At the time of his arrival, the bhikkhus were walking up and down in the open air. Running up to them, he asked, "Where is the Blessed, Worthy, Fully Enlightened One? I have come in great haste to see Him." Then the bhikkhus said, "Bāhiya, the Buddha has entered the city for alms." Bāhiya did not stop there. He immediately ran after Him. As soon as he saw the Buddha walking for alms in Sāvatthi, a great faith arose in him. Seeing the Buddha, who was extremely peaceful and of serene faculties, he fell at His feet and begged, "O Blessed One, please preach the Dhamma to me." For some reason, the Buddha said, "Bāhiya, this is not the time to preach the Dhamma; we are on our alms-round." When this was said, Bāhiya entreated Him again, "O Blessed One, I do not know when the Blessed One's life might end, or when my own life might end. Therefore, please, in some way, teach me at least a little Dhamma." Again the Buddha said, "No, Bāhiya, this is not the time to preach the Dhamma; we are on our alms-round." For the third time, he made the request, "O Blessed One, I do not know when the Blessed One's life might end, or when my own life might end. Therefore, please quickly preach at least a brief Dhamma." At that moment, the Buddha delivered a very brief discourse—seemingly simple, yet containing a very profound meaning. Its import is as follows:</p>
+<p>"In that case, Bāhiya, you should train yourself like this. 'In that case' means—since you are now entreating me, He gave a teaching: 'Therefore, Bāhiya, you should train yourself thus' (*Tasmātiha Bāhiya evaṃ sikkhitabbaṃ*). In what way?</p>
+<p>'In the seen, there will be only the seen (*diṭṭhe diṭṭhamattaṃ bhavissati*),</p>
+<p>In the heard, there will be only the heard (*sute sutamattaṃ bhavissati*),</p>
+<p>In the sensed, there will be only the sensed (*mute mutamattaṃ bhavissati*),</p>
+<p>In the cognized, there will be only the cognized (*viññāte viññātamattaṃ bhavissati*).'</p>
+<p>In the seen—'seen' refers to the object seen. In the seen, there will be only the seen. In the heard, there will be only the heard. 'In the sensed, there will be only the sensed.' *Muta* means what is sensed. Sensation is what is referred to here. The word *muta* is used for what is sensed by the nose, tongue, and body. It can be understood as sensory experience. The sensation felt by the nose, tongue, and body is a special kind of knowing, and it is called *muta*. Thus, in what is sensed, there will be only the state of being sensed. 'In the cognized, there will be only the cognized.' Consciousness (*viññāṇa*) means the mind, doesn't it? In what is known by consciousness, in what is cognized, or in what is thought—we can call it the cognized or the known—with regard to what is known, there will be only the cognized. 'Thus, Bāhiya, you should train yourself' (*Evaṃhi te Bāhiya sikkhitabbaṃ*). Bāhiya, this is how you should train yourself. Then He preaches:</p>
+<p>"When for you, Bāhiya, in the seen there will be only the seen, in the heard only the heard, in the sensed only the sensed, in the cognized only the cognized;</p>
+<p>then, Bāhiya, you will not be 'by it' (*na tena*).</p>
+<p>When, Bāhiya, you are not 'by it', then, Bāhiya, you will not be 'therein' (*na tattha*).</p>
+<p>When, Bāhiya, you are not 'therein', then, Bāhiya, you will be neither here (*na idha*), nor there (*na huraṃ*), nor in between the two (*na ubhayamantare*).</p>
+<p>This itself is the end of suffering (*esevanto dukkhassa*)."</p>
+<p>Now, previously, it was said to train in this manner. It seems like a very simple task. As described, in the seen, by way of the seen-only, there will be only the seen; in the heard, only the heard; in the sensed, only the sensed; in the known—or what is known to consciousness—only the cognized. After training in this manner, when, Bāhiya, for you, in the seen there is only the seen, in the heard only the heard, in the sensed only the sensed, in the cognized only the cognized, then, Bāhiya, you will not be 'by it.' We will try to explain this later. You do not take the seen or the heard as a "thing" and define yourself "by it." When you do not identify yourself "by it" in that manner, then you are not "therein." Not being "therein" means you do not slip inside it. You do not enter into it.</p>
+<p>"When, Bāhiya, you are not 'by it', then you are not 'therein'. When you are not 'therein', then you are neither 'here', nor 'there', nor 'in between the two'. This itself is the end of suffering."</p>
+<p>Looking at this, Nibbāna seems very easy to attain. This single passage is a subject of meditation (*kammaṭṭhāna*) leading all the way to Nibbāna, to Arahantship. It is a wonderful teaching. Even today, many scholars often bring up this sutta to show the essence of the Buddha's teaching. We do not know how many actually understand it. Be that as it may, a person with a meditative mind can understand these things even without much academic learning, though it may be difficult for ordinary scholars. At any rate, through this discourse, the Buddha gave Bāhiya a meditation subject (*kamaṭahana*) leading all the way to Nibbāna, to the fruit of Arahantship. How successful was it? It is mentioned in the sutta that immediately, as soon as the Buddha finished preaching this discourse, the ascetic Bāhiya, who was wearing bark-garments, attained Arahantship right there. What a wonder! Thus he attained Arahantship. By that, suffering (*dukkha*) came to an end right there. We will try to explain this slowly and gradually. However, the story does not end there. We will explain certain things using the story, as they are helpful and easy to bear in mind.</p>
+<p>Next, the event is described as follows. Having preached this discourse, the Buddha went on His alms-round. Having walked for alms and eaten, as He was leaving the city with the bhikkhus, He saw—what did He see?—Bāhiya, who had attained Arahantship, had not gone very far when a fierce cow with a calf gored him to death. The ascetic Bāhiya—now Arahant Bāhiya—was lying dead there. Only the Buddha knew of his state. Seeing the body of this Arahant lying there, the Buddha said to the bhikkhus, "Bhikkhus, do you see this body of Bāhiya? Take it on a cot, cremate it, and build a stupa over his relics." The bhikkhus went to perform that task. They took the body, cremated it, built a stupa, and returning to the Buddha, reported what they had done. "Blessed One, as you instructed, we have cremated the body of that ascetic. Where has he been reborn?" Then the Buddha declared, "Bhikkhus, Bāhiya was wise, highly intelligent, of great wisdom. He did not trouble me much; he did not even trouble me to explain this in detail. Bāhiya has attained Arahantship and attained final Nibbāna (*pariNibbāna)." This was indeed a miraculous event. Then the bhikkhus asked, "O Blessed One, when did he hear the Dhamma, and what did he hear, to attain Arahantship so quickly?" It was then, as shown in the Dhamma, that He specifically preached this verse. Although there are other relevant verses, this one can be taken as the simplest:</p>
+<p>"Though a speech consists of a thousand verses, if they are useless,</p>
+<p>Better is a single verse on hearing which one is stilled."</p>
+<p>The meaning of this verse is that rather than a thousand verses composed of useless words, a single line of a verse upon hearing which one attains peace and tranquility is far superior. Let us think a little more about the story here. Furthermore, it is mentioned in the Dhamma that on various occasions, the Buddha appointed different bhikkhus to the foremost positions (*aggasṭhāna*) in various fields. Many of you may have heard of this. Venerable Sāriputta was foremost in wisdom (*mahā-paññā*), Venerable Moggallāna was foremost in psychic powers, and so on. In this way, the Buddha granted chief positions. Similarly, even though the ascetic Bāhiya passed away shortly after, the Buddha declared to the bhikkhus that he was their co-associate in the holy life (*sabrahmacārī*). The term *sabrahmacārī* is used for a member of the Sangha. Although he attained Arahantship in lay clothing, the Buddha referred to him as a *sabrahmacārī*. Furthermore, the Buddha declared here that in His dispensation, among those who can comprehend the Dhamma extremely rapidly—the *khippābhiññā* (those of swift direct knowledge)—Bāhiya Dārucīriya is the foremost.</p>
+<p>A person with such a great store of merit met with such a fate due to some force of kamma—first, after the ship sank, he suffered greatly and had to swim. Then, shortly after attaining Arahantship, he had to pass away. However, there is a past story mentioned about why he was able to understand the Dhamma so quickly. This is particularly important for our times. What is it? This Bāhiya Dārucīriya was one of a group of seven bhikkhus during the time of Kassapa Buddha. When the dispensation of Kassapa Buddha was declining—we can think about our own era here too; it must have been an era like this, what is called the "declining age"—these seven bhikkhus, filled with great urgency (*saṃvega*), consulted among themselves: "Before this dispensation vanishes, let us sacrifice our lives and strive to realize Nibbāna." Having made this agreement, they paid their final respects to the golden shrine of Kassapa Buddha and entered the forest. There they saw a great mountain cliff. Before climbing this cliff, all seven said to one another, "If there is anyone who still has a desire for life, let him stop here. If there is anyone who is prepared to abandon the desire for life and strive for Nibbāna, let him join." They constructed a ladder, climbed that great cliff, and then threw the ladder down.</p>
+<p>What was their situation now? Now these venerable ones were on top of the rock. What was left for them to do? There was only one thing to do: to meditate solely for liberation from saṃsāra. All their time—since there was no way to go anywhere else, and no ladder to go down—was spent in intense meditation. By the dawn of the next day, the senior monk, the chief elder, attained Arahantship with psychic powers (*abhiññā*). Having attained Arahantship, it is said that he used his psychic power to go on alms-round to Uttarakuru, obtained food, and returned. Perhaps out of custom, he invited the other monks to partake of this almsfood. The other monks said, "Venerable sir, did we make such an agreement—that when one of us attains Arahantship, we would eat the almsfood he brings?" "No, friends." "In that case, venerable sir, you may consume it. We will achieve what we can through our own strength." Saying so, they began to meditate with great determination. On the second day, the second monk attained the stage of Non-returner (*anāgāmī*). He too flew through the air, brought almsfood, and made a similar invitation to the others to eat. At that time, they said, "Venerable sir, did we make such an agreement—to reject the almsfood of the chief elder but eat the almsfood of the second monk, and then meditate?" "No, friends." "Then we do not need that either. Somehow, by our own strength, if we are able, we will go and obtain almsfood." Saying so, the five remaining monks continued their intense meditation. After seven days, with their bodies dried up and exhausted, meditating intensely unto death, they passed away on that rock as worldlings (*puthujjana*).</p>
+<p>The Arahant among them attained final Nibbāna. The second monk, as a Non-returner, was reborn in the Brahma realm. One of the remaining five was this ascetic, Bāhiya Dārucīriya. The others are also mentioned in the Dhamma. By the power of their intense effort, their morality (*sīla*), and their meditation until their bodies withered away, they were reborn in the heavenly realms and eventually took birth in various places during this Buddha-dispensation. One was reborn as King Pukkusāti. Another as Kumāra Kassapa—who later became a great Arahant. Another as the wanderer Sabhiya. Another as Venerable Dabba Mallaputta—who attained Arahantship at the age of seven. In this way, they were born as outstanding individuals in this Buddha's dispensation. The fifth was Bāhiya Dārucīriya. Thus, the result of the life-sacrificing effort made by those five during the final days of Kassapa Buddha's dispensation was *khippābhiññā*—the ability to realize the Dhamma extremely rapidly in this dispensation.</p>
+<p>In this way, from this past account, we get great encouragement to meditate without giving up our efforts even in these times, during the decline of this Buddha's dispensation, through the example of these venerable ones. We must ponder on this. Furthermore, regarding this verse, let us look at the path to Nibbāna preached by the Buddha. As we said at the very beginning, this is something related to the mind. Escape from saṃsāra is a wonderful state. Ultimately, liberation is attained by relying on wisdom (*paññā*). The Buddha's dispensation is the cultivation of morality (*sīla*), concentration (*samādhi*), and wisdom (*paññā*). We have stated on many occasions: morality is undertaken to discipline the body and speech. Having disciplined body and speech, the mind is then stilled through concentration. To the stilled mind, the true nature of the world becomes clear. The true nature of the world does not mean running after what is seen by the eye and heard by the ear as if chasing a mirage, investigating everything scientifically. Ultimately, the root of all this is this mind—the thought. It is the understanding of the thought. The day one understands the thought, the bond of Māra is broken. For, the bond of Māra is itself the thought, even though we cannot do without it, whether for good or bad. We are forced to think. Thoughts exist. That is why we mentioned at the outset: the thought—it is through thought that we understand everything. But the question is, how do we understand the thought itself? It is to this that the Buddhas provide the answer through this Dhamma.</p>
+<p>Let us now try to dissect and analyze this brief discourse, presenting it step-by-step, so that everyone can bring it to a level they can practice. Here it was said, "in the seen, only the seen." There is another point to consider here. Someone might wonder why the Buddha, who is so extremely compassionate, rejected the request of an ascetic who had come from such a great distance—leagues away—not just once, but twice, saying, "This is not the time to preach, it is the time for alms-round." We must realize that this was done with a very deep purpose. We can think of several reasons. First, after such an exhausting journey—when someone arrives panting and exhausted, they are not ready to listen to the Dhamma. Only when the exhaustion has subsided and they have calmed down can they focus the mind on something. Another reason we can think of is that the Buddha often uses skillful means (*upāya*). If the Buddha had said, "Very well, I will go on the alms-round later. Sit down comfortably. Take the five precepts," and started in that manner, the man's keenness—his intense desire to attain the Dhamma—would have diminished. Instead of that intense effort, he would have thought that this is a slow, gradual journey. To prevent both of these, the Buddha behaved as if He too was in a great hurry. Then, the person is prompted to think: "Please tell me just a little and go." "Just a little is enough for me. If you are on your alms-round, I do not need a long sermon. Tell me a fraction; I will understand it." It is with that attitude that one listens. Here we can see two sides. On one hand, the person's excessive excitement or fatigue was calmed. On the other hand, due to the Buddha's skillful means, this person was in a state to be satisfied with even a brief discourse. He was ready to derive the maximum benefit from it, directing his entire attention to it and listening. That must be why, through such a brief discourse, he understood the hint in the Buddha's Dhamma, as we mentioned earlier.</p>
+<p>This Dhamma gives a hint to a person. Because understanding the nature of thought is something one must do for oneself. No one else can do it. Not even the Buddha. He only points the way. Giving skillful means, He directs one toward it. Other than that, there is nothing else to do. This is something that belongs to each of you. With such a background, let us think about this. *Diṭṭhe diṭṭhamattaṃ bhavissati*—we say this in Pali, but there is no need to be worried about it. If we translate it into Sinhala, *diṭṭha* means "the seen." Why do we say "the seen"? Usually, we use the term "the seen thing." By referring to it as "the seen thing," we are already trapped. If we think of it as "the seen thing"—take the rainbow, for instance, when it is about to rain. There is a rainbow. Everyone likes it. Is this rainbow a "thing"? Think about it. Is a rainbow a "thing"? If it is a young child, seeing its beauty and colors, they might think, "There is a rainbow. Oh mother, father, can you get that for me?" A child might think so. Is this a thing that can be obtained? How is a rainbow formed? When it is about to rain, in a certain place in the sky, moisture catches the light of the sun. The sun is on one side. The color composition of the sun's light is what is called a rainbow. How many things have come together to form this? Just as the rainbow appeared, it vanishes. The entire world is just like this rainbow. But we construct "things" out of these. Just as the rainbow is made into a "thing," we make past events into "things" too. That is why we say "the seen." Let us look at this in another way. Looking from here—or looking from one mountain to another—it is a beautiful view. A good view to photograph. But if someone thinks of seeing this view clearly and goes to that mountain, what do they see? The view that was there is no longer there. Now this side is seen clearly. A mirage. That is what is called a mirage. It is something like that. The mirage is also like that.</p>
+<p>Therefore, the Buddha declared to stop at "in the seen, only the seen." It is not about chasing the rainbow in an airplane, or trying to catch it in some other way. It is to leave it right there as a kind of mirage that is to be seen. It is the same with a mirage. This is what is meant by *diṭṭhe diṭṭhamattaṃ bhavissati*—in the seen, there will be only the state of being seen. Do not go beyond that. Do not go on thinking about it; that is the meaning here. Now, if we contemplate the simile of the mirage a bit more deeply: you have heard that during a drought, deer, seeing the shimmering nature rising from the ground, run toward it. Let us think for a moment. As the deer runs, the mirage recedes. Suppose the deer runs a certain distance and looks back. What then? The mirage is right where it started. So the deer has to run back—if it looks back—to the place it came from. Having run there, when it looks back again, it has to go back again. When you think about this simile, you might find it humorous. But this is exactly what we all do. Because the truth is hidden from the deer, it runs after the mirage. Having run, if it looks back, the mirage is now on this side. So it travels back the same distance it came. It goes there again. This simile will help us in a certain part of this discourse.</p>
+<p>Very well, keeping that in mind, let us see. "In the seen, there will be only the seen." Similarly, *sute sutamattaṃ bhavissati*—this is the path of training the Buddha gives to Bāhiya. He says "you should train thus." A deep training is found here. "In the heard, there will be only the measure of the heard." Only the heard—Bāhiya, regarding what is heard by you, there will be only the state of being heard. It is just like the seen. If we think about hearing, even what is being spoken now is heard. Not only that; songs, hymns, and all such things are heard by you. All of these are heard by combining many rhythms to make music. It is not the musician who made the music; it is you. You weave it yourself. There is no need to go that far. Place a vessel where drops of water are dripping. What happens? Through the "tap-tap-tap," if the mind is inclined towards a song, you will hear a song. If you like songs, you will hear a song at that moment. If it is night, you might feel afraid. Who weaves songs out of this? We are all musicians. We weave songs. We weave rhythms. Where do these occur? In the eardrum. We are pleased by the sounds striking the eardrum—especially if they speak of our praise or virtues. If we think someone is scolding us, we get agitated. These are all sounds striking a drum. In this light, one can understand the profound insight-meaning of the advice the Buddha gave to Bāhiya Dārucīriya: "In the heard, there will be only the heard."</p>
+<p>Similarly, "in the sensed, there will be only the sensed." "Sensed," as we said, refers to what is experienced by the tongue, nose, and body. These are very subtle sensations. You know how dangerous the tongue is. The moment something touches the tongue, either the entire body is thrilled, or the face becomes sour or bitter. Such a thing happens on the tongue due to the sensitive power of the tongue. But here too, our mind collects these in an extremely subtle manner. Think about it. We say sugar is sweet like honey. What flavor is honey? It is sweet like sugar. This too is like the deer running after the mirage. We say sugar is sweet, comparing it to honey. Because we have eaten honey, we say it is sweet. Then, when we take honey, we have to say it is sweet like sugar. This is the trick played by the tongue. It is the same with the other senses. Let us think about contact (*phassa*). Our body comes into contact with something. Suppose on a dark night, while sitting down, something very soft brushes against our body. Thinking it is something very soft, we touch it. The moment we touch it—it is a cobra. The cobra bites. That is contact. Then, the feeling that arose earlier is not what follows when we see it and realize it is a dangerous thing. The Buddha is presenting the wonderful deception that occurs through our sense faculties. Therefore, if you want wisdom (*paññā*), if you want to be liberated from saṃsāra, if you want to break the bond of thoughts, if you want to escape the mirage—do this. If you want to live in the world, if you want to cultivate saṃsāra, if you want to go further in saṃsāra—none of this is necessary. Remain subject to the very same thoughts as before. That is all there is to the Dhamma.</p>
+<p>Thus, what is "sensed" can be understood in the same way. *Viññāta* means what is cognized. Usually, let us think about the vast store of knowledge in the world—books in libraries, the forces of what is called the wonderful science in the world. Through all of these, with a certain pride, we think "I know" about various things, as knowledge, as cognizing. To distinguish one thing from another is the primary function of consciousness (*viññāṇa*). To know the difference between bitter and sweet is also called consciousness. To know the difference between pleasant, painful, and neutral feelings (*vedanā*) is also consciousness. Through consciousness, we distinguish and know. We separate one from another. We taste and distinguish: "Ah, this is bitter, this is sweet." Similarly, whether it is pleasant or painful. What is felt as pleasant is understood as painful after some time. The state where both are absent is distinguished as neutral. In this way, there is a very subtle dividing nature in our consciousness. It is by dividing and presenting that we understand: "This is this, this is one thing, the other is next to it, and that is another." Whichever it may be, what the Buddha says here is that if there is something known in that way, you should regard it merely as the cognized. Do not go beyond that. Do not build further upon it. This is what the Buddha says. Thus, *viññāte viññātamattaṃ bhavissati*. Now let us come to the profound part that follows.</p>
+<p>Thus, Bāhiya was first given the path of training: "train yourself in this way." For you, we mentioned something simpler—we started by giving only the *Ājīva-aṭṭhamaka-sīla* (morality with livelihood as the eighth) to discipline body and speech. Look at what the Buddha gives to Bāhiya Dārucīriya first: He gives this deep restraint of the sense faculties (*indriya-saṃvara-sīla*). Here lies the restraint of the sense faculties, not ordinary morality. Here is the deepest restraint of the faculties, which is helpful to anyone to attain Arahantship. If one has developed such restraint, control, and training regarding everything seen, heard, sensed, and thought, so that one stops at that limit and does not go beyond—then, the Buddha declares what happens next: "Then, Bāhiya, you will not be 'by it'." That is a deep concept. What is meant by "by it"? As said before, that is a "thing." Let us go back to the rainbow. The child who made it a rainbow, crying, might beg his mother, "I will not sleep until you give me that rainbow. Somehow give me that rainbow." That child thinks of it having made it a rainbow. It is not just a seen thing; it is something that exists, something that can be obtained. Then, that child lives within the rainbow, inside the rainbow. He will even see the rainbow in his dreams. This is a small illustration taken for the occasion. Through this, one can understand *na tena*—then, Bāhiya, when you are not "by it"—"by it" means by the seen, the heard, the sensed, the thought, or what is conceived. If you do not think of it in that way, then, Bāhiya, you are not "therein." You are not in the seen. If we want an illustration for this too, what does a person who has built a grand bungalow and is very proud of it do? He stands in front of it and gets a photographer to take a picture. Why? What is shown through that is the owner of the bungalow. When looking at that picture, this person is inside the picture.</p>
+<p>In the same way, understand from this simile that if you do not arouse pride regarding it, if there is no craving (*taṇhā*), conceit (*māna*), or views (*diṭṭhi*)—these words can be understood in relation to craving, conceit, and views—if you do not arouse defilements in that way, then you are not "therein." You are not inside that view. You are not inside that music. That delusion is not there. In the same way, you are not inside what is sensed. They are just as they are, in their respective places. What we expect from the Dhamma preached by the Buddha is the knowledge and vision of things as they really are (*yathābhūta-ñāṇadassana*). The Buddha shows what is, as it is. He does not show what is not, as what is. The Buddhas appear in the world to show what is not as what is not, and what is as what is. That is what is expressed here. In the seen, there will be only the seen; do not grow anything further on it. Do not allow its branches and leaves to develop. If allowed, due to defilements, it leads either to lust (*rāga*), hatred (*dosa*), or delusion (*moha*), and drags one into various other defilements. Therefore, the Buddha gives a strict training here. In the seen, there will be only the measure of the seen. What happens when it is so? Then, you are not "by it." When you are not "by it Converter," you are also not "therein." If you are not "therein"—here comes the deepest part—"When, Bāhiya, you are not 'therein', then you are neither 'here', nor 'there', nor 'in between the two'. This itself is the end of suffering." Therefore, Bāhiya, you are neither here, nor there, nor in between the two. This itself is the end of suffering. Nibbāna.</p>
+<p>Now let us think—we have to bring in the story of the deer here too. When we reach the state of training in that way, how does the mind understand? "You are not here." The feeling that "I am here" also disappears. For, the premise, the idea of "self" and "other"—self and the world—which has been carried throughout saṃsāra, is erased by insight-wisdom (*vipassanā-paññā*). Then you are neither here, nor there, nor in between. Now, regarding the deer, we said that having seen the mirage, it ran a long distance and looked back. Looking back, it saw the mirage was here. It ran back. When it looked back from here, it was over there. In this way, the deer falls exhausted by running after the mirage. We can say this in two ways: if it keeps going without looking back, it will eventually fall dead. If it goes this way, running back and forth between "here" and "there," it will fall dead from exhaustion.</p>
+<p>Now, think about this. What is being done in this saṃsāra? Most of you perform meritorious deeds not only for this world, but for the next world. There are two: this world and the next world. You perform meritorious deeds to secure something for the next world. That is not bad; it is good. Through merits, through wholesome deeds, the mind is purified. But suppose we distribute one oil-cake (*kævum*) to the alms-round in a year, wishing: "May I receive a thousand oil-cakes like this." Well, suppose as a result, we receive ten thousand oil-cakes. After they are finished—or suppose by that merit, we are reborn in heaven. After that merit is exhausted, we have to come back to the human world, cook oil-cakes, and give them again. There too, it is like the work of that deer. There is no satisfaction, no contentment. Here, satisfaction, contentment, means what is needed to quench the deer's thirst. What is that? Water. That shimmering nature seen in the distance looks like water. Therefore, it goes in search of water. Water is not found. It has to come back, because water is seen here. Similarly, this saṃsāric being enjoys the five-fold sensory pleasures in this world as much as possible. Through the wealth obtained by past merit, they eat, drink, dance, and do everything. Yet, they are not satisfied. Therefore, what do they do? Somehow, they give even an oil-cake and wish for its fruits—not just enough, but unsatisfyingly up to ten million-fold. But whether that is received or not, they return right here. They run after the mirage.</p>
+<p>So, someone might argue that this is a statement against performing meritorious deeds. But there is such a wonderful thing in this middle path, the Dhamma of the Buddha. That is why this Dhamma is called a diamond (*viduru-miṇa*). You know what a diamond is. A diamond (*vajra-māṇikya*) is a gem that can cut other gems. The Buddha's Dhamma is like that. It cuts through. Even the things we hold on to as "meritorious deeds," a point comes when they too have to be let go. That is what the Buddha profoundly declares: do not hold on to anything. But this is not something that can be done all at once. First, through virtues like morality, a level of tranquility is achieved. Then, by practicing concentration-meditation (*samādhi-bhāvanā*), the mind is stilled. One does not remain stuck in any of them. One is not satisfied with that. One is not satisfied thinking "Now I am a very moral person." One is not satisfied thinking "Now I have attained high concentration and jhānas, I can fly through the air." What is the ultimate thing? Liberation from saṃsāra lies in wisdom (*paññā*). Therefore, wisdom is compared to that diamond. It is a gem that cuts every other gem. It is wonderful. That means it penetrates.</p>
+<p>Here too, what was done is a penetration. Why is it said to stop at "in the seen, only the seen"? Usually, what happens? One goes and gets entangled in the seen. You may have heard the story of a dog on a footbridge, or a jackal carrying a piece of meat. Crossing a footbridge, seeing its reflection in the water, thinking another jackal was carrying a piece of meat, it let go of its own and jumped in to snatch it. In this way, how much does the saṃsāric being suffer by being deceived by the seen, by the object seen? Because of the wrong understanding and wrong path of thought generated through it, day and night, a person sacrifices their entire life, dedicating it to a seen vision, and falls into delusion. But they do not understand the true situation. Not to speak of this as a riddle: let us say a person, a man or a woman, sees the form of someone they love. In the thought generated through this, they kill themselves, then kill others, trying to obtain that man or woman, and finally fall into hell. Why does all of this happen? Because they did not stop at "in the seen, only the seen." They thought of it as a person. They thought of it as someone who could be with them forever. Now, the past Arahants like Bāhiya Dārucīriya sacrificed their lives for something else. But people in this era throw down ladders and do everything for the sake of saṃsāra. Therefore, from such matters, one must understand what is meant by stopping at "in the seen, only the seen." One establishes a state of mind that is not deceived by the mirage. For daily activities, we have to use the conventional term "things" regarding what we see. But we must penetrate it with wisdom.</p>
+<p>You know what it is to penetrate something. When someone looks at something with a device that has the power to penetrate, and then removes it, it is seen as it is. Similarly, here it is said that a person gains liberation of mind (*ceto-vimutti*) through the power of wisdom. Therefore, the person who has attained insight-wisdom (*vipassanā-paññā*) can see that true nature. But they do not end their life on that account. They carry out other activities. The experience gained through that wisdom is embedded within them, embedded within the mind. So much so that at the end, at the moment of final Nibbāna (*pariNibbāna), like Arahant Bāhiya Dārucīriya, they do not take birth again, being liberated from saṃsāra. Arahant Bāhiya Dārucīriya broke the bond of saṃsāric thoughts. That is why it is said he attained final Nibbāna. Arahants do not die. The word "die" can be used in the world. Along with the word "die" goes its counterpart, "is born." These go in pairs, as couples. Just as we said "there" and "here." There is a "there" and a "here." We have built fences and boundaries. Only when we have built them is there a middle. That is why it was said "you are not in between." Someone might ask: "If you are not here, and if you are not there, you must be in the middle." That is the logic of the world. Now you know there are factions in the world. Even if we think about them, it is the same: either you must be here, or you must be there, or you must be in the middle. Here is a wonderful thing: "Bāhiya, you are neither here, nor there, nor in between the two." Because even the usage of "is" and "is not" finally comes to an end. Ultimately, in the Buddha's Dhamma, this existence (*pavattiya*)—which every religious teacher in the world takes so seriously—is not a real existence, but only a conceit of existence. It is only an illusion, a delusion, a deception created by the mind. The world runs on this delusion—between there and here, between the next world and this world, between the human world and the heavenly world. In this running, there is no end. There is no end to those aspirations. This is what a Buddha introduces to the world. For this, the Buddhas fulfill the perfections (*pāramī*) for four incalculable aeons and a hundred thousand cycles. It is not to teach some social or political philosophy. Although He mentioned those in passing, this is the core of the Buddha's teaching.</p>
+<p>The secret of escaping from this entire saṃsāra is preached by the Buddha as a hint, according to each individual's character and capacity for understanding. If someone understood that hint at that moment, through a single verse, they realized Nibbāna. Therefore, you can understand that there is a very great depth in this discourse. It appears deep, in fact, to a person who has not developed the mind through meditation. Bāhiya Dārucīriya might not have had academic degrees. He was a person who lived a difficult life after his ship wrecked in the ocean. But relying on the power of the perfections (*pāramī*) he had acquired in the past, he attained Arahantship very instantly through such a brief discourse. Therefore, we must understand that knowledge is something that piles up in the world. Many people live their lives crushed by it—crushed by knowledge. Because of knowledge, they sometimes commit various kinds of cunning deeds and finally fall into hell. What is really needed is not knowledge, but wisdom (*paññā*). Wisdom is a capacity of understanding, something that penetrates, like that diamond. It cannot be obtained from books, money, or degrees. The path to it is what is called morality (*sīla*), concentration (*samādhi*), and wisdom (*paññā*).</p>
+<p>Now, on this valuable Poya day, I believe most of you have observed the precepts (*sīla*). Others too should make an effort. Meditation means cultivating the mind. This is not something that belongs only to the Sangha. This Bāhiya Dārucīriya—who was wearing bark-garments—did not even have a robe, yet he attained Arahantship. Similarly, you must consider: even if we live as laypersons, if we are Buddhists, what we must do is travel along this path of training. Therefore, based on morality, having disciplined body and speech, we must then still the mind. Chiefly, first a concentration (*samādhi*), some meditation subject (*kammaṭṭhāna*). For that, perhaps big words are not needed. Stilling one's mind on a wholesome object by means of a single phrase like "may I be well" or "Arahant" is what is called concentration. If stilled in that way, the running of the mind is stopped to a great extent. But it is not finished. Going deeper than that is insight-wisdom (*vipassanā-paññā*).</p>
+<p>So, the essence of that is what is contained in this sermon. In fact, the Buddha has presented the threefold training of morality (*sīla*), concentration (*samādhi*), and wisdom (*paññā*) in this discourse in a way that suited Bāhiya's capacity for understanding. We too must harvest from this at our own level, in a way that helps our lives. We must think of the entire saṃsāra as a dream, a kind of dream. Someone might feel afraid of that. But think about your own dreams. A dream is a real thing at the time of dreaming. Finally, when we wake up, the things that appeared as real in the dream are completely different. Sometimes, what we ate thinking it was good food was actually the pillow. It is the same with other things. Those are the dreams of the night. In fact, think about the entire past. When you think about your entire past from childhood—childhood, youth, those achievements—when these elderly gentlemen think about them, are they not a dream? The past is like the dream seen last night. Next, let us think about the future—the future for which great aspirations have been made. Think of a certain moment as the dream seen today, like the dream that will be seen tonight. Then, what is there to say about what is being done on this very day? The word to describe it might be something humorous. It is like a day-dream. This existence is something like that. That is why the Buddha declared the entire saṃsāric existence to be a delusion, an illusion. Consciousness (*viññāṇa*) is compared to an illusion, to a magic trick where a magician shows what is not there as if it exists.</p>
+<p>Therefore, according to this Bāhiya Sutta, why do we stop at "in the seen, only the seen"? There is no "thing" to be taken as "the seen." There is no "thing" to be taken as "the heard." Just as we said about the rainbow, the music, and the mirage. But we think so. There are many such concepts in the world. We cannot speak otherwise according to our convention. We cannot talk to others in that language, in our language of insight. Therefore, conventionally we have to say that a rainbow is appearing, or rain is falling. We must think whether the rain is separate from the falling. Now rain is falling. Rain is the thing that falls; the action is the falling. Can these two be separated? They cannot, can they? Similarly, there is a mass of mere activities here. Thus, they are a mass of preparations (*saṅkhāra*). Out of this, we construct a world. Having constructed and created it, we divide it, build fences, saying "there" and "here," and this journey of saṃsāra is what we do as "the next world" and "this world." This entire saṃsāric existence is something that belongs neither to the next world nor to this world. That is why the Buddha preached cessation (*navatma*) instead of existence. Nibbāna means cessation, cooling down. This is not something pleasing to the ordinary world. The world likes burning and running. To the world that likes burning and running, the invitation to cooling down and cessation might be unpleasant. But the Buddhas say only this. This is what is called the Buddha's teaching. Therefore, stop, cool down—it is for this that the Buddha preached such discourses. Those who cooled down and stopped are called Arahants.</p>
+<p>Thinking thus, on this valuable Poya day, you listened to a discourse that the ordinary world dismisses as deep, and thinks cannot be understood in this day and age. But we think that even though you are village folk, if you have directed your mind towards meditation, you have the capacity, at least to some extent, to understand even such discourses. In the future too, to develop that capacity, go to those who can give advice and, developing all those mental faculties by way of tranquility (*samatha*) and insight (*vipassanā*), as quickly as possible—further developing the spiritual faculties and powers such as faith (*saddhā*), energy (*vīriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*) aroused during this discourse—may you, in this very life, through the realization of the paths and fruits of Stream-entry (*sotāpatti*), Once-returning (*sakadāgāmi*), Non-returning (*anāgāmi*), and Arahantship, escape from this extremely terrifying saṃsāra, break the bond of thoughts, and find peace in the supreme and deathless Nibbāna.</p>
+<p>Furthermore, may the merit we accumulated today by way of giving this Dhamma-teaching, and the merit accumulated by way of listening to the Dhamma, be shared particularly with the protective deities and Brahmas of the Sasana, and with all our relatives and others from Avīci hell up to the Akanitṭha heaven who are able to rejoice in merit. May they all rejoice in this merit, and through it, attain the supreme and deathless Nibbāna through a Bodhi of their aspiration. Having made this aspiration, recite the verses and share the merit:</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_017.html" class="doc-btn">← Previous Sermon (017)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_019.html" class="doc-btn">Next Sermon (019) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

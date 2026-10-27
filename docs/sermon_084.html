@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 084 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_083.html" class="doc-btn">← Previous Sermon (083)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_085.html" class="doc-btn">Next Sermon (085) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 084</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_084_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_084_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_084_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #84</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.164)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Abhiññeyyaṃ abhiññātaṃ, bhāvetabbañca bhāvitaṃ,</p>
+<p>pahātabbaṃ pahīnaṃ me, tasmā buddhosmi brāhmaṇa;</p>
+<p>Vineyya mayi kaṅkhaṃ, adhimuccassu brāhmaṇa,</p>
+<p>dullabhaṃ dassanaṃ hoti, sambuddhānaṃ abhiṇhaso;</p>
+<p>Yesaṃ ve dullabho loke, pātubhāvo abhiṇhaso,</p>
+<p>sohaṃ brāhmaṇa sambuddho, sallakatto anuttaroti.</p>
+<p>From:</p>
+<p>Sela Sutta (Majjhima Nikāya 92), Sutta Nipāta (Sn 3.7)</p>
+<p>Dear Listeners,</p>
+<p>The news that a Buddha had appeared in the world spread throughout ancient Jambudīpa (India) primarily through the recital of the formula of the nine virtues of the Buddha, beginning with *Arahaṃ*. In an era when there were no diverse or colorful communication media like today, the formula of the nine virtues alone was often sufficient for the news of a Buddha's arising to spread. Furthermore, Buddhist literature makes it clear to us that even a single word among those nine virtues was sometimes capable of causing a massive psychological revolution in a person. The *Sela Sutta*, which is found in both the *Majjhima Nikāya* and the *Sutta Nipāta*, is excellent proof of this.</p>
+<p>It is three verses from that *Sela Sutta* that we have chosen as our theme today. On one occasion, the Blessed One, the Teacher of the Three Worlds, accompanied by a large retinue of about one thousand two hundred and fifty monks, was wandering on a Dhamma tour in the region of Aṅguttarāpa in India, and arrived at the market town named Āpana. The matted-hair ascetic (*jaṭila*) named Keṇiya, who lived in that market town of Āpana, heard: "The ascetic Gotama has arrived in our village." A glorious report concerning him had spread in this manner: "*Itipi so Bhagavā Arahaṃ Sammāsambuddho Vijjācaraṇasampanno Sugato Lokavidū Anuttaro Purisadammasārathi Satthā devamanussānaṃ Buddho Bhagavā*" (Thus indeed is the Blessed One: Worthy, Fully Enlightened, perfect in true knowledge and conduct, sublime, knower of worlds, incomparable leader of persons to be tamed, teacher of gods and humans, the Awakened One, the Blessed One). Moreover, having realized this world with its gods and Maras through his own higher knowledge, he makes it known to the world. He teaches the Dhamma that is good in the beginning, good in the middle, and good in the end. He proclaims a perfectly pure holy life. Having heard this news, Keṇiya the matted-hair ascetic thought, "Indeed, even the mere sight of such worthy ones is a good thing," and went to see the Buddha.</p>
+<p>Having gone there, Keṇiya the *jaṭila* exchanged friendly greetings with the Buddha and sat down on one side, after which the Buddha gladdened him with a Dhamma talk. Although at that moment he did not yet possess enough faith to take refuge in the Triple Gem, Keṇiya the *jaṭila* invited the Sangha headed by the Buddha, saying: "O Ascetic Gotama, please accept tomorrow's meal at my hermitage together with the Sangha." Then the Buddha said: "Keṇiya, this assembly of monks is very large. Furthermore, you are one who is well-pleased with the brahmins." Even though the Buddha said this, Keṇiya insisted a second time: "The assembly of monks is indeed large, O Ascetic Gotama, and it is also true that I have faith in the brahmins. Nevertheless, I invite the Venerable Gotama and the Sangha." Once again, the Buddha reminded him: "This assembly of monks is large, and you have faith in the brahmins." Yet, when Keṇiya the *jaṭila* extended the invitation for the third time, the Buddha accepted the invitation in silence.</p>
+<p>Understanding this, Keṇiya the *jaṭila* went back to his hermitage and said to his relatives, friends, and associates: "I have invited the Ascetic Gotama along with the Sangha for tomorrow's sacrifice here. Therefore, please perform whatever physical services you can for this endeavor." Those relatives, friends, and associates gathered together; some set up stoves, others chopped firewood. Some prepared water vessels, others washed dishes, and some prepared seats. Keṇiya the *jaṭila* himself was busy preparing the large hall of his hermitage.</p>
+<p>At that time, there lived in Āpana a brahmin named Sela, who had reached the further shore of the Three Vedas, and was teaching mantras to about three hundred young brahmin pupils. It is mentioned regarding this brahmin that he was accomplished not only in the Three Vedas but also in history, poetics, prosody, as well as the science of body characteristics known as the marks of a Great Man (*mahāpurisa-lakkhaṇa*). This Brahmin Sela was a close friend of Keṇiya the *jaṭila*. Keṇiya also had great confidence in Brahmin Sela. In the evening, Brahmin Sela, surrounded by his group of pupils, came to this hermitage to see Keṇiya the *jaṭila* as a form of light exercise.</p>
+<p>Upon arrival, seeing some building stoves, others splitting firewood, and such a grand preparation underway, he asked Keṇiya: "What is this, Keṇiya? Is there a festival such as a marriage or a wedding feast? Or are you preparing for a great sacrifice? Or have you invited King Bimbisāra along with his army for tomorrow?" Then Keṇiya replied: "No, Sela, it is not a marriage celebration, nor have I invited King Bimbisāra. Rather, I have invited the Ascetic Gotama together with the Sangha for tomorrow." And concerning that Ascetic Gotama, such a report of fame has spread, and he recited the aforementioned passage, starting with *Itipi so Bhagavā*. When he said this, Brahmin Sela asked: "Did you say 'Buddha', Keṇiya?" Then Keṇiya the *jaṭila* replied: "Yes, I said 'Buddha'." A second time he asked: "Did you say 'Buddha', Keṇiya?" — "Yes, I said 'Buddha'." A third time he asked: "Did you say 'Buddha', Keṇiya?" — "Yes, indeed, I said 'Buddha'."</p>
+<p>At that point, Brahmin Sela remarked: "Even the hearing of the word 'Buddha' is extremely rare." Then he thought, "In our mantras, it is mentioned concerning Buddhahood that if a person is born with the thirty-two marks of a Great Man, only two paths lie open to him in life. If he leads a household life, he becomes a Wheel-turning Monarch (Cakkavatti). If he goes forth from home into homelessness, he becomes a Fully Enlightened One (Sammāsambuddha)." Thinking thus, he next asked: "Where is the Venerable Gotama staying at this moment?" Then, pointing with his right hand, Keṇiya the *jaṭila* declared: "Over there, in the direction of that blue forest grove seen in the distance."</p>
+<p>Next, Brahmin Sela went together with his group of disciples to see the Buddha. On the way, out of respect, he said to his pupils: "Walk quietly, step by step. These Fully Enlightened Ones are supreme like lions. Furthermore, do not interrupt while I am speaking." Thus, with a certain degree of faith, he went to meet the Buddha, sat down on one side, and exchanged friendly greetings.</p>
+<p>Then, this Brahmin Sela looked closely for the marks of a Great Man on the Buddha's body. When certain doubts arose in him regarding this, it is mentioned that the Buddha, through his psychic powers, made even the hidden parts of his body visible. Once he was freed from doubt about them, Brahmin Sela wondered whether this was indeed a Buddha or someone who could attain the status of a Wheel-turning Monarch. Thereupon, Brahmin Sela thought, "We have heard from our teachers and teachers' teachers in our mantras that when Buddhas are praised in laudation, they reveal their true nature. Therefore, I should recite a series of verses to the Buddha by way of praise and extolling his virtues." Then, as mentioned in the suttas, a long series of verses follows: "There are such wondrous marks on your body. You are fit to be a king. You are worthy even of gaining sovereignty. Why lead this ascetic life, what use is it to you? You are worthy of attaining even the wheel-turning sovereignty of Jambudīpa" — in this manner, he praised him.</p>
+<p>Then the Buddha declared: "Sela, I too am a king. I am the King of Dhamma (Dhammarājā). And I turn the Wheel of Dhamma solely through the Dhamma." In this way, he declared, "I am the King of Dhamma." Then Brahmin Sela asked: "Who is your general (*senāpati*)?" The Buddha declared: "Sāriputta is the one who turns after me the Wheel of Dhamma that I have turned." Next, the Buddha uttered the three verses which we have placed as our theme, declaring his own Buddhahood:</p>
+<p>> *Abhiññeyyaṃ abhiññātaṃ, bhāvetabbañca bhāvitaṃ,*</p>
+<p>> *Pahātabbaṃ pahīnaṃ me, tasmā buddhosmi brāhmaṇa.*</p>
+<p>"What is to be known by higher knowledge (*abhiññā*) has been known by me through higher knowledge. If there are things to be developed (*bhāvetabbaṃ*), they have been fully developed by me. What is to be abandoned (*pahātabbaṃ*), such as defilements, has been abandoned by me (*pahīnaṃ me*). *Tasmā buddhosmi brāhmaṇa* — therefore, O brahmin, I am a Buddha."</p>
+<p>Then he declares: "Dispel your doubt in me, O brahmin (*vineyya mayi kaṅkhaṃ*); resolve with faith in me, O brahmin (*adhimuccassu brāhmaṇa*). Rare indeed is the sight of the Fully Enlightened Ones (*dullabhaṃ dassanaṃ hoti sambuddhānaṃ abhiṇhaso*)." Next he declares:</p>
+<p>> *Yesaṃ ve dullabho loke, pātubhāvo abhiṇhaso,*</p>
+<p>> *Sohaṃ brāhmaṇa sambuddho, sallakatto anuttaro ti.*</p>
+<p>"I am such a fully enlightened Buddha, whose appearance in the world is extremely rare. I am an incomparable surgeon (*sallakatto anuttaro*)." After his Buddhahood was declared in this manner, Brahmin Sela developed great faith and, presenting further praises of the Buddha to his pupils in verse, said: "I am going to go forth as a monk under this Ascetic Gotama. I will live the holy life. Anyone who wishes to take the step I am taking may join me. Let the others leave." Thereupon, all three hundred disciples said to their teacher: "We too shall take the step that you are taking." Subsequently, the entire group requested the going forth (*pabbajjā*) and higher ordination (*upasampadā*) from the Buddha. It is then mentioned that the Buddha granted them all the going forth and higher ordination.</p>
+<p>Now, we return to the hermitage of Keṇiya the *jaṭila*. After preparing everything there for the "sacrifice" (which was the term they used rather than "meal offering"), and when the preparations for the great sacrifice were complete, they sent a message to the Buddha. The Buddha arrived along with the Sangha, and after Keṇiya the *jaṭila* had respectfully served the Buddha with delicious food and other offerings, and the meal was finished, it is mentioned that the Buddha uttered two verses of appreciation (*anumodanā*). The meaning of those verses is nothing other than the Buddha expressing the pre-eminence of sacrifices in this way: "Among sacrifices, the fire sacrifice is foremost. Likewise, regarding the poetic meters in which the Vedic mantras are composed, for which the word *chandas* is used, the Sāvitrī meter is foremost among meters. Among humans, the king is foremost. For flowing rivers, the great ocean is foremost. For stars, the moon is foremost. For shining objects, the sun is foremost. Likewise, for those who sacrifice seeking merit, the Sangha is foremost." Having given this appreciation, the Buddha departed.</p>
+<p>What is told next is that Brahmin Sela, along with his group, put forth strenuous and firm effort in meditation, and within seven days, the entire group attained Arahantship. Furthermore, with deep faith, that group along with the pupils went before the Buddha and, with several verses of praise, offered their gratitude to the Buddha. "The Blessed One is the Buddha who has defeated all Māras, destroyed defilements, and removed all acquisitions (*upadhi*)" — paying homage in praise, they finally said: "O Blessed One, please stretch out your feet so that we may worship them." With that, the account in the *Sela Sutta* comes to an end.</p>
+<p>Next, what we have to examine is the importance of the formula of the nine virtues as mentioned earlier. You, virtuous devotees, can appreciate the value of this sutta. When Keṇiya the *jaṭila* made the invitation for the sacrifice, the Buddha remained impartial and declined three times. He gave Keṇiya the opportunity to change his mind. Yet, Keṇiya the *jaṭila*, with a certain faith, extended the invitation for that offering. Next, concerning Sela: even with such a large group of pupils, Brahmin Sela came and first developed faith in the Buddha based on his external bodily characteristics. Secondly, during the discussion that ensued, he recognized the Buddha and obtained that ordination.</p>
+<p>If we direct our minds to the formula of the nine virtues of the Buddha mentioned earlier, all of you virtuous devotees are familiar with the recollection of the Buddha (*buddhānussati*) as a meditation practice based on the nine virtues, starting with *Itipi so...* Although we say everyone knows it, even though they pronounce that formula in Pali, the meaning is not clear to some. That is natural for many people in this day and age who lack an understanding of the language.</p>
+<p>*Itipi so Bhagavā* — "Thus indeed is the Blessed One." There, at the beginning, some word is necessary to refer to the Buddha. In those days, a word most commonly in usage was *Bhagavā*. Even today in India, many people say "Bhagavān Gotama Buddha" in that way; the word *Bhagavān* is the primary term, just like *Buddha*. That is why this word was used first to introduce the Buddha: *Itipi so Bhagavā* — "Thus indeed is that Blessed One." From there onwards we have: He is *Arahaṃ* (Worthy). We will explain each word simply hereafter. *Arahaṃ* (Worthy), *Sammāsambuddho* (Fully Enlightened), *Vijjācaraṇasampanno* (Perfect in True Knowledge and Conduct), *Sugato* (Sublime), *Lokavidū* (Knower of Worlds), *Anuttaro Purisadammasārathi* (Incomparable Leader of Persons to be Tamed), *Satthā devamanussānaṃ* (Teacher of Gods and Humans), *Buddho* (The Awakened One), *Bhagavā* (The Blessed One). It is only at the end that the term *Bhagavā* is mentioned as belonging to the nine virtues.</p>
+<p>You, virtuous devotees, have studied these in various ways. The recollection of the Buddha is practiced in many different ways. We too have expressed some thoughts on this here on previous occasions. On this occasion, regarding its practical application as a formula of the nine virtues, we have previously shown a method that is truly simple and suitable for regular use. To state it now according to our understanding: certain meditation methods that existed simply during the Buddha's time became highly complex in later times, and by the attempts of scholars to analyze them at an academic level, it appears that their practical value was lost.</p>
+<p>Here, if we take the word *Arahaṃ* itself, if you ask many people today, they might not give the true meaning of the word *Arahaṃ* but tell you other things instead. They might say it means "because he does not commit sin even in secret." Or "because he has cut the spokes (*ara*) of the wheel of saṃsāra." Or "because he has destroyed the enemies (*ari*) which are the defilements." What has happened here? It appears that scholars have dissected the words this way and that, highlighting foreign meanings not relevant to the original sense of the word, and have assigned meditators to keep expounding on them at length. Frankly speaking, although the idea of "not committing sin even in secret" has been mentioned in various books for ages, it is actually a word that is almost like an insult to the Buddha. The meaning of the word *Arahaṃ* is "worthiness of receiving offerings." Being worthy of offerings is what is meant by *Arahaṃ* or *arahato*. One can understand that he is worthy of offerings due to those virtues. But what those scholars have done to the word *Arahaṃ* is to break it this way and that. Removing the letter 'a' (අ) and taking 'rahaṃ' (රහං), they dragged in a story about "secrets" (*rahas*). Taking the idea of the spokes of a wheel (*ara*) in the wheel of saṃsāra, they removed 'haṃ' and took 'ara'.</p>
+<p>So, not only do those stories about spokes and secrets suppress the relevant meaning, but instead of keeping the mind established on the virtue of the Buddha, the mind runs after the etymologies and derivations of the word. The mind runs after unnecessary things. Just consider for a moment: you virtuous devotees know of the eight-faceted gem (octagonal gem). Looking at its faceted form, you can imagine it as an octagon. In such an eight-faceted gem, whichever of the eight sides you look at, you only see the gem. Similarly, if we think of the formula of the nine virtues as a nine-faceted gem, if it is a nine-faceted gem, whichever side we look at, we should be reminded of the Buddha. Instead, if our mind is dragged away to those unnecessary details, that is not suitable.</p>
+<p>Another word that has been heavily dissected in this way is *Bhagavā*. Extremely strange meanings have been attributed to it. Scholars have presented these as the meditation on the virtues of the Buddha. This caused the practical values that existed during the Buddha's time to slip away. Only the scholars can understand it. Those who do not understand simply keep reciting the Pali words somehow. To one who understands, however, it is truly apparent that those stories about secrets are completely external to the word *Arahaṃ*. Therefore, one must consider that the word *Arahaṃ* is also mentioned in the phrase *Namo tassa bhagavato arahato*. There is no story about secrets there at all. It means the Blessed One, and then: "worthy of offerings" due to the greatness of his virtues. Thus we have: *Itipi so Bhagavā Arahaṃ*.</p>
+<p>Next, *Sammā* (Perfect / Rightly); you virtuous devotees can also contemplate this. Added to the word *Buddha*, we get *Sambuddha* or *Sammāsambuddha*. If we take the comprehension implied by *Sammāsambuddha*, many people today use it to mean that he realized the truth by himself, perfectly through self-attained knowledge (*svayambhū-ñāṇa*). To convey the idea that the Buddha realized it entirely from within himself, without any teacher's instruction, through his own higher knowledge, the term *Sammāsambuddho* is used. Next, the word *Sampanno* (endowed with) is also analyzed in various ways. Constantly analyzing these can be an obstacle to meditation. If we define it briefly, we can say that *Vijjā* (knowledge) and *Caraṇa* (conduct) represent two aspects of a person's life. We now have two eyes that can see. Even if our eyes can see, if we cannot walk—if we are lame—we cannot go on a journey. Even if we have two legs, if our eyes cannot see, we still cannot go on a journey. *Vijjā* refers to that understanding, which is like the two eyes. Next, *Caraṇa* refers to behavior in accordance with that understanding; virtues such as moral virtue (*sīla*). Through *Vijjā*, the accumulation of knowledge within a Buddha, such as insight-knowledge (*vipassanā-ñāṇa*) related to Buddhahood, is indicated. Next, *Caraṇa* refers to virtues such as moral virtue. Being complete in both of these is what is meant by *Vijjācaraṇasampanno*.</p>
+<p>Thus, it is precisely due to being perfect in knowledge and conduct (*vijjācaraṇa-sampanna*) that he is called *Sugato* — meaning "well-gone." It is a very short word, but if we make it meaningful, we should think that because of being complete in both the aforementioned vision and conduct, he went to the very end of the path that had to be traveled. He went exceedingly well, hence *Sugato*. Because of that going, he is *Lokavidū* — meaning he realized all that should be known regarding the world, both internally and externally.</p>
+<p>Thus, precisely because he has a clear understanding of everything internal and external, he is *Sugato Lokavidū Anuttaro Purisadammasārathi*. Regarding that taming, even in the pronunciation of the word *Purisadammasārathi*, it is not *Purisadhamma* but *Purisadamma*, with an unaspirated 'da'. Nowadays, there is no regard for unaspirated or aspirated letters; everything has become a tangled mess. *Purisadammasārathi* means being like a skilled charioteer in taming persons fit to be tamed. That is *Purisadammasārathi*. That is to say, because of the aforementioned virtue of *Lokavidū*, the inner potentials that a person has brought along through saṃsāra are visible to him. Furthermore, the exact moment, place, and manner in which that person should be tamed are all visible to the Buddha because of his quality of *Lokavidū*. He possesses that supreme ability to tame: *Anuttaro Purisadammasārathi*.</p>
+<p>For this very reason, he is the teacher not only of humans but also of gods (*Satthā devamanussānaṃ*). You have heard of Baka Brahmā and others; similarly, it is often mentioned in the Dhamma that deities came and engaged in Dhamma discussions and asked questions of the Buddha, even though some people in this day and age do not believe these things. If we believe this passage, we must accept that the Buddha was a teacher not only to humans but also to gods — *Satthā devamanussānaṃ*. Next, at the end, it says *Buddho*. Here, in this sutta, the Buddha himself directly gives a definition, an introduction, for the word *Buddho*:</p>
+<p>> *Abhiññeyyaṃ abhiññātaṃ, bhāvetabbañca bhāvitaṃ,*</p>
+<p>> *Pahātabbaṃ pahīnaṃ me, tasmā buddhosmi brāhmaṇa.*</p>
+<p>"Things to be known through higher knowledge have been known by me through higher knowledge. Next, the virtues to be developed for Buddhahood have been fully developed. The defilements and so forth to be abandoned have been abandoned. Because of this, I am a true Buddha." One can say he has awakened from the sleep of defilements, or that he has attained that full realization — *Buddho*.</p>
+<p>Next, *Bhagavā*. The word *Bhagavā* carries the meaning of "fortunate" or "blessed," which is still commonly used today. Thus, that brahmin first looked at the blessed nature of the Buddha externally, such as the marks of a Great Man. Next, his internal virtues. The Buddha was fortunate from both sides — externally and internally. Due to training for a long time in saṃsāra, through his power of merit, and through the power of his perfections (*pāramī*), all the qualities gathered within a Buddha are, in short, encapsulated in the word *Bhagavā*, as if it were the sum total of the other eight virtues. Even today in India, many people refer to the Buddha as "Bhagavān," the Blessed One. Similarly, in the sutta discourses, the faithful devotees often refer to the Buddha not only as "Buddha, Bhagavā, the Buddha," but also as "the Blessed One" (Bhāgyavatun-vahanse). So that is regarding the nine virtues.</p>
+<p>In addition, a unique phrase was mentioned in the verses uttered by the Buddha. Let us say something about that too: *Sallakatto anuttaro*. What does that mean? He says, "I am an incomparable surgeon." In this day and age, too, there are doctors who perform various kinds of heart surgeries, such as bypass surgeries. Yet, whatever they do, one cannot escape Death (Māra) thereby. Escaping from Māra—though everyone must die, those surgeons cannot cure this journey of being born and dying repeatedly over a long time in saṃsāra. But what did the Buddha do? The poison arrow, or the dart, of craving (*taṇhā*) is pierced in the heart. And the poison is the poison of ignorance (*avijjā*). The Buddha has analyzed it in various places in this way as *avijjā-visadoso* (the poison of ignorance). The dart of craving, dipped in the poison of ignorance, is pierced in the heart. It is because he pulled that out that he is called the incomparable surgeon: *Sallakatto anuttaro*. Anyone can develop faith even by reflecting on this. Thinking of it from another angle: as you virtuous devotees know, when an occasion arises to undergo heart surgery, and one's friends and relatives gather and ask where to get treatment, they say, "So-and-so is good, that doctor has such-and-such degrees." Saying so, they often choose the surgeon who possesses a series of qualifications that inspires confidence.</p>
+<p>Now consider this: the removal of that dart of craving is not like a bypass surgery. The qualification list suitable for performing that surgery which completely liberates one from Māra is found within the formula of the nine virtues. *Arahaṃ*, *Sammāsambuddho*, *Sampanno* — we can think of these as the surgeon's qualifications. We can choose to look at it that way to inspire faith. In any case, why is the meditation on the virtues of the Buddha given a primary place among meditations? We must reflect on that too. One must walk this path of practice with faith (*saddhā*) in the forefront. Some people nowadays, those who call themselves "rationalists" or "intellectuals," seem to think that faith is unnecessary. They believe everything can be done through logic alone. But faith is absolutely essential to walk the path of practice shown by the Buddha. It is said, *Saddhāya tarati oghaṃ* — "By faith one crosses the flood." To cross over this torrential flood, faith is necessary. Primarily, one must have faith in the Teacher. It was because of that faith, indeed, that Brahmin Sela, along with such a large group, abandoned all his Vedic mantras and went forth under the Buddha. Therefore, because developing faith in the Teacher is absolutely essential, the value of *buddhānussati* (recollection of the Buddha) meditation is shown in the sutta discourses. The Buddha himself points out on certain occasions that some beings, some humans, attain purification even through the recollection of the Buddha.</p>
+<p>How this is shown is as follows: if a person establishes their mind on the virtues of the Buddha, through that constant establishment—at that moment, whether constantly keeping the mind on the entire formula of the nine virtues or on one of them—that person's mind does not go towards lust (*rāga*). It does not go towards hatred (*dosa*). It does not go towards delusion (*moha*). Likewise, it does not go towards things related to the five cords of sensual pleasure; it does not go into the mud-swamp. Therefore, at that moment, the mind is freed from those hindrances (*nīvaraṇa*) and draws close to concentration (*samādhi*). The Dhamma heard during such a concentrated state is understood insightfully, leading to the realization of the paths and fruits (*magga-phala*). Even now, many people raise this question: "How does someone realize the paths and fruits, such as Stream-entry (*sotāpatti*), especially while listening to the Buddha's discourses?" At that time, it is because of that faith that the mind becomes unified. Otherwise, the mind gets scattered. Just like wondering, "Is this doctor really going to cure me?" as mentioned earlier, while listening to the Buddha's sermon, distorted streams of thought might run through one's mind, such as, "No, so-and-so over there said this, he is far more learned."</p>
+<p>One who has faith in the Buddha listens to him at that moment, and as you virtuous devotees know, the way he presents the Dhamma is truly wondrous — he presents the Dhamma in a way that suits each individual and fits the occasion. Then, it strikes the faithful one directly. Right at that moment, their mind does not go to those defilements; it does not go to the hindrances. When the mind is pure and clear, the Dhamma points declared by the Buddha enter the heart; the Dhamma strikes the mind, and subsequently, one is able to attain direct realization through it. This is how the paths and fruits are realized. Therefore, we should understand the value of the recollection of the Buddha; the formula of the nine virtues is shown as a meditation precisely because it is absolutely essential for the practice.</p>
+<p>In suttas like the *Caṅkī Sutta*, it is specifically mentioned concerning the Teacher:</p>
+<p>* *Saddhā-jāto upasaṅkamati* — "One in whom faith has arisen approaches."</p>
+<p>* *Upasaṅkamanto payirupāsati* — "Approaching, he associates closely."</p>
+<p>* *Payirupāsanto sotaṃ odahati* — "Associating closely, he lends an ear."</p>
+<p>* *Ohitasoto dhammaṃ suṇāti* — "Lending an ear, he hears the Dhamma."</p>
+<p>* *Dhammaṃ dhāreti* — "He retains the Dhamma." Rather than just listening or recording it with machines, he personally retains it well within his heart.</p>
+<p>* *Dhātānaṃ dhammānaṃ atthaṃ upaparikkhati* — "He examines the meaning of the retained teachings." He examines the Dhamma he has retained in terms of its meaning at that moment.</p>
+<p>The intellectual capacity of some brahmins who had studied and retained the Vedas was extremely high and powerful. These capacities emerged at that moment through faith. When they examine the meaning (*atthaṃ upaparikkhati*), *chando jāyati* — next, when the meaning is understood correctly, a great desire (*chanda*), an eagerness, arises. It is because of faith indeed that a powerful eagerness called *chanda* arises. *Chandajāto ussahati* — "Filled with desire, he exerts effort." After that, he makes an effort and puts forth energy. *Ussahitvā tuleti* — "Exerting effort, he scrutinizes." Next, having scrutinized and balanced his mind, *tūlayitvā padahati* (scrutinizing, he strives), and only thereafter does he realize the ultimate truth (*paramattha-saccaṃ sacchikaroti*). In this way, through a gradual practice, the realization of the paths and fruits is obtained. Therefore, it is impossible without faith. Faith itself is fundamental.</p>
+<p>So, through the recollection of the Buddha—and as you virtuous devotees have heard, also through the recollection of the Dhamma (*dhammānussati*), the recollection of the Sangha (*saṅghānussati*), and so forth—these too are shown as meditation practices. By constantly keeping the mind established on them, there is no room left for those hindrances (*nīvaraṇa*). That is why we say that when speaking about meditation, the terms *āsevati* (associates with), *bhāveti* (develops), and *bahulīkaroti* (practices frequently) are often used. Not only with the recollection of the Buddha, but also in developing meditations like loving-kindness (*mettā*), one constantly associates with the meditation object (*kammaṭṭhāna*) or theme like a close friend — *āsevati*. Likewise, one develops it — *bhāveti*, developing it gradually to a level where one can say tomorrow is better than today. Next, one practices it frequently — *bahulīkaroti*. In practicing this, especially when practicing frequently, with a meditation like the recollection of the Buddha, some people are indeed capable of keeping their mind on the entire formula of the nine virtues. That too should not be done like a constant chanting that is heard from the inside out, but internally, if possible. But for one who does not have that much leisure, choosing one of them—a suitable one—and in making that choice, as we have shown on many occasions, one can choose one that suits that person's mind. According to one's temperament, among these virtues of the Buddha—the virtues we briefly expressed—some might prefer the virtue of *Sambuddha*, some might prefer the virtue of *Sugata*, and another might prefer the virtue of *Purisadammasārathi*. For whatever reason, even a single virtue that grasps one's mind is sufficient. By constantly keeping the mind established on it as a meditation in that manner, no room is left for other unwholesome states (*akusala*). That is how concentration (*samādhi*) is brought about through the recollection of the Buddha.</p>
+<p>Likewise, the Buddha often points out the value of faith in that a great eagerness called *chanda*, and energy (*viriya*), must indeed be aroused; such is faith. So, if there is no faith in the Teacher, there is every possibility of falling into wrong views (*micchā-diṭṭhi*). Therefore, we must constantly remember that the recollection of the Buddha is shown as an auxiliary meditation object (*kammaṭṭhāna*), especially to guard practices like mindfulness of breathing (*ānāpānasati*). Look at people like Meghiya. Some have the desire to meditate, but they lack faith. Without faith, one cannot go far. One cannot go very far in this meditation. For, this path of practice is an extremely strenuous one. To guard virtues like moral virtue, one must develop faith in the Teacher. That faith eventually leads to realization at some point. Why do many people dislike faith? There is indeed one aspect where this is true; sometimes it is mentioned in the Dhamma: *Susaddahitaṃ pi hoti tañ ca hoti micchā* — "It may be well-believed, yet it may be false." There can be something in which one has deep faith, yet it is false. And some things in which one lacks faith might actually be true. However, in order to establish that faith correctly, one must examine that person properly.</p>
+<p>Reflecting according to the mantras when it was said that a Buddha had arisen, Brahmin Sela first examined the Buddha according to his external physical marks. Thereafter, through that discussion, he became free of doubt concerning the Buddha. In that way, although we cannot see the Buddha now, if we see the Buddha through the Dhamma he taught, it is just like seeing the Buddha himself. For some people who have trained in these in saṃsāra, even a very short word like *Buddho* is sufficient to arouse faith in the Buddha. One must understand that this is the purpose of the recollection of the Buddha. It is not merely praising the Buddha. Nowadays, the meditation on the virtues of the Buddha has been transformed into gathering a long list of Pali words that one does not even understand, and reciting them like a rote chant. There is no mysterious, mystical power in that. It must draw close to one's own heart. That is why we now explain these in a simple manner. If one can see the Buddha, that is why we called it a "nine-faceted gem." If one can see the Buddha through a single word, there is no need to keep constantly analyzing it.</p>
+<p>One does not need to repeatedly ask about someone one already knows. Similarly, if one has recognized the Buddha correctly, even the single word *Buddho* is enough. Even the single word *Sugato* is enough. When uttering that word, just as if one were filled with the fivefold joy, a great faith and clarity (*prasāda*) arise within oneself, just like in Sela. Clarity is something that goes hand-in-hand with this faith. It is often mentioned in the Dispensation: *Saddho pasanno hoti* — "He is faithful and well-pleased." The quality of faith is like what is sometimes described in ancient books as the water-clearing gem (*udaka-prasādaka-maṇi*). A water-clearing gem is something that—though nowadays we may have various electrical filters to remove mud and purify water—in ancient times, there was a certain gem which, when placed in muddy water, made the mud settle at the bottom, leaving clear water on top. In the same way, through faith—which is called the water-clearing gem—the turbid mud of defilements in the mind settles down, and the mind becomes clear. Clarity (*prasāda*) is necessary. It is through clarity that realization comes. That is why the two words *saddhā* and *pasāda* go together. It is often mentioned as *saddho pasanno*. It refers to the clarity of one who has developed faith in the Triple Gem. Therefore, through the recollection of the Buddha, on one hand, concentration is established, and on the other hand, the energy required to walk this path of practice is generated.</p>
+<p>You have heard that when people speak of "senses," they refer to the external eyes, ears, nose, and so forth. But in the Dhamma, when the "five faculties" (*pañcindriya*) are mentioned, they are often: faith (*saddhā*), energy (*viriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*). Even there, faith is placed at the very beginning because it is through faith that energy emerges. That powerful eagerness called *chanda* is indeed what turns into energy. If one does not have faith in the work one is doing, one does not apply full energy toward it. We apply energy in proportion to the growth of that faith. The Buddha declared:</p>
+<p>> *Saddhāya tarati oghaṃ, appamādena aṇṇavaṃ,*</p>
+<p>> *Viriyena dukkhamacceti, paññāya parisujjhati.*</p>
+<p>This was declared to Ālavaka the yakkha: "By faith one crosses the flood, by diligence the ocean, by energy one overcomes *Dukkha* (Suffering), by wisdom one is purified." It is by faith indeed that one is able to cross over this torrential flood of defilements—or what is shown in this Dhamma as the fourfold flood (*ogha*), which is the mass of defilements. If one asks whether it is possible to cross a stream flowing very rapidly during the rainy season, some might stand there folding their arms, saying it is too cold. Another, an energetic person, leaps into it without fear, swims across, and goes to the other bank. That is what is meant by *Saddhāya tarati oghaṃ*; it is the faithful one who leaps into the water, determined to cross over.</p>
+<p>You virtuous devotees might have heard in various Dhamma talks the truly wondrous similes the Buddha uses to show the value of this faith. In the *Gopālaka Sutta*, it is shown through the simile of the cowherd. A cowherd crosses the river Ganges during the rainy season. When the skilled cowherd drives the herd of cattle to cross at a watering place, he first drives the lead bull across, and then the next cow goes, thinking, "I too can do it." Next, in that manner, even the newborn calf born that very day crossed the river because of that faith. This shows the power of faith. Because the big one went, "I too can go." — "The next one too can go." Having developed faith row by row in this manner, it is said that even the newborn calf born that very day crossed over. That is a demonstration of the strength of faith. Therefore, faith is necessary to generate the perception of capability (*haki-saññā*) instead of incapability (*barikama*).</p>
+<p>Why do we emphasize this so much? Nowadays, many people try to understand who the Buddha is by relying solely on logic. Consequently, they think that faith is unnecessary. They contemplate in that way. In that case, they cannot walk the path of practice. Why? Because for the practice, one must develop energy. A massive commitment is required, like leaping headlong into the water. One does not make that commitment if there is no faith. That is why faith is essential. These become faculties (*indriya*) at one stage as one travels along this path of Dhamma. As you virtuous devotees know, in the thirty-seven aids to enlightenment (*bodhipakkhiya-dhamma*), faith (*saddhā*), energy (*viriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*) are mentioned. You have heard about these five. It is in accordance with that faith that energy arises. Through that energy, next comes mindfulness (*sati*); mindfulness is established. Next, that is strengthened up to concentration. Only after that is wisdom (*paññā*) attained. One cannot jump straight to wisdom (*paññā*). One can jump to intellect (*buddhiya*), but by jumping, there is also the risk of being ruined.</p>
+<p>But real wisdom (*paññā*)—even those words have been highly distorted nowadays. Those aforementioned people think that intellect (*buddhiya*) is the same as wisdom (*paññā*). There are those who believe there is no difference between intellect and wisdom. However, according to the Dhamma, the Buddha has pointed out that there is a certain path here, a practice. To walk the path of practice, these are indeed the most essential factors. It is only the faithful one, the one who has faith, who can bring forth the full energy for one's commitment. That is why meditations such as the recollection of the Buddha are necessary.</p>
+<p>Although exaggerations regarding the supreme excellence of the Buddha's physical body might have been added in later times, it is mentioned in several suttas—though some Western scholars mock these physical characteristics of his body. Not in one place, but in many places, it was to such an extent that the monk named Vakkali could not be driven away by the Buddha, so much was he gazing at the Buddha. Likewise, the Brahmin Māgandhiya came to offer his daughter, whom he had refused to marry off even to kings, in marriage to the Buddha. This demonstrates that he possessed an extraordinarily magnificent physical form. Regarding these, various exaggerations might have been added in later times. Yet, regarding those characteristics, it is mentioned in the Dhamma itself that a brahmin named Bāvarī, who also had a large group of disciples, possessed three marks of a Great Man. In this way, some people developed faith based on those aspects that arose through the Buddha's power of merit, and they gained faith through that. Next, hearing the Dhamma of the Buddha. This faith is something that grows gradually by proceeding towards wisdom. As you virtuous devotees have heard, as one walks along this path of Dhamma, which is described as *sandiṭṭhika* (to be seen here and now), *akālika* (timeless), *ehipassika* (inviting one to come and see), and so forth, faith grows step by step. That is precisely what is shown in suttas like the *Cūlahatthipadopama Sutta*: like people who go searching for and catching elephants in a forest, they do not make a final decision merely by seeing the footprint of an elephant at once. Yet, they do not stop their journey either; they go forward. As they go further, they see more and more signs that the high-class elephant they are expecting is there.</p>
+<p>In the same way, when one develops faith in the Buddha at one's own level and begins to walk the path of practice, faith grows more and more. That is what is shown in the Dhamma. To bring forth the energy potentials within a human being, faith is necessary. Having shown the qualities of faith (*saddhā*), energy (*viriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*), the Dhamma then describes them as powers (*bala*). When defilements arise, some put forward faith, put forward energy, and with the help of the strengths they have developed, such as mindfulness and concentration, they finally complete even the Noble Eightfold Path.</p>
+<p>Something that is fundamental to this faith is this recollection of the Buddha. Many people have experienced this in their daily lives. They say that it possesses a protective quality. When reflecting on the virtues of the Buddha, one is reflecting on the most sublime person in the world. That is it. Our mind becomes great or small based on the object it takes. Based on the object our mind takes, our mind becomes great or small, exquisite or coarse, noble or low. Therefore, when we reflect on the person who has developed himself to the highest possible state among all humans in the world, our mind becomes great. That is how we must understand it. At that moment, our mind is awakened. That is why the Buddha declared that there is no room for lust (*rāga*), hatred (*dosa*), or delusion (*moha*) to enter.</p>
+<p>The person who constantly reflects on the Buddha is, as mentioned in ancient books, just like someone staying near the scented chamber (*gandha-kuṭi*) of the Buddha. Ven. Ānanda constantly stayed near the scented chamber, attending to the Buddha. Although he was only a Stream-enterer (*sotāpanna*), he was a monk of wondrous energy and power of merit. In the same way, one who develops the recollection of the Buddha is, as shown in the Dhamma, just like someone staying near the scented chamber of the Buddha, constantly developing the virtues of the Buddha. So, this is said to encourage practicing it simply, not to disparage it; if one keeps the mind established on the virtues of the Buddha with truly pure faith, even a single word is sufficient.</p>
+<p>Often, if we think of childhood, various symbols are used because they help a young child develop faith in the virtues of the Buddha, even though some people reject them. We can think that for those who cannot use the language or do not know about it, a statue of the Buddha sometimes helps to arouse faith. Just as someone develops faith through verses composed about the virtues of the Buddha by a skilled poet, or through a piece of writing, by seeing a Buddha statue carved out of a lifeless stone by a skilled sculptor, not only uneducated people but even some Westerners considered learned in this day and age have developed faith merely by looking at a carved statue that represents the highest expression an artist can offer regarding the Buddha.</p>
+<p>Therefore, even if one does not have external symbols, what one can generate from within the mind is that formula of the nine virtues. That is why we said that in ancient Jambudīpa during the Buddha's time, those brahmins and others were waiting for a Buddha to appear in the world. For a long time, this was called the "Buddha-clamor" (*buddha-kolāhala*) — not in the sense of a riot as the word is used today. "Buddha-clamor" means that a rumor was going around: "A Buddha will appear very soon; it is during this era that Buddhas arise." Such a feeling existed in ancient India. Therefore, everyone was watching carefully to see if such a person would appear. Under such circumstances, once the Buddha had appeared, and in connection with that glorious report, it is mentioned in many places—not just one—that brahmins who had mastered the Three Vedas developed faith in the Buddha, sometimes by becoming free of doubt regarding his powers through discussions and so forth.</p>
+<p>Therefore, we must reflect that as we walk on this path of Dhamma, even if there are various arguments and thoughts put forward by rationalists, in order to practice this path—that is, to guard virtues like moral virtue—we must develop faith in the Triple Gem: the Buddha, the Dhamma, and the Sangha. That is why the Buddha is called the King of Dhamma (*Dhammarājā*), and why it is called the Wheel of Dhamma (*dhammacakka*). As Brahmin Sela said earlier: "Since you possess the physical characteristics of a body fit to be a Wheel-turning Monarch, why lead this ascetic life? Become a Wheel-turning Monarch!" — thus he invited the Buddha. It was then that the Buddha replied: "I too am a king. I am the King of Dhamma. The wheel I turn is the Wheel of Dhamma. The one who assists in this, who turns it after me, is my general Sāriputta." The *Dhammacakkappavattana Sutta* reminds us of that concept of a Wheel-turning Monarch. That is also why the Buddha is called the King of Dhamma. Instead of the worldly concept of kingship, we use the term "Buddha." The King of Dhamma turned the aforementioned Wheel of Dhamma.</p>
+<p>Similarly, a Buddha is an extremely rare person in the world — the Buddha himself declared that a Buddha is someone who is exceedingly rare. We must understand that he is no ordinary person. The Buddha himself declared in the *Aggappasāda Sutta* that if one develops faith in such a person, it is highly fruitful and of great benefit. In that sutta, the Buddha declared in a truly wondrous manner:</p>
+<p>> *Yāvatā, bhikkhave, sattā apadā vā dvipadā vā catuppadā vā bahuppadā vā, rūpino vā arūpino vā, saññino vā asaññino vā nevasaññīnāsaññino vā, Tathāgato tesaṃ aggamakkhāyati arahaṃ sammāsambuddho. Ye buddhe pasannā, agge te pasannā. Agge kho pana pasannānaṃ, aggo vipāko hoti.*</p>
+<p>"To whatever extent there are beings — footless, two-footed, four-footed, many-footed; with form or formless; percipient, non-percipient, or neither-percipient-nor-non-percipient — the Tathāgata, the Worthy One, the Fully Enlightened One, is declared to be the foremost among them. Those who have faith in the Buddha have faith in the foremost. For those who have faith in the foremost, the result is foremost." Thus, the Buddha has declared that if one develops faith in the foremost person, it brings about the foremost result and benefit.</p>
+<p>In that way, those virtuous devotees who constantly engage in such practice can draw close to the Buddha. Although we might speak of him as someone who lived in a distant era, he is extremely close to the faithful one. That is indeed what the Buddha declared; the *Aggappasāda Sutta* especially shows that when clarity and faith arise towards the Dhamma and the Sangha, a great transformation occurs in a person. You virtuous devotees have all heard and read from those Dhamma stories how, after gaining clarity regarding the Buddha, not only ordinary people but even great philosophers among various brahmins, and even kings, had their entire lives transformed. In order to bring about such a transformation within oneself, we must explain to those self-proclaimed "intellectuals"—who in this day and age push faith aside and regard it as something belonging only to simple, uneducated lay devotees—that without this faith, it is impossible to walk this path of practice. Therefore, if one expects Nibbāna, if one truly expects to undergo that aforementioned surgery, one must have unwavering confidence in that surgeon's qualifications.</p>
+<p>Therefore, we wish that the hearing of this sermon related to the recollection of the Buddha today may assist you virtuous devotees in your meditation and other practices. Putting forward that faith, developing energy, and cultivating virtues like mindfulness and concentration, *paññāya parisujjhati* — indeed, purification is attained through wisdom. One cannot simply jump to that wisdom. It must begin from that very starting point. Thus, by developing the recollection of the Buddha in a simple manner according to these explained points, one can develop it constantly, even in all four postures. When the hindrances are removed and one reaches a concentrated state through it, that is when the depth of the Dhamma is understood. Developing insight (*vipassanā*) through the meditation on the three characteristics (*tilakkhaṇa*), and through insight-knowledges, one can quickly realize the noble goal of penetrating the paths and fruits starting from Stream-entry (*sotāpatti*).</p>
+<p>Therefore, by means of the moral virtue guarded today, and the meditation practiced, and with the help of today's sermon, you virtuous devotees must resolve to achieve what can be achieved from this Dispensation of the Buddha as quickly as possible. With the help of the Dhamma sermon, by putting forth energy, gaining the assistance of noble friends (*kalyāṇa-mitta*), and bringing your meditation to fulfillment, you must wish that it may serve as a supportive condition to escape as quickly as possible from the suffering of saṃsāra—such as *Jāti* (Birth), *jarā* (decay/aging), sickness, and death—and to attain the sublime, supreme deathless Nibbāna. If there are any beings from the Avīci hell up to the Akaniṭṭha heaven who wish to rejoice in this merit of teaching and hearing the Dhamma, may they, through that rejoicing, find peace in the sublime, supreme deathless Nibbāna through their aspired state of awakening (Bodhi). With this aspiration, please recite this verse.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_083.html" class="doc-btn">← Previous Sermon (083)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_085.html" class="doc-btn">Next Sermon (085) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

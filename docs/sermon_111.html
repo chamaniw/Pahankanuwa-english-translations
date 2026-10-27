@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 111 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_110.html" class="doc-btn">← Previous Sermon (110)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_112.html" class="doc-btn">Next Sermon (112) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 111</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_111_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_111_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_111_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #111</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.16)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Yo ca vassasataṃ jīve, kusīto hīnavīriyo;</p>
+<p>ekāhaṃ jīvitaṃ seyyo, vīriyama-rabbhato daḷhaṃ.</p>
+<p>From:</p>
+<p>Dhammapada 112 (Sahassavagga)</p>
+<p>Dear Listeners,</p>
+<p>It was on a Vesak Full Moon Poya day like today that our Teacher of the Three Worlds, the Fully Self-Enlightened Buddha, was born, attained enlightenment, and passed away into Parinibbāna. Therefore, for us Buddhists, the most sublime and memorable day in every year must be Vesak day. That Great Compassionate One, giving away His eyes, head, flesh, and blood as charity, fulfilled the *pāramīs* (perfections) for four incalculable eons (*asaṅkheyya*) and a hundred thousand eons (*kalpas*), with the firm determination of ferrying us across the ocean of *saṁsāra*, the ocean of *Dukkha* (Suffering).</p>
+<p>On a day like today, we must reflect upon what kind of effort He must have exerted to fulfill such difficult perfections over such a vast period of time. Not only during that long period, but also in His final birth in which He became Buddha, practicing self-mortification for six years, the Blessed One exerted a monumental effort that no other yogi or spiritual practitioner had ever borne. It was through that firm, fourfold effort—resolved as: "Let only skin, sinews, and bones remain in this body; let my flesh and blood dry up. Whatever can be achieved by human strength, human energy, and human valor, without reaching that goal, there shall be no relaxing of energy"—that the Buddha realized Supreme Enlightenment. Yet, on a Vesak Full Moon Poya day like today, our minds are drawn more towards material offerings (*āmisa-pūjā*). No matter how sky-high we perform these material offerings with oil, flowers, lamps, and incense, the Buddha considered the offering of practice (*paṭipatti-pūjā*) as the highest offering.</p>
+<p>What is the reason for this? The very purpose, the very goal for which the Buddha exerted such a monumental effort, is fulfilled only if we walk on that path of practice. Even though He exerted such great effort to ferry us across the ocean of *saṁsāra*, if we do not take an interest in it, if we do not walk the path of practice, we will not be able to realize that Dhamma of Nibbāna. When we reflect on the offering of practice, an essential element, an indispensable component of this offering of practice is effort. Apart from the exemplary effort the Buddha demonstrated during that long period and in His final life as Buddha, He has highlighted the value of effort in various discourses (*sūtras*). We first realize that the stanza we have chosen as our theme, and its background story, are indeed a story and a stanza that demonstrate the immense value of effort.</p>
+<p>First of all, let us focus our minds on the occasion on which this stanza was preached, its background story (*nidāna kathā*). The texts describe it as follows: A certain young man in Sāvatthī heard the Dhamma from the Buddha and went forth into homelessness. Having gone forth, he received higher ordination (*upasampadā*). However, before long, he became dissatisfied with this monastic life and contemplated returning to lay life; he thought of disrobing. But even though such a thought and feeling arose, this monk thought: "For a son of a noble family like me, considering things like self-respect, it is far better to end my own life while remaining in this monkhood than to return to lay life." He then kept thinking of an easy way to commit suicide.</p>
+<p>While he was in this state of mind, one day a group of monks, after having finished their morning alms-meal, returned to the monastery and found a highly venomous cobra in the fireplace room. Having caught this cobra in a basket, these monks were taking it away to discard it. The monk we mentioned saw them carrying the cobra and asked, "What is this?" They replied, "We are taking this cobra to throw it away." Then, this monk thought, "Here is an easy way to commit suicide!" and saying, "Give it to me, I will do it," he took the basket away. Going a distance away, he opened the basket, put his hand in, and tried to make it bite him. But the cobra did not bite. He put his hand inside the basket and moved it here and there, yet it still did not bite. Finally, he even put his finger into the cobra's mouth. Even then, it did not bite. So this monk thought, "This must be a rat-snake." He threw it aside and returned to the monastery. The other monks asked, "How is it, venerable friend, did you discard the cobra?" "That was not a cobra; it was a rat-snake." "Why do you say so, venerable friend?" "I tried to make it bite me, intending to end my life, but it did not bite." The other monks had no reply and fell silent. They fell into deep thought, wondering, "What is this?"</p>
+<p>Then, on another day, a barber—to use the modern term—came to shave the monks' heads. He came with several razors, laid one razor on the ground, and began shaving the heads and beards of the Sangha with another razor. Meanwhile, that monk contemplated this razor, thinking, "Here is another way for me to end my life." He took that razor, went and leaned his neck against a tree, and placed the razor on his neck. Just as he placed it—now, generally, at the moment of death, there is a moment when one's life appears before them like a movie. Likewise, he was ready to let go of life. Just as he placed the razor against his windpipe, it suddenly occurred to him as a reflection (*āvarjana*) that from the very day of his higher ordination, he had kept an extremely immaculate, pure virtue (*sīla*). The thought suddenly came to him: "Have I not kept a virtue as spotless as the full moon?" Instantly, a great wave of rapture (*pīti*) suffused his entire body. This refers to a certain concentration (*samādhi*) born of that rapture. This is called the recollection of virtue (*sīlānussati*). Without even realizing it, what this monk practiced was *sīlānussati*, which, as you virtuous people know, is a subject of meditation (*kammaṭṭhāna*).</p>
+<p>So, by reflecting on virtue through *sīlānussati*, through that contemplation, rapture spread throughout his body and his mind became stilled. Next, how does one direct the mind to insight (*vipassanā*) in such a situation? Calming that very rapture that had arisen, he then directed it through wisdom towards insight-knowledge (*vipassanā-ñāṇa*). In this manner, in a very short time, in a mere instant, this monk transcended that rapture, aroused insight-knowledge, and realized the supreme fruit of Arahantship.</p>
+<p>Thus, it was a monk who intended to return to lay life and disrobe who had gone taking the razor. But the one who returned with the razor was an Arahant. The other monks did not know this. The monks asked, "Where did you go, venerable friend?" He replied, "I went intending to commit suicide, intending to cut my throat with the razor." "Why then are you not dead?" He made an indication: "Now indeed I have reached a state where I cannot commit suicide"—meaning a state where the mind is no longer inclined to end one's life. "Now I have reached such a state. What happened? Although I went taking the razor to cut my neck, what was ultimately done was the cutting away of all defilements (*kilesas*) with the razor of wisdom." Hearing this, the other monks thought this monk was telling a lie out of conceit (*adhimāna*), or perhaps it was a pure lie, and went to complain to the Buddha, saying, "This monk is making such a claim." Thereupon, the Buddha declared, "Monks, those who have destroyed the cankers (*khīṇāsavas*), the Arahants, do not commit suicide." Pointing out that this is a natural law (*dhammatā*), He made a statement that confirmed the monk's words. Then the monks asked, "Blessed One, if so, why did someone with such capacity to attain Arahantship think of returning to lay life? Why did he think of disrobing?" Next, they asked three questions: "And if he became an Arahant, what was the wholesome karma (*kusala-kamma*) that supported his attainment of Arahantship?" Thirdly, they asked, "In the previous instance, why did that cobra not bite him? Why did the serpent not bite?"</p>
+<p>Out of those three questions, the Buddha first answered the last question: the reason why the serpent did not bite. As the cause for this, that cobra had been a servant, a helper of this monk in his third previous birth. Therefore, it did not think of biting its master. You, virtuous people, might sometimes understand such things through the behavior of dogs and cats. Sometimes, non-human animals have special behaviors towards those who were their relatives or friends, through a certain recognition (*saññā*). Accordingly, in later times, this monk came to be known in the Dispensation (*Sāsana*) as "Venerable Sappadāsaka"—the monk whose servant was a serpent. He began to be known by the name Sappadāsaka. But the Buddha did not stop there; He then answered the other two questions as well. That is: while having such potential (*sampatti*) to become an Arahant, why did he think of returning to lay life? Why did he think of disrobing? And secondly, if he attained Arahantship, what was the merit that supported his attainment?</p>
+<p>As the reason for this, He related an incident from the time of Kassapa Buddha. A certain monk—not this monk, but another monk—having heard the Dhamma, went forth, but not long after receiving higher ordination, he thought of returning to lay life. He thought of disrobing. However, instead of doing it immediately, he told a companion monk, a friend of his, "Such an idea has come to me." That companion monk, explaining various matters and highlighting the drawbacks of lay life, dispelled his idea of returning to lay life. Thus, that monk settled his mind. However, during the days he was contemplating disrobing, he had neglected his requisites (*pirikara*). Therefore, taking those rusted and soiled requisites, he went to a small pool of water to clean them. While he was cleaning the razor and other items, the companion monk who had helped him with advice was standing there. The monk cleaning the requisites said to him, "Venerable friend, when I was thinking of returning to lay life and disrobing, I had intended to give these requisites to you upon my departure." Hearing this, a great greed (*lobha*) arose in the companion monk. His mind changed completely, and he thought, "Whether this monk disrobes or stays is all the same to me, let me get these requisites." Thereupon, he began to praise the advantages of lay life and speak of the disadvantages of monkhood. In other words, he tried to make him disrobe.</p>
+<p>"What is the use of this life of ours, venerable friend? Instead of spending this life wandering from house to house for alms, if we were at home, we could have lived pleasantly engaging in friendly conversation with a wife and children." In this manner, through various lines of talk, he rekindled the idea of returning to lay life and disrobing in that monk. But that monk fell into reflection: "Why is this monk, who previously advised me otherwise, now trying to make me return to lay life?" Then it occurred to him, "Perhaps this is due to his greed for my requisites." Thinking thus, that monk made an effort on his own, dispelled the thought of returning to lay life, and remained in the monkhood. This is the past account that the Buddha revealed.</p>
+<p>So, what we have to recognize here is: who was that monk who first helped his companion monk, and later, out of greed for the requisites, praised the advantages of lay life? It was none other than this Venerable Sappadāsaka. Now, through this, we can see the way the wheel of karma (*kamma-cakka*) operates. The Buddha declared it in this manner. Moreover, another point of interest is how he attained Arahantship in such a short time, while holding the razor to his neck. The Buddha declared that the reason for this was that this Venerable Sappadāsaka had practiced monastic duties (*samaṇa-dhamma*) for twenty thousand years during the time of Kassapa Buddha. In the era of Kassapa Buddha, the lifespan of human beings was extremely long. It was because of fulfilling those monastic duties that he was able to attain Arahantship in this life. Yet, the wondrous Dhamma-nature (*dhammatā*) here shows a great entanglement, or rather, a subtle interaction between the wheel of karma and the wheel of Dhamma (*dhamma-cakka*) through this story. Because he had tried to make another disrobe out of greed for a razor, that very razor spun back to be pointed at his own neck, along with a mind bent on suicide. But this monk, being energetic—that is where the importance lies—energetically reflecting on his practice of monastic duties and his immaculate keeping of virtue...</p>
+<p>Next, when the monks asked how he had attained Arahantship so quickly, the Buddha declared: "Monks, for one of aroused energy (*āraddhavīriya*), for a monk of aroused energy, in raising a foot and putting it down, he can attain Arahantship even before that foot touches the ground. So rapid is this mind, and due to the qualities of this Dhamma, such as being visible here and now (*sandiṭṭhika*) and timeless (*akālika*), one can penetrate the Paths and Fruits extremely rapidly. But while one of aroused energy can do this so quickly, a lazy, indolent person cannot do it even if he lives for a hundred years." Having declared thus, the Buddha uttered that Dhamma stanza which we placed as our theme at the beginning:</p>
+<p>*Yo ca vassasataṁ jīve, kusīto hīnavīriyo;*</p>
+<p>*Ekāhaṁ jīvitaṁ seyyo, vīriyama-rabbhato daḷhaṁ.*</p>
+<p>"Though one should live a hundred years lazy, indolent, and devoid of effort, yet better is a single day's life of one who makes a firm effort." This is the exemplary stanza of advice uttered by the Buddha. Thus, both this stanza and the story are things from which we can draw great inspiration. This monk, indeed, intended to commit suicide. But here, we must contemplate the effort spoken of by the Buddha. How can we say that this Venerable Sappadāsaka developed effort? In truth, as soon as the thought of disrobing occurred to Venerable Sappadāsaka, he could have done so. But instead, he thought that death was better than returning to lay life. Indeed, in this Dispensation, if a monk disrobes, according to the usage of the Dispensation, the Buddha has designated that as "death". Saying that a member of the Sangha has disrobed, in the terminology of the Dispensation, means he has died. The Buddha has spoken of the decline of monastic virtues to that extent. It might be because this touched his heart, or it might be due to the power of his past karma and past merit, that this monk also contemplated, "It is better for me to end my life than this."</p>
+<p>However, based on this, no one should think that committing suicide is the best path to realize Nibbāna. That would be a misunderstanding of this story. There is a very profound point here. When we reflect on the idea of developing effort here, from the moment that monk contemplated by way of *sīlānussati* (recollection of virtue), the entire succession of insight (*vipassanā*) from that point onward was carried out entirely through effort—through intense effort. That is to say, it was through contemplation, through intense contemplation in a manner that aroused deep insight-knowledge, that the venerable monk attained Arahantship. From that point onwards, it was complete effort; his mind did not back down.</p>
+<p>Furthermore, when we think carefully about suicide, generally in the world, a person is driven to suicide through mental conflict (*ghattana*). This monk, too, had such a mental conflict. Facing this mental conflict, what most people do is destroy their lives out of hatred/aversion (*dosa*). But the problem is not solved. Why? Because a person commits suicide because they did not get something they expected, or someone they hoped for. At the moment of ending one's life, there is self-hatred within that person. It is out of a certain hatred towards oneself that one cuts one's neck, or jumps into a river or the sea, and does such things. Therefore, in truth, the problem is not solved by it. The problem is not solved because *Taṇhā* (Craving) remains. As long as *taṇhā* is preserved as an *anusaya* (latency/underlying tendency), as a defilement, one cannot escape the problem by committing suicide. Nowadays, sometimes people try to solve a problem either through suicide or alcohol. Either they intoxicate their minds, attempting to flee from the problem, or they attempt to flee from life itself.</p>
+<p>Even though one attempts to flee from this life, such is the nature of *saṁsāra* that as long as defilements are not destroyed, as long as ignorance (*avijjā*) and *Taṇhā* (Craving) are not eradicated and cut away, one is born again and again in *saṁsāra*. The Buddha demonstrated this in a Dhammapada stanza:</p>
+<p>*Yathāpi mūle anupaddave daḷhe,*</p>
+<p>*chinno’pi rukkho punareva rūhati;*</p>
+<p>*Evam-pi taṇhānusaye anūhate,*</p>
+<p>*uppajjati dukkham-idaṁ punappunaṁ.*</p>
+<p>Meaning: Just as a tree, though cut down, grows again and again as long as its root remains undamaged and firm—that is, if it is not uprooted, even if the tree is cut, it grows again—just so, as long as the underlying layer of craving, the subtle defilements remaining as *anusaya* (latency/underlying tendency) are not removed, this *saṁsāra* *Dukkha* (Suffering) arises again and again. According to this Dhamma-nature, suicide is not the solution. However, there is a profound point here. At the moment of committing suicide, through this mental conflict, if one arouses the perception of self—the notion of "I" and "mine"—then indeed one loses to Māra (the Evil One).</p>
+<p>Instead, what should be done? By subtly contemplating the true nature of this mental conflict arising within oneself, analyzing it as: "Here is merely such and such a flow of thoughts, and these are the causes for it"—through such contemplation, through wise contemplation, one arouses the perception of *Anattā* (Not-self) here. The perception of *anattā* means that nothing can be kept under one's control; one has to be separated from them, if not by other means, then by death. Some people, thinking of certain individuals, decide to commit suicide if they do not get them. But one cannot stay with them forever. Such is the nature of things. Therefore, that profound understanding, that direct realization that "nothing can be kept under one's control," which one can arouse through that very conflict, is like a blessing in disguise. Now, there is a common saying in society: "Sorrows that come are sweet." But in truth, we must say that the sorrows that come are not merely sweet; there is also the possibility of turning those sorrows into the taste of Nibbāna. You, virtuous people, have heard of many who turned the sorrows that came to them into the taste of Nibbāna, such as the female disciples Paṭācārā, Kisāgotamī, and others, who extracted the taste of Nibbāna from the sorrows they encountered.</p>
+<p>Now, here too, this Venerable Sappadāsaka, through the mental conflict that arose in him, wisely, through what is called *Yoniso manasikāra* (Wise attention)—contemplating with wisdom—realized the sublime Dhamma of Nibbāna. Similar to Venerable Sappadāsaka's story, we can briefly mention another parallel case mentioned in the Dhamma concerning a certain bhikkhunī. Because the oppression of defilements was so great for her, she felt the same way and thought: "It is better for me to hang myself than to return to lay life." She went to a forest, climbed a tree, made a noose out of a creeper, and just as she was about to put it around her neck, her mind was freed from defilements and she attained Arahantship. Now, these stories are not meant for anyone to experiment with. However, one must understand the Dhamma-nature (*dhammatā*) within them.</p>
+<p>The realization of this Dhamma, the Dhamma of Nibbāna, is impossible for a lazy person even if they live for a hundred years. But for wise individuals of aroused energy—one who wisely develops virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*)—this can be directly realized in a very short moment, even before raising a foot and putting it down, as the Buddha declared. The reason for this is that the activity of this mind is extremely rapid. The Buddha stated that no comparison is adequate to describe this. Nowadays, perhaps, some people give comparisons like computers and so on. But the mind changes with such speed that not even one of those comparisons can come close; it is said to be *lahuparivattaṁ* (swiftly changing). That is why the mind is so rapid. This is true when it is directed towards the bad, but if it is directed towards the good, one can very quickly realize the Dhamma of Nibbāna.</p>
+<p>Such is the valuable story contained here. Moreover, we must contemplate how the mind changed. The manner in which the mind of greed (*lobha*) arose in that monk was extremely rapid. One must make an effort, drawing from this story, to protect one's mind from such situations. Sometimes, a defilement (*kilesa*) aroused in a mere split second can extend extremely far into the future. It was because of that greedy mind that the razor was aimed at his own neck. Why did he become wearisome of monkhood and think of disrobing, despite having such a rich store of supportive causes (*hetu-sampatti*)? It was because he had caused such a flow of thoughts in another person. This shows the connection between karma and its result (*vipāka*). "What you do bears fruit"—such is the reality.</p>
+<p>Next, let us contemplate the razor. There is much we can learn from the razor as well. The razor is largely out of common use today, even among the Sangha. But you, virtuous people, probably know that there are two ways of using a razor. That is, there are two ways of holding a razor. When shaving the head or beard, the razor is held in a certain delicate manner, almost as if preparing to cast it, allowing the hand to move back and forth very easily from the wrist. That is how the razor is held when shaving. But if someone is trying to commit suicide, how do they hold this razor? They brandish it; they hold it tightly. Corresponding to these two ideas, there are two words used in society. Likewise, there are two words used in the Dispensation as well. That delicate holding is called *sammasana* (comprehension/careful investigation), and the tight grasping, the brandishing, is called *parāmasana* (grasping/clinging). Although these words are somewhat heavy, we mentioned them on this occasion because they contain several profound meanings. *Sammasana* refers to a kind of delicate stroking or light touching. It is enough to understand it in relation to the razor.</p>
+<p>There is a similar situation within mental conflict as well. Mental conflict refers to the clashes within the mind. We cannot imagine that there is anyone here who does not experience mental conflicts. Various kinds of conflicts can arise: disappointments, unexpected occurrences—in short, the eight worldly conditions (*aṭṭha-loka-dhamma*). There are mental conflicts that arise when facing these. One can utilize such mental conflicts in both of the ways mentioned. Venerable Sappadāsaka initially went with the intention of brandishing that razor. But what was done through it next? What followed was an understanding of this mental conflict. In the same way, friends, a profound meaning of the word *sammasana* is contemplation. Contemplation means reflecting on whatever comes into one's mind as: "This is such-and-such; this is merely a *Vedanā* (Feeling); this is only a thought; this is like a dream; or this is a *saññā* (perception), a recognition." Considering their true nature in one's mind in this manner is called *sammasana*.</p>
+<p>What happens through that? Through that recognition, one does not get entangled in karma with them. Because it is due to a lack of understanding and delusion regarding a mental conflict, the tremors in the mind, that a person is driven by defilements to commit suicide. If, instead, one arouses understanding, grasps their Dhamma-nature, and arouses the concept of *Anattā* (Not-self) instead of self—instead of that intense *Taṇhā* (Craving) and ignorance (*avijjā*) which demands "this must be kept under my control," realizing: "these are things that do not remain under anyone's control; even if one wishes, they cannot be kept; either one must let them go at death, or they must be abandoned before death"—if one gains such an understanding, they can remain unsubmerged by the torrent of defilements. In short, *sammasana* means contemplating in a manner that arouses the Three Characteristics of *Anicca* (Impermanent), *Dukkha* (Suffering), and *Anattā* (Not-self). *Sammasana* is the sharpening of this razor of wisdom so that the Three Characteristics of *anicca*, *dukkha*, and *anattā* become sharp. On the other hand, *parāmasana* (grasping/clinging) means raising the perception of self at a moment of mental tremor or conflict, causing great mental distress by thinking "this is happening only to me," becoming deluded, and out of that tight grasping, being driven by lack of understanding to commit suicide or turn to alcohol. Such is the situation.</p>
+<p>Thus, you, virtuous people, apply your minds to meditation along the path of *sammasana*. This meditation is not restricted only to the Sangha. In short, you know that the eight worldly conditions—gain and loss, fame and disrepute, praise and blame, pleasure and *Dukkha* (Suffering)—are things that come in our day-to-day lives. The Buddha declared that everyone has to face these, including the Buddha Himself, as long as they are in *saṁsāra*. So, when one of these conditions presents itself, some people are driven to commit suicide because of it. That is not how one should think. One should console oneself by thinking, "This is only one of the eight; it is only a quarter (of the pairs)." Reflecting wisely that "this is only a quarter of the worldly conditions that happen to everyone," and understanding that this too is a Dhamma-nature that arises, exists, and ceases—a person who practices contemplating daily life in a manner that yields such understanding will never contemplate committing suicide in such a violent way. In the case of that monk, it was because a heavy past karma had surfaced. Even if such a situation arises, one must contemplate in accordance with the Dhamma. It is from this very mind that we derive what is called effort. Exerting effort means remaining afloat, not submerged by the torrent of defilements. Just as when one falls into a river or the sea, one swims and tries to cross over somehow, one must arouse this wisdom with strength and strive to gain a true understanding of these. That is the exemplar we must take from such stories: the arousing of this effort.</p>
+<p>Next, as we said about *sammasana* and the razor, in every situation that presents itself to us, there is a leaning towards *saṁsāra*; we can act in a way that expands *saṁsāra* through the various objects that present themselves. But the Buddha has also declared that within that wise contemplation called *sammasana*, there lies the path to cross over the suffering of *saṁsāra*. In that way, if one now arouses the nature of *Anicca* (Impermanent), *Dukkha* (Suffering), and *Anattā* (Not-self) in everything, and exerts effort towards that, one can reach that understanding within daily life itself. It is mentioned that in the past, not only the monks, but also lay disciples (*upāsaka* and *upāsikā*) even after the Buddha's time, well-guarding their five precepts or the eight Uposatha precepts, and established on that virtue, even during their daily work like farming or carpentry, contemplated the thoughts that arose, the flow of thoughts, exactly as they were, dissolving them right where they arose, and strove to realize the Three Characteristics of *anicca*, *dukkha*, and *anattā* through them. For such persons, at a moment they least expect, sometimes suddenly by the very law of Dhamma, even the penetration of the Paths and Fruits—Sotāpanna, Sakadāgāmi, Anāgāmi, and Arahant—can be achieved.</p>
+<p>Therefore, while everyone should be enthusiastic about maintaining this attention (*manasikāra*), one must reflect on the Dhamma-principles that lead to this according to what has been discussed. If someone walks the Noble Eightfold Path—shaping their flow of thoughts and daily life according to *sammā-diṭṭhi*, *sammā-saṅkappa*, *sammā-vācā*, *sammā-kammanta*, *sammā-ājīva*, *sammā-vāyāma*, *sammā-sati*, and *sammā-samādhi*—this path becomes straight for them at the very moment such insight-knowledges arise. Furthermore, according to the matters discussed regarding Venerable Sappadāsaka, one must constantly cultivate a deep conviction in the turning of this wheel of karma. The things that happen to oneself should not be viewed merely as things done by others in society; this karma operates in an extremely subtle manner, visible only to a Buddha or to those possessing higher psychic knowledges (*abhiññā*). These are wondrous things. We think someone else did it to us, but underneath lies the force of karma.</p>
+<p>Therefore, a person who has developed the conviction that such a force of karma is at work here need not get agitated about these things. These are things one has to pay off. Thus, instead of accumulating further karma based on them, what one must do is apply wisdom, understanding, and effort to comprehend their true nature and turn them into blessings in disguise. In accordance with the Dhamma, there are only three grades to learn in this *saṁsāra*, or rather, to pass out of *saṁsāra*: gratification (*assāda*), danger (*ādīnava*), and escape (*nissaraṇa*). Gratification (*assāda*) means pleasing the senses with the fivefold sensual pleasures and so on. The gratification class is like the kindergarten class, and that is where the majority of people are. Next, in experiencing this gratification, many people have to commit various unwholesome deeds for its sake; this is clear to you, virtuous people. Nowadays, those who are considered wise or scientists teach what kind of occupations one should do to get rich quickly. What do those who adopt such schemes do? They accumulate sin. Through accumulating those sins, while on the gratification side, they then have to suffer the consequences as the danger (*ādīnava*) of those actions without even realizing it. In the stage of suffering the consequences, a person then reflects in that class: "This *saṁsāra* is indeed not a good place; I must depart from here." It is in such instances, as mentioned in the Jātaka stories and other places, that even kings sometimes abandon their kingship, leave behind all wealth, and go to practice asceticism in places like the Himalayas.</p>
+<p>Next, if one has understood the danger (*ādīnava*) of defilements in *saṁsāra* in this way, the peace we receive, the rare gain we obtain, is the opportunity to escape from this, provided we have attained a wise human existence during the era of a Buddha's appearance. This is called "escape" (*nissaraṇa*). Escape means leaping out of this *saṁsāra*. *Saṁsāra* is like a circular ring. When we take the two words *saṁsaraṇa* (wandering) and *nissaraṇa* (escape), we understand that wandering means spinning in the same place. If you look at a dog, you sometimes see it spinning around to catch its tail. It spins in the very same spot. It is the same here. What is to be understood from this extremely profound Dhamma called *Paṭicca-samuppāda* (Dependent Arising) is also this nature of spinning in the same place. The exhaustion and the dizziness arising from this are indeed what are called defilements (*kilesas*). Leaning towards those defilements, the world is drawn and spins in the same place due to the taints (*āsavas*) and other factors.</p>
+<p>Due to ignorance (*avijjā*) and *Taṇhā* (Craving), ordinary worldly people see no strength or method to ever leap out of this circular ring. However, when a Buddha appears and declares the Dhamma, we can gradually understand, as Right View (*sammā-diṭṭhi*), the correct comprehension: the nature of *Dukkha* (Suffering) of this entire *saṁsāric* existence, and that *taṇhā* lies lurking underneath it. If one gains an understanding of these Four Noble Truths—that on the day this unquenchable thirst called *taṇhā* is stilled, there is peace right there, and that the path to attain that peace called Nibbāna is this path of eight factors—then such a person can advance in that grade of escape (*nissaraṇa*).</p>
+<p>Therefore, escape (*nissaraṇa*) means leaping out of this circular ring. Once caught in that circular ring, one must exert a certain effort to leap out of it. It does not happen on its own. You know that for someone spinning in circles to leap out of that ring, a special effort is required. What happens on its own is the spinning of the circular ring. That effort is what is called energy (*vīriya*). It was about that energy that the Buddha uttered this stanza, which we have chosen as our theme. Now, you, virtuous people, exert much effort in your day-to-day lives for your occupations and so on. The Buddha describes the lay life as *khuppipāsāhi khajjamāno*—being consumed by hunger and thirst. How do lay devotees spend their lives? Being eaten up by hunger and thirst. It is just like food. To live in this *saṁsāra* is to live falling prey to what is called hunger and thirst. We think we are taking food and drink, eating and drinking. But what actually happens to us? We are being consumed by thirst and hunger. That is how the Buddha declares it. Such is the perilous state that exists in *saṁsāra*. Whether we look at *saṁsāra* or look at the way our poor human beings live, such a state of suffering exists.</p>
+<p>Thus, such is the state of the world. This *Taṇhā* (Craving) is never something that can be satisfied. It is like a deer running after a mirage. This thirst can never be quenched. No matter how much, it cannot be filled. Instead, what must be done is the eradication of this *taṇhā*. That is why the Buddha declared that the very eradication of *taṇhā* is Nibbāna. Thus, what Venerable Sappadāsaka also did was to remove that *taṇhā* lying underneath, as well as the ignorance (*avijjā*) concerning it. A beginning for this can be aroused by everyone through the very things they do. On some occasion, you offer a spoonful of rice. You give something. Even when you offer something when we go on alms round (*piṇḍapāta*), you should reflect: "This is not done merely because this monk arrived, nor is it because we must give something by any means." At that moment, you must look closely back at your own mind. Wisely reflecting on all these things so that no conflict arises in the mind, you must use every single one of these actions to refine your own mind.</p>
+<p>In accordance with the advice, "If one gives, one gives alms and merit; if one shapes, one shapes one's own mind," when offering oil, a lamp, or a flower, in every such act, one must look at one's own mind. That is why in stanzas and such, the impermanent nature of these is indicated. A child is very fond of a flower when they see it. But at the moment of offering it, the attitude of offering (*pūjā-buddhi*), the faith (*saddhā*) one has in the Buddha, and similarly with other things, is what matters. Wisely contemplating the value of such moments, one must strive to advance on this path of Nibbāna through them.</p>
+<p>From this story, points regarding the exertion of effort arose. When considering day-to-day meditative attention (*manasikāra*), one can contemplate how this bodily cage decays by way of unattractiveness meditation (*asubha-bhāvanā*), or by way of attention to elements (*dhātu-manasikāra*), reflecting that these four elements—earth (*paṭhavī*), water (*āpo*), fire (*tejo*), and wind (*vāyo*)—are what we consume as food and drink. When these external things are integrated into this body, we develop a great attachment to them, thinking "mine," or "this is my limb." But we must reflect wisely on their true nature. Furthermore, instead of submitting and yielding to the flow of thoughts rushing into one's mind, acting according to them, and going to states of misery (*apāya*), one must constantly contemplate the wholesome roots and unwholesome roots declared by the Buddha: *lobha* (greed), *dosa* (hatred), *moha* (delusion), and *alobha* (non-greed), *adosa* (non-hatred), *amoha* (non-delusion). When a certain thought comes to the mind, one must reflect: "Does this fall on the side of greed or non-greed? Does it fall on the side of hatred, or does it help to eradicate hatred? Does it fall on the side of delusion, or on the side of understanding?" When one shapes the mind with understanding regarding whatever arises, contemplating subtly, karma does not spring up again from them.</p>
+<p>If we may give a small comparison—these are not perfect comparisons, but we offer them because they help to understand things through contemporary examples. You know that if there is a wire carrying electricity, and it is not covered with a rubber insulation, the moment you touch it, you get an electric shock. But through that rubber insulation, one is saved from the electric shock. Just so, one must practice contemplating and attending (*manasikāra*) to the flow of thoughts passing through one's mind. What is supportive of this? The Buddha has declared it as *sati-sampajañña*—mindfulness and clear comprehension. *Sati* means mindfulness, and *sampajañña* is also described as wisdom, or rather, awareness. One begins to perform consciously what used to occur unconsciously, even small things like going and coming. Next, contemplating everything, such as the movement of hands and limbs—that is indeed what is called insight (*vipassanā*). Directing attention to each of these, one understands their true nature: that these are things that arise, exist, and cease. At the moment one gains that understanding, just like the electric wire covered with rubber insulation, defilements do not grow within oneself through that flow of thoughts. It helps one to be freed from *saṁsāra*.</p>
+<p>This *saṁsāra* is indeed an accumulation of these five aggregates (*pañcakkhandha*). Through everything we do, these five aggregates—form (*rūpa*), *Vedanā* (Feeling), perception (*saññā*), *Saṅkhāra* (Formations), and *viññāṇa* (consciousness)—are accumulated. Just like pouring water into a filter and having it strain through, through everything we do, these five aggregates grow due to ignorance (*avijjā*) and *Taṇhā* (Craving)—either on the wholesome side or on the unwholesome side. One who strives to completely escape from these, from *saṁsāra*, uses the weapon of wisdom as the supporting tool. Wisdom indeed is this very contemplation. It is the matter of *sammasana* (comprehension/careful investigation) that we have discussed so far: the understanding of, or awareness of, their true nature. One must become aware of them. We mostly try to make others aware. But that is not it; one must apply all of this to oneself. For such a long time, throughout our entire lives, we have breathed since the moment we came out of our mother's womb. Yet, we do not know the true nature of this breath, of this inhalation and exhalation. That is why the Buddha declared the meditation of *ānāpānasati* (mindfulness of breathing). If one understands the impermanence (*aniccatā*) within this inhalation and exhalation, how delicate is this thread of life! One can easily arouse the understanding of how quickly, at any moment, it can be spent and cease.</p>
+<p>Likewise, one has no understanding of the true nature of this body, its unattractive nature, its impermanent nature, or the true nature of the food and drink we consume. In the ordinary worldly life, this is an era in which people think about them according to various ornaments and fashions. In such an era, one must reflect that by living with wisdom, one can escape from the dangerous conditions commonly seen in society, such as alcohol addiction and suicide. But this must be done systematically. Systematic practice is indeed what is called meditation (*bhāvanā*). Quieting the mind and then practicing this attention by way of insight (*vipassanā*)—if one obtains the necessary instructions for this from the proper sources, they do not refrain from meditating on the pretext of having farming work in their day-to-day lives; they meditate along with their farming work. They plow, and at the same time, they develop a strength in the mind that can be derived from it.</p>
+<p>One must train oneself in that kind of thinking. It was because they lived such lives in the past that it is mentioned of lay female devotees that when pounding paddy, they would not let the husk be separated from the grain without bringing it under the attention of meditation. Somehow, they saw impermanence (*aniccatā*) through it. It was through that Dhamma-reflection during their daily activities that they obtained mental relief—not from medicine or sleeping pills. Therefore, the Dispensation of the Buddha, this Dhamma, is never outdated. It is mentioned in the Dhamma: *satañ-ca dhammo na jaraṁ upeti*—the Dhamma of the virtuous never decays. Ordinary worldly things—you know, where are the things that were in your living rooms ten years ago? If the next-door neighbor has a greater fashion, you follow that. Without even knowing it, those older things go to the dustbin.</p>
+<p>That outdated nature found in the world does not apply to this Dhamma. The Dhamma declared by the Buddha more than two thousand five hundred years ago is true even today. It is that fire of greed, that fire of hatred, and that fire of delusion that are still burning. Only the firewood thrown into them is different. In those days, what was thrown were bows, arrows, swords, and so on. Today, you know what is thrown: bombs and other such things. In this manner, the three fires called *lobha* (greed), *dosa* (hatred), and *moha* (delusion) are ever-present realities; they are always there. Therefore, the Dhamma of the Buddha never decays. Reflecting wisely according to this, no matter how the world thinks of these things, one must contemplate them with one's own wisdom and, walking on this Noble Eightfold Path, strive to become a Buddhist in reality, in truth—that is, not merely as a Buddhist by birth certificate, but through practice; not by birth, but to reach the state of being a Buddhist through practice.</p>
+<p>The path that supports this is the Noble Eightfold Path. If we briefly consider it, translating the Pali terms: *sammā-diṭṭhi* means Right View. Even when going on a journey, we first look ahead at the road to see if we can pass, or if there are thorns and bushes. Next, we establish a certain view regarding it. *Sammā-diṭṭhi*, or Right View, refers to the Four Noble Truths: that this entire *saṁsāric* existence is *Dukkha* (Suffering); the cause for it is *Taṇhā* (Craving); and the path that leads to the eradication of *taṇhā* and supports Nibbāna is walking on this Noble Eightfold Path. If this basic understanding, this Right View, is established, then as one constantly thinks accordingly, Right Intentions (*sammā-saṅkappa*) arise.</p>
+<p>The thought to escape from this lay life, the thought of going forth, the thought of letting go of these, the thought of detachment from *saṁsāra*; next, non-violence, and thoughts of loving-kindness (*mettā*). In this manner, a succession of thoughts arises. If Right Intentions are established accordingly, then that person's speech also avoids lying, slander, harsh speech, and idle chatter; instead, truthful words, words that unite others, meaningful words, and gentle words are what proceed from that person. Right Speech. *Sammā-vācā* means Right Speech. Next, in accordance with this, that person strives to act as the Buddha did, who was *yathāvādī tathākārī*—He did as He said, and He said as He did. Thinking, "Therefore, I too must live according to my words," they abstain from unwholesome deeds like killing, stealing, and sexual misconduct—Right Action (*sammā-kammanta*). Through Right Speech, they arouse Right Action. That Right Action is not something done occasionally, but is integrated into their entire livelihood, which is extremely difficult in this era. How to keep one's livelihood righteous (*sammā-ājīva*) is indeed a great challenge. Nevertheless, if one hopes for Nibbāna, they have to do it, along with a certain sacrifice.</p>
+<p>Then comes Right Livelihood (*sammā-ājīva*). Through the effort applied to Right Livelihood in accordance with the Dhamma, what that person does is walk on that path of meditation. *Sammā-vāyāma* means Right Effort. *Sammā-vāyāma* does not mean exerting limbs and working until one sweats. It is a certain energy exerted within the mind. What is that energy? Preventing unwholesome thoughts from entering the mind; dispelling unwholesome thoughts already present in the mind; bringing in wholesome thoughts that should be cultivated; and consolidating the wholesome thoughts already present. This is a fourfold energy: the effort to prevent the arising of unarisen unwholesome states, to abandon arisen unwholesome states, to arouse unarisen wholesome states, and to maintain and consolidate arisen wholesome states. This is the true energy. What is supportive of developing this energy? Mindfulness (*sati*), the awareness we mentioned earlier. Constantly with mindfulness, alert like a good sentry, one must watch one's own mind. One must constantly watch this flow of incoming thoughts, the flow of thoughts underlying our external actions and words. That watchfulness, that state of keeping watch, that awareness of it, is indeed what is called *sampajañña* (clear comprehension). Thus, one practices *sati-sampajañña*—mindfulness and the wisdom or awareness that follows mindfulness.</p>
+<p>Next, accordingly, the Four Foundations of Mindfulness (*satipaṭṭhāna*) develop within that person: the true nature of this body—not only of one's own body but also of others' bodies—the true nature of *Vedanā* (Feeling), the behavior of the mind, and the changes in the mind during states of greed, hatred, and so on, and what lies underneath them. These four are called contemplation of the body (*kāyānupassanā*), contemplation of feelings (*vedanānupassanā*), contemplation of the mind (*cittānupassanā*), and contemplation of phenomena (*dhammānupassanā*). These Four Foundations of Mindfulness automatically become the focus of such a person. Next, when one directs the mind for a long time towards some object, some meditation subject (*kammaṭṭhāna*) in those Four Foundations of Mindfulness, that purified mind then becomes concentrated (*samādhi*). Through that concentration, a very subtle pleasure (*sukha*) is also experienced. But even if that pleasure or a great rapture arises, transcending that too, just like Venerable Sappadāsaka, one then directs it towards insight-knowledge. You know that water is collected in a large reservoir and then carried through pipes; why is that? To generate electricity, it is carried through several pipes and then through a narrow pipe to turn an iron wheel and produce hydroelectric power. Just so, all this energy gathered and accumulated by way of concentration (*samādhi*) must next be directed towards the path of insight (*vipassanā*). It is by developing this succession of insight-knowledges in one's mental continuum, beginning with arising and passing away, that at a certain stage—when they have matured—one can penetrate the Paths and Fruits of Sotāpanna, Sakadāgāmi, Anāgāmi, and Arahant, escape this perilous ocean of *saṁsāra*, and realize supreme Nibbāna.</p>
+<p>Therefore, on a Vesak Full Moon day like today, if you, virtuous people, aspire to worship the Buddha with the highest offering of practice (*paṭipatti-pūjā*) as He declared, you must strive from this day onward to cultivate within yourselves not only that physical effort but also mental effort—this *sammā-vāyāma* (Right Effort). The Vesak day is indeed the most valuable day to make special determinations. Contemplate in that manner. You have listened to the Dhamma very calmly up to this moment. One might think that the benefits of listening to the Dhamma (*dhamma-savana-āniśaṁsa*) are something that will manifest in the future. But most of those benefits have already been reaped right here, even if you are unaware of it. That is to say, the Buddha has declared that it is not through our physical five senses—eyes, ears, nose, and so on—that we can realize Nibbāna. We can realize Nibbāna through the five spiritual faculties (*indriya*) called *saddhā* (faith), *vīriya* (energy), *sati* (mindfulness), *samādhi* (concentration), and *paññā* (wisdom). Faith (*saddhā*) must be elevated to a faculty (*indriya*). A faculty means a ruling power; faith must be brought to a state where it is unsubdued by anyone, unsubdued by lack of faith. Energy (*vīriya*) must also be elevated to a faculty. It must rule. Ruling means reigning in one's mental continuum. *Indriya* refers to a ruler or king. Thus, faith, energy, and also mindfulness—mindfulness too must be developed in the same way. Next, concentration, the power of concentration. Next, wisdom. The Buddha has designated these both as faculties (*indriya*) and as powers (*bala*). A king is not given kingship for nothing; it is given to exercise power. Likewise, if these faculties of *saddhā*, *vīriya*, *sati*, *samādhi*, and *paññā* have arisen in someone's continuum, then as faculties, they possess a governing power; they can apply that power to realize the supreme Dhamma of Nibbāna.</p>
+<p>In support of that, there are those here who have undertaken the *ājīva-aṭṭhamaka-sīla* (livelihood-eightfold virtue), and there are also those who have undertaken an even more precious virtue, the precious eight Uposatha precepts. Grounded on that virtue, everyone has generated a good flow of thoughts at this moment—which is indeed meditation. Whether one is seated in a cross-legged posture (*pallaṅka*) or in any other way, this is something that takes place within the mind. Therefore, through this listening to the Dhamma, that meditative flow of thoughts generated develops those faculties of *saddhā*, *vīriya*, *sati*, *samādhi*, and *paññā*. Moreover, for some, deep understanding may even arise through this. Reflecting in this manner on this heap of merit accumulated by you, virtuous people, during this hour—this heap of merit accumulated as the benefits of listening to the Dhamma—you must also share its meritorious portion. Having attained a human birth in this extremely rare era of a Buddha's appearance, this is a moment when the lamp of the Dispensation (*Sāsana*) is on the verge of going out. If one does not obtain light from these last few drops of oil, they will next plunge into a great darkness and will have to wait for another interval between Buddhas (*buddhantara*).</p>
+<p>Therefore, reflecting on these, one must take full advantage of such opportunities. Furthermore, may this accumulated store of merit (*puñña-sambhāra*) support our journey to Nibbāna! You must make an aspiration for yourselves: "May I, by developing meditation in this very life, escape from these perilous four states of misery (*apāya*) as quickly as possible, attain the state of Sotāpanna or go even beyond, and obtain the power, the supportive potential (*upanissaya-sampatti*), and the fortune to end all *saṁsāric* *Dukkha* (Suffering) through the noble state of Arahantship!" Having done so, next, aspire likewise: "May the assembly of deities and Brahmas who protect the Dispensation, and any guardian deities residing in this place who await merit, rejoice in this store of merit we have accumulated through this Dhamma preaching and Dhamma listening! Having rejoiced, may they realize supreme Nibbāna through a wished-for Bodhi!" Furthermore, whatever departed relatives there may be in our names, and whatever living beings from Avīci up to Akaniṭṭha who desire Nibbāna and seek merit—may all such beings rejoice in this heap of merit of our Dhamma listening and Dhamma preaching! Having rejoiced, may they realize the supreme, deathless Nibbāna as quickly as possible. With this aspiration, recite these stanzas and share the merit.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_110.html" class="doc-btn">← Previous Sermon (110)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_112.html" class="doc-btn">Next Sermon (112) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

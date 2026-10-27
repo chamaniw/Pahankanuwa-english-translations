@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 092 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_091.html" class="doc-btn">← Previous Sermon (091)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_093.html" class="doc-btn">Next Sermon (093) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 092</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_092_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_092_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_092_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #92</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.103)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Na attahetu na parassa hetu,</p>
+<p>na puttaṃ icche na dhanaṃ na raṭṭhaṃ;</p>
+<p>na iccheyya adhammena samiddhimattano,</p>
+<p>sa sīlavā paññavā dhammiko siyā ti.</p>
+<p>From:</p>
+<p>Dhammapada 84 (Paṇḍitavagga)</p>
+<p>Dear Listeners,</p>
+<p>The world seeks paths of progress with the expectation of prosperity. It is with a beautiful dream of a prosperous future that people exert themselves day and night, regardless of fatigue. Especially, with the dawning of a new year according to worldly convention, many people direct their thoughts in this manner. Now, in this stanza we have chosen as our topic today, the Buddha presents a certain vision regarding prosperity. This stanza was spoken by the Buddha concerning a Thera named Dhammika. The story is related as follows: There lived in the city of Sāvatthi a lay disciple (*upāsaka*) known by the name of Dhammika. There were many lay disciples named Dhammika during the time of the Buddha. Now, this is a story about one such person.</p>
+<p>That lay disciple was a virtuous person who lived in accordance with the Dhamma, having abandoned unrighteous behavior and practicing righteous conduct (*dhamma-cariyā*) and harmonious conduct (*sama-cariyā*). While living in this manner, on one occasion, due to the maturing of his thoughts, he felt a weariness towards the household life. While talking quietly with his wife on one occasion, he said, "I feel like ordaining." Then his wife said, "Please wait a little until this child in my womb is born." So, this lay disciple actually waited until the child was born and reached the age of walking. That means he postponed his idea of ordination. When he asked his wife again, she said, "Wait until this child grows up a bit." Then this lay disciple Dhammika thought, "Whether I get her permission or not, I will go and ordain." Since it is from parents that one must normally get permission, and perhaps thinking thus, he went and ordained without her permission. Having ordained, he practiced diligently, meditated, and in due course attained Arahatship.</p>
+<p>After attaining Arahatship, Ven. Dhammika returned to the city of Sāvatthi and visited his former home. He went to be of help to his wife and child. Having arrived there, he preached the Dhamma to his son. Perhaps the son was a somewhat grown-up boy by then. So, the aspiration for Nibbāna arose strongly in that child too, and he went and ordained. Not long after ordaining, he attained Arahatship. Now, only the former wife remained at home. In the Dhamma, such persons are referred to as *purāṇa-dutiyikā*—the former companion (literally, "former second"). So, this Thera's former companion sat at home and thought, "The ones for whose sake I remained in this household life have both ordained now. There is no use for me in this life anymore. I too will ordain." Thinking so, she also went and ordained, and before long, practicing diligently, she attained Arahatship. Behold what happened to that family!</p>
+<p>Then, a discussion arose among the Bhikkhus that because this lay disciple Dhammika was established in the Dhamma, he fulfilled his monastic duties, realized the Dhamma at the highest level, and also became a refuge to his child and wife. While they were discussing this, the Buddha arrived there and asked, as was customary, "Monks, what are you discussing?" When the matter was explained, the Buddha said, "Indeed, monks, a wise person (*paṇḍita*) does not desire a son, wealth, or a kingdom for his own sake or for the sake of another. He does not desire his own prosperity through unrighteous means (*adhamma*). He does not seek to build his prosperity through unrighteous paths. Such a person is the one who can be considered virtuous (*sīlavant*), wise (*paññavā*), and righteous (*dhammika*)." This is the meaning of that stanza.</p>
+<p>Now, at first glance, although we do not have many details, we can see that the person who is the subject of this story, the lay disciple Dhammika, was righteous both as a layman and as a monk. This will perhaps become clear as we go on explaining. Therefore, let us first direct our attention to how one lives righteously as a layman. You have heard about this often. When speaking of acting righteously in lay life, we all know that the very fundamental principle the Buddha pointed out to the young novice Rāhula is what applies to us all—one must have an understanding of wholesome (*kusala*) and unwholesome (*akusala*) actions. In this Dhamma, the analysis of wholesome and unwholesome actions is based on that fundamental principle which follows the Middle Path. That is, from a far-sighted perspective, an unwholesome action (*akusala*) is something that leads to one's own downfall, to the downfall of others, and to the downfall of both. A wholesome action (*kusala*) is something that does not lead to one's own downfall, nor to the downfall of others, nor to the downfall of both. This is how the Buddha analyzed wholesome and unwholesome actions in this Dhamma. It is within this framework that a righteous life proceeds.</p>
+<p>Next, you often hear about the *Parābhava Sutta* when discussing progress and downfall. The Buddha preached it in response to a question by a deity. At the very beginning of that discourse, in the very first stanza, the Buddha stated the most fundamental factors regarding a person's downfall and progress—which can be called the guiding principle or the core fact.</p>
+<p>*Suvijāno bhavaṃ hoti, suvijāno parābhavo*</p>
+<p>*Dhammakāmo bhavaṃ hoti, dhammadessī parābhavo*</p>
+<p>According to the Buddha, one's progress is very easy to understand, and downfall is very easy to understand. That is, the Buddha states that the cause of progress and the cause of downfall are very easy to understand. What is the cause? *Dhammakāmo bhavaṃ hoti*—he who loves the Dhamma progresses. *Dhammadessī parābhavo*—he who hates the Dhamma meets downfall.</p>
+<p>Generally, you might have doubts about this. However, that is indeed how the Buddha preached. Having preached thus, in the *Parābhava Sutta*, he went on to expound many factors that lead to personal and social downfall. We will not discuss them in detail at this moment because we have other matters to explain briefly. So, that is one aspect. When speaking of downfall and progress, a person progresses only if they love the Dhamma. One who loves the Dhamma attains progress in the true sense. One who hates the Dhamma will fall into ruin at some point. As we mentioned earlier, there were several great lay disciples named Dhammika in this Dispensation. One such lay disciple—not the gentleman in our story, but another—asked the Buddha about the proper course of practice to be undertaken by the Sangha, and the course of practice to be undertaken by laypeople. This is called the lay duty (*gihivata*). He questioned the Buddha regarding the lay duty. Let us bring that up here now.</p>
+<p>The Buddha gave an answer to what the lay duty (*gahaṭṭha-vatta*), the practice of laypeople, is. That sutta reveals that the foundation of the lay life's practice is the Five Precepts (*pañca-sīla*). The Five Precepts are the foundation. This is stated in that sutta in great detail, more detailed than we usually think, in the form of stanzas. I believe expressing the meaning would be sufficient. If we take the first precept, one should not kill a living being, nor cause another to kill, nor approve of killing or slaughter. Furthermore, one should abstain from harming all beings, whether great or small. The Buddha expresses this idea regarding the first precept in the very first stanza. In the same manner, he describes the second precept. That lay devotee who wishes to progress in accordance with the Dhamma in this Dispensation and society, does not take what is not given—what we generally call theft. In short, he neither steals, nor causes others to steal, nor encourages theft. That is the second precept. The third precept is mentioned briefly there. Everyone knows this is committing adultery, going to another's wife. One should abstain from committing adultery. On Uposatha days, when observing the Eight Precepts, one practices celibacy (*brahmacariya*). On other occasions, in ordinary lay life, one abstains from committing adultery in accordance with the precept of *kāmesu micchācārā*.</p>
+<p>Next, regarding telling lies, the same is stated. One does not tell a falsehood, a lie, whether in an assembly, in the midst of a crowd, or even when conversing with a single individual. One does not speak lies, nor cause others to speak lies, nor approve of lying. Next, regarding the fifth precept. Here, it is stated as that which causes intoxication, whether it is a drink or anything else that assists in becoming intoxicated. One does not take it oneself, nor does one cause others to take it, nor does one encourage it.</p>
+<p>The reason given here is that because of intoxication, one is tempted to commit evil deeds oneself, and it also tempts others to commit evil deeds. In short, the Buddha refers to intoxicants there strictly as an *apuññāyatana*—a source of generating demerit (an "evil-manufacturing institution"). Intoxicants are indeed a source of generating demerit. The Buddha says to boycott them completely. In short, everyone knows it causes downfall in both worlds. That is why the Buddha describes it as something that causes madness, delusion, and insanity, drawing in the foolish (*bālatantant*). In this way, the perils of intoxicants are shown there using various terms.</p>
+<p>In this manner, at the very least, as a minimum standard, one must protect at least these Five Precepts. Next, in addition to that, you have heard about livelihood. Here too, one must abstain from wrong livelihood (*micchā-ājīva*) which is related to an unrighteous life. Five factors of wrong livelihood are generally mentioned: trade in weapons (*sattha-vaṇijjā*), trade in living beings (*satta-vaṇijjā*)—which is generally explained as slave trade, selling living beings into slavery or servitude; and next, selling for meat goes without saying. Next, trade in flesh (*maṃsa-vaṇijjā*) is separately shown, as an improper thing, something that should not be done regardless of who killed the animal. Next, trade in intoxicants (*majja-vaṇijjā*), and trade in poison (*visa-vaṇijjā*). If one only thinks about oneself, according to positive thinking about one's own progress, these are indeed what one would do. No matter what anyone else says, if one's goal is to become a millionaire—especially in these times when state assistance might even be provided for such things—it is to these unrighteous methods of trade that one must turn to achieve one's goal. Yet, for some reason, the Buddha forbids them. What is the reason?</p>
+<p>The Buddha possessed a far-sighted understanding of our life that no one else had. Although we think we have come out of a mother's womb as someone belonging to parents according to ordinary society, the Buddha states that we have been coming through a long Samsara, undergoing birth (*jāti*) and death (*maraṇa*). We did not come for nothing; we accumulated various kinds of kamma. Therefore, we go prepared to experience their results (*vipāka*) too. If we commit more and more evil deeds while traveling on such a journey, even if we achieve progress at some point, those achievements will eventually be washed away, swept away. They are destroyed by floods or fire. Just as the goal is succeeded, the four elements (*cattāro mahābhūtā*) become provoked—either the internal elements become provoked and one becomes a patient, with bile or phlegm being provoked, and one has to experience the results of those evil deeds. One cannot even take a little food, no matter how much one has earned. Otherwise, the external four elements become provoked, and through droughts, floods, and various other disasters such as fear of fire, the accumulated wealth and that person are swept away. It is because of such dangers that the Buddha tells us to depart from those unrighteous trades and turn to other righteous methods. From a far-sighted perspective, it is because those unrighteous trades lead to harm both to oneself and to others. It is with this in mind that we used the word "far-sighted."</p>
+<p>When reflecting accordingly, you may have heard that according to the Buddha's vision of the world, there are three types of persons. Who are these three? The blind, that is, the one without two eyes. The blind person (*andha*) is defined by the Buddha as someone who does not know how to acquire unacquired wealth and resources, lacks understanding of economic principles, and has no skill in that area. At the same time, he has no understanding of good and bad, wholesome (*kusala*) and unwholesome (*akusala*), merit (*puñña*) and demerit (*pāpa*). That person is a blind person. He has neither progress in this world nor progress in the next world. The second is the one-eyed person (*ekacakkhu*). That person is one who understands those economic principles, perhaps a highly educated graduate. Having studied all the paths of progress according to worldly convention and understood their principles, he secures progress economically, whether through righteousness (*dhamma*) or unrighteousness (*dhamma*), even by killing others, or out of jealousy in a competitive world, defeating others, and living according to those unrighteous ways. Yet, one of his eyes is blind; he is one-eyed. According to the Buddha's word, he has no understanding of good and bad, right and wrong, or higher and lower qualities of Dhamma. That is the one-eyed person.</p>
+<p>Next, the two-eyed person (*dvicakkhu*) is defined as one who righteously, through the sweat of his brow, not through theft or deceitful means, nor through deceitful means that seem easy, but by working very hard through the sweat of his brow, righteously accumulates wealth. For this, the Buddha has given various similes on different occasions.</p>
+<p>If we look closely at the world—how sweet is honey? Did the bees make it easily? No, with great effort. It is very strong. Who built it, engineers? No, that tiny creature, with how much effort? Even though we do not see its sweat flowing. Thus, the Buddha states that wealth acquired and earned righteously, through hard work and the sweat of one's brow, is as sweet as honey and as stable as an anthill. Thus, in this way, that person is capable of achieving progress in the world economically in accordance with the Dhamma—even if it is not a rapid progress, it is a gradual, imperishable progress. Moreover, he does not merely hoard the wealth he has acquired; knowing that he has to go further in Samsara and knowing that there is something more valuable than this, he uses it properly, engaging in acts of generosity (*dāna*) and meritorious deeds, in a righteous manner that also helps him in the next world.</p>
+<p>We know that food is necessary for us. Not only is it necessary, we can even say it is essential. One cannot live without food. But who lives for the sake of food? Living for the sake of food is a base thing. Can any of you lay devotees live without wealth at all? Can you live being poor? No. Wealth is necessary. There are various problems and issues. Wealth is needed for them. Children must be educated, houses must be built. How many other tasks are there? Wealth is necessary. But do we live for the sake of wealth? Should wealth be the ultimate goal? No. The Buddha has stated things relevant to laypeople in many other suttas; we cannot state all of them in this short time. Mentioning them generally gives you ample opportunity to look into them.</p>
+<p>On one occasion, the Buddha expounded in great detail to the Koliyan son Dīghajānu how a layperson can achieve dual welfare—that is, making a success of both this world and the next world. If we briefly take some of those points, for progress in this world, the Buddha declared four practices: *uṭṭhāna-sampadā* (achievement of persistent effort), *ārakkha-sampadā* (achievement of protection), *kalyāṇamittatā* (good friendship), and *sama-jīvitā* (balanced livelihood). That *uṭṭhāna-sampadā* means the capacity to acquire wealth through persistent effort and the sweat of one's brow. *Ārakkha-sampadā* means protecting the wealth thus acquired, without squandering it, preventing it from falling into the hands of thieves or enemies, or being destroyed in wrong ways. One employs righteous protection—not unrighteous, but righteous protection. Next is *kalyāṇamittatā*. Everyone has heard that wealth can be destroyed through bad companions. If one associates with someone addicted to intoxicants, adultery, or vice, that wealth will be destroyed in a day or two. Therefore, *kalyāṇamittatā*—good friendship—is indeed a blessing (*sampatti*) because approaching and associating with good friends can assist not only in one's physical comfort but also in mental comfort, mental problems, and not just in lending a hand, but in soothing the mind.</p>
+<p>What is contained in *sama-jīvitā* (balanced livelihood) is living with a certain balance regarding income and expenditure, rather than hoarding all this wealth and living in an extremely miserly way like the stingy millionaires of the past, who would not even consume food and drink but would live in great pride thinking only of their wealth, and then die leaving it all behind. It refers to consuming wealth like weighing income and expenditure on a scale, without letting expenditure exceed income, nor letting expenditure rise excessively high. Moreover, wealth that is merely accumulated without being of use to anyone is said to be like a pond possessed by demons. No one benefits from it. It sometimes lies buried somewhere and is completely destroyed, of no use to children or anyone else. Instead, *sama-jīvitā* means systematically using a certain portion for one's daily consumption, or doing those deeds that help other friends—fulfilling one's duties. One saves what needs to be saved. One applies it to meritorious deeds. But one does not hoard them excessively and become inflated with pride as a "multi-millionaire." What is meant there is eliminating the imbalance between income and expenditure. It is not spending beyond limits, but understanding this. These four practices were shown as leading to progress in this world.</p>
+<p>Next, things regarding the next world are specifically shown. The factors regarding the next world are presented as *saddhā-sampadā* (achievement of faith), *sīla-sampadā* (achievement of virtue), *cāga-sampadā* (achievement of generosity), and *paññā-sampadā* (achievement of wisdom). These are not things that can be touched by hand. They cannot be kept in chests. They are things that can be deposited in the heart. The achievement of faith (*saddhā-sampatti*). Explaining faith further on suitable occasions, everyone knows that *saddhā* means faith in the Triple Gem. Or specifically, through the faith we generate in the Enlightenment of the Tathāgata, generating faith in the Triple Gem. That is a blessing (*sampatti*).</p>
+<p>Next, likewise, is the achievement of virtue (*sīla-sampatti*). Now, you devotees are also fulfilling that achievement of virtue. Virtue is a blessing; everyone knows that. It is the blessing that brings the happiness of blamelessness (*anavajja-sukha*). Similarly, the achievement of generosity (*cāga-sampatti*)—relinquishing or letting go—that too is a great blessing. Next, the achievement of wisdom (*paññā-sampatti*). If we reflect deeply as described in the Dhamma, wisdom is defined as analyzing and understanding this life and the world in terms of insight (*vipassanā*). What is known as *udayabbayagāminī paññā* is the wisdom that deeply penetrates the nature of arising and passing away. Why is this wisdom a blessing? Because it is through this that one can bring an end to all the suffering (*dukkha*) of Samsara. It is analyzed there in that manner as *paññā-sampadā*.</p>
+<p>The Buddha has declared the real wealth belonging to a lay devotee as the seven noble treasures (*ariya-dhana*). The ones mentioned earlier also belong to these. He shows seven in this manner as noble treasures: *saddhā* (faith), *sīla* (virtue), *hiri* (moral shame), *ottappa* (moral dread), *suta* (learning), *cāga* (generosity), and *paññā* (wisdom). These seven are called the Seven Noble Treasures (*sapta ariya-dhana*). There is the real wealth belonging to laypeople. If there is positive thinking, here is noble positive thinking. This is what should be targeted. They do not fail; they lead on the right path. So, if we practice according to what the Buddha has declared, let us analyze "endowed with faith" briefly. Faith, as expressed earlier, refers fundamentally to believing in the Enlightenment of the Tathāgata. Through that, we also believe in the Dhamma and develop faith. We also develop faith in the Sangha who practice according to that Dhamma. In this way, the faith we generally speak of is faith in the Triple Gem. We all use the term "Triple Gem." Reflect then on the change that occurs in a person when they deposit the Triple Gem in their heart—the difference between a person who has faith and one who does not. Because of those three gems deposited in the heart of the person who has faith, that person does not take external things so seriously.</p>
+<p>He knows that the valuable thing is internal, spiritual virtues. Not only that, from the moment the treasure of faith is properly deposited in the mind—from the moment that noble treasure is deposited—the value of that person's thoughts increases, their worth increases. The value of their words increases. The value of their actions increases. Now, you know how the value of a currency note increases according to economic principles. The value of these notes depends on the value of gold or gems deposited. Thus, from hearts devoid of the treasure of faith, there arise only those kinds of worthless, valueless thoughts, words, actions, and behaviors. But from a person of faith, noble and valuable things emerge. That is why faith is a treasure. Next, it is by making faith one's refuge that one protects virtues such as *sīla*. A person without faith cannot do this.</p>
+<p>What is meant by virtue (*sīla*)? It is the training of body and speech. What happens if body and speech are not trained? As the Buddha sees it, it is like how difficult it is for a mother to train her child at home during that young, mischievous age, when they run after snakes, or when they run after youths. The fire in the hearth looks beautiful, and they run to catch it. They run after serpents. Why is that? They do not know how to train body and speech according to those principles. Similarly, a person who has no regard for virtue engages in misdeeds that lead to their own downfall, destroying both their wealth and themselves. That is why virtue is a treasure. Next, those qualities that help to stabilize and protect that virtue are presented together as *hiri* (moral shame) and *ottappa* (moral dread). In society, *hiri-otappa* is referred to as shame regarding evil. A deeper meaning is found here than ordinary worldly shame; it is the quality of the mind not bending towards committing sins or unwholesome deeds—a shrinking away. That is a strength. Nowadays, shamelessness is considered a cleverness in society. However, that shrinking of the mind towards evil deeds shown by the Buddha is a strength and a protection for oneself. That is what *hiri* means. Let us think of it as a disgust. One develops a disgust towards evil deeds. Next, *ottappa* means developing a fear towards sins. Just as a child who has been burnt once does not touch the fire again, even without being burnt, one knows according to the Buddha's word that if we go along these paths we will get burnt, because of one's faith in the Buddha's word.</p>
+<p>*Ottappa* is fear. One does not commit sin. Therefore, shame and fear of wrongdoing—that is why the Buddha calls them the world-protecting qualities (*loka-pālaka-dhamma*). We think the world is controlled by the police and the military. That is in a very limited sense; those who cannot even control themselves are controlling others. But the Buddha, in an eternal sense, calls these two the world-protecting qualities. If one voluntarily develops these within oneself, there is no need for police or military. You have heard those stories about Buddhists of the past, and not only in the ancient past, but during the times of the ancient kings. Perhaps that was partly due to punishments. Yet, this was so deeply ingrained in the Sinhalese that even in the recent era of foreign rule, various reports mention that foreigners themselves were amazed by their adherence to precepts and discipline. The reason for this was those virtues of *hiri* and *ottappa* practiced since ancient times. That is why they are called world-protecting qualities. They too are treasures. Then next is the treasure of learning (*suta-dhana*), which means knowledge of the Dhamma.</p>
+<p>We have expressed this on many occasions. The Buddha explains this word *suta* through a long passage. In those days, it was mostly by listening, what we call "having heard much." It was by listening that they knew the Dhamma. Today, there are many books. Yet, it specifically refers to the Dhamma-knowledge developed through hearing. That too is a strength, a treasure. It becomes a strength—that passage goes on as *sutā, dhatā, vacasā paricitā* and so forth. Having heard it, retained it, practiced it verbally, memorized it, and reflected on it deeply, drawing something from it. Likewise, next it is described as *bahu-ssuta*—greatly learned, having heard and accumulated much, knowing many things deeply regarding the Dhamma.</p>
+<p>Likewise, *suta-dharo*—one retains what has been known. Not in machines. If some question is asked and one says, "Behold, it is in the machine. I cannot answer now, it is in the machine," or "There is a big book at home, I must go and look at it"—if that is the situation, that person does not truly possess the treasure of learning. Thus, *sutadharo, sutasannicayo* is like a walking library. So, that state of being greatly learned is a treasure to a person. When a question arises, one does not need to search for others, to search for great scholars. One can find the answer through the Dhamma—a righteous answer. That understanding according to the Buddha's word: "At this moment, this is what should be done, this is what should not be done." There, that state of being greatly learned becomes a treasure, a saving. What is mentioned next is the very result of being greatly learned. What is the Buddha saying here? From beginning to end, he tells a story of letting go. He states that in this entire Samsara, what keeps us bound is *Taṇhā* (Craving), *upādāna* (grasping/holding/fuel), and holding on. Therefore, letting go. Thus, generosity (*cāga*). That too is defined in ordinary words in relation to lay life. It is defined in a long passage. Even a devotee living a lay life dwells at home with a mind free from the stain of stinginess (*vigata-mala-macchera*). That means having removed the stain of stinginess. Even the term "stain of stinginess" (*macchera-mala*) is a word to be contemplated deeply.</p>
+<p>You devotees know that in a place where metal objects are kept, if they are not cleaned from time to time, they become entirely a pile of rust. Similarly is the place where money and wealth are accumulated. There too, the stain of stinginess exists. That is why in society, a stingy person is sometimes called a "rusty one" (*malakaḍayā*). To that extent, stinginess is a dangerous thing. So, living with a mind from which the stain of stinginess has been removed. Next, relinquishing is mentioned again—understanding the value of relinquishing. With hands ready to give generously, finding even delight and happiness through letting go, without regret such as "I gave this to someone, oh dear, I lost this," but being able to rejoice, thinking, "How wonderful, I let go of my *Taṇhā* (Craving) and gave this." One can rejoice in letting go. Next, there is also the word *yācayogo*—meaning that beggars can approach that person without fear, knowing that he is a giver, a generous person.</p>
+<p>Next, the word *dāna-saṃvibhāgarato* is mentioned—delighting in sharing gifts, having a nature of distributing to others. It is through this that the quality of generosity, of giving, grows. When you reflect on the benefits of letting go, you have indeed heard of the benefits of wealth and giving. How letting go becomes a benefit can sometimes be a question. "Giving" (*dāna*) is what is visible on the outside—the act of giving. That giving can be done without letting go. One can give to someone while holding on to it in the mind. That is how it is done in trade and business transactions. So, in return, one must be given money; it is given while holding on in the mind. Instead of that, the ability to give by completely letting go in the mind is what is called *cāga* (generosity). That strength helps when, at some point, while one is away, news comes: "Behold, the house has burnt down!" or "The bank where my money was deposited has collapsed!" or "My house, land, or estates have all been nationalized or confiscated by the state!" Upon hearing that news, that person either faints and falls, or their heart fails and they die right there.</p>
+<p>What is the use of that wealth? If that quality of *cāga* (generosity) has not been developed, that person cannot bear it. They cannot console their mind. Similarly, you must have seen many examples of this. Situations arise where one must decide which to save between one's own life and the wealth one has been holding on to so far. In places where great fires occur, or floods, or tsunamis, if one holds on to what one has held on to so far, that person is swept away. The one who let go wins. Such matters can be understood by you too from the events happening in these times. That strength is not something that arises only at that moment; it is the one who has long practice who lets go in that manner. The strength to let go of what must be let go when the time comes is what is called *cāga*.</p>
+<p>Thus, for one who is accustomed to such letting go, when entering deep meditation at last, it becomes clear: "What I am holding on to is not merely these few external things; I am holding on to the five aggregates (*pañcakkhandha*): form (*rūpa*), feeling (*vedanā*), perception (*saññā*), preparations (*saṅkhāra*), and consciousness (*viññāṇa*)." Because of holding on to them, due to my *sakkāya-diṭṭhi* (dogma of self-illusion / view of existing body), they appear as things. Yet, what is here is, as was said, "form is like a lump of foam"—a pile of things arising and passing away. What I take to be so great as "form," what appears on the outside and is beautifully presented, changes internally moment by moment with an unimaginable speed. It decays, and undergoes various other transpreparations. Seeing this arising and passing away is what is meant. It is called *udayatthagāminī paññā* (the wisdom of arising and passing away). That wisdom mentioned earlier is what is shown here. Wisdom is ultimately one's treasure, nothing else. It is not just about the arising and passing away of external objects; they all disappear and dissolve. Clothes get soiled and decay; those are external things. But when one directs one's mind to the changes occurring within this body that one is holding on to, and observes according to *satipaṭṭhāna*, then one understands that these five aggregates of grasping (*pañcupādānakkhandha*)—all these five heaps declared by the Buddha—which is why they are called heaps (or aggregates)—contain a multitude of arisings and passings away. Thus, just as form is like a lump of foam, feeling (*vedanā*) is like a bubble of water, perception (*saññā*) is like a mirage, preparations (*saṅkhāra*) are like a banana trunk that can be peeled, and consciousness (*viññāṇa*) is a completely deceptive illusion—this understanding arises at some point through insight (*vipassanā*) even to laypeople. That is the treasure of wisdom (*paññā-dhana*). According to the Buddha's assessment, the greatest treasure in the world is wisdom. That is why it is said, *narānaṃ ratanaṃ*—wisdom is the gem of human beings.</p>
+<p>That is indeed what is shown in the *Ālavaka Sutta* on a certain occasion: "by wisdom one is purified." Real purity comes through wisdom, through understanding, through penetrating wisdom. That wisdom is the ultimate treasure. Whether one is a layman or a monk, that is the treasure. Thus, let us suppose that a person drowns in water; when that person drowns, although the body goes down, the mind goes up if wisdom has been developed. On one occasion, the Buddha shows through a simile: when a jar of ghee is drowned in water, the shards of the jar, the clay, go down, but the ghee comes up to the top. Similarly, the Buddha shows that when a lay devotee who has developed the mind through absorptions (*jhāna*) and realized the paths and fruits (*magga-phala*) dies, or drowns in the sea or somewhere, the body goes to the bottom, but the mind goes up. But let us suppose he is someone who did not develop the mind, who lived committing great sins, killing animals, living unrighteously through trade in meat, and leading others toward unrighteousness—if such a person dies, what happens? The body will go to the bottom, and the mind will go even further, splitting the earth and going to hell. Then one can understand the difference, the value of these treasures. The treasure of wisdom is such a noble thing. It was due to the systematic development of that very treasure of wisdom that the lay disciple Dhammika felt the urge to ordain.</p>
+<p>At first, we might think that what he did was a very wrong thing. Even though the lay disciple Dhammika listened to his wife's words and waited until the child was born, he only waited until the child could walk a little. But how much work is there regarding a child? The child has to be sent to school, and then to university. While all of that was there, this lay disciple Dhammika went and ordained. But he did not forget them after attaining Arahatship. Having finished his work, the task of ordination, he came and first of all gave that Dhamma-heritage to his son. Now you can recall what the Buddha gave to Prince Rāhula—you have heard that story many times. When the Buddha visited Kapilavatthu and was being offered alms at the palace of his father, King Suddhodana, Queen Yasodharā said to Prince Rāhula: "Son, there is your father. Go and ask for your inheritance." This child also went and said, "Ascetic, even your shadow is pleasing to me. Give me my inheritance." After partaking of the alms, the Buddha took Prince Rāhula and gave him the inheritance. What was it? We can understand that. That is exactly what Ven. Dhammika also did.</p>
+<p>Thus, as a Bhikkhu, the noblest gift he could give to his relatives is what Ven. Dhammika gave. We should contemplate this. First he gave it to his son. After that, the son also ordained. Next, let us also reflect on how the wife thought, on her way of thinking. How did she think? "The ones for whose sake I carried on this lay life have both ordained. Why should I remain a laywoman?" It was not because she had no other place to go. You know what is meant by "finding another place to go." That laywoman might have had other options. But instead, what did she think? She understood the values. The husband set the example. The son set the example. This is all there is to do. "It was for their sake that I spent this lay life. Why should I remain?" In the end, what happened? There were three Arahats! Therefore, we must reflect on values in accordance with the Dhamma. Food is not the purpose of life. Nor is wealth the purpose of life. Through those noble treasures we have just mentioned, when wisdom finally matures, a weariness (*nibbidā*) with life naturally occurs.</p>
+<p>Now, is it not with a certain degree of that weariness (*nibbidā*) that you devotees have come here to spend the day? Leaving behind household problems, perhaps the husband handing over the child to the wife, saying, "I will observe precepts (*sīla*) this time, you look after the child. Next time, I will stay and you go observe precepts"—even negotiating in that manner, you tread this path of precepts with difficulty, keeping a thousand other problems aside. Understanding that "this is a great suffering (*dukkha*), like playing the drum we have slung over our shoulders," we are currently connected in these various ways due to various causes and the results of kamma (*kamma-vipāka*). But in Samsara, we are all alone. As we often remind ourselves, family relationships are like people gathered at a resting-hall (*ambalama*), if we look at it according to Buddhist philosophy. According to social philosophy, they might seem different.</p>
+<p>If we reflect in a deep, far-sighted manner according to those terms: *kammasako'mhi, kammadāyādo, kammayoni, kammabandhu, kammapaṭisaraṇo*—we own only our kamma. Even the child does not belong to us. Neither father nor mother belongs to us. One has only one's own kamma. The heritage one has is not the heritage received from parents, but kamma itself. One's relative is kamma itself. One's refuge is kamma itself. When reflecting in that manner, it is when you understand that amazing loneliness in this world that you are motivated to isolate yourselves from your households with difficulty and spend a day in a place like this. That is the beginning of renunciation (*nekkhamma*). The end of that beginning is when, at some point, one feels like the lay disciple Dhammika: "There is no use in doing this halfway, bit by bit. There is no point in throwing a washed cloth back into the mud. I must bring this to an end. Practicing wisdom in a superficial way is not enough. Therefore, I must obtain the environment necessary for that." This gives rise to a deep thought. That is when, even in the past, Bhikkhus ordained. That is why the purpose of ordination is called *pabbajita-kicca*—the duty of ordination, the goal of ordination. That is, having destroyed all defilements, becoming an Arahat. Or, having understood the five aggregates as they really are, escaping from this Samsara. It is only such a liberated person who can support the world in the highest sense through the Dhamma. It is only then that one can support through the Dhamma, not through unrighteousness. That is why we said earlier that the life of Ven. Dhammika is highly exemplary; that he lived righteously as a layman is briefly mentioned here, and we can understand it. Next, the proof of his living righteously as a monk is that after ordaining and attaining Arahatship, he did not assist his wife and son to acquire wealth or secure jobs in some indirect or improper way. Through the Dhamma, he directed them to the very path he had trodden.</p>
+<p>Its ultimate result was that three individuals attained Nibbāna. They ended the suffering (*dukkha*) of Samsara. Thus, if the culmination of wisdom is the ending of all Samsaric suffering in the manner of *sammā dukkhakkhaya*, then there is no treasure more valuable than that. Therefore, in accordance with this, you devotees must reflect that we live in an era where various kinds of opinions prevail in the world. No matter how much their correctness or incorrectness is spoken of or read in books, sometimes one does not understand.</p>
+<p>But certain events happen in the world which are called "objects of urgency" (*saṃvega-vatthu*). There are times when things get hot. It is when it is hot that you must strike. It is only when it is hot that even in a smithy, iron can be beaten. Behold, a hot time has arrived now. Therefore, you devotees must reflect on what the real values in the world are. Even if there are many kinds of thinking, such as positive thinking, cultivate Noble Positive Thinking. If a way of thinking is needed, incline toward Noble Positive Thinking. Without making wealth the ultimate goal, you must train yourselves to consider that very noble treasure (*ariya-dhana*) declared by the Buddha—which helps in this world, the next world, and Nibbāna, namely, *saddhā, sīla, hiri, ottappa, suta, cāga, paññā*—as your real wealth. It is not the wealth in banks, nor houses, lands, estates, or vehicles. All of those can be swept away by a wave. But this cannot be taken by a thief, nor can it be destroyed by any flood.</p>
+<p>On one occasion, the royal minister named Ugga came to the Buddha and said, as if in great amazement, "Venerable Sir, the householder Migāra Rohaṇeya is a person possessing truly amazing wealth. The value of his gold alone is hundreds of thousands. There is no limit to what can be said about his silver." Then the Buddha stated, "Ugga, there is indeed such wealth in the world. But Ugga, that wealth you speak of is common to fire, floods, kings, thieves, and unloved heirs; they can take ownership of it. It is something one cannot keep as indeed 'mine.' But Ugga, there are seven treasures that no one can steal, which cannot be confiscated by kings, and cannot be affected by fire or water." That is what we have just declared: the Seven Noble Treasures (*sapta ariya-dhana*).</p>
+<p>Next, finally, he declares that if any person, whether a woman or a man, possesses these Seven Noble Treasures: *sa ve mahaddhano loke*—he is indeed, let us say without hesitation, that person is the wealthiest in the world. *Sa ve mahaddhano loke, ajeyyo*—likewise, unconquerable, undefeated (*aparājita*), a great undefeated one, a greatly wealthy one. Undefeated. Many wealthy people and millionaires are defeated. Even if they appear as winners in society, at the moment of death on their sickbeds, they scream in fear at the dreams they see, as the evil deeds committed in the past appear to them, and the manner in which they accumulated that wealth appears. Behold, such a person is defeated. But the one who has the Seven Noble Treasures, as was said, is like that jar of ghee: even if the body goes down, the mind goes up.</p>
+<p>Therefore, you devotees must reflect on these with wisdom, not thinking of them as just another sermon, but comparing them with your own direct experience (*paccakkha*). The Buddha's Dhamma is like that; it is not accepted merely because it was said. Nor is it accepted solely by limiting it to logic or being logical. One compares it with one's own experiences and accepts it on that basis, seeing whether these stated matters are true or not.</p>
+<p>According to worldly convention, this is the beginning of a year. According to our convention, the Duruthu Full Moon Poya Day is also considered the first Poya day for that reason. Even otherwise, we must reflect everywhere that in this wheel of time, we ourselves must mark a starting point. In a rotating wheel, if we want to change at some point, we make a small mark and say: "Behold, a year has dawned," "Behold, a month has started," "Behold, a week has started," "Behold, a day has started." The sun and the moon helped us in this. But we must know how to make use of that dawning year and week.</p>
+<p>Therefore, those matters must be reflected upon with wisdom. It is to draw closer to that noble treasure (*ariya-dhana*) that at this moment, you devotees have left your homes, specifically having undertaken a higher virtue (*sīla*), or at least as a minimum standard, having undertaken the *Ājīva-aṭṭhamaka Sīla* (virtue with pure livelihood as the eighth factor), and remain inclined towards virtue in that manner. Next, through a Dhamma sermon, the knowledge born of learning (*sutamaya-ñāṇa*), and thereby the opportunity to develop wisdom, was acquired by you during this brief period, this time of about an hour. The Buddha describes all of these as wholesome (*kusala*). Wholesome means those things that help to draw closer to that target—to bring an end to all this Samsaric suffering (*dukkha*). Therefore, rejoice in that.</p>
+<p>Rejoicing in and sharing this, may these wholesome qualities accumulated so far—the spiritual faculties (*indriya*) and powers (*bala*) of faith (*saddhā*), energy (*viriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*)—help at some point to bring an end to this Samsaric suffering (*dukkha*), and to realize the Dhamma of Nibbāna through the realization of the paths and fruits (*magga-phala*). Through those developed spiritual faculties, and with their help, inclining towards the association with good friends (*kalyāṇa-mitta*), and through that association, completing the practice of Dhamma and meditation, and having this wholesome energy as a strong supportive condition (*upanissaya*), may this wholesome deed of listening to the Dhamma lead to the swift escape from all the suffering (*dukkha*) of Samsara, such as birth (*jāti*), decay (*jarā*), disease (*vyādhi*), and death (*maraṇa*), and to the realization of the supreme, deathless Nibbāna! Likewise, if any beings, including our relatives from Avīci up to Akaniṭṭha, are ready to rejoice in this merit of preaching and listening to the Dhamma, may all of them, by rejoicing in this merit, realize the supreme, deathless Nibbāna through whichever of the three Bodhi states they aspire to! Aspiring thus, please recite this stanza.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_091.html" class="doc-btn">← Previous Sermon (091)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_093.html" class="doc-btn">Next Sermon (093) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

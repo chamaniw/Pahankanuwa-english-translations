@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 106 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_105.html" class="doc-btn">← Previous Sermon (105)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_107.html" class="doc-btn">Next Sermon (107) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 106</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_106_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_106_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_106_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #106</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.13)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Andhabhūto ayaṃ loko, tanuk’ettha vipassati;</p>
+<p>Sakuṇo jālamuttova, appo saggāya gacchati.</p>
+<p>From:</p>
+<p>Dhammapada 174 (Lokavagga)</p>
+<p>Dear Listeners,</p>
+<p>The Supreme Buddha, the Teacher of the Three Worlds, has declared that there are three types of eyes in the world. They have been identified by the Buddha as *maṁsa-cakkhu* (the fleshly eye), *dibba-cakkhu* (the divine eye), and *paññā-cakkhu* (the wisdom eye). The fleshly eye refers to the physical eye of flesh that we all receive by birth. The divine eye refers to the celestial vision possessed by deities, or developed by a person through cultivating mental absorptions (*jhāna*) and higher knowledges (*abhiññā*), which enables them to see things invisible to the ordinary eye. And the wisdom eye, dear devotees, can be described as the eye of understanding or wisdom (*paññā*), which assists a person in seeing the world through insight meditation (*vipassanā-bhāvanā*).</p>
+<p>Even though there are three kinds of eyes in this manner, in ordinary worldly parlance, we use the term "blind" only for a person who lacks the first-mentioned fleshly eye. Seeing those who are blind from birth, or who have become blind later due to some cause, lacking this physical eye, we feel proud, thinking how fortunate we are. Likewise, we can imagine how helpless they must be. But the Buddha saw that the majority of this world, who proudly assume they have eyes and are not blind, are actually blind. The reason for this is that they lack the wisdom eye, the eye of understanding, which is necessary to see the truth in the world. They live as the spiritually blind. Just as a blind person walks here and there, colliding with tree roots and wounding themselves, the worldly human being, despite having this physical eye, lives as one who is spiritually blind due to lacking the wisdom eye, gets bound up in the five sins and ten unwholesome actions, commits various other crimes, and undergoes suffering (*dukkha*) in the four lower realms (*apāya*) for an infinite period of time. It is seeing this state of affairs that the Supreme Buddha, endowed with great wisdom and great compassion, out of compassion for the world, declared the Dhamma of Nibbāna and the path to Nibbāna. Therefore, dear devotees, we must realize that the ultimate purpose of listening to this Dhamma is indeed to open this third eye—the wisdom eye, the eye of understanding. Generally, not everyone who listens to the Dhamma shows an interest in this wisdom eye. They are content merely with the fact that they have heard a sermon.</p>
+<p>The Buddha uttered the stanza we have chosen as our theme with reference to a certain young lay disciple, a young girl, who understood the true purpose of hearing the Dhamma and strove to develop her wisdom eye. On one occasion, the Buddha journeyed to the city of Āḷavī. At that time, the inhabitants of Āḷavī invited the Buddha for alms and offered him food. Afterward, in the sermon of appreciation (*anumodanā*), the Buddha delivered a special instruction on mindfulness of death (*maraṇasati*). He expounded the beneficial aspect of cultivating mindfulness of death. The Buddha declared that this mindfulness of death is something everyone should cultivate. "Life is unstable; death is certain. Life is impermanent/inconstant (*anicca*); death is constant"—thus, one should constantly cultivate mindfulness of death by bringing this to mind. If anyone does not cultivate mindfulness of death, when death approaches, they will be terrified like a person who suddenly sees a snake; they will lament, lacking the strength to face death, and experience dread and suffering (*dukkha*) in an extremely terrible manner. On the other hand, if a person has cultivated mindfulness of death and accustomed their mind to death, they will not fear in the face of death, just like a fearless person who, upon seeing a snake, simply removes it with a stick. Therefore, the Buddha instructed that mindfulness of death must be cultivated constantly. Yet, even at that time, many people did not show much interest in this meditation on mindfulness of death.</p>
+<p>In that gathering, there was a weaver's daughter. That is, a daughter of a cloth-weaver, who was of a very young age. She thought, "This teaching of the Buddha is highly wondrous. There must be great benefits in this." Resolving to cultivate mindfulness of death day and night to the best of her ability, she did so. The Buddha then returned to Jetavana Monastery. Three years passed. One morning, as the Buddha surveyed the world with his attainment of great compassion (*mahākāruṇikā-samāpatti*), that young girl appeared within his vision of wisdom. Then the Buddha reflected, "Why is this girl appearing to me?" The Buddha realized: "This girl has cultivated mindfulness of death for three years, and her wisdom has matured. If I go there and preach the Dhamma, she will attain Dhamma-realization, and it will also bring great relief and sublime peace to the rest of the people." Having thought thus, the Buddha journeyed to the city of Āḷavī accompanied by five hundred bhikkhus. When he arrived at the Aggāḷava temple in Āḷavī, the local residents came and invited the Buddha for alms. The weaver's daughter, that young girl, also heard that the Buddha had arrived. She thought, "A very valuable opportunity has come to me; I must go to listen to the Dhamma." But unfortunately, her father, the weaver, assigned her a task: he asked her to fill the shuttle with thread for a cloth that needed to be woven urgently. He had already gone to the weaving hall. Thus, this young girl had to attend to this task first.</p>
+<p>Meanwhile, having offered alms to the Buddha, the gathering prepared to listen to the sermon of appreciation. However, the Buddha saw that the person for whose sake he had journeyed to Āḷavī was not present there. Therefore, he remained silent. The weaver's daughter, too, having filled the shuttle with thread, placed it in a basket and hurried along. At that moment, the Buddha raised his head and looked at the girl. Being a wise girl, she thought: "Out of such a large crowd, the Buddha is looking at me; it must be in anticipation of my arrival." Thinking thus, she set the basket aside and approached the Buddha. Straightaway, the Buddha asked her, "My daughter, where have you come from?" She replied, "I do not know, Venerable Sir." Then the Buddha asked, "Where are you going?" To this also, she replied, "I do not know, Venerable Sir." Then the Buddha asked, "Do you not know?" to which she replied, "I do know." Next, the Buddha asked, "Do you know?" and she replied, "I do not know." The gathering grew agitated. They became angry, thinking, "This weaver's girl is speaking whatever comes to her mouth with the Supreme Buddha."</p>
+<p>The Buddha calmed the crowd and asked the girl, "Why did you reply in that manner when I asked where you came from?" The girl explained, "The Buddha knows that I am coming from the weaving hall. I thought you were asking something deeper than that. I understood it as: from which world, or from where, did I come and take birth (*jāti*) here? Since I do not know that, I replied that I do not know." At that, the Buddha uttered words of praise, saying, "Sadhu, sadhu! You have answered the very question I asked," expressing his delight. Then he asked, "If so, why did you say you do not know when I asked where you are going?" "I thought the Blessed One was asking where I would go after dying from here, where I would take birth (*jāti*). Since I do not know that, I replied that I do not know to that as well." For that too, the Buddha uttered words of praise, commending her, saying, "You have answered exactly what I asked." Then he asked, "When I asked 'Do you not know?', why did you say 'I do know'?" The girl explained: "I understood that the Buddha was asking, 'Do you not know that you will die?' Since I know that I will die, I answered that I do know." For that also, the Buddha uttered praise and approved, saying, "That indeed is what I asked." Finally, he asked, "When I asked 'Do you know?', why did you say 'I do not know'?" Then she said, "I know that I will die. But I do not know at what place or at what time I will die. Therefore, I said I do not know."</p>
+<p>Expressing his appreciation for the answers given to all four questions, the Buddha addressed the gathering: "The reason this great crowd could not understand such a matter is because they lack the wisdom eye. Those who lack the wisdom eye are blind." And he uttered the Dhamma stanza we mentioned earlier:</p>
+<p>*Andhabhūto ayaṁ loko, tanuk’ettha vipassatī,*</p>
+<p>*Sakuṇo jālamuttova, appo saggāya gacchati.*</p>
+<p>*Ayaṁ loko*—this world; "this world" means the worldlings, the people in this world. This world is blind. *Tanuk’ettha vipassati*—only a very few in this world possess a deep vision, a deep wisdom by way of insight (*vipassanā*). Only a very few see the world as it really is.</p>
+<p>*Sakuṇo jālamuttova, appo saggāya gacchati.*</p>
+<p>When a bird-hunter casts a net over birds, only a very few escape from it. In the same way, only a very few people, upon dying from here, go to a happy destination (*sugati*), to heaven, to the celestial worlds. The majority take birth (*jāti*) in the lower realms (*apāya*) and such bad places. The Buddha declared that, just like being caught in the net cast by a bird-hunter, they are caught in the net spread by Māra; they lament in that manner, develop attachments to their worldly things, and upon death, are destined for the lower realms.</p>
+<p>It is mentioned in the texts that, having heard this sermon, she attained Dhamma-realization and became a Stream-enterer (*sotāpanna*). She attained a certain realization of the Dhamma. Anyway, next, in order to complete the work assigned to her, she took the basket and went to the weaving hall. When she arrived, her father was sitting and nodding off, waiting for the threads. As she placed the basket containing the shuttle down, it fell to the ground making a sound. Without thinking, the weaver pulled the shuttle. At once, a sharp end of it (it is said that the weaving machines of that time might not have been like this, but had a revolving tip) struck the girl's shoulder, and she fell down dead right there in a pool of blood. Unable to bear this grief, the father went crying to the Buddha and begged him, "Please appease this grief of mine." At that moment, the Buddha said, "Lay disciple, if one were to collect the tears you have shed out of grief over the death of your daughter throughout this beginningless Saṁsāra, they would be more than the water in the four great oceans." Speaking in this manner, he appeased that man's grief. It is also mentioned that this man later ordained in the Dispensation, received higher ordination (*upasampadā*), and became an Arahant.</p>
+<p>As the primary point relevant to our discussion, we can see that the Buddha journeyed to this place specifically for the sake of the weaver's daughter. This was no ordinary journey. The Buddha foresaw the great benefits of this journey, and also knew that, according to karma, this girl would certainly meet her death on that very day, and that no one could prevent it. Therefore, the Buddha himself journeyed there to grant her the realization of the Dhamma before her death. From this, we can understand that if someone has trained their mind in meditation, they possess a spiritual strength, an attractive force of the Dhamma, that can draw even a Buddha to their side.</p>
+<p>Now, let us consider this mindfulness of death (*maraṇasati*). Why did the Buddha emphasize mindfulness of death and give so much instruction on it—a matter we are afraid to think about, and which we are reluctant to contemplate? There must be a reason for this. Everyone around us in the world dies. Every day, we hear not only of deaths, but of sudden deaths and mass deaths occurring in various ways. But one must reflect and see: "Do I possess mindfulness of death within myself?" Even ancient sages pointed out, as one of the greatest wonders in the world, that while other human beings are dying all around them, the ordinary person lacks the awareness that they themselves will die. What is the reason for this? Within us, there is something called "intoxication with life" (*jīvita-mada*). An intoxication due to this life. Deep down in the mind, there is a feeling like: "Even though others die, I will not die so easily." In order to subdue that, it is necessary to constantly cultivate this mindfulness of death. It is because of this intoxication with life that there arises the feeling that "I will not die," or a feeling of being immortal. It is due to this that people fall into grave sins and have to suffer their consequences.</p>
+<p>A person who possesses mindfulness of death constantly develops a sense of urgency (*saṁvega*): "My life is short. Therefore, I must quickly perform wholesome deeds. For, I do not know what will happen when I go to the next world." In this way, a certain sense of urgency arises. Therefore, among the bases of urgency (*saṁvega-vatthu*) shown as supportive factors for developing virtues in this Dispensation, one is death—contemplating death. Furthermore, there is another benefit of the meditation on mindfulness of death: it highlights the impermanent/inconstant (*anicca*) nature of life. The three characteristics we have to cultivate in insight meditation (*vipassanā-bhāvanā*) are impermanence (*anicca*), suffering (*dukkha*), and non-self (*anattā*). *Anicca, dukkha, anattā*—these are the three terms declared by the Buddha. Within this lies insight (*vipassanā*). The word *vipassati* is used in the phrase *tanuk’ettha vipassatī* precisely for this reason. Thus, within mindfulness of death, there is this perception of impermanence (*anicca-saññā*). Why does this perception of impermanence not arise within us? We have made various plans regarding life. "We will live for a hundred years, or eighty years." Deep in our minds, there is the assumption that we will not die before that. Because of this, on some occasions, the Buddha delivered special instructions on mindfulness of death, almost like taking lessons from children in a classroom.</p>
+<p>In one discourse, the Buddha first declared the benefits of mindfulness of death. He declared: *"Maraṇasati, bhikkhave, bhāvitā bahulīkatā mahapphalā hoti mahānisāṁsā amatogadhā amatapariyosānā."* "Bhikkhus, when mindfulness of death is cultivated and frequently practiced, it is of great fruit and great benefit; it merges in the Deathless, and ends in the Deathless." In this way, he declared the beneficial aspect of mindfulness of death, meaning it assists in realizing Nibbāna.</p>
+<p>The Buddha asked the bhikkhus, "Bhikkhus, do you cultivate this mindfulness of death?" Then one bhikkhu declared, "Venerable Sir, I cultivate mindfulness of death." Just like when children in a class are asked, and someone speaks up first. "Good, how do you cultivate mindfulness of death?" the Buddha asked. Then this bhikkhu replied, "Blessed One, I think: if I could live for just one day and night—for one single day—and spend that lifetime practicing meditation according to the Blessed One's instruction, that would be a great thing for me." That means this monk's plan was for one day. "If I live for one day, that is enough for me." As soon as he said that, another monk declared, "Venerable Sir, I also cultivate mindfulness of death." "Good, how do you cultivate it?" "Blessed One, I think: if I could live for just the daytime—this plan is slightly shorter than the previous—if I could live properly for at least the daytime and act according to the Blessed One's Dispensation, I would consider that a great thing." At the same time, another bhikkhu declared, "Blessed One, I think: if I could live for just half a day, and during that time practice the Blessed One's Dispensation, that would be a great thing." Another bhikkhu declared, "I think: if I could live long enough to finish eating a single meal of alms-food (*piṇḍapāta*), and during that time act according to this Buddha-Dispensation, that would be a great thing." Another bhikkhu declared, "If I could live long enough to eat half of a meal of alms-food, that would be a great thing for me." Next, another bhikkhu declared, "If I could live long enough to swallow just four or five mouthfuls of rice while practicing according to the Buddha-Dispensation, I would consider that a great thing." Then, another bhikkhu declared, "As for me, Blessed One, I think: if I could live only long enough to chew and swallow a single morsel of rice, and during that time act according to the Blessed One's instruction, that would be a great thing. That is, my plan is to live for just the duration of eating one morsel of food." Finally, another bhikkhu, the eighth bhikkhu, declared, "Blessed One, I also cultivate mindfulness of death. I think: if I could live for just the brief duration between breathing in and breathing out, or between breathing out and breathing in, and during that brief moment act according to the Blessed One's instruction, I would consider that a great thing."</p>
+<p>Regarding the answers given by all eight of them, the Buddha then pointed out who was better, and how many had "passed." The Buddha declared that the first six monks mentioned did not possess a sharp mindfulness of death. Those six were dwelling in negligence (*pamāda*). Their plans were too large. That is, the monks who thought of living for a day and night, or for just the daytime, or for half of the daytime, or until finishing a meal, or until eating half a meal, or for the duration of eating four or five mouthfuls of rice—their mindfulness of death lacked speed and momentum. It was too slow for realizing Nibbāna. Only the last two who spoke had "passed." Who were they? The bhikkhu who thought, "If I could live long enough to chew and swallow a single morsel of rice, I would consider that a great thing," and the bhikkhu who thought, "If I could live for the brief moment between breathing out and breathing in, or between breathing in and breathing out, and act according to this Dispensation, I would consider that a great thing." Only these two monks passed. From this, we must realize that no matter how big our plans are for ten, twenty, or thirty years, we do not know when our life will be destroyed. In such a moment, what comes to the final mind is like a film. The feeling arises: "I spent this entire life in an extremely useless manner, didn't I? I did nothing for the next world, or for Nibbāna, did I?" Therefore, since we do not know at what moment death will come, we must cultivate mindfulness of death to shorten these plans. We must constantly bring this to mind. The momentum that supports this journey in the Dispensation is urgency (*saṁvega*), the driving force. For such people, this urgency arises through mindfulness of death.</p>
+<p>That is why, among the four protective meditations (*caturārakkha-kammaṭṭhāna*), mindfulness of death is shown as one meditation. The tendency to fall into negligence is removed, and diligence (*appamāda*) arises. So too is the intoxication called "intoxication with life" (*jīvita-mada*), the pride developed regarding life. Now, we go to funeral houses quite often. We constantly read and hear about death. Yet, deep in the mind, there remains the feeling: "Even though others have died, I will not die so easily." It is described as a great wonder that this intoxication with life has taken such deep root within us in Saṁsāra. It is to break this down that the Buddha declared this mindfulness of death. And that mindfulness of death should be cultivated gradually. This breath, this thread of life, is an extremely subtle thing, so fragile that one cannot say when it will snap—even more fragile than a coir fiber. Yet we think so highly of this fragile thread of life. Therefore, we must reflect: if we take a breath in and cannot breathe it out, or if we breathe out and cannot take another breath in, that is death. That is why the eighth monk mentioned at the end had passed with the highest distinction. We must strive to cultivate mindfulness of death in that manner.</p>
+<p>On one occasion, the Buddha delivered an extremely valuable sermon to shatter the concept that worldlings have regarding their plans for life. It was an account of the very distant past. The Buddha presented the Dhamma in such a way that it aroused the curiosity of the listeners. Only at the right moment would he reveal the deepest point of a matter. Until then, the bhikkhus would listen eagerly, wondering, "What will he say next? What will he say next?" Such was the Buddha's style of Dhamma-preaching. A highly wondrous style. Accordingly, the Buddha declared: "Bhikkhus, in the very distant past, there was a teacher named Araka..." The Buddha's eye of wisdom could see into infinite time, the events of extremely distant aeons (*kappa*). Therefore, the bhikkhus listened with great attention, knowing that this was an ancient account.</p>
+<p>In the past, there was a teacher named Araka. Under that teacher, there were hundreds of disciples and pupils. This teacher's method of instruction was unique. Every day, this teacher would address his disciples and give an instruction using a certain passage: *"Appakaṁ, brāhmaṇā, jīvitaṁ manussānaṁ parittaṁ lahukaṁ bahudukkhaṁ bahupāyāsaṁ, mantāya boddhabbaṁ, kattabbaṁ kusalaṁ, caritabbaṁ brahmacariyaṁ, natthi jātassa amaraṇaṁ."* Its meaning is: "O brahmins"—he addressed these pupils and disciples as brahmins—"O brahmins, the life of human beings is extremely insignificant. It lasts for an extremely short, brief period. It is also full of suffering (*dukkha*), full of despair (*bahupāyāsa*), accompanied by much trouble. With wisdom (*mantāya*), this matter should be understood. Having understood it, one must do wholesome deeds (*kattabbaṁ kusalaṁ*). One must lead the holy life (*caritabbaṁ brahmacariyaṁ*), the noble life of the Dispensation. For one who is born (*jāta*), there is no such thing as not dying (*natthi jātassa amaraṇaṁ*)." In this manner, he gave daily instruction. The Buddha further declared that, after doing so, to engrave this instruction deeply in their minds, that teacher presented seven similes. You, dear devotees, have likely read these similes in books.</p>
+<p>The first simile is the dewdrop on the tip of a blade of grass at sunrise, which dries up extremely quickly; similarly, the life of human beings vanishes. The second simile is the water bubble. That is, when it rains heavily, as the raindrops fall, water bubbles form and burst extremely rapidly. Likewise, this life also bursts in a moment; that is the water bubble simile. Thirdly, there is the simile of a line drawn on water with a stick. That is, if you draw a line on water with a piece of wood, it disappears even as you draw it. Likewise, this life also vanishes with extreme speed. It is as impermanent (*anicca*) as a line drawn on water. Next, the fourth simile is of a river flowing down a mountain; without stopping for even a single moment, it rushes rapidly downwards. In the same way, this life flows constantly toward death. This is the simile of the mountain river. Next, the simile is given of a strong man who collects a glob of spit on the tip of his tongue and easily spits it out; this life is just as trivial. It can vanish extremely easily. Even though we think highly of it, it can disappear very quickly. This is the simile of the glob of spit. If we remember each of these in brief terms, it becomes easy to contemplate based on them. This life, which we think of as so grand, vanishes just like a glob of spit collected on the tip of the tongue and easily spat away; it is completely destroyed. Next, another simile is given: the lump of meat. That is, if a small piece of meat is thrown onto an iron pan that has been heated all day long, it burns up the very instant it is dropped. In the same way, this life is rapidly destroyed by death. The final simile is of a cow being led to the slaughterhouse. Just as a cow being led by a butcher to be killed comes closer to death with every single step she takes, we too come closer to death with every single moment, with every blink of an eye, and with every breath we take. In this way, that teacher declared to his disciples these seven similes that arouse an intense sense of urgency (*saṁvega*). It is the Buddha who points out this matter.</p>
+<p>Having shown this, the Buddha then said, "Bhikkhus, during the time when the teacher named Araka delivered that instruction—which aroused such a sense of urgency regarding the brevity of life, its impermanence (*aniccatā*), and its painful nature (*dukkha-sabhāva*)—the lifespan of human beings was sixty thousand years." You, dear devotees, can imagine how the bhikkhus must have felt when this was said. In the era when the teacher Araka gave such instructions with seven highly urgent similes, the lifespan of human beings was sixty thousand years. Not only that, the human beings of that time had only six types of illnesses/afflictions. It is mentioned in Buddhist literature that there were such eras in past aeons (*kappa*). They had only six afflictions. What were those six afflictions, those six illnesses? Feeling cold, feeling hot, hunger, thirst, and then, because the food and drink consumed must be expelled, defecation and urination. Only those six illnesses existed in that era. Then the Buddha said, "Bhikkhus, it was in an era with such long-lived human beings, and with so few afflictions, that this teacher daily instructed his disciples on mindfulness of death with those seven urgent similes. Truly, bhikkhus, this sermon is most fitting for the present times. For in these times, bhikkhus, if someone lives, they live at most for a hundred years, maybe slightly less or slightly more." But the Buddha did not stop even there.</p>
+<p>Even you, dear devotees, reflect on this: we think of a hundred years as a very long time. We even use a special word for it, calling it "a century." We think of a century as an immense period of time. We bless others saying, "May you live for a hundred years!" However, living for a hundred years is nothing very great. Even crows, eating scraps and offerings, live for a hundred years. Yet we think that living for this hundred years, a century, is the greatest achievement. Next, to shatter that concept and eradicate the intoxication with life, the Buddha performed a certain calculation. Nowadays, the word "calculation" (or computation) is used with a highly scientific connotation, tied to worldly things. Yet the Buddha also performed a sort of calculation for the bhikkhus. What was this calculation?</p>
+<p>The Buddha declared: "Bhikkhus, consider a human being who lives for a hundred years. In a single year, there are three seasons: the cold season (*hemanta*), the hot season (*gimhāna*), and the rainy season (*vassāna*). Therefore, a person who lives for a hundred years lives for only three hundred seasons." He turned the hundred into three hundred. Next, the Buddha declared: "A year consists of twelve months. Therefore, a person who lives for a hundred years lives for only one thousand two hundred months." He did not stop even there. Then the Buddha declared: "If we calculate the life of that person who lives for one thousand two hundred months in terms of half-months (fortnights)—even nowadays we speak of a fortnight as half a month—if calculated by fortnights, it is two thousand four hundred fortnights. Two thousand four hundred half-months." He did not stop even there. Next, the Buddha declared: "If we calculate the number of nights spent by that human being who lives for a hundred years, they live for only thirty-six thousand nights. And likewise, normally, a human being while living consumes at least two meals a day. If calculated in terms of meals, a person who lives for a hundred years consumes seventy-two thousand meals of rice." But he did not finish even with that. The Buddha then declared: "In reality, it is even less than seventy-two thousand meals. The reason for this is that from this we must subtract the period spent drinking mother's milk, and the periods when meals were missed." For missing a meal, the term used by the Buddha is *bhattantarāya*, which means obstacles or interruptions to meals. The Buddha further analyzed the occasions when meals are missed. How does a person experience an interruption to meals? He gave the reasons: sometimes, due to intense anger, a person refuses to eat as a way of taking revenge. Sometimes, due to intense grief, being unable to bear the sorrow, a person goes without eating, like a fast. At other times, because of illness, when doctors or physicians advise them not to eat, or because they cannot digest food, they do not eat. Thus, meals are missed. And sometimes, like some people nowadays, they observe the Uposatha, the precept day, and sacrifice a meal, refraining from eating. And sometimes, a person wishes to eat but does not get any food. Thus, he lists five reasons: due to anger, due to grief, due to illness, due to observing the Uposatha, or due to not obtaining food at all. On account of anger, sorrow, illness, observing the Uposatha, or not receiving food at all, they are unable to consume meals. The Buddha declared that these must also be subtracted from that seventy-two thousand.</p>
+<p>We have to consider: why did the Supreme Buddha take so much trouble to provide such a list? The depth of this lies in our ordinary concept that a hundred years is an immense period of time. When we think of it in terms of a season, a month, a half-month, a day, a night, or a single meal, this life that we call "ours" gradually unravels. What the Buddha did was to unravel this life which we deemed so grand. He unraveled the century. A century, when analyzed to its very end, is a number of meals even less than seventy-two thousand meals of rice, or thirty-six thousand nights. It was to make a person reflect in this manner and arouse a sense of urgency (*saṁvega*) that the Buddha provided such a lengthy analysis. We should not think of these as mere computations or statistics in the Dhamma; rather, the Buddha declared them all based on their practical, functional value. Nowadays, when scholars explain these, they often appear as mere records. But to a person who lives according to the Dhamma, these are subjects for deep contemplation. Why did the Buddha take so much trouble? It was to shatter the concept within us of "a hundred years" or "a century." When one contemplates: "A man who lives for a hundred years lives only for thirty-six thousand nights and seventy-two thousand meals," the impermanent (*anicca*) nature of his life stands out, and the intoxication with life is eradicated.</p>
+<p>That is how one must contemplate. In this manner, across numerous discourses, the Buddha has shown the benefits of mindfulness of death. In addition to this, he has shown various other similes. Devotees who practice meditation know the simile of the lamp flame: just as when a lamp is lit in a windy place, one does not know at what moment or from which direction a gust of wind will extinguish the flame, this life too can be extinguished from any side, whether by an internal affliction or an external hazard. This is the simile of the lamp flame. Furthermore, with every blink of an eye, this life can vanish—there are various such valuable similes. We must constantly contemplate death with the aid of these similes.</p>
+<p>Moreover, there is another special feature in cultivating mindfulness of death. You know that we cultivate loving-kindness (*mettā*) by taking ourselves as the example, because we desire happiness. Regarding mindfulness of death, it is the exact opposite. Seeing others die, we must cultivate it thus: "This state is also my lot. This belongs to me too; someday it will come to me." Regarding loving-kindness, the texts describe it as *attūpamāya*—taking oneself as the comparison. Regarding death, it is described as *parūpamāya*—taking others as the comparison. Nowadays, even though ordinary people go to houses of mourning, often no grief is visible there. Tears are hardly seen. Instead, in the backyard, there might be various forms of entertainment, food, and drink. That is often how it is. Yet, how many people return from a funeral house carrying the realization, "I too will die"? If one is a meditator, to the credit of the deceased person, they should make it a subject of meditation (*kammaṭṭhāna*), wishing: "May merit accrue to that person!" and use it to arouse mindfulness of death within themselves. Instead, what is present in most people is the feeling: "Even though they died, I will not die like that." That is why the Buddha presents it in this Dhamma as *parūpamāya*—using others as the comparison, reflecting: "What has come upon others, I do not know when it will come upon me," thereby arousing a sense of urgency (*saṁvega*). This urgency is extremely important; through it, diligence (*appamāda*) is developed. An intense enthusiasm arises in a person to quickly develop virtues, observe precepts, meditate, realize Nibbāna, and put an end to this suffering (*dukkha*) of Saṁsāra. Therefore, mindfulness of death is highly significant. Even without that multitude of similes, one can practice this by constantly contemplating some simile that suits one's mind.</p>
+<p>Nowadays, some people constantly have songs and such things on their lips—things related to the fivefold sensual pleasures that prolong Saṁsāra. Now, you, dear devotees, know those few words: *“Jīvitaṁ aniyataṁ, maraṇaṁ niyataṁ”* (Life is inconstant, death is constant). One should accustom the mind to such a phrase. If one trains one's mind in this, just like a cow being dragged to slaughter with every step she takes, if one internalizes the feeling that with every step, every breath, and every blink of an eye, one is drawing closer to death, then within that person, the aforesaid wisdom eye develops; the eye of insight (*vipassanā*) develops. In the ordinary world, it is from things we discard as worthless that valuable items are manufactured and sold to us at high prices in shops. In the same way, within this death—which we think of as worthless, and which we fear and shrink from contemplating—there lies a profound depth. If one constantly contemplates death, they will always incline their mind toward virtues and wholesome qualities (*kusala-dhamma*), incline their mind toward sermons and meditation, and perform those tasks with diligence (*appamāda*) without procrastinating. They will not put them off, saying, "These are things to be done after retirement, in old age, or after being freed from children."</p>
+<p>Nowadays, for their security in the world, people often make use of insurance schemes and deposits to protect their lives, or rely on insurance organizations. But Māra is not subject to any of these plans. When Māra comes, these plans vanish into thin air. If one constantly contemplates this, within such a person, that strength of the Dhamma grows, and urgency (*saṁvega*) develops. Their enthusiasm to practice these virtues, to listen to the Dhamma, and to meditate increases daily. Therefore, the Buddha declared that mindfulness of death is something that should constantly remain deep in one's mind. It is for this very reason that in numerous discourse-teachings, the Buddha expounded mindfulness of death to the bhikkhus. Not only for the bhikkhus, but when we consider how that weaver's daughter in that gathering cultivated mindfulness of death, it serves as a great example, a great inspiration for you lay devotees. Generally, a young person is not inclined to think about death. Yet, how great were the benefits of her cultivation, given that she met with such an untimely death! Before that, however, she had the fortune of the Buddha himself visiting specifically for her sake and preaching a Dhamma sermon for her to hear.</p>
+<p>In this way, we must understand that there are things in this Dhamma that are ordinarily deemed worthless and do not attract the mind. Ordinary scholars write various descriptions about these. But the Buddha has declared this Dhamma for those who put it into practice. It is in this that the depth lies. Why did the Great Compassionate Buddha explain these matters in such detail, presenting various similes about life? It was to expose the true nature of this Saṁsāra. The opportunity to escape from this Saṁsāra is available only during the era of a Buddha's appearance. During the era of a Buddha's appearance, the human state of existence is extremely rare, an extremely precious acquisition. Similarly, hearing the Dhamma, an environment where one can practice according to the Dhamma, and the opportunity to receive instructions on them—these things are extremely rare.</p>
+<p>Therefore, wise devotees must reflect so as to obtain the true fruit of a Dhamma sermon. Nowadays, modern science has invented various other "eyes" to enhance this fleshly eye. When these two eyes lose their sight, we put on a pair of spectacles. When that is not enough, there are further scientific devices like microscopes and telescopes. All of these are meant only for this fleshly eye. Next, the divine eye (*dibba-cakkhu*) is developed by yogis, those who possess higher knowledges (*abhiññā*). Though these are superior, they too belong to this very Saṁsāra. But the true eye is the wisdom eye (*paññā-cakkhu*). The wisdom eye that sees the world, that sees the nature of impermanence (*anicca*), suffering (*dukkha*), and non-self (*anattā*), is the true eye. That is something one must develop by practicing insight meditation (*vipassanā-bhāvanā*), cultivating mindfulness of death, the perception of impermanence (*anicca-saññā*), and such meditations. From the falling leaves of these trees, from flowers, fruits, and the flowing river—from everything we see around us—we can develop this insight meditation and cultivate this wisdom eye. For this, the correct view is necessary. The right perspective is necessary. That is what is called Right View (*sammā-diṭṭhi*). There must be the proper contemplation called radical attention / wise attention (*yoniso manasikāra*). Not in a superficial or improper way, but there must be proper, systematic reflection.</p>
+<p>Instead of rejoicing upon seeing the death of others, thinking of them as those of the opposing side, those against us, those not of our party, or those not of our race, one must use that occasion to aid mindfulness of death, reflecting: "This death can come to me as well, through external or internal hazards." That is what is called radical attention / wise attention (*yoniso manasikāra*). Proper reflection. If one spends one's life in that manner, like that weaver's daughter, insight knowledges (*vipassanā-ñāṇa*) will arise within oneself without one even being aware of it, and the wisdom eye can be uncovered. Such people are not blind. It is such people who live in the world possessing eyes. Reflect in that manner.</p>
+<p>On this Poyaday, you, dear devotees, have directed your minds during this hour toward mindfulness of death, which is conducive to meditation, based on a sermon of the Buddha. Through this, a certain meditative contemplation has arisen within you. Furthermore, you have undertaken the valuable precept of *ājīva-aṭṭhamaka-sīla* (morality with right livelihood as the eighth precept). Along with that virtue, you performed this task by concentrating your minds in a state of concentration (*samādhi*) while listening to the Dhamma. When one listens to the Dhamma with a concentrated mind, in a state of concentration, deep understandings that did not exist before arise by way of wisdom (*paññā*). Therefore, you should reflect that this Dhamma sermon has assisted in the development of virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*).</p>
+<p>Furthermore, although you possess these faculties (*indriya*) such as eyes, ears, and nose, one cannot realize Nibbāna through them. What helps to realize Nibbāna is the development of the five spiritual faculties (*indriya*) shown in the Dhamma: faith (*saddhā*), energy (*viriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*). In that manner, you too have grown in faith, grown in energy, grown in the mindfulness called *sati*, grown in concentration, and grown in wisdom. That is the true benefit of hearing the Dhamma. Through these benefits of hearing the Dhamma, may you have the strength and power to escape as quickly as possible, in this very life, from this terrible and dreadful suffering (*dukkha*) of Saṁsāra, such as birth (*jāti*), aging (*jarā*), sickness, and death (*maraṇa*), and realize the supreme, deathless Nibbāna! May you attain it—this is our wish!</p>
+<p>Furthermore, we must share all this accumulated store of wholesome thoughts and meritorious deeds with the assembly of deities and Brahmas who protect the Dispensation, and with whatever deities are guardian over this place. May they all, having rejoiced in these merits, protect the Dispensation and protect us as well! Likewise, we must make the aspiration: "May they find peace in the supreme, deathless Nibbāna by way of their desired path of enlightenment (*bodhi*)!" Similarly, let us share merits at this moment with the aspiration: "May all our deceased relatives, and not only them, but all beings from Avīci hell up to the Akanitṭha heaven who desire merit and desire Nibbāna, rejoice in this merit of our preaching and hearing the Dhamma, escape from this suffering (*dukkha*) of Saṁsāra such as birth (*jāti*), aging (*jarā*), sickness, and death (*maraṇa*), and find peace in the supreme, deathless Nibbāna!" With these aspirations, share the merits at this time!</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_105.html" class="doc-btn">← Previous Sermon (105)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_107.html" class="doc-btn">Next Sermon (107) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

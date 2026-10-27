@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 087 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_086.html" class="doc-btn">← Previous Sermon (086)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_088.html" class="doc-btn">Next Sermon (088) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 087</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_087_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_087_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_087_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #87</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.36)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Gāme vā yadi vāraññe, ninne vā yadi vā thale,</p>
+<p>Yattha arahanto viharanti, taṃ bhūmiṃ rāmaṇeyyakaṃ.</p>
+<p>From:</p>
+<p>Dhammapada 98 (Arahantavagga)</p>
+<p>Dear Listeners,</p>
+<p>Today is the Duruthu Full Moon Poya day. You all know that there is a special significance to this Duruthu Poya. The beginning of the year, exactly on the first of January, coincides with this Poya day. Looking at the year, this is one thousand nine hundred and ninety-nine (1999). It is the year that marks the end of a century. Considering it from all aspects, we can regard this as a decisive year. Whether we look at it as the end of a century or consider the various decadent forces affecting our lives, this is in a way a decisive year. For, despite advancements in various sciences and technologies, when we think of the mental atmosphere of man, when we think of the mental environment, various decadent forces have come forward, making us think that this era is one in which the entire human race is heading towards a precipice of decline. There is a common saying in society about "escaping by ninety-nine" [a narrow escape]. Likewise, at the very least, it is good for you all to make a resolution on this valuable day that we must escape from these forces of decline, even by ninety-nine.</p>
+<p>Generally, when worldly beings, ordinary worldly beings, think about their own well-being, protection, and the smooth running of their lives, we see that they pay great attention to the physical environment. Now, especially in this era, there is a great awakening regarding the environment, and we often hear society talking about environmental protection. However, most of these people talk only about the physical environment. Now, to assist in protecting this environment, there is what is called environmental science, environmental engineering, and so forth. In those fields, much attention is focused on trees and plants, geographical features, the general atmosphere, and such matters.</p>
+<p>But the Buddha presented a novel concept to this environmental science: the mental environment, the mental atmosphere. That is the very point mentioned in the *Maṅgala Sutta*, which you frequently practice and recite: *“Patirūpadesavāso ca”*—dwelling in a suitable locality. How this suitable locality is measured in terms of geographical features is something that any ordinary worldly person can easily understand. But what the Buddha meant here by *patirūpadesavāsa* is the mental atmosphere. The Buddha declared in the *Maṅgala Sutta* that a righteous atmosphere, an environment suitable for maintaining righteous thoughts and aspirations, is what is fit for human habitation.</p>
+<p>In that manner, in the verse we have chosen as our theme, the Buddha presents an important concept regarding this environmental science. That is, how a certain land becomes delightful. This is something that all of us Buddhists should ponder upon. It is a matter worthy of attention. Because when we consider the mental atmosphere, this is an era where various adverse forces and toxic fumes of wrong views are flowing in. In such a situation, we must direct our minds to a verse preached by the Buddha regarding this mental environment on a decisive day like today. The incident, the story, the background story (*nidāna-kathā*) that led to the preaching of this verse is very exemplary. All of you know about the chief disciple, Ven. Sāriputta. After he was ordained, he also gave ordination in the Dispensation to his three sisters, Cālā, Upacālā, and Sīsūpacālā. Next, he ordained two other brothers, Canda and Upasena. Finally, only the young child named Revata was left in the family. Then, the mother, a brahmin woman—this was a non-Buddhist family—thought, "This Upatissa has gone forth; not only did he ordain himself, but he also got my three daughters ordained. He also got my two sons ordained. Only Revata is left. If this child is also ordained, this lineage will be destroyed. Our wealth will also be confiscated by the king." Thinking thus, she resolved that somehow, while he was still at a tender age, she must bind him through household bonds and marriage bonds.</p>
+<p>Anticipating this matter, as if by hint, the highly wise Ven. Sāriputta had issued a directive, like a command, to the Sangha beforehand: "If at any time this Revata comes with the intention of ordaining, there is no need to trouble yourselves by asking his parents again. Ordain him immediately. There is no use in asking those heretical parents; I myself am that child's father and mother." He had made such an announcement and notification to the Sangha. Meanwhile, that mother arranged a marriage proposal for this seven-year-old boy, this seven-year-old young child. You all know well that even up to this day, child marriage is something that happens very often in India. Having selected a girl of similar age and similar caste for this seven-year-old child, and having fixed a date, they dressed this child in wedding attire and took him to the wedding. At the wedding ceremony, as part of the proceedings during the blessings, the relatives blessed the young bride saying, "May you be like the grandmother, may you obtain the grandmother's wealth of experience, and may you have a long life; may you live for a long time." Then, this child Revata asked, "Who is this grandmother you speak of?" Then the relatives pointed out, "Why, can't you see? There she is, about a hundred and twenty years old, completely weakened by decay and aging (*jarā*), with wrinkled skin, gray hair, bent body, bent like the rafters of a roof—don't you see that motherly figure? That is the grandmother."</p>
+<p>Then this child asked, "Will my bride here also become like this in the future?" "Yes, child. If she grows old like that, she will become just like that." Then this child thought, "It is because he knew this fact that my brother Upatissa must have gone forth. Now, therefore, I must escape this very day." Thus he made a firm resolution. After the wedding festival, the party put the young child-couple in a chariot and was bringing them back home through a forest. While they were being escorted, in the middle of the forest, this child said, "I need to perform bodily functions"—meaning he had a need to use the toilet—and got down from the chariot. Having got down, he stayed near a bush for a short while and got back in. Having gone a little further, he pretended to be unwell in the same manner and did this several times. The relatives thought it must be some kind of indigestion and did not get too worried about his getting down from the chariot. After a while, this bridegroom child said, "You all go ahead quickly with the chariot. I will follow behind."</p>
+<p>Having let the chariot go ahead in that manner, what this child did was pretend to go behind a bush, and then ran swiftly to a nearby forest monastery where about thirty monks resided, and running up to them, said, "Venerable Sirs, Venerable Sirs, please ordain me." "How can we ordain you, child? How do we know if you are a royal child or a minister’s son, dressed in such expensive clothes and ornaments?" When they said this, he replied, "Why, don't you recognize me? I am Upatissa's younger brother." Then they asked, "Who is Upatissa?" Then this child said, "You Venerable Sirs call our elder brother 'Sāriputta'. That is why you do not know the name Upatissa. I am Upatissa's youngest brother." Then those monks said, "If that is so, come, we will ordain you. That Venerable Sir has given us permission beforehand." Saying this, they removed his wedding garments, shaved his head, and ordained him.</p>
+<p>After ordaining him, they sent a message to Ven. Sāriputta about this matter. Hearing this, Ven. Sāriputta went to the Buddha and asked for permission, saying, "I received news that Revata has been ordained in this manner; I too should go and visit that area." The Buddha said, "Do not be in a hurry, Sāriputta, wait a little." After a few more days, Ven. Sāriputta again asked the Buddha for permission. The Buddha stated on that occasion too, "No, no, we too are intending to go. There is no need to go right now." While delay was being made in this manner, what did the young novice Revata do? He thought, "If I stay here, my relatives will come searching for me and drag me back. Therefore, I must flee." That is, not simply flee, but go to a distant region. So, taking meditation subjects (*kammaṭṭhāna*), and obtaining instructions from those monks to guide him all the way to Arahantship, he set out on tour and traveled many leagues (*yojanas*) away to an Acacia forest (Khadiravana). Having arrived, he spent the rainy season (*vassa*) in that forest. Within those three months of the rainy season, this young novice attained the state of a great Arahant possessing the four analytical knowledges (*paṭisambhidā*) and great psychic powers (*iddhi*). Such was the power of his past merit.</p>
+<p>Meanwhile, once the rainy season was over, Ven. Sāriputta again went to the Buddha and asked for permission, saying he wished to go and see Revata. Then the Buddha said, "We too are coming," and prepared to go to the Acacia forest where the young monk Revata was, taking five hundred monks along. After traveling some distance, Ven. Ānanda came to a junction where the road split in two and said to the Buddha, "Blessed One, the road going this way is a long road. That is, it goes through human habitations, through villages and market towns. It is sixty leagues (*yojanas*) long. There is also a short road, which goes through the wilderness. By which path do you wish to travel?" The Buddha asked Ven. Ānanda, "Ānanda, is Sīvalī in this assembly?" "Yes, Venerable Sir," he replied. "Ah, then, if Sīvalī is here, let us go by the short route," he said. Even if others do not know the reason, you, devout listeners, know Ven. Sīvalī. You know the reason. Often, in households, sometimes even more prominence than the Buddha's image is given to Ven. Sīvalī. You know the reason for that too. Ven. Sīvalī was foremost among those who receive gains. This was an occasion for the fruit of that monk's past merit to mature. The Buddha does everything only when the suitable opportunity presents itself.</p>
+<p>Now, at the time when those merits were to manifest, the Buddha, allowing room for those fruits of merit, decided to travel by that wilderness path. It is mentioned that while traveling, the deities brought divine food and drinks to entertain Ven. Sīvalī, and through those provisions, comfort was provided to the entire five hundred monks, including the Buddha. It is also stated that league by league, monasteries and other facilities were created through psychic power (*iddhi*) to make the journey easy for them. Next, in the meantime, the young monk Revata, that Arahant, also heard that the Buddha was arriving with the assembly of monks. He likewise created, through psychic power in that Acacia forest, the dwellings, night-quarters, day-quarters, and perfumed chambers (*gandhakuṭi*) necessary for the Buddha and the monks. The Buddha also arrived at that place.</p>
+<p>While staying there, two elderly monks thought: "Now, the Buddha has arrived at a place that is complete in every aspect. Only one monk lives here. It is this one monk who has built all these buildings. This shows that there is no meditation going on here. The Buddha has traveled to a place where someone is busy building structures and doing construction work (*navakamma*), just because he is Ven. Sāriputta's brother. This is a biased act, like showing favoritism." Thus, those two elderly monks corrupted their minds. The Buddha understood this. Then, after staying in this monastery in the Acacia forest for about a month, on the day of departure, the day of returning, the Buddha made a resolution: "May those two elderly monks forget their water strainer (*dabarāva*) and their pair of sandals." After they had gone some distance, they remembered that they had forgotten them. After the Buddha had departed from the monastery and withdrawn the psychic power (*iddhi*), they turned back to find them. When they came back to find them, in the meantime, Ven. Revata had withdrawn the psychic creation. Since the Buddha and the Sangha had departed, he let go of that psychic creation. When he let go of that psychic creation, it became an Acacia forest once again. Now these two elderly monks came looking for their belongings. When they arrived, those buildings were nowhere to be seen. In the end, getting pricked by thorns and wandering here and there, they barely managed to see their belongings hanging on a tree, took them, and went away. That is indeed how the incident took place.</p>
+<p>Then that entire group of monks returned to Sāvatthi and arrived at Pūrvārāma, which is the monastery built by Visākhā, the monastery built for the Buddha. The next morning, those two elderly monks went to Visākhā's house to partake of rice gruel. At that time, the great lay-disciple Visākhā asked, "How was it, Venerable Sirs? Did you also travel to that Acacia forest?" When they said yes, she asked, "How was it, is that forest delightful?" "Oh, what delight! It is a forest full of Acacia thorns, full of Acacia trees. There is no delight in it whatsoever," they said. A short while later, two other young monks came to partake of gruel. The lay-disciple asked them too, "Did you travel to that place?" When they said yes, she asked, "How was it, is it delightful?" Then those two monks declared, "Oh, there is nothing more to say about it. It was a wonderful, beautiful, delightful place, as if created by psychic power." Since Visākhā was a highly wise woman, she understood: "This must surely be the difference between the sight seen when the psychic creation was present, and the sight seen after the psychic creation was withdrawn." Later, when the Buddha arrived for the almsgiving, after offering the food, Visākhā stated, "Now, such a thing happened. When I asked the two elderly monks how the place they visited was, they spoke in this way. The other two monks spoke in that way. Why is it like this?" and she inquired from the Buddha about the reason.</p>
+<p>On that occasion, the Buddha pronounced this verse:</p>
+<p>> *“Gāme vā yadi vāraññe, ninne vā yadi vā thale,*</p>
+<p>> *Yattha arahanto viharanti, taṁ bhūmiṁ rāmaṇeyyakaṁ.”*</p>
+<p>Whether in the village or in the forest, in the vale or on the hill, wherever the Arahants dwell, delightful is that place. It is mentioned that upon hearing the Buddha's sermon, many attained the paths and fruits (*magga-phala*). Now you know this story and the verse. What we have to do now is to draw from this some lessons as examples for our lives, especially for this decisive year as we have mentioned. First, let us reflect a little on this story. In this story, there is a wonderful kind of playfulness within the Dispensation (*sāsanika huratalayak*). A seven-year-old child—when viewed from the perspective of worldly life, this is somewhat of a joke. A seven-year-old child—here we are talking about a marriage between two children of an age when they would normally play at cooking sand-rice. We can see from this incident how much worldly people are eager to keep the world going, to expand the world, and to protect this *saṁsāra* (round of rebirths).</p>
+<p>So they dressed that seven-year-old child in wedding garments, took him, and performed something like a drama. But the power of conceptualization is truly wonderful. Even though this seven-year-old child was young in age, he understood that decay (*jarā*) like a great wise pundit. From that incident, from the very sight of the grandmother, a very deep understanding arose in him about this *saṁsāra*. That is why Prince Revata resolved, "Now, I must escape." Now, when speaking of escaping, there are various kinds of escapes in this day and age. This is a special escape. This is a truly wonderful escape. There is an escaping to get caught in bonds, and there is also an escaping to be freed from bonds. This was an escaping to be freed from bonds.</p>
+<p>Through that skill-in-means (*upāya-kosalla*), this child, in the middle of that forest, somehow escaped and obtained ordination. This is a good example for those who lead a life within the Dispensation. Through this incident, we can see the way the world thinks about worldly values and evaluations, and on the other hand, how the Buddha, the Arahants, and those who followed their path think about this life and the world. What this child did can be described as a very precious, playful triumph within the Dispensation. There are lessons we must learn from this. Especially about *saṁsāra*, as we have expressed on many occasions before, there are three lessons to be learned in *saṁsāra*. Indeed, we can call them three classes: gratification (*assāda*), danger (*ādīnava*), and escape (*nissaraṇa*).</p>
+<p>Within worldly intelligence (*saṁsārika buddhi*), there are three levels of intelligence. The side of gratification (*assāda*) is the aspect where worldly beings lean towards the pleasures of the five cords of sensual desire. Next, bringing out the danger (*ādīnava*) aspect is an awakening—seeing that there are faults such as birth/arising (*jāti*), decay and death / aging and death (*jarāmaraṇa*), sickness, and such in these things. Understanding that aspect of danger represents a matured stage of worldly intelligence. Next, getting freed from it is called escape (*nissaraṇa*), which is actually jumping out of *saṁsāra*, out of the wheel of *saṁsāra*, out of the cycle of *saṁsāra*. The seven-year-old young novice Revata was able to achieve that too.</p>
+<p>Thus, from those, we see the qualities of this Dispensation such as being visible here and now (*sandiṭṭhika*), timeless (*akālika*), inviting one to come and see (*ehipassika*), and so forth. We see from this power of the Dhamma how those with past merit, even in their childhood, even at the age of seven—a time when others are playing at cooking sand-rice—could bring an end to this great suffering / unsatisfactoriness / stress (*dukkha*) and attain the state of a great Arahant with the power to perform psychic miracles. Therefore, this is a good story to incline the mind towards Nibbāna, to bring out those values regarding Nibbāna, and to understand their worth.</p>
+<p>Next, let us reflect on this verse. Regarding a land becoming delightful, or being a good place, a wholesome place to live, we have already mentioned that in the Buddha's teaching, an aspect is brought out which ordinary worldly people do not think of, through the word *patirūpadesavāsa*. *Patirūpadesavāsa* means dwelling in a suitable locality. Before mentioning *patirūpadesavāsa* in the *Maṅgala Sutta*, as you may know, the preceding verse mentions:</p>
+<p>> *“Asevanā ca bālānaṁ, paṇḍitānañca sevanā,*</p>
+<p>> *Pūjā ca pūjanīyānaṁ, etaṁ maṅgalamuttamaṁ”*</p>
+<p>as blessings (*maṅgala*). Generally in the world, in this day and age, when the word 'foolish' (*bāla*) is used, it brings to mind young children. But according to the Dhamma, the word *bāla* is applied to the fool. The word *bāla* is mostly applied to denote a fool. If *asevanā ca bālānaṁ* referred to young children, we wouldn't even be able to keep children in our homes. That is not what is meant here. *Asevanā ca bālānaṁ*—not associating with fools is shown here as one blessing. Not associating with ignorant people, foolish people, because by associating with them, one also falls into decline. *Asevanā ca bālānaṁ*—that itself is a blessing.</p>
+<p>Next, *paṇḍitānañca sevanā*—associating with the wise. Next, *pūjā ca pūjanīyānaṁ*—honoring those worthy of honor. The ground where all three of these factors exist is what is called *patirūpadesavāsa*, a suitable locality.</p>
+<p>That is to say, when it is an area where the Buddha, the Arahants, and the Sangha reside, there is association with noble friends (*kalyāṇa-mitta*). Those three aforementioned factors are fulfilled. In that manner, even though he appeared as a young novice, he was a great Arahant. Through his dwelling there, that place became a *patirūpadesa*, a suitable locality. Thus, regardless of other facilities for those monks, the Buddha declared that even a thorny Acacia forest becomes delightful when an Arahant resides there. There is an important point there, especially. The reason why a land becomes delightful due to the dwelling of an Arahant. You now know that there are Buddha-lands (*Buddha-bhūmi*) and sacred lands (*suddha-bhūmi*). The lands touched by the Buddha, and especially the places where he dwelt having entered the concentration of the fruition of Arahantship (*arahatta-phala-samādhi*), became sacred lands, Buddha-lands. The places where the Buddha dwelt in India, and even in this country, such as the sixteen sacred sites (*solosmasthāna*) and other places where Arahants resided—the Buddha specially visited those places and dwelt in the attainment of fruition (*phala-samāpatti*) so that in the future they would become stupas (*caitya*) and delightful places, thereby giving that land an attractive power to draw hundreds of thousands of people.</p>
+<p>Then, the energy present in that land due to that attainment of the fruition of Arahantship cannot generally be measured in terms of years. Sometimes they last for the entire interval between two Buddhas (*buddhantara*). That is why it is said that all Buddhas are born in the Middle Country (*Majjhima-desa*) of India. A wonderful energy is added to that land by that supramundane concentration (*lokuttara samādhi*). Now we see that the highest concept regarding a land becoming delightful is the concentration of the fruition of Arahantship. Because someone dwells in the concentration of the fruition of Arahantship, a great power of attraction is added to that land. Moreover, it is the concentration of Nibbāna. Through that concentration of Nibbāna, a great peace and tranquility is added to that land. Even today, you know that in places like Anuradhapura, Mihintale, etc., even if you walk on such a path, you feel a wonderful coolness because those lands have received that sacred quality. Therefore, even when we think at that level, what the Buddha has expressed here is how an environment becomes delightful through those virtues.</p>
+<p>When we say 'general environment', we think only of the physical environment. We think only of physical health. But here, mental health is primary. No matter how much physical health there is, if there is no environment suitable for mental health, there is no use in it. That place is good not for a human being, but for a beast. Now, let us say someone, according to environmental engineering, selects a good piece of land, and then, having created a beautiful environment with trees and foliage, and if desired, having built a superb house according to the highest architectural standards, attempts and resolves to live a good life in comfort.</p>
+<p>But if the surrounding land is daily drenched in the blood of animals slaughtered for meat, if it is a place teeming with dens of thieves, darkened by immorality, and foul-smelling with alcohol consumption—such a place cannot be considered a good environment. No matter how large a bungalow that person builds, they will not be able to live in peace. Because there is no mental atmosphere there; there is no mental atmosphere suitable for the mind. On the other hand, let us assume a poor person lives in a small hut on a piece of land that is generally unattractive and lacks a beautiful appearance, yet around it there is that good mental atmosphere we mentioned earlier. They live peacefully with the bliss of Nibbāna, living in tranquility. This is exactly what you should think about, especially in a decisive year like this. Because when talking about the environment generally now, people speak much of the toxic fumes and pollution caused to the world by science and scientific progress. But there are many other invisible toxic fumes coming through heretical concepts of wrong view. There are thorns of wrong view everywhere; next, toxic fumes of wrong view. One must make an effort to protect oneself from these. Otherwise, one's life will not be a human life; in the end, without even knowing it, it will be transformed into the life of a beast, a hungry ghost (*peta*), or a demon (*yakṣa*).</p>
+<p>What is the use of living beautifully in a large bungalow, in a luxurious bungalow of that kind in a place with good geographical features, if one undergoes internal degeneration? Therefore, we can understand that matter through the description of the delightful land preached by the Buddha. It is the same in daily life; if we speak of the highest level, it is the state of the Arahants. Short of that, if we consider, if there are virtuous people, those who lead virtuous lives around us. In this manner, you have now undertaken the *Ājīva-aṭṭhamaka-sīla* (eightfold virtue with right livelihood as the eighth). Likewise, it is a place where virtuous people (*satpurusa*) dwell, who lead good lives by constantly directing their minds to wholesome practices (*kusala-dhamma*) like giving (*dāna*), virtue (*sīla*), and meditation (*bhāvanā*). In such a place, in case of an emergency or crisis, one can find someone as a noble friend (*kalyāṇa-mitta*) or even for assistance. Moreover, looking at their virtues, looking at their exemplary lives, one can shape one's own life too.</p>
+<p>If one creates that kind of mental environment, one can make one's life fortunate. Also, we mentioned here *patirūpadesavāsa* when talking about the blessings (*maṅgala*). Several other blessings are also mentioned along with it: *“Pubbe ca kata-puññatā, attasammā-paṇidhi”*. If one has secured a good place like *patirūpadesavāsa*, then within that person, *pubbe ca kata-puññatā* means having performed meritorious deeds in the past. None of you can know whether you have past merits or not. But we have not traveled through this long *saṁsāra* solely committing sins, nor solely doing meritorious deeds. These merits and demerits go mixed together. However, whichever it may be, we have the ability to bring them to the surface—whether merit or demerit—according to the life we lead. Sin adds to sin; merit adds to merit. Sinners gather around those who commit sin; those who do merit gather around those who perform merit.</p>
+<p>The Buddha has declared this as: *“Dhātuso sattā saṁsandanti samenthi”* (Beings associate and come together according to their elements/nature). There is a nature where beings of similar temperament gather together. Likewise, when one inclines towards evil, more and more evil deeds, past evil deeds, support it, like Māra drawing one in. For a person performing merit, it may appear as something difficult, like swimming against the current of a river, but once one starts with merit, behold! Those merits hidden in the past can be brought to the surface, like sparks of fire under ashes.</p>
+<p>To kindle a fire even from sparks under ashes, one has to blow on them a little. Similarly, one must exert great effort, endeavor, and energy (*vīriya*) to bring merit to the surface. So, the blessing called *pubbe ca kata-puññatā* is indeed present in all of us; we must bring it to the surface. It becomes a blessing (*maṅgala*) only when it is brought to the surface. Having performed meritorious deeds in the past. Therefore, if one has obtained *patirūpadesavāsa*—an atmosphere and environment suitable for such a life—then next, one must be keen to bring those merits of one's own to the surface. Past merit, the power of merit. One must bring the past power of merit to the surface by turning towards faith (*saddhā*) in the Triple Gem and wholesome qualities (*kusala-dhamma*) such as giving (*dāna*), virtue (*sīla*), and meditation (*bhāvanā*). This is *pubbe ca kata-puññatā*.</p>
+<p>Why do we do all of this? Because *attasammā-paṇidhi* is also a blessing. Devout merit-seekers, *attasammā-paṇidhi* means directing one's mind rightly. In leading this life, if we do not direct our mind rightly, to what dangerous disasters might we be subjected! Through the decisions we make daily, our lives are liable to be destroyed. If we are not controlled by virtues such as morality (*sīla*) due to giving in to sudden anger, sudden emotions, and so forth, into what a dangerous precipice will we fall? That is why we referred to it earlier as a precipice of decline. According to this mental atmosphere, everyone is keen not on bringing to the surface past merits as mentioned, but on bringing past sins to the surface and using them to build up their economy as much as possible. Even if I do not describe this in detail to you, everyone knows that this is an era where righteousness is declining due to methods used for building up the economy.</p>
+<p>If there are past demeritorious deeds, if there are skills in killing, stealing, etc., or capabilities in drinking various kinds of alcohol—this is an era that brings those energies to the surface. It is an era that fosters and supports them. An era where even various kinds of assistance are received. In such an era, everyone is trying to bring those past sins to the surface, and after eating, drinking, or squandering in this life, they die and pass away. When we say "die and pass away," speaking of the next world, they go to places like the realms of hungry ghosts (*peta*), demons (*yakṣa*), and hell (*niraya*). In any case, because of those short-term practices that think only of this world, leading to a precipice of decline, such is the thinking that prevails in the world.</p>
+<p>Making an effort as Buddhists, reflecting wisely, protecting oneself from those forces of wrong view and their toxic fumes, one must develop a clear understanding of right view (*sammā-diṭṭhi*), the correct vision, of good and bad, merit and sin, wholesome and unwholesome, and the path declared by the Buddha. Why are Buddhas born in the world? It is to first rescue beings who have been suffering / unsatisfactoriness / stress (*dukkha*) in this *saṁsāra* for an infinite time from the path to woeful states, and direct them towards the path of happy destinations. Next, by gradually granting them the path and fruit of Stream-entry (*sotāpatti*), they close the door to the woeful states. Next, by developing that mind even further, developing the mind on the supramundane side, they reveal the path to escape from the entirety of the suffering / unsatisfactoriness / stress (*dukkha*) of *saṁsāra*; that is why the Buddhas fulfill perfections (*pāramitā*) for four incalculable aeons and a hundred thousand cosmic cycles (*kalpas*). It is not to introduce a new sociology to the world, nor to introduce political science, nor to present a novel economic philosophy—a Buddha is not born in the world for any of those. Those are incidental things. Some teachings about them may exist in the Buddha's discourses. But that is not the essence. The essence of the Buddha's discourses is the escape from, the liberation from, this entire suffering / unsatisfactoriness / stress (*dukkha*) of *saṁsāra*.</p>
+<p>That should be the ultimate goal of a human life too. In this short human life, which is less than a hundred years—nowadays it is over by the time one is seventy or eighty. During such a short lifespan, we run after targets like what we call our education, degrees, and so on. Next, after obtaining them, we run after targets regarding employment. Next, there is no end to that either. We remain engaged in earning wealth, etc., right up to death, and finally after dying, behold, next one suffers the consequences in states like that of hungry ghosts (*peta*). Because this is such an era, at least a few of us should reflect wisely; not making it our primary goal to provide noble friendship (*kalyāṇa-mitta*) to the world, but shaping our own lives—that is what is meant here by *attasammā-paṇidhi*. Establishing oneself on the correct path. One's own mind. When one's own mind is established rightly, other things also fall into place. For, as understood from the verse preached by the Buddha, *“Manopubbaṅgamā dhammā...”* (Mind precedes all phenomena), the mind is chief to everything.</p>
+<p>Now, according to physical science, matter is primary. But the Buddha declares, *“Manopubbaṅgamā dhammā”*—mind is primary. It is based on the mind that this material world we see behaves. The material world operates based on the mind. Going to the moon and doing everything else—all of these. We misunderstand it through science, saying these are the forces of matter. But it is the force of the mind. Behind every single one of these is the mind. Grounded in that fundamental principle, the Buddha placed before the world the objectives of fixing the mind, building the mind, purifying the mind, and liberating the mind from worldliness and making it supramundane. Therefore, a Buddhist is not merely someone who goes for refuge to the Triple Gem in the manner described, and knows the Pali phrases for taking the five precepts. Right view (*sammā-diṭṭhi*) is not completed by that alone. Now you know that right view is shown as a wholesome act called *diṭṭhijukamma*—rectifying one's view. Thus, in these meritorious deeds, the ten wholesome courses of action (*dasa-kusala*), it is finally shown as *diṭṭhijukamma*—rectifying one's own view.</p>
+<p>If the view were already straight, there would be nothing to straighten. Therefore, we have to think that our views are not yet straight. Actually, that state is attained only when one reaches the stage of Stream-entry (*sotāpatti*). It is only when one obtains a deep understanding of the Four Noble Truths preached by the Buddha in a supramundane sense that one's view becomes straight. Until then, the view bends this way and that. What is the reason for that? It is those forces of wrong view mentioned earlier. Because of those forces of wrong view and also various other influences received from the rest of society regarding this life, the view sometimes gets crooked. Most Buddhists have a view with many crooks and bends. Therefore, one must make an effort to straighten one's view as shown in the Dhamma. It is to straighten that view that one must rightly establish one's mind through virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*). Through virtue, one disciplines one's body and speech. Through that, one is freed from those low behaviors that are akin to animal life. That, too, is a sacrifice.</p>
+<p>You think of giving (*dāna*) as sacrificing a possession belonging to you. That is indeed a beginning. The feeling of giving is familiar to all Buddhists. In almost every religion, in fact, there is the concept of letting go. Giving starts with articles of use and consumption. With one's external possessions. As an aspect of that same thing, one can think of virtue (*sīla*) also as a kind of sacrifice. In controlling one's body and speech, one has to make a certain sacrifice. The mind desires to manipulate that body and speech in the wrong direction to obtain some gratification (*assāda*) or gain. Instead of that, as you know well now when thinking about livelihood, when thinking about one's livelihood and the problems concerning it, there are very easy ways where one can become a multi-millionaire overnight. Through various acts of theft, or through what is very common in this day and age—killing animals, breeding animals for meat, next the trade in intoxicants and poisons, the weapon trade—through such things, one can become rich very quickly.</p>
+<p>If we consider it in that way, regardless of one's mind, it is to protect the body in that manner that most people exert themselves. This cage of a body is a temporary cage. We have a cage of a body received due to past merit. We will have to abandon this and go. The next cage is created by our mind. It is by our mind that the next cage is created. So, when abandoning this cage in this manner, if the mind has become a hungry ghost (*peta*), one receives a hungry ghost cage. If it has become a demon (*yakṣa*), one receives a demon cage. Rarely is someone meritorious enough to become a deity (*deva*), to obtain a divine cage. But most people fall into the aforementioned precipice. If someone attempts to direct their entire life to evil deeds in order to protect this cage, that person is not a Buddhist. They have succumbed to those inappropriate forces. What those forces showed was a temporary, or short-term prosperity and progress. We see them dragging this society along in various guises. That is why we said we are heading towards a precipice of decline, and that we must try to escape, even by ninety-nine.</p>
+<p>You should think in that way about your daily lives, regarding the blessing (*maṅgala*) called *attasammā-paṇidhi*. When speaking of blessings, you think in terms of the word 'wedding/blessing' (*maṅgala*) used in daily life regarding children and so on. But the Buddha used this word *maṅgala* in a much deeper sense. Blessings are not just the marriage ceremonies in this world. It is about developing one's worldly state (*saṁsārika* state), wearing out *saṁsāra*, and quickly reaching the highest blessing, the supreme blessing. You might have heard the words "supreme blessing" used to denote that peaceful bliss. The bliss obtained by escaping from the entire *saṁsāra*, which is called Nibbāna. That is indeed what we mentioned earlier, that the Buddha and the Arahants, in the attainment of the fruition of Arahantship, subdue their minds and project that wonderful power of Nibbāna into that land, into that atmosphere, into the surroundings, so that it lasts for centuries, or even for a *buddhantara*.</p>
+<p>Then, you know that if we employ and maintain good virtue (*sīla*) and good, virtuous thoughts, through that too, a wonderful energy, peace, and comfort is added to our surroundings. When maintaining thoughts of loving-kindness (*mettā*) and compassion (*karuṇā*), and developing them to a state of absorption (*jhāna*), not only can one obtain a wonderful peace for oneself, but one also obtains the power even to calm the restless minds of others through the qualities of loving-kindness and compassion. Thus, the Buddha showed that within every such Dhamma, within every virtue, there is something that brings peace to a large number of people.</p>
+<p>Let us think about giving (*dāna*). Sometimes only one person offers that gift. Yet how many people rejoice in it saying "Sādhu, Sādhu" and purify their minds! In that brief moment, a great opening is created in their minds. If one also adds virtue (*sīla*) into that opening created by rejoicing in the almsgiving, then it becomes even stronger. If at that moment one resolves, "I can generate a great comfort and happiness like this if I control these wrong actions and wrong thoughts of mine," then through virtue, that power is further established.</p>
+<p>Taking it even further than that is what is called meditation (*bhāvanā*). Meditation means waging a face-to-face battle, as it were, against this scattered nature of the mind. In daily life, our mind is distracted by the objects that come to the five sense-faculties, due to things flowing in through these gates. Our minds are often polluted and soiled according to the low, worldly habits practiced in the past. Just as we spoke of environmental pollution, here the mental environment is polluted. So, to free the mind from this, taking some meditation subject (*kammaṭṭhāna*) like the recollection of the Buddha (*Buddhānussati*), recalling the ocean of the Buddha's virtues and taking a single word like *Arahant* or *Bhagavā* and keeping the mind on that single word—in that brief moment, a great uplifting, a great clarity, a clarity through faith (*saddhā*) is produced in that mind. Faith (*saddhā*) is said to be like a water-clearing gem (*udaka-prasādaka-māṇikya*). There is a certain gem put into turbid water called the water-clearing gem. When that gem is put in, the turbidity of the water is settled, and clarity arises. Just like that, the mind becomes clear through *Buddhānussati*. The mind of loving-kindness is also like that. Discarding ill-will from that mind, a very wonderful, peaceful state arises in the mind. Acknowledging one's own wish for the peace and well-being of the world, one aspires: "May all beings be well and happy." At that moment, a wonderful energy is added to the world. Similarly, what is done through other meditations like the contemplation of foulness (*asubha-bhāvanā*)? The mind that was subject to defilements like sensuality, and had suffered / unsatisfactoriness / stress (*dukkha*) in woeful states for a long time due to those five cords of sensual pleasure—that meditation on foulness gives some power to free the mind from them.</p>
+<p>Next, mindfulness of death (*maraṇasati*) means reminding oneself of the shortness of this lifespan. As something highly astonishing in the world, even Westerners say that everyone who dies forgets that they themselves will die. No matter how many funerals we attend, the feeling "we are alive" remains deep down in the mind. To that extent, mindfulness of death is not easy to develop. No matter how many deaths occur around us, it does not sink into the mind. To that extent, there is craving / thirst (*taṇhā*) for becoming / existence (*bhava*) in worldly beings. There is a desire for existence. There is delusion, ignorance, and craving / thirst (*taṇhā*). It is exactly like a feeling present in everyone that they will live permanently, eternally, along with the group they have gathered around them. The thought that "I will have to abandon this and go, I will have to abandon my relatives and go" does not enter their minds even for a moment, especially in the minds of the wealthy. Even the word "death" is unpleasant to many. The Buddha declares the reality. The word "reality" is present in today's society; reality means the truth as it is.</p>
+<p>So, the truth as it is was indeed seen beforehand by that seven-year-old Prince Revata. That when his bride reaches one hundred and twenty years, she will come to that very state. This is far-sighted wisdom. Far-sightedness. Similarly, in our daily lives, if we reflect and abandon this short-term agenda and work on the most important thing we have not done so far—escaping from *saṁsāra*, liberation from *saṁsāra*—what is relevant to that is indeed what is called the path of meditation. Without putting it off, we must realize that a completely perfect environment for this will never be obtained. There can be various shortcomings. There may be a lack of holidays. So, instead, even by taking leave—leave is not something given by the government, nor is it something received from outside; it is something one obtains oneself. Some of you who practice these things know that one can obtain leave to engage in those virtues, to practice Dhamma and meditation, according to one's own effort, interest, and mental desire (*chanda*).</p>
+<p>No matter how much work there is in between, if one gets used to paying homage to the Triple Gem for five, ten, or fifteen minutes right after waking up in the morning, calming the mind through some meditation subject (*kammaṭṭhāna*), and then going to daily work; next, after returning from work and before going to sleep at night, even in secret, calming the mind in that manner for a brief moment and reflecting on the daily budget—by budget we mean a balance sheet of merit and sin, of wholesome and unwholesome—and trying to bring out that blessing (*maṅgala*) called *attasammā-paṇidhi*, applying some effort to build one's mind, then day by day, as one day, two days, three days, a week, a month passes by, a certain meditative development will arise within that mind.</p>
+<p>Next, instead of spending even the little holiday one gets in daily life on other things, that person goes to a meritorious place, a sacred land, goes to associate with someone who can give meditation instructions, receives advice from them, and gradually first practices at home as much as possible even amidst various obstacles, using them as aids to remind oneself of the nature of *saṁsāra* and to remain diligent (*appamāda*). They start to implement it. Practically shaping one's daily life and proceeding in that manner, a time may come when one is able to let go of things that one previously thought could never be let go of. Things that one previously claimed were absolutely impossible to let go of, one sees slipping away without even knowing it. One does not need to forcefully detach them. Even those that appear as great bonds—the Buddha has declared regarding the attachment to children and wealth—regardless of wealth, the attachment to one's relatives is even more powerful. It is not easy to break them. They are like iron chains. But even those gradually slip away because one is interested in protecting the mind. It is by doing so systematically that in the past, the Buddha's disciples, as well as lay-disciples (*upāsaka-upāsikā*), donors and benefactors, practiced Dhamma and meditation and attained those states. From those Dhamma stories, we can bring these lessons close to our own lives, take them as examples, and generate energy / effort (*vīriya*) saying "we too must shape ourselves in this manner." Because, as mentioned earlier, this lamp of the Dispensation is about to go out.</p>
+<p>A lamp does not just go out. Before going out, there is a nature, a law of nature (*dhammatā*), where it emits a bright, radiant light. Therefore, without being saddened that this lamp is going out, keeping in mind the feeling that some light can be emitted before it goes out, in this year of one thousand nine hundred and ninety-nine, in this year that ends a century, you must try to escape, even by ninety-nine. You must establish that resolution in your minds on this valuable Duruthu Poya day.</p>
+<p>Now, for this much time, you have listened to a Dhamma sermon having undertaken the valuable *Ājīva-aṭṭhamaka-sīla*. Listening to a Dhamma sermon is indeed an application of one's mind. What is done there is also the development, to a certain extent, of certain spiritual faculties present in one's mind, namely faith (*saddhā*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*). Although there were various other daily activities at this time, you abandoned them; although there were various entertainments for amusement, you abandoned them and listened to this Dhamma for about an hour with faith (*saddhā*) in the Triple Gem. Next, even to remain in a single posture, a certain energy / effort (*vīriya*) is required. Through that, applying mindfulness (*sati*) and attentiveness, you listened to this Dhamma. Through that, one can experience a certain concentration (*samādhi*) at least for a short while. It is indeed to such a concentrated mind that the true nature of the Dhamma, deep things, become clear. That understanding is what is called wisdom (*paññā*).</p>
+<p>In that manner, you should rejoice and be glad that even within this brief hour, certain special energies have been deposited in your mind as the benefits of listening to the Dhamma. You should rejoice in it. Likewise, this listening to the Dhamma itself is shown as a wholesome act (*kusala*). In any case, may the accumulation of merit gathered by both parties through the preaching of the Dhamma and the listening to the Dhamma, be rejoiced in by the deities who protect the Dispensation, including the assembly of Devas and Brahmas, and whatever kings of Devas and Brahmas there are who direct their minds towards this Dispensation and are keen on its behalf! Having rejoiced, while granting us and this Dispensation the strength and power to proceed on this journey in the future, may they realize the supreme, deathless, great Nibbāna through a Bodhi of their aspiration—thus you should aspire.</p>
+<p>May all departed relatives of yours, and all beings from Avīci to Akaniṭṭha who desire merit and desire Nibbāna, rejoice in this wholesome merit of our preaching and listening to the Dhamma. Having rejoiced, escaping from this highly fearsome *saṁsāra*, may they be comforted by the supreme, deathless, great Nibbāna—with this thought in mind, recite these verses and share the merit.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_086.html" class="doc-btn">← Previous Sermon (086)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_088.html" class="doc-btn">Next Sermon (088) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

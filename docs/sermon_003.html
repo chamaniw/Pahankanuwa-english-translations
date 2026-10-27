@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 003 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_002.html" class="doc-btn">← Previous Sermon (002)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_004.html" class="doc-btn">Next Sermon (004) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 003</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_003_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_003_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_003_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #3</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No. )</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Nagariṁ yathā paccantaṁ,</p>
+<p>guttaṁ santarabāhiraṁ;</p>
+<p>Evaṁ gopetha attānaṁ,</p>
+<p>khaṇo vo mā upaccagā;</p>
+<p>Khaṇātītā hi socanti,</p>
+<p>nirayamhi samappitā.</p>
+<p>From:</p>
+<p>Verse 315, from  the Nirayavagga (Chapter on Hell)  of the Dhammapada</p>
+<p>Dear Listeners,</p>
+<p>It was on an Esala full-moon poya day that the Supreme Buddha, the Teacher of the Three Worlds, first revealed to the world of devas and humans the path to Nibbāna—namely, the Four Noble Truths—which he discovered after practicing six years of austere practices. Therefore, today is an extremely valuable poya day. Viewed from another perspective, this can also be regarded as a day of great significance for the Dispensation (Sāsana). When considered as the poya day that marks the commencement of the rains retreat (*vassa*) for the Sangha, this Esala full-moon poya day is highly important. Now, the term used in ancient texts to refer to the Buddha's Dispensation is "Dhamma-Vinaya." "Dhamma-Vinaya" is applied to designate the Dispensation of the Teacher because both the Doctrine (Dhamma) and the Discipline (Vinaya) are relevant to it. When thinking of the rains retreat, this period is considered highly important from the side of the Discipline because it is specifically connected to a group of disciplinary rules of the Sangha. However, during the time of the Buddha, as we can see from ancient stories, the rains retreat was also regarded as an extremely valuable period from the side of the Dhamma, the aspect of the Doctrine. For there was a custom in the Buddha's day: when the Buddha was alive, the members of the Sangha would go to meet the Buddha before the rains retreat to obtain meditation subjects (*kammaṭṭhāna*). Then they would depart for a remote, secluded area, spend the retreat in a suitable place, meditate according to that meditation subject, and make every effort to realize Nibbāna within the rains retreat. They had a great desire to bring back that joyful news to the Buddha. Looked at in this way, the wise and far-sighted Sangha of that time considered the realization of Nibbāna as the noblest, highest meritorious deed—as the rains-retreat offering—to be accomplished during the rains retreat. If they strove as much as possible and aroused effort during those three months but were unable to realize Nibbāna, a certain sense of spiritual urgency (*saṃvega*) would arise within those monks. Because when they went to meet the Buddha again after the rains retreat, the question the Buddha would often ask—after first exchanging pleasantries and inquiring about their well-being in a friendly manner—was: "Monks, have you fulfilled the purpose of your ordination?" If they were unable to answer this properly, it would cause great dejection in the minds of those monks. To put it briefly, it would be like going to see the Buddha empty-handed. Therefore, the monks made great efforts to realize Nibbāna within the rains retreat. Now, the story that clarifies these matters is the one associated with the verse we have taken as our theme.</p>
+<p>While the Buddha was residing at Jetavana monastery, a group of monks went to a remote border village—though we use the word "remote" (*piṭisara*), what is meant here is a village situated on the frontier—to spend the rains retreat. During the first month, those monks were able to carry out their meditation work well. They received good support and requisites from the lay supporters. However, in the second month, a band of thieves—a gang of robbers—raided the village and took the villagers captive. Thereafter, the villagers began to organize security measures. Fearing that the gang of thieves would return and attack them again, they started putting up defense systems. They erected various kinds of ramparts and fortifying walls, implementing certain defensive arrangements for their streets. Because of this, the monks experienced disturbances. Consequently, despite their efforts, these monks were unable to fulfill their intended goal. When these monks went to visit the Buddha after the rains retreat, the Buddha asked them, "How was it, monks? Did you spend the rains retreat comfortably and in peace?" Then those monks explained: "Venerable Sir, during the first month we lived well without any trouble. But afterwards, due to the situation that arose in the village when thieves raided, the villagers—our lay supporters—focused their minds on setting up security measures. Consequently, we faced various shortcomings, and we were unable to practice meditation properly during the rains retreat." They offered this as their excuse. At that moment, the Buddha said: "Monks, indeed that is so. A comfortable lodging is not something that is obtained every day. It is not something to be constantly expected. That is the normal course of things. But what should you have done? Just as those people protected their city, you should have protected yourselves. Just as those people were diligent in protecting their village, you too should have secured your own safety." Declaring thus, he spoke the verse we have taken as our theme:</p>
+<p>*Nagaraṃ yathā paccantaṃ*</p>
+<p>*guttaṃ santarabāhiraṃ*</p>
+<p>*evaṃ gopetha attānaṃ*</p>
+<p>*khaṇo ve mā upaccagā*</p>
+<p>*khaṇātītā hi socanti*</p>
+<p>*nirayamhi samappitā*</p>
+<p>The meaning of this is: just as a city situated on a frontier is well-fortified internally and externally—inwardly and outwardly—meaning, just as a frontier city is well-guarded within and without, in the same manner, "*evaṃ gopetha attānaṃ*"—so should one guard oneself. "*Evaṃ gopetha attānaṃ - khaṇo ve mā upaccagā*"—the next phrase indicates that one must perform this task without delay: "*khaṇo ve mā upaccagā*"—do not let the moment pass you by. Do not allow the proper moment—the opportunity—to slip away. The next two lines express the danger (*ādīnava*) that arises from not properly following this advice: "*khaṇātītā hi socanti - nirayamhi samappitā*". If one allows the moment to pass, what happens to such people? "*Khaṇātītā hi socanti*"—they will have to weep, wail, regret, and sorrow. "*Nirayamhi samappitā*"—because they will have fallen into hell, and falling into hell, they will have to suffer. In this way, the Buddha uttered an instructive and admonishing verse. It is said that upon hearing this verse, those venerable monks attained Arahantship. Thus, when we reflect on this verse, we can see the profound Dhamma within it. Many times, when monks apply their minds to the Dhamma and meditation, putting effort into those tasks, the Buddha would preach such a verse of Dhamma as if to complete whatever was lacking in their efforts. Therefore, we can understand that even a single passage of Dhamma or a verse from the Buddha can help in the final consummation of the monks' endeavors, enabling them to complete their meditation subjects. This is probably why it is mentioned that the monks attained Arahantship upon hearing this very verse. Be that as it may, let us reflect on the depth of this Dhamma verse according to our own capacity.</p>
+<p>Now, this simile is highly apt. We employ similes on such occasions because they help the Dhamma point penetrate deep into the mind. "*Nagaraṃ yathā paccantaṃ - guttaṃ santarabāhiraṃ*"—we can understand that this simile is extremely relevant to our present times as well. Thus, what is spoken of here is the guarding of a frontier city, both from within and from without. Likewise, the monks are told, "*evaṃ gopetha attānaṃ*"—to secure self-protection in this manner. Even nowadays, "self-protection" (*ātmārakṣāva*) is a commonly used term. However, in modern times, when people speak of self-protection, they generally mean bodily protection—guarding the physical body. Employing bodyguards, they only protect the physical body. As for the mind, the attitude in the world is often that it does not matter if it is handed over to devils and Death (*Māra*). But when the Buddha spoke of self-protection here, he meant guarding the mind. For what we carry through this round of rebirths (*saṃsāra*) is this mind—the mental continuum. As for this body, this bodily cage, we leave it behind. Therefore, the Buddha gave prominence to guarding the mind. Here too, the meaning to be taken is not merely guarding the body, but guarding the mind. To guard the mind, a certain degree of concern for the body is indeed necessary. But what most people do is guard the body without any care for what happens to the mind. If we grasp this profound meaning as guarding one's own mind, let us next consider this security system—what is said here regarding protection.</p>
+<p>If we reflect in accordance with the Dhamma, who is the security guard of the mind? It is mindfulness (*sati*). In the Dhamma, it is stated: "*sati ārakkhasārathī*"—mindfulness is the guarding charioteer. The task of taming the mind, of guarding the mind—that responsibility is borne by the sentry called mindfulness. Now, when this sentry of mindfulness is well-uniformed, we can understand it more broadly as mindfulness and situational awareness (*sati-sampajañña*). At times, wishing to render *sampajañña* into a Sinhala term, we have translated it as "awareness" (*dänuvatbava*). Or else, remaining mindful with clear comprehension; the clear comprehension that goes hand-in-hand with mindfulness. Thus, what is spoken of here is mindfulness coupled with awareness. Now, when security guards are deployed in the world, in a place like a city, protection is set up both inside and outside. In a city, there is usually an inner gate, an entrance gate, then the fortifying walls, ramparts, and so on. Externally, there are watchtowers, sentry boxes, and moats. In ancient times, various security measures—defensive arrangements—were put in place to protect cities. Even nowadays, a sentry is typically posted at a gate. When posting a sentry at a gate, that gate must be very narrow. If it is a large gate, the incoming crowd can rush in. In the same way, if we consider mindfulness (*sati*) from the perspective of the Dhamma—the word *sati* also carries the meaning of memory. However, when we speak of right mindfulness (*sammā-sati*) in the Dhamma, it refers to constantly established mindfulness. This is something relevant to the present moment. For if the mind starts running to the past or jumping to the future, that gate becomes wide. What, then, is the gate we have to guard? From the perspective of the Dhamma, it is the six sense-doors: the eye, ear, nose, tongue, body, and mind. Including the mind, these are the six sense-doors. The five external senses are the eye, ear, nose, tongue, and body; and then there is the mind, the mind-faculty. These six sense-doors are what must be guarded. While guarding these six doors, the army of Māra, the army of defilements—the enemy host—is constantly waiting to break in. The army waiting to invade consists of sense-objects. For the eye, they are visual forms; for the ear, sounds; for the nose, smells and fragrances. In this manner, the enemy forces that agitate the mind and lead it into attachments, attraction, delusion, and bewilderment are waiting to invade. And they arrive with extreme rapidity. In such a situation, when a large crowd arrives at the gate, they must first be told: "You must come in a queue." They must come in a queue, one after the other. Otherwise, this gate cannot be guarded. Making it a narrow gate in that manner is precisely the easiest way to keep the mind in the present. What is spoken of here is keeping the mind in the present without running to the past or leaping to the future, and directing mindfulness to each and every thing as it arrives. Along with that mindfulness, what does one do through mindfulness? A certain practical boundary is needed. Relying on that awareness, one applies attention. A certain attention (*manasikāra*), a reflection is applied.</p>
+<p>Let us suppose there is a security guard: his duty is not to sleep. Remaining fully awake, he casts an inquiring eye on each person who arrives. This depends on his skill. It must be done very rapidly. He cannot hold up any single person for a long time there. They arrive, he subjects them to scrutiny, and if they are to be let in, he lets them in; if they are to be turned away, he turns them away. There are only these two options. Therefore, what is required here is skill; that reflection cannot be carried out at length. Today, as you lay devotees well know, at such checkpoints there is something called an identity card. Even if there were no identity cards in the past, there must have been some way of identifying people when they arrived. An identity card has a name and a photo (form). Thus, the person is identified by this name. This person arrives with a certain physical form corresponding to that identification. But what usually happens? If enemy forces or spies arrive, they come in disguise. Not in their true form. Therefore, they must be recognized. If the sentry is highly skilled, he will not allow them to engage in idle chatter; he will demand that they present their identity card and prove their eligibility to enter. In the same way, if we consider it from the perspective of the Dhamma, there is a general method for identifying these incoming objects—these enemy forces. It is called Name-and-Form (*Nāmarūpa*). They are identified by reflecting on them as Name-and-Form (*Nāmarūpa*). Let us say a visual object comes before us. Some form arrives. This is what happens to an insight meditator. The incoming form comes in disguise. We speak of color configurations—their colors, all kinds of colors, and various outlines. Because of this, the mind might become fixated. Without directing the mind to those details, one reflects: "This is just a form." Thus, no matter what kind of form arrives, the meditator reflects, "form, form" (*rūpaṃ, rūpaṃ*). He does not go any further than that. For the Buddha has pointed out that if one goes further, the mind cannot be restrained. It gets dragged into defilements. This is what is called grasping at signs (*nimitta*) and secondary features (*anuvyañjana*)—meaning, the sign and the other characteristics grasped in accordance with that sign. When that person sees a form—be it a person or an object—since a multitude of other thoughts, defiled thoughts, can invade concerning it, he briefly notes it as "form."</p>
+<p>Furthermore, what is relevant here, in brief, are the three characteristics: the characteristics of impermanence (*anicca*), suffering (*dukkha*), and not-self (*anattā*). It is by applying these three seals that every object is let through. Thus, what helps to stamp these three characteristics is nothing other than this recognition. Now, mental phenomena (*nāma-dhamma*) are shown in the Dhamma to consist of feeling (*vedanā*), perception (*saññā*), intention (*cetanā*), contact (*phassa*), and attention (*manasikāra*). Here, we are trying to align this with the Dhamma. Mental phenomena are generally things associated with the mind. So, the things associated with the mind are feelings (*vedanā*). A person recognizes something—even a small child who does not yet know how to speak recognizes things—through these very factors. Through experiencing something, or experiencing what is given to them, on the basis of the feeling (*vedanā*) therein. Or through a perception (*saññā*) of it. Then, the thoughts that arise regarding them, their contact (*phassa*), and how we attend to them. When viewed deeply in this manner, these are the mental phenomena that support insight (*vipassanā*). Next, when considering material phenomena (*rūpa-dhamma*), one does not think about those color configurations or color designs mentioned earlier. Of all the things that exist in the world, what are the primary elements out of which both our bodies and external things are made? Earth (*paṭhavī*), water (*āpo*), fire (*tejo*), and air (*vāyo*). Both this great earth and our bodies are made of the element of earth, which represents solidity. Then there is the element of water, representing the flowing nature of liquid. Then fire, representing heat; and air, representing wind. Our bodies and external things are composed of elements related to these four. For this reason, when reflecting in accordance with the Dhamma, the sentry of mindfulness must comprehend things in this manner through attention. One must not let the mind run after the various external signs of the incoming form, because if one does, defilements will flood in. If we take Name-and-Form (*Nāmarūpa*) in this way, this is the identity card. We let things pass by looking at this identity card. Now a sense-object has arrived; we do not cling to it; it is gone. It came and went, came and went. Through this, we understand impermanence (*anicca*)—the impermanent nature of each of these things, their nature of coming and going. This is how it is with the eye, ear, nose, and so forth. Now with a sound—when we hear a word, there is simultaneously a contact (*phassa*) at the ear. When a drum or a *rabāna* is struck, a resonance echoes for some time. When you strike something like a *rabāna*, a resonance naturally follows. In the same way, the thoughts that arise in the mind through words also produce a certain echo. That is how one is able to remember and recall. In this manner, we can understand regarding the ear. One can understand each of these senses in this way. Regarding the tongue, even a small child can understand it very easily. Thus, through all these senses, objects come flooding in, arriving with great speed. Now, the meditator identifies them with a certain degree of equanimity, in a manner that does not lead to being dragged along or trapped by attraction. Within that identification, within that reflection, wisdom (*paññā*) becomes active. Therefore, to realize Nibbāna, one must develop both mindfulness (*sati*) and wisdom. This wisdom is activated at that moment through that very reflection. That is, applying mindfulness, one identifies it. This must be done with extreme rapidity. The reason for this, as the Buddha has declared, is that the objects flooding into our senses in this world arrive at tremendous speed.</p>
+<p>On one occasion, the Buddha declared to the young Brahmin Ajitha:</p>
+<p>*Yāni sotāni lokasmiṃ*</p>
+<p>*sati tesaṃ nivāraṇaṃ*</p>
+<p>*sotānaṃ saṃvaraṃ brūmi*</p>
+<p>*paññāy'ete pidhīyare*</p>
+<p>(Sutta Nipāta, Verse 1039)</p>
+<p>Whatever streams there are in the world, mindfulness is their barrier. I call mindfulness the restraint of the streams. "*Paññāy'ete pidhīyare*"—but it is by wisdom that they are completely shut off, that these streams can be fully closed. So, with this mindfulness—just as with a rapidly flowing river, one cannot build a dam all at once; one has to employ some means to temporarily hold back the rushing water. It is like the security guard stopping the invading crowd, telling them, "Hold on a moment." Then they are subjected to examination. Through this examination, the true nature of the person is understood. If it is a defiled object, it is pushed away completely. In this manner, even with water, it is only after the dam is built that the work is complete. Wisdom is the dam—wisdom, deep understanding, comprehension of the Dhamma, the true nature of things.</p>
+<p>Thus, what we have here is a matter directly relevant to meditation. It is by understanding this that the monks must have attained Arahantship. So, what is spoken of here is guarding the mind; the mind is the city. It is said to have six gates. Apart from the mind itself, which refers to the thoughts that enter it, there are the other external objects: forms, sounds, smells, tastes, and touch (*phassa*). When these come flooding in, one must apply mindfulness—mindfulness coupled with awareness—and reflect on each one. This reflection must be done with extreme rapidity. It is not about uttering long sentences. If it is a form, one notes "form, form" twice. If it is a sound, "sound, sound." In that way, the mind is given the designation "smell, smell," "taste, taste." Through this designating, it is understood, and the matter is ended there. This is the kind of discipline that one adopts in meditation, in insight meditation. This is the meaning that the Buddha has expressed in this verse. In short, what is spoken of here is Nibbāna—the factors that support Nibbāna. That is why, next, the Buddha says: "*khaṇo ve mā upaccagā*"—"do not let this opportunity to realize Nibbāna pass you by."</p>
+<p>This "moment"—the opportune moment (*khaṇa-sampatti*)—is described in the Dhamma in this way: the Buddha has stated that a human birth obtained during the period of a Buddha's appearance—that entire life—should be regarded as a single "moment." The Buddha said: "Monks, the people of the world often say, 'The world is bound to the moment, the world is bound to the moment' (*khaṇakicco loko*). They say that this world is a place where tasks must be done on time, on the instant. But what the right moment is, and what the wrong moment is, the world does not know." Then the Buddha declares: "Monks, now a Buddha has appeared in the world and is preaching the Dhamma. Yet, a certain person is born in hell. In that case, even though a Buddha has appeared, one does not get the opportunity to realize Nibbāna. That is what is called an inopportune moment." That is, the Buddha points out eight inopportune moments when the timing is wrong—moments that are not the right opportunity. Showing these eight, he states that one who is free from these eight obtains the opportune moment during the period of a Buddha's appearance. So, as mentioned first, a Buddha has appeared and preaches the Dhamma, but this unfortunate person is born in hell. Then it is impossible to benefit from this Dhamma and bring suffering (*dukkha*) to an end. That is the first. Next, it is stated—and it is the same: a Buddha has appeared and preaches the Dhamma, but that person is born in the realm of departed spirits (*peta-loka*). Third, a Buddha has appeared and preaches the Dhamma, but this person is an animal, born in the animal realm. In such a situation, too, it is impossible to travel along the path to Nibbāna and be freed from the suffering (*dukkha*) of saṃsāra. Likewise, a Buddha has appeared and preaches the Dhamma, but a person is born in a very long-lived class of devas—in a celestial realm. While indulged in the pleasures of that heaven, they do not get the chance to practice the holy life (*brahmacariya*) in the Dispensation, develop the three characteristics—the three characteristics of impermanence (*anicca*), suffering (*dukkha*), and not-self (*anattā*)—and bring the suffering (*dukkha*) of saṃsāra to an end. It is difficult because of the sensual pleasures and various other reasons in those realms. The human world is indeed the best place for realizing Nibbāna. Furthermore, a Buddha has appeared and preaches the Dhamma, but a person is born in a remote border region. Generally, it is said that Buddhas are born in the Middle Country (*Majjhima-desa*) of India (*Jambudīpa*). Therefore, one born in that Middle Country has obtained a fortunate birth. That is to say, during the time of the Buddha, there was a situation in that region where one could hear the Dhamma and live in accordance with it. If, in such a time, a person is born in an extremely remote region, where one does not even get to hear the Dhamma, and where the fourfold assembly—monks, nuns, laymen, and laywomen—does not visit, then such a person cannot benefit from this Dhamma. Thus, that opportunity is not a proper one; it is an unfortunate time. Next, a Buddha has appeared and preaches the Dhamma, and a person is indeed born in the Middle Country, residing in that very region. However, that person holds wrong views. He is blinded by strong wrong views. Such a person cannot benefit from the Dhamma. That opportunity is indeed an unfortunate one. Next, it is shown: a Buddha has appeared and preaches the Dhamma, but this person cannot understand anything that is explained. He lacks wisdom. That is, his wisdom is immature. Such a person cannot benefit from the Dhamma. Thus, that opportunity is also an unfortunate one. Finally, in the last instance, a person is highly wise, is born in the Middle Country of India, and all other conditions are complete, but a Buddha has not appeared, and the Dhamma is not preached. That is the eighth instance.</p>
+<p>In this way, the Buddha declares that there are eight inopportune moments. If, escaping these eight inopportune moments during the period of a Buddha's appearance, a person obtains a birth in a suitable region where they can hear the Dhamma and live in accordance with it, without any sensory impairments and possessing wisdom—that, the Buddha declares, is an extremely rare moment, a precious opportunity. Therefore, you should think of yourselves as having obtained such a noble opportunity. It is this opportune moment that the Buddha urges us not to waste. If that moment is missed, if that opportunity is lost, the Buddha gives a simile: it is just like a merchant who gets an opportunity to buy goods at a cheap price, but fails to take advantage of it and later regrets it. In the same way, one will have to regret if, during a time when one can benefit from the Dhamma—an extremely rare opportunity obtained in this unimaginably long saṃsāra—one fails to make use of it. What is meant by "making use of it"? It is realizing Nibbāna, bringing the suffering (*dukkha*) of saṃsāra to an end. At the very least, as mentioned, it is obtaining a supramundane state by attaining the path of Stream-entry (*sotāpatti-magga*), which helps one escape the lower realms. This is how we have to understand this verse.</p>
+<p>That is why: "*khaṇātītā hi socanti, nirayamhi samappitā*"—if that noble moment is allowed to pass, what happens to that person is that they fall into hell, suffering and sorrowing. Indeed, as we said before, people nowadays make so many efforts to protect the body, but because they are not concerned with guarding the mind, during this brief lifespan, after setting up various security systems, they sometimes meet their death at the hands of those very guards. In the end, where do they go and take birth? In the realms of departed spirits, the realms of *yakkhas*, in woeful states, or in hell. We hear various stories of people being born in such places. It is in such an extremely unfortunate era that we live. But you, devout lay followers who reflect wisely, must always bear in mind the Buddha's advice: what is meant here by self-protection is guarding the mind. Guarding the mind means applying mindfulness to those doors—the six doors connected to the mind—and assigning the duty belonging to the sentry in a manner appropriate to one's meditation. Regarding the awareness called *sampajañña* that goes hand-in-hand with mindfulness, it is presented in four ways in the Dhamma. A person practicing a meditation subject has to apply that awareness in accordance with their meditation subject. That is to say, when a sense-object arrives, they have to consider: "Is this object helpful to the meditation subject I am practicing? Is it useful? Is it purposeful?" Next, they must also consider: "Is it suitable (*sappāya*) for my meditation? Is it appropriate? Is it fit?" Moreover, they must examine whether they can maintain their meditation subject at all times through every such object. Lastly, they must acquire the ability to look at that object without being deluded by it. Reflecting deeply in this way, just as that security guard maintains a high degree of awareness in fulfilling his assigned duty and responsibility, the meditator, the person dedicated to meditation, guards their own meditation subject. The meditation subject is the only thing one has to guard. It is through maintaining those meditation subjects that one is able to realize Nibbāna. This is why *sampajañña*—awareness or clear comprehension—must be understood in a very broad sense.</p>
+<p>Thus, the objects that help in guarding mindfulness in this manner are what the Buddha has declared as the Four Establishments of Mindfulness (*satipaṭṭhāna*). That is, we are not talking about other things or external things here. One establishes mindfulness on the very body received—this body. Next, on feelings (*vedanā*). Next, on the mind—understanding the nature of the mind in its various states. Next, on the thoughts that enter the mind. These can be taken generally as: body, feelings (*vedanā*), mind, and thoughts. Establishing mindfulness on these means constantly living in the present moment. Usually, people live either in the future or in the past. Thinking about what is to be done in the future, or thinking about what has happened in the past, people generally live with a dead past and an unborn future. The Buddha has given the advice to remove this tendency and to strive, as far as possible, to live in the present.</p>
+<p>Here too, we can think of that sentry. If that sentry starts running after a person who has already passed his guard post, he will not be able to perform the duty belonging to his office. By directing full attention within a brief moment and inspecting them, he understands the situation and lets that person go. He then stands ready for the next person. A skilled and clever sentry is always ready for whoever arrives. In the same way, one who has well-established mindfulness understands each and every incoming object in its true nature—in its true nature as impermanent (*anicca*), suffering (*dukkha*), and not-self (*anattā*)—and lets them go. Why does he let them go? Because they are things that have the nature of constantly coming and going, things of an impermanent nature. Understanding the impermanent as impermanent—this is indeed through direct experience. By practicing mindfulness in this way, that wisdom gradually develops. Wisdom means understanding. It is by understanding, on this basis, that everything existing in the entire world is of an impermanent nature that one is able to realize Nibbāna. For there exist perverted views in the world. These are called *vipallāsa*—four perverted views are spoken of: taking the impermanent (*anicca*) as permanent; taking the foul (*asubha*) as beautiful; taking what is characterized by suffering (*dukkha*) as pleasant; and taking what is not-self (*anattā*) as self. It is within these four perverted views that the world lives. The Buddha declares that it is because of these four perverted qualities called *vipallāsa* that beings wander long in this saṃsāra. The path of living in accordance with wisdom—by turning away from this perverted state, turning away from delusion, from bewilderment, and from ignorance—is what is called the Four Establishments of Mindfulness (*satipaṭṭhāna*).</p>
+<p>This is not something that costs much. It costs nothing at all. However, one has to make a certain sacrifice. Regarding the things that the world—or rather, the pompous, ostentatious world—usually thinks of as important and valuable, and regarding the values one personally attributes to them, one must reconsider them and arrive at a Dhamma-compliant conclusion concerning them, as well as about the way one's life is being spent. Now, even though the Buddha described this lifespan as a single moment, people generally divide this life, this one brief moment, and set aside a portion, saying, "This is the final part of my life." They think that activities like listening to sermons, meditating, and keeping precepts are for the final stage of life. But the Buddha constantly reminds us of diligence (*appamāda*), and of the fact that the time of death is uncertain. On one occasion, to arouse spiritual urgency, the Buddha spoke a certain verse:</p>
+<p>*Ajjeva kiccamātappaṃ*</p>
+<p>*ko jaññā maraṇaṃ suve*</p>
+<p>*na hi no saṅgaraṃ tena*</p>
+<p>*mahāsenena maccunā*</p>
+<p>—*Bhaddekaratta Sutta, Majjhima Nikāya*</p>
+<p>Strive today itself; who knows if death will come tomorrow? For there is no bargaining with Death (*Maccu*) and his great army. One cannot enter into a treaty with Death (*Māra*) and his great host, can one? One cannot say, "Give me a little time until I am free from my children, until I retire from my job, because I couldn't perform other meritorious deeds—meaning, I couldn't practice meditation, I couldn't set aside time." One cannot make a contract with Death (*Māra*) in that way. That is the reality that prevails in the world. Therefore, a wise human being who is born during the period of a Buddha's appearance in this long saṃsāra, in a region where they can hear the Dhamma and live in accordance with it, must regard this entire life as a single moment.</p>
+<p>So that moment—that is precisely why the Buddha said the world states, "The world is bound to the moment, the world is bound to the moment." Everyone says that this world is a place where one works on time. Even today, in a city, we hear this all the time. In offices and other places. Where worldly work is done, the talk is always of efficiency and promptness. When traveling in vehicles, there too, the talk is of promptness. Yet, when it comes to the journey of the Dhamma, the journey in the Dispensation, or meditation, there is no such urgency. Such is the state of affairs in the world. The Buddha's vision is quite different. In short, to establish that mindfulness, we may sometimes have to perform even our daily activities slowly. Diligence (*appamāda*) in the Dhamma means bringing forth mindfulness regarding these very activities. Thus, to bring forth mindfulness, especially in the beginning, one may have to carry out one's postures and activities slowly, like a sick person. Why? Because sense-objects flood in with great rapidity. When these are brought through a narrow gate and made to pass one by one, managing them is easy. For this reason, performing everything slowly, one must gradually gain a deep understanding of them. But if we look at the life stories of those wealthy people holding high positions who are deemed "successful" in daily life, that is not how they have spent their lives. Clinging to a vast array of tasks, losing sleep, and committing various offenses, they have simply accumulated wealth. Yet, the Dhamma does not speak of such things. Leaving behind that vast accumulation of wealth, turning toward a simpler attire, and living by the principle of "simple living and high thinking," one should—even with difficulty—observe the precepts on a poya day or a holiday. Setting aside time for that, one must personally test the truth of the Dhamma proclaimed by the Buddha. One must personally put it into practice. If one spends even a single day in that manner, one can gain an entirely different experience compared to the experiences gathered over a whole lifetime. That is why the Buddha declared this Dhamma as "*paccattaṃ veditabbo viññūhi*"—to be personally realized by the wise.</p>
+<p>You lay devotees often hear and recite the six qualities describing this Dhamma. "*Svākkhāto*"—well-proclaimed is the Dhamma. Why is it said to be well-proclaimed? This Dhamma is said to be properly proclaimed not merely because the Buddha's Dhamma is sweet, nor only because those words and that teaching are perfectly complete, but because in a deep sense, it is "well-proclaimed" (*svākkhāto*) because one can obtain the results by practicing it. "*Durakkhāta*" means poorly proclaimed. The Buddha stated that in a poorly proclaimed Dhamma, dispensation, or religion, it is the lazy person who lives in comfort. But in a well-proclaimed (*svākkhāta*) Dhamma, one that is properly preached, the Buddha declares that it is the energetic person who lives in comfort. This is a profound idea. That is to say, in a teaching preached in a wrong manner, with wrong views, if a person lives properly according to it, he goes to hell. Therefore, the lazy person lives in comfort there. However, in this well-proclaimed Dhamma, it is the energetic person who can live in comfort, who lives happily. The lazy person lives in misery. The person who does not perform today itself what ought to be done—that task mentioned earlier—will regret it. They will suffer in this life, and they will suffer on their deathbed. Then, in an even more terrifying manner, as expressed by "*nirayamhi samappitā*", they will fall into hell and have to suffer. Furthermore, they will have to seek the help of living relatives, visible or invisible, in various ways. It is because such a state of affairs exists in saṃsāra, in the world, that the Buddha delivered these teachings on many occasions. Such is the quality of "well-proclaimed" (*svākkhāto*) in this Dhamma.</p>
+<p>"*Sandiṭṭhika*" means that by practicing this Dhamma, one can personally experience and test its efficacy in this very life, in a directly visible manner. The Nibbāna spoken of in the Buddha's Dhamma is not something to be obtained only in a future world. In almost all other teachings, the ultimate goal, the highest attainment, is presented as a state to be reached only after death. Our Buddha alone declared that in this very life—"*diṭṭhe'va dhamme*" means in this present life—the bliss of Nibbāna can be realized, and the ending of the suffering (*dukkha*) of saṃsāra can be accomplished right here. Thus, in that higher sense, it is not only the realization of the paths and fruits of Stream-entry and so forth; even in daily life, as we mentioned earlier, a person who sets aside even a single day, performing movements slowly, maintaining a suitable meditation subject, and testing the truth of those teachings in accordance with that meditation subject, can develop faith (*saddhā*) in the Buddha in a single day. This is not a faith found merely in books, but one arising from within oneself, thinking: "The Buddha has indeed preached such a Dhamma!" That is *sandiṭṭhika* (directly visible). Next, "*akālika*" means that this Dhamma has the nature of yielding results without delay. It is not like a gift that is awarded. In some worldly matters, when someone achieves a certain status, they are given a prize; one has to present one's credentials and wait until the prize is awarded. There is no such thing here. The result comes immediately upon the fulfillment of these conditions. The Buddha demonstrated this in both very simple and very profound ways. He explained it in a simple way when a certain Brahmin asked. He inquired: "Venerable Sir, what is the meaning of *sandiṭṭhika*, *akālika*, and *ehipassika*?" The Buddha explained it to him in a way that he could understand, even from his perspective as a Brahmin. "Now, Brahmin, let us say you have greed (*lobha*) regarding something. If, by putting in some effort and understanding the value of generosity, you remove that greed—at that very moment, do you not realize, 'Because of that greed, I suffered so much; now, because I have given up that greed, I have received this much peace'? That is what is meant by *sandiṭṭhika* and *akālika*. The result is obtained right there; there is no need to wait. It is the same with hatred (*dosa*). Now, you get angry with someone; you arouse hatred. When that hatred arises, your face changes completely, becomes distorted, and you suffer a certain pain and dejection because of that hatred. If you remove that hatred through thoughts of loving-kindness (*mettā*) and compassion (*karuṇā*), at that moment a great peace is obtained. You experience it right there. It is the same with delusion (*moha*). If, when delusion arises, you act with established mindfulness, and perform the reflection properly at that moment, the benefit of that wisdom is present right there. This is how it is in a general sense." When viewed in a deep sense, simultaneously with the fulfillment of the Noble Eightfold Path, the fruit of Stream-entry is attained. The Buddha does not have to come and say, "Here, I grant you Stream-entry." There is no such thing. It is declared there that it is inherent in the Dhamma itself, obtained by practicing the Dhamma. "*Akālika*"—it yields results without delay.</p>
+<p>"*Ehipassiko*" means "come and see." It invites one to come and look. It is not the Buddha who says "come and see," but the Dhamma itself. This Dhamma cries out, "Put me into practice and see." Thus, it is the Dhamma that is *ehipassiko* here. "Come and see"—"Come and look, practice and see." It makes an invitation in this manner. "*Opanayiko*" means that the nature of this Dhamma is such that one factor leads to another in a wonderful manner, in accordance with the law of cause and effect. Now, anyone can understand this easily. If a person who held wrong views listens to the Dhamma from the Buddha to develop right view, understands good arguments, understands wholesome and unwholesome actions, and gains some understanding of the Four Noble Truths—at that point, right view (*sammā-diṭṭhi*) arises in that person to a certain extent. Along with that right view, wholesome thoughts arise in him: "Renunciation is good; leaving behind (*nekkhamma*) is good; non-harming is good; loving-kindness is good." In that direction, thoughts of loving-kindness, wholesome thoughts of that nature, arise. That is right intention (*sammā-saṅkappa*). This is why the Buddha declares: "*sammādiṭṭhissa sammāsaṅkappo pahoti*"—in one of right view, right intention, wholesome thoughts, arise naturally, effortlessly, and spontaneously. In that way, instead of remaining bound by stinginess in the household life, ordination—that renunciation (*nekkhamma*)—is seen as something highly valuable. Likewise, turning away from violence and maintaining thoughts of non-harming and compassion is seen as highly valuable. Turning away from hatred, thoughts of loving-kindness. In this way, through thoughts, that person reaps benefits at that very moment. Here lies "*opanayiko*"—it leads from one stage to another. In one of right view, right intention arises. In one of right intention, appropriate, wholesome speech issues from the mouth. Truthful speech, speech that unites others, gentle speech, and speech in accordance with the Dhamma issue from his mouth. Thus, "*sammāsaṅkappassa sammāvācā pahoti*"—in one of right intention, of wholesome thoughts and aspirations, wholesome speech issues forth precisely because of those wholesome thoughts. Next, "*sammāvācassa sammākammanto pahoti*"—the person who purifies their speech thinks: "I maintain thoughts of renunciation, loving-kindness, and non-harming in this way. That is how I purify my thoughts, and that is how I purify my speech. Therefore, actions like killing living beings, stealing, and sexual misconduct are not fitting for me." Thus, he naturally abstains from them as well. Thereafter, it is not merely a matter of doing this for a day or two, but one shapes one's livelihood—one's lifestyle—according to it, even if some sacrifice is required. Thinking, "These are not things to be observed occasionally only on poya days. I must align my entire livelihood, my whole way of life, with this path," that person makes an effort and refines his right livelihood (*sammā-ājīva*)—a proper way of living. And the person who has established a proper way of living, through his endeavors, next exerts right effort (*sammā-vāyāma*). True effort does not mean engaging in some physical labor until one sweats profusely. What is true energy? It is remaining highly attentive to the mind, preventing unwholesome states that are about to arise, abandoning unwholesome states that have already arisen, bringing forth wholesome states, and consolidating those wholesome states that have arisen within oneself. This is the fourfold effort. This is the energy that arises in a person who makes a certain sacrifice in their livelihood to establish a righteous way of living. Then, through that very effort, as he applies it, he naturally falls into the aforementioned establishments of mindfulness (*satipaṭṭhāna*); the Four Establishments of Mindfulness are fulfilled. For that person is constantly attentive to his own mind, and to the body that acts in accordance with that mind. The body and the mind function in connection with each other. The ordinary person is subordinated to the body and ignores the mind. The Buddha shows that the mind is the forerunner, in accordance with the Dhamma: "*mano pubbaṅgamā dhammā*." Now, in the book called the Dhammapada, presented as the opening for many verses proclaimed by the Buddha, as the door to that treasury of gems, is: "*Mano pubbaṅgamā dhammā, mano seṭṭhā manomayā*"—mind is the forerunner of all things, mind is supreme, they are mind-made. No one can disprove this. Not even a worldly scientist can disprove this. Such is this wonderful teaching. For this reason, the Buddha gave priority to the mind. The Buddha declared: "*cittena nīyati loko*"—the world is led by the mind. It is through the mind that the world thinks about these things. The scientist does his work in the laboratory with the mind. Thus, everything is led by the mind. Even going to the moon is done by the mind. Everything is done by the mind. Some people might misunderstand these things and interpret them in a perverted way. But what is present here is that the mind is primary in everything. That statement made by the Buddha is eternally true: "*cittena nīyati loko*." That is why the Buddha gives priority to the mind.</p>
+<p>If that proper vision called right view arises in one, the lineage of Dhamma factors arising from there is what is called the Noble Eightfold Path. The Buddha has declared that this practice is superior to all other paths in the entire world. There are all kinds of broad paths in the world, paths where one can travel in comfortable vehicles, various kinds of paths. However, the Buddha declares: "*maggānaṭṭhaṅgiko seṭṭho*"—the path with eight factors is the best. In that way, when this mindfulness is fulfilled through the Four Establishments of Mindfulness, concentration (*samādhi*) naturally grows within such a person. By applying the mind to a single object, just as that sentry applies mindfulness well to each arrival, a certain concentration arises within him, even if only for a brief moment. Thereafter, he is able to sustain it for a longer duration. It is through the fulfillment of this Noble Eightfold Path that one can realize this noble Dhamma of Nibbāna, be freed from all the suffering (*dukkha*) of saṃsāra, and find peace in the deathless bliss of Nibbāna.</p>
+<p>Therefore, today is a very valuable poya day. It is the day the Buddha set the Wheel of Dhamma in motion. Thus, we must strive to set this Wheel of Dhamma in motion within our own mental continuums to escape from this aforementioned mass of suffering (*dukkha*). Today, on this precious day, you have established yourselves in your respective precepts, or in a noble virtue, and have listened to the Dhamma in this manner for about an hour. During this time, you may have been able to realize those aforementioned Dhamma principles to some extent, according to your own store of merit and capacity of wisdom. In short, had you spent this time on other things, on worldly matters, such a peaceful and pure group of thoughts would not have arisen. The value of the Dhamma, in terms of being *sandiṭṭhika* and *akālika*, must be understood accordingly.</p>
+<p>Now, by listening to the Dhamma for this long, you lay devotees have gathered a great store of merit. As a benefit, you can realize at this very moment those qualities declared by the Buddha: faith (*saddhā*), energy (*viriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*). With a certain measure of faith, followed by corresponding energy, you have remained in this posture during this time, established mindfulness accordingly, listened to the Dhamma, and experienced a certain degree of concentration. If a certain understanding of the Dhamma has arisen, wisdom has developed through it. Reflecting in this way, you must firmly resolve to travel along this path of Dhamma, gradually, step by step, and derive the maximum benefit possible from this human life—the maximum benefit from this opportune moment. Making such a resolution, you should aspire: "By the power of the great merits accumulated through listening to the Dhamma, may I gain the strength and power to realize the deathless supreme Nibbāna in this very life, as quickly as possible, through the paths and fruits of Stream-entry, Once-returning, Non-returning, and Arahantship."</p>
+<p>Likewise, we must share this accumulated store of merit—the store of merit accumulated by both of us through preaching and listening to the Dhamma—with the devas. May the assembly of devas who protect the Dispensation, and whatever deities reside in this sacred place, joyfully appreciate these merits! May they all realize the supreme deathless Nibbāna through whichever of the three states of awakening (*bodhi*) they have aspired to! May they protect us and the Dispensation! In the same way, may all departed relatives, and all beings from Avīci up to Akaniṭṭha who desire merit and desire Nibbāna, appreciate this merit of our preaching and listening to the Dhamma! Having appreciated it, may they be freed from all suffering (*dukkha*) states and reach happy states, and practicing meditation as quickly as possible, find peace in the supreme deathless Nibbāna! With this aspiration, recite these verses to share the merit:</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_002.html" class="doc-btn">← Previous Sermon (002)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_004.html" class="doc-btn">Next Sermon (004) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

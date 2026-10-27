@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 057 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_056.html" class="doc-btn">← Previous Sermon (056)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_058.html" class="doc-btn">Next Sermon (058) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 057</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_057_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_057_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_057_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #57</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.89)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Paṇṇavīsati vassāni, bhagavantaṃ upaṭṭhahiṃ; Mettena kāyakammena, chāyāva anapāyinī. Paṇṇavīsati vassāni, bhagavantaṃ upaṭṭhahiṃ; Mettena vacīkammena, chāyāva anapāyinī. Paṇṇavīsati vassāni, bhagavantaṃ upaṭṭhahiṃ; Mettena manokammena, chāyāva anapāyinī.</p>
+<p>From:</p>
+<p>Ānanda Thera – Theragāthā</p>
+<p>Dear Listeners,</p>
+<p>The greatest spiritual friend (*kalyāṇa-mitta*) who has ever appeared in the world is that Blessed, Arhat, Fully Self-Awakened Buddha. To constantly associate with and serve that Blessed One is an immense blessing. In this Buddha-dispensation, that fortune belonged to Venerable Ānanda. For about twenty years, the Buddha did not have a permanent attendant. It is mentioned that monks such as Nāgasamāla, Sāgata, Meghiya, Upavāṇa, and Nāgita served the Buddha from time to time. It is also recorded that some of those monks were disobedient to the Buddha and acted according to their own whims.</p>
+<p>On one occasion, while walking on a long journey with the Buddha, the monk named Nāgasamāla took the bowl and robes, arrived at a fork in the road, and said to the Buddha: "Venerable Sir, this is the path. Let us go by this path." The Buddha replied: "No, Nāgasamāla, this is the path. Let us go by this path." For a second time, the monk Nāgasamāla said: "No, no, Venerable Sir, this is the path." The Buddha rejected it. In this way, even though the Buddha pointed out the correct path three times, the monk Nāgasamāla kept pointing to the other path, and finally, putting down the bowl and robes right there, said: "Here, Venerable Sir, are the bowl and robes," and went along the path of his own preference. But he did not get far. Robbers assaulted him, broke his bowl, tore his robes, beat him, and in the end, he had to return to the Buddha.</p>
+<p>Similarly, another incident is mentioned. When the monk named Meghiya was walking for alms with the Buddha, he saw a beautiful mango grove and wished to go there and meditate. Although the Buddha asked him, "Meghiya, wait until another attendant monk arrives," he disobediently went to that mango grove, saying, "The Blessed One has nothing new to meditate on, but I have meditation to do." However, unable to concentrate his mind, he had to return to the Buddha and explain the matter. Because of incidents like these, on one occasion when the Saṅgha was assembled, the Buddha declared: "Monks, I am now old. Some of the monks who come to serve me, even when told 'this is the path', go on whichever path they please, leaving the bowl and robes on the ground. Therefore, it is good to appoint a permanent attendant." When this idea was expressed, a great sense of spiritual urgency (*dhamma-saṁvega*) arose within the entire assembly of monks.</p>
+<p>The Great Arhat Sāriputta arose and declared to the Buddha: "Venerable Sir, I shall serve the Blessed One." The Buddha declined. Likewise, the Great Arhat Moggallāna and the other great disciples stepped forward individually. The Buddha declined them all. Venerable Ānanda alone remained silent. The other monks said: "Why, Friend Ānanda, do you not request the opportunity to serve?" Venerable Ānanda replied: "What is the use of a position obtained by begging? If I am suitable, the Blessed One himself will say so." Then the Buddha declared: "Monks, Ānanda does not need to make any special effort. Ānanda will serve me, knowing it himself." At this moment, Venerable Ānanda stood up and addressed the Buddha: "Venerable Sir, if the Blessed One grants me these eight boons, I shall serve the Blessed One." What were those boons?</p>
+<p>Although called eight boons, the first four were refusals. What were they? "If the Blessed One does not give me the excellent robes (*cīvara*) received by the Blessed One, I will serve. Likewise, the second: if the Blessed One does not give me the excellent almsfood (*piṇḍapāta*) received by the Blessed One, I will serve. If the Blessed One does not grant me the privilege of residing in the same scented chamber (*gandhakuṭi*) with Him, I will serve. And if the Blessed One does not take me along to the alms-invitations made to the Blessed One, I will serve." These were the four negative conditions (refusals).</p>
+<p>What was the purpose of these? Someone today might say, "If such privileges are received, who wouldn't serve the Blessed One?" There was room for such blame. People might say, "Who cannot do it if one receives robes, requisites, and almsfood from the Blessed One?" That is why he said, "I will serve only if these are refused."</p>
+<p>Next, he presented four other requests to the Blessed One as appeals: "If the Blessed One attends the invitations I accept on behalf of the Blessed One; second, if the Blessed One allows me to arrange meetings for those who come from afar seeking the Blessed One; third, if, whenever a doubt arises in me, the Blessed One permits me to approach Him and clear my doubt through Dhamma discussion; and fourth, if the Blessed One repeats to me every Dhamma discourse preached in my absence—then I am willing to serve."</p>
+<p>Within these four appeals was the intention to acquire the Blessed One's Dhamma, thereby becoming a learned Treasurer of the Dhamma (*Dhammabhaṇḍāgārika*). It was also to avoid the blame of being unable to achieve anything despite associating so closely with the Buddha.</p>
+<p>The Buddha agreed to all eight boons. Having agreed, from that day on, Venerable Ānanda began to serve the Buddha with an extraordinary sacrifice of life, dedication, and affection. Providing tooth-wood, water, massaging the feet and back, attending during illnesses, and serving the Buddha in the same manner throughout the day. It is mentioned that at night, he walked around the scented chamber (*gandhakuṭi*) nine times holding a torch, so that if the Blessed One suddenly called for any reason, he would be ready to respond.</p>
+<p>In this manner, in various ways, he performed loving bodily action, verbal action, and mental action towards the Buddha in a wonderful and friendly way. Indeed, it is this very matter that was expressed in the opening verses. The three verses we placed as our theme are from the Thera Gāthās, which Venerable Ānanda expounded concerning his own life story. They express this very fact: "For twenty-five years I served the Blessed One with loving bodily action, like a shadow that departs not..." and likewise with verbal action and mental action. These three aspects are what are expressed in those verses.</p>
+<p>Thus, while serving with wonderful dedication, by discussing the Dhamma with the Buddha on various occasions and under different circumstances, and by retaining well the Dhamma preached to other groups when it was repeated to him, Venerable Ānanda became a marvelous Treasurer of the Dhamma (*Dhammabhaṇḍāgārika*) of great learning (*bahussuta*).</p>
+<p>Considering all these factors, on one occasion in the midst of the Saṅgha, the Buddha awarded Venerable Ānanda the foremost position (*etadagga*) in five aspects: "Among my disciples of great learning (*bahussuta*), Ānanda is chief. Likewise, among those of great memory (*satimanta*), Ānanda is chief. Next, among those of analytical grasp (*gatimanta*)—meaning the wonderful cognitive ability to connect, synthesize, and expound a Dhamma discourse from one single aspect of the Dhamma—he is chief. Then, among those of steadfast fortitude (*ṭhitimanta*)—which means the strength to stand firm in one's determination and successfully accomplish a task amidst any obstacles—he is chief. Finally, among those who are attendants (*upaṭṭhāka*), Ānanda is chief." Thus, he was declared foremost in five qualities.</p>
+<p>Similarly, it is mentioned in the *Mahāparinibbāna Sutta* that when the Buddha was on his deathbed, Venerable Ānanda's affection and love for the Buddha was so great—since he had only attained the fruit of Stream-entry (*Sotāpanna*) at that time—that he went inside the monastery, clung to the doorpost, and wept, saying: "I am still only a trainee (*Sekha*). I have only reached the stage of a trainee. I still have much work to do to attain Arahantship. And my compassionate Teacher is about to attain Parinibbāna." While he was weeping in grief, the Buddha summoned Venerable Ānanda and consoled him, saying: "Ānanda, do not weep. Do not lament. Have I not told you before that whatever is born of causes, whatever has the nature of arising due to conditions, is subject to decay? It is subject to decay and dissolution. And have I not declared beforehand that there must be separation, alteration, and parting from all that is beloved and pleasing?"</p>
+<p>Saying so, he then praised Venerable Ānanda: "Ānanda, for a long time you have served the Tathāgata with boundless, sincere loving bodily action, wishing for His well-being. Likewise, with loving verbal action and loving mental action. You have accumulated much merit. Therefore, strive on. You will quickly become an Arahant." Thus, the Buddha consoled Venerable Ānanda.</p>
+<p>Thus, having praised Venerable Ānanda, the Buddha further declared: "Ānanda, whatever Worthy and Fully Self-Awakened Buddhas existed in the past, they all had attendant monks just like Ānanda. And whatever Fully Self-Awakened Buddhas arise in the future, they too will have attendants just like Ānanda." Thus, he pointed it out as a natural law (*dhammatā*)—that serving the Buddha is a status to be achieved by fulfilling perfections (*pāramī*).</p>
+<p>Furthermore, he declared: "Monks, Ānanda is wise. Ānanda knows: 'This is the proper time for monks to see the Tathāgata. This is the proper time for bhikkhunīs. This is the proper time for laymen (*upāsaka*) and laywomen (*upāsikā*). This is the proper time for kings, ministers, non-Buddhist ascetics (*tīrthakas*), and their disciples.' Ānanda possesses such deep understanding and wisdom."</p>
+<p>Next, the Buddha declared that there are four wonderful and marvelous qualities in Ānanda. What are they? If a group of monks comes to see Ānanda, they are delighted by his very sight. Furthermore, if Ānanda expounds a portion of the Dhamma to that group of monks, they are highly pleased, and while they are still unsatisfied (desiring more), Ānanda falls silent. That is, he does not preach to the point of causing weariness; while they are still not fully satiated, Ānanda becomes silent. Likewise, the same is true for the group of bhikkhunīs, laymen, and laywomen—this is how the Buddha shows these four wonderful and marvelous qualities regarding the fourfold assembly.</p>
+<p>He then compared this using a simile. "Similar to these four wonderful and marvelous qualities, there are four qualities in a Wheel-Turning Monarch (*Cakkavatti*). If a group of kṣatriyas (royalty) comes to see the Wheel-Turning King, they are delighted by his very sight. If the Wheel-Turning King addresses that group of kṣatriyas, they are delighted by his speech. Then, while they are still unsatisfied, the Wheel-Turning King falls silent. Just as with royalty, so too with the householders, and likewise with the ascetics; every group that comes is delighted by the very sight of the Wheel-Turning King. If he speaks, they are delighted by that too." In this way, comparing him to the wonderful and marvelous qualities of a Wheel-Turning King, the Buddha praised Venerable Ānanda.</p>
+<p>Furthermore, on many occasions, the Buddha praised Venerable Ānanda's state of great learning (*bahussuta*), his wisdom, and his great intelligence.</p>
+<p>He also provided opportunities for Venerable Ānanda to bring forth his own capabilities. One such instance—and such incidents are frequently recorded—is when the Buddha would give a brief discourse to the monks, state a riddle-like sentence, and then get up and retire to his temple. Then, the monks, wishing to understand that sermon in detail and obtain its explanation, would go to Venerable Ānanda and entreat him: "The Blessed One and other co-religionists have often praised the Venerable Ānanda for having the ability to explain such brief discourses in detail. Therefore, please explain this to us in detail." But Venerable Ānanda would humbly say, using a simile: "It is like a man seeking heartwood who, finding a tree with good heartwood, bypasses its roots and trunk and looks for heartwood among the branches; when the Blessed One, the Lord of Dhamma, is present to clarify, why do you ask me?" However, when the monks requested repeatedly, Venerable Ānanda would give an explanation of that Dhamma portion. Having done so, he would say: "This is how it appears to me. If you wish, go to the Blessed One, ask Him, and confirm it." Then, when those monks presented that Dhamma explanation to the Buddha, the Buddha would approve it, saying "Sādhu, sādhu!" and declare: "Monks, if you had asked me, I too would have explained it in the very same way." Thus, He validated and approved it.</p>
+<p>In this manner, the Buddha employed various methods to highlight Venerable Ānanda's competence. Specifically, it is mentioned that on one occasion, the Sakyans of Kapilavatthu built a new assembly hall and invited the Buddha to use it first. The Buddha, together with the Saṅgha and Venerable Ānanda, went there, preached the Dhamma to the Sakyans for most of the night, and then said to Venerable Ānanda: "Ānanda, expound the trainee's path (*sekha-paṭipadā*)—meaning how a Stream-enterer (*Sotāpanna*) should train hereafter—to these Sakyans. My back is aching. I will stretch my back." The Buddha then folded His double-outer-robe into four, laid it down right there in the hall, and lay down. He did not sleep; He merely reclined. Venerable Ānanda delivered a long Dhamma sermon on that subject. Hearing this, the Buddha expressed His approval, saying "Sādhu, sādhu!" and commended Venerable Ānanda's skill.</p>
+<p>Similarly, praises received from Venerable Sāriputta are also recorded. On one occasion, Venerable Ānanda went to Venerable Sāriputta and asked: "Friend Sāriputta, in what way does a monk become one who has heard what he had not heard? And how does he not forget what he has heard? How does he repeatedly bring to mind what has briefly occurred to his mind? And how does he know what he did not know?" When these four questions were asked of Venerable Sāriputta, Venerable Sāriputta said: "The Venerable Ānanda is of great learning (*bahussuta*). May the answer occur to the Venerable Ānanda himself!" Then, after Venerable Ānanda explained it in detail to Venerable Sāriputta, Venerable Sāriputta declared: "This is wonderful, marvelous! The Venerable Ānanda has here declared six virtuous qualities present within himself through this exposition."</p>
+<p>Venerable Sāriputta then said: "Venerable Ānanda thoroughly studies and learns the word of the Buddha, the Teacher’s dispensation, which consists of nine factors: *sutta* (discourses), *geyya* (mixed prose and verse), *veyyākaraṇa* (expositions), *gāthā* (verses), *udāna* (inspired utterances), *itivuttaka* (as-it-was-said), *jātaka* (birth stories), *abbhutadhamma* (marvelous phenomena), and *vedalla* (catechisms). This is the first quality. He expounds that word of the Buddha in detail to others. This is the second. He teaches that word of the Buddha to others. This is the third. He recites those Dhamma portions in detail. This is the fourth. He repeatedly examines and ponders over those various Dhamma portions in his mind, keeping his mind anchored in them. This is the fifth. And Venerable Ānanda has a habit: in whatever monastery or dwelling where monks of great learning, keepers of the Dhamma, and keepers of the Vinaya reside, he goes there, spends the rainy season, and asks them about what he does not understand, saying: 'Venerable Sir, what is the meaning of this? What is that?' He asks and learns. In this way, Venerable Sāriputta explained the secret of Venerable Ānanda’s great learning (*bahussuta*) and praised him in highly appreciative words."</p>
+<p>From this, we can see that Venerable Ānanda, as the Treasurer of the Dhamma (*Dhammabhaṇḍāgārika*) in this Buddha-dispensation, made extraordinary use of his close association with the Buddha alongside his role as attendant. Although Venerable Ānanda declined to reside inside the Buddha’s scented chamber (*gandhakuṭi*), we see that he made his own heart a scented chamber for the Buddha’s virtues. Furthermore, he maintained a Treasury of the Dhamma in his mind for posterity—we must understand that this was for us. We can see that Venerable Ānanda made a tremendous effort to establish this Dhamma Treasury within his own mind.</p>
+<p>Thus, three months after the Parinibbāna of the Buddha, when the Great Arhat Mahākassapa was preparing to hold a Dhamma Council (*Saṅgāyana*) with the aim of preserving the Buddha’s word, five hundred Arhats were to participate. However, only four hundred and ninety-nine (499) Arhats were selected. Why was one seat left vacant? One seat was left because Venerable Ānanda had only attained Stream-entry (*Sotāpanna*) at that time and had not yet become an Arhat. A dilemma arose. Only Arhats must participate. Yet, it was impossible without Venerable Ānanda, and also impossible with him. It was impossible *with* him because he was not yet an Arhat. It was impossible *without* him because Venerable Ānanda held the entire word of the Buddha in his mind. At such a moment, a great challenge arose for Venerable Ānanda for the sake of the Dispensation. The Council was to be held the very next day. Therefore, he resolved, "I must attain this through intense energy." With this hope and determination, it is said that Venerable Ānanda spent most of the day in mindfulness of the body (*kāyagatāsati*), and finally, at night, as he was about to rest, after his feet had left the ground and before his head reached the pillow, in that brief interval—free from the four standard postures—he attained Arahantship. Thus, Venerable Ānanda, utilizing his powers of mindfulness (*sati*) and steadfastness (*ṭhiti*), attained Arahantship at that moment as a support to the Dispensation. Through this, we can see Venerable Ānanda's dedication to the Dispensation.</p>
+<p>There are many lessons we can draw from his life. An attendant of the Buddha could easily enjoy the gains, favors, and offerings received by Him. Yet, what is shown by the boons requested by Venerable Ānanda? "I will serve the Blessed One only if He does not give me the robes, requisites, and almsfood received by Him."</p>
+<p>Through this, he gave a highly valuable example to the world. The Buddha declared an extremely valuable passage to the monks: "Monks, be heirs of my Dhamma (*dhamma-dāyāda*), not heirs of material things (*āmisa-dāyāda*). This is what I expect from you out of compassion." The Buddha declared this in a certain discourse.</p>
+<p>He then explained it in detail as follows: "Suppose I have finished eating my meal and a portion remains. At that point, I could either throw that almsfood onto the ground where there is no grass, or discard it in water where there are no living beings. At that time, suppose two monks who are suffering from hunger arrive. I speak to them thus: 'Monks, I have finished eating. Here is some leftover almsfood. If no one eats it, I will throw it away; eat if you wish.' Then, one monk thinks: 'Now, here is a portion of almsfood left over after the Blessed One has eaten. If I do not eat it, the Blessed One will discard it. But the Blessed One has declared this: "Monks, be heirs of my Dhamma, not heirs of material things." Recalling that word of the Buddha, that monk rejects the almsfood and resolves to spend the day in hunger. The other monk thinks: 'Here is some leftover almsfood... If I do not eat it, He will discard it. Therefore, let me eat this food, satisfy my hunger, and spend the day well.' Thinking thus, he eats the almsfood. Ultimately, the Buddha declared: 'Monks, between these two, although the second monk satisfied his hunger with the food I was going to discard, it is the first monk whom I regard as more venerable and praiseworthy. Why? Because that monk's rejection of the almsfood and spending the day in hunger will help him protect and develop noble spiritual qualities in the future, such as fewness of wishes (*appicchatā*), contentment (*santuṭṭhitā*), easy-supportability (*subharatā*), and the practice of effacement (*sallekha*)—the practice of cutting away defilements through ascetic practices (*dhutaṅgas*). That rejection assists him.'" We can understand that Venerable Ānanda, through his own life, provided a living example of the principle taught by the Buddha in this discourse known as the *Dhammadāyāda Sutta*. "I will serve the Blessed One only if He does not give me the robes, requisites, and almsfood received by Him... and if He does not grant me the opportunity to reside together with Him." Through this, we can take a great example. Venerable Ānanda's store of virtues, such as fewness of wishes (*appicchatā*), is mentioned in many places.</p>
+<p>Venerable Ānanda received not only praise but occasionally also criticism and various accusations. On all such occasions, he very humbly accepted his mistakes and never showed anger or hatred. He never engaged in backbiting or carrying tales to the Buddha merely because of his close association. It is shown that he served the Buddha in a wonderfully obedient and humble manner. We must also consider that he had a long-standing familial relationship with the Buddha.</p>
+<p>Looking at this life in terms of this world, Venerable Ānanda's background is recorded as being the son of Amitodana, the Sakyan who was the paternal uncle of the Buddha. He came and ordained along with other Sakyan princes such as Anuruddha, Bhaddiya, Bhagu, Kimbila, and Devadatta. Yet, the Jātaka stories reveal an even deeper, ancient connection with the Buddha. It was due to that attachment, that devotion, and that extraordinary affection that he served the Buddha at the highest level, wishing for His well-being without any duplicity, performing loving bodily, verbal, and mental actions. We should remember Venerable Ānanda’s service as a shadow walking behind the Buddha’s service to the world. On the other hand, we have his virtuous qualities—especially his quality of great learning (*bahussuta*). Although he had only attained Stream-entry (*Sotāpanna*) and was not yet an Arhat, the Buddha and other great elders like Sāriputta referred to Venerable Ānanda using the word "wise" (*paṇḍita*). It is mentioned that due to his great learning (*bahussuta*), he delivered long discourses on many occasions to other monks, non-Buddhist ascetics, laymen, and laywomen, while holding the Dhamma in his heart as the Treasurer of the Dhamma (*Dhammabhaṇḍāgārika*).</p>
+<p>Based on these facts we have declared, we should think of honoring Venerable Ānanda. Today, devotees perform Buddha-pūjās. They perform stupa-worship, Buddha-image offerings, and flower offerings. When doing these, we should think: "What we are doing is a Buddha-service, modeled on the symbol of service that Venerable Ānanda rendered to the living Buddha."</p>
+<p>This also helps in developing faith (*saddhā*). This is revealed even during the Buddha’s time through the account of the Ānanda Bodhi tree in India. According to it, when the Buddha was away on tours, King Kosala, Anāthapiṇḍika, the devout Visākhā, and others had no way of paying their respects and making offerings to the Buddha, so they requested a worshipful object. As a result, it is said that Venerable Ānanda, with the Buddha’s permission, obtained a seed from the Bodhi tree in Gayā and planted the Ānanda Bodhi tree. The very name "Ānanda Bodhi" shows that it was a tribute to Venerable Ānanda, continuing the service he rendered to the Buddha. Through this, we expect to inspire clarity (*prasāda*) in our minds. Just as he said "making my heart a scented chamber," the purpose of Buddhist devotees in performing these services should be to make their own hearts a scented chamber for the Buddha’s virtues. Venerable Ānanda provides an example for this.</p>
+<p>Furthermore, it is mentioned in the *Mahāparinibbāna Sutta* that it was under Venerable Ānanda's guidance, and in response to his questions, that the Buddha explained in detail the honors to be paid to the Tathāgata’s body, the building of stupas, and so forth. Venerable Ānanda repeatedly asked: "Blessed Sir, after the Parinibbāna of the Tathāgata, how should we serve and honor the Tathāgata’s body?" In response to this, the Buddha said that the body should be treated like that of a Wheel-Turning King, and explained the details of constructing stupas. It was according to these instructions that, after the Parinibbāna of the Buddha, the enshrining of relics and the building of stupas began. Therefore, whenever we perform Buddha-worship, we should recall the Buddha-service Venerable Ānanda rendered to the living Buddha and think, "We are doing the very same service, the same duties." Even when performing duties at the temple or the Bodhi tree, these are not things to be considered a hassle; rather, through them, we hope to keep the Buddha alive in our hearts. Therefore, even though nothing belongs to the Buddha now, what do we expect? Clarity (*prasāda*) is a quality that goes along with faith (*saddhā*). Faith (*saddhā*) and respect for the Teacher (*satthu-garava*) towards the Triple Gem are essential. Especially in these times, even our Buddhists run after various other teachers instead of the Buddha. We hear that some have even claimed that other Buddhas have appeared. In this way, there is a condition where faith (*saddhā*) is corrupted. Therefore, we must understand that observing duties and rituals sometimes helps us to generate genuine respect for the Teacher. To follow Venerable Ānanda's example and cultivate faith (*saddhā*) in the Buddha, we must perform activities like stupa-worship and daily duties meaningfully, with the ultimate goal of developing faith (*saddhā*) and clarity (*prasāda*) in our hearts.</p>
+<p>In the *Mahāparinibbāna Sutta*, the Buddha declared that if anyone clarifies their mind through such actions as stupa-worship, that clarity of mind (*cetaso pasāda*) even helps them to attain birth in a heavenly world. This is regarding the next life. But if we consider this life, it is that very clarity (*prasāda*) accompanying faith (*saddhā*) that helps us to establish concentration (*samādhi*) in our minds. For one listening to a Dhamma discourse, the precursor to concentration (*samādhi*) is the clarity (*prasāda*) that arises in the mind, once the hindrances (*nīvaraṇa*) are removed through that clarity. There is an ancient simile of the water-clearing gem (*udaka-pasādaka maṇi*). In those days, when a certain gem was placed in muddy water, the mud would quickly settle to the bottom and the water would become clear. In the same way, faith (*saddhā*) is described as a water-clearing gem. It is to cultivate this that we perform these duties and rituals.</p>
+<p>Just as the Buddha-service symbolizes Venerable Ānanda’s service, we must also recall his service to the Dispensation as the Treasurer of the Dhamma (*Dhammabhaṇḍāgārika*). In the pirith suttas and Dhamma portions we chant, we frequently see the words "*Evaṁ me sutaṁ*." This "*Evaṁ me sutaṁ*" means, "Thus have I heard." Who is this "I"? This "I" is Ānanda. This is because, at the Council, Venerable Ānanda placed himself in the position of the one who heard, saying "Thus have I heard," and declared those Dhamma portions. As a tribute to him, the compiling monks (*saṅgītikāraka*) included those words as well. That is why we begin suttas with "*Evaṁ me sutaṁ*." Some people do not even know the reason for this. Through this, tribute is paid once again to Venerable Ānanda and his role as the Treasurer of the Dhamma.</p>
+<p>Why do we highlight the characters of these disciples? These disciples did not shape their characters in just one lifetime. If we accept this saṁsāric journey, we know we travel in this saṁsāra for a long time. When we speak of the Buddha, we do not think that He accumulated the store of virtues supporting His Buddhahood in just one lifetime, nor that He suddenly attained it by striving for six years or merely by sitting under a tree. A Buddha arises in the world after fulfilling perfections (*pāramī*) in this saṁsāra for a long time, for an unfathomable number of eons. In the same way, the Buddha declared as a natural law (*dhammatā*) that special positions, chief disciple positions, attendant positions, and so forth, are the results of perfections (*pāramī*) and resolve (*praṇidhi*) made while performing meritorious deeds over a long period. That is how great disciples are born into the world. Although they have attained Parinibbāna and are no longer alive today, we must keep their exemplary characters at the forefront and carry this Dispensation forward accordingly. Today, as a tribute of worship, we have brought forward the character of Venerable Ānanda. It is worthwhile to integrate his quality of service and the service he rendered to the Dispensation as the Treasurer of the Dhamma into our own lives to help preserve this Dispensation.</p>
+<p>Furthermore, the Buddha has declared the value of faith (*saddhā*) through the five spiritual faculties (*indriya*) and five spiritual powers (*bala*): *saddhā* (faith/devotion), *viriya* (energy/effort), *sati* (mindfulness), *samādhi* (concentration), and *paññā* (wisdom). We must carefully consider their mutual relationship. Some people think of faith (*saddhā*) as foolishness. But in reality, before turning to any special task, one must have a deep conviction, a certain degree of faith (*saddhā*) in it. For without faith (*saddhā*), energy (*viriya*) does not arise. Now, of all the objects in the world towards which faith (*saddhā*) can be generated, the Tathāgata, the Fully Self-Awakened Buddha, is the most supreme. Thus, when we practice recollection of the Buddha (*Buddhānussati*), we recall the Buddha, and through that, we generate faith (*saddhā*). This came naturally to Venerable Ānanda. To what extent? He mentioned when recounting his life that, although he was only a Stream-enterer (*Sotāpanna*), defilements of sensual lust (*kāma*) did not arise in him, because he spent his time constantly dwelling on the virtues of the Buddha, thinking of the Buddha.</p>
+<p>We can see that faith (*saddhā*) removes the hindrances (*nīvaraṇa*). Faith (*saddhā*) means clarity (*prasāda*). Furthermore, like an elephant’s trunk, it is by using faith (*saddhā*) that one is able to fulfill these spiritual qualities of the Dispensation. Faith (*saddhā*) is described as the seed. It is with faith (*saddhā*) as the seed that other spiritual qualities grow. With faith (*saddhā*) established, one then cultivates energy (*viriya*). What is done by cultivating energy (*viriya*)? Cultivating energy (*viriya*) means applying fourfold effort to remove unwholesome qualities that flow into one’s mind, and to cultivate wholesome qualities. In this way, one exerts energy (*viriya*). When that energy (*viriya*) leaves no room for unarisen unwholesome states, dispels arisen unwholesome states, generates unarisen wholesome states, and consolidates arisen wholesome states, it is through this that mindfulness (*sati*)—the power of memory—emerges. Thus we have *saddhā*, *viriya*, and *sati*. When that mindfulness (*sati*) can be maintained for a considerable time according to one’s determination, that is called concentration (*samādhi*). Within this concentration (*samādhi*), there is a power to gather together the energies that are otherwise wasted in our daily lives through a scattered, distracted mind. This is concentration (*samādhi*). Finally, the concentrated mind helps us to gain a deep understanding of the true nature of the world, the true nature of the body, and the process of arising and ceasing in the world as it exists in the Dhamma of Dependent Co-arising (*paṭiccasamuppāda*). This is called wisdom (*paññā*).</p>
+<p>These are shown as spiritual qualities (*dhamma*) because they must be developed through effort. We know that when a person is born, the five physical senses—eyes, ears, nose, etc.—emerge. They exist, but one cannot realize Nibbāna through them. One must elevate these five spiritual qualities—*saddhā*, *viriya*, *sati*, *samādhi*, and *paññā*—into the position of ruling faculties (*indriya*). "Indriya" means ruler. One turns faith (*saddhā*) into something that has the power to perform a special function. What is that special function? Through that faith (*saddhā*), one removes double-mindedness and doubt (*vicikicchā*). One cannot make this journey while holding onto doubt and double-mindedness. It is with pure faith (*saddhā*) in the Triple Gem that one is able to apply hundred-percent energy (*viriya*). With a hesitant, doubtful mind, one cannot exert energy (*viriya*) with genuine self-sacrifice. That is why faith (*saddhā*) in the Buddha is necessary. Thus, within faith (*saddhā*), there is what is called "resolve" (*adhimokkha*). *Adhimokkha* means releasing, launching. The Buddha states, "Let faith launch forth." If this power of faith (*saddhā*) has launched forth towards the Tathāgata, then one directs oneself to exert energy (*viriya*) without any hesitation. It is through that energy (*viriya*), in the manner described, that mindfulness (*sati*) and other spiritual qualities emerge.</p>
+<p>Therefore, let us reflect that this character of Ānanda also helps us to cultivate these spiritual qualities beginning with faith (*saddhā*). By constantly following behind the Buddha like a shadow and serving Him, he not only secured time for the Buddha’s daily activities, but at the same time, he himself made true use of his association with the Buddha, presenting his problems and questions on various occasions; and it is their answers that we see today as the sutta portions in the Tipiṭaka. Whenever a thought or reflection arose in Venerable Ānanda, he would go to the Buddha and ask, "How is this, Venerable Sir?" The answers given to those are this vast collection of Dhamma portions. It is this vast collection of Dhamma portions that we use today as sutta discourses. Through all of this, we must consider: what do we expect from these Dhamma discourses? It is crossing over from the suffering of saṁsāra (*saṁsāra-dukkha*). The Buddha has shown the path to cross over from saṁsāric suffering as: Right View (*sammā-diṭṭhi*), Right Intention (*sammā-saṅkappa*), Right Speech (*sammā-vācā*), Right Action (*sammā-kammanta*), Right Livelihood (*sammā-ājīva*), Right Effort (*sammā-vāyāma*), Right Mindfulness (*sammā-sati*), and Right Concentration (*sammā-samādhi*).</p>
+<p>Within the Right View (*sammā-diṭṭhi*) of this Noble Eightfold Path, there is also a certain degree of faith (*saddhā*) in the word of the Buddha. Having generated that faith (*saddhā*), as the Buddha declared in the discourse on the elephant footprint simile, one generates a certain degree of faith (*saddhā*) in the Awakening (*sambodhi*) of the Buddha. Without that trust to a certain extent, one cannot walk this path of Dhamma. One would be unable to choose who one’s Teacher is. Having established faith (*saddhā*) in the Buddha as one’s foundation, if one develops the correct vision, the correct view, then from there on, the stream of thoughts that arises—the path-thoughts—constitutes Right Intention (*sammā-saṅkappa*). Through that, one’s speech, action, and livelihood are aligned, and ultimately, by bringing forth concentration of mind, one is able to realize the true nature of the world. Essential for walking this path are the qualities shown by the Buddha: *saddhā*, *viriya*, *sati*, *samādhi*, and *paññā*. These are both spiritual faculties (*indriya*) and spiritual powers (*bala*). When opposing states arise, by recalling faith (*saddhā*), one can conquer doubt, hesitation, and uncertainty (*vicikicchā*). By putting forward energy (*viriya*), one can conquer the mind's shrinking nature and sluggishness. Developing mindfulness (*sati*) helps to eliminate distraction. Then comes concentration (*samādhi*), one-pointedness, and finally wisdom (*paññā*).</p>
+<p>It is by completing these factors that one is able to achieve the highest results on this Dhamma path. Therefore, we must reflect on the spiritual qualities present in the characters of these disciples. While reflecting on them as a tribute of gratitude and worship, we must take the examples we can from them and cultivate these spiritual qualities of the Dispensation within ourselves. It is through this that we can achieve our own liberation and also set an example for others. Even though we might generally think of offerings and rituals as meaningless, within them lie activities related to this Buddha-service. Next, just as Venerable Ānanda did, by retaining these Dhamma portions and constantly using them in a way that assists our liberation, we must put them into practice. It is through these that even the state of great learning (*bahussuta*) helps the longevity of this Dispensation. Through great learning (*bahussuta*), many results are obtained. One gets the opportunity to hear the Dhamma. Especially in an era when there were no books, it is because the monks retained and maintained these as reciters (*bhāṇakas*) through generations that we have received this Dhamma today. Even if we restrict this Dhamma to books and merely print them in books because printing facilities are available, after some time, these will become things that are not understood. Therefore, we must retain this Dhamma in our minds, in our consciousness, in our hearts, repeatedly bring them to mind, examine their meaning (*attha*), and be enthusiastic to protect that Dhamma in our minds.</p>
+<p>Along with that, one's life naturally shapes itself. If one is constantly engaged in something, all one’s thoughts and aspirations remain aligned with it. A person whose mind is engaged in wrong thoughts and wrong views (*micchā-diṭṭhi*) will have all other behaviors aligned accordingly. But when one lives constantly bringing Dhamma portions to mind, reflecting on them, and directing the mind towards them, one is naturally inclined to develop the spiritual qualities present in those Dhamma portions within oneself. Recalling these facts, today these lay devotees—just as the Buddha declared—have received this heritage of the Dispensation, brought down to us by Venerable Ānanda not as an inheritance of material things (*āmisa-dāyāda*) but as an inheritance of the Dhamma (*dhamma-dāyāda*).</p>
+<p>Just as Venerable Sāriputta is referred to as the General of the Dhamma (*Dhammasenāpati*), Venerable Ānanda is referred to as the Treasurer of the Dhamma (*Dhammabhaṇḍāgārika*). The Buddha awarded foremost positions to these various elders for the forward journey of this Dispensation. Thus, the Saṅgha knew: "These monks are special in these particular fields. Therefore, matters related to those can be obtained from those specific monks." In this way, through a certain skillful means, the Buddha provided opportunities for His disciples to demonstrate their special skills and talents to the world.</p>
+<p>As mentioned in that *Sekha Sutta*, in the trainee's path, the Buddha actually might not have had such a severe backache as to require lying down. But He utilized that opportunity to have Venerable Ānanda deliver a long discourse. He rested, saying, "Ānanda, preach the Dhamma to these Sakyan princes." In that way, on various occasions, He preached the Dhamma briefly and retired from the temple to provide opportunities for His disciples to practice their skills. In this manner, every one of us must strive to retain the Buddha’s Dhamma correctly—both its meaning (*attha*) and its phrasing (*byañjana*) as He said, "with meaning and phrasing"—and expound and teach them to others, anchor our minds in them, ask and learn about what we do not understand or what is unclear, and by depositing that Dhamma in our minds and living according to the Dhamma, we can protect this Dispensation. For various wrong views arise due to a lack of correct understanding of the Dhamma. But today, when the phrasing or the letters and order of words in any Dhamma portion declared by the Buddha are changed, their meaning also changes. If the Dhamma is distorted, pronouncing Dhamma passages incorrectly and retaining them incorrectly, their meaning also gradually becomes distorted. That is how the disappearance of the Dispensation occurs. Therefore, considering it as one’s duty, for the longevity of the Dispensation and for the development of one’s own spiritual qualities, one must correctly retain the Dhamma portions, teach them to others, and with genuine faith (*saddhā*), perform the duty of teaching others exactly as heard and exactly as learned (*yathāsutaṁ yathāpariyattaṁ*).</p>
+<p>If we take the character of Ānanda as our example in all of this—the Buddha has declared that failing to worship and praise those who are worthy of worship and praise is a shortcoming. When we reflect in this manner, by constantly recalling the store of virtues of those Great Arhats, taking them as examples for our lives, and through those spiritual qualities, bringing an end to our saṁsāric journey—by bringing the power of those spiritual qualities such as *saddhā*, *viriya*, *sati*, *samādhi*, and *paññā* taught by the Buddha into our minds—may this Dhamma sermon we delivered today, and the meritorious benefits of hearing the Dhamma you have acquired, be a supportive condition to succeed in your own Dhamma-meditation as quickly as possible before the decline of this Dispensation, relying on the association with good spiritual friends (*kalyāṇa-mitta*)! Through that merit, may it quickly and definitely be a supportive condition for your release from all saṁsāric suffering—such as birth (*jāti*), aging (*jarā*), illness, and death (*maraṇa*)—and for finding solace in the supreme, noble, stilled mind (Nibbāna! Wishing that the virtue (*sīla*) kept today and the Dhamma heard definitely be a supportive condition for our supramundane progress, let us recite the verses in this manner:</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_056.html" class="doc-btn">← Previous Sermon (056)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_058.html" class="doc-btn">Next Sermon (058) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

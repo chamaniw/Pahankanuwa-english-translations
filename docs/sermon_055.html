@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 055 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_054.html" class="doc-btn">← Previous Sermon (054)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_056.html" class="doc-btn">Next Sermon (056) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 055</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_055_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_055_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_055_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #55</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.208)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Kena-ssu nivuto loko, kena-ssu nappakāsati; Kissābhilepanaṃ brūsi, kiṃsu tassa mahabbhayaṃ? Avijjāya nivuto loko, icchāya nappakāsati; Taṇhābhilepanaṃ brūmi, dukkhamassa mahabbhayaṃ. Savanti sabbadhi sotā, sotānaṃ kiṃ nivāraṇaṃ? Sotānaṃ saṃvaraṃ brūhi, kena sotā pidhiyyare? Yāni sotāni lokasmiṃ, sati tesaṃ nivāraṇaṃ; Sotānaṃ saṃvaraṃ brūmi, paññāyete pidhiyyare.</p>
+<p>From:</p>
+<p>Parāyana Vagga, Sutta Nipāta</p>
+<p>Dear Listeners,</p>
+<p>The Supreme Buddha, the Teacher of the Three Worlds, introduces the world to us as a place enveloped in ignorance (*avijjā*). The entire Buddhist path of practice is a journey from ignorance (*avijjā*) to wisdom (*vijjā*)—a journey from darkness to light. It is a few verses revealing this fact that we have taken today as our theme. These verses are found in the *Ajita Māṇava Pucchā* (The Questions of the Youth Ajita) in the *Pārāyana Vagga* of the *Sutta Nipāta*. The introductory story of these verses is the account concerning the Brahmin Bāvarī. Briefly stated, Bāvarī was a Brahmin teacher who had mastered the Vedic texts. He left the Kosala country with his sixteen disciples and set out for the far regions of Southern India, known at that time as the *Dakkhiṇāpatha* (Southern Path). He departed in search of 'nothingness' (*ākiñcaññāyatana*), the sphere of nothingness. Having traveled a long distance, this group built a hermitage and resided on the banks of the River Godāvarī, in an area belonging to the King of Assaka. The number of disciples in that hermitage gradually increased, and the surrounding village also became prosperous. The king directed the revenue of that village to this hermitage. However, the Brahmin Bāvarī used those funds from time to time to conduct grand sacrifices.</p>
+<p>On one occasion, after using that revenue to conduct a grand sacrifice, just as the Brahmin teacher Bāvarī returned to the hermitage, a certain visiting Brahmin arrived and demanded, "Give me five hundred coins (Kahāpaṇas)." Then the Brahmin Bāvarī said, "All my wealth for almsgiving has been exhausted. There is no way I can give you five hundred coins." Thereupon, this deceitful Brahmin said, "If you cannot give me what I ask, within seven days your head will split into seven pieces." Because of this curse, the Brahmin Bāvarī became terrified. Seeing him sitting in grief, unable to eat or practice absorption (*jhāna*), a benevolent deity approached Bāvarī to console him, saying, "That deceitful Brahmin does not know what the head is, nor does he know the splitting of the head. That Brahmin has no knowledge regarding this." Then the Brahmin Bāvarī asked the deity, "Do you know what the head is, and what the splitting of the head is?" The deity replied, "I too do not know. Knowledge regarding the head and the splitting of the head is unique only to the Buddhas. The Buddhas are the ones who possess that knowledge." Then Bāvarī said, "If there is anyone on this entire earth who knows this matter, tell me about them." It was then that the deity revealed the news: "Having departed from the city of Kapilavastu, the Lion of the Sakyas, the Savior of the World, has attained Supreme Enlightenment. He is residing in the Kosala country, preaching the Dhamma to the world, fully liberated. Go to that Supreme Buddha and ask this question." The moment he heard the name "Sambuddha" (Fully Enlightened One), the Brahmin's grief was appeased, and his heart leaped with joy. Then he asked, "In which village, province, or city does the Blessed One reside?" The deity replied, "In Savatthi, in the Kosala country."</p>
+<p>Since the Brahmin Bāvarī was very advanced in age, he called his sixteen disciples and said, "A Buddha, a Fully Enlightened One, who rarely appears in the world, has now arisen. Go and meet the Supreme Buddha." When he said this, those disciples asked, "How are we to recognize that he is indeed a Buddha?" Then the Brahmin Bāvarī replied, "In our Vedic texts, there is mention of the thirty-two marks of a Great Man. If those marks are present on a person's body, there are only two paths open to him. If he remains a layman, he will become a Wheel-Turning Monarch (*Cakkavatti*). If he goes forth into homelessness, he will attain Supreme Enlightenment. When you go and meet the Buddha, ask him these questions in your mind: ask about my age, my clan, my learning, the marks on my body, and the number of my disciples. Ask these mentally. Furthermore, ask mentally about the head and the splitting of the head. Since the Buddha possesses unobstructed knowledge and vision (*anāvaraṇa-ñāṇa-dassana*), he will answer the questions asked mentally with spoken words."</p>
+<p>That group of disciples set out on the long journey from the *Dakkhiṇāpatha*. There were sixteen disciples in this group: Ajita, Tissa Metteyya, Puṇṇaka, Mettagū, Dhotaka, Upasīva, Nanda, Hemaka, Todeyya, Kappa, Jatukaṇṇī, Bhadrāvudha, Udaya, Posāla, Mogharāja, and Piṅgiya. As this group completed their long journey, the Buddha was at the Pāsāṇaka Shrine in Magadha, preaching to the Sangha. Having climbed that hill, the youth Ajita asked in his mind the questions entrusted to him by the Brahmin Bāvarī. First, he asked about Bāvarī himself. The Buddha answered in words: "The Brahmin Bāvarī is one hundred and twenty years old. His clan name is Bāvarī. There are three of the thirty-two marks of a Great Man on his body. He is a master of the Vedas. He has five hundred disciples." He explained in this manner. The listening crowd was astonished at how the Buddha could declare these things without any verbal question being asked. After that, the chief disciple, Ajita, asked the specified question in his mind. The Brahmin Bāvarī asks: "What is the head, and what is the splitting of the head?" It was then that the Buddha declared this in a verse:</p>
+<p>> *Avijjā muddhā ti jānāhi,*</p>
+<p>> *vijjā muddhādhipātinī,*</p>
+<p>> *Saddhā-sati-samādhīhi,*</p>
+<p>> *chanda-vīriyena saṁyutā.*</p>
+<p>That verse declares: "Know that ignorance (*avijjā*) is the head. The splitting of the head is wisdom (*vijjā*). That wisdom (*vijjā*) is accompanied by faith (*saddhā*), mindfulness (*sati*), concentration (*samādhi*), desire (*chanda*), and energy (*vīriya*)." The moment this verse was uttered, the sixteen disciples, headed by Ajita, prostrated with great devotion at the feet of the Buddha, declaring that Bāvarī and his disciples paid homage to the Blessed One. When they said this, the Buddha blessed them, wishing that Bāvarī as well as his disciples may be happy. He gave a special blessing to the youth Ajita: "May you too be happy! May you live long!" Then he invited them: "If Bāvarī or any of you have any questions, ask them. I will answer." It was at that moment that the chief disciple Ajita presented his questions through the verses we chose as our theme. In this *Pārāyana Vagga*, the questions of all sixteen disciples and the answers given to them by the Buddha are recorded in a very profound manner. The question asked by the youth Ajita is what we took as our theme.</p>
+<p>> *Kena-ssu nivuto loko,*</p>
+<p>> *kena-ssu nappakāsati,*</p>
+<p>> *Kissābhilepanaṁ brūsi,*</p>
+<p>> *kiṁsu tassa mahabbhayaṁ.*</p>
+<p>By what is the world enveloped?</p>
+<p>Why does it not shine?</p>
+<p>What is its sticky smear?</p>
+<p>What is its great terror?</p>
+<p>Now, the Buddha answers:</p>
+<p>> *Avijjāya nivuto loko,*</p>
+<p>> *vevichā pamādā nappakāsati,*</p>
+<p>> *Jappābhilepanaṁ brūmi,*</p>
+<p>> *dukkhaṁ assa mahabbhayaṁ.*</p>
+<p>The world is enveloped by ignorance (*avijjā*).</p>
+<p>Because of stinginess and negligence, it does not shine.</p>
+<p>Craving (*taṇhā*) is its sticky smear, I declare.</p>
+<p>Suffering (*dukkha*) is its great terror.</p>
+<p>Then, the youth Ajita asks another question:</p>
+<p>> *Savanti sabbadhī sotā,*</p>
+<p>> *sotānaṁ kiṁ nivāraṇaṁ,*</p>
+<p>> *Sotānaṁ saṁvaraṁ brūhi,*</p>
+<p>> *kena sotā pithiyyare.*</p>
+<p>Streams flow everywhere.</p>
+<p>What is the dam for these streams?</p>
+<p>Tell me the restraint for the streams.</p>
+<p>By what are the streams shut off?</p>
+<p>Now, the Buddha answers:</p>
+<p>> *Yāni sotāni lokasmiṁ,*</p>
+<p>> *sati tesaṁ nivāraṇaṁ,*</p>
+<p>> *Sotānaṁ saṁvaraṁ brūmi,*</p>
+<p>> *paññāy’ete pithiyyare.*</p>
+<p>Whatever streams of craving (*taṇhā*) there are in the world,</p>
+<p>Mindfulness (*sati*) is their dam, their prevention.</p>
+<p>I declare it to be the restraint of the streams.</p>
+<p>But by wisdom (*paññā*) they are completely shut off.</p>
+<p>Thus, the questions and the answers given by the Buddha have been declared. Now, we have to say something about this. You must have understood, devout friends, that these verses mainly speak about ignorance (*avijjā*) and craving (*taṇhā*), which we frequently encounter. Anyone who knows the Dhamma has read about these factors in various places. Particularly in the *Anamatagga Saṁyutta*, the statement made by the Buddha regarding ignorance (*avijjā*) and craving (*taṇhā*) is indeed wonderful.</p>
+<p>*"Bhikkhave, saṁsāro anamataggo, pubbā koṭi na paññāyati avijjānīvaraṇānaṁ sattānaṁ taṇhāsaṁyojanānaṁ sandhāvataṁ saṁsarataṁ..."*</p>
+<p>"Monks, this saṁsāra is without discoverable beginning. A first point is not discerned of beings hindered by ignorance (*avijjā*) and fettered by craving (*taṇhā*) faring on and running through saṁsāra." It is impossible to see a starting point for this running and wandering in saṁsāra, enveloped by ignorance (*avijjā*) and bound by craving (*taṇhā*). The Buddha also indicates in some places that a beginning limit of ignorance (*avijjā*) cannot be shown by saying, "Prior to this, ignorance (*avijjā*) did not exist, and it arose only thereafter." It is because of these two—ignorance (*avijjā*) and craving (*taṇhā*)—that beings wander for such a long time in saṁsāra. Next, it was mentioned here that the world is enveloped by ignorance (*avijjā*). What is this world? What is this world!! Let us try to understand what "the world" means according to the Dhamma and according to common usage. Today, many people talk about the world. But although they talk about it, those who do not even have an understanding of the world often express various opinions. The Buddha introduces the world to us. He points it out in various suttas. On one occasion, the Venerable Samiddhi asks the Buddha:</p>
+<p>*"Loko, loko’ti, bhante, vuccati. Kittāvatā nu kho, bhante, loko vā assa lokapaññatti vā’ti?"*</p>
+<p>"Venerable sir, it is said 'the world, the world.' To what extent, venerable sir, is there a world or a description of a world?" Then the Buddha says:</p>
+<p>*"Yattha kho, Samiddhi, atthi cakkhu, atthi rūpā, atthi cakkhuviññāṇaṁ, atthi cakkhuviññāṇatabbā dhammā, atthi tattha loko vā lokapaññatti vā."*</p>
+<p>"Where there is the eye, Samiddhi, where there are forms, where there is eye-consciousness (*viññāṇa*), where there are things to be cognized by eye-consciousness (*viññāṇa*), there is the world or the designation of the world." In this manner, the world is described based on the six sense bases: eye, ear, nose, tongue, body, and mind. Similar analyses are found in many places. On one occasion, Venerable Ānanda addresses the monks and states: *"Yena kho, āvuso, lokasmiṁ lokasaññī hoti lokamānī, ayaṁ vuccati ariyassa vinaye loko."* "That by which one is a perceiver of the world and a conceiver of the world, friend, is called the world in the discipline of the Noble Ones." By what does one become a perceiver and a conceiver of the world? By the eye, ear, nose, tongue, body, and mind. By these. We understand that the world is that which is contained within the sixfold sense base (*saḷāyatana*), where the sixfold sense base (*saḷāyatana*) begins.</p>
+<p>Next, to gain a deeper understanding of this, let us present a valuable story. In the *Aṅguttara Nikāya*, in one place, a Brahmin named Verañja used a few derogatory words to insult the Buddha. The Buddha elevated every word to a new meaning, turned it toward the Dhamma, and cleansed the filth from that word. One word used by this Verañja Brahmin was: *"Apagabbho samaṇo Gotamo"* (The ascetic Gotama is devoid of embryonic growth/sterile). He meant a bad birth, born from a foul womb—something like an abusive term in modern times. Then the Buddha said, "Yes, that is true. I am indeed *apagabbha*. I will not undergo birth in a mother's womb again. Therefore, what you said is correct." But he did not stop there. He gave a novel simile: "Brahmin, suppose a hen has eight, ten, or twelve eggs and sits on them properly. If one of those chicks is the first to break through the eggshell with its claw or beak and come out safely, what would you call that chick, Brahmin—the youngest or the eldest?" The Brahmin replied, "Master Gotama, I would call it the eldest." "In the same way, Brahmin," the Buddha connected, "among those beings who are enveloped by ignorance (*avijjā*), imprisoned inside the eggshell of ignorance (*avijjā*), I am the very first to break through that eggshell and come out. Therefore, I am the eldest in the world."</p>
+<p>Based on this, we can contemplate: what is the eggshell? What is the eggshell? The eggshell in which the entire world is trapped is the eggshell of the sixfold sense base (*saḷāyatana*) that we mentioned earlier. Everyone, including scientists, is trapped inside this. Then, what does it mean to break the eggshell and come out? It is to become world-transcending (*lokuttara*). Everyone talks about the experience limited to this eggshell. This is what scientists talk about, and what everyone knows. But the Buddha points out another side. Even when there is the cessation of the sixfold sense base (*saḷāyatana-nirodha*), there is a certain experience. That is indeed the coming out of the eggshell. Liberation is there. Nibbāna is there. Think about it from that perspective. We have provided a deeper meaning of ignorance (*avijjā*) and the world from that.</p>
+<p>Next, let us speak about craving (*taṇhā*). Often, when speaking about craving (*taṇhā*), the word *lepa* (smear/glue) is used; sometimes it is called *visattikā*. *Visattikā* means a sticky substance. The quality of binding is also what is found in the fetters (*saṁyojana*). Thus, ignorance (*avijjā*) veils, and craving (*taṇhā*) adheres, or binds. Sometimes we refer to these two as the father and mother of saṁsāra. It is through these two that this entire suffering (*dukkha*) of saṁsāra is accumulated. When we look at Dependent Arising (*paṭicca-samuppāda*), we see that starting with 'dependent on ignorance' (*avijjā-paccayā*), craving (*taṇhā*) is found in the middle. Whichever way you look at it, these two are the main factors.</p>
+<p>On one occasion, in the *Satipaṭṭhāna Saṁyutta*, the Buddha gives another valuable simile showing this sticky nature of craving (*taṇhā*). "Monks, there are level regions in the Himālaya mountains where both humans and monkeys roam. In such a region, a monkey-catcher sets a sticky trap of pitch to catch monkeys. Suppose the pitch is smeared on a piece of wood or a tree trunk. It must be a tasty pitch for monkeys. The Buddha states that those monkeys who are not greedy and have some understanding will see the pitch from afar and keep away. But a greedy and foolish monkey comes along, sees the pitch, and catches it with one hand. It gets stuck. He tries to free it with his second hand. That too gets stuck. He brings a foot close to free the hand. That too gets stuck. He brings his second foot. That too gets stuck. After that, he brings his mouth close to free his hands. That too gets stuck. Now, when he is stuck in five places, the monkey-catcher comes, shoots him, and carries the monkey away along with the piece of wood." What does this simile represent? The five cords of sensual pleasure. The five cords of sensual pleasure are just like that, the Buddha points out through this simile. That sticky nature is well illustrated by this simile. This entire suffering (*dukkha*) is prepared within these two. *Jappābhilepanaṁ brūmi* (Craving is the sticky smear in which the world is stuck).</p>
+<p>Next, the greatest fear in the world is suffering (*dukkha*). The suttas on Dependent Arising (*paṭicca-samuppāda*) also show us how suffering (*dukkha*) is prepared—how this entire mass of suffering (*dukkha*) is prepared. Beginning with ignorance (*avijjā*), joined by craving (*taṇhā*), these two combine to finally prepare the entire five aggregates of grasping (*pañcupādānakkhandha*). That is what was shown in the main points of the first verse. Next, another nature of craving (*taṇhā*) is mentioned. The youth Ajita asks: *Savanti sabbadhī sotā*—"Streams flow everywhere. How are they to be dammed?" This is the question he asks. Those streams are sometimes described as being thirty-six in number: *Yassa chattiṁsatī sotā, manāpasavana bhūsā* (He whose thirty-six streams flow strongly towards pleasant things). This is explained as follows: the streams of craving (*taṇhā*) flow through the senses of eye, ear, nose, tongue, body, and mind towards their respective objects. When these six are multiplied by the three types of craving—craving for sensual pleasures (*kāma-taṇhā*), craving for becoming (*bhava-taṇhā*), and craving for non-becoming (*vibhava-taṇhā*)—they become eighteen. When multiplied by the two aspects of internal and external, they become thirty-six. Some commentaries show that when multiplied by the three periods of time—past, future, and present—they become one hundred and eight. How are these one hundred and eight streams of craving (*taṇhā*) to be dammed? This is Ajita's question. The Buddha says: by mindfulness (*sati*). It is by mindfulness (*sati*). *Sati nivāraṇaṁ* (mindfulness is their dam). That is why you can understand, devout friends, why the Buddha has given such a prominent place to the four establishments of mindfulness (*cattāro satipaṭṭhāna*) as the direct path (*ekāyana maggo*). This mindfulness and wisdom (*paññā*) are indeed the most practically important things among these teachings. There are many other suttas revealing the importance of mindfulness (*sati*). We point each of these out so that you may ponder deeply upon them.</p>
+<p>On one occasion, a Brahmin named Unṇābha came to the Buddha and asked: "These five faculties—eye, ear, nose, tongue, and body—have different domains and different pastures. That is, the eye is for seeing forms and cannot do what the ear does. The ear cannot see forms. In this way, their respective pastures—what is called the objective field—are different. The pasture of the eye is form; forms are the pasture of the eye. Sounds are the pasture of the ear, and so on. The pasture fields of these five are different. Then, Master Gotama, what is the resort (*paṭisaraṇa*) for these pastures brought in by the five sense faculties? Where do they go and gather?" The Buddha replied: "The mind (*manas*)." You can contemplate this, devout friends. What is brought from these five external sense bases gathers in the mind (*manas*). Then he asks another question: "What is the resort (*paṭisaraṇa*) of the mind?" The Buddha's answer to this is mindfulness (*sati*). The resort of the mind is mindfulness (*sati*). This goes even further. From an ordinary point of view, it seems as if there is no problem, but the entire Dhamma is contained within this. Next, he asks: "What is the resort of mindfulness?" The resort of mindfulness is liberation (*vimutti*). "What is the resort of liberation?" The resort of liberation is Nibbāna. There the discussion ends.</p>
+<p>From this we see how important mindfulness (*sati*) is. Once what is brought by the body-senses comes to the mind, some control can be exercised over them through mindfulness (*sati*). That is why in so many suttas you have heard, especially when describing sense restraint, mindfulness (*sati*) is depicted as a gatekeeper (*dvārapāla*). It is said, "guarded as to the doors of the faculties" (*indriyesu guttadvāratā*). It is the job of a gatekeeper to let in suitable people and close the door when unsuitable people arrive. In other places, mindfulness is described as "the protecting charioteer" (*sati-ārakkha-sārathī*). There are occasions where this is shown through the simile of a chariot. The charioteer who drives the chariot, the one engaged in guarding, the gatekeeper—in this manner, the function of mindfulness (*sati*) is shown. It provides protection to the mind. That is why mindfulness is shown to be so important in this verse. But the last line can sometimes be a problem. Mindfulness (*sati*) only does the damming. It only temporarily blocks the flowing streams. This is completely, thoroughly shut off by wisdom (*paññā*). There lies the problem.</p>
+<p>What is this wisdom (*paññā*)? How does this wisdom (*paññā*) shut off all these streams? From there, let us go a bit deeper. Now we declared the story of the head and the splitting of the head. That indeed is the basis of this entire sermon. Then, ignorance (*avijjā*) was said to be the head. The splitting of the head means the shattering of ignorance (*avijjā*). How is ignorance (*avijjā*) shattered? It is through the shattering of ignorance (*avijjā*) that wisdom (*vijjā*) emerges. When ignorance (*avijjā*) ceases, wisdom (*vijjā*) arises. Wisdom (*vijjā*) means realization. When speaking about realization, the topic of wisdom (*paññā*) arises. Wisdom (*paññā*) is shown as a light in some places. We mentioned being trapped inside an eggshell. It is only after breaking the eggshell and coming out that one sees things as they truly are. To the one trapped inside the eggshell, nothing beyond is visible. That is why wisdom (*paññā*) is described in a wonderful manner. In some places, wisdom (*paññā*) is shown as an eye. You may have heard of the fleshly eye, the divine eye, and the wisdom eye. Everyone has the fleshly eye (*maṁsa-cakkhu*). Next is the divine eye (*dibba-cakkhu*), which is attained by sages and those who have attained absorptions (*jhāna*). Even higher than that is the wisdom eye (*paññā-cakkhu*) introduced to the world by the Buddha. There is a certain passage describing wisdom (*paññā*) and how that wisdom eye is brought to light:</p>
+<p>*"Udayatthagāminī paññā ariyā nibbedhikā sammā dukkhakkhayagāminī."*</p>
+<p>"The noble, penetrative wisdom (*paññā*) that goes to the rise and fall [of phenomena], and leads to the complete destruction of suffering (*dukkha*)." The seed of this wisdom (*paññā*), or its beginning, starts in a manner suited to the realization of the yogi. It is the wisdom (*paññā*) that sees the arising and passing away of things. The world stands on the side of arising (*samudaya*). Generally, cessation (*nirodha*) is not within their domain. The worldling disregards cessation and constantly goes from arising to arising. That is what is called craving (*taṇhā*). It leads to renewed existence (*ponobbhavikā*), pulling and sticking from existence to existence. The primary function of wisdom (*paññā*) is to bring to light the veiled cessation (*nirodha*). Its primary aspect is that the yogi understands the arising and passing away of this world—its impermanence (*aniccatā*)—through these two words. We can call it *samudaya-vaya* (arising and passing away). We can call it *udayatthagama* (rise and fall). This is the nature of preparations (*saṅkhāra*).</p>
+<p>> *Aniccā vata saṅkhārā,*</p>
+<p>> *uppādavayadhammino,*</p>
+<p>> *Uppajjitvā nirujjhanti,*</p>
+<p>> *tesaṁ vūpasamo sukho.*</p>
+<p>"Impermanent (*anicca*) indeed are preparations (*saṅkhāra*), subject to rise and fall. Having arisen, they cease; their calming is bliss." Everything is contained right there. It is not something that happens after death. "Impermanent indeed are preparations (*saṅkhāra*)"—every preparation (*saṅkhāra*) is impermanent (*anicca*). "Subject to rise and fall"—their nature is arising and passing away. "Having arisen, they cease"—they arise only to cease. "Their calming is bliss"—that is the very thing that leads to wisdom (*paññā*), the path leading to cessation (*nirodha*).</p>
+<p>In some places, that wisdom (*paññā*) is shown as a light. These may sometimes be a problem for someone. They might think of these statements made by the Buddha in various places as mere similes. There are many similes for light. It is called *ābhā* (radiance); it is called *pabhā* (splendor). There is a sutta that some do not take very seriously, thinking of it merely as something beautifully said: *"Catasso imā, bhikkhave, pabhā. Katamā catasso? Candappabhā, sūriyappabhā, aggippabhā, paññāpabhā. Etadaggaṁ, bhikkhave, imāsaṁ catunnaṁ pabhānaṁ yadidaṁ paññāpabhā."* "There are these four splendors, monks. Which four? The splendor of the moon, the splendor of the sun, the splendor of fire, and the splendor of wisdom (*paññā*). Among these, the splendor of wisdom (*paññā*) is supreme." All other splendors are surpassed by this splendor of wisdom (*paññā*). One can understand that this is not a statement made lightly. We said that this is a journey from ignorance (*avijjā*) to wisdom (*vijjā*), a journey from darkness to light. That light is contained within the word *paññā*. It is called the lamp of wisdom (*paññā-pajjoto*). In many places describing the direct experience of the Arahants, the final mention is:</p>
+<p>*"Paññāya tassa disvā āsavānaṁ parikkhayaṁ gacchati."*</p>
+<p>"Having seen with wisdom (*paññā*), his influxes are completely destroyed." It is because of this that we said these flowing torrents of craving (*taṇhā*) cannot be completely shut off by mindfulness (*sati*) alone. It must be done by wisdom (*paññā*) itself. Because the word *āsava* (influx/canker) also contains the meaning of "flowing." As long as the influxes are not destroyed, liberation is not complete. It is only when those influxes are destroyed that everything is completed. This light, the light of wisdom (*paññā*), is an internal light. That light, as mentioned here, surpasses the splendor of the moon and the sun. There is a verse related to this, which scholars have discussed for a long time, at the end of the *Bāhiya Sutta*:</p>
+<p>> *Yattha āpo ca paṭhavī,*</p>
+<p>> *tejo vāyo na gādhati,*</p>
+<p>> *Na tattha sukkā jotanti,*</p>
+<p>> *ādicco nappakāsati,*</p>
+<p>> *Na tattha candimā bhāti,*</p>
+<p>> *tamo tattha na vijjati.*</p>
+<p>></p>
+<p>> *Yadā ca attanāvedi,*</p>
+<p>> *muni monena brāhmaṇo,*</p>
+<p>> *Atha rūpā arūpā ca,*</p>
+<p>> *sukhadukkhā pamuccatī’ti.*</p>
+<p>This stands as a great riddle-like verse. After the ascetic Bāhiya Dārucīriya attained Arahantship instantly and passed away (*pariNibbāna, the Buddha uttered this extremely profound verse as an inspired utterance (*udāna*). This matter is expressed subtly within it.</p>
+<p>"Where water, earth, fire, and wind find no footing." In which consciousness (*viññāṇa*)? Everyone is established within these great elements (*mahābhūta*), but they do not reside, they find no footing, in that mind. In such a state: "There the stars do not shine." "The sun does not shed its light." "The moon does not beam." What is the reason? Within that splendor of wisdom (*paññā*), all those objects that give light to the world are rendered lusterless. The world sees things through a medium. To see, they need a medium. In the night, they need starlight, or they need moonlight, or they need sunlight. Otherwise, they need fire—which includes electricity, and so forth. It is through such light that we see. But when the light of wisdom (*paññā*) comes, those other lights are made lusterless. The moon, sun, and stars all lose their luster. That is what we have to say, because those things are not caught up in that state. That splendor of wisdom (*paññā*) at the moment of release from the sixfold sense base (*saḷāyatana*) is what is called the destruction of the influxes. "Having seen with wisdom (*paññā*)"—having seen through that wisdom, the influxes are destroyed. That is liberation.</p>
+<p>The word wisdom (*paññā*) coming after mindfulness (*sati*) becomes extremely important. Some explain this in various ways. A good proof of this is mentioned in the *Ajita Māṇava Pucchā* itself. After receiving answers to those verses, the youth Ajita asks the Buddha: "Where does Name-and-Form (*nāmarūpa*) cease completely?" (*Nāmañca rūpañca, asesaṁ uparujjhati*). At that point, the Buddha says: "With the cessation of consciousness (*viññāṇa-nirodha*), it ceases completely" (*Viññāṇassa nirodhena, uparujjhati*). Two words are mentioned there: cessation (*nirodha*) and complete cessation (*uparodhana*). Cessation of consciousness (*viññāṇa-nirodha*) means that the prepared consciousness (*abhisaṅkhata-viññāṇa*), the un-Arahant consciousness, exists depending on Name-and-Form (*nāmarūpa*). When that prepared consciousness (*saṅkhata-viññāṇa*) which existed depending on Name-and-Form (*nāmarūpa*) ceases, that state is called the unmanifestative consciousness (*anidassana-viññāṇa*). That consciousness (*viññāṇa*) does not show Name-and-Form (*nāmarūpa*). That unmanifestative consciousness (*anidassana-viññāṇa*) is indeed the state of the liberated mind. There, the moon, sun, etc., find no place. At the conclusion of the sutta, something similar is said:</p>
+<p>*"Viññāṇaṁ anidassanaṁ, anantaṁ sabbato pabhaṁ..."*</p>
+<p>"Consciousness (*viññāṇa*) that is non-manifestative, infinite, radiant all-round; here water, earth, fire, and wind find no footing; here long and short, fine and coarse, pleasant and unpleasant [Name-and-Form cease completely]." In this manner, the verse goes on. That is, that unmanifestative consciousness (*anidassana-viññāṇa*), the consciousness (*viññāṇa*) that does not manifest Name-and-Form (*nāmarūpa*), is that liberated mind. It is infinite (*anantaṁ*); there are no limits such as long or short. "Radiant all-round" (*sabbato pabhaṁ*)—it is luminous in every way. That is the reason. Because it is luminous in every way, this is a state where everything the world regards as light-giving objects is rendered lusterless. That is why it was said that the moon, sun, etc., do not shine. What is obtained from this is not the meaning obtained from ordinary words. The light of wisdom (*paññā*) is not something external. It is something that comes from within. In the presence of that light of wisdom (*paññā*) that comes from within, the entire world of Name-and-Form (*nāmarūpa*) ceases, or is completely stopped. That completely stopped state is what exists in the attainment of the fruit of Arahantship (*arahattaphala-samāpatti*). We have pointed out the relevant suttas on various occasions. If the sixfold sense base (*saḷāyatana*) is the world, then the cessation of the sixfold sense base (*saḷāyatana-nirodha*) is the world-transcending (*lokuttara*) state. It is the moment of breaking through the eggshell and coming out. It is not the vision thought of by the ordinary world. That vision is an entirely open vision; it exists within that open mind. What is put together is called the prepared (*saṅkhata*). Name-and-Form (*nāmarūpa*) is a prepared thing. If we are to say a little more about how it is made, we have explained these to some extent in sermons on Dependent Arising (*paṭicca-samuppāda*).</p>
+<p>The twelve factors of Dependent Arising (*paṭicca-samuppāda*), as we all know, begin indeed with ignorance (*avijjā*). But as we have pointed out, within that darkness of ignorance (*avijjā*), a certain preparation (*saṅkhāra*) is made. We can say that preparation is like groping in the dark. Through that groping in the dark, the worldling makes that preparation (*saṅkhāra*). Sometimes it is shown as follows. The most basic preparation (*saṅkhāra*) necessary for existence (*bhava*) is inhalation and exhalation. Inhalation and exhalation are what give the feeling of self and world. The breath taken in is something taken from the external world. Having taken it in, it is given back to the world. Right there, one is caught up in the world. Inhalation and exhalation are indeed described as "bodily preparation" (*kāya-saṅkhāra*), in the context of "dependent on ignorance, preparations arise" (*avijjā-paccayā saṅkhārā*). Next is "verbal preparation" (*vacī-saṅkhāra*); people in the world use words to live, to exchange ideas. But beneath that are initial and sustained mental application (*vitakka-vicāra*), which are described as preparations (*saṅkhāra*). Before uttering a word, if it is a question, one thinks for a long time before uttering the word. Think of it in such situations.</p>
+<p>The Buddha did not refer to *kamma* there as *saṅkhāra*, but to the extremely subtle aspect of preparations (*saṅkhāra*). Inhalation and exhalation—these too belong to existence (*bhava*). Existence is right there. Taking a breath in, one tries to hold it. When it is gone, one quickly takes another breath. Craving (*taṇhā*) is right there. Ignorance (*avijjā*) is right there. In order to protect this internally grasped body, thoughts (*vitakka-vicāra*) are used, and words are uttered through them. Next, "mental preparation" (*citta-saṅkhāra*) is feeling and perception (*saññā vedanā*). It is because of perception (*saññā*) and feeling (*vedanā*) that intentions, etc., are prepared, and we are prompted to act. What is done by those preparations (*saṅkhāra*) against the background of ignorance (*avijjā*)? Through them, consciousness (*viññāṇa*) and Name-and-Form (*nāmarūpa*) emerge as two. Consciousness (*viññāṇa*) means discrimination. One person's consciousness (*viññāṇa*) is different from another's consciousness (*viññāṇa*). Even if all else is equal, when looking at it in terms of consciousness (*viññāṇa*), it is an extremely personal thing. The world is reflected in consciousness (*viññāṇa*) as Name-and-Form (*nāmarūpa*). We have pointed this out. It is recognized through the mental phenomena (*nāma-dhamma*) of feeling (*vedanā*), perception (*saññā*), intention (*cetanā*), contact (*phassa*), and attention (*manasikāra*), along with the great elements of earth, water, fire, and wind. Consider that as humans, the experience we derive from those feelings, perceptions, and intentions is not shared by animals, or by birds, or by creatures in the water. They have a different world. Their world of the sixfold sense base (*saḷāyatana*) is different. That is why the Buddha always described the world in terms of the sixfold sense base (*saḷāyatana*). The Buddha showed the world through the personal sixfold sense base (*saḷāyatana*) of each individual being, because the origin of the world and the cessation of the world are right there. When speaking about the cessation of the world, this is the kind of thing that is found there. The prepared (*saṅkhata*) is constructed between Name-and-Form (*nāmarūpa*) and consciousness (*viññāṇa*).</p>
+<p>Next, "dependent on Name-and-Form, the sixfold sense base arises" (*nāmarūpa-paccayā saḷāyatanaṁ*). We called that duality which arose between consciousness (*viññāṇa*) and Name-and-Form (*nāmarūpa*) "the two." A split into two. That is also present within the sixfold sense base (*saḷāyatana*). The sixfold sense base (*saḷāyatana*), devout friends, means the six sense bases, which go in pairs: eye and form, ear and sound, and so forth. So much so that on one occasion the Buddha declared: "Monks, I will teach you the dyad. What is the dyad? The eye and forms, the ear and sounds, the nose and odors, the tongue and tastes, the body and tactile objects, the mind and mental phenomena." Then the Buddha makes a challenge: "Monks, if anyone should say there is another dyad in the world apart from this, it would be empty chatter." This shows that this is the dyad. It is through the conflict between these two that the aggregates are accumulated. The eye clings to forms, or conflicts with them. The ear clings to sounds, and so on. Next, through that, *kamma* is accumulated.</p>
+<p>We spoke about Name-and-Form (*nāmarūpa*): feeling (*vedanā*), perception (*saññā*), intention (*cetanā*), contact (*phassa*), and attention (*manasikāra*). Remember the simile of the five fingers we gave. We said feeling (*vedanā*) is the little finger, perception (*saññā*) is the middle finger, next is contact (*phassa*) which comes to dispute, the index finger, and finally the thumb is attention (*manasikāra*). We showed in various ways that the journey towards this wisdom (*paññā*) begins with radical attention (*yoniso manasikāra*). We illustrated this through various similes. Even if we look at it legally, using stories from the world, if there is no witness, a court case must be dismissed. This problem between consciousness (*viññāṇa*) and Name-and-Form (*nāmarūpa*) was like a court case without a witness, which even the ancient sages of the deep past could not resolve. How to understand consciousness (*viññāṇa*)? It is through consciousness (*viññāṇa*) itself that everything is presented to us. How to understand it? It was there that the Buddha applied the middle path. He made one of the defendants a witness. Who is the biggest culprit? Attention (*manasikāra*). Having pardoned that inappropriate attention (*ayonisomanasikāra*) which, combining ignorance (*avijjā*) and craving (*taṇhā*), committed this crime, he turned it into radical attention (*yoniso manasikāra*), saying, "You tell us the internal story." In the Dhamma, radical attention (*yoniso manasikāra*) means doing things in the proper manner, and it is based on this that one travels on the path of wisdom (*paññā*).</p>
+<p>The passing away, the cessation (*nirodha*), which is invisible to the ordinary world, is seen correctly as impermanence (*aniccatā*) by the noble disciple, the yogi. What the ordinary world calls "impermanent" is when something that existed decays, is discarded, and another is taken. The world does not know any impermanence (*aniccatā*) deeper than that. The Buddha showed that this is a wisdom (*paññā*) that penetrates. Why did he call it penetrating? *Ariyāya nibbedhikāya* (noble and penetrative)—the moment something arises, one sees that its nature is to be destroyed. There lies the penetration. The world's side is the side of arising (*samudaya*). Forgetting cessation (*nirodha*), they highlight only arising (*samudaya*). Within that, they stick things together, one to another, through craving (*taṇhā*). Instead of that, the yogi highlights cessation (*nirodha*), though with difficulty, through the two aspects of arising and passing away. Therein lies liberation. Because if everything that arises ceases, no permanent stance can be taken there. It cannot be taken as "me" or "mine." That penetration is what is called penetrative wisdom (*nibbedhikā paññā*). Gradually, through that impermanence (*aniccatā*), the mind arises, and cessation (*nirodha*) comes to the fore. Because if everything that has arisen ceases, that is what the mind must be applied to. Liberation is also there. Many scholars today distinguish this path leading to cessation (*nirodha*) by putting the prepared (*saṅkhata*) on one side and the Unprepared (*asaṅkhata*) on the other. But this is where it lies. That consciousness (*viññāṇa*) we spoke of is a prepared consciousness (*abhisaṅkhata-viññāṇa*), a consciousness (*viññāṇa*) that manifests Name-and-Form (*nāmarūpa*). If on some occasion, having developed disillusionment towards Name-and-Form (*nāmarūpa*) in that manner, the meditator contemplates the preparations of Name-and-Form (*nāmarūpa-saṅkhāra*)—the objects that come to the eye, ear, nose, tongue, body, and mind are described as Name-and-Form preparations (*nāmarūpa-saṅkhāra*). Within the objects that come to them, there are indeed those feelings (*vedanā*), perceptions (*saññā*), intentions (*cetanā*), contact (*phassa*), and attention (*manasikāra*), and the great elements grasped by them are right there. In any object, whether form or sound, if on some occasion one sees their impermanent (*anicca*), suffering (*dukkha*), and unsubstantial (*anattā*) nature and frees the mind from them, then indeed arises "non-manifestative consciousness" (*viññāṇaṁ anidassanaṁ*), the consciousness (*viññāṇa*) that does not reflect Name-and-Form (*nāmarūpa*). Therein lies that liberation. That indeed is the splendor described as "radiant all-round" (*sabbato pabhaṁ*).</p>
+<p>A truly wonderful sermon. What the Buddha has shown here is the difference between the world and the world-transcending (*lokuttara*) state. Generally, most people explain the world-transcending (*lokuttara*) state—for example, when an Arahant passes away (*pariNibbāna—by saying that they go and are born in some place where there is no sun, moon, or stars. That is how it has been understood for a long time. But the depth lies here. That is the great wisdom (*paññā*) that comes from within. It is unmediated. The world generally sees through a medium, by moonlight, by starlight. This is not like that. It is a splendor that comes from within. What is shown through that splendor? The emptiness (*suññatā*) of the world. How to see the emptiness (*suññatā*) of the world? When light comes from all sides (*sabbato pabhaṁ*). Suppose there is something transparent like a piece of glass. If a great light shines on it, it reaches a state where it becomes invisible. In the same way, if one sees deeply the nature of this prepared (*saṅkhata*) world that the world has conjured up, on some occasion the mind becomes liberated. It is through that liberation that Nibbāna is spoken of. What is the result there? It is only as long as consciousness (*viññāṇa*) is bound that there is a future birth. The liberated mind is sometimes described as an island. It is often said that when Arahants are absorbed in the attainment of the fruit of Arahantship (*arahattaphala-samāpatti*), they do not hear even a thunderbolt. That is the state of release from the sixfold sense base (*saḷāyatana*). That is experiencing the bliss of Nibbāna in this very life.</p>
+<p>Next, at their final moment, that direct experience we spoke of comes to the fore. What is the reason? Even during their lifetime, if they had gained an experience of the deathless (*amata*), if that person had attained the direct realization that there is no fear of death when craving (*taṇhā*) is destroyed, even when death approaches, what arises at that moment is the attainment of the fruit of Arahantship (*arahattaphala-samāpatti*) registered in that mind. It is said that Buddhas and Arahants finally pass away (*pariNibbāna through an absorption (*jhāna*). But the depth lies in this: from that absorption (*jhāna*), they then enter that attainment of the fruit (*phala-samāpatti*). Breaking through the absorption (*jhāna*), and having entered the attainment of the fruit (*phala-samāpatti*), Buddhas and Arahants let go of the body. That is why, as we described on previous occasions, Arahants like Dabba Mallaputta are recorded to have set fire to their own bodies and attained *parinibbāna*. That is not like lighting a fire in modern times. It is like letting go of a garment and setting fire to it; having put the body aside through their attainment of the fruit of Arahantship (*arahattaphala-samāpatti*), they burned it through the power of the fire-device (*tejo-kasiṇa*). That is a matter showing that liberation. That is why the Buddha even uttered a special inspired verse on that occasion:</p>
+<p>> *Abhedi kāyo, nirodhi saññā,*</p>
+<p>> *vedanā sītirahesuṁ sabbā.*</p>
+<p>> *Saṅkhārā vūpasamiṁsu,*</p>
+<p>> *viññāṇaṁ atthagamā.*</p>
+<p>When the Arahant Dabba Mallaputta set fire to himself and attained *parinibbāna*, there was neither soot nor ash remaining. That indeed was what the Buddha declared as a special inspired utterance. He showed the state of Nibbāna very clearly.</p>
+<p>"The body broke up"—the physical body broke up. "Perception ceased"—perception (*saññā*) was extinguished. "All feelings became cold"—all feelings (*vedanā*) became cool. We might think that when Dabba Mallaputta set fire to himself, he must have felt the heat. No. All feelings (*vedanā*) became cool. "Preparations were stilled"—all preparations (*saṅkhāra*) were calmed. The mind did not go towards a future birth again. "Consciousness came to an end"—consciousness (*viññāṇa*) went to its end, it reached its termination. The entire problem lies within this termination of consciousness (*viññāṇa-atthagama*). For so long, consciousness (*viññāṇa*) goes through saṁsāra with the help of ignorance (*avijjā*) and craving (*taṇhā*), accumulating *kamma*. That is why it is said that the five aggregates of grasping (*pañcupādānakkhandha*) are accumulated. In some places in the Dhamma, it is mentioned that all these problems are resolved through the cessation of preparations (*saṅkhāra-nirodha*). The Buddha declared on one occasion:</p>
+<p>*"Kāye vā, bhikkhave, sati kāyasañcetanahetu uppajjati ajjhattaṁ sukhadukkhaṁ."*</p>
+<p>"Monks, when there is the body, internally pleasure and pain arise due to bodily intention." Similarly, when there is speech, pleasure and pain arise in connection with speech. When there is the mind, the same is declared. All these are said to have ignorance (*avijjā*) as their condition. But finally, it is shown:</p>
+<p>*"Avijjāyatveva asesa-virāga-nirodhā so kāyo na hoti yaṁ-paccayāssa taṁ uppajjati ajjhattaṁ sukhadukkhaṁ... sā vācā na hoti... so mano na hoti... khettaṁ taṁ na hoti, vatthuṁ taṁ na hoti, āyatanaṁ taṁ na hoti, adhikaraṇaṁ taṁ na hoti yaṁ-paccayāssa taṁ uppajjati ajjhattaṁ sukhadukkhaṁ."*</p>
+<p>"But with the remainderless fading away and cessation of ignorance (*avijjā*), that body does not exist conditioned by which that internal pleasure and pain arise; that speech does not exist... that mind does not exist... that field does not exist, that site does not exist, that base does not exist, that ground does not exist, conditioned by which that internal pleasure and pain arise." But through the cessation of ignorance (*avijjā*)—at the beginning we said that because of ignorance (*avijjā*), bodily preparations (*kāya-saṅkhāra*), verbal preparations (*vacī-saṅkhāra*), and mental preparations (*citta-saṅkhāra*) arise. This says that when ignorance (*avijjā*) is completely ceased, there is no body, no words, and no mind. Those are shown as the places where *kamma* was accumulated. Liberation, the state of *parinibbāna*, is shown as something mysterious. That is why there is a truly wonderful sermon of the Buddha. We have delivered separate sermons on these. It is a grand sermon that even foreigners are astonished by. For those who seek liberation elsewhere, this is a great answer:</p>
+<p>*"Imasmiṁ yeva byāmamatte kaḷevare sasaññimhi samanake lokañca paññāpemi lokasamudayañca lokanirodhañca lokanirodhagāminiñca paṭipadaṁ."*</p>
+<p>"In this very fathom-long carcass, endowed with perception (*saññā*) and mind (*manas*), I declare the world, the origin of the world, the cessation of the world, and the path leading to the cessation of the world." Within this carcass, which is endowed with perception (*saññā*) and mind (*manas*)—not a dead carcass, but within this physical frame endowed with perception (*saññā*) and mind (*manas*)—I declare the world, the origin of the world, the cessation of the world, and the path leading to the cessation of the world. It was because of this matter that the Buddha uttered this wonderful lion's roar. Therefore, this wisdom (*paññā*) we spoke of, "the wisdom (*paññā*) that goes to the rise and fall" (*udayatthagāmiṇī paññā*), is where a yogi has to begin. Through the cultivation of the perception of impermanence (*anicca-saññā*), that impermanence (*aniccatā*) is seen in two aspects: arising and passing away. Along that, the mind goes deeper and deeper. It is there that attention (*manasikāra*)—the defendant we made into a witness—finally reveals the story through radical attention (*yoniso manasikāra*).</p>
+<p>As one sees each of these extremely subtly through radical attention (*yoniso manasikāra*), impermanence (*aniccatā*) comes to the fore. Cessation (*nirodha*) comes to the fore. Then, just as existence (*bhava*) grows through that arising (*samudaya*), when cessation (*nirodha*) comes to the fore, right there is the cessation of existence (*bhava-nirodha*). That is what comes to the fore. That is why the Buddha declares almost everywhere: *Bhava-nirodho nibbānaṁ, bhava-nirodho nibbānaṁ*—"The cessation of existence (*bhava*) is Nibbāna." But when the cessation of existence (*bhava*) is mentioned, many people become afraid, because there is such a great craving for existence (*bhava-taṇhā*) within the world. But this cessation of existence (*bhava-nirodha*) is shown as a direct experience. The cessation of existence (*bhava-nirodha*) is a direct experience obtained in this very life. Within it lies the bliss of liberation. If there is suffering (*dukkha*) within existence (*bhava*), where the cessation of existence (*bhava*) is a direct experience, the bliss of liberation is found right there. That is what is meant by experiencing the bliss of liberation. Even a living Arahant experienced that bliss of liberation as a direct realization. That is why, when speaking about Nibbāna, it is said: *sandiṭṭhiko dhammo...* (Dhamma to be realized here and now). It is something that can be attained and seen. Now, do it! It is not something to be obtained after going to the next world. It is in this very life (*diṭṭheva dhamme*). That is indeed concerning Nibbāna. Then, extinguishing or cooling down means, finally, that mass of saṁsāric suffering (*dukkha*). That is it. In various sermons, we highlighted a series of words describing Nibbāna. In applying the mind to Nibbāna as the recollection of peace (*upasamānussati*), that can be used as an aid.</p>
+<p>*"Etaṁ santaṁ etaṁ paṇītaṁ, yadidaṁ sabbasaṅkhārasamatho sabbūpadhipaṭinissaggo taṇhākkhayo virāgo nirodho nibbānaṁ."*</p>
+<p>"This is peaceful, this is sublime, namely, the stilling of all preparations (*sabbasaṅkhārasamatho*), the relinquishing of all assets (*sabbūpadhipaṭinissaggo*), the destruction of craving (*taṇhākkhayo*), dispassion (*virāgo*), cessation (*nirodho*), extinguishment (Nibbānaṁ*)." Within those few words, everything we have said is contained. "The stilling of all preparations" (*sabbasaṅkhārasamatho*)—if all preparations (*saṅkhāra*) have been calmed. "The relinquishing of all assets" (*sabbūpadhipaṭinissaggo*)—assets (*upadhi*) refer to the five aggregates of grasping (*pañcupādānakkhandha*); those accumulated five aggregates of grasping are also relinquished. "The destruction of craving" (*taṇhākkhayo*)—craving (*taṇhā*) is destroyed. "Dispassion" (*virāgo*)—dispassion also refers to Nibbāna itself, that state of detachment. "Cessation" (*nirodho*)—extinguishing. "Extinguishment" (Nibbānaṁ*)—finally, cooling down. If the world is in a state of burning, what the Buddha points out instead of that burning is cooling down. All this is contained within the word Nibbāna. Various meanings were added to this in later times. Indeed, each verse in this *Pārāyana Vagga* is truly wonderful. Those disciples had gone that far, practicing absorptions (*jhāna*), in search of "nothingness" (*ākiñcañña*)—the direct experience of "there is nothing." But having returned, they met the Buddha and obtained "nothingness" (*ākiñcañña*) in its highest sense. The sphere of nothingness is a state of absorption (*jhāna*). This is not like that. It is said: *"Akiñcanaṁ anādānaṁ, etaṁ dīpaṁ anāparaṁ."* "Possessing nothing, grasping nothing, this is the island, there is no other." The Buddha has shown that as an island. It shows the bliss of liberation that exists when all grasping (*upādāna*) is destroyed. It is said that many, including the youth Ajita, became Arahants on the spot upon hearing the answer given by the Buddha. It is truly wonderful. From this, we see how much deep meaning is contained in a single four-line verse. We tried to explain it at our own level. Do not think of these as things that merely pass over the surface. The Dhamma is a profound thing. It can be understood through various similes in a simple way. For one who is engaged in the Dhamma in the present, these are not deep. They are simple. That is what we must take into consideration.</p>
+<p>Today too, you have had the opportunity to listen to a certain insight-oriented sermon that is helpful for your meditation. We hope that you will derive the full benefit of this program of virtue (*sīla*). If you spend your time wandering here and there, talking about other things, you will not be able to properly understand even this Dhamma that is being spoken. Therefore, this group must be more careful. If activities are conducted within a certain schedule of virtue (*sīla*), you must conform to it. Only then can you understand this kind of Dhamma. Otherwise, if you remain talking about useless things, you cannot understand a Dhamma of this nature. I wish that those of you who have undertaken a high standard of virtue (*sīla*) today, walking on the path of Dhamma and applying your minds to it, may gain the strength and power to realize these expected noble goals in this very life!</p>
+<p>From the lowest hell Avīci to the highest heaven Akaniṭṭha, if there are any beings who wish to rejoice in this merit of listening to and preaching the Dhamma, may they, through their rejoicing, find peace in the noble, deathless, supreme Nibbāna through their aspired enlightenment! Recite these verses:</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_054.html" class="doc-btn">← Previous Sermon (054)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_056.html" class="doc-btn">Next Sermon (056) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

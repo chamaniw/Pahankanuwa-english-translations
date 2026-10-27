@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 015 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_014.html" class="doc-btn">← Previous Sermon (014)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_016.html" class="doc-btn">Next Sermon (016) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 015</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_015_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_015_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_015_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #15</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No. )</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Yo ca vassasataṃ jīve, dussīlo asamāhito; Ekāhaṃ jīvitaṃ seyyo, sīlavato jhāyino.</p>
+<p>From:</p>
+<p>Verse 110 from the Sahassavagga (Chapter of Thousands) of the Dhammapada</p>
+<p>Dear Listeners,</p>
+<p>It does not require a long time for a complete transformation to occur in a human life. Sometimes, even a momentary mental revolution can bring about a massive transformation of life, entirely reshaping one's way of living. In this manner, some experience a mental revolution upon witnessing a miracle. Indeed, a miracle is an extraordinary event capable of inducing a special mental revolution in the mind of an individual or a group. The Buddha preached this verse, which we have chosen as our theme, regarding a monk who, through such an extraordinary event, transformed a band of thieves into virtuous people.</p>
+<p>There was a monk named Koṇḍañña who had come to the Buddha and ordained. Having received meditation subjects from the Buddha, he went to a remote forest, meditated, and attained Arahantship. Having realized the truth, he was returning to see the Buddha to report his realization. On the way, due to the fatigue of the journey, he stepped aside from the path, sat on a flat rock near the road, and entered absorption (*jhāna*). That very evening, a band of five hundred thieves, who had plundered a village and were carrying their bundles of booty on their heads, came to that same rock to spend the night. The thieves saw this monk. However, in the darkness, the monk sitting there appeared like a stone pillar. Thinking it was a pillar, one thief placed his bundle of booty on the monk's head. Another thief leaned his bundle against the monk's body. Then, they all lay down and slept around the monk.</p>
+<p>Waking up at dawn and searching for their bundles, they saw the monk and, terrified, thinking he was a demon (*yakṣa*), they all started to run. Seeing the monk sitting there with a bundle still on his head, they were terrified, cried out "It's a demon!" and began to run. The monk called out to them, saying, "Lay devotees, do not be afraid, I am an ordained monk." Due to this incident, a great mental revolution took place within this group. They begged for forgiveness, saying, "Venerable Sir, please forgive us, we thought you were a pillar." Subsequently, the leader of that band of thieves, due to the deep sense of spiritual urgency (*saṁvega*) that arose in him, decided to ordain. He requested of the monk, "Please ordain me." Following their leader's decision, the rest of the gang also decided, "We too must ordain." All five hundred of them requested ordination from the monk. The monk then ordained them. Indeed, ordaining five hundred people is a grand task. Having ordained and trained them, the monk journeyed to see the Buddha. Along with this, a nickname was attached to this monk: "Khāṇu Koṇḍañña." He was originally named Koṇḍañña, and "Khāṇu" means a pillar, due to this incident concerning the pillar. Because of the news spreading about them mistaking him for a pillar, he was nicknamed Khāṇu Koṇḍañña. In this Dispensation, this monk is known by the name Khāṇu Koṇḍañña. This name "Khāṇu Koṇḍañña" is used to distinguish him from the more famous monk, Aññā Koṇḍañña.</p>
+<p>After Khāṇu Koṇḍañña arrived, the Buddha asked him, "How is it, Koṇḍañña, that you have acquired a group of disciples?" Thereupon, the monk related the event. The Buddha then asked the group, "Monks, is this true?" The group replied, "We have never seen such psychic power and majesty in anyone before. Because of that, we felt the desire to ordain." It was on that occasion that the Buddha uttered the verse mentioned earlier:</p>
+<p>*He who should live a hundred years,*</p>
+<p>*unwise and unconcentrated,*</p>
+<p>*yet better is a single day's life*</p>
+<p>*of one who is wise and meditative.*</p>
+<p>The Buddha told this group: "Abandoning the life you led previously—that foolish and sinful life devoid of wisdom—and turning to a good life of developing absorption (*jhāna*) endowed with wisdom, that is what is truly valuable." This is the meaning conveyed by this verse. The Buddha declared that even if one lives for a hundred years without wisdom and without concentration, a single day of life spent developing absorption (*jhāna*) with wisdom is far more valuable. It is recorded that upon hearing this verse and the sermon, all five hundred of them attained Arahantship.</p>
+<p>Now, let us try to extract some points useful for our lives from this verse and the story. In this verse, the Buddha highlighted and compared spiritual values—or rather, Dhamma-conforming values—with worldly values. According to worldly values, living for a hundred years by any means, even unrighteously, without thinking about wisdom, knowledge, absorption (*jhāna*), or concentration, is considered a great thing by society. People say of such a person that they "enjoyed longevity." However, rather than enjoying longevity in this worldly way, the Buddha declared that a single day spent in this Dispensation developing wisdom and absorption (*jhāna*) is more valuable. Rather than living a hundred years without wisdom and concentration, if one lives for just a single day with wisdom, developing absorption (*jhāna*), that one day of life is far more valuable. The Buddha declared this because, in the ordinary world, people often care only about their unrighteous livelihood. They think that as long as one survives somehow, that is all that is required. However, pious devotees, one must reflect with wise attention: when we speak of our human life in general, the greatest and most valuable privilege that is naturally received—received along with human status itself—is the human mind. The greatest work we can do with this human mind is to generate that wisdom which helps to put an end to the suffering of saṁsāra and realize Nibbāna, and to practice the meditation and absorption (*jhāna*) that support that wisdom. This human existence is especially one obtained during a Buddha-era (the period of a Buddha's appearance). A Buddha-era is a time when one gets to hear the Dhamma, has the opportunity to realize Nibbāna, and has the chance to end the suffering of saṁsāra. In a human existence obtained during such a time, we must use the human mind, our greatest privilege, in a way that develops wisdom, concentration, absorption (*jhāna*), and so forth. Yet, most people in the ordinary world spend their lives without any awareness of these things.</p>
+<p>Thus, we can find a great example from this story in the course of action taken by this band of thieves. In fact, in this story, we can consider that there is not just one, but two miracles. One miracle is that of the monk, which, as the Buddha declared, was a miracle performed with wisdom and absorption (*jhāna*)—that is, sitting all night in concentration like a stone pillar. However, the next miracle is the one shown by the chief of the thieves. When there is a group, especially a group of five hundred, there are major challenges in deciding on a course of action and making a wise decision. Yet, what was the courageous decision made by this chief of thieves? He decided to break away from this wrong livelihood—this wrong way of living—which he had led for a long time, and to ordain in the Dispensation. Had there been something like a vote, it would have resulted in a massive entanglement. But this individual possessed a strong desire (*chanda*). When this is called a miracle (*iddhi*), the Dhamma mentions four factors that support the manifestation of miraculous power (*iddhipāda*): desire (*chanda*), energy (*viriya*), mind (*citta*), and investigation (*vīmaṁsā*). Desire (*chanda*) means the wish, the eagerness. Energy (*viriya*) is the effort applied in accordance with that eagerness and wish. Mind (*citta*) is the willpower and determination applied to complete and make that effort successful. Lastly, investigation (*vīmaṁsā*) is the analytical wisdom that helps in doing and succeeding in all of these. It is by relying on these four that one can perform miracles, such as psychic miracles and so forth. Indeed, the bases of power (*iddhipāda*)—power (*iddhi*) meaning success—are the four factors that support it. This chief of thieves possessed a firm determination. Accordingly, having fulfilled the necessary requirements, he was the first to step forward and say, "I must ordain." Consequently, the other followers also decided to change their way of life. This too can be considered a miracle by us.</p>
+<p>In taking an example from this story today, that is precisely how one must act. One must bring forth those bases of power (*iddhipāda*) in accordance with the Dhamma and change one's way of life. Sometimes, due to various saṁsāric defects or karmic defects, certain individuals are inclined toward wrong livelihoods—wrong ways of living. Some have fallen into alcoholism as drunkards. People label them "drunkards." Some are known as violent murderers. Others are labeled "murderers," "thieves," or "criminals." To the extent that such names are attached to them, some have brought their lives to a corrupted state. However, no one should hesitate to change this way of life. If an opportunity arises, one must step forward fearlessly to do so. Sometimes, some people weaken their minds by thinking, "I will be subject to the contempt, insult, and ridicule of others in society who live just like me." Others might weaken their minds by thinking, "Having lived such a life, how can I ordain? Won't others say this and that about me? Won't they slander me?" However, a person with the determination to make use of the supreme privilege obtained through human status—this human mind—and who has wise intentions, does not hesitate at anything. Even if they suffer an economic loss because of it, they change their sinful or wrong courses of action and adapt to a righteous life.</p>
+<p>Now, this Dispensation—the Buddha's Dispensation—is known as a Dispensation of Compassion. Due to the Buddha's great wisdom and great compassion, this Dispensation is known as a Dispensation of Compassion. Why is that? Because among those who ordained and attained Arahantship in this Dispensation, there are great murderers, notorious thieves, and women who led various kinds of bad lives. Many such individuals are found in the history of this Dispensation. It is said that having ordained under the Buddha, they attained the noble state of Arahantship and received worship and offerings even from devas and Brahmās. Therefore, especially the story of Angulimāla can instill great courage in someone who leads a wrong livelihood to reshape their way of life. Just like the story of the notorious thieves here, Angulimāla's story is highly renowned. He was a terrible murderer who killed thousands of people and was famous as such. After he ordained in this Buddha-Dispensation and became an Arahant as Venerable Angulimāla, many people, and sometimes even the monks, talked about it as a great marvel. On that occasion, the Buddha arrived there and expounded a verse—a verse capable of instilling great courage in anyone to reform their way of life:</p>
+<p>*Whose evil deed is covered*</p>
+<p>*by a wholesome deed later,*</p>
+<p>*he illuminates this world,*</p>
+<p>*like the moon freed from a cloud.*</p>
+<p>The Buddha declared: "If the evil deed committed by someone is covered by the wholesome deeds done later, such a person illuminates and sheds light upon the entire world, just like the orb of the moon when freed from dark clouds." Now, when we look at the moon on a full-moon day, it is exceedingly splendid and beautiful. It is even more beautiful when the moon emerges from a dark cloud; it has a special splendor. In the same way, when those who spent their lives committing wrong, black deeds turn toward the bright side, it stands out clearly to the world. It is exceedingly splendid. Just as a bright white dot stands out clearly when placed on a black velvet background, so too, when someone who led a bad life turns toward the good side, it serves as a great example to the world. It becomes an excellent proof demonstrating the power of this Dispensation—this Dispensation of Compassion—and the power of the Buddha's Dhamma. If a person who lived unrighteously, like the chief of thieves, brings about a transformation of life based on a firm determination, akin to a psychic miracle—</p>
+<p>Then, we can see from all these individuals how they ordained and achieved noble states according to the Buddha's Dhamma; when we reflect on this, we cannot discard anyone. Ordinarily, we marginalize people in society, saying that so-and-so lacks education, or is an extremely poor, low-caste, or degraded person. However, if we reflect in the proper manner, saṁsāric intelligence cannot be measured by high or low social status, by being educated or uneducated, or by being rich or poor. Those whose saṁsāric intelligence has matured, who are close to the arising of wisdom, can sometimes be found even among very young children, seven-year-old children, and not only among adults. Likewise, they can be found among the uneducated, those who are illiterate, and among those who are extremely poor and belong to castes deemed low. They can exist among the poor and the outcastes (*caṇḍālas*). When we reflect in this way, good fortune is hidden within all of us. The Dhamma describes this as being like a lamp burning inside a clay pot. Wisdom—the light of wisdom—is not visible to the world. It must be brought out in the proper manner. It does not emerge on its own. One must make an effort oneself. There may be good wholesome karma lying underneath. One must make an effort oneself to bring them out. No matter how great or skilled a lion may be, if the lion just sleeps, animals will not enter its mouth on their own—some effort must be made. In the same way, it is only the energetic and effortful person who can bring about their hidden miracle of merit, their good fortune.</p>
+<p>What is described as good fortune in this Dispensation, or what we should define as Dispensation-based fortune, is the bringing out of this supramundane Dhamma-wisdom, absorption (*jhāna*), and so forth. Attaining those noble supramundane states—Stream-entry, Once-returning, Non-returning, and Arahantship—is what we must consider as good fortune in this Dispensation. Today in society, people exert so much effort to achieve economic fortune. We constantly hear about opportunities to achieve this kind of fortune through loudspeakers. We often see people exhausting themselves to gain economic fortune. However, very few are interested in gaining righteous fortune. We can say that for those who wish to gain righteous fortune, the Poya day is an excellent day. Therefore, we can call it "Poya-day fortune." Very few are eager to acquire this "Poya-day fortune," unlike other worldly fortunes. Yet, if someone reflects on the Poya-day fortune and, on that day, commits themselves to observing the precepts, listening to sermons, and reshaping their life in accordance with the Dhamma, they can bring out that hidden light of wisdom within them. They can generate the mental strength to change their way of life. In this manner, we must be eager to shape our lives righteously.</p>
+<p>We can gain a great example from this story to shape our lives and bring about a mental revolution. Even if we do not delve deeply into the Dhamma preached by the Buddha, reflecting on its basic aspects can generate a great sense of spiritual urgency (*saṁvega*) regarding this saṁsāric state. Animals do not have the capacity to develop wisdom or absorption (*jhāna*) in this way. How miserable is the life led by animals! Furthermore, those who have fallen into the states of demons, hungry ghosts, and the like—sufferers of hell—the Buddha has described all this. This human existence has not been deeded to any of us as a freehold property. This is an extremely valuable opportunity obtained through some merit performed in the past. If we waste this, if we do not take advantage of it, we do not know where we will go next. If we do not free ourselves from the four planes of misery by attaining at least Stream-entry, no matter how luxurious, beautiful, and ostentatious a life we lead, if we engage in evil deeds and lean toward wrong livelihoods, the sins we commit will ultimately cause us to be reborn in the realms of demons, hungry ghosts, and the like. Subsequently, we will have to come back to our relatives and trouble them. Only then will we understand merit and demerit, wholesome and unwholesome deeds. Some adopt an intellectualist stance, engaging in various arguments and debates. They will understand only after they pass away. The true wealth of this world is measured by merit and demerit, wholesome and unwholesome actions. This is the unchanging currency. Other currencies and notes may be valid now, but it is according to this natural law (*dhammatā*) declared by the Buddha that the high or low status of one's saṁsāric life is measured. One goes to high states or low states based on this. Pious devotees who have understood this matter in advance must carefully examine their way of life. Here, we have undertaken the Eight Precepts with Righteous Livelihood (*ājīva-aṭṭhamaka-sīla*). Wrong livelihood (*micchā-ājīva*) is defined here as trading in weapons, breeding animals for slaughter, trading in meat, trading in poisons, and trading in intoxicants. According to social standards, these are things that can make someone rich very quickly. However, because these activities defile the mind, the Buddha declared that we must abstain from these livelihoods and establish a good way of life. Wise devotees must reflect on this.</p>
+<p>Next, what is this wisdom specifically mentioned in this verse? In the Dhamma, this wisdom is described as a gem. The Buddha declared, *"Paññā narānaṁ ratanaṁ"*—"Wisdom is the gem of human beings." Among gems, there is the diamond (*vajra-māṇikya*), which is an extremely powerful gem capable of cutting other gems. This wisdom is like that diamond. Why? Because this wisdom is described as *"nibbedhikā paññā"*—penetrative wisdom. Wherever we look in the world, things appear permanent to us. It is this wisdom that helps us see the impermanent nature of these seemingly permanent things. Everything appears as permanent due to the perception of compactness (*ghana-saññā*)—seeing things as solid wholes. However, these things change with extreme rapidity. Because this change is not seen, we form the misconception that they are permanent, and consequently, we develop intense craving (*taṇhā*) toward them, turn to various crimes and sinful actions, and travel in this saṁsāra for a long time. Therefore, to be able to realize Nibbāna, the impermanent nature of these things that we took to be permanent must be directly realized by ourselves. This direct realization does not come through charms, spells, or inference; it is realized through this wisdom—the light of wisdom. This is a penetrative light. It is an understanding generated from deep within the mind. That understanding does not arise on its own; it is for this purpose that absorption (*jhāna*) and meditation assist us.</p>
+<p>Now, what is done in that meditation as insight (*vipassanā*) which supports wisdom? One begins to observe the impermanent nature of this world—how everything arises and passes away. In the method of mindfulness (*satipaṭṭhāna*), as the Four Foundations of Mindfulness, it is shown how this body, feelings (*vedanā*), the mind, and the thoughts that come to the mind, arise and pass away. These things arise, and then they pass away. For a person who constantly contemplates this arising and passing away, contemplating them frequently with well-established mindfulness and clear comprehension, extremely deep understandings arise. They are not deluded by that seemingly permanent nature visible externally. Someone seeing a banana trunk might think, "This is wood with a solid heartwood." However, one who has a correct understanding of of it knows that it is merely a pile of sheaths. In the same way, the perception of permanence (*nicca-saññā*) regarding everything or all things is shattered and loosened.</p>
+<p>If one constantly contemplates the arising and passing away of everything—concerning this body, our physical postures, our movements to and fro, and so on—it is stated in the Dhamma: *"samudayadhammānupassī vā, vayadhammānupassī vā, samudayavayadhammānupassī vā"* and so forth. That means one dwells contemplating the nature of arising, or one dwells contemplating the nature of passing away, or one dwells contemplating both the nature of arising and passing away. It is by dwelling in this manner, by developing this meditation, that the impermanent nature of these things gradually begins to be understood by oneself. Just as when sharpening a razor, one strokes the razor upward, then downward, and then rapidly upward and downward from both sides to make the razor extremely sharp; in the same way, when developing this insight-wisdom (*vipassanā-paññā*), at times one contemplates the nature of arising, at times the nature of passing away, and then rapidly contemplates both arising and passing away together to refine and develop this vision. It is precisely by doing so that it becomes penetrative wisdom. A person who has developed this does not wait until things disappear to see impermanence; the moment they see something, it is apparent to them that whatever has arisen is of a nature to perish. They have a prior understanding of the impermanent nature of everything. This is what is called wisdom. It is only a person who sees in this manner who can abandon the five aggregates (*pañcakkhandha*). By observing the arising and passing away of the body, feelings (*vedanā*), the mind, and thoughts, and gradually developing that wisdom, one realizes the Four Noble Truths—namely, suffering (*dukkha*), origin (*samudaya*), cessation (*nirodha*), and the path (*magga*). This entire existence is suffering (*dukkha*). Its cause is craving (*taṇhā*). One understands that it is due to this underlying craving (*taṇhā*) that we perceive things as permanent, with the perception of permanence. Next, when this craving (*taṇhā*) is ceased, that state of extinguishing the thirst of craving is peace—that is Nibbāna. It is the Noble Eightfold Path that supports this realization: Right View (*sammā-diṭṭhi*), Right Intention (*sammā-saṅkappa*), Right Speech (*sammā-vācā*), Right Action (*sammā-kammanta*), Right Livelihood (*sammā-ājīva*), Right Effort (*sammā-vāyāma*), Right Mindfulness (*sammā-sati*), and Right Concentration (*sammā-samādhi*). Following this Noble Eightfold Path is how one can realize Nibbāna. The Buddha declared that this wisdom is a light.</p>
+<p>On one occasion, the Buddha declared four kinds of light that exist in the world: the light of the moon, the light of the sun, the light of fire, and the light of wisdom. Among all lights, the light of wisdom is considered the supreme and foremost. Even in what is seen by moonlight, there are shadows. In sunlight, too, there are shadows. Things we think we see clearly through the light of lamps or electricity—we believe we see them perfectly—but indeed, true vision arises only through wisdom, through a certain understanding that comes from within. What is seen through that inner understanding is what can be taken as the truth. Even with sunlight and moonlight, one is sometimes unable to see things as they really are. So, that is regarding wisdom.</p>
+<p>In the same manner, the Buddha spoke about absorption (*jhāna*). Absorption (*jhāna*) means the unification of the mind, making it concentrated. Normally, the mind is mostly scattered. There are five hindrances (*nīvaraṇa*)—namely, sensual desire (*kāmacchanda*), ill-will (*byāpāda*), sloth and torpor (*thīna-middha*), restlessness and worry (*uddhacca-kukkucca*), and doubt (*vicikiccha*). The mind is disturbed either by sensual thoughts or by thoughts of ill-will. Through sensual thoughts, thoughts of ill-will, or due to sleepiness and laziness, the mind is rendered inactive. Or else, due to restless states, worry, and the like, or due to doubts and hesitation, the concentrated nature of the mind is suppressed; the Buddha has declared these occasions.</p>
+<p>On one occasion, the Buddha even expounded similes for removing the mind from those hindrances (*nīvaraṇa*). The disturbance of the mind by sensual thoughts—the Buddha gave the simile of a bowl of water. If a bowl of water is mixed with yellow, red, or blue dye, one cannot see one's face clearly; one cannot see things as they really are. In the same way, if the mind is disturbed by sensual lust and so forth, such a person cannot see their own welfare, the welfare of others, or the welfare of both. Next, ill-will—the mind disturbed by ill-will. The Buddha compared this to a bowl of water that is boiling, bubbling over a fire; one cannot see one's face clearly in it. In the same way, when the mind is boiling with ill-will, one cannot understand things as they really are. Next, if the mind is rendered inactive and loses its functionality due to sleepiness and laziness, such a state is demonstrated by a bowl of water covered with moss and water plants; one cannot see one's face properly in a bowl of water covered with moss. Next, if restless states, worry, or regret over things done or left undone come to the mind—what is called restlessness and worry (*uddhacca-kukkucca*)—one cannot see things as they really are in those states either. The simile given for this is a bowl of water that is whipped by the wind, creating waves, or a bowl of water that is shaken and trembling; one cannot see one's face properly in that wavy, turbulent water. Finally, doubt (*vicikiccha*)—the state of hesitation—is also something that destroys the mind's ability to see things as they really are. When the mind is disturbed by doubt and hesitation, it is compared to looking at one's face in a bowl of water that is turbid and muddy.</p>
+<p>According to these similes shown by the Buddha, we can understand those states that obstruct concentration. It is when they are removed that absorption (*jhāna*) and concentration (*samādhi*) emerge. Therefore, devotees who try to develop mental strength must be eager to develop this wisdom and absorption (*jhāna*) in the manner declared by the Buddha. The Poya day is the occasion to make a good start in this. That is why we called it "Poya-day fortune." One must make an effort to bring about some reform in one's life. If one fails to do so, one will face great regret at the final moment. Therefore, one must form a firm determination to walk this path to Nibbāna shown by the Buddha. The practice that shapes this path of life to support that is the Noble Eightfold Path, as declared by the Buddha. Indeed, this is not merely something found in books, but a practice that must be generated within one's very heart.</p>
+<p>Right View (*sammā-diṭṭhi*) means correct vision. Before embarking on any journey, one must first have some understanding of where one is going. What we sometimes call "foresight"—understanding whether the place is full of thorns, or whether traveling on this road will bring about one's welfare—this is how Right View is introduced. It is to plant a certain level of understanding of the Four Noble Truths, the entire blueprint of this Dispensation, into one's mind. Right View defines this entire saṁsāric existence as suffering (*dukkha*). One may not have fully realized it yet, but this is where the target lies. As one travels along this path, one understands that the five aggregates themselves are of the nature of suffering—this is suffering (*dukkha*). Next, the cause of this is craving (*taṇhā*). When this craving is appeased at some point, the peace obtained therefrom is Nibbāna. Furthermore, the path that supports this is the Noble Eightfold Path. It begins with Right View (*sammā-diṭṭhi*). Therefore, one must acquire a correct vision, a basic understanding of the Buddha's Dhamma message—an understanding of that blueprint.</p>
+<p>One must be able to experience that blueprint in daily life, through the events that happen to oneself. Let us say a friend of ours has passed away, or some property has been lost; on such occasions, one can think: "Ah, this is a part of that suffering (*dukkha*) declared by the Buddha that I am now experiencing. Indeed, this suffering has arisen for me because of the craving (*taṇhā*) within me. It is due to the craving toward this man, this woman, or these things that this suffering has arisen for me." Next, if we appease this craving even for this moment by reflecting in accordance with the Dhamma, a great peace comes to us. Now, one does not weep and lament over the death of one's neighbors, but why does one grieve when a close friend, a relative, or a beloved person passes away? We think we are crying for that person, but we are not crying for them; we are crying for ourselves who are now without them. We cry for ourselves, thinking, "This is me, left without so-and-so. I lived with them, and now I am the one without them." We do not realize this. Therefore, on such occasions, one must reflect on this with wise attention, realizing that what lies underneath is craving (*taṇhā*)—not because of that person's goodness, but due to the attachment one has toward them—and appease it. For that, one must implement the Four Noble Truths to a certain extent in daily life. It is by doing so and gradually developing through meditation that one is ultimately able to realize the paths and fruits (*magga-phala*). Thus, Right View (*sammā-diṭṭhi*) means correct vision.</p>
+<p>If one has acquired such an understanding, the next systematic transformation that takes place within that person is Right Intention (*sammā-saṅkappa*)—correct thoughts. It is according to the view (*diṭṭhi*) or the philosophy of life one has adopted that one's thoughts are shaped. For instance, a person who steals sees opportunities for theft wherever they look. A killer thinks only of killing. In this manner, thoughts arise in accordance with the view one has adopted. Therefore, the Buddha declared that *sammā-saṅkappa* means correct thoughts. Since Right View (*sammā-diṭṭhi*) means correct vision, a person who has acquired the correct vision regarding the Four Noble Truths then becomes eager to cultivate Right Intention (*sammā-saṅkappa*), which means correct thoughts. The Buddha defines these as thoughts of renunciation (*nekkhamma-saṅkappa*), thoughts of non-ill-will (*abyāpāda-saṅkappa*), and thoughts of non-harming (*avihiṁsā-saṅkappa*). Thoughts of renunciation (*nekkhamma-saṅkappa*) mean leaving the household life, or rather, departing from the fivefold sensual pleasures, understanding that this is true peace—one must constantly bring forth this idea. Even if one cannot free oneself from them, when these thoughts arise in daily life—whether upon seeing monks, reading books, or listening to the Dhamma—and one thinks, "Oh, how wonderful it would be if I could lead such a life," the intention develops along with it. Thoughts of non-ill-will (*abyāpāda-saṅkappa*) mean thoughts of loving-kindness. One develops thoughts of loving-kindness that suppress ill-will. Thoughts of non-harming (*avihiṁsā-saṅkappa*) mean cultivating compassionate thoughts to abstain from harming. Such are good thoughts.</p>
+<p>Next, the words one uses must also be shaped in accordance with these thoughts. It is through lying, slandering, harsh speech, and useless babble that one defiles speech. This gift of speech we have received is a rare privilege. How many are mute and unable to speak due to their karma? Therefore, we must reflect that this too is a strength we have received through our merit. Consequently, if we waste this capacity for speech on lying, slandering, harsh speech, and useless gossip that is "fruitless for both worlds," we will lose this privilege we have received. It is for this reason that the Buddha declared we should instead use truthful words, gentle and soft words, words that reconcile others, and Dhamma-conforming words—using good words in this manner.</p>
+<p>A person who refines their speech in this manner also becomes eager to act in accordance with those words. That action means resolving to abstain from the wrong actions of killing living beings, stealing, and sexual misconduct. This is known as Right Action (*sammā-kammanta*). Next, another step from that is not merely living in this manner occasionally, but reflecting on one's occupation, on one's livelihood, and living more righteously. It is by abstaining from the trade of weapons, breeding animals for slaughter, the trade of meat, the trade of poisons, and the trade of intoxicants, as we mentioned earlier, and striving to live by a righteous livelihood. This is what is called Right Livelihood (*sammā-ājīva*).</p>
+<p>In the effort made for this, that which is called Right Effort (*sammā-vāyāma*)—a certain meditative strength generated within the mind—arises naturally. Right Effort means constantly striving, by carefully reflecting on the wholesome and unwholesome states arising in one's mind, to abandon unwholesome states and increase and develop wholesome states. To prevent unarisen unwholesome states from flowing into the mind—those that are waiting to flow in—one has to apply a certain firm effort and energy. That is called the effort to prevent unarisen unwholesome states from arising. Next, to expel arisen unwholesome states—if there are wrong, unwholesome states within oneself, one must apply a firm effort to remove them. Similarly, to generate unarisen wholesome states, one must also apply a special effort. One must reflect and observe: "These good virtues are not yet present within me; I must develop them," and make a great effort for that. Likewise, if there are good wholesome states already present within oneself, one must make an effort to establish and increase them, not allowing them to decay.</p>
+<p>So great is the value of this effort that the Buddha used a series of terms to describe it: *"chandaṁ janeti, vāyamati, vīriyaṁ ārabhati, cittaṁ paggaṇhāti, padahati"*. As we mentioned earlier, the word *chanda* in *"chandaṁ janeti"* does not have the meaning of a political "vote" used nowadays. It has a much deeper meaning. *Chanda* means the eagerness, the wish to do something, the desire generated toward wholesome states. One generates this *chanda*. Having generated this *chanda*, one *"vāyamati"*—makes an effort toward it. One does not stop the effort after doing a little. One transforms it into energy (*vīriyaṁ ārabhati*), carrying out that effort more and more firmly. Next, when various obstacles present themselves while carrying out that energy, one does not let the mind waver, but brings out a firm determination; this is called *"cittaṁ paggaṇhāti"*—one summons willpower. Lastly, the word *"padahati"* is used when, with a firm determination even at the risk of one's life, one performs that task, thinking, "I must do this somehow."</p>
+<p>If one applies energy in these four ways within the mind, breaking away from one's wrong ways of living—let us say a person who drinks alcohol, kills animals, steals, or commits murder—if such a person separates themselves at least on the Poya day, reflecting on the "Poya-day fortune," they will think about this for themselves. They will contemplate how to do this, looking at the side of its benefits and the side of its dangers. Thinking not only of this life but of the entire saṁsāra in accordance with the Dhamma declared by the Buddha, they will reflect on its benefits and think: "If I waste the capacity to bring out this wisdom and absorption (*jhāna*)—the greatest privilege I have received through this human existence—will I not also fall to the level of an animal? Will I not fall to the state of a hungry ghost or a demon?" Reflecting thus, they direct their mind toward a complete transformation of their way of life. Through the effort applied in this manner to abandon unwholesome states and elevate wholesome states, they become a spiritual practitioner (*yogāvacara*) and a meditator without even realizing it. Such a person is a most valuable individual.</p>
+<p>What is the next result of the effort made in this manner? Due to that effort, Right Mindfulness (*sammā-sati*)—correct mindfulness—is established within oneself. What is called the "Four Foundations of Mindfulness" (*satipaṭṭhāna*) is the establishment of mindfulness regarding this body—one's own body or another's body—regarding feelings (*vedanā*), regarding the mind, and regarding the things that come to the mind. It is the person who has established this mindfulness who subsequently sees their arising, passing away, and so forth, and brings out wisdom. Thus, Right Effort (*sammā-vāyāma*) leads toward these Four Foundations of Mindfulness.</p>
+<p>Next, a person who develops that mindfulness—that clear awareness—can, by maintaining this mindfulness for five minutes, ten minutes, an hour, or two hours on a wholesome object or meditation subject (*kammaṭṭhāna*), develop concentration (*samādhi*). Subsequently, the devotee who wishes to bring out the "Poya-day fortune" must turn their attention to meditation. For the purpose of meditation, the Buddha has presented various meditation subjects and themes. The Buddha has highlighted meditation subjects in a simple manner so that one can practice them in daily life and reap their benefits daily. These four meditation subjects are declared by the Buddha for both laypersons and ordained monks: recollection of the Buddha (*buddhānussati*), loving-kindness (*mettā*), foulness (*asubha*), and recollection of death (*maraṇasati*). Recollection of the Buddha (*buddhānussati*) means maintaining the mind on the virtues of the Buddha. Selecting even one word from the text of the nine virtues, which are like a vast ocean, such as "Arahaṁ," "Arahaṁ," "Arahaṁ," one constantly contemplates the Buddha. Or using words like "Buddho" or "Bhagavā," one constantly recalls the Buddha with faith (*saddhā*); at that moment, the scattered nature of the mind disappears. Indeed, what is done through a meditation subject? Let us say there is water that is scattered, or flowing in various directions; if we build a dam, gather it together, and make a reservoir, we can make use of that water. In the same way, keeping this running mind anchored on a single wholesome object is what is called meditation. In the same manner, one can constantly bring up a short phrase of loving-kindness in the mind, such as "May all beings be well and happy," without needing to speak it to anyone. When the mind runs wild, running toward sinful and unwholesome states, one brings it back to this object. Thus, for the person who eagerly strives to tame this mind with the tether of mindfulness (*sati*), a great number of benefits are received in daily life. Through the benefits of loving-kindness meditation, one can suppress the mind of ill-will and obtain a great peace. Similarly, through foulness (*asubha*) meditation, one gains the strength to free the mind from the defilements that oppress it. Next, through the recollection of death (*maraṇasati*), one generates a sense of spiritual urgency (*saṁvega*) and becomes eager to travel the path of Dhamma diligently, without delaying or putting it off. For the person who develops the recollection of death, impermanence is also understood in the same way.</p>
+<p>If someone is eager about this meditation in this manner, even if they do not experience a miracle as great as that of the monk, they can experience for themselves the peace that can be obtained from within through the development of absorption (*jhāna*) and meditation. We must reflect on the lessons we can take for our lives from such a story—even from a single short verse of four lines—and be eager about these practices. Now, on this valuable Poya day, these devotees have undertaken the Eight Precepts with Righteous Livelihood (*ājīva-aṭṭhamaka-sīla*) and, by relying on this valuable Dhamma story—a valuable Dhamma story from which one can take an example—have listened to several Dhamma points. At this moment, you must reflect on the transformation that has occurred within your own mind.</p>
+<p>With faith (*saddhā*) in the Triple Gem, you came to such a sacred place. Likewise, you sat down to listen to this Dhamma. The mind was purified with that faith; a certain joy arose in the mind. Next, in accordance with that faith, a certain energy (*viriya*) was applied during the time of listening to this sermon, to sit comfortably and pay attention to it; one has to apply a certain energy for that. Faith, then energy, and then, in accordance with that energy, being mindful—mindfulness (*sati*). Listening to this with good mindfulness. Next, when listening to it for a long time, a certain concentration (*samādhi*) is generated—as recollection of the Dhamma (*dhammānussati*), understanding the value of the Dhamma, and recollection of the Buddha (*buddhānussati*) when the Buddha is mentioned. In these various ways, one even gets an opportunity to generate a certain concentration. It is with that concentrated mind that wisdom (*paññā*)—or rather, those specific, deep understandings—arises. Those deep understandings of a penetrative nature, as mentioned earlier, arise. When reflecting in this manner, it is by developing the spiritual faculties (*indriya-dhamma*) of faith, energy, mindfulness, concentration, and wisdom (*saddhā, viriya, sati, samādhi, paññā*) that one can realize Nibbāna at some point. One must rejoice, reflecting that this occasion supported the development of those spiritual faculties declared in the Dispensation.</p>
+<p>This life is passing away with extreme rapidity. Sometimes, seventy or eighty years, which we think is a long time, pass by without our even realizing it. Within that, when reflecting at the end as death approaches, what did one do in this life? An emptiness is seen at the end. Sometimes, having spent unrighteous lives, leading them in sinful and drunken ways, one ultimately gets to see, on their deathbed, a series of painful scenes like a movie. Therefore, before that happens, one must reflect on leading a life in accordance with the Dhamma. If someone can reflect with concentration and feel joy for even a single moment in their daily life, such a person is the wise person, the fortunate person.</p>
+<p>Therefore, reflecting with wisdom, concerning this store of merit accumulated in your mind on this occasion today—this store of merit accumulated through listening to the Dhamma—we must now reflect on how we share this merit. Indeed, there are those in this universe who, having rejoiced in merit, strive to free themselves from their miserable states. Likewise, there are those in this universe who use merit to make their future aspirations successful. Reflecting thus, may the assembly of deities who protect the Dispensation, including the deities presiding over this place, rejoice in this store of merit gathered by both of us through preaching and listening to the Dhamma! May they realize the noble and supreme Nibbāna by their preferred path to enlightenment (*bodhi*)! Reflecting in this manner, one must share the merit with the deities. Likewise, may our deceased relatives, and whatever beings from the Avīci hell to the Akaniṭṭha heaven who desire merit, rejoice in this merit of preaching and listening to the Dhamma! Having rejoiced, may they find peace in the noble and supreme Nibbāna by their preferred path to enlightenment (*bodhi*)!</p>
+<p>Likewise, by relying on this noble store of merit accumulated so far through undertaking the precepts, listening to the Dhamma, sharing merit, and so forth, may these devotees also, in this very life, as quickly as possible, through the penetration of the paths and fruits (*magga-phala-paṭivedha*)—namely, Stream-entry (*Sotāpanna*), Once-returning (*Sakadāgāmi*), Non-returning (*Anāgāmi*), and Arahantship—free themselves from this terrifying saṁsāric suffering, and obtain the strength and power to find peace in the noble and supreme Nibbāna! Praying in this manner, you may now transfer the merit by reciting the verses:</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_014.html" class="doc-btn">← Previous Sermon (014)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_016.html" class="doc-btn">Next Sermon (016) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

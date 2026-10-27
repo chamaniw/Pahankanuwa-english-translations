@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 047 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_046.html" class="doc-btn">← Previous Sermon (046)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_048.html" class="doc-btn">Next Sermon (048) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 047</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_047_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_047_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_047_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #47</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.159)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Ubayeneva sampanno, Rāhulo Bhaddoti maṃ vidū; Yañcāmhi putto Buddhassa, yañca dhammesu cakkhumā. Yañca me āsavā khīṇā, yañca natthi punabbhavo; Arahā dakkhiṇeyyomhi, tevijjo amataddaso.</p>
+<p>Kāmandhā jālapacchannā, taṇhāchadanachāditā; Pamattabandhunā baddhā, macchāva kumināmukhe. Taṃ kāmaṃ chetvā Mārassa bandhanaṃ samūlaṃ taṇhamabbuyha; Sītibhūto'smi nibbuto'ti.</p>
+<p>From:</p>
+<p>Theragāthā, Rāhulattheragāthā</p>
+<p>Dear Listeners,</p>
+<p>In this Dispensation, Ven. Rāhula, who attained the foremost position among the monks who love the training, was known among the Sangha by the name "Rāhula Bhadra" (Rāhula the Fortunate / Rāhula the Good). That epithet "Bhadra"—meaning "good" or "fortunate"—indicates that he was extremely dear and pleasing to the Sangha. He was not so dear and pleasing to the Sangha merely because he was the son of the Buddha, but also due to his good qualities, his obedient, humble, and disciplined behavior. Indeed, the character of Rāhula is a supreme ideal of obedience. He was a son of the Buddha in the truest sense of the word. The verses from the Theragāthā Pāli that we have taken as our theme today are accepted as the joyous utterances (*udāna*) expressed by Ven. Rāhula after he attained Arahantship. In these verses too, it is mentioned that he was known by this name, "Rāhula Bhadra."</p>
+<p>*"Ubayen’eva sampanno, Rāhulo Bhaddo’ti maṃ vidū"* — "Endowed with both, they know me as Rāhula Bhadra." Because of two reasons, they know me by the name Rāhula Bhadra:</p>
+<p>*"Yañca’mhi putto Buddhassa, yañca dhammesu cakkhumā"* — "In that I am the son of the Buddha, and that I have the eye [of wisdom] regarding the Dhammas." One reason is that I am the son of the Buddha. The other reason is that I possess the Dhamma-eye, which has the power of understanding the Dhammas.</p>
+<p>*"Yañca me āsavā khīṇā, yañca natthi punabbhavo"* — "And that my taints (*āsavas*) are destroyed, and that there is no more renewed existence (*punabbhava*)." Because my taints are destroyed, and because there is no renewed becoming (*bhava*) for me,</p>
+<p>*"Arahā dakkhiṇeyyo’mhi, tevijjo amataddaso"* — "I am an Arahant, worthy of offerings, possessed of the Threefold Knowledge, and a beholder of the Deathless." I am an Arahant, worthy of receiving gifts called offerings (*dakkhiṇeyyo*), possessed of the Threefold Knowledge (*tevijja*), and a beholder of the Deathless (*amata-dassa*), which is Nibbāna.</p>
+<p>*"Kāmandhā jālapacchannā, taṇhāchadanachāditā; Pamattabandhunā baddhā, macchāva kumināmukhe"* — "Blinded by sensual pleasures, covered by the net, shrouded by the canopy of craving, bound by the kinsman of the negligent, like fish in the mouth of a funnel-net." Beings who are blinded by sensual pleasures, entangled in the net of sensuality, and covered by the shroud of craving (*taṇhā*), are bound in the net of Māra (the kinsman of the negligent) like fish caught in the mouth of a wicker-trap (funnel-net).</p>
+<p>This is what is declared regarding those beings. Next, he speaks about himself:</p>
+<p>*"Taṃ kāmaṃ chetvā Mārassa, bandhanaṃ samūlaṃ taṇhamabbuyha, sītibhūto’smi nibbuto’ti"* — "Having cut off those sensual pleasures, having severed the bonds of Māra, and having uprooted craving (*taṇhā*) completely, I have become cool, extinguished (*nibbuto*)." Thus, these are the verses declared by Ven. Rāhula after attaining Arahantship.</p>
+<p>You all must have heard that the immediate cause for Prince Siddhartha’s Great Renunciation was the news that a son had been born. Prince Siddhartha received the happy news of a son’s birth with the reaction, "A Rāhula (a bond/fetter) is born." Not only that, on that very night, without informing anyone, suppressing his paternal affection, he made the Great Renunciation for the sake of us all. Thus, Prince Rāhula, who did not receive paternal affection, got to see his father for the first time only when the Buddha visited the city of Kapilavatthu about a year after His Enlightenment. Having arrived at Kapilavatthu, while residing in the Sakyan monastery named Nigrodhārāma, one day the Buddha visited the palace of King Suddhodana. Having arrived, He sat on the prepared seat. Rāhula's mother, Princess Yasodharā, said to Prince Rāhula: "There, Rāhula, is your father. Go and ask for your inheritance." So, Prince Rāhula went before the Buddha and began to speak endearing words, saying, "Ascetic, even your shadow and your shelter are pleasant to me." When the Buddha started to return to Nigrodhārāma, Prince Rāhula followed closely behind Him, repeatedly saying, "Ascetic, give me my inheritance! Ascetic, give me my inheritance!"</p>
+<p>Once the Buddha returned to Nigrodhārāma, He said to Ven. Sāriputta, "Well then, Sāriputta, ordain Prince Rāhula." At that time, there was no established monastic procedure regarding the ordination of novices (*sāmaṇeras*). Therefore, Ven. Sāriputta asked, "Venerable Sir, how shall I ordain Prince Rāhula?" At that moment, the Buddha laid down a Vinaya rule, having assembled the monks and delivered a Dhamma talk: "I allow you to ordain novices by the threefold recitation of the going-for-refuge (*saraṇāgamana*)." In this manner, Ven. Sāriputta ordained Prince Rāhula.</p>
+<p>Upon hearing the news of this ordination, King Suddhodana came to the Buddha, paid homage, and sitting to one side, said, "Venerable Sir, I would like to ask for one boon." The Buddha addressed His royal father as "Gautama": "Gautama, the Tathāgatas are beyond the custom of granting boons." "No, Venerable Sir, what I ask is something allowable and blameless." "Then speak, Gautama." Then King Suddhodana said, "When the Blessed One went forth, it caused me great pain. Likewise, when Prince Nanda went forth. And when Prince Rāhula went forth, it was even more painful, Venerable Sir. Paternal love cuts through the outer skin; having cut the outer skin, it cuts the inner skin; having cut the inner skin, it cuts the flesh; having cut the flesh, it cuts the sinews; having cut the sinews, it cuts the bones; having cut the bones, it strikes and remains in the marrow. Therefore, Venerable Sir, it would be well if the Noble Ones do not ordain a son who has not been permitted by his parents." Thereupon, the Buddha, having delivered a Dhamma talk, consoled King Suddhodana and sent him away, assembled the monks, and laid down a Vinaya rule: "A child, a son, who has not been permitted by his parents should not be ordained. If a monk ordains such a person, he commits an offense of wrong-doing (*dukkaṭa*)." In this manner, the way the Buddha ordained Prince Rāhula and gave him his heritage in the Dispensation—the heritage of the Dhamma—is mentioned in many discourses.</p>
+<p>In Dhamma portions such as the *Ambalaṭṭhikā-rāhulovāda Sutta*, *Mahā-rāhulovāda Sutta*, *Cūḷa-rāhulovāda Sutta*, *Rāhula Sutta*, and the *Rāhula Saṃyutta*, it is next mentioned how the Buddha systematically, step-by-step, revealed the heritage of the Dhamma to Ven. Rāhula. The discourse that is most widely known is the *Ambalaṭṭhikā-rāhulovāda Sutta*. While the Buddha was residing at the Veḷuvanārāma monastery in Rājagaha, Ven. Rāhula was staying in a hut at a nearby place called Ambalaṭṭhikā. In the evening, the Buddha arose from His meditation and walked to see Ven. Rāhula. Seeing Him coming from afar, Ven. Rāhula prepared a seat and placed a vessel of water for washing the feet. After the Buddha had finished washing His feet, leaving a little water in the vessel, He asked Ven. Rāhula, "Rāhula, do you see this little bit of water left in this vessel?" "Yes, Venerable Sir." "Rāhula, for anyone who has no shame in telling a deliberate lie, their monkhood is just as little as this water left in the vessel." Next, the Buddha threw away that little bit of water. Having thrown it away, He asked Ven. Rāhula, "Rāhula, did you see how that little bit of water was thrown away?" "Yes, Venerable Sir." Then the Buddha said, "For anyone who has no shame in telling a deliberate lie, their monkhood is cast aside just like that water thrown away"—declaring that their monkhood has been discarded and cast out.</p>
+<p>Next, the Buddha turned the water vessel upside down. Having turned it upside down, He asked Ven. Rāhula, "Rāhula, do you see this water vessel turned upside down, inverted?" "Yes, Venerable Sir." "For anyone who has no shame in telling a deliberate lie, their monkhood is turned upside down just like this," He declared in that manner. Next, the Buddha declared another simile to Ven. Rāhula: "Rāhula, a state war-elephant taken into battle fights with its forelegs, fights with its hindlegs, fights with its head, fights with its tusks, but keeps its trunk curled back. Then the elephant-trainer thinks, 'This elephant has not yet sacrificed its life.' But when that elephant begins to fight even with its trunk, the trainer thinks, 'Now this elephant has sacrificed its life. There is nothing that this elephant cannot do now.' In the same way, Rāhula, for anyone who has no shame in telling a deliberate lie, there is no evil that they cannot do. Therefore, Rāhula, you should train yourself thus: 'I will not tell a lie, even in jest.'" Behold, the Buddha gave that fundamental advice and instruction to the young novice on that occasion. Likewise, how Ven. Rāhula was shaped under the constant instructions of the Buddha and the guidance and mentorship of Ven. Sāriputta as his preceptor (*upajjhāya*) is mentioned in many places throughout Dhamma literature.</p>
+<p>One such incident is the sand play of young Ven. Rāhula. What was it? It is mentioned that upon waking up in the morning, he would take a handful of sand, throw it up in the air, and say: "May I receive as many words of advice and instruction from the Buddha and my fellow companions in the holy life as there are grains of sand here." Hearing the monks talking about his love for advice, the Buddha preached Jātaka stories such as the *Tipallattha-miga Jātaka* and the *Tittira Jātaka*, as is recorded in the Jātaka Book itself. Likewise, another such incident is mentioned in the Vinaya Piṭaka, demonstrating the humility of Ven. Rāhula. On one occasion, the Buddha laid down a Vinaya rule that a fully ordained monk (*upasampanna*) should not sleep under the same roof with an unordained person (*anupasampanna*), which means novices and so forth. After this Vinaya rule was laid down, while the Buddha was residing at Badarikārāma in Kosambī, the monks told the young Ven. Rāhula, "The Blessed One has laid down such a Vinaya rule. Therefore, find a place for yourself to sleep." Ven. Rāhula looked around, but there was no place. It is mentioned that, in the end, he spent that night in the Buddha's toilet-chamber. As the Buddha approached the toilet-chamber at dawn, He cleared His throat—which is a custom and Vinaya rule to make one's presence known. When the Buddha cleared His throat, Ven. Rāhula, who was inside, also cleared his throat. "Who is inside there?" He asked. "It is I, Rāhula, Venerable Sir, I, Rāhula." "Why are you staying here?" He asked. Once Ven. Rāhula explained the situation, the Buddha assembled the monks, delivered a Dhamma talk, and relaxed that Vinaya rule, allowing an unordained person to reside with a fully ordained monk for two or three nights. Thus, numerous such incidents are recorded concerning Ven. Rāhula and his virtuous qualities. In present times, some young children, harboring pride over their parents' positions or power, have a habit of saying the moment they cross paths with someone, "Just wait, I'll tell my father and teach you a good lesson!" But this Ven. Rāhula turned even the cold-shouldering and shortcomings of others into a lesson for himself, and nowhere in Dhamma literature is it seen that he ever went to tale-bear or complain to the Buddha.</p>
+<p>Next, the systematic way in which the Buddha disciplined him is especially revealed in the *Mahā-rāhulovāda Sutta*. This is an extremely important discourse, even for meditating yogi monks. On one occasion, while the Buddha was residing at Jetavanārāma in Sāvatthī, He took His bowl and robes in the morning and set out for alms. Ven. Rāhula was also walking for alms, right behind the Buddha. The Buddha turned around, looked at Ven. Rāhula, and said, "Rāhula, whatever form (*rūpa*) there is..."—and there it is shown in eleven ways: whether past, future, or present; internal or external; coarse or subtle; inferior or superior; far or near—whatever form-aggregate, whatever form there is: "This is not mine, this I am not, this is not my self." Thus it should be seen with wisdom as it really is (*yathābhūta*). Then Ven. Rāhula asked, "Blessed One, Fortunate One, is it only form?" "No, Rāhula," the Buddha declared, "Just like form, feeling (*vedanā*), perception (*saññā*), preparations (*saṅkhāra*), and consciousness (*viññāṇa*)—indeed, the entire five aggregates should be viewed in that same manner as not-self (*anattā*)." Thereupon, while the Buddha continued on His alms-round, Ven. Rāhula thought, "Who, having met the Blessed One and received such a meditation subject directly, would go into the village for alms?" Rejecting the alms-round, he sat down straight under a tree for meditation. He sat down and began to meditate. Just then, Ven. Sāriputta, who came behind him, saw Ven. Rāhula and gave him a brief piece of advice: "Rāhula, develop mindfulness of breathing (*ānāpānasati*). Mindfulness of breathing, when well-developed and practiced frequently, is of great fruit and great benefit."</p>
+<p>Then, Ven. Rāhula meditated the entire afternoon, and in the evening, he visited the Buddha and asked Him, "Venerable Sir, in what way is mindfulness of breathing developed so that it is of great fruit and great benefit?" Thereupon, the Buddha mentioned a host of meditation methods that must be practiced as a preliminary phase to mindfulness of breathing. This is a very good lesson for meditators (*yogāvacaras*), because some people who start directly with mindfulness of breathing go and get stuck. On that occasion, the Buddha first spoke about the four elements present in one's body. He gave a meditation subject on the attention to elements (*dhātu-manasikāra*): "Rāhula, whatever is coarse, rough, and solid in this body, such as hair of the head, hair of the body, nails, teeth..."—showing nineteen such solid parts up to feces. In the sutta text, thirty-one parts are recorded. Later on, the brain in the head was added to make it twenty parts. All those nineteen are the internal earth element (*pathavī-dhātu*). Next, there is no need to speak separately about the external earth element—the solid substances outside. Whatever internal earth element there is, whatever earth element belonging to oneself, and whatever external earth element, it is simply the earth element. "This is not mine, this I am not, this is not my self"—thus it should be seen with wisdom. This was the first instruction He gave.</p>
+<p>Next, you may understand the other elements in the same way as the earth element. Since we have spoken in detail about these matters regarding the attention to elements, [we can summarize]: concerning the water element (*āpo-dhātu*), the liquid parts of the body such as bile, phlegm, saliva, urine, and so forth are shown as the internal water element; and considering both the internal and external water elements as one, it is simply the water element: "These are not mine, this I am not, this is not my self." In the same way, the fire element (*tejo-dhātu*)—the parts related to the heat in the body and the external fire, etc.—and then the wind element (*vāyo-dhātu*)—the winds that go upward and downward in the body, inhalation and exhalation, and the external wind element. Next, there is additionally the space element (*ākāsa-dhātu*); what is shown as the space element in the body are the cavities of the ears and nose, the hollow space within the intestines where food is stored, and so forth. Those are the internal space element. The external space element can be easily understood in the same way. One should contemplate it in that very manner: "This is not mine, this I am not, this is not my self." Thus, in this way, He showed how to elevate the attention to elements, including the space element, into meditation.</p>
+<p>Next, the Buddha declared another unique meditation: "Rāhula, develop a meditation like the earth (*paṭhavī-sama bhāvanā*)." "Meditation like the earth" means equating oneself to the earth. It is a unique meditation. This is also mentioned in the discourses of Ven. Sāriputta. It means to contemplate in this way: the earth does not make a distinction regarding clean and unclean things thrown upon it. Even if someone throws feces, urine, saliva, phlegm, or snot on the earth, the earth does not feel disgusted or repulsed by it. In the exact same way, in accordance with the nature of the earth, you too should establish equanimity like the earth. Then, the mind will not be troubled by agreeable and disagreeable contact (*phassa*), and it will not grasp them tightly. That is the meditation like the earth. Likewise, there is the meditation like water (*āpo-sama bhāvanā*). Just as water does not show any aversion whether it washes away clean things or unclean things, so too should you contemplate yourself as water. Here, "like the earth" means contemplating that one is the earth. Why? Because as mentioned earlier, both the earth element inside oneself and the earth element outside are simply the earth element. This can also be understood logically. Thereafter, one contemplates without any distinction between internal and external. Then, one takes as an exemplar the external, insentient earth element, the insentient water element, the insentient fire element, the insentient wind element, and the insentient space element. The Buddha is telling us to behave in that manner. That is to say, it is a method to bring the mind to equanimity. Just like the earth and so forth. Next, fire burns anything without discriminating between clean and unclean; wind blows on everything, whether foul-smelling or fragrant. In this way, you may briefly consider all four. The space element is spoken of in a special way because it is unique: just as space does not rest anywhere, so too you do not cling to anything anywhere. Thus, this is shown there as a meditation to eliminate craving (*taṇhā*), conceit (*māna*), and the dogma of self-illusion (*sakkāya-diṭṭhi*) regarding one's body. So, that is the second step.</p>
+<p>The Buddha showed a third step as well: "Rāhula, develop loving-kindness (*mettā-bhāvanā*) to eliminate ill-will. Develop compassion (*karuṇā-bhāvanā*) to eliminate cruelty. Develop appreciative joy (*muditā-bhāvanā*) to eliminate boredom or discontent (*arati*) towards monastic practice. Develop equanimity (*upekkhā-bhāvanā*) to cease the friction of repeated aversion (*paṭigha*) towards things, bringing the mind to equanimity. Next, develop the meditation on foulness (*asubha-bhāvanā*) to eliminate lust. Develop the perception of impermanence (*anicca-saññā*) to eradicate the conceit 'I am' (*asmi-māna*)." Behold, He spoke of that step too.</p>
+<p>It was only after that, at the very end, that the Buddha declared the meditation of mindfulness of breathing (*ānāpānasati*). At that point, the Buddha finally declared all sixteen steps of mindfulness of breathing. From this we can see that it is by practicing mindfulness of breathing with such accompanying practices that it becomes of great fruit and great benefit. The Buddha concluded that discourse by stating that for one who has developed mindfulness of breathing in this manner, even their final breath, their last inhalation and exhalation, fades away with full awareness, and even the final breath can be let go of mindfully. We will not detail the sixteen steps on this occasion, as we have spoken about these things previously. In this manner, the Buddha explained in detail to Ven. Rāhula how to make the meditation of mindfulness of breathing of great fruit and great benefit.</p>
+<p>Furthermore, a series of verses with which the Buddha constantly advised and admonished Ven. Rāhula is also mentioned in the text called Sutta Nipāta, under the name *Rāhula Sutta*. According to that *Rāhula Sutta*, the Buddha first asks Ven. Rāhula, "I hope that, due to constant association, you do not disregard or show disrespect to your preceptor." In that context, the Buddha refers to Ven. Sāriputta as *"ukkādhāro manussānaṃ"*—meaning, one who holds up a torch for mankind, one who gives light through wisdom. That was how the Buddha described Ven. Sāriputta on that occasion. Ven. Rāhula also replies, "Yes, Venerable Sir, I do not disrespect my preceptor. I always respect him."</p>
+<p>Next, with another set of verses, the Buddha further shows how Ven. Rāhula should train himself: "Rāhula, having abandoned the five sensual pleasures which have an attractive appearance, and having gone forth out of faith, bring to the forefront your ultimate goal of ending suffering (*dukkha*). Next, associate with noble friends (*kalyāṇa-mittas*). Reside in secluded, quiet lodgings. Eat food with moderation. Likewise, eliminate craving (*taṇhā*) for the four requisites—robes, almsfood, lodgings, and medicinal requisites. Avoid beautiful themes (*subha-nimittas*) that fuel lust and are connected to lust. Unify the mind and attain concentration through the meditation on foulness. Next, develop the signless concentration (*animitta-samādhi*). 'Signless concentration' means that by deeply contemplating impermanence (*aniccatā*), the perception of permanence (*nicca-saññā*) is erased and the 'signless' (*animitta*)—the state devoid of signs—emerges. Develop this signless concentration. By developing the signless concentration, eliminate conceit (*māna*). Eliminate the conceit 'I am' (*asmi-māna*). By eliminating the conceit 'I am', in the end, you will become one who makes an end of suffering (*dukkha*)."</p>
+<p>It is recorded in the texts that the Buddha constantly advised Ven. Rāhula through those few verses. This is known as "constant advice" (*abhiṇhaso avavāda*). *"Abhiṇha"* means advice given continuously. Thus, on one hand, Ven. Sāriputta gave instructions as his preceptor. At the same time, the Buddha also witnessed His son's tender maturation in the Dispensation. Through the giving of these instructions, it is clearly shown to us how the Buddha was constantly keeping watch over Ven. Rāhula's inner progress.</p>
+<p>The final discourse shown in this regard is the *Cūḷa-rāhulovāda Sutta*. In the *Cūḷa-rāhulovāda Sutta*, it is recorded as follows: On one occasion, the Buddha, having walked for alms and finished His meal, said to Ven. Rāhula in the afternoon, "Rāhula, take your sitting cloth (*nisīdana*). Let us go to the Andhavana forest for the day’s abiding (*divāvihāra*)." Lay disciples, "day’s abiding" refers to a custom of the Sangha in the past, where after taking their meal, they would spend the hot afternoon meditating, often in the open under a tree. That is what is called the day’s abiding. "Let us go to the Andhavana forest for the day’s abiding," said the Buddha, and Ven. Rāhula followed behind Him. At that time, as recorded in the texts, many thousands of deities, hearing the news that "Today the Blessed One will give Ven. Rāhula meditation subjects leading to Arahantship," also followed behind the Buddha. So, the Buddha went to the Andhavana forest and sat under a tree on a prepared seat. Ven. Rāhula sat nearby and paid homage to Him. Thereupon, the Buddha gave the Dhamma instruction on that occasion in this manner:</p>
+<p>"Rāhula, is the eye permanent or impermanent (*anicca*)?" This discourse is delivered here in a question-and-answer format. "Impermanent (*anicca*), Venerable Sir." "Is that which is impermanent (*anicca*) pleasant or painful (*dukkha*)?" "Painful (*dukkha*), Venerable Sir." "Is it fit to regard that which is impermanent (*anicca*), painful (*dukkha*), and subject to change, as: 'This is mine, this I am, this is my self'?" "No, indeed, Venerable Sir." Next, He asks in the same way about forms—the objects that are the range of the eye: "Are forms permanent or impermanent (*anicca*)?" "Impermanent (*anicca*), Venerable Sir." "Is that which is impermanent (*anicca*) pleasant or painful (*dukkha*)?" "Painful (*dukkha*), Venerable Sir." "Is it fit to regard that which is painful (*dukkha*) and subject to change, as: 'This is mine, this I am, this is my self'?" "No, Venerable Sir."</p>
+<p>In this manner, you can understand how He questioned him about the eye, about forms, about eye-consciousness (*viññāṇa*) arising dependent on the eye and forms, and about eye-contact (*phassa* / *cakkhu-samphassa*) arising in dependence on eye-consciousness. Next, concerning whatever feelings (*vedanā*), perceptions (*saññā*), preparations (*saṅkhāra*), and consciousness (*viññāṇa*) that arise due to eye-contact—expressed as *"vedanā-gataṃ, saññā-gataṃ, saṅkhāra-gataṃ, viññāṇa-gataṃ"*—if any of these arise from the impingement of the eye and forms, one grows weary of them too. Now, this is where we arrive at deep insight (*vipassanā*). The cessation of the six sense-bases (*saḷāyatana-nirodha*) is what is called Nibbāna. Realizing the cessation of these six sense-bases is true Nibbāna. The Buddha delivers this discourse, this instruction, by putting the six sense-bases at the forefront. First, He made Ven. Rāhula realize the impermanent (*anicca*) nature, the changing nature, and the not-self (*anattā*) nature of the eye. Next, concerning forms: it is dependent on the eye and forms that eye-consciousness (*viññāṇa*) arises. This consciousness (*viññāṇa*) is not something stored up somewhere. Right there is the deep part of this Dhamma—it is dependent on the eye and forms [that consciousness arises]. That is why it is called dependently arisen (*paṭicca-samuppanna*). Dependent on the eye and forms, eye-consciousness arises. Next, at the point where these three factors meet, a person separates the eye through that consciousness, and separates the form. From that point onward, there is the talk on contact (*phassa* / *cakkhu-samphassa*). The idea of the form impinged on the eye occurs. The Buddha makes Ven. Rāhula realize that eye-contact (*cakkhu-samphassa*) too is impermanent (*anicca*), painful (*dukkha*), and not-self (*anattā*). Next, whatever feelings (*vedanā*), whatever perceptions (*saññā*), whatever preparations (*saṅkhāra*), and whatever consciousness (*viññāṇa*) arise through that eye-contact, they ultimately group together and fall into the five aggregates.</p>
+<p>This is a somewhat deep matter. Those lay disciples who know something about these meditations might understand it at once. For others, it might be difficult. It is an extremely deep section, because this is connected to dependent arising (*paṭicca-samuppāda*). The mode of thinking here is not how the ordinary world thinks; it is something completely unique. Thus, due to the lack of real understanding (*yathā-anavabodha*) regarding the eye and forms, by ignoring their impermanence (*aniccatā*) and taking them as permanent, a consciousness (*viññāṇa*) arises. Dependent on the eye and forms, consciousness arises. What is called consciousness (*viññāṇa*) separates those two. Forgetting that separation, taking the eye, forms, and consciousness—all three together—as one, is contact (*phassa*). That is contact. From there on, because of contact, there is feeling (*vedanā*). Next, through the effort to identify the feeling, there is perception (*saññā*). Next, through perception, the internal active nature, which is performed as if personally, is the active nature. It is at this stage that karma is accumulated in the form of preparations (*saṅkhāra*). Next, what is called consciousness (*viññāṇa*) is taken as "this is my mind" once all of these are deposited. That gets added to those five heaps called the five aggregates of grasping (*pañcupādānakkhandha*). The products made through these six sense-bases go, accumulate, filter down, and it is through them that we construct what is called the five aggregates of grasping in saṃsāra. That is an extremely deep matter. This very same Dhamma-principle (*dhammatā*) applies to each and every sense-base. Forgetting their impermanent nature, driving a peg where the eye is, driving another peg where the form is, and taking this consciousness (*viññāṇa*) arising therefrom as a self, and from that point, experiencing a contact, having a feeling of "I contact"—in that manner, through contact, one generates feelings (*vedanā*) as painful, pleasant, or neither-painful-nor-pleasant. Through identifying those feelings, one creates various perceptions (*saññā*) and signs (*nimittas*). Next, by acting in accordance with those signs of perception, through that delusion, one accumulates preparations (*saṅkhāra*). All those preparations are then in the illusory consciousness (*viññāṇa*), and one thinks they are stored up. One stores them up as "this is mine, this I am." Thus, this is how these five grabbed heaps, or five heaps of grabbing, are called the five aggregates of grasping (*pañcupādānakkhandha*).</p>
+<p>Just as the Buddha spoke here about the eye, about forms, about eye-consciousness (*viññāṇa*), about eye-contact (*cakkhu-samphassa*), and about feeling (*vedanā*) and perception (*saññā*) arising dependent on eye-contact, He spoke in the same way about the other sense-bases: the ear and sounds, the nose and smells, the tongue and tastes, the body and tactile objects, and finally, the mind (*mana*) and mind-objects (*dhamma*). This is the deepest place. When the word "dhamma" is used here, you might think it refers to our True Dhamma (*Saddhamma*). But, lay disciples, in these sutta discourses and in Buddhist philosophy, this word "dhamma" is used in many senses. Just as form (*rūpa*) is to the eye, mind-objects (*dhamma*) are to the mind. The objects that come to the mind are known by the name "dhamma". Finally, the Buddha asks Ven. Rāhula: "Is the mind permanent or impermanent (*anicca*)?" "Impermanent (*anicca*), Venerable Sir." "Is that which is impermanent (*anicca*) pleasant or painful (*dukkha*)?" "Painful (*dukkha*), Venerable Sir." "Is it fit to regard that which is impermanent (*anicca*), painful (*dukkha*), and subject to change, as: 'This is mine, this I am, this is my self', Rāhula?" Then Ven. Rāhula says, "No, indeed, Venerable Sir."</p>
+<p>Just as He spoke about the mind, so too regarding those mind-objects (*dhamma*)—which must be understood here as the objects that come to the mind: "Are mind-objects permanent or impermanent (*anicca*)?" "Impermanent (*anicca*), Venerable Sir." "Is that which is impermanent (*anicca*) pleasant or painful (*dukkha*)?" "Painful (*dukkha*), Venerable Sir." "Is it fit to regard that which is impermanent (*anicca*), painful (*dukkha*), and subject to change, as mine, as 'I am', or as my self?" "No," Ven. Rāhula replies there too. That is precisely where the deepest part comes. Why? Because regarding these objects that come to the mind, the ordinary world thinks that objects exist separately, and we merely think about them. But the deepest part of the Dhamma is what is declared at the very beginning of the Dhammapada verses. We have probably mentioned this on many occasions in connection with the themes of our sermons. That Dhammapada verse is both the beginning and the end of this Dhamma literature. That is to say, it is through the principle declared in the first two verses of the Dhammapada, *"manopubbaṅgamā dhammā manoseṭṭhā manomayā"*, that the most profound part of this dependent arising (*paṭicca-samuppāda*) shown by the Buddha emerges. *Manopubbaṅgamā*—mind precedes.</p>
+<p>But consider the attitude of the world—even you yourselves, lay disciples. We think about something because a "thing" exists, don't we? We first take a grasp, a hold, thinking that a thing exists. Only after that do we think about it. Not only do we think about it, we engage in thoughts (*vitarka*) about it. Those thoughts turn into conceptual proliferation (*papañca*). Having turned into conceptual proliferation (*papañca*), in the end, we fall into delusion. This can often be observed when some people get lost in the past; sometimes you have to shake their bodies and ask, "Where are you?" The mind is in the past. Only then do they wake up. In that manner, what remains when one goes into the past is that sign (*nimitta*) grabbed from the past. One does not know that the sign grabbed from the past is something of the past. Getting deluded about it, one turns it into a "thing". It was there, and it is gone. Yet, we turn it into a thing and then get trapped within it. It is the same with the future; with various plans of ours, we fall into thinking about a future sign, resting our chin on our hand in a different world. There too, we think that the thing which has not yet arrived in the future exists. This is the illusion, the gravest illusion in the world. Thus, the world thinks that mind-objects (*dhamma*) exist beforehand, and the mind comes later to understand them. But the Buddha turns that upside down: *"manopubbaṅgamā dhammā"*—the mind is what precedes mind-objects. It is not the mind-object that precedes; the mind is what precedes. Next, there is: *"manoseṭṭhā"*—of the two, the mind is supreme. Why is the mind said to be supreme? *"Manomayā"*—those mind-objects (*dhamma*). Here, "dhamma" must be understood in the sense mentioned earlier. Many people explain these terms differently nowadays. But here, "dhamma" must be understood in the sense of the objects that come to the mind. It is not other kinds of dhamma. It is not wholesome or unwholesome dhammas and so forth; it means the objects coming to the mind. They can be wholesome, or they can be unwholesome. That is a different, incidental matter. But the fundamental principle, as anyone who knows something about the Dhamma is aware, is that *"manopubbaṅgamā dhammā manoseṭṭhā"* is found in both of the opening verses. It is as a result of this that one gets bound to wholesome and unwholesome karmas. The mind precedes, and the mind is supreme between them. Thirdly, it says: *"manomayā"*—which means those mind-objects, those objects thought up by the mind, where did they arise from? From the mind itself. They are created by the mind itself. This is exactly where we are trapped—by not knowing that these are things created by the mind itself. We think of them as a "thing," get lost there, and wander on and on in saṃsāra. This is what a Buddha reveals: *"manopubbaṅgamā dhammā manoseṭṭhā manomayā"*.</p>
+<p>Why is this not understood? It is because of that perception of permanence (*nicca-saññā*) held by the world—through the perception of permanence that takes both the mind as permanent and mind-objects as permanent. Yet, a thought arises and passes away. But regarding that, what we call a memory trace or similar, we take such a thing as real; and based on that bit created by the mind itself, we spend the rest of our entire lives. This is how we accumulate preparations (*saṅkhāra*) in saṃsāra, and this is how we go on and on in saṃsāra. Thus, the Buddha shows that the mind is what precedes. It is from the mind itself that the object is created. But by neglecting and not knowing that the grabbed object is something created by the mind, through the delusion concerning it, we separate the mind as one thing and the mind-object as another. That moment of separation is what is called the arising of mind-consciousness (*mano-viññāṇa*). Otherwise, this is not stored. Mind-consciousness is not stored. The greatest delusion in the world is the belief that consciousness (*viññāṇa*) is stored within the mind. To express it with a simple simile, as we have had to state on some occasions, it is like believing that fire is stored inside a matchbox. Fire only comes after you strike a matchstick against the matchbox. Yet, we conventionally call it a "matchbox". Similarly, we think that within this body connected to the mind, a consciousness (*viññāṇa*) is stored up inside. But the Buddha shows that consciousness (*viññāṇa*) is constantly dependently arisen (*paṭicca-samuppanna*). Apart from causes and conditions, no consciousness (*viññāṇa*) arises. Thus, it is from the impingement of the mind and mind-objects that mind-consciousness arises. But after mind-consciousness has arisen, forgetting that this mind-consciousness was born due to those two, one then begins to separate those two; and the acrobatics that start from there go on as thoughts (*vitarka*), conceptual proliferation (*papañca*), and so forth. What happens if this is understood? If this is understood, right there, consciousness (*viññāṇa*) subsides. Preparations (*saṅkhāra*) are no longer constructed. Right there is Nibbāna—something a person cannot even conceive. In fact, Nibbāna is described as an awakening that is like falling asleep. An awakening like falling asleep. To say "falling asleep," if viewed from the world’s perspective, it is like falling asleep. Why? Because what is called waking life—what the world calls waking life—is actually a dream. As we said before, the past is a kind of dream. The future built inside the mind is also a dream. And the stream of thoughts that constructs the present, as long as one does not understand its impermanent (*anicca*) and dependently arisen (*paṭicca-samuppanna*) nature, is also like a dream. That moment of waking up from that dream is indeed this: the understanding that this is dependently arisen (*paṭicca-samuppanna*); and along with that realization, consciousness (*viññāṇa*) subsides. Consciousness (*viññāṇa*) can no longer function.</p>
+<p>Simultaneously with the arising of the realization that this mind-consciousness (*mano-viññāṇa*) occurred due to the impingement of both the mind and the mind-object coming to the mind, mind-consciousness (*mano-viññāṇa*) can no longer function. It cannot go beyond that. That is precisely what is called "the cessation of consciousness" (*viññāṇa-nirodha*). The cessation of consciousness is described as peaceful and sublime, and this is what is called the stilled calming of preparations (*saṅkhāra-samatha*). So, this is Nibbāna: *"etaṃ santaṃ etaṃ paṇītaṃ yadidaṃ sabbasaṅkhārasamatho"*—all preparations (*saṅkhāra*) are calmed at that moment. The acrobatics performed by taking the mind and the object as two separate things cease at the moment when one directly realizes that this consciousness (*viññāṇa*), which aids in performing those acrobatics, is itself something that arises due to those very two. It can only be understood through contemplating this. If at any moment that truth is understood, right there, Nibbāna is realized.</p>
+<p>But how does this discourse end? Next, the Buddha speaks about each of these and brings out weariness (*nibbidā*) and dispassion (*virāga*) regarding them. Once they are understood properly, one grows weary of the eye, weary of forms, weary of eye-consciousness (*viññāṇa*), and weary of eye-contact (*phassa*). Through that weariness, the mind steps back. *"Nibbidā"* means the weariness arising through this real understanding (*yathā-avabodha*). It is through not knowing the reality as it is, and through the perception of permanence, that the world grasps these and holds on to them as grasping (*upādāna*). By understanding that these are impermanent (*anicca*) and born of causes and conditions, there automatically arises *"nibbidā"*—a valuable word of the past, though people do not bring it out much these days. We use the term "weariness with saṃsāra" in a casual way; when someone is sulking, we say, "Oh, why are you weary of saṃsāra?" But that is the door to Nibbāna shown by the Buddha. If it arises properly, it is not something that leads to suicide. If this reality is properly understood as it is, *"nibbidā"* (weariness) will inevitably arise. *"Nibbidā"* is also referred to as disenchantment or *"nirveda"* (transcendence of feelings). In present times, using the word *"nirveda"* is quite risky, because some people confuse it with artificial numbness. The word *"nirveda"* and the word *"nibbidā"* are used together. That *"nirveda"* is not an artificially induced numbness. Here, the realization comes that there is nothing to be felt (*vedanā* / experienced as a self). That is also why preparations (*saṅkhāra*) are no longer accumulated. What arises through that weariness (*nibbidā*)? Dispassion (*virāga*)—non-clinging. Through that dispassion, the mind is liberated. That is what is called the liberation of mind (*citta-vimutti*).</p>
+<p>Simultaneously with the conclusion of the Dhamma analysis and the question-and-answer explanation based on the Three Characteristics of existence regarding the six sense-bases in this *Cūḷa-rāhulovāda Sutta*, Ven. Rāhula's mind was liberated from all taints (*āsavas*), and he realized supreme Arahantship. Not only that, it is mentioned at the same time that the Dhamma-eye arose in the thousands of deities who were listening: *"yaṃ kiñci samudayadhammaṃ sabbaṃ taṃ nirodhadhammaṃ"*—"Whatever is subject to origination is all subject to cessation." That fundamental principle of dependent arising (*paṭicca-samuppāda*) arose in those deities. In many places, the attainment of the fruit of Stream-entry (*sotāpatti-phala*) is designated by this brief passage. The deepest realization a person can attain can be summarized in this short phrase: "Whatever is subject to origination is all subject to cessation." For someone listening to that Dhamma sermon with their mind fully applied, contemplating with wise attention (*yoniso manasikāra*), step-by-step as Ven. Rāhula was answering the Buddha’s questions, this realization is directly experienced. He did not answer by imagining things in his mind. They must have been directly experienced by him. When asked whether the eye is permanent or impermanent, and if impermanent, whether it is fit to be regarded as self, he did not say it merely because the Buddha asked. Because Ven. Rāhula had deeply developed all those previously mentioned meditations like mindfulness of breathing, the Buddha understood at that moment that Rāhula's spiritual merits had matured—or as we say, his conditions for liberation (*vimutti-paripāka*) had ripened, and the dhammas helpful for liberation had matured. It was at that moment that the Buddha delivered this discourse. From this, we can see that if we are to summarize everything, the cessation of the six sense-bases (*saḷāyatana-nirodha*) is indeed Nibbāna; it was because he directly realized the ceasing nature, the ceased state of these sense-bases, that Ven. Rāhula realized Arahantship as that discourse concluded.</p>
+<p>Therefore, this systematic group of meditation subjects given to Ven. Rāhula can be helpful to some extent to any meditating lay disciple (*yogāvacara*). As we said earlier, it is incorrect to think that the meditation of mindfulness of breathing (*ānāpānasati*) is merely applying the mind to inhalation and exhalation. Although that helps to go up to a certain point, in order to complete mindfulness of breathing through tranquility and insight (*samatha-vipassanā*), prior to those sixteen steps, one must practice to some extent those meditations shown by the Buddha, such as the attention to elements (*dhātu-manasikāra*), the meditation like water, like fire, etc., along with loving-kindness, compassion, appreciative joy, equanimity, foulness, and the perception of impermanence (*anicca-saññā*). If even Ven. Rāhula, who followed the Buddha for such a long time in saṃsāra, needed all of this to become an Arahant, what need is there to speak of people like us? Therefore, instead of clinging to a single meditation subject, thinking "I will attain it through this alone," it is good if one contemplates and applies the mind to those other mentioned meditation subjects as well.</p>
+<p>Nowadays, some people have created various disputes over these, as if they were separate sects. But based on the instructions the Buddha gave us, we can understand something practically. It is to such a matured insight (*vipassanā*) that discourses of that nature become applicable. Otherwise, someone in this day and age might think that a person can become an Arahant at any time simply by reading these sutta discourses. But in the past, how did they listen to those discourses? Just as it is said: *"atthikatvā manasikatvā sabbacetaso samannāharitvā ohitasoto dhammaṃ suṇāti"*—thinking, "there is benefit in this," contemplating, paying close attention, and with the entire mind directed to it, they listened to the Dhamma. Thus, because his conditions had matured in that manner, Ven. Rāhula was able to answer the questions asked by the Buddha regarding the Three Characteristics of existence without any hesitation. Finally, as that discourse concluded, Ven. Rāhula directly realized that the six sense-bases themselves are impermanent (*anicca*), painful (*dukkha*), and not-self (*anattā*). It was through that realization that he attained his goal. Therefore, from the character of Rāhula, we must understand both his tender maturation in the Dispensation and the way the Buddha gave him his Dhamma heritage. Through this, what a valuable example was given to the world by the virtuous qualities of the young Ven. Rāhula! Retaining all of this in our minds and bringing it close to our own lives, you, lay disciples, must strive to use this sermon to make your own Dhamma-contemplation and meditation successful. By using it thus, without treating them as extraneous, and by practicing all those various mentioned meditation subjects in a way that helps your own Nibbāna, may this be a supportive condition for you to put an end to all suffering (*dukkha*) such as birth (*jāti*), decay and death (*jarāmaraṇa*), disease, and so forth, and to attain the supreme, deathless Nibbāna through the penetration of the paths and fruits starting from Stream-entry. I wish you all that supportive fortune.</p>
+<p>Likewise, from the Avīci hell up to the Akaniṭṭha heaven, if there be any beings who wish to rejoice in the merits of this preaching of the Dhamma and hearing of the Dhamma, may they, by rejoicing, realize the deathless Nibbāna through a Bodhi of their aspiration. Praying thus, please recite these verses and share the merits.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_046.html" class="doc-btn">← Previous Sermon (046)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_048.html" class="doc-btn">Next Sermon (048) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

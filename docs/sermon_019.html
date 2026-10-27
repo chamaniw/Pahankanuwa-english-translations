@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 019 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_018.html" class="doc-btn">← Previous Sermon (018)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_020.html" class="doc-btn">Next Sermon (020) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 019</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_019_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_019_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_019_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #19</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No. )</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Gabbhameke uppajjanti, nirayaṃ pāpakammino; Saggaṃ sugatino yanti, parinibbanti anāsavā.</p>
+<p>From:</p>
+<p>Verse 126 from the Pāpavagga (Chapter on Evil) of the Dhammapada</p>
+<p>Dear Listeners,</p>
+<p>There exists a certain cyclical relationship between kamma and rebirth. A being who takes birth as a result of a certain period of fruition (*vipāka*) becomes subject to and yields to that very same kammic force when generating kamma anew, thereby dragging on this saṃsāric round of rebirth indefinitely. It is only by relying on the power of the Dhamma that one can appease this kammic energy and escape from saṃsāra. The Buddha, the Teacher of the Three Worlds, revealed to the world that no matter how powerful the wheel of kamma may be, ultimately, the wheel of Dhamma triumphs. Today, through the verse and the background story we have taken as our theme, you will have the opportunity to hear various factors related to this very matter.</p>
+<p>An Arahant named Tissa, who resided at Jetavana, had been visiting the house of a certain jeweler for alms for twelve years. Both the jeweler and his wife treated this venerable monk as they would their own parents, attending to all his needs and offering him alms-food. One day, when the Thera arrived at the jeweler’s house, the jeweler was cutting meat. At that very moment, while the Thera was standing there, a messenger arrived from King Kosala with a gemstone, saying, “The King has commanded to have this gem cleaned, perforated, and sent back.” Still cutting meat, the jeweler took the gemstone with his blood-stained hand, placed it on a box, and went to wash his hands. There was a pet crane kept in the house. Attracted by the smell of blood, the bird mistook the gem for a piece of meat and swallowed it, right before the Thera's eyes. When the jeweler returned from inside and looked, the gem was missing. He asked his wife and children if they had taken it. When they denied taking it, he went inside and discussed with his wife, saying, “Surely, it must be this monk who took it.” The wife pleaded, “Oh, do not say such a thing! For twelve long years, we have never seen any fault in this venerable sir.” But the jeweler would not listen. He came out and asked the Arahant, “Who took the gem that was here? Did you take it, venerable sir?” “No, lay follower, I did not take it,” the Thera replied. “There was no one else here. You must have taken it, venerable sir. Please return the gem to me,” the jeweler insisted.</p>
+<p>The Thera was thus left helpless. The jeweler went inside again and discussed with his wife: “Surely, it must be this monk who took it. I must interrogate him, even by torturing him.” “Oh, please do not do that! We will be ruined if you do. It would be far better for our entire family to become royal slaves,” she pleaded. But the jeweler replied, “Even if we all become slaves, it will not pay for the value of this gem.” Stubbornly holding onto this view, he bound the Thera’s head with a rope and tightened it using a wooden stick as a tourniquet. Inflicting torture progressively, he demanded to know if the Thera had taken the gem. As the binding was tightened further, blood began to pour from the Thera's nose, ears, and mouth. Unable to bear the agony, the Thera collapsed to the floor. Attracted by the scent of blood, the crane came to drink it. Out of sheer anger towards the Thera, the jeweler shouted, “What are you doing here?” and kicked the crane. The bird died on the spot, falling on its back. The Thera saw this and said, “Lay follower, please loosen this binding slightly. Loosen it and see if that bird is dead.” “May you die just as it did!” the jeweler barked. Now realizing that the bird was indeed dead, the Thera said, “Lay follower, it was this bird that swallowed the gem. I did not disclose it because it would have resulted in the bird's death. Even if I were to die, I would not have spoken. But now that the bird is dead, I tell you this.”</p>
+<p>When the jeweler slit open the bird's belly, there indeed was the gem. Immediately, a deep sense of remorse and urgency (*saṃvega*) overcame him. Falling at the Thera’s feet, he pleaded, “Venerable sir, please forgive me for what I have done out of ignorance.” The Thera replied, “Lay follower, this is neither your fault nor mine. This is a flaw of saṃsāra—a saṃsāric fault. Therefore, I forgive you.” The lay follower then said, “Venerable sir, if you truly forgive me, please come to our house for alms-food just as before.” The Thera responded, “No, lay follower. I now realize the danger (*ādīnava*) of this—of entering inside houses, of going under the roof of a household. It is because of this that such a thing occurred. Therefore, as long as there is strength in my legs, I shall wander for alms.” Right then and there, he undertook an ascetic practice (*dhutaṅga*), reciting a verse appropriate to it:</p>
+<p>*“Paccati munino bhattaṃ - thokaṃ thokaṃ kule kule*</p>
+<p>*Piṇḍikāya carissāmi, atthi jaṅghabalaṃ mama”*</p>
+<p>“For the silent sage, food is cooked little by little, household by household. I shall wander for alms, for there is still strength in my legs.”</p>
+<p>Despite his resolve, the Thera did not live long; due to the physical trauma he suffered, he soon attained pariNibbāna (final Nibbāna). Later on, both the jeweler and his wife also passed away. After their deaths, the bhikkhus questioned the Buddha about where the individuals involved in this event had been reborn. It was on that occasion that the Buddha uttered the verse we have chosen as our theme. It is mentioned that the crane—perhaps due to its familiarity with the household—was reborn in the womb of the jeweler’s wife. The jeweler's wife, when she passed away, was reborn in a heavenly realm. The jeweler himself was born in hell because he had inflicted fatal torture upon an Arahant. The Thera attained pariNibbāna. The verse revealing this state of affairs is the one we placed as our theme:</p>
+<p>*“Gabbhameke uppajjanti - nirayaṃ pāpakammino*</p>
+<p>*Saggaṃ sugatino yanti - parinibbanti anāsavā”*</p>
+<p>“Some are born in a womb; evil-doers arise in hell; those of good destiny go to heaven; the taintless are completely extinguished.”</p>
+<p>This is the essence of what is stated in the verse. This is the narrative. What this verse illustrates, in truth, is how different individuals are reborn in accordance with their kamma. Now, as is our custom, let us extract the guidance, the Dhamma lessons, and the doctrinal principles that we can bring to light from this story and verse.</p>
+<p>This story is indeed a deeply moving, remorseful one. From one perspective, it is the story of a jeweler who failed to recognize a true gem. From another perspective, it is the story of an Arahant who, for twelve years, visited the same household only to receive the fruition of a grave past kamma. This narrative concerns a monk who was highly intimate with the jeweler's household (the word *kulūpaga* is used here, referring to “Tissa, the family-associate of the jeweler”). He was such an intimate monk. Yet, due to a suspicion that arose in a brief moment, the jeweler subjected him to such severe torture that it led to the Arahant's death. We can reflect on something from this. At the time the Thera arrived, the jeweler was cutting meat. We can understand from this that transitioning from one blood-spilling activity to another is quite easy. He was driven to inflict such cruel torture because it did not seem to be a grave matter to him; the gem was far more important. He did not comprehend the gravity of saṃsāra. For twelve years, he failed to recognize the highly virtuous monk—the Arahant. The gem sent by the king was of far greater consequence to him. This is one aspect we can contemplate.</p>
+<p>Furthermore, we can understand that there was a grave kamma waiting to bear fruit for this Thera. When we examine it, we see a dramatic series of events. Often, when one has to experience the fruition of kamma—even nowadays—we see a series of events aligning in a peculiar manner. Here, when the Thera arrived that day, the jeweler was cutting meat. Then arrived the king’s message regarding the gem. Then the crane was also right there. All these factors fell into place, and in the end, the Arahant suffered a fatal injury—or rather, was forced to attain pariNibbāna—due to his own past kamma. It was precisely because he understood this that, when the jeweler begged for forgiveness, the Thera, while forgiving him in a most virtuous manner, said, “This is neither your fault nor mine. It is a saṃsāric flaw.” To call it a saṃsāric flaw means that one must inevitably experience the results of the kamma one has committed; one must exhaust the fruits of kamma. This is the lesson we must draw from this. At the same time, the vast reservoir of this Thera’s noble virtues becomes clear. His only weakness, as mentioned, was his being a family-associate (*kulūpaga*). While intimacy with families is regarded as a good thing in the lay world, for the Sangha, such intimacy is considered a defect. It is for this reason that the Thera, realizing his error—the danger (*ādīnava*) of being a family-associate—resolved to go strictly on almsround, from house to house.</p>
+<p>In any case, the Thera's great mass of noble virtues is clearly evident. Even when subjected to such fatal pain, he did not testify against the crane. This was not out of fear of anyone, but because his precept would be compromised. He would not give testimony that would knowingly cause the death of a living being. Sacrificing his own life, out of compassion for that animal at that moment, he withheld the truth. Therein lies a precious virtue. Likewise, he harbored no aversion (*dosa*) toward the jeweler who tortured him. Such a valuable store of virtues is illuminated by the life of this monk. Furthermore, if we reflect deeply, what we see through this is kamma and its fruition. This is precisely what the verse declares: “Some are born in a womb; others in hell.” Here, hell became the jeweler's destination. On the other hand, we see the difference between the couple: the wife, possessing deep faith, did not condone what her husband was doing. Out of her devotion to the Thera, she did not approve of his actions. It is said that due to her store of virtue and her acts of service, she was reborn in a heavenly world. As for the Arahant, we all know that his passing was pariNibbāna. Thereafter, there is no more birth (*jāti*). Thus, through this story, we see the relationship between kamma and its fruit—or rather, between kamma and rebirth.</p>
+<p>This law of kamma—this natural order (*niyāma*) of action—is an incredibly powerful law of nature in this world, which not even Buddhas or Arahants can bypass. Therefore, a saṃsāric being must accept this reality and strive to live accordingly. Even during the time of the Buddha, there were various teachers who did not believe in kamma or the fruition of kamma. Even today, there may be those who hold similar views. Therefore, especially in these times, this is a point we must repeatedly remind people of in Dhamma sermons. There are various views in the world that discount this world and the next. However, according to the Buddha's Dhamma—if we reflect upon our actions—depending on the good or bad nature of the kamma we perform, we will attain a future becoming (*bhava*) and birth (*jāti*). The happiness or suffering we experience in that birth is determined solely by the wholesome or unwholesome nature of that kamma.</p>
+<p>Therefore, we must reflect on this matter, and also consider under what circumstances the mind is inclined to perform an evil kamma. As we all know, there are three trainings in this Sasana: virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*). Let us contemplate what their ultimate purpose is. Whenever we have to perform an action, a kamma, that very present moment is of paramount importance. Because, as we said at the very beginning, we carry certain saṃsāric habits. By performing the same kamma repeatedly, there are times when an evil-doer is compelled to yield to it and perform kamma in the same way. However, these can be overcome by being mindful of the present moment. In short, the Buddha said, “Bhikkhus, intention (*cetanā*) is what I call kamma.” Why? Because it is in that brief moment of intention that we can do something about the operation of kamma. That moment of intention is extremely important. What was done in the past is done; its fruit will come. Even when that fruit comes, if at the moment it arrives, our stance, our determination, is inclined toward a good direction, then we can act with clear understanding and escape. We can act with responsibility. We can act in a way that directs our saṃsāric journey in a wholesome direction. Now, faced with the very same event, the jeweler acted in one way. The jeweler’s wife acted in another way. The venerable monk, the Arahant, acted in yet another way—in a most noble, supreme manner. It was a difficult situation. But one can triumph over such situations only if one is established in a certain stance, only if one has cultivated a certain attitude beforehand. It is for this purpose, pious devotees, that there is such a thing as virtue (*sīla*).</p>
+<p>Nowadays, some people claim that virtue (*sīla*) and meditation (*bhāvanā*) are unnecessary. When we reflect deeply, what is actually taking place here? In our day-to-day lives, various situations arise—sometimes situations that come to us in accordance with our kamma. At such times, we can make the right decision only if we have a firm determination, a wholesome stance like a commitment to virtue. A scattered mind easily drifts into the kamma of others. We must keep this in mind. A person with a scattered mind, who has no firm stance or wholesome attitude, easily gets dragged into the kamma of others and descends to hell and other lower realms. Why? Because this society, this world, is a place that operates according to the forces of kamma that each individual has brought along. When we look at it, this is, in one sense, like a puppet show. To a Buddha, to an Arahant, to those with direct knowledges (*abhiññā*), this appears just like a puppet show. Various things occur in accordance with past kamma and its results. But in the face of all this, if we control that brief moment called intention—the moment of intention—then we have won. Virtue is what helps us in this. Now, on this occasion, you all undertook a set of training precepts. What is accomplished by that? You have given a command to your mind, to your wisdom, to your intellect. You have made a determination: “I will protect this precept—this practice.” Then, keeping that principle in mind, you can act with a firm principle. You have heard of “abstinence upon the arrival of the occasion” (*sampatta-virati*) as one of the benefits of virtue. When the opportunity to commit a wrong arises, the strength of your commitment to virtue gives you the power to refrain from it, thinking: “I have undertaken such a precept; to act in this way is not proper.” Thus, on one hand, virtue helps us in such situations, preventing us from getting entangled in the kamma of others, and protecting us by placing our noble practice first. At an even higher level, it assists in concentration (*samādhi*). Concentration means the calming of the mind. Calming the mind means attaining a state of composure. It removes the scattered nature of the mind, known as the hindrances (*nīvaraṇa*), and makes it one-pointed. It is easy for a one-pointed mind to make a decision—a wholesome decision can be made. Furthermore, someone who has reached a state of equanimity (*upekkhā*) in concentration can, at an even higher level, respond to the problems that arise in their life in a way that is in accordance with the Dhamma.</p>
+<p>Next, the level higher than that is wisdom (*paññā*). Virtue, concentration, wisdom. Wisdom—this is what is demonstrated and polished in the life of that Arahant. That insight wisdom (*vipassanā-paññā*)—or rather, the wisdom obtained through the path-knowledges (*magga-ñāṇa*)—gives a special power to protect oneself when these situations of kamma occur. There is an extremely high level of equanimity (*upekkhā*) there. Relying on the equanimity present in the fruition-mind (*phala-citta*) of the Arahants, they are able to triumph over such situations. This, then, is virtue, concentration, and wisdom. It is worth reminding those who present such false views that these are practically helpful in our day-to-day lives.</p>
+<p>Now, to make this even more understandable in terms of practical daily life, let us say you bought a new car—a vehicle. Somehow or other, you managed to learn how to drive it, at least to some extent. Even though you learned, if you take it out onto the road and drive without considering other drivers, without considering the traffic laws, where will you end up? Even if your life is spared, you might end up in court and have to pay compensation for damaging other vehicles. You will have to face a host of such troubles. Therefore, you must observe the rules of the road. Next, you must drive this vehicle not with a scattered mind, but with good mindfulness and awareness, driving this vehicle with a kind of “concentration” (*samādhi*). Furthermore, in emergencies, such as when others are about to crash into your vehicle, you must develop a wisdom (*paññā*), an intellect, that can think quickly and act in an instant. Thus, even for an activity like driving a vehicle in daily life, a certain level of virtue, concentration, and wisdom is required. Do not misunderstand this. I am not over-simplifying this deep Dhamma. I mentioned this merely as a simple illustration. It is by being established in a certain virtue (*sīla*) in daily life that we step onto the road. One must know one's own side of the road. It is just like what was said about the bad destiny and the good destiny. If you drive your vehicle on the wrong side, that is the end of it. You will plunge down a precipice and ultimately be destroyed. Likewise, you might crash into other vehicles and cause various conflicts. Such is the situation in this world.</p>
+<p>This is a society complicated by the diverse forces of kamma that each individual brings along. It is not the society we see on the surface. Each person behaves in ways we do not expect at any given moment. It is like the puppet show we mentioned. Now, that jeweler, who had attended to the Thera for twelve long years as though he were his own parent, because of a grave kamma he performed in a brief moment, ultimately bound himself to a heinous kamma with immediate retribution (*ānantarika-pāpa-kamma*) that blocked all his merits, and went straight to hell. From this, we can reflect that no matter how good we may be, how wholesome we are, if we do not possess these qualities of virtue, concentration, and wisdom within us, we—just like the jeweler—will have to reap terrible fruits from an unwholesome deed committed in one brief moment. That is the essence of the Dhamma taught by the Buddha. Virtue, concentration, and wisdom represent: first, the initial steps of disciplining body and speech; next, the calming of the mind; and finally, wisdom is the correct understanding of the world and life—correctly comprehending the three characteristics of the impermanent (*anicca*), suffering (*dukkha*), and not-self (*anattā*). By doing so, we appease all these forces of kamma at various levels, and ultimately, through the wheel of Dhamma, we break the wheel of kamma, conquer the wheel of kamma, and bring this saṃsāric journey to an end. This is what is called becoming an Arahant through wisdom—when viewed from the perspective of the paths and fruits.</p>
+<p>Now, if we reflect further on this, the Buddha himself has presented a certain analysis of kamma. Since it is relevant to this story, let us present it on this occasion. The Buddha presented various analyses of kamma on different occasions. In one place, he states, “Bhikkhus, there are four types of kamma.” Let us explain this in clear terms so it is easily understood:</p>
+<p>There is dark kamma with dark results.</p>
+<p>There is bright kamma with bright results.</p>
+<p>There is dark-and-bright kamma with dark-and-bright results.</p>
+<p>There is neither-dark-nor-bright kamma with neither-dark-nor-bright results.</p>
+<p>In this way, he outlines four types of kamma. The Buddha explains each of these in the following manner. “Dark kamma with dark results” refers especially to the five immediately effective heinous kammas. You have heard of these—killing one’s mother, killing one’s father, killing an Arahant, with a hateful mind shedding the blood of a Tathāgata, and causing a schism in the Sangha. If one commits any of these five heinous kammas, one is definitely born in hell. Here, it is explained in this way: dark kamma means that a person, having performed bodily, verbal, and mental actions that are of an afflictive nature, takes birth in an afflictive place. Here, it specifically refers to hell. That is entirely painful. That is why it is dark. The kamma is dark; the fruition of kamma is dark. When born in such a place—as mentioned here—afflictive contacts touch that person. When we look at this, a wonderfully profound phrasing is used. All of this is executed by the mechanism of kamma. Furthermore, because of those afflictive contacts, that person becomes subject to a multitude of definitely painful feelings (*vedanā*). In this way, too, the Buddha demonstrates the statement “beings are heirs to their kamma” (*kammadāyādā sattā*). It shows that for every person, for every being, kamma is their inheritance. This means that if someone performs a dark kamma that brings dark results, they will take birth in places like hell that correspond to it. When they take birth, they will, in one way or another, have to experience contacts (*phassa*) that match it—afflictive contacts that bring painful feelings (*vedanā*). This is dark kamma.</p>
+<p>Next, bright kamma that brings bright results. What is that? It is explained as the ten wholesome courses of action. It means abstaining from the ten unwholesome actions: killing, stealing, and sexual misconduct; and also those verbal actions related to the precepts undertaken on this occasion—false speech, slandering, harsh speech, and idle chatter. Next, separating oneself from the unwholesome states of covetousness (*abhijjhā*), ill-will (*vyāpāda*), and wrong view (*micchā diṭṭhi*)—meaning extreme greed, anger, and wrong view—and generating wholesome states of mind; this is what is called bright kamma here. A person who has performed such bright kamma is born in the Subhakiṇha Brahma world, which is of an exclusively pleasant nature. This is stated at the highest level. Thus, by performing bright kamma, one takes birth in a place that brings bright results.</p>
+<p>Next, what is declared as “dark-and-bright kamma” is a mixture of these—meaning performing those bad kammas, and at the same time, occasionally performing wholesome kammas. The places of rebirth for those who perform kamma in this mixed way are mentioned as the human world, certain heavenly worlds, and also certain lower realms. It is not entirely painful; there is also occasional pleasure. There are pleasant feelings (*vedanā*) that can be called happiness. In this way, the Buddha explains the third category. That is mixed: dark-and-bright kamma that gives dark-and-bright results.</p>
+<p>Fourthly, he shows—and this is the deepest one—neither-dark-nor-bright kamma that brings neither-dark-nor-bright results. This is unique. These are described as those that assist in the destruction of all kamma. This kamma—neither-dark-nor-bright kamma—helps to conquer all kamma. This is explained as follows: if a person, in accordance with the Dhamma, generates an intention (*cetanā*) to destroy the dark kamma that brings dark results, and to destroy the bright kamma that brings bright results, and to destroy the dark-and-bright kamma that brings dark-and-bright results—in short, the intention generated to destroy all kamma is what is identified here as neither-dark-nor-bright kamma. In short, it is identified as the Noble Eightfold Path—the Middle Way. It is the middle path that leads to Nibbāna that the Buddha shows here. In another place, this is explained as the very same idea of the Noble Eightfold Path, as the seven factors of enlightenment (*satta bojjhaṅga*). Whether one develops these factors of enlightenment, or develops the Noble Eightfold Path at the supramundane level, what ultimately happens? One is able to escape from this entire wheel of kamma, consisting of merit and demerit, wholesome and unwholesome, at four stages: Stream-entry (*Sotāpanna*), Once-returning (*Sakadāgāmi*), Non-returning (*Anāgāmi*), and Arahantship—as you all have heard. To break the power of the wheel of kamma, in short, is to destroy the cause of kamma. preparations (*saṅkhāra*), as stated in the teaching of Dependent Arising, “with ignorance as condition, preparations arise” (*avijjāpaccayā saṅkhārā*)—it is because of ignorance that these preparations arise. The very word “kamma” is expressed here in a subtle way as “preparations” (*saṅkhāra*). Ignorance also means that based on the notion of “I” and “mine”, all wholesome or unwholesome, merit or demerit, occurs. Therefore, if one wants to destroy them, one must destroy ignorance. What assists in this is the Middle Way—the Noble Eightfold Path. From another perspective, it is the development of the seven factors of enlightenment: mindfulness (*sati*), investigation of states (*dhamma-vicaya*), energy (*viriya*), joy (*pīti*), tranquility (*passaddhi*), concentration (*samādhi*), and equanimity (*upekkhā*). This is the unique message a Buddha gives to the world. Whether a Buddha arises or not, various views regarding kamma exist among different teachers in the world. Only a Buddha declares the path that can break this law of kamma. That is why this fourth category mentioned here is extremely important: neither-dark-nor-bright kamma with neither-dark-nor-bright results, which conquers both the wholesome and the unwholesome.</p>
+<p>Now, when this is said, some people might misunderstand it. They might think, “If so, merit and good deeds are not needed. We do not need to think about the wholesome and the unwholesome.” But one cannot escape in that way. This is a very subtle point. Many people get confused here. This is what the Buddha reminds us of when explaining the Dhamma, that some people grasp these wrong views like catching a snake by its tail. What is present here is a middle path. There is a place in a certain sutta discourse where the Buddha presents this middle path most beautifully. On one occasion, a certain deity came and asked the Buddha, “Noble Sir, how did you cross over the flood?” The “flood” referred to by the deity—you all might have heard of this, it is mentioned in Dhamma analyses as “ogha”. There are four floods that sweep away saṃsāric beings: the flood of sensuality (*kāma-ogha*), the flood of becoming (*bhava-ogha*), the flood of views (*diṭṭhi-ogha*), and the flood of ignorance (*avijjā-ogha*). Sensual thoughts—these flow like a great torrent, and beings are swept away by them. Next, the desire for the continuation of existence, craving (*taṇhā*) for becoming (*bhava*). Next, various views—getting caught in views and being swept away. Finally, ignorance—not knowing. All of these are shown as floods: the four floods that sweep away saṃsāric beings.</p>
+<p>While being swept away by these four torrents, the deity asks the Buddha how he crossed over them. The Buddha gives a very brief answer: “Friend, I crossed over the flood without halting and without straining.” “Without halting and without straining, I crossed over the flood,” he answers. When asked to explain further, he says, “Friend, when I halted, I sank; when I strained, I was swept away. Therefore, without halting and without straining, I crossed over the flood.” That represents, pious devotees, the Middle Way—the middle path. Now consider a situation where one is about to be swept into a sluice gate, or caught in a whirlpool. If you just remain passive and do nothing, you will sink. Next, if you struggle violently without trying to escape in a proper manner, you will still be swept away. You will either go under or be swept away. Such is the situation regarding this kamma. That means, in the face of these questions regarding kamma, one must look at it in this way: those unwholesome actions—evil kammas—bring fruition to saṃsāric beings. We cannot deny their existence. Therefore, they must be conquered through wholesome actions. This is the middle path. One must develop the wholesome in place of the unwholesome. One must do merit instead of demerit. Having done so, one must arrive at a certain firm stance. A calm mind, in short, a concentrated mind, can be obtained only if one protects those virtues such as *sīla*. What is present in virtues like *sīla* is identifying and understanding the wholesome and unwholesome, identifying merit and demerit, and walking on that wholesome path. Therefore, you cannot throw these away. If you break and destroy the raft before crossing over, you will never reach the other shore.</p>
+<p>Therefore, in this middle path, there is no halting, nor does it go to either extreme. If one goes to one extreme, it becomes the indulgence in sensual pleasures (*kāmasukhallikānuyoga*), thinking, “We can live as we like, we can enjoy ourselves.” On the other hand, if one goes to the opposite extreme, one begins to strain and struggle, just like the Nigaṇṭhas of old who, thinking all knots must be untied, went to the extreme of discarding even the knots of their clothing and wandering naked. These are the two extremes shown by the Buddha. Halting is the indulgence in sensual pleasures: disregarding these wholesome and unwholesome actions, virtues, and so on, and indulging in the five cords of sensual pleasure as one pleases. The other extreme is that rigid practice—as you all have heard of those in the past who, close to the Nigaṇṭha practice, lived like dogs or lived like cattle. Taking up various vows rigidly, believing that liberation is obtained through them. Those who live carrying various types of wrong views and dogmatic observances (*sīlabbata-parāmāsa*) represent that other extreme. Instead, the Buddha shows: relying on virtue (*sīla*), one develops concentration (*samādhi*). Without lingering there, relying on concentration, one then sees with wisdom those three characteristics of the impermanent (*anicca*), suffering (*dukkha*), and not-self (*anattā*), thereby bringing forth wisdom (*paññā*). Bringing forth wisdom, pious devotees, means destroying that mentioned ignorance. If it is because of ignorance that all preparations (*saṅkhāra*), regarded as wholesome and unwholesome, arise in this mental continuum, then the path of calming those preparations (*saṅkhāra-upasama*) is indeed the unique message that the Buddha introduced to the world. It is the path of appeasing these preparations. That is what is called the supramundane path.</p>
+<p>Now, there are two aspects to what is called “right view” (*sammā-diṭṭhi*). Many people discuss this without a proper understanding. One aspect of this right view is the “right view of ownership of kamma” (*kammassakatā sammā-diṭṭhi*): being established in the position that kamma is one's own, and acting in a way that can face it. With a correct understanding of merit and demerit, wholesome and unwholesome, one must live with open eyes. Otherwise, one falls into those terrible bad destinies and saṃsāra is prolonged. One descends to states from which one cannot raise one's head again. That is called *kammassakatā*—the feeling that kamma is one's own. Why do we say kamma is one's own? One cannot escape by claiming “there is no self.” Why? Because it is precisely with the notion of “I” that those mentioned kammas are performed. Its fruition will definitely come. The period of fruition also arrives based on that very notion of “I”. It is like a “responsibility”—and responsibility is something one has taken upon oneself. It is by taking on the responsibility of “I” that a person engages in those evil kammas and so on. Correspondingly, the kamma flows back to that very person. That is why kamma is said to be “one's own”, “one's relative, one's kinsman”. One should not prematurely bring in not-self (*anattā*) there and misunderstand it. That is one level. In short, that is the side of origination (*samudaya*) of saṃsāric beings. Now, there are two sides: origination (*samudaya*) and cessation (*nirodha*). It is said that saṃsāric beings dwell entirely on the side of origination. “Origination” means arising. They are always trying to bring about, to acquire, to renew. The entire saṃsāric existence is an attempt to cultivate the perception of permanence (*nicca-saññā*) in the world, in place of impermanence—by forgetting impermanence. To cultivate the feeling that the world is permanent, what must be done? Forgetting that these things are decaying and passing away, one must constantly renew them, bringing forth the feeling that “all of this is eternal”. The feeling of “I myself” also runs upon that. Consequently, one has to experience the fruition of the kamma performed in accordance with that. This is inevitable.</p>
+<p>So, the other side is the supramundane side. What lies on the supramundane side? On the supramundane side, one is facing cessation (*nirodha*). The noble disciple (*ariya-sāvaka*) stands facing the side of cessation. The ordinary worldling (*puthujjana*) stands facing the side of origination (*samudaya*). To put it another way, everyone lives as if thinking, “No matter how much suffering we experience today, tomorrow morning will be good.” Even when this life is spent, they long for another life: “I could not fulfill my hopes in this life, but in the next life, I will.” This journey driven by ignorance and craving (*taṇhā*) is what is called saṃsāra. That is living on the side of origination. The law of kamma applies to such a person. Therefore, one must accept it and try to live according to it. Otherwise, one will have to experience fruition in a far more terrible state than one's current state. Next, what is needed to escape from this, what helps us to escape, is not an extreme effort like that of the Nigaṇṭhas, inflicting various pains upon the body, thinking “I am exhausting past kamma through this pain, and I will not perform any more kamma,” binding their mouths, or discarding their clothes.</p>
+<p>The forces of kamma can be appeased—as shown by the Buddha—only through wisdom (*paññā*). Only by destroying ignorance. It cannot be done by other methods. One cannot exhaust and finish all kamma either. This destruction of kamma—as mentioned in the fourth category, neither-dark-nor-bright kamma—is said to destroy kamma. To destroy kamma—you all have heard that a Stream-entrant (*Sotāpanna*) is born seven times at most. How does that happen? Based on the power obtained through the path-knowledge (*magga-ñāṇa*) of Stream-entry, due to the cutting off of the defilements, the noble disciple who has become a Stream-entrant is incapable of performing kamma that can lead to the lower realms. One can perform kamma that leads to the lower realms only with a strong view of existing group (*sakkāya-diṭṭhi*). The view of existing group (*sakkāya-diṭṭhi*) is the most gross, coarse aspect of “I” and “mine”. That layer of ignorance is shattered by path-knowledge; that is why that person cannot go to the lower realms. He is freed from the lower realms, in short. Next, as a direct result of the reduction of the sense of self, birth (*jāti*) is limited to at most seven more. This is how the Buddha solves this problem. This is the Middle Way. “Without halting and without straining” is why he said so. This problem is solved through wisdom (*paññā*), not by other artificial methods. Because the wheel of kamma in saṃsāra is so terrible. Even to Arahants, and to Buddhas, these kammas bring fruition. But that body they brought along—even those noble ones we call an Arahant or a Buddha appeared in this world through some force of kamma, and they have to experience those fruits correspondingly. But it ends there. After that, they do not take birth again. To solve that problem, the Buddha has shown these paths and fruits. At the state of Stream-entry, seven times; next, if Once-returning (*Sakadāgāmi*), coming to this world only once more; next, if Non-returning (*Anāgāmi*), being born in the Brahma world and after some time attaining Arahantship and pariNibbāna. Those Arahants, Buddhas, and Paccekabuddhas who attained final Nibbāna (*pariNibbāna) in this very world do not take birth again. To say they do not take birth again means that they have exhausted that accumulated mass of kamma.</p>
+<p>That, then, is the solution presented by the Buddha. We must reflect on these matters with wisdom and understand them. Otherwise, we might fall into those mentioned wrong views: “Since both merit and demerit expand saṃsāra—through both merit and demerit, or rather, through both wholesome and unwholesome, saṃsāra is prolonged—therefore, we do not need to concern ourselves with merit.” As for demerit, that is out of the question; it happens easily anyway. But the difficult thing is performing merit—performing the wholesome. To say, “There is no need to exert ourselves for them; if we do, saṃsāra is prolonged,” is to grasp the Dhamma wrongly. That is like grabbing a snake by its tail. The correct way to practice has been shown by the Buddha. As mentioned before, through virtue (*sīla*), at a practical level, one disciplines body and speech. What is the result obtained from that? It is blameless happiness (*anavajja-sukha*), the absence of remorse. Relying on that, one next develops concentration (*samādhi*). One does not linger in that concentration either, for that too is something that prolongs becoming (*bhava*). The Buddha does not hold onto that either. Instead, relying on concentration, with that calmed and unified mind, one penetrates and sees the three characteristics. The unique vision that a Buddha presents to the world is insight (*vipassanā*)—the three characteristics of the impermanent (*anicca*), suffering (*dukkha*), and not-self (*anattā*). This, too, can be understood insightfully only if there is good concentration. It is at that level of insight, after insight has been sufficiently developed, that through the realization of the paths and fruits—through that penetration—one understands that in these five aggregates, there is no “I”. There is nothing here to be taken as a self. Once that understanding arises, or rather, once the law of Dependent Arising is correctly understood, that person no longer performs the kind of unwholesome or wholesome actions that occur through the view of existing group (*sakkāya-diṭṭhi*). This is the solution shown by the Buddha.</p>
+<p>We chose a verse that speaks briefly about this becoming (*bhava*) as our theme. But we must realize that saṃsāric beings obtain various states based on the distinction between the wholesome and the unwholesome, between merit and demerit. That is an eternal law. Moreover, one is easily inclined toward evil kammas. Because one is easily inclined, we must establish a certain stance; we must make a firm determination. Otherwise, one naturally drifts into them. One drifts into the kamma of others. Having drifted, one will have to suffer in terrible places like the lower realms. Therefore, a certain level of virtue (*sīla*) is necessary. Furthermore, virtue that has been practiced for a long time is stronger; virtue practiced for a brief period has less strength. That is why you all undertake precepts, or rather, protect the five precepts that are your own. Having undertaken them, you make a determination. Having made a determination, you reflect upon them. Reflecting thus, when the opportunity arises to take a wrong path, you bring forward the mental factor of abstinence (*virati-cetasika*) to abstain from the situation that has presented itself, practicing abstinence upon the arrival of the occasion (*sampatta-virati*). That mind of abstinence is extremely helpful in escaping from such dangerous situations. Next, it is through the strength developed through virtue in this way that concentration (*samādhi*) can be established.</p>
+<p>Reflecting in this manner, you will be able to understand the true meaning of the Middle Way shown by the Buddha. Next, through all of this, we must reflect on the nature of preparations (*saṅkhāra*). This existence created by the mind itself through these preparations—the worlds exist in corresponding alignment. The Buddha has shown that in accordance with various kammas, sometimes separate worlds manifest. It is said that at the end of an eon (*kalpa*), separate Brahma mansions arise for certain individuals. From this, we can see how powerful the mind is—this accumulation of kamma performed by our mind. Underneath all this lies that mentioned ignorance. Like a deep darkness, because of the darkness of ignorance, cultivating the delusion of “I” and “mine”, the beings of the world are driven to this kind of activity. To escape from this, we must gradually utilize these—without throwing away and without grasping onto virtue, concentration, and wisdom—using them from a middle stance. In some instances, this is compared to traveling by seven chariots. In those days, unlike today, if there was an urgent journey, several horse chariots were stationed at different points. One would travel in one chariot and mount the next when the horses became tired, and from that, mount another. In this way, changing between seven horse chariots, King Pasenadi Kosala went from Sāvatthi to Sāketa in an emergency; this simile has been shown. In that very way, the Buddha has shown each purification here. Relying on the purification of virtue (*sīla-visuddhi*), one develops the purification of mind (*citta-visuddhi*). Relying on the purification of mind, one develops the purification of view (*diṭṭhi-visuddhi*). In this way, passing through the sequence of seven purifications, ultimately one is able to attain the paths and fruits.</p>
+<p>From this, we can contemplate how wondrous the Middle Way shown by the Buddha truly is. The ordinary worldling cannot find a way to escape from this saṃsāra. For they either sink by remaining static, or they struggle and are swept away by this flood. Through every kamma we perform, there is a portion that sinks into the mental continuum. This portion that sinks into the mental continuum is identified in this Dhamma as the “underlying tendency” (*anusaya*). Like a heavy object sinking to the bottom, during our long journey in saṃsāra, there is a portion that comes to be deposited as an underlying tendency (*anusaya*) in our mental continuum. Likewise, there is that which is called “taints” (*āsava*). *Āsava* implies a flowing—there is the sense of an influx or taints. Then, there is another portion that sweeps one away, and that is what is called a “flood” (*ogha*), which we have referred to as torrents. What does that mean? It means saṃsāric habits. Through every kamma we perform, a habit is forged. That is why we previously referred to it as a wheel—the wheel of kamma. Indeed, the Dhamma sometimes outlines: the round of defilements (*kilesa-vaṭṭa*), the round of kamma (*kamma-vaṭṭa*), and the round of fruition (*vipāka-vaṭṭa*). This word *vaṭṭa* is often employed. *Vaṭṭa* means going in a circle, or a wheel. How does each of these turn into a wheel? They turn into habits. It is not easy to break those saṃsāric habits. They can be broken only through wisdom (*paññā*). Those habits accumulate. When one kamma is performed—as we said, because the jeweler was cutting meat, it was very easy for him to transition to another blood-spilling kamma—in that very way, any kamma we perform assists another as a habit, by way of repetition (*āsevana*), whether good or bad. Thus progressing, the portion that sinks into the mental continuum is called the underlying tendency (*anusaya*). These cannot be easily removed. Likewise, the taints (*āsava*) represent the portion that flows in. Arahants, pious devotees, remove those underlying tendencies (*anusaya*), taints (*āsava*), and floods (*ogha*)—that portion which sinks. They also exhaust those influxes of sensuality, becoming (*bhava*), and views (*diṭṭhi*) that flow in. A mind that has acquired the strength to be freed from those torrents called floods is what is called an Arahant’s mind, a Buddha's mind. It is for this state that a Buddhist practices all steps of the path. It is not for some minor goal as ordinary people think—not merely to protect some social ethics, nor just with the objective of maintaining society well. There is a far deeper purpose than that. One's saṃsāric liberation belongs to oneself. For one's inheritance of kamma—as expressed in “heirs to their kamma” (*kammadāyādā*)—one must be responsible for the mass of kamma one has brought along. One must also be responsible in this saṃsāra for the mass of kamma one performs. The way to escape from it was ultimately shown by the Buddha as that mentioned neither-dark-nor-bright kamma. That means developing the Noble Eightfold Path at the supramundane level.</p>
+<p>Looking towards the side of origination (*samudaya*), performing actions based on a general understanding of good and bad is described as “accompanied by taints, siding with merit, ripening in acquisitions” (*sāsavā puññabhāgiyā upadhivepakkā*). It is accompanied by taints (*sāsava*); that is acknowledged. Accompanied by taints, siding with merit, it accumulates acquisitions (*upadhi*) in saṃsāra—acquisitions meaning those things that yield various existences or worldly resources in saṃsāra. There is such a form of right view. On the other hand, what is the deep right view? It is the right view concerning the Four Noble Truths: that this entire existence is suffering (*dukkha*); its cause is craving (*taṇhā*); the calming of this craving is Nibbāna; and the path to it is the Noble Eightfold Path. The realization of these Four Noble Truths is what is called supramundane right view (*lokuttara-sammā-diṭṭhi*). Thus, in a mundane or saṃsāric sense, understanding the good and bad actions of beings is the lower level of right view. That is what is called the “right view of ownership of kamma” (*kammassakatā sammā-diṭṭhi*)—the understanding of merit and demerit, or good and bad. Not everything is accomplished by that alone. Standing upon that foundation, and having fulfilled those necessary requirements, ultimately—the final goal must be—to understand these Four Noble Truths deeply. To say that this entire existence is suffering (*dukkha*) means that there is no “soul” or “I” here. The path leading to that realization is what the Buddha has shown in the profound aspect of the Noble Eightfold Path. All eight factors arise simultaneously in a supramundane mind. Ordinary people, when developing the Noble Eightfold Path, take each factor individually and develop them “retail”. But it is in a supramundane mind that the Noble Eightfold Path arises in a unified meditative state. It is said that all eight factors arise simultaneously in a single moment of mind. That means all eight factors have become aligned. If we imagine those eight factors were crooked—crooked in various ways—it is precisely when all eight factors, from right view to right concentration, become aligned at the same instant that the realization of the paths and fruits occurs, when viewed in a deep sense. Therefore, there is a far greater depth in the supramundane state than the right view and right intention developed by ordinary people.</p>
+<p>Therefore, through this, you all should reflect upon and bring to light a host of deeper matters regarding kamma and rebirth, drawing from this story and verse. On this valuable day, bringing the Dhamma knowledge you have gathered close to your lives, and without neglecting these virtues, may you establish concentration (*samādhi*) through the restraint you have developed, and through that concentration, obtain that insight wisdom (*vipassanā-paññā*) to resolve to escape from this extremely dangerous saṃsāra. May the store of merit we have gathered today through this Dhamma sermon and Dhamma listening, and also all the mental strengths of faith (*saddhā*), energy (*viriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*) that you have developed through listening to the Dhamma, be a decisive support (*upanissaya*) for crossing over this saṃsāra—for crossing over this flood without halting and without straining.</p>
+<p>Likewise, for this pious group, today our small hall has been expanded. For this too, these devout lay disciples must have assisted and contributed to some extent. Also, a seat has been offered as a Dhamma-seat. Although we do not expect much, out of respect for the Dhamma, a Dhamma-seat has been offered. Reflecting upon that merit, and also relying on the store of merit gathered today through this special Dhamma listening, may all this power of merit remove whatever states obstruct your journey to Nibbāna in this life! May supportive states approach you! Experiencing the peace of the Dhamma, appeasing those mentioned forces of kamma, ultimately through the power of Dhamma, may this power of merit definitely be a cause and support to conquer the entire wheel of kamma through the wheel of Dhamma! Thus make your aspiration. Likewise, may the Sasana-protecting deities and Brahmas, and also the relatives who have passed away in your names, and all beings from Avīci up to Akaniṭṭha, rejoice in this merit of Dhamma sermon and Dhamma listening! Having rejoiced, may they as quickly as possible find peace in the supreme Deathless Nibbāna through their aspired Bodhi! With this aspiration, recite these verses and share the merit.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_018.html" class="doc-btn">← Previous Sermon (018)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_020.html" class="doc-btn">Next Sermon (020) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 069 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_068.html" class="doc-btn">← Previous Sermon (068)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_070.html" class="doc-btn">Next Sermon (070) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 069</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_069_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_069_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_069_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #69</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.170)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Apaṇṇakaṃ ṭhānameke, dutiyaṃ āhu takkikā;</p>
+<p>etadaññāya medhāvī, taṃ gaṇhe yadapaṇṇakaṃ.</p>
+<p>From:</p>
+<p>Apaṇṇaka Jātaka (Jātaka No. 1)</p>
+<p>Dear Listeners,</p>
+<p>The Buddha points out to us that the difference between the wise person and the foolish person can be understood according to the course of action they take when faced with a problem. The wise person looks at a problem and arrives at conclusions in a manner entirely different from how the foolish person looks at a problem and the conclusions they draw. Because of this very reason, where the foolish person meets ruin, the wise person secures their own progress. In this Dhamma, it is the practice of those wise ones that is known as the *apaṇṇaka* practice (the safe or non-erring path).</p>
+<p>The verse from the *Apaṇṇaka Jātaka* which mentions that wise practice is what we have chosen as our theme. In the Jātaka book, the *Apaṇṇaka Jātaka* is presented first, like the letter 'A' of the alphabet. This could be due to its foundational theoretical value. Everyone knows the story of the *Apaṇṇaka Jātaka*. Its background story (*nidāna*) exists as a narrative. The occasion on which this Jātaka story was preached is mentioned in the *Apaṇṇaka Jātaka* as follows. At a time when the Buddha, the Teacher of the Three Worlds, was residing in Sāvatthi, the householder Anāthapiṇḍika came to see the Buddha along with five hundred of his friends who were followers of other sects (*tīrthaka*). Having arrived and heard the Dhamma from the Buddha, all five hundred of those followers of other sects abandoned their sectarian refuge and took refuge in the Triple Gem. After that, they frequently came to Jetavana monastery with the householder Anāthapiṇḍika. They listened to the Dhamma, gave alms, and observed the precepts. After some time, the Buddha journeyed from Sāvatthi to Rājagaha.</p>
+<p>After He had departed, all five hundred who were previously sectarian followers abandoned their refuge in the Triple Gem and once again took refuge in their sectarian teachers. Having done so, when the Buddha returned to Sāvatthi seven or eight months later, the householder Anāthapiṇḍika came to meet the Buddha with these five hundred people and revealed this matter, in a way that made those sectarian followers feel somewhat ashamed. On that occasion, the Buddha, having declared the value of taking refuge in the Triple Gem in various ways, explained that in the past too, certain people, by taking that which is not a refuge as a refuge, fell prey to demons (*yakshas*) in a wilderness infested by non-humans and were destroyed.</p>
+<p>When this was declared, the householder Anāthapiṇḍika requested the Buddha to relate that story of the past. The story of the past is as follows. You all know how Jātaka stories begin. In the past, when King Brahmadatta was ruling in the city of Benares in the kingdom of Kāsi, the Bodhisatta was born into a merchant family. Having reached young adulthood, he earned his living as a merchant traveling through deserts with five hundred carts. In ancient books, he is called a caravan leader (*sātthu-nāyaka*), which in modern terms means a cart caravan leader. He was engaged in trade as a caravan leader. In that same city of Benares, there was another merchant who was rather foolish. He too was someone who traveled through deserts with five hundred carts. On one occasion, the Bodhisatta loaded his carts with valuable goods from Benares and prepared to cross the desert to a distant city. At that very moment, the foolish merchant also prepared to go at the same time with his five hundred carts. Then the Bodhisatta thought: "If both of our groups go together, the road will not be sufficient for a thousand carts. The men will not get enough water, and the oxen will not get enough grass. Either I must go first, or this merchant must go first." Thinking thus, he went to the foolish merchant and asked, "Will you go first, or shall I?" The foolish merchant calculated the benefits of going first in this way: "I can lead my carts on a road that is not yet muddy. There will be plenty of grass for the oxen. The men will also be able to get edible leaves. Going first, we can obtain clean, unmuddy water. Furthermore, I can fix the price of the goods as I wish." Seeing five such benefits, he declared, "I will go first."</p>
+<p>The Bodhisatta saw the advantages of going afterwards. He reasoned: "Once these merchants have gone and prepared the path, making the uneven places even, my journey will be easy. Also, when their oxen have eaten the mature grass, my oxen will get the tender young grass. Similarly, my men will get sweet edible leaves. Furthermore, as for water, since they would have gone ahead and dug wells in waterless places, we too can obtain water from them. Additionally, haggling over prices is a taxing task, like a slaughter; therefore, it is easier for me to sell my goods at the prices already established by them." Seeing five advantages in that direction, he agreed, saying, "Very well, I shall go afterwards." So, the foolish merchant, having filled his carts with water, set off. Deserts without water are called waterless deserts (*nirudaka*) in the books. *Udaka* means water. There are waterless deserts as well as deserts infested by non-humans. This was a desert that was both waterless and infested by non-humans. When these foolish merchants had reached the middle of the desert, the demon (*yaksha*) infesting that desert thought of making this caravan discard their water to weaken them, so that he could devour them along with their oxen. He assumed the guise of a great lord and, accompanied by a group of about ten or twelve, came in a carriage. This group wore lotus flowers, chewed lotus stalks, with their hair and garments dripping wet, and had mud on their bodies, looking exactly as if they were coming from a region plentiful in water. Coming forward, he engaged in friendly conversation with the foolish merchant. The merchant asked, "Is there water in the direction you are coming from?" "Oh, it is raining heavily there, there are lakes and ponds," praised the demon. When asked, "What is in those carts at the back?" the merchant replied, "Water." "Why are you carrying that water? There is plenty of water in that direction. You do not need to pull that load in these carts," said the demon.</p>
+<p>Listening to the demon's words, these foolish merchants broke their water pots, threw away the water in the carts, and went forward. But contrary to their expectations, there was no water. Both men and oxen stopped the carts at night and lay down exhausted. During the night, the demons came from the demon city and devoured everyone, including the oxen, leaving only their bones. That was the fate of the foolish merchant. Next, about a month and a half after the foolish merchants had left, the Bodhisatta also set out with his five hundred carts. When he reached the middle of the desert, the same demon came in the same manner to deceive the Bodhisatta, saying, "There is plenty of water in this area, throw away your water and go." The Bodhisatta immediately recognized that this was a demon, thinking, "Because of the redness of his eyes and the absence of a shadow, this must be a demon." The Bodhisatta said, "I will not throw away the water I have without seeing other water." Standing firm on that principle, he said, "It does not matter if the load is a bit heavy for us. We will carry it." Thus, the demon's plan did not succeed.</p>
+<p>As the Bodhisatta proceeded along that road, a discussion arose among the people: "Why are we carrying such a heavy load? That person said there is water ahead, didn't he?" The Bodhisatta stopped all the carts, gathered his men, and asked, "Have you ever heard of lakes or ponds in this desert?" "No," they replied. "And if it is raining, how far away do you feel the rain-wind and cold?" "About a league (*yojana*)," they said. "Do you feel them now? Do you hear thunder? Do you hear it rumbling? Do you see lightning?" When he asked this, the men had no answers. He said, "Understand that it was a demon who came. Therefore, let us continue our journey forward." Having persuaded them, they went forward. When they went, in the middle of the desert they saw those five hundred carts standing intact, and piles of bones everywhere. They realized the truth of the Bodhisatta's words—that the demons had devoured them. That night, having organized strong security arrangements, and having advised his men, saying, "Do not throw away the water, use it sparingly," they took the better carts in place of their own broken ones. They reached their destination safely, sold their goods, made a profit, and returned. That is what is related in that Jātaka story.</p>
+<p>Next, the Buddha, by way of presenting the underlying principle of the story, declared the short verse which we have taken as our theme. We have to understand it by adding a few more words.</p>
+<p>*Apaṇṇakaṃ ṭhānameke, dutiyaṃ āhu takkikā;*</p>
+<p>*Etadaññāya medhāvī, taṃ gaṇhe yadapaṇṇakaṃ.*</p>
+<p>What it says is: some wise people adopt that matter, that practice, which is called '*apaṇṇaka*'—let us keep the word as it is. "*Dutiyaṃ āhu takkikā*"—those who are slaves to logic (*takkikā*) accept the second position. Now, the word *apaṇṇaka* is often understood as the non-erring, safe path. Accordingly, wise people adopt the non-erring practice, while those mentioned second adopt the erring path. The wise person (*medhāvī*), having correctly understood this matter—that is, the difference between these two practices, the difference between good and bad, right and wrong—follows the advice: "*taṃ gaṇhe yadapaṇṇakaṃ*", meaning he acts in accordance with that *apaṇṇaka* practice. This is the instruction contained in this verse.</p>
+<p>At the conclusion of that story, the Buddha identified the characters, stating that the foolish merchant was Devadatta and the wise merchant was Himself. When we reflect upon this story, we can understand that between the practices of those two, the foolish merchant believed the words of the demon exactly as they were spoken. If we look at it from the perspective of logic, there were signs of someone coming from a place where it was raining. "Therefore, let us throw away the water and go"—that was all he thought. He acted without foresight. But the Bodhisatta not only recognized the demon as a demon; he also did not believe his words outright. Furthermore, he thought: "Why should we throw away the water we have carried without seeing other water? Even though it is somewhat heavy and troublesome, whether it turns out to be right or wrong, let us keep it." It is this very principle of "whether it turns out to be right or wrong" that is contained in this *apaṇṇaka* practice. Some foolish people, just because someone says so, would say, "Alright then, let us throw away the water and go." Our elders may have heard the saying: "Seeing fleeing deer, do not throw away the harvested leaves." A saying that fits this *apaṇṇaka* practice has been absorbed into our literature too: do not throw away the edible leaves you have already gathered just because you see deer running past. In the same way, one should not throw away the water in one’s possession merely because someone says there is water ahead.</p>
+<p>Moreover, this Bodhisatta merchant saw the benefits of going second in a way different from the foolish merchant. Also, when explaining things to his followers, he thought deeply and wisely considered whether it was really raining or not before making a decision. That is the *apaṇṇaka* practice. Therefore, even though it was troublesome, they carried the water. But in truth, he did not err. It might have seemed like an error initially. These are the valuable points contained within the *apaṇṇaka* practice. From this point on, we must add a few more details to this. We said earlier that the *Apaṇṇaka Jātaka* is placed at the very beginning of the collection due to some theoretical value. We can say, by way of a simile at this point, that just as the Bodhisatta, standing firm on the *apaṇṇaka* practice as a Bodhisatta, led his followers safely through the waterless desert infested by non-humans, the Buddha, the Teacher of the Three Worlds, after His Enlightenment, presented a non-erring practice in the Dhamma under the name *apaṇṇaka* that leads all the way to Nibbāna. It is that portion we are going to discuss next.</p>
+<p>There is a valuable discourse that reveals this. Today, there is a discourse in the Majjhima Nikāya called the *Apaṇṇaka Sutta* which is highly worth studying for rationalists. This discourse is somewhat deep, and it is something very valuable for intellectuals to investigate. The background story in it is as follows. On one occasion, while wandering on tour with a large community of monks, the Buddha arrived at a Brahmin village called Sālā. The Brahmins of Sālā had heard the widespread report of the Buddha's fame, such as "Itipi so bhagavā...", and thinking that it is wonderful to see an Arahant like the Buddha, this group of Brahmins came to see Him. When they arrived, the Buddha asked, "Householders, is there any agreeable teacher in whom you have placed your faith after investigating the facts?" This group replied, "No, we do not have such a teacher in whom we have established faith." The Buddha declared: "Householders, here the term *ākāravatī saddhā* (reasoned faith) is mentioned. Reasoned faith is the faith that is developed after investigating the facts. If you do not have a teacher in whom you have established reasoned faith, you should adopt and practice the *apaṇṇaka* practice. Standing firm on and practicing the *apaṇṇaka* practice will lead to your welfare and happiness for a long time. And what, householders, is this *apaṇṇaka* practice?"</p>
+<p>Now, what follows relates to the *apaṇṇaka* practice. "Householders, there are some ascetics and Brahmins who put forward this view, this opinion: 'There is nothing given, nothing offered... there are no spontaneously arisen beings; there are no ascetics and Brahmins in the world who have correctly understood and declared both this world and the world beyond.' That which was said to exist is denied there, and what is described is what is known in the Dhamma as the 'right view of ownership of action' (*kammassakatā sammādiṭṭhi*). You may have heard of the ten-point right view. Next, the Buddha states: 'Householders, these two groups express mutually contradictory views.' He analyzes and explains each of these as follows. Regarding those ascetics and Brahmins who previously presented the nihilistic view (*nātthika diṭṭhi*), because they do not accept good and bad, we can expect this kind of conduct from them: they abandon bodily, verbal, and mental good conduct, and engage in bodily, verbal, and mental misconduct. They do not know the danger in misconduct or the benefit in good conduct, nor do they know how the mind is defiled or purified by them. Therefore, they remain in that position and conduct their lives according to that practice. The Buddha continues further, by way of showing the danger of this: if there is indeed a world beyond—whereas their view is that there is not—then their view turns out to be a wrong view. Their thoughts and intentions become wrong thoughts (*micchā saṅkappa*). Furthermore, in their conduct, they say things opposed to the words of the Noble Ones (*Ariyas*). Moreover, by trying to propagate their view to others, they propagate the false Dhamma. In this way, the side of danger is shown. There are these various dangers in holding such a wrong view. Also, those who hold that wrong view tend to praise themselves and disparage others. Showing five such dangers, the Buddha summarizes them. Now, those who held that nihilistic view, from the very beginning, rejected the virtue of good conduct (*susīla*) and embraced bad conduct (*dussīla*), showing that they possess wrong view, wrong thoughts, wrong speech, and so on.</p>
+<p>Next, how a wise person looks at this matter is shown. This wise person looks at their practice and view and thinks: "If the view of these people is correct, if indeed there is no such thing as sacrifice or offering, and there is no world beyond, then after death, they will not face any trouble. However, if by any chance the opinion they hold is wrong, they will arise in a state of deprivation, in hell. Not only that; even if their view were correct, in this very life wise people censure them, saying: 'These people are of bad conduct, they hold wrong views.' This is called '*ubhayatha kaliggaho*'—losing on both sides. They have failed both in this world and in the world beyond." That is how the wise person reflects.</p>
+<p>Regarding those who hold the affirmationist view (*atthika-vāda*), the Buddha explains as follows. If they have presented an opinion in the second manner, which is the right view of ownership of action (*kammassakatā sammādiṭṭhi*), we can expect the following from them. Since they believed in *kamma* and its results, they would avoid wrong bodily, verbal, and mental actions and behave in good, wholesome bodily, verbal, and mental actions. Why? Because they know the danger in misconduct which defiles beings, and the beneficial side of good conduct which purifies the mind. This is the positive side of those who adopt the second opinion. The Buddha declares that if the matter is true, they possess right view (*sammādiṭṭhi*), their thoughts are right thoughts (*sammāsaṅkappa*), and the words they use are right speech (*sammāvācā*). If there is an opinion held by the Noble Ones (*Ariyas*), their view is in agreement with it. Their position is not opposed to the Noble Ones, it is in agreement. If they teach the Dhamma to someone, it is the True Dhamma (*saddhamma*). Through "*saddhamma-saññatti*" (persuasion in the True Dhamma), the True Dhamma is sharpened and refined. Furthermore, because they stand firm in that Dhamma, they do not engage in self-exaltation or disparaging of others.</p>
+<p>Having thus declared the side of benefit, the Buddha summarizes it: those who held that second view, from the very beginning, removed bad conduct and established themselves in good conduct, possessing good practices such as right view. Therefore, the wise, looking at that group with reason, see that even if by some chance it were true that there is no world beyond, they still receive the praise of the wise in this life, and they lead a good life. And if that matter is indeed true, they will go to a happy destination after death. While the others go to a miserable destination, these go to a happy destination. In that way, on both sides, those who hold this second view win on both sides. While for the first view it was said, "it failed on both sides," here it is "it succeeded on both sides." That is the *apaṇṇaka* practice. We can understand that those who hold wrong view meet with destruction both in this world and in the next. That can be considered bad. For those who adopt right view, whether they turn out to be right or wrong, their practice is a fruitful, non-erring practice.</p>
+<p>That discourse does not end there. Taking each of the wrong views such as the nihilist view (*nātthika-vāda*), the doctrine of non-causality (*ahétu-appaccaya-vāda*), the annihilationist view (*ucchēda-vāda*), and the doctrine of non-action (*akiriya-vāda*) taught by Pūraṇa Kassapa and others, it presents, describes, analyzes, and dissects these principles. It demonstrates the side of danger and the side of benefit, showing how the wise should look at them. Although this discourse continues much further, let us analyze this portion. In our literature, there is a book called *Subhāṣitaya* written by Alagiyavanna Mukaveti. There is a stanza in it that illustrates the *apaṇṇaka* practice:</p>
+<p>*Whether there is a world beyond or not, O great virtuous ones,*</p>
+<p>*It is best to abandon sinful deeds without keeping them in mind.*</p>
+<p>*Even if there is no world beyond, no harm comes from doing so,*</p>
+<p>*But if there is, disaster awaits those who sinned thinking there is none.*</p>
+<p>I spoke at length about the *apaṇṇaka* practice to show that there is something here for rationalists to ponder. From that point onwards in the discourse, the path leading to Nibbāna is presented. So, as summarized, the Buddha rejects the primary wrong views. He does not merely reject them, but by showing reasons and evidence, He demonstrates to the wise how to look at them in accordance with the *apaṇṇaka* practice. Next, the discourse goes into a deeper aspect: "Householders, there are certain ascetics and Brahmins who say that there is absolutely no such thing as formless *Bhava* (Becoming)."</p>
+<p>You are all aware of the three realms of *Bhava* (Becoming), namely: the sensual (*kāma*), fine-material (*rūpa*), and immaterial/formless (*arūpa*) realms. Fine-material *Bhava* (Becoming) refers to the planes from the first absorption (*jhāna*) to the fourth absorption. Immaterial *Bhava* (Becoming) refers to those existing above them, such as the sphere of infinite space (*ākāsānañcāyatana*), and so on. "Householders, some ascetics and Brahmins say there is no immaterial *Bhava* (Becoming). Some other ascetics and Brahmins say there is immaterial *Bhava* (Becoming). Now, householders, are the assertions of these two groups mutually contradictory?" "Yes," they reply. "If they are contradictory, a wise person looks at this and thinks in this way: 'Whether immaterial *Bhava* (Becoming) does not exist or does exist is something I do not know. If so, if I were to grasp one side as "this is the only truth, all else is false," that would be a view. That is wrong, and that is not suitable for me.'" This is how the Buddha shows a wise person should think. However, the wise person reflects on these two views present before him—that immaterial *Bhava* (Becoming) exists and that it does not. "If the words of those who say there is no immaterial *Bhava* (Becoming) are true, then by acting accordingly, I can be born in the fine-material worlds consisting of mind-made form. If the view of the second group is true, I can obtain birth in the immaterial worlds." Then this wise person reflects: "It is because of form (*rūpa*) that all of this—taking up rods, taking up weapons, quarrels, disputes, false speech, etc.—occurs; none of these exist in the immaterial realm." Therefore, even though he does not know for certain which one of the two is correct, his preference leans towards the immaterial. Why? Because the benefit is greater. "Therefore, I can free myself from form and obtain birth in the immaterial plane." Thinking thus, he chooses the second of the two options.</p>
+<p>Next, another scenario is presented. "Householders, there are certain ascetics and Brahmins who say there is absolutely no cessation of *Bhava* (Becoming). Other ascetics and Brahmins say that the cessation of *Bhava* (Becoming) can be achieved in every way." The Buddha shows how the wise should reflect on this: "If the words of those who say that *Bhava* (Becoming) can in no way be ceased are true, then if I follow the path they show, I can obtain birth in the immaterial worlds. The previous one was mind-made immaterial, while this one is perception-made immaterial (*saññāmaya*). This second one is subtle. Like Āḷāra Kālāma and Uddaka Rāmaputta, by attaining states of absorption (*jhāna*), I can obtain a corresponding birth through that first option. Secondly, he thinks, if indeed *Bhava* (Becoming) can be ceased in the manner stated in the second view, then I can achieve parinibbāna '*diṭṭheva dhamme*'—in this very life, right here. I will be able to attain extinction/extinguishment in this very life."</p>
+<p>Now we come to a profound point. Out of these two, the wise person chooses the second one. If one can attain extinction/extinguishment in this very life, then both the fine-material worlds and the immaterial worlds are completely transcended. That is what this wise person chooses. This demonstrates that *apaṇṇaka* practice. Just as the Bodhisatta, during his life as a Bodhisatta, stood firm on the '*apaṇṇaka* practice' and crossed the desert safely with his caravan despite the various temptations used by the demons to lure them in the waterless, non-human infested desert, the Buddha has shown, through this *Apaṇṇaka Sutta*, the path leading to Nibbāna by saving His followers from various kinds of wrong-viewed demons.</p>
+<p>That is why we started with the *Apaṇṇaka Jātaka* and descended to the *Apaṇṇaka Sutta*. This is a profound matter. On previous occasions, we mentioned how nowadays, many people explain Nibbāna as a state of *Bhava* (Becoming) attained after death. We even treated that view with irony. Here, it is clearly seen that Nibbāna, this so-called parinibbāna, is something that can be realized in this very life. Everyone knows the ultimate conclusion of that Buddha-word that "saṃsāra is *Dukkha* (Suffering)," which was realized when He was a Bodhisatta. As a Buddha, what is contained in the Four Noble Truths that put an end to this saṃsāric journey? The entirety of the five aggregates of grasping (*pañcupādānakkhandha*)—when we say the five aggregates of grasping, fine-material and immaterial are all included—the five aggregates of grasping themselves are *Dukkha* (Suffering). They exist because of *Taṇhā* (Craving); by eradicating *Taṇhā* (Craving), one is liberated from those five aggregates of grasping. This is shown as a state experienced in this very life. It is a bliss of Nibbāna enjoyed in this very life, not something to be experienced in the next world. This is also clear from this sutta passage: '*diṭṭheva dhamme parinibbāyati*'—one attains parinibbāna in this very life. That does not mean one dies. 'Parinibbuta'—parinibbāna—means calming in every way, relinquishing these assets (*upadhi*), exhausting *Taṇhā* (Craving), and reaching dispassion (*virāga*); that is, experiencing the state of Nibbāna in this very life within the attainment of the fruit of Arahantship (*arahatta-phala-samāpatti*). What is realized through that is the cessation of *Bhava* (Becoming). It is because of *Upādāna* (Grasping) that there is *Bhava* (Becoming). This is the deepest point of the Dhamma. Although we think that a world exists even without us, the deepest matter in the Dhamma is *upādāna-paccayā bhavo*: as long as there is *Upādāna* (Grasping), there is *Bhava* (Becoming). Where there is no *Upādāna* (Grasping), *Bhava* (Becoming) is ceased. That cessation is what is called parinibbāna. Therefore, if the five aggregates of grasping present through *Upādāna* (Grasping) are a fire, on the other hand, there is the cooling, the extinguishment.</p>
+<p>As Buddhists who have trust and faith in the Buddha, we must consider that this discourse provides clear evidence. If we return to those views, at the very beginning of the discourse it was shown that those who adopt wrong view, the nihilistic view, go to a miserable destination. Those who adopt the right view of ownership of action perform meritorious deeds and go to a happy destination. If one is to remain in saṃsāra, a happy destination is better than a miserable one. Beyond that, if saṃsāra is *Dukkha* (Suffering), then liberation from saṃsāra is necessary. In the past, those hermits (*risis*) who had attained supernormal knowledges (*abhiññā*) and realized that saṃsāra is *Dukkha* (Suffering), tried to elevate their minds to the fine-material plane to escape the sensual world. They realized it. Going even further in this life, there is what is called "immaterial perception-made," such as the sphere of neither-perception-nor-non-perception (*nevasaññānāsaññāyatana*). They were the teachers of the Bodhisatta. He was not satisfied with that, was He? Because that too is *Bhava* (Becoming). Even though Āḷāra Kālāma and Uddaka Rāmaputta handed over their followers and offered Him an equal status, the Bodhisatta left them, saying, "This is not the path to Nibbāna." Nibbāna cannot be that kind of thing. Whether taken by way of sense bases (*āyatana*) such as what is seen by the eye and heard by the ear, or by way of aggregates (*khandha*), *Bhava* (Becoming) arises because all of these are taken by way of *Upādāna* (Grasping). *Upādāna-paccayā bhavo*—each individual goes on creating their own *Bhava* (Becoming). Sensual *Bhava* (Becoming) is what is mostly found in the world. This is not something you can touch with your hand; one dwells inside sensual *Bhava* (Becoming). It is only very rarely that someone experiences fine-material *Bhava* (Becoming) or immaterial *Bhava* (Becoming).</p>
+<p>But all of those are defeated by the state of parinibbāna shown by the Buddha. It is something no other teacher was able to demonstrate. So, to understand that, we must understand the value of truth. Although we express truth in words, for convenience we now say: *Jāti* (Birth) is *Dukkha* (Suffering), *jarā* (decay/aging) is *Dukkha* (Suffering), sickness is *Dukkha* (Suffering). We go on reciting this very easily. Finally, it is said that, in short, the five aggregates of grasping (*pañcupādānakkhandha*)—these five heaps grasped through *Upādāna* (Grasping), namely form (*rūpa*), *Vedanā* (Feeling), perception (*saññā*), *Saṅkhāra* (preparations), and *viññāṇa* (consciousness)—were declared by the Buddha to be *Dukkha* (Suffering).</p>
+<p>If this *Dukkha* (Suffering) exists because of *Upādāna* (Grasping), what is the cause of this *Upādāna* (Grasping)? It is *Taṇhā* (Craving), indeed. Now, we often say that teachers in Dhamma schools teach what the Truth of *Dukkha* (Suffering) is. Next, they say the second truth is *Taṇhā* (Craving). However, they do not properly know the connection between these. If the five aggregates of grasping—the five heaps held onto—are *Dukkha* (Suffering), then *Taṇhā* (Craving) which causes that holding is the cause; that is the second truth, the Truth of Arising (*samudaya sacca*). It is only by eradicating that cause that one can be liberated from this *Dukkha* (Suffering). That is why in certain places Nibbāna is described as: "*taṇhakkhayo hi rādha nibbānaṃ*"—"Indeed, Rādha, the destruction of *Taṇhā* (Craving) is Nibbāna." But this is not enough for many people. They want to destroy *Taṇhā* (Craving), but they also want to keep something else remaining. That is precisely where they go wrong.</p>
+<p>But the Buddha points out that as long as this *Taṇhā* (Craving) exists, this burning remains. Liberation (*vimutti*) is a state of cooling, of extinguishment. In truth, it is often the simple things that people fail to understand, and that is the point being emphasized here. This discourse concludes with '*diṭṭheva dhamme parinibbāyati*'—one attains parinibbāna in this very life.</p>
+<p>Therefore, one must wisely reflect upon this *apaṇṇaka* practice. *Apaṇṇaka* means non-erring or safe. In truth, there are differences of opinion regarding the etymology of this word. Some say it comes from '*apraśnaka*', meaning unquestionable or without any issue. Be that as it may, we can find an explanation from the discourses themselves which is helpful even to etymologists. In a certain discourse in the Aṅguttara Nikāya, the Buddha provides a simile of the "*apaṇṇako maṇi*"—the *apaṇṇaka* gem. He says there is a gem called *apaṇṇaka*, which, when thrown up into the air, always lands squarely on whichever side it falls. The Commentary explains this as a four-sided or cubic object. Just as a perfectly cubic piece of wood, when dropped, always lands flat on one of its six faces—having six sides representing up, down, and the four directions—the gem is described as landing upright no matter which way it is thrown. That is why it was said earlier, "whether it turns out to be right or wrong."</p>
+<p>Through the simile of the *apaṇṇaka* gem, we can understand that even if the word *apaṇṇaka* is not fully analyzed, when the Buddha wanted to declare that this *apaṇṇaka* practice is absolutely correct, He said that it happens in an *apaṇṇaka* (unfailing) manner. The Buddha states that if someone engages in misconduct through bodily and verbal actions, just as that *apaṇṇaka* gem always lands securely on some side, it is certain that the person will go to hell. They go there definitely, without fail. Sometimes people say about bad deeds, "it is as if they were placed in hell." The positive side is also applied in the same simile: if someone engages in good conduct through bodily and verbal actions, then, just as the *apaṇṇaka* gem thrown up lands securely, they will go to a happy destination.</p>
+<p>The *apaṇṇaka* practice means reflecting on matters wisely, not merely accepting things because someone said so, but making a decision after thoroughly investigating the dangers and benefits. What is found here is not the adopting of an dogmatic view. It is not like saying, "*idameva saccaṃ moghamaññaṃ*" ("this alone is truth, all else is foolish/false"). The wise person should not think: "I do not know for sure if this is correct. Nor do I know if the second one is correct. Why should I, not knowing, declare 'this alone is truth, all else is false'?" Instead, he investigates the path: "If I proceed according to this path, this is the benefit I will receive. If I act according to the second path, this is the benefit I will receive." He weighs both options, weighing the dangers and the benefits. Thereafter, he gives his preference to the beneficial side. That is the secret of the *apaṇṇaka* simile.</p>
+<p>Nowadays, no matter how much we explain to many of those who claim to be intellectuals, it is difficult for them to establish faith (*saddhā*) in the Buddha. They question everything, putting logic forward, just like the foolish merchant. If the words sound logical, they would accept them even if spoken by a demon. That is not the approach to which the Buddha gives prominence.</p>
+<p>Here, in accordance with this principle, we point out to you a discourse that has been heard of for a long time and is discussed among scholars, namely the *Kālāma Sutta*. At this moment, we will not analyze it extensively. We will mention it briefly: a similar situation arose for the Buddha regarding the Kālāmas of Kesaputta. They said to the Buddha: "Some ascetics and Brahmins who come to us speak in one way, while another group censures them and states a different opinion. We have doubts in choosing between these." Recognizing this, the Buddha declared: "It is natural that you have doubts. When such a double-horned dilemma is presented, doubt is reasonable." Having accepted this, He then presented ten criteria.</p>
+<p>To consider them briefly: do not go by oral tradition, do not go by lineage of teaching, do not go by hearsay, do not go by mere logical reasoning, do not go by inference, do not go by superficial evaluation, or because this teacher is respected by us—in this way, He points out ten criteria. He advises not to arrive at a conclusion based on those. Yet, just because this was said, some people use it to reject certain points of the Dhamma. Sometimes we have to say that some of our intellectuals have "eaten up and thrown away the *Kālāma Sutta*" (a play on words: *kālāmā dālā*). They have not understood its value. The *Kālāma Sutta* must be analyzed while standing firm on that very *apaṇṇaka* practice. The Buddha declared directly to them:</p>
+<p>"Kālāmas, do not hold firmly to any of those ten criteria. Each one of them can err." That demon was, at first glance, someone who looked clean as if he had bathed well. So how could one doubt him? Thus, there are things like that on all sides. Do not accept any of those. Instead, what should be done? "Relate it to your own lives." Most people leave out that part. The Buddha points out on many occasions that this Dhamma is about the eradication of greed, hatred, and delusion. Then, one can directly see whether greed is a good thing or a bad thing. Greed is bad, hatred is bad, delusion is bad. This is directly experienced.</p>
+<p>When speaking of this matter, the qualities of the True Dhamma: "*sandiṭṭhiko, akāliko, ehipassiko, opanayiko, paccattaṃ veditabbo viññūhi*" also apply here. Within this well-expounded (*svākkhāta*) Dhamma, there are things that can be directly experienced by oneself. The Buddha says to the Kālāmas regarding whether greed, hatred, and delusion are good or bad, and whether eradicating them and developing non-greed, non-hatred, and non-delusion is bad or good: "Kālāmas, when you investigate within yourselves whether something is wrong, and whether it is good or bad, and realize 'by practicing these dhammas, I will have these benefits'—that is how a matter should be investigated." The Buddha is saying there that you should examine and accept these things by relating them to your own lives, not through any of those ten criteria. It does not mean throwing everything away, nor does it mean accepting everything. It means testing it in one’s own life; and testing does not mean through books, but by connecting it to life to see whether it is right or wrong. That is not being done in the way mentioned. Most often, the logic of books is put forward. "If these teachings are brought close to life, we will face ruin; otherwise, because of these teachings, our lives will flourish"—the Buddha is declaring to the Kālāmas to draw conclusions in this manner through investigation and direct experience.</p>
+<p>If there is any logic in this Dhamma, it exists to draw conclusions based on direct experience. The journey that is based on that direct experience leads straight to Nibbāna; this Dhamma is well-expounded (*svākkhāta*) and leading out of suffering (*niyyānika*). The *apaṇṇaka* practice is a practice that leads out of suffering. What is the reason for this? Because this Dhamma is well-expounded, it is directly visible (*sandiṭṭhika*); because it is directly visible, it is timeless (*akālika*). The timeless Dhamma can be pointed to as "come and see" (*ehipassiko*). Accordingly, within the Dhamma itself, there is the quality of one step elevating you to the next step. That is how the Dhamma is structured. It is structured as right view, right thought, and so on. One step prepares for and supports the next step. Next is "*paccattaṃ veditabbo viññūhi*"—it is to be experienced individually by the wise. It is not about proving it through mere intellectual reasoning or mere belief. It is about bringing it close to one's own life and drawing a conclusion as to whether it is right or wrong. It is this very *apaṇṇaka* practice that the Buddha declared.</p>
+<p>What was presented to you today is a somewhat complex sermon. However, take what is to be taken. Try to bring it close to your own lives. By observing these virtues of moral conduct, what you are hoping for is to escape from this saṃsāric *Dukkha* (Suffering) of *Jāti* (Birth), *Jarāmaraṇa* (Decay and Death), sickness, and so on. Fine-material *Bhava* (Becoming) and immaterial *Bhava* (Becoming) lose their significance once a Buddha has appeared.</p>
+<p>In today’s sermon, the *apaṇṇaka* practice was introduced. I wish that by taking this *apaṇṇaka* practice forward, this sermon may support everyone in escaping from the saṃsāric *Dukkha* (Suffering) of *Jāti* (Birth), *Jarāmaraṇa* (Decay and Death), sickness, and so on, and realizing the noble, supreme, deathless Nibbāna! May whoever wishes to share in the merit of this Dhamma preaching and Dhamma listening, from the Avīci hell up to the Akaniṭṭha heaven, rejoice in it and realize the supreme, deathless Nibbāna through their aspired state of Enlightenment! Wishing thus, recite these verses and share the merit.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_068.html" class="doc-btn">← Previous Sermon (068)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_070.html" class="doc-btn">Next Sermon (070) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 054 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_053.html" class="doc-btn">← Previous Sermon (053)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_055.html" class="doc-btn">Next Sermon (055) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 054</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_054_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_054_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_054_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #54</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.203)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Aho buddhā aho dhammā, aho no satthu sampadā; Yatthetādisaṃ dhammaṃ, sāvako sacchikāhisi. Asaṅkheyyesu kappesu, sakkāyādhigatā ahu; Tesaṃ ayaṃ pacchimako, carimoyaṃ samussayo. Jātimaraṇasaṃsāro, natthi dāni punabbhavoti.</p>
+<p>From:</p>
+<p>Theragāthā</p>
+<p>Dear Listeners,</p>
+<p>The Venerable Kumāra Kassapa Mahā Arahant was a disciple who received from the Blessed One the foremost position (*etadagga*) among those who are eloquent speakers (*citta-kathika*). The term *citta-kathika* signifies the ability to preach the Dhamma in a wondrous and diverse manner, presenting appropriate similes and illustrations according to the occasion. Today, we have selected as our theme two verses mentioned in the *Theragāthā Pāḷi*, which the Ven. Kumāra Kassapa Mahā Arahant uttered in praise of the virtues of the Triple Gem after attaining Arahantship. In these verses, the indeclinable particle ‘*aho*’ is used in the sense of expressing wonder. "Oh, how wondrous are the Buddhas! Oh, how wondrous is their Dhamma! Oh, how wondrous is the attainment of our Teacher! In what kind of teacher’s achievement, within what kind of dispensation of holy life (*brahmacariya*), a disciple realizes such a Dhamma—how wondrous is that achievement of the Teacher!" In the next verse, it is said: "In incalculable aeons, existences of the existing group (*sakkāya*) have been received by me, have arisen for me. Of those, this is the last group of the five aggregates of grasping (*pañcupādānakkhandha*). This is the final existing group (*sakkāya*). This is the last body. The round of rebirths characterized by Birth and Death (*jātimaraṇasaṁsāra*) is ended; now there is no renewed becoming (*bhava*)." That is the meaning of those two verses.</p>
+<p>Through these two verses, the Ven. Kumāra Kassapa Mahā Arahant has very beautifully praised the virtues of the Triple Gem, taking his own direct realization as an illustration. There are certain remarkable features in the life story of Kumāra Kassapa Mahā Arahant, just as in his eloquence. According to the Pāḷi records, like other great disciples who received foremost positions, Kumāra Kassapa Mahā Arahant had also fulfilled the perfections (*pāramī*) for a long period in the presence of past Buddhas, aspiring for this position. In the time of our Buddha, he was born in Rājagaha as the son of a treasurer’s daughter. His birth is recorded as follows:</p>
+<p>That treasurer's daughter had a great desire to ordain and asked her parents for permission to become a *bhikkhunī*, but they did not grant it. Instead, they gave her in marriage to someone. Not long after being married, having obtained permission from her husband, she ordained in the Bhikkhunī Order. However, she did not know at the time that she was pregnant. As the womb matured, the other *bhikkhunīs* suspected her and informed Elder Devadatta about this. Elder Devadatta said that this *bhikkhunī* should be disrobed. But that *bhikkhunī*—let us call her the mother of Kumāra Kassapa—when she had the matter referred to the Buddha, the Buddha assigned Elder Upāli, the foremost among the masters of discipline (*vinayadhara*), to resolve this issue. Elder Upāli summoned the residents of Sāvatthi and the great laywoman disciple Visākhā, and in the midst of an assembly including the King, had a screen put up. He had Visākhā examine the *bhikkhunī* and concluded that the pregnancy had occurred during her lay life, and thus she was innocent. In due course, while in the bhikkhunī monastery, she gave birth to this child. Later, King Pasenadi of Kosala, thinking that raising this child would be an impediment and a trouble for the *bhikkhunīs*, took over the responsibility of raising him. Because of this, it is said he received the name ‘Kumāra Kassapa’ (Kassapa the Prince). Furthermore, this prince entered the order at the young age of seven.</p>
+<p>There is a highly important discourse associated with him in the Tipiṭaka literature, called the *Vammika Sutta* (‘The Ant-hill Discourse’) in the *Majjhima Nikāya*. In truth, that was not a sermon preached by him. At that time, the Ven. Kumāra Kassapa had not yet attained Arahantship. One day, while he was meditating in the Andhavana forest during the night, a deity appeared and presented fifteen deep, enigmatic questions using the simile of an ant-hill. No one else in this world-system could answer these questions; only the Buddha could answer them. So the deity told him to go and ask the Buddha. When the Ven. Kumāra Kassapa asked those questions, the explanation given by the Buddha is what is recorded in the *Vammika Sutta*. According to what is mentioned in the *Apadāna Pāḷi*, the Buddha’s profound exposition helped the Ven. Kumāra Kassapa to attain Arahantship.</p>
+<p>Although he received the foremost position as an eloquent speaker (*citta-kathika*), among the discourses available to us, the only sutta that reveals the eloquence of Ven. Kumāra Kassapa Mahā Arahant is the *Pāyāsi Sutta* in the *Dīgha Nikāya*. It is a very long discourse, containing numerous illustrative similes. Let us try to extract a few similes from it that are suitable for this occasion. The story is recorded as follows. According to the opinion of scholars, this *Pāyāsi Sutta* appears to have been preached after the Parinibbāna of the Buddha. At that time, Ven. Kumāra Kassapa Mahā Arahant was elderly and held a highly respected position. It is recorded as follows: On one occasion, while Ven. Kumāra Kassapa Mahā Arahant was wandering in the Kosala country with a large retinue of five hundred bhikkhus, he arrived at the city of Setavyā and resided in the Siṁsapā grove, an *Aṭṭēriyā* (Indian Rosewood) forest located to the north of the city. Next, the book describes the city of Setavyā as follows.</p>
+<p>The ruler of the city of Setavyā was a local chieftain appointed by King Pasenadi of Kosala, named Pāyāsi Rājañña. He was not a king, but was known as ‘Rājañña’ (chieftain/prince). This ruler is specifically described as follows: He was a person who held a very grave wrong view (*micchā-diṭṭhi*). What was the view he clung to? ‘There is no other world; there are no spontaneously born (*opapātika*) beings; there are no fruits or results of good and bad deeds.’ This Pāyāsi Rājañña was someone who held such a terrible, sinful view. Then, it is recorded as follows: When the news spread that the Ven. Kumāra Kassapa Mahā Arahant had arrived—that a wise, learned, intelligent, eloquent, elderly Mahā Arahant was residing there—his reputation spread far and wide. While a group of residents from Setavyā was preparing to go to the Siṁsapā grove to see him, Pāyāsi Rājañña, who was resting during the day, saw the crowd going and asked his doorkeeper, "Where is this crowd going?" The doorkeeper replied: "They are going to see a monk named Kumāra Kassapa who has arrived." Then Pāyāsi Rājañña told his servants: "In that case, go and tell that crowd not to go until Pāyāsi comes. I will also go with you. Before that ascetic deceives foolish brahmins by spreading false rumors that there is another world, that there are spontaneously born beings, and that there are results of good and bad deeds, I must go there." Thus he went.</p>
+<p>That chieftain went along with the crowd, exchanged pleasantries with Ven. Kumāra Kassapa, and then directly stated his view: "My view, Kassapa, is this: there is no other world, there are no spontaneously born beings, there are no fruits or results of good and bad deeds." Then Ven. Kumāra Kassapa remarked: "I have never heard of such a thing. This is indeed a very wrong view." First, he asked: "Are the sun and moon things belonging to this world or the other?" Pāyāsi admitted: "They do not belong to this world; they belong to the other world, the higher celestial world." Then the Elder asked: "Why then do you hold such a view?" From that point onwards, a very long discussion ensues. These are long narratives that reveal the patient endurance and the brilliant, creative intelligence of Ven. Kumāra Kassapa Mahā Arahant.</p>
+<p>Some of the similes are very long. This is how it begins. The Elder asks, "Why did you adopt such a view, such a wrong opinion?" To this, Pāyāsi Rājañña explains the kind of experiments he performed. He says: "I have friends and relatives who commit the ten unwholesome deeds—killing, stealing, and so on. When these relatives and friends of mine fell ill and were close to death, I went to them and said: ‘If you die and are born in hell, come and tell me that there is another world.’ Although I told them so, no one has yet come and told me that there is another world." It is based on this that Pāyāsi Rājañña asserts there is no other world. The simile given by Ven. Kassapa to this is as follows: "Now, Rājañña, suppose you are a king's officer, and your servants capture a criminal who has committed an offense, and bring him to you to be punished. Then, as a punishment, you order: ‘Bind him with ropes, beat the execution drum, take him through the streets, and execute him by cutting off his head at the place of execution on the south side of the city.’ When the executioners have bound that man and taken him there, and he sits down to be beheaded, can that man say to the executioners: ‘Wait a moment until I go and take leave of my relatives and friends and return’?" Pāyāsi replies, "No, he cannot." Then the Elder says: "Rājañña, if that human thief cannot get permission from those human executioners, how could he, after going to hell, get permission from the wardens of hell to come and tell this chieftain about the matter?" Then Pāyāsi admitted it was impossible, but added: "Even so, Ven. Sir, I still cling to my view."</p>
+<p>Again, he gives another reason for it. It proceeds in the same manner. This was regarding the ten unwholesome deeds. "Similarly, I went to my friends and relatives who abstain from the ten unwholesome deeds like killing and so on, when they were on their deathbeds, and said: ‘If you are born in a celestial world, come and tell me.’ Let the devotees think of this in the same way. ‘None of them have come so far to give me the message, even though I asked them to.’" Then the Ven. Thero says: "Just as a man who has fallen into a cesspit, after being pulled out, washed, and cleaned, would not want to go back into that cesspit again, so a person who has gone from this human world and is enjoying celestial pleasures in the heavenly world would not trouble himself to return to the human world to tell this to the Rājañña." Related to the same point, the chieftain says: "The ascetics and brahmins say that if one keeps the five precepts properly, one goes to the Tāvatiṁsa heaven. I also told such people who keep the five precepts properly: ‘If you are born in the Tāvatiṁsa heaven, come and tell me.’ But in that case too, no one came to tell me." Then Ven. Kassapa explains the life-span of the Tāvatiṁsa heaven. One hundred years in the human world is equivalent to a single day in that celestial world. Therefore, if a person born in that heaven thought of coming to fulfill the message after enjoying heavenly bliss for just two or three days, would you still be alive in this human world to receive it? Pāyāsi answers that question too.</p>
+<p>Next, he describes another experiment he conducted. To put it briefly, dear devotees, think about this carefully: Pāyāsi was like a pioneer to modern physical scientists who use advanced machinery to study the workings of the mind. Understand this from what Pāyāsi says next. On this occasion, Pāyāsi Rājañña relates an experiment he performed and its results: "When a criminal like that is brought to me, I tell my men to put that man alive into a large jar, cover its mouth with a damp hide, seal it well with clay, place it on a furnace, and light a fire. When the man is about to die, I carefully open it to see if the vital principle (*jīva*) escapes from the jar. Although I did so, as a result of that experiment, I did not see any vital principle escaping." That was a very foolish experiment.</p>
+<p>The answer given by Ven. Kassapa to this is worth contemplating. He asks: "Rājañña, do you remember when you go to sleep during the day—indeed, one has dreams even during the day—do you not see yourself in dreams going to beautiful, delightful ponds and gardens? Do you remember?" "Yes," he replies. "On such occasions, if you have attendants and maids watching over you, do they see your vital principle departing, or your mind departing?" "No," he says. From this, we can understand something. Ven. Kassapa says: "If they cannot see the movement of your mind while you are alive, how could one see the mind departing at the moment of death?" When this was said, what could he say? This Rājañña was someone who had conducted a fair number of experiments; in short, he can be called a pioneer among physical scientists who conduct experiments.</p>
+<p>Then he says: "On some occasions, I weigh a condemned man on a scale before he is executed. Then I weigh him again after he is dead. When weighed after death, he is heavier than before. If the vital principle had departed, shouldn't he be lighter?" This was his logic. Then Ven. Kassapa asks: "Rājañña, then answer this question. When an iron ball is heated all day long, it is lighter when weighed, isn't it? When it is completely cooled, it is much heavier, isn't it?" Pāyāsi replies: "Yes, that is so. When the heat element (*tejo-dhātu*) and the wind element (*vāyo-dhātu*) are combined and active, the iron ball is lighter. When they subside, it is heavier."</p>
+<p>"Just like that," Ven. Kassapa says, "as long as this body possesses life-span, warmth, and consciousness (*āyu, usmā, viññāṇa*), the body is lighter. After death, it becomes stiff and heavy." In this manner, he answers that question. Thus, there were various kinds of experiments.</p>
+<p>Some other arguments are quite humorous. He says: "If virtuous people go to heavenly worlds and such places after death, why do they protect their lives? They could eat poison and die sooner, if they knew they would be born in a good place. I do not see anyone doing that." At that point, Ven. Kassapa gives a unique simile. This is how it is told. These are illustrative stories. Whether they are actual events or not, he says: "A certain brahmin had two wives. The child of one wife was ten or twelve years old. While the other wife was pregnant with a child, the brahmin passed away. That ten or twelve-year-old boy said to his stepmother: ‘Now, this wealth of my father belongs to me, not to you. Therefore, hand it over to me.’ Then this woman said: ‘Wait a little while until this child is born. If this child is a boy, he will also get a portion. If it is a girl, I will hand it over to you.’ Again and again, the boy harassed her. Later, this woman—since in those days there were no instruments to find out the state of a child in the womb as there are today, nor were there methods to hasten birth as many do today—what did she do? She took a knife, went into a room, and in order to quickly deliver the child, performed a certain surgical operation on herself, and consequently died." Giving this simile, Ven. Kassapa says: "Just like that, virtuous people do not destroy their lives prematurely when there is still time to live. Committing suicide in expectation of a happy destiny is like what that woman did in trying to force the birth before the child was due."</p>
+<p>In this way, he goes on giving similes. But this person, the Rājañña, continues to state such points endlessly. After a certain point, when he was convinced to some extent, he says: "If I abandon this view of mine now, King Pasenadi of Kosala and many others, as well as people of neighboring countries, know that Pāyāsi Rājañña holds such a view. If I abandon this view, I might face various accusations from others. Otherwise, they will look down on me, saying that I behaved foolishly for so long." Even after understanding and being convinced, the Rājañña was reluctant to abandon his view due to pride (*māna*). At that point, the Ven. Kumāra Kassapa Arahant relates a great number of similes. If I were to relate all of them, it would be a very long description. I am mentioning only what is essential. On that occasion, Pāyāsi says: "It is not because I am not convinced that I do not abandon this, but out of shame for what I have held for so long." The simile then given by Ven. Kassapa is a good story worth remembering for all of us.</p>
+<p>You may have heard this before. He says: "Rājañña, the people of a certain province abandoned that province. It became an empty, desolate province. Two friends from a neighboring province discussed: ‘Let us go to that desolate province to gather some wealth.’ So the two started their journey. In the first village they reached, they found a large quantity of discarded hemp-tow (*hana-vähari*). These two friends said: ‘Let us bind bundles of hemp,’ and they both bound two bundles of hemp. Carrying them, they proceeded further, and in the next village, they found hempen thread. One friend said: ‘Why are we carrying this hemp-tow? Thread is more valuable. Let us discard this hemp and take the thread.’ But what did the other friend say? ‘I have carried this bundle of hemp for a long distance. It is well bound. I cannot abandon it.’ Therefore, that friend carried the bundle of hemp as it was. The other friend bound a bundle of hempen thread and carried it. Going further, they found hempen cloth, which we call sacks. Discarding the hempen thread, the wise friend said: ‘Friend, carrying a valuable thing is useful to us.’ He discarded the thread and bound a bundle of hempen cloth. The other carried his bundle of hemp just as before. The story goes on like this. To make it short, in the next village they found cotton, then cotton thread, then cotton cloth. Think of it in this way. At every stage, the wise one abandoned the old bundle and took the new, more valuable thing."</p>
+<p>Then, as they went further, there were discarded metals, scrap iron. Even scrap iron is valuable. Indeed, iron was also there. Then lead, copper, and so on, step by step, there was a list of valuable things. Next, silver. Silver was also discarded there. This is said as a simile. Then, one friend, the wise one, bound a bundle of silver, while the other still carried his old bundle of hemp. Finally, at the last place, gold was discarded. The wise friend gathered that gold. The other friend kept his bundle of hemp just as it was. Eventually, these two returned to their village. When they returned, the family of the one who had brought the bundle of gold was extremely happy. Relatives, parents, everyone was delighted. The family of the one who carried the old bundle of hemp was very disappointed. "Similarly, Rājañña, you too are carrying a bundle of hemp." When this was said, Pāyāsi Rājañña replied: "Venerable Sir, I was convinced even when I heard the first few similes. But in order to experience your brilliant and creative eloquence, I pretended to show opposition further." Thereupon, the Rājañña, just as it is said in other places, uttered "*Abhikkantaṁ bhante*" (Excellent, Venerable Sir! Excellent!), took refuge in the Triple Gem, and declared: "I take refuge as a lay disciple from this day forward, as long as life lasts."</p>
+<p>Furthermore, he said to Ven. Kumāra Kassapa Mahā Arahant: "Venerable Sir, I wish to give a great alms-offering. I am a man who has never even thought of how to give alms before. I wish to give a great alms-offering; please advise me on this,"—he, a man who knew nothing of alms-giving. On this, Ven. Kumāra Kassapa Mahā Arahant preached something: "In any alms-giving or sacrifice where cattle, goats, sheep, etc., are slaughtered, and if those who accept the alms are individuals of wrong views, wrong thoughts, wrong concentration, etc., then that alms-giving does not yield great fruit or great benefit. It is just like a farmer who takes a plough and seed-paddy, goes into the forest, and sows the seeds in uncultivated, infertile, poorly protected soil, and does not get a good harvest; the benefits of such sacrifices are minimal. On the other hand, in a true sacrifice, there is no slaughter of animals. Furthermore, those who receive the alms are individuals of right view, right thought, right speech. Alms given to such people yield great fruit and great benefit." If we explain this with the simile of farming, it is like preparing the soil well, setting up the field, and sowing the right kind of seeds in the proper manner, which yields an abundant harvest.</p>
+<p>Then, Pāyāsi Rājañña for the first time established a regular charity (*dan-väṭa*). A *dan-väṭa* means a great alms-distribution to ascetics, brahmins, the poor, travelers, and beggars. He started a daily almsgiving. There, it is mentioned as follows: In this almsgiving, what did this Rājañña give? Gruel-broth (*kāḍi-hodda*) and broken-rice bread (*nivuḍu-salē bata*). After some time, a young man named Uttara, a close associate of Pāyāsi Rājañña who was in charge of organizing, preparing, and distributing this alms, made various sarcastic remarks: "I may be with this Pāyāsi Rājañña in this world, but I do not wish to be associated with him in the next world." Pāyāsi summoned him and asked: "Why do you say so, young man?"—or let us say, ‘friend’ or ‘your majesty/sire’. "Sir, you give to others food that you would not even wish to touch with your foot. You give to others coarse garments that you would not even wish to touch with your foot." When this was said, Pāyāsi changed his mind and told the young man Uttara: "In that case, arrange to give them the same food that I eat, and good garments like the ones I wear." In this way, the alms-giving continued. It went on and on, and next is the side of results.</p>
+<p>The *Pāyāsi Sutta* ends with extraordinary historical events. Some people might disbelieve them. But this is what is recorded. Ultimately, as a result of this almsgiving, Pāyāsi Rājañña, after his death, was born in an empty celestial mansion called Serīssaka, belonging to the realm of the Four Great Kings (*Cātumahārājika*). However, the young man Uttara was born in a celestial world with much greater wealth and splendor. What was the reason? There, something is mentioned regarding the manner of giving alms, which you may have read in other places as well. Regarding how an almsgiving should be properly conducted, it is described in four terms:</p>
+<p>* *Sakkaccaṁ dānaṁ deti*: He gives alms carefully, properly, and in an orderly manner.</p>
+<p>* *Sāhatthā dānaṁ deti*: He gives alms with his own hands.</p>
+<p>* *Cittīkatvā dānaṁ deti*: He gives alms having pleased his mind with faith, compassion, etc.</p>
+<p>* *Anapaviddhaṁ dānaṁ deti*: He gives alms respectfully, not as if discarding it.</p>
+<p>This is what is called a good almsgiving: *sakkaccaṁ, sāhatthā, cittīkatvā, anapaviddhaṁ*. But Pāyāsi Rājañña gave alms in the wrong way. He gave alms carelessly (*asakkaccaṁ*), at least in the early stages, not properly. It was that gruel-broth and broken-rice. Furthermore, it was not done with his own hands, nor was it done with a pleased mind, but as if discarding it. Therefore, it is shown that the Rājañña received lesser results. He appeared in an empty mansion in the *Cātumahārājika* realm. But the young man Uttara was born in a place of great comfort in the Tāvatiṁsa heaven.</p>
+<p>This story goes even further. You have heard about Yasa, the clansman's son. Among the fifty-five friends of Yasa the clansman's son, four prominent ones are mentioned: Vimala, Subāhu, Puṇṇaji, and Gavampati. The Elder named Gavampati was very elderly by that time; he was an Arahant. He had a habit of going to that empty Serīssaka mansion belonging to the *Cātumahārājika* realm for his daytime abiding (*divā-vihāra*). One day, when he went there, the Rājañña was there. He asked, "Who are you?"</p>
+<p>"I am Pāyāsi."</p>
+<p>"Why, did you not hold such a wrong view: ‘There is no other world, there are no spontaneously born beings, etc.’?"</p>
+<p>"Yes, indeed I did. But the Ven. Kumāra Kassapa Mahā Arahant removed my wrong view. It is because of that I was born in the *Cātumahārājika* realm."</p>
+<p>"Then where is the young man Uttara, who managed your almsgiving?"</p>
+<p>"He gave alms better than I did, and has been born in the Tāvatiṁsa heaven."</p>
+<p>In the *Vimānavatthu* Commentary, Pāyāsi Rājañña is referred to by the name Serīssaka. This is a long story. Pāyāsi Rājañña then makes a request to the Ven. Gavampati Mahā Arahant:</p>
+<p>"Venerable Sir, please go to the human world and tell the humans, with this illustration, that Pāyāsi gave alms carelessly, did not give with his own hands, did not please his mind, and gave alms as if discarding them, and consequently was born in an empty mansion in the *Cātumahārājika* realm. But Pāyāsi Rājañña's organizer and pupil, the young man Uttara, did the opposite: he gave alms carefully, with his own hands, with a pleased mind, and not as if discarding them, but with great care and respect, and has gone to the Tāvatiṁsa heaven. Venerable Sir, preach to these humans in the human world to give alms carefully, to give with their own hands, to give with a pleased mind, and not to give alms as if discarding them." In this way, that discourse ends.</p>
+<p>Thus, we can think that even someone who had committed such sins as to go to hell—we can imagine how terribly—every leader knows it, there is no need to elaborate. That is why they say being a ruler is like a gateway to hell. If, for some reason, without believing in karma and its fruits, he had remained drowned in such sinful karma, we cannot say where this man would have ended up; ultimately he would have fallen into hell. But due to the compassion and patience of the great Kumāra Kassapa Arahant, who turned the Rājañña around by giving so many similes, he went to a celestial world. The commentaries and other texts further state: someone might ask how this could happen when he had committed so many sinful deeds. Let us say, whether it was broken-rice bread or some other alms (later on, he gave alms well), if one gets the opportunity to offer alms to a Mahā Arahant like Kumāra Kassapa at the very moment he arises from the attainment of cessation (*nirodha-samāpatti*), through that very wholesome merit, one escapes hell in the next life. Someone might ask how a person who committed so many sins could go to the *Cātumahārājika* realm.</p>
+<p>In this way, there is a very deep side to wholesome and unwholesome deeds (karma). That is why the arising of the Triple Gem brings such peace and blessing to the world. Contemplate on that. But even in this day and age, there are materialists. Think also of the lessons that can be drawn from this. It is not just about telling stories. When we think of the present era, we do not have the primitive instruments of those days, like conducting experiments by putting a man in a jar. Yet today, they do the very same thing in a more subtle manner. I forgot to mention one thing, a simile suited for this moment.</p>
+<p>On the occasion when the Tāvatiṁsa heaven was mentioned, the Rājañña asks Ven. Kumāra Kassapa Mahā Arahant: "How do you say there is a Tāvatiṁsa heaven, and that there is such a life-span? How is it, have you seen it?" Then comes this simile: "If a man blind from birth says there is no sun, moon, or stars, can that be accepted?" "No." "Similarly, there are yogis dwelling in the forest who have developed the divine eye (*dibba-cakkhu*). It is with that divine eye, not with the physical eye, that this is said." This was mentioned by Ven. Kumāra Kassapa at one point during those similes. If we bring that up again here, this is what is being done even now.</p>
+<p>We have said before that there are three eyes. When we speak of three eyes, there are various stories about them. But in the Dhamma, there are: the physical eye (*māsa-cakkhu*), the divine eye (*dibba-cakkhu*), and the wisdom eye (*paññā-cakkhu*). The physical eye is the eye of flesh. The divine eye is what yogis and sages of the past brought forth through meditative absorptions (*jhāna*). Next is the wisdom eye. When speaking about the movement of the mind, you may have heard some of our discourses on dependent co-arising (*paṭiccasamuppāda*). One can never make a decision about the existence of the mind using the physical eye. Today, what goes by the name of physical science attempts to talk big about the mind by examining how the brain functions and doing other things. This is what they hold onto as ‘psychology’. It is extremely limited, because they arrive at these conclusions using instruments connected only to the five physical senses. But next, there is the divine eye. That is higher than the physical eye. It is through that divine eye that the existence of another world is seen, rebirth is seen, and the results of karma are seen. Sages of the past saw that level. However, the entirety of the mind is not grasped by it. The divine eye is superior to the physical eye, and the wisdom eye is superior to the divine eye. The working of the mind grasped by that wisdom eye is what we have been showing so far through discourses on dependent co-arising (*paṭiccasamuppāda*).</p>
+<p>What was not seen by any sage or yogi was seen by the Buddha. There is such a deep matter here. But people dilute these and speak of psychology and this and that. What they say may be correct to some extent. But that is why we said that this Rājañña was like the pioneer of physical science. One can see even today how far the wrong views (*micchā-diṭṭhi*) derived from this can go. Some people say: "I cannot see it; our scientists have not said that there is another world," and they cling to that opinion. It is for such people that a verse from the *Subhāṣitaya*—which is a certain matter expressed in very simple language by Alagiyavanna Mukaveṭi—applies. The older generation might know it:</p>
+<p>*Whether there is another world or not, O virtuous ones,*</p>
+<p>*It is indeed good to abandon sinful deeds, keeping the mind pure.*</p>
+<p>*If there is no other world, no harm is done thereby;*</p>
+<p>*But if there is, ruin befalls the one who sinned, thinking there is none.*</p>
+<p>Therein lies that profound truth. If we state the deep meaning of the verse in the *Subhāṣitaya* in Dhamma terms, it can be called the ‘Incontrovertible Path’ (*apaṇṇaka-paṭipadā*). Let us proceed to that. To understand the term *apaṇṇaka-paṭipadā*, for many people, the very first Jātaka story among the Jātaka stories is the *Apaṇṇaka Jātaka*. Furthermore, in the *Majjhima Nikāya*, there is a special discourse called the *Apaṇṇaka Sutta*. To tell the *Apaṇṇaka Jātaka* story briefly here: while the Bodhisatta and Devadatta, as two merchants, were traveling through a desert, a demon, intending to prey on them, came forward with wet hair and holding lotus flowers, to show that there was plenty of water on the other side. When asked, he said there was water over there. The first merchant discarded all the water they carried in their carts, and consequently fell prey to the demon. The Bodhisatta, who came second, thought: "What he says might be true or might not be true. If we carry our water, it is only a slight trouble. We can discard it later." Thus, thinking wisely, he escaped that disaster. The general principle of the *apaṇṇaka-paṭipadā* can be stated like this: whether it is right or wrong, we are safe in the end.</p>
+<p>In the *Apaṇṇaka Sutta*, the Buddha shows this. It is a very profound discourse. On one occasion, the Buddha said to the householders of Sāleyyaka: "If you do not have a teacher in whom you have placed a reasoned faith (*ākāravatī saddhā*) after making a deliberate decision, I tell you to adopt this principle regarding this matter, to understand what is good and bad, right and wrong. This is called the *apaṇṇaka-paṭipadā* (the safe or incontrovertible path)." Next, he illustrates it as follows: "Suppose a certain teacher comes and declares the ten-fold wrong view (*dasa-vatthuka micchā-diṭṭhi*). You know it, even if I do not describe each one. ‘There is no alms-giving, no offering, no sacrifice; there is no mother, no father; there is no this world, no other world; and finally, there are no spontaneously born beings.’ A person holding wrong views says this. Next, those who hold right view (*sammā-diṭṭhi*) say that these exist—that there are results of sacrifices, and so on. Then, a person who does not have a proper teacher falls into doubt as to which of the two is correct."</p>
+<p>Then, the Buddha expounds the way to resolve this—the way a wise person should contemplate to resolve it: "Now, if I accept the view of the first person mentioned, what would be the result? What can be expected from a person who holds that nihilistic view? He spends his life committing various crimes without any understanding of wholesome and unwholesome deeds. Meanwhile, he is censured by the wise. When caught in crimes, it happens naturally. Meanwhile, if indeed there is no other world, there is nothing to fear. But he has already experienced the retribution in this very life. If there is another world, he will fall into a terrible place. Next, one should think about what was said by the second teacher who holds right view, according to the method of conclusion in the *apaṇṇaka-paṭipadā*. If what they say is true, those who hold this view avoid bad deeds and lead a good life even in this world. They are praised by the wise. If their view turns out to be wrong, there is no loss to them in this life. If it turns out to be correct, they will go to a heavenly world." By giving such illustrations, what the Buddha expounds is the *apaṇṇaka-paṭipadā*.</p>
+<p>This is a problem for many people even today. "So-and-so says this, and so-and-so says that." This must be thought of according to the situation. Decisions must be made regarding the results, drawbacks, and benefits. Now, that Rājañña clung to his experiments and carried that wrong view (*micchā-diṭṭhi*) for a long time. Similarly, today there are such people with big titles, be they philosophers or scientists, who say: "He said this, she said that. The result of this experiment is such, therefore there is no result of karma; heaven and such things are not visible yet." In such situations, if one cannot establish faith (*saddhā*) in the Buddha, one must think in that manner. For those who have faith (*saddhā*), this question does not arise. But for those who do not have faith (*saddhā*) but possess wisdom, the course of action to be taken is what is shown through the *apaṇṇaka-paṭipadā*. In such instances, one should think that there are benefits to the aforementioned right view (*sammā-diṭṭhi*) in this life, and also in the next life. That is why we said, whether it is right or wrong, we must think of shaping our lives accordingly, and not just keep talking about it. This story of Pāyāsi is an example for us in several ways. On one hand, Ven. Kumāra Kassapa Mahā Arahant, due to his abundance of compassion, and on the other hand, due to his eloquence (*citta-kathikatā*), gave various matching similes to every question asked by the Rājañña. He gave illustrative stories, subdued him, made him a donor, and even enabled him to go to a celestial world.</p>
+<p>Next, we must contemplate what was said about almsgiving. Even when offering a spoonful of rice, we must bear those points in mind. In modern times, almsgiving is not a transactional business done as a physical process. Although the topic of almsgiving is not explained anew, it is very familiar to you. But almsgiving is not just about giving. You have heard various details about giving with a pleased mind throughout the three phases (before, during, and after). How profound a matter it is becomes clear from this story. The pupil, the young man Uttara, who gave alms carefully and with his own hands, surpassed the Rājañña who merely supplied the materials for the alms, and enjoyed the benefits thereof. Contemplate on those; contemplate on their depth. Giving is not just a visible physical act—though it appears so. It is not an ordinary worldly transaction. There is a deep meaning here, such as preparing the mind and giving with one's own hands. Thus, the concept of almsgiving also goes deep. You can learn something from that as well.</p>
+<p>Next, the story of this world and the next. We must constantly contemplate the three eyes we mentioned. Our physical eye is not sufficient. What have they done for hundreds of years by inventing various instruments? They are still going in the same direction. The eye cannot see enough, so they used spectacles. Finding spectacles insufficient, they used telescopes and microscopes. It is the same with other senses. Finding that the ear cannot hear enough, they invented other things. There is no need to elaborate on these. In fact, a person in this era can say that if one has a sufficient amount of money, there is no need for supernormal knowledges (*abhiññā*). There is no need for *abhiññā*. The divine eye (*dibba-cakkhu*) is in that box at home. Next, the divine ear (*dibba-sota*) is there. They have not just one or two, but many of these instruments. They even walk on the roads listening with the divine ear. The divine ear is close by. Going through the air is also like that. Everything is like that. Looking at it that way, supernormal knowledges (*abhiññā*) are not needed in this era. But when looking deeply, there is no truth within them; it is only a departure from the truth. It is true that we cannot escape them due to the current trend. But we must contemplate that the truth lies in the Dhamma, which might seem outdated to people of this era. The minds of those who are subdued by those instruments and trends become dull. Ultimately, they become subservient to instruments. Knowing these drawbacks—and indeed, what we say now is also being recorded—perhaps you might think: "It doesn't matter if we sleep now; we can listen to this later." But the manner in which they listened to the Dhamma and took in the teachings in the past is extremely valuable to us.</p>
+<p>In the past, even in the times we remember, when starting a Dhamma sermon, they would first state how one should listen to the Dhamma. Today, they do not even say that, because there are recording instruments. We frequently remind you: *Atthīkatvā, manasikaritvā, sabbacetaso samannāharitvā, ohitasoto dhammaṁ suṇāti* (paying attention, reflecting, with all his mind applied, lending an ear, he listens to the Dhamma). It is in such instances that the fruits of the path (*magga-phala*) arise, and concentration (*samādhi*) is established. This means thinking: "There is something beneficial for me in this," reflecting on word by word, applying the entire mind (*sabbacetaso samannāharitvā*), lending an ear (*ohitasoto*)—it is when listening in this way that concentration (*samādhi*) is established therein.</p>
+<p>Especially when listening to the Buddha, or listening to those noble disciples, even if a snake bit them, they would not know. They were absorbed in such a wondrous concentration (*samādhi*). For such people, the fruits of the path are not far. Within that very state, the hindrances (*nīvaraṇa*) are removed, and concentration (*samādhi*) comes. That is why the Buddha expounds that when one listens to the Buddha’s Dhamma, at that moment, a mind accompanied by lust (*rāga*) does not arise, a mind accompanied by hatred (*dosa*) does not arise, a mind accompanied by delusion (*moha*) does not arise; the hindrances (*nīvaraṇa*) are removed. Having been removed, concentration (*samādhi*) is prepared. That is what is called: *kalla-cittaṁ, mudu-cittaṁ, vinīvaraṇa-cittaṁ* (a prepared mind, a malleable mind, a mind free from hindrances). We have also spoken to you on some occasions about the Buddha's preaching style. How a person who has never heard the Dhamma before attains Stream-entry (*sotāpanna*) in a single sermon is a great mystery to some. But the Buddha's discourses are ‘graduated discourses’ (*anupubbī-kathā*). We have given more details about these on other occasions. *Dāna-kathaṁ, sīla-kathaṁ, sagga-kathaṁ, kāmānaṁ ādīnavaṁ, okāraṁ saṅkilesaṁ, nekkhamme āniśaṁsaṁ* (talk on giving, talk on virtue, talk on heaven, the danger, degradation, and corruption of sensual pleasures, and the benefit of renunciation)—these form the basic part of the graduated discourse. This means that through the talk on giving, even to beggars who have nothing to give, the thought of giving arises: "Ah, if only I had something to give, I would give it!" Even though they are not asked to observe the precepts, when the Buddha speaks of the benefits of virtue (*sīla*), they rejoice right then and there and adopt those training rules. Thus, both giving (*dāna*) and virtue (*sīla*) are established. Next, when speaking of the benefits of both, the talk on heaven (*sagga-kathā*), it is as if they have gone to the heavenly world. After that, when the Buddha preaches the dangers of sensual pleasures (*kāmānaṁ ādīnavaṁ*)—all the pleasures of the celestial and human worlds—their corrupt nature and their low nature, and speaks of the benefits of renunciation (*nekkhamma*), they turn to the other side.</p>
+<p>A passage that is frequently mentioned describes how at that moment the Buddha looks at the mind of that disciple. That is why it is said: *Yathā bhagavā aññāsi kalla-cittaṁ mudu-cittaṁ vinīvaraṇa-cittaṁ udagga-cittaṁ pasanna-cittaṁ* (When the Blessed One knew that the mind of the hearer was prepared, malleable, free from hindrances, uplifted, and bright). Seeing that the disciple's mind is properly prepared, soft, free from hindrances, well-uplifted, and full of joy and confidence, only then does the Buddha expound the Four Noble Truths: *dukkha, samudaya, nirodha, magga* (Suffering, Origin, Cessation, Path). It is through such a preaching style, as well as the manner in which the Dhamma is heard, that the fruits of the path are attained.</p>
+<p>Now, what do many people say? They say: "It is enough to just listen to the Dhamma to become a Stream-enterer." But they do not say how one should listen to the Dhamma. To tell the truth, if that were the case, it is this recording machine that should become a Stream-enterer, not the people who listen to it! Such is this era. We remind you of these according to the times, because this is a world bound to the physical eye, enslaved by the aforementioned machines. In such an era, they are like Pāyāsi. They too must have followers. It is the same in this era. Therefore, you must protect yourselves from these and walk on this path of virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*) declared by the Buddha. There are no short cuts like pressing buttons to attain the fruits of the path; one must go from the very beginning. Therefore, established in a certain virtue (*sīla*), and using that virtue as a support, as we often say, one must then make an effort towards a state of concentration (*samādhi*).</p>
+<p>According to the talks going on now, something often said by those who come to us is that meditation is merely looking at the mind. They say that looking at the mind is all that is needed. It is a very easy task. There is no talk of concentration (*samādhi*), and then they even say that concentration is not needed. "We are wise people; we do not need concentration." Such are the stories going around. But we must keep in mind the Buddha's word: *Natthi jhānaṁ apaññassa, paññā natthi ajhāyato, yamhi jhānañ ca paññā ca, sa ve nibbānassa santike* (There is no meditative absorption for one who lacks wisdom, nor is there wisdom for one who lacks meditative absorption. He who has both meditative absorption and wisdom is indeed close to Nibbāna). Thus, the Buddha has declared that the one who has both is close to Nibbāna. Through this narrative, we must understand the supremacy of the Buddha's teaching, as well as the brilliant and creative intelligence of his disciples. In the past, that brilliant and creative intelligence and the wonderful style of preaching were directed towards Nibbāna—directed solely towards Nibbāna. By the time one finished listening to it, one was already inclined towards the path of Dhamma. But this is not something done for fame. The terms "wonderful sermon" and "eloquent preacher of Dhamma" are used very casually nowadays.</p>
+<p>Perhaps to assist the wonderful preaching style of such great noble ones as Kumāra Kassapa Mahā Arahant, a deity came and asked fifteen very deep questions from the Elder. We did not go on to relate that. That is not a sermon of his. The *Vammika Sutta* is an extremely profound discourse. It contains fifteen very deep questions asked by a deity using the simile of an ant-hill. No one else could answer them, and he was told to go and ask the Buddha. But if we think about why this was said to Ven. Kumāra Kassapa, it must have been a subject of meditation (*kammaṭṭhāna*) for his Arahantship. It must have been a subject of meditation for his eloquence. We should think of it in that way.</p>
+<p>Through these Dhamma talks, we must become more energetic. Whether as lay women or lay men disciples, it is good to recall the time of the Buddha. Now, things are going in the opposite direction. We must shatter the perception of "inability" prevalent in this era, arouse the perception of "ability", and strive. It is true. There are a thousand obstacles within the modernizing trend. But if someone thinks wisely, discards unnecessary things, keeps close what is valuable and necessary, and makes an effort during this short life-span without putting it off further, they will be able to achieve those supreme goals they hope for.</p>
+<p>Therefore, today as well, you should observe a valuable virtue (*sīla*), without looking down on it, without thinking: "We do not need qualities like virtue; we can jump straight to the fruits of the path." Instead, turning away from the daily pattern of life, and inclining towards the practice of the Arahants at least for a single day, observe a valuable virtue (*sīla*), and spend this day directing your mind to your Dhamma study and meditation. It is in such a situation that, if one is to understand, one can understand properly. Therefore, understanding these words of ours, on one hand, if there are shortcomings in your views, correct them with right view (*sammā-diṭṭhi*). We must use the very words of the Rājañña: "Having been in such a sinful view, it is due to Ven. Kumāra Kassapa Mahā Arahant that I, who was bound for hell, obtained such a celestial rebirth." Thinking in this way, we must understand the value of all three: giving (*dāna*), virtue (*sīla*), and meditation (*bhāvanā*), in the light of this Dhamma talk.</p>
+<p>All of this is done during the short time we live. Because if this valuable opportunity is lost, many people indeed think with fear about the place where they will be born next. "We do not know where we will be born, if rebirth is a truth." The Buddha points out its danger. If one becomes a Stream-enterer at least, the greatness of the arising of the Dhamma-eye is that, once that Dhamma-eye has arisen, one loses the eligibility to go to hell, and one loses the eligibility to go to the animal world, through the eradication of the dogma of self-illusion (*sakkāya-diṭṭhi*). There lies the secret. Therefore, the Buddha has shown that even by the measure of the arising of that Dhamma-eye, one escapes a vast mass of suffering (*dukkha-kkhandha*) in saṁsāra. Understanding these, discarding the perception of "inability", and arousing the perception of "ability", may this sermon delivered today help you to proceed further and further on this path of Dhamma! Let us make that aspiration.</p>
+<p>Aspiring thus, as we constantly say, from the Avīci hell up to the Akaniṭṭha heaven, if anyone wishes to rejoice in the merit of this Dhamma preaching and Dhamma listening, may they, through that rejoicing, realize the supreme goal through their aspired Bodhi! Recite these verses with that aspiration.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_053.html" class="doc-btn">← Previous Sermon (053)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_055.html" class="doc-btn">Next Sermon (055) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

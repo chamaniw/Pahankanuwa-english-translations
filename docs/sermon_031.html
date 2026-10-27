@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 031 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_030.html" class="doc-btn">← Previous Sermon (030)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_032.html" class="doc-btn">Next Sermon (032) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 031</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_031_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_031_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_031_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #31</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No. )</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Imesu kira sajjanti, eke samaṇabrāhmaṇā; Viggayha naṁ vivadanti, janā ekāṅgadassino.</p>
+<p>From:</p>
+<p>Sutta Nipāta, Aṭṭhakavagga</p>
+<p>Dear Listeners,</p>
+<p>It was on a Vesak Full Moon Poya day such as this that our Tathāgata, the Fully Self-Enlightened One, awakened the Eye of Wisdom. The understanding of the world, which is the domain of that Eye of Wisdom, is enshrined within the virtue of *Lokavidū* (Knower of the Worlds) among the nine supreme qualities of the Buddha. Based on the verse we have chosen as our theme today and its corresponding origin story (*nidāna-kathā*), we will be able to bring to light certain aspects of this very virtue.</p>
+<p>At one time, while the Buddha was residing at Jeta’s Grove in Sāvatthī, various ascetics, brahmins, and wanderers holding different views came to dwell in Sāvatthī. They were engaged in disputes and debates regarding their respective views in this manner:</p>
+<p>Some said: "The world is eternal; only this is true, everything else is false."</p>
+<p>Another group said: "The world is not eternal; only this is true, everything else is false."</p>
+<p>Another group said: "The world is finite; only this is true, everything else is false."</p>
+<p>Another group said: "The world is infinite; only this is true, everything else is false."</p>
+<p>Another group said: "The soul and the body are one and the same (here 'jīva' refers to the self/soul); the soul and the body are identical. Only this is true, everything else is false."</p>
+<p>Another group said: "The soul is one thing, the body is another. Only this is true, everything else is false."</p>
+<p>Those who held these views also put forward their speculations there: "The Tathāgata exists after death." (Here, "Tathāgata" refers not only to our Buddha, but in those various schools and systems of belief, the person who had reached the ultimate state was known as the "Tathāgata"). Thus, some said: "The Tathāgata, the liberated person, the one who has reached the highest state, exists after death. Only this is true, everything else is false."</p>
+<p>Another group said: "The Tathāgata does not exist after death. Only this is true, everything else is false."</p>
+<p>Yet another group said: "The Tathāgata both exists and does not exist after death." Combining both, "exists and does not exist"—in one sense he exists, in another sense he does not. "Only this is true, everything else is false."</p>
+<p>And another group said: "The Tathāgata neither exists nor does not exist." Rejecting both. "Only this is true, everything else is false."</p>
+<p>In this way, bound to their respective views, they ended up quarreling and disputing, wounding one another with sharp tongues. Then, one day during that time, a group of monks, having gone into Sāvatthī for alms, heard these quarrels and disputes, and went to the Buddha and said: "Venerable Sir, various ascetics, brahmins, and wanderers holding different views are disputing and wounding each other with sharp tongues."</p>
+<p>When this was reported to the Buddha, he said: "Indeed, monks, those ascetics and brahmins of other sects are blind; they have no eyes." The Buddha described them with the words "blind" (*andhā*) and "eyeless" (*acakkhukā*). They do not know what is beneficial; that is, they do not know what is good, they do not know what is bad, they do not know what is Dhamma, they do not know what is non-Dhamma. Remaining thus, they argue and dispute in this manner. Having stated this, the Buddha presented a story of the past as a parable.</p>
+<p>"Monks, in the past, in this very city of Sāvatthī, there was a king. One day, the king summoned a royal officer and said: 'Go, gather all the men in this city who are blind from birth.' 'Blind from birth' (*jātyandha*) means those who are born blind. 'Gather all the men in Sāvatthī who are born blind and bring them here.' So, the royal officer went, gathered those men, brought them, and said: 'Your Majesty, I have brought them.'"</p>
+<p>"'Then show an elephant to these blind men,' the king said. So, the royal officer went and showed an elephant to the blind men. How did he show it? He had some of the blind men feel the elephant's head. He had another group feel its ear. Another group feel its tusk. Another feel its trunk. Another feel the elephant's belly. Another feel the elephant's foot. Another feel its thigh. Another feel its tail, and another feel the tuft of its tail. The tuft and the tail are shown as two different parts there."</p>
+<p>"Having shown them thus, he returned to the king and said: 'I have shown the elephant to the blind men.' The king went out to the courtyard where the blind men were and asked: 'Blind men, have you seen the elephant?' They replied: 'Yes, Your Majesty.' 'What is the elephant like?' he asked. Then, those blind men who had felt the elephant's head said: 'An elephant is just like a water jar.' Those who had felt its ear said: 'An elephant is just like a winnowing basket.' Those who had felt its tusk said: 'An elephant is just like a plowshare.' Those who had felt the trunk said: 'An elephant is just like a plow-pole.' Those who had felt its body said: 'An elephant is just like a storehouse.' Those who had felt its foot said: 'An elephant is just like a pillar.' Those who had felt its thigh said: 'An elephant is just like a mortar.' Those who had felt the tuft of its tail said: 'An elephant is just like a pestle.' Those who had felt its tail said: 'An elephant is just like a broom.' Saying so, they argued with each other, shouting, 'An elephant is like this, it is not like that!' and they came to blows, striking each other with fists and feet. The king looked on and was amused."</p>
+<p>"That is the story presented by the Buddha. Having told this, the Buddha said: 'Just so, monks, those ascetics and brahmins are blind; they have no eyes. They do not know what is beneficial, they do not know what is harmful; they do not know Dhamma, they do not know non-Dhamma. That is why they quarrel and dispute.' And then he uttered this verse:"</p>
+<p>*Imesu kira sajjanti,*</p>
+<p>*eke samaṇabrāhmaṇā;*</p>
+<p>*Viggayha naṁ vivadanti,*</p>
+<p>*janā ekāṅgadassino.*</p>
+<p>"Some ascetics and brahmins cling to these views. They are attached to these views. 'These blind people, seeing only one part, grasp onto it and engage in fierce quarrels and disputes.' This is the meaning."</p>
+<p>So, from this story and verse, we can understand that the Buddha regarded all those who held such views as blind, as having no eyes. Why did he regard them so? There we have a question. In fact, these ten questions are frequently encountered in the Sutta discourses of the Dhamma by those devoted readers. Often, these ten questions are presented as a challenge to the Buddha, demanding a direct answer. But instead of giving a direct answer, the Buddha set aside their explanation. He rejected those questions. This is a very puzzling issue for scholars as well: why did the Buddha, possessing such an immense treasury of knowledge, not answer questions of this nature? However, here we have a point that reveals the secret. The Buddha declared here that those who held those views are blind, eyeless. We can understand why he said so.</p>
+<p>We began by speaking of the Buddha’s Eye of Wisdom. The Buddha declared that there are three types of eyes in the world: the physical eye, the divine eye, and the Eye of Wisdom. The Eye of Wisdom is the *prajñā*-eye. It is on the basis of the physical eye that one develops the divine eye. The one who has a physical eye is able to obtain the divine eye. Those two are connected. But the Eye of Wisdom is unique. It was the Buddha who introduced the Eye of Wisdom to the world. Therefore, it is far superior to the knowledge gained through the physical eye and the divine eye. The Eye of Wisdom surpasses them all.</p>
+<p>Furthermore, the Buddha explains in the Dhamma the reason for not answering those questions in this way: "Monks, when it comes to answering or explaining, there are four types of questions: *ekaṁsa-vyākaraṇīya* (to be answered categorically), *vibhajja-vyākaraṇīya* (to be answered analytically), *paṭipucchā-vyākaraṇīya* (to be answered with a counter-question), and *ṭhapanīya* (to be set aside)." *Ekaṁsa-vyākaraṇīya* refers to questions that can be answered directly as "yes" or "no". There are certain questions that can be answered directly by saying "yes" or "no".</p>
+<p>There are other questions that are *vibhajja-vyākaraṇīya*. Analytical questions are those that must be answered by dividing, analyzing, and impartially dissecting the question, rather than saying "yes" or "no" straightaway. *Paṭipucchā-vyākaraṇīya* refers to those where one must ask questions back to the questioner to clarify the root of the question. There are such questions as well.</p>
+<p>Then there is the fourth category, *ṭhapanīya*—questions to be set aside. Why are they set aside? Because their foundation is wrong. Since they are formulated upon a false hypothesis, a wrong premise, they are set aside and rejected. One cannot say "yes" or "no" to them. It is to trap the one who answers that they present questions in the form of dilemmas or tetralemmas (two-pronged or four-pronged). They try to persuade the answerer to give an answer somehow. Yet, the Buddha did not answer even one of them. This is something that scholars sometimes fail to comprehend.</p>
+<p>But here, in relation to the Buddha’s quality of *Lokavidū*, we bring to light what the Eye of Wisdom actually is. Wherever it is mentioned that "the Eye of Dhamma arose", it is stated: "Whatever is of the nature to arise, all that is of the nature to cease" (*yaṁ kiñci samudayadhammaṁ sabbaṁ taṁ nirodhadhammaṁ*). It was that very law—the law of arising and ceasing—that was visible only to the Buddha's eye. Until then, the world was harbored in the view of a self, harboring in the dogma of self-illusion (*sakkāya-diṭṭhi*), with the perception of compactness (*ghana-saññā*), feeling that the world is permanent, that there is something eternal. They see that various things in the world decay, yet there was a feeling within the world that there is some indestructible core. That is what is called the dogma of self-illusion (*sakkāya-diṭṭhi*). Only the Buddha brought to light the three characteristics of impermanence (*anicca*), suffering (*dukkha*), and not-self (*anattā*), thereby breaking that wrong view. That is why this Eye of Wisdom is far more powerful and supreme than the physical eye and the divine eye.</p>
+<p>So, next, it was first mentioned here whether the world is eternal or not. Some said it is eternal; others said it is not eternal. Why did the Buddha not accept either of these? In that case, the Buddha had to redefine the word "world". It is not the "world" that worldly people think of. Regarding this, we find a certain Venerable monk named Samiddhi asking the Buddha directly: "Venerable Sir, it is said, 'the world, the world.' To what extent is there a world?" Then the Buddha declares: "Samiddhi, wherever there is the eye, there are forms, there is eye-consciousness (*viññāṇa*), and there are things cognizable by eye-consciousness—there a world exists. Likewise, where there is the ear, there are sounds, there is consciousness (*viññāṇa*) associated with it, and there are things cognizable by that consciousness—to that extent a world exists." In this manner, a world exists in relation to the six sense bases, including the mind.</p>
+<p>Now, you lay devotees know that there are six sense bases (*saḷāyatana*). In this Dhamma, "six sense bases" refers to the eye, ear, nose, tongue, body, and mind. These are also known as "bases" (*āyatana*). Why? Because it is through contact with these that a world is recognized. Having shown the world in this manner, the Buddha next says—not pointing to a specific geographical location, but directly: "Wherever there is no eye, no forms, no eye-consciousness (*viññāṇa*), and no things cognizable by eye-consciousness—there is no world." Going on in this manner, "Wherever there is no mind, no mind-objects (dhamma), no mind-consciousness (*viññāṇa*), and no things cognizable by mind-consciousness—there is no world." This demonstrates that there is an arising of the world and a cessation of the world.</p>
+<p>The world is not an eternal thing as others think. It is something connected to and relative to these six sense bases (*saḷāyatana*). This thing called the world is bound up with the six sense bases (*saḷāyatana*). It is on their account that the designation of a "world" arises. This is something that generally escapes physical science. There is a deep matter here. This was presented to the world for the first time by the Buddha through the doctrine of Dependent Arising (*paṭicca-samuppāda*).</p>
+<p>The Buddha expressed this on one occasion in a very brief verse:</p>
+<p>*Chasu loko samuppanno,*</p>
+<p>*chasu kubbati santhavaṁ;*</p>
+<p>*Channameva upādāya,*</p>
+<p>*chasu loko vihaññati.*</p>
+<p>Here, *cha* means "six" in the Pali language. *Chasu loko samuppanno*—the world has arisen in the six. The world is in the six. It is in these six sense bases that the world is born. How wonderful is this way of explaining! *Chasu kubbati santhavaṁ*—it is within these six that all connections, all relations of the world are made. Think about it for a moment, devotees, regarding all modern gadgets. Every single one of them is designed to connect with these six. Then, *channameva upādāya chasu loko vihaññati*—grasping (*upādāna*) onto these very six, the world is afflicted within the six. This is the story of the six presented by the Buddha. Thus, the world is born in the six, the world conducts all its relations within the six, and by grasping (*upādāna*) these six, the world meets with affliction within the six. Such is the account the Buddha presents to the world.</p>
+<p>Therefore, in direct relation to this, we must next consider: if the world is such a thing, something existing on account of the six sense bases (*saḷāyatana*), then the Buddha shows that there is a cessation for it. It can be ceased. The next question is: where does it cease? Before we discuss that, let us look at the etymological definitions given to the word "world".</p>
+<p>On one occasion, Venerable Ānanda asked the Buddha a similar question: "It is said, 'world, world.' In what sense is it called 'world'?" The Buddha says: "Ānanda, whatever is of a crumbling nature..."—here he uses the Pali term *paloka-dhammaṁ*. Whatever is of a disintegrating, crumbling nature is called the world. In the term *paloka-dhammaṁ*, the word *loka* is contained, but there it refers to the nature of disintegrating. Asking "what disintegrates?", the Buddha says: "The eye disintegrates, forms disintegrate, the eye-consciousness (*viññāṇa*) that arises due to both also disintegrates. The feelings (*vedanā*)—whether pleasant, painful, or neither-painful-nor-pleasant—that arise as a result also disintegrate." Disintegrating means crumbling away, moment by moment. Thus, this is something that is constantly crumbling and breaking apart.</p>
+<p>If the world is such a thing, think about it for a moment: we try to draw water from a large vessel using a ladle. If that ladle is full of holes, can you measure water with it? When you lift it up, the water leaks out of that ladle. In the same way, the entire world is disintegrating and crumbling moment by moment—the Buddha declared that it disintegrates at a speed invisible to the physical eye. That is why: "Whatever is of the nature to arise, all that is of the nature to cease" (*yaṁ kiñci samudayadhammaṁ sabbaṁ taṁ nirodhadhammaṁ*).</p>
+<p>This Dhamma-nature applies even to what is called the atom in modern times. It applies from the atom up to the entire world system (*loka-dhātu*). Until the early part of the last century, scientists thought the atom was something indivisible. But now, even that is an "atom" only in name. They have understood to some small extent that it too is something that disintegrates. Likewise, the world system also crumbles. The Buddha has given wonderful descriptions of the beginning and destruction of aeons (*kalpa*) in the Sutta discourses. Thus, the world, from the atom to the world system, changes moment by moment. One cannot say whether something that changes moment by moment is eternal or not eternal. Just as it arises, it ceases in another place. Such is the process taking place in the world. That is why the Buddha set aside the questions of whether the world is eternal or not eternal.</p>
+<p>What was the next pair of questions? "Is the world finite or infinite?" Some said: "The world has an end; only this is true." Others said: "The world has no end; only this is true." The Buddha did not answer either of these. He cast those questions aside entirely as wrong views, treating them as incorrect questions, like those asked by a feverish patient. He showed that the premise, the underlying hypothesis, was faulty. There is an excellent illustrative story about this in the Dhamma.</p>
+<p>While the Buddha was residing at Jeta’s Grove, a young deva named Rohitassa came during the night and asked the Buddha—devas have a particular way of addressing the Buddha, often rendered in Sinhala as "nidukāṇeni" (O Painless One). He asked: "Venerable Sir, is it possible, by traveling, to reach the end of the world where one is not born (*jāti*), does not age (*jarā*), does not die (*maraṇa*), and is not reborn?" Then the Buddha replied: "No, friend, I say it is not possible to reach the end of the world by traveling in that manner."</p>
+<p>Then Rohitassa the deva said: "It is wonderful, Venerable Sir, it is marvelous! I have realized this very fact myself. How? In a past life, I was a great sage named Rohitassa. I had the psychic power to travel through the air. The speed of that travel is described as being like the speed of an arrow flying through the air. Moreover, I could place one foot on the eastern shore and the other foot on the western shore; I had the strength to take such giant strides across the ocean. Traveling at such a speed for a hundred years, I died without ever seeing the end of the world. What the Buddha says is absolutely true," Rohitassa the deva declared.</p>
+<p>Then the Buddha, agreeing with him, said: "Indeed, I say that one cannot reach the end of the world by traveling. Yet, without reaching the end of the world, there is no making an end of suffering (*dukkha*)." Next, he declares where the end of the world actually lies. He makes this amazing statement: "I declare that within this very fathom-long body, endowed with perception and mind, lies the world, the origin of the world, the cessation of the world, and the path leading to the cessation of the world." From this too, we see that the Buddha analyzed the "world" in terms of these six sense bases (*saḷāyatana*). If we can bring our mind to a state where these six sense bases (*saḷāyatana*) cease, then we have escaped the world. We have found the end of the world. That story of eternity ends right there.</p>
+<p>This matter becomes even clearer to us: it is not just the views present in the world, but all possible views that can arise are encompassed in the net cast in the Brahmajāla Sutta, the great Brahma Net. There is a highly profound discourse called the Brahmajāla Sutta, which categorizes all worldly views into sixty-two. All views are included within these sixty-two. How are these views rejected? The Buddha, summarizing the various views, declares that every single one of them has arisen due to contact (*phassa*).</p>
+<p>Now think about the contact (*phassa*) of that elephant. In that story, it was said that the elephant was "shown" to the blind men. But even when shown, can blind men see the elephant? Instead, what they did was feel the elephant, and through that contact (*phassa*), they identified the elephant. Similarly, understand that the ordinary worldling (*puthujjana*) tries to understand the world just like those blind men feeling the elephant. They try to grasp it through these six. They grasp through the eye; there is the world seen by the eye. You lay devotees know: the world seen by the eye, the world heard by the ear, the world smelled by the nose, the world tasted by the tongue, the world felt by the body, and finally, the world cognized by the mind—there is no other world than this.</p>
+<p>Worldly people grasp onto these and carry out their reasoning and arguments, even science itself. Now, among the sixty-two views mentioned, some are views held by those with higher psychic knowledges (*abhiññā*). These are views of yogis who, having developed jhana-powers and obtained the divine eye, saw hundreds of thousands of past births (*jāti*). Yet, the Buddha rejects them all, saying that all of them are things constructed by contact (*phassa*) through these six sense bases (*saḷāyatana*).</p>
+<p>Then, what is the correct view? The correct vision? Apart from those, what is the true view? There a question arises. That is indeed the Eye of Wisdom. The Buddha explains in that very Brahmajāla Sutta how this Eye of Wisdom arises. If a monk fully understands these five aspects of the six sense bases (*saḷāyatana*): their arising, their passing away, their gratification, their danger, and the escape from them—if he understands these five aspects correctly, then that monk transcends that entire net of views and attains a supreme vision. From this, we can see that the cessation of the six sense bases (*saḷāyatana-nirodha*) is itself Nibbāna.</p>
+<p>Worldly people, ordinary worldlings (*puthujjana*), trapped within these six sense bases (*saḷāyatana*), go in search of the end of the world. Now, the great psychic sage Rohitassa traveled at the speed mentioned earlier, flying through the sky, without any financial cost. The only cost was time. He said: "Except for the time spent eating and sleeping, even after traveling for a hundred years, I could not see the end of the world"—without any special expense, using his psychic power. Yet, our modern-day Rohitassas, who possess no such higher knowledge (*abhiññā*) or psychic powers whatsoever, spend billions to run around searching for the end of the world. In this lifespan of less than a hundred years, they run like this, get exhausted, and die. In the end, they go to places like the lower realms. We must reflect wisely on this state of affairs. This is because we live in an era where many people talk and think about the quality of *Lokavidū*. That is why we are saying this: to explain how the word *Lokavidū* should be understood.</p>
+<p>The Buddha shows minutely, in terms of the minor world-systems (*cūḷanikā loka-dhātu*), the great thousandfold world-systems (*mahāsahassī loka-dhātu*), and so forth, a highly marvelous universe. He has declared world systems beyond what we think, beyond what the eye can see, and even beyond what modern astronomers with their instruments and telescopes can conceive. The Eye of Wisdom surpasses all of that. Why? Because every single one of them disintegrates. A thing that is constantly disintegrating and breaking apart cannot be measured in that way. Is it eternal? Then, the question of its end. All of these. That is what the Buddha points out.</p>
+<p>Even more important is that this world we speak of is constructed by the mind itself. It is based on this eye, through eye-contact (*phassa*). In understanding this, the simile of the elephant is of great help. Just as those blind men grasped onto individual parts and declared, "This is the elephant," so too the world seen by the eye, the world heard by the ear—these are what the world takes to be "the world". But the Buddha shows that all of these are ultimately empty, void.</p>
+<p>Furthermore, the Buddha declares the way to escape from this. That is why it was said that when a monk sees both the arising and the passing away of these six sense bases (*saḷāyatana*)—*samudayatthangama* or *samudaya-vaya* (arising and ceasing)—he sees a process occurring instantly. He sees their arising and ceasing. Likewise, he sees their gratification. He sees their danger. And next, he sees the escape from them, which is Nibbāna. Thus, it was when the Buddha realized that very cessation of the six sense bases (*saḷāyatana-nirodha*) that the Eye arose.</p>
+<p>Now, you lay devotees know that there are classes or grades—various words like that are used. The body of knowledge required for a certain grade is completed only when one passes that class, isn't it? What does "passing" mean? It means going beyond, doesn't it? To pass exams means to go beyond them. In the same way, it is only when one has gone beyond the world that one can understand the world. Only when one has gone beyond the world does one gain a complete picture of the world. Until then, there is no real understanding. There is only that incomplete knowledge, just like grasping a part of the elephant and imagining. This is what we must understand.</p>
+<p>Therefore, from this, consider: on what should those devotees who wish to make use of their lives focus their attention? Should it be on this Dhamma regarding the Eye of Wisdom presented by the Buddha? Or on that running around in the modern world? Spending billions to go in search of the end of the world, only to die halfway like Rohitassa. So, that is the story regarding the end of the world.</p>
+<p>There are two other questions, aren't there? Some said that the soul (*jīva*) and the body are one and the same. Others said that the soul (*jīva*) is one thing and the body is another. Here, "soul" (*jīva*)—you should understand—is just another name for the self. To put it in familiar terms, one group said the self and the body are one. Others say the self is one thing, the body is another. Now, how could the Buddha answer either of these? If he answered, he would be trapped, wouldn't he? This is a self/soul that the Buddha does not accept. The Buddha declares it to be *kevala-paripūro bāladhammo*—completely filled with foolish notions. This concept of a "self" is entirely a wrong view of ordinary worldlings. The dogma of self-illusion (*sakkāya-diṭṭhi*) is a wrong concept firmly rooted within worldly beings through ignorance and craving (*taṇhā*). Therefore, relating an actually non-existent self to the body, and saying either that the two are one or that the two are different—both are wrong.</p>
+<p>You lay devotees know the kind of questions asked in courts, don't you? If a clever lawyer asks a person who has never drunk alcohol in his life, demanding a "yes" or "no" without wasting the court's time: "Has the gentleman now stopped drinking alcohol?"—whether he says "yes" or "no", he gets trapped. It is for this reason that the Buddha set those questions aside. Their premise, their core assumption, is wrong. Thus, it can be easily understood; that is, why the Buddha did not answer can be easily understood.</p>
+<p>Because we know, everyone accepts, that this is a Dhamma of not-self (*anattā*). To some extent, impermanence (*anicca*) was seen not only by the sages of the past but even by ordinary people. They also knew to some extent that what is impermanent (*anicca*) is suffering (*dukkha*). But it was the Buddha who brought to light the nature of not-self (*anattā*)—that there is nothing that can be taken as "I" or "mine", no core or essence. When speaking of these eyes, ears, nose, and so on: "The eye cannot be taken as self, forms cannot be taken as self." Nowhere is there a self. There is no essence; it is unsubstantial. That is why those two questions were also set aside.</p>
+<p>Next, it is the same with the final set of questions. They are extremely profound. It concerns the word "Tathāgata". We began today's sermon by speaking of the Tathāgata, the Fully Self-Enlightened One. However, the ascetics and brahmins of other sects used the word "Tathāgata" to refer to the one who had reached the highest state in their respective teachings, described as the supreme man (*uttamapurisa*), the ultimate man (*paramapurisa*), who has attained the highest attainment (*paramapattipatta*). In short, it was used to refer to the liberated individual. There is an instance where this matter becomes very clear.</p>
+<p>The wanderer Vacchagotta asked the Buddha these ten questions. In fact, it was not only the wanderer Vacchagotta; the Suttas mention that various people—sometimes even kings, and sometimes even monks of the Sangha—asked the Buddha: "Why does the Buddha not answer these questions?" We think that if there is a question, it must surely be answered. This is why we mentioned earlier that the Buddha pointed out four types of questions. The Buddha set these questions aside for a specific reason. These four questions are formulated in such a way that one cannot escape them.</p>
+<p>The Tathāgata—let us understand "Tathāgata" here as the liberated individual. Does the liberated individual of a certain teaching exist after death? Does he not exist after death? Does he both exist and not exist after death? Fourthly, does he neither exist nor not exist after death? In this way, they make it four-cornered to corner the one who answers. They put four corners to the question so that the answerer cannot escape. Whichever one he asserts, he gets trapped. But the Buddha did not get trapped by this. Without answering even one of them, he dismissed them, calling it a wilderness of views, a joke, and declared that such questions do not even arise for a noble person. The Buddha stated that it is only the one lacking that understanding who troubles himself over why these questions were not taken seriously and answered.</p>
+<p>Now let us try to understand "Tathāgata" in relation to our Dispensation. The term "Tathāgata" is actually applied in the Sutta discourses not only to the Buddha but in some places to Arahants as well. In short, it refers to the liberated person. The wanderer Vacchagotta did not present his questions to the Buddha using the word "Tathāgata". He asked whether a liberated person of this Dispensation, a monk of liberated mind, is reborn (*jāti*) after death. The Buddha said: "That question does not apply."</p>
+<p>He asked: "Is he not reborn after death?" "That question also does not apply." Next he asked: "Is he both reborn and not reborn?" "That question also does not apply." Then he asked: "Is he neither reborn nor not reborn?" "That question also does not apply." In this way, the Buddha gave short answers. Thereupon Vacchagotta said: "Whatever faith I had in you, Master Gotama, is now gone." Then the Buddha said: "Very well, Vacchagotta, let me ask you a question in return."</p>
+<p>"Suppose a fire were burning before you. Would you know that there is a fire before you?" "Yes, Master Gotama, I would know." "If someone were to ask you: 'On account of what does this fire burn?' what would you say?" "I would say: 'This fire burns on account of grass and wood as fuel. It burns by grasping (*upādāna*) onto them, using them as fuel.'" "Very well, suppose that fire before you were to go out. If someone were to ask you: 'Where has this extinguished fire gone? To the east? To the west? To the north? To the south?' what would you say?"</p>
+<p>"The question does not apply, Master Gotama." He too was forced to say that the question does not apply. Why? He is then told the reason. To ask where the fire went after it went out—which had burned on account of grass and wood—is an absurd question. He did not say "foolish", but that it is not a fitting way of speaking. Instead, the only word to say is *nibbuta*—"extinguished". That is the only answer. A fire that burned by grasping (*upādāna*) onto various fuel materials has gone out due to the absence and exhaustion of that grasping (*upādāna*)/fuel. That is all. That is the whole story. So, the word used for that is *nibbuta* (extinguished).</p>
+<p>So now, you devotees have to think about that word Nibbāna. This is where we have arrived: at this question of Nibbāna. Everyone in this Dispensation knows that there are said to be five heaps (aggregates) that we hold onto because of craving (*taṇhā*). You devotees often hear them mentioned: the aggregate of form, the aggregate of feeling (*vedanā*), the aggregate of perception, the aggregate of formations (*saṅkhāra*), and the aggregate of consciousness (*viññāṇa*). We are holding onto these five heaps. At the very least, a Buddhist has this basic understanding. Non-Buddhists take them as a self. Even among Buddhists, it is only when the view is purified—that is, when a Stream-enterer (*sotāpanna*) purifies his view—that this is truly seen.</p>
+<p>Thus, the Buddha declares that we hold onto these five heaps in twenty ways as the dogma of self-illusion (*sakkāya-diṭṭhi*). Either one says form is the self, or that the self possesses form, or that form is in the self, or that the self is in form. In this way, there are four ways for each of the five. One says feeling (*vedanā*) is the self, or that the self possesses feeling, or that feeling is in the self, or that the self is in feeling. In this manner, there is a wrong view, a false grasping, regarding all five aggregates.</p>
+<p>Even if they can comprehend the other aggregates, when they come to the deepest, most illusory part—which is consciousness (*viññāṇa*)—most people get stuck. Even if other things are seen as not-self (*anattā*), they think: "This consciousness (*viññāṇa*), or mind, has some kind of essence." The Buddha declares that even this consciousness (*viññāṇa*) is not-self (*anattā*), that there is nothing there to be taken as a self. It is instantaneous, and even faster than the others—you devotees may have heard the term *lahuparivattaṁ* (swiftly changing)—this mind spins extremely fast. This consciousness (*viññāṇa*) revolves with immense speed. The Buddha declares that there is not even an adequate simile for it. Even with modern scientific instruments, one cannot measure it. To such a wonderful extent, this consciousness (*viññāṇa*) spins rapidly.</p>
+<p>Philosophers of the past gave the simile of the *alāta-cakka* (whirling firebrand). When you whirl a firebrand, it appears like a circle of fire. They present the simile of the whirling firebrand. The mind moves with such speed. Because of this, the world develops a wrong understanding and takes it to be a self. That is where most people get stuck. Even those who have attained higher psychic knowledges (*abhiññā*) ultimately get stuck there.</p>
+<p>However, the Buddha understood this consciousness (*viññāṇa*). That was when the Eye of Wisdom arose. Consciousness (*viññāṇa*) also arises and ceases moment by moment. If consciousness (*viññāṇa*) also arises and ceases, then those six types of consciousness—eye-consciousness, ear-consciousness, nose-consciousness, tongue-consciousness, body-consciousness, and mind-consciousness—all arise due to causes and conditions, and when those causes and conditions are removed, they cease.</p>
+<p>Thus, it is in dependence on this consciousness (*viññāṇa*) that we construct the concept of a "world". The concept of the world is a worldly designation. The "world" is a designation we have constructed. And we are trapped within it. Now think about it for a moment: is the world seen by humans the same as that seen by other animals who have eyes different from ours? No matter how much scientific power we possess, can we understand the world of an ant? We cannot understand the ant's world, no matter how much scientific exploration and research we conduct.</p>
+<p>A small illustration of this, which you devotees probably know better than we do, is how during the recent tsunami, animals surpassed human instruments. The instinct of those animals, whom we consider inferior—human beings cannot even conceive how that animal instinct works. That is how they escaped. While humans were waiting for warning signals, those animals sensed the tsunami. That is a good example. From that, we can see what the world of those animals is like, but we cannot comprehend it. That is why the Buddha declared that the world exists relative to the six sense bases (*saḷāyatana*). If the world exists relative to the six sense bases, then the cessation of the world can be brought about by the cessation of the six sense bases (*saḷāyatana-nirodha*).</p>
+<p>The Buddha stated that all of these questions are like those asked by a feverish patient. When a feverish patient asks for water, it is not proper to just give him water; one must give him medicine. Likewise, the Buddha did not give "water", but gave "medicine". That medicine is the Dhamma. So, that Dhamma is what exists. When that is realized: "Whatever is of the nature to arise, all that is of the nature to cease" (*yaṁ kiñci samudayadhammaṁ sabbaṁ taṁ nirodhadhammaṁ*).</p>
+<p>This applies to the atom as well. It also applies to the world system. There are indeed hundreds of thousands of such world systems, galaxies. It is true that living beings exist in them. But we must contemplate this to arouse urgency (*saṁvega*): for so long, we have been born and dying in this long saṁsāra. That is what the Buddha declared. Because of contact (*phassa*) through the six sense bases (*saḷāyatana*), feeling (*vedanā*) arises. Because of feeling, craving (*taṇhā*) arises. Because of craving, grasping (*upādāna*) arises. Because of grasping, becoming (*bhava*) arises. Because of becoming, those who cling to all sixty-two views do not escape from birth (*jāti*), aging and death (*jarāmaraṇa*).</p>
+<p>Among those who held these sixty-two views were those who had attained higher psychic knowledges (*abhiññā*). There were those with marvelous mental powers, surpassing modern scientists, who could see past births. Yet, even of them, the Buddha declared that they too are blind because they lack the Eye of Wisdom. He said they do not have the true eye, calling them *acakkhukā* (eyeless). We must understand this in that light.</p>
+<p>Thus, we have received this Dhamma. Where do we begin it? Right here. With these six sense bases (*saḷāyatana*). Within this fathom-long body itself. That is why the Buddha made that marvelous statement: "Within this very fathom-long body, endowed with perception and mind, I point out the world, the origin of the world, the cessation of the world, and the path leading to its cessation."</p>
+<p>Therefore, what we are doing at this moment is, in particular, developing virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*). Developing the Noble Eightfold Path means developing virtue, concentration, and wisdom. This is done through this body endowed with perception and mind. Having done this, at some point, by seeing the arising and ceasing of these things through insight (*vipassanā*), one traverses the path that the Buddha pointed out as the stages of Stream-entry, Once-returning, Non-returning, and Arahantship. Therein lies the effort to eliminate ignorance.</p>
+<p>The dogma of self-illusion (*sakkāya-diṭṭhi*) born of ignorance, and craving (*taṇhā*) which reinforces it—in fact, it is due to grasping (*upādāna*) driven by this craving (*taṇhā*) that worldly beings remain trapped within becoming (*bhava*), seizing everything. Grasping onto this, they cry: "Save me!" Grasping onto something, they say: "Oh, save me!" But the Buddha says: "Let go." Without letting go, how can one be saved? The moment you let go, you are saved. That is the secret. But it is difficult to understand. That is why the Buddha shows it to us.</p>
+<p>How then do we let go of these? Not by physically grabbing and throwing them away. It is seen through the Eye of Wisdom, with the Eye of Wisdom itself. That is what is called insight-knowledge (*vipassanā-ñāṇa*). Insight (*vipassanā*) means a special kind of seeing. That special seeing is not done with the physical eye. As the practitioner (*yogāvacara*) develops virtue, concentration, and wisdom, at some point, things that are invisible to the ordinary worldling become visible.</p>
+<p>To one who took a candle flame as a single entity, its flow of arising and ceasing sometimes becomes visible. Looking at a waterfall, at some point, that same nature is seen. Going even further, when one removes the attachment to these things—as the Buddha declared, by removing and removing it—the cessation of the six sense bases (*saḷāyatana-nirodha*) occurs. That is what is meant by the escape from the six sense bases. Departing from the six sense bases (*saḷāyatana*) means removing the perception of a self regarding them, and gradually walking the path of insight (*vipassanā*).</p>
+<p>Thus, because of not understanding that the eye crumbles in this world, and not understanding that forms crumble, we bring the two together, create a contact (*phassa*), and construct a world. The cinema worlds, music worlds—all these worlds we create are things manufactured within our own minds. Think about it for a moment: highly sweet music, the most beautiful music of the most talented musician of our time. If you slow it down using modern equipment, it sounds like wailing. It is like crying. That is what the Buddha declared: *Ruṇṇamidaṁ, bhikkhave, ariyassa vinaye yadidaṁ gītaṁ*—"Singing is, in the discipline of the Noble Ones, a form of wailing." Thus, one can realize it directly in that manner.</p>
+<p>The same applies to the world seen by the eye. All of those—you devotees know about cinema and related things, modern things. When we look at what is shown to us, what falls onto that screen is a mass of forms, a succession of forms. We seize them with perception, submit to them, and are deluded. But at some point, if that Eye of Wisdom is developed, the attachment to them gradually fades away.</p>
+<p>Along with the fading of attachment—these two go together—just as attachment fades, light arrives. To the extent that darkness is dispelled, light comes in. To the extent that light enters, darkness is removed. Therefore, what we must do is depart from that path of darkness and walk along this path of light.</p>
+<p>Therefore, you devotees must understand that the Buddha pointed out this Noble Eightfold Path within this very body. The first step in our effort to develop the mind is virtue (*sīla*). You devotees, at this moment, have received the basic discipline of restraining body and speech through observing the precepts (*sīla*). The Buddha points out various stages of virtue (*sīla*). Why do we do this? Because while traveling through this saṁsāra for a long time, various wholesome and unwholesome kamma have been stored in our consciousness (*viññāṇa*). They are also recorded as memories. These memories flood into our minds. Because of this, it becomes difficult to concentrate our minds.</p>
+<p>But if someone sets certain boundaries and restrains his body and speech, he can arouse joy instead of remorse. One can think: "For so long I drank alcohol, killed animals, stole, and did various things. But now I have turned away from those things and established myself in this good practice." By directing the mind there, gladdening the mind, one can build up concentration (*samādhi*). That is why we sometimes say that this saṁsāra is a muddy swamp. We have come sinking and sinking in this muddy swamp. If we are to sit down to meditate, we must construct a small foundation. We must think of the training precepts (*sikkhāpada*) as planting five, eight, or ten pillars. It is with such a valuable virtue (*sīla*) that you devotees are now endowed.</p>
+<p>Where do we go from there? As you devotees know, there are two aspects to meditation: calm (*samatha*) and insight (*vipassanā*). To some extent, one must develop calm by removing the hindrances. One must concentrate the mind by bringing up a wholesome object. By anchoring the scattered mind on a wholesome object, we can test the strength of the mind. Those who have attained states like absorption (*jhāna*) understand how small a fraction of our mental strength we utilize in our day-to-day lives. A scattered reservoir of water has no power. But when that water is collected and channeled through pipes to spin the turbine to generate hydroelectric power, with what great speed does that water travel!</p>
+<p>In the same way, there is an immense power in our mind. Having unified and collected that power through obtaining concentration (*samādhi*) like absorption (*jhāna*), next we must spin that iron wheel. That spinning is what is called wisdom (*paññā*), insight (*vipassanā*). We must then apply that stilled mind not to anywhere else, but to this very body. The Dhamma-nature of this body and other bodies is the same. Just as this body is, so is that body; just as that body is, so is this body. The aggregate of form in that body is just like the aggregate of form in this body. Whether you look at it from that side or this side, ultimately we arrive at these six sense bases (*saḷāyatana*) and the five aggregates of grasping (*pañcupādānakkhandha*).</p>
+<p>As one gradually understands this deeply through insight, what is the ultimate result? The entire sum of knowledge is contained within this Dhamma-nature of arising and passing away—*samudaya-vaya*. Within both arising and passing away. But as this knowledge of arising and ceasing goes deeper and deeper, the aspect of ceasing begins to show itself far more than the aspect of arising. It crumbles away. That is why the Buddha said *lujjati palujjati* (it crumbles and disintegrates). The "world" is that which crumbles away. It is something constantly crumbling and breaking apart. Thus, when one directs the mind to the five aggregates—form, feeling (*vedanā*), and so forth—and contemplates them with a concentrated mind at some point, this is understood.</p>
+<p>The disenchantment (*nibbidā*) arising through that—that disenchantment, as it goes deeper, helps one to let go of the five aggregates of grasping (*pañcupādānakkhandha*) and even to escape from those bases through the cessation of the six sense bases (*saḷāyatana-nirodha*).</p>
+<p>What is meant by escaping from the sense bases? We grasp onto this eye, ear, nose, and so forth, taking them as a self. We think of them as places inhabited by a self. Thus, "my eye, my ear, my nose"—there is that sense of ownership. Along with that, it is as if someone is residing inside them. But at some point, one understands that these things we took to be "mine" crumble right here, on the spot. The eye crumbles, forms crumble, the consciousness (*viññāṇa*) that arises due to both crumbles, contact (*phassa*) crumbles as a result of that consciousness, and feelings (*vedanā*) that arise due to that contact all crumble away. It is to this very truth that the Buddha ultimately directs our mind.</p>
+<p>Through that, having seen the arising and ceasing of the six sense bases (*saḷāyatana*), and having understood their gratification, and even more so their danger, that escape from them at some point—that state of escape is what we call Nibbāna in this very life. It is said, "He saw Nibbāna in this very life" (*diṭṭheva dhamme*). He realized Nibbāna, he went to the other shore.</p>
+<p>When we speak of Nibbāna, and when we speak of the Buddhas, we use the term "supramundane" (*lokuttara*). Why do we use the word "supramundane"? Some might think that the Buddha became supramundane only after his final passing away (*pariNibbāna. Perhaps they think so. Why? Because he lived in the world. He was in the world, and after his final passing, he crossed over the world. Some might indeed think that way. But the Buddha was supramundane while alive, because he had crossed over that world. He crossed over that world—he crossed over the world of the five aggregates, he crossed over the world of the six sense bases (*saḷāyatana*).</p>
+<p>Thus, the galaxies and so forth that we speak of are based on this world. Those questions are like the questions of a feverish patient. Because once one has crossed over the world, those questions do not exist. Those questions are asked by one who stands within the dogma of self-illusion (*sakkāya-diṭṭhi*). The things taken as "the world" are constructed in dependence on forms contacted (*phassa*) by the eye, sounds contacted (*phassa*) by the ear, and so on. Bringing to mind the story of the elephant once more, the world obtained by contacting (*phassa*) through these sense bases is exactly equivalent to the world of the blind men who gained an understanding of the elephant.</p>
+<p>It is deficient; it is not complete knowledge. But the Eye of Wisdom encounters all of those aspects we mentioned. It sees how these six sense bases (*saḷāyatana*) arise, and it also sees how they instantly cease. If there is any gratification in them, it sees that, and it sees the danger, and next the escape from them—it is through the ending of attachment to them that at some point, the cessation of consciousness (*viññāṇa-nirodha*), the cessation of the six sense bases (*saḷāyatana-nirodha*), and the cessation of becoming (*bhava-nirodha*) occur. Now, the term "cessation of becoming" (*bhava-nirodha*) is constantly mentioned as Nibbāna itself. It is frequently stated in the Dhamma: *Bhava-nirodho nibbānaṁ, bhava-nirodho nibbānaṁ* (The cessation of becoming is Nibbāna).</p>
+<p>The cessation of becoming (*bhava-nirodha*) does not mean departing from the physical world we think of. It is not that final event of the Buddha's passing away which we think of as Parinibbāna. Rather, it is obtaining that supramundane state while still alive. It was obtained at the moment the Eye of Wisdom arose. There is a state where all forms hitherto seen, all sounds heard through the darkness of ignorance, entirely cease. It was by realizing that cessation directly that the Buddha gained the understanding that the world can be ceased right here. That was the state of mind the Buddha ultimately arrived at.</p>
+<p>Sometimes we think that after his final passing, or after five thousand years, the Buddha will return. But what we must remember there is that word *nibbuto* (extinguished). Once a fire has gone out, where is it? Does it go to the east? To the west? To the north? To the south? Does the fire return? No. The fire existed on account of that wood. Likewise, whether we say "Tathāgata", "liberated monk", or "Arahant", that concept was created only because of attachment to those five aggregates of grasping (*pañcupādānakkhandha*).</p>
+<p>That is why, on one occasion, the Venerable Rādha asked the Buddha: "Venerable Sir, it is said, 'a being, a being' (*satto, satto*). According to this Dispensation, what is called 'a being'?" Until then, the past schools had defined "being" as an eternal entity. But the Buddha gave a unique etymological definition to it, in the sense of being stuck or attached to form, feeling (*vedanā*), and so forth: "*Rūpe kho, Rādha, yo chando yo rāgo yā nandī yā taṇhā, tatra satto, tatra visatto, tasmā satto'ti vuccati*"—"Rādha, in the sense of being attached, specially attached to form, one is called 'a being'." Thus, just as the world was defined as that which crumbles, even the word "being" was defined by the Buddha in the sense of being attached to something.</p>
+<p>Therefore, as long as one is attached to form, feeling (*vedanā*), and so forth, one exists. The moment one is liberated from them, there is no "being". It ends right there. But the world usually thinks of a "being" in association with the perception of a self. The world regards a "being" as a self. They think there is some unchanging core, an essence, here. The idea that there is some unchanging element either in form, in feeling (*vedanā*), or ultimately in consciousness (*viññāṇa*), is held by those of wrong views, who hold onto the dogma of self-illusion (*sakkāya-diṭṭhi*). The Buddha demonstrated that there is no such thing even in consciousness (*viññāṇa*).</p>
+<p>What is there is only a grasping (*upādāna*) created through ignorance and craving (*taṇhā*). As long as that grasping (*upādāna*) exists, as long as that grasping (*upādāna*) is present, that person is entitled to that designation of "being" as a conventional reality. That person claims ownership, because there is a responsibility in it. That is why one goes on and on in saṁsāra. Because of grasping (*upādāna*), becoming (*bhava*) exists, just like a spreading fire. Then, if all the wood that spreads the fire is exhausted, if the oil in the lamp is exhausted, if the wick is also exhausted, what happens?</p>
+<p>*Khīṇaṁ purāṇaṁ navaṁ natthi sambhavaṁ,*</p>
+<p>*virattacittā āyatike bhavasmiṁ;*</p>
+<p>*Te khīṇabījā avirūḷhicchandā,*</p>
+<p>*nibbanti dhīrā yathāyaṁ padīpo.*</p>
+<p>That very story is found in this verse. *Khīṇaṁ purāṇaṁ*—the past is finished. *Navaṁ natthi sambhavaṁ*—nothing new arises. *Virattacittā āyatike bhavasmiṁ*—there is no longer any attachment or desire for future becoming (*bhava*). *Te khīṇabījā avirūḷhicchandā*—that seed of consciousness (*viññāṇa*) is destroyed, and therefore desire (*chanda*) does not spring up. Growth does not arise. *Nibbanti dhīrā yathāyaṁ padīpo*—like this lamp, those wise ones are extinguished.</p>
+<p>So, that is how we understood the word *Lokavidū*. In these times, it can be understood and explained in various ways. But we had to present this specific aspect because we give a special place to this Eye of Wisdom.</p>
+<p>Therefore, you devotees must consider: what is there for us to do? You must decide for yourselves whether you will become like Rohitassa, or whether you will walk this path pointed out by the Buddha.</p>
+<p>On this valuable Vesak Poya day, this pious gathering has taken leave from their daily routines, and at least temporarily observed such a valuable virtue (*sīla*) and engaged in meditation. At this moment, you have listened to a Dhamma sermon that supports insight (*vipassanā*) and meditation. Therefore, relying on this store of merit accumulated so far, supported by your meditation practice, and through the association with noble friends, may you have the strength and power to realize the path, fruit, and penetration of Stream-entry, Once-returning, Non-returning, and Arahantship as soon as possible before the lamp of this Dispensation goes out, making an end to the suffering (*dukkha*) of saṁsāra and reaching the supreme end of the world! You should make the aspiration: "May the merit of listening to the Dhamma be a strong support for this!"</p>
+<p>Likewise, may all beings, from Avīci hell up to the Akanitṭha heaven, who wish to rejoice in the merit of this giving and hearing of the Dhamma, by rejoicing in it, quickly make an end to the suffering (*dukkha*) of saṁsāra through their preferred state of Awakening! Having made this aspiration, please recite these verses:</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_030.html" class="doc-btn">← Previous Sermon (030)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_032.html" class="doc-btn">Next Sermon (032) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

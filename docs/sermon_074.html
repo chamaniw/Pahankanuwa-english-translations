@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 074 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_073.html" class="doc-btn">← Previous Sermon (073)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_075.html" class="doc-btn">Next Sermon (075) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 074</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_074_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_074_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_074_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #74</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.144)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Pheṇapiṇḍūpamaṃ rūpaṃ, vedanā bubbulūpamā;</p>
+<p>marīcikūpamā saññā, saṅkhārā kadalūpamā;</p>
+<p>māyūpamañca viññāṇaṃ, dīpitādiccabandhunā.</p>
+<p>Yathā yathā yoniso upaparikkhati, rittakaṃ tucchakaṃ hoti,</p>
+<p>yo naṃ passati yoniso.</p>
+<p>Imañca kāyaṃ ārabbha, bhūripaññena desitaṃ;</p>
+<p>pahānaṃ tiṇṇaṃ dhammānaṃ, rūpaṃ passatha chaḍḍitaṃ.</p>
+<p>Āyu usmā ca viññāṇaṃ, yadā kāyaṃ jahantimaṃ;</p>
+<p>apaviṭṭho tadā seti, parabhattaṃ acetanaṃ.</p>
+<p>From:</p>
+<p>Saṃyutta Nikāya (SN 22.95, Pheṇapiṇḍūpama Sutta)</p>
+<p>Dear Listeners,</p>
+<p>Today is this Vesak Full Moon day, the day that commemorates the rare event of the appearance of a Tathāgata Fully Enlightened Buddha to the entire world. It is the day the deathless medicine of Nibbāna, which cures the disease of saṃsāra, was discovered through a noble quest. It is the day the light of wisdom dawned upon the world.</p>
+<p>Today, let us try to see the Buddha through the Dhamma preached by the Teacher of the Three Worlds Himself. The Buddha has declared: *"Yo dhammaṃ passati so maṃ passati"*—"He who sees the Dhamma sees me." Therefore, on this noble day, by directing our minds to the Dhamma, let us strive to see the Buddha. The verses we presented as our theme contain the summary of a very special discourse delivered by the Buddha.</p>
+<p>On one occasion, the Buddha, along with a group of monks, journeyed to the city of Ayodhyā near the river Ganges. The residents of Ayodhyā provided lodging facilities for them. While residing there, utilizing the river Ganges as an object, the Buddha addressed the monks and delivered a discourse concerning foam. Why? Because the perception of a self is the most severe defilement in the world. To assist in removing it, the Buddha presented five similes to the monks on that occasion. It begins like this:</p>
+<p>"Just as, monks, a great lump of foam is carried along by the river Ganges, and a person with physical sight, as well as the eye of wisdom, sees that lump of foam, reflects upon it, and thoroughly investigates it with wisdom. As he reflects and investigates with the eye of wisdom, that lump of foam appears to him—to that person with eyes—as empty, hollow, and insubstantial (*anattā*). What essence, monks, could there be in a lump of foam?</p>
+<p>In the same way, monks, whatever aggregate of form (*rūpa-kkhandha*) there is—here, aggregate of form means a heap of form—and how does the Buddha describe that heap? In eleven ways. Whatever form there is: past, future, present, internal or external (that is, concerning oneself or others, which we may call inside or outside), gross (rough) or subtle, inferior or superior, far or near; in this manner, it is shown in eleven ways. A person with the eye of wisdom investigates all that aggregate of form with wisdom. To that person with the eye of wisdom who thus investigates, it appears as empty, hollow, and insubstantial (*anattā*). What essence, monks, could there be in form?</p>
+<p>Next, in the same manner, another simile is shown regarding feeling/sensation (*vedanā*). Just as, monks, in the autumn season, when rain with large drops is falling, bubbles of water rise and burst in rapid succession on the water, and a person with the eye of wisdom who sees those water bubbles rising and bursting, reflects upon them, and investigates them with wisdom, those water bubbles appear to him as empty, hollow, and insubstantial (*anattā*). What essence, monks, could there be in a water bubble?</p>
+<p>In the same way, monks, whatever feelings there are—past, future, present, internal or external, gross or subtle, inferior or superior, far or near—a wise monk investigates all those feelings with wisdom and reflects upon them. To that monk who looks thus, they appear as empty, hollow, and insubstantial (*anattā*). What essence, monks, could there be in feeling/sensation?</p>
+<p>Next, He speaks about perception (*saññā*). Just as, monks, in the last month of the hot season, at midday, a mirage is seen. A person with the eye of wisdom looks at that mirage, reflects on it, and investigates it with wisdom. To him who reflects and investigates with wisdom, that mirage appears as empty, hollow, and insubstantial (*anattā*). What essence, monks, could there be in a mirage?</p>
+<p>In the same way, monks, a monk directs his eye of wisdom to investigate whatever perceptions there are—past, future, present, internal or external, gross or subtle, inferior or superior, far or near—indeed, that entire aggregate of perceptions. To that monk who looks thus, perception appears as empty, hollow, and insubstantial (*anattā*). What essence, monks, could there be in perception?</p>
+<p>Just as, monks, a man seeking heartwood goes into a forest taking a sharp axe. He sees a large, straight banana trunk. He cuts it down at the root. After the tree falls, he cuts off the crown. Having cut it, he peels away the outer skins of that banana trunk in search of heartwood. As he finishes peeling it in that manner, he realizes that there is not even sapwood in this banana trunk, let alone heartwood. But a person who has not only physical sight but also the eye of wisdom, looking at this banana trunk, understands that this banana trunk is hollow, empty, and insubstantial (*anattā*). What essence, monks, could there be in a banana trunk?</p>
+<p>In the same way, monks, whatever preparations/preparations (*saṅkhārā*) there are—past, future, present, internal or external, gross or subtle, inferior or superior, far or near—a monk reflects upon those preparations. He investigates them with the eye of wisdom. To that monk who looks thus, preparations appear as empty, hollow, and insubstantial (*anattā*). What essence, monks, could there be in preparations?</p>
+<p>Next, fifthly, the Buddha points out concerning consciousness (*viññāṇa*). Just as, monks, a magician—or to put it in modern terms, an illusionist or a magician—or his apprentice, performs a magic trick at a crossroads. A person with the eye of wisdom who sees that magic trick reflects upon it and investigates it with the eye of wisdom. To him who looks thus, that magic trick appears as empty, hollow, and insubstantial (*anattā*). What essence, monks, is there in a magic trick, in an illusion? What heartwood?</p>
+<p>In the same way, monks, whatever aggregate of consciousness (*viññāṇakkhandha*) there is—which is taken as that collection of thoughts, consciousness—past, future, present, internal or external, gross or subtle, inferior or superior, far or near, a monk investigates it with the eye of wisdom. To that monk who looks thus, the aggregate of consciousness also appears as hollow, empty, and insubstantial (*anattā*). What essence, monks, could there be in consciousness?"</p>
+<p>Having declared this, the Buddha then said: "Monks, if a noble disciple possessing knowledge of the Dhamma looks at and investigates these five aggregates of grasping (*upādāna-kkhandha*) with the eye of wisdom, and engages in meditation on them, through such engagement he becomes disillusioned with form. He becomes disillusioned with feeling/sensation. He becomes disillusioned with perception. He becomes disillusioned with preparations. He becomes disillusioned with consciousness. Through that disillusionment, dispassion (fading of lust) arises. Through dispassion comes liberation; the mind is liberated. Once liberated, he understands that it is liberated. Through that very liberation of the fruit of Arahantship,</p>
+<p>he then understands: birth/arising (*jāti*) is ended, the holy life has been lived, what had to be done has been completed. He attains the direct realization of Arahantship." In this way, He concludes the discourse by culminating it in Arahantship.</p>
+<p>Next, the very essence of that discourse is presented there as the word of the Buddha. It has been presented in verses. A few of those are what we presented as our theme.</p>
+<p>> *Pheṇapiṇḍūpamaṃ rūpaṃ, vedanā bubbulūpamā,*</p>
+<p>> *Saññā marīcikūpamā, saṅkhārā kadalūpamā,*</p>
+<p>> *Māyūpamañca viññāṇaṃ, dīpitādiccabandhunā.*</p>
+<p>What is meant by 'Ādiccabandhu' is the Kinsman of the Sun, which is used as an epithet for the Buddha. The Buddha, the Kinsman of the Sun, has preached in this manner using similes. Form has been compared to a lump of foam. Feeling has been compared to a water bubble. Perception has been compared to a mirage. Preparations have been compared to a banana trunk. Consciousness has been compared to a magic trick. That He has shown similes in this manner is the essence of it.</p>
+<p>> *Yathā yathā yoniso upaparikkhati, rittakaṃ tucchakaṃ hoti,*</p>
+<p>> *Yo naṃ passati yoniso.*</p>
+<p>Next, it is stated: in whatever way one reflects upon it and investigates it with radical attention (*yoniso manasikāra*), to him who thus investigates with radical attention, this appears as empty and hollow.</p>
+<p>> *Imañca kāyaṃ ārabbha, bhūripaññena desitaṃ,*</p>
+<p>> *Pahānaṃ tiṇṇaṃ dhammānaṃ, rūpaṃ passatha chaḍḍitaṃ.*</p>
+<p>Next, 'bhūripaññena' means the Buddha of great wisdom. If one correctly understands what was preached by Him concerning this body, it means that when three things are removed from this body, this form (the physical body) is seen as something abandoned and cast away. In other words, look at it in that manner.</p>
+<p>> *Āyu usmā ca viññāṇaṃ, yadā kāyaṃ jahantimaṃ,*</p>
+<p>> *Apaviṭṭho tadā seti, parabhattaṃ acetanaṃ.*</p>
+<p>Then, finally, it points out what those three factors are: vitality, warmth, and consciousness. When these three things abandon this body, at that moment, this body lies cast away like a discarded object. *'Parabhattaṃ acetanaṃ'*—without volition, without the power of intention. *'Parabhattaṃ'* means food for animals, a meal for beasts. So, the story of the body and the story of these five aggregates have been told through those verses. Let us try to understand these briefly presented similes in somewhat greater detail.</p>
+<p>These are things seen in our daily lives, things everyone has seen to some extent. However, through these, the Buddha directs us toward the Dhamma. Using those very things, the Buddha highlights and shows through these similes the emptiness, hollowness, and insubstantiality (*anattā*) of these five aggregates of grasping (*upādāna*), which have not been seen with the eye of wisdom until now.</p>
+<p>Form is compared to a lump of foam. Let us first direct our minds to this lump of foam. In a place like a river, due to the speed of the flowing water, the rubbish and debris in the water gather together. When they go and hit against something like a log, after a considerable time, a lump of foam is formed there. As it goes further and further, it becomes a large lump of foam. Looking at it from afar, it might even look like a white stone. But even if someone is deceived by such an appearance, when looking at it closely and investigating it with wisdom, one cannot do things with this lump of foam as one would with a stone or a solid, strong object. It is full of holes. Moreover, it rises and falls; it is fragile, liable to break at any moment. That is exactly how this physical body of form is. When we hear the word 'form' (*rūpa*), what immediately comes to our minds—especially in this age where visual media is highly emphasized—is this body of ours, presented in various forms with beautiful colors, even more than the actual color of the physical body.</p>
+<p>What we have to take as 'form' is just an impression that falls upon our mind. But what lies beneath it? When we think about this cage of a body, it is not the beautiful form seen on the outside. It may look very beautiful. But inside, just as was said about that lump of foam, in this saṃsāric stream, at the moment of our conception in a mother’s womb, we began by depending on that embryonic form (*kalala-rūpa*), that stain of mud. Subsequently, this physical body of form is built up from milk-foam, gruel-foam, rice-foam, and so on. Furthermore, it breaks down moment by moment. Even if we forget that fact, this body changes moment by moment. Likewise, it goes on breaking and disintegrating. The final breaking is what is called death. Yet, for a long time, an attachment to this form and the concepts of 'mine' and 'I am' have arisen in worldly beings because they look at it from afar, without investigating with the eye of wisdom, but relying only on physical sight. It is also due to the craving (*taṇhā*), etc., they have for it. The Buddha presented the true nature in this way.</p>
+<p>Similarly, comparing feeling to a water bubble is also not difficult to understand. It is raining heavily. When it rains heavily like this, through that force, momentarily combining with air and perhaps aided by dust and sand, a small water bubble is formed. No sooner is it formed than it bursts; very rapidly, water bubbles keep forming and bursting. Looking from afar, it may appear as a single continuous thing or as something substantial. But when looking closely, it does not remain the same even for a single moment. It is in the same way that those eleven kinds of feelings are called 'my feeling'. One goes to the physician and says, "Doctor, since last night I have had a feeling of pain in such and such a place." But it is not a single feeling. It is a stream of feelings that is arising, ceasing, and disintegrating very rapidly. We take this as one. Taking it as one, just as we take photographs and develop pride and attachment, we think 'I' and 'mine' of feeling as well. This is because of the 'perception of compactness' (*ghana-saññā*) in the world; the tendency of worldly beings is to consider everything as a solid, compact unit. To break that perception of compactness regarding feeling, the simile of the bubble arising in water has been shown.</p>
+<p>You, devout laypeople, have heard much about mirages, haven’t you? When speaking of perception (*saññā*) here, you must reflect that it is not merely the ordinary perception spoken of in the common world that is meant. There is a deep meaning here. When we say 'the mirage of the perception of form,' we immediately think of the perception of form. But the Buddha has compared the entirety of perception to a mirage. Therefore, we must reflect that it is not only the perception of form. The perception of sounds, the perception of smells, the perception of tastes, the perception of touch (which is felt by the body), and finally, the perception of mind-objects (*dhamma-saññā*) felt by the mind. This entire aggregate of perception (*saññā-kkhandha*)—all these perceptions are indeed like a mirage. Why? Because, although they exist as a collection of many things, they appear to us as one.</p>
+<p>You have heard about mirages, haven't you? A mirage is called *'mṛga-tṛṣṇikā'* (deer-thirst) because it creates craving (*taṇhā*) in a thirsty deer. To a thirsty animal looking at a mirage, in the midday heat of the summer season, there appears a shimmering that looks like a flowing river or a lake in the distance. Perception is exactly like that. Through perception, it deceives us, saying 'this is blue, this is yellow, this is red.' This perception has a deceiving nature. When looking closely at that perception, there is no such reality. Due to some defect of the eye, or perhaps because of the structure of the eye, taking hold of those aggregates of perception, worldly beings create pride, thinking 'I' and 'mine' within them.</p>
+<p>Next, concerning preparations (*saṅkhāra*); this word *'saṅkhāra'* is not a very commonly used word. It is a wonderful word that cannot be easily translated. But to get a general idea, there is a term used technically in modern times: 'activities' (*kriyākārakam*). It is not a very elegant word. A human being is prompted to activity through perception, corresponding to that intention, as a responsible agent, through body, speech, and mind. Therefore, bodily preparations (*kāya-saṅkhāra*), verbal preparations (*vacī-saṅkhāra*), and mental preparations (*mano-saṅkhāra*)—relying on these three doors, one is prompted to some activity due to ignorance and craving (*taṇhā*). Through these, even kamma is accumulated. That is why the word *'saṅkhāra'* is very close to kamma. It is the activity present within that person.</p>
+<p>Now, if we thought that form is the physical body, the feeling concerning it, the perception formed due to that feeling, and because one expects pleasure in accordance with that perception, one is prompted to various activities—whether wholesome, unwholesome, and so on—all of that can be considered as the aggregate of preparations (*saṅkhāra-kkhandha*). That too is not a single thing; although we take it as 'I' and 'mine', there too is a multitude, like a heap of plantain sheaths. That is why the banana trunk is used as a simile. At first glance, this appears like a unit, like a single thing. As if it has some heartwood or core. The term 'insubstantial' (*anattā*) is used to show that it has no heartwood or core. Empty, hollow, and then insubstantial. The perception of self has arisen within because, even though it appears as a heap, one thinks there is a core or heartwood beneath it. Relying on that, one says 'I' and 'mine'. One says there is an eternal essence, that these things exist around something permanent. But from the simile of the banana trunk, it is clear that even these preparations, even that intention, are constructed by gathering a multitude of factors. Yet, due to ignorance, a concept, reckoning, or designation (*saṅkhā*) has been made, thinking 'I do it'. Preparations are also of this nature.</p>
+<p>Next, the deepest simile of all is the comparison of consciousness (*viññāṇa*) to a magic trick or illusion. When a magician or an illusionist displays these tricks, anyone is deceived. There is such a deceptive nature in consciousness. That is what is shown by that simile: *'māyūpamañca viññāṇaṃ'*. When a magic trick is performed at a crossroads, the spectators are deceived by it. But if someone is able to clearly see the tools of the magic trick shown by that magician, the things shown stealthily, by hiding somewhere, then that person understands this. Although people are prompted to various activities based on them, a realization arises in that person that 'here is a falsehood, an empty thing, an illusion.' Similarly, regarding this mind, in this era, many people are heard speaking about consciousness. This is the deepest matter. The Buddha also declares this. Addressing the monks on one occasion, He declared the difficulty of understanding this consciousness.</p>
+<p>"Monks, it is easy for worldly beings to develop disillusionment toward this physical body of form. Why? Because how this physical body of form is made, how the body gradually grows, and how it wears away is easily visible to someone. How the body of form is grasped and how it is abandoned are well-known to the world. Therefore, it is easy for worldly beings to break the perception of self regarding form. But, monks, that which is known in the world by the names mind (*citta*), intellect (*mano*), and consciousness (*viññāṇa*)—(these are words used for the mind according to the occasion)—it is towards these immaterial, formless things that worldly beings have a stronger perception of self."</p>
+<p>Then the Buddha declares: "Worldly beings grasp that which is called mind, intellect, and consciousness, thinking: 'This is mine, this I am, this is my self' (*etaṃ mama, eso 'hamasmi, eso me attā*). It is difficult to break that grasping." But the Buddha then declares the true state: "However, monks, it would be better for an untaught ordinary person to take this body composed of the four great elements as the self. Why? Because this body is seen to persist without change for a year, two years, three years, or even more. But as for that which is called mind, although it is taken as the self, here the Buddha points out a deep idea: day and night, it arises as one thing and ceases as another. It arises as one thing and ceases as another. It is so rapid that it is not even possible to give an adequate simile." As He stated: *'Upamāpi na sukarā yāva lahuparivattaṃ cittaṃ'*—"It is not easy to find a simile to describe how rapidly the mind changes and turns."</p>
+<p>On that occasion, the Buddha brought a simile somewhat close to this: Just as a monkey jumping from tree to tree in a great forest, running very fast, lets go of one branch and grasps another, very rapidly; in the same way, this mind goes on grasping objects after objects, rapidly. Indeed, the Buddha declares that one should by no means hold a view of self (*atta-diṭṭhi*) regarding the mind. But because worldly beings have no understanding of the immaterial mind, when they are unable to grasp those other things, they go and settle down in the view of self within the mind. There is a reason why everyone speaks about consciousness in this era. For, the Western scientists, who held the view of self and did not break the dogma of self-illusion (*sakkāya-diṭṭhi*) in their search for the true nature of matter, in trying to understand the physical phenomena of form, gradually realized at the end of their research that there is a mind underlying this. Although they do not have a correct understanding of that matter concerning the mind, an understanding has come from that direction that there is some secret here, that consciousness must be understood.</p>
+<p>Similarly, to the Western psychologists who also held the view of self, at the end of the understanding obtained through various kinds of research on the mind, there are still parts they cannot understand—especially where this consciousness goes after death. That is exactly what the Buddha expressed in that final verse.</p>
+<p>Such things are also mentioned in the Dhamma. On one occasion, a minister spent several days enjoying himself with a dancing girl. One dancing girl did not eat properly, thinking she must dance well. However, while dancing, her final dance ended in death, right there. The one who was dancing beautifully was next a corpse. In that manner, it speaks of three things leaving that place at some point. That too is a deep matter that many people forget. As soon as vitality, warmth, and consciousness (*viññāṇa*) leave this body, the body becomes like a log, a corpse that is food for others. It is when vitality, warmth, and consciousness are gone that a person is said to have truly died. That is why they also check whether there is warmth in the body.</p>
+<p>Earlier, didn’t the Buddha explain how form is formed, how the parts of form gather together, and how form gradually forms like that foam gathering—worldly beings can see this somewhat. They can also see how form wears away. How it is grasped, how it is abandoned; these too are clear to the world. But how does the mind gather? Where does this mind gather? Where does it grow? How is it abandoned? The moment of abandonment is death. At the moment of death, where does this consciousness go? All these have become problems for the world. That is why, just as the physicist is trapped within existence/becoming (*bhava*), the modern psychologist is trapped within the intermediate state (*antarābhava*). Because they do not look at it from a Buddhist perspective. The solution to everything expressed here is shown by the Buddha to be the law of Dependent Origination (*paṭicca-samuppāda*). According to the Buddha’s Dhamma, nothing stands alone. Especially concerning consciousness, the Buddha declares that consciousness exists because of Name-and-Form (*nāmarūpa*), and Name-and-Form exists because of consciousness.</p>
+<p>In a certain discourse, in response to a question asked by a monk, the Buddha declared the causes and conditions for the five aggregates of grasping. A certain monk asked the Buddha: "What, Blessed One, is the condition for form?" Since we previously said that form is not a single unit, when asked what the condition for form is, the Buddha declared: "The four great elements." The four great elements mean the four elements: earth (*paṭhavi*), water (*āpo*), fire (*tejo*), and wind (*vāyo*). What we take as various kinds of food contains just that, doesn't it? Thus, this is built up relying on the great elemental phenomena of earth, water, fire, and wind, which cannot stand alone or be identified individually. Therefore, the four great elements are shown as the cause and condition for the aggregate of form. Next, when asked what the cause for feeling/sensation is, the Buddha declared: "Contact (*phassa*)." It is owing to contact that feeling arises. It does not arise without cause. Likewise, for perception too, the cause and condition shown is contact. For preparations too, the cause and condition shown is contact. Lo and behold! When asked what the cause and condition for consciousness is, Name-and-Form (*nāmarūpa*) is shown.</p>
+<p>This term Name-and-Form may not be very familiar to you. Insight meditators are used to hearing it, and different people explain it in various ways. But the Buddha has analyzed Name-and-Form. What is shown as 'Name' (*nāma*) are the five phenomena: feeling/sensation (*vedanā*), perception (*saññā*), intention (*cetanā*), contact (*phassa*), and attention (*manasikāra*). Next, 'Form' (*rūpa*) is explained as the four great elements and the form derived from those four great elements—the form and perception of form that arise through grasping them; so, Name-and-Form. Let us try to understand this further. We said consciousness is an illusion. There is no reality in what the magician displays. Yet, it has the appearance of truth. It is because of that appearance of truth that one is deceived by the magic trick, the illusion. In the same way, in Name-and-Form, which is the condition for consciousness, there is also such a displayed thing. A false thing. Form is not real. It is the same with the mental phenomena called feeling, perception, preparations, and consciousness.</p>
+<p>Now, when we say 'Name' (*nāma*), it is a name. But what a person calls a name, he identifies as a form. Now, when we say 'clock,' a certain form is conjured in the mind because it has a name. But originally, one identifies it as a name through those mentioned phenomena: feeling, the perception that follows feeling, the intention created through perception, the contact caused by intention, and then attention (reflecting). Those five factors are shown as Name-and-Form. In short, it is merely of the nature of a name. It is not a conventional name of the world.</p>
+<p>Next, even though we consider form as solid, what is it but a shadow falling on the mind? A perception of form, relying on the elemental phenomena of form. Thus, the Buddha has declared that there is a constant relationship between Name-and-Form and consciousness. The mind grasps objects very rapidly, and at every moment of grasping, the mind also changes. It is exactly like a whirlpool. When the mind grasps an object and lets it go, its value changes. That is why the rapid rotation between consciousness and Name-and-Form was called *'lahuparivattaṃ'* (rapidly changing). The mind rotates rapidly, very rapidly. But consciousness is not a rotation on its own. Consciousness does not exist alone.</p>
+<p>But Western philosophers think of consciousness as something existing alone, like a soul. The Buddha declares: *"Aññatra paccayā natthi viññāṇassa sambhavo"*—"Apart from conditions, there is no origination of consciousness." Without conditions, there is no arising of consciousness. Just as a fire does not arise alone without fuel, in every case: dependent on the eye and forms, eye-consciousness arises; dependent on the ear and sounds, ear-consciousness arises; dependent on the nose and smells, nose-consciousness arises... and finally, dependent on the mind and mind-objects (*dhamma*), mind-consciousness arises. In this way, the Buddha points out six kinds of consciousness: eye-consciousness, ear-consciousness, nose-consciousness, tongue-consciousness, body-consciousness, and mind-consciousness.</p>
+<p>Is even one of those consciousnesses stored up anywhere? Due to causes and conditions, in a dependently arisen manner, consciousness arises and passes away. It arises with the help of something else. Just as a fire does not arise alone, but a wood-fire or a straw-fire arises by grasping some specific material; in the same way, eye-consciousness arises due to the eye and forms. It is in this manner that the Buddha has described consciousness. It is not something that arises on its own.</p>
+<p>The Ven. Sāriputta, the Great Arahant, also illustrated the constant relationship between consciousness and Name-and-Form, showing how they support each other, using the simile of two sheaves of reeds. Not two reed-sticks, but two sheaves of reeds. There is also depth in the term 'sheaves of reeds'. Is there any heartwood in reeds? They are not things with heartwood. Ven. Sāriputta could have taken something else. He could have taken a wood with good heartwood. See how well this simile fits. Two sheaves of reeds. There is no heartwood in a reed. Even in a sheaf, there is no heartwood. Now, one sheaf of reeds is leaned against the other at the top. Think about it: a sheaf of reeds stands upright with the support of the other. In this very manner, Ven. Sāriputta has shown that in the law of Dependent Origination, with consciousness as condition, Name-and-Form arises; with Name-and-Form as condition, consciousness arises.</p>
+<p>Let us present a simile that helps to understand the relationship between these two to some extent. It may not be a simile found in the Dhamma. There is a Greek myth, a somewhat tragic story. A certain beautiful Greek youth had never seen his own form. Perhaps he did not look into mirrors, maybe because there were none in those days. But one day in the forest, suddenly needing to drink some water, as he bent down to look at the pond, he saw his own face. However, because this Greek youth had never seen his own face before, he was deceived, thinking this was a goddess. Thinking it was a nymph living in the pond, he tried to embrace it. With every attempt to embrace it, it was covered by ripples of water.</p>
+<p>On the first day, he tried very hard; when the water settled, he tried to catch it again. Trying and trying like this, going home and coming back, trying again and again, he spent several days in the same spot, and finally, Narcissus died of that very grief of separation. The story mentions that to commemorate the death of Narcissus, a highly fragrant flower plant nearby was named Narcissus.</p>
+<p>What we have to take from this is the story of self-love. Narcissus grasped his own form, thinking it was someone else. Actually, when we reflect upon it, what we grasp as our form is a reflection. Think of the other side of it. He grasped it thinking it was someone else, a goddess. What Narcissus did is exactly what we have done in this saṃsāra for a long time. At the moment of death too, we do the same thing. When whoever it is dies, because the craving within the concepts developed throughout that person’s lifetime is not yet ended, when those aspirations are activated through the power of kamma, some sign comes to the mind. Grasping that sign as 'I' and 'mine', lo and behold, another form arises. We have done the very same thing Narcissus did.</p>
+<p>But here, one must understand the phenomena of feeling, perception, intention, contact, and attention that are within it. The youth Narcissus experienced a pleasant feeling through that sight. Because of that, a perception was formed; because of the perception, he formed an intention to grasp; and according to that, he paid attention. Now, that simile will help to understand those factors of Name-and-Form. In this era, everyone comes and asks about consciousness—the point where physicists got stuck and the point where psychologists got stuck. It cannot be understood in that way.</p>
+<p>This question of consciousness is not a question of today or yesterday. The sages who wrote the Vedas and Vedānta, or the philosophers, also had the view of self within them. They saw things like form arising and passing away. But consciousness has no visible path. When one dies, where does consciousness go? This became a great problem: how to understand consciousness. There is a certain simile to show their inability to understand it. Finally, they decided that trying to understand consciousness is like trying to grasp a fingertip with that very same fingertip—a futile effort. One cannot grasp a fingertip with that very fingertip, can one?</p>
+<p>Using these fingers as an aid, let us next try to understand consciousness in accordance with the Dhamma, and see what solution the Buddha has given. We said consciousness does not arise on its own; it is something that arises due to causes and conditions. It arises due to Name-and-Form. Let us try to take these Name-and-Form phenomena onto the fingertips themselves, using a simile. It is only a simile given to understand something.</p>
+<p>When we think about the five fingers of this hand, there is the smallest one, isn't there? He is the reckoner/troublemaker. He is the troublemaker; although he is small, he always looks to hurt. And why is he called the reckoner? Because when we count, we first count 'one' starting with this little finger. Think of feeling/sensation in that way. Let us compare feeling to the little finger for a moment.</p>
+<p>Next, perception (*saññā*). Next to the little finger is the ring-wearer (the ring finger). Just as there is a troublemaker, there is the ring-wearer, referring to various people who wear rings. Like wearing a ring. That second finger is perception. Perception is the ring-wearer. Perception is about identifying, while the other is about experiencing (feeling).</p>
+<p>Next, let us think about the middle finger. He is the stubborn one (wilful one). When raising the five fingers up, he is the most prominent, the tallest one. Also, when tapping on something like a table, we use the middle finger, as it stands out more than the others. We thought of the little finger as feeling for a moment, and the ring finger as perception; and the stubborn one, intention (*cetanā*)—that is the middle finger.</p>
+<p>Next, there is a quarreler (the index finger). The world also recognizes the index finger as such. He is the one who threatens. He has a lot of work. He always comes to quarrel. He is designated as contact (*phassa*).</p>
+<p>Next, there is a giant (the thumb). If we speak of him directly in Dhamma terms, he is the attention-maker (*manasikāra*). Attention means reflecting. This thumb has two names; nicknames have been attached to him. The one who acts like the leader can be called attention (*manasikāra*). It is this attention-maker who, gathering the other four as well, has brought us along in saṃsāra for so long.</p>
+<p>It brought us in the manner of unwise attention (*ayoniso manasikāra*). Unwise attention means reflecting in a wrong way. That wrong way of reflecting is seeing the impermanent (*anicca*) as permanent, the painful (*dukkha*) as pleasant, the foul as beautiful, and the not-self (*anattā*) as self. That behavior of showing things in a wrong way, we designate as a crime. That crime is these five taking us along in this saṃsāra.</p>
+<p>What did the Buddha do to reveal the secret within this consciousness? As those philosophers say, consciousness is something not easily understood. To use a simile, it is like a court case without a witness. A murder has taken place, but there are no witnesses. The case would be dismissed, wouldn't it? Instead, there is a certain tactic in the legal field: one of the defendants is pardoned. Having pardoned him, the story is extracted.</p>
+<p>The Buddha had to do a similar thing. That is what is called the Middle Path (*majjhimā paṭipadā*). The Middle Path is something extremely deep; generally, people think it is only the ethical aspect mentioned in the Dhammacakkappavattana Sutta. But there is something much deeper in the Middle Path. Dependent Origination itself is a Middle Path. Although worldly beings take each thing individually, the Buddha showed through causes and conditions that nothing exists alone. Everything exists upon causes and conditions. In accordance with that very story of causes and conditions, the Buddha shows that what is to be done is not trying to grasp the fingertip with that same fingertip.</p>
+<p>The truth must be understood. That attention-maker we spoke of, gathering the troublemaker and all the others, has dragged us into saṃsāra for a long time; he has trained us to grasp (*upādāna*). Grasping means taking hold of tightly. But the Buddha shows that here, the thumb maintains relationships with all the other fingers. The thumb and the index finger associate very closely. That is contact (*phassa*). We missed mentioning that. The index finger is contact. If we name those five, they are: feeling, perception, intention, contact, and attention. The phenomenon closest to attention is contact. Reflecting in this way, the Buddha shows that to get the secret of this, we must first change our attitude through radical attention (*yoniso manasikāra*). We must remove that distorted view.</p>
+<p>One must understand how to see the impermanent as impermanent. One must correctly understand the word of the Buddha. One must take the painful as painful, the foul as foul, and the not-self as not-self, removing those wrong attitudes. It is through that vision that radical attention (*yoniso manasikāra*) develops. Unwise attention means forgetting the place where something arose and arriving at a conclusion based only on what appears from afar. Now, when reflecting on a mirage, this can be understood. It is the person who does not know how the mirage arises, but only how it appears from afar, who runs after the mirage. Instead, investigating how it arises according to causes and conditions,</p>
+<p>one tries to understand feeling as feeling, not as 'my feeling', but feeling simply as feeling. Perception as perception. That is what is in the Satipaṭṭhāna Sutta: seeing things as they really are, as they exist. Seeing them as not-self (*anattā*), without projecting a view onto them. The dogma of self-illusion (*sakkāya-diṭṭhi*) means taking them as 'I' and 'mine'.</p>
+<p>Instead, seeing them in accordance with reality, as they are—feeling as feeling, perception as perception, intention as intention. When looking in that way, one eventually understands gradually how the senses clash with objects, just like the thumb and index finger coming together. That moment of clashing is what is called contact (*phassa*). Finally, what is caught is the mind and mind-objects (*dhamma*). That is the deepest place. It is called *'dhammārammaṇa'* (mind-object). Here, 'dhamma' does not mean the Dhamma as understood in the ordinary world. It means the objects that come to the mind. The Buddha shows that each sense faculty has its objects: the eye has forms, the ear has sounds, the nose has smells, the tongue has tastes, the body has contact, and finally, the mind has mind-objects (*dhamma*). By 'dhamma' here, we mean 'things'. This is an extremely deep matter indeed.</p>
+<p>It is from there that the Dhamma begins in the Dhammapada, which we constantly remind you of: *"Mano-pubbaṅgamā dhammā, mano-seṭṭhā manomayā."* The answer is right there. The Buddha declares that things did not exist first and then were thought of. Mind is the forerunner. Mind itself is chief; things are made of mind. Finally, it says *'manomayā'*—these things are mind-made. But worldly beings do not realize that they are mind-made, due to ignorance. Radical attention (*yoniso manasikāra*) means recognizing the object right at the point where it arises.</p>
+<p>But because worldly beings lack radical attention, they proceed in an unwise manner, allowing thoughts to go into conceptual proliferation (*papañca*), making it into a 'thing', and through that, they fall into defilements. But the Buddha shows that when one reflects in a subtle manner through radical attention—not in a wrong way, but reflecting on the painful as painful, the impermanent as impermanent—the secret of this consciousness is gradually understood.</p>
+<p>It is revealed when, at whatever moment, if one catches the place where the mind and the object clash, through that very catching, the foundation of consciousness is shattered. Worldly beings think of this mind-consciousness as a self. But in reality, the Buddha declares that consciousness arises only with causes and conditions. What is the cause? The object that comes to the mind. That object is none other than *'manomayā'*—something constructed by the mind itself. Through forgetting that it is something constructed by the mind itself, we are then prompted to think about it. That is the nature of the world. But in insight meditation, through gradually sharpening one's reflection, if at some point one understands the moment a thought clashes with the mind, then Name-and-Form (*nāmarūpa*) is correctly understood. Without letting it go towards the side of feeling, without letting it go towards the side of perception, without letting it go towards the side of intention. Finally, what is left is the clashing point of the mind and the object, like the clash between the index finger and the thumb. If the trick is caught right at the moment the mind and the object clash, immediately consciousness loses its place. For, consciousness is an illusion. Consciousness finds its place only within ignorance.</p>
+<p>It is stated: *"Avijjā-paccayā saṅkhārā, saṅkhāra-paccayā viññāṇaṃ"*—"With ignorance as condition, preparations arise; with preparations as condition, consciousness arises." It is as a result of that preparation, that collection of activities arising through ignorance, that there is a division as consciousness and Name-and-Form. Within that Name-and-Form, in the feelings, perceptions, etc., that belong to it, consciousness itself is naturally trapped.</p>
+<p>But just as the youth Narcissus, by forgetting the reflecting nature of water, thought it was someone else, there is a reflecting nature in consciousness, which is called reflection (*paccavekkhaṇā*). That is where the trick lies. What does consciousness reflect? It reflects Name-and-Form (*nāmarūpa*). Therefore, these are not entirely different things. Nor are they the same thing. These exist on causes and conditions. That must be understood insightfully, through the reflection of meditation as described. When reflecting with a concentrated mind, at some moment, the feeling aspect is abandoned, the perception aspect is abandoned, the intention aspect is abandoned, and finally, the mind and the thought are abandoned. The Buddha declared that mind-consciousness is also something that arises and ceases extremely rapidly. Even that concept of what we call 'things grasped', the Buddha declares as *'manomayā'*—something made by the mind itself. The Buddha shows that through forgetting that it is something made by the mind itself, worldly beings fall into both extremes.</p>
+<p>We expressed this matter not as an argument. This is not to be found in the way many people search for a solution. According to the word of the Buddha, according to the Middle Path, these mental phenomena must be understood. That is why the Buddha declared: if at any point consciousness is understood, Name-and-Form is understood. If Name-and-Form is understood, consciousness is understood. But Name-and-Form has to be understood not by bringing someone from outside. We must pardon the attention-maker who stands at the end of these mental phenomena; though he has brought us through saṃsāra in an unwise manner until now, we must remove the unwise aspect of unwise attention and make him behave in a radical manner. Then, through radical attention, he reveals the crimes he committed in association with the other four. Finally, what is revealed is how the mind arose concerning the clashing of mind with that index finger (contact). That is why the entire noble Dhamma of the Buddha is contained within the two lines: *"Mano-pubbaṅgamā dhammā, mano-seṭṭhā manomayā."* This can be called the Middle Path.</p>
+<p>The Buddha declares that it is only when all three—vitality, warmth, and consciousness—are removed that a person dies. Yet, sometimes, when pointing out the state called the attainment of cessation (*nirodha-samāpatti*), someone who has entered the attainment of cessation ceases consciousness, but still lives. When the reason for this was asked, it is mentioned in the Dhamma that the Buddha declared that even vitality and warmth support each other. Because of the preparation of vitality (*āyu-saṅkhāra*), warmth exists. Because of warmth, the preparation of vitality exists. Neither exists alone. It is compared to a burning lamp: because of the flame, light exists; because of the light, the flame exists. Because of vitality, warmth exists. Because of warmth, vitality exists. There too, there is a relationship of cause and condition. Neither exists alone.</p>
+<p>That is what becomes a problem for some. A person is on the verge of death, yet there is still warmth in the body. Thereafter, through surgery, etc., life returns. Meanwhile, it appears to that person that consciousness went somewhere. That person thinks consciousness went alone. No, that is only what appeared to that dying person at that time. It is seen from that person’s point of view. There are not two people there. That state occurs relative to consciousness. Such is the situation there.</p>
+<p>Because many people ask, we have merely brought the solution to this question to maturity. This is a deep matter. On this valuable Vesak day, we try to escape from saṃsāra by grasping only a very light portion of the Dhamma. Yet, we think about big questions. To compare these two, one must enter this path of meditation. Today, on this valuable Full Moon day, you have made a beginning—like starting with the alphabet—by starting with virtue (*sīla*). Likewise, you also tried to develop concentration (*samādhi*) to the extent of your ability. As mentioned, some of you are also walking on the path of insight (*vipassanā*). Especially for them, this sermon would have been helpful. In that way, we have made a small beginning. We must understand deep Dhamma for the sake of escaping from this saṃsāra.</p>
+<p>Due to unwise attention (*ayoniso manasikāra*), we constantly go on doing exactly what Narcissus did in this saṃsāra. To eliminate this, we must understand the true nature of consciousness. The cessation of consciousness (*viññāṇa-nirodha*) is what is called Nibbāna. It is the direct realization of the cessation of consciousness. It is the escape from that illusion. One escapes from that illusion at the moment wisdom arises. The Buddha has declared: *"Viññāṇaṃ pariññeyyaṃ, paññā bhāvetabbā"*—"Consciousness is to be fully understood, wisdom is to be developed." But consciousness is correctly understood only at the moment wisdom arises. The seed of wisdom is what is called radical attention (*yoniso manasikāra*)—wise reflection. Therefore, reflecting that the seed of wisdom is within us, we must proceed on this journey.</p>
+<p>May this beginning made by you today, this virtue observed today, the meditation practiced today, and this insight-oriented sermon heard today, serve as an aid to your liberation! With the help of association with noble friends (*kalyāṇa-mitta*), having succeeded in your Dhamma practice and meditation as quickly as possible, transcending the suffering of saṃsāra such as birth/arising (*jāti*), decay and death (*jarāmaraṇa*), and through the realization of the stages of the path and fruit such as Stream-entry, Once-returning, Non-returning, and Arahantship, may this power of merit and the hearing of the Dhamma today lead to the realization of the supreme, deathless Nibbāna!</p>
+<p>May whatever beings there are from Avīci to Akaniṭṭha, including your own relatives, by rejoicing in all these merits of delivering and hearing the Dhamma, and through rejoicing in these merits, realize the supreme, deathless Nibbāna through a Bodhi of their aspiration! Having aspired thus, recite these verses and share the merits.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_073.html" class="doc-btn">← Previous Sermon (073)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_075.html" class="doc-btn">Next Sermon (075) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

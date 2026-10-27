@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 120 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_119.html" class="doc-btn">← Previous Sermon (119)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_121.html" class="doc-btn">Next Sermon (121) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 120</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_120_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_120_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_120_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #120</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.94)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Piyato jāyatī soko, piyato jāyatī bhayaṃ;</p>
+<p>Piyato vippamuttassa, natthi soko kuto bhayaṃ ti.</p>
+<p>From:</p>
+<p>Dhammapada 212 (Piyavagga)</p>
+<p>Dear Listeners,</p>
+<p>We constantly hear and see many people falling into *Dukkha* (Suffering), unable to bear the sorrow of separation from their beloved ones. The Supreme Buddha, the Teacher of the Three Worlds, who pointed out the path to extinguishing the *Dukkha* of saṃsāra, explained how to mitigate this grief of separation from the beloved even in daily life. Today, on this Vesak Full Moon Poya Day, we intend to present how the Most Compassionate One helped a certain householder who was rendered helpless by grief over the death of his son.</p>
+<p>A certain householder in the city of Sāvatthi, when his son passed away, out of the immense grief that arose, stopped taking food and drink properly, abandoned his daily work, went to the cemetery, and wept constantly. While he was spending his days in this manner, one morning, as the Buddha was surveying the world at dawn with the attainment of Great Compassion (*Mahākaruṇā Samāpatti*), He saw that this lay devotee possessed the supportive conditions (*upanissaya sampatti*) for attaining the fruit of Stream-entry (*Sotāpanna*).</p>
+<p>After His alms-round that day, the Buddha, having taken His meal, walked to the house of that lay devotee accompanied by a certain monk. Knowing that the Buddha had arrived, the family invited Him inside, prepared a seat in the middle of the house, and made Him comfortable. When the lay devotee came and sat down, the Buddha asked, "Why is it, lay disciple, that you seem to be in *Dukkha*?" Then he replied, "I have met with such trouble, Lord. My son has passed away. Because of this grief, I cannot even attend to my other duties."</p>
+<p>Then the Buddha stated, "Lay disciple, weeping and grieving over the loss of a beloved one is futile. Death is not something that happens to only one person in one place. Wherever there is *Bhava* (Becoming), it is common to all. Therefore, abandoning one's duties and grieving because a son has died is a useless task. In the past, when their beloved sons passed away, the wise did not grieve but, establishing mindfulness of death, carried out their duties properly." When He spoke in this manner, curiosity arose in the lay devotee, and he asked, "Blessed One, when and who did such a thing?"</p>
+<p>Having received this invitation, the Buddha related a past story found in the Jātaka book under the name ‘Uraga Jātaka’. The event is told as follows: In the past, in the city of Benares, the Bodhisatta was born as a brahmin in a brahmin family, living by farming. At the time of this incident in the story, six people lived in that brahmin's household: the brahmin (the father), the brahmin lady (the mother), the son, the daughter, the daughter-in-law, and the servant maid. These six people together, in accordance with advice and instruction, constantly practiced mindfulness of death. One day, while plowing the field, while the son was gathering dry leaves and setting them on fire, the smoke disturbed a cobra in a nearby anthill. Angered, the cobra came out and bit the brahmin youth on his hand. Right there, overcome by the venom, he fell dead.</p>
+<p>The Bodhisatta carried his son, placed him under a tree, and covered his face with a piece of cloth because he was dead. Having covered him, he went back to plowing the field without paying any heed to it. Then he asked a passerby, "Where are you going?" When the man replied that he was going to the village, the Bodhisatta said, "In that case, please convey a message to our house: tell them to bring food for only one person instead of two as usual. And tell the brahmin lady, the daughter, the daughter-in-law, and the servant maid, all four of them, to wash their heads, bathe, and come bringing perfumes and flowers." So those people also came in that manner, bringing the food. The brahmin sat under that very tree, right near the dead body, finished his meal, and then all five of them, very calmly and composedly, gathered firewood and cremated the corpse. It is said that due to the power of that righteousness (Dhamma-nature), Sakka, the king of gods, whose Pandukambala stone throne became hot, turned his attention there and arrived on the scene in disguise.</p>
+<p>The subsequent events are recorded in the book in this manner. He asked, "What is this group cremating?" They replied, "This is a corpse." "No, no, you must be lying because you would have to share the wild game with us. This must be a wild boar or a deer that you are burning." "No, no, it is a human corpse." Then he asked next, "Then is this an enemy you are burning?" "No, no, it is my own beloved son." "Why? Was the son disobedient?" "No, he was extremely obedient to me." "Then why are you not weeping?" Then, with an illustration, the brahmin said, "Just as a serpent sheds its skin and leaves it behind, my son has abandoned this physical body and is now born in some other place. My weeping is completely futile. Grieving for the dead is useless."</p>
+<p>Then Sakka, who was in disguise, asked the brahmin lady, "Who is this deceased person to you?" She replied, "He is my son." Then he said, "Men may be able to generate presence of mind, reflect on things, and bear their grief in this way, but it is the nature of women to weep. Why is it that you do not grieve?" Then the brahmin lady said, "When my son was conceived, he did not tell me he was coming. When he died, he did not tell me he was leaving. He went just as he came. Weeping is of no use. Even if I weep, my son will not return. Grieving for the dead is futile." It is mentioned in a verse there that the brahmin lady answered in this manner.</p>
+<p>Next, Sakka, the king of gods, asked the sister of the deceased son, that is, the brahmin's daughter, "Who is he to you?" "My own brother born of the same womb." Then he said, "It is the nature of sisters to wail and weep when their brother dies. Why are you like this?" Then she also said, "If I start to weep, my mind will fall into *Dukkha* (Suffering), and my physical body will also become discolored. That is the only result of it. My brother will not return because I weep." Thus, she explained why she did not grieve.</p>
+<p>Next, he asked the daughter-in-law, "Who is he to you?" She replied, "He is my husband." "Even if no one else does, a wife weeps more than other relatives when her husband is lost, because she becomes a widow, and because of separation from her beloved. Why do you not weep?" Then the daughter-in-law said, "Losing one's husband is just like the sun and moon rising in the east and setting in the west. Death is common to everyone who is born. It is not my husband who is here; this is just a corpse, and he is already born in another place. My weeping is futile." Thus, she replied.</p>
+<p>Finally, he asked the servant maid, "Who is this to you?" She replied, "This is my master." "Why? Did he torment, abuse, and exploit you while he was alive?" "No, no, he was extremely kind to me, like a child of my own, and my master was the same to me." "Then why do you not weep?" Then she said, "Just as when a clay pot filled with water is carried, falls, and breaks, the pieces of that pot cannot be joined back together; in the same way, the deceased person will not return just because we weep." In this manner, she too explained the reason for her equanimity. Having heard all this, it is said that Sakka praised them, filled their house with the seven kinds of treasures, and departed.</p>
+<p>Next, at the end of the Jātaka story, the connection of lives is made: the brahmin was the Bodhisatta, the brahmin lady was Khema Theri, the daughter was Uppalavaṇṇā, the brahmin youth was Rāhula, and the servant maid was Khujjuttarā. In this way, they were identified with contemporary characters. The Buddha stated, "The wise, when they lost their beloved sons, did not grieve but took their food and carried on with their duties." The verse the Buddha uttered on that occasion is the very one we chose as our theme.</p>
+<p>Now let us look at the meaning of this verse. *Piyato jāyati soko*—it is because of the beloved that sorrow arises. *Piyato jāyati bhayaṃ*—it is because of the beloved that fear arises. *Piyato vippamuttassa*—for one who is freed from the beloved, there is no sorrow, *kuto bhayaṃ*—whence can there be fear? This is the meaning. So, through this story and the verse, we can understand how our Buddha, as the Teacher of the Three Worlds, directed others toward mindfulness of death. The way they acted with such a wondrous sense of equanimity regarding their child is an example to everyone.</p>
+<p>The Buddha Himself once declared that He is an incomparable physician and surgeon. The words used here are physician (*bhisakka*) and surgeon—*sallakatto anuttaro* (the unsurpassed surgeon). What is the task of that physician known as the Buddha? It is to treat the disease of saṃsāra at its very source. The habit of ordinary people in the world is to treat the symptoms of a disease. This saṃsāric disease is a chronic illness that has plagued beings wandering through saṃsāra, shrouded in ignorance and bound by *Taṇhā* (Craving) since time immemorial. Curing a chronic illness is no easy task. One must treat the disease at its very source.</p>
+<p>Through this verse, the Buddha presents the root cause of the disease. It is because of the beloved that sorrow and fear arise. Where there is no beloved, there is neither sorrow nor fear. This is the truth that the Buddha presents through this. We must apply our minds to this a little. Why did He make such a statement? If someone is dear to another, the expectation is to keep that beloved person with oneself constantly. However, the worldly nature, the law of nature, is opposed to this. The Buddha has shown this as a principle in a certain valuable passage: *Sabbehi me piyehi manāpehi nānābhāvo vinābhāvo aññathābhāvo*—meaning, "From all those who are dear and delightful to me, there must be change, separation, and alterity." All three of these words are extremely important. They are worth reflecting upon deeply.</p>
+<p>*Nānābhāvo* means becoming separate. Because of love, the union is so close that some think they are not two people, but two halves of one person. Some think, "We are two halves, two parts." Similarly, some think the other half is better. Be that as it may, this relationship is sometimes split in two; it gets broken apart due to various reasons.</p>
+<p>That is what happens to "oneness." That is what is called *nānābhāvo*. These two who were integrated in oneness eventually become "diverse" (*nānā*). The two go in opposite directions; they part ways. Such is the nature of the world. It can happen due to various reasons. When that happens, some drink poison, commit suicide, or sometimes resort to highly violent acts. That is because of *nānābhāvo*. Next, *vinābhāvo*—even if they do not change or part ways in that manner, they are separated by death. The person whom one thought they could not live without, they are forced to live without. This *vinābhāvo* occurs either because one's beloved dies before oneself, or because one dies while the other is still alive. This is called bereavement (separation by death). *Vinābhāvo*. Even then, one has to face various kinds of *Dukkha* (Suffering), sorrow, and so forth, in the same way.</p>
+<p>Next, changes occur (*aññathābhāvo*). Sometimes, even two people who were united like gold and quicksilver fall out. The state of being beloved gradually turns into a state of dislike due to various reasons. Or else, it eventually turns into hatred, even a terrible hatred. Then they resort to various things like suicide. *Nānābhāvo, vinābhāvo, aññathābhāvo*—these are the symptoms of the disease that spring from that very source, from that state of being beloved. Thus, the word of the Buddha is exactly so.</p>
+<p>Even though the Buddha stated this fact in this way, it is not easy for ordinary worldly people to accept it. Sometimes, even the Buddha was unable to convince certain individuals of this fact. A good example of this is mentioned in the Dhamma itself, named the ‘Piyajātika Sutta’. In that Sutta, which is found in the Majjhima Nikāya, many matters directly related to this question of the beloved are mentioned. That too is a good story. It is described as follows.</p>
+<p>A certain householder in Sāvatthi, when his only son died, went to the cemetery daily out of that grief and wept, abandoning his food, drink, and business. While he was weeping like that, crying "Where is my only son? Where is my only son?", for some reason, this person felt like visiting the Buddha. Having gone and sat down near the Buddha, He asked, "Lay disciple, your appearance has changed now. Your faculties seem uncontrolled; why has this happened to you?"</p>
+<p>"How could it be otherwise, Lord? My only dear and delightful son has passed away. That is why for the past few days, my day is spent in this manner." Then the Buddha declared, "That is how it is, householder. It is because of the beloved that sorrow, lamentation, *Dukkha* (Suffering), grief, and despair arise." But that person did not accept it. He said, "How can you say that, Lord? How can that be? It is because of the beloved that happiness and joy arise!" Even after undergoing so much *Dukkha*, that person did not accept the word of the Buddha. That is the conventional nature of the world. It is hard for worldly beings to accept it.</p>
+<p>Then, rejecting the word of the Buddha, where did this person go when he got up? Near sacred places like Jetavana monastery, various things happen, and a group of people had gathered to play dice. This person went to these gamblers and told them the news: "My son passed away, and when I told this to the Buddha, He uttered such a statement." Then those gamblers also agreed with this man's words: "That is so, householder, your opinion on this is correct. It is because of the beloved that happiness and joy arise, not sorrow and lamentation!" So, that householder accepted their view and went home. However, this story went from mouth to mouth and eventually reached the ears of King Pasenadi of Kosala.</p>
+<p>So King Kosala said to Mallikā, "Is it so, Mallikā, that the ascetic Gotama has made such a statement: ‘From the beloved, sorrow and lamentation arise’?" As soon as he said this, Queen Mallikā replied, "Great King, if that is the word of the Blessed One, then it must be exactly so." Thereupon, King Kosala became angry and said, "That is just like you. Whatever the Blessed One says, you say ‘it is exactly so,’ just as a pupil agrees with whatever the teacher says." In this way, he made a statement rejecting it. There is a certain Pāli passage mentioned there, which if translated, would mean he dismissed Mallikā, saying something like, "Just go away, what nonsense are you talking!"</p>
+<p>However, Mallikā did not stop there. Because Mallikā was a highly intelligent woman, she summoned a certain brahmin named Nāḷijaṅgha and told him, "Go and ask the Blessed One whether He indeed made such a statement. If the Blessed One gives some explanation or elaboration on it, bear it well in mind, come back, and tell me." Thereupon, the brahmin Nāḷijaṅgha went and inquired of the Buddha, "Reverend Sir, was such a statement indeed made by the Blessed One, that because of the beloved, sorrow, lamentation, *Dukkha* (Suffering), and grief arise?" Then the Buddha, with reasoned examples, replied, "Yes, I said so for these reasons," and He gave illustrations from incidents of the kind we frequently hear and see, or read about in newspapers nowadays.</p>
+<p>"Brahmin, in this very city of Sāvatthi, a certain woman, when her mother passed away, became mad and deranged because of it. She went from street to street, from junction to junction, asking, ‘Has anyone seen my mother? Has anyone seen my mother?’ In the same way, a certain woman behaved like that when her father passed away, when her husband passed away, when her son passed away." He gave several such examples, and next, He gave an illustration of the kind that is reported even in modern times.</p>
+<p>"Similarly, a certain woman in this city of Sāvatthi went to live with her relatives' family. Those relatives wanted to separate her from her husband and give her hand to another man. But this woman did not consent to it. She went and told her husband, ‘These relatives of mine are going to separate me from you and give me to another.’ Then what did that husband do? Taking a sharp weapon, he cut that woman in two, and then ended his own life with that same weapon, saying, ‘May we meet in the next world!’" It is clear from this that such things were done by people even in those days. It is not I who am saying this; the Buddha Himself gave such an illustration on that occasion.</p>
+<p>The brahmin Nāḷijaṅgha came back and related this entire event to Queen Mallikā. The wise Queen Mallikā, without mentioning that she had sent such a message to the Buddha, went back to King Pasenadi of Kosala and asked, "Your Majesty, is the princess Vajirī dear (beloved) to you?" Princess Vajirī was the daughter of King Kosala and Queen Mallikā. They had no son; they had only a daughter. "Is Princess Vajirī beloved to you?" "Yes, she is beloved to me." "If some misfortune were to happen to Princess Vajirī, would sorrow, lamentation, weeping, and grief arise in you?" "What are you saying? Not just weeping and lamentation, but even my very life might end!" "That is indeed why, Great King, the Blessed One, the Fully Self-Awakened One, uttered this statement; it was because of this." Showing proof in this way, she did not stop there. Next, she asked, "Is Queen Vāsabhakhattiyā beloved to you?" She too was a queen very dear to King Kosala. When he replied "Yes," she asked him the same question: "If Queen Vāsabhakhattiyā were lost to you, what would you feel?" Next, she asked about General Viḍūḍabha—General Viḍūḍabha was the son of Queen Vāsabhakhattiyā, the King's own son—and when asked about him, he replied in the same manner. Then, thirdly, Mallikā asked about herself: "Am I beloved to you?" "Oh, yes," he said. Then she asked, "So if something were to happen to me, would there be sorrow, weeping, and lamentation?" "What are you saying? If that happened, my life too would end!" Thus, after asking several questions and having convinced the King, such great faith arose in him that he exclaimed, "With what great wisdom and what a truthful matter has the Buddha taught!" Right there, saying "Namo tassa..." he turned toward the direction of the Buddha and paid homage.</p>
+<p>From these valuable stories, we can understand that it is generally difficult for worldly people to accept that from this state of being beloved, *Dukkha* (Suffering) and grief arise. Ordinary worldly people think that the beloved is a cause for pleasure and happiness. Next, another similar incident is mentioned concerning Visākhā. Visākhā had many children; she had ten children. It is said that Visākhā lived for one hundred and twenty years. By that time, she had a huge number of children and grandchildren, a large number like several hundreds. One day, while the Buddha was residing in Pubbārāma, which was built by Visākhā herself, one of Visākhā's granddaughters passed away. She was a very dear and delightful granddaughter.</p>
+<p>So Visākhā, grieving deeply (experiencing great *Dukkha*), went to visit the Buddha in broad daylight, having bathed, with wet clothes and wet hair—which must have been a custom at that time when someone died. The Buddha asked her, "Why is it, Visākhā, that you come in broad daylight with wet clothes like this?" She replied, "My extremely dear and delightful granddaughter has passed away. Because of that, I have come in this grief." Then the Buddha asked, "Would you like it, Visākhā, if you had as many children and grandchildren as there are people in this city of Sāvatthi?" "Oh, if I had that many children, indeed I would like it!" she said. Even though she already had so many, it seems it was still not enough.</p>
+<p>"If I had as many children and grandchildren as the population of Sāvatthi itself, it would be so good for me." Then the Buddha asked, "How many people pass away in Sāvatthi in a single day?" She replied, "Sometimes ten, or perhaps nine, or at the very least, one person dies. There is no day when someone does not die." Then the Buddha said, "In that case, Visākhā, you would never have even a single day to live without wet clothes and wet hair." Thereupon, when she understood the matter, Visākhā said, "Then I do not want that many children!" The Buddha, on certain occasions, delivers wondrous discourses in a way that deeply touches one's heart.</p>
+<p>The Buddha said to Visākhā: "Visākhā, if someone has a hundred beloved ones, they have a hundredfold *Dukkha* (Suffering). If someone has ninety beloved ones, they have ninetyfold *Dukkha*. If eighty beloved ones, eightyfold *Dukkha*. If seventy, seventyfold *Dukkha*. If sixty, sixtyfold *Dukkha*. If fifty, fiftyfold *Dukkha*. If forty, fortyfold *Dukkha*. If thirty, thirtyfold *Dukkha*. If twenty, twentyfold *Dukkha*. If ten, tenfold *Dukkha*. If nine, ninefold *Dukkha*. If eight, eightfold *Dukkha*. If seven, sevenfold *Dukkha*. If six, sixfold *Dukkha*. If five, fivefold *Dukkha*. If four, fourfold *Dukkha*. If three, threefold *Dukkha*. If two, twofold *Dukkha*. If one, they have one *Dukkha*. For those who have no beloved ones, there is no *Dukkha* (Suffering) at all." In this way, the Buddha preached. Whether we are willing to accept this is something we must ask ourselves. It is something that worldly people find impossible to accept.</p>
+<p>In many places, it is said that to the extent that one has beloved ones, to that extent they have bonds (knots). Therefore, for those who have no beloved ones, there are no bonds. Thus, a state of being beloved is a bond; one is caught in a knot. The Buddha says that the way to be freed from those bonds—destroying this belovedness—does not mean turning it into something disliked. The Buddha once stated briefly: *Ganthā tesaṃ na vijjanti yesaṃ natthi piyāppiyaṃ*—"Bonds do not exist for those who have neither beloved nor unbeloved." So, here there is neither belovedness nor unbelovedness. Then what is there? Neutrality, equanimity. Now, the six people in the aforementioned Uraga Jātaka possessed that very equanimity. They had no attachment (belovedness) toward the child, nor did they have any dislike or anger toward him on account of disobedience and so forth. There was equanimity, an acceptance of the Dhamma-nature. That acceptance of Dhamma-nature is what lies within mindfulness of death. Therefore, a person who has developed mindfulness of death can carry out their duties with an equanimous mind on such occasions. Thus, that brahmin ate his meal right next to his son's corpse, and then, putting the corpse aside, even started plowing. Such a wondrous way of behavior! One might think, "Even if it is possible for them, we cannot do it." However, even in these times of disaster, it is seen that some people are endowed with the strength to generate equanimity (*upekkhā*) through the power of the Dhamma.</p>
+<p>Since people also like to hear stories, if I may relate another incident, among the female lay disciples in this Dispensation, the one who can be called a "great heroic mother" is Bandhula Mallikā. The general named Bandhula is shown as someone with immense physical strength, and his wife Mallikā was also a woman of great physical strength. To distinguish her from Kosala Mallikā, she was called Bandhula Mallikā. It is said that these two had thirty-two twin sons, born from sixteen pregnancies. All of them were a bunch of highly powerful children with wondrous strength of character. Since General Bandhula was the chief commander, they too were men of great warrior-like strength. However, at one time, out of jealousy toward General Bandhula, a certain faction slandered him to King Kosala, sowed discord, and tried to take revenge. Thereupon, King Kosala was deceived and thought, "If I put General Bandhula to death openly, it will bring great disrepute to me." Thus, he employed a trick: through a conspiracy, he instigated a rebellion in a remote border region.</p>
+<p>Having faked a rebellion, he told General Bandhula to go with his sons and suppress it. As General Bandhula went with his group, the rebellion was easily subdued. On their way back, the King sent another band of warriors with them, with orders to cut off the heads of General Bandhula and all his sons once they approached the city. In that very manner, those warriors executed the task. It must have been at night; when they arrived close to the city, they cut off the heads of General Bandhula and his sons. Next, as part of the conspiracy, a spy took that news, written on something like a palmyra leaf of that time, and delivered it to Mallikā Devī.</p>
+<p>At the moment of delivery, a great alms-giving ceremony was taking place at Bandhula Mallikā's house. This message arrived while alms-food was being offered to five hundred monks, headed by the chief disciples Sāriputta and Moggallāna. She received the message, read it, and tucked it into her waist. Bandhula Mallikā continued to perform all the duties and hospitality that needed to be done. While serving the alms-food to the Saṅgha, two servant maids were carrying a pot of ghee, and right in front of the Saṅgha, it fell and broke. When it broke, the Great Arahant Sāriputta, thinking that Mallikā's mind might be disturbed by this, uttered a word of consolation to Bandhula Mallikā: "*Bhedanadhammaṃ bhinnaṃ, na cintetabbaṃ*"—"What is of a breakable nature has broken, do not worry about it. Do not be overly troubled."</p>
+<p>At that moment, Bandhula Mallikā said, "Venerable Sir, I have received this message saying that my husband and my thirty-two sons have all been beheaded and are dead. If I can carry out my duties in this manner while keeping that message tucked in my waist, would I regret the breaking of that pot of ghee?" It is said that Ven. Sāriputta then delivered a sermon appropriate to death and departed. What a heroic mother! It is difficult for us even to imagine the way she kept her mind calm and acted with such wondrous equanimity and courage in such a situation.</p>
+<p>Next, we must take into consideration that what the Buddha presented through these Sutta discourses and stories as a meditation subject (*kammaṭṭhāna*) to plant this Dhamma-nature in our minds is mindfulness of death. What is mindfulness of death? If we speak of death by way of an analogy, it is just like a stranger whom we meet every day but do not recognize. We think of death as something that happens only to others. We forget that it happens to ourselves. That means we have not recognized death. Such is the nature of worldly people. Countless people die, and we hear and see daily that they die. Yet, for some reason, the thought that "I will die" does not enter our minds. It does not really strike our hearts. Because of this, when death comes to us, it is like a stranger. It is an unfamiliar thing, something we do not know, something unexpected.</p>
+<p>There is a certain therapy, like homeopathy, where a small amount of a pathogen is introduced to build up immunity against a disease. What the Buddha points to is similar: putting the very idea of death into the mind and training the mind to get used to it. Generally, there is fear of death within a person. But just as the power of that fear is broken when death is accepted as a Dhamma-nature, the Buddha introduces the concept of death into our minds. By reflecting on the death of others, one attributes it to oneself. It is by developing this as a meditation—thinking, "This will definitely happen to me too"—that we can develop the strength within us to accept that equanimous state, the Dhamma-nature.</p>
+<p>Almost everyone has heard of the meditation on mindfulness of death, and they may be practicing it to some extent, using phrases like "*jīvitaṃ aniyataṃ, maraṇaṃ niyataṃ*"—"life is *Anicca* (Impermanent), death is certain." By constantly bringing to mind even just the word "*maraṇaṃ, maraṇaṃ*" (death, death), we are able to shape our view of life accordingly. By developing mindfulness of death in this manner, we can develop the perception of *Anicca* (Impermanent) even regarding the things we see around us. When we reflect deeply, what is found within mindfulness of death is the very perception of *Anicca* (Impermanent) itself.</p>
+<p>The wrong concept arising from *Taṇhā* (Craving) for *Bhava* (Becoming)—the belief that "I exist as a permanent soul (self)"—gradually fades away. Along with that, if one acts with mindfulness in daily activities, one can see death within each of them: within bodily postures, within inhalation and exhalation, and within the food we consume. The Buddha declares that death is constantly present in all of these. It is also shown as momentary death. The cells of this body are dying rapidly. Even faster than that, our mind dies, our thoughts die. The world does not see this because of that false view, the *Sakkāya-diṭṭhi* (dogma of self-illusion/view of existing group/body).</p>
+<p>*Sakkāya-diṭṭhi* (dogma of self-illusion/view of existing group/body) is the feeling that this collection exists as a whole; even if it is said that there is no self (soul) in the body, there remains a feeling among worldly people that some unchanging, permanent, eternal thing is hidden at least in the mind. Especially for a person overcome by *Sakkāya-diṭṭhi*, it is difficult to grasp the Dhamma-nature of the mind as taught by the Buddha. Yet the Buddha declares that this mind changes with an inexpressibly wondrous speed, much faster than material form (*rūpa*) changes: "*Lahuparivattaṃ cittaṃ*" (the mind is quick to change). It changes so rapidly that, "*Upamā pi na sukarā*"—it is not easy even to give an analogy. It is said that the mind changes so fast that one cannot even provide an analogy. That is what is called cessation (*bhaṅga* / breaking up). The mind is breaking up, breaking up; it is something that breaks up. Even if we think about the aforementioned process of the body, especially inhalation and exhalation, what is present there too is nothing but death.</p>
+<p>To put it briefly, we might as well consider this thing we call "life" as a constant struggle not to die. If we explain this "living" from another perspective, what we have to say is that it is a constant effort to survive. When we are sick or engaged in a highly strenuous activity, how difficult is it to take another breath after one breath? So, even between those two—between two breaths—there is death.</p>
+<p>In this way, within the continuation of one's life, one begins to see the breaking up of one's own body as well. Similarly with external things: a capacity to see death in everything arises. The entire perspective changes. When leaves fall from a tree, when flowers fade and fall, when fruits drop, every single one of them brings that perception of death. That is why in the past, the Buddha said:</p>
+<p>> *Dumapphalānamiva patanti mānavā,*</p>
+<p>> *daharā ca vuddhā ca, kāyassa bhedā.*</p>
+<p>> *(Just as fruits fall from a tree, so do humans, both young and old, pass away at the breaking up of the body.)*</p>
+<p>For instance, when a mango tree blossoms, we are filled with anticipation, thinking we will get a huge harvest of mangoes. But how many of those flowers fall, caught in storms while still in the blossom stage? Then, caught in storms, due to their small stems, the tiny flowers, the tender little buds fall at that very stage—things we were waiting to eat when fully ripe. Going on like this, in the end, only a few mangoes are left on the tree. That is the analogy shown here. Among those born in this world, some perish within the mother's womb itself. In these times, everyone who does science knows that, to put it briefly, parents do not even know the total number of children conceived by them. That means they dissolve within the mother's womb itself. Having been conceived, they dissolve like that, and out of numerous such attempts, it is only as the final result that a child is born.</p>
+<p>Indeed, within a mother's womb, there are unimaginably many opportunities for one to die. Even after overcoming those situations, the moment of birth is also an extremely dangerous moment. Then, after birth, during infancy, when one cannot even say what is needed and can only express one's thoughts through crying, if not for the constant care and watchfulness of the parents, how easily would life be destroyed? Consider what happens to the eggs of wild animals when they are found by other beasts. Looking at the world in this way, that perception of death arises within us everywhere.</p>
+<p>This applies to animate objects, and the same Dhamma-nature applies to inanimate objects as well: the leaves and flowers of trees and so forth. Thus, throughout the entire universe, there are only these two: *Jāti* (Birth) and *Jarāmaraṇa* (passing away/decay and death). This is what the Buddha points to by words like *samudaya-vaya* (arising and passing away) and *udayabbaya* (rise and fall). Worldly people place this within a massive span of time and hold grand celebrations saying, "Lo, a child is born!" Having held a birthday party, they make a great din, rejoicing and making merry because a stranger has joined their family, and then, while living like that, at some moment or another, lo, death arrives. The wedding turns into a funeral. *Jāti* (Birth) ends in *Jarāmaraṇa* (decay and death).</p>
+<p>The momentary death that occurs in the interim is not understood by ordinary worldly people. But that too becomes understood. As that is understood more and more, that previously held perception of compactness (*ghana-saññā*)—the feeling that "here is a person"—gradually dissolves. It is through this that the aforementioned state of equanimous neutrality can be developed. Now, we generally think that when a beloved one is lost, we weep for that person. But this too is a delusion. It is not that child who is beloved; it is oneself who is dearer to oneself.</p>
+<p>A certain incident in this regard is recorded in the Dhamma. On one occasion, King Kosala asked Queen Mallikā, "Who is dearest (most beloved) to you?" She replied, "To me, I myself am dearest." King Kosala did not agree with this. So when he reported this matter to the Buddha, He uttered a verse: "Having traversed all directions with the mind, one cannot find anyone dearer to oneself than oneself. Since that is so, and since oneself is dearest to oneself, one should not harm others." Through this, the Buddha highlights a unique Dhamma point.</p>
+<p>We generally put forward the argument, "I am weeping for so-and-so." But in reality, it is a weeping for oneself. Indeed, it is because of the loss of the protection, comfort, closeness, and love that one received from that child that one weeps on that occasion. Therefore, when we reflect deeply, there is no one dear to us other than ourselves. Reflecting on this Dhamma-nature, what we must do is understand the fault of being dear to oneself. It is for this that insight meditation (*vipassanā*) is of help.</p>
+<p>To be dear to oneself means that one's body is dear to oneself. Not only for the sake of preserving this stomach, but for maintaining this bodily cage, how many efforts—a heap of *Saṅkhāra* (Formations)—do we accumulate? For the sake of all these adjustments, how much fatigue, *Dukkha* (Suffering), and exertion do we undergo? Every bit of exertion we put in breaks down when we least expect it. Every delicious meal we take has to be expelled in a matter of hours. Inhalation becomes exhalation. Within everything, there is this nature of breaking up, breaking up—there is *bhaṅga* (dissolution), a nature of breaking up. Now, while this breaking up is not visible to the ordinary eye, it is visible to the meditator through the eye of wisdom. But the one who does not grasp this thinks that from the day of birth until death, it is this very same person who exists.</p>
+<p>To give an analogy for this: now, there are some vehicles whose license plate remains the same, but they have been repaired with fitted parts for years. Parts keep falling off, yet the license plate is the same. It is the same when we think of the human body. Ask any surgeon. Someone gets admitted to a hospital; they leave having received blood from someone else, or with parts like kidneys borrowed from others, or artificial things. Everyone knows about teeth; they are usually the first to change. All of those are carried on by joining collected parts together. Yet, the name is the same. Name, prestige, position—all are the same; they do not change. So, along with that, at the moment of death, it is said that so-and-so, who held such-and-such high positions, has died. But this is just a heap of *Saṅkhāra* (Formations). It is a great mass of *Dukkha* (Suffering). A temporary end to a heap of *Dukkha*. It does not end there, according to the Buddha. In the end, the force exerted to catch a breath is the very grasping (clinging) of *Taṇhā* (Craving) and *Upādāna* (Grasping) operating in that subtle manner between two breaths, which finally performs the seizing. Accordingly, another *Jāti* (Birth) comes about. There too, it is that same process.</p>
+<p>It is by putting all this together that the Buddha presented the entire world, the entire Dhamma-nature, by the single word *Dukkha* (Suffering). In Sinhala, it is just two letters (දු-ක). Within those two letters of *Dukkha* lies the truth taught by the Buddha. This is something carried with great difficulty (*Dukkha*). It is bearing with difficulty, and though borne, it is *Dukkha*. If one has the understanding that we are carrying this burden of the five aggregates in this manner, and if, free from the perception of compactness (*ghana-saññā*), we have the feeling that this is just a heap, then those aforementioned agitations will be greatly reduced. One will be able to compose one's mind.</p>
+<p>Sometimes we capture various moments of this life in photographs, paste them in albums, and show them to others with pride, saying, "This is me, and this is also me," "The one holding these trophies and receiving these honors is also me." We must bear in mind that this "I" is just something fitted together with parts in that manner. Even if we have not fitted parts from others, we must constantly reflect on the transaction we carry out with the four great elements: earth (*pathavī*), water (*āpo*), fire (*tejo*), and air (*vāyo*).</p>
+<p>When going into the deeper aspect of the Dhamma, we come across two concepts: *upādinna* (clung-to/appropriated) and *anupādinna* (not clung-to/unappropriated). It may be a somewhat deep concept. *Upādinna* refers to this bodily cage of ours, including our faculties. This is the portion we have grasped tightly. That grasping in the mother's womb through the power of past kamma is what we continue to carry, being born as a child, thinking "this is me" in this life, nourishing it, and carrying it with the help of others. Next, in order to maintain this *upādinna* (clung-to) body, we take as food, even by killing them, certain animate or inanimate things considered as *anupādinna* (not clung-to). We preserve this clung-to body with the help of other things. Yet, we will have to abandon this clung-to (*upādinna*) bodily cage at some point. Just as we use external things like food, drink, clothing, and other items, and abandon them when they decay to take up new ones, we abandon one breath to take another. Thus, within that very process lies what the Buddha calls *Anicca* (Impermanent).</p>
+<p>Within this *Anicca* (Impermanent) lies the nature of *Dukkha* (Suffering). Because this is impermanent, we constantly have to prepare (sustain) it, we have to repair (reconstruct) it. If something has to be repaired constantly, it is a great hassle. It is a torment. Even in the case of a vehicle, if it is in the garage every day, constantly up on jacks, then this body is just like that. The moments of being placed "on jacks" are the times spent in the hospital. At that time, we hand this over to the doctor. One is not sure of returning home, and one even signs one's own death warrant during highly critical moments. In this way, this vehicle of a body is indeed constantly "on jacks."</p>
+<p>If we all reflect on this condition constantly, we can bring to mind that nature of constant change within it. This does not cost any money. What is required is to turn the mind, which is directed toward the unnecessary things of the world, toward this side. The difference between the two is mentioned in the Dhamma as *ayoniso manasikāra* (unwise attention) and *Yoniso manasikāra* (Wise attention). The word *ayoniso manasikāra* mentioned in the Dhamma means inappropriate (unwise/unsystematic) reflection, while *Yoniso manasikāra* (Wise attention) means proper (wise/systematic) reflection.</p>
+<p>If we explain it more deeply, *Yoniso manasikāra* (Wise attention) means directing the mind to the very source of things, to the place of their arising, and trying to understand them. *Ayoniso manasikāra* means applying the mind to external things and expecting a solution from them. To give an illustration, a deer starts running after a mirage to catch what appears in the distance. But a wise person, understanding that it is a mirage, does not run because it is something appearing due to a certain defect of the eye itself. Due to a defect in the eye, that distant phenomenon appears to us as water. If one understands this by way of *Yoniso manasikāra* (Wise attention), that person does not run. But the deer runs; that is *ayoniso manasikāra*. What has happened now is also like that: because the truth is hidden, many people are running in that manner out of *ayoniso manasikāra*.</p>
+<p>The Buddha has declared: "Within this fathom-long body itself, I make known the world, the origin of the world, the cessation of the world, and the path leading to the cessation of the world." The Buddha has delivered a wondrous teaching, the like of which has never been uttered by anyone in any other dispensation. Without paying heed to this, we go either searching for visible stars, and in the end, no matter how many stars are seen, we do not abandon that effort, and next we go to conquer planets. All of those may be good. However, according to the word of the Buddha, if we reflect on what needs to be done within this extremely brief, short span of time, we would not turn toward those activities that destroy so many human lives or wealth. What needs to be done is right here.</p>
+<p>Some might think that the Buddha did not investigate these things or did not know them, and therefore He was not omniscient. However, the Buddha saw that within this short life span, especially during the appearance of a Buddha, there is only one task to be done which could not be done hitherto. There is only one task to perform. What is that task? Hitherto, we have been unable to destroy this *Dukkha* (Suffering), this saṃsāric *Dukkha*. The advice necessary for that was not received from anyone. Even if received, we have not paid heed to it so far. At least at this moment, during this period of the appearance of a Buddha, as long as the Dhamma of the Buddha remains, the Buddha has shown us the reality of this.</p>
+<p>Now, this is exactly what was said in this verse. It is the story about the source of the disease, which ordinary worldly people do not accept. Hitherto, what ordinary worldly people have been doing everywhere in various fields like the social field, the political field, and so forth, is like weeding a jungle (felling wild bushes), a mere patching up. Or, if we think deeply, it is treating the symptoms. But the Buddha points out that unless the source of the disease itself is treated, this disease cannot be cured. So, it is that very matter that the Buddha presents even through this short verse. We must make an effort to understand it. If we make an effort to understand it, applying *Yoniso manasikāra* (Wise attention) instead of *ayoniso manasikāra*, and without being deluded by carrying the whole world in our heads, we must direct our minds to this fathom-long world introduced by the Buddha.</p>
+<p>That is why, in brief, the Buddha pointed to the Four Foundations of Mindfulness (*Satipaṭṭhāna*). What are the Four Foundations of Mindfulness? *Kāyānupassanā*—contemplation of the body. *Vedanānupassanā*—contemplation of feelings (*Vedanā* (Feeling). *Cittānupassanā*—contemplation of the mind. *Dhammānupassanā*—contemplation of mind-objects (thoughts arising in the mind). Are machines required to look at this? This is constantly visible to oneself, if looked at and reflected upon properly. Next, if one wishes to look at something else, for the sake of easier understanding, one can also look at things seen externally, at bodies seen externally: other bodies are just like one's own body. One can draw examples from them too. It is not that we should keep our eyes closed. If other people are seen in the world, we can attribute it to them as well: the Dhamma-nature of other bodies is exactly the same as the Dhamma-nature of my body. That is precisely what is mentioned in the Dhamma: "*Yathā idaṃ, tathā etaṃ; yathā etaṃ, tathā idaṃ*"—"As this is, so is that; as that is, so is this." As this body is, so is that body; as that body is, so is this body.</p>
+<p>So, if in that way, it is planted in the mind as a Dhamma-nature, as a universally applicable Dhamma-nature, and if one sees deeply, then the knowledge that sees arising (*Jāti*) and passing away (*Jarāmaraṇa*) gradually inclines toward the side of dissolution (*bhaṅga*), which is breaking up. From there, other insight knowledges rapidly arise, and disenchantment with these five aggregates is born. Having deeply understood the Three Characteristics—*Anicca* (Impermanent), *Dukkha* (Suffering), and *Anattā* (Not-self)—one can realize in this very life that wondrous supramundane state of Nibbāna, known as Stream-entry (*Sotāpanna*), Once-returning (*Sakadāgāmi*), Non-returning (*Anāgāmi*), and Arahantship.</p>
+<p>Therefore, we must reflect: on this valuable Poya day, although we started with that small verse, we have attempted to present the entirety of the True Dhamma to some extent within this short sermon. While making an effort to understand this according to your capacity of comprehension, may the power of hearing this Dhamma sermon, by maintaining precepts like virtue (*sīla*), engaging in meditation, and gathering these matters pertaining to wisdom, together with all the meritorious power accumulated so far, support you! At this final hour when the lamp of the Buddha's Dispensation is about to go out, putting forth the maximum possible effort, removing *ayoniso manasikāra* and doing what needs to be done through *Yoniso manasikāra* (Wise attention), may this power of listening to the Dhamma sermon assist you in realizing the supreme, deathless, great Nibbāna by way of the path, fruit, and penetration of Stream-entry, Once-returning, Non-returning, and Arahantship, thereby escaping from this terrifying saṃsāric *Dukkha* (Suffering)! I bless you thus.</p>
+<p>Likewise, if there be any beings from here up to the Akaniṭṭha heaven who wish to rejoice in the meritorious power of this Dhamma teaching and Dhamma hearing, may they all rejoice in this merit and realize the supreme, deathless, great Nibbāna by way of their wished-for Bodhi (awakening)! Say "Sadhu" and recite these verses:</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_119.html" class="doc-btn">← Previous Sermon (119)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_121.html" class="doc-btn">Next Sermon (121) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

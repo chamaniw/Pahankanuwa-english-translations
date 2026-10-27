@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 110 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_109.html" class="doc-btn">← Previous Sermon (109)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_111.html" class="doc-btn">Next Sermon (111) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 110</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_110_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_110_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_110_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #110</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.126)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Na tena thero hoti, yenassa palitaṃ siro;</p>
+<p>paripakko vayo tassa, “moghajiṇṇo” ti vuccati;</p>
+<p>yamhi saccañ ca dhammo ca, ahiṃsā saṃyamo damo;</p>
+<p>sa ve vantamalo dhīro, “thero” iti pavuccati.</p>
+<p>From:</p>
+<p>Dhammapada 260 (Bhikkhuvagga)</p>
+<p>Dear Listeners,</p>
+<p>The world is accustomed to measuring seniority and elderhood solely by external appearance. The Buddha points out to us that a gray head alone is not a qualification for receiving respect. A person who has merely matured in age, but has not grown in virtue, is described by the Buddha as one who has "decayed in vain." Regardless of external appearance, virtue itself should be the sole qualification for receiving respect and honor; this is the principle declared in the two verses we have taken today as our theme.</p>
+<p>The Buddha preached these two verses at the Jetavana monastery in Sāvatthī, with reference to the Elder named Lakuṇṭaka Bhaddiya. One day, while Ven. Lakuṇṭaka Bhaddiya was leaving after attending on the Buddha, a group of thirty forest-dwelling bhikkhus arrived to see the Blessed One. Having paid their respects and sat down to one side, the Buddha asked them: "Monks, did you see that Elder who just left this place?" The bhikkhus replied: "We did not see an Elder, Venerable Sir." "Why, did you not meet anyone on your way here?" "We only met a novice (*sāmaṇera*) coming towards us, Venerable Sir." "Monks, that was not a novice. He is an Elder." "Oh, he had such a small body, Venerable Sir!" "Monks, I do not call someone an Elder merely because his head is gray. If someone has realized the Four Noble Truths and is established in the Dhamma of non-violence, it is that person whom I call an Elder." Having declared this, the Buddha uttered the two verses mentioned earlier.</p>
+<p>*“Na tena thero hoti yenassa palitaṁ siro”* — One does not become an Elder merely because one's head is gray.</p>
+<p>*“Paripakko vayo tassa”* — Even though that person's age is mature and seasoned,</p>
+<p>*“Moghajiṇṇoti vuccati”* — he has merely aged in years, and is called one who has decayed in vain, one who has grown old in vain.</p>
+<p>*“Yamhi saccañ ca dhammo ca ahiṁsā saṁyamo damo”* — But in whom there exist these virtues: the realization of the Truth, the Dhamma, non-violence, restraint, and self-control,</p>
+<p>*“Sa ve vantamalo dhīro”* — that bhikkhu indeed, that wise person who has vomited and discarded the stains of defilement,</p>
+<p>*“Thero iti pavuccati”* — is called an Elder.</p>
+<p>That is how the Buddha defined an Elder on that occasion. Now, if we are to speak about this monk named Lakuṇṭaka Bhaddiya, the meaning of the word "Lakuṇṭaka" is "dwarf" or "short." He was extremely short—what we commonly call a dwarf. Furthermore, his body was very deformed. Because of this short stature and deformed appearance, this Elder frequently had to face insults, teasing, and jokes. It was for this reason that the Buddha constantly highlighted the great spiritual body of virtue within his dwarf frame. So much so, that several verses in the Dhammapada itself are inspired by Ven. Lakuṇṭaka Bhaddiya. Not only there, but in other places too, the Buddha preached several profound verses on Nibbāna as inspired utterances (*udāna* verses), keeping the Elder Lakuṇṭaka Bhaddiya in mind.</p>
+<p>The reason behind another very valuable verse mentioned in the Dhammapada is recorded as follows: Whenever they saw Ven. Lakuṇṭaka Bhaddiya, certain novice monks would pull him by the nose and ears, teasing him, saying, "Uncle, are you disillusioned with the monkhood?" and making various jokes. Yet, Ven. Lakuṇṭaka Bhaddiya never harbored anger or let his mind become corrupted by any of this. A conversation arose in the Dhamma assembly among the Sangha: "Look, isn't it amazing how Ven. Lakuṇṭaka Bhaddiya remains in equanimity and endures even when teased so much?" At that moment, the Buddha arrived there and asked, "Monks, what are you discussing?" When they explained, the Buddha uttered this valuable and widely known verse in the Dhammapada in praise of his quality of equanimity:</p>
+<p>> *Selo yathā ekaghano,*</p>
+<p>> *vātena na samīrati;*</p>
+<p>> *Evaṁ nindāpasaṁsāsu,*</p>
+<p>> *na samiñjanti paṇḍitā.*</p>
+<p>"Monks, this is how wise people are. Just as a solid, single mass of rock is not shaken by a storm, even so, the wise are not perturbed or shaken by blame and praise." This is the meaning of that verse. It is mentioned in this manner on many occasions. Similarly, in the Dhamma commentaries and other texts, various reasons are given for this Elder receiving such a dwarfed body. One very well-known story must be mentioned.</p>
+<p>One story is that during the time of the Buddha Kassapa, when the relic stupa (*cetiya*) was being built, this Elder served as the chief carpenter and master builder. When the rest of the people were preparing to build a massive stupa, Ven. Lakuṇṭaka Bhaddiya (in that past life) planned it as a smaller one, thinking it would be easier to maintain and restore. It is said that due to that unwholesome activity (*akusala saṅkhāra*), his body became dwarfed in this life. Be that as it may, he endured all of this with equanimity.</p>
+<p>On another similar occasion, the Buddha uttered a valuable verse prompted by the very sight of Ven. Lakuṇṭaka Bhaddiya. Once, while the Buddha was preaching to the Sangha, or while the Sangha was seated around the Buddha, Ven. Lakuṇṭaka Bhaddiya was seen coming in the distance. The Buddha then asked the Sangha: "Monks, do you see that very deformed, dwarf monk coming in the distance, who is the subject of others' ridicule?" "Yes, Bhante," they replied. "Monks, this bhikkhu is of great psychic power and great majesty. It is not easy to find a meditative attainment (*samāpatti*) that this Lakuṇṭaka Bhaddiya has not mastered. For whatever purpose noble sons leave the household life to go forth into homelessness, that supreme purpose of Nibbāna has been fully realized and experienced by this bhikkhu." Then he uttered two verses, the meaning of which we will state here. The meaning of those two verses is as follows:</p>
+<p>Swans, herons, peacocks, elephants, deer, and all other forest animals are afraid of the lion. No animal's physical strength can compare to the physical strength of the lion's body. In the same way, among human beings, if someone is wise, even if they are young, it is to that person that the epithet "Great" (*mahā*) must be applied. It is to such a young but wise person that we must say "Great", and not to a foolish, ignorant person who merely possesses a large body. This is the value that the Buddha highlights. So, on one hand, while Ven. Lakuṇṭaka Bhaddiya received ridicule, abuse, blame, and jokes due to an extraordinary force of karma—for which past lives and karmic causes are detailed in ancient stories that we will not go into here—he also possessed an exceptionally melodious voice. So much so, that he received the foremost position (*etadagga*) in that regard. In the Dhamma literature, there is a section called the *Etadagga-vagga*. The Buddha, much like an award ceremony, introduced his disciples, declaring who was chief in each respective field.</p>
+<p>On such an occasion, Ven. Lakuṇṭaka Bhaddiya was declared chief among those who have a melodious voice (*mañjussarānaṁ*), those who preach the Dhamma with a sweet, melodious voice. Yet, Ven. Lakuṇṭaka Bhaddiya lived with an extraordinary equanimity, harboring neither special attachment to those who praised him nor any hatred toward those who insulted him. We can understand the reason for this. In the book called *Theragāthā*, the verses are often presented in a way that expresses the life story or personal reflection of the Elders and Sisters along with their characters.</p>
+<p>A series of valuable verses about Ven. Lakuṇṭaka Bhaddiya is mentioned in the work named *Theragāthā*. From those verses, it appears that he often engaged in meditation in the Ambaṭṭhaka forest. He declares, "I, Bhaddiya, am meditating at the foot of a tree in the Ambaṭṭhaka forest." Having expressed this, he says, "Some people in the world entertain themselves with various musical instruments like kettle-drums, tabors, lutes, and harps. I do not need that music. Sitting at the foot of a tree in the dispensation of the Buddha, I experience that joy through the bliss of jhana." Furthermore, he says, "Some people measure me by my body, my physical appearance. Others follow me because of my voice. All of them are overcome by desire and passion (*chanda-rāga*); they do not truly know me." This is how he expresses it.</p>
+<p>Thus, regarding this matter of the yardstick, the Buddha addressed the monks in a discourse containing sets of four, not specifically targeting Ven. Lakuṇṭaka Bhaddiya, but declaring it to the entire world as a true fact and a universal principle. "Monks, there are four kinds of persons in the world. Who are these four?</p>
+<p>*Rūpappamāṇo rūpappasanno*,</p>
+<p>*Ghosappamāṇo ghosappasanno*,</p>
+<p>*Lūkhappamāṇo lūkhappasanno*,</p>
+<p>*Dhammappamāṇo dhammappasanno*."</p>
+<p>These are the four. The first person is *rūpappamāṇo rūpappasanno*—one who measures by physical appearance, takes physical form as the yardstick, and is pleased with physical form.</p>
+<p>*Ghosappamāṇo ghosappasanno*—one who, hearing fame, praise, and renown, makes that alone their yardstick and develops confidence in someone solely due to their reputation. *Lūkhappamāṇo lūkhappasanno*—one who, seeing those who practice austere conduct, rigid vows, and hard practices, and seeing that rough, harsh practice, becomes pleased with someone solely because of that harsh practice, thinking, "How can he do such difficult things?" The fourth category is *dhammappamāṇo dhammappasanno*—one who makes the Dhamma itself the yardstick, and develops confidence based on the Dhamma alone.</p>
+<p>Next, the Buddha utters a series of verses there itself as an explanation of this. The Buddha declares that if someone measures by physical form, or if someone follows another merely because of reputation, they are overcome by desire and passion. They have not correctly known the person. Then, some do not understand the inner qualities of a person, nor do they look at and contemplate their external, practice-oriented life. Such people are completely obstructed, covered by delusion, and are drawn away by mere reputation. There is another who cannot see a person's inner virtues, but sees the gains and honors received externally due to their practices. Seeing this, because their understanding is limited, they too are overcome by reputation and are drawn towards it.</p>
+<p>But if someone sees and understands another's inner wealth of virtue, and also correctly understands their externally visible commitment to practice—such a person, with an open mind, is not overcome by mere reputation. Discerning the truth, they establish their faith. This is accepted in the world as a natural order (*dhammatā*). In the commentary, though it cannot be called the direct word of the Buddha, a certain proportion is shown. It is appropriate for us to consider this, and we mention it here. It is not that anyone did a census of the entire world to arrive at such a decision, but roughly, the commentary mentions the following proportion: Of the first category, two-thirds of all worldlings are *rūpappamāṇā*—those who are drawn to physical form, who take physical form as their yardstick. Only one portion does not make physical form the yardstick but develops faith in someone due to other reasons.</p>
+<p>Next, regarding *ghosappamāṇa*, the commentary says that four-fifths of the world is drawn to reputation. Only one-fifth is not swept away by reputation, but wishes to think wisely, and thinks with wisdom.</p>
+<p>Next, concerning *lūkhappamāṇa*, it says that nine-tenths of the world, seeing rough, harsh practice, are pleased with it and cling to it. Only one-tenth, not being deceived by that alone and not jumping to conclusions based solely on that, reflects deeply and develops confidence and clarity.</p>
+<p>This is what is said about *dhammappamāṇa* in the commentary: Out of a hundred thousand people in the world, ninety-nine thousand nine hundred and ninety-nine measure by what is not Dhamma (*adhamma*) and find pleasure within *adhamma*. Only one out of a hundred thousand makes the Dhamma their yardstick, is pleased with the Dhamma, and has a genuine clarity of faith. These proportions were shown roughly to illustrate the worldly tendency, the nature of the world.</p>
+<p>The most important thing the Buddha shows us here is *dhammappamāṇo*. Therefore, we must not fall prey to the first three categories. We should not take physical form as our yardstick, nor is it proper to be deceived or swept away by reputation. It is also not proper to develop confidence in someone merely because they look austere on the outside. It was said that we must establish ourselves in Dhamma-judgment and make the Dhamma itself the yardstick. Indeed, the Buddha himself has given us examples of this on many occasions. You may have heard that in places where the Buddha is described, the thirty-two marks of a Great Man (*mahāpurisa-lakkhaṇa*) are often mentioned. It is mentioned in many places in the Dhamma that the Buddha possessed an extraordinary physical beauty that no one else had. The Elder named Vakkali's devotion to the Buddha was such that he could not bear to be without seeing him. He developed an extraordinary attachment; his faith became a strong attachment. But the way the Buddha broke that attachment was truly wonderful. It is mentioned in one place in the Dhamma that Ven. Vakkali became very gravely ill. He fell sick and sent a bhikkhu to pay respects to the Buddha and request him to visit, saying that Vakkali was very weak and asking him to come out of compassion. The Buddha then came to see Ven. Vakkali.</p>
+<p>Having arrived, he asked, "How are you?" As soon as the Buddha arrived, Ven. Vakkali tried to get up from his bed out of faith. "No, no, stay there, there are seats for me," said the Buddha, keeping the patient settled. "Why is this? Do you have any regret or remorse?" What was the remorse of Ven. Vakkali? Was it concerning virtue? No, he says: "For a long time I have not been able to go and see the Buddha. I do not even have enough physical strength for that." That was Ven. Vakkali's regret—that he could not see the Buddha as before. Then the Buddha made a statement that you all may have heard, an extraordinary, wonderful statement: "Vakkali, what is the use of this putrid body? *Kiṁ te vakkali iminā pūtikāyena diṭṭhena*? What is the use to you, Vakkali, of seeing this putrid body?"</p>
+<p>"He who sees the Dhamma sees me." *Yo dhammaṁ passati, so maṁ passati.* The same is said in reverse: "He who sees me sees the Dhamma." To emphasize this, the Buddha expressed it in that manner. The Buddha does not speak words in vain. There is a deep meaning in it. Otherwise, he could have stopped after uttering the first phrase. That was said to make us think.</p>
+<p>In the case of Ven. Vakkali, he thought: "Not being able to see the Buddha as before is a great loss to me. I cannot make my mind one-pointed; I cannot concentrate." He even had regret about it. But what does the Buddha declare? "What is the use of this putrid body? There is no benefit in clinging to it. When one sees the Dhamma, at that very moment of seeing the Dhamma, one has seen me." Next, what is the meaning of saying "when one sees me, one sees the Dhamma"? "Vakkali, all this time you have not seen me. You have not seen me; you have only seen my body, this putrid body. See the Dhamma. If you see the Dhamma, you see me." That is how it is to be understood.</p>
+<p>The meaning of "*yo maṁ passati so dhammaṁ passati*"—"he who sees me sees the Dhamma"—was said directly targeting Ven. Vakkali. "Vakkali, though you have been looking at me for this long, you did not see me. You only saw the external putrid body. If you want to see me, you must see the Dhamma." Following that, he gave a meditation subject (*kammaṭṭhāna*) for insight (*vipassanā*). The story of how Ven. Vakkali subsequently became an Arahant goes on at length, but we will mention only this much on this occasion. Thus, the Buddha himself gave a great lesson. Even though he possessed such physical beauty, the Buddha did not encourage attachment to it. Instead, seeing the opportunity, he told Ven. Vakkali: "What is the use of seeing this putrid body? The important thing is to see the Dhamma." That is seeing through *dhammappamāṇa*.</p>
+<p>Now, there is a story that fits the description of *lūkhappamāṇo lūkhappasanno*. The wanderer Mahāsakuludāyī was someone who had great devotion to the Buddha. Although he was a wanderer of another sect, he had developed great appreciation for the Buddha due to his high reputation and various other reasons. On one occasion, as part of a long discussion, the Buddha asked this wanderer: "Udāyī, what do you think? For what reasons do my disciples revere and honor me?" Then this wanderer replied: "As I see it, Venerable Sir, your disciples revere and honor the Blessed One for five reasons. What are these five reasons? The Blessed One is a moderate eater (takes little food). He praises the taking of little food. That is the first reason. Second, the Blessed One praises wearing simple, coarse robes, and praises the value of that practice as a *dhutanga* (ascetic practice). The third reason is that whatever food is received, whether good or bad, the Blessed One has the quality of being content with whatever is obtained; he is content with alms-food (*piṇḍapāta*), and he praises this to others. The fourth reason is that the Blessed One is content with whatever lodgings (*senāsana*) are available, and he praises this. The fifth reason is that the Blessed One loves solitude and lives in solitude, and praises it. It is because of these things that these disciples have confidence in the Blessed One."</p>
+<p>Then the Buddha declared: "No, Udāyī, it is not for those five reasons. My disciples do not revere me for those five reasons. This is the truth." The Buddha first addresses the point about eating little: "Udāyī, I have disciples who are keepers of ascetic practices; although the word *dhutaṅga* is not detailed there, we can understand that they are *dhutaṅgadhara* who subsist on very little food. But I sometimes eat even a full bowl of food. I am not so austere in that regard. If they revered me for that, then those disciples who are more restrained than me regarding food would not respect me. They could say, 'I am greater than the Blessed One.' But it is due to another reason that I am shown respect."</p>
+<p>He said the same about the second point regarding robes: "There are those who wear much coarser robes than I do, who wear rag-robes (*paṁsukūla-cīvara*) their entire lives"—such as the Elder Mahā Kassapa, although not mentioned by name here—"and the reason the Buddha states this is that some monks keep such strict practices regarding robes. But I, on some occasions, even use robes offered by householders. If so, those monks would have no reason to respect me for that. Regarding alms-round, I sometimes even partake of delicious alms-food." Regarding lodgings, some live austerely at the foot of trees, whereas I sometimes reside in comfortable dwellings. Moreover, I do not constantly live in absolute solitude; some monks live continuously in the forest, whereas I sometimes dwell associating with kings, royal ministers, and even teachers of other sects. Thus, the Buddha shows that it is not because of austere practice (*lūkha-patipadā*) or any of those things that my disciples revere me. Then the Buddha declared five other reasons:</p>
+<p>"My disciples revere me because of the Noble Virtue (*ariya-sīla*) within me. Next, because of my knowledge and vision (*ñāṇa-dassana*). Next, because of my wisdom (*paññā*), that wisdom which is incomparable. Because of my ability to answer any question regarding the Four Noble Truths. Next, because of my ability to train the Sangha in this path of practice. It is because of these spiritual, Dhamma-based reasons that my disciples revere me." From all of this, you must consider what the yardsticks are that the Buddha highlighted in our Dhamma for developing faith in someone. Then, looking at the other side, the word "Elder" (*thera*) was mentioned. In fact, as some of you might know, if we consider the word *thera* as an ecclesiastical term in the present era, according to current convention, a monk who has completed ten years from his higher ordination (*upasampadā*) is called a *thera*. By twenty years, he has automatically become a *Mahāthera*, whether he has the qualifications or not. That is how it is used in common parlance. But the Buddha gives a much deeper meaning to the word *thera* here.</p>
+<p>In a discourse related to this very point, the Buddha—not because a question arose, but recalling a past event of his own, an event from this very life—expressed the following: "Monks, on one occasion, shortly after my awakening, while I was residing at the foot of the Ajapāla Banyan tree on the banks of the Nerañjarā river, very old, elderly brahmin householders and brahmins came to meet me. Some paid homage to me, while others sat down after announcing their names. Somehow or other, sitting close to me, they made this statement: 'Venerable Gotama, there is a rumor among us that you do not respect very old, elderly brahmins and elders. It is said that you do not stand up and offer them a seat, nor do you show them respect and honor. There is such a talk among our people, and that is indeed so. Now we have understood that it is indeed so. That is not proper.' That is all the brahmins said. 'When these brahmins came, the ascetic Gotama did not show respect! Now we understand that the rumor spread about the ascetic Gotama is true. That is certainly not proper.'" On that occasion, it is not mentioned that the Buddha said anything to them. Instead, it is recorded as follows:</p>
+<p>"Monks, then this thought occurred to me"—not that he said anything to the brahmins, but this thought occurred to him—"Alas, these people do not know who an Elder is, nor do they know the qualities that make one an Elder (*therakaraṇa-dhamma*). Who is called an Elder? Generally speaking, 'elder' or *thera* carries the idea of being mature, being senior. These people do not even know who an elder is. Nor do they know the factors that help one become an elder." Having stated that this thought occurred to him, he addressed the Sangha again and said: "Monks, let me tell you how one becomes an Elder." The Buddha then gives the explanation of that concept of the Elder. Even if a person is senior in age, if that person has the following ten qualities... next, ten qualities are mentioned as follows: He is one who speaks at the wrong time (*akālavādī*); he is not a timely speaker. He is one who speaks untruth (*abhūtavādī*); he is not a speaker of truth. He is one who speaks what is useless (*anatthavādī*); he is not a speaker of what is beneficial. He is one who speaks what is not Dhamma (*adhammavādī*). He is one who speaks what is contrary to the Discipline (*avinayavādī*). He is not a speaker of words that are worth treasuring (*anidhānavādī vācaṁ bhāsitā*), words to be preserved, guarded, and remembered in the heart. Furthermore, he speaks out of season (*akālena*), not at the right time but at inappropriate moments. He speaks without reason (*anapadesaṁ*), without causes and evidence. He speaks of things that do not lead to any purpose, are of no use to anyone, and are useless for both this world and the next. That is the unwholesome side. To such an elder, I say: *bālo thero*—a foolish Elder. That is what I call such a person.</p>
+<p>Then he declares the other side: "But if someone is young (*daharo*)"—there it says, he is very young, with black hair, a youth—"yet that person is as follows: He is a timely speaker (*kālavādī*), speaking according to the occasion. He is a speaker of truth (*bhūtavādī*). He speaks what is beneficial (*atthavādī*). He is a speaker of Dhamma (*dhammavādī*). He is a speaker of Discipline (*vinayavādī*). He is a speaker of words worth treasuring (*nidhānavādiṁ vācaṁ bhāsitā*), highlighting things of value to be kept in the heart. He speaks in season (*kālena*), with reasons and examples (*sāpadesaṁ*), and with a clear purpose (*atthasaṁhitaṁ*). In this way, based on his manner of speaking and the matters he presents, even though he is young in age, I call that person *paṇḍito thero*—a wise Elder."</p>
+<p>Having thus defined the word "Elder", the Buddha next declares four qualities that make one an Elder (*therakaraṇa-dhamma*). The Buddha highlights four factors that help one to be called an Elder in the true sense of the word. What are they? It is said concerning a bhikkhu: He is virtuous (*sīlavanto*)—there is a long explanation of virtue. Next, to put it briefly, he is highly learned (*bahussuto*), holding the Dhamma well. This holding of the Dhamma is not like a machine holding information; in ancient times, they held the Dhamma in the mind. It is described with a string of words: *sutā, dhatā, vacasā paricitā, manasānupekkhitā, diṭṭhiyā suppaṭividdhā*—having heard the Dhamma, holding it in mind, reciting it verbally until it is familiar, examining it constantly in the mind (*manasānupekkhitā*), and comparing it with right view to penetrate it thoroughly (*diṭṭhiyā suppaṭividdhā*). This is the highly learned person possessing Dhamma-knowledge. That learnedness is the second factor. Next is the four jhanas—that is, the power of concentration (*samādhi-balam*), which is considered a pleasant dwelling here and now (*diṭṭhadhamma-sukhavihāra*). Finally, it is declared: one who has attained that noble state, ending the suffering of *saṁsāra* (the round of rebirths) through the realization of the Four Noble Truths, achieving Arahantship. The Buddha declared that it is through these factors that one becomes an Elder in the true sense of the word.</p>
+<p>Thus, through such Sutta discourses, we can understand that what the Buddha highlighted was *dhammappamāṇa*—we must give priority to the Dhamma. We must measure according to the Dhamma. But the nature of the world is that many people strive to beautify this decaying body with various colors, photographs, etc., and through these, they try to attract others and generate faith. But we, the wise, must reflect so that we do not go after such reputation. There is a reason why this group called *dhammappamāṇa* is indeed only one in a hundred thousand. To that extent, the world is drawn to those other things. It is not drawn to things of substance. One must reflect on the lesson the Buddha gave us through Ven. Lakuṇṭaka Bhaddiya. It was not merely in praise of him; he highlighted to us that even within such a body, noble and highly valuable virtues can exist. If even the Buddha had not highlighted those virtues, a great number of people would have accumulated demerit. Those novice monks pulled his ears, pulled his nose, and teased him in other ways, failing to see the wealth of virtue within him. If there had been someone with a massive body, no one would have gone to tease him, even if he were a fool.</p>
+<p>Yet, they teased this Arahant in this manner because their yardsticks were wrong. There will be consequences for that. We must therefore reflect on these points highlighted by the Buddha. Next, in those *Theragāthā* verses, Ven. Lakuṇṭaka Bhaddiya expresses his love for mindfulness of the body (*kāyagatāsati*). He says: "If the Buddha were to grant me a boon, this is the boon I would ask: May the entire world always develop mindfulness of the body! May they develop mindfulness of the body!" It was not that Ven. Lakuṇṭaka Bhaddiya actually expected a boon from the Buddha, but he said: "If a boon were to be given, if he were ready to give one, what I would request on my behalf is that the Buddha tell the world, tell everyone to always develop mindfulness of the body!"</p>
+<p>Something is revealed to us through this. Although Ven. Lakuṇṭaka Bhaddiya did not actually get depressed over these things, but endured and bore them with equanimity, he might have felt some spiritual urgency (*saṁvega*): "Alas, it is because this world does not know the true nature of this body that they tease and ridicule me in this way. It is due to their inability to see the unseen wealth of virtue with wisdom that they tease this visible dwarf." Through that understanding, may the world constantly reflect on the nature of this body they carry around. The beautifully gathered flesh wears away very quickly. Indeed, if we are to take a photograph of ourselves, what we should take is the skeleton, which lasts much longer in our body. We must give more place to the skeleton. Other things decay very quickly as we age. We know that in childhood, during the first few months of an infant, the body seems puffed up, growing like a balloon. The limbs swell, but as middle age passes, it begins to shrink, and wrinkles appear.</p>
+<p>Thus, that puffed-up flesh wears away just like that. It dissolves. In the end, even when one goes to the cemetery, what helps one to remember is only the skeleton. In the past, if one went to a charnel ground to see a deceased friend, what could be seen, if anything remained for long, was only the skeleton. But the world does not think about that. It must have been seeing the worldling creating values out of that putrid flesh, decorating it, deceiving the world, and deceiving themselves on their journey, that made Ven. Lakuṇṭaka Bhaddiya wish for such a boon on behalf of the world. We can understand this.</p>
+<p>There are other occasions in the Dhamma that show the special regard the Buddha had for Ven. Lakuṇṭaka Bhaddiya. Once, while Ven. Sāriputta, the Great Arahant—we can assume—was delivering a long Dhamma talk to Ven. Lakuṇṭaka Bhaddiya to help his meditation, during that talk, Ven. Lakuṇṭaka Bhaddiya attained Arahantship. At that moment, the Buddha uttered a profound inspired utterance (*udāna*), a verse about Nibbāna, which is recorded in the book called *Udāna*. Not only that, Ven. Lakuṇṭaka Bhaddiya was so humble that even though he had attained Arahantship, he did not even let Ven. Sāriputta know that he had completed his task. So, Ven. Sāriputta, the Chief Disciple, kept delivering Dhamma talks again and again, thinking that the trainee (*sekha*) Lakuṇṭaka Bhaddiya had not yet attained Arahantship. Seeing this, the Buddha uttered another Udāna verse. That too is a profound one about Nibbāna. We are not going to quote it here; if you are interested, you can find it. In that same book of Udāna, the Buddha uttered a verse as an inspired utterance, seeing Ven. Sāriputta continuing to preach the Dhamma, thinking that Ven. Lakuṇṭaka Bhaddiya was not yet an Arahant.</p>
+<p>How wonderful are these occasions where the Buddha highlighted Ven. Lakuṇṭaka Bhaddiya. It was not for any other reason. Using Ven. Lakuṇṭaka Bhaddiya, the Buddha taught a lesson to the world. Where can that which we think is great and valuable reside? It may not be in the places where ordinary worldlings think. It could reside within such a dwarf, short body. That is why it was said: "It is not easy to find a meditative attainment (*samāpatti*) that this Lakuṇṭaka Bhaddiya has not mastered. He is of great psychic power and great majesty." Even though he was of such great majesty, when they teased him in that manner, he not only refrained from seeking revenge or showing off his powers, but he did not even let Ven. Sāriputta know that he had attained Arahantship. On one hand, we have to contemplate his quality of humility. At the same time, what we highlight through this sermon is the point the Buddha showed the world: *dhammappamāṇo dhammappasanno*—making the Dhamma itself the yardstick and developing confidence in the Dhamma alone. We can point out other factors related to this.</p>
+<p>Indeed, we have stated on many occasions that in this Dhamma there is a challenge, a pulling of a person towards that far shore. How it leads to Nibbāna is shown through the word *opanayiko*. There is a truth in the Dhamma: the Dhamma itself pulls one towards Nibbāna. It is not that the Buddha simply pushes. Even though, due to his power of merit, he received a body with such wonderful marks of a Great Man and had all other attributes, on certain occasions, to convince someone of a Dhamma point, he held long Dhamma discussions with brahmins, presenting arguments to dispel their doubts. Only in extreme cases, to break someone's pride, did he employ miracles; he never tried to force the Dhamma into someone through psychic power. So much so, that a certain bhikkhu named Kevaṭṭha invited the Buddha to appoint a bhikkhu to perform psychic miracles in order to win over a large number of people to the Dhamma.</p>
+<p>The Buddha rejected that request. "I say that is not the true miracle. The miracle of instruction (*anusāsanī-pāṭihāriya*) is the true miracle. The miracle of psychic power (*iddhi-pāṭihāriya*) and the miracle of telepathy (*ādesanā-pāṭihāriya*)—the power to read others' minds—these are not the true miracles. The miracle of instruction is the true miracle." This is described in the Dhamma in this way: *Evaṁ vitakkehi, mā evaṁ vitakkayittha* (Think thus, do not think thus). The Buddha declares: "Entertain thoughts of this kind. Do not entertain thoughts of sensual desire (*kāma-vitakka*), etc. Entertain thoughts of renunciation (*nekkhamma-vitakka*), non-ill-will (*avyāpāda* / *mettā*), and non-violence (*avihiṁsā*)." In this way, he defines the thoughts to be entertained. "Think thus, do not think in this way. Focus your mind in this way (*evaṁ manasikarotha*), do not focus your mind in that way (*mā evaṁ manasikarotha*). Abandon these things (*idaṁ pajahatha*), enter and dwell in these things (*idaṁ upasampajja viharatha*)." That is what the Buddha considers the highest miracle: the miracle of instruction. It is in this very way that the Buddha points out the path of practice leading to Nibbāna. That too is something that proceeds according to causes and conditions (*paṭicca-samuppāda*). It is through a sequence of causes and conditions, where one is connected to another, that one draws close to Nibbāna.</p>
+<p>The Buddha does not drag anyone by force. In a certain valuable Sutta discourse that explains this, it is stated as follows: A person, through some faith—not in the wrong way mentioned earlier, but in a way that can give rise to right view (*sammā-diṭṭhi*) by hearing the Dhamma—applies the power of proper reflection within themselves, called *yoniso manasikāra* (wise attention / radical attention), focuses the mind on the Dhamma heard, and thereby develops faith (*saddhā*). Thus, it is expressed in this manner: Once faith has arisen, *saddhājāto upasaṅkamati*—one who has developed faith approaches. He draws close to the disciple who helped him develop faith. *Upasaṅkamanto payirupāsati*—having approached, he attends on him, which means he sits close. *Payirupāsanto dhammaṁ suṇāti*—sitting close, he gets to hear the Dhamma from that teacher. Having heard the Dhamma, *dhammaṁ dhāreti*—he retains the Dhamma well. *Dhātānaṁ dhammānaṁ atthaṁ upaparikkhati*—not being satisfied with just that, he independently examines the meaning of the Dhamma he has retained. *Atthaṁ upaparikkhato dhammā nijjhānaṁ khamanti*—as he examines the meaning and reflects, the thought arises: "This cannot but be true." *Dhammā nijjhānakkhamanti* means as he reflects and compares with his own experience, the realization comes: "This is indeed possible." *Dhammanijjhānakkhamā chando jāyati*—it is not that he immediately thinks "this is definitely so," but once the feeling arises that "this is possible," then desire (*chanda*) is born.</p>
+<p>Desire (*chanda*) is not something that is given just like that; it arises at that stage. In the Dhamma, indeed, at some point the understanding comes: "If this is put into practice, it will be fruitful; this is possible." *Chandajāto ussahati*—once desire has arisen, effort is made. Now he exerts energy. *Chandajāto ussahati*—as he makes an effort and strives, exerting energy, a certain point comes when balance is achieved; then, *ussahitvā tuleti*—one who exerts strong energy... now, to use an analogy that helps your understanding, let us think of a big running race. In a running race, some run slowly in the first few rounds. But in the final round, they apply all their energy, running with extraordinary effort to win somehow. In the same way, exerting energy, at some point one strongly strives—this is called *padahati*, supreme effort (*padhāna-viriya*). In the Dhamma, this is described as the energy endowed with four factors (*caturanga-samannāgata-viriya*): "Let only skin, sinews, and bones remain, let the flesh and blood dry up, but as long as that which is to be attained by manly strength, manly energy, and manly progress is not attained, there shall be no relaxing of energy." Such strong energy is applied. That energy is applied precisely when the opportunity arises. There, it is said: *chando jāyati, chandajāto ussahati*. First, he makes an effort. Making an effort means he exerts some energy. But having made an effort, *tuleti*—then comes a special moment. *Tuleti* means he balances. He balances.</p>
+<p>Whether there is excessive energy, or other excesses and deficiencies—precisely when he balances these, that supreme effort (*padhāna-viriya*) becomes fruitful. That is something to be contemplated. He balances (*tuleti*). He weighs his own strengths, the faculties (*indriya*) and powers (*bala*). As we have expressed on previous occasions: faith (*saddhā*), energy (*viriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*). Sitting in the middle, mindfulness (*sati*) weighs these well. It balances faith with wisdom, and balances energy with concentration. Having balanced them and hit the target precisely—only when the target is hit—does he apply that supreme effort called extraordinary energy. That is *padahati*. *Padahitvā*—having applied supreme effort, he himself sees the Dhamma, sees that this is the truth. He realizes the Four Noble Truths declared by the Buddha for himself, not merely because it was said. Thus, the Buddha pointed out the path of practice based on a wonderful conditional relationship (*paṭicca-samuppāda*), where one factor supports the next.</p>
+<p>It is in this way that one can draw close to Nibbāna. It is not possible to take someone to Nibbāna or put them there through blind faith, as is said in some other religions, merely because they developed faith and devotion. One cannot make them go to a happy destination or lead them there by force. That is why the Buddha declared:</p>
+<p>> *Tumhehi kiccaṁ ātappaṁ,*</p>
+<p>> *akkhātāro tathāgatā;*</p>
+<p>> *Paṭipannā pamokkhanti,*</p>
+<p>> *jhāyino mārabandhanā.*</p>
+<p>"The effort must be made by yourselves; the Tathāgatas are only teachers. Those who enter the path and practice meditation will free themselves from the bonds of Māra." From this we see that the Buddha always highlighted the Dhamma. He is only a teacher.</p>
+<p>Not only that, there is a very exemplary saying which mentions that after his awakening, the Buddha reflected: "Is there a teacher whom I can constantly revere and honor?" Feeling the absence of a teacher, the Buddha thought, "In whom shall I dwell, paying revere and honor?" Even when looking at the entire world, there was no one. No one could be found who was superior to him in virtue. However, he saw the Dhamma. He saw the Dhamma. This Dhamma is what all Buddhas—when thinking of the past Buddhas—every Buddha lived *dhammaṁ yeva sakkaronto dhammaṁ garukaronto*—honoring and respecting the Dhamma itself. "I too shall live in this way; I too respect the Dhamma." Therefore, reverence for the Dhamma (*dhamma-gāravatā*) is the most valuable thing in this dispensation. Not those other external yardsticks we mentioned. Not physical form, not fame and reputation, not austere practice, but the Dhamma itself. For even the Buddhas live *dhammaṁ yeva sakkaronto dhammaṁ garukaronto*.</p>
+<p>The Buddha declared this when explaining the profound Dhamma of *paṭicca-samuppāda* (dependent arising / conditional relation) using terms like *uppādā vā tathāgatānaṁ anuppādā vā tathāgatānaṁ thitāva sā dhammadhātu dhammaṭṭhitatā dhammaniyāmatā idappaccayatā*: "Whether Tathāgatas arise or do not arise, whether the birth of Tathāgatas occurs or does not occur, *thitāva sā dhammadhātu*—that Dhamma-element, that nature of Dhamma, always remains as it is." What is it? *Dhammaṭṭhitatā dhammaniyāmatā idappaccayatā paṭiccasamuppādo*. This *idappaccayatā paṭiccasamuppāda* is not something the Buddha invented or produced anew; it is not a creation. It is not a product of the Buddha. Whether Tathāgatas arise or do not arise, it is a truth that always exists in the world. That is why the Buddha immediately declared: *taṁ tathāgato abhisambujjhati abhisameti, abhisambujjhitvā abhisametvā ācikkhati deseti paññāpeti paṭṭhapeti vivarati vibhajati uttānīkaroti passathāti cāha*. "Tathāgatas do only this: the Tathāgata fully awakens to it, penetrates it. Having fully awakened and penetrated it, he declares it, teaches it, points it out, establishes it, opens it up, analyzes it, makes it plain (*uttānīkaroti*), and says: 'Look! Behold!'"</p>
+<p>That is how the Tathāgatas declare their task. We see everywhere, therefore, that it was the Dhamma that the Buddha revered. In this dispensation, we too must always practice reverence for the Dhamma (*dhamma-gāravatā*). You may have heard that in this dispensation, reverence for the Dhamma is superior to reverence for persons. "If this disciple sitting next to me is preaching the Dhamma, I will rise from this seat." It is not personal respect, but respect for the Dhamma. It is because of this reverence for the Dhamma that even the youngest child in the dispensation has the strength to sit on the Dhamma-seat without fear. Everyone must reflect on bringing these Dhamma-values close to our lives. It is when one lacks understanding of these that one is drawn away and swept away by those other things. It is said that the world goes with that current, just like being swept away by a vast, fierce flood. If one is to walk the path of Dhamma with a stable strength, without being caught in the current and swept away, one must bear these points in mind. On a day like today, you must resolve to become *dhammappamāṇo dhammappasanno*, without going to the side of *rūpappamāṇo rūpappasanno*, without becoming *ghosappamāṇo ghosappasanno*, and without becoming *lūkhappamāṇo lūkhappasanno*.</p>
+<p>On this valuable day, fulfilling your virtues of morality (*sīla*) is the first step in walking the path of Dhamma shown by the Buddha. Therefore, despite having troubles and duties at home, as the first step of the Dhamma path, you undertook a valuable moral precept (*sīla*) and dedicated this day to Dhamma-hearing and meditation. At this moment, through hearing the Dhamma, you can extract certain points that support your meditation and lead to Nibbāna. As constantly highlighted, we hope this sermon has helped you to arise or develop the spiritual faculties (*indriya-dhamma*) or powers (*bala-dhamma*) that support Nibbāna—namely, faith (*saddhā*), energy (*viriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*).</p>
+<p>This is a Poya day at the end of the year. One must make a strong resolution: in the midst of these changes and calamities of time, we do not know at what moment or where this life will end. The saying *animittaṁ anaññātaṁ maccānaṁ idha jīvitaṁ* ("The life of mortals here is without a sign and unknown") has become extremely true in this era. The only question is where, how, and at what time death will occur. Death is indeed certain. Therefore, may you resolve: may this sermon we delivered today help us to walk on this path of Dhamma diligently! Utilizing the power of merit you have accumulated, through the blessings of hearing the Dhamma, with the help of noble friends (*kalyāṇa-mitta*), and bringing your meditation to fulfillment, may this hearing of the Dhamma support you in realizing supreme, deathless Nibbāna through the path, fruit, and penetration of stream-entry (*sotāpatti*), once-returning (*sakadāgāmitā*), non-returning (*anāgāmitā*), and Arahantship! If your departed relatives, and all beings from Avīci to Akaniṭṭha, wish to rejoice in this merit of hearing and preaching the Dhamma, may they rejoice and find peace in supreme, deathless Nibbāna through their desired path of awakening! Now recite the verses in this manner.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_109.html" class="doc-btn">← Previous Sermon (109)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_111.html" class="doc-btn">Next Sermon (111) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

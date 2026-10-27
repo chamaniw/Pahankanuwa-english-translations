@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 026 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_025.html" class="doc-btn">← Previous Sermon (025)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_027.html" class="doc-btn">Next Sermon (027) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 026</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_026_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_026_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_026_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #26</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No. )</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Yo vadataṁ pavaro manujesu, Sakyamunī bhagavā katakicco pāragato balavīriyasamaṅgī; Taṁ sugataṁ saraṇamupemi. Rāgavirāgamanejamasokaṁ, dhammamasaṅkhatamappaṭikūlaṁ madhuramimaṁ paguṇaṁ suvibhattaṁ; Dhammamimaṁ saraṇamupemi. Yañca dinnaṁ mahapphalamāhu, catūsu sucīsu purisayugesu; Puggaladhammadassā te, saṅghamimaṁ saraṇamupemi.</p>
+<p>From:</p>
+<p>Ratana-style Refuge Verses preserved in the Khuddaka tradition (non-Dhammapada source)</p>
+<p>Dear Listeners,</p>
+<p>Taking refuge in the Triple Gem and undertaking the precepts are merely the initial steps in this Dispensation (*Sāsana*). Nevertheless, the fact that even this mere act of taking refuge can yield such marvelous benefits is a testament to the powerful and majestic nature of the Triple Gem. There are numerous accounts in Buddhist literature of devotees who attained rebirth in happy realms (*sugati*) simply by virtue of taking refuge and observing the precepts. The story of Chatta Mānavaka is one such example.</p>
+<p>During the time when the Buddha was residing in Sāvatthī, a young Brahmin named Chatta—a Brahmin youth from the city of Setavyā—went to the Brahmin teacher named Pokkharasāti in the city of Ukkaṭṭhā to complete his education. Having finished his studies, he returned to Setavyā to see his parents, and then set out again to meet his teacher, carrying a thousand gold coins (*kahāpaṇa*) as a teacher's fee. On that morning, as the Buddha surveyed the world with his mind of Great Compassion, the youth Chatta appeared in his vision. Knowing this, the Buddha walked to a tree along that path and sat down. When Chatta Mānavaka saw the Buddha, he approached him with great devotion and clarity of mind, took refuge in the Triple Gem, listened to the Dhamma, and prepared to depart. Before his departure, the Buddha taught Chatta Mānavaka three verses extolling the virtues of the Triple Gem to be recited when taking refuge. It was while contemplating these verses that Chatta Mānavaka set out on his journey. Those three verses are the ones we recited at the beginning of this sermon.</p>
+<p>The first verse says: *“Yo vadataṁ pavaro manujesu”*—He who is the noblest or supreme among speakers of truth, *“Sakyamunī”*—the Sakyan Sage, *“bhagavā”*—the Blessed One, *“katakicco”*—one who has completed all that needs to be done for liberation, *“pāragato balavīriyasamaṅgī”*—who has crossed over the wilderness of Saṁsāra, crossed the ocean of existence—meaning he who has realized Nibbāna and is endowed with physical strength and the power of effort and energy—*“taṁ sugataṁ saraṇamupemi”*—in that Sugata (Well-Gone One), I take refuge, I seek shelter. That is the meaning of the first verse.</p>
+<p>The second verse says: *“Rāgavirāgamanejamasokaṁ”*—that which dispels lust and passion (*rāga*), is free from the agitation of craving and thirst (*taṇhā*), and is free from sorrow (*asoka*); *“dhammamasaṅkhatamappaṭikūlaṁ”*—the unrepulsive, Unprepared (*asaṅkhata*) Dhamma, which is Nibbāna; *“madhuramimaṁ paguṇaṁ suvibhattaṁ”*—this sweet, well-mastered, and excellently analyzed scriptural Dhamma; *“dhammamimaṁ saraṇamupemi”*—in this Dhamma, I seek refuge.</p>
+<p>The final verse means: *“Yañca dinnaṁ mahapphalamāhu”*—in whichever Noble Saṅgha it is said that gifts given yield great fruit; *“catūsu sucīsu purisayugesu”*—composed of the four pairs of pure men; *“puggala-dhammadasā te”*—those eight individuals who have directly realized the Dhamma of Nibbāna; *“saṅghamimaṁ saraṇamupemi”*—in this Saṅgha, I take refuge, I seek their shelter. This is the meaning of the final verse.</p>
+<p>Thus, while reciting these three verses and taking step after step forward, thieves—perceiving that this youth possessed wealth—shot him with an arrow and killed him. Immediately upon his death, Chatta Mānavaka, by virtue of his refuge in the Triple Gem, his undertaking of the five precepts, and the wholesome thoughts generated by listening to the Dhamma, was spontaneously reborn in the Tāvatiṁsa heaven, in a celestial mansion spanning thirty leagues. Later, when his parents and the citizens of Setavyā gathered to perform his funeral rites upon hearing of his death, the Buddha arrived at the location.</p>
+<p>When the Buddha arrived, Chatta—now a deity—descended from the heavenly realm together with his celestial mansion. In order to reveal this to the gathered crowd, the Buddha questioned the deity: “Who are you that have come from the heavenly world with a mansion shining brighter than the sun and moon? What kind of merit did you perform to achieve this state?” The Buddha allowed the deity Chatta to speak for himself. He said, “Blessed One, I am that young Brahmin whom you met today when you sat under the tree out of compassion for me. The Blessed One asked me, ‘Do you know how to take refuge in the Triple Gem?’ and I said ‘No.’ The Blessed One then taught me how. I took refuge as taught. You then asked if I knew the five precepts. I said I did not. You taught me those as well. You instructed me: ‘Abandon the killing of living beings, which is impure; it is not the practice of the wise. Similarly, taking what is not given, committing sexual misconduct, lying, and taking intoxicants are not praised by the wise; these are impure practices.’ After you said this, I firmly resolved to observe the precepts. As I went on my way, thieves shot and killed me. The other deities in the heavenly world, seeing my splendor, wonder how I obtained such a state.” Thus, Chatta the deity declared his story.</p>
+<p>Through this brief story, we can see how immensely beneficial taking refuge in the Triple Gem and undertaking the five precepts can be. We must particularly contemplate the undertaking of precepts. As you all know, before undertaking the precepts, we first take refuge. Taking refuge in the Triple Gem is no small matter. Through it, one’s faith (*saddhā*) is brought to the fore. It is upon faith that morality (*sīla*) is put into action. To the extent that one’s faith is strong, to that extent one is motivated to protect the training rules of morality and becomes established in morality. As Chatta Mānavaka walked along reciting those verses, he was contemplating the virtues of the Triple Gem. He went while practicing recollection of the Buddha, recollection of the Dhamma, and recollection of the Saṅgha. It was because he passed away with that mind—that proximate mind (*āsanna-citta*)—that he achieved that state in the heavenly world. We have heard in the Dhamma that when a person’s next birth (*jāti*) is determined, unless there is a weighty karma (*garuka-kamma*) such as the five heinous crimes (killing mother, killing father, killing an Arahant, shedding the blood of a Buddha, or causing a schism in the Saṅgha) or certain fixed wrong views, a person’s next birth is decided by a karma performed at the final moment, or a past karma recalled at the final moment. This is called proximate karma (*āsanna-kamma*). When there is no weighty karma, proximate karma determines it. If that is also absent, then habitual karma (*āciṇṇa-kamma*), which is practiced continuously, comes forward. In the absence of that too, some other karma that was previously performed, known as stored karma (*kaṭattā-kamma*), will somehow condition the next birth. Here, we clearly see the operation of proximate karma. Indeed, the Buddha did not go there to save him from death. Through his knowledge of the attainment of Great Compassion, the Buddha saw that Chatta Mānavaka possessed the capacity to generate deep faith. Thus, the Buddha went there to prepare his final mind-state. Accordingly, Chatta Mānavaka took a refuge he had never even heard of or taken before, and undertook a training in morality he had never heard of before. It was through the wholesome volition (*kusala-cetanā*) generated during that brief moment that he received such heavenly splendor.</p>
+<p>Therefore, we must reflect upon this. Indeed, our undertaking of precepts is established upon faith. If a person can say, *“Natthi me saraṇaṁ aññaṁ, Buddho me saraṇaṁ varaṁ”* (“I have no other refuge, the Buddha is my supreme refuge; the Dhamma is my refuge; the Saṅgha is my refuge”), if there is such strong faith, that person truly takes refuge. Taking refuge means seeking shelter. That shelter must be sought through morality, concentration (*samādhi*), and wisdom (*paññā*). The Buddha cannot save anyone directly, but taking refuge is the beginning of cultivating morality, concentration, and wisdom. That is why, even in this day and age, before undertaking the precepts, we recite three times, *“Buddhaṁ saraṇaṁ gacchāmi”*, and so forth. This is no ordinary thing. Chatta Mānavaka lost his life suddenly due to a fatal danger and hazard that existed during the Buddha's time. You all know how many hazards and dangers exist on the roads today for young boys, girls, and children, even more so than during the Buddha's time. Before a young child can cross from one side of the road to the other, high-speed massive vehicles run down every street. Similarly, there are swindlers, thugs, and murderers at every junction waiting to rob us of our hard-earned wealth, character, and lives. In recent times, Buddhist leaders have introduced a practice for school children to recollect and recite these three verses when leaving school or returning home after school. Today, there is hardly anyone to explain the meaning of these verses. Some even distort them and turn them into a joke. But these are three extremely powerful verses. Since dangers are more abundant now than in the Buddha’s time, we must say that one should recollect these verses not only when leaving school, but even when leaving home to go to school. If possible, one should leave with these three verses in mind, or at the very least, leave with a proximate mind reciting *“Buddhaṁ saraṇaṁ gacchāmi, Dhammaṁ saraṇaṁ gacchāmi, Saṅghaṁ saraṇaṁ gacchāmi”*. At the very least, if an accident were to occur, leaving home with the recollection of the Triple Gem ensures rebirth in a good destination (*sugati*). Such is the current situation.</p>
+<p>Similarly, we see that along with faith in the Triple Gem and taking refuge, the undertaking of precepts is incredibly powerful. The five precepts are no small matter; they constitute the permanent morality (*nicca-sīla*) of a layperson. Chatta Mānavaka must have undertaken that morality and formed a strong determination (*adhiṭṭhāna*) within that brief moment: “For the rest of my life, I will not kill any living being, I will not steal, I will not commit sexual misconduct, I will not lie, and I will not drink intoxicants.” He did not observe this determination for a long time, but through the power generated within that single split second, he received such heavenly wealth. Even more meritorious, as you have heard, is the eight-precept Uposatha morality (*uposatha-aṭṭhaṅga-sīla*). Many of you have undertaken the eight-precept Uposatha morality today. There are Dhamma stories illustrating the benefits of the eight precepts as well. In the Dhamma literature, there is a remarkable story about the benefits of strictly observing even a single precept for just half a day. There is a story of a certain poor man who strictly observed the precept of abstaining from untimely eating (*vikāla-bhojana*)—which is often not taken very seriously nowadays—with a firm resolve and even at the risk of his life, and as a result, was reborn as a tree-deity (*rukkha-devatā*). The story goes as follows.</p>
+<p>There was a group of five hundred ascetics who came from the Himalayas to the city every year. They came to the city of Kosambī. At that time, three wealthy merchants named Ghosita, Kukkuṭa, and Pāvāriya had invited these ascetics, saying, “Please come and receive our support during the four months of the rainy season every year.” Acting on this invitation, the ascetics were traveling when, at one point, they stopped to rest for a moment under a massive banyan tree at the edge of the forest. The chief ascetic thought: “The deity residing in this banyan tree cannot be an ordinary being; he must be highly powerful.” He casually thought, “If this deity could provide us with drinking water through his power, it would be of great value to our group.” Instantly, water appeared there for everyone. Then he thought, “It would be wonderful if we could get water to bathe.” That too appeared immediately. Next, he thought, “It would be great if we could get some food.” Food was likewise provided for all five hundred ascetics. Then the ascetic thought, “If only we could see this deity who has the power to grant whatever we think of!” Thereupon, from among the roots of the banyan tree, the deity appeared in a majestic form. The ascetic asked him, “What kind of meritorious deed did you perform to achieve this state?” The deity felt ashamed to speak, as his merit was very small. He hesitated, but upon repeated requests, he began to tell his story. The complete account is given in the Dhamma.</p>
+<p>In the city of Sāvatthī, it was the custom in the household of Anāthapiṇḍika the merchant that everyone observed the Uposatha precepts on every Uposatha day. It was observed so strictly that even infants who were still breastfeeding had their mouths washed, and at sunset, their mouths were rinsed and *catumadhura* (a sweet fourfold medicine) was placed in their mouths, training them from a very young age to observe the precept of abstaining from untimely eating. Everyone in the household strictly observed the Uposatha precepts. One day, a very poor man came to the house seeking daily-wage work. He had not been there long when, on the Uposatha day, the merchant returned from the monastery and asked the household members, “Did anyone inform the daily-wage worker that today is the Uposatha day?” They replied, “We forgot to tell him.” The merchant said, “Then prepare some food for him separately for the evening,” and while he was provided food, the others adhered to the practice, even the young children abstaining from food. Meanwhile, the man returned in the evening, extremely exhausted from his labor. When he was given the food, he fell into reflection. Despite his hunger, he did not eat immediately but thought: “Usually, in this house, there is so much noise with children asking for rice and curries. Today, there is absolute silence.” He then asked, “Have these people already eaten?” They replied, “No.” When he asked why, they explained, “On Uposatha days, it is our custom. The merchant has everyone, even the small children, observe the training rule regarding untimely eating.” Hearing this, the man asked, “Can I also observe the Uposatha precepts now?” They replied, “We do not know; you must ask the merchant.” He went to ask, and the merchant said, “Yes, you can still observe the Uposatha for half a day. Tell him to wash his mouth and make the determination.”</p>
+<p>The man did exactly that, taking the Uposatha precept centering on the abstention from untimely eating. As night fell, due to his hunger and exhaustion, unbearable sensations (*vedanā*) of pain arose. What did he do? He tied a rope to something in the room and, holding onto the end of it, began to roll around on the floor, unable to bear the pain. When the servants informed the merchant, he came with *catumadhura* and pleaded with him, “Why this distress?” The man said, “A wind-ailment has arisen due to my exhaustion.” The merchant said, “Then take this *catumadhura*.” The man asked, “Do you also take it, master?” The merchant replied, “No, I have no discomfort.” The man then said, “Please allow me, master. I could not observe this Uposatha for the whole day; let me at least keep this half-day pure,” and he rejected the *catumadhura*. Thus, he remained completely starving. Consequently, unable to endure the pain, the man passed away at dawn and was reborn as the tree-deity in that banyan tree. This was his story. The tree-deity added, “The merchant was a devotee of the Buddha, Dhamma, and Saṅgha. It was through my association with him that I obtained this celestial fortune as a tree-deity.” Upon hearing this, the ascetics—who did not even know at that time that a Buddha had appeared, as Kosambī was far away—stood up and asked three times, “Did you say ‘Buddha’? Is it true that a Buddha has arisen?” After learning the news of the Buddha’s arising, those ascetics informed the three merchants, went to Sāvatthī, listened to the Dhamma from the Buddha, and attained Arahantship.</p>
+<p>Thus, through that story, we see that the Uposatha morality observed for just half a day yielded such great benefits. In modern times, our logicians often argue, especially about the precept of abstaining from untimely eating, saying, “Eating food does not harm anyone. Who ever went to hell just for eating rice?” There are indeed people who ask such questions. Here, the issue is not about eating or not eating rice. By strictly observing the undertaken precepts with a firm determination (*adhiṭṭhāna*), he purified his mind. He straightened his mind. Through faith in the Triple Gem, undertaking the precepts, and honesty, he made his mind upright. It was the fruit of this that the poor man received. Therefore, we must reflect that even the training rule of abstaining from untimely eating is not something to be taken lightly. Whatever training rule (*sikkhāpada*) it may be, if it is observed correctly within the Buddha Sāsana, it yields great benefits; this is clearly illustrated here.</p>
+<p>Furthermore, there are many other Dhamma stories related to this. Regarding the virtues of morality (*sīla*), another highly valuable discourse must be mentioned. During the time of the Buddha, there lived a Brahmin named Kūṭadanta. He was extremely wealthy and wished to perform a grand sacrifice (*yāga*). For this sacrifice, he had prepared seven hundred bulls, seven hundred calves, seven hundred goats, and seven hundred rams, tying them to posts. Then, he heard that the ascetic Gautama knew a method of performing sacrifices that was highly fruitful and of great benefit. He went to the Buddha and initiated a discussion on how to conduct a sacrifice of great fruit and benefit.</p>
+<p>The Buddha recounted a past story where, in a previous birth, he was born as a royal advisor to King Mahāvijita. The king possessed vast wealth and, involving the entire country, conducted a grand sacrifice. In that sacrifice, no animal was harmed. No force was used against the people involved, and the grand sacrifice was conducted in an extremely righteous manner. The Buddha explained this in detail. At that moment, the Brahmin crowd uttered *Sādhu* in approval. The Brahmin Kūṭadanta, pleased with the explanation, first asked, “I feel that the chaplain described by the Blessed One must have been the Blessed One himself.” The Buddha confirmed this. Next, the Brahmin asked, “Is there another sacrifice that requires less preparation and effort, yet is of greater benefit?” The Buddha replied, “Yes, Brahmin, there is. If one regularly offers alms to virtuous, gone-forth ones, that sacrifice is nobler than the grand sacrifice of King Mahāvijita.” He then asked, “Is there a sacrifice that requires even less preparation, yet yields greater benefits?” The Buddha answered, “Yes. Building a monastery (*vihāra*) for the Saṅgha arriving from the four directions is even more beneficial, and can be done with less physical exertion.”</p>
+<p>Then he asked, “Is there an even easier sacrifice with greater benefits?” At that point, the Buddha declared, “If a person, with a pure mind, takes refuge in the Buddha, takes refuge in the Dhamma, and takes refuge in the Saṅgha, that sacrifice is far superior to all the aforementioned sacrifices—superior to the grand sacrifice of King Mahāvijita, superior to regular alms given to virtuous families, and superior to the offering of a monastery.” He did not stop there. The Brahmin asked, “Is there an even more valuable sacrifice of great fruit and benefit?” The Buddha then declared, “Yes. If a person abstains from the killing of living beings, from taking what is not given, from sexual misconduct, from false speech, and from taking intoxicants, that sacrifice is of even greater benefit.” The next question was, “Is there a sacrifice of even greater benefit than this?” In response, the Buddha expounded the entire path of morality (*sīla*), concentration (*samādhi*), and wisdom (*paññā*) leading all the way to Arahantship for one who ordains in this Dispensation.</p>
+<p>Having heard this entire sermon, the Brahmin Kūṭadanta took refuge in the Triple Gem and became a lay disciple (*upāsaka*). He granted freedom (the gift of fearlessness) to all the 700 bulls, calves, cows, and other animals that were tied to the posts to be slaughtered. He released them, wishing, “Let them eat grass freely and drink cool water,” and granted them their lives.</p>
+<p>From this story too, we see how this Dispensation leads from the material (*āmisa*) to the spiritual (*nirāmisa*). In the ordinary world, material giving is considered great. But the Buddha showed the world entirely new values that are spiritual, closer to the mind and volition, such as taking refuge in the Triple Gem and undertaking the precepts. The benefits of keeping the precepts are illustrated in various stories in the Dhamma. Generally, for laypersons who observe the five precepts, five immediate benefits in this life are described. If a person is virtuous, due to their diligence (*appamāda*)—and here, “diligence” means avoiding unwholesome actions. If someone commits the wrongs related to the five precepts, such as killing, stealing, sexual misconduct, lying, and taking intoxicants, whether at a business or personal level, it is classified as negligence (*pramāda*). They have fallen into negligence. Indeed, not only through alcohol, but through any of these actions, a person eventually becomes like a madman whenever those impulses arise in the mind. They become agitated. This is a cause of negligence. Because of this negligence, even if they appear to prosper in the eyes of the ordinary world or according to the understanding of common people, at some point, they suffer a major downfall. In contrast, the Buddha states that if a person is virtuous and protects the five precepts properly, they can accumulate great wealth by virtue of their diligent practice. In modern times, people are prone to think that a person who keeps the five precepts and lives righteously has no place in society and cannot acquire wealth. But the Buddha pointed out that it is precisely the person who keeps the five precepts who can accumulate wealth.</p>
+<p>Sometimes, wealth means the stability of one’s possessions. Even if one earns a lot, if one drinks and engages in other vices, that wealth is quickly squandered and lost. The virtuous person is not like that. The Buddha used the similes of bees building a honeycomb and termites building a mound—earning wealth through hard work and righteousness ensures that it is stable and secure. In that sense, the first benefit described is that they obtain the wealth (*bhogakkhandha*) that laypeople desire. The second benefit is that a good reputation (*kīrti-rāva*) spreads about the virtuous person. A good reputation, a noble fame among the wise, spreads gently. That is the second benefit, which is highly valuable for someone living in society. Thirdly, when such a virtuous person enters any assembly—whether it is an assembly of kings, Brahmins, householders, or ascetics—they enter with confidence (*visārada*), without mental hesitation.</p>
+<p>Mental hesitation means hanging one’s head down, looking down in shame and hiding one’s face. Because their virtue is pure, they can enter any assembly with head held high, without fear, and speak with confidence. That is the third benefit. The fourth benefit is passing away with mindfulness and clear comprehension at the moment of death, without confusion. You may have heard in other stories about Cunda the pork-butcher, who slaughtered pigs. At his final moment, having lost his human consciousness, he ran around squealing like a pig, suffered immensely, and fell into the lower realms. The virtuous person, however, recollects their good deeds, rejoices, spends their final moments with clear mindfulness, and—as described in the texts—passes away as if falling asleep and waking up, to be reborn in the heavenly world. The fifth benefit is indeed the ability to go to a happy destination. If a virtuous person protects their precepts properly, like Chatta Mānavaka or that poor man, they will be reborn in a happy destination. This is the fifth benefit.</p>
+<p>On another occasion, Venerable Ānanda asked the Buddha: “Blessed One, there are three types of fragrance in the world: the fragrance of roots, the fragrance of heartwood, and the fragrance of flowers. These three kinds of fragrance only travel with the wind, not against it. Blessed One, is there a fragrance in the world that travels both with the wind and against the wind—a fragrance that goes in both directions?” The Buddha replied: “If in any village, town, or city, there is a woman or man who has taken refuge in the Buddha, Dhamma, and Saṅgha, who abstains from the five vices of killing, stealing, sexual misconduct, lying, and taking intoxicants, who keeps these precepts and is generous, the fragrance of their virtue spreads among humans, deities, and ascetics and Brahmins alike.” The fragrance of their virtue spreads; this is how the benefits of morality are sometimes illustrated. Thus, even in this life, the virtuous person can live peacefully. You have also heard that those who observe virtue and other qualities can constantly live with great joy, free from the remorse (*vippaṭisāra*) mentioned in ancient books. They can experience spiritual joy. This is called the blameless happiness (*anavajja-sukha*). The thought “I have done no wrong, I am blameless” brings great joy. Through this, one can generate happiness.</p>
+<p>Thus, that very joy is the initial benefit of morality in this life. Among the qualities of this Dispensation, as we all know, morality is the foundation for cultivating all spiritual qualities. In the path to ending the suffering (*dukkha*) of Saṁsāra, three aspects are described: morality, concentration, and wisdom. Established on morality, one develops concentration; supported by concentration, one develops wisdom. That is why they are presented as the threefold training: morality, concentration, and wisdom.</p>
+<p>Morality is diverse. You know that the five precepts serve as the permanent lay morality. If possible, there is also the eightfold morality with right livelihood as the eighth (*ājīva-aṭṭhamaka-sīla*), which involves guarding one’s speech as some of you have undertaken today. In short, morality means restraint of body and speech. This is done with the assistance of the mind, led by the power of determination in the mind. Therefore, the most valuable aspect of undertaking precepts is determination. Through this determination, one establishes a certain stability. Without that stability, concentration cannot be built. Just as a pagoda cannot be built without a proper foundation, the mind cannot be established in concentration without at least the minimum level of the five precepts. This simile can be used to understand this, even if it is not directly from the texts.</p>
+<p>We have spent infinite time in this Saṁsāra experiencing various kinds of lives. Mostly, we have been reborn as demons, hungry ghosts, and hell-beings, and only occasionally as Brahmas or humans. Thus, stored in our consciousness (*viññāṇa*), in our minds, there is a vast accumulation of good and bad. Mostly, the bad side is dominant. These arise constantly in our minds as karmic results. Just as when a pot is boiling on the hearth, different things bubble up to the surface from time to time, so do karmas rise to the surface. It is the determination of morality (*sīla-adhiṭṭhāna*) that helps to suppress these and bring the mind to a stable level. If at any moment a person who has been killing animals—whether as a livelihood or for recreation—makes a firm determination: “From this moment on, I will not harm any living being,” through that very power of determination, the past karmic forces related to that action are largely suppressed. The mind does not allow them to surface when they arise. This is the natural law. It is the same with stealing. For some, stealing is an ingrained habit from birth, reflecting past character traits. But if one determines firmly, placing that taking of refuge—taking refuge in the Triple Gem—at the forefront of that determination, that determination becomes powerful, whether regarding stealing or other vices. In short, the five precepts address the very wrongs we have committed throughout infinite time in Saṁsāra when we did not encounter the Dhamma. The Buddha grouped and presented these as the five precepts.</p>
+<p>Therefore, if we are looking towards Nibbāna, we must, as a starting step, observe at least these five as our permanent morality (*nicca-sīla*). That is the value of the five precepts; it is no small matter. They must be observed not casually, but with firm determination. Beyond that, there are Uposatha eight precepts and so on. Furthermore, the morality of a monk is even broader. If the foundation is strong, as you know in the case of building high-rise structures, they do not just build the upper part. Before that, as engineers well know, how much effort goes into laying the foundation? If built on a heap of sand, it will collapse. That is why, for the monks who work with higher targets, wishing to realize Nibbāna, the Buddha expounded an even more subtle and vast restraint of the Pātimokkha.</p>
+<p>For the monks, the morality of fourfold purification is described: Pātimokkha restraint (*pātimokkha-saṁvara-sīla*), restraint of senses, purification of livelihood, and morality concerning the use of requisites. In this way, there is a gradually developing morality in this Sāsana. We must understand that Saṁsāra is entirely a muddy swamp. If we are to sit for meditation on this muddy swamp, we must build a platform. We have to construct a small platform. That platform can be built by erecting five pillars, representing the five precepts. It can also be built with eight pillars, representing the Uposatha precepts, or ten pillars for the ten precepts. That is how we must understand it. That is why the Buddha instructs us to develop concentration while established in morality. The mind can be maintained in an unshakeable state on an object only if we generate a state free from remorse. What supports this is the morality observed over a specific period of time. Morality kept over a long period is indeed strong, but even at a minimum level, one should make a determination at some point: “From today, from this moment, I am a different person. This is the foundation stone for a complete transformation of my character and life.” If, like Chatta Mānavaka, one determines such morality, then from that day on, that blameless happiness, that spiritual joy, will arise. That joy is obtained by reflecting upon it.</p>
+<p>In morality, there are two aspects: determination and reflection. Determination is naturally present within the undertaking of the precept. It is not out of fear of someone else's words, but by saying “I undertake,” one accepts it with all one's heart and resolves upon that practice. Then, by resolving and keeping it, when one looks back—reflecting means reviewing—when one reviews the morality resolved upon in the morning and sees that it has been kept perfectly, despite various troubles in daily life, one feels great joy. If one reviews after a week and sees that it has been kept continuously, the joy is even greater. After a month, after a year, if a training rule has been kept perfectly for twenty or thirty years, it generates immense mental strength and joy. That very joy is what supports concentration, as described in the Dhamma. A virtuous person does not need to make a deliberate effort wishing, “Let joy arise in me, let happiness arise in me.” Because the virtuous person has no remorse, joy arises naturally. When joy (*pāmojja*) arises, it turns into rapture (*pīti*). Through that rapture, the mind becomes tranquil, and through physical and mental happiness (*sukha*), concentration arises according to the meditation subject (*kammaṭṭhāna*) chosen. This is the natural law. Such is the value of morality.</p>
+<p>Similarly, established on that morality, next comes concentration. Concentration means the unification of the mind. The states of a unified mind are described as meditative absorptions (*jhāna-samāpatti*). Supported by these, one gains the strength to understand the deepest teachings expounded by the Buddha—the reality of life, the truth of character and the mind.</p>
+<p>All of this is done by first establishing oneself in the refuge. We must think about what this Triple Gem is. Why are they called Gems (*ratna*)? It is mentioned in the Dhamma:</p>
+<p>*Yassa kiñci ratanaṁ loke vijjati vividhā puthu,*</p>
+<p>*Ratanaṁ Buddha-samaṁ natthi, tasmā sotthī bhavantu te...*</p>
+<p>*Ratanaṁ Dhamma-samaṁ natthi...*</p>
+<p>*Ratanaṁ Saṅgha-samaṁ natthi...*</p>
+<p>Thus it is mentioned in blessing verses. Whatever gems exist in the world, in all their variety, there is no gem equal to the Buddha Gem, the Dhamma Gem, or the Saṅgha Gem. This is how the simile of gems has come down from the past. “Gem” here means that a person's value arises because of these three Gems deposited in their heart. Whatever one’s past life status may be, these three things—Buddha, Dhamma, and Saṅgha—which appear rarest in the world, are called Gems. They are compared to gems. However, in recent times, due to various social changes, some Buddhist lay disciples defile their taking of refuge. A concept of “two gems” is spreading in the country, where one of the Gems is not given its due place. This is a defilement of one’s refuge. There is no taking of refuge in two gems in this Sāsana; it is only in the Triple Gem. Therefore, we must constantly generate the perception of the Gem in the eightfold Noble Saṅgha. It is upon this perception of the Gem that we observe morality. This is clear from the story of Chatta Mānavaka. The value we give to it corresponds to the Buddha as our Teacher, his Dhamma as the practice, and the Saṅgha as those who reflect the success of that practice. This is beautifully described in suttas like the *Aggappasāda Sutta*, in a way that is highly meaningful to the faithful. Among whatever beings there are—whether footless, two-footed, four-footed, many-footed, with form, formless, percipient, non-percipient, or neither-percipient-nor-non-percipient—the Tathāgata, the Arahant, the Fully Enlightened One is supreme. Those who have faith in the supreme Buddha have faith in the supreme. For those who have faith in the supreme, the result is supreme. This is what is said of the Buddha Gem.</p>
+<p>Similarly, it is said: “Among whatever conditioned states there are, the Noble Eightfold Path is the supreme. If one has faith in this Dhamma, the benefit of that faith is likewise supreme.” Then it is said: “Among whatever conditioned or unconditioned states there are, the Unprepared (*asaṅkhata*) which is Nibbāna, unarisen from causes and conditions, is the supreme. If one has faith in this Dhamma of Nibbāna, its benefits are likewise supreme.” Next, it is said: “Among whatever communities or groups there are in the world, the Saṅgha of the Tathāgata, the eightfold Noble Saṅgha Gem, is supreme. Therefore, if one has faith in the Saṅgha, the benefits are likewise supreme.” In this way, the Buddha has introduced the value of taking refuge and the perception of the Gem to the world on many occasions. We must constantly reflect on this. The value of all our actions arises from the strength generated through faith (*saddhā*) within our hearts. That is why it is said, *“Saddhāya tarati oghaṁ”*— “Through faith, one crosses the flood.”</p>
+<p>In this formidable ocean of Saṁsāra—and Saṁsāra consists of four terrible floods: the flood of sensual desire, the flood of becoming/existence (*bhava*), the flood of views, and the flood of ignorance—one cannot even think of crossing over to the other side. Crossing over these four terrible floods, in which we have been submerged and swept away for infinite time, is what is meant by crossing over Saṁsāra. To face this task, we must possess sufficient strength of faith. We generate faith in the Enlightenment of the Tathāgata, believing that the Teacher does not speak falsehood: *“Saddahati Tathāgatassa bodhiṁ”*—accepting that the Tathāgata is the Fully Enlightened One, that his practice leads out of suffering, and that there is a community of people who have proven the efficacy of this liberating path. It is through this faith that one crosses the flood, as said in *“Saddhāya tarati oghaṁ”*. You have also heard in many places that if we compare the spiritual qualities of this Sāsana to agriculture, faith is the seed: *“Saddhā bījaṁ”*. Wherever spiritual qualities are described, faith is highlighted first, either as a seed or as a power (*bala*). To direct the physical and mental energy within a being towards a certain goal requires a major commitment. That commitment is what lies within this taking of refuge. Some cannot understand this today. We have to explain it to some scholars. What is this taking of refuge? Some cannot even comprehend why we take refuge in the Buddha or Saṅgha when it is said, “Self is indeed the refuge of self.” They completely misunderstand this. We must cross over. The Buddha cannot carry each person from this shore to the other shore. But we take refuge because there is Someone who points out the correct path, saying: “If you do it this way, it is correct; if you act this way, it is correct.” Taking refuge in the Buddha, Dhamma, and Saṅgha is not like in some other religions where another being drags you along. Here, it is to bring forth the energy (*vīriya*) within oneself. That is why, alongside faith, come energy, mindfulness, concentration, and wisdom. Energy follows faith.</p>
+<p>*“Saddhāya tarati oghaṁ, appamādena aṇṇavaṁ, vīriyena... paññāya...”*—thus it is sometimes stated. One crosses the flood through faith, and crosses the ocean of Saṁsāra through diligence. Next, through energy—energy is brought forth based on faith. Therefore, the degree to which faith becomes firm depends on the value we place on those three objects. If we equate any of these to something lesser than these Gems, we must consider whether we can generate the strength within us to cross over. A certain person asked the Buddha: “How does one become a lay disciple (*upāsaka*) in this Sāsana?” The Buddha replied: “By taking refuge in the Buddha, taking refuge in the Dhamma, and taking refuge in the Saṅgha, one becomes a lay disciple.” Look how easy it seems. One does not need to fill out application forms, pay fees, or anything. It seems very simple. But to be a true lay disciple, one must take refuge to the point of being able to make a truth-assertion: *“Natthi me saraṇaṁ aññaṁ, Buddho me saraṇaṁ varaṁ, etena sacca-vajjena hotu me jayamaṅgalam”*— “I have no other refuge, the Buddha is my supreme refuge; by this truth, may there be victory and blessing!” That is the level. Taking refuge helps us to generate that state. Thus, when we reflect upon this, taking refuge in the Triple Gem is not something to be taken lightly. It is repeated three times to engrave it deeply in one’s mind.</p>
+<p>The wholesome energy generated through this refuge does not merely yield heavenly rebirth. Based on this, one fulfills morality. Based on morality, one develops concentration. Established on concentration, and supported by past wholesome forces, one eventually realizes the supreme Dhamma of Nibbāna through the path, fruit, and penetration of Stream-entry (*Sotāpatti*), Once-returning (*Sakadāgāmi*), Non-returning (*Anāgāmi*), and Arahantship (*Arahatta*). Therefore, we must reflect on our own lives. Especially, like what we said about children, not only children but even adults must spend their days with the recollection of the Triple Gem. It is not that merely recollecting the Triple Gem will save us from all physical dangers or grant us eternal life without death. But if we live with that proximate mind, if death should occur at any moment, we can avoid the lower realms and secure a good state. In short, our next birth (*jāti*) is a photocopy of our own mind. If we shake when a photo is being taken, how will the picture turn out? Similarly, if our mind is defiled at the moment of death, we will be reborn as hungry ghosts, demons, or animals. If, on the other hand, we achieve rebirth in a happy realm, especially like that deity we mentioned, when we look back and see how such a small thing, which the world thought lightly of, brought such great benefits, we should train ourselves to think: “If we were to complete this path of Dhamma, what kind of benefits would there be?”</p>
+<p>Therefore, looking at today’s topic, it is the initial step in the Sāsana. But if we do not understand it correctly, it becomes difficult to fulfill the spiritual qualities in this Dispensation. If we grab onto deep and complex things without understanding the basic principles, they will not penetrate our hearts. Thus, if we have understood the value of the Triple Gem in this Sāsana through stories like that of Chatta Mānavaka, it is with that support that we can fulfill our other practices. Therefore, you must reflect that no matter how busy your daily lives are, you should use the Uposatha day as a pause, and during this time, review and correct the shortcomings in your life. To cross over this Saṁsāra, reflect quietly on what you must do, establish yourself in morality on this Uposatha day, listen to the Dhamma, meditate, and thereby end the suffering (*dukkha*) of Saṁsāra within this very Buddha Sāsana. Therefore, reflect: “May this accumulation of merit gathered through keeping the precepts, meditating, and listening to the Dhamma, serve as a strong support to strive as much as possible in this very life to end the saṁsāric sufferings of birth (*jāti*), decay and death (*jarāmaraṇa*), sickness, and so forth, through the realization of the path and fruit of Stream-entry, Once-returning, Non-returning, and Arahantship!”</p>
+<p>Similarly, may all beings from Avīci to Akaniṭṭha, including the guardian deities and Brahma kings, as well as our departed relatives, rejoice in this merit of Dhamma-preaching and realize the supreme deathless Nibbāna through their aspired Bodhi! With this aspiration, please recite these verses:</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_025.html" class="doc-btn">← Previous Sermon (025)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_027.html" class="doc-btn">Next Sermon (027) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

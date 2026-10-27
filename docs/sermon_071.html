@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 071 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_070.html" class="doc-btn">← Previous Sermon (070)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_072.html" class="doc-btn">Next Sermon (072) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 071</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_071_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_071_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_071_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #71</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.68)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Yo ce gāthāsataṃ bhāse,</p>
+<p>anatthapadasaṃhitā;</p>
+<p>ekaṃ dhammapadaṃ seyyo,</p>
+<p>yaṃ sutvā upasammati.</p>
+<p>Yo sahassaṃ sahassena,</p>
+<p>saṅgāme mānuse jine;</p>
+<p>ekañca jeyyamattānaṃ,</p>
+<p>sa ve saṅgāmajuttamo.</p>
+<p>From:</p>
+<p>Dhammapada 102–103 (Sahassavagga)</p>
+<p>Dear Listeners,</p>
+<p>The Buddha, our Father, the Lord of Peace and Teacher of the Three Worlds, presented to the world a path of practice leading to peace and solace. However, in order to suit the mind of combative mankind, on certain occasions the Buddha used words such as "fight," "battle," and "warfare" even to describe the energy and effort exerted towards Nibbāna. On certain occasions, the Buddha pointed this out as a sublime, heroic battle against Māra (the Evil One), a war against Māra fought for the sake of peace, leading all the way to Nibbāna. The verses describing the value of this battle are indeed what we have chosen as our topic today. The background story (*nidāna*) of these verses concerns the account of Therī Kuṇḍalakesā. That account is found in various places in Dhamma literature with certain minor variations. If we summarize those details, we can present them for this occasion as follows.</p>
+<p>In the city of Rājagaha, there lived the sixteen-year-old daughter of a certain merchant (*seṭṭhi*). Since she was a very beautiful maiden, her parents, for her protection, had her live on the top floor of the mansion, guarded under the watchful eyes of attendants. One day, a certain thief in Rājagaha was caught with stolen goods, sentenced to death by royal decree, and was being taken to the place of execution, being whipped at the four-way crossroads. Hearing the shouts of the crowd, this merchant's daughter looked through the window and, upon seeing this young man—perhaps due to some past association in Saṃsāra—conceived a strong affection and attachment towards him. Having fallen in love, she lay face down on her bed, refused food, and went on a hunger strike. When her mother came and asked, she said, "If I get that young man as my husband, I will live; otherwise, my life will end." They tried to change her mind by pleading in various ways, but failed. Afterwards, the merchant was also informed. Having discussed it together, what did they do in the end? They sent a bribe of a thousand *Kahāpaṇas* to the chief executioner to release the thief and send him to them. That officer released the thief, executed someone else in his place, and sent word to the king that the thief had been executed. The merchant then gave that thief in marriage to his daughter. Then, wishing to win her husband's heart even more, she attended to him day in and day out with food, drink, and personal care, herself always beautifully adorned with ornaments.</p>
+<p>This thief, perhaps due to the habit of his thievish nature brought from birth, began to plot: "How can I kill this woman and take these ornaments?" Having thought of a ruse, one day he refused food and lay on the bed, whereupon the merchant's daughter came and asked: "Why, my lord, is it an illness?" "No," he replied. "Are you displeased with my parents?" "No," he said. When she asked, "Then what is it?" he said, "On the day I was being taken to be executed, I made a vow to make an offering to the deity residing at the mountain called 'Thieves' Cliff' (*Chorapapāta*), where thieves are thrown down to their death." "It is as a result of that vow that I was released and obtained you." When she asked, "What is required for that offering?" he replied, "Prepare waterless milk-rice (milk-rice prepared without adding water) and roasted paddy with five-fold flowers, etc." Thinking that it was no major task, she prepared those items. But the thief said, "Now, do not go with relatives or attendants. Let the two of us go there together. Also, come well-adorned with your ornaments. We can also make it a pleasure trip." In this manner, they set out. Having arrived, and climbing to the top, he said, "Now, stop the carriage and the attendants here. Let just the two of us go up."</p>
+<p>Handing the vessel of offerings to the merchant's daughter to carry on her head, they climbed up the mountain. One side of that mountain could be climbed, while the other side was a sheer precipice. Beyond that was where thieves were thrown off to their death. That is why it was called *Chorapapāta Pabbata* (Thieves' Cliff Mountain) in those days, as a place of punishment. After they ascended, when she said, "Now let us perform the offering ritual," the thief replied, "I did not come for that. I came with a different intention: to take your ornaments and kill you." She said, "Whose are these ornaments? Whose am I? Why do you do this?" He replied, "I do not understand all that. I am not accustomed to stealing without killing." When he said, "Remove your ornaments and get ready now," she realized: "Now an extremely dangerous situation has come upon me."</p>
+<p>"Wisdom is not something cooked and eaten. It is at times like this that wisdom is needed." Realizing this, through her presence of mind, she thought of a strategy. Thinking it over, she said, "This is my last sight of you. Therefore, grant me a single boon: let me circumambulate you, pay my respects, and embrace you while still wearing these ornaments." The thief agreed to this. She also said, "I need to see you clearly." So the thief climbed to the very edge of the cliff and stood there on top of the mountain. Under the guise of circumambulating him three times, she got behind him, grabbed his body firmly, and pushed him down from the mountain; the thief fell and was completely crushed to death. It is further said that the deity residing on that mountain, having witnessed the actions of these two, praised her presence of mind and uttered a certain verse:</p>
+<p>> *Na so sabbesu ṭhānesu, puriso hoti paṇḍito;*</p>
+<p>> *Paṇḍitā hoti nārīpi, tattha tattha vicakkhaṇā.*</p>
+<p>"Man is not wise in all situations. Even a woman can be wise in various matters when she possesses discerning intellect."</p>
+<p>After things happened in this way, this young woman thought: "If I go home, my parents will scold me. Even if I say my husband tried to kill me for my ornaments, they might not believe it. What shall I do now?" Wandering far away along a forest path, she reached an ascetic hermitage (*paribbājakārāma*) belonging to the Nigaṇṭhas (Jains). Going to this hermitage where white-robed (*Svetāmbara*) Nigaṇṭha female ascetics lived, she asked to be ordained. When asked what the monastic practice belonging to that hermitage was, she was told that one of them was plucking out the hair with pincers; she gave her consent to that too. Her hair was plucked out. It is said that because the hair that grew back afterwards was curly, she was called "Kuṇḍalakesā" (Curly-hair). Her previous name was Bhaddā. The name "Bhaddā Kuṇḍalakesā" is what is mentioned in the Sutta discourses. When she asked the ascetics, "What do you teach?" they informed her: "We teach absorptions (*jhāna*), etc., and on the other hand, we teach a thousand systems of debate, in which proficiency can be attained." So she learned the arts of debate and went around the villages, market towns, and cities of India in those days, debating with those accepted as scholars in those areas. That is what she did after learning debate. It is said she was also known as *Jambū Paribbājikā* (Rose-apple Wanderer).</p>
+<p>When going to those villages and market towns, she customarily used a rose-apple branch as a challenge. Before going for almsround (*piṇḍapāta*) in a city or market town, she would make a mound of sand at the city gate, plant the rose-apple branch on it, and tell the nearby children: "If there is anyone who wishes to debate with me, let them throw down this rose-apple branch." She would leave it like that for seven days. No one wished to accept that challenge. This was because by then, she had won debates everywhere. In this way, several years must have passed. According to the story, on one occasion she arrived at the city of Sāvatthī, set up a sand mound and planted the rose-apple branch near the city gate in that manner, and went for alms. Meanwhile, Venerable Sāriputta, returning after his almsround, saw this rose-apple branch. Seeing children gathered around it, he asked what it was, and the children explained the situation. Venerable Sāriputta said, "In that case, kick down that rose-apple branch." When they said, "We are afraid to do that," he replied, "No, no, I am telling you to do it. I will take care of it." When he said something like that, the children kicked down the rose-apple branch. When the wanderer returned, she blamed the children, saying, "I have no debate with you!"</p>
+<p>So, after being told of the event, she went looking for Venerable Sāriputta. Prior to that, making a great clamor in the city, proclaiming loudly, "Behold, I am going to debate with the ascetics of the Sakyan clan!" she went to the place where Venerable Sāriputta was residing. As mentioned here, he was seated under a tree in the evening. Having gone there to begin the debate, when she asked whose turn it was to question, the female wanderer took the opportunity and asked all one thousand questions of debate. Venerable Sāriputta answered every single question correctly. Next, when it was Venerable Sāriputta’s turn, saying "I too shall ask a question," he asked just one question.</p>
+<p>"Ekaṃ nāma kiṃ?"—"What is one?" he asked. That question is mentioned in Dhamma literature as one of the ten questions asked by the Buddha to ordain Venerable Sopāka, who attained Arahantship at the age of seven. The standard answer for "Ekaṃ nāma kiṃ" is "Sabbe sattā āhāraṭṭhitikā"—"All beings subsist on nutriment." But Kuṇḍalakesā knew nothing of this. She was bewildered by it; she did not understand it. Confessing, "I do not understand what that is," she admitted defeat and asked him to explain it to her. Venerable Sāriputta said, "This is what is called a Buddha-question." "To explain a Buddha-question, one must receive ordination," he said. She agreed to this. Venerable Sāriputta sent her to a nunnery (*bhikkhuṇī-upassaya*) and had her ordained as a Bhikkhuṇī (nun). Next, this nun, Kuṇḍalakesā Bhikkhuṇī, listened to the Dhamma from the Buddha. As it is mentioned, immediately upon hearing the discourse, she attained the stage of Stream-entry (*Sotāpanna*). Furthermore, while pouring water to wash her feet, observing the water flowing away, she very quickly realized the fruit of Arahantship. She attained Arahantship.</p>
+<p>On the basis of this event, it is mentioned that a discussion arose among the Sangha about how this Bhikkhuṇī Kuṇḍalakesā, recalling her past history, understood the Dhamma so quickly. They expressed wonder at this: "While as a layperson, she fought such a great battle with a thief and won it!" In this way, they were speaking about her. Having heard this news, the Buddha uttered the two verses we mentioned earlier:</p>
+<p>> *Yo ce gāthāsataṃ bhāse, anatthapadasaṃhitā,*</p>
+<p>> *Ekaṃ dhammapadaṃ seyyo, yaṃ sutvā upasammati.*</p>
+<p>"Monks, though one should recite a hundred verses comprising meaningless words, far better is a single word of the Dhamma [teaching/discourse] that brings about peace and stilling. That is the first verse." Next is the second verse:</p>
+<p>> *Yo sahassaṃ sahassena, saṅgāme mānuse jine;*</p>
+<p>> *Ekañca jeyyamattānaṃ, sa ve saṅgāmajuttamo.*</p>
+<p>"Though one should conquer a million men in battle—even if a single individual conquers a million men—far nobler is he who conquers himself. He indeed is the supreme warrior," the Buddha declared. If we consider the facts based on these two verses, it is first of all mentioned in Dhamma literature that this Kuṇḍalakesā attained the foremost position among the Bhikkhuṇīs of this Buddha-sāsana who possess swift intuition (*khippābhiññā*—understanding the Dhamma instantly). From this, it is evident that it was precisely due to the incident of her quick attainment of Arahantship that she received this foremost position.</p>
+<p>It is also said that from a very distant past, starting from the dispensation of Buddha Padumuttara, Therī Bhaddā Kuṇḍalakesā had received definite predictions to obtain the foremost position among the nuns who possess swift intuition (*khippābhiññā*) in this dispensation of the Buddha. Just as the ascetic Bāhiya Dārucīriya received the chief position on that side—for swift comprehension of the Dhamma. From the events of her lay life as well, we can understand that she was a person of great comprehension and presence of mind. Furthermore, having learned a thousand debates, she went around Jambudvīpa winning in various places. It was the highly wise Venerable Sāriputta who was finally able to tame her. Therefore, we can understand that, in accordance with some past meritorious power, she had attained the capacity for swift comprehension of the Dhamma.</p>
+<p>When we reflect on this matter, we see that swift comprehension is indeed a marvelous thing, worthy of special mention. However, in these times, some people think that just by hearing a single word of Dhamma, anyone can realize the Dhamma in this manner. As for the reason for this, we can think of it in this way: nowadays, with the advancement of science and technology, many people try to impose the stimulated concept of "instantaneity" onto spiritual life as well. This is not such an easy thing. Only if a person's faculty of wisdom has been developed through the long-term perfection of *Pāramīs* can they comprehend the supramundane Dhamma instantly in that manner. Otherwise, it is impossible to measure this matter of wisdom with mundane criteria. To put it briefly, there are certain deep Sutta discourses nowadays, like the Bāhiya Sutta and other special Suttas, which are extremely short. Scholars must have read them twenty or thirty times. But they have still not realized the Dhamma. From that itself, it is evident that thinking of oneself as belonging to the category of *khippābhiññā* (possessing swift intuition) is a form of delusion. Furthermore, because of this matter, we can bring out some important Dhamma points for this venerable audience to consider.</p>
+<p>The Buddha has generally shown four modes of practice (*paṭipadā*). Depending on the character and abilities of each individual, they can be divided into four modes of practice: painful progress with slow intuition (*dukkhā paṭipadā dandhābhiññā*), painful progress with swift intuition (*dukkhā paṭipadā khippābhiññā*), pleasant progress with slow intuition (*sukhā paṭipadā dandhābhiññā*), and pleasant progress with swift intuition (*sukhā paṭipadā khippābhiññā*). Thus, they are made into four divisions.</p>
+<p>To consider it briefly, the analysis of painful progress and pleasant progress is done in this way. For those whose progress is painful, it is shown that in the Dhamma, when establishing the mind on Nibbāna, or for the penetration of the Path and Fruits, they have to undergo considerable training. Meditation topics of this nature: *asubhānupassī kāyasmiṃ viharati*—one must dwell contemplating the foulness of the body; likewise, *āhāre paṭikūlasaññā*—one must develop the perception of repulsiveness in food; *sabbaloke anabhiratasaññā*—one must dwell with the feeling of non-delight, of disillusionment, towards the entire world; *sabbe saṅkhāresu aniccasaññā*—in accordance with this, one must develop the perception of impermanence / inconstancy [Anicca] in all preparations / preparations / volitional activity [Saṅkhāra]; next, *maraṇasaññā*—in this manner, mindfulness of death must constantly be established. Training in this way, so that the nature of suffering / unsatisfactoriness / stress [Dukkha] in this world penetrates the mind deeply, is what is called painful progress (*dukkhā paṭipadā*). Its opposite is called pleasant progress (*sukhā paṭipadā*). It is shown that if a person has attained the first, second, third, and fourth absorptions (*jhāna*), it is very easy for them. From the very attainment of those absorptions, it is clear that defilements such as the hindrances (*nīvaraṇa*) are suppressed. This indicates that for certain individuals who have well-developed those absorptions, this progress is pleasant.</p>
+<p>Next, regarding comprehension, the matter of "slow intuition" (*dandhābhiññā*) is pointed out. There it is shown that what helps for that comprehension of the Dhamma is what we always mention at the end of Dhamma sermons: faith (*saddhā*), energy (*viriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*)—these five are what assist in this comprehension of the Dhamma. What is the cause of that slow intuition? It is when those five spiritual faculties (*indriya*)—faith, energy, mindfulness, concentration, and wisdom—are in a soft, undeveloped, or immature state. "Khippābhiññā" (swift intuition) occurs when those five faculties (*pañcindriya*) have fully matured. Then, those who have pleasant progress and swift intuition (*sukhā paṭipadā khippābhiññā*) are skilled in both aspects. They have strong power of absorption (*jhāna*). Also, regarding comprehension, their five faculties—faith, energy, mindfulness, concentration, and wisdom—are highly developed. It is in this sense that the progress is divided into four.</p>
+<p>The Buddha has shown that when we consider individuals, they too can be classified into four types: *ugghaṭitaññū, vipañcitaññū, neyya, and padaparama*. *Ugghaṭitaññū* means those who comprehend the Dhamma the moment it is briefly indicated, even by a small hint. We can think of Bāhiya Dārucīriya, and also Bhaddā Kuṇḍalakesā in this regard. Such individuals can understand the Dhamma very easily. For them, even an extremely short discourse by the Buddha is sufficient. Next, *vipañcitaññū* refers to those who realize the Dhamma after a detailed discourse. The *neyya* person is of a lesser category of individual than that. The *neyya* person has to be led as if by the hand; the Dhamma must be explained to them constantly. They need to ask questions. Furthermore, they must associate with noble friends (*kalyāṇa-mitta*). They must engage in wise attention / radical attention [Yoniso manasikāra]. Only after doing many such activities can that person attain comprehension of the Dhamma. Concerning the *padaparama* (one for whom the word is the maximum) person, it is stated in the Dhamma as follows: even if that person memorizes the Dhamma, due to some lack of supportive past conditions, they cannot realize the Paths and Fruits in this life. No matter how much they learn, or how well they memorize the Dhamma, they cannot realize the Paths and Fruits in this life. Yet, a *padaparama* person should not give up, because the effort made in this life will serve as a support for the next life. Thus, the four types of individuals are presented.</p>
+<p>Looking at this, those who think of themselves as *ugghaṭitaññū* (possessing instant realization) do not want to start from the alphabet level. But in reality, do they belong to that category? Indeed, those who dwell in such conceit can never understand this Dhamma. They must humbly return to the very beginning. Because they must come to the threefold training (*tividha-sikkhā*) of virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*). Precisely due to their learning, some think: "Faith and virtue are teachings meant for foolish lay-devotees." "These are of no use to us. We are highly intellectual people. What we need is that when a single word is said, we understand everything." Rejecting that basic, gradual path of practice, they carry wisdom on their shoulders and expect liberation through that alone. As we said before, this is an overrunning of the concept of "instant gratification" found in science and technology.</p>
+<p>We all know that in this era of the decline of the Sāsana, and even when we consider the environment, this is not an era favorable to spiritual life. Likewise, we must accept that if those who could understand quickly were rare even in the Buddha's time, they must indeed be extremely rare in this day and age. Therefore, we should not take these matters too lightly. If we take them casually, we will never obtain results. We must humbly return to the very beginning and do what needs to be done first, first. The Buddha too has stated that if someone abandons what should be done first and leaps into other things, they will have to regret it someday. That is a point we can consider in this regard. We stated this based on the meaning of the first verse: rather than a hundred verses of no benefit or purpose, a single word of the Dhamma leading to the comprehension of Dhamma, stilling (*vūpasama*), and calming, is superior.</p>
+<p>Indeed, there are certain short discourses in the Dhamma through which some disciples realized the Dhamma very quickly. But for others, those must be explained in detail, and they must undergo a certain training in respect of them.</p>
+<p>Next, let us look at the idea in the second verse. Even if a certain giant or warrior conquers a million men all by himself, the one who conquers himself is said to be far nobler. What is this "conquering of oneself"? This concept presented by the Buddha is unique. Because to a world weary of bloodshed and war, the Buddha introduced the concept of conquering oneself. This can be called "self-conquest" (*ātma-vijaya*). In the world, there is the conquest of directions and countries. That conquest is achieved by killing human beings. Many hope to toast and celebrate such a victory. But the Buddha did not consider that a noble victory. Why? Not only do those individuals have to pay for the unwholesome karma (*akusala*) arising from that victory, but they also cannot obtain true liberation, solace, or peace through it. Both the victor and the defeated are helpless in the face of death. But this "conquering of oneself" pointed out by the Buddha is, in truth, the conquering of death. It is in that sense that, as we mentioned earlier, the Buddha brought words like "fight" and "battle" close to this path of practice.</p>
+<p>We all know that terms like "battle with Māra" (*Māra-saṅgrāma*) and "fight with Māra" are mentioned everywhere the path of practice is discussed. Through this, the combative nature inherent in human beings is directed towards a wholesome path. The highest, noblest victory is conquering oneself. No matter how much else one conquers, as long as one is subjected to defilements (*kilesa*), there is no real victory or solace for oneself. Not only that, due to those sinful actions, one is caught even more in those very bonds of Saṃsāra. What worldly battles do is not release one from bonds (*bandhana*), but rather multiply them. This battle pointed out by the Buddha, the battle with Māra, is one that goes towards the goal of release from bonds and conquering death. That is why there is a verse, like a battle cry, which the Buddha frequently used and approved for the daily practice of meditating monks (*yogāvacara* Sangha):</p>
+<p>> *Ārabhatha nikkhamatha,*</p>
+<p>> *Yuñjatha buddhasāsane;*</p>
+<p>> *Dhunātha maccuno senaṃ,*</p>
+<p>> *Naḷāgāraṃva kuñjaro.*</p>
+<p>"Exert! Venture forth! Engage in the Buddha's dispensation! Shatter the army of Death (*Maccu*), as an elephant crushes a reed-hut." There, an army of Māra (Death) is spoken of. That does not mean killing human beings; it refers to the defilements (*kilesa-dhamma*). In the accounts of the Buddha's Enlightenment, the army of Māra is described as: sensual pleasures, craving / thirst [Taṇhā], then discontent with the practice, hunger and thirst, doubt and skepticism (*vicikicchā*)—all such things that arise from within the mind. These defiling states (*kilesa-dhamma*) that hold one back from progressing are what are deeply shown as the army of Māra. Reflecting in this way, the defeat of Māra means conquering the host of defilements within oneself. Appropriate words for this are frequently found in the Dhamma:</p>
+<p>> *Mā nivattatha abhikkama*</p>
+<p>"Do not turn back, press forward!" Not only that, in matters concerning the Sangha, ordination is described as donning armor—like receiving armor for the battle with Māra. It is as armor for this battle against defilements that the Sangha wear the robes—not for anything else, not for any other battle. Such a concept is seen in this Dhamma.</p>
+<p>The value of this self-conquest must also be contemplated. Since the desire for victory has existed in everyone since ancient times, they either conquer countries in all directions through world conquest (*dig-vijaya*), or reaching the limits of the ocean, they then conquer countries beyond the ocean. Then, when even that is not enough, they seek to conquer the stars and planets in the sky. No matter how they achieve victory, they are all subject to death. Even if one goes to the moon and returns—we all know about the heroes who went to the moon and came back. But we have not yet heard that they became immortal.</p>
+<p>Thus, looking at it in that way, it was this conquest of oneself that the Buddha presented to the world as the supreme concept. Conquering oneself is, in truth, conquering death. By overcoming ignorance (*avijjā*) and craving / thirst [Taṇhā], and thereby conquering this host of defilements, one can stand unshaken in the face of death. Having no further rebirth, and because of abandoning craving / thirst [Taṇhā] and grasping / holding / fuel [Upādāna], that person obtains true solace. That is why the Buddha pointed to this as the highest victory. Now, for that victory, just as for a battle, an army organization is necessary. If we turn our attention to that required army organization—speaking in the military terminology fitting for these times—the Buddha has presented a valuable system of Dhamma groups regarding army organization.</p>
+<p>We can identify this army organization as the "Thirty-Seven Requisites of Enlightenment" (*sattis-bodhipakkhiya-dhamma*). They are so important that, as mentioned in the *Mahāparinibbāna Sutta*, at the time of passing away, the Buddha summarized everything he had taught up to then—not as a pile of books to be kept in libraries, not in the way we describe Dhamma nowadays, but in a practical sense. He declared: "Monks, those Dhammas which have been directly known and taught by me, namely..." and he mentioned these: the Four Foundations of Mindfulness (*cattāro satipaṭṭhānā*), the Four Right Efforts (*cattāro sammappadhānā*), the Four Bases of Power (*cattāro iddhipādā*), the Five Faculties (*pañcindriyā*), the Five Powers (*pañca balā*), the Seven Factors of Enlightenment (*satta bojjhaṅgā*), and the Noble Eightfold Path (*ariyo aṭṭhaṅgiko maggo*). According to this, it is these seven groups of Dhamma that we can think of as the Buddha's army. It is these that we must develop within our minds. There is a training here that begins with the Four Foundations of Mindfulness and culminates in the Noble Eightfold Path.</p>
+<p>If we analyze it in the same way, now you all know the Four Foundations of Mindfulness very well. Contemplation of the body (*kāyānupassanā*), contemplation of feeling / sensation [Vedanā] (*vedanānupassanā*), contemplation of the mind (*cittānupassanā*), and contemplation of mind-objects (*dhammānupassanā*)—this basic training is the primary military training received by the warrior of the meditating monk (*yogāvacara*). It is on the ground of the Four Foundations of Mindfulness that the first training is received, the military training is obtained. Through that exercise, the meditating warrior brings forth the fourfold energy called the Four Right Efforts (*cattāro sammappadhānā*). If we mention that fourfold energy in brief, it is as follows: to prevent the arising of unarisen unwholesome states, to abandon arisen unwholesome states, to arouse unarisen wholesome states, and to maintain and consolidate arisen wholesome states. This fourfold energy is what the meditator develops through training on the ground of the Four Foundations of Mindfulness. Next, through that very energy, the meditator is able to realize what the strategies are to win this battle.</p>
+<p>Let us say there are four strategies to win this battle. What are those four? They are the Bases of Power (*iddhipāda*). Venerable ones, "iddhi" does not mean merely flying through the air. It refers to the power to fulfill a certain hope, the idea of achieving success. So, *iddhipāda* means the paths to success. The Buddha has presented four paths leading to successful achievement. These can be understood to a certain extent even in relation to mundane matters, not only supramundane ones. What are they? Desire (*chanda*), energy (*viriya*), mind/consciousness (*citta*), and investigation (*vīmaṃsā*). *Chanda* means a strong aspiration or willingness. If one has a strong willingness for something, by putting that willingness forward and placing it in the forefront, one can fulfill one's hopes and overcome a problem. Likewise, *viriya* means energy. There are certain energetic temperaments who can endure anything without fear, disregarding body and life. The *viriya-iddhipāda* (base of power of energy) suits those of energetic temperament. There are some who can realize Nibbāna and perform meditation activities, etc., by making energy primary. *Citta* means the power of determination/mind. There are some who give foremost place to determination: "If I have made up my mind, I will not give up; I will not stop somehow or other." We can call that too a battle strategy. Finally, *vīmaṃsā*: investigative wisdom. There, the meaning is wisdom. Wisdom. Those who have the power of wisdom bring forward investigative wisdom. It is stated in the Dhamma that even if one has just one of these four kinds of *iddhipāda*, it is sufficient to win on the battlefield. Even if one does not have all four, depending on the temperament of each individual, some make *chanda* (desire) primary. Venerable Raṭṭhapāla, for instance, went in accordance with faith, making *chanda* primary to achieve his goal of Nibbāna. Similarly, some make energy primary, and so on.</p>
+<p>Next are the Five Faculties and Five Powers (*pañcindriya, pañca balā*). Going further, we can understand that according to this analogy, what is spoken of here are not the mundane "five powers." One must arouse and produce five faculties (*indriya*). Those five faculties are what we mentioned earlier: faith, energy, mindfulness, concentration, and wisdom—the five faculties/powers that assist in achieving the task of Nibbāna and seeing Nibbāna. These are developed as faculties (*indriya*) and, likewise, with their help, in the sense of conquering opposing states, those same five are shown as "powers" (*bala-dhamma*). Under both faculties and powers, those five—faith, energy, mindfulness, concentration, and wisdom—are mentioned. Next, once they are all well developed and sharpened, on the basis of that strength, seven factors that aid Enlightenment are lined up. Those are the seven: mindfulness (*sati*), investigation of states (*dhamma-vicaya*), energy (*viriya*), joy (*pīti*), tranquility (*passaddhi*), concentration (*samādhi*), and equanimity (*upekkhā*). Those seven factors of enlightenment (*bojjhaṅga*) are very close to Nibbāna. When those seven factors of enlightenment are developed, it is as if one is close to Nibbāna. Having completed their development, the "final operation"—to use modern terminology—is indeed the Eightfold Path.</p>
+<p>The final operation employed for this victory over Māra is indeed the Noble Eightfold Path. That is why we always speak of the Noble Eightfold Path. Sometimes other things are forgotten. That is why even scholars forget that one must begin with the Four Foundations of Mindfulness. We frequently use the term "Noble Eightfold Path." But to reach that level, one must come from that very beginning. One must obtain training on that battlefield. That is what we are specifically reminding you of. What is this Noble Eightfold Path? It is a path of completely integrated, wonderfully great power. Now, in other places, these are introduced individually and separately. From the way those Pāli words are used—such as *cattāro satipaṭṭhānā*, *cattāro sammappadhānā*, etc.—we see that they are introduced as if separated. But concerning the Noble Eightfold Path, it is expressed as *ariyo aṭṭhaṅgiko maggo*. This is shown as a single unit. These eight are fully integrated and linked to one another. This is the final operation. Indeed, it is a completely interconnected, immensely powerful process that is shown under the name of the Noble Eightfold Path.</p>
+<p>Now, if we look, in the Noble Eightfold Path there is also Right Mindfulness (*sammā-sati*). In that case, can someone who has not developed the Four Foundations of Mindfulness have Right Mindfulness? No, indeed. That is why we say everyone must understand that the Four Foundations of Mindfulness is the place where the basic training on the battlefield is received. That is exactly what the Buddha told Venerable Sāriputta: "Establish every newly ordained monk in the Four Foundations of Mindfulness." In modern times, perhaps, they are established in it only at the very end. But the Buddha told Venerable Sāriputta: "Sāriputta, establish everyone who is newly ordained in this dispensation in the Four Foundations of Mindfulness." The final operation of that basic training—the power gained from it—is: the four right efforts emerged as *sammappadhāna*; those four strategies emerged as *iddhipāda*; then, having developed the faculties, powers, and factors of enlightenment, the special alignment necessary for comprehension. After developing those teachings, the very energy that has been filtered and seasoned through them is what helps one towards Nibbāna as the Noble Eightfold Path.</p>
+<p>You all know about the Noble Eightfold Path. The ordinary world has a superficial understanding of it, thinking of Right View (*sammā-diṭṭhi*), Right Intention (*sammā-saṅkappa*), and so on, in a mundane way. If taken deeply, "Right View" is to be understood as the comprehension of the Truth. Among those, the ten-fold mundane Right View is the Right View relevant to ordinary Saṃsāra. But what helps for release from Saṃsāra is the correct vision regarding the Four Noble Truths. Making that correct vision primary, it goes all the way to correct thoughts and intentions; in accordance with those thoughts and intentions, as we frequently mention, correct speech and action; in accordance with those, correct livelihood; through that livelihood, correct effort; through correct effort, correct mindfulness—*sati*, good mindfulness—and finally, Right Concentration (*sammā-samādhi*), which is the unification of the mind.</p>
+<p>That supramundane path-concentration (*magga-samādhi*) is indeed the most powerful concentration in the world. It is through that path-concentration that instantly... we can describe the Noble Eightfold Path as a high-speed path. It is direct. Precisely because it is direct, the Buddha has declared that this is a straight path.</p>
+<p>> *Ujumaggamhi asaṅkhate, gacchatha mā nivattatha.*</p>
+<p>"On the straight path to the Unprepared / Unconditioned / Uncompounded [Asaṅkhata], go, do not turn back!" The Buddha has declared: "*gacchatha*"—go on, or march forward, on the straight path. "*mā nivattatha*"—do not turn back. Do not retreat. Why? Because it is a path that can be traversed with such fearlessness. But since some devotees come and ask us about this Noble Eightfold Path as an additional question, we shall try to clarify that too on this occasion.</p>
+<p>Now, the word "magga" (path) is also applied to the Four Foundations of Mindfulness. You may have heard that the Satipaṭṭhāna Sutta discourse begins with:</p>
+<p>> *Ekāyano ayaṃ, bhikkhave, maggo sattānaṃ visuddhiyā, sokaparidevānaṃ samatikkamāya, dukkhadomanassānaṃ atthaṅgamāya, ñāyassa adhigamāya, nibbānassa sacchikiriyāya.*</p>
+<p>That is how it begins. So, what is this "*ekāyana*" path? This is interpreted in various ways. Is this the "sole" path? If this is the sole path, why did the Buddha state elsewhere regarding the Noble Eightfold Path:</p>
+<p>> *Eso'va maggo natth'añño, dassanassa visuddhiyā.*</p>
+<p>"This is the path, there is no other, for the purification of vision." Thus, the Buddha declares this regarding the Noble Eightfold Path itself.</p>
+<p>In that case, what is meant here by "*ekāyana maggo*"? That word must be understood in the correct manner. "*Ekāyana*" means, venerable ones, a path that has no branchings in between, which can be traversed with absolute certainty. If there were branchings in between, upon reaching them, one would have to ask, "Where do we go from here?" "*Ekāyana*" means this path goes and merges straight into the Eightfold Path. The path that begins with the Four Foundations of Mindfulness merges straight into the Noble Eightfold Path. It does not wander here and there. It is in that sense, venerable ones, that this is called the "*ekāyana*" path. That is exactly what is said there: *Ekāyano ayaṃ, bhikkhave, maggo sattānaṃ visuddhiyā*—for the purification of beings, *sokaparidevānaṃ samatikkamāya*—for the overcoming of sorrow and lamentation, for the ending of suffering / unsatisfactoriness / stress [Dukkha] and grief, *ñāyassa adhigamāya*—for attaining the Method (*Ñāya*). "*Ñāya*" refers to that very Noble Eightfold Path. It is a name for the Noble Eightfold Path. It is the supramundane Noble Eightfold Path itself that is called "*Ñāya*." Thus, it is a path that leads surely to obtaining the Noble Eightfold Path. Finally, *nibbānassa sacchikiriyāya*—for the realization of Nibbāna.</p>
+<p>It is by confusing these two that some people have created problems. "Are these two different paths?" Merely because "*ekāyana*" is said there, it does not mean "only path" in that sense. That is what must be kept in mind. This is a certain path. This is a path that does not turn off into side-roads. It goes and merges straight into the Noble Eightfold Path. That merging occurs only if one develops it in that manner. It is not something that proceeds through books. Practically, it is something that happens within the heart. It is an internal development of the path. That is precisely why we said it is like military training. Having received that military training in the Four Foundations of Mindfulness, in the end, a good army division is formed, and finally, the final operation is the Noble Eightfold Path—the supramundane Noble Eightfold Path.</p>
+<p>That is how the battle must be won. That too, in four stages. In the stages of Sotāpanna, Sakadāgāmi, Anāgāmi, and Arahant, the path-mind (*magga-citta*) becomes progressively powerful. The path-mind in the first stage (Sotāpanna) is surpassed in strength in the second stage; in the third stage of Anāgāmi, it is even more powerful. It is in the fourth stage (Arahant) that, having destroyed all defilements and shattered that mass of darkness, one breaks through ignorance (*avijjā*), which the Buddha described as an impenetrable mass of darkness. If we speak merely by way of metaphor, we say "entering the City of Nibbāna." We say "City of Nibbāna" only as an analogy. We ourselves do not endorse treating it as a literal city. But in terms of the metaphor used, in terms of this analogy, the final operation of that army organization goes and breaks down the gate—like breaking down the gate of Vijitapura—breaks through, and behold! Finally enters the City of Nibbāna, or rather, realizes Nibbāna.</p>
+<p>We are speaking by putting this concept of battle in the forefront, because the concept of battle is appealing to the human mind. Also, we know that if a small child is fond of something, to draw them away from it, we must give them something similar. Similarly, we know that throughout history, human beings have made efforts, enduring pain and hardships, to attain world domination and empires, in order to cultivate the pride of victory. In that respect, even history recognizes Emperor Dharmāsoka as the greatest hero of all history. Although he achieved victory by killing hundreds of thousands of people, he abandoned that after discovering this conquest of Dhamma (*dhamma-vijaya*), or rather, this self-conquest (*ātma-vijaya*), once he turned to the side of the Dhamma. From that too, it is understood that conquering oneself is supreme.</p>
+<p>Accordingly, we must reflect, we must adjust our thinking if there are shortcomings, and we too must give foremost place to the Buddha's word. We must give the Buddha's Dhamma a place superior to all other mundane concepts. That is how we must think. One can make that "conquering of oneself" meaningful in that manner. Indeed, it is when a battle comes that one's own strength is brought out. That is exactly what is presented by that concept of Māra. Sometimes, when a defilement arises, even the Buddha would declare... because when one just says "it is a defilement," it does not strike the mind. But the moment he says, "Look, monk, there is Māra! Māra is right there!" that monk becomes vigilant. As said, there is an ascription of personality there. That helps to prepare our mind. Since saying we are fighting with lifeless mental states does not strike the heart, we personify them and call them "Māra." Utilizing even that support, in whatever way, this is all there is to do: to escape from this Saṃsāra. To conquer death. That is what is called self-conquest—conquering oneself. That is the concept we must develop.</p>
+<p>So, through this, we can bring out many valuable points, many valuable things. As we mentioned, some scholars in these times have created another problem: "Now, the Noble Eightfold Path begins with Right View." It is analyzed in this way: "Right View and Right Intention belong to the wisdom group (*paññā-kkhandha*); Right Effort, Right Mindfulness, and Right Concentration belong to the concentration group (*samādhi-kkhandha*)." Looking at it in that way, first comes wisdom, then virtue, and then concentration. Taking that logically, some try to give foremost place to this wisdom. But that is a completely wrong understanding.</p>
+<p>It is mentioned in the Dhamma itself. On one occasion, Bhikkhuṇī Dhammadinnā, in response to a question by her former lay husband, Visākha Upāsaka, says the following (mentioning it briefly due to time constraints): what is the question? Visākha Upāsaka asks: "Noble Lady, is the threefold training of virtue, concentration, and wisdom included in the Noble Eightfold Path, or is the Noble Eightfold Path included in the threefold training of virtue, concentration, and wisdom?" He asked this because even in the past, there were questions just like the ones we have today. What is the answer to that? The threefold training of virtue, concentration, and wisdom was not arranged by the Noble Eightfold Path; rather, the Noble Eightfold Path was arranged under the three groups of virtue, concentration, and wisdom. Through this, we must understand that the division into virtue, concentration, and wisdom is more primary than the Noble Eightfold Path. It is to that division that foremost place must be given. Just as we give foremost place to it, we must also give it place at the end.</p>
+<p>That is why, in the poignant account showing how the Buddha, even with such a severe illness, journeyed from village to village, we find a passage where he preached the entirety of the Dhamma in brief:</p>
+<p>> *Iti sīlaṃ, iti samādhi, iti paññā. Sīlaparibhāvito samādhi mahapphalo hoti mahānisaṃso. Samādhiparibhāvitā paññā mahapphalā hoti mahānisaṃsā. Paññāparibhāvitaṃ cittaṃ sammadeva āsavehi vimuccati.*</p>
+<p>In a single passage, he summarized and showed the entire Dhamma: "Such is virtue, such is concentration, such is wisdom." Concentration fully developed through virtue is of great fruit and great benefit. Wisdom fully developed through concentration is of great fruit and great benefit. Next, *paññāparibhāvitaṃ cittaṃ*—the mind developed through wisdom, the mind grown in accordance with wisdom, *sammadeva āsavehi vimuccati*—is fully liberated from the taints (*āsava*). That is a passage summarizing the entire Dhamma. Based on that, we can surely understand that the three—virtue, concentration, and wisdom—are primary. The Noble Eightfold Path is something built on that, arising through it.</p>
+<p>Likewise, we must understand that when we speak of a "path," Right View (*sammā-diṭṭhi*) must naturally come to the beginning. Even if we think of a gradual transformation of personal character, that too must begin with Right View. It is in accordance with one's view (*diṭṭhi*) that one's thoughts and intentions arise. In accordance with thoughts and intentions, words are spoken. In accordance with words, actions are performed. It is because of this systematic, gradual path of practice, which is connected in a wonderfully interconnected manner, integrated and organically blended, that it is called *ariyo aṭṭhaṅgiko maggo* (the Noble Eightfold Path). It is shown as a single unit, whereas the others are shown separately. Although the four foundations of mindfulness, the four bases of power, and so on are listed separately, in the end, the Noble Eightfold Path is a single unit. When the supramundane path arises, it happens so instantly that all those eight factors arise in a single mind-moment. That instant moment where all eight factors arise simultaneously in a single mind is the powerful concentration: the path-concentration. It is through that concentration that one can realize the Unconditioned.</p>
+<p>It is precisely because you all ask questions in various ways regarding this path of Dhamma that we summarized and presented many facts in accordance with this topic. You must reflect on this, not letting these matters remain limited to books, but practically drawing them close to your daily life, and proceeding on your path of virtue, concentration, and wisdom. Depending on your respective abilities—if not *ugghaṭitaññū*, then *vipañcitaññū*; if not that, then *neyya*—in whatever way, aligning with your capacity and putting forth maximum energy in these final times of the Buddha's dispensation, dedicating a place greater than for anything else to this task, may this Dhamma sermon surely serve as a supportive condition for you to escape from this extremely dangerous Saṃsāra, to practice this listening, meditation, virtue, concentration, and wisdom, and to bring an end to this suffering / unsatisfactoriness / stress [Dukkha] of Saṃsāra. Wish and aspire in this manner.</p>
+<p>If, through this, you have developed the spiritual faculties and powers of faith, energy, mindfulness, concentration, and wisdom, may that surely serve as a strong support (*upanissaya*) for you to realize the Paths and Fruits in this very life, with the help of the association with noble friends. Not only that: if any wholesome store of merit has been gathered through this Dhamma sermon in this seen and unseen world, may all beings, from Avīci to Akaniṭṭha, including the deceased relatives in whose names we do so, who wish to rejoice in this merit of listening to and delivering the Dhamma, rejoice in it likewise; and, with the help of that store of merit, may they as quickly as possible escape from all the suffering / unsatisfactoriness / stress [Dukkha] of Saṃsāra—such as birth / arising [Jāti], decay, aging, and death [Decay and Death / Aging and Death / Jarāmaraṇa], sickness, and so forth—and find solace in the supreme, deathless Nibbāna! Reciting these verses, let us share the merits.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_070.html" class="doc-btn">← Previous Sermon (070)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_072.html" class="doc-btn">Next Sermon (072) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

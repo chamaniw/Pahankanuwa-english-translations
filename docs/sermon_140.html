@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 140 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_139.html" class="doc-btn">← Previous Sermon (139)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_141.html" class="doc-btn">Next Sermon (141) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 140</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_140_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_140_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_140_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #140</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.133)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Na paresaṃ vilomāni,</p>
+<p>na paresaṃ katākataṃ;</p>
+<p>Attano va avekkheyya,</p>
+<p>katāni akatāni ca.</p>
+<p>From:</p>
+<p>Dhammapada Verse 50 (Puppha Vagga)</p>
+<p>Dear Listeners,</p>
+<p>Today, this Poson Full Moon Poya Day, is a day on which the attention of everyone is focused on the future of the Buddha Sāsana in this country. It is an occasion when the responsibility to protect the heritage of the Buddha Sāsana, which we received from the great Arahant Mahinda, arises in the hearts of everyone. Therefore, today we intend to present a stanza and a story appropriate for this occasion.</p>
+<p>The Blessed One expounded this stanza concerning an Ājīvaka ascetic named Pāṭika. In Sāvatthī, a certain housewife was supporting Pāṭika, an Ājīvaka ascetic—'Ājīvaka' refers to a non-Buddhist ascetic of that time—treating him like her own son. When this housewife’s neighbors returned after listening to the Dhamma from the Blessed One, and frequently praised the virtues of the Buddha and the Dhamma, this lay woman also felt a desire to go to the monastery and listen to the sermon from the Blessed One. When she went and told this to the Ājīvaka, he immediately said, "Do not go." Although she asked for permission repeatedly, the Ājīvaka did not grant it. This housewife then thought, "Now I must arrange a way for this without telling him. If I cannot go to the monastery, I should invite the Blessed One here." One evening, she told her son, "Go and invite the Blessed One for tomorrow's alms-giving." On his way, this boy went to meet the Ājīvaka. When he sat down, the Ājīvaka asked, "Where are you going?" When the boy explained that he was going according to his mother’s message, the Ājīvaka said, "Do not go." The boy replied, "I am afraid. My mother will threaten me and blame me." Then this Ājīvaka said, "Do not go, and let the two of us together eat the food prepared for that Ascetic Gautama." Even so, this boy did not agree and said he must go. "If so, well, it is alright if you go. But when you go, do not tell the path to come to the house, but return by another path," said the Ājīvaka.</p>
+<p>So this boy went and invited the Blessed One to visit their home, and returned in the manner he was told. On his way back, when he went to meet the Ājīvaka, the Ājīvaka asked, "How is it, did you do the job?" The boy said, "Yes, I came after doing so." The Ājīvaka said, "Good. Now the two of us can eat that alms-food." By that time, the neighbors in the village had cleaned the housewife's house—which in those days was called white-washing (plastering with white lime). They had cleaned and purified everything, prepared the Buddha’s seat, scattered the five kinds of puffed flowers, and decorated it beautifully. The Ājīvaka also left early in the morning for his disciple's house. When he arrived, they seated the Ājīvaka in an inner room of the house. While he was waiting there, the Blessed One arrived.</p>
+<p>The lay woman received the Blessed One warmly and offered the delicious alms-food with great devotion. After finishing the offering, when the time came to deliver the sermon of appreciation (*anumōdanā*), this housewife, now with great faith, began listening to the Buddha’s teaching with hands clasped in worship, saying "Sādhu, Sādhu." Hearing this, the Ājīvaka grew angry and came out of the room. He walked out of the house in anger, abusing both the lay woman and the Blessed One in harsh language. This was while the lay woman was listening to the sermon of the Blessed One. Because of this incident, the lay woman’s mind became agitated. Having her mind agitated, she was unable to pay attention to the Buddha’s teaching, to that sermon of appreciation. The Blessed One perceived this. Why? Because when the Blessed One preaches the Dhamma to someone, He preaches while observing how that person’s mind is functioning. Thus, He asked, "What is it, sister, is your mind agitated? Are you unable to concentrate your mind?" "Yes, Venerable Sir. Because the words spoken by that Ājīvaka keep coming to my mind, I cannot concentrate my mind," she replied. It was then that the Blessed One expounded this stanza. He first explained the meaning and then delivered the stanza. "It is not right, sister. You should not think of what others have done, but only of what you have done. Without directing your mind to his words, let us direct our mind to the sermon." Conveying this idea, He expounded a highly meaningful and valuable stanza in a much broader sense:</p>
+<p>> *Na paresaṃ vilomāni*</p>
+<p>> *na paresaṃ katākataṃ*</p>
+<p>> *attanova katāni akatāni ca*</p>
+<p>"Do not contemplate the disagreeable ways, the wrong behaviors of others, nor what they have done or left undone. Think only of what oneself has done or left undone." This is the brief advice.</p>
+<p>The meaning of this stanza also runs deep. Let us first try to draw what we should from that story. First, when we think about the behavior of that Ājīvaka, it serves as an example of the external dangers that have always threatened the Buddha Sāsana. During the time when the Blessed One preached the Dhamma, He had to face various troubles from Nigaṇṭhas, Ājīvakas, and other non-Buddhist sectarians, and sometimes even greater difficulties than this. Here, the Ājīvaka tried to prevent his lay follower from going to see the Blessed One, to stop her from becoming a disciple of the Buddha. When he failed in that, he employed a trick, a certain foolish trick. No one needs to show the path to the Blessed One. The Blessed One is the supreme being who knows even the path to Nibbāna. Yet, the Ājīvaka tried to make the boy not tell the way to the house, so that he could eat that alms-food. When none of these succeeded, finally, when the lay woman was listening to the Blessed One's sermon, out of jealousy, he insulted them with vulgar words and walked away. Because the neighbors of that lay disciple were strong and supportive of her, the Ājīvaka, having nothing else to do, left the house. Next, let us consider the other side of this.</p>
+<p>That housewife performed a highly meritorious deed. It was an extremely rare opportunity to invite the Blessed One, the Teacher of the Three Worlds, to one's own home and offer an alms-giving in this manner. The moment that culminates the meritorious deed of alms-giving is the moment of listening to the sermon of appreciation. It is a valuable opportunity where one can reap the fruits of alms-giving right then and there. However, this housewife failed to concentrate her mind. Due to that weakness, she was unable to focus her mind on it. But after the Blessed One expounded this stanza, she directed her mind to the correct path accordingly, and at the end of the story, it is mentioned that she, as well as the others, attained the Fruit of Stream-entry (*Sotāpatti*). Thus, we see that she derived benefit from that stanza. Instead of polluting her mind by thinking of what others had done and said, by thinking of her own meritorious deed, she generated joy and gladness regarding the meritorious deed of giving, and on the basis of that concentration (*samādhi*), she must have attained the Paths and Fruits.</p>
+<p>The manner in which one should listen when the Dhamma is being preached is constantly mentioned in the teachings. It is frequently stated of a noble disciple (*ariya-sāvaka*) or anyone listening to the Dhamma: *sabbacetaso samannāharitvā ohitasoto dhammaṃ suṇāti* (applying the whole mind, with attentive ears, one listens to the Dhamma). When one listens, thinking "This sermon is of benefit to me," contemplating word by word, and dedicating the entire mind to it, only then can one obtain a direct, experiential realization of the Dhamma.</p>
+<p>Thus, when we consider the aspect of external dangers as depicted in this story, all of you, this devout congregation, know that similar situations exist today as well. However, if we do not wisely consider the course of action to be taken regarding them, instead of the expected progress, it could lead to decline. Here, that Ājīvaka had to walk away. Likewise, if we focus only on the external and fail to strengthen the internal, it will result in the decline of the Sāsana rather than its progress. Now, let us try to bring up a small illustrative story on this point. There is a certain proverb in our society related to this story. I will not mention what that proverb is. When you finish listening to the story, that proverb will naturally come to your mind. Especially for these little lay gentlemen and little lay mothers who are to inherit the Buddha Sāsana of our small country in the future, I present this simple village tale.</p>
+<p>Once upon a time, there was a merchant in a country who made a living by carrying goods from village to village to sell them. This merchant carried his goods on the back of a donkey. During the daytime, he would travel with those goods loaded onto the donkey. He also had a dog at home to protect his wealth. This donkey and the dog were very close friends. Then, one night, a gang of thieves came to break into this house. So, the donkey said to the dog, "Look, you are here to guard this house. Why aren't you doing your job? Shouldn't you bark?" But the dog would not bark. The donkey thought, "If he is not doing it, I must do it myself, shouldn't I?" and so the donkey started screaming. What did the merchant sleeping inside the house do? He came out with the club he kept for securing the door and beat the donkey severely. In the meantime, using that opportunity, the thieves outside entered and went away with the money box and everything. So, we can draw a lesson from this. The donkey took upon himself the duty that should have been performed by the dog. Because of that, it was his own back that ultimately received the blows of the club. In this manner, we must reflect that even for the protection of the Sāsana, if we take incorrect courses of action, it will only result in the decline of the Sāsana. Therefore, we should constantly think about strengthening the internal.</p>
+<p>How do we become strong from within? On a day like this, this devout congregation has undertaken a noble precept (*sīla*) and is spending the day here to become strong from within. Here, what we have to bring to mind is that, according to the words of the Buddha, the opportune moment (*khaṇa-sampatti*) is not a secret. It is rapidly declining. How is that moment? It is like a lamp going out. Now, let us take another small illustration—not quite an analogy, but a small example. It is a lamp-lighting ceremony on a dark night at the lamp-post (*pahan kanuva*). Storms are blowing from this side and that side. The flame of the lamp dances and turns blue. It draws close to going out. What do we do? We feed some oil to the wick. Even when that does not work, we pull up the wick and pour more oil. When even that does not work, we add another wick. When even that does not work, we bring that dying lamp close to a bright lamp. Why? Because in this dark night, we can obtain light even for a short while only in this manner—this is the idea.</p>
+<p>According to this analogy, we must reflect. As those who seek to obtain light from a lamp that is flickering but prepared to go out in the midst of storms, when it is about to extinguish, we must pour in some oil of faith (*saddhā*). We know the inconstancy (*anicca*) of the wick, yet we must add another wick to increase the light. What one cannot do by oneself, one should achieve by leaning on a noble friend (*kalyāṇa-mitta*), and thereby strengthen the internal Sāsana consisting of virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*). Otherwise, there will be nothing left to protect. What remains to be protected would be a hollow shell, not a Sāsana. Therefore, we must reflect that the Buddha Sāsana is like a message that goes from heart to heart. To strengthen it, we, as Buddhists, must develop within ourselves that system of virtues aimed at Nibbāna. Then, just as lighting one lamp from another, if that dying lamp is preserved in that manner, it can provide strength to other lamps. It can provide light. It is in that manner that we have to act in this dark night. This is what is meant by becoming strong from within.</p>
+<p>Furthermore, when we contemplate this stanza expounded by the Blessed One in a broader sense, we see that a certain principle of Dhamma (*dhamma-niyāma*) is embedded within it. Here, it is said: "Do not direct your mind to the improper behaviors, the misconduct of others, and without thinking of what they have done or left undone, focus your mind on what you yourself have done or left undone." Why was this said? As we all know, generally, it is easy for us to see the faults of others. Seeing one's own faults is extremely difficult. This is stated in the Blessed One's own words in the Dhammapada:</p>
+<p>> *Sudassaṃ vajjaṃ aññesaṃ*</p>
+<p>> *attano pana duddasaṃ*</p>
+<p>> *paresaṃ hi so vajjāni*</p>
+<p>> *opuṇāti yathā bhusaṃ*</p>
+<p>> *attano pana chādeti*</p>
+<p>> *kaliṃva kitavā saṭho*</p>
+<p>The meaning of this stanza: "The faults of others are easy to see, but one’s own faults are difficult to see. One winnows the faults of others like chaff, but conceals one’s own, just as a crafty gambler conceals a losing die." These are the analogies given by the Blessed One. They are highly appropriate.</p>
+<p>In the same way, even the ancient Sinhala poets expressed this matter in another way. One's own fault is not seen, but the faults of others are very easily seen. Next, a question is asked: "Why is it that these two eyes can see the nose that is outside, yet cannot see oneself?" The eyes see the nose that is external, but they cannot see oneself. Then, is there a way to see oneself? Suppose there is a small ailment, a wound, or trouble in the eyes. How do we see it? Through a mirror. It is this analogy of the mirror that the Blessed One gave to the young Rāhula. This is represented by the word 'reflection' (*paccavekkhaṇā*), the word for 'looking back.' Here, *attanova avekkheyya* means looking at oneself. To look at oneself, something is required. A mirror is required. Thus, with that analogy, the Blessed One then illustrates how all ascetics and brahmins of the past and future corrected their own faults.</p>
+<p>A wonderful sermon has been preached regarding that principle of Dhamma. You must have heard this to some extent. Since it is relevant here as well, let us bring it forward. The Blessed One suddenly asked, "Rāhula, what is a mirror for?"</p>
+<p>"For the purpose of reflection (*paccavekkhaṇā*)." Reflection means looking back. Why does one look back? To correct any shortcoming one has. You know very well that before stepping out onto the road, one looks at a mirror to see if the face is clean, or if the clothes are worn properly. In such instances, there are mirrors that show one's entire body. That is the use of a mirror. So, the Blessed One applies that very thing here. A similar mirror exists within our minds as well. Among the mental factors (*cetasika*) related to this mind of ours, there is a certain power to look back. This is highly developed in humans, whereas it is virtually absent in animals. It is this power that we make use of.</p>
+<p>*Paccavekkhaṇa* means the power of looking back. The Blessed One declares as an instruction to Ven. Rāhula: "Rāhula, if you are to perform an action by body, before doing it, you must reflect: 'Does this action I am about to do lead to my own harm or to my own trouble? Or does it lead to the harm of others? Does it lead to the harm of both? And is it an unwholesome deed?' Thinking thus, if it is so, then 'one should by no means do it.'" One reflects wisely before acting. Next, if in any way it does not lead to one's own harm, nor to the harm of others, nor to the harm of both, and if it is a wholesome action, then "one should do it." What should not be done and what should be done was shown by the Blessed One at this first level. But in certain instances, it is difficult to decide before doing the work. There are such deeds. The side of danger in it is sometimes understood only after the work has gone some distance, because we do not possess that much strength. Now, the reason we look at the face in the mirror several times is to see whether the perfume or powder applied is correct or insufficient. If there are shortcomings, we have to look again next time. So, it is the same here. Next, the Blessed One shows that one should reflect even while performing the action. Look back at the mind. Consider whether this action being performed leads to one's own harm, to the harm of others, or to the harm of both. If it is so, stop it right there. Halt that work right there.</p>
+<p>If while carrying it out, you feel that it is not wrong but good, then continue doing it. That is not all; there is a third stage. The work is finished. After it is finished, sometimes faults that were not visible in both the previous stages might become apparent. Therefore, for the third time, the Blessed One points out that even after finishing, one must reflect: "Did this action I performed lead to my own harm, to my own decline, or to the harm of others? Did it lead to the harm of both?" Having considered thus, now indeed the action is done. Although it is finished, what is to be done now is to declare it to the Blessed One or to other co-associates in the holy life (*sabrahmacārī*), saying: "This happened due to my ignorance and foolishness." Declaring the fault, one resolves upon future restraint (*āyati-saṃvara*), which means training oneself again: "Henceforth, I shall not do such a thing."</p>
+<p>Similarly, if upon looking back after finishing it, one realizes that it did not lead to one's own harm or to the harm of others, but resulted in the welfare of both, then with that joy and gladness, thinking "I have done a good deed," and with that very gladness, one should live training oneself well during the day. In that manner, the Blessed One spoke concerning bodily actions (*kāya-kamma*). By the same principle, He speaks of vocal actions (*vacī-kamma*), the faults committed through speech. One reflects whether the words spoken lead to one's own harm, to the harm of others, or to the harm of both. Even while speaking, one reflects, and if it is unsuitable in the manner described, one stops it. One refrains from doing it. Otherwise, one continues. In this manner, regarding vocal actions. It is the same regarding mental actions (*mano-kamma*). Regarding mental actions, it refers to a thought—one thinks about a certain matter. When that first thought arises, its fault is not visible. When the thought goes a little further, sometimes it might become visible. Then, in the manner described, one halts that thought. If it is a good thought, one carries it forward. After going some distance, if one realizes that this is an unwholesome mind, the Blessed One indicates that one should arouse disgust toward it. There is nothing to be declared to anyone there. One arouses a disgust and aversion toward it in the mind so that it does not arise again. If it is a good thought, in the manner described, one joyfully carries forward that training.</p>
+<p>In this manner, the Blessed One declares systematic and methodical reflection (*paccavekkhaṇā*) in three instances—before, during, and after—concerning bodily actions, vocal actions, and mental actions. "If any ascetics and brahmins of the past purified their bodily, vocal, and mental actions, or if in the future they will purify their bodily, vocal, and mental actions, they do so in this very manner." Thus, the Blessed One introduced a highly valuable principle of Dhamma to the world. Accordingly, we have to understand what we must do to protect the Buddha Sāsana from within.</p>
+<p>Next, let us consider the other side. Now, that lay woman, as we mentioned earlier, after performing such a valuable meritorious deed, instead of focusing her mind on the Buddha's teaching during an extremely rare era of a Buddha's arising, directed her mind to the vulgar words and obscenities of the Ājīvaka. Because of that, she was unable to concentrate her mind. At any occasion, without directing the mind in accordance with the sermon, one cannot realize the Paths and Fruits. Thus, there is an important point regarding this. Although that lay woman, who had been a disciple of the Ājīvaka, was agitated in the beginning, because she adjusted her mind in accordance with the advice and instruction of the Blessed One as the occasion demanded, she also attained the realization of the Paths and Fruits.</p>
+<p>Whether one can attain the Paths and Fruits through the mere hearing of the Dhamma is also a question in many eras. If we are to say something about that, the Blessed One has pointed out five spheres of liberation (*vimuttāyatana*), five occasions where the liberation of the mind occurs. It is shown in this manner: while the Teacher or one of His disciples is preaching the Dhamma, one must listen to the Dhamma by dedicating the entire mind to it, contemplating word by word, thinking "This Dhamma is of benefit to me," in the manner we mentioned earlier. Concerning this, it is stated: *attha-paṭisaṃvedī ca hoti dhamma-paṭisaṃvedī*. One experiences the meaning of what is being said, and one experiences the Dhamma contained within that meaning. That is an important thing. One must listen to the Dhamma in such a way that both the meaning of what is said and the Dhamma shown according to that meaning are understood. One must experience both. It is an experience: *attha-paṭisaṃvedī dhamma-paṭisaṃvedī*. To make it an experience, one must have a well-concentrated mind.</p>
+<p>In the presence of the Blessed One, due to His style of preaching and all His other Buddha-powers, the mind becomes concentrated at the very moment of listening. Right there, a concentration (*samādhi*) arises by way of recollection of the Buddha (*buddhānussati*). Listening to the Dhamma with that concentrated mind, one understands the meaning of what is said, and one understands the Dhamma contained within it. *Attha-paṭisaṃvedī dhamma-paṭisaṃvedī*. When listening in that manner, experiencing the meaning and experiencing the Dhamma, an inner gladness (*pāmojja*) arises. Gladness means joy (*pīti*). Then, one does not go to tell the person next to them. One calms it down and turns it into joy. There is only a slight difference between gladness and joy. One transforms that gladness into joy, into a subtle joy. When the mind is joyful, the mind no longer goes to an external song heard outside, because the joy is present right within. Due to that very reason, the body and mind become tranquil. Within that tranquility, one experiences a peculiar pleasure (*sukha*) in the body, a tranquil pleasure never experienced before. It is within that pleasure that the mind becomes concentrated. Through that concentration, understanding (*paññā*) arises next. This is how the first step regarding the realization of the Paths and Fruits is described. It is mentioned in the texts that even while listening to the Dhamma in this manner, one can attain the realization of the Paths and Fruits. But that is only one of them.</p>
+<p>Next, the second one is shown. A certain disciple, instead of listening to the Dhamma in the manner described, preaches the Dhamma. Even while preaching, when that preacher preaches while experiencing and contemplating the meaning of the Dhamma and the Dhamma contained within it, then through that very process within oneself, one attains the realization of the Paths and Fruits, which perhaps had not been attained until then. If we are to illustrate this with an analogy, when it is heard that a guest is coming to a certain house, delicious food is prepared. It is not only the guest who enjoys it. Together with them, one also enjoys it oneself. Similarly, when a preacher preaches while understanding the meaning of this Dhamma and experiencing that Dhamma, not only the listeners but the preacher also attains the realization of the Paths and Fruits. Many such instances are mentioned in the Dhamma. Extremely wonderful things. That wonder occurs not through anything else, not through some other strange miracle, but through this very principle of Dhamma spoken of by the Blessed One. If not only the listener but also the preacher of the Dhamma acts in this manner, Dhamma points that were not understood until then can be understood at the very moment of preaching. That is why it is declared that such an opportunity arises.</p>
+<p>Next, thirdly, for a certain person, even while reciting the Dhamma in detail, a similar realization of the Paths and Fruits can occur. In recitation, the mind does not wander; the mind is alert. Recitation exists especially to dispel sleepiness (*thīna-middha*). When one recites aloud, one also becomes alert. One’s own ear hears it. If it strikes the mind just as it is heard by the ear, without letting the mind wander to external things, even at that moment, one can absorb the deep ideas contained within that portion of the Dhamma more deeply into the mind, in the manner of *attha-paṭisaṃvedī dhamma-paṭisaṃvedī*. That is what is meant by 'experiencing' (*paṭisaṃvedī*). One turns it into an experience. On such an occasion, even while reciting, an inner gladness arises in the very same manner, and turning it into joy, one thereby generates the lightness of body and mind called tranquility of body (*kāya-passaddhi*) and tranquility of mind (*citta-passaddhi*). If the portion of the Dhamma being recited is in some way inclined toward Nibbāna, then through that very process, one can realize the Paths and Fruits. That is the third occasion. Next, fourthly, it is shown that a certain person mentally contemplates, reflects in mind upon a portion of the Dhamma they have heard and learned. They examine it in mind again and again. While examining it thus, they go deeper and deeper. Within that portion of Dhamma, they enter into a certain concentration. There, by the fact that the portion of Dhamma learned until then becomes a direct realization—*attha-paṭisaṃvedī dhamma-paṭisaṃvedī*—states of concentration arise, and it is shown that even thereafter, the realization of the Paths and Fruits is possible.</p>
+<p>The fifth one shown is the most important. Usually, at the end of discourses, the Blessed One mentions the most important thing. Here too, the fifth one shown is what we all refer to in practice: one contemplates a certain theme of concentration (*samādhi-nimitta*) that is familiar to oneself. One directs the mind to a theme of concentration that one has well-developed. On the basis of that theme of concentration, just like concentration, one directs it toward wisdom (*paññā*). At the moment of directing the mind from concentration to wisdom, then too, the realization of the Paths and Fruits is possible. This principle of five spheres of liberation (*vimuttāyatana*) shown by the Blessed One is useful to all of us. Now we listen to many sermons. We preach sermons. Next, we recite. Occasionally, we contemplate the Dhamma, the things we have learned. Not with the intention of passing exams, not to pass exams and gain degrees in the world, but if one does so with the intention of removing acquisitions (*upadhi*), instead of passing the four biggest exams in the world to gain a degree, if one contemplates the portion of Dhamma learned with the intention of relinquishing acquisitions (*upadhi-patinissagga*), which means letting go of the five aggregates of grasping (*pañcupādānakkhandha*), then too, the realization of the Paths and Fruits is possible.</p>
+<p>For us to have such a developed mind, that instantaneous realization of the Paths and Fruits mostly occurs to those who have fulfilled the perfections (*pāramī*) for a long period in *saṃsāra*. It is difficult for others to recognize such individuals. They are caught only by the Buddha-eye, due to the Blessed One's special six uncommon knowledges (*asādhāraṇa-ñāṇa*), such as the knowledge of the inclinations and underlying tendencies (*āsaya-anusaya-ñāṇa*). Because they are not common to other disciples, they are called 'uncommon knowledges' (*asādhāraṇa-ñāṇa*). This does not mean 'unjust' in the sense used today. Because of the Blessed One's special powers, such as the attainment of great compassion and the knowledge of inclinations and underlying tendencies (*anusaya*), He has the understanding of those capacities. It is frequently mentioned that when the Blessed One preached, those instantaneous realizations of the Paths and Fruits occurred because of those capacities. But that may not happen every day. It may not happen everywhere. Even if one comes with such accumulated strength, the moment they manifest is seen clearly only by the Buddha-eye. Therefore, in an era like this, without harboring that wishful expectation—the hope that it will be achieved by the mere hearing of the Dhamma—one must do what needs to be done. One must engage in what must be done. What is that? That very subject of meditation (*kamaṭṭhāna*).</p>
+<p>If we look at even the word *kamaṭṭhāna*—*karma-sthāna*—in a way that fits this era, since *kamma* means 'work' and *ṭhāna* means 'place', one can introduce it as an 'spiritual workshop'. Undertaking such an spiritual workshop and constantly engaging in it as a subject of meditation (*kamaṭṭhāna*), whether during leisure times or by securing leisure, if one engages in it, gradually, in the manner of *attha-paṭisaṃvedī dhamma-paṭisaṃvedī*, that portion of the Dhamma can be understood deeper and deeper. Generally, in the beginning, a meditation subject (*kammaṭṭhāna*) becomes dry because the subject of meditation (*kamaṭṭhāna*) does not appeal to one's mind. In the past, it was mentioned: *kammaṭṭhāne cittīkāraṃ katvā*. One must generate a great respect toward it. Something like respect for the Teacher, thinking, "Through this meditation subject, I will accomplish the tasks I expect." Otherwise, a hesitation, a state of double-mindedness arises.</p>
+<p>Then, having obtained that, in accordance with it, one must systematically develop a certain level of serenity (*samatha*). As we all know, becoming concentrated (*samādhi*) means removing—at least temporarily—sensual desire (*kāmacchanda*), ill-will (*byāpāda*), sloth and torpor (*thīna-middha*), restlessness and worry (*uddhacca-kukkucca*), and doubt (*vicikicchā*), which drag down the strength of the mind. Thus, when those sensual thoughts, angry thoughts, sleepy and sluggish states, doubts and hesitations, restless states and regrets are stilled, and the mind becomes settled on the subject of meditation (*kamaṭṭhāna*), that is when one is said to be concentrated—the one-pointedness of concentration. At the moment of one-pointedness, if the strength related to the three characteristics (*ti-lakkhaṇa*) that incline toward insight (*vipassanā*) is wrapped within that concentration, then through that very concentration, or after emerging from concentration, one can realize the Paths and Fruits. That is what is mentioned in conclusion. Making use of a theme of concentration (*samādhi-nimitta*) that one has developed, one can attain for oneself that noble direct realization which we refer to as Nibbāna.</p>
+<p>Thus, when we say we are protecting the Buddha Sāsana, it is not something done by shouting and making a noise. That Ājīvaka had to go out from inside the house because the neighbors acted strongly on that occasion. In the illustrative story related to the proverb we mentioned, that merchant went out with the door-bolt, which was kept for the protection of the house, to beat that animal. Then, the door was opened for the thieves automatically. In the same way, if we take short-sighted measures, thinking of protecting the Sāsana, we might end up harming our Sāsana. Instead, we must constantly recollect the matters spoken of by the Blessed One regarding the opportune moment (*khaṇa-sampatti*). You have heard a poem mentioned in the *Lōväḍa Saňgarāva* on this:</p>
+<p>> *Aňdurehi as loma vidinaṭa duradī*</p>
+<p>> *viduliya pahä varadunahot varadī*</p>
+<p>> *viduliya van mē kaya lat tänadī*</p>
+<p>> *sidunokaḷot matu saga mok varadī*</p>
+<p>This is an ancient analogy. In the past, the skill of archers was measured: they would wait in the pitch-dark night, holding the arrow to the bow, waiting for the lightning to flash. On the other side, there is a horsehair, at a considerable distance. To prove one’s skill, to pass the exam, one must shoot that horsehair using only the brief flash of lightning. It is something hard to imagine. But according to the words of the Buddha, it is that analogy that comes in this poem: "To shoot a horsehair from afar in the dark—if one misses the flash of lightning, it is over." What is signified by lightning is "when this lightning-like body is obtained." It is not just this physical body that is meant here, but this wise human existence, this opportune moment (*khaṇa-sampatti*) obtained during the era of a Buddha’s arising. If, when this is obtained, one does not perform the meritorious deeds by way of giving, virtue, and meditation, future heaven and liberation (*mokṣa*) will be missed. It is this very idea that Sanskrit poets also expressed at times, in a way that arouses spiritual urgency (*saṃvega*):</p>
+<p>> *Rātrau yathā megha-ghanāndhakāre*</p>
+<p>> *vidyud yathā prajvalatīṃ prakāśā*</p>
+<p>> *buddhānubhāvena tathā daduti*</p>
+<p>> *loke'smi kṣaṇaṃ cā*</p>
+<p>"Just as in the dense darkness of rainy clouds at night, lightning flashes for a moment with bright light; in the same way, by the power of the Buddha, a mind inclined toward merit arises in this world for a single moment." What we have to do, then, is to protect that which has arisen for a single moment. It is that very thing that the Blessed One has declared:</p>
+<p>> *Cittuppādamapi kho ahaṃ, Cunda, bahukāraṃ vadāmi, ko pana vādo kāyena vācāya anuvidhiyanāsu*</p>
+<p>"Even the arising of a thought concerning wholesome qualities, Cunda, I say is of great benefit. What indeed is there to be said of conforming to it by body and speech?"</p>
+<p>Therefore, we must reflect on protecting that wholesome thought that has arisen. That lay woman was unable to protect the wholesome thought she had generated, because she thought about that Ājīvaka. What we also have to do for our internal progress is to protect ourselves from within. Otherwise, to become strong from within, we must walk on this path of Dhamma, no matter what kind of insults and abuses come our way.</p>
+<p>In that very discourse preached to Ven. Mahā Cunda, another highly profound matter is mentioned. A concept that existed among the Nigaṇṭhas and others during the time of the Buddha's arising was the idea of wearing away their defilements to a degree that others could not. With the intention of wearing away—meaning reducing—they gave up and relinquished various things. Relinquishing and relinquishing, the Nigaṇṭhas in the end even gave up the clothes they wore. According to their concept, the concept of letting go was taken in that manner. They called it *sallēkha* (effacement).</p>
+<p>The Blessed One also makes use of this word *sallēkha*. *Sallikhati* means gradually scraping or wearing away. What we mean by scraping or wearing away is like carving a piece of wood little by little. In that manner, it is a method of scraping and wearing away defilements by gradually reducing one's needs. But the Blessed One presented a novel concept through it. If we look at it according to the practice of the Nigaṇṭhas, what can be designated as *sallēkha* are those states of absorption such as the first *jhāna*, the second *jhāna*, etc., obtained by striving with great difficulty and separating oneself from the pleasures of the five senses. But the Blessed One says: "According to the noble usage, these absorptions are not called *sallēkha*." The Blessed One designates those states of absorption as 'pleasant dwellings in this very life' (*diṭṭhadhamma-sukha-vihāra*). Speaking of the attainments (*samāpatti*) that went even beyond that, He says: "I do not call even those attainments *sallēkha*." I do not use the word used by those Nigaṇṭhas. *Santā ete vihārā*—"I designate them as peaceful dwellings." What is the true effacement (*sallēkha*)? It is designated in this manner:</p>
+<p>> *Pare vihiṃsakā bhavissanti, mayamettha avihiṃsakā bhavissāmā'ti sallekkho karaṇīyo.*</p>
+<p>"Others will be harmful. Here too, there is the talk of self and others. Others are those who are bent on harm. 'We here shall be harmless,' thus effacement (*sallēkha*) should be practiced." While the majority practice harm, let us free our minds from that harm and be harmless. This is the novel concept of effacement (*sallēkha*) shown by the Blessed One. It will become clearer as we go further. *Pare pāṇātipātī bhavissanti, mayamettha pāṇātipātā paṭiviratā bhavissāma.* "Others will be destroyers of life. We here shall refrain from destroying life." There too, there is a separation—not a separation from clothes as the Nigaṇṭhas said. Here, that word *sallēkha* is deeply connected to these virtues of morality (*sīla*).</p>
+<p>Accordingly, what we have to understand is that others are harmful in that manner. They destroy the lives of others. They commit theft and robbery in that manner. They engage in various wicked deeds. They plunder and destroy. If we also go to compete with them and do the same, instead of protecting the Sāsana, it will only result in the decline of the Sāsana. If we go to do it just because others are doing it. There, the Blessed One declared the practice of effacement (*sallēkha*). It is something contrary to that, something contrary to what the world does, that goes on here. The majority do that; we, on our part, shall train ourselves in this manner. Thus, we can draw something from this as well. Although preached to the Sangha, many of these discourses can be practiced generally by everyone to a certain extent.</p>
+<p>Even if we think about this occasion, this is an occasion where this devout congregation has undertaken a precept and is dedicated to it. At this moment, your mind does not incline to act in the way you do when problematic situations arise in your day-to-day home life, because you have firmly declared *pāṇātipātā veramaṇī* (abstaining from destroying life) and *adinnādānā veramaṇī* (abstaining from taking what is not given). We often say to pronounce the word *veramaṇī* with a bit of emphasis. Through that, the idea of abstaining is taken into the mind. Through that idea of abstaining, we are protected. The Blessed One introduced the practice of effacement (*sallēkha*) by bringing it close to virtue (*sīla*). Thus, there is no need to speak separately of those states of absorption (*jhāna*). As a result of that, those 'pleasant dwellings in this very life' (*diṭṭhadhamma-sukha-vihāra*)—peaceful dwellings—are obtained. Those are the results. It begins with virtue (*sīla*). Devotees who expect to protect the Buddha Sāsana must reflect wisely on what the Sāsana actually is. Even if nothing else is present, if virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*) exist somewhere, we must consider that the Sāsana exists there.</p>
+<p>When we reflect in that manner, we have that lamp. Where is that lamp? Where is that lamp whose light we protected with great difficulty during the monthly Poya day lamp-offering or at the lamp-post (*pahan kanuva*), which we took as an analogy? It is in our heart. Thus, that too is something like a clay lamp. It is to that lamp of the heart that we pour the oil of faith (*saddhā*), place the wick of effort (*viriya*), and when even that is insufficient, if there is something we do not understand, we draw close to another lamp—draw close to the lamp of a noble friend (*kalyāṇa-mitta*) and make use of that light. A person who has become strong in that manner can strengthen ten others, twenty others. It is in that manner that a Sāsana is protected.</p>
+<p>That is why we constantly declare that the Sāsana is protected not by external things, but through internal strength. Even if external things exist, if internal virtues are absent, they become hollow, empty, mere monuments, things that attract foreigners, limited only to photographs, things about which one can only shout loudly. If internal virtues are present, then they become sacred sites for us. Now, when we recollect those places like Anurādhapura and Mihintale, why do those ruins not remain mere ruins to you? Generally, ruins and remains are not things of great value. But something remains within those remains. You must reflect on what it is that remains. As you, who go to those places, constantly recollect, it is the touch of those past practitioners, those noble individuals who made use of those stone caves and other places, that has transformed those remains into memorable monuments of the Sāsana.</p>
+<p>If we reflect in that manner, without limiting ourselves only to worshipping those ancient things, if our own homes, our meditation huts, the monastery or forest hermitage where we live, become filled with those virtues, we do not need to wait for centuries. They will become objects of worship in the very same way. In that manner we must reflect. As is constantly reminded, the Sāsana is something that must be built within the stream of consciousness (*citta-santāna*). When that is strengthened, no one can come near it. That Ājīvaka was unable to prevent her from going to the Blessed One. Having heard of the virtues of the Buddha and the virtues of the Dhamma, the faith (*saddhā*) that arose within that lay disciple through the praise spoken by her neighbors was so great that, without even minding the word of her own teacher, the Ājīvaka, she brought the Blessed One by a device and made the Ājīvaka sit in the room. It is not even mentioned in the story that food was given to the Ājīvaka there. The Ājīvaka was inside the room, inside the house. But this lay woman performed that meritorious deed beautifully. It was only when the sound of 'Sādhu' arose that the Ājīvaka could no longer tolerate it.</p>
+<p>In that manner, you too must strive to establish this within our Sāsana. If we strengthen the internal Sāsana in that way, whatever external dangers may arise, we can conquer them through a certain power of the Dhamma. When the internal Sāsana collapses, we end up in the illustrative story of the proverb mentioned earlier. We have to take the very door-bolt meant for protecting the house and use it to deal blows on the back of that animal. Although done with good intention, that animal forgot the duty belonging to itself. Now, it does not matter even if we do not mention this proverb explicitly. Many points for you to reflect upon wisely have been spoken today on this valuable day. Devotees who reflect on the future of the Buddha Sāsana can reap something from this thoughtfully. We have to constantly think about the value of our lives through that story concerning the opportune moment (*khaṇa-sampatti*). Within a very short lifespan of less than a hundred years, according to what we acquire through our courses of action, to the extent that we are rich enough to give to others, a Sāsana is protected.</p>
+<p>We know that when a flashlight is passed from hand to hand in a dark night, it is not seen from whom it is received or to whom it is given. But it is seen by the light of the flashlight. It is in this manner that this Sāsana has been protected for over two thousand five hundred years. Therefore, we must reflect on protecting this internal Sāsana even anonymously, and through that, to help others as a duty of a noble friend (*kalyāṇa-mitta*), relying on the association of noble friends. The Blessed One has declared that the Buddha Sāsana is entirely the association of noble friends (*kalyāṇa-mittatā*). He said that the entire holy life (*brahmacariya*) is companionship with noble friends. Accordingly, through the association of noble friends, the Sāsana is protected.</p>
+<p>Therefore, you must reflect wisely. If there is a certain taste of meaning, a taste of Dhamma in these matters spoken, reap it, and by shaping your lives accordingly, walking on this path of Dhamma, just as the Blessed One did, perform this Dhamma service at least by a word, offering the association of noble friends, and proceed forward. You must strive to carry forward this beginning made on this Poson Full Moon Poya Day. Leaving your homes, undertaking a valuable precept, many of you are striving at least a little to draw close to the first step of renunciation (*nekkhamma*). That course of action which begins therewith, some conclude by entering the homeless life (*pabbajjā*). Even if one is ordained, there is no end there; it is only a beginning. The long journey from there onward is an unseen journey.</p>
+<p>Everyone knows that the fourfold assembly—monks, nuns, laymen, and laywomen—belongs to this Sāsana. Therefore, if everyone becomes strong in this manner, the Sāsana will be protected automatically. Thus, on this noble Poya day, this devout congregation, having dedicated themselves, preparing themselves, keeping the precepts, performing your own study and meditation today, and listening to the Dhamma sermon at this moment—through the mass of merit accumulated through all of this, may you strengthen those qualities that should be developed as spiritual faculties and powers (*indriya-bala*) at the stage of the Paths and Fruits, namely faith (*saddhā*), effort (*viriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*). And as quickly as possible, before this lamp of the Buddha Sāsana goes out, through the penetration (*paṭivedha*) of the Paths and Fruits of Stream-entry (*Sotāpatti*), Once-returning (*Sakadāgāmi*), Non-returning (*Anāgāmi*), and Arahantship, may this merit definitely be a cause, may it be a supportive condition (*upanissaya*), for realizing the noble, supreme Peace of Nibbāna! Make that aspiration. Likewise, from the Avīci hell to the Akanitṭha heaven, if there is anyone who wishes to rejoice in this merit of preaching the Dhamma and hearing the Dhamma, through that rejoicing, may they end the suffering of *saṃsāra* through their aspired Bodhi, the noble, supreme Nibbāna! Aspiring thus, recite this stanza.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_139.html" class="doc-btn">← Previous Sermon (139)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_141.html" class="doc-btn">Next Sermon (141) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

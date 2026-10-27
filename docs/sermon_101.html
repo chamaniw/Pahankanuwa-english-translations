@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 101 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_100.html" class="doc-btn">← Previous Sermon (100)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_102.html" class="doc-btn">Next Sermon (102) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 101</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_101_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_101_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_101_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #101</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.47)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Ahaṃ nāgo 'va saṅgāme, cāpāto patitaṃ saraṃ;</p>
+<p>Ativākyaṃ titikkhissaṃ, dussīlo hi bahujjano.</p>
+<p>Dantaṃ nayanti samitiṃ, dantaṃ rājā bhirūhati;</p>
+<p>Danto seṭṭho manussesu, yo 'tivākyaṃ titikkhati.</p>
+<p>Varamassatarā dantā, ājānīyā ca sindhavā;</p>
+<p>Kuñjarā ca mahānāgā, attadanto tato varaṃ.</p>
+<p>From:</p>
+<p>Dhammapada 320–322 (Nāgavagga)</p>
+<p>Dear Listeners,</p>
+<p>Today is the Vesak Full Moon Poya Day, the sacred day on which occurred the three great events of the birth, the attainment of Supreme Buddhahood, and the Parinibbāna of our Blessed One, the Worthy One, the Fully Self-Enlightened One, who is supreme in the three worlds. This is a day when the entire Buddhist world immerses itself in the ocean of the Buddha's sublime qualities. Let us also, to the best of our strength and wisdom, strive to comprehend the depth of this ocean of Buddha-virtues. All of you devout people know very well the *Itipiso* passage, the formula of the nine supreme qualities: *“Itipi so bhagavā arahaṃ sammāsambuddho vijjācaraṇasampanno sugato lokavidū anuttaro purisadammasārathi satthā devamanussānaṃ buddho bhagavā’ti.”* It is worth reflecting on why the word *Bhagavā* (the Blessed One) appears twice here. This collection of terms is introduced with the word *Bhagavā* at the very beginning. Furthermore, after declaring that the Blessed One is *Arahaṃ*, *Sammā-sambuddho*, *Vijjācaraṇa-sampanno*, and so on, it concludes with *Buddho Bhagavā’ti*.</p>
+<p>From this, we can understand that the essence of all the other eight qualities is contained within this single term, *Bhagavā*. What is meant by this ninefold formula is that the entire vast ocean of the Buddha's qualities is encompassed in the word '*Bhagavā*' (Blessed). Everyone, when beginning a sermon—just as we did—recites the phrase, *"Namo tassa bhagavato arahato sammāsambuddhassa."* The meaning there is: "Homage to Him, the Blessed One, the Worthy One, the Fully Enlightened One!" In all these instances, the term *Bhagavā* (Blessed) is employed. Even among contemporary Hindus, the term *Bhagavān* is frequently used for the Buddha, referring to him as "Bhagavān Buddha." The reason why this term *Bhagavā* is so significant is that it represents the power of the *Pāramīs* (perfections) fulfilled by the Buddha over four incalculable aeons and a hundred thousand world cycles. So great was that blessedness that it manifested even in his physical form, adorned with the thirty-two marks of a Great Man (*mahāpurisa-lakkhaṇa*).</p>
+<p>The Buddha possessed an incomparable beauty of form, unequaled in the entire world. One can understand that the entire physical body of the Buddha was a manifestation of "blessedness" created through the power of those *Pāramīs*. Even more so, this very blessedness is found within his incomparable and supremely profound Buddha-knowledge. Yet, despite the sublime blessedness of the Buddha whom we call the "Blessed One," he too had to face the eight worldly conditions (*attha-lokadhamma*) that all of us must confront. The Buddha too had to face the insults, slander, sarcasm, harsh words, and physical pain inflicted by the world. But the difference, dear devotees, lies in this: due to the wonderful quality of equanimity (*upekkhā*) and the quality of steadfastness (*tādī-guṇa*)—a resolute, unshakeable quality developed through the power of his *Pāramīs*—the Buddha possessed the strength to remain unshakeable in the face of these eight worldly conditions. The background story of the three verses we have taken as our theme demonstrates the Buddha's ability to face with equanimity all those experiences, good or bad, which we call the eight worldly conditions: gain and loss, fame and disrepute, praise and blame, pleasure and suffering (*dukkha*).</p>
+<p>In the Kuru country, there lived a Brahmin named Māgandiya. This Brahmin had an exceptionally beautiful daughter. When the Brahmin was looking for a suitable partner to marry his daughter, even kings and wealthy merchants (*seṭṭhis*) sent marriage proposals to win her hand. However, this Brahmin kept saying, "Not a single one of them is worthy of my daughter." While things stood thus, one day in the early dawn, when the Buddha entered into the Attainment of Great Compassion (*mahākaruṇā-samāpatti*) and surveyed the world with his net of wisdom, the Brahmin Māgandiya and his wife appeared in his vision. Seeing that if he visited them, they had the spiritual potential to attain a supramundane state as high as the stage of Non-Returner (*anāgāmī-phala*), the Buddha walked to a place outside the city where the Brahmin performed his fire-worship. As soon as the Brahmin saw the Buddha, he thought: "There is no one in this world so handsome. This is indeed the perfect husband for my daughter!" He approached the Buddha and said: "O recluse, I have a daughter. Until now, I could not find a suitable husband for her. You are the perfect match for her, and she is the perfect match for you. I shall go and bring her here quickly."</p>
+<p>The Buddha remained silent. Perhaps the Brahmin thought, "Ah, then he has consented." He hurried home and said to his wife: "Hurry, hurry! Dress our daughter quickly and bring her along. Today I have found a perfect husband for her!" Thus, the three of them—the Brahmin, his wife, and their daughter—came along. By the time they arrived, the Buddha had walked some distance away from where he was standing, to a spot somewhat out of sight, leaving behind a footprint by resolution. We know that if the Buddha wills it, even if he places his foot on a solid rock, that sacred footprint remains. Thus, when the Brahmin, his wife, and daughter arrived, the Buddha was not where he had been. As the Brahmin looked around saying, "I told him to wait right here," he saw the footprint. The moment he showed it to his wife—who, being well-versed in the Vedic texts regarding the physical marks of a Great Man (*mahāpurisa-lakkhaṇa*), contemplated what kind of person would leave such a footprint—she realized that this footprint did not belong to someone who seeks the pleasures of the five senses. She said to the Brahmin, "This footprint does not belong to one who is attached to the fivefold sensual pleasures. Your wish will not be fulfilled."</p>
+<p>But the Brahmin tried to silence her, saying something to the effect of "Don't talk nonsense!" (just as people say today). The Brahmin's wife replied, "Whatever you say, I maintain that this footprint does not belong to someone who seeks the fivefold sensual pleasures." Nevertheless, as they looked around, they spotted the Buddha. Going up to him, the Brahmin said, "Here, I have brought my daughter. I wish to give her to you in marriage." At that moment, the Buddha briefly stated, "I have this to say to you," and briefly recounting the events from his Great Renunciation up to his victory over Māra, he uttered a certain verse indicating that not even a trace of defilement (*kilesa*) arose in him even when the daughters of Māra came and tried to seduce him:</p>
+<p>*Disvāna taṇhaṃ aratiṃ ragañca,*</p>
+<p>*nāhosi chando api methunasmiṃ;*</p>
+<p>*Kimevidaṃ muttakarīsapuṇṇaṃ,*</p>
+<p>*pādāpi naṃ samphusituṃ na icche.*</p>
+<p>This verse, along with a series of other verses, is recorded in the *Sutta Nipāta* of the Tipiṭaka. The meaning of this verse is: "Even upon seeing [Māra's daughters] Taṇhā [Craving], Arati, and Ragā, no desire arose in me for sexual union. What is this body, after all, but something filled with urine and excrement? I would not wish to touch it even with my foot." Hearing this, the young maiden Māgandiyā harbored a deep hatred toward the Buddha, thinking: "If he did not want me, he could have just said so instead of insulting me in this manner." Yet, such was the spiritual transformation (*citta-viplava*) wrought by this encounter that the Brahmin subsequently asked: "Well, if you do not desire such a jewel of a woman whom even kings covet, what is the virtue or vow (*sīla-vrata*) that you keep? What is your view (*diṭṭhi*)? What is your philosophy of life?" thus putting several questions to the Buddha. Reading the section of the Canon known as the *Māgandiya Sutta*, one understands that a long Dhamma discussion ensued from the Buddha's replies, diving deeper and deeper. By the end of that Dhamma discussion, both the Brahmin and his wife were established in the fruit of Non-Returner (*anāgāmī-phala*).</p>
+<p>Next, they developed such deep devotion and faith (*saddhā*) that, in order to make arrangements to ordain under the Buddha, they entrusted the responsibility of their daughter to the Brahmin’s brother, known as Cūla Māgandiya—who was the uncle of the young Māgandiyā. They handed over those duties to his brother. Having done so, the two of them ordained in the Dispensation (*Sāsana*) and became Arahants. Thereupon, Cūla Māgandiya took his brother’s daughter to King Udena of Kosambī. He presented her, saying, "This jewel of a woman is fitting only for Your Majesty." King Udena appointed her to the position of chief queen. Thus, a sequence of events unfolded. In the course of time, the Buddha received an invitation to visit the city of Kosambī from three wealthy merchants (*seṭṭhis*) named Ghosita, Kukkuṭa, and Pāvāriya. Having heard the news of the appearance of a Buddha in the world, these three merchants had loaded carts with great offerings, traveled to Jetavana Monastery to see the Buddha, offered a great almsgiving, listened to the Dhamma, attained the stage of Stream-Entry (*sotāpatti*), and then invited the Buddha to Kosambī.</p>
+<p>Moreover, before extending the invitation, they constructed three suitable monasteries (*ārāmas*) for the Buddha and the Saṅgha. These were known as Ghositārāma, Kukkuṭārāma, and Pāvārikārāma. Thus, the Buddha journeyed to Kosambī and, residing by turns in the three monasteries of the said merchants, went on alms-round (*piṇḍapāta*) to their mansions along with the Saṅgha. By then, the young Brahmin woman Māgandiyā was a queen—the chief consort of King Udena. Through a series of reports, Queen Māgandiyā learned that the Buddha had now arrived in the city. She thought, "Now is the perfect time for me to take my revenge." Previously she had resolved, "Once I obtain a powerful husband, I will show this ascetic Gotama what I can do." That was how she had harbored hatred. Now that the opportunity had arrived, what did Māgandiyā do? She bribed the townspeople to insult, abuse, and drive away the Buddha and the Saṅgha when they went on alms-round.</p>
+<p>Today, too, we have such things as boycott campaigns and protests. In a similar manner, she organized a campaign using the townspeople to drive the Buddha out. As this continued for several days, the Venerable Ānanda, unable to bear it, approached the Buddha and said: "Venerable Sir, the insults and abuse directed at us by these citizens are overwhelming. Let us go elsewhere." The Buddha asked, "Where do you propose we go, Ānanda?" "Let us go to another city, Lord." "And if the same thing happens in that city, Ānanda?" "Then we shall go to another city, Lord." "And if it happens there too?" In this way, the Buddha explained: "No, Ānanda, if we flee like that, even if we go to every city in Jambudīpa, this problem will not be settled. That is not how it should be done. When a problem arises in a particular place, it must be settled right there. This abuse will not last more than seven days. Just like an elephant that has entered the battlefield, I shall endure all insults, abuse, assault, and harsh words coming from the world." Expressing this sentiment, he uttered the three verses we have taken as our theme:</p>
+<p>*Ahaṃ nāgo'va saṅgāme,*</p>
+<p>*cāpāto patitaṃ saraṃ;*</p>
+<p>*Ativākyaṃ titikkhissaṃ,*</p>
+<p>*dussīlo hi bahujjano.*</p>
+<p>"Just as an elephant entered into battle endures an arrow shot from a bow, so too shall I endure the abusive words of the world; for indeed, the majority of people are ill-behaved." Next:</p>
+<p>*Dantaṃ nayanti samitiṃ,*</p>
+<p>*dantaṃ rājā bhirūhati;*</p>
+<p>*Danto seṭṭho manussesu,*</p>
+<p>*yo'tivākyaṃ titikkhati.*</p>
+<p>"They lead only a tamed, trained, and disciplined elephant or horse to an assembly. It is upon a tamed elephant or horse that even a king mounts. *Danto seṭṭho manussesu*—but among humans, he who has tamed himself to endure insults and abuse from without is indeed supreme. This is the second verse." Then, thirdly, he declares:</p>
+<p>*Varamassatarā dantā,*</p>
+<p>*ājānīyā ca sindhavā;*</p>
+<p>*Kuñjarā ca mahānāgā,*</p>
+<p>*attadanto tato varaṃ.*</p>
+<p>"Mules (*assatarā*) born of a donkey and a mare, possessing great speed and power, are noble when tamed. Likewise, noble thoroughbred horses (*ājānīya*) capable of understanding the rider's intent are noble. Thoroughbred horses of the Sindh region (*sindhavā*) are noble. And *kuñjarā ca mahānāgā*—great tuskers of immense stature are noble. Yet, more than all of them, *attadanto tato varaṃ*—one who has tamed himself (referring here to the Blessed One himself) is the most supreme of all. Thus he spoke."</p>
+<p>And it is said that after seven days, the hostility and abuse gradually subsided. These verses helped many people in their realization of the Dhamma. That is the background story. Let us use this story to try and understand the depth of the ocean of Buddha-virtues to the best of our ability. First, let us reflect on the skillful means (*upāya-kosalla*) employed by the Buddha. The Buddha’s Great Wisdom (*mahā-paññā*) and Great Compassion (*mahā-karuṇā*) are two outstanding and noble qualities that distinguish him from all his disciples. Both of these are encompassed in his knowledge of the Attainment of Great Compassion (*mahākaruṇā-samāpatti-ñāṇa*). For it is stated in the texts that every day at dawn, the Buddha casts his net of wisdom—the knowledge of the Attainment of Great Compassion—over the entire world. The texts mention that at that hour, those who are ready to realize the path and fruit (*magga-phala*) on that day appear within this net of wisdom. In this way, along with the knowledge arising from his Great Compassion and attainment, the precise skillful means to tame such individuals also dawns upon the Buddha.</p>
+<p>Thus, we can appreciate the immense value of this knowledge of the Attainment of Great Compassion. This is described as an unshared Buddha-knowledge (*asādhāraṇa-buddha-ñāṇa*). "Unshared" (*asādhāraṇa*) does not mean "unjust" in the modern sense, but rather "extraordinary" or "exclusive." The Buddha possesses a wonderful, unique knowledge of the Attainment of Great Compassion that is not shared by other disciples. Relying on this, no matter how far away a person might be, or how lowly and miserable their state, the Buddha goes in search of them. He goes and, using the appropriate skillful means, leads them toward Nibbāna. Such was the wonderful net of wisdom possessed by the Buddha. Now, when reflecting on this skillful means, some of you devout people might think that there was a slight shortcoming here, because of the few words the Buddha spoke about the physical form of the young Brahmin woman Māgandiyā, which caused her to harbor deep hatred. However, what is shown here is that if a certain skillful means can help someone attain a spiritual state, the Buddha would adopt that course of action even if others might accumulate demerit as a result. As the reason for this, we can point out that the Brahmin Māgandiya and his wife had developed intense conceit (*māna*) due to their daughter’s physical beauty. It was to shatter that conceit that the Buddha uttered a verse with words that disparaged physical beauty.</p>
+<p>Therefore, even though the young woman harbored hatred because of it, the ultimate result was that the Brahmin Māgandiya and his wife attained the fruit of Non-Returner (*anāgāmī-phala*) and eventually attained Arahantship. Based on this, we can understand that the skillful means employed by the Buddha was born purely of Great Compassion (*mahā-karuṇā*). For if even one being undergoing suffering (*dukkha*) in this great Saṃsāra can be rescued, the Buddha will take whatever action is necessary. If, in the process, someone else gets upset and accumulates demerit, nothing can be done about it. That is the nature of the situation. In this manner, that net of wisdom, the knowledge of the Attainment of Great Compassion, possesses an unimaginably wonderful power. Today, we have various networks like the internet. What they mostly do is keep people spinning within this Saṃsāra. But the Buddha casts his net of the knowledge of the Attainment of Great Compassion across the world to see those who have the strength to escape from this suffering (*dukkha*) of Saṃsāra. It is in accordance with this that the Buddha approaches and helps them. Reflecting on this knowledge of the Attainment of Great Compassion, we can develop faith (*saddhā*) in the Buddha's profound intellectual power and Great Compassion. Furthermore, as specifically conveyed by these verses, the noble and supreme quality of the Buddha in enduring all anger, insults, and abuse is of great significance to all of us. Everyone living in this society has to face such experiences. To varying degrees, our minds get agitated. Yet, the Buddha's mind was never agitated by them in the least. Such was the wonderful quality of steadfastness (*tādī-guṇa*), a resolute quality, that resided within the Buddha.</p>
+<p>We see there the noble and valuable quality of settling any problem right where it arises. Likewise, these eight worldly conditions—gain and loss, fame and disrepute, praise and blame, pleasure and suffering (*dukkha*)—are common to everyone, even to a Buddha. The difference lies in the great quality of equanimity (*upekkhā*) in enduring them, which can be regarded as belonging to the Buddha's unique quality of "blessedness" (*bhagavā*). Thus, the cause of that supreme quality of the Buddha is indeed that very state of blessedness. Today, we use the term *bhāgya* to mean luck or fortune. One might call it being "fortunate." However, there is a certain point here that needs to be clarified. It is a somewhat deep matter. It is stated in the Dhamma regarding the Buddha that he abandoned all defilements along with their residual impressions (*savāsanā sakala kilesa*).</p>
+<p>To say that he destroyed all defilements along with their *vāsanās* means he eradicated the defilements and impurities together with their habitual tendencies (*vāsanā*). There, the word *vāsanā* is used in the Dispensation (*Sāsana*) with a completely different meaning. It is not in the sense of "luck" or "fortune" (*vāsanā*) that we frequently hear of nowadays. Here, the quality of *vāsanā* is not presented as a good quality in a person. What is called *vāsanā* here is something like a residual odor left behind by defilements. That is precisely why, diving deep into the ocean of the Buddha's qualities, the Great Thera Vīdāgama Maitreya, when describing the Buddha’s virtues, stated: "He has none of the *vāsanā* qualities possessed by everyone else in this world"—meaning that the Buddha does not have the residual habits (*vāsanā*) that remain in all other worldly beings. Upon reading this, one might think, "Then, was the Buddha an extremely unfortunate person?" But the difference lies in this: the term *vāsanā* is used in the Dhamma in an entirely different sense. As you devout people know, if a corpse-flower (*kiḍāram mala*) blooms on one's land, one goes, identifies it as a foul-smelling thing, uproots the entire plant, and throws it away. Even so, the foul odor lingers for a considerable time. In the same way, even when the filth of defilements accumulated over this immensely long Saṃsāra is eradicated by the knowledge of the Noble Path (*ariya-magga-ñāṇa*)—the Path of Arahantship—the lingering odor of these defilements still remains.</p>
+<p>This is the difference between the Arahants and the Buddha. *Savāsanā sakala kilesa* means all defilements along with their residual impressions. In the Arahants, these impurities of residual impressions (*vāsanā*) remain. Consequently, in their physical and verbal behavior, those habitual tendencies (*vāsanā*) from Saṃsāra may manifest, sometimes causing people in the world to form wrong impressions about them. But the Buddha is free even from those residual tendencies (*vāsanā*), in the second sense of the word. Not in the sense of the "luck" (*vāsanā*) that we refer to in the world today, but like the illustration of the corpse-flower: even after a filthy thing is removed, a bad smell remains there for some time. Although defilements are destroyed in the mental continuum (*citta-santāna*) by the knowledge of the Noble Path, the habitual patterns of defilement practiced over a long period occasionally surface; this is indeed present in the Arahants. But as for the Buddha, so vast were the *Pāramīs* he fulfilled, and so sharp and deep were his concentration (*samādhi*) and wisdom (*paññā*), that he possessed the power to completely suppress and eradicate those forces of residual tendencies (*vāsanā*). That is why it is said that the Buddha uprooted all defilements along with their residual tendencies (*vāsanā*). The Buddha possessed a supremely pure continuum, without even a trace of lingering odor. This is also why the Buddha acted without the slightest agitation when confronted by the eight worldly conditions. In this way, we must contemplate the depth of the Buddha’s qualities.</p>
+<p>Similarly, regarding the physical beauty of the Buddha: now, if ordinary worldly people possess such physical beauty, they use it to pursue the fivefold sensual pleasures. The Brahmin was taking great pains to find a suitable husband for his daughter. But the Buddha did not visit that place to fulfill that desire. Because of the course of action the Buddha took, and according to the verse he preached, since the Brahmin and his wife were wise, they perceived that within him lay a power of knowledge and wisdom far deeper than his attractive external physical beauty. A mere fraction of that vast store of the Buddha's qualities is revealed through this knowledge of the Attainment of Great Compassion. Moreover, his quality of steadfastness (*tādī-guṇa*), that resolute quality, is like an *indakhīla* (city-post) firmly planted at a city gate, or like a strong pillar sunk deep into the earth. Ordinary worldly people, indeed, are *lābhena unnato loko alābhena ca ūnato*—they inflate when gain comes, and collapse when loss comes. In that manner, the minds of many are agitated within these eight worldly conditions. The two sides of the eight worldly conditions are like the two pans of a balance scale. The Buddha possessed the quality of looking upon them with equal equanimity (*upekkhā*).</p>
+<p>We must also contemplate the life of the Blessed Buddha. On this Vesak day, which we call the Day of the Threefold Auspicious Events, the three major events of the Buddha’s life—his birth, Supreme Enlightenment, and Parinibbāna—occurred on the very same day. Renouncing the world at the age of twenty-nine and practicing severe austerities for six years, he attained Buddhahood in his thirty-fifth year. Then, for forty-five years, dedicating only a very brief time for sleep, he served as his Buddha-activity to rescue beings from the path to states of deprivation—beings who were inclined toward the path of hells, wallowing in defilements, and suffering (*dukkha*) for a long time in this Saṃsāra—and to liberate them from Saṃsāra.</p>
+<p>We must reflect on the Buddha's life in this manner. The examples we can draw from the Buddha's life are countless. Through every single event, his Great Wisdom and Great Compassion are revealed to us. A Buddha is one who has developed the power of the *Pāramīs* over an immense period. When we say four incalculable aeons and a hundred thousand world cycles, how incredibly long a duration is that! From the moment the aspiration arose in the Buddha, "Let me not cross over alone, but let me rescue as many of the worldly beings as possible," he fulfilled the *Pāramīs* specifically to attain those Buddha-knowledges, such as the knowledge of the inclinations and underlying tendencies of beings (*āsayānusaya-ñāṇa*), which make visible the thoughts, desires, and past kamma-propulsions of all beings. As you devout people know, ten *Pāramīs* are mentioned: *“Dānaṃ sīlañca nekkhaṃmaṃ, paññā viriyena pañcamaṃ, khantī saccaṃ adhiṭṭhānaṃ, mettūpekkha ca ime dasa.”* (Giving, virtue, renunciation, wisdom, energy as the fifth, patience, truthfulness, determination, loving-kindness, and equanimity). The Buddha developed each of these qualities to its ultimate limit. To the absolute limit of giving, to the absolute limit of virtue, to the absolute limit of renunciation—for such a long period did the Buddha sacrifice his life for this purpose. When these virtues are trained to their absolute limit in this manner, they leave behind a vast reservoir of experience within the Buddha. That is what is meant by *Pāramīs*.</p>
+<p>One might wonder, "What is the profound meaning behind the fulfillment of these *Pāramīs*?" Through the fulfillment of these *Pāramīs*, the entire vast range of experiences gathered in this world accumulates toward the Buddha’s aspiration for Supreme Enlightenment (*sambodhi-praṇidhi*). These experiences do not just disperse in vain. An aspiration (*praṇidhi*) means that once the resolution is made, "I shall become a Buddha, supreme in the three worlds, and attain Full Self-Enlightenment," all the experiences—whether good or bad—of the lives lived and fulfilled from that moment onward accumulate toward that single thought. Through all of these, that wisdom grows. Now, we know that when we try to do something or learn a craft, we learn even from our mistakes. We learn from the pressures we face. Therefore, we generally think that it was the Venerable Devadatta who obstructed his path to Enlightenment. Yet, looking at it from another angle, one could say that it was Venerable Devadatta who actually helped the Buddha to attain Enlightenment.</p>
+<p>Saying such a thing might easily be misunderstood. During the period of fulfilling the path to Enlightenment, the most powerful obstacle presented to the Buddha was the vengeful intention born of Venerable Devadatta’s hatred. Here too, Māgandiyā acted, to a certain extent, with a hateful intention. Through all of these, the Buddha's vast store of qualities was polished and shone forth. Thus, during the period of fulfilling the *Pāramīs*, he had to sacrifice his life, and give away his eyes, head, flesh, and blood. The Buddha had to face numerous other assaults and oppressions, and had to undergo suffering (*dukkha*). But what was left to the Buddha from all of this? The way the worldly mind functions, the reasons and backgrounds for such things turning toward unwholesome actions, how minds change according to various circumstances, and not only that, how his own mind might be agitated or altered in such situations, and the path to bring them into equanimity (*upekkhā*)—all these became wisdom-growing experiences for him. When it comes to the instances of giving away one's eyes, head, flesh, and blood, the texts, of course, describe that he gave those gifts without any difficulty, as if it were very easy. Yet, during those times, he was not yet a Buddha; there were shortcomings. When giving a gift that ordinary worldly people cannot give, the mind often wavers. He learned even from that—about the moments when the mind trembles.</p>
+<p>All of these ultimately helped the Buddha develop special knowledges, such as the knowledge of inclinations and latencies (*āsayānusaya-ñāṇa*). From this, it is clear that the cause of the Buddha's unshared knowledges (*asādhāraṇa-ñāṇa*)—his extraordinary and highly specific knowledges—was indeed that very power of the *Pāramīs* fulfilled over such a long period. It is that store of qualities, developed through the power of the *Pāramīs*, which we summarize and recall as the Buddha-virtues beginning with *Arahaṃ*. But no matter how we try to bring them to mind, we cannot measure their depth. The depth of that great ocean of Buddha-virtues is such that no shore can be seen. Now, when we look at the ocean, the limit of what we can see is what we call the horizon; we cannot see beyond that. Such is the vastness of the ocean of Buddha-virtues. Some might think, "Why did the Buddha act in this or that manner? Isn't there a shortcoming in this?" But there is a deep meaning behind it that we cannot see. Here too, the Buddha acted in that manner precisely to enable Māgandiyā's parents to attain the fruit of Arahantship.</p>
+<p>Throughout the many wonderful events of the Buddha’s life, he received great gains, such as the Incomparable Almsgiving (*asadisa-dāna*). Yet, on other occasions, he did not even receive alms-food (*piṇḍapāta*); he had to face various such situations. Through the power of those *Pāramīs*, the Buddha developed the quality of equanimity (*upekkhā*) to endure all of these—a supreme equanimity. So great was his power of concentration (*samādhi*) that the Buddha declared he possessed the ability to enter into the attainment of the fruit (*phala-samāpatti*) even while preaching the Dhamma. Even at the very end, in an extremely weak condition at eighty years of age, the Buddha made a declaration like a lion's roar in the *Mahāsīhanāda Sutta*: "No matter what, my power of knowledge and wisdom has not decayed; it remains steadfast." In that manner, the Buddha possessed a wonderful store of qualities. It was due to the greatness of his store of qualities that infinite and boundless beings in the world found refuge. From the epithet *“Satthā devamanussānaṃ”* (Teacher of gods and humans), we see that not only humans but even devas and brahmās in the heavenly and brahma realms, who had been waiting for the appearance of a Buddha, listened to his Dhamma and attained the peace of Nibbāna.</p>
+<p>Furthermore, once a Buddha has actually attained Enlightenment, whom does he revere? It is mentioned regarding the Buddha that after attaining Enlightenment, when he looked to see under whom he could live showing reverence, there was no one in the world superior to him. Then he reflected on the Tathāgatas of the past. The past Tathāgatas spent their lives paying homage to the Dhamma alone, honoring the Dhamma. Therefore, the Buddha too paid homage to that very Dhamma. He placed the Dhamma in the position of the Teacher. Thus, when we say *Buddha*, *Dhamma*, and *Saṅgha*, a Buddha is such because of the Dhamma he has realized. That is how the Buddha attained Buddhahood. The Saṅgha consists of those who have personally realized the feasibility and practical value of that Dhamma, and the possibility of attaining the supramundane paths and fruits. That is what we mean by the Triple Gem. Therefore, on this Vesak day, while we reflect on this ocean of Buddha-virtues, merely being satisfied with that alone is not sufficient. Indeed, the Buddha himself declared that there are great blessings in recollecting the qualities of the Buddha: *“Ye kho te buddhe pasannā, agge te pasannā; agge kho pana pasannānaṃ, aggo vipāko hoti.”* "If anyone has developed confidence and clarity toward a Buddha, they have developed it toward the foremost person in the world. And if anyone has developed confidence toward the foremost, the fruit thereof is also foremost and supreme," thus the Buddha declared. Thinking in this manner, even the contemplation of the Buddha's virtues as *buddhānussati* brings great peace to the world.</p>
+<p>The very characteristics of the Buddha's quality of blessedness include his physical beauty, as we mentioned earlier, as well as his brahma-voice endowed with eight factors (*aṭṭhaṅga-samannāgata-brahmasara*). We know of instances where even wild animals were pacified by that sweet voice. Likewise, the Buddha's logical power, his Great Wisdom, and his ability to make someone understand the Dhamma by comparing appropriate similes and metaphors—all of these belong to his quality of blessedness (*bhagavā*). The Buddha utilized each of these according to the situation to enable the world to realize the Dhamma. Some are drawn to the physical form of the Buddha. Others are drawn to his voice. Yet others are drawn to his logical power and the metaphors presented in his Dhamma discourses. Some attain realization through the very influence of his Great Wisdom. Still others, through his psychic powers and miracles, shatter their conceit and draw close to this Dhamma. It was because of this great quality of blessedness that the Buddha was able to make individuals realize the Dhamma. The Buddha preached the Dhamma in a way that perfectly matched the inclinations and latencies (*āsayānusaya*)—the saṃsāric habits—active in their minds, and whatever qualities or meditation subjects (*kammaṭṭhāna*) they had developed during Saṃsāra.</p>
+<p>The Buddha possessed such a wonderfully great power. It is as a step in practicing the Dhamma preached by the Buddha that all of you devout people have observed these precepts today. Indeed, as the Buddha declared, this virtue (*sīla*) is the fundamental foundation of these wholesome qualities. Standing on the foundation of virtue, one must develop concentration (*samādhi*). Then, with a concentrated mind, through wisdom (*paññā*) and insight (*vipassanā*), one must realize the three characteristics of impermanence (*anicca*), suffering (*dukkha*), and non-self (*anattā*). Whether called "giving, virtue, and meditation" (*dāna, sīla, bhāvanā*) on one hand, or "virtue, concentration, and wisdom" (*sīla, samādhi, paññā*) on the other, it is this very same path of Dhamma. Therefore, you devout people must reflect that all of these are contained within the Dhamma of the Four Noble Truths introduced to the world by a Buddha. The Dhamma of the Four Noble Truths explains that the entirety of saṃsāric existence is suffering (*dukkha*), and the cause of this suffering (*dukkha*) is the uninterrupted craving (*taṇhā*) within worldly beings. The settling of this craving (*taṇhā*) is not achieved by throwing more and more of the fivefold sensual pleasures into it, which is like throwing straw onto a fire. It is by removing whatever cause there is for this craving (*taṇhā*)—that is, by removing ignorance (*avijjā*)—that this craving (*taṇhā*) is settled.</p>
+<p>Next, that very state of a stilled and cooled continuum in which craving (*taṇhā*) has been settled is what is called Nibbāna; it is not some strange, separate world. The desire to go on and on in this becoming (*bhava*) is a highly subtle level of craving (*taṇhā*), categorized as sensual craving (*kāma-taṇhā*), craving for becoming (*bhava-taṇhā*), and craving for non-becoming (*vibhava-taṇhā*). No matter how much suffering (*dukkha*) and trouble they undergo, even you devout people know very well that, at the final moment, one thinks: "Well, we failed to fulfill our hopes this time, so we must achieve them at least in the next life." In this way, these saṃsāric beings chase after a mirage. This was seen by the Buddha's eye. Only a Buddha can point this out correctly. The entirety of existence—consisting of form (*rūpa*), feeling (*vedanā*), perception (*saññā*), formations (*saṅkhāra*), and consciousness (*viññāṇa*)—is suffering (*dukkha*). The entire saṃsāric existence is suffering (*dukkha*). The day one eliminates the desire and craving (*taṇhā*) for this existence is indeed the day of the greatest peace. Thus, instead of merely giving water to a feverish patient, the Buddha diagnosed the true cause of the illness and treated it.</p>
+<p>That is why the Buddha is called the incomparable Physician. We must contemplate according to the Dhamma preached in that manner. Today, many devout people have observed the noble Ten Precepts (*dasa-sīla*). Others have observed the Eight Uposatha Precepts (*aṭṭhaṅga-uposatha-sīla*). Still others have observed a higher level of virtue known as *ājīva-aṭṭhamaka-sīla* (virtue with livelihood as the eighth factor). Whichever it may be, one must contemplate the value of each of these training rules (*sikkhāpada*). It is only when a Buddha appears in the world that the eye of Dhamma (*dhamma-cakkhu*) arises for worldlings. Until then, the entire world is blind. Living with this eye of Dhamma, one gains the strength to discipline body and speech. It is due to not disciplining body and speech that beings suffer (*dukkha*) in these states of deprivation (*apāya*) for a long time. Thus, by keeping these virtues, and through the serenity arising therefrom, when one removes the hindrances (*nīvaraṇa*)—sensual thoughts, thoughts of ill-will, sloth and torpor, doubt and restlessness, and the wavering of indecision (*vicikicchā*)—and settles the mental continuum upon a wholesome object, that is indeed concentration (*samādhi*).</p>
+<p>Next, relying on that concentration, one must bring to light the reality of impermanence (*anicca*), suffering (*dukkha*), and non-self (*anattā*) as pointed out by the Buddha, whether in regard to all beings or other things in the world. This is a Dhamma that must be understood each according to their own wisdom. Because this is something that must be personally realized, the Buddha declared: *"Tumhehi kiccaṃ ātappaṃ, akkhātāro tathāgatā"*—"You yourselves must make the effort; the Tathāgatas are only teachers." Therefore, in accordance with the Dhamma taught by the Buddha, we must strive to honor him with the worship of practice (*paṭipatti-pūjā*). What you devout people aim for by observing these precepts with faith and listening to this Dhamma is to offer the highest possible worship to the Buddha—the worship of practice, which is considered far superior to material offerings (*āmisa-pūjā*). Thus, this is not merely an offering to the Buddha; it is something done for one’s own liberation, for liberation from this Saṃsāra. One must reflect that a Buddha appears in the world solely to enable us to realize Nibbāna.</p>
+<p>Authors of the past, who contemplated the Buddha’s qualities with abundant faith, used to write: "He became Buddha for my sake alone." They referred to the Buddha as "He who became Buddha for my sake alone." What is the meaning of that statement? "The Buddha attained Buddhahood for my sake alone." Everyone should think in this very way: "The Buddha attained Enlightenment for my sake alone." Developing such firm faith (*saddhā*) and walking along this path of Dhamma, one must not be satisfied with virtue alone, but alongside it, one must develop meditation based on some meditation subject (*kammaṭṭhāna*). For this Dhamma of Nibbāna is something that must be personally realized. Everyone understands the various levels of suffering (*dukkha*)—physical suffering (*dukkha*) and mental suffering (*dukkha*). All of these are indeed suffering (*dukkha*); yet, dividing them into compartments, people say only this part is suffering (*dukkha*). And they imagine that the other part is pleasure (*sukha*). That is not what the Buddha declared. There is no need to sugarcoat this: the entire saṃsāric existence is suffering (*dukkha*). Existence in the deva and brahma worlds is also impermanent (*anicca*). Indeed, as long as one remains in Saṃsāra, in becoming (*bhava*), the moment that merit is exhausted, one falls back into lower births, engages in unwholesome actions, and repeatedly goes even to the states of deprivation (*apāya*).</p>
+<p>Such is the terrifying nature of this Saṃsāra. This is why a Buddha is the peerless Teacher of the world: because he points out the path for liberation from Saṃsāra, for escaping from the suffering (*dukkha*) of Saṃsāra. Therefore, on this day, we must contemplate that supreme store of qualities of the Buddha. In terms of the word "tribute" (*upahāra*) used in modern times, the highest tribute we can pay him is the worship of practice (*paṭipatti-pūjā*). What helps to sustain the Buddha’s Dispensation (*Sāsana*) is this very store of qualities—virtue, concentration, and wisdom (*sīla, samādhi, paññā*)—accumulated within us. The Buddha's Dispensation (*Sāsana*) is a message that travels from heart to heart. That message is carried by the blessing of good friendship (*kalyāṇamitta-sampatti*). Seeking the help of good friends (*kalyāṇamitta*), one also becomes a good friend to the world. Thus, the association of good friends (*kalyāṇamitta-samāgama*) can be considered the highest, widest, and greatest association in the entire world. For from the Avīci hell up to the Akaniṭṭha brahma realm, there is a certain spiritual network for those who have turned toward this path to Nibbāna.</p>
+<p>It is within this network that, as it is said, even the help of the devas is received as circumstances require. Therefore, in this Saṃsāra, we should not think of ourselves as helpless. If we have gone for refuge to the Triple Gem, that help of good friends (*kalyāṇamitta*) belongs to us; we shall receive it. The Buddha indeed is our peerless Good Friend (*kalyāṇamitta*). Likewise, we must reflect on this impermanence (*aniccata*). Having fulfilled the perfections over such an immense period—four incalculable aeons and a hundred thousand world cycles—the Buddha lived for only eighty years. Within forty-five years, he completed his Buddha-activity. Then, at his final moment, he declared as his last words: *"Handa dāni, bhikkhave, āmantayāmi vo, vayadhammā saṅkhārā appamādena sampādetha."* "Behold, monks, I address you now: formations (*saṅkhāra*) are subject to decay. Strive with diligence (*appamāda*)!" That was the final word of the Buddha. We must bring this to mind especially at this moment. This Dispensation (*Sāsana*) will not last forever. Indeed, everything is impermanent (*anicca*). Even so, we must strive to prevent the decline of the Dispensation (*Sāsana-parihāniya*) to some extent, like propping up a collapsing building. This must be done not by other means, but by cultivating those qualities of the Dispensation within our own mental continuums.</p>
+<p>It is by developing the blessing of good friendship (*kalyāṇamitta-sampatti*) and expanding the association of good friends (*kalyāṇamitta-samāgama*) that we can prevent the decline of this Dispensation. Therefore, regarding the decline of the Dispensation too, what we must think of is that very word of the Buddha: *“Appamādena sampādetha”*—we must accomplish it with diligence. The Vesak day is indeed an excellent day for all of you devout people to make such resolutions within your mental continuums. Devout Buddhists refer to Vesak day as the Buddhist New Year. For if a New Year is an occasion to form new thoughts, new aspirations, and new resolutions, then the best occasion for that is Vesak day, the Vesak Full Moon Poya Day—the memorable day on which the three most precious events of the Buddha’s life occurred: his birth, Supreme Enlightenment, and Parinibbāna.</p>
+<p>Therefore, relying on the beginning you have made, you devout people must resolve to go further and further forward. This Noble Eightfold Path is a path to be developed within one’s own heart. No matter how many different paths there are in the entire world, the Buddha declared: *"Eso'va maggo natthañño, dassanassa visuddhiyā"*—"This is the path; there is no other for the purification of vision." To develop one's vision of life and to develop wisdom (*paññā*), there is no other path; this very Noble Eightfold Path is the only way, as declared by the Buddha. The Noble Eightfold Path consists of eight steps that bring about a complete, total transformation of a person's life. Now, you devout people can easily understand that *Sammā-diṭṭhi* means Right View. In one sense, Right View means that in conducting one’s daily life, to steer clear of the path to states of deprivation, one must discipline body and speech. One must fulfill virtue and other wholesome qualities. In this, the ten-point Right View (*dasa-vatthuka-sammā-diṭṭhi*) is of assistance.</p>
+<p>There are those in the world who hold nihilistic views (*nātthika-diṭṭhi*), having no belief in wholesome and unwholesome actions (*kusala-akusala*), or in merit and demerit. Raising various intellectual arguments, they become indifferent to wholesome and unwholesome actions, and merit and demerit. But one must reflect with wisdom: in the Buddha's Dhamma, that belief is indeed a part of Right View (*sammā-diṭṭhi*). As long as we remain in Saṃsāra, we must face these forces of kamma (*kamma-vega*). Therefore, performing acts of giving and merit-making, and doing wholesome deeds in our daily lives, helps us suppress unwholesome states or suppress the results of evil actions. The deeper meaning, however, is that one day we must also cross over this Saṃsāra. What helps us do so is the realization and direct experience of the Dhamma of the Four Noble Truths. If one has a certain measure of understanding regarding these truths taught by the Buddha—suffering (*dukkha*), the origin of suffering (*dukkha*), the cessation of suffering (*dukkha*) which is Nibbāna, and the path thereto—that also is Right View (*sammā-diṭṭhi*). Thus, relying on this Right View, we must strive to develop Right Intention (*sammā-saṅkappa*). These are the intention of renunciation (*nekkhamma-saṅkappa*), the intention of non-ill-will (*avyāpāda-saṅkappa*), and the intention of harmlessness (*avihiṃsā-saṅkappa*). Renunciation (*nekkhamma*) does not mean merely leaving the household life, but leaving behind the fivefold sensual pleasures. In short, we must cultivate the thought of escaping from Saṃsāra within our minds. Likewise, loving-kindness and harmless thoughts, and consequently, words corresponding to them must issue from us. We must strive to use our speech correctly by refraining from false speech, slanderous speech, harsh speech, and frivolous talk (*samphappalāpa*), as mentioned in the *ājīva-aṭṭhamaka-sīla*.</p>
+<p>Next, in our actions and work, we must strive to live by refraining from grave and obvious defilements such as taking life and sexual misconduct. We must strive to refrain from wrong livelihood (*micchā-ājīva*)—such as trading in poisons, trading in weapons, rearing animals for slaughter, and trading in intoxicants—and seek the peace of living righteously, even if one’s livelihood yields only a small income. The effort made to establish such a livelihood is indeed the fourfold effort, namely: the effort to prevent the arising of unarisen unwholesome states, the effort to abandon already arisen unwholesome states, the effort to arouse unarisen wholesome states, and the effort to maintain and consolidate already arisen wholesome states. In that manner, having developed the quality of Right Effort (*sammā-vāyāma*), through that very quality, one must establish Right Mindfulness (*sammā-sati*) within oneself. One must establish correct mindfulness regarding the four foundations of mindfulness (*satipaṭṭhāna*): body, feelings/sensations (*vedanā*), mind, and mind-objects. Not only in regard to oneself, but also concerning all saṃsāric relations in this world whom we divide and claim as "I" and "mine". One must contemplate that all of them are travelers in this Saṃsāra, and thereby gain a certain understanding.</p>
+<p>Looking at this as something common to all, one gains an understanding of this natural law (*dhammatā*). Next, with the help of mindfulness, when one develops concentration (*samādhi*)—which is the ability to keep the mind on a single object for a long time, the full power of the mind—it is through that developed power that the true nature of this world is seen. In this day and age, many scholars and intellectuals struggle, unable to understand the difference between wisdom (*paññā*) and worldly intellect. To beautify a brass tray, someone might paint over it. But what does a wise person do? Using the necessary materials, they gradually remove the rust and tarnish layer by layer from that brass tray. Then, its shine returns so brightly that one can see their own face in it. Wisdom (*paññā*) is precisely like that. The more we remove the tarnish of defilements embedded in our mental continuum, the more our cognitive power is purified, and our wisdom (*paññā*) is purified.</p>
+<p>If we accumulate the knowledge of great scholars and intellectuals of the world while keeping this pile of defilements intact, it is like applying paint over the tarnish. Beneath is rust; on top is a fine coat of paint. In that manner, what often arises in those intellectuals is a state of "outward shine, inward rot." Because they have forgotten this basic principle taught by the Buddha. What is required here is the removal of the defilements within oneself through virtue, concentration, and wisdom (*sīla, samādhi, paññā*). Accordingly, we must shape our lives in line with that principle of Dhamma, and not according to any other theories.</p>
+<p>While reflecting wisely in this manner, you devout people should rejoice today. For in this world, not only in foreign lands of wrong views (*micchā-diṭṭhi*) unknown to us, but even in this very country, countless people are heading toward destruction starting from their very hold on wrong views (*micchā-diṭṭhi*). Due to wrong views (*micchā-diṭṭhi*), there arise wrong intentions; due to wrong intentions, wrong speech; due to wrong speech, wrong action; due to wrong action, wrong livelihood; due to wrong livelihood, wrong effort; due to wrong effort, wrong mindfulness; due to wrong mindfulness, wrong concentration; and from that, terrible disasters occur. While such things are happening in the world, you devout Buddhists have gathered on this Poya day, observed precepts according to your capacity, directed your minds toward Dhamma and meditation, and especially for about an hour now, have listened to a Dhamma sermon centered on the Buddha's qualities. You must reflect on what has been left with you through this. Mention is made in the Dhamma of five valuable qualities known as the powers (*bala*): faith, energy, mindfulness, concentration, and wisdom (*saddhā, viriya, sati, samādhi, paññā*). You must understand that this opportunity has helped you develop and cultivate those very powers.</p>
+<p>Especially, when you contemplate the Buddha's virtues by way of *buddhānussati*, faith (*saddhā*) arises in you. It is through that faith (*saddhā*) that you truly recognize the Buddha. Indeed, what we must do is walk along this path of Dhamma. Then, through the faith (*saddhā*) generated by recollecting the Buddha's qualities, we must become energetic in walking the path traversed by the Buddha. Through that exertion of energy, our mindfulness (*sati*) grows. When that mindfulness is developed to a certain degree, concentration (*samādhi*) arises. Through that concentration, as mentioned, wisdom (*paññā*) dawns. These must be developed to some extent as spiritual faculties (*indriya*) and spiritual powers (*bala*) if one is to realize Nibbāna. Therefore, you devout people can rejoice that today’s Dhamma sermon has helped you cultivate these wholesome qualities according to your capacity. To escape from this terrifying Saṃsāra, you must recall the Buddha's advice of diligence: *“Appamādena sampādetha”*—accomplish it with diligence. Indeed, just as expressed toward the end of the Buddha’s life, when we reflect on the changes taking place in this country now, we too might feel that this is the final stage of the Dispensation (*Sāsana*). Therefore, in such circumstances, we must strive as quickly as possible to benefit from this Dhamma and achieve our own liberation from Saṃsāra.</p>
+<p>Today, on this Vesak day which we regard as our New Year, making that resolution, seeking the association of good friends (*kalyāṇamitta*), you should make the aspiration: "May this Dhamma discourse help and serve as a support for realizing the great deathless Nibbāna through the penetration of the paths and fruits of Stream-Entry (*sotāpatti*), Once-Returning (*sakadāgāmitā*), Non-Returning (*anāgāmitā*), and Arahantship, if possible, in this very life!" Although this Dispensation (*Sāsana*) is something that is sinking, the texts mention that devas and brahmās of Right View (*sammā-diṭṭhi*) assist in preserving it to some extent. Likewise, our good friends (*kalyāṇamitta*) among them rejoice, sharing in the merit of these wholesome deeds we perform, glad that the Dispensation still remains. May the meritorious deeds we perform help them fulfill whatever aspirations for Enlightenment they may have, and may they rejoice in knowing that their efforts on behalf of the Dispensation are bearing fruit! Let us share the merit with the devas in this manner, wishing: "May the store of merit we have accumulated today through giving and listening to the Dhamma be received by them, and through rejoicing in it, may they provide as much protection as possible to the Dispensation, and securing their own liberation, may they find peace in the supreme, deathless Nibbāna!" Likewise, make the aspiration: "May all saṃsāric beings, from the Avīci hell to the Akaniṭṭha brahma realm, who desire merit and desire Nibbāna, rejoice in this merit, and through their own aspired Enlightenment, find peace in the supreme, deathless Nibbāna!" In this manner, let us transfer the merit by reciting these verses.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_100.html" class="doc-btn">← Previous Sermon (100)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_102.html" class="doc-btn">Next Sermon (102) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

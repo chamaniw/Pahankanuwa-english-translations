@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 124 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_123.html" class="doc-btn">← Previous Sermon (123)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_125.html" class="doc-btn">Next Sermon (125) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 124</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_124_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_124_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_124_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #124</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.132)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Dhanapālako nāma kuñjaro, katukappabhedano dunnivārayo;</p>
+<p>Daddho kabalaṃ na bhuñjati, sumarati nāgavanassa kuñjaro ti.</p>
+<p>From:</p>
+<p>Dhammapada 324 (Nāgavagga)</p>
+<p>Dear Listeners,</p>
+<p>The Greatly Compassionate Lord Buddha, the Teacher of the Three Worlds, afforded a supreme place to the care of parents among social virtues. In instances where this virtue was neglected, he employed skillful means (*upāya-kauśalya*) to remedy it. During his lifetime, he timely revealed the example he himself set by fulfilling this virtue. From the verse we have chosen as our theme today, and its introductory story, we can find evidence for this. The Buddha preached this verse in Sāvatthī, concerning the four sons of a certain Brahmin.</p>
+<p>In Sāvatthī, there lived a certain Brahmin who possessed eight hundred thousand (eight lakhs) of wealth. When his four sons reached the proper age, he arranged their marriages and distributed four hundred thousand from that wealth among the four children. Sometime later, his wife passed away. The children began to think: "If our father brings another wife, it might lead to some problem regarding our family wealth." As a strategy, they began to attend to their father, pampering him with food and drink even more than before, and massaging his hands and feet. One day, during the afternoon, while massaging the father after he woke from sleep, the children spoke of the bitterness of household life in a way that would induce disillusionment with saṃsāra, or rather, in a way that would incline him toward ordination, and then they said: "Please give the rest of the wealth to us as well." Believing them, the Brahmin gave those four hundred thousand to the children too. Not only that, he distributed all his other goods and possessions, leaving himself with only his undergarment and upper robe. Having done so, while he was staying for a few days at the eldest son's house, one day he went out, bathed, and upon his return, the daughter-in-law stood at the doorway and said: "Why, did you give an extra hundred or two to the eldest son? Didn't you give two lakhs to each? Won't the other sons' houses take you in?" The Brahmin, angered by this, cursed her, calling her an outcast (*vasalī*), and departed from there. Next, he went to the other sons' houses. Receiving similar treatment at their homes as well, the Brahmin was ultimately forced to take to the road. He then thought of a way to survive and sustain himself; he received ordination in the mendicant order called *Kaṇḍalaṅga* and began to live by begging for alms.</p>
+<p>Gradually, as he grew old, due to the lack of proper food and drink, and having no place to sleep, his body became extremely weak. One day, after waking up from sleep on a wooden plank, he reflected: "The only refuge I have is our Ascetic Gotama. From what I have heard, he is someone who engages in friendly conversation, someone whom one can approach without fear." Carrying his walking stick, he went to the presence of the Buddha. The Buddha asked him: "Why, Brahmin, have you come here so weak, without proper clothing?" Thereupon, he told his story. The Buddha then taught this Brahmin five verses, instructing him to go and recite them at an assembly when his children were gathered in the Brahmin hall. The Brahmin learned the five verses, went inside when his children were assembled with the other Brahmins, raised his hand, and asked for permission to speak a few verses. Having received permission, he recited the five verses taught and expounded by the Buddha. Let us state the meaning of those verses.</p>
+<p>In those verses, the Buddha presented what the Brahmin was to say concerning his children: "Those children at whose birth I rejoiced, whose progress I looked forward to—they, in conspiracy with their wives, have driven me out of the house. It is just like dogs barking and chasing away a pig." Furthermore, he says: "These ungrateful, wretched children, like demons in the guise of sons, have driven me, in my old age, out of the house. Just as horses receive good food and drink as long as they possess swiftness and strength, how is an old horse treated? It is turned out to graze like cattle. In the same way, my children have driven me from the house without giving me my due sustenance in my old age." Next, he says: "This walking stick is of greater help to me than these ungrateful children. Supported by this walking stick, I drive away fierce dogs and cattle. When walking in the dark of night, this walking stick guides me, going before me. Likewise, when stepping into water, it tells me the depth of the water. When I am about to fall, the walking stick becomes my support. Not even that much support do I have from my children." Thus he spoke those verses. It is said that in those days, there was a custom that if anyone received their inheritance from their parents and failed to care for them, that person should be put to death. Therefore, these children became terrified, prostrated at their father's feet, and begged: "We shall care for you. Please spare our lives."</p>
+<p>Then the Brahmin told the rest of the assembly: "Now indeed my children will look after me." They then seated the father on a chair and carried him home. The eldest son told his wife to look after him well, otherwise there would be punishment. From that day on, the Brahmin received "regular meals"—amounting to eight portions of rice—along with excellent food, drink, and foot massages, just as he desired, from all four sons' houses. Before many days had passed, when the Brahmin's body had recovered well, he thought of the Brahmin custom of offering teacher's fees (*guru-paṇḍuru*). Thinking thus, he took two robes he had received, went to the Buddha, and offered them, saying: "O Ascetic Gotama, I have brought these teacher's fees for you." The Buddha accepted them out of compassion. When the sermon of appreciation (*anumodanā*) was delivered, the Brahmin developed faith and took refuge in the Triple Gem. He also invited the Buddha, asking the Blessed One to accept four of the eight portions of daily food he received from his four children. The Buddha expressed his consent. The Brahmin went home and informed his children: "If the Venerable Gotama comes to our house, treat him well." The Buddha, in due course, walked for alms to those houses. They too prepared excellent food and drink and offered alms to the Buddha.</p>
+<p>On a certain occasion, it is mentioned that when an auspicious ceremony arose at the eldest son's house, the son asked his father to whom the wedding feast should be given. The father replied: "To whom else should it be given? It must be given to our Ascetic Gotama." Accordingly, they invited the Buddha and five hundred monks to the eldest son's house. On that occasion, after serving the alms bountifully and performing other acts of generosity, the children sat near the Buddha and said: "Now we are caring well for our father; do you not see how exceptionally healthy and well he is?" It was on that occasion that the Buddha declared: "Indeed, in the past too, wise sages of old cared for their aged parents." As an example, he related the Jātaka story found in the Jātaka book, known as the *Mātupōsaka Nāgarāja Jātaka* (The Jātaka of the Mother-Supporting Elephant King). The verse we have chosen as our theme is the one that expresses the meaning of that Jātaka story:</p>
+<p>> *Dhanapālako nāma kuñjaro katukappabhedano dunnivārayo;*</p>
+<p>> *baddho kabalaṃ na bhuñjati, sumarati nāgavanassa kuñjaro* ti.</p>
+<p>The elephant named Dhanapālaka, in must, fierce and normally difficult to restrain—once bound in the elephant stable, did not eat even a single morsel of food. The elephant remembered the Naga-forest where his mother resided; therefore, he did not take food.</p>
+<p>If we briefly summarize that *Mātupōsaka Jātaka* story, it is detailed as follows: As you, virtuous friends, know from the Jātakas of the past, during the reign of King Brahmadatta, the Bodhisatta was born in the Himalayas in an elephant herd of thousands, as an elephant pure white in all limbs—an elephant of great meritorious features. He lived as an elephant king, surrounded by his herd. In the course of time, after his mother became blind, he sent food to his blind mother through the other elephants. However, he later came to know that those elephants, instead of giving the food to the blind mother, ate it themselves. Knowing this, the Bodhisatta elephant became disillusioned, left the herd that very night, and went to a certain mountain called Caṇḍora. Placing his mother, the mother elephant, in a cave near a bamboo grove, he stayed there, attending to all her needs.</p>
+<p>On one occasion, a certain poor man, a forester from the city of Benares, having lost his way, was unable to find the path and began to weep. The Bodhisatta elephant went to investigate, and when told that the man was lost, he seated the man on his back and showed him the path back to the city. However, this ungrateful man marked the path as he went. Meanwhile, when the king's state elephant died and could no longer perform its duties, the king had a drum beaten, announcing that if anyone knew of a suitable elephant, they should report it. This man came forward and said: "I have seen a completely white elephant king in such-and-such a place." He then led the elephant trainers and pointed the elephant out while it was in a lake. The Bodhisatta elephant, understanding the situation, thought: "It is this ungrateful person who has brought this calamity upon me," yet without showing any opposition, he remained calm. The trainers led the Bodhisatta elephant to the city. The king, celebrating the arrival of the elephant, decorated the stable and placed before him various delicious royal foods suitable for him. Although seven days had been spent on the journey, the elephant did not take any food. The king then came and pleaded: "If you remain thus, we cannot carry out these affairs." The elephant replied: "While my blind mother is starving in the forest, I shall not take food." Deeply moved by this virtue, the king released the elephant king. The Bodhisatta elephant, freed from the king's service, returned to his mother and attended to her.</p>
+<p>According to the Dhamma accounts, the king was so moved by this virtue that he declared that region a separate tax-free village, and ultimately provided special facilities for the Bodhisatta elephant and his mother. That is to say, he arranged for food and drink to be provided, and later, naming the area Hastipura, he had an image of the elephant carved in stone. The books mention that the story of this elephant remained famous in India (Dambadiva) even after that. When the Buddha expounded this elephant king's story in detail, the children developed a deep sense of spiritual urgency (*saṃvega*) regarding the care of parents.</p>
+<p>At that moment, the Buddha preached the teaching of the Four Noble Truths, and upon hearing that sermon, the Brahmin, his children, and their wives all attained the Fruit of Stream-entry (*Sotāpatti-phala*). In brief, this is the origin story of this verse, with which the Jātaka story is connected.</p>
+<p>With reference to this, let us now attempt to connect it to our present era, and also bring to mind the categories of Dhamma related to the care of parents. For the decline of this virtue is occurring on all sides—in lay society and in monastic society alike. Among the virtues of lay society, we find numerous sutta teachings revealing that the Buddha gave an exceptionally supreme place to the care of parents. In particular, the Buddha declared on one occasion that if parents are properly honored and cared for in a home, it is as though Brahmās reside in that home. As you, virtuous friends, have often heard: *“Sabrahmakāni tāni kulāni”*—in whatever clans or families parents are properly cared for and honored, there is a Brahmā in that family, in that home. Similarly, the Buddha pointed out that parents are worthy of the sacrifices and offerings normally dedicated to Brahmās. He also stated that they are the "first teachers" (*pubbācariya*) in the home, and are worthy of offerings. In this manner, the Buddha praised the care of parents in the most sublime terms.</p>
+<p>Likewise, among the seven vows that lead to rebirth as Sakka, the primary one is: *“yāvajīvaṃ mātāpettibharo assaṃ”*—"as long as I live, may I support my mother and father." It is mentioned that because he undertook and kept this vow, he attained that celestial state. You have also heard in both the *Vasala Sutta* and the *Parābhava Sutta* that the Buddha declares that if anyone who has the capability does not support their aged parents, that person is an outcast (*vasala*). Neglecting the care of parents is also shown as a cause of one's downfall (*parābhava*). In the *Sigālovāda Sutta*, which relates to lay life and is frequently recollected by you, Sigāla, the son of a Brahmin householder, worshipped the six directions as a daily ritual. However, the Buddha gave a completely different meaning to the worship of the directions practiced among Brahmins, in order to preserve social ethics. Among them, the Buddha first indicated the Eastern direction—the forward direction—as representing parents: *“mātāpitā disā pubbā”*.</p>
+<p>Regarding the care of parents, the Buddha has shown five duties that children must perform for their parents: "Having been supported by them, we shall support them in their old age"—this resolve must be maintained. Likewise, one must perform their duties and affairs when they are unable to do so themselves. Furthermore, preserving the family lineage and tradition; managing the inheritance received from parents properly and protecting it; and lastly, transferring merits to them after they pass away—the Buddha indicated in the *Sigālovāda Sutta* that these five duties must be fulfilled. When these are fulfilled, the mutual relationship and the support received from parents was expounded by the Buddha in that sutta.</p>
+<p>When parents are cared for in this manner, its blessings (*āniśaṃsa*) are received. If children support their parents, the parents, with joyful minds born of that, bless the children, saying: *“Ciraṃ jīva, ciraṃ āyu!”*—meaning, "May you live long! May you have long life!" This blessing becomes a cause for the progress of the children. Furthermore, parents restrain children from evil deeds, establish them in wholesome qualities, teach them arts and sciences at the proper time, provide them with suitable spouses, and hand over their inheritance to them in their old age. In this manner, the relationship between parents and children has been expounded. In various other places too, the Buddha has spoken about the care of parents.</p>
+<p>To show the value of parents, there is a special discourse of the Buddha: "Monks, there are two persons whose care one can never repay in this world. Who are the two? Mother and father." Then, using a few extraordinary words, the Buddha expounds the value of parent care: "If a son, with the intention of caring for his parents, were to carry his aged father on one shoulder and his mother on the other for a hundred years, providing them with all care, cleansing their excrement and urine, and performing all massage and nursing, even then, the help and refuge received from those parents would not be fully repaid." Secondly, the Buddha declares: "If a son, with the intention of repaying his parents, were to establish them in sovereign kingship over this great earth filled with the seven treasures, even then, he would not have done enough for his parents. But if a child establishes faithless parents in the blessing of faith, immoral parents in the blessing of virtue, stingy parents in the blessing of generosity, and unwise parents in the blessing of wisdom—such a child has not only repaid them, not only done what is sufficient, but has done more than enough." In the *Maṅgala Sutta*, which is well known to you, *“mātāpitu upaṭṭhānaṃ”* (supporting mother and father) is shown as a highly valuable blessing among the thirty-eight blessings. Thus, while neglecting parents is a cause of decline, caring for them is shown as a blessing that leads to one's progress.</p>
+<p>Nevertheless, the failure to care for parents has always existed in society. For many forget the protection they received in their childhood. In short, forgetting the service rendered by the mother at birth, and the service rendered by the father in guiding one's life on the right path, some are even reluctant to introduce their parents. Parents must be revered as those who introduce this world: *“imassa lokassa dassetāro”*—those who showed this world. In ancient times, there was a practice of *preta-pūjā* (offerings to spirits) among the Brahmins for transferring merits to the deceased. It was this ritual that the Buddha, in suttas such as the *Tirokuḍḍa Sutta*, presented according to the Buddhist way—namely, the method of helping deceased parents by transferring merits. The word *dakkhiṇā* in many places refers to the sacrifices of the Brahmins; but here, *dakkhiṇā* means that deceased parents can be made happy by performing meritorious deeds such as almsgiving to the Triple Gem and transferring those merits. However, sometimes there are instances where they are neglected while alive, and only after death are they remembered as a matter of custom. What is emphasized here is that parents must be cared for even while they are alive, especially in their old age, remembering the help and protection they gave in our childhood, such as cleansing our excrement.</p>
+<p>Because of this importance, the Buddha granted certain special privileges regarding parents even to the Sangha. Now, regarding travel during the rainy retreat (*vassa*), the Buddha has laid down certain rules for the Sangha, stating that it is unsuitable to go away for more than six nights during the *vassa*. However, as special cases, it is indicated that one may go for some urgent matter concerning members of the order, such as a bhikkhu, bhikkhunī, or sāmaṇera. Likewise, if there is an affair connected with one's mother or father, permission has been granted to go, whether there is an invitation or not. Even without an invitation from the parents, if they are afflicted with illness, or if there is a need to preach the Dhamma to them, the Buddha has permitted the Sangha to go even during the *vassa*. Furthermore, if the parents are extremely poor, and after the child has ordained, they have no other way of obtaining food, permission has been granted to go on almsround and give the alms food received to them as well. The Buddha has indicated on certain occasions that there is no wrong in giving parents one's personal gains, though not the communal property of the Sangha.</p>
+<p>Although the Sangha has been instructed to use what is given in faith (*deyya*) in such a way that it does not go to waste, special privileges have been shown as a favor concerning parents. If they are aged or ill, a monk is permitted to physically support his father to care for him. In times of illness, the Buddha has permitted him to attend to his mother as well, even while avoiding direct bodily touch. Through this virtue of parent care, we must understand the value of gratitude. On the other hand, cruel acts committed against parents, which we hear of through the media, did not fail to occur in the past as well.</p>
+<p>The consequences of cruel acts committed against parents instead of the care due to them are illustrated within the Dispensation itself by the character of Ven. Mahāmoggallāna. The chief disciple Ven. Mahāmoggallāna was a person of such great psychic power. Yet, because he listened to his wife's words ninety-something eons ago, beat his parents, and abandoned them in the forest, the result of that unwholesome deed was so grave that even in the life he attained the position of chief disciple with great psychic power, his bones were crushed by five hundred bandits, leading to his final passing (*pariNibbāna. Such accounts are heard both in the past and in the present.</p>
+<p>Parents are noble individuals, equivalent to the state of Brahmā. If anyone in society wishes to accumulate merit, they have the opportunity right at home. Instead of worshipping the fire god, instead of throwing food into the fire, the Buddha introduced the care of parents to the world. We occasionally hear of some who consider the sole purpose of their lay life to be the care of their parents. Such virtuous people have come to us too on certain occasions, and from their stories, we hear that some still preserve these valuable virtues. There are those who even give up jobs offered far away, dedicating themselves to the care of their parents. In lay life, both in the past and present, a common point of conflict after marriage is the relationship between mother-in-law and daughter-in-law. This is what is revealed even in the story of Ven. Mahāmoggallāna.</p>
+<p>We remember a certain devotee who knew of such situations telling us that before marrying a young woman, he gave her a "two-week interview" to care for his parents. Only if she passed that test would he marry her. On that occasion, that gentleman had declared: "I can find any number of wives, but I have only one mother and father." We must be mindful of virtues that are in decline. The foundation of lay society is that very relationship between parents and children. If it is broken at any point, it becomes a powerful obstacle to the future progress of this Dispensation. In particular, when the Poson season approaches, Buddhist devotees make great efforts to uplift the Dispensation. But it is within the unit of the family that these virtues must awaken. The relationship within a family is analyzed in the Dhamma as the four Divine Abodes (*cattāro brahmavihārā*).</p>
+<p>According to Brahmin teachings, the Brahmins were born from the mouth of Brahmā, or else Brahmā created them. That is why those Brahmins worship Brahmā. But the Buddha's description of parents is not based solely on the fact of giving life. That too is true, but parents did not "create" the child there. Rather, when one is born as the child of those parents due to some karmic cause, we all know the importance of the protection given by parents in early childhood. It is a common fact known to everyone. But a fact often forgotten by us is that during the period spent in the mother's womb, there are thousands of opportunities to die. Yet, those mothers, caring for the child, even refrain from taking foods they like, thinking of the child.</p>
+<p>Furthermore, even after birth, everyone says that they feed us by turning blood into milk. The Buddha states on one occasion: *“Lohitaṃ idaṃ ariyassa vinaye vuccati yadidaṃ mātutaññaṃ”*—"In the discipline of the Noble Ones, mother's milk is called blood." The Buddha expressed this to direct our feelings toward this, to urge us toward reality. No one would like to suck and drink blood from a mother. Therefore, we have to say that through a certain law of nature, the mother's blood becomes milk. The Buddha presented this directly. On one hand, at the beginning of life, the primary nourishment is received from the mother. Unlike wild animals, protection is provided by the father in a civilized society. That is why the Buddha often praised the care and worship of parents. To go to the Brahmā world, what helps a person is not the fire worship spoken of by the Brahmins, but the four Divine Abodes (*brahmavihāra*), as the Buddha declared. The four Divine Abodes are the four virtues: loving-kindness (*mettā*), compassion (*karuṇā*), sympathetic joy (*muditā*), and equanimity (*upekkhā*). Among them, we speak of extending the quality of loving-kindness (*mettā*) to all living beings. In showing the relationship between children and parents, the primary quality we can bring forward is this mind of loving-kindness.</p>
+<p>In the *Karaṇīyametta Sutta*, it is shown thus:</p>
+<p>> *Mātā yathā niyaṃ puttaṃ āyusā ekaputtamanurakkhe,*</p>
+<p>> *evampi sabbabhūtesu mānasaṃ bhāvaye aparimāṇaṃ.*</p>
+<p>"Just as a mother would protect her only son even by sacrificing her life, even so, let one cultivate a boundless mind of loving-kindness toward all living beings." From this, it is clear that loving-kindness is fundamentally helpful in shaping a child's life. As a simile, a mother's loving-kindness is compared to milk. When looking at early childhood, the food easiest for anyone to digest is milk. Just like giving the mother's milk to the infant, so is loving-kindness, the mind of loving-kindness—a very friendly and gentle quality. It is with the mother's gentle quality that milk is given on that occasion.</p>
+<p>As the child grows, the mother has to employ skillful means (*upāya-kauśalya*) to a certain extent, according to the situation, to discipline the child. Sometimes, when the child is naughty, she has to speak firmly or harshly. Even the Buddha, who was greatly compassionate, addressed not only Devadatta but sometimes even some monks as "empty men" (*mogha-purisa*). One might think: "The Greatly Compassionate Buddha spoke harshly like this, didn't he?" One might doubt this. Not only us, but even the Nigaṇṭhas (Jains) had such a doubt. On one occasion, the teacher named Nigaṇṭha Nātaputta, without presenting himself, assigned a prince who held his views to present this question to the Buddha: "If the Blessed One is greatly compassionate, why did he use such words that would hurt the mind of Ven. Devadatta?" This question was prepared beforehand to be asked of the Buddha, thinking it would pose a double-horned dilemma to the Blessed One. At that moment, Prince Abhaya was holding his young child in his lap. The Buddha then asked: "Well, Prince, if this child in your lap, through your negligence or that of a nurse, were to put a pebble or a stick in his mouth, what would you do?" "I would pull it out, even if it drew blood." "In the same way, when I see that Devadatta cannot be disciplined otherwise, I use such words," the Buddha replied.</p>
+<p>There we see a certain depth in that quality of great compassion. A mother's compassion is just like that. Scolding children is not out of anger or for revenge, but in disciplining children through true compassion, she has to speak firmly on certain occasions. It is said to be a stage of childhood where they do not understand, even running after slithering snakes, chasing after whatever they see. It is at that stage that compassion is aroused. As the child grows, at the stage where they must be disciplined, the mother has to step in and speak firmly according to the situation, and sometimes even punish them.</p>
+<p>Reflecting wisely, she has to do this as a means to discipline the child. This can be compared to a lump of butter (*veḍaru piḍa*). A lump of butter melts very quickly, though it is more solid than milk. In the same way, although the mother tries to discipline the child in that manner, if the child, by not listening, does something and gets hurt, she does not say: "Let him suffer." She immediately treats the child. That is how we must understand the characteristic of compassion: at first glance, it appears firm or harsh, but it melts quickly. That is compassion. Thus, in the growth of the child, the quality of compassion that helps a mother is the second stage of the Divine Abodes.</p>
+<p>Next, when the child grows up, studies well, and some perhaps attain high positions, the parents look at those children with great sympathetic joy (*muditā*). They rejoice, thinking: "The child whom we raised with so much struggle, hardship, and expense can now stand on his own feet, and can live without our help." Sympathetic joy is a rare quality in this world. When discussing these Divine Abodes, many speak of loving-kindness, and many speak of compassion, but very few direct their minds to sympathetic joy. Sympathetic joy is the quality opposed to jealousy (*issā*). Jealousy is what is abundant in the world. When looking at curd (*dī-kiri*), everyone's mind is pleased; a vessel of curd is a very pleasing sight. Just like that curd is the quality of sympathetic joy. These similes are not those found in the Dhamma itself; we employ these similes to illustrate this mutual parent-child relationship.</p>
+<p>As the child grows and develops in that manner, sometimes due to foreign travel or various studies, they have to leave. Likewise, if it is a daughter, as everyone knows, there is an occasion when parents weep—seemingly in vain—when giving the child away in marriage. On such occasions, they cultivate equanimity (*upekkhā*), thinking: "Now indeed, let her live safely somehow." That is the occasion for equanimity. This stage is compared to ghee (*gi-tel* / clarified butter). For, as we all know, a vessel filled with ghee can be turned upside down without fear, as it does not spill easily; ghee is solid and heavy. The word for heavy is *garu* (grave, respected). Thus, that grave quality... the similes of milk, butter, curd, and ghee can be applied accordingly. Like ghee is that stage of equanimity. From this, we see that just as the child grows with the help of the parents, the parents too grow through those four Divine Abodes, taking the child as their object.</p>
+<p>A great mutual relationship can be brought out through this. When the discussion of the four Divine Abodes is brought close to this, the parents cultivate loving-kindness taking the child as object, and in the final stage, they cultivate such equanimity and strength that they can selflessly let go of the child. It was in this sense that the Buddha gave parents the status of Brahmā. It is not merely because one is born due to parents; in truth, one is born due to various kamma, utilizing parents as a support. Because of giving the first understanding of life, and because of the protection received from parents to build the body and the mind, parents are called "first teachers" (*pubbācariya*).</p>
+<p>The parents' side too must reflect on this: if the qualities of loving-kindness, compassion, sympathetic joy, and equanimity developed toward one's own children can be gradually extended to one's neighbors and others, that itself becomes the arising of the four Divine Abodes. The mutual relationship between parents and children is a good opportunity for us to cultivate and grow virtues even through lay life. If the loving-kindness started in a home taking one's children as object can be extended to neighbors, the village, the country, and to all sides—that is the development of the Divine Abode of loving-kindness (*mettā-brahmavihāra*). When neighboring children succeed, just as one's own children stand on their own strength, one must arouse the quality of sympathetic joy instead of jealousy. The start for this was received from the home itself. Likewise, the quality of compassion. You have heard: *“Paññā sassa sabbadhammesu, karuṇā sabbajantusu”*—that is, the Buddha has wisdom regarding all phenomena, and compassion toward all living beings.</p>
+<p>Therefore, the great compassion of the Buddha is so deep that it is beyond our comprehension. To the Buddha, beings fallen into the ocean of saṃsāra appeared just like children running close to the hearth fire, or trying to jump onto a road where vehicles are passing. That is why, to rescue them from states of misery and guide them onto the path to heaven, the Buddha sometimes took firm measures, and even laid down strict disciplinary rules (*Vinaya*) for the Sangha. This was not out of a lack of compassion. A common folk story expressing a mother's compassion toward her children is mentioned in the Dhamma literature itself: A certain child was about to go into the forest, and the mother warned him as a threat: "If you go to the forest, a wild buffalo will gore you to death!" But when he encountered the buffalo, the child reflected: "If my mother actually wished this, let it happen. But if she spoke this without such a wish, merely as an advice, let it not happen." At that moment, the child was saved. This shows that the words a mother uses to prevent something, free from anger, are sufficient for discipline and must be used with due measure.</p>
+<p>Sometimes, the advice of a wise mother is only understood by a child after they reach adulthood. In times of illness, accidents, or when being drawn into wrong relationships, the advice given by parents must be understood as the arising of the quality of compassion. In society, firm measures must be taken on certain occasions. If we can do so mindfully, just as a mother scolds her child, we have learned something from that family life.</p>
+<p>At present, intellectuals have spread new concepts such as "positive thinking". Within such things, there is a headlong rush like a rhinoceros, looking only at one's own progress, making wealth the sole purpose of life, without considering moral virtues. In an era when such corrupt social views are widespread, we must be mindful to use the four Divine Abodes to arouse the same sympathetic joy toward a neighbor's child when they study well, pass exams, and attain high positions, as we would for our own child. If we can cultivate a quality where we can rejoice, thinking of even a poor or low-caste child, "Oh, how good, how valuable!" and saying "Sādhu! Sādhu!", we would be preserving the vanishing quality of sympathetic joy in the world.</p>
+<p>An extremely deep stage in the parent-child relationship is that of parting from the children. In parting from those children, it is indeed an occasion where the parents experience the state of Brahmā at its highest. When speaking of the position of Brahmā in the world-system, they are the highest class. That is why they are depicted with a long beard. Parents too, by the time their children are grown, have reached a significant elder status. Through the fulfillment of responsibilities and grave duties, they have acquired a strength and dignity. Just as children learn from parents, parents also learn from children; that is what is called a mutual relationship. Utilizing the child as a support, the parents develop loving-kindness, compassion, and sympathetic joy, and finally reach up to equanimity. Now, some think equanimity means bow-headed submission to everything. But according to the simile we mentioned, we can show that we cannot get pure ghee from cows without milk. It is after passing through the stages of milk, curd, and butter that ghee is produced. That is why the Buddha placed equanimity at the end. Loving-kindness, compassion, sympathetic joy, and lastly comes equanimity. That equanimity does not mean merely closing one's eyes and ignoring everything. Nor is it a cruel disregard of the world. Equanimity is something deep. It is with that depth that parents act regarding their children when parting from them—selflessly, altruistically, for the welfare of the children. But children must not think: "Our parents' duties are over, so we are finished."</p>
+<p>It is from there that the children's duties begin. If the children are strong, the Buddha has declared: *“Bhatto nesaṃ bharissāmi”*—"Having been supported by them, I shall support them." "We were brought up by our parents; because they raised us, we must now support them." *“Kiccaṃ nesaṃ karissāmi”*—"It was for our sake that our parents performed various works at home; we must perform those works." In this manner, a multitude of duties such as caring for parents devolves upon the children from that point. There are various ways of looking after parents. For some, it is possible to look after parents by writing a cheque, or by sending them to elder care homes. That is one way. Yet, as we mentioned earlier, some even give up jobs they receive to preserve those virtues, and with great desire, feeling that they are performing something valuable, they care for their parents. They receive the parents' blessings in their final moments.</p>
+<p>The Dispensation of the Buddha consists of the fourfold assembly: bhikkhus, bhikkhunīs, upāsakas, and upāsikās. When we speak of the decline of the Dispensation, we often speak of the shortcomings of the Sangha. But this class called the Sangha also comes from that very lay society. Therefore, the corruption of virtues and the decline of virtues in lay society naturally enter among the Sangha as well. If the Sangha did not receive such an environment even during the time they spent in their homes, then both sides must be held responsible. If the duties due from parents are properly fulfilled for the children, from the milk onward as mentioned, then the children too, placing the Buddha's word at the forefront, will fulfill their duties. Children should not be like birds that leave the nest and fly away, forgetting the protection they received, flying as they please, finding another who flies likewise, and flying here and there in the world. But if the portion of duties to be performed is fulfilled with one's own hands rather than through a cheque, that is something extremely valuable, an example to the world. It is mentioned that even some kings of ancient Sri Lanka, despite holding high positions of kingship, engaged in the care of their parents before attending to state affairs.</p>
+<p>Even here, in the Jātaka story related, we have a blind mother elephant. Once she became blind, what could the children not do? Who would know, who would see? But it is when she became blind that the care was given. The care given to blind parents is the greatest care. The Dhamma story shows that even as a wild animal, such care was performed. Such accounts of Bodhisatta lives are frequently mentioned.</p>
+<p>A "Bodhisatta" is a noble being aspiring for Buddhahood. A Buddha is born through the vastest range of experiences possible in this world-system. It is by the completion of one's vast range of experiences and the accumulation of the mass of wisdom that the ten perfections—generosity (*dāna*), virtue (*sīla*), mental cultivation (*bhāvanā*), ending in equanimity (*upekkhā*)—are filled and perfected. Therefore, we must reflect on the preservation of this Dispensation of ours. Lay Buddhists, in their home life, must strive for the longevity of this Dispensation by cultivating these numerous virtues related to the care of parents through the four Divine Abodes. We brought out these points on this occasion in connection with this Dhamma sermon because everyone speaks of the Buddha's Dispensation when the Poson Poyaday approaches. We must strive to integrate the points presented so far into our lives, and go as far as possible along the path of Dhamma, without falling prey to those "positive thinking" concepts.</p>
+<p>As the first step in renunciation (*nekkhamma*), you have left your homes today, observed the noble precepts (*sīla*), and in accordance with the declarations of the Buddha, you have observed these precepts to cross over the suffering of saṃsāra. Next, in connection with that, you engaged in sermon and meditation. Likewise, utilizing a Dhamma sermon that supports the valuable virtues of life, may this wholesome power (*kusala-saktiya*) you have acquired through the blessings of hearing the Dhamma guide your lives on the path of Dhamma, and may it swiftly become a supportive cause and condition for your liberation from the suffering of saṃsāra—from birth (*jāti*), aging (*jarā*), sickness (*vyādhi*), and death (*maraṇa* / *jarāmaraṇa*)—and for your realization of the supreme peace of Nibbāna,! May all beings, from the Avīci hell to the highest heaven (Akaniṭṭha), by rejoicing in these blessings of preaching the Dhamma and hearing the Dhamma, realize the supreme peace of Nibbāna,, through their aspired path of awakening! Let us recite this verse.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_123.html" class="doc-btn">← Previous Sermon (123)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_125.html" class="doc-btn">Next Sermon (125) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

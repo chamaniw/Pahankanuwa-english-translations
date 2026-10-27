@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 098 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_097.html" class="doc-btn">← Previous Sermon (097)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_099.html" class="doc-btn">Next Sermon (099) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 098</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_098_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_098_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_098_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #98</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.100)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Duppabbajjaṃ durabhiramaṃ, durāvāsā gharā dukhā;</p>
+<p>Dukkho 'samānasaṃvāso, tasmā na caddhagū siyā, na ca dukkhānupatito siyāti.</p>
+<p>From:</p>
+<p>Dhammapada 302 (Lokavagga)</p>
+<p>Dear Listeners,</p>
+<p>The Buddha, the Teacher of the Three Worlds, declared that the happiness of ordination is superior to lay happiness. By forgetting the vast amount of suffering (*dukkha*) and hardship that lies beneath lay happiness, one might sometimes perceive lay happiness as superior. Because of such a misunderstanding, the force of renunciation (*nekkhamma*) that brings a person to the ordained state might also diminish. Therefore, on many occasions, the Buddha highlighted the vast amount of suffering (*dukkha*) and hardship that lies beneath lay happiness and lay life. The Buddha expounded the stanza we have taken as our theme as advice to a certain monk who was facing such a problem.</p>
+<p>While the Buddha was residing at the Gabled Hall in the Great Wood near Vesālī, this monk, who was a Vajjiputtaka (a prince of the Vajjians), lived devoted to meditation in a forest grove. One night, while he was practicing walking meditation, he heard the sounds of an annual festival being held in the city. The sounds of various musical instruments, songs, singing, dancing, and the beating of drums began to be heard. Then, this monk recalled how, during his lay life when he enjoyed royal pleasures, he used to dress up in beautiful clothes and ornaments to enjoy himself on such occasions. Reflecting on this, a great sadness arose in him, and as a form of lamentation, he uttered a certain stanza: "We live alone in this forest like a piece of wood cast away in the jungle. On a night like this, who is more unfortunate than us?" It is said that he expressed his grievances through this stanza. Hearing this, the deity presiding over that forest grove, wishing to arouse spiritual urgency (*saṁvega*) in the monk, turned the same stanza around and declared: "Indeed, you live alone in this forest like a discarded piece of firewood. Yet, laypeople look up to you with great respect and high esteem, just as those destined for hell look longingly up to those who have gone to heaven." After hearing that stanza, the monk's desire for lay pleasures vanished. On the following day, when this monk went to see the Buddha, the Buddha, understanding the situation, uttered the very stanza we have chosen as our theme, in order to help the monk further eradicate his lingering attachment to lay happiness.</p>
+<p>Every word in this stanza carries an extremely profound meaning:</p>
+<p>*“Duppabbajjaṁ durabhiramaṁ, durāvāsā gharā dukhā;*</p>
+<p>*Dukkho’samānasaṁvāso, tasmā na caddhagū siyā, na ca dukkhānupatito siyā.”*</p>
+<p>*Duppabbajjaṁ*: going forth is difficult. It is difficult to transition from lay life to the ordained life. *Durabhiramaṁ*: even after going forth, it is difficult to find delight in the ordained life; it is difficult to develop a love for the monastic way of life. *Durāvāsā gharā dukhā*: living in the household life is a mountain of great suffering (*dukkha*), a heap of suffering (*dukkha*). *Dukkho’samānasaṁvāso*: here, although the Sinhala script might read *samāna* (equal/same), the true grammatical meaning intended is *asamanasaṁvāso*—living together with incompatible people is suffering (*dukkha*). It is said because of the nature of society. Next, *dukkhānupatito addhagū*: this journey through saṁsāra is a journey that drags suffering (*dukkha*) along with it. *Tasmā*, therefore; *na caddhagū siyā*: do not be a traveler who continues to drag suffering (*dukkha*) along endlessly in saṁsāra. *Na ca [dukkhānupatito] siyā*: do not act in a way that suffering (*dukkha*) follows close behind you. In this manner, the Buddha delivered the stanza as advice.</p>
+<p>If we reflect a bit more carefully on each of these words, why is it called *duppabbajjaṁ*? According to the concept of ordination in the Buddha's time, a layperson went forth with a deep intention, driven by genuine renunciation (*nekkhamma*), and not merely because they had robes and requisites. As mentioned in ancient texts, they went forth after abandoning a small or large accumulation of wealth, and abandoning a small or large circle of relatives. Departing from the home life and going forth in that manner is extremely difficult for a layperson. Most of the time, there are plenty of excuses not to ordain. To that extent, the bonds of lay life cannot easily be untied and brought to an end. Here, there is a wondrously complex web of interconnected attachments. This is why it is called *duppabbajjaṁ*—ordination is a state that is achieved with great difficulty.</p>
+<p>Furthermore, even if one manages to ordain with difficulty, once entering the monastic sphere, it is hard to adapt to the monastic lifestyle due to deeply ingrained lay habits. Depending on alms food, living in seclusion, going to the forest to live alone devoted to meditation, withdrawing from crowds, and observing the relevant Vinaya training rules—all of these are unfamiliar things. To develop a delight, a keen interest, and a desire (*chanda*) for these things, and to act accordingly, is difficult for one who has ordained. This is precisely what happened to that Vajjiputtaka monk. According to the texts, among the Vajji princes of that era, there was a confederacy in which seven thousand seven hundred and seven princes reigned in turn. This monk is described as someone who abandoned his turn at the kingship to ordain. Yet, upon hearing the sounds of the festival, his mind turned back to kingship. His mind drifted toward royal luxuries, weakening his resolve, and he expressed that stanza lamenting his situation.</p>
+<p>*Durabhiramaṁ*: in the Dispensation, there is a term called *abhirati* (delight). Without a special delight in the ordained state, one cannot sustain it. When that delight is lost, it is called *anabhirati* (non-delight/discontent). As soon as discontent arises, one becomes "apathetic" (*ukaṭalī*, weary/bored). Then, one keeps thinking about lay life, wondering, "When will I escape this trouble and go back?" In this way, due to these saṁsāric weaknesses, it is difficult for a layperson to cultivate and sustain a delight in renunciation. Similarly, *durāvāsā gharā dukhā*: next, the nature of lay life is further described. Living in the household life involves immense suffering (*dukkha*) and troubles. Because living the lay life means one must toil to gather the necessary wealth and resources. According to ancient similes, balancing income and expenses in a household is an extremely difficult task. Often, disputes over income and expenditure arise between husbands and wives, leading to quarrels and conflicts. In the texts, this is compared to pouring water into a leaking pot. The mouth of the pot is small, but there are many holes. Similarly, income is small, but expenses are many. It is extremely difficult to resolve this entanglement in lay life, and as a result, one gets trapped in a mountain of great suffering (*dukkha*). One can never fully satisfy the responsibilities concerning spouse and children, and social duties.</p>
+<p>Another simile is given to show the difficulty of satisfying lay needs, comparing them to the great ocean. No matter how many rivers flow into it, the ocean can never be filled. Similarly, no matter how much the desires of a layperson's mind are fulfilled, there is no satisfaction; there is no end to their needs. Because of this, household life is described as *durāvāsā gharā dukhā*.</p>
+<p>Next, *dukkho samānasaṁvāso* (or *asamanasaṁvāso*): living with incompatible people is also suffering (*dukkha*). Society is crowded with diverse and discordant individuals. Among them, there is an extraordinary degree of competitiveness, jealousy, association with bad friends, and so forth. Because of these factors, living in a society filled with discordant people is no easy matter. Having to live together with incompatible people is a great suffering (*dukkha*).</p>
+<p>Next, *dukkhānupatito addhagū*: similarly, lay life means wandering further and further in saṁsāra. Wandering further and further in saṁsāra means a journey where one continues to prolong and experience the momentum of kamma created through attachments and conflicts. This is why it is called "expanding saṁsāra." Within lay life, saṁsāra is expanded. That is what is meant. In this very manner, one travels this long journey carrying saṁsāric suffering (*dukkha*) along. Indeed, five points are presented here in this manner. Next, *tasmā na caddhagū siyā*: therefore, do not be a traveler who wanders endlessly in saṁsāra. *Na ca [dukkhānupatito] siyā*: do not go searching for suffering (*dukkha*). This is the meaning of that stanza.</p>
+<p>As we mentioned earlier, at first glance, the ordained life might seem like a heap of great suffering (*dukkha*)—living alone in the forest like a discarded piece of wood. Lay life, on the other hand, seems to be a fashionable, attractive, colorful, and luxurious lifestyle. So why did the Buddha show this lay life as suffering (*dukkha*) and ordination as happiness? The Buddha demonstrated this to the world on several occasions through his own example.</p>
+<p>Such an incident is recorded, a very valuable one. Once, the Buddha spent a night in an Alavi forest of *aṭṭēriya* leaves on a path frequented by cattle. He slept on a bed of *aṭṭēriya* leaves. Rising in the morning, while he was seated there in meditation, the prince Hatthaka Āḷavaka, who was out for a walk, saw the Buddha sitting on the bed of leaves. He realized that the Buddha must have spent the night there. So he asked the Buddha: "Venerable Sir, did the Blessed One sleep in comfort?" The Buddha replied: "Yes, Prince, I slept in comfort. Of those in the world who sleep in comfort, I am one."</p>
+<p>Then the prince said: "But Venerable Sir, the night in this winter season is cold. This is the time of the severe winter frost. Furthermore, the ground here is rough, trampled by the hooves of cattle. The bed of leaves is very thin, and the leaves on the trees are sparse. The Blessed One's robes are cold, and the biting wind blowing from all four directions is cold. Yet the Blessed One says, 'I slept in comfort'!"</p>
+<p>Thereupon the Buddha said: "Well then, Prince, I will first ask you a question. Answer as you please. Suppose there is a wealthy householder or a householder's son living in a luxurious gabled mansion, plastered inside and out, on a comfortable couch spread with fine woolen covers, soft pillows, and mattresses. A lamp is burning, and he is attended by four highly pleasing wives. Would that householder or householder's son sleep in comfort?" Then the prince replied: "Yes, Venerable Sir, he would be one of those in the world who sleep in comfort."</p>
+<p>Then the Buddha asked again: "Well then, please answer this question too. Might not that householder or householder's son have to lie down in discomfort, tormented by lustful thoughts that cause bodily and mental distress?" To this, the prince had to say: "Yes, Venerable Sir." Next, the Buddha declared: "The defilements of lust and so forth that burn that householder or householder's son have been completely abandoned by the Tathāgata. Cut off at the root, like a palmyra tree uprooted, made non-existent, these defilements of lust and hatred are rendered incapable of future arising. That is why I said I sleep in comfort. Similarly, whatever thoughts of hatred might arise in that householder or householder's son, causing him to spend the night in discomfort—that hatred too has been abandoned by the Tathāgata. Whatever delusion might torment that person in that luxurious mansion—none of those hardships exist for the Tathāgata, who is free of delusion." That was how the Buddha replied on that occasion.</p>
+<p>Likewise, there are valuable accounts concerning the Buddha's great disciples. Another such incident occurred when the Buddha was residing in the Anupiya Mango Grove. A monk named Bhaddiya, whether he went to the forest, to the foot of a tree, or to an empty house for meditation, would constantly exclaim: *"Aho sukhaṁ! Aho sukhaṁ!!!"*—which translates to, "Oh, what happiness! Oh, what happiness!" Hearing this, many other monks thought: "Without a doubt, the Venerable Bhaddiya is reflecting on the royal pleasures he enjoyed before, and out of desire for those royal pleasures, he has become dissatisfied with the ordained life, which is why he is crying out *"Aho sukhaṁ! Aho sukhaṁ!!"*." Thinking thus, the monks went to the Buddha and said: "Venerable Sir, our Venerable Bhaddiya has become dissatisfied with the ordained life and is constantly exclaiming *"Aho sukhaṁ"* in this manner." The Buddha instructed a monk: "Go and summon the monk Bhaddiya."</p>
+<p>When that monk conveyed the message, Venerable Bhaddiya came. The Buddha asked him: "Is it true, Bhaddiya, that whether you go to the foot of a tree, an empty place, or a forest, you exclaim *"Aho sukhaṁ"*?" "Yes, Venerable Sir." "For what reason do you say so?" Then Venerable Bhaddiya said: "Blessed One, in my lay life when I was in the palace, there were security arrangements both inside and outside the inner palace. There were security forces inside and outside the city, and guards inside and outside the district. Thus, surrounded and trapped by guards, I lived in great fear, agitation, and terror during my time as king. But now, Venerable Sir, whether I go to the forest, the foot of a tree, or an empty house, I live alone without any fear or suspicion, in complete peace, spending my life as serenely as a wild deer belonging to the forest. That is why I exclaimed *"Aho sukhaṁ, aho sukhaṁ"*." So, we have such inspiring examples.</p>
+<p>From this, we can understand that the Buddha declared the happiness of ordination with a very deep meaning. The happiness of ordination, dear devotees, is referred to in some places as the happiness of renunciation (*nekkhamma-sukhaṁ*), the happiness of seclusion (*paviveka-sukhaṁ*), and the happiness of peace (*upasama-sukhaṁ*). The happiness of renunciation (*nekkhamma-sukhaṁ*) means that escaping from these lay bonds is itself a great happiness. Some of you might understand what a hassle lay life is. Especially those who have a strong desire to dedicate time to the Dhamma and engage in meditation often realize that this lay life is a mountain of great suffering (*dukkha*), and some even regret, saying, "What foolishness made us get entangled in these things?"</p>
+<p>In the past, there was a common sentiment that "the home life is a burning house." When we contemplate the mountain of suffering (*dukkha*) in that life, you too, dear devotees, are enjoying a small measure of that happiness right now by escaping it. What a relief it is to be able to detach from those things even for a single moment, an hour, a day, or half a day! That indeed is the first happiness: when one completely breaks these lay bonds and develops a liking for living in seclusion. Reflecting on this, one rejoices, thinking, "What a massive bond this was! It is like being released from prison." Next is the happiness of seclusion (*paviveka-sukhaṁ*). There are many accounts of monks living in that seclusion—which often frightens ordinary people—among wild beasts, dwelling in loving-kindness (*mettā*) with those very animals.</p>
+<p>If you can walk on roads where highly dangerous, high-speed vehicles travel, then it is no wonder that a monk who loves seclusion can live in a forest hermitage populated by wild animals. Sometimes, animals possess a kind of sensitivity that even humans lack toward monks who live harmlessly in this manner. Even if that is not the case, there are monks who live valuing seclusion, cultivating mindfulness of death (*maraṇasati*) regarding the dangers of their surroundings. This is the happiness of seclusion (*paviveka-sukhaṁ*).</p>
+<p>Next, the concentration and meditation developed through that happiness of seclusion lead to the happiness of peace (*upasama-sukhaṁ*). The happiness of peace (*upasama-sukhaṁ*) is the happiness obtained through the stilling of lust, hatred, and delusion, as declared by the Buddha. When it is said that the Buddha slept on a bed of *aṭṭēriya* leaves on such rough ground in the freezing cold—he slept in comfort. One can only say this when the happiness of peace (*upasama-sukhaṁ*) is fully realized. This is what the happiness of ordination means. Furthermore, on certain occasions, the Buddha has described the suffering (*dukkha*) and hardships of lay life in even greater detail. There is a discourse (the *Mahādukkhakkhandha Sutta*) where the Buddha points out, one by one, a massive mass of suffering (*dukkha*). In that discourse, he systematically reveals the dangers of sensual pleasures (*kāma*) as the hardships and sufferings (*dukkha*) one has to endure in lay life.</p>
+<p>First, it is described as follows: For a young man of good family to live in the household life, he must strive hard to fulfill massive responsibilities: securing employment, earning a livelihood, maintaining himself, looking after his spouse and children, and performing social duties. Striving is necessary to earn wealth, for a lazy person cannot do so. If he has learned a certain craft, he engages in a job based on it. It is mentioned there—to use modern terms—that he does his job in the midst of a mountain of great suffering (*dukkha*): scorching in the sun, getting wet in the rain, enduring and suffering from cold and heat, and even dying of hunger and thirst. This is shown as the first suffering (*dukkha*).</p>
+<p>Next, it is said that despite putting in so much effort, when he does not receive an income from his work, when losses occur, when businesses collapse and are destroyed, this person weeps, laments, and beats his breast. He falls into confusion, crying out: "Alas! The effort I exerted so hard has been ruined, lost. My labor is in vain!" Next, it is said that if, by some means, his efforts succeed and he acquires wealth, he then lies awake in the midst of great suffering (*dukkha*) and distress, thinking: "Oh, may kings not confiscate this wealth I have earned! May thieves not steal it! May it not be destroyed by fire! May it not be swept away by floods or deluges! May these things not perish!" Thus, he organizes extensive security measures and lives with suffering (*dukkha*) and distress.</p>
+<p>Next, the subsequent suffering (*dukkha*) is described: even if he has set up all those security measures, if kings confiscate his wealth, or thieves come and plunder it either secretly or by force, or if it is burnt by fire, or swept away and destroyed by floods, then on that occasion too, he weeps, laments, and beats his breast in the same manner. He laments, beating his breast, saying: "What was mine is no longer mine" (*yampi me ahu tampi me natthi*). "Whatever we had, that too is gone." That is the next suffering (*dukkha*). Not only that, but within the lay life they have obtained, because of their desires for accumulated possessions and issues of distribution, kings dispute and fight with kings. In homes, disputes arise between husbands and wives, parents and children, brothers and sisters, starting in this manner with insults and abuse, and then, taking up sticks, clubs, and weapons, they harm one another and ultimately kill each other. The Buddha declared that such a mountain of suffering (*dukkha*) is associated with lay life. If we consider all of this as a whole, the Buddha has used a valuable simile in the *Muni Sutta*.</p>
+<p>In the *Muni Sutta*, the Buddha explains the value of the life of a genuine, practice-observing, meditative monk, referred to as a sage (*muni*) cultivating absorption (*jhāna*) in the forest. In the concluding stanza of that discourse, a wonderful simile is presented. The more you think about it, the more profound the simile used for the layperson becomes. This is how that stanza reads: "Just as the blue-necked peacock, in its speed of flight through the sky, can never equal the swan, so the layperson can never equal the sage (*muni*) meditating in the forest." We should reflect a little on this simile of the peacock representing the layperson. Everyone knows the peacock. Its blue neck is very beautiful. It is even more beautiful when it spreads its feathers. How beautiful is the peacock when it dances with its train spread out! Yet, once it folds its feathers, it cannot fly easily even when necessary, or even when another animal comes to attack it. Why? Because of the weight of its train. It has to drag it behind like a trailer; it is a massive burden.</p>
+<p>Thus, despite its beauty, the peacock cannot fly freely like the swan. The Buddha has used the simile of the swan in other places too to describe the sage (*muni*). It is the nature of the swan that if it is on a lake and decides it is no longer suitable, it flies away to another lake immediately, without any attachment. The peacock cannot do this. Even jumping from tree to tree is done with great difficulty because of its heavy train of feathers. I will not analyze this further, as it might upset you, dear devotees. However, I leave it to you to contemplate the depth of the simile given by the Buddha. Outwardly, how beautiful is the peacock! Not only its blue neck but also its train is extremely beautiful. Yet, it has that minor weakness. This is precisely what the Buddha pointed out when contrasting the value of the happiness of ordination with suffering (*dukkha*).</p>
+<p>When we contemplate these matters, we see that within lay happiness, there is nothing for a practice-observing monk to envy, covet, greed for, or compete to win. Yet, it is due to the force of defilements that the mind turns back to those things. This is a saṁsāric weakness. Indeed, that Vajjiputtaka monk must have ordained with a great aspiration for renunciation (*nekkhamma*), abandoning his turn at the kingship. However, overcome by a surge of defilements, his mind drifted momentarily to that festival. In this way, there are various festivals in society at different times. If one goes to join these festivals, one abandons the happiness of ordination and acts like someone chasing a mirage. One falls back.</p>
+<p>Thus, abandoning the happiness of ordination to seek lay happiness once more is described in ancient texts as eating one's own vomit. That is why the Buddha declared the sufferings and hardships of lay life to the world beforehand. This was not done out of disparagement. The hope of everyone is to realize Nibbāna; whether one is a layperson or a monk, that is the ultimate goal. But to achieve it, one must cultivate the vast array of virtues required.</p>
+<p>There is a certain aspect of gratification (*assāda*) in lay life. However, its danger (*ādīnava*) is hundreds and thousands of times greater. Only when that aspect of danger is properly understood does the escape (*nissaraṇa*) known as renunciation (*nekkhamma*) arise—the departing from it. Departing from lay life, joining the ordained life, becoming devoted to secluded living and meditation, and from there cultivating meditation and insight (*vipassanā*)—it is through this that one can bring this saṁsāric suffering (*dukkha*) to an end. Strictly speaking, the goals of a layperson—wealth, status, titles, positions—should not be the goals of ordained ones. The Buddha has pointed out a far more valuable goal, the ending of suffering (*dukkha*), known by the name Nibbāna. That is the goal of the monastic side. It is as a path toward this goal that most of you, dear devotees, have today observed the Uposatha Eight Precepts according to your capacity and in the appropriate manner.</p>
+<p>If we reflect on this, the Buddha has presented the observance of these Uposatha precepts as an effort to draw closer to the practice of the Arahants. This is specifically described on one occasion when the great lay devotee Visākhā came to see the Buddha at the Eastern Monastery during the midday of a Uposatha day. When the Buddha asked: "Why, Visākhā, are you here in the middle of the day?" she replied: "Venerable Sir, today I have observed the Uposatha Eight Precepts." From there, the Buddha delivered a long discourse on the value of keeping the eight Uposatha precepts. Regarding each training rule, it is said: It is true that a layperson always observes the training rule of abstaining from taking life as a permanent precept (*nicca-sīla*). However, on the Uposatha day, they do not observe it merely at the level of everyday lay life, but at the highest level, just like the Arahants. There, it is said that to fulfill this training rule in the manner of the Arahants, it is not merely about nominally abstaining from killing; rather, many other terms are used along with it—such as laying aside the rod and the sword, and living with compassion toward all living beings. This is what it means to fulfill the first training rule at the level of an Arahant.</p>
+<p>That is why you, dear devotees, set aside a day to observe the Uposatha Eight Precepts. In the past, the concept of ordination was a life-long commitment. One ordained with a great resolution: not to return, but to cross over or die trying ("death or crossing over"). That is why, as mentioned, they left behind even a small or large accumulation of wealth, and a small or large group of relatives. The Buddha has shown in the Dhammapada and elsewhere that this is not an easy thing to do. If there are bonds in this world made of iron, wood, or hemp, all those bonds are nothing compared to the attachment to gold, jewels, pearls, gems, and spouse and children in this life. Those physical bonds can be broken, but this emotional attachment is not easy to break. That is why that ordination is a life-long ordination. Indeed, even though some disrobe due to various reasons like a weakening of the mind, genuine ordination is entered into with a profound intention, abandoning everything in that manner, and it is that initial momentum of renunciation that leads to success.</p>
+<p>Thus, the life-long concept exists on that side. How then can a lay devotee, while remaining in lay life, develop that same momentum? The answer to this is what the Buddha highlighted through the Uposatha. In the past, the brahmins interpreted the word "Uposatha" in their own way, which was still something valuable at their brahminical level. In those days, the calendar in lay life was prepared based on the moon. Based on the phases of the moon, certain days were set aside, and "Uposatha" meant spending that day according to a unique set of practices, as if living with the gods. In the Noble Uposatha (*Ariya-uposatha*) that the Buddha explained to Visākhā, he presented it as an idea of living close to the Arahants: "By keeping these precepts in the highest manner, just as the Arahants keep them, I draw closer to the path of the Arahants." This is the concept.</p>
+<p>"Today, this night and this day, just as those Arahants abstain from eating at improper times throughout their entire lives, so during this day and night, I too will abstain from it. Just as those Arahants observe celibacy (*brahmacariya*), so during this day, I too will observe it." Similarly, regarding "dancing, singing, music, and unseemly shows" (*nacca-gīta-vādita-visūka-dassana*): in today's world, the moment you turn a knob or press a button on some device in your home, all the dancing, singing, music, and unseemly shows of the entire world stream in. Likewise, if one has money, as soon as one goes to the shops, one can acquire "garlands, perfumes, cosmetics, ornaments, and adornments" (*mālā-gandha-vilepana-dhāraṇa-maṇḍana-vibhūsana*).</p>
+<p>Yet, despite having the ability to do so, you, dear devotees, spend this day understanding the value of drawing closer to the practice of the Arahants, as explained by the Buddha. The other training rules are just the same. You know well the training rule of celibacy (*abrahmacariya-veramaṇī*), and then the one on abstaining from eating at improper times (*vikāla-bhojana*), and then the one on dancing, singing, and music, and then the one on high and luxurious beds and seats (*uccāsayana-mahāsayana*). When you step away from the comfortable seats and beds of your homes to live a simple life suited for ordination—remembering that Prince Siddhartha, who lived in palaces suited for each of the three seasons, spent his nights on a bed of *aṭṭēriya* leaves after becoming the Buddha—you can understand. One should not view lying down or sitting on the ground on this day and night, abandoning those comforts, as a hardship. Instead, we should contemplate the immense value of that Arahant practice.</p>
+<p>Understanding its true value and purpose with wisdom, we practice all of this to slowly, step-by-step, break the long-standing attachment to the five-fold sensual pleasures of saṁsāra. For someone who has tamed their mind to a considerable extent by keeping the Uposatha precepts over a long period, transitioning to the ordained life becomes easy. In that case, one can indeed say it is as simple as changing one's clothes. However, ordination is not achieved merely by changing one's clothes; one must prepare the mind. This is the opportunity the Buddha presented through the Noble Uposatha. Understanding this is highly helpful. Yet, many people keep lay happiness as their ultimate target. The reason is that, at first glance, one sees multi-millionaires living in massive, luxurious mansions, traveling in ultra-luxurious, high-speed vehicles, and enjoying various kinds of entertainment like the festivals mentioned earlier. But if one forgets how much they live in a bonfire of a mountain of great suffering (*dukkha*) deep down in their minds, only then do these things appear as happiness. This is what the Buddha pointed out.</p>
+<p>Therefore, it was the Buddha, who had practiced these virtues as perfections (*pāramī*) in saṁsāra over a long period, and the great disciples of that era, who gave the most sublime example. What remains for others is to respect that example. When you read the biography of the Buddha and his disciples, you can understand what a great sacrifice is required to escape from saṁsāric suffering (*dukkha*). Without making this sacrifice, one cannot break these bonds of saṁsāra. One should not think of this as self-mortification (*attakilamathānuyoga*). This is because ordination or going forth (*pabbajjā*) means preparing the body, mind, and environment in a manner suitable and conducive for meditation.</p>
+<p>To use another simile: in the past, those who had long harbored the aspiration to end saṁsāric suffering (*dukkha*) but could not see a path, upon hearing that a Buddha had appeared in the world and that a Community of Monks (Saṅgha) had been established—just as in the story of King Mahākappina—went forth and ordained simply by hearing the words, "A Buddha has arisen." Kings abandoned their kingdoms and ordained; queens did the same; ministers left behind their lay pleasures and ordained. With what intention did they ordain? There is a phrase used there: *pabbajitaṁ anupabbajiṁsu*—"they went forth in imitation of those who had gone forth." A common custom in the world is following examples and imitation. In that imitation, bad imitation or a bad example is not good; we must adopt the correct example.</p>
+<p>Thus, when those kings set the right example—if kings went leaving behind such immense wealth, of what value is our ministership?—the ministers also left their posts and went forth. Following them, others went too. It is said that in this way, kingdoms became empty, simply upon the news that a Buddha had arisen. If we try to understand this mental process through a simile: suppose in ancient times, a herd of cattle was penned in a stable all night long. They wait until dawn, watching for the first light of day. The moment the herdsman goes and opens the gate, those cattle rush out, running as if seeking freedom. The word *pabbajjā* is closely related to this concept. *Vaja* or *braja* means a cowpen. Escaping from this saṁsāric cowpen is what is meant by *pabbajjā*. The power required for this is the power of renunciation (*nekkhamma*).</p>
+<p>Therefore, one who has long cultivated virtues like morality (*sīla*) in this wilderness of saṁsāra according to the Dhamma taught by the Buddha, and who has wisely contemplated the dangers of lay life, preparing a meditative mind suitable for it, abandons kingdoms and departs the moment they hear a Buddha has arisen. This is renunciation (*nekkhamma*). Furthermore, once they have gone forth, they realize: "From what an immense mountain of suffering (*dukkha*) have I escaped!"</p>
+<p>That is that happiness. Subsequently, using that happiness as a support—as you, dear devotees, often mention and complain about—it is difficult to meditate while staying at home, since there are obstacles on every side. That is why the monks of old went to deep forests inhabited by wild beasts to meditate; because the mind becomes serene and enters deep concentration (*samādhī*) only when one withdraws from human society and goes to a secluded place. Using that concentration (*samādhī*) as a support, they freed themselves from suffering (*dukkha*). Indeed, it is said that every Buddha attained Buddhahood in a natural environment, in accordance with nature. In any case, it is only with a mind stilled by developing a love for that secluded dwelling that one can ultimately realize the deepest understanding of the Four Noble Truths, which ends this saṁsāric suffering (*dukkha*). That is the most suitable and conducive environment. The change one makes to obtain that environment is called ordination. However, if one ordains but ends up in an environment unsuitable for it, then there is some deficiency.</p>
+<p>Therefore, one must strive to secure such a secluded dwelling and complete this task. For we have spent a long time rolling in these lay bonds and heaps of lay suffering (*dukkha*) in saṁsāra. Yet, liberation is not obtained merely by wishing for it. That is why the Buddha declared in the *Dhammacakkappavattana Sutta* and other discourses: "not to get what one wants is suffering (*dukkha*)" (*yampicchaṁ na labhati tampi dukkhaṁ*). What is it that one wishes for? "If only I could be free from this suffering (*dukkha*) of birth (*jāti*)! If only I could be free from this saṁsāric state of decay (*jarā*)! If only I could be free from this terrifying illness and death (*maraṇa*)!"—such is the aspiration. But the Buddha declared: "This is not to be achieved by wishing" (*na kho pana etaṁ icchāya pattabbaṁ*). These are not obtained merely by wishing, without taking the necessary path of action. The path of action to be taken is none other than the Noble Eightfold Path, known as the Middle Path, as declared by the Buddha. We have reminded, clarified, and explained this to you on many occasions.</p>
+<p>Indeed, everything necessary is contained within it. One must cultivate right view (*sammā-diṭṭhi*). If we consider the simpler aspect of right view, it is the basic understanding of wholesome and unwholesome, good and bad. At the minimum level, understanding what is wholesome and unwholesome, good and bad, helps direct our saṁsāric journey away from states of deprivation (*duggati*) and toward happy realms (*sugati*). Yet, the task is not finished with that. The deepest and highest level of right view (*sammā-diṭṭhi*) is the Four Noble Truths. This is the mountain of suffering (*dukkha*) connected with the five aggregates of grasping (*pañcupādānakkhandha*) and with this saṁsāric existence (*bhava*). It is right there that birth (*jāti*), decay (*jarā*), illness, and death (*maraṇa*) exist.</p>
+<p>Thus, only the Buddha clearly declared that saṁsāric existence is suffering (*dukkha*). Others tried to segment it, separating it into "this part is happiness, that part is suffering (*dukkha*)." That is not in accordance with the Dhamma. This is why the Buddha declared that, let alone other places, there is no real happiness even in the Brahma worlds. It is said that when the lion king roars his lion's roar, the animals living in small hollows in the forest retreat into them; those living in the water plunge into the water; and those that fly take to the sky. Not only that, but even royal elephants in palaces break their iron chains and flee upon hearing that roar. Similarly, when the Buddha declared to the world the Three Characteristics—the impermanent (*anicca*), suffering (*dukkha*), and not-self (*anattā*) nature of all things—showing that there is suffering (*dukkha*) and impermanence (*anicca*) everywhere, even in the Brahma worlds, it is recorded in the Dhamma that even the Brahmas residing in those worlds became terrified, saying: "We had thought all along that we were permanent, but now they say we are impermanent (*anicca*)!" Thus, they fell into fear and terror. This is compared to royal elephants breaking their iron chains in their stalls and fleeing in terror upon hearing the lion's roar; in the same way, even the Brahma kings are struck with spiritual urgency (*saṁvega*) and terror. Such is the nature of this Dhamma. Therefore, bringing this saṁsāric suffering (*dukkha*) to an end is the ultimate goal belonging to every Buddhist, whether lay or ordained. On the path to that goal, one must, at the very least, cultivate that right view (*sammā-diṭṭhi*).</p>
+<p>If we are going on a journey, we must have some understanding of the destination. If we turn our head in the opposite direction instead of the way we need to go, where will we end up? This is why the Buddha placed right view (*sammā-diṭṭhi*) at the very beginning. Even cultivating that vision of life is a precious thing. Once that is developed, the journey undertaken in accordance with it is what is called the practice (*paṭipadā*).</p>
+<p>All other paths and roads in the world, including high-speed expressways, are said to be inferior to this Noble Eightfold Path. However, this path cannot be found outwardly anywhere in the world. It is something to be developed within oneself as virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*). The first step of that path is right view (*sammā-diṭṭhi*). When one establishes right view (*sammā-diṭṭhi*) and spends a day cultivating virtues like morality, the thoughts and intentions that arise are indeed right intention (*sammā-saṅkappa*)—namely, thoughts of renunciation (*nekkhamma-saṅkappa*), thoughts of non-ill will (*avyāpāda-saṅkappa*), and thoughts of harmlessness (*avihiṁsā-saṅkappa*). By using wholesome speech in accordance with these good thoughts, one prepares for a complete transformation in one's life. When one acts in accordance with that speech, it is right action (*sammā-kammanta*). When this conduct is not limited to a day or two but is integrated into one's entire livelihood, it is right livelihood (*sammā-ājīva*). Through the effort to establish right livelihood, by being mindful of one's mind, recognizing its unwholesome tendencies, expelling existing unwholesome states, preventing new unwholesome states from arising, encouraging the wholesome thoughts already present, and removing bad thoughts, the effort one exerts is right effort (*sammā-vāyāma*).</p>
+<p>Proceeding in this very manner, by maintaining the mind on an object for a long period with right mindfulness (*sammā-sati*) and clear comprehension, if the mind were indeed a weapon, it is sharpened to the highest degree. Then, by deeply penetrating and seeing the Three Characteristics of impermanence (*anicca*), suffering (*dukkha*), and not-self (*anattā*), right concentration (*sammā-samādhi*) is established. Next come right knowledge (*sammā-ñāṇa*) and right liberation (*sammā-vimutti*). It is at the culmination of this path of practice that one can arouse insight-knowledges (*vipassanā-ñāṇa*), understand the suffering (*dukkha*) and empty (*suñña*) nature of this saṁsāra, cross over saṁsāric suffering (*dukkha*), and directly realize the sublime, deathless, great Nibbāna.</p>
+<p>Therefore, today, just as you have engaged in good practices, you have also listened to the Dhamma at this moment. We can understand that this Dhamma sermon has helped you arouse, to some extent, those qualities that assist in realizing Nibbāna, namely the faculties (*indriya*) and powers (*bala*) of faith (*saddhā*), energy (*viriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*). If there is any store of merit (*puñña*) accumulated by both of our parties through the giving of this Dhamma sermon and the listening to this Dhamma sermon related to Nibbāna, may all those wholesome merits be shared by all beings from Avīci up to Akaniṭṭha, whoever wishes to rejoice in these merits. May all of them, including your relatives, according to their own aspirations, be freed from this saṁsāric suffering (*dukkha*) as quickly as possible and find peace in the sublime, deathless Nibbāna. May we also aspire that, by fulfilling these practices, we too may have the strength to realize the sublime, deathless, great Nibbāna as quickly as possible, in this very life, during the existence of this Dispensation, through the penetration of the paths and fruits of Stream-entry (*sotāpatti*), Once-returning (*sakadāgāmitā*), Non-returning (*anāgāmitā*), and Arahantship. Let us recite the stanzas in this manner:</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_097.html" class="doc-btn">← Previous Sermon (097)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_099.html" class="doc-btn">Next Sermon (099) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

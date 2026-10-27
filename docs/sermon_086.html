@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 086 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_085.html" class="doc-btn">← Previous Sermon (085)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_087.html" class="doc-btn">Next Sermon (087) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 086</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_086_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_086_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_086_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #86</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.25)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Sabbaso nāmarūpasmiṃ yassa natthi mamāyitam,</p>
+<p>Asatā ca na socati sa ve "bhikkhu"ti vuccati.</p>
+<p>From:</p>
+<p>Dhammapada 367 (Bhikkhu-vagga)</p>
+<p>Dear Listeners,</p>
+<p>There are no other two words in the world as pleasing and dear to a person as these two: "I" and "mine." How many times a day do we use these two words? How often are we compelled to use them? In fact, it is difficult to even maintain a life without using these two words, "I" and "mine." Yet, despite this being so, the Buddha points out that deep within these two words, "I" and "mine," lies a grave ignorance (*avijjā*) and Craving (*taṇhā*). The Buddha declared that it is precisely due to this ignorance and Craving (*taṇhā*) that beings in this world wander for a long time, suffering in saṃsāra. Therefore, even though we use these two words, "I" and "mine," the Buddha declared that if we can somehow remove this ignorance within them and dispel Craving (*taṇhā*), we can escape from this terrifying saṃsāra. And He also proclaimed the path to achieve that.</p>
+<p>It is indeed a Dhamma verse containing a teaching that helps remove that sense of "I" and "mine" which we have taken as our topic today. The Buddha uttered this verse to a certain Brahmin who lived in Sāvatthī, known by the name "Pañcaggadāyaka." Even though this Brahmin held wrong views, he received the name "Pañcaggadāyaka" (giver of five first-portions) because he had a habit of giving alms at five distinct stages of his agricultural work. When the paddy ripened, while it was still in the field, he would give an offering called "the first-share of the field." Whether to Brahmins whom he held in high esteem, or to the poor, travelers, and beggars, he would give this first-share of the field. Next, after bringing it to the threshing floor, he would give what is called "the first-share of the threshing floor." After converting it into grain at the threshing floor, as a third offering, he would give "the first-share of the grain." Next, when the rice was boiling in the pot, he would offer the first portion at that stage too, called "the first-share of the cooking pot." Finally, when the food was served into his own plate—the vessel from which he ate—he would give a portion, the first share, from that as well. Such was the Brahmin, endowed with this noble quality.</p>
+<p>One day, when the Buddha, having arisen from His attainment of Great Compassion, surveyed the world, He saw that both this Brahmin and his wife possessed the spiritual potential and supporting conditions (*upanissaya-sampatti*) to attain the fruit of Non-Returning (*anāgāmi-phala*). Seeing this, the Buddha went to the Brahmin's house for alms on that day. At that moment, the Brahmin was eating his food right at the doorway of the house, facing the wall. The Brahmin woman was serving him food. Therefore, the Brahmin did not see that the Buddha had arrived and was standing there. The Brahmin woman saw Him. Upon seeing Him, she thought, "This Brahmin is someone who observes such a practice of giving. The moment he sees that the Ascetic Gotama has arrived, if he gives this food to the Venerable Gotama, I will have to cook again." Thinking thus, what did she do? She stood behind the Brahmin, blocking his view so that he could not see the Buddha. She hoped that the Buddha, after waiting for a while, would leave. She glanced sideways. Yet, the Buddha was still standing there. What did she do next? She was afraid to say anything loudly lest the Brahmin should hear. There was a certain word used at that time, "apiccha" or "apicchaka bhante," which means "venerable sir, please move on to another place," indicating that nothing will be received here, or rather, a way of saying "we have nothing to give." So, she felt unable to even say that word properly. What did she do then? She retreated backward a little and softly muttered the word "apiccha."</p>
+<p>What was the Buddha's response? The Buddha shook His head, as if to say, "I will not depart from here." Seeing this, the Brahmin woman smiled. She laughed a bit out loud. At that very moment, the Buddha emanated Buddha-rays. They fell upon the wall, and the Brahmin saw this too. Seeing the Brahmin woman laughing and noticing that sign, he turned around and saw the Ascetic Gotama standing there. Then, rebuking his wife, saying, "When a son of a king is standing at the doorway, why did you not tell me?", he took the plate from which he was eating, came forward, and said, "Venerable Gotama, I have a custom of giving food at five stages. Furthermore, when I am eating, if someone arrives, I do not eat without sharing. However, I have eaten one portion of this food, dividing it from the middle. I intend to offer you the remaining portion."</p>
+<p>Then the Buddha declared in a verse: "These sages, if someone offers a portion of food from the first, the middle, or the remainder—whichever portion it may be—they accept it; they do not engage in any praise or blame regarding it."</p>
+<p>*Yadaggato sesato vā, piṇḍaṃ labhetha paradattūpajīvī;*</p>
+<p>*nālaṃ thutiṃ no pi nipaccavādī, saṃ vāpi dhīrā muniṃ vedayanti.*</p>
+<p>Thus He uttered a certain verse describing the sages. Whether it is from the choice part, the first portion, the middle, or the remainder, the sage who lives dependent on others ("paradattūpajīvī" meaning living on what is given by others) receives his alms food from any of these three parts without discrimination, and does not engage in praise or the like. That is what is meant by calling such a person a sage. Hearing this verse, the Brahmin was highly pleased, thinking: "Even though He is a king's son, He is ready to partake of food left over by another." Then he asked further, "Venerable Gotama, you refer to your disciples as 'bhikkhus'. What is the meaning of this word 'bhikkhu'?" Thus he asked the meaning of the word "bhikkhu."</p>
+<p>At that moment, the Buddha thought: "In the time of Kassapa Buddha, this Brahmin and Brahmin woman had heard about Name-and-Form (*nāmarūpa*)—a certain important category of the Dhamma. Therefore, even though I am preaching to them for the first time in this life, I must preach the Dhamma in a way that reminds them of these Name-and-Form (*nāmarūpa*) dhammas." It was with this in mind that He preached that Dhamma verse which we took as our topic.</p>
+<p>*Sabbaso nāmarūpasmiṃ yassa natthi mamāyitaṃ,*</p>
+<p>*asatā ca na socati sa ve "bhikkhū"ti vuccati.*</p>
+<p>If a person has no sense of ownership (*mamāyita*), no taking as "I" or taking as "mine" in any way regarding Name-and-Form (*nāmarūpa*), and if they do not grieve over the absence of any such thing, it is such a person who is called a "bhikkhu." This is the very brief and simple meaning that appears on the surface. Yet, there is a profoundly deep statement hidden there.</p>
+<p>We must understand the primary meaning of this verse uttered by the Buddha before we analyze it in detail. The term Name-and-Form (*nāmarūpa*) might be a word that many people do not understand. In fact, according to the Dhamma taught by the Buddha, Name-and-Form (*nāmarūpa*) is the term used in accordance with the Dhamma for this physical frame which we call "I" and "mine," or for these two which we conventionally refer to as "mind" and "body." When one says "name" (*nāma*), one naturally thinks of an appellation or a name. However, there is a certain depth here when considered as mental factors (*nāma-dhamma*). If we consider it simply, the dhammas belonging to the category of "Name" (*nāma*) are shown as five dhammas: Feeling (*vedanā*), perception (*saññā*), volition (*cetanā*), Contact (*phassa*), and attention (*manasikāra*). Feeling (*vedanā*) means experiencing. Perception (*saññā*) is the recognition that arises based on that Feeling (*vedanā*). Based on those recognitions, certain volitions or expectations arise; this is known as volition (*cetanā*). Next, Contact (*phassa*) means striking or impingement. Attention (*manasikāra*) is the act of bringing to mind. These five dhammas are considered as Name-dhammas.</p>
+<p>Next, what is considered as "Form" (*rūpa*) is not merely the common, coarse idea of visual forms seen by the eye. As Form (*rūpa*), if we consider anything that impinges upon the eye or the body as material substance, the primary elements contained in all of them—or how they are constituted—are the four primary elements: earth (*paṭhavī*), water (*āpo*), fire (*tejo*), and wind (*vāyo*), representing hardness, cohesion, heat, and motion. What is pointed out by the category of Form (*rūpa*) is that which is derived from or dependent on these four elements. In truth, the five factors shown as Name-dhammas are what assist in "naming" or designating something. Feeling (*vedanā*), the experiencing of something; perception (*saññā*) derived from it; volition (*cetanā*) produced accordingly; a certain point of impingement directed toward oneself; and the attention directed to it—all these are maintained. It is this collection of dhammas that we take as "I" and "mine" in our daily life. Similarly, with these Form-dhammas, what lies beneath those forms are the four elements mentioned above. The Buddha pointed out these basic factors to highlight the mutual relationship between the two. Name exists dependent on Form; Form exists dependent on Name. In some places in the Dhamma, a simile is given for this. The journey of life, this journey of Name-and-Form (*nāmarūpa*), is compared to a sighted lame man riding on the shoulders of a blind man who can walk, traveling together.</p>
+<p>The one who can walk is blind; the lame man who cannot walk has sight. It is like a journey where these two assist each other. This means that Form-dhammas are just like the blind man. The moment the mind is withdrawn—when a person dies, faints, or loses consciousness—the body just lies there like a log of wood. It is passive and inactive. These dhammas like Feeling (*vedanā*) and so on, have to be understood in relation to those elements like earth (*paṭhavī*) and so forth. For though we speak of water, fire, and wind as elements, we recognize the earth element (*paṭhavī*) by its hardness. There is a nature of experiencing whether something is hard or soft; in relation to that, one recognizes it as the earth element, just as a blind man goes and bumps into something. Once there is a collision with something, the Name-dhamma then declares, "This is such-and-such." Similarly, the water element (*āpo*) refers to that which has the nature of trickling or flowing. The nature of heating up, getting hot or warm, is called fire (*tejo*). The blowing, moving nature is called wind (*vāyo*). All of these are recognized in association with those Name-dhammas. That is why it is said that this is like a journey where the lame man and the blind man travel together. If these two assist each other, there is a certain unstable, contingent nature here. We cannot firmly grasp any of these as "I" or "mine." Taken separately, both are helpless. Such is their nature. Now, even though this is stated in words and similes in this manner, it is something that one must realize directly. It is something that each individual must realize directly in daily life. It is a Dhamma to be directly realized. It is through this direct realization that, even though the two words "I" and "mine" are used in daily convention, they do not affect one's mind-stream. This is due to that understanding, due to direct realization. Therefore, what is the path of Dhamma shown by the Buddha? In daily life, one must understand these aforesaid Name-and-Form (*nāmarūpa*) dhammas through one's own direct experience.</p>
+<p>If we take a simile for those Name-dhammas, we can compare Feeling (*vedanā*) to our little finger. Though small, it is with this Feeling (*vedanā*) that all activities begin. Next, perception (*saññā*) can be compared to the ring finger. Volition (*cetanā*) can be compared to the middle finger. Contact (*phassa*), which gives the idea of striking or impingement, can be compared to the index finger. Attention (*manasikāra*), which is bringing to mind, can be compared to the thumb. If taken thus, the Buddha declares that the chief factor that helps in understanding these Name-and-Form (*nāmarūpa*) dhammas is not just anything. We know that the thumb stands apart from the other four fingers. It stands away from them, yet this thumb can touch and identify all other four fingers, and works in coordination with them. To use an analogy of standing apart and giving evidence: in certain court cases, when there is no one to give evidence, one of the criminals themselves is pardoned and used to give state evidence. By the time that person finishes giving evidence, he too is caught and exposed, but somehow the case is proven. Similarly, these Name-and-Form (*nāmarūpa*) dhammas cannot be understood through something external. That is why the Buddha, in a most marvelous way as a middle path, singled out this attention (*manasikāra*)—bringing to mind—as the primary factor. It is through this attention, through insight-attention (*vipassanā-manasikāra*), that these Name-dhammas can be understood in daily life.</p>
+<p>In the ordinary world, this attention is applied in an unwise manner (*ayoniso*). Attention is applied wrongly, in a way that increases defilements. The ordinary worldly person brings things to mind in a way that prolongs the journey in saṃsāra and brings ignorance to the forefront. The Buddha pointed out to apply this as Wise attention (*yoniso manasikāra*), to bring things to mind in the correct manner. Wise attention (*yoniso manasikāra*) means that if this tangle of saṃsāra arises in some way, one directs attention right to the place where it arises, to its headquarters, and reflects upon it. Where do they arise? From this very mind, not from external things. We know that when a snake bites, we do not run after the snake. We treat the spot where the venom entered before it spreads. Similarly, in our daily life, when something strikes our body or impinges on our mind, what is done in the external world—as in physical sciences today—is that they pursue their ends in an unwise and incorrect manner, seeking their outer limits. One can never escape saṃsāra in that manner. What the Buddha points out is *yoniso* (wise and radical). One must direct the mind to the very place where they arise, look backward, reflect, review, contemplate, and comprehend their Dhamma nature. If one comprehends the Dhamma nature in any place, what arises there is equanimity (*upekkhā*). Based on that equanimity, one can gain the realization of things. That is where the secret lies. This attention, or rather Wise attention (*yoniso manasikāra*), is like the operation of that thumb. Next, applying that attention, one recognizes how Feelings (*vedanā*) come and go in their respective ways. Not a single Feeling (*vedanā*) can be taken as "I." In daily life, one can realize that no matter what pleasant Feeling (*vedanā*) or painful Feeling (*vedanā*) arises, when one keeps watching it, it is seen to arise and pass away. It is the same with perception (*saññā*). It is the same with volition (*cetanā*). It is the same with Contact (*phassa*). And in the end, attention (bringing to mind) too. Only at the very end is that caught. It is a profoundly deep matter, a subtle matter. To understand this subtle matter, in meditation, one is instructed that this bringing to mind must be done in an extremely pure and rapid manner.</p>
+<p>In our daily life, there are six places where we have to apply this bringing to mind. There are six doors or gateways: eye, ear, nose, tongue, body, and mind (*mana*). "Mana" means the mind, the intellect. There are objects that come to these: forms, sounds, smells, tastes, touches, and ideas (*dhamma*). Tangible objects are referred to as "phoṭṭhabba"—things to be touched. Next, things that come to the mind are called "dhamma." We call them mind-objects. The object of the eye is form; the object of the ear is sound. Viewed in this way, the object of the mind is the thought. This is an extremely subtle thing. A thought comes to the mind. One constantly sees that there is something subtle here. What came to the mind was a thought, a state of mind. Thus, if one wishes to realize this fact directly, what must be done at every presentation: if one aspires for Nibbāna in daily life, it is done in one way; if one intends to remain in saṃsāra, it can be done in another way, by continuing to bring things to mind in that ignorant manner. What does the meditator (*yogāvacara*) who aspires for Nibbāna do? In brief, upon seeing something, instead of letting the mind run along its details, its color patterns, and the gratification to be derived from it, he brings it to mind as "a form, a form." What assists in that bringing to mind is mindfulness and clear comprehension (*sati-sampajañña*)—mindful wisdom.</p>
+<p>In daily life, what is shown in the Satipaṭṭhāna Sutta is mindfulness (*sati*) and clear comprehension (*sampajañña*)—mindful wisdom. Mindfulness and awareness; an awareness that goes hand-in-hand with mindfulness. One understands the Dhamma nature, realizing "this is this." One understands it very rapidly, in brief, in summary. Thus, "a form, a form." No matter how much one analyzes it, no matter how much the mind runs around it, what is here is only a form. Merely a simple color configuration. In fact, it is like a picture projected on the screen of the eye. The form seen by this eye is like a projected image on a screen. Even when thought of in terms of medical science, the image falling on this eye, the shadow, is actually cast upside down. In whatever manner, it is an image falling on the screen of the eye.</p>
+<p>Next, in the ear. When thinking of this ear, everyone knows there is something called the eardrum. We listen to the sounds of drums, but we very rarely listen to the sound coming from our own eardrum. We consider the drum sounds coming from around us as highly pleasing and we listen to them. However, there is a most valuable drum in this ear to which we should actually direct our attention. If we listen to this eardrum, all we have to apprehend there is just a sound. A series of vibrations, a series of movements arising with the assistance of the wind element (*vāyo-dhātu*). This, then, can be sweet or harsh. Be it sweet or harsh, it is merely a sound. So, the insight meditator brings it to mind briefly as "a sound, a sound" and stops the mind right there. If the mind runs far, then indeed there is the entanglement—the entanglement of saṃsāra. Then, the faint shadow that barely arrived is painted well and begins to be perceived as an object, something to be firmly grasped with Craving (*taṇhā*). The mind creates all of this. This is a wondrous thing. That is why the Buddha declared: "Mind precedes all dhammas, mind is chief, they are mind-made." Mind is the forerunner of all things. Mind is supreme. It is by the mind itself that these are created. The ordinary worldly person does not consider that these are created by the mind itself. They consider Form-dhammas as things existing entirely separately in the world.</p>
+<p>Yet, just as we spoke of the lame man and the blind man, we comprehend these Form-dhammas through the mind as well. Therefore, the Buddha gives foremost place to the mind. For it is when we direct the mind to the very place where these arise, in association with this mind, that we can escape from this dense darkness of ignorance and free ourselves from that terrifying bond, the fetter called Craving (*taṇhā*), and attain liberation from saṃsāra. Thus, to the meditator who has begun this attention in this manner, as he brings it to mind rapidly, again and again, what is understood here? That all these things are of a nature to break up and disintegrate. Things that have the nature of arising and passing away. That is what is meant by "udayabbaya" (arising and passing away). They arise and pass away, like the sun rising and setting. Every single thing, whether a sound or a form, has this nature of arising and passing away. When this is rapidly brought to mind, it is understood more clearly that these are things that are breaking up, moment by moment.</p>
+<p>Within things that are continuously breaking up, there is nothing to grasp anymore. There is nothing worthy of taking as an object. When that is understood, what does the meditator do next? He refines that bringing to mind even further, making it more subtle. To designate the things we encounter in daily life, we constantly use the words "I" and "mine." Among these things, there are things we can grasp with our hands, and things we can grasp with our mind. And those things grasped by the mind are sometimes far more difficult to let go of than those grasped by the hand. In truth, every single thing is grasped by the mind. Then, to the things that assist in this mental grasping, we apply the name "things." That is what is called "objects." To the insight meditator who brings this to mind rapidly, it is finally realized directly that if things are breaking up moment by moment, they cannot even be considered as "a thing." Next, he brings to mind: "Here, there is only a seeing." Instead of a "form," there is only a seeing, or a registering of sight on the screen of the eye; a vision, in that manner.</p>
+<p>Similarly, instead of saying "a sound," he notes it as "a hearing." A seeing, a seeing. A hearing, a hearing. There is no sound here; just a hearing. Here, there is only a sound striking the eardrum. Similarly, with the body, tongue, and nose, it is just "a sensing." Very briefly, what comes to the body, tongue, or nose is regarded as just a sensing. Next, what comes to the mind is just "a thinking." There is no basis to take them as two things like "mind" and "thought." It is just a thinking. In this way, here there are only bare activities. In the end, this transforms into bare activities, like the flowing of a river. These are all minds arising and passing away; by that stage, this person's level of ignorance is largely removed. In that way, the tendency to firmly grasp in terms of Craving (*taṇhā*) and Grasping (*upādāna*), which was in the mind, carried over through saṃsāra, has dried up to a great extent. It is to the person who develops the mind in this manner that, gradually, through the stages of insight-knowledges (*vipassanā-ñāṇa*), the mind is developed, and even the paths and fruits such as Stream-entry (*Sotāpatti*), Once-returning (*Sakadāgāmitā*), and Non-returning (*Anāgāmitā*) can be directly realized.</p>
+<p>When reflecting in this manner, even someone who has not directly realized the Dhamma in daily life can understand that, according to the Dhamma, this is a causal process, something based on causes. Now, regarding this understanding of Name-and-Form (*nāmarūpa*) dhammas, one might wonder: how did that Brahmin and his wife, who held wrong views, understand this in the context of giving alms? Although we cannot fully explain the depth of this in every aspect, we can appreciate to some extent its causal validity. One reason is that since the time of Kassapa Buddha, those two had been fulfilling wholesome qualities (*kusala-dhamma*) and traveling together. At this particular moment, the Brahmin woman's mind experienced a certain disturbance. Because she would have to cook again, she wanted to turn the Buddha away from there. Yet, if these two had cultivated the habit of giving alms from their harvest at five stages in this manner, those alms too were foremost offerings. Generally, it is the nature of worldly people to keep the first portion for themselves. For a long period, they had trained themselves to give the foremost portion of what they claimed as theirs to others at five stages. This is a great saṃsāric strength.</p>
+<p>It must have been on the basis of the mind that arose at that moment that the Buddha preached this Dhamma. Indeed, you devotees must also realize that this has given us a wonderful opportunity to reflect deeply on the meritorious deeds we perform in our daily lives. This giving of alms, serving of food, and so forth, are things that all of you devotees know and perform. In daily life too, you practice generosity to a greater or lesser degree. However, when making those offerings, what is often done? You think of the benefits of that giving in a very superficial way, such as: "We will receive a hundred-thousand-fold of what we give, or we can gain heavenly pleasures." But when the Buddha spoke of the benefits of giving, in the truest and deepest sense, He stated: *"cittālaṅkāraṃ cittaparikkhāratthaṃ dānaṃ deti"*—one gives alms for the adornment of the mind, and for the requisite equipment of the mind. "Parikkhāra" (requisites) refers to the things necessary for the growth of the mind. Alms should be given to provide the requisites for the mind.</p>
+<p>That is how the benefits of giving, or the ultimate purpose of giving alms, is expressed in its deepest sense. The mind is adorned through concentration (*samādhi*). It is explained in the Dhamma that when the mind becomes tranquil through serenity (*samatha*), that state of composure, by becoming concentrated, adorns the mind. Just as before applying varnish to a wooden plank, one must first plane and smooth it properly; otherwise, that varnish is of no use. In the same way, the mind is adorned by becoming tranquil and concentrated. What is to be done here is that at the moment of giving, one must look—one must actually turn back and look at one's own mind. If one directs the mind back to the object given, and if there is still some desire for it—even a fraction of desire—one might regret it, sighing, "Ah! If only I had used this in another way, it would have been more useful." Then, the mind falls and sinks. Or else, one directs the mind to the resident monk who accepted it, or to various other things, letting the mind wander externally. Instead of that, what must be done is to look at the mind itself.</p>
+<p>What happened at the moment of giving? Something that had been thought of as "I" and "mine"... perhaps something that was thought to be completely impossible to give away. It might be the food on which one was to survive after being hungry for several days. Or it might be a possession acquired with extreme difficulty. When giving something that is generally difficult to give, or when describing a miser, there is a worldly saying: "It is like breaking a bone from one's body when letting go of something." Breaking a bone from one's body is no small matter. There are people who regard giving in that way. That is how it appears to a miserly mind. But to one filled with the wholesome volition of giving and generosity, it is something that can be done with great ease. What takes place there? That notion of taking as "I" and "mine" can be let go of very easily. That strength to let go instantly—this must have been the habit that these two Brahmins, the Pañcaggadāyakas, carried over from saṃsāra.</p>
+<p>What the Buddha did was to introduce that term Name-and-Form (*nāmarūpa*) through that very habit. Since they also had the habit of having heard it before, these two looked next not at the Buddha, but at their own minds. The Brahmin woman must have seen her own mind. Now, in giving alms, that is something that commonly happens, something that has happened to worldly people. A falling and sinking of the mind occurs. There is a nature of the mind flipping over. The mind is something that constantly flips. It is easier for it to flip toward the unwholesome. For a long time in saṃsāra, it is this flipping toward the unwholesome that has occurred. Therefore, this is something that must be done with great care. When serving this alms food, you devotees are very careful to serve it in a way that it does not spill on the body or go to waste. That is good, but in the same way, one must mindfully consider with care: "Is my mind scattering? Is my mind flipping to one side?" One must think in that manner. It is when one trains in that manner that even Name-and-Form (*nāmarūpa*) dhammas can be understood in association with it.</p>
+<p>In the way that was thought of as breaking a bone from the body, let us say one was eating this delicious food just now. There is Feeling (*vedanā*) there. The food touching the tongue—it was a portion of that which the Brahmin offered to the Buddha. Accordingly, that sense of "mine" was present there. Regarding the food taken for one's own consumption, for eating, it is seen as: "This is the food that is soon to go into my stomach. This is indeed me"—that is how it is taken next. We go to take this food. Next, we return having taken food. What happens within that? "It was I who went to take food; it was I who returned after taking food." Even if we weigh the difference in between, the only difference is that compared to the weight when going, the weight has now increased by the added food. This means, "Now this is my weight." What does that mean? The food that was taken has become "me." Therefore, it is a part of "me" that is being let go here. The Brahmin offered half of the plate of food he was eating to the Buddha. This is no small thing.</p>
+<p>This is something performed frequently not only by that Brahmin but also by you devotees. However, one must comprehend its Dhamma nature. This is not about thinking: "This is a custom, a custom observed by other neighbors; if we do not give, they will be angry; through this we can go to heaven." There is something far deeper that must be done at the moment of giving. What is it? This is indeed a highly valuable opportunity to witness the moment when the ownership (*mamāyita*), the taking as "I" and "mine" regarding those Name-and-Form (*nāmarūpa*) dhammas, is broken. If one looks at the mind: "What I had taken as 'I' and 'mine' up to now, I have now given away with great ease." To the devotee who has developed wholesome qualities such as faith and that spirit of generosity, the realization of the paths and fruits can be easily attained through this very opportunity, by watching the flipping mind and correcting it so that it does not flip.</p>
+<p>The mind at three points: before giving, at the moment of giving, and after having given. Through each of these, one prepares and tranquilizes the mind. Without letting the mind scatter, one concentrates it. Developing faith regarding the Saṅgha, or in the case of a Buddha-pūjā, regarding the Buddha. Through those, one cultivates concentration. What is done next is attention (*manasikāra*). There, one applies attention. One applies bringing to mind with wisdom—wisely, in a Wise (*yoniso*) manner. One looks back. Within this thought, or rather, what is present here—one reflects upon its Dhamma nature. One allows that thumb to touch and examine the little finger. Next, to touch the ring finger. Then, the middle finger, the index finger—one reflects on these and understands their nature. Then, it is seen that the perception of pleasure (*sukha-saññā*) that was previously there regarding the food has now departed. It has turned into equanimity (*upekkhā*). Having turned it into equanimity, one gave it. Similarly, if there was a perception regarding them, such as "To whom am I giving my packet of rice?", that pleasure departed. The volition ceased. The pleasant Contact (*phassa*) associated with it—every single one of them was removed.</p>
+<p>Through that, this person experiences a spiritual joy (*nirāmisa-pīti*). Within that spiritual joy, the mind becomes stilled and composed. Next, to gain the correct understanding of something based on that Dhamma nature, on that equanimity, the mind must be brought to a state of equanimity. Removing it from attraction and repulsion, bringing it to the state of equanimity. Reflecting on the Dhamma nature is extremely helpful for that. What is here in this Feeling (*vedanā*) is not something to be taken as "I" and "mine." Among the Name-dhammas, this is seen in Feeling (*vedanā*). What is called Feeling (*vedanā*) is sometimes present as pleasant Feeling (*vedanā*). Sometimes as neutral Feeling (*vedanā*). Sometimes as painful Feeling (*vedanā*). Flipping to either side of these, the middle state is called equanimity. It is always mostly between pleasure and pain. It is exactly the same with regard to the others as well.</p>
+<p>It is by dividing up these Name-and-Form (*nāmarūpa*) dhammas, grasping them as "I" and "mine," and through this ignorance, that worldly beings prolong saṃsāra. Then, another point right here is that, as we mentioned, when insight meditation is developed, particularly if indicated in terms of knowledges (*ñāṇa*), it proceeds by way of arising and passing away (*udayabbaya*), dissolution (*bhaṅga*), and so forth. "Udayabbaya" means the wisdom that sees arising and passing away. When that is developed and understood rapidly, what is next understood most clearly is dissolution (*bhaṅga*) itself. Here there is nothing to grasp anymore. Once things begin to break up and dissolve, there is nothing to be regarded as "a thing."</p>
+<p>Next, one brings this to mind as bare activity (*kiriyā-mātra*). As "a seeing," "a hearing," "a sensing," "a thinking," and so on. What happens by doing so? If we reflect deeply, all this while in saṃsāra, as we said before, we have been taking things in the world as "a thing." Just as we say "I" and "mine" in daily life, we cannot avoid using the term "a thing." These things are not always things we can grasp with our hands. Often, they are things grasped by the mind. Even more difficult for many than letting go of things grasped by the hand, is letting go of things grasped by the mind—such as views (*diṭṭhi*). In that way, various things are difficult to let go of. We refer to them as "things." The "thing-ness" of those things we call "things" must disappear. That is called the signless (*animitta*). Signs (*nimitta*). Another word for mind-objects is signs. It is said "taking signs." A sign. One takes a sign in everything.</p>
+<p>That sign is a perception of permanence (*nicca-saññā*). It goes hand-in-hand with perception. A perception of permanence in everything. Thus, there is this taking of signs in the world. It is precisely this taking of signs that turns out badly for us even at the moment of death. Something, such as a sign of kamma (*kamma-nimitta*) or a sign of destination (*gati-nimitta*), comes to the mind at that final moment. Ignorance and the sense of "I" and "mine" are present. Craving (*taṇhā*) is present. The desire to grasp is present. Next, one firmly grasps whatever is presented according to kamma. At that moment of death, wherever that grasping occurs—be it a mother's womb, the flames of hell, or the womb of an animal—because one wants to continue this "I" and "mine" continuously, the mind grasps it. One turns it into "a thing." Behold, there is this nature of grasping signs in the mind. This must be broken. It is precisely to break this that the Buddha preached the teaching of the Three Characteristics (*tilakkhaṇa*), which we briefly consider as Impermanent (*anicca*), Suffering (*dukkha*), and Non-self (*anattā*).</p>
+<p>What is meant by Impermanent (*anicca*), Suffering (*dukkha*), and Non-self (*anattā*)? The sign of permanence is broken right there by contemplating it as Impermanent (*anicca*). Generally, the impermanence of all these things remains hidden. The mind is not directed toward it. For throughout a long time in saṃsāra, what we have done is watch the sun rise; we do not like to watch the sun set. We buy new clothes, but we do not think about what happened to the old clothes. We eat fresh food, but we do not think of the fate of the food eaten yesterday. Worldly people have a nature of covering all of that up. Craving (*taṇhā*) is always "ponobhavikā"—meaning, leading to renewed existence. It looks at new arisings again and again; it constructs and reconstructs preparations (*saṅkhāra*), but does not like to look at what is decayed. Such a nature exists in the world. Therefore, impermanence is hidden. The breaking-up nature is hidden. We easily forget the fact of disintegration. Therefore, one must look at this nature of arising and passing away in an impartial, objective manner. The mind is trained for that.</p>
+<p>It is through bringing to mind the nature of arising and passing away that one sees impermanence. As the bringing to mind increases, gradually this disintegration begins to be seen at an extremely rapid pace. When it is seen thus, one begins to clearly understand how the mind operates within these, in a way that helps the maturity of those insight-knowledges. At that point, the things taken as objects dissolve away. They dissolve. They are no longer registered by the mind. Even though others, the worldly people, take them as "things," to one's mind they are felt only as rapidly dissolving processes, bare activities. It is by training the mind in this manner that the defilement of ignorance, accumulated over a long time in saṃsāra, can be broken at four stages.</p>
+<p>A fact mentioned regarding the Stream-entrant (*sotāpanna*) is... Without the wise reflection called Wise attention (*yoniso manasikāra*), what have we done through unwise attention (*ayoniso-manasikāra*)—unwise reflection—over an extremely long period in saṃsāra? We have gathered five massive heaps, so large that they cannot be exhausted. A heap of Form, a heap of Feeling (*vedanā*), a heap of perception, a heap of preparations (*saṅkhāra*), a heap of Consciousness (*viññāṇa*). That is what is called the Five Aggregates (*pañcakkhandha*). The five heaps that are grasped are called the Five Aggregates of Grasping (*pañcupādānakkhandha*). These five heaps were formed precisely because that bringing to mind was done incorrectly. Instead of perceiving them in accordance with the Three Characteristics of Impermanent (*anicca*), Suffering (*dukkha*), and Non-self (*anattā*), what has happened to us through looking at the world with the perception of permanence (*nicca-saññā*), the perception of beauty (*subha-saññā*), the perception of pleasure (*sukha-saññā*), and the perception of self (*atta-saññā*) is that those heaps accumulated.</p>
+<p>If these heaps are to be thinned out, they must be seen as Impermanent (*anicca*), Suffering (*dukkha*), and Non-self (*anattā*). In their being seen thus, gradually, it is realized that there is nothing in the world worthy of being regarded as "a thing." In the end, the emptiness of the world—generally, if one says this to someone, they might laugh. "When there are so many things to see and hear in the world, how can you say the world is empty, a void (*suñña*)?" Worldly people are afraid of even the word "void" (*suñña*). Yet, as the Buddha declared, this is not something that can be shown to another through various exhibitions. It is something to be known and realized directly by each person, according to their own wisdom. What the insight meditator does by directing that beam of light called attention (*manasikāra*) is like bringing light to a dark place, whereby darkness disappears. Similarly, due to that darkness, when we grope in the dark, whatever we touch, we take as "a thing." Later, when we look, it is not what we thought it was. In the same way, due to groping in this manner for a long time in saṃsāra, a massive heap of "things" has accumulated within the mind.</p>
+<p>It is this attention (*manasikāra*) that helps break down even those concepts (*paññatti*) conventionally taken as "things." When that beam of light is applied, through that attention, these are seen to have holes and gaps—a multitude of arisings and passings away. A lamp flame appears to us from afar as a single continuous thing. Or when looking at a waterfall from afar, it appears like a silver wall. Yet, when looking closely, there is an extremely rapid activity, a state of constant breaking-up. This is what must be understood, what must be realized directly. Through such direct realization, gradually those insight-knowledges mature, and even the dawning of Stream-entry takes place. Up to then, the Dogma of self-illusion (*sakkāya-diṭṭhi*) was held. "This form is mine. Or, I am inside form. Or, I am one who possesses form. Or, form is inside me." In these four ways, worldly people take this form as a self. It is the same with Feeling (*vedanā*). "This Feeling (*vedanā*) is mine; this Feeling (*vedanā*) is I; Feeling (*vedanā*) is in me; or, I am in Feeling (*vedanā*)." In that very way, they think about the mind too—Consciousness (*viññāṇa*). "This Consciousness (*viññāṇa*) is I. Or, I am inside Consciousness (*viññāṇa*). Consciousness (*viññāṇa*) is in me. Or, I am one who possesses Consciousness (*viññāṇa*)."</p>
+<p>In this way, as we said at the very beginning, "I" and "mine" are two words extremely pleasing to worldly people. Two words they cannot avoid using. Within that lies the secret of the entire saṃsāra. Therefore, we do not need to go home today and, just because we cannot use those words, stop saying "I" and "mine" and instead say, "The Five Aggregates have arrived; I shall feed the Five Aggregates." Or say, "Two Name-and-Form (*nāmarūpa*) dhammas have arrived..." Rather, one must apply the attention necessary to break the concept one has formed within. It is something that each person must realize directly through the beam of light of attention. That is what is meant by recognizing those Name-and-Form (*nāmarūpa*) dhammas.</p>
+<p>This is not something to be learned in daily life merely by listening to a sermon or reading a book. With one's own effort, directing and linking these to daily life, one must understand these six sense bases called the Six Sense Bases (*saḷāyatana*). There may be people here who work in various conventional institutions (*āyatana*), thinking about those institutions and their salaries. Yet, there are six bases (*āyatana*) in which every single one of us has to work. Those are what are called the Six Sense Bases (*saḷāyatana*): eye, ear, nose, tongue, body, and mind. Everyone performs work in these six bases. Insight meditation (*vipassanā-bhāvanā*) is the proper understanding of the work done within these six bases.</p>
+<p>Upon seeing a certain form, letting oneself get entangled by thinking in complex ways with attraction and repulsion along its color configurations, and creating a massive web of confusion—that indeed is messing up the work in the eye-base. Instead, what does the insight meditator do? He brings it to mind as "a form, a form" and stops right there. Even in an office, we know that if a manager tries to pursue every incoming matter to its ultimate conclusion, he cannot remain in that seat. Instead, he signs what is necessary, approves it, and files that folder away. The document folder is filed. In the same way, bringing this seen thing to mind once or twice as "a form, a form," he files it and puts it aside. If a sound is heard, without pursuing it far by asking "Where did this sound come from? Whose song is this? Who said this?", the meditator files it as "a sound" and puts it aside. In that very manner, without getting attracted or repelled by a smell or fragrance, it is just noted as something sensed by the nose.</p>
+<p>Similarly, when considering them as Name-and-Form (*nāmarūpa*) dhammas, what is present here is some Feeling (*vedanā*)—this is that little finger. Next, this is the ring finger; this is the middle finger; this is the index finger—and the thumb is what does all of this. In the end, as we said, in a case of murder where there is no evidence, one of the murderers themselves is pardoned by the state, pardoned by the court, and his evidence is taken. Finally, when the case is proven, if the truth is spoken, it is revealed that he too was involved in it. In the same way, what is revealed in the end is this attention (*manasikāra*). At the point where we divided attention, mind, and thought, there is a wondrous subtlety. When looked at in the end, there is nothing to be taken here. It is understood as void and empty.</p>
+<p>The Impermanent (*anicca*), Suffering (*dukkha*), and Non-self (*anattā*) are shown in another way in the Dhamma as the gateways to Nibbāna. The meaning of this is the doors of liberation (*vimokkha-mukha*) that help realize Nibbāna—meaning, deliverance or freedom. The word "freedom" is used in various senses in this day and age. But we know that the true liberation is liberation from saṃsāra. The Buddha has pointed out three gateways that assist in this liberation from saṃsāra, which may differ according to the temperament of each individual. Whichever gateway one enters through, one arrives at Nibbāna.</p>
+<p>What are those three gateways? They are shown as the signless (*animitta*), the desireless (*appaṇihita*), and the void (*suññata*). We mentioned "the sign" (*nimitta*) earlier too. Taking signs is done in accordance with the perception of permanence. Where that perception of permanence is broken, reflecting as Impermanent (*anicca*) culminates in the signless (*animitta*). The Buddha declared that the person who develops the perception of impermanence over a long time and develops insight along that path, as he approaches Nibbāna, arrives there through the gateway called the door of liberation of the signless (*animitta-vimokkha-mukha*).</p>
+<p>Similarly, Suffering (*dukkha*). Reflecting on the suffering of the world, of this saṃsāra, can vary according to the individual. It can differ based on saṃsāric habituation. To some, suffering is understood more clearly. To some, the impermanent nature is understood more clearly. To another, the non-self nature is understood. Then, to the person who reflected on attention in accordance with suffering, as he approaches the door of Nibbāna, it is designated as the desireless (*appaṇihita*). For "pranidhi" (directed resolve) means aspiration or prayer. It is like saying one made a resolve for Buddhahood. We have some aspiration or directed resolve for something. We direct our mind toward something. Directing the mind toward something with Craving (*taṇhā*) and desire is called "pranidhi." So, the more one looks at its painful and unsatisfactory nature, the less room there is here for Craving (*taṇhā*). There is no room for desire, no foundation for it. That is what is meant by "appaṇihita" (the undirected or desireless). Thus, in that manner, that is the other gateway to Nibbāna.</p>
+<p>Next, similarly, to the one who reflects on the non-self nature, this is understood as empty, as void, as Non-self (*anattā*). Those with abundant wisdom usually contemplate the aspect of Non-self (*anattā*). In whatever way, what helps all of them is reflecting on those aforesaid Name-and-Form (*nāmarūpa*) dhammas in a manner suited to each meditator in accordance with the Dhamma.</p>
+<p>Now, based on this, for you devotees—this is indeed a deep verse, we cannot hide that fact. Name-and-Form (*nāmarūpa*) dhammas are a profound matter. Yet, even a matter of this nature, that Brahmin and Brahmin woman who held wrong views, by hearing just that one verse—or perhaps the Buddha preached a few more explanatory words related to that verse—understood. About non-attachment to this Name-and-Form (*nāmarūpa*). Yet, it could not have been a very long sermon. By listening to it, they did not merely become Stream-entrants, nor Once-returners; they went all the way to the state of Non-returning (*Anāgāmī*). Therefore, we must consider that these potentials may exist not only within that Brahmin and Brahmin woman, but within us as well. This is an era where the decline of the Sāsana is occurring, in a way that makes us think it is the final era of this Dispensation. However, without letting the mind grow weak by that alone, you devotees must strive to gain the maximum results and benefits from insight meditation (*vipassanā-bhāvanā*) through these Dhamma matters, before this Buddha Sāsana comes to an end.</p>
+<p>Therefore, even at the moment of serving alms, in the manner said as "giving for the adornment of the mind," one must perform it without defiling the mind by thinking about the money spent on that alms-giving, or that we gave more generously than others, or that "through this, I must go to heaven." If, in association with that alms-giving, one can rejoice: "The ignorance and craving that had arisen in my mind have been thinned out in this manner at this moment of giving." "I saw the impermanence of these dhammas. I understood that the notion of 'I' and 'mine' has no foundation here"—if you devotees can find joy in that, Nibbāna is right there in that spoonful of rice.</p>
+<p>You devotees, then, listened to this Dhamma for about an hour on this valuable Poya day. Generally, at the end of a Dhamma sermon, when transferring merits and indicating the beneficial aspect of these deeds, we easily say, "Through the benefit of listening to the Dhamma, may you realize the deathless noble Nibbāna!" It would be far better if you devotees reflect, as was said regarding the giving of alms, on what benefits were received at this moment. Faith (*saddhā*), energy (*viriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*) are the dhammas that assist in Nibbāna. Among the Thirty-seven Requisites of Enlightenment (*bodhipakkhiya-dhamma*), you have secured opportunities to arouse or develop these dhammas within your own mind-stream, which are shown as the spiritual faculties (*indriya*) and spiritual powers (*bala*). With faith toward the Triple Gem, sitting faithfully in this Bodhi-court, you listened to the Dhamma with faith. Accordingly, energy was present in directing the mind to this. Various defiled thoughts could have flooded in. Dispelling them and listening to this Dhamma, you utilized energy. Next, if you listened to it while bringing it to mind word by word, mindfulness was developed thereby. Next, through that, by reflecting on the Dhamma as Dhamma-contemplation (*dhammānussati*), gladdening the mind with faith, if a certain level of concentration arose, then concentration was established. Next, it was a Dhamma verse accessible to your own wisdom that we analyzed. In association with that, utilizing the wholesome practices of giving, virtue, and meditation (*dāna*, *sīla*, *bhāvanā*) that you have developed up to now, and utilizing your supporting conditions (*upanissaya-sampatti*), if anyone experienced deep Dhamma understandings through this sermon, that assists in wisdom (*paññā*). Furthermore, this is a wonderful opportunity to develop those spiritual faculties. If, through the benefit of listening to the Dhamma, someone can attain this noble Nibbāna not in the future, but at this very moment, that indeed is something extremely valuable. Therefore, by traveling on this path of Dhamma, we wish that you devotees may gain the strength and power to escape from this terrifying saṃsāra in this very life—at least by escaping the four planes of misery at the stage of Stream-entry, or otherwise by escaping the entirety of saṃsāra, eradicating all defilements through the knowledge of the Path of Arahatship, and finding peace in the noble, deathless, great Nibbāna.</p>
+<p>Similarly, we must now reflect that although invisible to us, the assembly of deities and Brahmas who protect the Dispensation lend a hand to these Sasana activities of ours. Reflecting in that manner, with the aspiration that we may continue to receive protection and organization from them for our Sasana activities in the future, and that if those deities and Brahmas aspire to any Enlightenment—whether as a Buddha, a Pacceka-Buddha, or an Arahat—they too may utilize these benefits of listening to the Dhamma in that very manner, let us share these merits with the deities. Furthermore, from Avīci to Akaniṭṭha, including all our departed relatives such as parents, whoever desires Nibbāna or desires merits, may all of them rejoice in these merits. Having rejoiced, may they be delivered from this terrifying saṃsāra and find peace in the noble, deathless, great Nibbāna. With that aspiration, let us share the merits by reciting the verse.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_085.html" class="doc-btn">← Previous Sermon (085)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_087.html" class="doc-btn">Next Sermon (087) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

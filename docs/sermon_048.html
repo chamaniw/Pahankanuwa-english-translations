@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 048 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_047.html" class="doc-btn">← Previous Sermon (047)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_049.html" class="doc-btn">Next Sermon (049) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 048</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_048_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_048_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_048_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #48</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.181)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Jīvite vāpi sappañño, api vittaparikkhayo; Paññāya ca alābhena, vitto vāpi na jīvati. Sabbaṃ suṇāti sotena, sabbaṃ passati cakkhunā; Na ca diṭṭhaṃ sutaṃ dhīro, sabbaṃ pariccajituṃ arahati. Cakkhumāssa yathā andho, sotavā badhiro yathā; Paññavāssa yathā mūgo, balavā dubbaloriva; Atha atthe samuppanne, sayetha matasāyikaṃ.</p>
+<p>From:</p>
+<p>Nālaka Sutta tradition from the Sutta Nipāta</p>
+<p>Dear Listeners,</p>
+<p>Today is an exceptionally precious day for Buddhist devotees, being the anniversary of the day the Tathāgata, the King of Dhamma, the Fully Self-Awakened One, set the Wheel of Dhamma rolling up to the Akaniṭṭha Brahma world. On that day, in the *Dhammacakkappavattana Sutta*, the entire Sublime Dhamma was encapsulated within the Four Noble Truths presented by the Blessed One to the world. The Blessed One also nurtured a community of disciples who were capable of explaining that deep Dhamma as occasion demanded. Among those disciples skilled in analyzing and explaining in detail and depth the meaning of a Dhamma passage preached in brief, the position of *etadagga*—the foremost—was received by the Great Arhat Mahā Kaccāyana. The three verses he uttered on one occasion are what we have selected as our theme today.</p>
+<p>If we look at the background story as presented in the Commentaries and other texts, it is explained that with regard to Ven. Kaccāyana, he fulfilled his perfections (*pāramīs*) over a long period during the dispensations of past Buddhas for this aforesaid position of eminence. Next, in this present Buddha-dispensation era, Ven. Kaccāyana was born in the Avanti country as the son of the Brahmin chaplain of King Caṇḍappajjota. Since his body was golden in color, his mother gave him the name 'Kañcana' (Golden). Having learned the three Vedas and other sciences, this young man succeeded his father in the position of royal chaplain upon the latter’s passing. He was known by his clan name, Kaccāyana. King Caṇḍappajjota came to hear that a Buddha had appeared in the world. He commissioned this Brahmin chaplain to go and invite the Buddha to visit the country of Avanti. Accordingly, the chaplain Brahmin Kaccāyana went with seven others to see the Blessed One. Having traveled a great distance and met the Blessed One, it is mentioned in the texts that through the very first Dhamma sermon they heard from the Blessed One, all eight attained Arhatship with the four analytical knowledges (*paṭisambhidā*) and received ordination through the 'Ehi Bhikkhu' formula. Subsequently, Ven. Kaccāyana conveyed the King's invitation to the Blessed One. However, the Blessed One said, "Kaccāyana, there is no need for me to go. Even if you go, the King will gain confidence." Accordingly, Arhat Kaccāyana and the other seven returned to the Avanti country. Residing in the King's park for a certain period, Ven. Kaccāyana established the Buddha’s dispensation in the Avanti country, inspiring confidence in the King as well. It is mentioned that later he traveled to see the Blessed One again. He also visited the Avanti country from time to time as the occasion demanded.</p>
+<p>Now, a series of advisory verses uttered by him on one occasion is found in the *Theragāthā Pāli*. We have taken three of those verses as our theme. The meaning of those verses needs to be explained in some detail.</p>
+<p>*Jīvite vāpi sappañño api vittaparikkhayo* — "Even if wealth and possessions are ruined, the wise person still lives."</p>
+<p>*Paññāya ca alābhena vitto vāpi na jīvati* — "On the other hand, if wisdom is not attained, even if one has wealth, one does not truly live."</p>
+<p>*Sabbaṃ suṇāti sotena sabbaṃ passati cakkhunā* — "He hears everything with the ear; he sees everything with the eye."</p>
+<p>The wise person should not completely discard everything he has seen and heard; discarding is not appropriate. Now, here is a special verse:</p>
+<p>*Cakkhumāssa yathā andho* — "Though possessed of eyes, let him be as one blind."</p>
+<p>*Sotavā badhiro yathā* — "Though possessed of hearing, let him be as one deaf."</p>
+<p>*Paññavāssa yathā mūgo* — "Though possessed of wisdom, let him act as if dumb."</p>
+<p>*Balavā dubbaloriva* — "Though strong, let him act as if weak."</p>
+<p>*Atha atthe samuppanne sayetha matasāyikaṃ* — "Then, when the need arises, let him lie down like a dead man." (That is, like someone lying on their deathbed). We need to analyze these a little.</p>
+<p>"Even if wealth is exhausted, the wise person still lives." This was said with the following meaning: even if a wise person's wealth is lost, by being content with what is received, through wise courses of action, and without falling into corruption, they live through righteous means. Therefore, that is a true life. On the other hand, *paññāya ca alābhena*—the foolish person without wisdom, no matter how much wealth they have, falls into vice, ruins both this world and the next, and destroys their life. From this, we can see that during the Buddha’s time, unlike today, wise thinking was valued over positive (wealth-oriented) thinking. Why? We can find many supporting facts in the Suttas.</p>
+<p>When a deity asked, "What is the best treasure of humans?" (*kiṃsu narānaṃ ratanaṃ...*), the answer was *paññā narānaṃ ratanaṃ*—"Wisdom is the treasure of humans." Likewise, in response to the verse asked by Ālavaka the Yakkha, when asked, "Whose life is said to be the best?" (*kathaṃ jīviṃ jīvitamāhu seṭṭhaṃ*), the Blessed One declared, *paññā jīviṃ jīvitamāhu seṭṭhaṃ*—"Living by wisdom is said to be the best." From this, we can see that according to the values of that time, wisdom was appreciated more than wealth. That is why it was said that the wise person lives even without wealth, while the wealthy person without wisdom is like the dead, not truly living.</p>
+<p>Some important points are mentioned here. *Sabbaṃ suṇāti sotena*—one gets to hear many things with one’s ears. Likewise, *sabbaṃ passati cakkhunā*—one gets to see everything with one's eyes. *Na ca diṭṭhaṃ sutaṃ dhīro sabbaṃ*—the wise person does not completely discard all that is seen and heard. However, now he states what should be abandoned (or how to behave): *cakkhumāssa yathā andho*—though possessed of eyes, he behaves as if blind according to the occasion. On certain occasions, one has to act as if one has not seen. If defilements arise within oneself through seeing, or if various complications arise, one must remain as if one has not seen. *Cakkhumāssa yathā andho*—one must act like that as the situation demands. Likewise, *sotavā badhiro yathā*—even if heard, one must remain like a deaf person. One has to live as if one has not heard, as if one is blind and deaf to those things. Similarly, *paññavāssa yathā mūgo*—though possessing wisdom, one should act like a mute. If one tries to speak with all one's wisdom at the wrong time, one will get into trouble. *Balavā dubbaloriva*—though possessing strength, one must act as if weak. *Atha atthe samuppanne sayetha matasāyikaṃ*—furthermore, as the occasion demands, if a certain course of action would hinder one's progress in this world or the next, one must remain inactive, like a dead man. This is the advice given by Ven. Mahā Kaccāyana through those verses.</p>
+<p>Just as he received that *etadagga* position, it is mentioned in many Sutta discourses that lay and ordained disciples inquired from Ven. Kaccāyana about the meaning of certain Dhamma portions preached in brief by the Blessed One. Although we cannot recount all of them, on one occasion it is mentioned as follows. While Ven. Mahā Kaccāyana was residing in the town of Kuraraghara in the Avanti country, the householder Hāliddakāni came to him, sat on one side, and asked this: "Venerable Sir, in the *Māgandhiya Pañha* of the *Aṭṭhaka Vagga*, the Blessed One has uttered this short verse, a brief Dhamma point. I will recite that verse:</p>
+<p>> *Okaṃ pahāya aniketasārī,*</p>
+<p>> *Gāme akubbaṃ muni santhavaṃ,*</p>
+<p>> *Kāmehi ritto apurekkharāno,*</p>
+<p>> *Kathaṃ na viggayha janena kayirā.*</p>
+<p>This is the Buddha's word. Realizing that there is a deep meaning here, this householder must have asked. He inquired from Ven. Kaccāyana about the meaning of this Dhamma portion preached in brief. It is only when listening to this exposition that one understands that there is a depth in these Dhamma portions far beyond the ordinary meaning we usually grasp. Ven. Kaccāyana explains it like this. If we summarize it according to the occasion, its general essence is: *okaṃ pahāya*—the word *oka* is used in the Pali language for a home or house. *Okaṃ pahāya*—leaving home and going forth into homelessness (*anokaṃ āgamma*). But Ven. Kaccāyana explains this in a very deep manner. He explains that the form element (*rūpa-dhātu*), which we conventionally refer to as ourselves, is a home/abode for consciousness (*viññāṇa*). Furthermore, the form element is where consciousness (*viññāṇa*) becomes established; that is why it is called a home. It is with the idea that consciousness (*viññāṇa*) becomes established in the elements of feeling (*vedanā*), perception (*saññā*), and preparations (*saṅkhāra*) that they are called *oka* (home). But the Tathāgata has abandoned that home—meaning, not a physical house, but those homes where consciousness (*viññāṇa*) becomes established: the form element, the feeling element, the perception element, the preparations element, and the consciousness element—having abandoned lust, affection, craving (*taṇhā*), thirst, etc., towards them. It is in this sense that *okaṃ pahāya* (abandoning the home) was said. Next, *aniketasārī* (wandering shelterless)—*niketa* means a residence or dwelling. Therefore, *niketasārī* means one who wanders among homes. But *aniketasārī* is explained here as follows:</p>
+<p>You have heard many times about forms, sounds, smells, tastes, touches, and ideas (*rūpa, sadda, gandha, rasa, phoṭṭhabba, dhamma*) which are the objects of these six sense bases. These are the signs (*nimitta*) within the range of the senses: eye, ear, nose, tongue, body, and mind. It is these signs that have been designated as *niketa* (abodes). With the meaning of "not being drawn along those signs," he is called *aniketasārī*. Since the Tathāgata has removed attraction, affection, lust, and craving (*taṇhā*) toward the objects of those sense bases, he is not drawn along by them; hence *aniketasārī*. Thus, *okaṃ pahāya aniketasārī*.</p>
+<p>Next, the second line: *gāme akubbaṃ muni santhavaṃ*—the sage (i.e., the monk) does not make intimacy/connections in the village. *Santhava* means keeping company/intimacy. "Not having friendly intimacy in the village" means avoiding inappropriate relationships with householders, the lack of association with laypeople. This is often mentioned in the Dhamma as follows. Regarding a monk who associates with laypeople, it is said: *sahananandī, sahasokī, sukhitesu sukhito, dukkhitesu dukkhito* etc.—rejoicing when laypeople rejoice, grieving when laypeople grieve, sharing the happiness and suffering of laypeople. Not only that, but in their duties and tasks (*kicca-karaṇīyesu*), he takes part (*yogaṃ āpajjati*) and joins them in doing those things. That is what intimacy is. The sage does not do that.</p>
+<p>Next, *kāmehi ritto*—*ritta* means empty. *Kāmehi ritto* means the Tathāgata is empty of sensual pleasures; empty of the five cords of sensual pleasure. By removing desire, affection, lust, etc., towards them, he is free from the five cords of sensual pleasure, hence *kāmehi ritto*. Next, *apurekkharāno* (not looking forward) has a deep meaning. It is shown like this: forming future aspirations regarding the five aggregates of grasping, such as "May I have such a form, such a feeling, such a perception in the future!" is what is meant by *purekkharāno* (looking forward/preferring/putting in front). It puts becoming (*bhava*) in front. It aspires: "May I have such and such in the future." That is wishing for becoming (*bhava*). *Apurekkharāno* means not putting it in front in that manner. If someone does not put it in front, it is considered an excellent practice. Then one becomes *kāmehi ritto apurekkharāno* (empty of sensual pleasures, not looking forward).</p>
+<p>Next, it says: *kathaṃ na viggayha janena kayirā*—he does not engage in disputatious speech with people. It is explained like this: at that time, there was a custom among other ascetics and Brahmins. They would gather in assembly halls and argue, challenging one another. There are several phrases of disputation mentioned here: "You do not know this Dhamma and Discipline; I know this Dhamma and Discipline," "You are practicing wrongly; I am practicing rightly," "You say last what should be said first, and first what should be said second." There is a whole set of such verbal challenges used in those debates. *Kathaṃ na viggayha janena kayirā* means that when speaking with people, he does not enter into such disputations. He does not engage in debates and challenges. Thus, Ven. Mahā Kaccāyana explains the aforementioned verse in depth. There are many other such instances; let us discuss them according to the occasion.</p>
+<p>Among the expositions given by Ven. Kaccāyana, the most outstanding, deepest, and most highly valued exposition of that time is found in the *Madhupiṇḍika Sutta* of the *Majjhima Nikāya*. We hope to speak a little about that, right from its introductory section. On one occasion, the Blessed One was residing at the Nigrodhārāma in Kapilavastu. One day, after consuming his almsfood, he entered the Great Forest for his afternoon abiding (*divāvihāra*—daytime rest) and sat at the foot of a Bel tree. At that moment, the Sākyan named Daṇḍapāṇi—the name Daṇḍapāṇi was given because wherever this Sākyan went, he carried a walking stick or a staff—while walking for exercise, came up to the Bel tree where the Blessed One was sitting. He did not pay respects, but after exchanging pleasantries, he asked a question: *kiṃvādī samaṇo kimakkhāyīti*—"What is your doctrine, ascetic, and what do you proclaim?"</p>
+<p>Then the Blessed One gave a unique answer. He gave an answer that this Sākyan could not grasp. Let us try to state it in English. It is a long passage. He addressed this Sākyan as "friend" (*āvuso*). "Friend, I declare such a doctrine whereby one does not dispute with anyone in this world, with its deities, Māras, and Brahmās, in this generation with its ascetics and Brahmins, its devas and humans; and furthermore, whereby concepts do not lie latent as underlying tendencies (*anusaya*) in that Brahmin who dwells detached from sensual pleasures, free from doubts, and liberated from craving for becoming (*bhava-taṇhā*). I present such a doctrine." The Blessed One gave this unique answer. Unable to understand this, the Sākyan shook his head, wagged his tongue, wrinkled his forehead, and departed.</p>
+<p>Afterwards, the story goes like this: having spent the evening, the Blessed One arose from his meditation, returned to Nigrodhārāma, and addressed the Sangha, recounting the question asked by Daṇḍapāṇi Sākyan and the answer given by the Buddha. At that moment, a certain monk questioned the Buddha about the meaning of that answer. Thereupon, the Blessed One laid down a brief exposition before the monks. It is as follows:</p>
+<p>"Monks, if, owing to whatever cause, concepts, reckonings, or designations characterized by the prolific tendency of concepts (*papañca-saññā-saṅkhā*) beset a man, and if there is nothing therein to be delighted in, welcomed, or grasped, then this is the end of all underlying tendencies (*anusaya*) of lust, the end of the underlying tendencies of aversion (*paṭigha*), the end of the underlying tendencies of views (*diṭṭhi*), the end of the underlying tendencies of doubt (*vicikicchā*), the end of the underlying tendencies of conceit (*māna*), the end of the underlying tendencies of craving for becoming (*bhava-rāga*), and the end of the underlying tendencies of ignorance (*avijjā*). This itself is the end of taking up rods and weapons, quarrels, disputes, recriminations, and other evil, unwholesome states." The Blessed One delivered this unique discourse, leaving a certain puzzle unsolved. It was not clear what those *papañca-saññā-saṅkhā* actually were. In short, the Blessed One declared that if, owing to whatever cause, a man is beset by *papañca-saññā-saṅkhā*, and if one does not delight in, welcome, or cling to that cause, this itself is the end of the sevenfold defilements of underlying tendencies (*anusaya*), as well as quarrels, disputes, etc. Having declared this, he rose from his seat and entered his dwelling. Then, this became a puzzle for the monks. The Blessed One had not given the complete explanation. The monks then pondered, "How can we understand the meaning of this Dhamma taught in brief by the Blessed One?" While they were talking, they recalled that the venerable Mahā Kaccāyana had been highly praised and commended by the Blessed One, and was deeply respected by his companions in the holy life. "Perhaps Ven. Kaccāyana can explain this for us." This group went and invited Ven. Mahā Kaccāyana: "The Blessed One has declared such a thing, please be compassionate enough to explain this to us."</p>
+<p>Then, as was his usual custom, Ven. Mahā Kaccāyana said: "Indeed, Venerable Sirs, your action is like that of a man who, seeking the heartwood of a tree, bypasses its root and trunk and searches for the heartwood among its leaves. While the Blessed One is present, you come to me to find its meaning; that is what your action is like. Go and ask the Blessed One himself." Then those monks said: "The Blessed One has entered his dwelling, and our time is passing. If it is no trouble, please clarify its meaning for us." When they repeatedly requested and invited Ven. Mahā Kaccāyana, it was on that occasion, through an extremely deep passage that has captured the minds of many, that Ven. Mahā Kaccāyana analyzed that utterance of the Buddha. Some parts of it are explained in Pali. The exposition given by Ven. Mahā Kaccāyana to explain the Buddha's passage is extremely deep. In any case, he says this:</p>
+<p>"Friends!" addressing those monks, he took one of the six sense bases—the eye, ear, nose, tongue, body, and mind—and explained, and the devotees should apply it to the other sense bases as well. It begins like this:</p>
+<p>*Cakkhuñca āvuso paṭicca rūpe uppajjati cakkhu-viññāṇaṃ*—"Friends, dependent on the eye and forms, eye-consciousness (*viññāṇa*) arises." You can understand that much. Next, he says: *tiṇṇaṃ saṅgati phasso*—the coming together of these three is contact (*phassa*). Those three mean the eye, forms, and the consciousness (*viññāṇa*) that arises dependent on them. The moment of their coming together, the moment they meet, is designated as contact (*phassa*). Next: *phassa-paccayā vedanā*—dependent on contact (*phassa*) as condition, feeling/sensation (*vedanā*). Now, he expounds the next part in a unique way: *yaṃ vedeti taṃ sañjānāti*—what one feels, that one perceives. *Yaṃ sañjānāti taṃ vitakketi*—what one perceives, about that one thinks. *Yaṃ vitakketi taṃ papañceti*—what one thinks about, that one conceptually proliferates (*papañceti*). I will explain these words later. For now, understand it as "conceptually proliferates." *Yaṃ papañceti*—what one conceptually proliferates...</p>
+<p>Now, next he says: *tato nidānaṃ purisaṃ papañca-saññā-saṅkhā samudācaranti*—owing to that cause, those aforesaid *papañca-saññā-saṅkhā* (concepts, reckonings, or designations characterized by the prolific tendency of concepts), whatever they may be, beset and overwhelm that man who set those Dhamma processes in motion. Regarding what? *Atītānāgatapaccuppannesu cakkhuviññeyyesu rūpesu*—the man is overwhelmed by the *papañca-saññā-saṅkhā* built up regarding forms cognizable by the eye in the past, future, and present. This was the answer given by Ven. Mahā Kaccāyana.</p>
+<p>He adds a bit more to the end. Although there is no opportunity to explain all of it, to make it complete, it must be said in brief. Next, he states: "When there is the eye, forms, and eye-consciousness, it is possible to point out a designation (*paññatti*) of contact (*phassa*). When there is the designation of contact (*phassa*), there is room for a designation of feeling (*vedanā*). When there is the designation of feeling (*vedanā*), there is room for a designation of perception (*saññā*). When there is the designation of perception (*saññā*), there is room for a designation of applied thought (*vitakka*). When there is the designation of applied thought (*vitakka*), there is the onset of *papañca-saññā-saṅkhā*." He also states the reverse:</p>
+<p>"Where there is no eye, no forms, and no eye-consciousness, there is no way to designate contact (*phassa*). In the absence of that, one cannot designate feeling (*vedanā*); there is no perception (*saññā*), no applied thought (*vitakka*), and no *papañca-saññā-saṅkhā*." Ven. Kaccāyana stated this as well. Having finished this exposition, Ven. Mahā Kaccāyana said to the monks: "Friends, this is how I understand it. Go to the Blessed One and ask about the meaning of this brief sermon, and in whatever way he explains it, preserve it accordingly."</p>
+<p>Then, these monks—it may not have been at that very moment, but on a later occasion when they found the Blessed One at leisure—went and presented the entire account. After the Buddha arrived, they explained: "We invited Ven. Mahā Kaccāyana, and he analyzed it for us in this manner," presenting the exposition in full. The Blessed One declared: "Monks, Mahā Kaccāyana is wise. Even if you had asked me, I would have explained it in this very same way. Therefore, this indeed is its meaning. Preserve it thus." The Blessed One approved it entirely. At that moment, Ven. Ānanda, who was standing nearby, made a unique comment. He used a simile: "Venerable Sir, just as a man oppressed by hunger might find a ball of honey (*madhupiṇḍika*), a honeycomb, and from whatever side he tastes it, licks it, or sucks it, sweet honey flows out endlessly; even so, Venerable Sir, if a wise monk examines the meaning of this Dhamma portion with wisdom, endless sweet meaning flows out." Expressing his joy, Ven. Ānanda asked: "Blessed One, what name should be given to this Dhamma portion?" He asked with a hint. "Then, Ānanda, call this Dhamma discourse the *Madhupiṇḍika* (The Ball of Honey) Sutta." From this, we see that Ven. Ānanda too realized that this discourse contained immense meaning. That is why he gave the simile of the ball of honey.</p>
+<p>So, it is this very ball of honey that I am trying to offer you to suck, according to my ability. Try to suck this honey. There is extremely deep Dhamma here. Indeed, this is the section that has drawn the attention of most scholars today. First, let us try to understand the word *papañca*.</p>
+<p>In everyday usage, even as it is used today, if someone gives a long-winded, roundabout explanation instead of directly answering a question, we say, "Speak without *papañca*." So, unnecessary circumlocutions and wordiness are also called *papañca*. But here, it refers to a *papañca* of the mind (conceptual proliferation). I will explain the other words as the occasion demands. The uniqueness of the exposition given by Ven. Mahā Kaccāyana is that he first shows that what is called consciousness (*viññāṇa*) is dependently co-arisen (*paṭicca-samuppanna*). It is something that arises from causes and conditions. An ordinary untaught person, lacking Dhamma knowledge, takes this consciousness (*viññāṇa*), this mind, as the self. That is exactly what all other religions firmly grasp as the soul or self. But here, it is clearly shown that dependent on the eye and forms, eye-consciousness (*viññāṇa*) arises: *cakkhuñca paṭicca rūpe ca uppajjati cakkhu-viññāṇaṃ*. Consciousness is neither in the eye nor in the forms. If these two come together at some point, through the direction of attention (*manasikāra*), something called consciousness arises at that moment: eye-consciousness. Just as fire does not arise without friction, the Blessed One declared that consciousness does not arise without a cause.</p>
+<p>Eye-consciousness, ear-consciousness, nose-consciousness, etc., are all born of causes and conditions. *Aññatra paccayā natthi viññāṇassa sambhavo*—"Apart from conditions, there is no origination of consciousness." This is shown as the most important point in this Dhamma. Here, it is clearly shown that dependent on the eye and forms, consciousness arises. In that consciousness, both the eye and forms are reflected. Then there is the eye, there are forms, and there is consciousness. These three are taken together. The moment they are taken together is called contact (*phassa*). *Tiṇṇaṃ saṅgati phasso*—the coming together of these three is contact. Contact is a very deep matter. It is shown to be dependently co-arisen. No one actually "made" contact; contact is something that emerged through those causes and conditions. Next, it is stated: *phassa-paccayā vedanā*—dependent on contact as condition, feeling (*vedanā*). Here too, the conditional relation is stated, showing it is dependently co-arisen. No one "made" contact; contact arose through other causes and conditions. Dependent on that contact, there is feeling (*vedanā*). But going forward from there, it is after feeling arises that the hidden "self" wakes up. As mentioned in another Sutta, the Buddha asks: "Ānanda, if there were no feeling (*vedanā*) at all, would there be any room for a self?" The answer is "No." This shows that after reaching the stage of feeling, let us see how Ven. Mahā Kaccāyana's exposition proceeds.</p>
+<p>"*Cakkhuñca paṭicca rūpe uppajjati cakkhu-viññāṇaṃ, tiṇṇaṃ saṅgati phasso, phassa-paccayā vedanā*." From there, it goes in a unique way: *yaṃ vedeti taṃ sañjānāti*—what one feels, that one perceives. So, one perceives that feeling: what one feels, that one perceives. Next, *yaṃ sañjānāti taṃ vitakketi*—what one perceives, about that one thinks. *Yaṃ vitakketi taṃ papañceti*—when one thinks about it, without one even knowing it, one gets carried away by those thoughts. Why does one get carried away? That too is in the Buddha's teaching.</p>
+<p>Wherever there are conceptual proliferations (*papañca-saññā*) due to some cause, the Buddha uses three words: *abhinanditabbaṃ, abhivaditabbaṃ, ajjhosetabbaṃ*—to be delighted in, to be welcomed, to be grasped. These words refer to what you know very well as craving (*taṇhā*), conceit (*māna*), and views (*diṭṭhi*). One delights through craving (*taṇhā*); one welcomes/asserts through conceit (*māna*); one grasps/clings through views (*diṭṭhi*). That is why all three words are connected. Thus, due to forming craving, conceit, and views (*taṇhā, māna, diṭṭhi*) regarding those thoughts (*vitakka*), those conceptual proliferations (*papañca*) overflow. Those thoughts overflow, and what happens in the end? The person who directed their intellect in that way is overwhelmed. Therein lies *papañca-saññā-saṅkhā samudācaranti*—the concepts, reckonings, or designations characterized by the prolific tendency of concepts beset and overwhelm that man.</p>
+<p>"Saṅkhā" derived from conceptual proliferation (*papañca-saññā*). Now, the word *saṅkhyā* is used in daily life for numbers/figures. Everyone knows that. Actually, when we think about it, in language usage, for humans to exchange ideas, the easiest way they first use to communicate is numbers. One can even point with fingers and reckon. This reckoning is called counting. The same reckoning done with numbers is later done with words. Therefore, *papañca-saṅkhā* means the reckonings or designations created by conceptual proliferation. Why is it called designations? In another place, if we seek the etymology of this word based on the Buddha's teaching, there are three words: *saṅkhā, samaññā, paññatti*. These are synonyms—meaning they have similar meanings. *Saṅkhā* is a reckoning, arriving at a convention. Next, *paññatti* is like the first presentation of something like a "clock" through some reckoning. Then it is conventionally agreed upon. We all call it a "clock." If we used another name, it would cause confusion. Thus, the convention arose. So, the "clock" became a convention. First, the reckoning was done, putting the pieces together. At that point, let's say we decided to call it a "clock," and thereafter it was conventionally agreed upon. Next, once it is established as a designation (*paññatti*), no one doubts it because it has been accepted. That reckoning called *saṅkhā* goes very far. Through those thoughts, through that reckoning, that person is unknowingly overwhelmed by *papañca-saññā-saṅkhā*. *Samudācaranti*—due to that overwhelming, they slip into the three periods of time: past, present, and future (*atīta, anāgata, paccuppanna*). Confusing the three periods of time, there is a past. One thinks the past is the present, and one thinks the future is also the present. That is why the Buddha preached that wise ascetics and Brahmins do not confuse these three periods of time. For past things, they say "it was"; for future things, "it will be"; for present things, "it is." But the ordinary world confuses this. This happens mostly due to being overwhelmed by craving (*taṇhā*) and conceit (*māna*).</p>
+<p>Explaining this story in this way, many might not understand. Therefore, let us tell a small, heart-touching story that anyone can relate to. The Buddha did similar things. Some of you might have heard that during the Buddha’s time, there was an Arhat monk named Saṅgharakkhita. A nephew of his was ordained under him. Therefore, that monk was called Bhāgineyya Saṅgharakkhita (Nephew Saṅgharakkhita). This young monk observed the rainy retreat (*vassa*) in a temple in a certain remote village. At the end of the retreat, he received a piece of cloth of seven cubits and another of eight cubits as retreat garments to make a robe. This young monk thought: "I will use this seven-cubit cloth. I must offer the eight-cubit cloth to my teacher." He returned to the monastery. Since the senior monk was out on almsround, he planned to make a grand offering to his teacher. When the venerable elder returned, the young monk placed the cloth at his feet, offered it, saying "I offer what I received to you," and began to fan him. The elder Saṅgharakkhita said: "You keep it, my robes are complete." The young monk repeated: "I had intended to offer this robe only to you." Yet, the elder Saṅgharakkhita refused. Because of this, the nephew monk’s mind became deeply disappointed.</p>
+<p>This young monk thought: "Even though we are related, he did not even consider that." He thought, "Now, there is no use in my being a monk," and while fanning, he planned to disrobe. "After disrobing, I cannot live doing nothing. I will sell this eight-cubit cloth and buy a she-goat. She-goats give birth quickly. By selling the kids, I will get a wife to look after the house. After we have a child, I will name him after my uncle, and taking the child in a carriage, I will go to visit my uncle, the elder Saṅgharakkhita. On the way, I will ask, 'Give the child to my hands.' My wife will say, 'You drive the carriage, I will look after the child.' Somehow, due to carelessness, the child will fall. The wheel of the carriage will run over the child. I will get angry. Because she did not give me the child when I asked, I will get angry and beat my wife with the goad." But whom did he actually beat? With the palm-leaf fan, he struck the head of the chief monk! Since Ven. Saṅgharakkhita could read the minds of others, he looked to see what had happened. "Aha! You were striking your wife, but you struck the old monk, didn't you?" At that, the nephew monk thought, "I am ruined!" and dropping the fan, he started to run. The other monks caught him. Later, when they brought him to the Buddha and explained the matter, the Buddha uttered the verse from the *Dhammapada*: *dūraṅgamaṃ ekacaraṃ* ("wandering far, wandering alone"), to show how far the mind can travel.</p>
+<p>Though it is not a long story, regarding what happened at that moment, he projected a future. Then, he was overwhelmed by those *papañca-saññā-saṅkhā*—things created entirely by his own mind. He had not bought a she-goat, he had not married a wife, he had not had a child. Nothing had happened. Yet, in his mind, he took all of those, became overwhelmed by them, and got into an entanglement. This happens to everyone in some way, at various levels.</p>
+<p>But here, let us take the word *saṅkhā*. This is a linguistic matter. When a word is formed, we think it is a "thing." In grammar, there is a nature that deludes the world. That is where ignorance (*avijjā*) lies hidden. Through nouns, verbs, and the general connection of subject and object, in the structures of agent and action, the ordinary world easily falls into delusion. That is why this Dhamma is difficult to understand. These aspects are found everywhere in this world. When the Blessed One explained dependent co-arising (*paṭicca-samuppāda*), he showed: think of the beginning of a river flowing from a mountain. Sometimes, when rainwater falling from a roof mixes with water coming from around, it becomes a stream, a brook, a river, and flows into the ocean with a great roar. We call that a stream, a brook, a river. We conceive of a "thing" through words, but the world exists only as a continuity (*santati*). It arises due to causes and conditions. From whichever side it flows, we have given it a name—the Kelani River or the Mahaweli River. But there is nothing of the sort. We are overwhelmed by that word. There is such a thing within language. It is within this that ignorance (*avijjā*) lies hidden. An example of this is *papañca-saññā-saṅkhā*. Even if we do not have long stories to illustrate these *saṅkhā*, consider it in brief.</p>
+<p>In Western literature, a similar event is mentioned. There is the story of the goose that laid golden eggs. There was a goose that laid one golden egg a day. Its owner thought: "Since she gives one egg a day, I can get all of them at once." But when he cut open the belly of the goose, there were no eggs. Why? He thought the future was in the present. He took the future to be the present. This kind of thing happens constantly.</p>
+<p>This is an extremely deep Sutta. On one hand, it is the disregarding of the fact that things arise from causes and conditions. That is why even consciousness (*viññāṇa*) was shown here as not existing on its own. To explain this: when we say "matchbox," there is no fire in the matchbox, nor is there fire in the matchstick. Yet, when they strike together, fire emerges due to causes and conditions. The Blessed One says that consciousness (*viññāṇa*) is also such a thing. It is an arising due to causes and conditions. But through forgetting this, and thereafter turning them into "things," one separates the "eye" and separates the "form." This is the kind of thing that happens. This is a deep matter. I am trying to explain it in brief.</p>
+<p>On certain occasions, the Blessed One has given wonderful similes regarding this "duality"—regarding taking the eye and forms as two separate things. Sometimes, he gives the simile of a seamstress. The seamstress is craving (*taṇhā*), which ties the knot. The seamstress takes two ends and ties them in a knot. One end is the past; the other end is the future. The seamstress takes the past and the future and ties them in a knot, disregarding the present. This is what happened to the monk Bhāgineyya Saṅgharakkhita. He tied the past and the future in a knot. He forgot the act of fanning.</p>
+<p>In other places, it is shown that between the internal sense base and the external sense base lies consciousness (*viññāṇa*). Disregarding this, one ties them together. Think of a mirage. Through memory/perception, why does a deer mistake that distant shimmer for water? Because of craving (*taṇhā*) and conceit (*māna*), it thinks, "There is water over there, and here am I," and goes in search of water. But what appears as a mirage is a vision arising through causes and conditions. In that same way, the world is trapped between the two ends and the middle. It tries to knot the two ends together. In that attempt, it is craving (*taṇhā*) that comes forward. That is why craving is called *yāyaṃ taṇhā ponobhavikā nandīrāgasahagatā tatra tatrābhinandinī* ("this craving which leads to renewed existence, accompanied by delight and lust, finding delight here and there"). Craving has a nature of finding delight here and there. It has a nature of reproducing. This craving is described as a sticky sap (glue). Why is it shown in so many different ways? Within craving, there is both the covering nature of ignorance (*avijjā*) and the sticking nature of craving. Thus, this illusion is exposed here. Disregarding that things have arisen from causes and conditions, after that personal feeling (*vedanā*) arises, one thinks: "Ah! This is my feeling, now I have recognized it."</p>
+<p>Next, one thinks about that recognized perception. This is what a person keeps doing. Having gone on thinking, a point comes when, without even knowing it, that person is overwhelmed by those reckonings, or rather those feelings they created themselves, through the *papañca-saññā-saṅkhā* born of those thoughts. For this, many more stories have to be told.</p>
+<p>Another small story, also from Indian literature. There were three magicians. Having learned the art of magic from their teachers, they were returning home through a forest. A good opportunity arose to show their skills. The bones of a tiger were scattered here and there. Among them, the first one, to show his skill, collected the bones of the tiger and reconstructed the form of the tiger. After the skeleton was made, the second one, to show his cleverness, filled the skeleton with flesh, skin, and blood. That was the magic method he had learned. What did the third one do? He gave life to the tiger. What happened to the three of them after that? The tiger leaped up and ate all three. This simile fits here perfectly. These people were overwhelmed by the *papañca-saññā-saṅkhā* they themselves had created. There are many other similes in all literatures, like the story of the man with the pot of flour on his head. These demonstrate the nature of *papañca* in daily life. No extraordinary stories are needed; everyone can experience it themselves. At a moment when a great, powerful craving or desire arises, someone nearby has to shake you and ask, "Where are you?" In the meantime, one goes further and further into that *papañca* and, like that monk, does not know until one falls into a great disaster.</p>
+<p>So, what is the cause of this? It is due to not knowing the reality, the lack of *Yoniso manasikāra* (Wise attention). In the Dhamma, *yoniso manasikāra* means returning to the place where things started. *Ayoniso manasikāra* (unwise attention) is running after the mirage. Think of it that way. *Yoni* means the source, the place of origin. That is what was said: dependent on the eye and forms, eye-consciousness arises. The contact of these three means, in truth, one turns them into three. Then one counts them as three. One forgets that consciousness arose because of these two. At the moment of counting them, one takes it as contact (*phassa*). This is a very deep matter. That is what lies at the end of Ven. Mahā Kaccāyana’s sermon. Let us mention that part too. Where there is an eye, a form, and eye-consciousness, there is a designation (*paññatti*) called contact (*phassa*). Because of that itself, there are other designations like feeling (*vedanā*), etc. Where they are not, there is no contact (*phassa*), no feeling (*vedanā*), no craving (*taṇhā*), no applied thought (*vitakka*), and nothing called *papañca-saññā-saṅkhā*. What does that mean? We did not mention that earlier. That is what is called Nibbāna, the *asaṅkhata-dhātu* (the unconditioned element). Why? At some point, through *yoniso manasikāra*—the ultimate end of *yoniso manasikāra* is wisdom (*paññā*). *Yoniso manasikāra* is the seed of wisdom. When one reaches the next stage of *yoniso manasikāra*, consciousness subsides. *Sabba-saṅkhāra-samatha*—all preparations are stilled. Along with that, consciousness too must subside. It is because of preparations (*saṅkhāra*) that consciousness (*viññāṇa*) exists. At that moment, the subsiding of consciousness is the rise of wisdom. On one hand, when the light of wisdom arises, the reality of the illusion of consciousness is understood. Right there, that indeed is the supreme, deathless Nibbāna.</p>
+<p>So, considering the time, I have said this much. Devotees may ask for further details from someone else. Consider this as a highly valuable ball of honey. If you suck this ball of honey well, you can extract the taste of Nibbāna from within it. Reminding you of this, today is the valuable Esala Full Moon Poya day, the day the Blessed One presented the sublime Dhamma to the world. In the first sermon, as everyone knows, only Ven. Aññā Kondañña understood that deep Dhamma to that extent. But subsequently, a large number of monks realized it. Through the expansion of the Dhamma, you devotees too might be thinking, "I must not be born again." So, to fulfill that, may this Dhamma sermon, supported by the virtue (*sīla*) you have observed, by engaging in sermon-hearing and meditation, and by completing both serenity and insight (*samatha* and *vipassanā*), lead you at some point to realize the noble cessation of the six sense bases (*saḷāyatana-nirodha*) in this very life, to realize the cessation of becoming (*bhava-nirodha*) in this very life, and to attain the supreme, deathless Nibbāna, liberated from all suffering of saṃsāra! Through the sermon delivered so far, from the Avīci hell up to the Akaniṭṭha Brahma world, if any being wishes to rejoice in the merit of hearing this Dhamma, may they, through that rejoicing, realize the supreme, deathless Nibbāna through a wished-for Bodhi (awakening)! For you devotees too, may this merit be a cause and condition for the swift realization of the paths and fruits, starting from Stream-entry (*Sotāpanna*), within this very Buddha-dispensation! Now recite these verses:</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_047.html" class="doc-btn">← Previous Sermon (047)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_049.html" class="doc-btn">Next Sermon (049) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

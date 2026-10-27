@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 034 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_033.html" class="doc-btn">← Previous Sermon (033)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_035.html" class="doc-btn">Next Sermon (035) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 034</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_034_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_034_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_034_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #34</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No. )</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Dānañca peyyavajjañca, atthacariyā ca yā idha; Samānattatā ca dhammesu, tattha tattha yathārahaṁ. Ete kho saṅgahā loke, rathassāṇīva yāyato. Ete ca saṅgahā nāssu, na mātā puttakāraṇā, labhetha mānaṁ pūjaṁ vā, pitā vā puttakāraṇā. Yasmā ca saṅgahā ete, samavekkhati paṇḍitā; Tasmā mahattaṁ papponti, pāsaṁsā ca bhavanti te.</p>
+<p>From:</p>
+<p>Aṅguttara Nikāya 4.32, Saṅgaha Sutta</p>
+<p>Dear Listeners,</p>
+<p>The Duruthu Poya day is the first full-moon day of the year according to the civil calendar. At the beginning of a year, almost everyone directs their mind toward their future prosperity, progress, and forward journey. Our Teacher of the Three Worlds, the Blessed Buddha, expounded several verses showing four valuable factors that lead to the forward journey and progress of both the individual and society, which we have chosen as our theme today. Just as a linchpin is helpful to a moving chariot, the Buddha presents four factors of the Dhamma through these verses that assist in the progress of society:</p>
+<p>> *Dānañca peyyavajjañca atthacariyā ca yā idha*</p>
+<p>> *Samānattatā ca dhammesu tattha tattha yathārahaṁ*</p>
+<p>Everyone knows *dāna* (giving/almsgiving). *Peyyavajja* means pleasant speech. Therefore, giving, pleasant speech, and then *atthacariyā* (purposeful activity). Purposeful activity means acting for the welfare of others; in modern times, the term "altruistic activity" is used for this. *"Samānattatā ca dhammesu tattha tattha yathārahaṁ"*—there it is expressed in a somewhat unique way: impartiality or equality (*samānattatā*) fittingly in each situation and place. That is the fourth factor.</p>
+<p>Next, the Buddha states: *"Ete kho saṅgahā loke rathassāṇīva yāyato."* This means these four bases of sympathy assist the world just as the linchpin assists a moving chariot. Then he declared: *"Ete ca saṅgahā nāssu..."* If these bases of sympathy do not exist, *"na mātā puttakāraṇā labhetha mānaṁ pūjaṁ vā, pitā vā puttakāraṇā"*—a mother would not receive honor or respect because of her son, nor would a father receive honor, respect, or offerings from his son. It is further stated: *"Yasmā ca saṅgahā ete samavekkhanti paṇḍitā"*—since the wise reflect upon and understand these bases of sympathy with wisdom, *"tasmā mahattaṁ papponti"*—therefore, because of that, they reach greatness, abundance, and nobility. *"Pāsaṁsā ca bhavanti te"*—they become praiseworthy. This, indeed, is the meaning of these verses.</p>
+<p>Now, some of the points mentioned here are well known to most people. The word *dāna* (giving) is very familiar to our ears. We all know that within the act of giving, there are two sides. Generally, when we talk about *dāna* or giving, it feels like a mere transfer of an object from hand to hand. However, beneath the act of giving, there is a certain shift in attitude. How does this giving occur? Sometimes, out of necessity, a person comes asking for something due to their hardships. At that moment, satisfying that need, even in a small way, is a great relief to that person. In such a situation, one must give to the person who expects it. At other times, what a person expects is not a gift, but a pleasant word. There are some in society who say that even if someone gives nothing, a single kind word is worth gold. Everyone knows what pleasant speech is. Just as *pharusa vācā* (harsh speech) is unpleasant to everyone, pleasant speech is sweet to the ear. The Buddha described pleasant speech as: *"Yā sā vācā nelā kaṇṇasukhā pemaniyā hadayaṅgamā porī bahujanakantā bahujanamānāpā"* and so on. If there is speech that is *nelā* (faultless), *kaṇṇasukhā* (pleasing to the ear), *pemanīya* (endearing), *hadayaṅgamā* (heart-penetrating), *porī* (polite and civil), *bahujanakantā* (beloved by many), and *bahujanamānāpā* (agreeable to many)—such words, spoken in due season, are pleasant words. Sometimes, it is nothing more than words like "mother", "father", "brother", "sister" used in society, along with the pleasant feelings that accompany them. Some people expect such pleasant words.</p>
+<p>Next is *atthacariyā* (purposeful activity). Another person, according to the situation, does not merely expect a gift or a pleasant word, but rather advice that leads to their progress. Nowadays, there is something called "counseling" or guidance, and there are many counselors. Giving advice for one’s economic or spiritual progress in this manner is *atthacariyā* (purposeful activity); it conveys the meaning of altruistic activity.</p>
+<p>Next, *samānattatā* (equality/impartiality) is mentioned. In this society, there are various caste and class divisions. Because of this, some people experience marginalization due to pride. Yet, most people hope, when the occasion arises, to sit together, eat together, and share joys and sorrows. Many people have a yearning for this kind of equality. One who fosters this becomes beloved and pleasing. Impartiality or equality is something to be practiced according to the situation. Forgetting divisions, cultivating a certain equanimity (*upekkhā*) in the mind, and remembering human brotherhood, one acts with equality according to the circumstance.</p>
+<p>Now, in expressing these matters, the Buddha's mention of parents here is extremely important. Why? We have all heard that in the Dhamma, parents are described as *"Brahmā ti mātāpitaro"* (parents are called Brahmas). They are called Brahmas because they practice the four *Brahma-vihāras* (sublime states). We are more accustomed to considering parents as those who develop the four *Brahma-vihāras* towards their children. However, it is stated here that if a mother or a father does not practice these teachings of giving, pleasant speech, purposeful activity, and equality, they will not receive honor and respect from their children. From this, we can understand that underlying these four Dhammas, as an attitude, lie the virtues of loving-kindness (*mettā*), compassion (*karuṇā*), sympathetic joy (*muditā*), and equanimity (*upekkhā*), even if they are not explicitly mentioned here. In short, these qualities of giving, pleasant speech, purposeful activity, and equality are a resonance of the four *Brahma-vihāras*.</p>
+<p>Let us try to understand this. If we think about what a mother or a father, especially a mother, does after a child is born into this world, that giving (*dāna*) begins with the well-known act of turning her blood into milk to feed the child. The giving for the child begins with that breast milk. Next, both mother and father raise the child by spending their time, wealth, and labor, directing their love toward them. This is what is mentioned in the Dhamma as the Buddha's word regarding parents: *"Āpādakā posakā lokassa dassetāro"*—parents are the caretakers, the nourishers, and those who show this world to the child. If we look at it as giving, it is the sacrifice of time, wealth, and labor made by parents to raise a child.</p>
+<p>Pleasant speech—everyone knows the affection parents have for their children. When we look at lullabies, with what great love do they soothe a crying child? As the child grows a bit more, during the mischievous stage, a parent may sometimes use harsh words. But we must consider that they use them out of compassion. That very affection turns into compassion. Although those compassionate words may seem harsh on the surface, inside them lies the protection of the child. Therefore, that compassion is pleasant speech. Pleasant speech is not merely the pleasant form we usually think of. Depending on the situation, even a harsh word becomes a pleasant word when used for the welfare of the child. Therefore, we must consider not only the lullabies of early childhood but also the words used to discipline during the mischievous stage as pleasant speech.</p>
+<p>Next, *atthacariyā* (purposeful activity) means teaching arts and sciences and explaining good and bad for the welfare of the children, as everyone knows. This is why they are called *pubbācariya* (the first teachers). In this way, parents provide wonderful help to their children so they can stand on their own feet in society. That is *atthacariyā*—wishing and working for their welfare.</p>
+<p>Similarly, the final factor, *samānattatā* (equality/impartiality), can sometimes be difficult to understand. If we parallel these qualities, we can connect loving-kindness (*mettā*) to giving (*dāna*), compassion (*karuṇā*) to pleasant speech (*peyyavajja*), and sympathetic joy (*muditā*) to purposeful activity (*atthacariyā*). In purposeful activity, parents feel great joy in the growth and development of their child. While there might sometimes be envy regarding the growth and development of neighbors, there is sympathetic joy (*muditā*) regarding their own children; there is happiness, thinking, "Oh, it is good, it is wonderful if they succeed."</p>
+<p>Now, next, for equality (*samānattatā*), we have to add equanimity (*upekkhā*). How does equanimity emerge? We can understand that generally, after children reach adulthood, parents hand over their inheritance and responsibilities. If it is an enterprise, there comes a time when the owners hand it over. They also distribute their lands and properties. Furthermore, if we think about it, just as children look after their parents, parents also attend to their children with equanimity and equality when they are sick or helpless. That is equality, something to be done according to the situation. Accordingly, we can understand that the four *Brahma-vihāras* underlie these four *saṅgaha-vatthu* (bases of sympathy).</p>
+<p>That was about family relationships. But we know that in discourses like the *Sīgālovāda Sutta*, it is mentioned that friends in the northern direction treat one another with these four bases of sympathy—giving, pleasant speech, purposeful activity, and equality. In the *Sīgālovāda Sutta*, where six directions are mentioned, one's friends are the northern direction. Just like worshipping the northern direction, supporting that direction is done through the four bases of sympathy.</p>
+<p>Next, the Buddha has clearly shown in one place how this directly affects society. In the Dhamma, there is a section called the *Etadagga Vagga* (Chapter on the Chiefs). According to the unique strengths and abilities of lay and ordained disciples, the title of *etadagga* (chief) is given, declaring, "He is chief in this particular field." In such a place, it is mentioned: "Among my lay disciples who minister to a group with the four bases of sympathy, Hatthaka Āḷavaka is chief," declares the Buddha. A certain event is also mentioned in the Dhamma. On one occasion, while the Buddha was residing at the Āgāḷava Shrine in Āḷavī, Hatthaka Āḷavaka—who was an *Anāgāmī* (non-returner) lay disciple, a lay disciple of the Buddha's time who had realized the fruits of the path and reached the state of a non-returner—came to see the Buddha with a retinue of five hundred people. After arriving, bowing to the Buddha, and sitting to one side, the Buddha remarked, "Āḷavaka, your retinue is indeed very large. How do you minister to such a large assembly?"</p>
+<p>Then, the lay disciple Hatthaka Āḷavaka replied, "Venerable Sir, the Blessed One has declared four bases of sympathy, and it is through those bases of sympathy that I minister to this assembly. If someone in this assembly needs *dāna* (giving), needs something to be given (let us say, perhaps regarding employment, tools needed for farming, or money, giving various things according to their needs), I give *dāna* to that person who expects it. Likewise, if someone expects pleasant speech, having considered it with wisdom, I minister to them with pleasant speech. When one speaks with pleasant speech within an assembly in terms of 'mother', 'father', and so on, their hearts become soft; there is gentleness. That must be done with genuine sincerity."</p>
+<p>Next, he states: "If someone expects advice regarding their progress, I give that too. That is *atthacariyā* (purposeful activity). Likewise, according to the situation, I practice *samānattatā* (equality)—eating together and practicing equality in various such situations." Then the Buddha declared: "Sādhu! Sādhu! Very good, Āḷavaka. In this very way, if anyone in the past ministered to an assembly, it was through these selfsame bases of sympathy. If anyone in the future ministers to an assembly, it will be through these selfsame bases of sympathy. In the present too, one must minister to an assembly through these four bases of sympathy."</p>
+<p>After the lay disciple Āḷavaka stood up and left with his retinue, the Buddha expressed a special statement of praise to the Sangha: "Monks, consider this lay disciple Hatthaka Āḷavaka as one endowed with eight wonderful and marvelous qualities." What are the eight? Seven of these are well-known to everyone as the noble treasures (*ariya-dhana*): *saddhā* (faith), *sīla* (virtue), *hiri* (shame of wrongdoing), *ottappa* (fear of wrongdoing). *Saddhā* and *sīla* are known to all. *Hiri* means shame of sin, and *ottappa* means fear of sin, fear of wrongdoing. Next is *suta* (learning)—Āḷavaka is highly learned (*bahussuta*). Next is *cāga* (generosity)—he is generous. Next is *paññā*—wisdom; as an individual, he possesses wisdom. Finally, he is stated to be of few wishes (*appiccha*). Hatthaka Āḷavaka has few wishes. Connected to having few wishes is that equality (*samānattatā*). Forgetting his own greatness at that moment, he practiced equality according to the situation. Thus, this account of ministering to an assembly is recorded in the Dhamma.</p>
+<p>Similarly, in another important and deep discourse—deep to a certain extent—the Buddha has shown these same four bases of sympathy directed toward Nibbāna. How is that? On one occasion, the Buddha declared: "Monks, there are four powers in the world. What are the four powers? The power of wisdom (*paññā-balaṁ*), the power of energy (*viriya-balaṁ*), the power of blamelessness (*anavajja-balaṁ*), and the power of sympathy (*saṅgaha-balaṁ*)." The power of wisdom, the power of energy, the power of blamelessness (faultlessness, which is also a strength), and the power of sympathy. The power of sympathy refers to those very bases of sympathy.</p>
+<p>Now, each is analyzed. What is the power of wisdom (*paññā-balaṁ*)? To put it briefly, according to the Buddha’s teaching, one identifies: "These things are wholesome (*kusala*), these things are unwholesome (*akusala*), these things are blameworthy (*sāvajja*), these things are blameless (*anavajja*), these things are dark dhammas (*kaṇha-dhamma*), these things are bright dhammas (*sukka-dhamma*)." Just as one distinguishes dark from bright, one correctly distinguishes good from bad. That is the power of wisdom. This is indispensable for a noble disciple.</p>
+<p>The power of energy (*viriya-balaṁ*) means: if one has identified those dhammas, if one has distinguished good things from bad things separately, what is left to do? Removing the bad things and bringing the good things close. The energy applied for that is what is called the power of energy here. There too, it is briefly stated as the fourfold supreme effort (*sammappadhāna*) that we have all heard of. To abandon the unwholesome, faulty, and dark dhammas seen through wisdom, there is the frequently encountered passage: *"chandaṁ janeti vāyamati viriyaṁ ārabhati cittaṁ paggaṇhāti padahati"* (he generates desire, endeavors, rouses energy, exerts his mind, and strives). One develops a keen interest, makes an effort, rouses energy, firmly establishes the mind, and strives. In this way, one makes a strong effort to eliminate bad and unwholesome things. Similarly, one exerts energy to acquire and achieve good and wholesome things. That is the power of energy. It too is a power, a strength, a capability—to expel bad things and bring good things close. That is shown as the power of energy.</p>
+<p>Next, "the power of blamelessness" (*anavajja-balaṁ*) briefly indicates faultlessness. As a result of that aforementioned effort, a person can properly direct their bodily, verbal, and mental actions. Then, the power of blamelessness means a faultless life, the strength of a faultless life—directing the mind, body, and speech along the correct path.</p>
+<p>Now, next is "the power of sympathy" (*saṅgaha-balaṁ*). It is analyzed there in a somewhat unique way. By the power of sympathy, the Buddha points to those selfsame four bases of sympathy. However, the explanation is given in a unique manner. There, the Buddha shows these four in their highest sense: *"Etadaggaṁ, bhikkhave, dānānaṁ yadidaṁ dhammadānaṁ"*—"Monks, this is the chief among gifts, namely, the gift of Dhamma (*dhamma-dāna*)." Next, regarding pleasant speech: *"Etadaggaṁ, bhikkhave, peyyavajjānaṁ yadidaṁ atthikassa ohitasotassa punappunaṁ dhammaṁ deseti"*—what is pleasant speech? It is not merely the sweet words we think of. It is not saying "mother" or "father". Here it is shown more deeply. *"Ohitasotassa"* means to those who wish to hear the Dhamma, who bend their ears to listen, preaching the Dhamma to them again and again (*"punappunaṁ"*) is shown here as pleasant speech. Why is that? Everyone knows there is nothing as tasteful as the Dhamma. Well, one cannot say "everyone" knows; those who have correctly recognized the Dhamma know. There is nothing as tasteful as the Dhamma. That is why it is said: *"Sabbadānaṁ dhammadānaṁ jināti, sabbaṁ rasaṁ dhammaraso jināti"*—the gift of Dhamma excels all gifts, the taste of Dhamma excels all tastes. It is also said that there is nothing so healing and pleasing to the ear. Therefore, that is true pleasant speech—preaching the Dhamma again and again to those who wish to hear it. That is ministering through pleasant speech.</p>
+<p>Now, next is *atthacariyā* (purposeful activity). It too is shown in a unique way. What is *atthacariyā*? It is not giving advice to develop businesses. It is not that kind of counseling. What is shown here is: establishing a faithless person in faith, inspiring them with faith—using words like *"niveseti patiṭṭhāpeti"* (settles and establishes). One creates faith in a faithless person, making a special effort to establish them in the Triple Gem. Next, establishing an immoral person in virtue (*sīla*); that is *atthacariyā*. Establishing a stingy person in generosity (*cāga*), directing that person toward sacrifice. Next, establishing an unwise person in wisdom (*paññā*). Thus, we see that it is shown at a higher level, in a manner that assists Nibbāna.</p>
+<p>In a manner perfectly fitting this, how is *samānattatā* (equality/impartiality) shown? There too, it is shown in a unique way. A Stream-enterer (*Sotāpanna*) is equal to a Stream-enterer. A Once-returner (*Sakadāgāmī*) is equal to a Once-returner. A Non-returner (*Anāgāmī*) is equal to a Non-returner. An Arahant is equal to an Arahant. How do we understand this? Once we take it to the level of the fruits of the path, whether one is an extremely poor person, a great scholar, a high-caste noble, or a king—if they have reached the state of a Stream-enterer, they are equal in their Stream-entry. If they have reached the state of a Once-returner, they are equal in their Once-returner-ship. This is how we must understand it. We all know that there is no caste division within the dispensation of the Buddha. That is why, from whichever caste one is ordained, they are called *Samaṇa Sakyaputta* (ascetics, sons of the Sakyan). They reach the state of a Sakyan ascetic. Similarly, here too, equality is shown according to the fruits of the path, in a deep sense. Thus, the Buddha demonstrates that these selfsame four bases of sympathy assist a person all the way to Nibbāna.</p>
+<p>Next, there are other valuable suttas that we can connect to this. Based on this, we can understand that starting from the four *Brahma-vihāras* as an attitude, this social service we perform not only helps in leading daily life but also helps in inclining toward Nibbāna, as is seen from this analysis of the four bases of sympathy.</p>
+<p>In modern times, we all know that a subject becoming popular in the field of education is "counseling". We do not know through what kinds of courses this counseling is being taught. When we consider the four bases of sympathy presented by the Buddha, and the four *Brahma-vihāras* underlying them, they help us to be a true counselor and to recognize what true counseling is. Why? Because it is the inner desire of a person to work for another’s welfare—or rather, loving-kindness, compassion, sympathetic joy, and equanimity. It is that very quality. Everyone knows what is mentioned in the *Karaṇīyametta Sutta* where loving-kindness is declared: *"Mātā yathā niyaṁ puttaṁ āyusā ekaputtamanurakkhe; evampi sabbabhūtesu mānasaṁ bhāvaye aparimāṇaṁ"*—just as a mother would protect her only son even at the risk of her own life, or just as the loving-kindness of a mother toward her child, *"aparimāṇaṁ"*—one should radiate it boundlessly to all living beings. Based on this, we can understand that loving-kindness, as well as compassion, sympathetic joy, and equanimity, are all described as *appamaññā* (boundless states). It is by radiating them boundlessly that the entire society is embraced, and the whole society can be won over.</p>
+<p>Society is what was referred to here as "a group". However, it may differ from various modern social philosophies. This is the kind of thing the Buddha points out. Also, we generally consider some things in the world to be selfish. What is spoken of here is altruism (*paratthacariyā*). In fact, the Buddha shows both sides, just as he shows the Middle Path elsewhere in the Dhamma: *attahita parahita*—one's own welfare and the welfare of others. Even in the analysis of wholesome and unwholesome, the Buddha has shown that why something is unwholesome is because it leads to one's own ruin and also to the ruin of others; it leads to the ruin of both parties. Those are called unwholesome—things that arise as greed (*lobha*), hatred (*dosa*), delusion (*moha*), and so on. On the other hand, things that bring welfare to both sides are called wholesome.</p>
+<p>There is a place where the Buddha made this statement directly to a monk. A certain monk—whose name is not mentioned—came and asked the Buddha: "Venerable Sir, who is fit to be called *paṇḍito mahāpañño* (wise and of great wisdom)? Who is called 'a wise person of great wisdom'?" The Buddha declared: "If someone does not think of their own harm or ruin, nor of the ruin of others, but instead thinks of their own well-being and the well-being of others..."—*"attahitaṁ parahitaṁ ubhayahitaṁ sabbalokahitameva cinteti"* (one thinks of one's own welfare, the welfare of others, the welfare of both, indeed the welfare of the entire world). There lies a valuable statement. Some might think that a Buddhist is an isolated, selfish person. But the Buddha shows both sides in this manner: *"attahitaṁ parahitaṁ ubhayahitaṁ sabbalokahitameva cinteti"*. This is how the Buddha describes the wise person of great wisdom: as one who thinks of their own welfare, the welfare of others, the welfare of both, and the welfare of the entire world.</p>
+<p>This is made even clearer in another valuable sutta, where a unique analysis is presented by dividing people into four categories. Now, *hita* means welfare. If we have understood that, next it is said that there is one person—the first person—who works neither for their own welfare nor for the welfare of others: *"neva attahitaṁ na parahitaṁ"*. The Buddha describes him in this way: "Just as, monks, a firebrand from a funeral pyre, smeared with excrement, cannot be used as firewood in the village, nor can it be used as firewood in the forest. In the same way, I describe that person." He has neither *attahita* nor *parahita*; he does not care for his own welfare, nor does he care for the welfare of others. There is nothing useful in him. That is the first person.</p>
+<p>Then comes the second person. Who is the second person? *"Parahitāya paṭipanno no attahitāya"*—one who practices for the welfare of others, but not for their own welfare. Mentioning this, the Buddha states: "Between these two, the second is considered superior and excellent." That is understandable. Between a completely useless person and a person who considers the welfare of others but not their own, we can accept that the second is superior.</p>
+<p>Now comes a good point to reflect upon. Who is the third person? One who does not consider the welfare of others, but considers their own welfare; they work for their own welfare. Stating this, the Buddha declares: "Among these three, the superior person is not the second, but the third." That can be a challenge to some according to modern thinking. So, who is the second? One who does not consider their own welfare, but considers only the welfare of others. Who is the third? One who does not consider the welfare of others, but considers only their own welfare. The Buddha declares this person to be the most excellent among these three. We shall try to understand this later.</p>
+<p>Now, fourthly, it is shown—and there is no debate about this—the fourth person considers both the welfare of others and their own welfare. That person is the most excellent among the four. Thus, the Buddha has given an extraordinary analysis here. One was stated directly. Once two were introduced, the superior of the two was shown. Once three were introduced, the superior of the three was shown. Once four were introduced, the fourth is the most supreme. Here, a doubt might arise: why was the superior status given to the one who thinks of their own progress without thinking of others? There is a verse in the *Dhammapada* that helps us understand this:</p>
+<p>> *Attadatthaṁ paratthena, bahunāpi na hāpaye;*</p>
+<p>> *Attadatthambhññāya, sadatthapasuto siyā.*</p>
+<p>That is, "For the sake of another's benefit, however great, one should not neglect one's own benefit. Having clearly understood one's own benefit, one should be intent on one's true goal." It means: do not sacrifice your own welfare, your own progress—your spiritual progress in this long saṁsāra—even for the sake of a great deal of service to others. *"Attadatthaṁ paratthena bahunāpi na hāpaye"*—even for the sake of much service to others, do not destroy your own well-being—for you only have yourself. *"Attadatthambhññāya... siyā"*—having properly understood your own benefit and welfare, engage in it.</p>
+<p>What does this mean? Standing in a mud pit, how can one pull another out of the mud pit? If we ourselves are in bad practices—let us say we commit the five sins to help others. To support society, we commit destruction of life, theft, lying, and other sins. But in the end, because of a bad example, society deteriorates spiritually. We too deteriorate along with it. But to the outside, it appears as altruism. That is why the true foundation of altruism is self-interest itself. By "self-interest", we do not mean that kind of narrow, selfish idea, but inner spiritual progress. That is how we must understand it.</p>
+<p>Seeing this verse, *"attadatthaṁ paratthena"* in the *Dhammapada*, someone might raise a question: "Why, hasn't the Buddha preached a kind of extreme selfishness?" We must understand this in its context; it means committing sins under the guise of working for the world while neglecting one's own spiritual progress. As the Buddha himself declared, according to the analysis of wholesome and unwholesome, only what is beneficial to both sides is wholesome, not just to one side. Once this is correctly understood, the Buddha’s analysis of the wise person of great wisdom reveals the true target. That is exactly what a Buddha does—the true target is both *attahita* and *parahita* at their respective levels.</p>
+<p>At whatever level it is done, it must be in accordance with the Dhamma. To be in accordance with the Dhamma, we must think of those four powers. Why did we speak of "the power of wisdom" (*paññā-balaṁ*)? Now, if someone wants to do social service, shouldn't they have some kind of power and capability? We think that many people want to do social service. Here is the power and capability according to the Dhamma. Wisdom must be there to understand good and bad, wholesome and unwholesome, duties and non-duties, what should be done and what should not be done. Assisted by that power, assisted by that capability, when a problem arises, one does "counseling". That power of wisdom belongs to the counselor.</p>
+<p>Next, the power of energy (*viriya-balaṁ*)—if that counselor has no interest at all in removing what is bad, makes no effort, and makes no effort to bring close what is good, what kind of counseling do they do? That lazy person who lacks the power of energy, that kind of lazy person cannot minister to others; they cannot engage in altruistic activity. Next, similarly, "the power of blamelessness" (*anavajja-balaṁ*)—one who has a blameless course of action is fit for this. If one's own character goes astray, that person cannot perform true service. Next, similarly, they cannot come anywhere near "the power of sympathy" (*saṅgaha-balaṁ*) in accordance with the Dhamma.</p>
+<p>At the same time, in that very sutta, the Buddha shows how the noble disciple who possesses these four powers—the power of wisdom (*paññā-balaṁ*), the power of energy (*viriya-balaṁ*), the power of blamelessness (*anavajja-balaṁ*), and the power of sympathy (*saṅgaha-balaṁ*)—thinks. He shows that such a person can be free from four fears. What are the four fears? By "fear" we mean dangers, things that an ordinary person fears. What are the four fears? There are four fears that come to a person living in ordinary society: first, the fear concerning livelihood (*ājīvika-bhaya*). The fear concerning livelihood means fear regarding one's living, the fear of losing one's job—this is what the Buddha speaks of.</p>
+<p>Next, what is the second fear? *Asiloka-bhaya* (fear of ill-repute). *Siloka* means praise. Thus, the fear of blame, insult, and censure. This too exists for a social being. What is the third fear? *Parisasārajja-bhaya* (fear of assemblies/stage fright). The fear of going into an assembly. One can understand why. Fear of going into the midst of a group. This too is a fear for a social being. What is the fourth fear? The fear of death (*maraṇa-bhaya*). What is the fifth fear? The fear of an evil destination (*duggati-bhaya*). Thus, it is mentioned regarding the noble disciple that the noble disciple transcends and overcomes these five fears.</p>
+<p>Nay, the Buddha even shows how that person thinks. He thinks like this: "I have no fear concerning this livelihood. Why should I have fear concerning my livelihood? I have the power of wisdom, I have the power of energy, I have the power of blamelessness, I have the power of sympathy." According to how that person thinks: "It is the one who lacks wisdom who should fear concerning livelihood, fearing that they will lose their living. It is the lazy person who should have fear concerning livelihood. It is the one with wrong bodily and verbal actions who should have fear concerning livelihood. It is the one who does not minister to the group who should have fear concerning livelihood."</p>
+<p>Likewise, it is said regarding the other fears: "I have no fear regarding blame or insult. Why should I fear censure and insult? I have the power of wisdom, the power of energy, the power of blamelessness, the power of sympathy. It is the one who lacks wisdom who should fear censures and insults. It is the lazy person who should fear in that way. It is the one with wrong bodily and verbal actions who should fear censure in that way. It is the one who does not minister to others who should fear in that way."</p>
+<p>In the same manner, it is mentioned regarding going into the midst of an assembly. How that person thinks: "I have no fear of going into the midst of an assembly. Why? Because I have the aforementioned power of wisdom, power of energy, power of blamelessness, power of sympathy." There too, it is declared: "It is the man who lacks wisdom who should fear going into the midst of an assembly. It is the lazy person who should fear in that way. It is the one with wrong bodily and verbal actions who should fear. It is the one who does not minister to others who should fear!"</p>
+<p>In the same manner, it is mentioned regarding the fear of death. Based on this, we can understand. There too, it is said: "Why should I fear death? It is the man without wisdom who fears death. The man without energy, the one with wrong courses of action, and the one who does not minister to others are the ones who fear death." Next, regarding the evil destination too, it is the same way.</p>
+<p>Now, this might sometimes be a bit confusing. It might be difficult for this audience to understand. It has to be understood in this way: if there are deficiencies in those aforementioned bodily and verbal actions—indeed, according to this era, there is a saying in society that "there is no place for the good man". Everyone knows how the country is going. Now, most people just support whatever is trending. They do not consider Dhamma or non-Dhamma; they support the wrong path because it is the easy thing to do, selfishly. But the Buddha has pointed that out. Such people cannot remain in those positions for long anyway.</p>
+<p>So, be that as it may, if one lacks those aforementioned qualifications, the fear of livelihood might sometimes result in a sudden big gain. In these times, there are various things like bribery and corruption. They live in great fear, wondering at what moment this will be caught, and they will lose their post and have to step out onto the street. There is no such fear for the honest person—the person established in those aforementioned virtues has no fear. Even if they lose it there, they go elsewhere. Such a person does not need extra certificates. It is only a matter of inquiring, "What kind of person is he?" Many people expect certificates from others. For the one who lives a good life, certificates are not necessary. It is like that when one investigates a bit.</p>
+<p>Now, on one hand, we said that there is no place for the good man in society. On the other hand, we hear in society that there is no man for a job. Even with such a large population, why is there no man for a job? There is no honest man. In these times, one can place trust in a machine, in iron machines, but one cannot place trust in humans—they have fallen to a very degraded state due to the lack of Dhamma. Therefore, we can understand that the Buddha's word is true even today. That is why it was said that that person has no fear concerning livelihood. There is always a place in society for such individuals.</p>
+<p>So, it is the same regarding blame and insult. In these times, we hear of bribery, corruption, and so on. Regarding people who flourish, who flourish at the very top, suddenly a news item appears in big letters. After that, no one knows where that person is. Then, from that, it is seen that it is precisely due to the weakness of character strength that a person cannot go into the midst of an assembly. That is what is called the "fear of assemblies" (*parisasārajja-bhaya*).</p>
+<p>Now, we can understand why the Buddha presented the thoughts and words of that noble disciple as a model for the world. That person thinks without fear: "I have no fear of those things. Why should I fear?" A strength of character arises in that person, the noble disciple, enabling them to say so. Then, there is no fear concerning livelihood, no fear concerning blame and insult, no fear of going into the midst of assemblies, no fear of death, and no fear of the evil destination. This is what we have to understand.</p>
+<p>At the same time, let us consider. Now, this is about social service, or rather altruism. Nowadays, words like "social service" are used. Although we all talk about these things, the greatest parasite in society is envy. The opposite virtue of that is what is spoken of here as sympathetic joy (*muditā*). The sympathetic joy that parents develop regarding raising a child. Even the word *muditā* is not clear to many. Sympathetic joy (*muditā*) means generating happiness over the happiness of others. Or rather, seeing others in happiness, feeling happy in one’s mind as if one has reached happiness oneself. This virtue is lacking in most people.</p>
+<p>Therefore, they sometimes perform "altruistic service", but like puppeteers, they expect to keep that person under their control. They do not allow that person to rise on their own. It turns into envy: "The one who grew up eating and drinking from us—how can I give him an equal seat?" That question arises. The talk of equality (*samānattatā*) goes hand-in-hand with this. As long as envy exists, as long as that vice exists, that concept of altruism is not fulfilled.</p>
+<p>Indeed, a counselor should possess—then we see—the four *Brahma-vihāras*, this power of sympathy (*saṅgaha-bala*), the bases of sympathy (*saṅgaha-vatthu*), and their implementation. Underlying that is the matter of the mind. Now, when we speak of the four *Brahma-vihāras*, we often show these at the family level. Now, the family is a unit of society. That is why the Buddha pointed out: *"Mātā yathā niyaṁ puttaṁ āyusā ekaputtamanurakkhe; evampi sabbabhūtesu mānasaṁ bhāvaye aparimāṇaṁ"*. That is only an example. Just as a mother would protect her child at the risk of her life, radiate loving-kindness boundlessly to all living beings—boundlessly.</p>
+<p>Then we can understand that a social worker develops the loving-kindness of the four *Brahma-vihāras* boundlessly. The virtue that was limited to a family is developed for the entire society. Why? Because to the Buddha, although we enclose ourselves by nation or tribe, to the Buddha’s eye of wisdom, it appeared like a group of people being swept away into the ocean. These are all beings in the ocean of saṁsāra. Therefore, in whatever way, that wise noble disciple, having removed those vices like envy, thinks of the welfare of everyone. Within that, one's own spiritual progress is accomplished; that is why they are called *appamaññā* (boundless states) and exist as high states of jhāna. These are not merely words. If one makes an effort, they can be put into practice.</p>
+<p>Everyone has heard of loving-kindness (*mettā*). How to develop the meditation on loving-kindness has also been shown by us in many ways, through various methods in these sermons and so on. So, in brief, if one considers that everyone desires happiness and dislikes suffering, after grasping that concept in the mind, the meditation that begins with a word like "may they be well" is not limited to just one person. That is what is called "radiation" in the Dhamma. In developing the mind to the boundless state called *appamaññā*, it is described in the Dhamma regarding the meditation on loving-kindness as: *"ekaṁ disaṁ dutiyaṁ disaṁ tatiyaṁ disaṁ catutthaṁ disaṁ, uddhaṁ adho"*—one direction, the second direction, the third direction, the fourth direction, upward, downward, and so on, radiating the feeling "may they be happy" to the entire universe without any limit. Sometimes it is called the "dissolving of boundaries" (*sīmā-sambheda*), without any boundary, in a way that fences and hurdles are removed.</p>
+<p>Just as this is stated regarding loving-kindness, it is also said regarding compassion—to develop it to a boundless state. It is the same for sympathetic joy (*muditā*). Then there is no room for envy. Envy is a social parasite. If a parasite grows on a tree, the tree is destroyed. Similarly, as everyone knows, there is competitiveness everywhere. Indeed, we consider examinations, competitions, and sports events as tools to measure skill, efficiency, and wholesome talent. There are competitions even in Dhamma schools. However, one must be careful of the envy that arises very subtly through these. One protects oneself through virtues like sympathetic joy (*muditā*). Then, it seems as though we cannot do without competition to measure talent. But what the talented person receives is not praise, but the hatred and envy of those who competed with them. Because of this, sometimes untimely death occurs. You are well aware that this has come down to the school level.</p>
+<p>What was at the employment level—we do not need to speak of other things, of higher levels—what was at various levels of society has also entered the field of education. The one who scored more marks is sometimes killed by their own close associates. That kind of situation. Why? Although competitiveness is a necessity to test talent in the world, within that competition, instead of treating the winner as one who gave a new target to the world, as one who set a new record, and bending to praise them and give them a gift—instead of that virtue of sympathetic joy (*muditā*)—what exists in the world is pulling them down, destroying them, and reaching that place by wiping them out.</p>
+<p>So then we must think of this concept of altruism shown by the Buddha. These indeed help the counselors of modern times. Counseling is not a livelihood to be exploited. It is by putting forward the inner wholesome energy, and at the same time, in a way that assists one's own spiritual progress. In an era where everything, every job, is subjugated to money, some do counseling but do not develop the true attitude within it. How can a blind person show the way to another?</p>
+<p>Now, you have heard that when the Buddha speaks about the world, he describes the blind person, the one-eyed person, and the person with both eyes (*andha*, *eka-cakkhu*, *dvi-clakkhu*). The blind person has no understanding of welfare in this world, nor of welfare in the next world. They do not know their own welfare, nor do they know the welfare of others. In that way. But the one-eyed person, shortsightedly, with short-term plans only for the welfare of this world, achieves their own economic progress through devious means. One cannot support another with the squinted vision of a one-eyed person.</p>
+<p>Having understood the good and bad of both this world and the next, the Buddha declared that when we think of this journey of saṁsāra, although people are born in various castes, nations, and places, they are engaged in this same journey of saṁsāra. Sometimes, they are people who were relatives and siblings to one another in saṁsāra, living together. If one has gained that kind of understanding, that person understands that pulling another down to reach that place leads to one's own ruin. The blind person cannot do it anyway. One cannot counsel another with the squinted vision of a one-eyed person either.</p>
+<p>Accordingly, we must act in a way that brings welfare to both sides in both worlds—not only in both worlds but also in a way that brings Nibbāna. Now, here, the Buddha has analyzed these four bases of sympathy in this way: in a manner that brings prosperity in this world and Nibbāna at the end. From the perspective of showing equality according to the fruits of the path in the power of sympathy.</p>
+<p>Accordingly, we must reflect. Therefore, these four bases of sympathy are an extremely valuable Dhamma in this dispensation. Many people might sometimes become indifferent to our sermons, thinking that we always speak about Nibbāna. But we must understand that the path to Nibbāna lies through these very courses of action. This cannot be separated from the Dhamma. Therefore, these four bases of sympathy and the four *Brahma-vihāras* lead to one's own spiritual progress as well as the progress of society.</p>
+<p>Society is not something separate from the individual. The family is not something separated from the nation or society. Although it may be considered a unit, it is fine. It is the very deficiency here that affects society. It is the very progress here that affects society. Therefore, as individuals, the four *Brahma-vihāras* we learned from our parents, the four bases of sympathy we recognized through our parents, we must bring close to our lives. Before giving that aforementioned counseling to others, if one strengthens oneself with the power of sympathy, then indeed, one can rise from the mud pit and raise others from that state as well.</p>
+<p>We must reflect that the Buddha did not preach this Dhamma to make everyone attain Nibbāna in a single day. People are at various levels. That is why the Buddha began with the talk on giving (*dāna-kathā*). Beginning with the talk on giving, he spoke of the graduated discourse (*anupubbi-kathā*): talk on giving (*dāna-kathā*), talk on virtue (*sīla-kathā*), talk on heaven (*sagga-kathā*). Telling the one who cannot do anything else to at least do that—to give *dāna*. To keep that virtue (*sīla*) at least when giving *dāna*. Next, having shown the benefits of giving and virtue, the "talk on heaven". Next, the danger of sensual pleasures (*kāmānaṁ ādīnava*). Gradually, just as one removes children from toys and lifts them higher, the Buddha lifted the world from that mundane level, showed the Four Noble Truths, and led them toward Nibbāna.</p>
+<p>In the same way, at the beginning of this year, we too must think: may this journey starting with these four bases of sympathy, this journey starting with the four *Brahma-vihāras*, lead to the realization of Nibbāna at some point. If the benefits of hearing this sermon help you in your reflections, meditations, and in calming the mind, utilizing those wholesome energies, making an effort in this very life, and through the association of spiritual friends (*kalyāṇa-mitta*), succeeding in Dhamma practice and meditation, may this Dhamma sermon assist in realizing the noble, supreme, deathless Nibbāna through the penetration of the fruits of the path: Stream-entry (*Sotāpanna*), Once-returner (*Sakadāgāmī*), Non-returner (*Anāgāmī*), and Arahantship!</p>
+<p>While wishing so, may whatever living beings there are in the universe—from the Avīci hell to the Akanitṭha heaven—who expect the benefits of hearing the Dhamma and preaching the Dhamma, by rejoicing in this, be pacified by the noble, supreme, deathless Nibbāna through their aspired Bodhi! With this wish, recite these verses:</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_033.html" class="doc-btn">← Previous Sermon (033)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_035.html" class="doc-btn">Next Sermon (035) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

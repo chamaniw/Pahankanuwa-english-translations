@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 103 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_102.html" class="doc-btn">← Previous Sermon (102)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_104.html" class="doc-btn">Next Sermon (104) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 103</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_103_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_103_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_103_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #103</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.90)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Tapena brahmacariyena, saṃyamena damena ca;</p>
+<p>Etena brāhmaṇo hoti, etaṃ brāhmaṇamuttamaṃ.</p>
+<p>From:</p>
+<p>Dhammapada 422 (Brāhmaṇavagga)</p>
+<p>Dear Listeners,</p>
+<p>According to social convention, a person’s superiority or inferiority is often measured by the social environment into which they are born. The rigid caste discrimination that was prevalent in India during the Buddha’s time was also based on this matter of *Jāti* (Birth). The view accepted at that time was that one becomes an outcast (*vasala*) or a brahmin solely by *Jāti* (Birth). However, the Supreme Buddha, the Teacher of the Three Worlds, demonstrated to the world that instead of *Jāti* (Birth), it is practice (*paṭipatti*) that should be the yardstick for measuring a person’s high or low standing. Moreover, he provided a living example of this.</p>
+<p>The verse we have taken as our theme was delivered on such an occasion. There lived in the city of Rājagaha a very poor man named Sunīta, who was born into an extremely low caste, a despised clan, and worked as a scavenger. His occupation was collecting the street sweepings and refuse of the city. One morning, as the Blessed One surveyed the world with his Attainment of Great Compassion (*mahākaruṇā-samāpatti*), he saw that Sunīta possessed the spiritual potential and supportive conditions (*upanissaya-sampatti*) for attaining Arahantship. Seeing this, the Blessed One, accompanied by the community of monks, went on his alms-round to the street in Rājagaha where Sunīta was sweeping refuse. Seeing the Blessed One approaching, Sunīta felt a certain devotion, put aside his carrying-pole of refuse, came near the Blessed One, and paid homage. The Blessed One asked: "Sunīta, what is the use of this miserable life? Would it not be better to ordain?" Sunīta replied: "Who would ordain someone like us? If such ordination is possible, may the Blessed One ordain me." Then the Blessed One said: "Come, monk!" (*Ehi bhikkhu!*). This was the special method of higher ordination (*upasampadā*) that the Buddha granted to exceptional individuals. Through those two words alone—by the mere utterance of "Come, monk!"—the higher ordination was granted to that scavenger Sunīta, born of a low caste. The Buddha then took him along and gave him meditation objects (*kammaṭṭhāna*). Not long after, Venerable Sunīta retired to the forest, practiced absorption (*jhāna*) and meditation, attained the five higher knowledges (*pañcābhiññā*), the eight meditative attainments (*aṭṭha-samāpatti*), and realized Arahantship. He realized Arahantship during the last watch of the night. At that moment, Sakka, the devas, and the Brahma kings came to pay homage to Venerable Sunīta, the great Arahant. Witnessing this with his divine eye (*dibba-cakkhu*), the Blessed One smiled. It is mentioned that the Blessed One would smile under special circumstances. Smiling, he uttered this very verse that we have taken as our theme:</p>
+<p>*"Tapena brahmacariyena, saṃyamena damena ca;*</p>
+<p>*Etena brāhmaṇo hoti, etaṃ brāhmaṇamuttamaṃ."*</p>
+<p>By spiritual burning (*tapas*), by the holy life (*brahmacariya*)—that noble way of life—by restraint (*saṃyama*), by the self-control developed through moral virtue (*sīla*), and by sense-restraint (*indriya-damana*); it is through these that one becomes a true brahmin. *"Etena brāhmaṇo hoti, etaṃ brāhmaṇamuttamaṃ"*—this true brahminhood, this state of being a brahmin, is indeed supreme and noble. This is the meaning contained in the verse.</p>
+<p>Perhaps the Blessed One smiled because, looking at it from one perspective, Sunīta the scavenger had performed the ultimate act of scavenging. What is that? He washed away all the dirt and filth of defilements (*kilesa*) that had accumulated in his mind-stream over a long journey in *saṃsāra*. We can draw the meaning that Sunīta, who had been cleaning the physical refuse of others in the city, had now eradicated his own mental defilements, thus bringing the scavenger’s occupation to its true consummation. If the term "brahminhood" is used to denote superiority, it is because he fulfilled these virtues—spiritual burning, the holy life, restraint, and self-control. It was by completing these that he became a true brahmin. The Blessed One preached this verse to show this and to set an example for the world.</p>
+<p>The past karma underlying this event is also recorded in the texts. In the past, Sunīta was a person of great merit, but on one occasion, during a period when fully enlightened Buddhas did not arise but Paccekabuddhas dwelt in the world, he was born into a wealthy, high-caste family. While wandering through the village for amusement with youths of his own age, he saw a Paccekabuddha walking for alms and insulted him, saying, "Why is he walking for alms wrapping a cloth all over his body? Is his body covered in sores?" As a bad consequence of this, he suffered in hell for a very long period and was subsequently born in poverty in low and despised castes for hundreds of human lifetimes. Despite these social conventions, we can clearly see from this that the Blessed One did not accept social conventions regarding high and low distinctions.</p>
+<p>This matter is very clearly expressed in a discourse preached to Pahārāda. On one occasion, the Blessed One delivered a discourse to Pahārāda, the chief of the Asuras, comparing this Dispensation of the Buddha (*Sambhuddha-sāsana*), this community of monks (*Saṅgha-sāsana*), to the great ocean. He compared eight wonderful and marvelous qualities of this Dispensation to eight wonderful and marvelous qualities of the great ocean. The fourth of these was presented as follows: Just as the great rivers, such as the Gaṅgā, Yamunā, Aciravatī, Sarabhū, and Mahī, upon reaching the great ocean, discard their former names and lineages, and are simply designated as the great ocean, so too, those of the Khattiya, Brāhmaṇa, Vessa, and Sudda castes, when they leave the household life and go forth into homelessness in this Dispensation, no longer use their former caste designations. Instead, they are known simply as "Sakyaputtas" (ascetics of the Sakyan son). In this way, the practice of the Dispensation was clearly stated. The Buddha’s stand against caste discrimination, which appeared as a sort of social revolution, sometimes brought various insults upon the Buddha himself from the brahmins.</p>
+<p>A special discourse mentioning this is the *Vasala Sutta*. Many of you may have heard of it to some extent. One day, the brahmin Aggika Bhāradvāja was performing a fire-sacrifice at his house. At that time, the Blessed One, walking in sequence for alms, arrived at the brahmin’s house. Seeing this, the brahmin said: "Stop right there, bald-headed monk, you outcast (*vasala*)!" Then the Blessed One asked: "Brahmin, do you know what an outcast is, or what makes one an outcast?" "I do not know. If possible, let Master Gotama teach me," he invited. Thereupon, the Blessed One delivered a lengthy discourse. Without mentioning every single detail, in brief, he touched upon all the prevalent evils, corruptions, immoralities, and vices of society, presenting each one of them as a quality that makes one an outcast. Having done so, he delivered the concluding verse, which almost everyone has heard:</p>
+<p>*"Na jaccā vasalo hoti, na jaccā hoti brāhmaṇo;*</p>
+<p>*Kammanā vasalo hoti, kammanā hoti brāhmaṇo."*</p>
+<p>One does not become an outcast by *Jāti* (Birth), nor does one become a brahmin by *Jāti* (Birth). By karma one becomes an outcast, by karma one becomes a brahmin. Since the word "karma" is used here, some might misunderstand it. Because we mentioned a past story earlier, one might assume that "karma" here refers to past karma. However, there is no room for such an interpretation because, immediately after uttering this verse, the Blessed One provides an illustration to show what is meant by "karma." He says, "Here, I will give an illustration to show that it is by karma that one becomes an outcast or a brahmin." What is this illustration? It is connected to a Jātaka story.</p>
+<p>The outcaste named Mātaṅga, though born as a Caṇḍāla, practiced absorption (*jhāna*) and meditation, developed direct knowledges (*abhiññā*), and acquired the power to perform great wonders and miracles. He received service and honor from kings and brahmins alike, and even devas and Brahmas came to serve him. After death, he was reborn in the Brahma world. This is shown as the conclusion, indicating that *Jāti* (Birth) is no barrier to birth in the Brahma world. At the same time, the opposite side is also shown.</p>
+<p>If, on the other hand, brahmins engage in evil deeds, they will be censured and blamed as a consequence of those evil deeds, and they will go to a state of misery. Their *Jāti* (Birth) as a brahmin is not capable of preventing censure or rebirth in a state of misery. From this, it is abundantly clear to us that what is meant here is one's course of action. "Karma" means one's course of action, one's practice. It is according to one's course of action that one becomes an outcast or a brahmin, and not by *Jāti* (Birth). In this way, the Blessed One expounded that fundamental principle.</p>
+<p>Furthermore, another valuable discourse mentions many points relevant to this, concerning two young brahmins. One youth was named Vāseṭṭha, and the other Bhāradvāja. While walking along the road conversing, chatting, and discussing, a topic of dispute arose between them: "How does one become a brahmin?" In this regard, the young brahmin Bhāradvāja said: "If one is of pure *Jāti* (Birth) on both the mother's and father's side back for seven generations, with no reproach or slur cast upon one's *Jāti* (Birth) or lineage, then one is called a brahmin." But the young brahmin Vāseṭṭha said: "No, one becomes a brahmin through virtue (*sīla*) and conduct. One who possesses virtue and vows is a true brahmin." The two of them argued, but they could not come to a decision. Later, Vāseṭṭha suggested: "The ascetic Gotama is staying over there. A great report of good reputation has spread concerning this ascetic Gotama: 'Indeed, he is the Blessed One, the Worthy One, the Fully Self-Awakened One...' Let us go to the ascetic Gotama, and however he explains this matter, so shall we accept it." They went to the Blessed One and presented their dispute, saying: "There is this debate between us."</p>
+<p>Then the Blessed One said: "Very well, Vāseṭṭha, I will explain this to you in due order, systematically." In an astonishingly comprehensive manner, he presented points that broke down the foundation of caste discrimination. Grass, plants, trees, and creepers—all of these assume various forms according to their origin, their *Jāti* (Birth). There, a distinction of species (*jāti-bheda*) exists. They exhibit diversity based on their *Jāti* (Birth). When we speak of trees and creepers, there is a distinction of species. Similarly, among small insects, quadrupeds, birds, snakes, and fish in the sea, there is diversity in their bodily features. This is so among animals. But among human beings...</p>
+<p>...among human beings, there is no such significant difference. When we consider human beings, to classify them into castes or show diversity, there is no substantial difference in their limbs, ears, noses, hands, or feet. The Blessed One points out that human beings constitute a single species (*jāti*). Thus, based on facts that can be described in biological terms, the Blessed One declares that there is no such diversity among human beings as there is among animals, trees, and plants. Therefore, there is no room for the kind of racism or casteism based on *Jāti* (Birth) that the brahmins put forward.</p>
+<p>Furthermore, he shows that a difference is not determined by *Jāti* (Birth). Now, in the world, there is a conventional way of showing diversity. How? One who makes a living by farming should not be called a "brahmin," but a "farmer." Even if a brahmin does farming, he should be called a "farmer." One who lives by various crafts should be called a "craftsman." One who engages in trade, whether born as a brahmin or an outcast, should be called a "merchant." One who lives by warfare, as his livelihood, is called a "soldier." One who steals should be called a "thief," not a brahmin or an outcast, but a "thief." One who performs priestly duties is called a "sacrificer" (*yājaka*)—*yājaka* means one who prays or petitions; that is the proper designation for him, not "brahmin." One who rules is called a "king." This is the true sense of how conventions exist in society: it is according to the karma one performs. Here we see that "karma" refers to the course of action, the process of activity. However, many people think of this as past karma. In reality, karma is a present-moment thing connected to intention (*cetanā*). Now, in our ordinary daily usage, what we refer to as "karma" is often "karmic result" (*kamma-vipāka*). We loosely refer to the result of karma as "karma." But we must understand that karma is always a present-moment phenomenon. After showing these facts regarding *Jāti* (Birth) to the young brahmin Vāseṭṭha, the Buddha further declared: "If the term 'brahmin' truly means 'noble,' then that word should only be applied to an Arahant." Having thus described the vast qualities of an Arahant, he finally presented a short but extraordinarily profound principle as a cosmic law (*niyāma-dhamma*):</p>
+<p>*"Kammanā vattati loko, kammanā vattati pajā;*</p>
+<p>*Kammanibandhanā sattā, rathassāṇīva yāyato."*</p>
+<p>Since that verse is highly meaningful, we highlighted it in particular. *"Kammanā vattati loko"* — the entire world proceeds by karma. *"Kammanā vattati pajā"* — all generations of beings proceed according to karma, with karma as their fundamental principle. *"Sattā"* — beings are bound to karma in one way or another. Here is the simile for that: *"Rathassāṇīva yāyato"* — like the linchpin of a moving chariot. We can gather many insights from this.</p>
+<p>The linchpin of a moving chariot is what allows the wheel to turn. If we think about society in this way, nowadays words like "progress" are used to describe forward movement. The Blessed One highlighted a principle that allows for such progress. What if, instead of karma, we took *Jāti* (Birth) as the linchpin? The journey would come to a halt. One cannot change one’s *Jāti* (Birth). But one can change one's karma. A person who was a thief can abandon theft and do good things; a farmer can become a merchant. Thus, because karma is a process of action, a person can change. Instead of the rigid, unbending principle of *Jāti* (Birth) or origin that existed in society, the Blessed One highlighted a flexible, adaptable principle that leads to progress. This principle is important sociologically regarding occupations, and ethically regarding actions such as theft. Ethics refer to matters of good and bad. These, too, fall under the broad term of "karma." Each of these is like that linchpin. The development and existence of the entire society are connected to it. The Buddha presented this special principle in this manner.</p>
+<p>Similarly, matters related to this karma are mentioned in other discourses. Another instance is shown where a brahmin insulted the Blessed One. One morning, the brahmin Sundarika Bhāradvāja was performing a fire-sacrifice, making burnt offerings, by the river Sundarikā. The Blessed One saw that the brahmin Sundarika Bhāradvāja possessed the supportive conditions (*upanissaya-sampatti*) to attain Arahantship. Therefore, the Blessed One went to that place beforehand and sat meditating at the foot of a tree with his head covered. The brahmin, having offered the milk-rice to the Great Brahma, thought of giving the remainder to some other brahmin. Since brahmins consider themselves sons of Brahma, he thought: "Having offered to the father, I must now give the remainder to a son," and looked around. He saw someone sitting with his head covered. Thinking, "Perhaps this is a brahmin meditating through the night," he approached. As he came close, the Blessed One uncovered his head. Seeing him, the brahmin exclaimed, "Alas, this is a bald-headed ascetic!" and turned to go back. Then he thought, "Even though his head is shaved, he might still be a brahmin. In any case, I should go and ask about his birth, his *Jāti* (Birth)." He went up and asked: "Sir, what is your birth? What is your *jāti* (birth)?" Then the Blessed One declared: "I am neither a brahmin, nor a king's son, nor a merchant, nor of any other caste. Having departed from the household and social affairs, I live unattached to the world, observing virtues." Through the conversation that followed, a certain faith arose in the brahmin Sundarika Bhāradvāja. He then invited the Blessed One: "Then let Master Gotama tell me who is worthy of receiving the remainder of this sacrificial milk-rice, the one to whom it should be given to gain the true benefit." At that moment, the Blessed One declared: "In that case, brahmin, abandon the habit of asking about *Jāti* (Birth). Do not ask about *Jāti* (Birth). Ask about conduct." He uttered the principle: *"Mā jātiṃ puccha, caraṇaṃyapi puccha"* — "Do not ask about *Jāti* (Birth); ask rather about conduct."</p>
+<p>In those days, there was a practice that you, dear devotees, might not be familiar with. Today, we strike a match from a matchbox and instantly get fire. In ancient times, producing fire was not that easy. One had to rub two dry pieces of wood together for a long time to generate fire. This is the simile used here: no matter what kind of wood is used, there is no difference in the fire produced. Whatever the type of wood, when rubbed together, the fire that springs up from them has no difference. That is the simile given here. Analyzing it further, he declared that just as there is no difference in the fire regardless of the wood from which it arises, so too there is no difference when a person of a low caste, having cultivated those virtues, reaches the noble state—that is, becomes a true brahmin. In that context, in a manner that broke the foundation of caste discrimination, he described at length the qualities of an Arahant, and specifically of the Tathāgata. The Blessed One delivered a sermon stating: "The Tathāgata is one who possesses such and such virtues, such and such merits; he indeed is the true brahmin. It is to one with such virtues that the remainder of the sacrificial milk-rice should be offered." It might seem as though the Blessed One was praising his own virtues. However, he did not say this to obtain the milk-rice. Having heard all this, the brahmin Sundarika Bhāradvāja felt great faith and said: "Then I am indeed fortunate to have seen the Blessed One. Please, may the Blessed One accept this milk-rice." The Blessed One rejected it, saying: "Milk-rice obtained by chanting verses is not suitable for me. Buddhas reject such food. Offer it to some other Arahant who has destroyed the cankers (*khīṇāsava*)." The Blessed One preached the Dhamma on that occasion solely to guide the brahmin to Arahantship; he did not praise his own virtues for the sake of a little milk-rice. This is the custom of the Buddhas. He rejected it, saying that they do not accept what is obtained by chanting verses. In the end, the brahmin Sundarika Bhāradvāja did not merely take refuge in the Triple Gem as a lay disciple (*upāsaka*), but ultimately requested ordination and even attained Arahantship. Thus, in this instance too, the Buddha's view on caste discrimination is clearly demonstrated.</p>
+<p>On another occasion, while King Pasenadi of Kosala was having a Dhamma discussion with the Blessed One, he asked a question: "If people from the four castes—Khattiya, Brāhmaṇa, Vessa, and Sudda—ordain and exert intense energy (*viriya*), practicing meditation and striving hard, is there any difference in the result they achieve based on their castes?" The Blessed One declared: "No, the liberation (*vimutti*) they attain is one and the same. Whether one is an outcaste or a brahmin, after ordaining, if one exerts sufficient energy, there is no difference in the liberation they achieve." In that context, the Blessed One presented the simile of fire in greater detail: "Just as, O Great King, if a fire is produced by rubbing two pieces of Sal wood, another by rubbing two pieces of Mango wood, and another by rubbing two pieces of Fig wood, is there any difference in the color or the light of the fires?" "No." "In the same way, from whatever caste one goes forth, if one fulfills the Dhamma, there is no difference in one's liberation." This practice of the purity of all four castes was put into effect against the Brahmin view.</p>
+<p>It is called "purity of the four castes" (*catuvaṇṇi-visuddhi*). The Buddha's stance was that all four castes are pure. "Pure" means that people of all four castes can attain purification. Among the brahmins, there was a dogmatic view that only brahmins could attain purification, and those of other castes could not. The Blessed One showed that regardless of one's caste, if one fulfills the necessary conditions, one can attain purification. The Blessed One declared that this truly wonderful, liberating practice, which allows purification for all four castes, exists within this Dispensation.</p>
+<p>These statements of the Blessed One caused great displeasure among the brahmins. So much so, that brahmins from various regions gathered in the city of Sāvatthī and held a large meeting, like a symposium. On that occasion, they discussed: "The ascetic Gotama has put forward this principle of the purity of the four castes, which goes against our brahminical views. Who among us is capable of debating with the ascetic Gotama on this?" In Sāvatthī itself, there lived a sixteen-year-old young brahmin named Assalāyana. He was a young scholar (*māṇava*) well-versed in the Vedas. Deciding that he was the most suitable person to debate with Master Gotama, they went to meet the young brahmin Assalāyana and invited him, saying: "You are highly skilled. You are capable of debating with Master Gotama regarding his view that all four castes are pure and capable of attaining purification." But Assalāyana said: "The ascetic Gotama speaks according to the Dhamma. It is not easy to debate with someone who speaks according to the Dhamma," and he refused. They invited him a second and a third time, urging him strongly. When he refused the third time, they said: "Why admit defeat even before going to battle? Go and do it." Thus, Assalāyana said: "Since you all insist, I shall go." Accompanied by a large crowd of brahmins, he went to the Blessed One and presented the brahminical view: "Our brahmins say this: 'The brahmins alone are the highest caste. Only brahmins can attain ultimate purification. Brahmins are the true children of Brahma, born from Brahma's mouth, created by Brahma...'" In this way, he presented the brahminical dogma.</p>
+<p>At that moment, the Blessed One refuted the arguments presented step-by-step. First, he pointed out: "These brahmins claim to be born of Brahma, yet they know very well that brahmin women give birth to children. Knowing this, to make such a claim is not logical." He also pointed out that this caste distinction is not a universally applicable classification, because in regions like Yona and Kamboja, you all know that there are only two classes: masters (*ariya*) and servants (*dāsa*). These are not proper names; there are masters, and there is a class of servants. The *ariyas*—meaning noble or superior—are the bosses, and the *dāsas* are the subordinates. Let us think of it like that. The Buddha added: "However, a change can occur there. One who was a master becomes a servant, and one who was a servant becomes a master." We can imagine a war or conflict where the masters are defeated and the servants come to the forefront. Then the servants become masters, and the others become servants. Through this example of masters and servants, the Blessed One demonstrated that this caste system is a meaningless thing, not something to be taken as permanent in society.</p>
+<p>Next, he pointed to the ten unwholesome courses of action (*dasa-akusala*), such as killing and stealing, which you have all heard of, committed by body, speech, or mind. "If brahmins engage in those unwholesome actions, can their brahminical *Jāti* (Birth) prevent them from going to a state of misery? Can they escape their wrongdoings merely by their *Jāti* (Birth)?" The young brahmin Assalāyana had to admit that they could not. This means that if one commits evil deeds, whether one is a brahmin or an outcaste, one must go to a state of misery. Conversely, if one performs wholesome deeds, whether one is a brahmin or an outcast, one goes to a happy destination. The Blessed One declared that from this too, it is clear that the theory of *Jāti* (Birth) is useless and meaningless.</p>
+<p>In this way, the Blessed One expounded a wonderfully liberating principle for everyone in the world. Whatever one's *Jāti* (Birth) may be, they may possess the potential to achieve that state. Just as we call the Buddha "Lord Buddha," we also sometimes call him "the Teacher of the Three Worlds." When the Blessed One looks at the entire world, it appears to him like a school with no partitioned classrooms. Now, we have various terms for the alphabet and so on. In this school, who is at the kindergarten stage and who is in the higher grades is not determined by the way society thinks. The way it appears to the Buddha-eye is entirely different. It was in this manner that Sunīta became visible to him. When the Blessed One entered into the Attainment of Great Compassion, he saw the very person who needed to come to the front of the class, the one who needed to be given the lesson on that day, the one worthy of receiving the special lesson.</p>
+<p>Yet, the world sees him only as a scavenger or an outcast. This is the wonderfully tangled nature of karma. There is a karma that brings about a certain *Jāti* (Birth), and the world measures a person by that. However, hidden within that person are valuable meritorious potentials from the past. Bringing these to light is the most special and wonderful Buddha-activity (*Buddha-kicca*) that the Tathāgata can perform for a person. What is the reason for this? The Blessed One possesses not only the knowledge of the Attainment of Great Compassion but also the knowledge of the inclinations and latent tendencies (*āsaya-anusaya-ñāṇa*), which indicate underlying tendencies (*anusaya*). You all may have heard to some extent of the knowledge of recollecting past lives (*pubbenivāsa-anussati-ñāṇa*). It allows one to see the sequence of past aggregates, past lifetimes. Other members of the Sangha, other Arahants, and those Arahants who have attained direct knowledges (*abhiññā*) possess this to some extent. However, the Blessed One possesses it in its utmost purity. An even deeper knowledge than that is the knowledge of inclinations and underlying tendencies (*āsaya-anusaya-ñāṇa*). A person's inclinations, internal strengths, hidden potentials, and what we call innate abilities—all of these become apparent to the Blessed One the moment he directs his mind. It is based on this that the Blessed One refuted caste discrimination. This is a superficial, illogical, pride-driven construct. Caste is merely a convention (*sammuti*). It is a division, an analysis born of the world's ignorance. The Blessed One rejected the brahminical view as merely a social construct.</p>
+<p>Instead, he highlighted that karma is a present-moment phenomenon. The statement *"Cetanāhaṃ, bhikkhave, kammaṃ vadāmi"* (Monks, intention is what I call karma) implies that karma is always connected to intention. It is a present-moment thing. Some think of this as past karma. It is true that past karma has results. However, a person can bring about a transformation in their life based on what they do in this present moment. It is to assist in that transformation that the Blessed One came forward in that manner. Whether by covering his head, receiving the epithet of "outcast," or enduring the insult of "bald-headed monk," the Blessed One had to use his skill-in-means (*upāya-kosalla-ñāṇa*) to tame that person according to the situation, with the sole intention of helping him. Through this, there are many lessons for us and for this society to learn. Even if we think about our society today, not only in India but even in our own country, people are trapped within the narrow perspectives of caste discrimination. What grows out of this? Pride (*māna*) on one hand, and envy (*issā*) on the other. Why? Because when those from castes deemed low or inferior achieve high status, educate themselves through effort, and receive high offices, envy arises in the neighbors who consider themselves of high caste. They harbor envy, thinking, "Those who received help from us in such-and-such ways are now living in large bungalows like this." Instead, if we had understood the Dhamma correctly, we would think: "That person has, through effort, brought to light the innate potential within him."</p>
+<p>On one occasion, the Blessed One stated that when we see a poor person—for instance, when we walk along a city street and see destitute people on the pavement who are missing limbs—if we have something to give them, it is best to give. Even if we do not, we should at least think: "I too must have been like this." We must take this word of the Blessed One to heart. From the perspective of *saṃsāra*, this is equality. Because it is by tangling this ball of thread called "karma" that worldly beings have wandered in *saṃsāra* for so long. Therefore, we should not tangle it further with unwholesome thoughts such as envy. When someone, even having received help from us, educates themselves and eventually reaches a high status, instead of envying them, the very first benefit we can gain from that person is to cultivate empathetic joy (*muditā*) instead of envy. Many of you might not have heard the word *muditā* very often.</p>
+<p>The four sublime abodes (*brahma-vihāra*) are *mettā* (loving-kindness), *karuṇā* (compassion), *muditā* (empathetic joy), and *upekkhā* (equanimity). Among these, loving-kindness and compassion are heard frequently in society, whether practiced or not. But *muditā* is hardly ever heard. It is something the world has forgotten. Instead, envy (*issā*) is what is prevalent. Envy is what manifests. *Muditā* is the opposite of envy. It means that when someone succeeds, one feels happy about it. One rejoices: "Oh, how wonderful that this person has succeeded! He has shown the world by example the truth of the saying: 'The energetic and effortful person wins.'" Thus, by looking at that successful person and rejoicing, one reaps the first benefit oneself. Let us say someone of a low caste received help from you and achieved a high position. Even if you cannot ask him for a loan in an emergency, the first benefit you can derive from him is the cultivation of the virtue of *muditā*. You can reflect with joy: "Indeed, I too lent a hand to this person’s effort and energy, did I not? I too helped. How wonderful! He has set an example to the world that the energetic person wins, the effortful person wins. Through effort, he brought to light a certain wholesome potential (*kusala-sakti*) from the past." In this way, one has the capacity to rejoice. Instead, if one harbors mental stress and narrow envy, thereby accumulating unwholesome karma (*akusala*), one will fall into a miserable state, just as happened to Sunīta in the past.</p>
+<p>Moreover, insulting virtuous ones—such as insulting a Paccekabuddha—is done due to pride (*māna*). It was because of this that Sunīta fell into that low condition. Similarly, due to wrong views and wrong concepts such as envy in the present, one falls into extremely dangerous states in *saṃsāra*; one falls into poverty. Instead, we should properly adopt the attitude highlighted by the Blessed One. To the Buddha-eye, everything is visible at a glance, like a school with no partitioned classrooms: "This particular person is in this position; their *saṃsāric* wisdom has matured to this level." He might be uneducated. He might be poor, destitute, and born into a low caste, but if he possesses meritorious potential, it was to such a person that the Blessed One first gave assistance, and not to those with high offices and titles. The Blessed One did not preach the Dhamma specifically to the king or the wealthy merchant sitting at the front of the audience. It might be a person sitting at the very back of the crowd, considered low-born and despised by society, insulted and censured by others, who nevertheless possesses internal meritorious potential and is capable of realizing the Dhamma. It was such people that the Blessed One helped.</p>
+<p>From this, we see that the Blessed One presented practice (*paṭipatti*) as the fundamental principle instead of *Jāti* (Birth). As for the linchpin of a chariot, if that linchpin is oiled, the wheel turns smoothly. If not, the wheel cannot turn; that is the end of it. *Jāti* (Birth) is something that cannot be changed. But karma can be changed. Whether through one's course of action or through what are considered ethical practices of wholesome (*kusala*) and unwholesome (*akusala*) actions, one can bring about a transformation in one's life. Through this, the Buddha gave society the capacity and the perception (*saññā*) to transform one’s life. Thus, from the arguments presented by the Blessed One regarding caste discrimination or birth, we can extract many important Dhamma principles. Even in today's society, many people engage in mutual conflicts or turn to terrible crimes precisely because of that envy and pride. Envy and pride go hand in hand. The cause for them is that one boasts: "I belong to a high caste," or "I am in a high position." This does not last forever. Even regarding *Jāti* (Birth), the Blessed One pointed out that it is merely a fabricated pride. On certain occasions, the Blessed One answered the brahmins' arguments regarding birth in an even more biting manner. Can these brahmins truly claim that they were born of pure brahmin families back for seven generations? Were there no crossings of boundaries during that time? When thinking about the realities of society, you, dear devotees, can understand this for yourselves.</p>
+<p>On another occasion, the Blessed One states: "Suppose a man of a Khattiya family marries a Brahmin woman. What would you call their child? He is equal to the father and equal to the mother. He could be called of the Brahmin caste, and he could be called of the Khattiya caste." The Blessed One presented arguments in this manner to shatter the pride of the brahmins. Through this, he demonstrated that *Jāti* (Birth) is merely a convention (*sammuti*) created by human beings. It has no real essence. Furthermore, in the effort to attain Arahantship, instead of caste, what is essential is the energy (*viriya*) one exerts. It is called striving (*padhāna*), the great power of striving. This power can exist in everyone. Whether they are brahmins, Vessas, or Suddas, if they ordain in this Dispensation and make that effort based on their past meritorious potential, they can attain even Arahantship, worthy of receiving homage from devas and Brahma kings. Therefore, as declared in this verse, the true brahmin is a fully enlightened Buddha, a Paccekabuddha, or an Arahant who has perfected those spiritual virtues. It was such a person that the Blessed One presented as the true brahmin.</p>
+<p>The Blessed One presented to the world a completely new perspective, a novel definition, regarding the concepts of "outcast" and "brahmin," replacing what was previously tied to caste. If one does not like the word "outcast," or considers "outcast" an insult, then he clearly explained in the *Vasala Sutta*: "Keep in mind that these are the qualities of an outcast." To help one understand whether one is an outcast or not, the Blessed One lined up and pointed out all of one's own evil deeds, bad conduct, and corruptions: "Know this: if you do these things, you are an outcast." Conversely, he showed: "If one cultivates such virtues, leading to a noble conduct that eradicates defilements, that person is indeed a brahmin." In this way, using both terms commonly used in society, the Blessed One presented an analysis that assisted the spiritual progress of the world. The Blessed One declared that ignoring a person's inner strength because of distinctions of *Jāti* (Birth) or caste is an obstacle to social progress. In that regard, even from a sociological perspective, the Blessed One can be considered a person who brought about an extraordinary revolution. Through his view on caste discrimination, the Teacher of the Three Worlds showed that everyone has the opportunity for liberation. When we say "liberation" (*vimutti*), various meanings might come to mind, but what is meant here is liberation from *saṃsāra* (*saṃsāra-vimutti*). By keeping the Dispensation open to all castes, the Blessed One demonstrated to the world that whoever they may be, regardless of caste, they have the opportunity to attain liberation from *saṃsāra*.</p>
+<p>Just as the waters of various rivers flowing into the great ocean are simply called "ocean water," whoever ordains in this Dispensation receives the title "Sakyaputta Samana" (ascetic son of the Sakyan). A Sakyaputta Samana means a son of the Blessed One. He becomes a son of the Blessed One. This is why the term "son of the Buddha" (*Buddha-putta*) is used for the community of monks (*Saṅgha*). Regardless of which caste they come from, once they ordain, they become sons of the Buddha. Within every individual, there may lie certain internal capabilities. One must develop the capacity to look at a person as an uncut gem. Instead of revulsing against a low-caste or inferior person, one should first think: "I too must have been like this for an endless time in *saṃsāra*." Next, within this person, too, there may be many good qualities that assist liberation, though they remain hidden. It was to bring these to light that the Blessed One utilized his skill-in-means and his Attainment of Great Compassion. The Blessed One demonstrated this not to insult the brahmins, but to expose the errors of the false views (*micchā-diṭṭhi*) held by the world. It is clear that some brahmins accepted this. That is why the young brahmin Vāseṭṭha declared on that very occasion: "One endowed with virtue and vows is indeed the true brahmin." Gradually, this view spread among the brahmins as well.</p>
+<p>Due to his comprehension of *saṃsāra*, the Blessed One did not classify the world in that superficial way but opened the door of liberation to everyone. He opened the door of this Dispensation for anyone to ordain, bring forth their mental potentials, and attain liberation from *saṃsāra*. Because among the things accumulated over a long time in *saṃsāra*, there are results of evil deeds as well as the potential of wholesome deeds. Not knowing this and denying someone the opportunity to develop them is a cause for the decline of society. Just as there is no difference in fire regardless of the wood from which it arises, so too, whatever our caste, there can be special potentials within us. Even those who committed grave evil deeds, like Aṅgulimāla, upon attaining the noble state of Arahantship, became worthy of receiving homage from devas and Brahmas. Conversely, even if one obtains a high *Jāti* (Birth), if one commits evil deeds, one's rebirth in a state of misery is certain. This is shown according to the doctrine of karma (*kamma-vāda*). Indeed, the word "karma" is used here in a very broad sense. Most people refer to the result of karma (*kamma-vipāka*) as "karma," saying, "This is my karma." That, however, is a barren philosophy (*vañjha-dassana*).</p>
+<p>We should not resign ourselves to it, saying, "This is my karma." The Blessed One declared: "I am a teacher of karma (*kamma-vādī*), a teacher of action (*kiriya-vādī*), and a teacher of energy (*viriya-vādī*)." To some, this might seem contradictory. When he says "I am a teacher of karma," those who confuse the result of karma with karma itself might think: "Ah, if the Buddha is a teacher of karma, where is there room for energy? We must simply resign ourselves to it." But that is not how we should think. When the Buddha says this, he is highlighting the power of intention (*cetanā-sakti*) to the world. Within the intention of every individual—within their present-moment intention—lies the opportunity to steer this vehicle in whichever direction they choose. In the analysis of *"Cetanāhaṃ, bhikkhave, kammaṃ vadāmi"*, this is what we must contemplate. Why did the Blessed One say he is a teacher of karma? It is precisely because of that that he is a teacher of action (*kiriya-vādī*); hence there is active function. That is why he is called *kiriya-vādī*. Next, *viriya-vādī* means developing that active energy to its maximum.</p>
+<p>Through terms like *chanda* (desire/will), *vāyāma* (effort), *viriya* (energy), and *padhāna* (striving), the Blessed One explained how one can gradually increase that energy. A keen interest or desire arises for something. One makes an attempt for it. Next, one instigates energy. Then, regardless of life itself, one exerts intense effort to fulfill one's aspiration. The Blessed One introduced to the world, through the word "karma," the existence of such wonderful mental power. But nowadays, many people misunderstand it: "This is our karma, so we cannot change it; it is my karma, I cannot go beyond it." In truth, one must turn the very understanding of karma into a source of strength. "This is the result of a past karma. Yes, it is so, but even so, I possess the power to shape this present moment. I have that power of intention (*cetanā-sakti*). I have the power of energy." On certain occasions, the Blessed One used powerful words such as "human strength" (*purisa-thāma*) and "human energy" (*purisa-viriya*). It means that everything can be accomplished through human energy and human valor (*purisa-parakkama*). Thus, what we have here is not a barren philosophy. Those religions of creation by Brahma or creation by God contain a barren philosophy, because they deny the spiritual power (*adhyātma-sakti*) within the individual. There, liberation is something to be obtained by praying to someone else. This is not like that. The power is within the individual. Even in the most despised person, that power can exist. If it is applied properly, one can bring forth liberation. It shows that one can apply it freely and independently, not dependently.</p>
+<p>When we consider it from all sides in this way, it is clear that the Blessed One did not speak about caste discrimination to attack the brahmins, but to introduce true core values to the world. He brought to light the true potentials within the individual. Today, we began this sermon with the story of Sunīta, the scavenger. In truth, Sunīta, whom the world called a scavenger, became a scavenger in the highest sense. He removed the dirt and filth of defilements that had accumulated in his mind-stream for a long time, since time immemorial. That is why he attained Arahantship. It was for this very reason that the Buddha called Venerable Sunīta, the great Arahant, a true brahmin.</p>
+<p>Gathering these thoughts presented by the Blessed One regarding the internal potentials that can exist in our mind-streams, and looking at the world with an open and enlightened mind free from things that lead to envy and pride, may we shape our conduct. Paying attention to conduct rather than to *Jāti* (Birth) and lineage, may this Dhamma sermon we have conducted for about an hour help us live our future lives accordingly. May this meritorious deed of sharing the Dhamma be a strong supportive condition (*upanissaya*) for purifying our own practices of meditation, virtue, and other qualities, so that we may realize the noble and supreme deathless Nibbāna, which is liberated from *Jāti* (Birth), aging (*jarā*), sickness (*vyādhi*), and death (*maraṇa*)—which comprise *Jarāmaraṇa* (Decay and Death) that we all aspire to escape! Furthermore, if there are any beings from the Avīci hell up to the Akaniṭṭha heaven who wish to rejoice in this merit of sharing and hearing the Dhamma, may they, by so rejoicing, find peace in the supreme and noble deathless Nibbāna through whichever Bodhi they aspire to! With these wishes, please recite these verses.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_102.html" class="doc-btn">← Previous Sermon (102)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_104.html" class="doc-btn">Next Sermon (104) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

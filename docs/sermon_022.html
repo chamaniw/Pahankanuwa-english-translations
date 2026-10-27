@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 022 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_021.html" class="doc-btn">← Previous Sermon (021)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_023.html" class="doc-btn">Next Sermon (023) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 022</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_022_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_022_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_022_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #22</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No. )</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Yathāpi ruciraṃ pupphaṃ, vaṇṇavantaṃ agandhakaṃ; Evaṃ subhāsitā vācā, aphalā hoti akubbato. Yathāpi ruciraṃ pupphaṃ, vaṇṇavantaṃ sagandhakaṃ; Evaṃ subhāsitā vācā, saphalā hoti pakkubbato.</p>
+<p>From:</p>
+<p>Verses 51-52 from the Pupphavagga (Chapter on Flowers) of the Dhammapada</p>
+<p>Dear Listeners,</p>
+<p>It was on a full-moon day of Esala, just like today, that our Buddha, the Teacher of the Three Worlds, having attained Supreme Enlightenment, delivered His first Dhamma sermon, the *Dhammacakkappavattana Sutta*, to the world of devas and humans. Even today, we conduct these Dhamma sermons by the power and efficacy of that Wheel of Dhamma set in motion for the first time on that day. The True Dhamma, the word of the Buddha, is entirely "well-spoken" (*subhāsita*). Today, we have selected as our theme two stanzas which declare that this well-spoken word of the Buddha is as useless as a colorful but scentless flower to one who does not practice it, whereas it becomes a flower that is both colorful and fragrant to the one who puts it into practice.</p>
+<p>These two stanzas were preached in connection with an incident concerning the lay disciple Chattapāni. In the texts, it is recorded as follows: There lived in Sāvatthī a lay disciple who was an *Anāgāmī* (Non-Returner) with a highly advanced knowledge of the Dhamma. One day, early in the morning, this lay disciple came to see the Buddha. While he was seated listening attentively to a Dhamma discussion, King Pasenadi of Kosala arrived there. Seeing this, the lay disciple thought: "Now, if I rise upon seeing the king according to normal custom, it would be a mark of disrespect to the Teacher. For it would be like rising up upon seeing a regional ruler while in the presence of the Supreme King of Kings. I know that if I do not rise, the king will get angry with me. But that does not matter; let him be angry," he thought, and remained seated. Indeed, seeing this, the king felt some resentment and anger. Reading the king's mind, the Buddha began to praise the virtues of that lay disciple to the king. He did not explicitly state that Chattapāni Upāsaka was an *Anāgāmī*, but He gave the king the impression that he was a noble disciple (*Ariya*), a person of great value. Thus, the king's heart softened somewhat.</p>
+<p>On a later day, while the king was on the upper terrace of his palace, he saw Chattapāni Upāsaka passing through the palace courtyard holding an umbrella and wearing sandals. Seeing him, the king sent a messenger to call him. As soon as he received the message, Chattapāni Upāsaka put aside his umbrella and sandals and came to see the king. When he arrived and stood to one side, the king asked: "Why did you put aside your umbrella and sandals?" Then the lay disciple replied: "I did so because I was told that Your Majesty had summoned me." "Did you only realize today that I am the king?" asked the king. "No, we have always known that Your Majesty is the king." "Then why did you not rise when you saw me that day?" At that, he replied: "Thinking that rising upon seeing a regional ruler in the presence of the Supreme King of Kings would be disrespectful to that Supreme Ruler, I did not rise out of respect for the Teacher."</p>
+<p>Thereupon, the king reconciled his mind and said: "Very well, let that matter be. I have heard that you, lay devotee, are very learned in the Dhamma and know what is right and wrong. Therefore, could you not teach the Dhamma to the queens of our harem?" He replied that he could not do so. When asked why, he said that the royal household is a place fraught with complications, where right and wrong are difficult to navigate, and one could easily get entangled in serious accusations and faults. Then the king said: "Do not say so. Do not harbor any hesitation or apprehension thinking about how you did not rise upon seeing me that day." But the lay disciple replied: "It is not because of that. When a lay person engages in such a task, various issues and suspicions arise. Please arrange for an ordained monk, a member of the Sangha, to come for that purpose." The king agreed, saying, "Very well, you may go now, lay disciple," and thereafter went to see the Buddha and invited Him to come regularly with the Sangha to preach the Dhamma to the queens. For Queen Mallikā and Queen Vāsabhakhattiyā were constantly requesting and pleading to hear the Dhamma. The Buddha replied that Buddhas do not go to one and the same place continuously. "Then please assign one monk to us," the king requested. Thereupon, the Buddha entrusted this task to Ven. Ānanda.</p>
+<p>Thus, Ven. Ānanda regularly went to the palace and taught and explained the Dhamma to Queen Mallikā and Queen Vāsabhakhattiyā. One day, the Buddha asked: "How is it, Ānanda, are the female lay disciples learning the Dhamma?" "Yes, Bhante." "Who is learning better?" "Queen Mallikā learns very well, but Vāsabhakhattiyā, the Blessed One's kinswoman, does not learn properly," he said. It was on that occasion that the Buddha preached the two stanzas we took as our theme. He uttered those two stanzas giving the idea that this Dhamma becomes truly meaningful only to the one who learns it properly, retains it, and puts it into practice. Let us look at their meaning.</p>
+<p>*Yathāpi ruciraṃ pupphaṃ, vaṇṇavantaṃ agandhakaṃ,*</p>
+<p>*Evaṃ subhāsitā vācā, aphalā hoti akubbato.*</p>
+<p>"Just as a beautiful flower, colorful but scentless, so is a well-spoken word fruitless for one who does not act upon it."</p>
+<p>Then the other stanza:</p>
+<p>*Yathāpi ruciraṃ pupphaṃ, vaṇṇavantaṃ sagandhakaṃ,*</p>
+<p>*Evaṃ subhāsitā vācā, saphalā hoti pakkubbato.*</p>
+<p>"Just as a beautiful flower, colorful and full of scent, so is a well-spoken word fruitful for one who acts upon it." In this manner, those two stanzas were delivered.</p>
+<p>That is the background story of those stanzas. Now, before we delve into the meaning of the stanzas themselves, there are certain lessons we can take as examples from the background story we have related so far. Indeed, this lay disciple Chattapāni is a worthy character of that nature. Through the incident described, we can understand that he was someone who lived according to the values and virtues developed in accordance with the Buddha's teachings, like a fragrant flower—a person possessing the power of the Dhamma. His way of acting with a certain strength of Dhamma, giving precedence to respect for the Teacher over royal respect without being subservient to titles and positions, is evident in his remaining seated when he saw the king in the presence of the Buddha. That is indeed a great example for the people of today as well. For it is to the Dhamma that the primary place must be given. Cowering and being subservient before such worldly state power is an insult to the Dhamma.</p>
+<p>Likewise is the other point. When the king, pleased with him, invited him to preach the Dhamma to the queens, an ordinary person would have seen it as a great opportunity to gain royal favor, wealth, and honor, thinking, "This is excellent, Your Majesty, I shall come tomorrow, or even today," and would have highly welcomed and accepted the task of preaching to the queens. But this lay disciple thought far-sightedly about the danger involved. Understanding that various complications could arise from this, his ability even at that moment to decline the king's request was a highly valuable quality. We must understand through this that, like a colorful and fragrant flower, a profound spiritual integrity lies behind the character of Chattapāni Upāsaka.</p>
+<p>Now, the news about the queens is not so important there. The main point the Buddha showed us by using that incident as a basis is that this Dhamma is not something to be confined only to learning. Only when it is put into practice can the true power and benefit of this Dhamma be obtained. No matter how beautiful a flower is, if it has no scent, it is just like a paper flower. There is no real benefit in a paper flower. That is the point shown here. Therefore, in connection with this, let us now reflect on this True Dhamma.</p>
+<p>When we speak of this True Dhamma, you can bring to mind the six qualities of the Dhamma. Everyone knows these six qualities: *Svākkhāta* (well-expounded), *Sandiṭṭhika* (directly visible), *Akālika* (immediate/timeless), *Ehipassika* (inviting one to come and see), *Opanayika* (leading inwards/progressive), and *Paccattaṃ veditabbo viññūhi* (to be personally realized by the wise). From the way these six qualities are explained, we can understand that this True Dhamma is indeed like a challenge for practice. In short, the Buddha explained the word *Svākkhāta* in this manner: "Monks, in a poorly-expounded (*durakkhāta*) Dhamma and Vinaya... Now, *Svākkhāta* means well-expounded, beautifully taught; whereas *Durakkhāta* means badly expounded, wrongly expounded." If you understand those two words in that way, then you can understand the passage declared by the Buddha: "Monks, in a poorly-expounded Dhamma and Vinaya, the lazy person (*kusīta*) dwells in comfort." That is to say, in a Dhamma that is taught wrongly or not properly, in that Dhamma-Vinaya—meaning in that dispensation—the lazy, indolent man lives comfortably and happily. "But in a well-expounded Dhamma and Vinaya, it is the energetic person (*vīriyavanta*) who dwells in comfort." In a dispensation of well-expounded Dhamma, it is the energetic one who lives happily. A very profound matter is expressed here. Why was it said that the lazy person lives in comfort in that Dhamma-Vinaya? Through that, we can also grasp the meaning of that word. We said that the term implies a wrongly or badly expounded Dhamma. What is the idea there? If a Dhamma sets forth a certain goal, but that goal cannot be achieved by practicing that Dhamma, then it is a poorly-expounded Dhamma-Vinaya (*durakkhāta*). A well-expounded Dhamma-Vinaya (*svākkhāta*) is one where whatever it promises to deliver is properly accomplished. Therefore, if one exerts effort in a poorly-expounded Dhamma-Vinaya, it is useless; it is a wasted effort. It is of no use. That is why it was said that the lazy person dwells in comfort. Since the well-expounded Dhamma-Vinaya is fruitful and fulfills the desired goal, in that dispensation, it is indeed the energetic one who achieves those results, rejoices, and dwells in comfort. That is the idea behind the term *Svākkhāta*.</p>
+<p>Let us understand the other terms based on that as well. You all may have heard about them to some extent. Next, the specialty of this Dhamma lies there. A very profound idea is expressed there. This Dhamma is not something where you do it now and get the results only hereafter. It is *Sandiṭṭhika*—its results can be seen right here and now, before one's very eyes; that is its specialty. *Sandiṭṭhika* means, just like saying "sandiṭṭhiko dhammo", it can be experienced in this very world, in this very life. Next, *Akālika* (immediate/timeless) means without delay, meaning there is no gap of time between the effort made and the result. In short, there is no gap between the Path and its Fruit. If one is engaged in the path of practice, that path culminates immediately in the Fruit. Since there is no interval in between, it is *Akālika*—there is no time gap there. *Sandiṭṭhika, Akālika*. *Ehipassika* means that within this Dhamma itself, there is a challenging power that says, "Come and see!" That is to say, it is as if the Dhamma itself is crying out, saying: "Put this Dhamma into practice and see!" Next, *Opanayika* means: if it said "Come and see," the next step is leading, drawing close; *upanayati* means bringing close. Where does it lead? Not to any external place, but within, into the heart. That is *Opanayika*. Since the results of this practice must be experienced from within, this Dhamma must be brought right inside. Next, that is exactly why it is finally said: *Paccattaṃ veditabbo viññūhi*—it is a Dhamma to be personally realized by the wise. It cannot be shown to another. It is a Dhamma that each individual must realize for themselves by walking along this path of practice.</p>
+<p>Now, based on that, we can see that on one hand, this Dhamma is for the energetic—inviting them to put this Dhamma into practice and obtain its fruits. Thus, a very valuable idea is expressed there. Next, let us see: we mentioned at the very beginning that the Buddha commenced His Dhamma sermons with the *Dhammacakkappavattana Sutta*. In short, the *Dhammacakkappavattana Sutta* is presented as the very first sermon in our dispensation. Indeed, its core and essence is the question of the path of practice (*paṭipadā*). In that sermon, the Buddha showed the world a certain Middle Path, going between two extremes. What are the two extremes? One extreme is indulgence in sensual pleasures (*kāmasukhallikānuyoga*). The other extreme is self-mortification (*attakilamathānuyoga*), which was shown by various teachers of that time like the Nigaṇṭhas and other sectarians—the attempt to achieve liberation by severely tormenting the body. Rejecting both, the Buddha revealed an entirely new path of practice called the Middle Way. It is known in brief as the Noble Eightfold Path. You all have understood this to some extent. The path that is capable of bringing about a complete transformation of a person's life, consisting of eight steps or eight factors, is called the Noble Eightfold Path: Right View, Right Thought, Right Speech, Right Action, Right Livelihood, Right Effort, Right Mindfulness, and Right Concentration. Thus, this Noble Eightfold Path is introduced as the Middle Path. That brings us next to the subject of this Middle Path.</p>
+<p>What is present within this Middle Path (*majjhimā paṭipadā*) is the very same energy (*vīriya*) we mentioned earlier. There is a way of applying this energy in a moderate measure; in other words, it is a path of practice that shows a certain balance of energy. So, in this regard, we should reflect as follows: The Buddha has pointed out "Right Effort" (*Sammā Vāyāma*) within this Noble Eightfold Path itself. *Sammā Vāyāma* means right effort. Correct exertion means the way energy must be applied in the proper manner. This is also called the Great Efforts (*Sammappadhāna*). This word *padhāna* also means supreme effort or exertion. The words *vāyāma*, *viriya*, and *padhāna* are largely synonymous. Thus, this energy, known as the Four Great Efforts (*Sammappadhāna*) or Right Effort (*Sammā Vāyāma*), has been shown by the Buddha in four ways. They are briefly known by these words: *saṃvara* (restraint), *pahāna* (abandoning), *bhāvanā* (developing), and *anurakkhaṇa* (protecting/maintaining). *Saṃvara* means closing or preventing, if we take its simple meaning. *Pahāna* means removing or discarding. *Bhāvanā* means developing or cultivating, and *anurakkhaṇa* means guarding or maintaining. Next, let us consider why this energy was shown in four ways. The Buddha has explained that this stream of consciousness (*citta-santāna*) is like a flowing river. Thus, the Buddha analyzed this mind as having the characteristic of movement—meaning in the sense of moving and flowing—or as something possessing a dynamic nature like a flowing river. Therefore, this energy is something that must be applied with great care, systematically. Indeed, it becomes fourfold.</p>
+<p>As an analogy, you all know that if a dam is to be built across a swiftly flowing river, a fourfold effort is required. Before building the dam, the incoming unwanted water must be blocked; it must be closed off (*saṃvara*). Next, the unwanted water already remaining there must be removed (*pahāna*). Meanwhile, in the sense of *bhāvanā* (development), one must begin the preliminary work of building the dam, gathering the necessary materials, and starting to construct the dam. Then, in keeping with the word *anurakkhaṇa* (maintenance), one must engage in guarding it; it must be protected and reinforced so that it is not swept away again. Indeed, those four points are expressed in the Buddha's analysis of the Four Great Efforts (*Sammappadhāna*). Why do we explain this in such detail? Because nowadays, various people have opinions regarding the work of the mind, saying: "This is not something where energy, exertion, effort, or striving should be applied. One should just watch the mind as it goes of its own accord." In truth, because they do not understand the fundamental principles of the Middle Path which the Buddha presented as so supreme, many people these days have turned this practice into mere "doing nothing" (idleness). Following the views put forward by certain philosophers who have no correct understanding of this Dhamma, and lacking proper comprehension of the path of practice in this dispensation, they interpret it as just sitting idle. But if you just let the mind wander as it likes and simply watch it, the task will not be accomplished. One has to keep in mind the analogy of building the dam.</p>
+<p>If we are to condense this Noble Eightfold Path, it consists of *Sīla* (Morality), *Samādhi* (Concentration), and *Paññā* (Wisdom). It is the Threefold Training of Morality, Concentration, and Wisdom that is contained within this Noble Eightfold Path. Morality (*Sīla*) means the restraint and discipline of body and speech. Concentration (*Samādhi*) means the one-pointedness of mind. Wisdom (*Paññā*) means seeing in terms of *Anicca* (Impermanent), *Dukkha* (Suffering), and *Anattā* (Not-self) through insight (*vipassanā*). There is a very ancient stanza that encapsulates this, which you all often use even as a protective chant (*paritta*):</p>
+<p>*Sabba pāpassa akaraṇaṃ, kusalassa upasampadā;*</p>
+<p>*Sacitta pariyodapanaṃ, etaṃ buddhāna sāsanaṃ.*</p>
+<p>We have translated it into Sinhala, and you may have heard it: "Refraining from all evil, the attainment of the wholesome, purifying one's own mind—this is the message of all Buddhas." This is an eternal truth. It is not just the advice of one Buddha, but *buddhānaṃ sāsanaṃ*—the message of all Buddhas. Within it are Morality, Concentration, and Wisdom. "Refraining from evil" is Morality (*Sīla*). "The attainment of the wholesome" (*kusalassa upasampadā*) refers to Concentration (*Samādhi*). It means entering and dwelling in the jhānas. When considered as one-pointedness of the wholesome mind, the concentrated mind is expressed within this attainment of the wholesome. Next, there is a Dhamma passage, a word of the Buddha: "One is purified through wisdom" (*paññāya parisujjhati*). Based on that, we can understand that ultimate purification is attained through Wisdom (*Paññā*). The purification of the mind at the highest level is accomplished by Wisdom. Therefore, to fulfill this Threefold Training, energy is required; exertion is required. It does not happen just like that. It does not happen automatically. It does not happen by merely watching the mind. That energy must be applied carefully, systematically, and progressively. That is why the Buddha points out: "Just as the great ocean slopes gradually, deepens gradually, even so in my dispensation there is a gradual training." *Anupubbakiriya, anupubbapaṭipadā*—a gradual training, a gradual performance, and a gradual path of practice. It is through such a wonderful process, bound by an amazing relationship of causes and conditions, that this liberation can be attained.</p>
+<p>And that becomes further clear to us through what is known as the Four Great Efforts (*Sammappadhāna*). It is an extremely profound matter, and at the same time, highly practical. For those rationalists—indeed, those who give primary place only to intellect—the true taste of this Dhamma cannot be enjoyed; its true fragrance cannot be obtained. But through this gradual path, it can be attained. Thus, the Four Great Efforts are described in this way. Although we state the Pali passages, we will apply the Sinhala explanation. Keep them in mind so that if any issues arise regarding these, they can be resolved; we shall state the Pali passage first. It is as follows: *Anuppannānaṃ pāpakānaṃ akusalānaṃ dhammānaṃ anuppādāya chandaṃ janeti vāyamati viriyaṃ ārabhati cittaṃ paggaṇhāti padahati.* Once the meaning of this passage is explained, the others will be easy to understand. For the non-arising of unarisen unwholesome states: *chandaṃ janeti* means one generates desire, an earnest wish. *Vāyamati* means one makes an effort or exertion. *Viriyaṃ ārabhati* means one arouses or initiates energy. *Cittaṃ paggaṇhāti* means one upholds the mind, makes a firm determination. Next, *padahati* means applying the supreme effort—an outstanding exertion made even at the risk of one's life. Thus, this series of terms is applied to the Four Great Efforts.</p>
+<p>The first one, as we said, is for the non-arising of unarisen unwholesome states. That is exactly what is meant by restraint (*saṃvara*). Next, for the discarding of arisen unwholesome states: *uppannānaṃ pāpakānaṃ akusalānaṃ dhammānaṃ pahānāya*. For the abandoning of arisen unwholesome states, one must apply the same desire (*chanda*), etc., in the same manner. Next, what we mentioned as belonging to the aspect of development (*bhāvanā*) is: *Anuppannānaṃ kusalānaṃ dhammānaṃ uppādāya*—for the arising of unarisen wholesome states, one must make a similar effort. Next, finally it says: *uppannānaṃ kusalānaṃ dhammānaṃ ṭhitiyā asammosāya bhiyyobhāvāya vepullāya bhāvanāya pāripūriyā chandaṃ janeti, vāyamati viriyaṃ ārabhati cittaṃ paggaṇhāti padahati.* Strengthening that dam is no easy task either. That must be why so many words are used there. For the maintenance (*ṭhitiyā*) of arisen wholesome states, for their non-confusion (*asammosāya*), for their further growth (*bhiyyobhāvāya*), for their plenitude (*vepullāya*), and for their fulfillment by development (*bhāvanāya pāripūriyā*), one must similarly generate desire, make an effort, arouse energy, uphold the mind, and apply supreme exertion.</p>
+<p>Look then, in what a wonderful manner the Buddha has shown these Four Great Efforts in accordance with the nature of this mind. A mind that flows like a river as mentioned before—constructing this dam is something that must be done with extreme care. Similarly, the person who aspires for liberation must apply those four types of energy according to the occasion. Next, this goes even further. If we reflect further, why did the Buddha use so many words regarding energy? There, too, lies a wonderful ascending sequence. The Buddha has described in a few words the mental sequence through which our mind directs itself towards something and proceeds up to supreme energy. *Chandaṃ janeti* means generating an interest or intent. First, there must be an interest, a desire. That is the beginning, that is the direction. Next, one makes an effort (*vāyamati*). Within the word "effort" is a certain testing of "can I do this?"—a preliminary attempt, an exertion. Next, *viriyaṃ*—here, one truly gets down to the work, initiates the task. While proceeding in this way, obstacles arise. It is at that moment that one must firmly uphold the mind, as expressed by *cittaṃ paggaṇhāti*; one must bring forth the power of determination. Having established that power of determination, understanding that this task—which seemed impossible—is something that must absolutely be done, and putting one's life at stake, one accomplishes the task through supreme exertion. That is represented by the word *padahati*. In this series of terms applied to energy, the highest word is *padhāna*. This does not mean "chief" or "main" (*pradhāna*) as in our ordinary Sinhala language. In the Pali language, *padhāna* is used in the sense of supreme, ultimate energy. Thus, the matter regarding *chanda*, etc., has been briefly mentioned to you.</p>
+<p>Next, among the *Bodhipakkhiya Dhammas* (Factors of Enlightenment) shown by the Buddha, some of you might have heard that, regarding energy, there is another matter just as important as the Four Great Efforts. For those who are keen on the path of practice, there is mention of the Four Bases of Success (*Iddhipāda*). *Iddhipāda*—when we say *iddhi* (psychic power/success), we immediately think of someone flying through the air. But, devotees, *iddhi* is a word that means accomplishment, fulfillment, or making something successful. Even in daily life, the things required to achieve success and accomplishment in any endeavor are called *Iddhipāda*. The word *pāda* (base/foot) is used there to mean the factors that help in achieving success. The Buddha highlights four such factors in this manner: *chanda* (desire/intention), *viriya* (energy), *citta* (mind/determination), and *vīmaṃsā* (investigation/wisdom). Indeed, these have been mentioned here in some way or another. The very essence of that energy which was expressed through words like *chandaṃ janeti*, *vāyamati*, etc., is what is presented here as the *Iddhipāda*. In fact, as shown by the Buddha, the practitioner, the yogi who engages in the Four Great Efforts in the manner described, reaches a point where they can understand the secret of success regarding their own endeavor, in accordance with their temperament. The secret of the success of one's energy can vary according to each individual's temperament. Some people achieve their aspirations by putting forward *chanda* (intention/desire). *Chanda* means interest or desire. Those are the temperaments of whom we hear in the world: "If I set my mind to something, or if I develop an interest in it, I will do it and will not look back." Next are the energetic (*viriya*) temperaments. It is through that very effort of *chandaṃ janeti*, *vāyamati*, etc., that they understand the secret of success within themselves. The second is energy (*viriya*). There are some who say: "If I put energy into something, I will see it through to the end. I will not back down." Next, there are others for whom *citta* (mind/determination) is the base of success: "If I make a determination regarding something, I will abide by that determination. I will accomplish it somehow." For such a person, *citta* is the base of success. *Vīmaṃsā* means investigative wisdom. That was not directly mentioned earlier, but through it, we can understand Wisdom (*Paññā*). The one who relies on this base of success, *vīmaṃsā*, is of a wise temperament. That is, investigative wisdom: "I must do this and see how it works. I am curious to see if what is said is true." There are those who engage in this effort by bringing forward such an attitude.</p>
+<p>To help an ordinary person, who may not have much interest in such doctrinal matters, understand this point, we can give a helpful analogy. Let us assume there is a boulder that is a nuisance to our work. We feel like pushing it aside. First, the interest, the desire, arises for it (*chanda*). Since the boulder does not budge merely because one has the desire, what does one do next? One makes a certain effort (*vāyāma*). One makes a small exertion to see: "Can I lift this or push it aside?" That exertion is, in fact, a testing of one's strength. Inserting something underneath it, like a crowbar, one tries to see if it can be moved—that is *vāyamati*. Thus, *chandaṃ janeti, vāyamati*. Next, *viriyaṃ ārabhati*. Once it is understood that it is possible, one arouses energy. Slowly, one begins to lift it. As one gets close to lifting it and pushing it over, one realizes that this is no easy task. Perhaps it might fall back on oneself. The mind might also start to waver. At that very moment, one makes a firm determination: "Even if I die, I will not abandon this task I have started," and pushes it all the way over. That is what is represented by the word *padahati*—the supreme energy (*padhāna viriya*). Next, through engaging in this very exertion, the power of wisdom arises naturally within oneself. From those experiences, investigative wisdom arises. Today, we say of such a person: "He is an experienced person." That is the wisdom, the investigative insight, gained from the wealth of experience acquired through such work. Thus, through this, we can understand the value of those *Iddhipādas*.</p>
+<p>These days, these matters seem as if they are hidden within the Dhamma. But if we bring them to light, they are extremely important, especially for those devotees who wish to experience this Dhamma practically. Sometimes, the rationalists may not like these things very much. Now, there is a certain trend going on. You all must understand this. According to this intellectual and rationalist attitude, they expect instantaneous realization of the truth. There are indeed certain discourses where, as the Buddha preached to people of immense paramis like Bāhiya Dārucīriya, they attained Arahanthood almost instantly. Certain scholars who have studied those discourses twenty or thirty times imagine themselves to be wise, belonging to that special category, even though no internal transformation has taken place within them. They underestimate the fundamental virtues such as faith (*saddhā*) and morality (*sīla*). Showing no interest in them, they expect instantaneous liberation merely by listening to the Dhamma. That is entirely a delusion. For the Buddha has pointed out five "liberating occasions" (*vimuttāyatana*) that help in attaining Nibbāna—not just one. A person can attain realization of the Path and Fruits: while listening to the Dhamma, while teaching the Dhamma, while reciting the Dhamma, while reflecting on the Dhamma, and finally, it is shown, while systematically developing a certain theme of concentration (*samādhi-nimitta*). Yet, out of those five, some people think that everything can be accomplished merely by listening. That is possible only for those highly exceptional individuals. It happens very rarely. Especially in this era, we can assume that it is extremely rare. It was in an era when beings of great merit lived, and when those possessing higher knowledges (*abhiññā*) like the Buddha—who could read the mental capacity of others—were present to guide them, that someone could realize Arahanthood instantly through a brief sermon. Therefore, one should not think that just because one holds a long list of academic degrees, one also belongs to that rare category.</p>
+<p>Indeed, there is another similar analysis shown in the Dhamma. The Buddha points out a certain fourfold classification based on the capacity of individuals for realization: *Dukkhā paṭipadā dandhābhiññā* (painful progress with slow realization), *Dukkhā paṭipadā khippābhiññā* (painful progress with swift realization), *Sukhā paṭipadā dandhābhiññā* (pleasant progress with slow realization), and *Sukhā paṭipadā khippābhiññā* (pleasant progress with swift realization). If we put it in Sinhala, here *paṭipadā* refers to the course of action including the effort, etc., mentioned earlier. Thus, the first category is: progress is painful and realization is slow. Next, the second category: progress is painful but realization is swift. Then the third category: progress is pleasant but realization is slow. And the fourth is: progress is pleasant and realization is swift. It is to this fourth category that individuals like Bāhiya Dārucīriya, who possessed a highly supreme power of paramis, belong. So, that capacity is not present in everyone. One must understand this for oneself. The Dhamma mentions those suttas upon hearing which people attained Arahanthood instantly, or which caused Arahanthood. Certain scholars study them with great enthusiasm and keen interest. But they do not put them into practice. The attitude mostly prevalent today is that these stages of realization can be attained merely by studying the Dhamma. That is entirely wrong. If those virtues such as faith and morality are lacking—in short, if faith (*saddhā*) is absent... Faith is shown as the seed of all virtues in this dispensation. A heart without faith is a dry heart. No virtues can grow there. Therefore, if one studies the Dhamma with a rationalistic attitude, without faith, doubting, and subjecting it to constant criticism and speculation, even if one studies it, no Path or Fruit will be attained. Except, perhaps, for imagining that one has attained them. Thus, we must realize that no matter what we expect, this task is not that easy. If it were so easy, there would be no need for a Buddha for this task. A Buddha appears in the world to present a certain unique matter which no other teacher could discover, even by practicing those extremely difficult disciplines. The fundamental principle of that is the Middle Path, the Middle Way (*majjhimā paṭipadā*). Within that Middle Way lies that very effort which must be applied with great care, as shown by the Buddha in His explanation of the fourfold energy. One cannot be in a hurry for this either. Just letting the mind wander as it likes and watching it is an extreme akin to indulgence in sensual pleasures (*kāmasukhallikānuyoga*). That is, letting it drift as it pleases. That way will not work either. Nor can one do it by struggling and agitating.</p>
+<p>In this connection, the Buddha has preached a valuable discourse that brings us closer to this point. It is known as the *Oghataraṇa Sutta*. That analogy will be highly useful to you in understanding this fundamental principle. On one occasion, a deva came and asked the Buddha: "O sorrowless One, how did you cross over the flood?" Here, what was called the "flood" refers, in the doctrinal sense, to the four floods: sensual desire (*kāma*), Becoming / Existence (*bhava*), views (*diṭṭhi*), and ignorance (*avijjā*). You have heard of the flood of sensuality (*kāmogha*). The flood of sensuality means the torrent of sensual desire, which flows all over the world. The flood of sensual desire is flowing. This life is a matter of these four floods: sensual desire (*kāma*), Becoming / Existence (*bhava*), views (*diṭṭhi*), and ignorance (*avijjā*). All of these are like torrential floods. Thus, within this existence, existence is a dynamic, moving thing in that very manner. What the Buddha is showing here is a massive, flowing flood. How does one cross over this flood then? This is no easy task. There are four floods: the flood of sensuality (*kāmogha*), the flood of Becoming / Existence (*bhavogha*), the flood of views (*diṭṭhogha*), and the flood of ignorance (*avijjogha*). The deva is asking how He crossed over these. The Buddha's reply is: *appatiṭṭhaṃ anāyūhaṃ*—"Without halting, without straining/struggling." "Without standing still, and without struggling, did I cross over the flood." Here, standing still (*appatiṭṭhaṃ*) refers to indulgence in sensual pleasures (*kāmasukhallikānuyoga*). Next, struggling (*anāyūhaṃ*) refers to self-mortification (*attakilamathānuyoga*). You can understand this with reference to the *Dhammacakkappavattana Sutta*. Then the deva asks further details: "How did you do that?" To that, the Buddha replies: "Friend—*āvuso* means friend—friend, when I stood still, I sank; when I struggled, I was swept away by the flood." Those are the two extremes. It is by avoiding those two extremes that one must travel on this path of Dhamma. It is there that the Middle Way lies; it is there that the Middle Path is found.</p>
+<p>Therefore, this is not something that happens of its own accord or merely by wishing, by completely abandoning energy and just watching the mind wander. Why are people inclined towards such an attitude? You all know the social environment of today. Due to the advancement of science and technology, in your daily lives at home as well as in your office work, you do things almost instantaneously. Everything is instant. Science and technology provide facilities to get everything done instantly. Now, many people expect to find that same instantaneous nature in this Dhamma and in the realization of the Dhamma as well. That is a mirage. That is a wrong idea. Because the environment in the past was one that truly supported spiritual development. But you can imagine how the environment of today is, judging by the way daily life is spent. How complex it has become due to this material progress! On one hand, it seems like a great advancement, but humans are deteriorating terribly, falling into animalistic states. These minds have fallen to the levels of demons, hell-beings, and hungry ghosts (*peta*). In such an era, it is difficult to find a proper, quiet environment—not only in noisy cities or villages but even in a forest, it is extremely difficult to find a secluded place. In such an age, you must think for yourselves: is this something that can be achieved by doing nothing, when it actually requires one to exert much greater effort, increasing one's energy hundreds and thousands of times? According to that, we should realize the value of the Middle Path shown by the Buddha.</p>
+<p>To explain it a bit more deeply, we can speak about the extreme we mentioned. The difference between the practice followed by the Nigaṇṭhas and the practice prescribed by the Buddha for the Sangha helps us understand this. Let us bring this out briefly to suit the occasion. Now, you may have heard that what belongs to the monks is the four requisites (*cattāro paccayā*): robes (*cīvara*), almsfood (*piṇḍapāta*), lodging (*senāsana*), and medicinal requisites (*gilānapaccayabhajja*)—the things necessary to sustain life. The Buddha has pointed out the course of practice to be adopted when using them, which is to reflect upon them (*paccavekkhaṇa*). This reflection is briefly introduced as restraint by knowledge (*ñāṇa-saṃvara*), a restraint accomplished through wisdom and knowledge. First, let us take the practice of the Nigaṇṭhas. What was it? The Nigaṇṭhas saw that things like food and clothing are what draw worldly people towards sensuality. That is obvious even when one goes to a city. Due to fashions regarding these, worldly people are drawn to sensuality. Therefore, what was the extreme practice adopted by the Nigaṇṭhas? Discarding clothing entirely (practicing nudity), and regarding food, you might have heard that there were even those who ate excrement in those times. In that way, they turned that effort into an extreme distortion; they struggled.</p>
+<p>But the Buddha showed a different path instead. These four requisites are things we can neither do with completely (in an attached way) nor do without. What is this Becoming / Existence (*bhava*)? It is a flowing stream. Now, you know that in a place where a strong current is flowing, if one wants to go from here to the opposite bank, one cannot go in a straight line as if drawing a straight line. After entering the water, one has to go to the opposite bank while yielding somewhat to the flowing current. Suppose you are caught in a current while swimming. What happens? You cannot just fight it head-on. Nor can you do nothing. One must escape and save oneself carefully, wisely, and gradually. That is the kind of path of practice the Buddha points out. Therefore, what is to be done is not the discarding of robes, nor resorting to distorted foods like excrement. Rather, the Buddha prescribed the manner of using them with restraint of knowledge (*ñāṇa-saṃvara*), with wisdom, turning it into a meditation, by way of reflection (*paccavekkhaṇa*).</p>
+<p>If we mention briefly, taking just one or two examples—regarding almsfood, it is said: Let the monks reflect in this manner before consuming almsfood. That is indeed like a meditation: "I do not take this food for amusement, for intoxication, for physical beauty, or for brawn, as laymen do. But solely for the maintenance of this holy life (*brahmacariya*), for the realization of Nibbāna." First, that purpose is considered. Next, secondly, also related to it is the meditative attitude regarding food and this body. It is developed as meditation, and also as the repulsiveness of food. There is a meditation called the analysis of elements (*dhātu-manasikāra*): this food is made up of earth (*paṭhavī*), fire (*tejo*), wind (*vāyo*), and water (*āpo*) elements. Likewise is this body. Next, one reflects that this food, made of earth, water, fire, and wind elements, which was clean, becomes dirty, impure, unappealing, and repulsive once it enters this dirty, impure body of mine. See then how the Buddha solved the problem of food—which the Nigaṇṭhas feared and discarded—through the Middle Path. He made that very food an aid to Nibbāna. The purpose of this is: this body is maintained for Nibbāna, merely for sustenance. This is not like the fashion with which the ordinary people of today, who strive to remain in Becoming / Existence (*bhava*), treat food. It is not that running after food that is mentioned here. Merely, a certain control is exercised over it. Looking at them from a balanced perspective, it is then turned into a meditation. That shows the Middle Way pointed out by the Buddha. Giving one example is sufficient. Thus, there are such passages of reflection regarding all four requisites.</p>
+<p>Through these, we must understand that nowadays, large crowds are drawn to the idea that the task is easy. It appears easy, but through that, a serious wrong view (*micchā-diṭṭhi*) is spreading, which is contrary to this Middle Path. Doing nothing is indeed something pleasing to many. If all of this can be achieved by doing nothing, why exert oneself? Why keep precepts? Why meditate? Some even say that meditation is unnecessary. "There is no need to control the mind in the name of meditation. Let it go where it wants and just watch." If those people were to enter the water, and if they were to just watch while crossing a torrential flood, they would be seen acting contrary to their own words. To satisfy their material needs in daily life, they are compelled to act in a way that is close to those very *Sammappadhāna* and *Iddhipāda* mentioned earlier. This shows us that the Buddha has brought to light a wonderful natural law (*dhammatā*) regarding our stream of consciousness (*citta-santāna*). He saw this properly; He saw its true reality. Having seen that, He said that the human mind functions in these four ways. Likewise, the Buddha pointed out a balanced path of practice to be followed with great care. Therefore, we must highlight these points. Especially since this is an era when various wrong views are spreading, some people—especially those we call rationalists (not that we say this as an insult, but such an attitude is prevalent nowadays)—study the Dhamma and possess some understanding of it. Through that scholarship, from the knowledge they have gained, some believe they have complete comprehension of this dispensation. No, devotees, this dispensation is threefold: *Pariyatti* (learning), *Paṭipatti* (practice), and *Paṭivedha* (realization). If only learning (*pariyatti*) existed, then the view held by those scholars would be correct. But here, it is not limited to learning alone. It must be put into practice—*Paṭipatti*. Next, the culmination of practice is realization (*Paṭivedha*)—one must penetrate it with insight wisdom (*vipassanā-paññā*), in its supreme form through meditation. That is why the motto of the Buddhists in the past—which is rarely heard nowadays—was: *Suṇātha, dhāretha, carātha dhamme*—"Listen, retain, and practice the Dhamma." "Listen, retain, and walk in the Dhamma."</p>
+<p>"Listen, retain, and practice the Dhamma; listen, retain, and walk in the Dhamma." This point is further clarified by the passages shown by the Buddha regarding the listening to the Dhamma, showing that this was preached for a practical purpose. Regarding the proper listening to the Dhamma, it is mentioned as follows: Or, regarding a person who has a correct understanding of the Dhamma, these words are mentioned. Such a person—let us say, in modern terms, such a scholar or such a disciple—has the Dhamma... and many words are used for this: *sutā, dhatā, vacasā paricitā, diṭṭhiyā suppaṭividdhā*. That person has heard the Dhamma (*sutā*), and retains it (*dhatā*)—not having heard it through one ear and let it out through the other. Next, they have not stored it in computers and set it aside. In those devotees who have stored the Tipitaka in computers, the Dhamma may not be present within. That is just an action. They did not take it within. That is why in the past, they spoke of the lineage of reciters (*bhāṇaka*); in those times, there were individuals of single-minded listening (*ekasuta*). They retained what they heard upon merely hearing it once. Next, *sutā, dhatā*—they retained the Dhamma. "There is a great book at home, but its name is not remembered"—our ancestors began to say this only after the custom of memorizing the Dhamma was lost. Nowadays, this is considered unnecessary, and sometimes even laughable. But the one who wishes to make use of it retains that Dhamma in the mind, like storing lion's fat in a golden casket. Having retained it through *sutā, dhatā*, they do not stop there. *Vacasā paricitā*—they must master it verbally. They must recall and memorize it from time to time. Next, it is not reciting it like a parrot. Those words—the things spoken of—must be turned over in the mind, investigated, and examined. Investigating in this manner, *diṭṭhiyā suppaṭividdhā*—when examining it thus, one obtains the ability to penetrate it through right view. Through those words, then, it is shown that the Dhamma is a practical thing. Dhamma-listening must be done in that manner, with a practical purpose and attitude.</p>
+<p>The same is shown in another way. The manner in which a noble disciple (*ariyasāvaka*) listens to the Dhamma is described as follows: It is shown how a noble disciple listens to the Dhamma, in short, in a way that leads to the realization of the Path and Fruits. A noble disciple listens in this manner: *aṭṭhikatvā manasikatvā sabbacetaso samannāharitvā ohitasoto dhammaṃ suṇāti*. At some point, a noble disciple, having paid attention (*aṭṭhikatvā*), listens with the primary thought: "This Dhamma is of benefit to me." Not with the purpose of analyzing this, writing a book about it, or obtaining a degree. He listens to the Dhamma with the thought: "This is of use to me. There is a benefit in this for me." Next, *manasikatvā*—reflecting upon what is heard, contemplating word by word at the very moment of listening. Without going into thoughts and speculations like: "I already know what is being said. What is there to explain about that?"—he contemplates it word by word. *Sabbacetaso*—not with half the mind here and the other half at home. *Sabbacetaso, samannāharitvā*—directing the entire mind to it, focusing attention, applying complete attention. *Ohitasoto dhammaṃ suṇāti*—he listens with inclined ears. This is an ancient expression: listening with inclined ears. We see certain animals inclining their ears. We cannot tell from the outside whether humans are inclining their ears or not. But listening with inclined ears means full attention. It means directing one's attention completely to it. Nowadays, since we have various scientific ears (recorders and devices) instead of our own ears, we leave them to listen, and when the Dhamma is preached, we step aside. This is just like saying, "There is a great book at home, but its name is not remembered." Those words can be applied today to modern machines like computers and cassette recorders. "There are many cassette tapes of the most talented monks in our house. But we have no time to listen." It is just like that.</p>
+<p>Such is the attitude prevalent today. Nevertheless, there is that intellectual attitude: "If we can produce light whenever we want by pressing a button, why can't we produce the light of wisdom merely by listening to a short sermon?" Some people raise such arguments nowadays. "This is an extremely advanced era. In such an era, if they could achieve these in the past, in an era of bullock carts, why can't we do so now?" People who ask such questions have indeed come and questioned us. We have to remind them of the difference between the environment of those times and that of today. The spiritual environment in those days was truly wonderful. Everyone was a seeker of truth. Among the brahmins as well as others, there was indeed a massive effort made for liberation. Even if they sometimes went astray. Today, in which direction are people running? Towards material progress. Everyone is running after that, caught up in that current, chasing a mirage. Among those who are running, even if you do turn towards the Dhamma, you have to operate amidst a massive array of obstacles. Devotees living in household life come and tell us: "We would like to meditate. But the children do such things all night... we don't need to describe it—they are in front of this or that machine. Or our lives are spent in the midst of a massive din." There is a great sense of frustration in them.</p>
+<p>Through that, we can understand that in this day and age, that state can be achieved only by putting in double, triple, or even a hundredfold energy. Holding degrees and being learned alone will not bring about the Paths and Fruits. You do not belong to the category of swift realization (*khippābhiññā*) just because you think you do. That is a point we must retain well in our minds. Reflecting in this way, today this group of devotees, practicing a simple life, a large number of you have observed the eight precepts for this Uposatha day, and others have established themselves in higher virtues. That is the importance of morality (*sīla*). Without taking the first step properly, the final result alone cannot be achieved. These factors of Morality, Concentration, and Wisdom are interconnected. This is something bound by causal relationships. Just as we often remind you regarding *Sammā Diṭṭhi*, *Sammā Saṅkappa*, etc., there is a wonderful relationship of cause and effect between each and every step in the Dhamma. That is why it was said that there is a gradual sequence. That sequence cannot be broken. Therefore, one must start from the very alphabet. One must go down to zero. One must start with Morality (*Sīla*). One must start with Faith (*Saddhā*). Fundamentally, Faith. Faith is the seed in this dispensation. No virtues accumulate in a heart devoid of faith. It is with faith aroused that one next approaches a teacher. *Saddhājāto upasaṅkamati*—"One with faith approaches," as pointed out by the Buddha. Having approached, one listens to the Dhamma, retains it, and reflects on it in that manner. In that way, systematically embarking on the practice, generating great desire and energy, and getting down to the practice, one can accomplish this ultimate goal.</p>
+<p>Thus, although the Buddha set the Wheel of Dhamma in motion on a day like today, the power of that Wheel of Dhamma seems to be fast fading away from this society due to the spread of such wrong views. Therefore, wise devotees must reflect. What must be done first cannot be put off for later. Nor can what must be done first be completely discarded. Therefore, those virtues of Faith (*Saddhā*) and Morality (*Sīla*) must be completed first. It is upon those virtues that the mind can next be composed in Concentration (*Samādhi*). It is to a concentrated mind that impermanence (*anicca*) and unsubstantiality (*anattā*) are understood by way of Wisdom (*Paññā*) and Insight (*vipassanā*). The supreme, peaceful, and sublime Deathless Nibbāna, which is free from all samsaric suffering such as aging (*jarā*), illness, and death (*maraṇa*) shown by the Buddha, can be attained through the realization of the Paths and Fruits of Sotāpanna, Sakadāgāmī, Anāgāmī, and Arahant. Thus, you must understand that within this brief period of time, we have briefly touched upon many facts. This is for you to reflect upon further. These points were mentioned not merely for you to stop at reflecting, but to adjust your lives in accordance with their practical value.</p>
+<p>Thus, in connection with this, you have established yourselves in morality, disciplined your body and speech, and listened to the Dhamma with focused attention for about an hour. Listening to the Dhamma is said to be a meritorious deed, a wholesome act (*kusala*), because it is something that aids your Nibbāna. That listening to the Dhamma is highly beneficial. It even provides the strong supportive condition (*upaniṣraya-sampatti*). By the blessings of that listening—if we look at these blessings in this very world, in a directly visible (*sandiṭṭhika*) and immediate (*akālika*) manner—let us resolve that we have used this brief time to develop within ourselves the faculties (*indriya*) and powers (*bala*) of Faith (*Saddhā*), Energy (*Viriya*), Mindfulness (*Sati*), Concentration (*Samādhi*), and Wisdom (*Paññā*). Through that Dhamma power, may you find the rare association of admirable friends (*kalyāṇa-mitta*), even with difficulty or by making your way through thick forests, and before this lamp of the dispensation is extinguished, may this serve as a strong supportive condition (*upaniṣraya-sampatti*) for you to escape this perilous saṃsāra and attain sublime Nibbāna through the realization of the Paths and Fruits of Sakadāgāmī, Anāgāmī, and Arahant. Likewise, make a wish that if there be any beings in this universe, from the lowest Avīci hell to the highest Akaniṭṭha heaven, who wish to rejoice in this wholesome deed of Dhamma preaching and Dhamma listening, may they all rejoice in this merit and find peace in sublime, deathless Nibbāna through the Bodhi of their aspiration. With that aspiration in mind, recite these verses:</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_021.html" class="doc-btn">← Previous Sermon (021)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_023.html" class="doc-btn">Next Sermon (023) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

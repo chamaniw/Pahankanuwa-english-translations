@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 064 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_063.html" class="doc-btn">← Previous Sermon (063)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_065.html" class="doc-btn">Next Sermon (065) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 064</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_064_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_064_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_064_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #64</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.180)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Nārati sahati dhīraṃ, nārati dhīrasahāti;</p>
+<p>dhīro ca aratiṃ sahati, dhīro hi aratīsaho.</p>
+<p>Sabbakammavihāyinaṃ, paṇuṇṇaṃ ko nivāraye;</p>
+<p>Ko taṃ jambonadassevā, nekkhaṃ ninditumarahati;</p>
+<p>Devāpi taṃ pasaṃsanti, brahmunāpi pasaṃsito ti.</p>
+<p>From:</p>
+<p>Aṅguttara Nikāya (AN 2.3.9 / Aṅguttara Nikāya Duka Nipāta)</p>
+<p>Dear Listeners,</p>
+<p>This Poson Full Moon Poya Day, which is regarded as the day on which the Buddha Sasana was established in our island, is an excellent day to recollect our practice. Especially in this year, which commemorates the passing of 2600 years since the Enlightenment, we hear many discussing "aligning ourselves in practice." It was with this "aligning ourselves in practice" in mind that we decided to present to you today a sutta discourse that was immensely popular during the times when the Buddha Sasana established in Lanka by Ven. Mahinda Maha Arahant shone brilliantly. In the past, this discourse was known as the *Maha Ariyavamsa*. The two verses recited at the end of that sutta are what we have presented as our theme.</p>
+<p>On one occasion, while the Teacher of the Three Worlds, the Fully Self-Awakened One, was residing at Jetavana monastery in Savatthi, he addressed a large congregation of monks and delivered this *Ariyavamsa Sutta*. Today, this is found in the Book of Fours (Catukka Nipata) of the Aṅguttara Nikāya. It was not prompted by any particular external event; rather, we must understand that an intention arose in the Buddha himself to highlight the dispensational practices in a way that would deeply touch the hearts of the Sangha.</p>
+<p>Therefore, he commenced this marvelous discourse in this manner: "Monks, there are these four noble lineages (ariyavaṃsā) which are recognized as foremost (aggaññā), long-standing (vaṃsaññā), ancient (porāṇā), unadulterated (asambhinnā); which are not doubted, which were not doubted in the past, nor will be doubted in the future, and which are not rejected by wise ascetics and brahmins." Having commenced thus, he explains them one by one to the Sangha as follows:</p>
+<p>"Herein, monks, a monk is content with any kind of robe whatsoever (*itari-itara cīvara santosa*)." We need to explain the meaning of the words *itari-itara cīvara santosa* so that you can understand. In Pali, *itara* refers to "one of two." Thus, if we say *itari-itara cīvara santosa*, what are the two alternatives? It could be a coarse robe or a refined robe; it could be a new robe or an old robe. Thus, it means "either of the two." To be content with *itari-itara* robes generally means that whatever kind of robe is received, one is fully satisfied with it. The first point is that a monk in this Sasana is endowed with contentment with any kind of robe whatsoever. The second point is that he praises the virtue of such contentment with robes. He speaks of its value to other members of the Sangha. The third point is that, in his search for robes, he does not resort to improper or unsuitable means. If he fails to obtain a robe, he does not become dejected, troubled in mind, or distressed. If he does obtain a robe, he does not become greedy (*giddha*), bound, or attached to it with craving / thirst (*taṇhā*). Instead, seeing its danger (*ādīnava*), he uses it with the wisdom of deliverance (*nissaraṇa-paññā*). Furthermore, it is said that he does not exalt himself or disparage others on account of his virtue of contentment with robes. Finally, it is stated that the monk is skilled and energetic in this contentment, not lazy, and is possessed of mindfulness and clear comprehension (*sati-sampajañña*). The Buddha declares that such a monk is said to be established in the ancient, foremost noble lineage. This is the first quality: contentment with any robe whatsoever—the virtue of being satisfied with whatever robe is received.</p>
+<p>Next, the Buddha declares: "Herein, monks, a monk is content with any kind of alms-food whatsoever (*itari-itara piṇḍapāta santosa*)." This means that when he goes on alms-round, whether the food is coarse or sweet, little or much, he possesses the virtue of being content with whichever of the two he receives. He is content with any alms-food whatsoever. Secondly, he praises the virtue of such contentment with alms-food. He tells others that this is a valuable practice. Thirdly, in his search for alms-food, he does not resort to improper means. Fourthly, if he does not receive alms-food, he does not become dejected or mentally distressed. When he does receive alms-food, he does not become greedy, attached, or enslaved by it through craving / thirst (*taṇhā*). Instead, seeing its danger, he consumes the alms-food with the wisdom of deliverance (*nissaraṇa-paññā*), keeping Nibbāna as his goal. Furthermore, he does not exalt himself or disparage others because of his virtue of being content with any alms-food whatsoever. Finally, he is skilled and energetic regarding this contentment with alms-food, not lazy, and is possessed of mindfulness and clear comprehension (*sati-sampajañña*). Concerning such a monk, the Buddha declares that he is said to be established in the ancient, foremost noble lineage.</p>
+<p>Next, the Buddha speaks concerning lodging: "Herein, monks, a monk is content with any kind of lodging whatsoever (*itari-itara senāsana santosa*)." This refers to the quality of being content with whatever lodging is received. He is endowed with contentment with any lodging whatsoever. He praises the virtue of such contentment with lodging to others. Furthermore, he does not resort to improper means to acquire lodging. If he does not obtain lodging, he does not become mentally distressed. To state it briefly: when he does obtain a lodging, instead of using it with greed, clinging, and possessiveness, he uses that lodging while contemplating its danger, with the wisdom of deliverance (*nissaraṇa-paññā*), and with Nibbāna in mind. He does not exalt himself or disparage others on account of his virtue of being content with any lodging whatsoever. He is skilled, energetic, and possessed of mindfulness and clear comprehension (*sati-sampajañña*) regarding this contentment with lodging. The Buddha declared this as the third quality of a monk established in the foremost noble lineage.</p>
+<p>The fourth noble lineage is presented in a unique way: *bhāvanārāmo hoti bhāvanārato, pahānārāmo hoti pahānārato*—both of these spiritual qualities are mentioned there. He is one who delights in meditation, one who rejoices in meditation; one who delights in abandoning, one who rejoices in abandoning. By "delighting in abandoning," we should understand the abandoning of defilements. This fourth factor concerns the monk who possesses both qualities: meditation and abandoning. He is devoted to meditation and delights in it. Likewise, he is devoted to the abandoning of defilements; he desires it and engages in it. Secondly, such a monk does not exalt himself or disparage others on account of these two noble qualities of delighting in meditation and delighting in abandoning. Thirdly, he is skilled and energetic in delighting in meditation and abandoning, not lazy, and possesses mindfulness and clear comprehension (*sati-sampajañña*) regarding them. Such a monk is described as one established in the fourth noble lineage.</p>
+<p>Summarizing these, the Buddha then declares: "Monks, these four noble lineages are foremost (aggaññā), long-standing (vaṃsaññā), ancient (porāṇā), unadulterated (asambhinnā), not doubted in the past, nor will they be doubted in the future, and not rejected by wise ascetics and brahmins." With these words, the Buddha describes them as qualities accepted since ancient times as foremost, enduring over a long period, belonging to the noble lineage, and highly valued qualities that are neither doubted nor rejected by wise ascetics and brahmins.</p>
+<p>Having shown these four noble lineages, the Buddha further states: "A monk who is endowed with, possessed of, and established in these four noble lineages, even if he dwells in the eastern quarter, he overcomes discontent (*arati*) and is not overcome by discontent." Discontent (*arati*), dear merits-seekers, refers to a lack of delight in the wholesome practices of the Sasana, such as meditation. At the same time, we must also understand its counterpart. The words *arati* (discontent) and *rati* (delight) appear together in this sutta and are frequently encountered. *Rati* means delight in the five cords of sensual pleasure. *Arati* is also unwholesome, though in a different way. It is not a lack of delight in sensual pleasures, but rather a lack of delight in the spiritual virtues of the Sasana. To put it simply, discontent (*arati*) is like the thought of reverting to lay life.</p>
+<p>Here, the Buddha concludes by stating that even if a monk endowed with these four noble lineages dwells in the eastern quarter, he overcomes discontent. This means he can conquer any dissatisfaction with the monk's life. Discontent does not overcome him; he does not submit to discontent. Furthermore, the Buddha declares that even if such a monk dwells in the western quarter, the northern quarter, or the southern quarter—indeed, in whichever quarter he may dwell—he overcomes discontent and is not overcome by discontent.</p>
+<p>Next, the Buddha asks: "Why is that, monks? Why do I say so? *Arati-rati-saho hi dhīro*—because that wise one, endowed with courage and fortitude, conquers both discontent and delight." Having declared this, he summarized the matter in the two verses we mentioned earlier. Discontent does not conquer the wise one; it does not crush or overwhelm him. Why? *Nārati dhīraṃ sahati*—discontent has no strength to overcome the wise one; *nārati dhīrasahāti*—discontent possesses no power to subjugate the wise one.</p>
+<p>Next, it says: *dhīro ca aratiṃ sahati, dhīro hi aratīsaho*—only the wise monk conquers discontent; indeed, only the wise one is capable of overcoming discontent. The Buddha has declared this multiple times to emphasize this single point. Then he says: *sabbakammavihāyinaṃ*—one who has cast off all *kamma* (volitional actions); *paṇuṇṇaṃ*—one who has dispelled all defilements. "Who can obstruct such a monk?" (*paṇuṇṇaṃ ko nivāraye*). This means there is no one capable of obstructing him.</p>
+<p>"Ko taṃ jambonadassevā, nekkhaṃ ninditumarahati" — *Jambonada* refers to gold obtained from the Jambu River, which is considered far more valuable than other kinds of gold. Who would dare to blame a monk who is as pure as a gold coin made of Jambonada gold? The meaning is that no one is capable of blaming him.</p>
+<p>Then, further praising him, the verse says: *devāpi taṃ pasaṃsanti, brahmunāpi pasaṃsito*—even the devas praise that monk, and he is praised by Brahma as well. With these verses, the Buddha presents a statement that further elevates and reinforces the points made.</p>
+<p>In explaining these verses, since ancient times, commentators have generally drawn upon the thirteen rigorous ascetic practices known as the *dhutangas* of the Sangha. It is in light of these thirteen rigorous practices that contentment with robes, contentment with alms-food, contentment with lodging, and delight in meditation are explained. In explaining them, as we have heard from the past, someone might think—it might appear that there is something missing here. You have surely heard of the four requisites (*sivpasa*): robes (*cīvara*), alms-food (*piṇḍapāta*), lodging (*senāsana*), and medicinal requisites for the sick (*gilānapaccaya*). You might see the omission of medicinal requisites as a shortcoming. However, medicine is generally considered to be subsumed under alms-food. In ancient times, medicines and such were also obtained by going on alms-round. Therefore, it is shown as belonging to that category. The fourth factor presented here is meditation and abandoning. When discussing these, various commentaries point to the rigorous ascetic practices (*dhutanga*). You may have heard that the Buddha placed the Maha Arahant Kassapa in the foremost position (*etadagga*) among those who practice these *dhutangas*. Ven. Maha Kassapa received such great respect from the Buddha precisely because he maintained these rigorous ascetic practices.</p>
+<p>We need to gradually familiarize ourselves with these *dhutangas*. Among them, two of the thirteen practices concern robes, corresponding to contentment with robes. There are two *dhutangas* related to being content with whatever robes are received. The first is *paṃsukūlika* (the refuse-rag-robe-wearer's practice). Though the term "paṃsukūla" has different meanings today, *paṃsu*, dear merits-seekers, means dust or a heap of dust. Rag-robes are pieces gathered and picked up from dust heaps. Today, no one would even like to think about such things. Yet, we have heard that even the Buddha made his rag-robes this way. Where did they find the cloth required for these rag-robes? It was either while going on alms-round, from rubbish heaps, or from shrouds discarded in cemeteries. It is recorded in the texts that the Buddha took the shroud thrown over the slave girl Punna in the cemetery to make his own rag-robe. In any case, such a robe is of few wishes (*alpecca*). A monk who undertakes the *paṃsukūlika* ascetic practice rejects robes offered directly by laypeople. He upholds the rigorous practice of using only robes stitched from pieces of cloth gathered from roadsides or cemeteries.</p>
+<p>When someone is ordained, especially at the time of higher ordination (*upasampadā*), the Buddha reminds the monk of the minimum things he should expect. These are known as the four supports (*nissaya*). "This monkhood has refuse-rag robes (*paṃsukūlacīvaraṃ nissāya*) as its support." One must be content with rag-robes. Household offerings are extra gains; therefore, one should not ordain with the expectation of extra gains. It is said that, at the very least, if one receives a refuse-rag robe, one should be satisfied. Thus, this *dhutanga* of using refuse-rag robes is shown as the first aspect of contentment with any robe whatsoever.</p>
+<p>The second *dhutanga* related to robes is *tecīvarika* (the triple-robe-wearer's practice). Members of the Sangha sometimes resolve: "I will be content with only three robes." The three robes are the outer patch-robe (*saṅghāṭi*), the upper robe (*uttarāsaṅga*), and the inner robe (*antaravāsaka*). To be content with these three robes is the practice. Here, a monk resolves for a certain period, or for his entire life: "I will not use a fourth robe; I will be content with only these three robes." This contentment with robes is what is called the *tecīvarika* ascetic practice. This too is a form of contentment. When people come from the lay world, they often bring along ideas of clothing fashion. If they continue to pursue such fashions even after wearing robes, what monkhood is left there? Therefore, to introduce the fundamental purpose and value of monkhood, the Buddha demonstrated this through his own example.</p>
+<p>In particular, the Maha Arahant Kassapa strictly observed this *tecīvarika* practice. He never took more than three robes. These two *dhutangas* concerning contentment with robes are detailed in the texts.</p>
+<p>Next is contentment with alms-food. This is represented by five *dhutangas*. The first is one you can easily understand: if a monk resolves to undertake the *piṇḍapātika* (alms-food-eater's) practice, he survives solely on food received through alms-round. If observed rigorously, he does not accept invitations to meals or food brought to the monastery by laypeople.</p>
+<p>This is why, when explaining the supports (*nissaya*) to a newly ordained monk, the Buddha states that this is the minimum he should expect: "This monkhood has alms-food (*piṇḍapātabhojanaṃ nissāya*) as its support." He says that one ordains for alms-food. This is because it is a practice of few wishes, and living on alms-food is a way of showing favor to the world. Furthermore, it is described in the texts as being like a bee that takes pollen from a flower without harming its fragrance or color. In this way, without causing trouble to anyone, he goes from house to house and is content with whatever is received. Through this, he also abandons his pride. He does not say, "I live on my own wealth." Instead, he reflects: "My life is dependent on others" (*para-paṭibaddhā me jīvikā*). Understanding that "I survive on food given by faithful devotees" helps in maintaining the virtues of a monk. Therefore, a monk who resolves to practice this even more rigorously depends solely on alms-food.</p>
+<p>Next, a monk who practices this even more strictly undertakes *sapadānacārika* (the uninterrupted alms-round practice). This too is designated as an ascetic practice. *Sapadāna*, dear merits-seekers, means going on alms-round from house to house in uninterrupted order. Even during the Buddha's time, there were some monks who frequently visited the houses of wealthy, faithful devotees, sometimes even entering inside to eat. Without selecting houses in that manner—whether it be a wealthy mansion or a poor hut—he walks for alms in consecutive order (*sapadāna*). This is considered a valuable practice. There were those who kept such rigorous ascetic practices. Ven. Maha Kassapa Maha Thero must have observed these. He walked for alms from house to house. Through this, he was like the moon (*candūpama*); he never became attached to any household. He was seen, but he did not cling. He maintained no intimacy or close association. The benefits of this are great: the monk avoids unnecessary involvements with laypeople, and it also guards against the craving for taste (*rasa-taṇhā*). Sometimes, monks frequent certain houses because they receive delicious food there. Free from such greed and craving for taste, and providing an opportunity for everyone to gain merit, a monk resolves and practices this *sapadānacārika* ascetic practice.</p>
+<p>Next is the special practice called *ekāsanika* (the one-session-eater's practice). Certain monks who are devoted to meditation resolve to eat only once a day. Indeed, even the Buddha observed this. It is quite amazing to hear of this today. At one time, in the early days of the Sangha, some monks used to eat even at night. When the Buddha opposed this and laid down rules, some monks rebelled. Yet, when the Buddha spoke of the benefits of *ekāsanika*—eating only once a day—it was truly wonderful. He declared many benefits of eating only once a day: *appābādhatañca, lahuṭṭhānañca, balañca, phāsuvihārañca*—fewness of illnesses, lightness, physical strength, and a comfortable dwelling. Taking light food in this way supports a meditative life. Some resolve to observe this practice of eating only one meal a day as a *dhutanga* for their entire life, and some for a specific period. This is what is called the *ekāsanika* practice.</p>
+<p>Another such difficult ascetic practice is *pattapiṇḍika* (the bowl-eater's practice). Some monks resolve to consume only food that is placed directly into their alms-bowl. They do not eat from other plates or vessels. This brings them great tranquility. Today, laypeople bring food in various types of vessels, which can sometimes distract the mind. But that monk takes whatever is received in his bowl, goes under a tree, and eats. While being content with whatever is received, this practice also prevents the mind from being distracted by the craving for taste and unnecessary vessels, thereby aiding concentration. Therefore, monks adopt this as an ascetic practice. Thus we have *piṇḍapātika*, *sapadānacārika*, and *ekāsanika*.</p>
+<p>Next is *khalupacchābhattika* (the practice of refusing later food). You may not have even heard of this. It means that while some members of the Sangha might eat more if something else is brought after they have finished their meal, a monk undertaking this practice firmly resolves: "Once I have finished eating and indicated that I am done, I will not take any extra food." It reduces the craving for taste and helps maintain a light, unburdened existence. Just like craving for clothing, craving / thirst (*taṇhā*) for food is a powerful force in this cycle of existence; we can see how even animals fight and kill each other for food. These are tendencies we have carried in our minds through *saṃsāra*. A verse in the Theragatha states: "One who is greedy and bound by the craving for taste (*rasataṇhāya gadhito*) does not awaken his heart to Nibbāna." Monks conquer this in various ways and correct their own shortcomings. This is not a mere vow to show off to anyone, nor is it to exalt oneself or disparage others. The practice is observed solely to crush one's own defilements. This is called the practice of effacement (*sallēkha-paṭipadā*). Indeed, to summarize these virtues for you, they consist of contentment (*santuṭṭhitā*) and fewness of wishes (*alpeccatā*). First comes *alpeccatā*, which means having few desires. *Santuṭṭhitā* means being content with what is received. *Subharatā* means being easy to support. And there is the special word *sallēkha*, which means the cutting away of defilements—examining one's own shortcomings and practicing accordingly to overcome defilements as the occasion demands. Finally, there is *vīriyārambhatā* (arousing of energy). If one eats too much food, drowsiness increases. What is spoken of here is a light diet suitable for meditation. The five *dhutangas* related to contentment with alms-food are traditionally explained in this manner.</p>
+<p>Although we are trying to explain this *Ariyavamsa* sermon in an hour, it is truly wonderful, dear merits-seekers. If we briefly mention its history—it is a significant part of our history. We mention this so you can understand its value. The Mahavamsa records that King Vohārika Tissa was a monarch who performed an extraordinary and grand service for the Sasana in ancient times. The Mahavamsa states that he established alms-funds and arranged for the preaching of the *Ariyavamsa Sutta* throughout the land. Many other Dhamma stories mention that Theros like Dīghabhāṇaka Abhaya preached the *Ariyavamsa* throughout all three watches of the night. Even if we cannot do so for all three watches, we are attempting to explain it briefly within this hour. It is recorded that during the times when the Buddha Sasana flourished, when the *Ariyavamsa* was preached in the city of Magama, people from the entire region flocked to hear it. It is also mentioned that even kings listened to the *Ariyavamsa* preaching throughout all three watches of the night. It was treated with such great importance because *Ariya* refers to the Buddhas, Paccekabuddhas, Arahants, and noble disciples of the Tathāgata. Since this was a discourse that highlighted the lineage of their own noble family, it was treated with immense respect. Not only the Sangha, but even laypeople listened to this *Ariyavamsa* sermon.</p>
+<p>We have spoken about robes and alms-food; now we must speak about lodgings. Regarding lodgings, five *dhutangas* are mentioned. First is *āraññika* (the forest-dweller's practice). A monk resolves: "I will dwell in the forest for this period." Or sometimes, so that others do not know, he might come to the village during the day and return to the forest at night. To put it briefly, he dwells in the wild forest. Dhamma stories record that even some novice monks undertook this practice secretly, because it is not something to be advertised. Since it is conducive to their meditation and they require seclusion, they resolve to spend the entire period in the forest, letting go of the expectation of life, arousing spiritual urgency (*saṃvega*), and using the seclusion of the forest to develop their meditation.</p>
+<p>Next is *rukkhamūlika* (the tree-root-dweller's practice), which refers to dwelling at the root of a tree. We can hardly even imagine this. Yet, you will recall that Buddhas almost always attain enlightenment under a tree. This is because that secluded environment is highly suitable for meditation. Some resolved to practice this *rukkhamūlika* ascetic practice. It was so highly valued that the Buddha, when presenting the four supports (*nissaya*) to a newly ordained monk, advised him to be content with these minimum things. He reminds him that monkhood is for the sake of lodging. He tells him to be prepared to live even under a tree. That is what is meant by contentment with lodging. A monk who has undertaken this *dhutanga* does not go under any roofed shelter; he lives solely under a tree. This is a highly rigorous practice, hard to imagine.</p>
+<p>Next is *abbhokāsika* (the open-air-dweller's practice). This is an even more powerful practice. *Abbhokāsika* means dwelling in the open air, under the open sky. Spending a night in the open air in peaceful meditation gives great strength to the mind. Monkhood itself is said to be like the open air, completely open like space. This can be experienced at times. Resolving to undertake this practice, one goes to the open air where there are absolutely no distractions to pull the mind away. In complete seclusion and silence, one’s meditation succeeds, and concentration (*samādhi*) is near. Some monks undertake the *abbhokāsika* practice and engage in their meditation in this manner. Ultimately, these are all for the sake of delighting in meditation and delighting in abandoning (*bhāvanārāmatā* and *pahānārāmatā*), not to inflict pain on the body. This is what must be understood. We have mentioned *āraññika* and *abbhokāsika*.</p>
+<p>The next *dhutanga* is *sosānika* (the cemetery-dweller's practice). This might sound a bit frightening. It means dwelling in a cemetery, a charnel ground. In ancient times, monks who meditated rigorously—especially those cultivating the meditation on foulness (*asubha-bhāvanā*)—spent their nights in cemeteries to conquer their defilements. Obtaining permission from the cemetery keepers, they practiced in this rigorous manner. Look at what great commitment they showed for the sake of Nibbāna, for the sake of ending the suffering / unsatisfactoriness / stress (*dukkha*) of *saṃsāra*. In those days, when bodies were left exposed, people were afraid to go near a cemetery due to the belief in spirits. In those raw cemeteries, there were freshly discarded corpses, old corpses, and decaying ones. By contemplating them, they meditated. Today, we practice foulness meditation by looking at foul pictures or attractive pictures, and we do not really perceive the foulness. Looking at the other side, even if it is lacking, it is still something. In the past, when corpses decayed—it is hard to even imagine. In those cemeteries where non-humans were said to dwell, monks developed fear of *saṃsāra* rather than fear of non-humans, meditated, and very quickly achieved the goal they sought. Therefore, these practices should not be ridiculed. That is the *sosānika* practice, where one’s shelter is the cemetery itself.</p>
+<p>The next is *yathāsanthatika* (the practice of accepting whatever seat is offered). This may be difficult to remember. It means accepting whatever lodging is assigned without choosing. We can understand this from the past. Even if he did not observe it strictly as a *dhutanga*, you remember what Ven. Rahula did when a large congregation of five hundred monks arrived. As senior monks arrived, Ven. Rahula had to move, and where did he spend the night? In the Buddha’s washroom. There was no special complaint; he did not go around saying, "My father is the Buddha." Accepting whatever lodging is offered is what is called the *yathāsanthatika* practice. This is shown as the fifth factor. Regarding contentment with lodging, this is the fifth. Thus, within the four requisites, we clearly see contentment with robes, contentment with alms-food, and contentment with lodging.</p>
+<p>The fourth factor presented is extremely important, extremely important. That is precisely why the Buddha presents it fourth: *bhāvanārāmo hoti bhāvanārato, pahānārāmo hoti pahānārato*—"He delights in meditation, rejoices in meditation; he delights in abandoning, rejoices in abandoning." Why is all of this done? It is to arouse delight in meditation, to engage in it with delight, to arouse delight in the abandoning of defilements, and to engage in that abandoning. Keep this in mind. Then one might ask, "What is the *dhutanga* associated with this fourth factor of delighting in meditation and abandoning?"</p>
+<p>We have already mentioned twelve *dhutangas*. The remaining one is *nesajjika* (the sitting-practice). *Nesajjika* means sitting—never lying down, never letting one's back touch a bed. It is recorded in the ancient texts as a highly rigorous practice. It is truly amazing to hear of it. Conquering drowsiness, conquering sloth and torpor (*thīna-middha*), a monk spends the entire day and night sitting, and if sleep comes, it is only while sitting; he never lies down on a bed. There are countless such stories. Some monks, when resolving to observe this throughout the entire rainy season (*vassa*), would turn their beds upside down at the very start, lest they should feel tempted to lie down. That is what is called the *nesajjika* practice. *Nisajjā* means sitting. You may have heard how Ven. Cakkhupāla Thero’s physical eyes became blind, but along with the loss of his physical sight, his eye of wisdom arose. Having resolved to maintain the *nesajjika* practice throughout the three months of the rainy season, he eventually attained Arahantship. Do not think that everyone who practices *nesajjika* will go blind. Rather, reflecting on the fact that throughout this long *saṃsāra* one has mostly spent time sleeping, he rouses energy and abandons defilements. Defilements do not enter an awake mind. It is within sloth and torpor that other defilements gain strength. By conquering sloth and torpor through the delight in meditation, both abandoning and meditation occur naturally through the *nesajjika* practice. This is expressed as energy; it is said that one cultivates *nesajjika* to rouse energy.</p>
+<p>The dispensational values declared by the Buddha thus far are aimed directly at Nibbāna. These are not mere vows or rituals; it is wrong to treat them as such, and it is wrong to form mistaken views about them. When monks are ordained, even today when tying the robe-belt, they recite: *sabba-dukkha-nissaraṇa-nibbāna-sacchikaraṇatthāya*—"For the sake of release from all suffering / unsatisfactoriness / stress and the realization of Nibbāna." It is with this intention of release that everything is performed. In the *Ariyavamsa Sutta*, when speaking of contentment with robes, alms-food, and lodging, the Buddha declared—to give an example—that when a robe is received, one should use it without greed, without being bound by craving / thirst (*taṇhā*), and without being overcome by it. Instead, seeing the danger, one uses it with the wisdom of deliverance (*nissaraṇa-paññā*). Understanding the meaning of "nissaraṇa" means understanding the danger of developing attachment to clothing, reflecting wisely (*paccavekkhaṇā*) on why this robe is used: merely to cover nakedness and to protect oneself from flies, mosquitoes, and so forth. You are somewhat familiar with the wise reflection on food, which laypeople who observe the precepts also practice. Similarly, the Sangha has these wise reflections regarding the four requisites.</p>
+<p>What is contained within this wise reflection? The Niganthas (Jains) take no food and wear no clothes. That is one extreme. In contrast, the Buddha showed how to use these four requisites in a way that does not allow one to fall prey to Mara. Generally, Mara lies hidden within these requisites. Today, this must be very clearly evident to you. Mara hides within robes as well; when one pursues highly valuable and fancy robes, there is Mara. Mara hides within alms-food too; the moment one becomes greedy for delicious food, there is Mara. It is the same with lodgings. It is to understand their danger and to use them as an aid for deliverance that the Sangha is given these wise reflections on the four requisites.</p>
+<p>One part of the reflection is considering the purpose for which we receive these. If we speak of food, we first declare what it is *not* for: *n'eva davāya, na madāya, na maṇḍanāya, na vibhūsanāya*—not for amusement, not for intoxication, not for physical fattening, not for beautification, unlike in the ordinary world. This is stated first. Instead, it is used solely—and the word "solely" is important here—to appease the painful feeling / sensation of hunger, and the Buddha has preached to wisely reflect on this before consuming food. What is the purpose of taking this? Unlike during lay life, it is taken because one cannot survive without it, to appease the painful feeling / sensation of hunger and to maintain this body. To where is this body to be maintained? Up to Nibbāna—this is what is meant by the wisdom of deliverance (*nissaraṇa-paññā*).</p>
+<p>Furthermore, to turn this wise reflection on the four requisites into a deeper meditation, it is shown that this food is composed of the elements of earth, water, fire, and air (*pathavī, āpo, tejo, vāyo*). This body is also composed of these four elements. Thus, reflecting that this clean, fragrant food enters this impure body and becomes filthy fulfills both element-attention (*dhātu-manasikāra*) and foulness-attention (*asubha-manasikāra*).</p>
+<p>The Buddha demonstrates how to conquer Mara at the very place where one is vulnerable to him. If one reflects rightly on these four requisites, contemplating their danger—the danger of overeating, of being enslaved by the craving for taste—and instead practices with the wisdom of deliverance (*nissaraṇa-paññā*) solely to maintain the body for the practice of the Dhamma, then that is for the sake of release. Indeed, the Buddha has declared so deeply: *āhāraṃ nissāya āhāraṃ pajahatha*—"Support yourself on food to abandon food." When we look at this, it seems paradoxical, as if the two parts do not agree. "Support yourself on food to abandon food" is a very profound statement. The Buddha has declared that there are four kinds of nutriment: physical food (*kabaḷīkārāhāra*), Contact (*phassa*), mental volition (*manosañcetanā*), and Consciousness (*viññāṇa*). To eliminate all of these, he says we must support ourselves on this physical food: *āhāraṃ nissāya āhāraṃ pajahatha*. That is the profound aspect. Thus, the Buddha shows that through wise reflection, a monk who acts in this manner is not overcome by Mara.</p>
+<p>These four requisites are things given by faithful laypeople with great devotion. Yet, in certain places, the Buddha has described this—please do not be offended by this word—as a "bait" (*āmisa*). *Āmisa* means bait. Without saying "laypeople," let us say "Mara." Mara casts a hook with bait to catch fish. When the bait is cast, some fish, not knowing any better, swallow it and fall into trouble. Therefore, the Buddha calls this *lokāmisa*—the bait of the world. If one does not know how to swallow this bait correctly, if one swallows it wrongly, dangerous consequences will follow. If one does not know how to swallow it rightly, it is better not to swallow it at all. Otherwise, one gets caught by Mara.</p>
+<p>Next, the Buddha describes in the *Ariya Pariyesana Sutta* (The Noble Search)—which you might not have heard of much—his own search for release from *saṃsāra*, which he calls the wondrous "Noble Search." In the beginning, the ascetic Siddhattha went astray because the world pointed to self-mortification as the sole path to liberation. Like the Niganthas, he subjected his body to extreme pain. But once he realized its futility, he took the Middle Path (*majjhimā paṭipadā*). Having taken the Middle Path, he accepted a sufficient amount of food to maintain the body. At the end of the *Ariya Pariyesana Sutta*, the Buddha gives a wonderful simile. Because of this simile, the sutta is also known by another name: *Pāsarāsi* (The Mass of Snares). *Pāsa* means a snare or a noose.</p>
+<p>A snare is used to catch an animal. The simile describes a deer hunter who sets snares to catch deer. Some deer get caught in those snares, and when the hunter comes, they are helpless and get captured. But the Buddha points out that some wise deer do not get caught in the snares; instead, they lie down right on top of the snare, and when the hunter approaches, they leap away. This is the wonderful simile given by the Buddha near the end of the *Ariya Pariyesana Sutta*.</p>
+<p>The Buddha showed that the path he traveled in the past is not a path of completely abandoning food and clothing. That is not how one escapes from *saṃsāra*. Instead, if one reflects wisely, maintains restraint over the senses, and understands the purpose of these requisites, then when Mara—the deer hunter—approaches, this monk can leap away like the wise deer, uncaught. This is what we must extract from this *Ariyavamsa* sermon. Through contentment with robes, satisfaction with what is received, fewness of wishes, and ease of support, one aligns with what was said regarding robes. Regarding fewness of wishes, the Buddha often compared the lifestyle of the Sangha to a bird: *sakuṇo sehi pattehi bārena yen’eva yati*—just as a bird flying in the sky flies freely, carrying only its wings. *Sapatto bhārova ḍeti*—carrying only his bowl and robes like wings, without accumulating many belongings, the monk lives with few wishes. This refers to the triple-robe-wearer (*tecīvarika*) monk. A monk content with only three robes can travel easily from place to place, just like a bird. These virtues of fewness of wishes and contentment are described because they support meditation and abandoning. Therefore, we must understand these four noble lineages declared by the Buddha. Since the very ancient past, wise ascetics and brahmins—not those of ordinary intellect—have walked in this noble lineage. The Buddha mentions that ancient Buddhas and their noble disciples valued these noble lineages, both regarding the four requisites and their ultimate purpose: meditation and the abandoning of defilements.</p>
+<p>When we speak of meditation, you can understand that true meditation is cultivated through the factors of awakening (*bojjhaṅga*): mindfulness (*sati*), investigation of states (*dhamma-vicaya*), energy (*vīriya*), joy (*pīti*), tranquility (*passaddhi*), concentration (*samādhi*), and equanimity (*upekkhā*). That is the genuine meditation. Abandoning refers to the abandoning of defilements. You are familiar with the four right efforts (*sammappadhāna*), which are described as four types of energy. They are explained as follows: to prevent the arising of unarisen unwholesome states, *chandaṃ janeti vāyamati vīriyaṃ ārabhati cittaṃ paggaṇhāti padahati*—he arouses desire, makes an effort, rouses energy, exerts his mind, and strives. As we have explained before, one must arouse desire, make an effort, start to rouse energy, and firmly establish the mind. One must exert supreme energy in four ways. First, to prevent the arising of unarisen unwholesome states. These *dhutangas* and the contentment with robes assist in preventing unarisen unwholesome states from arising. If one uses these requisites without such reflection, without understanding the value of fewness of wishes, one unknowingly becomes enslaved by the bait of the world, swallows the bait, and eventually is forced to return to lay life. That is why these have been declared.</p>
+<p>First is to prevent the arising of unarisen unwholesome states. Second is to abandon arisen unwholesome states. When a monk reflects: "These are the shortcomings in my character; I have a strong craving / thirst (*taṇhā*) and greed for food carried over from my lay life," he then resolves to undertake the relevant ascetic practice (*dhutanga*). If he has an excessive attachment to clothing, he resolves to undertake the corresponding *dhutanga*. That is the cutting away of defilements. This is called *sallēkha-paṭipadā* (the practice of effacement). The Buddha has indeed permitted certain comforts, but the monk abandons them—not to tell anyone else, but to cut away his own defilements, to prevent unarisen unwholesome states, and to abandon arisen unwholesome states. Then comes the other side: to arouse unarisen wholesome states. That is the side of meditation. And finally, to maintain and develop arisen wholesome states. Thus, the four right efforts—restraint, abandoning, developing, and maintaining—help us understand this *Ariyavamsa Sutta* discourse.</p>
+<p>As we mentioned earlier, in ancient Sri Lanka, not only the Sangha but even lay devotees listened to this *Ariyavamsa Sutta* discourse with immense devotion throughout all three watches of the night. Listening to the sermon with the same courageous energy with which it was preached, some might think it is an exaggeration, but it is recorded that even if a devotee or a monk was bitten by a snake or stung by a scorpion while listening, they would not even look at it but continued to listen to the Dhamma. Such occurrences are recorded.</p>
+<p>Not only for the Sangha, but even for laypeople, the capacity to experience this contentment and the sacrifice required for Nibbāna were well understood by everyone in the past through this *Maha Ariyavamsa Sutta* discourse. In ancient times, this discourse was also known as the *Catu-paccaya-santosa-bhāvanārāma-ariyavaṃsa Sutta*. A discourse that highlights contentment with the four requisites and delight in meditation. Such sublime and noble discourses are rarely heard today. People have no desire to hear them. Even if preached, it has reached a state where it is deemed of no use, as you well know.</p>
+<p>However, for some reason, this year we see the slogan "Let us line up in practice, let us line up in practice" everywhere. Therefore, we too felt the need to say something relevant to that. Whether it is accepted or not, we felt like preaching this marginalized *Ariyavamsa Sutta* today. Today, on this Poson Poya day, which is significant to our Sri Lankan history, just as mentioned in the Mahavamsa and the commentaries, vast crowds gathered to listen to the *Ariyavamsa Sutta* discourse.</p>
+<p>Whether lay or ordained, we must reflect on the value of the Sasana. The values of the Sasana are entirely different from the values of the lay world. What is the value of a refuse-rag robe? It is something pulled from a rubbish heap, taken from a cemetery. Yet, even the Buddha dyed such cloth and wore it. You may be familiar with the *Dasa-dhamma Sutta*, where a monk must constantly reflect: *vevaṇṇiyaṃ bhāvaṃ upagato’smi*—"I have entered upon a state of classlessness / disfigurement." The nature of laypeople is to seek colorfulness (*vevaṇṇiya*). The nature of a monk is disfigurement (*vivaṇṇiya*). This is explained as the disfigurement of the body (*kāya-vevaṇṇiyaṃ*) and the disfigurement of requisites (*parikkhāra-vevaṇṇiyaṃ*). The disfigurement of the body is removing the hair and beard, which laypeople tend to beautify. The disfigurement of requisites is discarding fine clothing and instead wearing a dull-colored refuse-rag robe. A robe stitched from pieces of cloth gathered here and there, and using a black alms-bowl. These things serve to remind him: "I am no longer a layperson, but a monk." We must reflect according to these monastic values. That is the significance of the *Dasa-dhamma Sutta* declared by the Buddha. All of these are directly related to the matters discussed in the *Ariyavamsa Sutta*. Therefore, we must not think of these as outdated or obsolete. If these were things that could become obsolete, the Buddha would not have used those terms:</p>
+<p>*Aggaññā, vaṃsaññā, porāṇā, asambhinnā, asambhinnapubbā... viññūhi samaṇabrāhmaṇehi*. Wise ascetics and brahmins regard this as foremost. Over a long period, wise ascetics and brahmins have neither doubted nor rejected it. Such is the nature of this practice.</p>
+<p>Therefore, on a day like today, you must make a firm determination. If we wish to preserve this dispensational practice, whether we are lay or ordained, we must at least recognize these values. If lay devotees do not recognize these values, it directly affects the lives of the Sangha. If these practices are ridiculed or mocked, it becomes difficult for the Sangha to maintain these *dhutanga* practices. A much better environment is created when lay devotees also understand these dispensational values. That is why we speak these words.</p>
+<p>You must bear in mind what we often say—that the lamp of the Sasana is about to go out. We are compelled to say that it is about to go out. In such an era, if anyone wishes to bring an end to the suffering / unsatisfactoriness / stress (*dukkha*) of *saṃsāra*, let them recollect the dispensational values spoken of today. The beginning of that is the valuable precepts you have undertaken today, dedicating yourselves to keeping them, meditating, and listening to the Dhamma. At this moment, you have also listened to this Dhamma discourse. May whatever is of value to be taken from this be taken by you to develop the virtues of virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*). May this discourse be a supportive condition for everyone to realize the noble, deathless Nibbāna through the realization of the path and fruit, starting from stream-entry (*sotāpatti*).</p>
+<p>May all beings from the lowest hell (*Avīci*) to the highest heaven (*Akaniṭṭha*) rejoice in the merit of listening to this Dhamma, and through that appreciation of merit, may they find solace in the noble, deathless Nibbāna through whichever Bodhi they aspire to. Likewise, may this merit of delivering the Dhamma be a supportive condition for you to preserve these dispensational virtues. Let us chant these verses to share the merit.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_063.html" class="doc-btn">← Previous Sermon (063)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_065.html" class="doc-btn">Next Sermon (065) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

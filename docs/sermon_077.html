@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 077 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_076.html" class="doc-btn">← Previous Sermon (076)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_078.html" class="doc-btn">Next Sermon (078) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 077</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_077_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_077_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_077_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #77</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.76)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Natthi rāgasamo aggi,</p>
+<p>natthi dosasamo gaho,</p>
+<p>natthi mohasamaṃ jālaṃ,</p>
+<p>natthi taṇhāsamo nadī.</p>
+<p>From:</p>
+<p>Dhammapada 251 (Malavagga)</p>
+<p>Dear Listeners,</p>
+<p>Listening to the True Dhamma is pointed out in the teachings as something extremely rare. It is considered rare not only because the arising of a Buddha in the world who expounds the True Dhamma is rare, but also because those who have the capacity and the corresponding inclination to listen to the Dhamma with full attention are rare in this world. Various saṃsāric weaknesses obstruct the hearing of the Dhamma. When one is overcome by those weaknesses, even if the sound of a Dhamma sermon strikes the ear, that Dhamma does not enter the mind or the inner ear. Now, in the background story related to the verse chosen as today’s theme, a relevant incident is mentioned.</p>
+<p>One day, five lay devotees came to the Jetavana monastery to listen to the Dhamma. Having arrived, they paid homage to the Buddha and sat down to one side. The Buddha commenced the Dhamma sermon. While this Dhamma sermon was being delivered, one of these five fell into a deep sleep. The second sat scratching the ground with his finger. The third sat shaking a nearby tree. The fourth sat gazing at the sky instead of listening to the sermon. Only the fifth person listened to the Dhamma with keen attention. While this was going on, Ven. Ānanda, who was standing fanning the Buddha, observed this and asked: “Venerable Sir, when the Blessed One is preaching the Dhamma so wonderfully, what is the reason [for this behavior]?” When asked, the Buddha inquired: “Ānanda, do you know who these people are?” When Ven. Ānanda replied, “No, Venerable Sir,” the Buddha then revealed their saṃsāric habits in this manner: “This person who has fallen asleep has been born five hundred times in the animal womb of serpents, as a cobra or a snake; he has taken birth (*jāti*) so for five hundred lifetimes. Due to that habit, he is now fallen asleep, as if coiled up with his head tucked in.” Ven. Ānanda asked: “Venerable Sir, when you say five hundred births (*jāti*), was it consecutively or intermittently?” Thereupon the Buddha declared: “Ānanda, the number of times they were born intermittently in the human world, deva world, animal world, etc., cannot be told even by a Buddha. What was declared here is that he was born consecutively without interruption for five hundred births (*jāti*). It is due to that saṃsāric habit that he has fallen asleep.” The Buddha declared the same regarding the others as well: “This person who keeps scratching the ground was born as an earthworm for five hundred births (*jāti*). This person who is engaged in shaking the tree was a monkey for five hundred births (*jāti*); he has repeatedly obtained monkey existences. The one who is gazing at the sky has taken birth (*jāti*) as an astrologer for five hundred lifetimes. The one who is listening to the Dhamma so well was born as a Brahmin versed in the Three Vedas for five hundred births (*jāti*). It is according to that habit that he listens so well.”</p>
+<p>Then Ven. Ānanda asked again: “Venerable Sir, the Dhamma is being preached in such an extremely sweet manner. Despite this, why is it that these people do not listen to the Dhamma in this way?” Thereupon the Buddha declared: “Ānanda, do you think this Dhamma is sweet? That it is always a pleasant thing to everyone?” When Ven. Ānanda asked, “Why, is it not? Is it not pleasant?” the Blessed One replied: “Ānanda, for these saṃsāric beings, even the hearing of the three words ‘Buddha’, ‘Dhamma’, ‘Saṅgha’ is obtained only after millions of aeons (*kalpas*). For a longer time than that, they have spent their time engaging in various kinds of animal talk—that is, useless stories—and enjoying themselves in taverns and theaters. While those things are very pleasant to them, listening to this Dhamma is not a pleasant thing for many people.”</p>
+<p>Next, he declared what the defilements are that dominate their minds for a long time. Pointing out the state of affairs in this *saṃsāra*—burning with the fire of lust (*rāga*) which surpasses all other fires in the world, suffering within the grip of hatred (*dosa*), entangled in the net of delusion (*moha*), and being swept away in the flowing river of craving (*taṇhā*)—the Buddha uttered the verse we cited as our theme:</p>
+<p>*Natthi rāgasamo aggi,*</p>
+<p>*natthi dosasamo gaho,*</p>
+<p>*natthi mohasamaṃ jālaṃ,*</p>
+<p>*natthi taṇhāsamo nadī.*</p>
+<p>There is no fire like lust (*rāga*). The Buddha points out the fire of lust (*rāga*) as a far more severe fire than other fires, arising from within and burning.</p>
+<p>There is no grip like hatred (*dosa*). When pythons, crocodiles, demons, and monsters seize, they catch one at a time. But the grip of hatred (*dosa*) can seize even a vast number at once; they are caught by hatred (*dosa*).</p>
+<p>There is no net like delusion (*moha*). Delusion (*moha*) is an amazingly entangled net from which it is impossible to escape.</p>
+<p>There is no river like craving (*taṇhā*). While other rivers dry up from time to time, this river of craving (*taṇhā*) flows continuously and at all times.</p>
+<p>The Buddha preached that verse to show that *saṃsāra* is indeed of such a nature.</p>
+<p>Now, this story is a very short story, an incident. But let us see what can be drawn from this. Principally, we see the act of listening to the True Dhamma. The Buddha specifically showed here that beings incline towards various things according to the nature of their minds. The Buddha possessed a special power to declare such things. That is called the knowledge of inclinations and underlying tendencies (*āsayānusaya-ñāṇa*). The Buddha possessed six extraordinary knowledges not shared by other disciples. One of them is the knowledge of inclinations and underlying tendencies (*āsayānusaya-ñāṇa*). Through this, the past state regarding the temperaments of beings is well understood. Specifically, the things relevant to that knowledge of inclinations and underlying tendencies (*āsayānusaya-ñāṇa*) are shown as temperament (*carita*), inclination (*adhimutti*), and capability or incapability (*bhavya-abhavya-tā*). Temperament (*carita*) refers to the wholesome and unwholesome actions (*kamma*) performed by beings in *saṃsāra*. Inclination (*adhimutti*) refers to the saṃsāric bent of beings. Particularly, the degree to which the mind is directed towards the wholesome or unwholesome side in this life, the Buddha sees as their bent, their flexibility. That is what is meant by inclination (*adhimutti*). Next, capability or incapability (*bhavya-abhavya-tā*) means that whether one can attain a noble path and fruit (*ariya-magga-phala*) in this very life or not is also visible to the Buddha. Even today, when looking for qualifications for someone’s job or position, it is often these very factors that are brought forward: how is the person’s character and behavior? Next, their flexibility, bent, and inclination—towards which side? Next, capabilities. Capability or incapability (*bhavya-abhavya-tā*) refers to these capabilities. In this way, the complete file of a person is understood by the Buddha the moment he directs his mind to it. It is according to this that the Buddha understood the character traits of these five individuals.</p>
+<p>Then someone might ask: “If so, why did the Buddha continue to preach without stopping, even while that group was behaving in that manner?” We have to think that if even one person would benefit, the Buddha preaches targeting that individual. Thus, in that manner, the fifth person listened to the Dhamma properly. Not only that, it is mentioned in that story that after the Buddha gave this analysis, having heard it, that person who had listened to the sermon well even attained the fruit of Stream-entry (*sotāpatti-phala*). Through that, through the analysis given by the Buddha, he must have understood the danger of *saṃsāra*. In any case, for the first four, their saṃsāric habits obstructed their hearing of the Dhamma. For the fifth person, who had been a Brahmin, that habit assisted him in listening to that Dhamma. Through that, he also attained Stream-entry. So, from this, one aspect we can understand is about that very listening to the Dhamma—in what manner listening to the Dhamma should be done. The Buddha himself on many occasions has pointed out four benefits of listening to the Dhamma. Almost everyone may have heard of these.</p>
+<p>By hearing the Dhamma, it is said, *assutaṃ suṇāti*: “one hears what has not been heard before.” One gets to hear something one has not heard previously. When listening well to the Dhamma, sometimes one gets to hear a point of Dhamma that one has never heard up to that time. Not only that, if one has heard it before, one gets an opportunity to hear it more clearly: *sutaṃ pariyodapeti* (purifying what has been heard). An opportunity is received to purify it. Likewise, one gets the opportunity to dispel one’s doubts: *kaṅkhaṃ vitarati*, the opportunity to remove doubt is obtained. Next, *diṭṭhiṃ ujuṃ karoti* means that if there are shortcomings in one’s right view, an opportunity is obtained to straighten them out. Therefore, reminding us of those four benefits of the Dhamma, the Buddha advises that one should listen to the Dhamma with wisdom and complete attention.</p>
+<p>Likewise, on the flip side, he indicates what kind of attitude prevents a person from benefiting from a Dhamma sermon. Five factors are pointed out. The Buddha has declared that if someone, while listening to the Dhamma, disparages the Dhamma talk, insults it, blames it, or blames the Dhamma expounder, or blames themselves, or looks at their own shortcomings and regrets them, or listens to the Dhamma with a distracted, non-concentrated mind, or reflects on the heard Dhamma in an incorrect manner—then that person cannot derive any benefit or fruit from the Dhamma. Therefore, according to this, we must realize that indeed, listening to the Dhamma must be done with great respect for it. In short, respect for the Dhamma is something far greater in this Dispensation than respect for individuals. In the past, Buddhists paid homage even to books, to Dhamma books, based on that respect for the Dhamma. We say “we pay homage to the Dhamma preacher,” but in reality, that preacher receives it through the Dhamma sermon, through that very act. That is why, no matter how many senior people are present, if even a young novice monk is preaching the Dhamma, he is given the high seat. From that, we see that the Buddha has given the primary place to respect for the Dhamma, even above respect for individuals. The Buddha himself declared this on one occasion from his own life.</p>
+<p>In the fifth week after his Enlightenment, while residing at the foot of the Ajapāla banyan tree, the Buddha related that a thought, a reflection, arose in him: “He who lives without showing respect and deference to anyone lives in suffering (*dukkha*). To whom should I now live showing respect and deference?” Thus, the Buddha stated that he reflected upon himself. Looking thus, when reflecting on the entire world including devas and brahmās, he saw no one in the world superior to himself in virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*). Then he thought: “In that case, to whom shall I show respect and deference?” Next, he thought: “If there is a Dhamma that has been realized by me, I must dwell for the remainder of my time honoring and respecting that very Dhamma.” The Buddha made such a determination. Knowing that thought, Sahampati, the king of Brahmās, arrived there at that moment and, in approval of the Buddha’s thought, declared: “Whatever Blessed, Fully Enlightened Ones existed in the past, those Buddhas too followed this very custom; that is, they dwelt respecting and honoring the Dhamma. Future Buddhas too will likewise show respect to the Dhamma. May the Blessed One also dwell likewise respecting the Dhamma.” Thus, it is said that he approved that thought. This is the matter concerning respect for the Dhamma. Thus, it is extremely clear from the Buddha’s life itself. The Buddha himself has set the prime example regarding respect for the Dhamma.</p>
+<p>Likewise, there are seventy-five training rules in the Vinaya Piṭaka, known as *Sekhiya*, in which both monks and novices must train themselves. Among those seventy-five training rules, sixteen are specifically about the preaching of the Dhamma. These also highlight this very aspect of respect for the Dhamma. If we consider them briefly, they mention those individuals to whom the Dhamma should not be preached. However, in almost all of them, a special concession is mentioned for a sick person. One can understand it in this way: It is said: “The Dhamma should not be preached to one who is not sick and is holding an umbrella in hand.” This Vinaya rule is laid down for the Sangha. When it is said “to one who is not sick and is holding an umbrella,” if there is sickness, there is an excuse. Otherwise, one must listen to the sermon after placing the umbrella aside. That is a custom that Buddhists have observed since ancient times. Next, it is also mentioned that the Dhamma should not be preached to one who is holding a staff in hand—something like a walking stick or a cane. If one is sick, there is allowance for it. Likewise, regarding a weapon (a weapon, a sword), the Dhamma is not preached to a person holding such a thing in hand. Next, it is similarly mentioned that if someone is wearing footwear—slippers, shoes, etc.—the Dhamma should not be preached to them either. It is because that custom is still followed that, leave alone other times, even when going to a sacred place, and especially during a Dhamma sermon, you, faithful devotees, remove your footwear. Likewise, it is mentioned regarding headwear: the Dhamma should not be preached to someone wearing a turban or a head covering. Through all of these, what is demonstrated is respect for the Dhamma. Next, it is said that the Dhamma should not be preached to someone who is lying down, unless they are sick.</p>
+<p>Likewise, to one who is mounted on a vehicle, a person standing outside the vehicle should not preach the Dhamma. Next, there is a habit of some sitting on shop-fronts clasping both knees with both hands; there is a certain way of sitting when gossiping. That is not a decorous way of sitting. Sitting in that manner is called “binding with clasped hands.” The Dhamma should not be preached to one who is sitting in such an improper manner, clasping the knees with both hands or binding them with a cloth.</p>
+<p>Next, it is specifically mentioned regarding sitting: if one is sitting on the ground, the Dhamma should not be preached to one seated on a seat, unless they are sick. Sitting on a low seat, one should not preach the Dhamma to one on a high seat. Likewise, suppose two people are walking along talking. If the one behind wants to say a point of Dhamma, they must come forward to the same level and speak. That is, there is a rule that while walking behind, one should not preach the Dhamma to one walking ahead. Similarly, let us suppose there are two roads—the main road on one side and a side path. It is also laid down that walking on a side path, one should not preach the Dhamma to one walking on the main road. When looking at these, it is amazing. To us, they seem like very trivial things. But through every single one of these, the Buddha highlighted that very respect for the Dhamma. The Dhamma should be preached to one who is prepared and ready to receive it with proper respect. Such is the matter.</p>
+<p>But it becomes a question as to how far these matters regarding respect for the Dhamma are observed in this day and age. That is precisely why the discussion about directing full attention arises. Especially nowadays, there are loudspeakers and various other devices in the homes of faithful devotees, allowing them to listen to sermons whenever they wish. Likewise, because preaching sermons is now so common, this is an era where the value, excellence, and pricelessness of Dhamma preaching is being forgotten. Indeed, rather than listening to the Dhamma, now it is merely heard. Listening to the Dhamma is active; but now it has become something passive that is just heard. That is where it has gone. It is no longer something to be listened to attentively, but has turned into something heard automatically. Even at home, while songs, news, etc., are playing on devices, people engage in other chores. If, according to that habit, one goes on to do the same with listening to the Dhamma, sometimes a wrong, distorted understanding of the Dhamma can result. You, faithful devotees, may know in common parlance we say “songs and news are playing [going on].” In the same way, we say “the sermon is playing [going on].” So, that is the state to which home Dhamma preaching has arrived.</p>
+<p>Indeed, although Dhamma sermons are abundant and the Dhamma is common, listening to the Dhamma is becoming rarer and rarer. That listening to the Dhamma is rare means that those who come forward to listen with full attention are fewer now, just as in the past. In the past, according to the story mentioned earlier, only one out of five listened to the Dhamma properly. Today as well, it could be the same, or perhaps even less than one percent. In that manner, there is a sign of decline. We must understand this. We cannot drag all those ancient lifestyles of the past back. But in everything, we must understand that there are two sides: benefits and drawbacks. We are compelled to use these loudspeakers and such things due to various reasons. But if respect for the Dhamma declines through that, we must be mindful of that too. At home, that can happen very often. Someone might ask: “Then, is it worse than not listening at all to listen to the Dhamma while doing some work?” The shortcoming in that is just this: sometimes, something not uttered by the Sangha is understood as having been said. Not only that, they go and tell others, “Look, such-and-such monk said this.” What is the reason? It was not heard properly. They were doing some other work, or they were in a different line of thought. That is why this Dhamma is something extremely rare. The Buddha said that even the three words ‘Buddha’, ‘Dhamma’, ‘Saṅgha’ are heard by beings only after millions of aeons (*kalpas*). In the same way, the Dhamma, the preaching of the Dhamma, is extremely rare. Only as long as a Buddha’s Dispensation exists will you, faithful devotees, get to hear the teachings that show the path to Nibbāna. Therefore, respect for the Dhamma must be cultivated within. These matters were indicated as Vinaya rules for the Sangha. To you, faithful devotees, these might sometimes seem like outdated things in this day and age. Someone might ask, “How can we observe these when we go to foreign countries?” But the Buddha highlighted these to protect the Dhamma, the True Dhamma. He himself remained respecting the Dhamma. He instructed his disciples to respect it in the same way. When saying “disciples,” the fourfold assembly of monks, nuns, laymen, and laywomen is included. From that story, we see that through such behavior, one becomes unable to reap the fruits of that Dhamma. Many such instances are mentioned in the Dhamma.</p>
+<p>Next, looking at the other side, the Buddha indicates the manner in which this Dhamma should be listened to. A certain valuable passage is mentioned regarding how the Dhamma should be listened to: *atṭhikatvā, manasikatvā, sabbacetaso samannāharitvā ohitasoto dhammaṃ suṇāti*. What this means is: “This Dhamma sermon is of benefit to me. This is useful for my life. This is helpful for my Nibbāna.” Intending to benefit from it, one must listen. *manasikatvā* means reflecting word by word, listening to it by reflecting well on each and every point. *samannāharitvā* means gathering the entire mind, directing full attention to it. If, while working in the kitchen or doing other chores, one lets the sermon play in that manner, the sermon merely “plays on,” but it does not come to oneself. It does not enter one’s ear. Just as the Buddha declared, for four out of those five, it merely struck the ear, but did not enter the ear. That is exactly how it happens most of the time now. Dhamma sermons become abundant, but listening to the Dhamma becomes rarer and rarer. That is the reason. So, *sabbacetaso samannāharitvā ohitasoto* means listening to the sermon with ears inclined. In those days, the term “inclining the ears” was used with the meaning of full attention. Even today, “give ear” or “listen” is used. Why? It is said because the ears are given elsewhere. The words “give ear!” and “listen!” have to be specifically said because the ears are directed to other directions. In that manner, one must be ready to listen. It is when these factors are fulfilled and one listens to the sermon that one can derive results from this. Not only that, as mentioned earlier, if one insults the preacher or the Dhamma, one becomes unable to reap results from it.</p>
+<p>The Buddha not only highlighted those matters. Next, in one place, he also mentioned three specific types of persons who listen to the Dhamma. Those three persons are introduced as follows: *avakkujja-pañña*, *ucchanga-pañña*, and *puthu-pañña*. *Avakkujja-pañña* means the person of upside-down wisdom. We will explain that later. *Ucchanga-pañña* means the person with lap-wisdom. *Puthu-pañña* means the person of broad wisdom. The Buddha explains these three in this manner: “Suppose someone goes to a monastery and frequently listens to the Dhamma from the Sangha. And these monks preach this True Dhamma which is beautiful in the beginning, beautiful in the middle, and beautiful in the end. Beautiful in the beginning, middle, and end; whether viewed in terms of virtue (*sīla*), concentration (*samādhi*), or wisdom (*paññā*), it is beautiful. While such a Dhamma, beautiful in every sense at the beginning, middle, and end, is being preached, that person does not reflect on its beginning, middle, or end. While sitting there and even when rising and leaving, he does not reflect on the beginning, middle, or end. Such a person is compared to a pot placed upside down. No matter how much water is poured onto an upside-down pot, it does not retain any of it. It is just like that. That is why he is called *avakkujja-pañña*. He is the person of upside-down wisdom. Regarding the second, it is said: ‘Suppose someone comes in the same way and listens to the Dhamma. While sitting, he reflects well on the beginning, middle, and end. But after rising, he remembers nothing.’ The simile given for this by the Buddha: ‘Suppose someone is eating sweetmeats or fruits kept in his lap. All of a sudden, without mindfulness, he stands up quickly. The moment he stands up, all of those things are scattered. Just like that, while sitting he reflects well on the beginning, middle, and end. But after rising, that person remembers nothing.’ That is the second person. The third person is spoken of: ‘While sitting, that person reflects well on the beginning, middle, and end. After rising, he also remembers that Dhamma well. His reflection is clear; his attention is perfectly pure. He listened to the sermon well.’ That person is described as *puthu-pañña* (broad-wisdomed). Even though called ‘one of broad wisdom’, there too the Buddha employs the simile of the pot. If a pot is placed upright, then water remains in it; it does not flow out. That person is just like that.” Thus, the Buddha points out three distinct types of persons regarding the hearing of the Dhamma. This, then, is the exposition regarding human beings who can understand the Dhamma.</p>
+<p>In addition, it is mentioned in our Dhamma literature how even animals—who cannot reap the flavor of the meaning of the Dhamma and can only benefit from the flavor of its sound—attained various results by listening to this Dhamma attentively. Most extraordinary stories are mentioned. One is the story of Maṇḍūka Devaputta (the frog-deity). On one occasion, the Buddha was residing on the banks of the Gaggarā lake, preaching the Dhamma to the citizens of Campā. At that moment, a frog that came out of the lake was listening to the voice of the Buddha. You, faithful devotees, may have heard that the Buddha’s voice is extremely special. It is referred to as the “brahmā-voice endowed with eight factors.” Just as with other attributes, this applies to the Buddha’s voice as well. That frog remained listening to that voice. Meanwhile, a cowherd who came there stuck his staff into the ground and, leaning on it, began to listen to the sermon. The staff went straight into the frog’s head. The frog died right there and was immediately born (*jāti*) in the Tāvatiṃsa heaven as a deity named Maṇḍūka (which means ‘frog’) in a golden mansion. It is mentioned in the Dhamma that he came to the Buddha at that very moment and revealed this news. Thus, even that frog obtained the benefits of listening to the Dhamma. It was only the sound. Yet, the supremacy of the Dhamma is seen from this. Even nowadays, even if you, faithful devotees, do not know the Pali language, when a protection chant (*paritta*) is recited, a truly faithful person experiences an extraordinary fascination when the Karaṇīyametta Sutta, etc., are chanted, because the meaning and the tone of the Dhamma are so wonderfully blended.</p>
+<p>Likewise, another story is mentioned, which was declared by the Buddha himself to Ven. Ānanda. On one occasion, while walking for alms, the Buddha saw a young sow. He asked Ven. Ānanda: “Ānanda, do you see this young sow?” He replied: “Yes, Venerable Sir.” Then, the Buddha mentioned the past history, the past births (*jāti*), of that young sow. It is a story involving many births (*jāti*), a long story. But let us extract the part we need. The Buddha declared: “In the time of Kakusandha Buddha, this young sow was a young hen near an alms hall where the Sangha partook of meals. That young hen got to hear a meditating monk chanting a subject of insight meditation. While she sat listening to it, a hawk came, carried the young hen away, slit her neck, and ate her. But dying right there, the Buddha declared her next birth (*jāti*): she was born in a royal family as a princess named Ubbirī. But we can infer that, perhaps due to the benefit of listening to that subject of insight meditation even without understanding it, the following is mentioned regarding that princess: On one occasion, when that princess went to a toilet and saw maggots there, she brought to mind the perception of a worm-infested corpse (*puḷuvaka-saññā*)—meaning, meditating by reflecting on the impurity of a corpse infested with worms. This is a special subject of meditation, an insight meditation subject that can even yield Nibbāna. Directing her mind to that subject of meditation, it is mentioned that she attained even the first absorption (*paṭhama-jhāna*) right there in the toilet.” It was shown how that very royal princess has now obtained the existence of this young sow. Not only that, in that story, after passing through numerous births (*jāti*), taking human and other existences, she came to Sri Lanka during the time of King Duṭugāmuṇu. Ultimately, at the time of her final extinguishment (*pariNibbāna as an Arahant nun, she declared her past history, as recorded in the books. So, the portion we require: see how even that young hen obtained some benefit by listening to the Dhamma, or rather, by listening to the insight meditation chanted by those meditating monks. Subsequently, she became strong enough to obtain a human existence. Through this, we must understand that we should develop respect for the Dhamma. Only then is the Dhamma properly understood.</p>
+<p>Likewise, you, faithful devotees, may have often heard that when the occasions of realizing the paths and fruits are shown, it is mentioned there too that one can attain the realization of the paths and fruits on five occasions: while listening to the Dhamma, while preaching the Dhamma, while chanting a portion of the Dhamma, while reflecting on a portion of the Dhamma, and lastly, while cultivating a sign of concentration (*samādhi-nimitta*). That is: while listening, while preaching, while chanting the Dhamma, while reflecting on the Dhamma, and next, while cultivating some special sign of concentration—on all these five occasions, one can even attain the supramundane paths and fruits (*lokuttara-magga-phala*). Just because it is said so, we must not think that if one listens in a casual way, letting the sermon “play on,” such a person can attain the paths and fruits.</p>
+<p>The manner of listening that leads to the attainment of the paths and fruits is also mentioned right there in the Dhamma: “If someone listens to the Dhamma by directing complete attention in the manner described, at that moment he is *atthappaṭisaṃvedī* and *dhammappaṭisaṃvedī*—he experiences the meaning of the Dhamma, and he experiences the Dhamma itself.” That person receives a great joy from both the meaning and the Dhamma. Even while listening to the Dhamma, he receives a state of composure and calmness from it. When thinking about its meaning, and when reflecting on that meaning, he receives calmness. In the end, that calmness and joy gradually lead directly to concentration (*samādhi*). Within that, it is shown in this way: “While listening to the sermon experiencing the flavor of the meaning and the flavor of the Dhamma, a great delight (*pāmojja*) arises in that person”—what is called joyful delight. A great happiness arises. Next, that delight turns into rapture (*pīti*). A great rapture arises in his mind. Next, when the mind is rapturous, the body becomes tranquil (*passaddhi*). The mind also becomes tranquil. Through that bodily tranquility, a unique kind of unworldly happiness (*nirāmisa-sukha*) is received by that person. From that happiness (*sukha*), concentration (*samādhi*) next arises; the mind becomes concentrated. He can even enter certain meditative absorptions (*jhāna*). With that concentrated mind, next, he contemplates the very Dhamma preached by the Buddha as insight meditation (*vipassanā*), by way of the three characteristics of impermanence (*anicca*), suffering (*dukkha*), and non-self (*anattā*). It is in that manner that the realization of the paths and fruits is obtained. It is not said here that the realization of the paths and fruits is attained by merely hearing the Dhamma. If one listens in the manner one ought to listen, by directing full attention as described, then if one’s merits have matured, that person can even attain the realization of the paths and fruits. Such is the nature of listening to the Dhamma. Likewise, the Buddha has demonstrated to us on various occasions, also through those very Dhamma stories, in what manner the true result of a Dhamma sermon should be obtained. Therefore, if one listens to these casually, the Dhamma is also liable to be distorted.</p>
+<p>In another place, the Buddha points out several factors that lead to the disappearance, the vanishing of the True Dhamma. There, it is specifically spoken regarding the monks. It says that if somehow the monks do not listen to the Dhamma properly, do not learn the Dhamma properly, do not bear the Dhamma properly, do not reflect on the Dhamma properly with wisdom—by way of radical attention (*yoniso manasikāra*)—and do not lead their lives in accordance with the Dhamma, then this True Dhamma will disappear. From this, we see that this Dhamma is not merely about listening at that moment and conceptualizing it in words, nor is it merely about memorizing it. It is by living within it that the True Dhamma is protected. This is a profound matter to be taken to heart.</p>
+<p>In the Dhamma, the learned person (*bahu-ssuta*) is often mentioned. The learned person is someone of great value. Nowadays, there are various computers and similar devices where the Dhamma is stored. Because of their existence, some might think, “Why trouble ourselves to memorize? It is not necessary in this age. If there is a device, we can retrieve all this whenever we want.” Even if one gets other things from them, the Nibbāna that should be attained through them can never be harvested from a computer, no matter how advanced computers become. Therefore, if one expects Nibbāna, there is a series of terms mentioned regarding the learned person, just as was said in the past: *sutā, dhatā, vacasā paricitā, manasānupakkhitā, diṭṭhiyā suppaṭividdhā*. *Bahu-ssuta* means one who has heard much. Not only does he listen to the Dhamma, he also bears it (*sutā, dhatā*). He listens to the Dhamma and bears it. Having borne it, because there is a possibility of forgetting it, he practices it verbally (*vacasā paricitā*): he recites it constantly, chants it constantly.</p>
+<p>In the past, the Sangha thus constantly held entire sections of the Dhamma in memory—sometimes so extremely long that it is even unimaginable—such as the entire Nikāya texts. Because they might forget, they chanted them again and again: *vacasā paricitā*. Next, not only that, but to make it useful, *manasānupakkhitā* means they examine it, reflecting on them constantly as to what their meaning is. It is at that point that it becomes something of one’s own—something that is not done by computers: contemplated with the mind (*manasānupakkhitā*). Next, by developing deep understandings of the Dhamma in that manner, *diṭṭhiyā suppaṭividdhā*: he penetrates it well with his right view. It was the Buddha who declared this. “This is the literal meaning of this; this is its deep meaning; this point was made by these words.” In that way, he has properly understood the Dhamma.</p>
+<p>If the Dhamma is not understood in that way, it is merely a collection of words. That is what will happen in the future. This Tripiṭaka Dhamma will be preserved in words in that manner. It will be preserved even better than it was preserved in ancient times on ola-leaf manuscripts. But the flavor of their meaning, the fruit and benefit that should be derived through them, is liable to be lost to the future public, or rather, to the future generations. Because they will become enslaved to those aforementioned machines and shape their thinking accordingly. Therefore, we are compelled to remind you of these things at least occasionally. In all these modern things we have received, as you, faithful devotees, know, there are two sides: benefits and drawbacks. To many, it is understood only later. Sometimes, even those who manufactured the machines realize at some point, “Although we manufactured these on a large scale, they have such-and-such drawbacks.” Not only in destructive things, but even in the things we use daily, there is an aspect of drawbacks.</p>
+<p>In short, you, faithful devotees, must realize that the most supreme knowledge among all mundane knowledges in this world is what is called the knowledge of drawbacks (*ādīnava-ñāṇa*). The moment when the side of drawbacks of everything—the wrong side, its shortcomings—becomes visible, that is the highest point of one’s mundane knowledge. Until then, only the side of benefits is visible. Just like that, now in all these machinery and devices, there is both a side of benefits and a side of drawbacks. They arise in this civilization. But as wise individuals, we must understand that there is not only a side of benefits but also a side of drawbacks in this. While utilizing the benefits, we must protect ourselves from the drawbacks. Otherwise, we will be subjugated by those machines and eventually turn into mechanical human beings. That is indeed what is happening. A time is coming in the future when heartless humans will be born in the world. Such is the situation. Likewise, not only heartless, but brainless humans will also be born, because that too is now done by those iron brains. The next generation is liable to be born as those having such distorted physical and mental states. The reason for that is spending one’s life in a servile and wretched manner, being subjugated by them without properly reflecting on both sides—the benefits and the drawbacks. Therefore, through this matter of respect for the Dhamma highlighted by the Buddha, we must take what should be taken, without thinking of them as outdated.</p>
+<p>In accordance with the present era, various things might appear to you, faithful devotees, as benefits of the Dhamma: passing examinations, obtaining various degrees, and various other things. By learning this Dhamma, by learning it as a subject, one can derive these benefits—by-products. But if we consider the ultimate purpose of the Buddha, it is for none of those. A Buddha is born and preaches the True Dhamma in the world so that human beings—who have traversed this infinite time, who are subjugated by the stream of defilements in an extremely long and amazing way, who are subjugated by lust (*rāga*), hatred (*dosa*), delusion (*moha*), craving (*taṇhā*), etc., and are bent towards those lives—can emerge from them, shatter them and move forward, or enter the path to Nibbāna, cross over this becoming (*bhava*), and bring an end to *saṃsāra*. It is for this that the Dhamma has been preached.</p>
+<p>Indeed, that craving (*taṇhā*) is compared to a river. But the Buddha has declared a going in the opposite direction. This Dhamma is against the current (*paṭisotagāmī*). This Dhamma is like going upstream. It is such an amazingly unique Dhamma. Now, the river of craving (*taṇhā*) flows simply downwards. Beings are caught in it and swept away. There is no end to this. But the Buddha points out the destruction of craving (*taṇhā*). The destruction of craving (*taṇhā*) is a name for Nibbāna itself. It is that path leading to Nibbāna that is shown through this Dhamma. That, indeed, is a journey to be traveled with effort, energy, and faith. What is required for that, first of all, is listening to the True Dhamma. Indeed, the Buddha also points out on one occasion a certain important thing that comes even prior to listening to the True Dhamma. Where is this hearing of the True Dhamma obtained from? We think that at some moment it is obtained from a machine. But the Buddha has pointed out that the real True Dhamma is heard from virtuous persons. It is through associating with virtuous persons that the True Dhamma is heard. Accordingly, on one occasion, the Buddha declared a discourse (*sutta*) thus: “When association with virtuous persons is fulfilled, one gets to hear the True Dhamma. When there is listening to the True Dhamma, through that, radical attention (*yoniso manasikāra*) [grows].”</p>
+<p>Prior to that, let us remind ourselves of this matter: Now, the Buddha points out four factors necessary for Stream-entry, known as the factors of Stream-entry (*sotāpattiyanga*): *sappurisasaṃseva, saddhammasavana, yoniso manasikāra, dhammānudhammappaṭipatti*—these four factors are pointed out as assisting one in attaining Stream-entry. *Sappurisasaṃseva* means association with virtuous persons. Next, *saddhammasavana*: the Dhamma heard next from virtuous persons, the opportunity to hear the True Dhamma. Next, *yoniso manasikāra* means reflecting with wisdom. Not in an unwise or wrong way, but reflecting in the correct manner is radical attention (*yoniso manasikāra*). Next is *dhammānudhammappaṭipatti*: living in accordance with the Dhamma. These four factors are necessary to realize the paths and fruits, to attain Nibbāna.</p>
+<p>Next, that matter is mentioned in more detail in the discourse (*sutta*) we are prepared to present now: “When the factor of association with virtuous persons (*sappurisasaṃseva*) is fulfilled, when it is filled up, it flows over and, through that, listening to the True Dhamma is next obtained by that person. When listening to the True Dhamma is fulfilled, that very reflecting with wisdom called radical attention (*yoniso manasikāra*) emerges through it. When reflecting with wisdom called radical attention (*yoniso manasikāra*) emerges, mindfulness and clear comprehension (*sati-sampajañña*)—meaning mindfulness and great wisdom—grow in that person. When mindfulness and clear comprehension (*sati-sampajañña*) grow, that person’s restraint develops—the restraint of the senses (*indriya-saṃvara*). That person’s good conduct of body, speech, and mind—the threefold good conduct—grows. When that threefold good conduct grows, the four establishments of mindfulness (*cattāro satipaṭṭhānā*) grow within that person. As the four establishments of mindfulness are being fulfilled, the seven factors of enlightenment (*satta bojjhaṅgā*)—namely, mindfulness (*sati*), investigation of states (*dhamma-vicaya*), energy (*viriya*), rapture (*pīti*), tranquility (*passaddhi*), concentration (*samādhi*), and equanimity (*upekkhā*)—grow in this person. After those factors of enlightenment have grown, the Noble Eightfold Path is fulfilled, and one can attain true knowledge and liberation (*vijjā-vimutti*)—such as insight knowledges, paths, and fruits. In that manner, matching Dhamma factors one to another like the links of a chain, the Buddha preaches in that discourse (*sutta*) how the journey starting from the association with virtuous persons goes ultimately to Nibbāna, along with a simile for it.”</p>
+<p>The Buddha always employs a simile to instill a Dhamma point deeper into the mind, to engrave it more firmly in the heart. The simile given on this occasion: “Just as when it rains heavily—when there are heavy rains on a mountain with drizzling and heavy downpours—they flow down the mountain slopes, fall into clefts and gullies, and flowing through them, fill up the small rivers. The small rivers flow and fill up the large rivers. The large rivers flow and next fill up the great ocean. Just in that way, when association with virtuous persons is fulfilled, listening to the True Dhamma is fulfilled. When that is fulfilled, reflecting with wisdom called radical attention (*yoniso manasikāra*) is fulfilled. When that is fulfilled, mindfulness and clear comprehension (*sati-sampajañña*), mindful wisdom, is fulfilled. From that, restraint of the senses; from that, next, good conduct of body, speech, and mind; as that develops, the four establishments of mindfulness; as that develops, the seven factors of enlightenment; as that develops, in the end, leading up to Nibbāna, the paths and fruits of Nibbāna are also obtained. In that manner, the Buddha declares in that discourse (*sutta*).”</p>
+<p>In all of this, we must reflect: why is it said that this True Dhamma indeed comes from a virtuous person? Who is that virtuous person? We might sometimes think that what is called a virtuous person is something that comes from these devices. But in the truest manner, the True Dhamma—the True Dhamma that helps one go towards direct realization—is received only through a virtuous person. The term “virtuous person” (*sappurisa*) is used in the Dispensation specifically for those who have attained noble states, or rather, who have well engaged in that aforementioned practice in accordance with the Dhamma (*dhammānudhamma-paṭipada*) by way of the penetration of the paths and fruits, and have seen the Dhamma through themselves. He is the real virtuous person. The True Dhamma received from that very virtuous person is what genuinely helps towards Nibbāna. Therefore, we must understand that this listening to the True Dhamma is an extremely valuable thing. The True Dhamma is an extremely valuable thing. If we are to protect it, we should not protect it in that manner through external machines and devices. Not by writing in books or writing on palm leaves and burying them under the earth. One must deposit it in the depths of one’s own heart, bring it up constantly, and reflect on it with wisdom in the manner described as radical attention (*yoniso manasikāra*), etc. Experiencing the flavor of its meaning and the flavor of the Dhamma, and concentrating the mind through that, one must then develop insight meditation (*vipassanā*) on impermanence (*anicca*), suffering (*dukkha*), and non-self (*anattā*), and properly understand the meaning of this Dhamma.</p>
+<p>This Dhamma preached by the Buddha is an amazingly profound Dhamma. This cannot be understood by becoming enslaved to words alone. It is when one lives in accordance with it that the Dhamma becomes meaningful. You, faithful devotees, can read the Satipaṭṭhāna Sutta in a matter of minutes. But the establishment of mindfulness is not fulfilled through that, if one does not engage in it. Likewise, this Dhamma preached by the Buddha indeed becomes meaningful only to the one who engages in it practically. For one who does not, just as it is said, *gopo gāvova gaṇayaṃ paresaṃ*: a cowherd counts the cows of others, but does not receive the five products of the cow himself. Thus, if one is to obtain those five products of the cow, one must engage in that Dhamma. Otherwise, it is merely looking after the cows. In that manner, by merely memorizing the Dhamma like parrots or by merely recording them on devices, neither this True Dhamma nor the Dispensation is protected. One must listen to that Dhamma properly and, according to it, apply reflection in that manner and make it directly realized to oneself. It is in that manner that the True Dhamma is protected. So, that is the respect for the Dhamma that the Buddha highlights.</p>
+<p>Indeed, the specialty of the True Dhamma preached by the Buddha is revealing the causal relationship called dependent arising (*paṭiccasamuppāda*), which is an extraordinarily profound Dhamma not found in any other religion. Speaking of that Dhamma, the Buddha says on one occasion: “Whether Tathāgatas arise or do not arise, whether Tathāgatas appear or do not appear, this Dhamma-nature, this truth, always exists in the world.” What Tathāgatas do is make it directly realized and understood within themselves, and demonstrate it to the world by way of preaching. Therefore, we must reflect that what is embedded in this True Dhamma is this eternal Dhamma-nature.</p>
+<p>That is precisely why these Buddhas did not pay respect and deference to other external ascetics and brahmins. In this way, there is no ascetic, brahmin, or brahmā in this entire world-system who can be compared to the Buddha. Yet, the Buddha, as well as all Buddhas, respected that very True Dhamma. That is to say, it is that profound Dhamma-nature regarding this world that is present in this True Dhamma. That Dhamma-nature cannot be obtained by merely memorizing a word. Sometimes, it cannot be obtained by merely passing examinations either. Having properly understood that Dhamma, experiencing the flavor of the Dhamma and the flavor of its meaning as described, and next, shaping one’s life in accordance with it, one must directly realize that Dhamma for oneself. That is why we constantly remind ourselves of the six qualities of the Dhamma: *svākkhāto bhagavatā dhammo, sandiṭṭhiko, akāliko, ehipassiko, opanayiko, paccattaṃ veditabbo viññūhi*. That this Dhamma is well-expounded (*svākkhāta*) is said not merely because it was spoken in beautiful words, but because of the ultimate purpose promised by it. It is well-expounded because it has the power to yield Nibbāna. Likewise, that it is directly visible (*sandiṭṭhika*) is said because these ultimate purposes can be obtained right before one’s eyes in this very world, in this very life. It is likewise immediate (*akālika*). Simultaneously with fulfilling the necessary practice for this, the result is right there. That is immediate (*akālika*). Likewise, inviting one to come and see (*ehipassika*) means that this Dhamma has a power that leads one step by step. As we are mentioning now, if someone draws close to the association with virtuous persons, through that they are automatically directed towards listening to the True Dhamma. Through that, automatically to those other aforementioned factors like radical attention (*yoniso manasikāra*). In that manner, there is a nature of pulling one factor after another, a nature of interconnectedness, a causal relationship in this Dhamma. That is precisely why it is *ehipassiko*—it comes and takes one along, saying, “Come and see this Dhamma.” Where does it take one? Not to some external place. It takes one right inside, into one’s own heart—that is why it is called *ehipassiko*. Next, *opanayiko* (leading onwards) means, just as it is said “to lead towards,” it brings it in. That is what is meant by bringing the Dhamma into oneself. That is, the nature of the Dhamma is such that when one factor is fulfilled, the next grows through it.</p>
+<p>You, faithful devotees, may have often heard as a well-known matter regarding the Noble Eightfold Path: when right view (*sammā-diṭṭhi*) grows, right intention (*sammā-saṅkappa*) grows. Right intention (*sammā-saṅkappa*) means that when good thoughts grow, good words emerge through them. When good words grow, when one keeps practicing good words, one is automatically inclined to perform good actions. When performing good actions, it becomes the cause for establishing right livelihood (*sammā-ājīva*)—meaning a good way of living. When a good way of living is established, next, through that, right effort (*sammā-vāyāma*)—meaning the energy that brings wholesome states close and removes unwholesome states—emerges well. Through that, right mindfulness (*sammā-sati*), clear awareness, emerges. Next, through that is right concentration (*sammā-samādhi*). Thus, from whichever side one takes it, whichever section of the Dhamma one takes, the most unique characteristic you, faithful devotees, can see through these teachings leading towards Nibbāna is the causal relationship. That is precisely why it is *ehipassiko*. It has a nature of calling one towards it. Then, this goes and demonstrates to oneself alone. That is what is said at the end as *paccattaṃ veditabbo*. This is not something that goes and demonstrates to someone else. The Buddha himself says: “Not even I can do it. I am only a teacher. You themselves must travel on this path: *paṭipannā pramokkhanti jhāyino mārabandhanā* (those who have entered the path, meditators, will be released from the bond of Māra).” That is, the Tathāgatas are merely those who point out the way. If one is to be freed from this bond of Māra, one must walk on the practice of this very path. If one is to walk on the practice, what helps is that very causal relationship mentioned earlier. It is not that someone else sits and pushes you. There is an amazing kind of push within this Dhamma itself. That is what is meant by *opanayiko*. It leads from one to another. We must benefit from that. When the utilization of it is fulfilled, then indeed *paccattaṃ veditabbo viññūhīti* (to be personally realized by the wise). The wise person can make this Dhamma directly realized to themselves and see it through themselves. That state is called *dhammabhūta* (become the Dhamma). That person has become a treasure-house of the Dhamma, or rather, has become the Dhamma itself. It is mentioned regarding the Buddha: although we consider the Buddha as a person, in reality, he became the embodiment of the Dhamma. In that manner, the respective Arahants also become embodiments of the Dhamma to their respective extents.</p>
+<p>Next, simultaneously, we must reflect that it is to conquer those saṃsāric weaknesses shown here that the Buddha has pointed out three trainings: virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*). In every single person—not only in those four mentioned earlier, but in everyone—there are saṃsāric weaknesses due to lust (*rāga*), hatred (*dosa*), delusion (*moha*), craving (*taṇhā*), etc., which obstruct the hearing of the Dhamma. To conquer them, at this moment when our understanding has come, we must conquer those old saṃsāric habits by applying virtue (*sīla*), concentration (*samādhi*), wisdom (*paññā*), etc. Virtue (*sīla*) means taming, by directing oneself to something. If we thus direct ourselves to good things, a good virtue (*sīla*), a state of being virtuous, is established. Otherwise, that wildness arises. Comparing the mind from the wild state of an animal to the virtuous, or rather, disciplined state, we see that the Buddha first showed how to conquer saṃsāric weaknesses through virtue (*sīla*). Next, to develop it further, the mind is composed through what is called concentration (*samādhi*), by removing the distracted state. With that composed mind, ultimately, wisdom (*paññā*). It is through the power of understanding that, in the end, having conquered those saṃsāric weaknesses, and by penetrating the paths and fruits of Stream-entry (*sotāpatti*), Once-returning (*sakadāgāmi*), Non-returning (*anāgāmi*), and Arahantship, one can cross over this ocean of *saṃsāra*—which has been filled with saṃsāric suffering (*dukkha*) like birth (*jāti*), decay (*jarā*), sickness, and death (*maraṇa*) for an infinite time—be freed from the bond of *saṃsāra*, and attain that liberation of *nibbāna*.</p>
+<p>You, faithful devotees, must reflect with wisdom: on a Poya day like today, having undertaken a certain virtue (*sīla*) at your own level, you listened to the Dhamma at this moment, meditating on a subject of meditation (*kammaṭṭhāna*). Today, this Dhamma sermon is indeed a Dhamma sermon about listening to the Dhamma. As we say on other days, the benefits of listening to the Dhamma are indeed to be reflected upon in the manner described as faith (*saddhā*), energy (*viriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*). If one listened to the Dhamma properly, faith, energy, mindfulness, concentration, and wisdom grow within that person. It is according to the level of that growth that, as mentioned in the Dhamma, some individuals attained the penetration of the paths and fruits at the very moment of listening to the Dhamma.</p>
+<p>Reflecting in that manner, through this store of wholesome merit accumulated up to now, through the association with noble friends (*kalyāṇa-mitta*), meditating, may these benefits of listening to the Dhamma definitely be a supportive cause for crossing over all saṃsāric suffering as quickly as possible and attaining this noble, great, deathless Nibbāna which is the supreme goal expected by each of you! Likewise, may all beings, including the assembly of deities and brahmās protecting the Dispensation, and our saṃsāric relatives from Avīci up to Akaniṭṭha, rejoice in this store of wholesome merit accumulated by us through preaching and listening to the Dhamma. Through that power, may they at some point be freed from unhappy states, reach happy states, develop meditation through association with noble friends (*kalyāṇa-mitta*), and as quickly as possible, realize the great, deathless Nibbāna through their aspired state of enlightenment (*bodhi*). Aspiring thus, recite this verse:</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_076.html" class="doc-btn">← Previous Sermon (076)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_078.html" class="doc-btn">Next Sermon (078) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

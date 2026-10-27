@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 040 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_039.html" class="doc-btn">← Previous Sermon (039)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_041.html" class="doc-btn">Next Sermon (041) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 040</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_040_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_040_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_040_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #40</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.176)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Atītaṃ nānvāgameyya, nappaṭikaṅkhe anāgataṃ; Yadatītaṃ pahīnaṃ taṃ, appattañca anāgataṃ. Paccuppannañca yo dhammaṃ, tattha tattha vipassati; Asaṃhīraṃ asaṅkuppaṃ, taṃ vidvā manubrūhaye. Ajjeva kiccamātappaṃ, ko jaññā maraṇaṃ suve; Na hi no saṅgaraṃ tena, mahāsenena maccunā. Evaṃ vihārimātāpiṃ, ahorattamatanditaṃ; Taṃ ve bhaddekarattoti, santo ācikkhate muni.</p>
+<p>From:</p>
+<p>Bhaddekaratta Sutta (MN 131) from the Majjhima Nikāya</p>
+<p>Dear Listeners,</p>
+<p>The sole Teacher of the world, the Supreme Fully Self-Enlightened Buddha, clearly explained to the world the significance of this present moment. The world mostly lives in a dead past. Or else, in an unborn future. Without one's knowledge, the present moment slips away. It is these four verses expressing the importance of the present moment that we have chosen as our topic today. These four verses are found in the *Bhaddekaratta Sutta* of the *Majjhima Nikāya*. Indeed, four consecutive suttas under the name *Bhaddekaratta* can be found in the *Majjhima Nikāya*: the *Bhaddekaratta Sutta*, the *Ānanda Sutta*, the *Mahākaccāna Sutta*, and the *Lomasakaṅgiya Bhaddekaratta Sutta*. In all four of these suttas, these same four verses are found as the theme or the main topic. From this, one can appreciate how important and meaningful these verses are. Furthermore, detailed expositions of these verses are found in all four suttas. In truth, every single one of these expositions is directly relevant to insight meditation (*vipassanā*). That is why we have specifically brought up this sutta discourse.</p>
+<p>Now, the introductory story (*nidāna*) of this *Bhaddekaratta Sutta* is briefly given as follows: While the Buddha was residing at the Jeta Grove monastery in Sāvatthī, he directly addressed the Saṅgha and declared, "Monks, I shall expound to you the summary (*uddesa*) and the exposition (*vibhaṅga*) of 'one who has an auspicious day' (*bhaddekaratta*). Listen and pay close attention."</p>
+<p>You may not be familiar with these two words, *uddesa* (summary) and *vibhaṅga* (exposition). They represent a distinctive feature of the Buddha's teaching style. On certain occasions, before presenting a lengthy explanation, the Buddha would first present a summary of what he intended to declare as a thematic passage. This is called the *uddesa*. Then, the *uddesa* is subsequently analyzed and explained in detail as the *vibhaṅga*. This is characteristic of the Buddha's method of teaching. In this sutta as well, the Buddha said, "Monks, I shall declare this summary and exposition to you," and the four verses he first presented as the summary (*uddesa*) are what we have taken as our topic today.</p>
+<p>Now let us try to understand the general meaning of these four verses.</p>
+<p>"Do not run after the past" (*atītaṃ nāvagameyya*); "do not long for the future" (*nappaṭikaṅkhe anāgataṃ*). "What is past is left behind" (*yad atītaṃ pahīnaṃ taṃ*); "and the future is yet unreached" (*appattañca anāgataṃ*)—the future has not yet arrived. "And whoever with insight sees each present state as it arises, right there, right there" (*paccuppannañca yo dhammaṃ tattha tattha vipassati*); "unconquerable, immovable, knowing that, the wise one should cultivate it" (*asaṃhīraṃ asaṅkuppaṃ taṃ vidvā manubrūhaye*). Unentangled by and unprovoked by that present state, indeed, that is what the wise person should cultivate.</p>
+<p>Next: "Today itself the effort should be made, who knows if death will come tomorrow?" (*ajjeva kiccaṃ ātappaṃ, ko jaññā maraṇaṃ suve*). The duty to be done must be striven for today itself. "Who knows if death will come tomorrow?" "For there is no bargaining with Death and his great army" (*na hi no saṅgaraṃ tena mahāsenena maccunā*). There is indeed no agreement or contract for us with the King of Death who has such a mighty army, is there? "One who dwells thus ardently" (*evaṃ vihārīmātāpiṃ*)—one who acts and dwells in this manner, with such understanding and realization, cultivating ardent energy, "tireless day and night" (*ahorattamatanditaṃ*), cultivating energy day and night without laziness, "him indeed, the peaceful sage calls one who has an auspicious day" (*taṃ ve bhaddekarattoti santo ācikkhate munī*). The peaceful sage—meaning the Buddha Himself—declares him to be a *Bhaddekaratta*.</p>
+<p>Thus, I have given the general meaning. To make this resonate more deeply in the heart, we have rendered it into Sinhala verse in this way:</p>
+<p>*Do not run after what has gone,*</p>
+<p>*Do not stand yearning for what is to come.*</p>
+<p>*Take what is past exactly as past,*</p>
+<p>*See the future as yet unreached.*</p>
+<p>*Subjecting the presently arisen things as they come,*</p>
+<p>*To the wisdom of insight,*</p>
+<p>*The wise one cultivates in this manner,*</p>
+<p>*The unattached, unprovoked insight.*</p>
+<p>*Do today itself what must be done,*</p>
+<p>*For death may indeed come tomorrow.*</p>
+<p>*There is surely no bargaining possible,*</p>
+<p>*With Death who has such a great army.*</p>
+<p>*Dwelling thus day and night without laziness,*</p>
+<p>*Living in a way that burns up the defilements,*</p>
+<p>*The Sage declares that such a monk*</p>
+<p>*Is delighted in the supreme solitude.*</p>
+<p>Even though we translated it in that manner, the word *bhaddekaratta* has been a puzzle for scholars since ancient times. Both the commentators and Western scholars have offered various interpretations, particularly concerning what is meant by the word *eka* (one/sole) in *bhaddekaratta*.</p>
+<p>Now, in an exposition written by us about forty years ago on this very sutta discourse, we presented an interpretation for this word *bhaddekaratta*. In short, it is based on that interpretation that we referred to "supreme solitude" here. We understood it in this way: we took the word *eka*—and demonstrated with supporting evidence—that the word *eka* signifies solitude or seclusion. Thus, *bhadra* means auspicious or good, and *ratta* means attached or delighted. Therefore, the meaning we presented was: one who is delighted in the auspicious, or rather, the most noble seclusion or solitude.</p>
+<p>We drew support for that meaning from a certain short sutta discourse found in the *Saṃyutta Nikāya*. It reads as follows: When the Buddha was residing at the Bamboo Grove (*Veḷuvana*) in Rājagaha, there was a certain monk who lived completely alone amidst the community of monks. The other monks referred to this bhikkhu as "Thera"—by the name "Thera"—though we do not know for what reason. Thus, the sutta featuring that monk named Thera is called the *Theranāmako Sutta*. The unique characteristic of this bhikkhu named Thera was that he was an *ekavihārī*—meaning he behaved in accordance with solitary dwelling, was a solitary dweller, engaged in solitary living, and also spoke in praise of the virtues of solitary dwelling. Let us highlight here a few words that describe his conduct, as they will assist in this explanation. His daily routine is recorded in this way: *So eko gāmaṃ piṇḍāya pavisati, eko paṭikkamati, eko raho nisīdati, eko caṅkamaṃ adhiṭṭhāti*. The word *eko* (alone) was repeated several times. What does it mean regarding his daily routine? He enters the village for alms alone, departs from the village alone, sits in meditation in private (*raho*) alone, and walks on the ambulatory (*caṅkama*) alone.</p>
+<p>Then, some other monks went and reported the uniqueness of his behavior to the Buddha, saying: "There is this bhikkhu named Thera who lives as an *ekavihārī* (solitary dweller) and keeps speaking in praise of the virtues of being an *ekavihārī*." The Buddha sent word, saying: "The Teacher is calling you, tell him to come here." When that bhikkhu arrived, the Buddha asked him: "How is it, Thera, that you dwell as an *ekavihārī* and speak in praise of the virtues of being an *ekavihārī*?" Thereupon, he declared his aforementioned daily routine: "Venerable Sir, Blessed One, I enter the village for alms alone, depart from it alone, sit in meditation alone, and walk on the ambulatory alone. That is how my dwelling as an *ekavihārī* is."</p>
+<p>Then the Buddha said: "Thera, there is indeed that kind of solitary dwelling (*ekavihāra*). I do not say it is not so. However, I shall tell you at this moment how this solitary dwelling—this solitude—becomes perfected in every sense, and how it is detailed and made truly meaningful. Listen well." Thereupon, the Buddha declared the following words, which we have taken as our supporting evidence, as they are very closely related terms: "Thera"—this is said regarding a certain bhikkhu—"what is past is abandoned" (*yaṃ atītaṃ taṃ pahīnaṃ*); he has abandoned past things, treating them as gone. "What is future is relinquished" (*yaṃ anāgataṃ taṃ paṭinissaṭṭhaṃ*); he has let go of future things. "And desire and lust (*chandarāgo*) for currently acquired forms of existence (*paccuppannesu ca attabhāvapaṭilābhesu*)—meaning whatever presents itself in the present—is thoroughly subdued" (*suppaṭivinīto*). "It is in this way, Thera, that this solitary dwelling (*ekavihārī*) is fully completed and perfected in every sense," so the Buddha declared.</p>
+<p>Thus, from this discourse we can see, firstly, that the meaning of the word *eka* is the state of being an *ekavihārī*—solitude. We have demonstrated this by citing other passages showing that the word *eka* was used in ancient times as a specific term denoting solitude. Secondly, as shown by the Buddha, this state of being an *ekavihārī* is not merely remaining physically apart from the conventionally accepted crowd. Now, those of you who have studied this Dhamma would know that three types of seclusion (*viveka*) are presented in this Dhamma. Seclusion is shown in three senses: physical seclusion (*kāya-viveka*), mental seclusion (*citta-viveka*), and seclusion from assets/defilements (*upadhi-viveka*). Physical seclusion (*kāya-viveka*) is what everyone knows. One thinks, "I will leave all this behind and go to the forest. By going to the forest and staying alone, everything will be solved." That, too, is helpful for meditation, of course. Yet, it is the lowest level of being an *ekavihārī*.</p>
+<p>The second level is mental seclusion (*citta-viveka*). Aided by that seclusion, if one suppresses the hindrances (*nīvaraṇa*) and attains concentration—attaining states of meditative absorption (*jhāna*) in the manner of "secluded from sensual pleasures, secluded from unwholesome states" (*vivicceva kāmehi vivicca akusalehi dhammehi*)—that is mental seclusion. The sages of the past who attained *jhānas* reached that point.</p>
+<p>Behold, seclusion from assets (*upadhi-viveka*) is the deepest seclusion shown in this Dhamma. Seclusion from assets is Nibbāna. To help you understand this term "seclusion from assets" (*upadhi-viveka*), one must first understand the meaning of the word *upadhi* (assets/acquisitions/fuel). This word *upadhi* is mentioned in the Dhamma in two senses. In the mundane sense, *upadhi* means gold, silver, pearls, gems, houses, land, wife, and children—things regarded as one's possessions, wherein the sense of "mine-ness" dwells. In the mundane sense, these are *upadhi*. In the deeper sense, *upadhi* refers to our samsaric assets. What is that? It is a term you have heard of: the five groups of grasping (*pañca-upādānakkhandha*). The five groups of grasping (*upādāna*) are the five heaps we hold on to and cling to. Anyone would have heard these five words: the heap of form, the heap of feeling (*vedanā*), the heap of perception (*saññā*), the heap of preparations (*saṅkhāra*), and the heap of consciousness (*viññāṇa*). Thus, in the sense of holding on and clinging to them, they are grasping (*upādāna*). However, if one stands established upon them as though they were assets—at the moment one regards them as things upon which one's self-identity rests—those very graspings (*upādāna*) are regarded as assets (*upadhi*). So, depending on the perspective from which we look, if we take these five heaps as things clung to at a given moment, they are five heaps of grasping (*upādāna*). If we consider them in the sense of relying upon them, or as things gathered and piled up, behold, they are assets (*upadhi*).</p>
+<p>Next, along with that, let us say that the word "heap" (or group) might be a problem for many. Why is this called the "heap of form", "heap of feeling"? The word is *khandha*. Indeed, the word *khandha* is the word used when saying "five aggregates" (*pañcakkhandha*). *Khandha* means heap, aggregate, or mass. What is this heap? The Buddha has explained this as well. This heap is eleven-fold. It is shown elsewhere as: *atītānāgatapaccuppannaṃ, ajjhattaṃ vā bahiddhā vā, oḷārikaṃ vā sukhumaṃ vā, hīnaṃ vā paṇītaṃ vā, yaṃ dūre santike vā*—making eleven aspects. The three periods of time mentioned here are shown first: past heap of form, future heap of form, present heap of form; then internal (*ajjhatta*) or external (*bahiddhā*), which is two-fold; then gross (*oḷārika*) or subtle (*sukhuma*); then inferior (*hīna*) or superior (*paṇīta*); then far (*dūre*) or near (*santike*). Behold, each aggregate is divided in this eleven-fold manner. So, these are indeed what we are holding on to as assets. The moment when every single such asset (*upadhi*) is relinquished is what is called Nibbāna. That is why a term used to describe Nibbāna is *sabbūpadhipatinissaggo*—the relinquishment of all assets. That state of relinquishing all assets is indeed the aforementioned seclusion from assets (*upadhi-viveka*). That means Arahantship. That is the highest seclusion.</p>
+<p>Now, the advice given by the Buddha to that bhikkhu named Thera is actually concluded with a certain verse—a verse that depicts an Arahant:</p>
+<p>*Sabbābhibhuṃ sabbaviduṃ sumedhaṃ,*</p>
+<p>*Sabbesu dhammesu anūpalittaṃ.*</p>
+<p>*Sabbañjahaṃ taṇhakkhaye vimuttaṃ,*</p>
+<p>*Tamahaṃ naraṃ ekavihārīti brūmi.*</p>
+<p>Behold, that solitary dwelling (*ekavihārī*) is in truth found only within an Arahant; this is declared to that bhikkhu through this verse. "*Sabbābhibhuṃ*"—conquering all; "*sabbaviduṃ*"—knowing all; that wise person; "*sabbesu dhammesu anūpalittaṃ*"—having an unstained nature toward any thing, or rather toward all things; "*sabbañjahaṃ*"—having abandoned everything; "*taṇhakkhaye vimuttaṃ*"—liberated through the destruction of craving (*taṇhā*); "*tamahaṃ naraṃ*"—to that person, to that human being, to that Arahant, I say "solitary dweller" (*ekavihārī*). Thus did the Buddha conclude his advice to the Thera. From this, we can contemplate and understand: behold, seclusion from assets (*upadhi-viveka*) is indeed the highest, consummate seclusion. To make it resonate more deeply, we called it "supreme solitude"—the ultimate seclusion. Thus, *bhaddekaratta* refers to that monk who is delighted in that supreme solitude. It was to demonstrate this that we presented that supportive sutta.</p>
+<p>Next, let us say that what we discussed so far were just the verses. The Buddha presented those verses as the summary (*uddesa*), as the synopsis. Along with that, the Buddha presented the exposition (*vibhaṅga*) to the Saṅgha in this manner: "And how, monks, does one run after the past?" Having previously said "do not run after the past," he now questions and explains how one chases after the past. Herein, a certain bhikkhu thinks thus: *Evaṃrūpo*—"I was of such a form in the past." He brings up that thought, thinks about the past, and generates a delight called *nandi*—*nandi* being another name for craving (*taṇhā*)—toward that past form. It is through generating that delight that one goes into the past. Therefore, it is not by the mere remembering of the past. Rather, one generates attachment, craving (*taṇhā*), for the past form. The same applies to feeling (*vedanā*), perception (*saññā*), preparations (*saṅkhāra*), and consciousness (*viññāṇa*). That is how one runs after the past.</p>
+<p>Next, he shows: "And how, monks, does one not run after the past?" Here, it is shown that if one does not generate that delight called *nandi* toward the past form, feeling, etc., behold, one is freed from that. One is freed from running after the past. The same is said regarding the future. If one generates craving (*taṇhā*)—namely *nandi*—toward a form expected in the future that has not yet arisen, thinking, "May I have such a form in the future!" behold, that is yearning for the future. Understand the other aggregates in the same way.</p>
+<p>Next, he speaks of the present. Regarding the present (*paccuppanna*): "And how, monks, is one drawn into presently arisen states?" A peculiar word is mentioned there, which also appeared in the verse: *saṃhīrati*—how is one drawn or swept away by present things? There, the Buddha shows—and some of you might already know this—that the thought pattern of the uninstructed worldling is shaped according to the dogma of self-illusion (*sakkāya-diṭṭhi*). The dogma of self-illusion (*sakkāya-diṭṭhi*) means imagining a self in four ways regarding each of these aggregates. Thinking, "This is my form." This is shown in four ways: one regards form as self; or one regards self as possessing form; or one thinks form is in self; or one thinks self is in form. In this way, being drawn to that form through a concept of self is what is meant by being drawn into presently arisen states—being drawn into present phenomena. Understand the same for feeling and so on. Such is the thought pattern of the uninstructed worldling—the ordinary person who does not know the Dhamma—being drawn into the present. It is precisely because of being drawn in that there is also the provocation (*saṅkuppati*) or conflict.</p>
+<p>Next, he shows how one is not drawn into them. There he speaks of the well-instructed noble disciple—the noble disciple who has heard the Dhamma, who thinks in a way that frees them from the dogma of self-illusion (*sakkāya-diṭṭhi*). How does such a person think? They do not grasp this form as "mine." They do not think in those four ways we mentioned—that form is mine, self possesses form, form is in self, or self is in form. Instead, they add a "not" (*na*) to it. They do not think of form as self; they do not think form is self. That is all. That means the noble disciple trains themselves to look at the present moment according to the vision of non-self (*anattā*), just as the Buddha explained. Thus, in that manner, if we take it briefly, the Buddha shows through the five groups of grasping (*pañca-upādānakkhandha*) how one runs after the past and how one does not; how one yearns for the future and how one does not; and how, without being caught by present phenomena, one practices insight meditation (*vipassanā*) right there at each point.</p>
+<p>So, since there is still much to cover, I have said that much about that sutta. Now, we mentioned earlier that the verses in this *Bhaddekaratta Sutta* are also found in three other suttas.</p>
+<p>Next, we shall take up the *Ānanda Sutta* which is right next to it. It is mostly similar. Let us point out the differences. The background story (*nidāna*) of the *Ānanda Sutta* is as follows: It was a time when the Buddha was residing at the Jeta Grove monastery in Sāvatthī. Ven. Ānanda was giving a Dhamma talk to the bhikkhus in the assembly hall, inspiring them with a Dhamma talk. While inspiring them, he also declared its detailed exposition to the Saṅgha. Ven. Ānanda preached the Dhamma. After he had finished explaining, the Buddha, having arisen from his evening meditation, came to the assembly hall and asked the Saṅgha: "Monks, who was it in the assembly hall that inspired the Saṅgha with a Dhamma talk, declaring the summary (*uddesa*) and the exposition (*vibhaṅga*)?" The bhikkhus replied: "It was the Venerable Ānanda." Then the Buddha asked Venerable Ānanda: "Ānanda, how did you explain this to the Saṅgha?" Thereupon, Ven. Ānanda once again presented the very same analysis he had declared earlier, right in front of the Buddha. The Buddha said, "Sadhu! Sadhu!" and approved of it. That is the *Ānanda Sutta*.</p>
+<p>Next, we come to the *Mahākaccāna Bhaddekaratta Sutta*. At that time, the Buddha was residing at the Tapodārāma in Rājagaha. While he was residing at the Tapodārāma, Ven. Samiddhi got up early in the morning—now, *tapoda*, friends, refers to the hot water springs in India. There was a hot water pool near the Tapodārāma where the Buddha resided. Having gone to that Tapoda pool, Ven. Samiddhi bathed at the crack of dawn, and stood wearing only his under-robe, waiting for his body to dry. At that moment, illuminating the Tapoda pool, a certain deity approached Ven. Samiddhi and asked: "Monk, do you know, do you remember, this exposition (*vibhaṅga*)?" Ven. Samiddhi replied: "No, friend, I do not know. Do you know?" The deity said: "I, too, do not know." Next, the deity asked: "Do you at least know these verses?" "I do not know. Do you know?" "I, too, do not know," said the deity. However, the deity then said: "Even so, monk, this summary (*uddesa*) and exposition (*vibhaṅga*) are extremely necessary for a monk's life. They are highly valuable. Learn them."</p>
+<p>Because of this, after daybreak, Ven. Samiddhi went to the Buddha and said: "While I was bathing in the morning, a deity came and spoke to me thus. Venerable Sir, please kindly explain to me the summary (*uddesa*) and the exposition (*vibhaṅga*) of 'one who has an auspicious day' (*bhaddekaratta*)." "Very well, monk, listen," said the Buddha, and then preached those four verses to the group, including Ven. Samiddhi. Having preached them, what did he do? He rose from his seat and went into his dwelling (*vihāra*). That was a clever device of a teacher employed by the Buddha. He did that to train them to get Ven. Kaccāna to give an exposition on this. Once the Buddha had gone into his dwelling, the community of monks, including Ven. Samiddhi, contemplated: "Now, the Blessed One has preached this in brief and departed. We do not know its meaning. How are we to know the detailed explanation? While there is an exposition (*vibhaṅga*), the Buddha preached only the summary (*uddesa*) and retired to his dwelling." So, as they were talking, these monks said: "Now, is not Ven. Mahākaccāna highly praised by the Buddha? He is wise, and is capable of explaining in detail what has been taught in brief. Let us go to Kaccāna." So saying, this group went and invited Ven. Kaccāna, requesting him to explain to them the meaning of what the Buddha had preached in brief.</p>
+<p>Then, as is usual in such situations, Ven. Kaccāna said: "You could have asked him right then. Your coming to me, Venerable Sirs, is just like someone looking for heartwood among the branches and leaves while bypassing the heartwood of the standing tree itself." When he spoke so humbly, the monks pleaded again: "No, no, that is alright. If it is no trouble, please kindly explain it to us. That time has passed—the time to ask the Buddha." "In that case, listen. I shall analyze it. Go later and ask the Buddha whether what I say is correct." Thereupon, what was the exposition given by Ven. Kaccāna? Ven. Mahākaccāna presented that very same matter by way of the six sense-bases (*saḷāyatana*). That is important. This is how he explained it there: "Behold, friends, this is how I have understood it: running after the past is explained as: 'In the past, my eye was such, forms were such.' One generates desire and lust (*chandarāgo*) toward them in consciousness (*viññāṇa*). Because of that desiring, which is desire and lust (*chandarāgo*), a delight called *nandi* arises—which is another name for craving (*taṇhā*). By generating that, behold, the bhikkhu is said to be running after the past." Instead of form, feeling, and so on, here he speaks of the eye and the others. When you consider the six sense-bases (*saḷāyatana*), what are the six? Eye, ear, nose, tongue, body, and mind, together with their corresponding forms, sounds, smells, tastes, tangibles, and ideas (*dhamma*). Therefore, regarding those six, including the mind, if one thinks about those things that existed in the past and generates an attachment in that manner, one has run after the past. One who does not generate such attachment does not run after the past. The fault does not lie in the mere remembering of the past. In the same way, he explained regarding the future: one makes a resolution or a wish concerning the future, thinking, 'May I be one possessing an eye in the future!' 'May I be a seer of such forms!' and so on. That is the future. He explains the present too in terms of the six sense-bases (*saḷāyatana*). Generating desire and lust (*chandarāgo*) and craving (*taṇhā*) in that same manner toward the present eye and its objects. Thus, Ven. Mahākaccāna clarifies this matter by way of the six sense-bases (*saḷāyatana*).</p>
+<p>The monks listened to that, went to the Buddha, and reported: "Venerable Sir, Ven. Mahākaccāna explained it to us in this way." The Buddha said, "Sadhu! Sadhu!" and approved of it, saying, "If you had asked me, I too would have explained it in this very same way." From this, we can see that this teaching on the *Bhaddekaratta* can be understood not only by way of the five groups of grasping (*pañca-upādānakkhandha*) but also by way of the six sense-bases (*saḷāyatana*). As we mentioned, because it is an aid to insight meditation (*vipassanā*), one can cultivate insight by utilizing the five groups of grasping (*pañca-upādānakkhandha*). That also leads to Nibbāna. Insight meditation can also be cultivated by way of the six sense-bases (*saḷāyatana*)—which is very helpful for many people. This teaching helps in that too. So, that is what is found in the *Mahākaccāna Bhaddekaratta Sutta*.</p>
+<p>Next, let us come to the *Lomasakaṅgiya Sutta*. It is somewhat unique. In this, the Buddha is indeed residing in Sāvatthī, but the event itself takes place at the Nigrodhārāma in Kapilavatthu of the Sakyans. A certain bhikkhu named Lomasakaṅgiya was residing in this Nigrodhārāma. At that time, it is described as follows: While the bhikkhu named Lomasakaṅgiya was residing in that Nigrodhārāma, late at night—there is usually a time when deities visit, isn't there?—a deity named Candana arrived. Appearing before Ven. Lomasakaṅgiya, he asked in the same manner: "Monk, do you know the summary (*uddesa*) and the exposition (*vibhaṅga*)? Do you remember it?" "No, friend." "Do you know it?" "I, too, do not know." Then, the deity asked: "Monk, do you know the *Bhaddekaratta* verses?" "I do not know, do you know?" Thereupon, the young deity Candana said: "I know." Behold, what is shown there is extremely special.</p>
+<p>This young deity Candana said: "On one occasion, the Blessed One was seated on the Paṇḍukambala stone seat at the foot of the Parasatu tree in the Tāvatiṃsa heaven, preaching this *Bhaddekaratta* and its exposition (*vibhaṅga*) to the Tāvatiṃsa deities..." Candana recited those verses. He did not stop after reciting those verses. The deity said to Ven. Lomasakaṅgiya: "Monk, you must learn the exposition (*vibhaṅga*) of this sutta as well. It is highly necessary for a monk's life." Having said so, he vanished.</p>
+<p>So what did Lomasakaṅgiya do? The very next day, he put his lodging in order, took his bowl and robes, departed from the Nigrodhārāma, and wandered by stages toward Sāvatthī. Why? To hear the summary (*uddesa*) and the exposition (*vibhaṅga*). Having arrived, when he met the Buddha at the Jeta Grove, Ven. Lomasakaṅgiya related the entire account concerning the deity who had visited him. And then—behold, there is a peculiarity here too—the Buddha asked: "Do you know who that deity was?" "No, Venerable Sir." "That was the young deity Candana. When I was preaching this, the young deity Candana was listening and paying close attention." Having said so, the Buddha said, "Behold, monk, I shall explain it to you," and presented the same exposition found in the earlier suttas. Thus, we have given you a general explanation of the matters concerning the *Bhaddekaratta Sutta* in those four suttas of the Middle Length Collection (*Majjhima Nikāya*).</p>
+<p>By now, you must have realized their importance. If there is anything to say in the remaining time, it is how this serves as an aid to insight meditation (*vipassanā*). How did we begin? Usually, the world stays in a dead past; it lives in a dead past, or in an unborn future. However, liberation from *saṃsāra* is found within this very moment. How did the Buddha bring this out? What is the reason why the ordinary worldling does not perceive the present moment? It is because of that aforementioned dogma of self-illusion (*sakkāya-diṭṭhi*)—the view of self. One who grasps the present moment cannot elevate it to insight meditation (*vipassanā*). However, the meditator of insight looks at it not as a self, but as preparations (*saṅkhāra*). That is what is important there.</p>
+<p>We know that one investigates them as preparations (*saṅkhāra*). Saying "impermanent indeed are preparations, subject to arising and passing away" (*aniccā vata saṅkhārā uppādavayadhammino*) does not refer only to the moment of dying. What is the nature of preparations (*saṅkhāra*)? They arise and pass away. They pass away. If they arise and pass away, and if they cannot be kept under one's control—if that is the reality—behold, then a gap opens up. The present. That is why it was said: *tattha tattha vipassati*—one must see right there at each and every point in the present.</p>
+<p>As stated in the verses: *paccuppannañca yo dhammaṃ [tattha tattha] vipassati*. Seeing present states right there at each point in an extremely subtle manner—as the insight meditator goes deeper and deeper, this 'present moment' becomes clear to them. Through reflecting with the wisdom called radical attention (*yoniso manasikāra*), one sees that what happens moment by moment—what happened in the past, what will happen in the future, and what is happening in the present—is just the arising and passing away of those aforementioned preparations (*saṅkhāra*). That is precisely what is called the knowledge of arising and passing away (*udayabbaya-ñāṇa*). Arising and passing away. Thus, insight meditation (*vipassanā*) begins there: "arising, passing away; arising, passing away."</p>
+<p>So that is why it was said: one does not grasp it as a self. If one grasps it, right there a conflict arises, doesn't it? There is none of that. Instead, insight at each point means seeing them as impermanent (*anicca*), suffering (*dukkha*), and non-self (*anattā*)—as preparations (*saṅkhāra*). To clarify this further, there are similes we have mentioned on many occasions—indeed, not us, but the Buddha has brought them up even more. You have often heard the simile given for preparations (*saṅkhāra*): the banana tree trunk.</p>
+<p>We have made great use of this banana tree. Even though it has no heartwood, the banana tree helps us understand the Dhamma. Yet we do not value it; we even dismissively say "like a banana flower" (or 'worthless'). But there is nothing as valuable as the banana tree, because it represents the nature of preparations (*saṅkhāra*). You must have heard the Buddha's word; it was the Buddha Himself who presented the simile of the banana tree trunk when speaking of preparations (*saṅkhāra*).</p>
+<p>Behold, a man who has never seen a banana tree goes into the forest and sees one for the first time. He thinks, "This looks like wood with a solid heartwood, so I will cut the top and the bottom and carry it on my shoulder," intending to go home and make a wardrobe or a chair.</p>
+<p>Thus, carrying that banana trunk on the shoulder is what we pointed out using a term: *parāmarsa*—grasping or holding on. We used that word because in the Dhamma there is its opposite: *sammasana*—investigation, which means reflecting with radical attention (*yoniso manasikāra*). The Pali word for reflecting is *sammasana*. If we present investigation (*sammasana*) as the opposite of grasping (*parāmarsa*)—if grasping is "clinging tightly," then investigation is like "gently feeling and examining."</p>
+<p>Now, regarding that banana trunk, that man just carried it off without even looking. But what does the insight meditator do? He cuts the top and bottom, feels the banana trunk, and peels away its sheaths. When one sheath is finished, behold, there is another sheath; under that, another sheath; under that, another sheath. That is exactly how it is perceived during the investigation of preparations (*saṅkhāra*). As reflection becomes subtler and subtler, even what we finally take to be the "core" of the banana trunk is found to be just sheaths—there is no core in that either. It is just like that in the investigation of preparations (*saṅkhāra*), because that aforementioned view is abandoned.</p>
+<p>Now, there are two other terms used in insight meditation (*vipassanā*) that we have often mentioned to you, which are found in meditation manuals: the perception of compactness (*ghana-saññā*) and the perception of a group/heap (*rāsi-saññā*).</p>
+<p>The perception of compactness (*ghana-saññā*) belongs to the one who clings. He regards it as compact: "This is a single, solid object." For him, indeed, there is no insight meditation. Behold, to the insight meditator, as he goes deeper into insight, this is perceived as a heap (*rāsi*). It is perceived as a heap. Why is it perceived so? The reason it was perceived as "one" is the glue of craving (*taṇhā*). It is stuck together by the glue of craving, and covered in the darkness of ignorance (*avijjā*). Because of that, the world takes this present as "self," as "I" and "mine"—and likewise with the past and the future.</p>
+<p>In truth, it is easy for us to understand the past as impermanent (*anicca*). Since it is already gone, it is somewhat easy. Since the future has not yet arrived, after dreaming future dreams and waking up after a short while, it is also easy to realize "it is not there" and understand it. But the present is what is difficult. In truth, intense insight meditation (*vipassanā*) occurs in the present moment. If the meditator reflects on the impermanence (*anicca*) of past preparations (*saṅkhāra*), and through the momentum thus generated understands that the Buddha's word is true to that extent, then by that same principle, if any preparations (*saṅkhāra*) are to arise in the future, they wisely contemplate that those future preparations (*saṅkhāra*) will also be impermanent (*anicca*). Yet, right at each point, whether regarding the five groups of grasping (*pañca-upādānakkhandha*) or the six sense-bases (*saḷāyatana*)—as we just discussed regarding the eye and form—the meditator practices insight by utilizing the clue given by the Buddha: the three characteristics (*tilakkhaṇa*).</p>
+<p>The Buddha showed what the world regards as permanent to be impermanent (*anicca*). He showed what the world regards as pleasure to be suffering (*dukkha*). He showed what the world takes as self to be non-self (*anattā*). Now, the word that helps to do that little bit is something we have highlighted on many occasions using various similes. To all that, the Buddha adds just a single letter: *na* (not). Just a "not". A massive task is accomplished by this "not". We have shown this through various similes.</p>
+<p>Behold, the concepts and thought pattern of the ordinary world who cling to that view of self are shown in the Dhamma in this way. When something presents itself, they think: *Etaṃ mama, esohamasmi, eso me attā*—meaning they conceptualize it through craving (*taṇhā*), conceit (*māna*), and view (*diṭṭhi*): "This is mine, this I am, this is my self."</p>
+<p>Let us imagine. To use a simile easily understood by you, let us say someone buys a highly valuable vehicle, one that nobody else has. He bought the most valuable vehicle, perhaps even by going into debt. Having bought it, it is indeed not anyone else's, is it? It is "mine." The car is mine, the petrol is mine, the driver is mine. "It is mine."</p>
+<p>Furthermore, not only did he buy that car, but must he not also show it off to the world? Standing in front of it, he takes a photograph, a photo, saying: "I am the owner of this car." Indeed, many people measure status by the vehicle, don't they? If someone arrives in a big car, he is a "big person"—no doubt about it. Behold, when coming: *esohamasmi, etaṃ mama, esohamasmi* ("this I am, this is mine, this I am"). Thereafter, to what extent does his thinking go? It becomes a view, and in the end, the car becomes a self. Whatever the car may be, it is like his self. It becomes unshakeable. It is when it reaches the level of view that it is called *attā* (self).</p>
+<p>Now, instead of that thought pattern, to cross over from it, the Buddha knew that the ordinary worldling cannot reach there all at once. The insight meditator is one who is still training. Therefore, as an aid for that, the Buddha presented just a single letter: *na* (not). Instead of saying *etaṃ mama, esohamasmi, eso me attā*, the Buddha said to think thus: *n'etaṃ mama, n'esohamasmi, na m'eso attā* ("This is not mine, this I am not, this is not my self"). We spoke this loudly so that you may remember it.</p>
+<p>Let us repeat a simile we gave on another occasion to help you understand this. Carpenters do not use them anymore; they are outdated now. There is something called a hand-plane (*yatukæṭaya*), isn't there? To shave off the rough, swollen parts of the wood with that hand-plane, one taps and inserts a blade. Having adjusted the blade to the required depth, only then is the planing done.</p>
+<p>Thus, in a sermon on that topic, we said on one occasion: how does this "carpenter-practitioner" (*yogāvacara*) plane down this heap of preparations (*saṅkhāra*) that has swollen with craving (*taṇhā*), conceit (*māna*), and view (*diṭṭhi*)? I told you to listen to that. In the manner described, *n'etaṃ mama, n'esohamasmi, na m'eso attā*—that letter *na* is just like the blade of that hand-plane. Without even understanding that this was given for a practical purpose, modern scholars turn it into views and construct various opinions. Yet, the Buddha's Dhamma is highly practical. This *na* was not given to be turned into a view, but to shape one's thought pattern in daily life, to bring about a correction in it.</p>
+<p>According to the world's view, the ordinary worldling thinks, "This is indeed mine. This is mine." But, recalling the Buddha's word even slightly: "Though I say it is mine, it is not mine. It is otherwise." Behold, one uses the *na* to help. The *na* is placed there for a practical purpose. That is why we said it is like the blade of the hand-plane. Those swollen parts are indeed craving (*taṇhā*), conceit (*māna*), and view (*diṭṭhi*). It is to shave them off. That is what it is for. It is within that pattern of thought that the practitioner (*yogāvacara*) subsequently conducts themselves.</p>
+<p>As it becomes thinner and thinner, as that glue of craving (*taṇhā*) gets removed, gradually, just like the sheaths of the banana tree, preparations (*saṅkhāra*) are detected one under another, one under another, layer upon layer emerging as if one within another. How do they emerge? What helps with that is something we have spoken about before. I cannot say everything at this moment. Thereafter, that person looks at them—looks at the objects that come to him—as Name-and-Form (*nāmarūpa*), according to the concept of Name-and-Form (*nāmarūpa*). Every single one of these incoming objects is merely Name-and-Form (*nāmarūpa*). On one side, it is Name, on the other, it is a form that is merely a designation (name-matter). In that way, relying on these mental factors (*nāma-dhamma*) of feeling (*vedanā*), perception (*saññā*), intention (*cetanā*), contact (*phassa*), and attention (*manasikāra*), we recognize the great elements (*mahābhūta*) of earth (*paṭhavī*), water (*āpo*), fire (*tejo*), and air (*vāyo*) which we cannot otherwise directly identify. Based on the qualities of hardness, fluidity, and heat, we think "this is earth, this is water," and so on. It is then that the observer recognizes it as Name-and-Form (*nāmarūpa*). It is the root of a delusion that we are exposing here. The world lives inside this Name-and-Form (*nāmarūpa*). They do not know it. This is a form in name only—a mere designation. The ordinary world does not know this fact. The insight meditator, however, understands it. It is through the understanding of Name-and-Form (*nāmarūpa*) that the comprehension of preparations (*saṅkhāra*) becomes deeper and deeper.</p>
+<p>Every incoming object, as it comes, is understood as Name-and-Form (*nāmarūpa*). The insight meditator recognizes each incoming object: "This object turned toward my mind, toward my attention, because of a corresponding feeling (*vedanā*). Because of a perception (*saññā*) that arose through feeling. Because of an intention (*cetanā*) caused by perception. Because of intention—precisely because of intention, there is a point where attention is directed," which is contact (*phassa*). That is why the Buddha declared: feeling (*vedanā*), perception (*saññā*), intention (*cetanā*), contact (*phassa*), and attention (*manasikāra*). We mentioned on one occasion that some put "contact" (*phassa*) at the front. In truth, contact (*phassa*) must come at the back. Feeling (*vedanā*) is what is primary. It is through feeling (*vedanā*) that one awakens. It is through feeling (*vedanā*) that even the perception of self is awakened. Through feeling (*vedanā*), one takes up a perception (*saññā*). Through perception (*saññā*), intention (*cetanā*) arises. When we become active based on that intention, attention is directed to that point of contact (*phassa*). These five states alone are present here, if we look at them as Name (*nāma*).</p>
+<p>Form (*rūpa*) too is not some permanent, eternal thing. It is merely a designated form (name-matter) that we have constructed out of those great elements (*mahābhūta*) so that they become accessible to our senses—accessible to the sense faculties. It is through that very understanding that one comprehends this illusion of consciousness (*viññāṇa*). Thus, the Buddha has brought out a clue to it.</p>
+<p>Now, this sutta is so important, and those summary (*uddesa*) verses are so important, that we might think this was preached only for the Saṅgha. Or that it was preached only for this human world. Think about it a little: if that account is true, as the young deity Candana said, the Buddha preached this *Bhaddekaratta Sutta* to the deities of the Tāvatiṃsa heaven while seated on the Paṇḍukambala stone seat. He must have spoken those verses, which we just mentioned:</p>
+<p>*Do today itself what must be done,*</p>
+<p>*For death may indeed come tomorrow.*</p>
+<p>*There is surely no bargaining possible,*</p>
+<p>*With Death who has such a great army.*</p>
+<p>Think about it a little. This was spoken to the deities of the Tāvatiṃsa heaven! You have heard of their day—as we mentioned in a previous sermon, a hundred years of this human world is just one day and night to them, and their lifespan is a thousand years. Even in that Tāvatiṃsa heaven, the Buddha spoke in a way that generates urgency (*saṃvega*):</p>
+<p>*Do today itself what must be done,*</p>
+<p>*For death may indeed come tomorrow.*</p>
+<p>*There is surely no bargaining possible,*</p>
+<p>*With Death who has such a great army.*</p>
+<p>Thus, it is a hundred thousand times more fitting for the human world. That is why that deity—perhaps because their pleasures are so vast, they somehow forgot these things—nonetheless brought it up and reminded the bhikkhus, the people of this world.</p>
+<p>Therefore, this is a wonderful opportunity for you. We hear so much about external dangers. Similarly, we do not know when they will arise within our physical body. Both from within and from without, this aforementioned Death is at work. The understanding comes that there is no time to lose—tomorrow is too late. It is to remind you of this that we have brought out this sutta. You must strive according to your own level.</p>
+<p>Now we know this is no secret. Although these were preached to the Saṅgha in the past, noble lay devotees like the noble householder Citta attained extraordinary fruits of the path (*maggaphala*), possessing such direct, experiential realization of those fruits that they could hold Dhamma discussions with the monks. Furthermore, even on his deathbed, Anāthapiṇḍika the householder made a special request: "Please preach these kinds of insight-oriented discourses to laypeople as well in the future." That is why we have spoken to you as well.</p>
+<p>Now, it is no secret—we are not boasting about ourselves—but for many lay devotees, the time has heated up now; it is a critical hour. So, in whatever way, even if you cannot wear a robe, if you practice just this much while remaining in the household, liberation is right there. Liberation is right there. Because we have said so many times, liberation is found within this very moment. One cannot go searching for the past, nor is it in the future. One must understand the present moment correctly. That is true insight meditation (*vipassanā*).</p>
+<p>Now, to say a little more about insight meditation (*vipassanā*): we said at the beginning that it is the arising and passing away of preparations (*saṅkhāra*) that the meditator sees first. As that reflection (*manasikāra*) becomes subtler and subtler, those arisings and passings away begin to appear with greater and greater rapidity. Not in the way the ordinary worldling thinks, but with extreme speed through direct experience. Finally, when one reaches the stage of the knowledge of dissolution (*bhaṅga-ñāṇa*), one sees things passing away faster than they arise. Dissolution is seen. Why is it seen so? At the stage of the knowledge of dissolution (*bhaṅga-ñāṇa*), just as the object coming to the meditator's mind passes away, the very mind that took up the object is also seen to pass away. Just as the object passes away, the mind that took up the object is also seen to pass away. It is then that a great sense of urgency (*saṃvega*) arises.</p>
+<p>Think about it for a moment. To give a simile: there is a footpath barely wide enough to walk along, between two massive precipices on either side of a great mountain peak. There is also a handrail to help those who walk on that path. Now, as the meditator goes a little distance holding on to this handrail, he finds that every part of the rail he grabs is decayed. If the handrail itself is decayed, what kind of urgency (*saṃvega*) arises? Falling to this side is destruction; falling to that side is also destruction. Behold, a great fear arises. That is why "fear" is placed right after the knowledge of dissolution (*bhaṅga-ñāṇa*). Seeing the speed at which those preparations (*saṅkhāra*) break apart, one sees there is nothing to hold on to, no place to grasp. All are crumbling preparations (*saṅkhāra*). It is from that point onward that true insight meditation (*vipassanā*) proceeds. That is why the knowledge of dissolution is intense insight meditation. Next is fear, and through that very fear, the disadvantage (*ādīnava*) is seen. If this existence (*bhava*) is a holding on, and if there is nothing to hold on to, what kind of existence (*bhava*) is there? If the very thing one holds on to crumbles right then and there, what kind of existence (*bhava*) is there? Behold, that is indeed the knowledge of disadvantage (*ādīnava-ñāṇa*).</p>
+<p>Next, through that very thing, there is revulsion (*nibbidā*) toward existence (*bhava*). It is the same here; it is the same in the deva worlds; it is the same in the brahma worlds. According to the Buddha's word, everywhere is just a heap of preparations (*saṅkhāra*). What existed in the past, and what will exist in the future, is just this very same thing—just this very present portion that is seen now. Instead of peeling the sheaths of the banana tree, we gave a simile on another occasion: a wise person does not need to keep peeling the sheaths; once the banana tree is cut, they can understand from its internal structure that it has no core. Behold, the meditator understands that. They understand it through the present preparations (*saṅkhāra*). There is no need to peel this again. At that moment, they understand that there is no core in this. Because of that, they understand the disadvantage (*ādīnava*).</p>
+<p>Next comes revulsion (*nibbidā*). There is no word more distasteful to humans than "revulsion"—especially to those of modern times who possess craving for existence (*bhava-taṇhā*). Yet, the most valuable word in the Sasana is revulsion: *nibbidā*. Because it is through that indeed that the door to Nibbāna opens. That is why we compared it on some occasions to a gooseberry (*nelli*): someone bites into it a little and throws it away, saying, "This is bitter." But if one chews it thoroughly and drinks some cold water, there is a strange, sweet, ambrosial taste. It is just like that: through *nibbidā*, the door to Nibbāna opens.</p>
+<p>When that knowledge of revulsion (*nibbidā-ñāṇa*) has arisen, if one strives further and cultivates those three characteristics (*tilakkhaṇa*), as that practitioner (*yogāvacara*) goes forward, behold, a stage arrives where, instead of the fear that existed earlier, it is now seen—previously fear arose thinking, "I am being destroyed," didn't it? "I am being destroyed." As the understanding of preparations (*saṅkhāra*) becomes purified, one understands: there is no "I" to be destroyed, is there? There is no "I" to be destroyed. Then what? Preparations (*saṅkhāra*) just come and go. That is what is called the knowledge of equanimity toward preparations (*saṅkhārupekkhā-ñāṇa*). That is a state very close to Nibbāna. At that stage, preparations (*saṅkhāra*) are seen to just pass by. They do not enter inside.</p>
+<p>We mentioned a simile for that—a simple simile; do not grasp tightly to every simile we give. Let us imagine someone is traveling on a train. While traveling, that express train stopped at a certain station. At that moment, out of idle curiosity, he looks around. There are beautiful flowers, people passing by, those folks and these folks. He keeps looking at those things. Behold, the train begins to move. It begins to move. Once it starts moving and goes a little distance, even if we want to, we cannot look at them. Coconut trees fly by, people pass by. We cannot take them inside, even if we think to. Behold, that stage arrives just like that. Those preparations (*saṅkhāra*) arise and pass away. They do not strike the mind.</p>
+<p>The simile given for that stage—the simile given by the Buddha—is very much like the simile given for the mind of an Arahant: the water drop on a lotus leaf. If a drop of water falls on a lotus leaf, it does not smear it. At that stage, there is no obstruction from preparations (*saṅkhāra*). They fall, and roll off to the other side. They fall, and roll off to the other side. That stage is as if very close to Nibbāna. It is an extraordinary kind of equanimity. That is what is called equanimity toward preparations (*saṅkhārupekkhā*).</p>
+<p>However, going even beyond that, by cultivating the three characteristics (*tilakkhaṇa*) to the point where the taints (*āsava*) and latencies (*anusaya*) are severed—by cultivating the three characteristics (*tilakkhaṇa*), and when a certain characteristic, whether impermanence (*anicca*), suffering (*dukkha*), or non-self (*anattā*), according to one's temperament, is cultivated to the required degree—behold, at a certain moment, one directly experiences that aforementioned supreme solitude. Complete mental liberation is right there.</p>
+<p>Thus, we have summarized a long story and told it within an hour. May you try to understand it in even greater detail. Now, today, when we think of this era, lay devotees are all living with a great sense of urgency (*saṃvega*). At any moment, dying is actually easier. But everyone has the fear: "Where will I go after death? Where will I go?"</p>
+<p>It is precisely for that little bit. If our mind is liberated, if the mind is liberated, there is no birth (*jāti*) again. There is no problem again. It is because of this that we specifically preached this insight-oriented Dhamma sermon today, at a time when many of you have observed the precepts today, keeping your minds tranquil, and are practicing a noble virtue (*sīla*).</p>
+<p>We make the aspiration: utilizing this Dhamma sermon as an aid, and bringing your own Dhamma meditation to its culmination, may this power of merit also serve as a strong support (*upanissaya*) for you to realize the noble, deathless, great Nibbāna through the penetration of the path and fruits (*maggaphala*) of Stream-entry, Once-returning, Non-returning, and Arahantship within this very Buddha Sasana.</p>
+<p>And also, we aspire that whatever beings from Avīci to Akaniṭṭha in existence (*bhava*) are able to rejoice in this merit of sharing and listening to the Dhamma, may they, through that rejoicing, find peace in the noble, deathless, great Nibbāna through their aspired Enlightenment. Aspiring thus, please recite these verses:</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_039.html" class="doc-btn">← Previous Sermon (039)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_041.html" class="doc-btn">Next Sermon (041) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

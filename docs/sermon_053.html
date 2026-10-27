@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 053 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_052.html" class="doc-btn">← Previous Sermon (052)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_054.html" class="doc-btn">Next Sermon (054) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 053</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_053_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_053_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_053_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #53</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.162)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Mama saṅkappamaññāya, satthā loke anuttaro; Manomayena kāyena, iddhiyā upasaṅkami. Yadā me ahu saṅkappo, tato uttari desayi; Nippapañcarato buddho, nippapañcaṃ adesayi. Tassāhaṃ dhammamaññāya, vihāsiṃ sāsane rato; Tisso vijjā anuppattā, kataṃ buddhassa sāsanaṃ.</p>
+<p>From:</p>
+<p>Theragāthā</p>
+<p>Dear Listeners,</p>
+<p>Venerable Anuruddha Maha Thero was a great Arahant who is placed in the very forefront among the eighty chief disciples of the Supreme Buddha. He was declared by the Blessed One to be the foremost (*etadagga*) among the bhikkhus who had attained the divine eye (*dibba-cakkhu*). He had highly developed the powers of absorption (*jhāna*) and higher spiritual knowledges (*abhiññā*) to the highest degree. Even today, for yogis who aspire to develop their mental power, the life of Venerable Anuruddha Maha Thero can serve as an ideal. In the Dhamma literature, various colorful narratives are recorded as the background to the life of Anuruddha. However, in this brief period, we hope to summarize certain facts in a manner relevant to our theme.</p>
+<p>Venerable Anuruddha Maha Thero was the son of Amitodhana, the Sakyan king who was the paternal uncle of the Supreme Buddha. Having decided to ordain under the encouragement of his brother, Mahanama the Sakyan, Prince Anuruddha asked his mother for permission, but she opposed it. When he repeatedly urged her, his mother, as a stratagem, said: "Only if your friend, King Bhaddiya, who is currently ruling as the Sakyan king, ordains, will I give you permission to ordain." Prince Anuruddha, in a very clever manner, persuaded King Bhaddiya to give up his wife and children, renounce the kingdom, and agree to ordain within a week. Ultimately, the six Sakyan princes—Anuruddha, Bhaddiya, Ānanda, Bhagu, Kimbila, and Devadatta—set out with Upāli the barber, pretending to go to the pleasure garden. Stopping their army at a distance, these six crossed the border with Upāli the barber, removed their royal ornaments, tied them in a bundle, and gave them to Upāli. They sent him off, saying, "Take these, go back, and live comfortably." Upāli the barber also went a short distance and began to reflect: "Now, if I take these back, the Sakyans will think that I killed these princes and took their ornaments. Why do I need these ornaments that they have abandoned? Let whoever wants them take them." So, hanging them on a tree, he returned and joined the six princes. In the end, these six princes and the barber went to the Anupiya Mango Grove of the Mallans, where the Buddha was residing at that time, and were ordained in the presence of the Blessed One. It is a significant event that the princes themselves requested Upāli the barber to be ordained first, in order to crush their Sakyan pride. To put it briefly, after Venerable Anuruddha was ordained, he made great efforts to attain *jhānas*, *abhiññās*, and the paths and fruits (*magga-phala*), while observing strict ascetic practices (*dhutaṅga*). Several sutta discourses reveal how hard he strove.</p>
+<p>Even today, yogis can derive practical insights from the discussions Venerable Anuruddha had with the Supreme Buddha and Venerable Sāriputta Maha Thero regarding his meditation. As the most important event, it is mentioned that on one occasion, Venerable Anuruddha was meditating in the Pacīnavaṁsa park in the country of the Cetis. At that time, the Supreme Buddha was residing in the Bhesakalā Forest in the Saṁsumāragiri region of the Bhagga country. While Venerable Anuruddha was meditating, seven thoughts of a great man (*dhamma-vitakka*) arose in his mind in sequence:</p>
+<p>1. *Appicchasāyaṁ dhammo, nāyaṁ dhammo mahicchasassa*: This Dhamma is for one of few wishes, not for one of many wishes.</p>
+<p>2. *Santuṭṭhasāyaṁ dhammo, nāyaṁ dhammo asantuṭṭhassa*: This Dhamma is for one who is contented, not for one who is discontented.</p>
+<p>3. *Pavivittasāyaṁ dhammo, nāyaṁ dhammo saṅgaṇikārāmassa*: This Dhamma is for one who is secluded, not for one who delights in company.</p>
+<p>4. *Āraddhaviriyasāyaṁ dhammo, nāyaṁ dhammo kusītassa*: This Dhamma is for one who is energetic, not for one who is lazy.</p>
+<p>5. *Upaṭṭhitasatissāyaṁ dhammo, nāyaṁ dhammo muṭṭhassatissa*: This Dhamma is for one of established mindfulness, not for one of muddled mindfulness.</p>
+<p>6. *Samāhitasāyaṁ dhammo, nāyaṁ dhammo asamāhitassa*: This Dhamma is for one who is concentrated, not for one who is unconcentrated.</p>
+<p>7. *Paññavantasāyaṁ dhammo, nāyaṁ dhammo duppaññassa*: This Dhamma is for one who is wise, not for one who is unwise.</p>
+<p>While he was reflecting on these seven thoughts of Dhamma that had arisen, the Supreme Buddha perceived the manner in which Venerable Anuruddha was reflecting on these thoughts. Seeing this, through psychic power, with a mind-made body, He disappeared from the Bhesakalā Forest and appeared before Venerable Anuruddha. After the Buddha sat on the prepared seat, Venerable Anuruddha paid homage to Him. Then, the Supreme Buddha said to him: "Sadhu! Sadhu! Anuruddha, it is very good that you are reflecting on these seven thoughts of a great man (*mahāpurisa-vitakka*). Add to these seven the eighth one as well, the eighth thought of a great man," and the Supreme Buddha declared the eighth thought of a great man:</p>
+<p>*Nippapañcārāmassāyaṁ dhammo nippapañcaratino, nāyaṁ dhammo papañcārāmassas papañcaratino*: "This Dhamma is for one who delights in the non-prolific, who rejoices in the non-prolific, not for one who delights in conceptual proliferation (*papañca*), who rejoices in conceptual proliferation."</p>
+<p>We will explain the word *papañca* in due course. What is important here is only this: having presented this eighth thought of a great man, the Supreme Buddha went on to give instructions on the benefits of that thought: "Anuruddha, if you now work with all these eight thoughts of a great man, you will soon be able to enter and dwell in the first, second, etc., absorptions (*jhānas*) and develop skill in those absorptions. Likewise, you can also develop the quality of contentment with whatever is received." The Supreme Buddha also gave another special advice: "Anuruddha, spend the upcoming rainy season (*vassa*) right here in this Pacīnavaṁsa park." The Supreme Buddha must have seen that there was a good environment there for attaining Arahantship. In any case, Venerable Anuruddha, in accordance with the instruction of the Supreme Buddha, meditated diligently and attained Arahantship during the following rainy season. The three verses we placed at the beginning as our theme were those expressed by him after attaining Arahantship, mentioning and expressing gratitude for the advice received from the Supreme Buddha.</p>
+<p>> *"Knowing my thought, the Teacher, unsurpassed in the world,</p>
+<p>> Came to me through psychic power with a mind-made body."*</p>
+<p>> *"Whatever thought I had, the Buddha taught me further still;</p>
+<p>> He, who delights in the non-prolific, taught the non-prolific (*nippapañca*)."*</p>
+<p>> *"Therefore, knowing the Dhamma, I dwelt delighting in the Dispensation;</p>
+<p>> The three knowledges have been attained, the Buddha's bidding has been done."*</p>
+<p>This means, "I have attained Arahantship."</p>
+<p>These three verses also reveal that the instruction given by the Supreme Buddha was particularly helpful to Venerable Anuruddha in attaining Arahantship. Likewise, it is revealed that the credit for listing those first seven thoughts of a great man in that manner goes to Venerable Anuruddha. It is mentioned in that sutta that after the Supreme Buddha had instructed Venerable Anuruddha in this way and returned to the Bhesakalā Forest, He addressed the Sangha: "Monks, I shall teach you the eight thoughts of a great man," and delivered the complete discourse. However, right here, a peculiar word emerged for us: '*papañca*'. Likewise, its opposite word, '*nippapañca*', was also expressed. Indeed, the word *papañca* is a very useful word for meditators, yet for many, it is a word that is difficult to comprehend. This word *nippapañca* is, in fact, applied to Nibbāna as well. *Nippapañca* is shown as a state of Nibbāna.</p>
+<p>Let us try to understand this word *papañca*. Even in society today, when someone speaks extensively instead of briefly, people say: "Speak without *papañca* (prolific details); say what you have to say briefly without *papañca*." Therefore, when looking at speech, '*papañca*' means talking unnecessarily and at length in a way that is irrelevant to the topic. However, when we consider this in relation to meditation and the mind, its depth is revealed to us. If we consider briefly according to the context of suttas like the *Madhupiṇḍika Sutta* of the Majjhima Nikāya, we can understand from the details mentioned in that sutta: through the collision of the six sense faculties—eye, ear, nose, tongue, body, and mind—with their respective objects, first a feeling or sensation (*vedanā*) arises within us. Some kind of feeling/sensation is born. Conditioned by that feeling/sensation (*vedanā*), perception arises. One reasons about what one perceives. One maintains thoughts. It is said that through maintaining those thoughts, conceptual proliferation (*papañca*) arises. The sutta expresses that having arisen, one becomes overwhelmed by the various ideas created due to that *papañca*. What is the reason for becoming subject to *papañca*? In meditation, it is because of the proliferation created in the mind by extending the thoughts that come through the sense objects of those six sense faculties into the time cycle of past, future, and present, under the instigation of defilements present within the being, namely craving (*taṇhā*), conceit (*māna*), and views (*diṭṭhi*). That is to say, a multitude of unnecessary thoughts often arise for these meditators. Without even realizing it, they go off-topic. Next, if we analyze those thoughts, beneath them lies either craving (*taṇhā*), conceit, or views. Once they go into those conceptual proliferations (*papañca*) and become overwhelmed by them, they do not even know where they are. Next, the things they construct from them—a future event appears as present, a past event appears as present. They are even prompted to act accordingly. There are various illustrations of this; there is no need to repeat them. Why there is no need to mention them here is because the meditators themselves would have experienced this. Be that as it may, this word *papañca* is extremely important.</p>
+<p>It is to show that this state of *papañca* does not exist in Nibbāna that Nibbāna is called '*nippapañca*'. Now, even in that verse, it is stated that the Supreme Buddha delights in *nippapañca* and preached *nippapañca* to me. From this, what we have to understand is that although they were good thoughts, the Venerable Thero went into *papañca* through them. This is exactly where many meditators get caught. Let us say one sat down for mindfulness of breathing (*ānāpānasati*). But in the end, when they observe, they find themselves thinking about the virtues of the Buddha or something else. That is not relevant to that meditation. We find another short sutta discourse which clearly shows that the conceptual proliferation (*papañca*) created through those thoughts is an obstacle to meditation. It is a short, instructional discourse preached by Venerable Sāriputta Thero to the bhikkhus. There, Venerable Sāriputta Thero says: "Friends, there are five things that can lead to the decline of a monk's meditation. What are they? *Kammārāmatā* (delight in work)." To put it briefly, *kammārāmatā* means engaging the mind and body in various activities irrelevant to meditation, a liking for work. *Bhassārāmatā*—delight in constant talking, chattering. *Niddārāmatā*—delight in sleep. *Saṅgaṇikārāmatā*—delight in socializing, and finally, *papañcārāmatā*—delight in *papañca* (conceptual proliferation), delight in thoughts. Perhaps because of the importance of the word *papañca*, Venerable Sāriputta Thero uttered two verses at the end of that short discourse:</p>
+<p>> *Yo papañcaṁ anuyutto, papañcābhirato mago;*</p>
+<p>> *Vīrādhayī so nibbānaṁ, yogakkhemaṁ anuttaraṁ.*</p>
+<p>></p>
+<p>> *Yo ca papañcaṁ hitvāna, nippapañcapathe rato;*</p>
+<p>> *Ārādhayī so nibbānaṁ, yogakkhemaṁ anuttaraṁ.*</p>
+<p>These are two identical verses showing the two sides. Here, the word *mago* (or *mūgo*) is used. *Mago* means a fool (or beast-like fool). If any foolish person is engaged in conceptual proliferation (*papañca*) and becomes one who delights in *papañca*, that person falls away from Nibbāna. *Vīrādhayī so nibbānaṁ yogakkhemaṁ anuttaraṁ*—*yogakkhema* means being freed from the yoke. He falls away from Nibbāna. But if someone, *yo ca papañcaṁ hitvāna*, abandons conceptual proliferation (*papañca*) and *nippapañcapathe rato*, delights in the path free from conceptual proliferation, *ārādhayī so nibbānaṁ yogakkhemaṁ anuttaraṁ*, that person wins Nibbāna. This also shows us how extremely important the words *papañca* and *nippapañca* are. From this, we can understand that this subtle attachment we have is the attachment to thoughts. In suttas like the *Satipaṭṭhāna*, these are expressed as *dhamma*—that is, mind-objects or thoughts. *Taṇhā loke piyarūpaṁ sātarūpaṁ, etthesā taṇhā uppajjhamānā uppajjati, ettha nivisamānā nivisati*: that is, in the world, this category called thoughts is extremely dear and pleasant. There, this craving (*taṇhā*) arises and settles. No one can see this, generally speaking. These are subtle thoughts within. Yet, that is the subtlest entanglement of all at the very end.</p>
+<p>We find another beautiful incident in the sutta discourses which shows that Venerable Anuruddha had this 'entanglement of thoughts' (*vitakka-paṭalavilla*). Venerable Anuruddha went directly and discussed his meditation problems with Venerable Sāriputta Thero. He presented his questions like this: "Friend Sāriputta, with the purified divine eye, which surpasses human vision, I see and perceive a thousandfold world system. My energy is aroused, my mindfulness is well established, my body is tranquil, and my mind is concentrated. Yet, my mind is not liberated from the influxes (*āsava*) without grasping; it does not attain Arahantship." Thus he declared his illness. Then, Venerable Sāriputta Thero, like a highly skilled psychiatrist, wonderfully revealed the illness from that very statement of Venerable Anuruddha. This is how Venerable Sāriputta Thero analyzed it: "Now, friend Anuruddha, did you not say, 'With the purified divine eye surpassing human vision, I see a thousandfold world system'? That is your conceit (*māna*). You said, 'My energy is aroused, my mindfulness is established, my body is tranquil, and my mind is concentrated.' That is your restlessness (*uddhacca*). Next, you said, 'Yet, my mind is not liberated from the influxes.' That is your worry (*kukkucca*).' Therefore, Anuruddha, abandon these three defilements, and without directing your mind to them, direct your mind to the deathless element (*amata-dhātu*), which is Nibbāna."</p>
+<p>Devotees, Nibbāna is not something of the sort that one thinks of now. It is the state of releasing the mind from these defilements, in short, from the five aggregates (*pañcakkhandha*). The deathless element (*amata-dhātu*) which designates Nibbāna is often shown in the discourses as: *Etaṁ santaṁ etaṁ paṇītaṁ yadidaṁ sabbasaṅkhārasamatho sabbūpadhipaṭinissaggo taṇhakkhayo virāgo nirodho nibbānaṁ*. From this, one can understand that this peaceful and sublime state is not those thoughts we mentioned. True peace and sublimity is *sabbasaṅkhārasamatho*—the stilling of all preparations/volitional activities (*saṅkhāra*), the relinquishment of all acquisitions (*upadhi*) grasped as ours. By showing this, we can see that thinking, "I have these things, I see divine worlds, I am striving well," is a delay. Those are subtle defilements. Next, thinking, "Unlike others who have these defilements, I have not received this yet," is a worry (*kukkucca*). What a meditator has to do is to engage in the work that belongs to them, not to increase expectations. As soon as expectations increase, it is no longer meditation; then, thinking "Why have I not received this yet?" becomes a cause for the decline of one's meditation. We can understand something from this question of Venerable Anuruddha.</p>
+<p>Next, we find an equally important sutta discourse, the *Upakkilesa Sutta*. This is a very important and valuable sutta in the life of Anuruddha. Likewise, it is a very important sutta for meditators for many reasons. It begins like this. It is a certain poignant moment in the Dispensation. That is, as you may have heard, on one occasion, the monks in the city of Kosambi began to quarrel, splitting into two factions, and in the end, the Supreme Buddha went to the Pārileyyaka forest for seclusion. You have all heard that story. It is related to that incident. When the Supreme Buddha was residing at the Ghositārāma in Kosambi, and the monks were quarreling and disputing, the Supreme Buddha went there and tried to reconcile those monks, saying: "Monks, do not quarrel. Do not dispute. Be united." A talkative monk among them said: "Wait, Blessed Lord, do not trouble yourself about this. According to your own seclusion, dwell in the happy dwelling of absorption (*jhāna*) and meditation. We will resolve our own quarrel." When the Supreme Buddha told them to unite a second time, that monk said the same thing a second time. No one else tried to stop him either. When the Supreme Buddha spoke for the third time, that monk spoke in that talkative manner for the third time. It is mentioned that the Supreme Buddha, having gone for alms round that day, returned, put away his lodgings, took his bowl and robe, and while standing, uttered a series of verses. Some of those verses are in the *Dhammapada*. Having uttered those verses expressing the danger of hatred, the danger of quarrels and disputes, and the value of the happiness of seclusion, the Supreme Buddha, on his way to the Pārileyyaka forest, visited the place where Venerable Bhagu was living alone. There, He delivered a Dhamma talk to Venerable Bhagu.</p>
+<p>Next, He journeyed to the Pacīnavaṁsa park, where that wonderful trio—Venerable Anuruddha, Venerable Nandiya, and Venerable Kimbila—were meditating. When the Supreme Buddha was about to enter the park, the park-keeper, not recognizing the Supreme Buddha from afar, said: "Monk, do not enter this park. There are three Venerable Ones meditating in this park, three sons of noble families. Do not disturb them. Do not enter." Hearing these words, Venerable Anuruddha looked and saw that the Supreme Buddha was coming. So he said to the park-keeper: "Park-keeper, do not say that. This is our Teacher." He quickly went and informed the Venerable Nandiya and Venerable Kimbila: "Venerables, come, come! Our Teacher has arrived." One Venerable Thero went and received the bowl and robe of the Supreme Buddha. One Venerable Thero prepared the seat. Another Venerable Thero brought water for washing the feet. After the Supreme Buddha washed His feet and sat on the seat, all three paid homage to Him. As was customary, the Supreme Buddha asked about their well-being, whether they were getting alms food, etc., and then asked an important question. There, the Supreme Buddha addressed Venerable Anuruddha, but in the plural. From this, we are to understand that Venerable Anuruddha was the leader of the three.</p>
+<p>If we were to say it in modern terms, He asked: "Anuruddha, are you all living in harmony, without disputing, blending like milk and water, looking at each other with eyes of affection?" The Supreme Buddha pointed out the true characteristics of unity. Venerable Anuruddha answered beautifully: "Yes, Lord, we live in harmony, happily, without disputing, blending like milk and water, looking at each other with eyes of affection." Satisfied with this, the Supreme Buddha asked: "How is it, Anuruddha, that you three live in such harmony?" The description given by Venerable Anuruddha is very important and beautiful. Venerable Anuruddha said: "Sometimes I think, Lord: 'It is a great gain for me, a great blessing, to live with such co-residents.' I maintain acts of loving-kindness (*mettā*) by way of body toward these two Venerables, both openly and in private. I maintain acts of loving-kindness by way of speech, both openly and in private. I maintain acts of loving-kindness by way of mind (thoughts), both openly and in private. Furthermore, Lord, sometimes I think: 'Why don't I discard my own mind and live according to the minds of these Venerables?' I think like that too. Sometimes it occurs to me: 'Though we are three in body, indeed we are one in mind.'" Just as Venerable Anuruddha expressed this, Venerable Nandiya also expressed the same. Venerable Kimbila also expressed the same.</p>
+<p>The Supreme Buddha said, "Sadhu! Sadhu!" in appreciation, and then asked further: "Anuruddha, do you spend your days diligently, striving with energy?" "Yes, Lord," said Venerable Anuruddha, and then he described the daily routine of the three of them. That too is a particularly valuable model for the lineage of the Sangha. Venerable Anuruddha explained it in this way: "Lord, all three of us enter the village for alms food. Whichever monk returns first from the alms round prepares the seats. Next, he sets out water for drinking and water for washing feet. He prepares the vessel for left-over food. Next, the monk who returns last from the village eats whatever is left in that vessel if he wishes to eat. Otherwise, he takes that vessel and discards the left-over food where there is no grass, or pours it into water where there are no living beings. Next, he washes the vessels and puts them away. He puts away the seats. He sweeps the refectory. Whichever of us notices that the vessel for drinking water is empty, he fills it. If it is too heavy for him to do alone, he signals a second monk with his hand, and both of them together bring the water vessel. We do not spend even a single word for that purpose." This is how they showed their unity. "Furthermore, once every five days, all three of us spend the entire night in Dhamma discussion, staying awake and discussing." The Supreme Buddha said, "Sadhu! Sadhu! Very good, Anuruddha." Next, He asked: "While you are living in harmony in this way, Anuruddha, have you attained any superhuman state (*uttarimanussadhamma*), a noble state through meditation?" At that moment, Venerable Anuruddha expressed a meditation problem common to all three of them.</p>
+<p>"Lord, sometimes in our meditation, we perceive a light and see forms. But after a short while, they disappear. We cannot understand the cause of this. We do not know." Then, the Supreme Buddha beautifully presented His own experiences from His days as a Bodhisatta as advice to the Venerables. For those who ask the same question about meditation nowadays, this shows how much effort the Supreme Buddha exerted in meditation. "Anuruddha, such a situation occurred to me as well. Sometimes, a light appeared and visions were seen. Suddenly, they disappeared. Then I investigated the cause: 'Why did this happen?' While investigating, I saw that doubt (*vicikicchā*) arose in me. Because of that doubt, my concentration (*samādhi*) was lost, it slipped away. That is why that light and the vision of forms disappeared. Then, I resolved to meditate without it. As I proceeded, that light came and visions were seen. But again they disappeared. At that time, when I considered, I thought: 'I did not attend to that light properly. Due to a deficiency in attention, the concentration (*samādhi*) that had arisen slipped away and disappeared.'" In this way, He mentioned eleven things at that time, that eleven imperfections (*upakkilesa*) arose for the Bodhisatta. Sometimes, it is mentioned as sloth and torpor (*thīna-middha*); at other times, due to a startle, a fright—perhaps from the sound of an animal while meditating in solitude, or due to some fright caused by visions within meditation itself. At other times, due to an unnecessary elation, an excessive joy, a limitless excitement. At other times, due to looking at those visions of forms and having too much attachment to them, concentration slipped away. At other times, due to excessive energy or deficient energy, concentration was lost. At other times, due to physical fatigue (*kāyadaraṭha*), concentration slipped away. These imperfections (*upakkilesa*) are often subtle and unseen. Sometimes, when joy comes during meditation, everyone thinks it is good for meditation. But those are obstacles to meditation. We can understand it in this way. So, having given such instruction, the Supreme Buddha departed for the Pārileyyaka forest. Thus, from the *Upakkilesa Sutta* too, we can learn many things about the life of Venerable Anuruddha.</p>
+<p>Next is an important sutta, from which we can gather many valuable points for our life: the *Cūḷagosinga Sutta* in the Majjhima Nikāya. The occasion is mentioned like this: The Supreme Buddha was residing at the brick house (*Giñjakāvasatha*) in the village of Nādika for some time. It was close by that Venerable Anuruddha, Venerable Nandiya, and Venerable Kimbila were meditating at that time. The Supreme Buddha, having risen from His meditation in the evening, was walking to the Gosinga Sāla forest. Here too, it is mentioned in this sutta, for some reason, just as in the *Upakkilesa Sutta*, the park-keeper did not recognize the Supreme Buddha from afar and told Him not to enter. Then, Venerable Anuruddha prevented him, and it is mentioned in that manner.</p>
+<p>Next, you can imagine that after the Supreme Buddha inquired about their well-being as usual, asking "How do you live?", in this Gosinga Sāla forest too, these three Venerables described their daily routine and their unity. However, the moment the Supreme Buddha asked about their meditation, it was special. The Supreme Buddha asked Venerable Anuruddha: "Anuruddha, have you now attained any superhuman state (*uttarimanussadhamma*)?" At that moment, Venerable Anuruddha said: "Why not, Lord?" He did not say this out of disrespect. Having said so, he declared that they had attained Arahantship. What did he say first? Venerable Anuruddha spoke on behalf of all three of them: "Lord, quite secluded from sensual pleasures, we enter and dwell in the first absorption (*jhāna*) as we wish." The Supreme Buddha asked: "Having transcended that, have you obtained anything further?" Then he mentioned the second absorption. He did not declare their attainment of Arahantship all at once. Venerable Anuruddha went on mentioning one by one, higher and higher absorptions, and finally, having transcended the high formless state of neither-perception-nor-non-perception (*nevasaññānāsaññā*), they entered the cessation of perception and feeling (*saññāvedayitanirodha*), and having emerged from it, seeing with wisdom, their influxes (*āsava*) were destroyed. This means they had attained Arahantship. Then the Supreme Buddha said, "Very good, Sadhu! Sadhu!", and after delivering another Dhamma talk, He departed.</p>
+<p>After He departed, a peculiar thing happened. Venerable Nandiya and Venerable Kimbila came and asked Venerable Anuruddha: "Friend, did we ever tell you that we have attained these states? You declared it up to Arahantship to the Supreme Buddha on behalf of all three of us." Then, Venerable Anuruddha said: "Venerables, you did not tell me. I saw with my mind that you had attained these. Likewise, deities also came and told me." There is something special here. That is, although these three lived in such harmony, sharing their food, they did not declare their superhuman qualities (*uttarimanussadhamma*) to each other. In the Dispensation, this is recognized as a very valuable quality: *adhigama-appicchatā* (contentment regarding one's spiritual attainments). It is a quality of having few wishes. One's attained state is not something to go around talking about, publishing in books, and publicizing. It is a deep, valuable thing. Its value is lost when one goes about talking about it. Leaving everything else aside, this is something to be guarded in the most excellent manner; even these three who lived together did not tell each other, "I have attained these levels of absorption and am an Arahant."</p>
+<p>A being who understood this quality—not an ordinary human but a yakkha named Dīgha Parajana—then takes the story in a whole new direction. Having listened to this conversation, after the Supreme Buddha had departed, the yakkha Dīgha Parajana approached the Supreme Buddha and expressed a eulogy about these three Venerables. This yakkha Dīgha Parajana declared how extremely virtuous these individuals were. He said: "It is a great gain for the Vajji country, a huge gain for the inhabitants of the Vajji country, that the Tathāgata, the Fully Self-Enlightened One, resides in this country, and also that these three—Venerable Anuruddha, Venerable Nandiya, and Venerable Kimbila—reside here," and he made this proclamation of praise. As mentioned in that sutta, this proclamation of the yakkha Dīgha Parajana reverberated. You know, just as in the *Dhammacakkappavattana Sutta*, the earth-dwelling deities (*bhumma devas*) reverberated it. Next, it is mentioned in that sutta that this fame reverberated from the Cātumahārājika, Tāvatiṁsa, etc., all the way up to the Akaniṭṭha realm. It is mentioned in that sutta that the Supreme Buddha also added to this, saying: "So it is, Dīgha, so it is, Dīgha. How valuable these three are..." This is what the Supreme Buddha declared: "If the family from which these three went forth and ordained should think of these three with a confident, joyful mind, it will lead to the welfare and happiness of that family for a long time."</p>
+<p>"Likewise, if those of whatever village, town, or province from which these three went forth to ordain should think of these three, it would be of great meritorious benefit to them." Finally, He said: "If the world with its devas, maras, and brahmas, this generation with its devas and humans, samanas and brahmanas, should recollect these three with a confident, joyful mind, it will lead to their welfare and happiness for a long time." This was a great tribute declared by the Supreme Buddha regarding these three. From the *Cūḷagosinga Sutta*, we can see that Venerable Anuruddha had attained all those wholesome minds and become an Arahant.</p>
+<p>We can see a great service rendered to the Dispensation by such a valuable character in the *Mahāparinibbāna Sutta*. You know the *Mahāparinibbāna Sutta*. Before the passing away (*pariNibbāna of the Supreme Buddha, the chief disciples had already passed away. At the time of the *parinibbāna*, Venerable Ānanda was nearby. Among the Venerables present, the most important and valuable Venerable Thero—who was like the organizer in this era—was Venerable Anuruddha Maha Thero. It is mentioned how, through his power of the divine eye, the opportunity was provided to carry out the great *parinibbāna* and the subsequent matters properly. The *Mahāparinibbāna Sutta* is a very long discourse. If we extract the necessary part: when the Supreme Buddha was on the bed of His passing away—at the time of His *parinibbāna*, you have heard of the *pacchimā buddhavācā*, the final words of the Buddha: *"Handa dāni bhikkhave āmantayāmi vo, vayadhammā saṅkhārā appamādena sampādetha."*</p>
+<p>"Now, monks, I address you: all preparations/volitional activities (*saṅkhāra*) are subject to decay. Strive with diligence for your salvation." Having declared this, preparing for His *parinibbāna*, the Supreme Buddha first entered the first absorption (*jhāna*), then the second absorption, the third absorption, and so on, up to the cessation of perception and feeling (*saññāvedayitanirodha*). When He entered the cessation of perception and feeling, Venerable Ānanda thought that He had passed away. Venerable Ānanda asked: "Venerable Anuruddha, has the Blessed One passed away?" Venerable Anuruddha said: "No, Ānanda, the Supreme Buddha has not passed away. He has only entered the cessation of perception and feeling." Thereafter, the Supreme Buddha entered the lower absorptions again, such as the sphere of neither-perception-nor-non-perception (*nevasaññānāsaññāyatana*) and so on, down to the first absorption. Then, He ascended again from the first absorption to the second, from the second to the third, and from the third to the fourth absorption, and having emerged from the fourth absorption, the Supreme Buddha passed away. At the moment of His passing away, as mentioned in that sutta, great earthquakes and other extraordinary phenomena occurred. It is mentioned that Sakka, the king of devas, and Great Brahma uttered verses. Here, the special significance of Venerable Anuruddha is that he expressed two extremely valuable verses describing how the mind of the Supreme Buddha attained *parinibbāna*:</p>
+<p>> *Nāhu assāsapassāso, ṭhitacittassa tādino;*</p>
+<p>> *Anejo santimārabbha, yaṁ kālamakarī muni.*</p>
+<p>></p>
+<p>> *Asallīnena cittena, vedanaṁ ajjhavāsayi;*</p>
+<p>> *Pajjotasseva nibbānaṁ, vimokkho cetaso ahū.*</p>
+<p>"There was no longer inhalation or exhalation for the one of steadfast mind, the Tathāgata. Unshaken, aiming at peace, the Sage passed away." (Passing away is mentioned here with a special meaning).</p>
+<p>"With unshrinking mind, He endured the feeling/sensation (*vedanā*). Like the extinguishing Nibbāna of a lamp, was the liberation of His mind." Venerable Anuruddha declared how the mind of the Supreme Buddha attained *parinibbāna*. That too is an important thing. Although we do not speak of them at length, we have explained these in other places.</p>
+<p>It is mentioned that at the moment of His passing away, the monks who were not yet Arahants wept, rolling on the ground in grief: "Too soon has the Tathāgata passed away! Too soon has the eye of the world been extinguished!" While they were grieving in this way, Venerable Anuruddha comforted them, saying: "Monks, do not weep. Do not lament. Has not the Blessed One already declared that there must be parting and separation from all that is near and dear? How is it possible that what is conditioned (*saṅkhata*), produced by causes and conditions, should not decay, disappear, and dissolve? Furthermore, the deities are finding fault with this behavior of the monks." Then the monks asked: "Venerable Anuruddha, how do the deities behave? What are the deities saying at this moment?" Then he said: "The deities who are not yet Arahants are lamenting and weeping in the same way. But those deities who are Arahants comfort their minds, reflecting that all preparations/volitional activities (*saṅkhāra*) are impermanent (*anicca*)."</p>
+<p>Next, Venerable Anuruddha told Venerable Ānanda: "Go now and inform the Mallan princes of Kusinārā that the Blessed One has passed away." As soon as Venerable Ānanda informed them in that way, the Mallan princes also began to weep and lament in the same manner. They also said to take charge of what needed to be done next, to take charge of the cremation. So, those Mallan princes came, and eight of them, having bathed and dressed in clean clothes, tried to lift the sacred body of the Supreme Buddha to take it to the cremation ground, but they could not lift it. At that moment, they asked Venerable Anuruddha: "Venerable Sir, why is it that despite our best efforts, we cannot lift it?" Then he told the Mallan princes: "Your intention is different; the deities' expectation is different." Then they asked: "How do the deities expect it?" "You expect to carry the sacred body out through the southern gate of the city and cremate it outside the city. But the deities expect to carry it through the northern gate, and cremate it at the Makuṭabandhana shrine located to the east of the city." Once they said, "Let the wishes of the deities be fulfilled!", the body of the Buddha was taken in that way, placed on the pyre, and four Mallan princes, having purified themselves, prepared to light the pyre. Although they tried to light it, the fire would not catch. At that moment too, they asked Venerable Anuruddha: "Venerable Sir, why does the pyre not catch fire?" At that moment too, Venerable Anuruddha declared: "The deities' expectation is different; your expectation is different. The deities are thinking like this..." To state it in Venerable Anuruddha's own words: "Venerable Maha Kassapa Maha Thero, with five hundred monks, is currently traveling on the high road from the city of Pāvā to Kusinārā. The deities' intention is this: 'Let this pyre not catch fire until Venerable Maha Kassapa Maha Thero arrives and pays homage to the feet of the Supreme Buddha!'" When he said that there was such an expectation of the deities, they delayed lighting the pyre in accordance with that request. In due course, Venerable Maha Kassapa Maha Thero arrived with his retinue of five hundred, clasped his hands in reverence, circumambulated the pyre three times, opened the pyre at the feet of the Supreme Buddha, and paid homage. Those five hundred monks also paid homage. As soon as they paid homage, it is mentioned in that discourse that the pyre caught fire by itself.</p>
+<p>So, now we can see: in modern times, during such festive occasions—we do not need to describe how they organize them with various equipment for the ear and eye. Yet, they do not have the power to connect with the divine world. It is difficult to think that such a power could arise in this era. Venerable Anuruddha accomplished that task without any of these. Nowadays, our interest in computers is like the past interest in absorptions (*jhānas*) and so on. Everyone made a special effort to develop the mind. That is not something done with external equipment and tools. It was in such an era that Venerable Anuruddha stood out in that manner, although they had no need to stand out. Since the other chief elders had passed away, Venerable Anuruddha very skillfully organized those activities during that supreme moment, in accordance with the situation, utilizing his powers of absorption (*jhāna*) and higher spiritual knowledges (*abhiññā*). Therefore, we should reflect that in this era, at the start of a year, the benefits as well as the disadvantages of those tools are manifest to the world. Likewise, this is a time when the mental powers of human beings, the special powers and qualities of Dhamma associated with our humanity, are in decline. At such a time, the character of Venerable Anuruddha we have declared, with those valuable qualities, can be called a supreme model of unity. These delicate princes—as mentioned in the Dhamma, who had palaces suited to the three seasons just like Prince Siddhartha, sometimes without even coming down to the ground floor during the rainy season—these Sakyan princes of delicate upbringing strove hard in the forest, meditated, and exerted special energy to attain those states, for no other reason than for liberation from *saṁsāra*. Not only that. Through the absorptions (*jhānas*) and higher spiritual knowledges (*abhiññā*) they attained, they rendered a great service to the world in that manner. Therefore, this is an opportunity for you to reflect, especially for meditators, on this life of Anuruddha. Through his shortcomings as well as the things expressed through his strength, one can understand those obstacles of the mind, the imperfections (*upakkilesa*) of the mind, and the word *papañca* (conceptual proliferation) we expressed, which often present themselves to meditators in a good guise, as seen in the discussions the Supreme Buddha and Venerable Sāriputta had with Venerable Anuruddha. Next, it is seen that they attained absorptions (*jhānas*), higher spiritual knowledges (*abhiññā*), and did a great service to the world through them.</p>
+<p>Therefore, if we reflect on the aims of this Dispensation of the Buddha, they consist in developing inner spiritual strength, and there are three: virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*). Developing concentration based on virtue, it is by using that as a support that wisdom can be attained. Nowadays, we hear various kinds of talk, claiming that one can attain the paths and fruits (*magga-phala*) merely by listening to a sermon. In some places in the sutta discourses, those who had developed these in past lives did indeed attain not only the fruit of stream-entry (*sotāpatti-phala*) but even the fruit of Arahantship with the help of a brief word of the Buddha. But if someone thinks that in this era, these can be obtained instantly like modern gadgets, that is a delusion. That is why we must reflect: these are the values of the Dispensation. It is true that we use these devices. But we must use them only as tools and not make them the ultimate goals of our lives. If we can get some help from them to develop our inner spiritual strength, that is what is necessary. Just as we use the four requisites in life to attain Arahantship. You are listening to the Dhamma in this mechanical age using such devices. You do many other things. But it is difficult to think that the Dispensation develops merely because the Dhamma is abundant. If, because of its abundance, one is led to think of these as worthless, trivial things, that is a great foolishness. We say that the appearance of a Buddha (*buddhōtpāda*) is rare. We say it is rare.</p>
+<p>But this Dhamma is not rare. Nowadays, it is more than abundant. You can carry the Tipitaka in your pocket. There is no need to carry it in the mind or memorize it. Such is the era. Likewise, this is what meditators expect in this era: to obtain these paths and fruits (*magga-phala*) instantly. Even meditation centers are turning into fruit shops nowadays.</p>
+<p>We must reflect that even such highly meritorious Venerable Ones like Anuruddha attained those states only by exerting great energy. Therefore, in the coming year of your lives, you must reflect on what our true aim in this Dispensation should be, compared to how ordinary people think. That is why even Venerable Anuruddha had a worry (*kukkucca*): "I see divine worlds. I have concentration. Why is my mind not yet liberated from the influxes (*āsava*)?" Indeed, Arahantship must be our target. If we take only the higher spiritual knowledges (*abhiññā*), even some worldly yogis had those powers. We have heard that even the Elder Devadatta attained these higher spiritual knowledges (*abhiññā*). Worldly higher spiritual knowledges (*lokiya-abhiññā*) alone are not enough. One must know how to use worldly higher spiritual knowledges correctly with insight-wisdom (*vipassanā-ñāṇa*). Otherwise, those mental powers become the path to one's own destruction, the wrong path. That is why, as Buddhists, we must remember that. Taking those yogic meditations and so on as major achievements, without forgetting the message of Nibbāna, which is the most valuable life of this Dispensation of the Buddha, we must keep this liberation from *saṁsāra* shown by the Supreme Buddha as our target in mind.</p>
+<p>To help in that, you have undertaken a valuable virtue (*sīla*) today. It is by being established in virtue that one can develop this concentration. Established in that virtue, using mindfulness and clear comprehension (*sati-sampajañña*) to develop what is called concentration, not stopping there, if there is a concentration sign (*samādhi-nimitta*)—it is clear that a concentration sign was developed, as seen in the way the Supreme Buddha strived during His time as a Bodhisatta, when mentioning those imperfections (*upakkilesa*). The way Venerable Anuruddha energetically strived for meditation is also clearly shown. But some people think that those are unnecessary, that mindfulness alone is enough, clear comprehension alone is enough. That is not enough. If so, there would be no need to speak about concentration. But the Supreme Buddha has spoken about concentration next to mindfulness. Therefore, within clear comprehension, there is a power to attain concentration. Likewise, there is a higher purpose, a side that turns towards insight-wisdom (*vipassanā*). Having understood these, and having understood that our ultimate goal is Nibbāna, we must strive to develop concentration to the highest level according to our special paramis in *saṁsāra*, and realize that noble liberation. With the eye we use, if we cannot see properly with this eye, we use spectacles, we use other devices to look at things. But for those noble ones who have developed the divine eye like Venerable Anuruddha, who have well developed the powers of absorption (*jhāna*), when questions are asked, not only the deities in those divine worlds but even their thoughts and wishes are visible. How wonderful! It is a great encouragement to you pious meditators that in the past, those Venerable Ones came from royal, wealthy, and noble families, strived with energy, and attained such powers. In the next year too, without losing this rare opportunity of a human life by becoming enslaved to that technology, we must understand this rare opportunity and make a resolution to walk on the path of virtue, concentration, and wisdom (*sīla-samādhi-paññā*).</p>
+<p>Today, having left your homes and having developed renunciation (*nekkhamma*) to some extent, you directed yourselves towards seclusion. Indeed, although everyone cannot ordain, it is bad to think: "We cannot attain these powers of absorption (*jhāna*) and so on." By training oneself to live in seclusion, starting with being established in virtue, if one constantly develops one's meditation subject (*kammaṭṭhāna*), one can develop those powers. It is through that that one is said to have walked on the true path walked by the Supreme Buddha, with the true strength of humanity.</p>
+<p>Through this undertaking of virtue, you must have engaged in the Dhamma and meditation you are accustomed to during this time. In this sermon, helping these pious meditators by using the exemplary characters of Venerable Anuruddha and other Theros, taking at least one percent of the energy they exerted, walking on this path of Dhamma, these characters of Arahants show us the maximum fruit that can be obtained from the rare human existence in this rare period of a Buddha's appearance (*buddhōtpāda*). One must strive to attain that goal in this very life. We have to say that nowadays, there are invitations from various places in this country saying, "Come with us, why are you in such a hurry? Let us go in the next bus." In the morning, at that time too, we said: "Do not accept those invitations. If you do, you will always be in the queue." Therefore, if you do not understand this rare opportunity, if you do not make use of it, you will have to regret. Leaving this human existence, one does not know where this mind of ours will be born. Therefore, you must make proper use of it. Hence, it is not about going to the end of technology. By developing the true inner strength, the spiritual strength, while bringing welfare to the world, to realize one's own liberation from *saṁsāra*, we ask you to make a resolution at this moment when one year is ending and a new year is about to begin. Likewise, we wish that this sermon may serve as a support (*upanissaya*), a conducive cause, for you to fulfill your future noble aspirations!</p>
+<p>Likewise, from Avīci to Akaniṭṭha, if there are any beings who wish to rejoice in this merit of preaching the Dhamma and hearing the Dhamma, may they, through that rejoicing, quickly realize their aspired supreme goals! With this expectation, recite these verses and share the merit.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_052.html" class="doc-btn">← Previous Sermon (052)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_054.html" class="doc-btn">Next Sermon (054) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

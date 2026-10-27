@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 001 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <span></span>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_002.html" class="doc-btn">Next Sermon (002) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 001</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_001_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_001_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_001_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #1</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No. )</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Taṇhāya jāyatī soko,</p>
+<p>taṇhāya jāyatī bhayaṁ;</p>
+<p>Taṇhāya vippamuttassa,</p>
+<p>natthi soko kuto bhayaṁ.</p>
+<p>From:</p>
+<p>Verse 216 Piya Vagga (the Chapter on Affection)of the Dhammapada</p>
+<p>Dear Listeners,</p>
+<p>Today is the Poson Full Moon Poya Day. As the day our island received the Buddha’s Dispensation (*Buddha Sāsana*), the Poson Poya is a highly valuable day for us. What is meant by the Buddha’s Dispensation is the Buddha’s path of Dhamma, the path to Nibbāna. It is recorded that the great Arahant Mahinda, having arrived at the Missaka rock in Mihintale with a retinue, addressed King Devānampiyatissa as "Tissa, Tissa" to bestow this path of Dhamma upon him. Thus, directing the attention of the king—who was engaged in hunting deer, an unrighteous act—towards the Dhamma, the great Arahant Mahinda systematically bestowed the Buddha's path of Dhamma—the path to Nibbāna—upon this island. The Buddha too acted in this manner; he went in search of individuals who possessed the potential to realize the Dhamma, and even if they were in the most destitute of conditions, if they were capable of receiving the gift of Dhamma—the realization of Dhamma—he would visit them. He bestowed this Buddha's Dispensation—that is, the path of Dhamma, the path to Nibbāna—upon them. The background story (*nidāna-kathā*) to the stanza we just recited also shows how the Buddha brought the Buddha's Dispensation directly to a certain poor brahmin.</p>
+<p>On one occasion when the Buddha was residing at Jeta Grove, a certain brahmin of wrong view was preparing his field. At that time, the Buddha visited the spot. Since this brahmin held wrong views, even though he saw the Buddha from afar, he pretended not to see him and went on with his work. But the Buddha went right up to him and asked, "Brahmin, what are you doing here?" The brahmin replied, "Venerable Gotama, I am preparing a field." That was all. The Buddha went back. On another day, the brahmin was ploughing his field. On that day too, the Buddha went there and asked, "Brahmin, what are you doing?" "Venerable Gotama, I am ploughing." The Buddha went back, and the man continued his work. Next, on another day, the brahmin was sowing seeds in his field. On that day too, the Buddha went there. "Brahmin, what are you doing?" "Venerable Gotama, I am sowing." With that, the conversation ended, and the Buddha returned. Now the crop in the field was growing. One day, the brahmin was weeding his field. On that occasion as well, the Buddha went there and asked, "Brahmin, what are you doing?" "I am weeding, Venerable Gotama." Then came the time to guard the field. Now the paddy crop was ripening. On that occasion too, the Buddha went there. "What are you doing, Brahmin?" "I am guarding this field." "That apart, Venerable Gotama, you come to me constantly. You must be a friend of mine. From today, I accept you as my friend. When the crop of this field is harvested, I will not consume it without giving a portion to Venerable Gotama," he pledged. The Buddha then returned.</p>
+<p>Now the crop had ripened. With great expectations of harvesting the crop the following day, the brahmin went home. That night, a torrential downpour with thunder and lightning poured down, and the entire crop was completely washed away into the river. In the morning, when the brahmin came to the field and looked, the entire field was desolate. He was struck with unbearable sorrow. He grieved most of all because he could not give a portion of the harvest to his friend, Venerable Gotama. At any rate, having returned home, the brahmin, out of grief, boycotted food—fasted—and lay down in a room. On that day too, the Buddha went to the brahmin's house and asked, "Where is the lay disciple brahmin?" The household members said, "He is sleeping over there, unable to bear the sorrow of such a loss." The Buddha went up to him and asked, "What is this, Brahmin?" The brahmin replied, "Venerable Gotama, I had such great expectations; I had resolved that after the crop ripened, I would not consume it without giving a portion of it to you. But such a great disaster has befallen me. Out of grief, I am fasting, abandoning all hope of life, and lying down." The Buddha asked, "Do you know the cause of this sorrow?" The brahmin said, "I do not know, do you know?" "Yes, Brahmin, I know." It was on that occasion that the Buddha preached the stanza we mentioned earlier:</p>
+<p>*Taṇhāya jāyatī soko*</p>
+<p>*Taṇhāya jāyatī bhayaṃ*</p>
+<p>*Taṇhāya vippamuttassa*</p>
+<p>*Natthi soko kuto bhayaṃ*</p>
+<p>"From craving arises sorrow, from craving arises fear. For one fully freed from craving, there is no sorrow; whence fear?" This was all that the Buddha preached. Yet, it is recorded in the Dhamma that upon hearing this Dhamma, a great revolution of the mind occurred within that brahmin, and through the sequence of insight-knowledges (*vipassanā-ñāṇa*), he realized the noble fruit of the path of Stream-entry (*Sotāpatti-magga-phala*).</p>
+<p>Therefore, we must reflect a little on how such a great mental revolution occurred. How did these insight-knowledges arise? Insight (*vipassanā*) means a special way of seeing. It was with the mental picture of his field that the brahmin had gone home and lay down. What constantly came to his mind was that desolate field. The Buddha uttered that stanza to provide the brahmin, who was staring at that field in his mind, an opportunity to look at his own mind. The brahmin thought his sorrow was caused by the desolation of the field. But after the Buddha uttered that stanza, he must have realized that the sorrow arose not because the field was desolate, but because his mind was desolate. Alongside the growth of the crop in that field, something else had also grown: the craving in his mind had sprouted and grown. What he would do with the harvest, and so many other things. You, lay devotees, know how those who engage in farming work. With what a vast array of expectations do they watch the paddy grow! In that same way, various desires and expectations had grown in this brahmin's mind. When the paddy was destroyed by that torrential rain and washed down the river, all those desires and expectations were washed away too. The brahmin was then constantly conjuring up the image of that desolate field in his mind. Because of this, he lamented, grieved, and sorrowed. The revolution brought about by the Buddha's stanza was so great that instead of looking at the field, the brahmin looked inward; he looked at his own mind.</p>
+<p>This looking inward, dear devotees, is what is called *yoniso manasikāra* (wise attention) in the Dhamma. Reflection with wisdom. Wholesome or unwholesome states arise from the mind. The mind is the forerunner of everything. The Buddha has declared: *"manopubbaṅgamā dhammā, manoseṭṭhā manomayā..."*—"Mind is the forerunner of all states, mind is chief, they are mind-made." It has been declared in that manner. Just so, the brahmin realized here too that the primary cause for the arising of this sorrow was his own mind—it was something that had sprung up from within his own mind.</p>
+<p>So when the Buddha declared: *"taṇhāya vippamuttassa, natthi soko kuto bhayaṃ"*—"for one fully freed from craving, there is no sorrow, whence fear?"—the brahmin understood that eradicating this craving (*taṇhā*) right there was something within his own power. The crop that had been washed away could not be recovered. There was no remedy for it. Instead of that, fasting and sleeping, or fasting unto death, was not the remedy. Thus, the ultimate result of the revolution that occurred within the mind of the brahmin who understood this reality was the attainment of the noble fruit of Stream-entry, which is far more noble than even universal emperorship.</p>
+<p>This story began with him as a brahmin of wrong views. Now, with the attainment of this fruit of Stream-entry, dear devotees, a person is known as a noble disciple (*ariya-puggala*). He attained a state of nobility, a supreme state. Right view arose. Such a massive mental revolution occurred. This brahmin might not have been a learned man. He was also a poor man. Yet, such a great thing occurred because of the profound Dhamma that is present here. This is something worthy of reflection for all of us.</p>
+<p>These days, we often hear people say: "This is not the time to focus on the profound aspects of the Dhamma. This is a time of great hardships, disasters, and calamities. We should think about that Nibbāna, about those profound things, only after this country overflows with milk and honey." Some people think so. But, dear devotees, there is a kind of thing in the world called "blessings in disguise." Some disasters and calamities come just like blessings. Now, for this brahmin, the desolation of this field became a great blessing. Through the mental revolution that arose from it, he was able to attain that noble state of an Ariya—praised in a wonderful way by the Buddha—which is far superior even to universal monarchy.</p>
+<p>Therefore, from these disasters, calamities, and shocks, we can bring to light the Four Noble Truths: suffering (*dukkha*), the cause of suffering, the cessation of suffering which is peace—Nibbāna—and the path to it, the practice—the Noble Eightfold Path. When we reflect on bringing forth insight-knowledges (*vipassanā-ñāṇa*) from these calamities, and when we think about knowledge, our minds usually run to universities, which are so common nowadays. They have an artistic name, *sarasavi* (academies of learning). Many people try to enter these universities. Those who have entered them try hard to graduate—to pass out.</p>
+<p>But, dear devotees, many do not know that we are all currently in a certain university. It is called the "University of Life." In other universities, there are various sciences, arts, and technologies to study. In this University of Life, there are only three subjects to master and pass. What are they? The Buddha has shown them as: gratification (*assāda*), danger (*ādīnava*), and escape (*nissaraṇa*).</p>
+<p>"Gratification" (*assāda*) refers to the side of pleasure—enjoyment—the fivefold sensual pleasures, gratification. This is the first lesson. I think everyone present here has passed this lesson with flying colors. Every samsaric being has passed this subject of fivefold sensual pleasures.</p>
+<p>The next lesson is "danger" (*ādīnava*). The hardships, trials, and adverse consequences in life that one has to undergo in the pursuit of those fivefold sensual pleasures. Troubles, hardships, disasters, calamities—all these belong to the category of danger. The gratification is minimal, while the danger is immense; yet most people remain in the gratification class. They do not even incline to think about the danger. They do not direct their minds to look at them. But, dear devotees, it is through this danger that one can progress to the next class.</p>
+<p>"Escape" (*nissaraṇa*) means departing from saṃsāra. Faring on (*saṃsaraṇa*) means moving in this saṃsāra, like turning in one spot. You know that when a vehicle travels a long distance, that mileage is recorded. But no matter how far it travels, what happens? The wheel itself spins in the very same spot. In the same way, from one perspective, we have traveled in this saṃsāra for an infinite time. We use terms like "infinitely long saṃsāra." But what is the use of traveling this far? We have merely spun in the very same place. We can understand this as the spinning of the wheel through birth (*jāti*), aging and death (*jarāmaraṇa*), and sickness. Or else, it is just the effort exerted to fulfill one's expectations, and of that too, there is no end. Just like that wheel spinning in the same spot.</p>
+<p>Thus, wandering on (*saṃsāra*) is a spinning, a wandering in the self-same place. And "escape" (*nissaraṇa*) means jumping out of that circle, departing, freeing oneself from saṃsāra. This grade of escape—this subject of escape—this lesson of escape—is what remains to be passed. In this world, in this era, the supreme being who first passed these three lessons in this University of Life was the Buddha, and following him, the Arahants. Now, this brahmin too attained the first noble state in that university, which is the fruit of Stream-entry. If we learn lessons from this University of Life according to the circumstances, that is what remains for life. That is what supports one’s liberation.</p>
+<p>The Buddha has shown through various similes how grand the liberation obtained through this fruit of Stream-entry is. On one occasion, taking up a little soil on his fingernail, the Buddha asked the bhikkhus: "Is this little soil on my fingernail more, or is the great earth more?" The bhikkhus replied: "Venerable Sir, this soil on the fingernail is very little. The soil of the great earth is much more." Drawing upon that simile, the Buddha declared that the amount of suffering in saṃsāra that a Stream-enterer has escaped and put an end to is like the soil of the great earth. The suffering (*dukkha*) that remains to be ended is extremely little, like the soil on the fingernail. Why is that? A Stream-enterer is reborn in saṃsāra at most seven times. Furthermore, he does not fall into the lower realms (*apāya*). That is a vast, wonderful relief. For a non-Stream-enterer, the lower realms are like his own home; one never knows when, due to what kind of unwholesome karma, one might have to go to the lower realms. Due to the transformation of the revolution that took place in the Stream-enterer’s mind, due to that noble state, due to the arising of the Eye of Dhamma brought about by the insight-knowledges, the capacity to perform unwholesome deeds that lead to the lower realms was destroyed. None of the unwholesome deeds committed in the past can drag him back to the lower realms. Such a wonderful liberation is received by a person even through the fruit of Stream-entry. That is why the Buddha declared that the saṃsāra suffering remaining for a Stream-enterer to experience is like the little soil on the fingernail, while the saṃsāra suffering from which he is freed is like the remaining soil of the great earth.</p>
+<p>He has shown other similes as well. The suffering remaining to be experienced is like two or three drops of water drawn from the great ocean, while the mass of suffering already exhausted—the mass of suffering from which he is freed—is like the remaining water in the great ocean. He has given another such simile: if the Himalayas were to gradually wear away until only seven tiny pebbles, each about the size of a mustard seed, were left. Those seven pebbles are like the suffering remaining for the Stream-enterer to experience, while the mass of suffering already ended is like the portion of the Himalayas that has worn away. In this way, various similes have been shown. There are four paths and fruits: Stream-entry (*Sotāpatti*), Once-returning (*Sakadāgāmi*), Non-returning (*Anāgāmi*), and Arahantship. One can imagine how great and how noble the liberation received even from the very first of these is.</p>
+<p>Therefore, that brahmin of wrong views, who had been leaning on his hoe weeding the field and addressing the Buddha as "Venerable Gotama," attained the fruit of Stream-entry after his crop was destroyed—a state which the Buddha considers superior even to universal emperorship, mastery over the entire world, or rebirth in the heavenly worlds. From this, we can see that these "profound Dhamma" things—these "insight-knowledges" things—are not limited only to the educated, to graduates, or to those who have gone to universities. If you, who engage in agricultural pursuits, also resolve to benefit from your University of Life, these states can indeed be attained. Since that brahmin of wrong views had a certain deep potential of merit, he underwent such a transformation upon merely hearing the Buddha's Dhamma stanza.</p>
+<p>You might feel a bit of doubt as to why the Buddha, the supreme leader of the three worlds, with so much work to do and so many duties concerning the Sangha, visited several times the place where this brahmin ploughed his field. The Buddha went there not waiting for the brahmin's field to ripen to obtain a share of his harvest, but waiting for the brahmin's mind to ripen in order to bestow a share of the harvest of the deathless, great Nibbāna that he himself had attained. The brahmin's mind ripened on the very day his crop was destroyed.</p>
+<p>Sometimes, your minds too ripen when you face disasters and calamities. Today, there is no need to speak anew about these things—how one's children and relatives meet their end in various circumstances. Sometimes through incurable diseases, sometimes through great shocks, they meet with destruction amidst great blazes. Even after receiving such lessons from the University of Life, Buddhists fail to achieve even what that brahmin of wrong views achieved, because they do not apply their minds to them. Instead, some people think that we should reflect on these things—the profound Dhamma, Nibbāna, the supramundane paths and fruits—only when this country becomes prosperous and overflows with milk and honey. "Until then, let us look to uplifting the economy; it does not matter what happens to righteousness (righteous living)." Such are the opinions prevalent in the world.</p>
+<p>But you can understand from this short story—nowadays people read short stories, novels, and such things with great interest, but there is no moral lesson to be taken from them other than mere enjoyment. However, through Dhamma stories and life accounts, there are many lessons we can learn. When we read about the lives of the Elder bhikkhus and bhikkhunis in this Dispensation, and about the lives of the lay disciples, we see that for many, the realization of this noble Dhamma of Nibbāna came at times when they faced massive shocks. The accounts of Kisā Gotamī, Paṭācārā, and others, and of individuals like Aṅgulimāla—it was through those experiences amidst great life problems that they realized the Four Noble Truths.</p>
+<p>Therefore, we too have such opportunities. That is what we referred to as "blessings in disguise." "Blessings in disguise" means that they appear to us as disasters, as calamities, as shocks. But for what purpose do those shocks occur? A certain opportunity comes in saṃsāra known as the "opportune moment" (*khaṇa-sampatti*). The Buddha has shown the value of this opportune moment. The "moment" means an instant. "Do not let the noble moment pass you by," the Buddha has declared.</p>
+<p>*"Khaṇo ve mā upaccagā,*</p>
+<p>*khaṇātītā hi socanti,*</p>
+<p>*nirayamhi samappitā"*</p>
+<p>"Do not let the noble moment—the opportune juncture—pass you by. For if that moment passes you by, you will have to fall into hell and suffer." What is meant by this noble moment?</p>
+<p>The Buddha mentioned on certain occasions that most people in the world say, "The world works by the hour, the world works by the hour," meaning that this world is a place where work is done by the moment or by time. Nowadays, time has become so complicated that it is almost impossible to keep track of it. But the Buddha identified the "opportune juncture" as the wise human life-existence obtained during the era of a Buddha's appearance. It is through the convergence of many factors that one is able to obtain a wise human life-existence during the appearance of a Buddha. Even if a Buddha appears, if one is born in the animal realm, the ghost realm, or the demon realm, the opportunity to incline toward this Dhamma, live righteously, realize Nibbāna, and escape saṃsāra is not afforded. But if during the era of a Buddha's appearance, in a place where the Dhamma exists, one obtains a human life-existence without physical or mental disabilities and with intellectual capacity, that is called the "opportune moment" (*khaṇa-sampatti*). The Buddha has constantly advised us to make use of this opportune moment. He has shown its value.</p>
+<p>Why? Especially as mentioned here, the Stream-enterer escapes hell—the very first escape. Everyone must contemplate that while the complete release from saṃsāra—from the entirety of saṃsāra—is obtained through Arahantship, the wonderful liberation obtained through the first path and fruit itself is the escape, the release, from the terrifying state of falling into the lower realms. The Buddha and the great Arahants who possessed higher knowledges (*abhiññā*) have declared that for an infinite time, world-beings undergo immense suffering in the animal realm, the ghost realm, the demon realm, and hell. Since there is such a calamity-ridden, risky condition in the world—in life—without pushing aside these noble states, insight-knowledges, paths and fruits, and the Four Noble Truths, one must learn lessons from the disasters and calamities one experiences, and from the experiences of these terrifying times.</p>
+<p>Some people solve the same math problem every day. The more they solve it, the more they get it wrong. The correct answer never comes. That is exactly how beings in this saṃsāra fare on, unable to understand the Four Noble Truths. The Buddha himself declared: "Monks, it is because of not understanding the Four Noble Truths that both you and I have fared on in this saṃsāra for such an infinite time, shrouded in ignorance and bound by craving." The experiences gained from life must be used to support the realization of the Four Noble Truths. If any disasters or calamities befall us, they are the truth of suffering (*dukkha*) declared by the Buddha. Just as that brahmin realized: "This is a portion of that suffering which has come to me; at the bottom of this lies craving (*taṇhā*)." That is something done through wise attention (*yoniso manasikāra*).</p>
+<p>"Wise attention" (*yoniso manasikāra*) means reflecting with wisdom. If certain things spring up from somewhere, looking right there—at that. If you look beyond that, you will never realize the truth of it. "Unwise attention" (*ayoniso manasikāra*) means improper reflection.</p>
+<p>Indeed, the Buddha has declared that there are four factors that support the attainment of Stream-entry: association with superior persons (*sappurisa-saṃseva*), hearing the true Dhamma (*saddhamma-savana*), wise attention (*yoniso manasikāra*), and practice in accordance with the Dhamma (*dhammānudhamma-paṭipatti*). "Association with superior persons" means associating with virtuous people, with noble friends (*kalyāṇa-mitta*). "Hearing the true Dhamma" means listening to the Dhamma. "Wise attention" (*yoniso manasikāra*) means reflecting with wisdom. Next, "practice in accordance with the Dhamma" means practicing according to the Dhamma—the Noble Eightfold Path. So these are the four factors.</p>
+<p>Now, some might wonder if these four were completed for that brahmin. But for someone who has fulfilled these qualities in past saṃsāra, that profound realization can be attained with a very slight stimulus. Understanding comes to different individuals in different ways. Even among you, there are some who understand when only a little is said. There is a saying in society: "I understand when things are just turning." Just like that, there were people who understood when things were just turning. There were those who, when the Buddha just turned to use one or two words, understood and realized Nibbāna right then. Some people have to be told at length. For some, various expedients have to be used. Here too, the Buddha, to generate confidence (*saddhā*) in the brahmin, frequented his field and established a close relationship. The Buddha saw that such a loss would befall the brahmin—not that he did not see it, and not because he expected a share of the harvest. But gradually, taking special pains for his sake, he brought the Buddha’s Dispensation directly to the brahmin. The result of that was the brahmin’s attainment of liberation.</p>
+<p>In the same way, you too must strive to understand the reality of life and the reality of saṃsāra through your life problems and disasters. Do not always remain in the gratification class, as if staying in a comfortable grade. The Buddha declared that there is a side of danger in this: "I went in search of gratification in the world. Whatever gratification (*assāda*) there is in the world, I understood it. Next, I went in search of danger (*ādīnava*). I understood that danger. Next, I researched into the escape (*nissaraṇa*)—the departure—from the world." The word "research" is used here. That is a word used in modern times for academic work: "research." Two words have been used: *anariya-pariyesana* (ignoble search) and *ariya-pariyesana* (noble search); improper searching and proper searching.</p>
+<p>The Buddha, through this noble search, realized that escape—Nibbāna. Having realized it, the Buddha then helped world-beings—devas, humans, destitute individuals, men and women subjected to various abuses, great bandits, morally corrupt people, and also the bhikkhus, various sectarians, wanderers, Nigaṇṭhas, and so on—everyone. He saw that these beings also possessed certain good qualities from their past saṃsāra. Preaching Dhamma in a way that subdued their bad qualities, he brought them to the practice in accordance with the Dhamma.</p>
+<p>Here, association with superior persons helps. Next, hearing the true Dhamma. That brahmin received all four of these at once. The greatest noble friend (*kalyāṇa-mitta*) in the world visited that brahmin's field—that home. Thus, the benefit of a superior person was received. Hearing the true Dhamma was accomplished even through those lines of the stanza. Next, wise attention (*yoniso manasikāra*). The brahmin, applying his mind, turned to look at his own mind instead of the mental picture of the field, and understood that truth. Through wise attention, the path to the practice in accordance with the Dhamma was also paved.</p>
+<p>In this day and age, someone might think that the practice in accordance with the Dhamma means dedicating one's entire life to the Noble Eightfold Path. Indeed, for some, such dedication is necessary. But for one who has fulfilled those qualities of Dhamma in the past, that practice in accordance with the Dhamma is completed in a very short time. When a person detaches their mind from the world and fasts, saying, "I do not want this life," defilements are low in that person. Although they have abandoned the expectation of life with a wrong notion, upon the Dhamma hitting the brahmin at such a juncture, the Noble Eightfold Path must have been completed within his mind. That is something extremely profound.</p>
+<p>Now you know that many people love to see the colors of a rainbow—especially young children. Looking up at the sky during a cloudy day when it is about to rain, it is something we can see only rarely. Even though we cannot always see it in the sky, we can see the beautiful colors of the sun's rainbow by looking at a tiny dewdrop hanging from a leaf on a vine, aligned perfectly when the sun is rising. It shines like a gem. Within it, those rays can be seen. Through a tiny dewdrop, one can see something like a rainbow. In the same way, if through a short stanza—a line of a stanza, a word—one looks precisely in line with the target, if one has established Right View (*sammā-diṭṭhi*), then one can see Nibbāna through it. The mental revolution that occurred within that brahmin was just such a thing.</p>
+<p>Reflecting deeply in that manner, we can derive many moral lessons from this Dhamma story. Likewise, we must constantly reflect on the way our lives pass, and the true nature of life. The Buddha has shown the true nature of this life—reality (this word is used in society now), "things as they really are"—in four statements, four Dhamma themes (*dhamma-uddesa*). These four are:</p>
+<p>*Upanīyati loko addhuvo* (The world is swept away, it is impermanent)</p>
+<p>*Attāṇo loko anabhissaro* (The world is without shelter, without a savior)</p>
+<p>*Assako loko sabbaṃ pahāya gamanīyaṃ* (The world has nothing of its own, one must depart leaving everything behind)</p>
+<p>*Ūno loko atitto taṇhādāso* (The world is insufficient, insatiable, a slave to craving)</p>
+<p>We receive a fine explanation of these four Dhamma themes from Venerable Raṭṭhapāla. Venerable Raṭṭhapāla was declared foremost among those who went forth out of faith in this Dispensation. The Buddha often bestowed foremost positions (*agga-ṭṭhāna*) upon his disciples in various fields. Foremost in wisdom was Venerable Sāriputta. Foremost among those possessing psychic powers was the great Venerable Moggallāna. Foremost among attendants was Venerable Ānanda. Just as universities award various degrees nowadays, this was done as an example to the world. If you want wisdom, look this way. If you want psychic powers, look that way. If you want matters of personal attendance, look here. In that way, if you want to see the power of faith (*saddhā*), the wonderful miracle of faith, look at Venerable Raṭṭhapāla.</p>
+<p>For Venerable Raṭṭhapāla, having heard the Dhamma from the Buddha once, asked his parents for permission to go forth. Venerable Raṭṭhapāla was from a very wealthy family. When he asked his parents for permission at that young age, it was not granted. He lay down on the floor right there, saying, "Either death or permission to go forth." He began a fast unto death. Finally, unable to resolve this otherwise, his friends gathered and pleaded with his parents, and they barely managed to obtain permission for him to go forth. After becoming an Arahant, Venerable Raṭṭhapāla visited his home village. When he visited the Kuru region, King Koravya of that Kuru country asked him: "Venerable Raṭṭhapāla, why did you go forth at such a young age, having been born into such a wealthy family? What was the reason for your going forth?" On that occasion, Venerable Raṭṭhapāla said, "It was because I heard, knew, saw, and understood the truth of four Dhamma themes declared by the Buddha—four Dhamma themes that declare the reality of life—that I went forth. Not without reason." Now, when we say "out of faith," some might wonder why out of faith. What are these four points? We have already mentioned them.</p>
+<p>He declared to the king that the nature of the world is: *"Upanīyati loko addhuvo"*—"The world is swept away, it is impermanent." The king asked him to explain what this meant, as it seemed somewhat like a riddle. Then, to explain it, Venerable Raṭṭhapāla asked the king: "Great King, when you were around twenty or twenty-five years of age, did you have great physical strength and bodily vigor? Were you skilled in the art of commanding elephant, horse, chariot, and infantry forces, in managing elephants and horses, and in the arts of the sword and bow?"</p>
+<p>"O yes, in those days I felt there was no one as powerful and strong as I. I even felt as if I possessed psychic powers, so great was my physical strength and vigor."</p>
+<p>Venerable Raṭṭhapāla then asked: "Well, Great King, is it the same now?"</p>
+<p>"O no, not now. Now I am around eighty years of age. A decrepit old man. Now sometimes when I think of placing my foot here, I place it over there. Even my limbs are no longer reliable."</p>
+<p>"That, Great King, is what the Buddha declared: *'Upanīyati loko addhuvo'*—the world is swept away by old age, it is impermanent. The world is impermanent. The world means world-beings—life; that is the truth of life."</p>
+<p>Then the king declared: "Marvelous, Venerable Sir, extraordinary is this matter! How true is that which the Buddha declared!" Thus, the true reality of the life of both the poorest destitute and a great king is what the Buddha declared in this Dhamma phrase.</p>
+<p>Next, the king asked Venerable Raṭṭhapāla about the second point: "Venerable Sir, why was it declared: *'Attāṇo loko anabhissaro'*? The general meaning of that is: 'The world is without shelter, without a savior.' Even today, if one says this, someone might be startled. 'The world is without shelter, without a savior; why was this declared?'"</p>
+<p>The king asked: "I have elephant, horse, chariot, and infantry forces. I have so much protection. Why was this declared?"</p>
+<p>Venerable Raṭṭhapāla then asked the king: "Great King, do you have any chronic illness?"</p>
+<p>The king replied: "Yes, Venerable Sir. I have a severe wind-disease. At times when that wind-disease becomes acute, my relatives and friends surround me, and I hear them say: 'Now King Koravya will pass away; he will die.'"</p>
+<p>Venerable Raṭṭhapāla asked: "Great King, on such occasions, can you tell those relatives and friends: 'Please, all of you join together and share a little of my pain, to reduce my pain'? Can you do that? Can you share your pain with those relatives and friends to get some relief?"</p>
+<p>"I cannot do that," the king declared.</p>
+<p>"That, Great King, is what the Buddha declared: *'Attāṇo loko anabhissaro'*—the world is without shelter, without a savior. One cannot obtain protection in such situations." Then too, the king accepted it, saying, "What a marvelous, extraordinary thing!"</p>
+<p>The king next asked: "Now in this palace I have gold, silver, pearls, gems, and abundant wealth and grain. Despite this, why does Venerable Raṭṭhapāla declare: *'Assako loko sabbaṃ pahāya gamanīyaṃ'*?"</p>
+<p>The meaning of that is: the world is a place where there is nothing that one can call one's own; it is a place where one must depart leaving everything behind. When he asked the meaning of this statement, Venerable Raṭṭhapāla enquired: "Now, Great King, you live well, enjoying these fivefold sensual pleasures. When departing for the next world, can you take these with you? Or do you have to leave them behind, handing them over to someone here? You have to leave them behind, do you not?"</p>
+<p>"Indeed, Venerable Sir, I cannot take any of these with me. I must go to the next world in accordance with my own karma, carrying only the good and bad deeds I have done," said the king.</p>
+<p>"That is what the Buddha declared: the world has nothing of its own, one must depart leaving everything behind." The king accepted that.</p>
+<p>Next, the final statement is what is relevant to the stanza we recalled at this time: *"Ūno loko atitto taṇhādāso"*. The king asked what the meaning of this was too. The meaning of that passage is: "The world is insufficient, insatiable, a slave to craving." Then, to make the king realize this directly, Venerable Raṭṭhapāla asked several questions.</p>
+<p>"Now, Great King, you rule over this highly prosperous Kuru country, do you not?"</p>
+<p>"Yes, indeed."</p>
+<p>"Now, suppose a spy or a trustworthy person comes to meet you. He comes and gives such news: 'I have come from the eastern direction. In that direction lies a very wealthy and prosperous country. You can conquer it very easily.' Upon hearing such news, Great King, what would you do?"</p>
+<p>"I would conquer that country as well."</p>
+<p>"Next, he asks: 'Well, suppose a messenger comes similarly from the western direction and says: "Your Majesty, in that direction lies a great territory, you can easily conquer it."'"</p>
+<p>"Then I would seize and conquer that as well."</p>
+<p>He said the same for the northern direction and the southern direction. When the king stated this, Venerable Raṭṭhapāla drove the point home: "It is because of this that the Buddha declared: 'The world is insufficient.' It is a place of constant lack. It is never satisfied. It is a slave to craving (*taṇhā*)." Even the king was a slave to craving. The king thought he was the ruler. Even today, there are those who hold various titles of "sovereign" or "director." Though the word "sovereign" has a general meaning, every single one of them is a slave to craving—*taṇhā-dāsas*. Even the king was a slave to craving.</p>
+<p>Therefore, escaping this slavery to craving is what is called freeing oneself from craving (*taṇhā*). Nibbāna is the calming of this thirst of craving. The moment that thirst is calmed. Like a feverish patient begging for water, this thirst of craving has pushed us through saṃsāra for an infinite time. It is never satisfied, no matter how much it is filled with extremely colorful things, or with the most precious luxuries. When we think of the pleasures of a universal monarch, the pleasures enjoyed by the super-rich in what are called "developed countries" nowadays are "beggar's pleasures." Universal monarchs enjoyed such vast pleasures, yet they were not satisfied by them. This is the nature of craving.</p>
+<p>This fire of craving can never be extinguished by adding fuel to it. Instead, the fire must be put out right where it arose—right there—just as that brahmin eradicated craving (*taṇhā*) right there regarding his field. Along with that, he grasped a profound point. He understood that this is the trick to escaping saṃsāra. Because he realized this secret, he attained the state of Stream-entry. By bringing to light this principle through the life problems, disasters, and calamities we experience, we can benefit from those blessings in disguise.</p>
+<p>Therefore, whether they are calamities of the times or various other revolutions that occur in the world, we must strive to bring forth this Buddha’s Dispensation from within them. "Buddha's Dispensation" is a grand word, a weighty word. Nowadays, only the sound of words remains, while the meaning tends to slip away. Especially with words related to the Dhamma, the sound increases more and more, but the meaning slips away. One such word is "Buddha's Dispensation." Nowadays, if one says "Buddha's Dispensation," buildings come to mind. Various things might come to mind when hearing "Buddha's Dispensation."</p>
+<p>But when we reflect deeply, the very same Buddha's Dispensation that the great Arahant Mahinda brought to Sri Lanka and handed over to King Devānampiyatissa is what the Buddha went and gave to that poor brahmin at his home. The ultimate goal of that Buddha's Dispensation is Nibbāna. Its philosophy of life is the Noble Eightfold Path. Its vision is Right View and the Four Noble Truths. Its path of life is the way of virtue, concentration, and wisdom (*sīla*, *samādhi*, *paññā*). This is the Buddha's Dispensation. Therefore, on a day like today, Buddhist devotees must bring to mind and protect this very Buddha's Dispensation.</p>
+<p>These are the things that help protect this Buddha's Dispensation. Now, we declared that four factors help in attaining the state of Stream-entry. First, "association with superior persons" (*sappurisa-saṃseva*)—when reflecting on daily life, this is a matter that must be put to use with great mindfulness and consideration. A "superior person" is identified in the Dhamma as a noble friend (*kalyāṇa-mitta*). A noble friend is a person—whether lay or monastic—who possesses Dhamma knowledge, lives according to the Dhamma, and practices meditation. The person who lives a life in accordance with the Dhamma is the superior person. Such a superior person is like a lighthouse to society, like a lamppost. You know very well what a "lamppost" is. A lamppost is an object that gives light to others. Just like that, the person known as the "superior person," the "noble friend," is a lamppost.</p>
+<p>The greatest lamppost in the world is the Buddha, the supreme leader of the three worlds, who radiated the light of the Dhamma. Below him stands the Great Sangha of the eight noble individuals, or lay and monastic devotees who lead lives in accordance with the Dhamma and practice meditation. Every one of them is a lighthouse, a lamppost, a superior person, a noble friend. It is through associating with such noble friends that one's progress is secured, and liberation from saṃsāra can be attained.</p>
+<p>On the other hand, when we think about it, bad friends (*pāpa-mittas*) are the ones who are in the majority in the world, in society. Keeping such people as far away as possible—and if possible, avoiding them completely—one must live one's life being cautious of them. Why? Because through associating with bad friends, one meets with terrifying ruin.</p>
+<p>On one occasion, Venerable Ānanda, attempting to express the value of this association with noble friends, said to the Buddha: "Venerable Sir, as I see it, noble friendship (*kalyāṇa-mittatā*) is half of the holy life; noble friendship is worth half of this Dispensation."</p>
+<p>The Buddha declared: "Ānanda, do not say so. It is not half of the Dispensation; the entirety of this holy life is noble friendship. The Dispensation is indeed noble friendship, the blessing of noble friendship."</p>
+<p>Now, it is due to a certain noble friendship that you have gathered here. You might not know one another. Personally, you might not have individual relationships. But in terms of Dhamma—by way of listening to Dhamma and being inclined toward Dhamma—you possess the quality of noble friendship. That is how a Buddha’s Dispensation exists. Through association with bad friends, the Dispensation declines. It is by seeking out noble friends, associating with them, and taking what should be taken from them—taking their help—that a Buddha's Dispensation is protected. Association with superior persons—*sappurisa-saṃseva*—is an extremely rare thing. The Buddha has pointed out six rare things:</p>
+<p>*Dullabho buddhuppādo lokasmiṃ*</p>
+<p>*Dullabho manussattapaṭilābho*</p>
+<p>*Dullabhā khaṇasampatti*</p>
+<p>*Dullabho pabbajjā*</p>
+<p>*Dullabhaṃ saddhammassavanaṃ*</p>
+<p>*Dullabho sappurisa-saṃsevo*</p>
+<p>The era of a Buddha's appearance is extremely rare. Human existence is extremely rare. Likewise, the opportune moment is rare. The opportune moment, as we mentioned, is the intelligent human existence, free of physical and mental disabilities, obtained during the appearance of a Buddha. That too is rare. Rarer still is the going-forth. Next, rarer still is the hearing of the Dhamma. Rarer than all of these, finally, is association with superior persons (*sappurisa-saṃseva*).</p>
+<p>Association with superior persons is just like the bullseye at the center of a target board. Why? Even if a Buddha's appearance is rare, within that, many more factors must converge for a person to obtain liberation. Even if the era of a Buddha's appearance is obtained, a human existence must be obtained. Along with a human existence, the opportune moment, the going-forth, and next, the hearing of the Dhamma. In this way, factor by factor, they become increasingly rare. If the correct association with a noble friend is properly received, Nibbāna is hastened for that person. Luckily for that brahmin, he met the greatest noble friend in the world. That is why he obtained that state so quickly.</p>
+<p>The same goes for hearing the true Dhamma. One must incline one's ears and direct one's mind to hear the Dhamma leading to Nibbāna. One must strive to understand the Dhamma. Hearing the Dhamma is not a mere customary ritual. It is something to be listened to with focused attention, with a concentrated mind, collecting the qualities within oneself that support Nibbāna, to the extent of attaining the paths and fruits even during the moment of hearing the Dhamma.</p>
+<p>Next, during such hearing of Dhamma, wise attention (*yoniso manasikāra*)—reflecting with wisdom—takes place. That brahmin, having reflected with wisdom, stopped staring at the field and suddenly began to look at his own mind by way of wise attention.</p>
+<p>Next, the mental revolution that arises from such looking is what is called the practice in accordance with the Dhamma (*dhammānudhamma-paṭipatti*). For some, it is completed in a single moment. But for many, it must be practiced over a long period as a preliminary stage. That is how one's lifestyle must be shaped. That lifestyle is what is called the Noble Eightfold Path. Through that Noble Eightfold Path—Right View (*sammā-diṭṭhi*), Right Intention (*sammā-saṅkappa*), Right Speech (*sammā-vācā*), Right Action (*sammā-kammanta*), Right Livelihood (*sammā-ājīva*), Right Effort (*sammā-vāyāma*), Right Mindfulness (*sammā-sati*), and Right Concentration (*sammā-samādhi*)—one's entire life is molded in accordance with the Dhamma.</p>
+<p>Right View (*sammā-diṭṭhi*) means correct vision—the correct philosophy of life. Having understood good and bad, wholesome and unwholesome, and the Four Noble Truths—suffering (*dukkha*), the cause of suffering, the release from suffering which is Nibbāna, and the Noble Eightfold Path which is the way to it—one puts this view, this Right View, at the forefront. It is declared: *"sammā-diṭṭhi-pubbaṅgamā"*—Right View is the forerunner. Everywhere, view is chief; it goes ahead. Even when you travel on a road, why do you look a bit ahead? You look ahead to establish a resolution, a determination, regarding the place you are going. Similarly, if there is an understanding of the Four Noble Truths through Right View, one establishes Nibbāna as the target, thinking: "My journey is a journey to Nibbāna, a journey toward Nibbāna." The "Buddha’s Dispensation" is a lifestyle with Nibbāna as its target, not buildings.</p>
+<p>Thus, if Right View—correct vision—has arisen, next comes Right Intention (*sammā-saṅkappa*) which follows correct vision. In accordance with that philosophy of life, one must cultivate good thoughts—wholesome thoughts. Thoughts of loving-kindness opposed to hatred, thoughts of harmlessness opposed to cruelty—these thoughts must be cultivated constantly.</p>
+<p>If such Right Intentions have arisen, the words spoken by that person are also correct words: words that are true, words that do not cause division among others, gentle words that are not harsh, and words that are in accordance with the Dhamma. Thus, one uses good speech.</p>
+<p>Next, the course of action is Right Action (*sammā-kammanta*): abstaining from bodily misdeeds such as killing living beings, stealing, and sexual misconduct.</p>
+<p>Next, correct living is Right Livelihood (*sammā-ājīva*), which contains the factors mentioned in the livelihood-as-the-eighth virtue (*ājīv'aṭṭhamaka-sīla*) we undertook on this occasion. It speaks of abstaining from wrong livelihood. Nowadays, many are enslaved by the effort to uplift their economy and incline toward wrong livelihoods. Whether they do so out of poverty or other reasons, the Buddha prohibited them because they support one’s passage to terrifying places in saṃsāra, such as hell. What are they? Trade in weapons, trade in living beings for meat, trade in poison, trade in flesh, and trade in intoxicants. The Buddha declared that making a living from these leads to one's ruin. Sometimes, one can get rich quickly through them. But despite becoming rich, because one has to suffer their terrifying consequences, the Buddha prohibited them. Therefore, abstaining from wrong livelihood and establishing a correct lifestyle is a source of great relief for a person. Such a person has no regret. That mind is always pure. Even a person with immense wealth does not possess that purity. Nor does someone with a large salary have that happiness. One's blamelessness—this is called the happiness of blamelessness (*anavajja-sukha*). The happiness of being correct. The absence of regret is a great comfort. A person who obtains immense wealth sometimes cannot sleep. They remember that they obtained that wealth through improper means. Therefore, one who expects ultimate comfort must necessarily examine their livelihood.</p>
+<p>Sometimes, some are addicted to wrong livelihoods inherited through generations. "We cannot abandon the jobs passed down from our parents. They are what we have inherited as our habit. Those are what we are used to." But if one has correctly understood the word of the Buddha, regardless of the loss of profit to oneself, one shapes one's livelihood in accordance with the Dhamma. Sometimes, one turns to a righteous livelihood that brings a small wage or a low income. That is what is called correct living.</p>
+<p>Through the effort exerted to cultivate Right Livelihood (*sammā-ājīva*), there arises within that person Right Effort (*sammā-vāyāma*), correct striving. Real effort is the energy exerted to prevent unwholesome thoughts from entering one's mind, to abandon unwholesome thoughts already present in the mind, to generate wholesome thoughts not yet present, and to maintain and consolidate wholesome thoughts already present. This fourfold effort is what is called Right Effort.</p>
+<p>The person who exerts effort in this way lives with Right Mindfulness (*sammā-sati*), correct awareness, due to the mindfulness they apply. Like a good gatekeeper. If mindfulness is well applied, the Four Foundations of Mindfulness (*satipaṭṭhāna*) are clearly understood. One clearly understands one's body, feelings (*vedanā*), mind, and thoughts that come to the mind. It is through the systematic development of these Four Foundations of Mindfulness that one can even attain the noble states of absorption (*jhāna*) known as Right Concentration (*sammā-samādhi*).</p>
+<p>If the Noble Eightfold Path is completed within someone in that manner, Nibbāna is right there. Simultaneously with the supramundane completion of the Noble Eightfold Path, one can attain the realization of the paths and fruits: Stream-entry, Once-returning, Non-returning, and Arahantship.</p>
+<p>Therefore, you must understand that if we speak of a Buddha's Dispensation on a day like today, that is what the Buddha's Dispensation is—it is the Noble Eightfold Path, the Four Noble Truths, or the cultivation of virtue, concentration, and wisdom (*sīla*, *samādhi*, *paññā*). Other than by describing it through such terms, the Buddha's Dispensation cannot be described by way of buildings or symbols. Therefore, if protecting that Buddha's Dispensation is our duty as Buddhists, we must also be eager to shape our way of life and our vision of life accordingly.</p>
+<p>The story presented in this Dhamma sermon is a simple, ordinary story. We should not dismiss it saying these are things found in ancient books. Unlike the novels and short stories of today, these are directly related to the experiences of our University of Life. Therefore, you must strive to realize Nibbāna through those very experiences.</p>
+<p>Especially, the occasion of hearing the Dhamma is declared by the Buddha as an "occasion of liberation" (*vimuttāyatana*), a place to attain liberation. There are various kinds of liberation. But the Buddha has declared the places where liberation from saṃsāra can be attained. The occasion of hearing the Dhamma is one such occasion. The occasion of preaching the Dhamma is also such an occasion.</p>
+<p>So if you have listened well to this Dhamma, many wholesome thoughts—supporting that liberation, supporting life—must have arisen within your stream of consciousness at this time. Making those wholesome feelings (*vedanā*) a strong supporting condition, you must wish: "May we be freed from this terrifying, dreadful saṃsāra, and may we be able to realize the supreme, great, deathless peace of Nibbāna, free from all saṃsāric suffering such as birth (*jāti*), aging and death (*jarāmaraṇa*), and sickness."</p>
+<p>Likewise, we must wish: "May the host of devas and brahmas who protect the Dispensation, and whatever deities residing in this place, and all those who desire merit and Nibbāna, rejoice in this merit of preaching and hearing the Dhamma!"</p>
+<p>Similarly, we must make the aspiration: "May all beings, including our own relatives and friends, from the lowest hell up to the highest heaven, who desire merit and Nibbāna, rejoice in this merit of preaching and hearing the Dhamma, and being freed from all saṃsāric suffering, may they be comforted by the great, deathless peace of Nibbāna!" Keeping this aspiration in mind, let us now share merit by reciting the stanzas in this manner:</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <span></span>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_002.html" class="doc-btn">Next Sermon (002) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 056 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_055.html" class="doc-btn">← Previous Sermon (055)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_057.html" class="doc-btn">Next Sermon (057) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 056</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_056_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_056_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_056_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #56</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.70)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Aciraṃ vatayaṃ kāyo, pathaviṃ adhisessati; Chuḍḍho apetaviññāṇo, niratthaṃva kaliṅgaraṃ.</p>
+<p>From:</p>
+<p>Verse 41 from the Cittavagga (Chapter on the Mind) of the Dhammapada</p>
+<p>Dear Listeners,</p>
+<p>The Great Compassionate Buddha clarified to the world the value of nursing the sick, not only through advice but also by example. The state of illness is a time when a person becomes helpless. Caring for them at such a time, with loving-kindness, compassion, and sympathy at the forefront, is a noble quality of a virtuous person. On the other hand, through illness, a person is able to properly understand the impermanent (*anicca*), suffering (*dukkha*), and not-self (*anattā*) nature of these five aggregates. What assists in this is timely Dhamma advice. A valuable story that demonstrates how the Buddha performed the nursing of the sick in both these ways is presented as the background story to the stanza we have chosen as our theme today.</p>
+<p>A certain faithful young man in the city of Sāvatthī ordained in the Dispensation and received higher ordination. He was known as Venerable Tissa. In the course of time, Venerable Tissa developed a severe illness. Starting as small pimples on his body like eczema, they gradually became large boils, then developed into large abscesses, which burst and began to ooze blood and pus. Holes appeared here and there all over his body. Likewise, his robes and undergarments became sodden with blood and pus; they were completely wet. Finally, he reached a state where even his attending monks could not look after him, and this venerable monk lay there helpless, without anyone to nurse him.</p>
+<p>At that moment, the Buddha, having entered the attainment of Great Compassion and looking at the world, beheld this monk. By that time, Venerable Tissa was known by the name 'Pūtigatta Tissa' (Tissa of the Putrid Body). Because his body was decaying, the nickname Pūtigatta Tissa was attached to him. So, Venerable Pūtigatta Tissa appeared to the Buddha’s knowledge of the attainment of Great Compassion. He understood that this helpless Tissa had the supportive conditions (*upanissaya-sampatti*) to attain Arahantship. But as things stood now, it would be difficult. Understanding that 'if even I do not help him, that opportunity will slip away,' the Buddha went to that monastery. Having arrived, he did not go straight to that monk. He went to the fire-house, washed the vessel used for heating water for bathing, poured water into it, placed it on the hearth, and stayed in the fire-house until the water boiled. Then, after the water had boiled, the Buddha went to the bed where that monk was lying and lifted one end of the bed. Since the bed has two ends, the other monks also understood that the Buddha was now preparing to nurse this monk. Saying, 'Venerable Sir, we will do that,' the monks lifted the bed and carried it to the fire-house.</p>
+<p>Next, the Buddha, with the assistance of those monks, first washed the monk’s outer robe and set it to dry in the sun. Then, with the help of those monks, the Buddha poured water, and those monks washed him. In this manner, they bathed him. After bathing him, by that time, the outer robe had dried. Having put that on him, they washed his undergarment as well. Washing it with hot water in the same way, and after it had dried in the sun in a short while, they put the undergarment on him too. Now indeed, Venerable Tissa felt great comfort after a long time due to this bath; he felt a lightness in his body and a peace in his mind. Wearing that undergarment and wrapped in his outer robe, he lay comfortably on the bed. Standing at the head of the bed, near his head, it was at that very moment that the Buddha preached the stanza we took as our theme.</p>
+<p>*Aciraṁ vatayaṁ kāyo paṭhaviṁ adhisessati chuddho apeta-viññāṇo niratthaṁva kaliṅgaraṁ*</p>
+<p>"Before long indeed, this body, devoid of consciousness (*viññāṇa*), will lie upon the earth, cast aside like a useless log"—this is the meaning contained in that stanza. Hearing this stanza, Venerable Pūtigatta Tissa attained Arahantship together with the four analytical knowledges (*paṭisambhidā*). Many other monks also attained various paths and fruits. Then, immediately along with his attainment of Arahantship, Venerable Pūtigatta Tissa attained final extinguishment (*pariNibbāna. Such events do occur, where life ends simultaneously with the realization of the Dhamma. However, those monks knew nothing of this. The Buddha had the body of Venerable Pūtigatta Tissa—who appeared to have passed away or attained final extinguishment—cremated, and caused a stupa to be built enshrining his relics.</p>
+<p>The monks asked, "Where has this Venerable Pūtigatta Tissa been born?" It was on that occasion that the Buddha declared, "Monks, this Pūtigatta Tissa has attained Arahantship and final extinguishment (*pariNibbāna." Then those monks asked: "Venerable Sir, if he had such supportive conditions to attain Arahantship, why did his body decay in this manner? Why did he fall into this state with boils oozing pus?" Furthermore, not only that, but Venerable Tissa’s bones also broke. In his final days, his bones broke, and his body was decayed in a most terrible manner. "What is the reason for his bones breaking? What is the reason for his attaining Arahantship?" When the monks inquired about this, the Buddha, pointing out his past karma, declared: "All of this is the result of past karma done by Tissa." The story is given as follows:</p>
+<p>In the time of Kassapa Buddha, this Venerable Pūtigatta Tissa was a bird hunter. His livelihood was catching birds and selling them to wealthy people. In order to keep the birds that remained unsold for the next day—with the thought that if he killed them, the meat would spoil and rot—he broke the wings and legs of those birds, plucking their feathers, and kept them alive to be sold the next day. He also killed and ate some of them. That indeed was his unwholesome karma. However, despite leading such a life, on one occasion, with great devotion, he offered food, offered alms-food (*piṇḍapāta*), to an Arahant who had come to his house for alms, and made a wish: "May I realize the same Dhamma that the Venerable Sir has realized." The Arahant also blessed him, saying, "May it be so." The Buddha explained that this wholesome merit was the supportive condition (*upanissaya*) for his attaining Arahantship.</p>
+<p>So, that is the story. This story is exemplary to us in several ways. First, we should pay attention to the nursing of the sick performed by the Buddha. Now, here, Venerable Pūtigatta Tissa did not appear to the Buddha’s knowledge of the attainment of Great Compassion merely because of his illness. A person is usually caught in that knowledge of the attainment of Great Compassion because they have the qualifications to be released from this suffering (*dukkha*) of saṁsāra. Here too, it was not solely due to his illness, but because he possessed the supportive conditions to attain Arahantship that he appeared in that manner. On such occasions, the Buddha often went to that place alone. Even here, the Buddha went there without taking even Venerable Ānanda with him, went first to the fire-house, and like a true attendant, washed the vessel, placed water on the hearth, boiled it, did all of that, and only then went to the patient's bedside. Furthermore, the very manner in which he performed that nursing is worthy of emulation even for us—the manner of nursing a patient. He first washed that monk's robe, let it dry, then bathed him, and finally washed his undergarment, performing the nursing in a very systematic, highly methodical manner. Lastly, the Buddha nursed that monk with the Dhamma. By nursing him with the Dhamma, He cured his entire disease of saṁsāra.</p>
+<p>Indeed, that is a very valuable story. A somewhat similar incident of the Buddha nursing the sick is mentioned in the Vinaya Piṭaka. Let us include that story here too, due to several reasons. A certain monk had a severe abdominal ailment, fell to the ground wallowing in his own urine and excrement, and was utterly helpless. Not a single monk went to nurse that monk. At that helpless moment, while the Buddha was on a walking tour of the lodgings (*senāsana cārikā*) with Venerable Ānanda—a walking tour of the lodgings means the Buddha, from time to time, went from monastery to monastery to see how the monks were living—while walking in that manner, he went with Venerable Ānanda to the place where that monk was and said to Venerable Ānanda: "Ānanda, go and bring water, bring water, let us bathe this monk." Then, Venerable Ānanda brought water. The Buddha poured water. Venerable Ānanda rubbed his body. After bathing him, the Buddha lifted him from the head side, and Venerable Ānanda lifted him from the feet side. They lifted him and laid him on the bed. He asked this monk, "Monk, why do others not nurse you?" This monk said, "Venerable Sir, since I do not nurse or help other monks, those monks do not look after me either."</p>
+<p>Then, based on this, the Buddha gathered the monks and asked: "Monks, is there a sick monk in such-and-such a monastery?" "Yes, Venerable Sir." "Does that monk have an attendant?" "No, Venerable Sir." "Why is there no attendant?" When asked, they replied, "That monk does not nurse us either. He does not help us. Therefore, we do not help him either." At that moment, the Buddha declared to the monks: "Monks, you have no mother or father here to nurse you. If you do not nurse one another, who else is there to nurse you?" Next, the Buddha declared a statement of profound meaning, which is interpreted in various ways today. It is mentioned in the Pāli language as:</p>
+<p>*Yo bhikkhave maṁ upaṭṭheheyya so gilānaṁ upaṭṭheheyya*</p>
+<p>"Monks, he who would nurse me, should nurse the sick."</p>
+<p>Some interpret that passage to mean that nursing a sick person is equivalent to nursing the Buddha. However, we have to say that if the Buddha had expressed such a thing, that sentence would have been expressed differently. In that case, it should have been said: "He who nurses the sick, nurses me." As a reason for this, we point to a well-known Dhamma advice mentioned in the teachings:</p>
+<p>*Yo dhammaṁ passati so maṁ passati*</p>
+<p>"He who sees the Dhamma, sees me."</p>
+<p>Whoever sees the Dhamma is equivalent to having seen the Buddha. According to that sentence structure and logic, if we were to take the first meaning we mentioned, it should have been said on this occasion: "He who nurses the sick, nurses me." But here, the Buddha declares: "He who would nurse me, should nurse the sick." Now, some interpret this from another angle. They say it means that nursing the sick can never be made equal to nursing the Buddha. Nursing a lay or ordained sick person is not as fruitful in terms of merit as nursing the Buddha. On this occasion, what the Buddha declared and meant was: "If you would nurse me by way of accepting my advice, you should nurse the sick." It is also interpreted in that way. But that is interpreted by adding words unnecessarily.</p>
+<p>If we reflect on this quietly, comparing this story with that of Venerable Pūtigatta Tissa, we will be able to bring out the true meaning of this Buddha-word. Now, in the story of Venerable Pūtigatta Tissa, we saw that because of his supportive conditions to attain Arahantship and because he appeared in the knowledge of the attainment of Great Compassion, the Buddha went there alone, not even with an attendant. He went alone and commenced the duties of nursing the sick. But here, the Buddha was on a walking tour of the lodgings (*senāsana cārikā*) with Venerable Ānanda. Pious devotees, this walking tour of the lodgings is something that a clever leader, a clever teacher, must do. It is a valuable custom. It means to observe things. Just as modern sudden raids or surprise inspections are carried out when reorganizing some departments, the Buddha also had a custom of quietly visiting monastery after monastery without prior notice. Then, when he saw the shortcomings of the monks in those places, he could advise them accordingly. Such an occasion is found here. So here, the Buddha went with Venerable Ānanda and nursed that monk with the assistance of Venerable Ānanda. Having done so, he came and gave advice in that manner.</p>
+<p>If we reflect according to that, we have to take it in this way. From what the Buddha declared here, it is clear that since there are no parents in this Dispensation, the monks must nurse one another. Furthermore, in this Dispensation, there are two teacher-pupil dyads: preceptor and co-resident (*upajjhāya-saddhivihārika*), and teacher and pupil (*ācariya-antevāsika*). For the proper conduct among these monks, for this monastic institution to function correctly, the Buddha has laid down these two teacher-pupil levels or dyads: the pupil of the preceptor is the *saddhivihārika*, and the pupil of the teacher is the *antevāsika*. The mutual relationship between these two groups is described as a relationship between a father and a son. That is how the Buddha has laid it down. Not only that, the Buddha has frequently declared that companion monks (*sabrahmacārī*) should help and nurse one another with a sense of brotherhood. So, if in some way they do not fulfill that responsibility, what happens? All of these are the Buddha's children, the Sakyaputta ascetics. If these children do not behave in that manner, the Buddha himself will have to go from lodging to lodging, from monastery to monastery, with his own attendant, and nurse the sick. That is why the Buddha declared on this occasion: "He who would nurse me, should nurse the sick." When we think about it in this way, based on what is said here, nursing the sick is a part of nursing the Buddha itself. It is a part of the service done to the Buddha. Otherwise, one cannot take it to mean that nursing the Buddha and nursing a lay or ordained sick person with medicine and care are exactly identical.</p>
+<p>Be that as it may, we can see through this the place the Buddha gave to nursing the sick. Furthermore, when the Buddha laid down various rules in the Vinaya Piṭaka, he provided various allowances for the sick, stating: "There is no offense for one who is sick" (*gilānassa anāpatti*). Thus, after laying down a certain rule, considering the sick, he exempts the sick monk by saying there is no offense. In many other ways too, the Buddha has described the nursing of the sick in the Vinaya Piṭaka. On one occasion, the Buddha points out five qualifications of a true sick-nurse. What is the first qualification of a true sick-nurse? He must be capable of preparing the medicine needed for that patient. Administering medicine is the first point. The second qualification is to understand what is suitable (*sappāya*) and unsuitable (*asappāya*) for that patient. The word *sappāya* is used to mean what is beneficial to someone—beneficial things, suitable things. So, one must understand what is suitable and unsuitable for the patient. Likewise, one must have the ability to remove unsuitable things and bring suitable, beneficial things close to the patient. Next, what is the third qualification mentioned? One must nurse with a mind of loving-kindness, without any expectation of gain from that patient—without even the expectation of taking the food received by the patient, or any expectation of gaining money or benefit from the patient. That is the next point. The fourth qualification is that one must be capable of removing the excrement, urine, saliva, phlegm, mucus, vomit, etc., of that patient. One must be able to handle those things without disgust. The fifth qualification is that one must be capable of delivering a timely Dhamma talk in a way that encourages the patient's mind—nursing them with the Dhamma. The Buddha demonstrated all of these through his own example as well. Thus, we should understand that the Buddha clarified the nursing of the sick to the world not only by advice but also by example.</p>
+<p>Similarly, on the other hand, just as the qualities of a good sick-nurse were mentioned, the characteristics or habits of a good patient—that is, a patient who is easy to nurse—are also shown. If one is a good patient, regarding that patient, he should know what is beneficial to him. He must act in accordance with what is beneficial; this is called *sappāya*. He must be able to behave in a way that suits his illness; otherwise, the attendant will not be able to manage him. So, behaving in that manner, in a way suited to one's illness, is necessary. The second point is that he must know the proper quantity of suitable things, such as medicine given. If one consumes or accepts too much of something thinking, "This is a good, beneficial thing," then another illness will arise. That is also necessary. One must know the measure to be taken even of things that are suitable and beneficial to oneself. That is something belonging to the patient. The third point is that he must use the medicine given systematically and in the proper manner. He must use the medicine continuously without rejecting it. The fourth point is that he must declare the state of his illness accurately and truthfully to his attendant. Is the illness getting better now? Is it increasing? Is there relief now? He must clearly state all of that to the attendant. The fifth point is that even if there is severe pain (*vedanā*), he must have the strength to bear it without crying out. In this manner, the Buddha has laid down both the qualities of a true sick-nurse and the behavior that should exist in a patient who is easy to nurse.</p>
+<p>Likewise, you have heard of occasions when the Buddha himself nursed with the Dhamma. You may have heard that to Venerable Moggallāna and Venerable Mahā Kassapa, on occasions when they were very gravely ill, the Buddha himself visited and recited the factors of awakening (*bojjhaṅga*). It is said that as soon as they heard it, their illnesses were cured. Similarly, another highly famous discourse is the Girimānanda Sutta. The Buddha preached the Girimānanda Sutta when Venerable Ānanda came and informed Him that Venerable Girimānanda was severely ill. On that occasion, the Buddha said: "It is alright even if I do not go. If you preach this discourse, the illness will be cured." Contained within that discourse are ten meditation themes called the ten perceptions (*dasa saññā*), which are about meditation. He preached an amazing discourse that develops the mind regarding the diseased conditions of the body. There too, it was nursing the sick. From that we can see that the Buddha does not endorse merely handing the patient over to doctors and nursing them only physically. You must set the mind right, make the mind healthy. If possible, one must be able to nurse them in such a way that the mind is led all the way to final Nibbāna, eradicating the disease of saṁsāra. This is the deepest aspect of nursing the sick. Thus, we can extract many points from these stories. Apart from that, let us now turn to another aspect.</p>
+<p>Now, next, what is the lesson we have to learn from this Venerable Pūtigatta Tissa? He too passed away after teaching us a lesson. What is the lesson? His body rotted. Why did it rot? During the time of Kassapa Buddha, as a bird hunter, with the business intention of supplying un-decayed, fresh meat to his customers, he broke the limbs and plucked the wings of those helpless animals and kept them overnight. Why was this? Because of the fear that the meat would spoil. The result of that grave unwholesome karma indeed yielded its fruit to Venerable Pūtigatta Tissa. Now, on this occasion, in the Right Livelihood characterized by the eight-fold virtue (*ājīva-aṭṭhamaka-sīla*) that you have undertaken, there are livelihoods that a faithful layperson should not perform, which you may have heard of. Livelihoods such as the trade in meat, or breeding animals for slaughter—that was the very livelihood that Venerable Pūtigatta Tissa also carried out. So, the result of that karma yielded its fruit in his final life. Therefore, we too must reflect. If we, with the intention of making wealth, direct ourselves toward such things—if we inflict such cruel torture on animals with the intention of supplying fresh meat to customers—the clear result of harming living beings is having abundant ailments, abundant diseases. We must all reflect that many, or perhaps all, of the ailments we experience are the results of the harm and torture we inflicted in various ways during this long saṁsāra. Thus, we must learn lessons from these. Through this, we see the immense power of karmic results. No matter how much we try to run away from these, we will have to suffer them in some way or other. It was because of this that he fell into a helpless state, oozing blood and pus, and finally, even his bones broke, as it is said. Even in modern times, there are various diseases. We do not know their causes. But we can understand from this that the real cause is the cause of karma. Such a state exists in this saṁsāra.</p>
+<p>Therefore, indeed, this saṁsāra is a dangerous place. Some people are tempted into such livelihoods because of the problem of their survival. What is survival, pious devotees? It is keeping this cage of a body going for a little longer. For another person, it is not just keeping it going, but nourishing it, making it strong—it is for this purpose that they engage in eating meat and so forth. You know where the proteins (muscle-building elements) are mostly contained. So, they direct themselves to those things with the intention of obtaining them. But those will have to be paid back someday. It is this condition, this story of the body, that the Buddha preached in that short stanza. That indeed is the stanza we took as our theme. That stanza alone was sufficient for Venerable Pūtigatta Tissa to realize Arahantship. Let us recollect that stanza once more:</p>
+<p>*Aciraṁ vatayaṁ kāyo paṭhaviṁ adhisessati chuddho apeta-viññāṇo niratthaṁva kaliṅgaraṁ*</p>
+<p>"Before long indeed, this body—devoid of consciousness (*viññāṇa*)—having abandoned this cage of a body, cast aside like something thrown away in the forest, will lie upon the earth like a useless log." Indeed, this became a very direct, experiential fact to Venerable Pūtigatta Tissa. It was at the moment when this body was in such a state, oozing blood and pus, with broken bones, just like a decayed, termite-eaten piece of wood in the forest, that the Buddha declared this stanza. Why did the Buddha express it in this way? We travel through this long saṁsāra because of our attachment to this body.</p>
+<p>To beautify this body, to make it fat, to make it strong, we employ various devices—not according to the Dhamma, but often unrighteous devices. All of this we do for this cage of a body. But a certain moment comes when this consciousness (*viññāṇa*) departs. Even after consciousness (*viññāṇa*) departs, it does not end there. Next, it grabs hold of another cage of a body. The condition of that cage of a body is decided according to one's own past karma. For Venerable Pūtigatta Tissa, indeed, saṁsāra ended there. For an ordinary person, after exhausting that karmic force, they might go and be born in another similar place. Such a dangerous situation exists. Therefore, if we reflect according to the Dhamma, if our purpose is to maintain this cage of a body, why do we maintain it? We must maintain this body for the sole purpose of understanding the three characteristics (*tilakkhaṇa*)—namely, impermanence (*anicca*), suffering (*dukkha*), and not-self (*anattā*)—which are the truths about life and the universe declared by the Buddha. So, it is to understand the three characteristics and to gain that realization that we maintain this cage of a body.</p>
+<p>Otherwise, when looking at a body thrown in a cemetery, you can imagine—in the past, unlike today, there was what was called an open cemetery. It was in open cemeteries that corpses were thrown. A corpse thrown in an open cemetery swells up thoroughly in a day or two; it swells to the highest possible level in two or three days. Next, it turns blue. Next, it putrefies, bursts, flows away, and finally, after several days, the skin also disappears, leaving only a heap of bones. Such indeed is the historical story of the body.</p>
+<p>Unless ordinary people think about this with difficulty and take it to heart, they generally do not understand it. They are not even inclined to think about it. But why do we think about these things? Through these, the Buddha demonstrates that if we hope to escape from this saṁsāra, we must eliminate attachment to this cage of a body. We conventionally refer to this as a "cage of a body." If we think of it in another way, it is fine to take it even as a cage in which a parrot or a bird lives. As long as there is attachment to this cage of a body, even if the mind departs from this cage, it will go and enter another cage. Such a state exists in this saṁsāra. Therefore, the Buddha shows that systematically, either by developing the three characteristics of impermanence (*anicca*), suffering (*dukkha*), and not-self (*anattā*) through meditation—and in developing through meditation, what one must use as an aid is indeed one's own body. For Venerable Pūtigatta Tissa, indeed, this was easily understood because his body had also reached that very state. But for some people, even if they reach that state, understanding does not come. Without waiting until we reach that state, according to the Dhamma advice declared by the Buddha, we must practice the necessary meditations: meditation on the foul (*asubha bhāvanā*), especially the state of a body in a cemetery, and then the thirty-two putrid parts of the body. The Buddha has told us to contemplate these in order to abandon attachment to this body. The Buddha has declared that as long as attachment to these five aggregates is not removed, there is no release from this saṁsāra.</p>
+<p>Now, the most visible thing to the eye is form (*rūpa*). The Buddha has shown the suffering (*dukkha*) nature, the pain-giving nature of this form (*rūpa*) in eleven ways: as impermanent (*aniccato*), as suffering (*dukkhato*), as a disease (*rogato*), as a boil (*gaṇḍato*), as a dart (*sallato*), as a calamity (*aghato*), as an affliction (*ābādhato*), as alien (*parato*), as disintegrating (*palokato*), as empty (*suññato*), as not-self (*anattato*). Why has the Buddha declared to look at this body in various ways—such as impermanent, as suffering, as a disease, as a boil (like a cancer), as a mass of great troubles, as an affliction, as something belonging to others, as an empty thing, as something not-self (*anattā*), as something that disintegrates? Because disenchantment (*nibbidā*) with saṁsāra supports final Nibbāna. So, it is not only regarding this. Even the aggregate of feeling (*vedanā*)—no matter how pleasant a feeling (*vedanā*) is, in a moment it turns the other way. Or sometimes, pleasant feeling (*vedanā*) itself emerges as suffering (*dukkha*). Union with the beloved, which was thought of as pleasant, next becomes suffering (*dukkha*) by way of separation from the beloved. Such is the situation. That is why the Buddha told us to first contemplate the impermanent nature, the suffering nature of this cage of a body, as a disease and an affliction. He asked us to contemplate in that way, to train ourselves to see in that way. It is through that, first through impermanence (*aniccatā*), and then through the suffering nature, the not-self nature (*anattatā*)—it is through understanding these that one can develop disenchantment towards the five aggregates, or in other words, towards the phenomena of Name-and-Form (*nāmarūpa*). To the extent that one understands its true nature, to that extent disenchantment arises. To the extent that disenchantment arises, to the extent that disenchantment with saṁsāra arises, to that extent one draws closer to final Nibbāna. Thus, final Nibbāna is the release from these sufferings—namely, birth (*jāti*), decay (*jarā*), sickness (*vyādhi*), and death (*maraṇa*)—which belong to a person along with existence (*bhava*), or birth after birth in various places arising in accordance with karma over a long period. It is not some other strange heaven.</p>
+<p>Therefore, we must reflect according to this Buddha-Dhamma. The Buddha declared that noble truth as suffering (*dukkha*). When ordinary people talk of the world being suffering (*dukkha*), they speak only of a very minor part of suffering. What the Buddha meant by telling us to fully comprehend suffering, to understand it properly, is to go towards the realization that this entire existence is one hundred percent suffering (*dukkha*). Indeed, that is not understood by the ordinary world. Just like a small child who cries for a moment and then laughs, no matter what suffering (*dukkha*) this world undergoes—whether separation from the beloved, illness, or any other suffering—as soon as they feel slightly better, they forget all of that. Again, through ignorance (*avijjā*), they drown in existence (*bhava*). Such is the state of saṁsāra. Therefore, this is something that must be brought out through effort. This meditative attention (*manasikāra*) shown by the Buddha must be brought out through effort, otherwise it gets suppressed by ignorance (*avijjā*). As it gets suppressed and suppressed, one has to travel in saṁsāra for a long time. That is why the Buddha has highlighted the necessary meditation signs (*nimitta*) and themes (*kammaṭṭhāna*). When this suffering (*dukkha*) is properly understood, along with it, the underlying craving (*taṇhā*) must also be understood. To whatever extent some suffering (*dukkha*) arises, underlying it, craving (*taṇhā*) is necessarily present together with it. If we lament over the death of someone, underlying it is the craving (*taṇhā*) and desire we have for that person. In that same way, we grieve over the loss of wealth because of the craving (*taṇhā*) we have for that wealth. This same principle applies to our body as well. As long as there is this strong attachment to our body, we do not wish to be separated from this body even by death. It is because of this very thing that we conjure up another cage in its place. Although we expect it, the cage is not conjured up as we wish. It is conjured up according to the karma one has performed. Such a state exists in this saṁsāra. That is why the Dhamma advice declared by the Buddha is the most valuable nursing of the sick here. The Dhamma advice given through that stanza is more important than the other external physical nursing the Buddha performed for Venerable Pūtigatta Tissa. It was through that indeed that he was able to end all suffering (*dukkha*) of saṁsāra.</p>
+<p>Now, likewise, when we look at the animal world, the Buddha has declared that there are even more terrifying, suffering-laden states, various planes of existence (*bhava*) in saṁsāra. This mind within this human being, in this human state of existence, is a very valuable thing. How do we use this valuable mind? Especially in this era, we often direct this mind to things of the external world, to go towards other worlds, to fulfill targets presented by our craving (*taṇhā*). But the Buddha declares: we have traveled in this saṁsāra for an infinite time. If there is something to be done by a person, it is to stop this journey of saṁsāra. It is for that purpose that the Buddha has shown the Noble Eightfold Path. We must straighten our suffering properly. We must straighten our view (*diṭṭhi*) according to the Dhamma. What exists in the ordinary world is a view (*diṭṭhi*) that entirely cultivates existence (*bhava*). It is a view that entirely moves within this existence (*bhava*) and cultivates existence (*bhava*), following the luxurious world. This is often what exists even among Buddhists. But the Buddha reminds us that by constantly recollecting the three characteristics of impermanence (*anicca*), suffering (*dukkha*), and not-self (*anattā*), as well as those meditations on the foul (*asubha bhāvanā*) which support disenchantment with saṁsāra, one can draw close to final Nibbāna.</p>
+<p>This Dhamma advice is indeed the highest nursing of the sick that can be given to someone. When someone close to us is sick, we must make them understand what the Buddha pointed out. It was that very thing that the Buddha did not hide in the Girimānanda Sutta. There, the Buddha presented a directory of diseases existing within this body. Some might doubt how a sick person can be cured by listening to a directory of diseases. But what was the Buddha's method of treatment? It was to help bring the mind to composure. By bringing the mind to that reality, the affliction arising from that suffering (*dukkha*) can be removed. For one who has the understanding that "this is the nature of this body"—let us think, now there is a directory of diseases in the Girimānanda Sutta. When listening to it, a person might think for a moment: "Out of this mass of diseases, how many do I actually have? I have comfort at least to that extent." But at that moment, one can reflect that the nature of the body is that it is a single cage of disease. Not only that, when we think of the last few diseases with which that list ends, it is proved that the entire body is a cage of disease. Finally, it is mentioned there:</p>
+<p>*sītaṁ uṇhaṁ jighacchā pipāsā uccāro passāvo*</p>
+<p>It points out at least six diseases that exist in this body: cold is felt, heat is felt, hunger is felt, thirst is felt, and because of hunger and thirst, one is inevitably forced to defecate and urinate. It is mentioned in the texts that even during times when there were long-lived humans with few ailments, these six diseases existed.</p>
+<p>According to that, we must reflect that this body is not some wonderful, strange creation of a god. Most people in the world think that a healthy state belongs to this body and that disease is something that has arrived as a visitor—that disease is something that came from outside. But the Buddha points out that this is a cage of disease. Its very nature is to be sick. Being healthy is entirely a conceit (*māna*) one has developed. That is what the Buddha declared to a certain lay devotee named Nakulapitā the householder. The advice the Buddha gave during his illness was:</p>
+<p>*Ātura-kāyassa me sato, cittaṁ anāturaṁ bhavissati*</p>
+<p>"Though my body is sick, my mind will remain unafflicted." He asked him to think in that manner. The Buddha declares: if anyone, based on this cage of a body, harbors a conceit (*māna*) of being healthy even for a single moment, there is no greater foolishness than that. Thus, what we call health is merely a state where disease is hidden. Being healthy is what is foreign; disease belongs to us. We must understand it in that way. When we reflect in that manner, our attachment to this cage of a body decreases. As long as we do not eliminate attachment to this cage, we will remain in this very saṁsāra. That is why the Buddha declared so. Some think of this as a form of pessimism. It is no such thing. The Buddha shows this because it is something that must necessarily be done. He shows that as long as one does not understand the impermanent (*anicca*), suffering (*dukkha*), and not-self (*anattā*) nature of, or develop disenchantment towards, form (*rūpa*), feeling (*vedanā*), perception (*saññā*), preparations (*saṅkhāra*), and consciousness (*viññāṇa*)—or the concept of a person that one imagines as oneself, which are the phenomena of Name-and-Form (*nāmarūpa*)—one cannot be released from this saṁsāra. Therefore, our effort must be to realize this. The target of our entire Buddhist practice, such as virtue (*sīla*), concentration (*samādhi*), wisdom (*paññā*), and giving (*dāna*), virtue (*sīla*), and meditation (*bhāvanā*), is release from this saṁsāra.</p>
+<p>Even when a Buddha appeared, even those of other religions in the world had the target of escaping from this saṁsāra. In some way, the path they took, their view (*diṭṭhi*), was wrong. But they understood it to some extent because, especially at that time, there were ascetics who possessed direct knowledges (*abhiññā*). Pious devotees, those who possessed direct knowledges means that even before the Buddha appeared, there were various ascetics who, having developed absorption meditations (*jhāna bhāvanā*), had gone to the highest levels in the aspect of tranquility (*samatha*). This is mentioned regarding Āḷāra Kālāma, Uddakarāmaputta, and others. Through the power of direct knowledges, they saw their past births (*jāti*). They saw their past lives, livelihoods, and so forth. If they saw those, the suffering (*dukkha*) nature of this saṁsāra must also have been necessarily visible to them. That is why every one of them wished for release from saṁsāra. But though they wished for it, what of it? The most fundamental premise for it—namely, the perception of not-self (*anattā-saññā*), the concept of not-self (*anattā*) which was pointed out by the Buddha—did not arise in them. Therefore, they thought that escaping from this meant being born in some eternal existence (*bhava*), or a Brahma world, in such a place. That was what existed as their goal.</p>
+<p>The Buddha alone showed that unless this disease of saṁsāra is completely, one hundred percent eradicated, if even a little bit of it is left over, it will go on and on. To what extent? On one occasion, the Buddha declared: "Monks, just as even a tiny amount of excrement stinks, I do not praise existence (*bhava*) even for a single moment." Just as even a very small amount of excrement stinks, this existence (*bhava*)—the entire existence (*bhava*) including the Brahma worlds—stinks, or in other words, stinks of suffering (*dukkha*). That is the Buddha-word. When one thinks of this, one feels fear, because the lust for existence (*bhava-rāga*) is so strong within beings. They want to end suffering (*dukkha*), but what they think of as ending it is merely taking on another pile of suffering. So, this is just like the condition of a hospital. Looking at it from that perspective, this entire existence can be taken as a hospital. In this existence of saṁsāra, having taken birth (*jāti*) in various species, one has to face decay (*jarā*), sickness (*vyādhi*), death (*maraṇa*), and so forth in all of them. It is because of this condition that the Buddha declared that as long as a person does not develop disenchantment with saṁsāra, they cannot escape from this saṁsāra.</p>
+<p>So, that state arose for Venerable Pūtigatta Tissa in that manner, being completely decayed and covered in blood and pus. At such a time, sometimes it may not be possible to calm the mind. Now, the Buddha nursed Venerable Pūtigatta Tissa to that extent not with the intention of making him live for another day. It was visible to the Buddha-eye that "if I do not intervene at this moment, that opportunity to attain Arahantship will slip away." Therefore, he nursed him to that extent, not to make Venerable Pūtigatta Tissa live for a longer time, but to cure this disease of saṁsāra and to give him that true health through Arahantship. We must bring out such a contemplation from this Dhamma talk.</p>
+<p>In an era like today when social values are highly degenerated, the nursing of the sick also quickly loses its value. This is revealed to us even through the relationships between parents and children at home. Not only that, even in hospitals, when human kindness, sympathy, and compassion disappear, when the understanding of the true nature of the cage of the body decreases, and when people direct themselves towards a certain superficial existence, it is forgotten that this nursing of the sick is something that people must do mutually. Then, the Buddha brought out valuable fundamental principles. Who is the true sick-nurse? It is the one who, as mentioned, without any expectation of gain, endowed with loving-kindness and compassion, with the sole intention of curing the patient's illness, with the sole intention of rendering good to the patient, and also comforting the mind with Dhamma advice, nurses with the absolute intention of giving health to the patient. On the other hand, the Buddha also declared how the patient should behave so as not to trouble the attendant. In this manner, in the Vinaya Piṭaka, the Buddha has, as a skilled physician, pointed out various instructions for one's ordinary life, and in short, for living healthily in order to travel on this path of Dhamma. What is the reason for that? The Buddha himself declares that to develop our mind, we must also use the body as an aid. Health is also necessary. That is why it is said: *Ārogyā paramā lābhā* (Health is the supreme gain).</p>
+<p>"*Ārogyā paramā lābhā, santuṭṭhi paramaṁ dhanaṁ*"—you have heard such verses from the Dhammapada. Through those, we must reflect. No matter what gains there are, if one does not have health, since its loss is visible, the Buddha declared *Ārogyā paramā*. The highest of gains is health. It was with that same meaning indeed that He said *paramaṁ dhanaṁ* (supreme wealth). No matter what resources one has, even if one has millions, if there is no joy and peace within the mind, that person is utterly poor. Thus, one must reflect in that manner. *Ārogyā paramā lābhā, santuṭṭhi paramaṁ dhanaṁ, vissāsā paramā ñātī*—similarly, no matter how many relatives one has, if they are not trustworthy, they are like enemies. The trustworthy person is like one's relative. These are very deep Dhammas. So, having reflected on all of these, finally, the Buddha declared:</p>
+<p>Nibbānaṁ paramaṁ sukhaṁ*</p>
+<p>The supreme bliss, the highest happiness, is final Nibbāna. Why is it said that final Nibbāna is the supreme bliss? The Buddha points out that the entire existence of saṁsāra is suffering (*dukkha*); it is a complete equation. This is not only in this human world. As mentioned, even in the Brahma worlds, there exists a very subtle nature of suffering (*dukkha*). Because of our coarse nature of suffering (*dukkha*), we do not understand that subtle nature of suffering (*dukkha*). The Buddha has shown these three types of suffering (*dukkha*): *dukkha-dukkhatā* (suffering as pain), *vipariṇāma-dukkhatā* (suffering due to change), and *saṅkhāra-dukkhatā* (suffering due to preparations).</p>
+<p>"*Dukkha-dukkhatā*" means the things we consider as raw suffering (*dukkha*)—sicknesses, afflictions, and various other losses and damages that we consider as suffering (*dukkha*) in our daily lives—that coarse, gross mass of suffering (*dukkha*). That is called *dukkha-dukkhatā*, pure suffering. Everyone understands that to some extent. Next, there is another type of suffering (*dukkha*), which is called "*vipariṇāma-dukkhatā*". When some people receive great wealth, they think of this as the greatest happiness they have received. As soon as that wealth is lost, destroyed, or consumed by fire, or when that child is lost due to some accident or illness, then they understand *vipariṇāma-dukkhatā*. "That state we had is lost, isn't it? It changed, didn't it? Aren't those impermanent (*anicca*)?" Through that, they fall into suffering (*dukkha*). That is *vipariṇāma-dukkhatā*. Thus, *dukkha-dukkhatā* is, in short, what exists in association with painful feeling (*vedanā*). *Vipariṇāma-dukkhatā* is pleasant feeling (*vedanā*); for a moment, it exists as pleasant feeling (*vedanā*), and then it turns into suffering (*dukkha*). Now, we have been turned to one side for a short while. If someone says, "Sit like this for an hour," one cannot stay without moving even on the most comfortable seat in the world for an hour. In that manner, we hide suffering (*dukkha*) by changing postures. Through changing postures, we hide that change (*vipariṇāma*). So, in short, *vipariṇāma-dukkhatā* is the second level.</p>
+<p>There is an even more subtle level. It is one that is understood by the meditative mind, and that indeed is called "*saṅkhāra-dukkhatā*". The word *saṅkhāra* (preparations) is an extremely broad word. For practitioners, it might be familiar. To put it briefly, within the entire existence of life, there is a lot of preparing, a lot of getting ready. Physically, a lot of getting ready; verbally, a lot of getting ready. Now, for this Dhamma sermon, I too have to take a considerable amount of effort, occasionally when this sound goes down or when the sound amplification is lost. Even to use my own voice projection. This too is a great suffering (*dukkha*). So, in any case, these words are spoken to make you understand that suffering (*dukkha*). When we look at it in that way, just like these preparations (*saṅkhāra*), our thoughts—the thoughts that arise in the mind—every single one of them has been shown by the Buddha as suffering (*dukkha*). That indeed is *saṅkhāra*. This mass of thoughts within this mind, which we think of as pleasant. Let us think, now, a very wealthy person had a certain problem. If this problem is not solved by tomorrow morning, the entire business is destroyed. When such a problem arises, he thinks all night without sleeping. At that moment, the suffering (*dukkha*) nature of those thoughts, of those ideas, is understood. Thus, one can understand the suffering (*dukkha*) nature of preparations (*saṅkhāra*) to some extent.</p>
+<p>It is according to this indeed that the Buddha refers to this final Nibbāna as "*sabba-saṅkhāra-samatha*" (the stilling of all preparations). This constant doing within this mind. This preparing also includes karma. Within those karmas, there are two called merit (*puñña*) and demerit (*pāpa*), as you know. The ordinary world says, "Do not do demerit, let us accumulate merit." Do not misunderstand this. Do not take these to extremes. But if we reflect deeply, considering this existence of saṁsāra, whether we accumulate merit or accumulate demerit, saṁsāra grows. This is shown in the books by way of a simile. Let us think, a cow is being taken to be slaughtered. On the path this cow is being taken, at one place she is given cold water. At another place, she is given hot water. Whether she drinks this hot water or cold water, that cow definitely goes towards her death. According to that simile, we have to take it. Whether we do merit or do demerit, we will have to abandon all of this and go. Even the divine state of existence (*bhava*) is just the same. No matter how many aeons one stays there, at the moment of passing away, one falls into suffering (*dukkha*). Such is the state. Whether dying or passing away, at the moment of flying away from there, one falls into suffering (*dukkha*). That is why the Buddha declared that our effort should be to eliminate this craving (*taṇhā*). It is craving (*taṇhā*) and ignorance (*avijjā*) together that prompt us to accumulate these preparations (*saṅkhāra*).</p>
+<p>We cannot avoid accumulating some preparations (*saṅkhāra*). That is what is called the Middle Path. That is why we say that we should not extremely say, "Let us abandon merit too, let us abandon wholesomeness too, let us abandon meditation too." It is bad to take it in that way. But the Buddha has shown a systematic, gradual path (*anupubba-paṭipadā*). Having eliminated that sinful nature, that leaning towards demerit, we must lean the mind towards the wholesome side, the meritorious side. It was indeed through that leaning, perhaps due to the merit of having given alms, that Venerable Pūtigatta Tissa received nursing from the Buddha in his final moment. If he had not received even that nursing, Venerable Pūtigatta Tissa would have fallen back into saṁsāra due to the lack of supportive conditions from that meritorious act.</p>
+<p>According to that, we must reflect. We must turn away from demerit and do merit. But we should not cling to merit. We must understand its practical meaning. What we do through this merit is raising our mind to a high state. What is called a high state? Unwholesome things are those that arise from greed (*lobha*), hatred (*dosa*), and delusion (*moha*). Wholesome things are from non-greed (*alobha*), non-hatred (*adosa*), and non-delusion (*amoha*). On every occasion we perform a wholesome act, we turn away, even slightly, from greed, from hatred, from delusion. That is what assists us. Why? Because our final Nibbāna is the state of being completely free from greed, from hatred, and from delusion. So, we walk the path of wholesomeness turned towards that direction—turned towards final Nibbāna. The path of unwholesomeness is walked turned towards the other direction—towards saṁsāra. Therefore, wholesomeness assists us. But that too is a force of preparations (*saṅkhāra*). At some stage, we must be strong enough to be released even from that. What assists in that is contemplating their impermanent nature, contemplating their suffering nature, contemplating their not-self nature, and deeply, gradually bringing our mind through meditation to a state where it is released from all of these—released from the five aggregates. In that manner, indeed, you were able to extract many Dhamma points leading all the way to final Nibbāna from this Dhamma talk. When looking at nursing the sick as a social duty in this society, there are things relevant to that too. But along with that, we must reflect: at the moment when our relative or well-wisher is sick, we must train ourselves to nurse them with the Dhamma too. Because this disease of saṁsāra is the most dangerous disease. Helping to escape from this is indeed the true nursing of the sick.</p>
+<p>Reflecting in that manner, you have now listened to a Dhamma sermon for about an hour, established in the Right Livelihood characterized by the eight-fold virtue (*ājīva-aṭṭhamaka-sīla*) or an even higher virtue. As we frequently remind you, as the benefits of hearing the Dhamma, we consider the generation within this hour of thoughts and aspirations that help to develop and increase the spiritual faculties (*indriya*) and powers (*bala*)—namely, faith (*saddhā*), energy (*viriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*)—which assist in final Nibbāna. Through the power of that merit you have generated, may all of you be able to develop your own meditation as quickly as possible, and through the association with noble friends (*kalyāṇa-mitta*), through the penetration of the paths and fruits of Stream-entry (*sotāpatti*), Once-returning (*sakadāgāmitā*), Non-returning (*anāgāmitā*), and Arahantship, gain the strength and power to escape from this entire disease of saṁsāra through the supreme, deathless final Nibbāna!</p>
+<p>Similarly, if there are beings from Avīci to Akaniṭha who are waiting to rejoice in this merit of hearing and preaching the Dhamma—including all our departed relatives—through rejoicing in this merit, may they as quickly as possible be released from all the suffering of saṁsāra, such as birth (*jāti*), decay (*jarā*), sickness (*vyādhi*), and death (*maraṇa*), and find peace in the supreme, deathless final Nibbāna! With that compassionate intention, let us share the merits by reciting the stanzas.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_055.html" class="doc-btn">← Previous Sermon (055)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_057.html" class="doc-btn">Next Sermon (057) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

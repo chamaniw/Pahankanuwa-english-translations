@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 043 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_042.html" class="doc-btn">← Previous Sermon (042)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_044.html" class="doc-btn">Next Sermon (044) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 043</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_043_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_043_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_043_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #43</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.206)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Cattāro ca paṭipannā, cattāro ca phale ṭhitā; Esa saṅgho ujubhūto, paññāsīlasamāhito. Yajamānānaṃ manussānaṃ, puññapekhāna pāṇinaṃ; Karotaṃ opadhikaṃ puññaṃ, saṅghe dinnaṃ mahapphalaṃ.</p>
+<p>From:</p>
+<p>Aṭṭhapuggala Sutta (AN 8 tradition)</p>
+<p>Dear Listeners,</p>
+<p>It was on an Esala full-moon poya day like today that the Tathāgata, the Blessed One, the Fully Enlightened Samma Sambuddha, after attaining supreme enlightenment, delivered his first Dhamma sermon, the *Dhammacakkappavattana Sutta*, to the group of five monks—Kondañña, Bhaddiya, Vappa, Mahānāma, and Assaji—at the Deer Park in Isipatana, Benares. Upon hearing that sermon, Ven. Koṇḍañña realized the noble fruit of Stream-entry (*Sotāpatti-phala*), marking the very first appearance of the Noble (*Ariya*) Saṅgha in the world. It is indeed this Noble Saṅgha that is referred to in the virtues of the Saṅgha (*Saṅghaguṇa*) which you, meritorious friends, frequently recite. In that recitation of the Saṅgha’s virtues, mention is made of eight individuals belonging to the Blessed One's disciple-community (*Sāvaka Saṅgha*). Today, we have chosen as our theme two verses from the *Aṭṭhapuggala Sutta* in the Book of Eights (*Aṭṭhaka Nipāta*) of the *Aṅguttara Nikāya*, which speak about these eight individuals.</p>
+<p>*"Cattāro ca paṭipannā cattāro ca phale thitā"* — The four who have entered the path of practice and the four established in the fruit.</p>
+<p>*"Esa saṅgho ujubhūto paññā-sīla-samāhito"* — This is the upright Saṅgha, endowed with the virtues of wisdom, ethical conduct, and concentration.</p>
+<p>*"Yajamānānaṃ manussānaṃ puññapekhāna pāṇinaṃ"* — For those humans who make offerings, for living beings seeking merit,</p>
+<p>*"Karotaṃ opadhikaṃ puññaṃ saṅghe dinnaṃ mahapphalaṃ"* — for those performing merit that leads to rebirth-assets, what is given to the Saṅgha yields great fruit.</p>
+<p>This same quality of yielding great fruit is what is found in the passage on the virtues of the Saṅgha that you often chant:</p>
+<p>*Supaṭipanno bhagavato sāvaka-saṅgho, ujupaṭipanno bhagavato sāvaka-saṅgho, ñāyapaṭipanno bhagavato sāvaka-saṅgho, sāmīcipaṭipanno bhagavato sāvaka-saṅgho, yadidaṃ cattāri purisayugāni aṭṭha purisapuggalā, esa bhagavato sāvaka-saṅgho, āhuṇeyyo pāhuṇeyyo dakkhiṇeyyo añjalikaraṇīyo anuttaraṃ puññakkhettaṃ lokassa.*</p>
+<p>Since you recite this passage frequently, many of you likely know its meaning as well.</p>
+<p>*"Supaṭipanno bhagavato sāvaka-saṅgho"*: The community of the Blessed One's disciples has entered the path of good practice.</p>
+<p>*"Ujupaṭipanno"*: They have entered the path of upright practice.</p>
+<p>*"Ñāyapaṭipanno"*: They have entered the path of practice in accordance with the law/method (*ñāya*).</p>
+<p>*"Sāmīcipaṭipanno"*: They have entered the path of proper practice.</p>
+<p>*"Yadidaṃ cattāri purisayugāni aṭṭha purisapuggalā"*: That is, the four pairs of persons, the eight individual persons.</p>
+<p>*"Esa bhagavato sāvaka-saṅgho"*: This is the Blessed One's community of disciples. After declaring their virtues, their qualifications to receive offerings are then shown:</p>
+<p>*Āhuṇeyyo*: They are worthy of gifts brought from afar.</p>
+<p>*Pāhuṇeyyo*: They are worthy of hospitality.</p>
+<p>*Dakkhiṇeyyo*: They are worthy of offerings given with the next world in view.</p>
+<p>*Añjalikaraṇīyo*: They are worthy of reverential salutation with hands joined above the head.</p>
+<p>*Anuttaraṃ puññakkhettaṃ lokassa*: They are the incomparable field of merit for the world.</p>
+<p>Now, let us first present the analysis and exposition of this passage found in the Commentaries. In the *Visuddhimagga*, in the section on recollections (*Anussati Niddesa*), Ven. Buddhaghosa explains these main terms. Someone might ask, "What is this 'pair' (*yugala*)? Who are the eight individual persons?" To this, the commentators present the meaning as follows. The four pairs of persons are shown as: *"Cattāri purisayugānīti paṭhama-maggatho phalaṭṭho"*—one who is on the first path and one who is established in its fruit. That is, one on the path of Stream-entry (*Sotāpatti-magga*) and one established in the fruit of Stream-entry (*Sotāpatti-phala*). In the same manner, one on the path of Once-returning and one established in the fruit of Once-returning, and so on, up to one on the path of Arahantship and one established in the fruit of Arahantship. The Commentary applies the exposition of "one on the path" (*maggaṭṭha*) and "one established in the fruit" (*phalaṭṭha*). It is according to this that the popular usage of "the four paths and the four fruits" (*satara-maṅga satara-phala*) has come about today.</p>
+<p>However, a certain problem arises from this. What is it? It is mentioned in the Dhamma, when speaking of the unmediated concentration (*ānantarika-samādhi*), that the realization of the fruit occurs immediately after the supramundane path. Let alone other places, this is mentioned even in the *Ratana Sutta*, which you know so well:</p>
+<p>*Yaṃ buddhaseṭṭho parivaṇṇayī suciṃ, samādhimānantarikaññamāhu, samādhinā tena samo na vijjati...*</p>
+<p>It is stated that the pure concentration praised continuously by the Buddha is called "unmediated" (*ānantarika*), and there is no concentration equal to that concentration. The meaning of this word *ānantarika* is that immediately after the path-concentration, one falls into the fruit. Therefore, if one enters the fruit immediately after the path-concentration, how can we distinguish the four on the path from the four established in the fruit? This very question has been discussed among the Saṅgha since ancient times. Many people have presented this question to us too, in person. Although I have given various answers, I thought at this moment that if I deliver a sermon on this, it will be easier in the future to just tell people to listen to this discourse in order to express my view on the matter. That is why I am specially delivering this sermon.</p>
+<p>When speaking of this discussion on *maggaṭṭha* and *phalaṭṭha*, it is found in the *Ratana Sutta* itself, which you know very well, at the point of declaring the virtues of the Saṅgha:</p>
+<p>*Ye puggalā aṭṭha sataṃ pasatthā, cattāri etāni yugāni honti, te sugatassa sāvakā dakkhiṇeyyā, etesu dinnāni mahapphalāni, idampi ratanaṃ paṇītaṃ, etena saccena suvatthi hotu.*</p>
+<p>There too, it is told to us: *"Ye puggalā aṭṭha sataṃ pasatthā"*—which means, meritorious friends, "the eight individuals praised by the virtuous (*sato/sataṃ*)." *"Cattāri etāni yugāni honti"*—there are four pairs here. *"Te sugatassa sāvakā"*—those disciples of the Sugata are worthy of offerings; that is how it is mentioned here.</p>
+<p>However, when trying to explain this, our Commentator Ven. Buddhaghosa begins with the first line of the verse we quoted: *"Cattāro ca paṭipannā cattāro ca phale thitā"*. But when explaining it, he only uses the two words *maggaṭṭha* and *phalaṭṭha*. Not only that; it is a very surprising thing. We can clearly point out an instance of distortion of meaning even during the Commentarial period. Because, in analyzing this verse, those who know the Pali language understand that *"ye puggalā aṭṭha sataṃ pasatthā"* refers to eight individuals praised by the virtuous. But someone who is incompetent and does not know Pali might mispronounce this verse and say *"Ye puggalā aṭṭhasatā"* (pronouncing it as *aṭṭhasataṃ*, meaning one hundred and eight). Even the pronunciation there is wrong; it distorts the meaning. Yet, even to this, the Commentator says as follows: after first stating the correct meaning, "praised by the virtuous," he then says, "or else..." (*athavā*) and makes it one hundred and eight by adding and multiplying. That is why even today, preachers often talk about "one hundred and eight persons," having with great effort constructed a list of one hundred and eight. This does not fit at all. It does not fit at all. Here, it is not talking about one hundred and eight. If we look at the word of the Buddha, *"ye puggalā aṭṭha sataṃ"*, this word *sataṃ* can be understood even by those who do not know Pali if we give an example. In the *Dhammapada* it is said: *"Sataṃ hiso priyo hoti, asataṃ hoti appriyo"* ("He is dear to the virtuous, and disliked by the unvirtuous"). Therefore, *sataṃ* refers to virtuous people, not the number one hundred. Thus, it appears that even the Commentator has left room for that incompetent exposition. Well, let us take that as an incidental matter.</p>
+<p>But the main point is that, in explaining this, although the verse says *"cattāro ca paṭipannā cattāro ca phale thitā"*, they have not seen—or they have not accepted—as important that there is a difference in meaning between "path" (*magga*) and "practice" (*paṭipadā/paṭipanna*). We said that the supramundane path is instantaneous. Immediate to it, the fruit is received. Yet, the Buddha uses the word *paṭipanna*—one who has entered the practice. So, understand the difference between the path (*magga*) and the practice (*paṭipadā*) in this way: the path may exist, but the training in accordance with the path, or the practicing of that way, is what is indicated by the word *paṭipanna*. If the Buddha wanted to, he could have stated this verse as: *"cattāro ca maggaṭṭhā cattāro ca phale thitā"*, couldn't he? Think about it. He could have said *maggaṭṭha* and *phalaṭṭha*, just as the commentators say. But how was it used here? *"Cattāro ca paṭipannā cattāro ca"*. Not only that. Now we will introduce to you the context, as we have quoted the first two verses of this discourse. Prior to these two verses, the Buddha begins that discourse in the Book of Eights of the *Aṅguttara Nikāya* as follows: *"Aṭṭhime bhikkhave puggalā āhuṇeyyā pāhuṇeyyā dakkhiṇeyyā añjalikaraṇīyā anuttaraṃ puññakkhettaṃ lokassa."* "Monks, there are these eight persons..." endowed with those virtues of being worthy of gifts, worthy of hospitality, etc. Even if I do not recite it in full, try to understand it. Next, those eight are identified in this way: the Buddha lists them as *sotāpanno, sotāpattiphala-sacchikiriyāya paṭipanno; sakadāgāmī, sakadāgāmiphala-sacchikiriyāya paṭipanno; anāgāmī, anāgāmiphala-sacchikiriyāya paṭipanno; arahā, arahattāya paṭipanno* (one who is practicing for the realization of Arahantship). Why did the Buddha use this long phrase? For ease, he could have just said *maggaṭṭha*, couldn't he? See indeed, the word *magga* is not even used there! Instead, remember that in *supaṭipanno, ujupaṭipanno*, and in every other place in the passage on the Saṅgha's virtues, it does not speak of *magga* (path); it speaks of *paṭipanna* (practice). This is an extremely important point. For all this time, people have not paid attention to this. *Supaṭipanno, ujupaṭipanno*—the practice is something that goes on over a certain duration of time. However, with the supramundane path, one immediately falls into the fruit. Therefore, you cannot divide them and give alms separately to eight distinct individuals.</p>
+<p>Yet, the commentators present another almost humorous reason for this. Our Ven. Buddhaghosa himself raises the question: "How can we not give to these eight?" and presents this as an illustration: Supposedly, a monk who has begun insight meditation—an *āraddha-vipassaka* monk—goes near a house, stands in front of it (while still meditating), and hands his bowl to the household. While they are offering alms into the bowl, this monk enters the path. This is how they explain it! That is a highly unnatural explanation. There is no such trouble once we bring the word *paṭipadā* (practice) forward. That is what is in the word of the Buddha. Why was it stated in this long form: "practicing for the realization of the fruit of Stream-entry"? There is no mention of "path" (*magga*) at all. "Practicing for the realization of the fruit of Once-returning..." Therein lies a deep matter. Keep in mind that this is the Buddha’s own word. We give priority to the word of the Buddha over the commentators, and over the words of Buddhaghosa. That is why I say this. I am reminding you of this because for a long time, a wrong idea and to some extent a distortion of this Dhamma has existed. Because of that, a problem has arisen. But if we take the word *paṭipadā*, there is no problem; we can perfectly give alms to eight distinct individuals.</p>
+<p>Next, one may ask: "Who are those included in this category of 'practicing for the realization of the fruit of Stream-entry' (*sotāpattiphala-sacchikiriyāya paṭipanno*)? Who are the ones practicing for the realization of the fruit of Stream-entry?" It is there that we must bring to light several discourses on this matter. In relation to this point, we have previously delivered a sermon based on the *Cūḷagopālaka Sutta*. But to put it briefly here, there are two types of special individuals who belong to this category: the "Dhamma-follower" (*dhammānusārī*) and the "Faith-follower" (*saddhānusārī*). They have not yet become stream-enterers, but they are two highly special individuals. Why? As we go further into the sutta, you will see. So much so that it is said in the Buddha's own words that those individuals belonging to the category of Faith-follower and Dhamma-follower will not pass away without realizing Stream-entry. Therefore, those two are certainly training in the path of Stream-entry—they are training in that practice.</p>
+<p>Indeed, let us quote from those discourses themselves. The *Alagaddūpama Sutta* of the *Majjhima Nikāya* is a discourse that wonderfully emphasizes the well-expounded (*svākkhāta*) nature of the Buddha's teaching. That discourse concludes as follows: "In this well-expounded Dhamma, whoever is a Dhamma-follower or a Faith-follower is bound for enlightenment (*sambodhiparāyaṇā*)." Generally, the term "bound for enlightenment" (*sambodhiparāyaṇā*) is used for those established in Stream-entry. Yet, the Buddha uses the term "bound for enlightenment" even for these two who are on this side of Stream-entry. See, that is how it was said there.</p>
+<p>Let us go further. Next, there is a better explanation in the *Cūḷagopālaka Sutta*, along with a very beautiful simile. The Buddha preached the *Gopālaka Sutta* in the city of Ukkācelā on the banks of the Ganges in the Vajjian country, addressing the monks with a profound simile. "Monks, in the last month of the rainy season, a foolish herdsman of Magadha, of very little wisdom, tried to cross his herd of cattle in this way: Without properly examining this shore, and without properly examining the opposite shore, he tried to cross his cattle at a non-crossing place (not the correct ford), and the herd was swept away by the current and met with destruction. But a certain wise herdsman of Magadha, having well examined this shore and well examined the opposite shore, crossed his herd of cattle at the correct ford." The Buddha beautifully presents the manner of crossing: "First, the bull-leaders and the guides of the herd crossed over first. Next, behind them, went the strong bulls and the steer to be tamed (*balavagāvo dammagāvo*). Then, behind them, went the heifers and the young bulls. After them, went the weak calves." And then, a wonderful thing is said: so great was the skill of this herdsman that finally, even the calf born that very day crossed over, drawn by the lowing of its mother (*mātugāviyā rāvena*—the mother cow lowing to urge the calf). Encouraged by the sound of its mother, even the newborn calf crossed over. This is not just an ordinary simile. To put it briefly, that unskilled herdsman represents the ascetics and brahmins of other sects. That herdsman knows neither this shore nor the other shore. Trying to cross at the wrong ford, they lead to destruction. But the Tathāgata, the Fully Enlightened One, (referring to himself), like the wise herdsman, crosses them over at the correct ford, systematically and after careful examination. It is this last category that should receive our attention. Who is this calf born that very day? In that context, the Buddha identifies them as the "Dhamma-follower" (*dhammānusārī*) and the "Faith-follower" (*saddhānusārī*). Thus, the Dhamma-follower and Faith-follower represent the entry-level or minimum stage. Yet, even those two ultimately cross over. That is why they are called "bound for enlightenment." That is the *Cūḷagopālaka Sutta*. There is much to say, but that is why I am explaining it briefly.</p>
+<p>Next, there is another discourse where we find more details about these two, in the *Okkantika Saṃyutta* of the *Saṃyutta Nikāya*. More details are mentioned there. There, addressing the monks, the Buddha says: "Monks, the eye is impermanent (*anicca*), subject to change, subject to becoming otherwise." In the same way, he speaks of the six senses: ear, nose, tongue, body, and mind. "If anyone accepts this fact with faith and applies themselves to the practice, that person is a Faith-follower (*saddhānusārī*)." "Next, if anyone accepts this fact to a certain extent with wisdom and trains accordingly, that person is a Dhamma-follower (*dhammānusārī*)." This means that among our faculties (*indriya*), the person in whom the faith-faculty (*saddhindriya*) is dominant goes toward the side of the Faith-follower, while the person in whom the wisdom-faculty (*paññindriya*) is dominant becomes a Dhamma-follower. These two are indeed special individuals. Next, the Buddha says something very unusual about them here, showing that they are not ordinary or insignificant persons.</p>
+<p>In the *Okkantika Saṃyutta*, the Buddha declares concerning those two that they have "entered the path of rightness" (*sammatta-niyāmaṃ okkanto*)—there is an unusual term there. Meritorious friends, we can describe *sammatta-niyāma* as: both of them have fallen into the natural law of correctness. To put it even more clearly, they have entered the plane of the virtuous (*sappurisa-bhūmi*). The word *sappurisa* is often applied to the Nobles (*Ariya*). Next, it is said that those two have entered the plane of the virtuous, having transcended the state of a worldling (*puthujjana*). Then a special thing is said: these two individuals, the Faith-follower and the Dhamma-follower, do not commit any evil deed that would lead them to hell, the animal realm, or the ghost realm. Next, it is said that these two will not pass away without realizing Stream-entry. The word *abhavya* (incapable / impossible) is used there. *"Abhabbo"*—there is the Buddha's word that they are incapable of passing away without realizing Stream-entry. Now, we get further details about these two who possess such distinguished qualities from the *Kīṭāgiri Sutta*. In the *Kīṭāgiri Sutta*, the Buddha states that both of them possess the five spiritual faculties—faith (*saddhā*), energy (*viriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*)—which are unique to the Nobles and not possessed by ordinary worldlings. Anyone might say, "We have them too." But the faculties are not established in them. Yet, in these two, they are indeed established. So, there is some deficiency, and it is that deficiency which must be filled. But we have to understand that this deficiency will somehow be filled within this very life.</p>
+<p>However, unfortunately—though we should perhaps not say this, and some might criticize us—yet, in the *Puggalapaññatti* treatise, when attempting to explain the "incapability" (*abhavyatā*) declared by the Buddha regarding these two, the Faith-follower and the Dhamma-follower, they provide a somewhat unfitting explanation. There, these two are referred to as *ṭhitakappī*. *Ṭhitakappī* supposedly means that these two can arrest or halt the eon (*kappa*). They say that these two can stop the running and destroying of the eon. How do they stop it? In this manner: Now, imagine for a moment that the eon has life. Now is the time the eon is running/ending. While running, the eon looks around and sees that there are a Faith-follower and a Dhamma-follower who have not yet attained Stream-entry. So, the eon supposedly stops—without running further—until those two attain Stream-entry! To us, this seems like putting the cart before the horse. If we reflect deeply on the Buddha's word, we must understand that a person's most precious moment is the moment of death. We have heard that some have attained Arahantship at the moment of death. Although it is a disputed story, we have told you about three monks who attained Arahantship even as their throats were being cut. That is to say, the moment of death is the occasion to decide between death and deathlessness. If there was a slight deficiency in this life, there is no need for any external talk about the eon. In that very context, the Buddha's word "incapable" (*abhabba*) meant that if the Faith-follower and the Dhamma-follower do not realize the fruit of that path during this lifetime, they will realize it at least at the moment of death. It is enough to state just that. But preachers still use that kind of story and the term *ṭhitakappī* today. They say *ṭhitakappī* means these two can stop the running of the eon. We have to say that this is somewhat unfitting.</p>
+<p>Well, that is the story of the eight persons; keep it in mind. The Buddha does not just say *maggaṭṭha* and *phalaṭṭha*. He uses a long phrase: "practicing for the realization of the fruit of Stream-entry," and so on. He had to speak in that way because of that reason: the supramundane path is instantaneous. It is instantaneous. You cannot isolate it to give alms to it. But you can do so for someone training in the practice. See in our recitation of the Saṅgha's virtues: *supaṭipanno, ujupaṭipanno*—it is the word *paṭipanna*. There is no talk of *magga* (path) in it. It is *paṭipanna*, *paṭipanna*. Merely by training in the practice, they are worthy of receiving alms and offerings. I mentioned this specifically because someone might ask about the path and fruit of Stream-entry. You can infer the rest, meritorious friends. Let us assume someone has become a Once-returner. They do not just remain inactive from that point. There, the word *sekha* (learner/trainee) is used. *Sekha* means a training person. They train all the way up to Arahantship. Their work is not yet finished. Some, due to various reasons, fall into negligence. They are called *pamāda-sekha* (negligent trainees). Visākhā, Anāthapiṇḍika, and others could not go beyond that level due to various worldly reasons. That is a different matter. But the general rule is that after becoming a Stream-enterer, one enters the next path of insight (*vipassanā-vīthi*).</p>
+<p>Now we have finished talking about the eight persons. Next, we bring forward the story of nine persons. What is that? In the Book of Nines (*Navaka Nipāta*) of the *Aṅguttara Nikāya*, there is a discourse like this: *"Nava ime bhikkhave puggalā āhuṇeyyā pāhuṇeyyā... añjalikaraṇīyā anuttaraṃ puññakkhettaṃ lokassa."* "Monks, there are these nine persons in the world who are worthy of gifts, worthy of hospitality... an incomparable field of merit for the world." How did the "eight persons" we mentioned become "nine persons" here? I am mentioning this because it is also a disputed point. Now, everyone knows the eight persons. In addition to those eight, there is the word *gotrabhū* (one of the lineage / change-of-lineage). This word *gotrabhū* is indeed a word that is also used when describing the cognitive series of insight-knowledge (*vipassanā-ñāṇa-vīthi*). It is the brief, instantaneous moment that exists between being a worldling (*puthujjana*) and receiving the path-fruit. If I illustrate this with a simile from the *Visuddhimagga*, it will be easy for you, meritorious friends, to understand this. This entire activity of insight, this practice, exists by depending on some aid. What is used as an aid for insight? The investigation of formations (*saṅkhāra-sammasana*). Having investigated formations, at the end, one lets go of formations (*saṅkhāra*) as well. This is illustrated with a good simile, which is an acceptable simile: During the rainy season, when trying to cross a stream, if there is no bridge, what do you do? A strong man, thinking wisely, grabs a hanging creeper from a tree and swings. Having swung and swung, as soon as he gets close to the opposite bank, he lets go of the creeper. If he keeps holding on, he will swing back to this side, won't he? So, in that brief moment, he lets go of the creeper and lands on the opposite side. That momentary, suspended time of letting go of the creeper is called *gotrabhū*. Understand it in that way. It is an extremely subtle moment, an extremely subtle stage in the cognitive series of insight, until one falls into the fruit. So, how can one catch that moment to give alms? That is why they said that when standing in front of a house, while alms are being served into the bowl, the monk practices insight! That is the kind of artificial explanation they give. None of that is necessary. As we said, these people also explain the word solely on the basis of insight meditation. That is wrong. Why? The *gotrabhū* stage is already included in "practicing for the realization of the fruit of Stream-entry." Keep in mind that "persons practicing for the realization of the fruit of Stream-entry" is a broad stage. You cannot isolate *gotrabhū* as a separate category in that way.</p>
+<p>Then, how do we explain this word *gotrabhū*? That is the question. To find the answer to this, we must go to the *Dakkhiṇāvibhaṅga Sutta*. The *Dakkhiṇāvibhaṅga Sutta* in the *Majjhima Nikāya* is highly popular among Dhamma preachers. You, meritorious friends, must have heard it frequently at almsgivings during the sharing of merits (*bhattānumodanā*). The introductory story of that discourse is extremely special when we discuss the virtues of the Saṅgha. It is shown as follows: When the Buddha was residing at the Nigrodhārāma in Kapilavatthu, the city of the Sakyans, Mahāpajāpatī Gotamī (the Buddha's foster-mother), brought a pair of new cloths she had spun and woven with her own hands, and offered them to the Buddha. "May the Blessed One, out of compassion for me, accept this." What did the Buddha say? A very surprising thing was said on that occasion: *"Saṅghe, gotami, dehi; saṅghe dinne ahañceva pūjito bhavissāmi..."*—"Gotamī, give it to the Saṅgha. When it is offered to the Saṅgha, I too will be honored." A second time and a third time, Pajāpatī Gotamī made her request. In addition, Ven. Ānanda joined in and said, "O Blessed One, please accept this. When the Blessed One lost his mother, it was this foster-mother who nursed him. She is the one who raised you." When that was said, the Buddha addressed Ven. Ānanda and delivered a sermon. That sermon presents a wonderful analysis regarding almsgiving. To put it briefly, it begins like this: "individual offerings" (*pāṭipuggalikā dakkhiṇā*). Fourteen such individual offerings are shown. Let us consider them briefly. First is an offering given to the Tathāgata, the Samma Sambuddha, personally. This is the kind of offering Pajāpatī’s was, because it was a personal thing. It was his foster-mother, offering it to her child; a personal gift. See, what a wonderful quality of the Buddha: he redirected even a personally offered gift to the Saṅgha. Right there, the world has a great lesson to learn. He offered it to the Saṅgha because he himself is included in the Saṅgha. Next, he mentions a personal offering given to a Paccekabuddha. Next are the eight persons mentioned earlier: to an Arahant, then to one practicing for the realization of Arahantship, then to a Non-returner (*Anāgāmī*), to one practicing for the realization of the fruit of Non-returning, and so on—the eight persons mentioned. Thus, if we take those eight and the first two, understand them as ten. Now, about the eleventh: the eleventh is "one who is free from lust regarding sensual pleasures among outsiders" (*bāhiresu kāmesu vītarāgo*)—there could be outside ascetics or rishis. They come at the next level, the eleventh. This is in terms of the order of respect. Next is shown the virtuous worldling (*sīlavanto puthujjano*). As the thirteenth, the unvirtuous worldling (*dussīlo puthujjano*). As the fourteenth, an animal. In that instance, the Buddha described these fourteen in descending order.</p>
+<p>But when explaining the benefits of giving (*dānāniśaṃsa*), the Buddha explains it in ascending order. In these times, someone might call it exaggeration, or say these were added later. However, this is how the Buddha explains it: Giving an offering to an animal—one can expect a hundredfold benefit. Giving to an unvirtuous worldling, a thousandfold. Giving to a virtuous worldling, a hundred thousandfold. Giving to an outsider ascetic free from sensual lust, a hundred thousand times ten million fold. Next, giving to one practicing for the realization of the fruit of Stream-entry—such as the Faith-follower or Dhamma-follower—the Buddha says it is incalculable (*asaṅkheyyaṃ*), immeasurable (*appameyyaṃ*); it cannot be counted, it cannot be measured. From that point upward, he says something wonderful. If it is already incalculable and immeasurable, you cannot increase it further, can you? Therefore, from that point upward, the Buddha uses the exact same phrase. *"Ko pana vādo"*—which means, meritorious friends, "What then to speak of...?" In old books, they translate this as "what need is there to speak of...?" Thus, by offering alms to that person practicing for the realization of the fruit of Stream-entry, the benefit is incalculable and immeasurable; and for those higher than that, he continues to say: *"ko pana vādo"*—what need to speak of it? What need to speak of it? This demonstrates the power of the benefit. You can understand this, meritorious friends. It is shown in ascending order, starting from the animal and going upward. Next, he says that these are the individual offerings (*pāṭipuggalikā dakkhiṇā*).</p>
+<p>Next, the Buddha shows seven kinds of offerings made to the Saṅgha (*saṅghagatā dakkhiṇā*). He shows them as follows: In the terms we use today: an offering to the dual Saṅgha (both communities) headed by the Buddha. During the Buddha's lifetime, lay disciples like Anāthapiṇḍika offered such alms to both the bhikkhu and bhikkhunī communities with the Buddha at the head. This is of the greatest fruit and benefit. After the dual Saṅgha headed by the Buddha, next is an offering to the dual Saṅgha of bhikkhus and bhikkhunīs after the parinibbāna of the Tathāgata. That is the second. The third is an offering to the bhikkhu Saṅgha after the parinibbāna of the Tathāgata. The fourth is an offering to the bhikkhunī Saṅgha. The fifth is shown in a different way: A donor requests from the Saṅgha: "Please give us a certain number of bhikkhus and bhikkhunīs on behalf of the Saṅgha." That is the fifth offering. The sixth is shown as requesting only bhikkhus: "Please give us only bhikkhus." The seventh is requesting only bhikkhunīs and giving to them. Those are the seven offerings to the Saṅgha.</p>
+<p>After that, the Buddha mentions an unusual thing. "Monks, in the future there will be unvirtuous, evil-natured monks, with yellow robes around their necks, who are regarded as *gotrabhū*." Those unvirtuous, evil-natured ones who wear the robe hanging around their neck are called *gotrabhū*. The word *gotrabhū* in this context should be understood not in the sense of insight (*vipassanā*). According to the donor's understanding and the person's appearance, this individual represents the Saṅgha—by the mere fragment of the robe hanging around their neck. That is to say, it is merely an indication of the Noble lineage (*ariya-gotra*). It is in that sense that we explain this word. Next, the Buddha says that even if one makes an offering to such individuals on behalf of the Saṅgha, that offering too is incalculable and immeasurable. This has been a subject of controversy. Western critics, in particular, reject this discourse because of this. Those people say that this is a discourse fabricated by monks during the decline of the dispensation in order to secure alms. This is a very profound discourse. Not a single word can be removed. But the way it is understood is wrong. So, this point is indeed highly controversial—this matter of unvirtuous monks with robes around their necks. Yet, the donor offers alms to them by keeping in mind the Saṅgha.</p>
+<p>To beautifully answer any question that might arise regarding this, the Buddha states a certain point. He shows four kinds of purification of an offering (*dakkhiṇā-visuddhi*). Meritorious friends, "purification of an offering" refers to the ways in which an offering made to the Saṅgha is purified. The first purification is shown as: *dāyakato visujjhati no paṭiggāhakato*—purified on the part of the giver, but not on the part of the recipient. The next one is purified on the part of the recipient, but not on the part of the giver. Then, purified neither on the part of the giver nor on the part of the recipient. The last one is purified both on the part of the giver and on the part of the recipient. Consider this division of pure and impure briefly: The giver being pure means they are virtuous and of good character (*sīlavā kalyāṇadhammo*). The recipients being impure means they are unvirtuous and of evil character (*dussīla pāpadhamma*). So, here too, the Buddha has shown a certain hint. This *kāsāvakaṇṭha gotrabhū* individual reminds that faithful giver of the Noble Saṅgha-treasure (*Ariya Saṅgha-ratana*). This is something you know very well: one can go to a heavenly world by giving alms. But think about it, can one go to a heavenly world merely by consuming alms? So, what happens is that the giver, seeing the robe hanging from the neck of the unvirtuous one, arouses faith through that, offers the alms, and goes to heaven. While that evil monk, by consuming those alms, goes to hell. There is no contradiction in the Buddha's word, is there? Why do we say this? Because this discourse is indeed magnificent. Yet, for some reason, some people use this discourse as a way to beckon the decline of the dispensation. You know this, meritorious friends. They say: "This is not a time when Noble Ones and Arahants exist. Now, what lies ahead is the era of the robe-wearers-in-name-only. There is nothing wrong with giving to them." The fact may be true, but that is the secret. The meritorious person who gives the alms goes to heaven; the monk who consumes the alms goes to hell. Thus, there is no contradiction in the Buddha's word. It is like a double-edged weapon.</p>
+<p>Let me give a small simile for this. My similes are rustic ones, of course. Suppose you bring a sack of paddy to your house—a sack of seed paddy. Having emptied the sack of paddy and transferred it into some box, you take the empty sack to the backyard of the house and shake it. A single grain of paddy that was stuck to the sack falls onto a heap of mud. Without you even knowing, a fine cluster of paddy grows behind the house because the ground is fertile. In the same way, this Noble Saṅgha is called a field of merit. It is not just anything; it is a fertile field of merit. In this field of merit, even a grain of paddy that falls stray sprouts. Think of it in that way. So, that *gotrabhū kāsāvakaṇṭha* monk gives that perception (*saññā*) to the world. He symbolizes it. He indeed helps the giver to remember. But that alone is not enough for him to escape hell. Let us think about it. The world exists within perception (*saññā*). Even if I mention this as a small illustration, meritorious friends, do not take it too seriously. Think for a moment: if King Duṭugämuṇu had placed those relics in a small casket at the site of the Ruwanweliseya, would the hearts of humans have been inspired in this way for centuries? That is the "perception of a stupa" (*cetiya-saññā*). Within the perception of a stupa, the world is drawn. That robe—it is not only today; it is found even in the Jātaka stories. You must have heard Jātaka stories showing the wonderful power of the robe even during times when no Buddha had appeared. According to that Jātaka story, the Bodhisatta was an elephant king. He had a large herd of elephants. Devadatta was an elephant hunter. What does he do? He wraps himself in the robe of a Paccekabuddha and sits down. While he sits there, all the elephants salute him as they pass. He must have had some weapon hidden—perhaps a boomerang, we do not know. He throws it, and throws it to kill the elephant that goes last. Killing elephants in this way to take their tusks, eventually the Bodhisatta thought, "Why is our herd diminishing?" Thinking thus, the Bodhisatta elephant walked at the very rear. When the elephant hunter threw his weapon, the elephant turned around, blocked it, and spared the man's life without killing him—all because of that robe! Because of the robe! Therefore, we must reflect on this. Indeed, although the Buddha used this story of *gotrabhū* to illustrate the supremacy of the offering and the value of this field of merit, we must not start interpreting it from the wrong end. If we start from the other end, it is an invitation to the decline of the dispensation.</p>
+<p>We must think of the reality. Why? Because you apply the perception of "treasure" (*ratana*) to all three: the Buddha-treasure, the Dhamma-treasure, and the Saṅgha-treasure. On the Vesak full-moon poya day, the Buddha-treasure appeared in the world. On the Esala full-moon poya day, both the Dhamma-treasure and the Saṅgha-treasure appeared in the world. Because, with the teaching of the Four Noble Truths and the Noble Eightfold Path, at the conclusion of that sermon, the Saṅgha-treasure appeared through Ven. Koṇḍañña who realized it. That is the Triple Gem. During the times of Paccekabuddhas, there is no such thing; there is no Saṅgha-treasure either. That is precisely why, in the *Aggappasāda Sutta* which you have heard, the Buddha states:</p>
+<p>*"Yāvatā bhikkhave gaṇā vā saṅghā vā, tathāgatasāvakasaṅgho tesaṃ aggamakkhāyati, yadidaṃ cattāri purisayugāni aṭṭha purisapuggalā, esa bhagavato sāvaka-saṅgho... anuttaraṃ puññakkhettaṃ lokassa."*</p>
+<p>Having said so, he continues: *"Ye saṅghe prasannā agge te prasannā, agge kho pana prasannānaṃ aggo vipāko hoti."*</p>
+<p>In that *Aggappasāda Sutta*, after speaking of the Buddha-treasure and the Dhamma-treasure, when finally speaking of the Saṅgha-treasure, he shows it in this manner. Everyone knows the explanation mentioned at the beginning. There is no need to repeat it. As far as there are groups or assemblies in the world, the disciple-community of the Tathāgata is supreme among them, according to the details mentioned. Next, he says that whoever has confidence in the Saṅgha has confidence in the supreme; and for those who have confidence in the supreme, the result is supreme.</p>
+<p>Thus, one must understand that here, the Buddha demonstrates the supremacy of the Saṅgha-treasure by redirecting that personal offering. How hard that Mahāpajāpatī Gotamī, that nun, must have labored to weave that robe! She did so with the same thoughts as when she nursed him as a small child. Having woven that cloth with her own hands with great effort, she was impatient until she could offer it. See what the Buddha said when she finally offered it! It was not out of unkindness. At the same time, when Ven. Ānanda spoke, the Buddha acknowledged that Mahāpajāpatī Gotamī had been of great help to him, and also stated that he too had been of help to Mahāpajāpatī Gotamī. What did the Buddha do? By redirecting this, to use a modern expression, he "paid the milk bill." He paid the milk bill at the highest level. He could have accepted it himself. But in order to make it of greater fruit and benefit, and at the same time to introduce the value of the Saṅgha-treasure to the world, he redirected it and said: "If you give, give to the Saṅgha. Then I too will be offered to." See, what a valuable example! He turned that personally intended offering into a communal offering. Therefore, one must reflect on the value of the Saṅgha. Many know that in the disciplinary acts of the monks, the word *Saṅgha* is an extremely powerful word. *Saṅgha*—when that word is used, there is a great power within it. A group of more than four is known as the Saṅgha. A smaller group is known as a chapter (*gaṇa*). This is a dispensation usage. *Saṅghaṃ uddissa*—"on behalf of the Saṅgha"—there is a deep meaning in this phrase.</p>
+<p>Not only that. Unfortunately, there are shortcomings in certain places in the commentaries. We have pointed them out. Ven. Buddhaghosa, in trying to explain the word *supaṭipanno*, explains it like this: *atītaṃ paṭipadaṃ nissāya supaṭipanno*—he is "of good practice" by depending on his past practice. That is to say, the terms *supaṭipanno, ujupaṭipanno*, etc., are applied because of their past practice, to show that they arrived through that practice. It is not so, meritorious friends! It is because they are training in the present. It is not past practice, but present practice. See, in that very *Ratana Sutta* it is said:</p>
+<p>*Ye suppayuttā manasā daḷhena, nikkāmino gotamasāsanamhi, te pattipattā amataṃ vigayha, laddhā mudhā nibbutiṃ bhuñjamānā.*</p>
+<p>"Those who, with a firm mind, well-applied, are free from desire in Gotama's dispensation..."—if anyone trains regardless of body and life, that quality is what was taken for the act of truth there, and not that story of path and fruit. But because this has come down for a long time, for convenience, when asked "who are the eight persons?", we say "the four paths and four fruits, the four paths and four fruits." This is a usage that arose during the Commentarial period. Yet, the Buddha used the word *paṭipanna*. He gave prominence to the practice, in that *supaṭipanno* verse. In this story of nine persons, starting with "practicing for the realization of...", this can indeed become a subject of controversy. I know that Westerners sometimes ridicule this: "How can one receive benefits by giving alms to those who just have a robe hanging around their neck?" That is why we said it is like a double-edged weapon. But the truth is this: by that alone, they benefit the giver. *Dāyakato visujjhati no paṭiggāhakato*—it was with a certain reason that the Buddha, after mentioning that *kāsāvakaṇṭha* story, spoke of the purification of the offering. This seems to be a good explanation. So, among those four ways, what is the first way? The offering is purified from the side of the giver, but impure from the side of the recipient. Yet, it is endowed with great benefit. It is incalculable, immeasurable, and cannot be counted. Saying *"ko pana vādo"* shows that this is no small matter.</p>
+<p>Meritorious friends, we do not declare these things as a "pulling hook"—not to tell you to give more. We express this on a day like today in order to bring the Buddha's word to light. It is not like what some say: "Now, the time of Arahants and Noble individuals is over. Now we are looking at that *kāsāvakaṇṭha* era, so give without fear." That is not what is here. Remember the simile of the sack of paddy. So supreme are the virtues of the Saṅgha—"an incomparable field of merit for the world"—and so great is the power of this supreme field of merit, that the robe which reminds one of that Saṅgha is used to assist in this. That is why we have the eight requisites (*aṭṭha-parikkhāra*). If we believe those stories, they say that Ghatīkāra the Brahma king brought and offered them to the Buddha. In fact, during times when no Buddha has arisen, there are only the requisites of ascetics, like water-pitchers. It was only the Buddha who prescribed the eight requisites as the minimum requisites for the monks. Therein lies that value. In later times—one should perhaps not say this—they began to describe the various benefits of offering the eight requisites with great exaggeration. But the real reason is that these eight requisites are the basic support for ordination (*pabbajjā*). That is why when someone comes and asks for ordination, they are asked: "Are your bowl and robes complete?" So, they have to find those items somehow. This demonstrates the value of the eight requisites. When you, meritorious friends, offer the eight requisites, you should think: "I am offering these eight requisites as an aid for someone to enter ordination, to join this dispensation, and to join this community of monks." Even if we do not describe its benefits separately, you should understand it in that way.</p>
+<p>Thus, it is during the era of a Buddha's appearance that the Saṅgha-treasure arises. What sustains the minimum existence of the Saṅgha-treasure is called the eight requisites. The great Arahants of the past, especially the Arahants who observed the dhutanga (ascetic) practices, were content with just those eight requisites. Within them, all needs are met if one travels the true path of Dhamma. As additional worldly things increased, the eight requisites have become not "eight" but "sixty" requisites today! You know better than we do what those young novice monks ask for. When we look at it, the "eight requisites" (*aṭa-pirikara*) have become "sixty requisites" (*häṭa-pirikara*). Things have increased to that extent. But we should at least maintain the concept. We must offer the eight requisites properly. If we do do it carelessly, saying "it is the decline of the dispensation anyway," then that is a failure on the part of the giver. We say this because today, these things are done based on various indirect or worldly motives. In doing so, that symbol, the symbol of the robe, might gradually disappear; and if one day, by some means, a lay dress is offered as the "eight requisites," you can consider the dispensation finished on that day. If we can at least see that symbol, and if that symbol is presented correctly, then within it, the Noble Saṅgha-treasure is remembered. That symbolic power—see, even during times when no Buddha had appeared, that elephant king could have killed that man, but did not kill him because his head was covered with the robe.</p>
+<p>In this day and age, we do not need to speak of such things. It has fallen to the lowest state of decline. But we must not use that as an excuse. We must not generate unwholesome states (*akusala*) because of it. Instead, what the wise, meritorious person does upon seeing the robe is that they do not go investigating it. In a Dhamma sermon we delivered earlier, we mentioned one of the outstanding qualities of the lay disciple Ugga Gahapati of Hatthigāma (do not use this in a bad way, as mentioned before), but in that previous sermon, we spoke of that great quality. Ugga Gahapati was a Non-returner (*Anāgāmī*), a highly capable lay disciple. The night before the almsgivings, deities would come and tell him: "Among the monks you intend to invite, such-and-such a monk is an Arahant, such-and-such is a Non-returner," and going down the list, they would even say, "such-and-such a monk is unvirtuous." But as a distinguished quality, that lay disciple says: "Even though I heard that, when I served the alms, I made no distinction. I made no distinction when serving the alms." He does not think about those things. On the part of the giver, that is how it is. If you go investigating these things, there is no end to it. How can you know about the monks? It is up to the Saṅgha to protect the purity of the Saṅgha. But for the lay devotee, the Buddha has taught that way; if we try to dissect it, we will end up going to extremes. Therefore, *dāyakato visujjhati*—the giver offers the alms with a pure mind, recollecting the Noble Saṅgha-treasure. That is why we said this cuts both ways. The giver, having given alms, goes to a happy destination; while the unvirtuous *gotrabhū kāsāvakaṇṭha* monk, having consumed the alms, goes to hell. There, the Buddha's word is correct on both sides. Nowhere is there any contradiction. What was declared there is the reality. Therefore, you must reflect on this, meritorious friends.</p>
+<p>So, we say these things on a day like today because everyone is talking about the decline of the dispensation. They say it cannot be restored now, even by a team of elephants. But we know that when we fall ill, even if doctors say we cannot be kept alive for long, what an effort we make! What energy we exert! We take the patient to the doctor, and if that fails, to traditional physicians. We do various things. Why? Just to keep this body alive for one more day. For what? To enjoy the five cords of sensual pleasure, nothing else. We spend hundreds of thousands on bypass operations and such to join pieces back together, just to preserve this body and life. Then, if such an effort is made to preserve life, why don't we think in the same way about the dispensation? Do we just abandon it, saying "it is impermanent (*anicca*)"? Meritorious friends, that is the point you must understand. We must not use impermanence (*aniccatā*) as an excuse. Even if it is impermanent, if we just allow it to go... Instead, what we must do is, to the best of our ability, the lay givers from their side, and the monks from their side, must bring out those virtues of the Saṅgha shown by the Buddha—*supaṭipanno, ujupaṭipanno*, etc.—along with their qualities of being worthy of gifts, worthy of hospitality, etc. Even if one is not "established on the path" (*maggaṭṭha*), merely training in the practice (*paṭipadā*) is enough. It is quite enough. If one trains properly in the practice, realizing the fruit within it is an absolute certainty.</p>
+<p>On a day like today, you, meritorious friends, must reflect on the value of the passage on the Saṅgha's virtues. The Triple Gem—the Buddha-treasure, the Dhamma-treasure, and the Saṅgha-treasure—cannot be separated from one another. We have stated on certain occasions that the eight Noble individuals of the Saṅgha-treasure can be compared to eight lamp-posts on a street. Imagine the Noble Eightfold Path as a street. The question arises: "How do we travel on this?" When the Dhamma is preached, the question of how to realize the fruit comes to everyone. That is when—these Arahants and Non-returners of the past, especially during the Buddha's time—served as lamp-posts for traveling on that path. That is why we said so. That is precisely why the Buddha has declared that even a Paccekabuddha cannot preach the Dhamma that helps one escape from Saṃsāra. It is such a profound Dhamma, as we have shown in our sermons on Dependent Arising (*paṭiccasamuppāda*). It is not because of any selfishness on their part. A Paccekabuddha cannot point out this path to the Mind Stilled (Nibbāna in a way that the world can understand. It is such a wonderfully profound Dhamma. But the Tathāgata, the Fully Enlightened Samma Sambuddha, through his wonderfully great power of wisdom, preached the Dhamma to the world. And the proof that this Dhamma was practiced is the Saṅgha. That is what is called the Saṅgha-treasure.</p>
+<p>Those three treasures are interconnected. Because of the Buddha-treasure, the Dhamma-treasure appeared; because of the Dhamma-treasure, the Saṅgha-treasure appeared. It is the practical aspect that is demonstrated by the Saṅgha-treasure. That is the Triple Gem. You, meritorious friends, often declare the great, powerful nature of the *Ratana Sutta*. We hear everywhere that even by mere chanting, some power and some benefit can be obtained, capable of doing powerful things—even by the very words used in them. That is why we spoke even of the misuse of words—not that we are merely finding fault with the commentators. See that verse; in the word of the Buddha, it is: *ye puggalā aṭṭha sataṃ pasatthā*. But those who do not know the language turn it into: *ye puggalā aṭṭhasataṃ*. If the commentators validate this, it is a great mistake, isn't it? That is what we are saying. This rich meaning is "with meaning and with phrasing" (*sātthaṃ sabyañjanaṃ*). This Dhamma must be understood both in terms of meaning (*attha*) and phrasing (*byañjana*). If we recite these verses with such understanding, what powerful benefits we can obtain! But now, as we said, it is only for the sound. Paritta recitations, even suttas like the *Ratana Sutta*, become like music, because there is no understanding of the meaning of those words; they are just recited anyway. Even so, there may be some power in that sound. But if recited with right understanding—with understanding of the virtues of the Buddha-treasure and the Saṅgha-treasure—then we too have to say that it is incalculable and immeasurable; there are limitless benefits. That is why it was said: *agge kho pana prasannānaṃ aggo vipāko hoti*.</p>
+<p>On a valuable day like today, we mentioned these facts to you because everyone asks us about them, and we must give an answer. Even though we point out the shortcomings of the commentators in our writings and sermons, we accept that they were extremely great individuals. If those reciting monks (*bhāṇaka*) had not preserved these, we would have no power to say even this much. But for some reason, because of traditionalism (*ācariyakappa*), because past teachers said so, some people accept these without questioning, showing a tendency to accept even highly weak points. When the monks say something, the laity accept it too. That is natural. It is to correct those points that we mentioned these various things—not in a critical spirit to disparage them. While accepting their greatness, certain shortcomings must be pointed out.</p>
+<p>Today, as usual, you, meritorious friends, must have observed your respective precepts and engaged in Dhamma discussions and meditation. If there is anything to be taken from this sermon for your future progress, for training in the practice, and for realizing the fruit, take those things and do so as quickly as possible—as we always say, "before the lamp of the dispensation is extinguished." We have to say this because it appears to us that it is moving in that direction. Therefore, we speak these words for the sake of diligence (*appamāda*). It is not with the wish that it should be extinguished, but because we actually see those signs. Therefore, it is up to you, meritorious friends, to make use of it. Wishing that this sermon may be a source of strength and power for you to reach those noble goals you hope for as quickly as possible; and wishing that whatever living beings from Avīci to Akaniṭṭha wish to rejoice in the merits of this preaching and hearing of the Dhamma, may they by doing so find peace in the supreme, deathless Extinction (Nibbāna through a Bodhi of their aspiration—please recite these verses:</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_042.html" class="doc-btn">← Previous Sermon (042)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_044.html" class="doc-btn">Next Sermon (044) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

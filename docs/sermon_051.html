@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 051 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_050.html" class="doc-btn">← Previous Sermon (050)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_052.html" class="doc-btn">Next Sermon (052) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 051</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_051_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_051_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_051_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #51</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.49)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Bahuṃ ve saraṇaṃ yanti, pabbatāni vanāni ca; Ārāmarukkhacetyāni, manussā bhayatajjitā. Netaṃ kho saraṇaṃ khemaṃ, netaṃ saraṇamuttamaṃ; Netaṃ saraṇamāgamma, sabbadukkhā pamuccati. Yo ca buddhañca dhammañca, saṅghañca saraṇaṃ gato; Cattāri ariyasaccāni, sammappaññāya passati. Dukkhaṃ dukkhasamuppādaṃ, dukkhassa ca atikkamaṃ; Ariyañcaṭṭhaṅgikaṃ maggaṃ, dukkhūpasamagāminaṃ. Etaṃ kho saraṇaṃ khemaṃ, etaṃ saraṇamuttamaṃ; Etaṃ saraṇamāgamma, sabbadukkhā pamuccati.</p>
+<p>From:</p>
+<p>Verses 188-192 from the Buddhavagga (Chapter on the Buddha) of the Dhammapada</p>
+<p>Dear Listeners,</p>
+<p>Today is the Esala full-moon Poya day. Indeed, the Triple Gem, which serves as the refuge from the suffering (*dukkha*) of saṃsāra, truly became manifest on an Esala full-moon Poya day such as this. Why do we say so? We all know that the Buddha realized supreme enlightenment at the foot of the Bodhi tree on a Vesak full-moon Poya day. However, he preached that supramundane realization he attained to the world of devas and humans at a level they could comprehend, as an auspicious Dhamma sermon—the *Dhammacakkappavattana Sutta*—on an Esala full-moon Poya day. Furthermore, among the group of five monks who were the recipients of that sermon, Venerable Aññākoṇḍañña realized Nibbāna with the path-knowledge of Stream-entry at the end of the discourse. Thus, we must understand that the Dhamma Gem became manifest through the preaching of the *Dhammacakkappavattana Sutta*. Next, this can also be considered the beginning of the manifestation of the Noble Saṅgha Gem. That is why we say that the Esala full-moon Poya day is the day on which the Triple Gem, the only refuge for this saṃsāric suffering (*dukkha*), became manifest.</p>
+<p>When we reflect in this manner, what is declared and emphasized in this series of verses, which is the theme of our sermon today, is that the only refuge for the saṃsāric suffering (*dukkha*) of living beings is the Triple Refuge, the Triple Gem itself, and that the path to escape from this saṃsāric suffering (*dukkha*) is none other than that supramundane path of liberation. The Buddha preached these few verses to a brahmin named Aggidatta. The background story (nidāna-kathā) regarding this is recorded as follows.</p>
+<p>In Sāvatthī, King Mahā Kosala—that is, the father of King Pasenadi Kosala—had a royal priest (purohita) brahmin, who was the aforementioned brahmin Aggidatta. After King Mahā Kosala passed away, King Pasenadi Kosala, who succeeded him, also retained the brahmin Aggidatta—who was by then quite advanced in age—in the position of royal priest with great respect. To show how much respect he had, whenever the priest came to the royal palace, the King himself would go forward to receive him. Moreover, out of respect for him as a teacher, he would offer him a seat equal to his own. That is how well he treated the royal priest, Brahmin Aggidatta.</p>
+<p>However, this brahmin thought wisely: "Young kings prefer young royal priests. I am too old. I will not be able to retain the King’s favor forever in this way." Thinking thus, he obtained permission from the King. He understood that ordination (going forth) is not merely a change in external appearance, but requires renunciation (*nekkhamma*). Therefore, how did he free himself from his vast wealth and great treasure? He sent town-criers through the city with drums, opened his doors, and gave it away in charity. Within seven days, he opened the doors and told anyone to take whatever they wanted from his entire wealth, and having freed himself from those riches, he went forth. Along with his departure, a large number of city-dwellers, said to be about ten thousand people, departed with this royal priest brahmin to practice asceticism under the sage's going-forth (rishi ordination). This group went and prepared a hermitage in a certain habitation between the kingdoms of Anga-Magadha and Kuru, where they practiced asceticism.</p>
+<p>What was the advice that the brahmin Aggidatta, as their leader, gave to this group? "Whenever a defiled thought such as a sensual thought (*kāma-vitakka*) arises in you, at that very moment, go, bring a bag of sand, and dump it in this place." Thus, he gave them a meditation instruction. As a result of this, after some time, a huge mound of sand was formed there. This shows how obediently they brought and dumped a bag of sand for every defiled thought that arose in them. After such a massive mound of sand was formed, it is said that a king of serpents (nāga king) named Abhicchatthaka took guardianship of that sand pile. This is not like the cobras we see today; what is referred to here is a kind of non-human/spirit entity (*bhūta*). Like what is said about the Nāga King Mucalinda, this was a powerful nāga king possessing special powers, psychic power (*iddhi-bala*), and the ability to change his physical form. That Nāga King Abhicchatthaka took up residence there.</p>
+<p>Furthermore, large crowds of people from the kingdoms of Anga and Magadha regularly visited to offer alms and respect to this brahmin and his group. What was the advice that this brahmin sage gave to them? "Go for refuge to mountains, parks, trees, and forests. Only by going for refuge to them can one be released from this saṃsāric suffering (*dukkha*), from all suffering (*dukkha*)." In this way, he advised them to take refuge in those things. He also gave the same advice to his own disciples.</p>
+<p>While things were going on in this way, as time passed, the Buddha appeared in the world. On one occasion, while residing at the Jetavana monastery in Sāvatthī, as he surveyed the world in the morning through the attainment of great compassion (*mahā-karuṇā-samāpatti*), he saw that this brahmin Aggidatta and his group possessed the supportive conditions to attain Arahantship. Having seen this, and devising a skillful means (*upāya-magga*), he invited the great Arahant Moggallāna: "Moggallāna, do you not see? This brahmin Aggidatta is misleading a large crowd, preaching to them, 'By taking refuge in these mountains, forests, trees, etc., you can bring an end to suffering (*dukkha*).' Go and turn this brahmin toward the Dhamma." The great Arahant Moggallāna replied, "Blessed One, there is a very large crowd there. I cannot do this alone. If the Blessed One also visits, perhaps it will be possible." Then the Buddha said, "Moggallāna, you go ahead first," and sent the great Arahant Moggallāna on his way that very evening.</p>
+<p>Before arriving at that place, the great Arahant Moggallāna also thought: "If I go before this massive crowd and say something, and if they start leaving in groups, I will not be able to accomplish what I intend." It is said that using his psychic power (*iddhi-bala*), he created a heavy drizzling rain. Because of that rain, those ascetics retired to their respective quarters, that is, their huts.</p>
+<p>Then, the great Arahant Moggallāna went near the hut of the brahmin Aggidatta and called him by name: "Aggidatta, Aggidatta!" Aggidatta, due to his conceit (*māna*), felt some anger at this. Thinking, "Who in the world is calling me by my personal name?", he asked, "Who is that?" "I am a renunciant. Please give me a place to stay tonight." Aggidatta replied, "Each of us has separate huts; we have no space."</p>
+<p>"Do not say so. It is the custom for humans to go to humans, cattle to cattle, and renunciants to renunciants. Therefore, please give me a place to stay tonight." He then said, "Since there is no other place, I can stay on that sand mound." Aggidatta warned him, "A great serpent king (nāga) lives there. It is dangerous. Do not go there under any circumstances." But saying it did not matter, as the great Arahant Moggallāna walked toward the sand mound to spend the night there, the serpent king became extremely angry. It is then mentioned that through his psychic power, the serpent king began to emit a powerful blast of smoke. The great Arahant Moggallāna also emitted smoke through his own psychic power. The serpent king was overwhelmed by this, while the great Arahant Moggallāna suffered no harm whatsoever.</p>
+<p>Next, the serpent king began to spit fire. The great Arahant Moggallāna, entering the fire-element attainment (*tejo-dhātu-samāpatti*), also emitted fire in the same way. Eventually, in one way or another, the serpent king was tamed. Having been tamed, it is said that the serpent king spread his hood around the great Arahant Moggallāna as a shelter, enabling him to spend the night there. Meanwhile, the brahmins, seeing the smoke and fire, thought, "This recluse, this monk's life must have been destroyed." When they looked in the morning, the great Arahant Moggallāna was perfectly fine. When they heard the details of what had occurred, they were all astonished, thinking, "What an incredibly powerful renunciant this is!"</p>
+<p>Just as they were expressing their joy, the Buddha arrived at the scene. When the great Arahant Moggallāna stood up and paid homage to the Buddha, these people were even more astonished. When they asked, "Is this someone even more powerful than you?", Moggallāna replied, "This is my Teacher." At that moment, the Buddha asked the brahmin Aggidatta: "Brahmin, in what manner do you preach the Dhamma to this crowd?" Then the brahmin Aggidatta declared, "I tell them that by taking refuge in mountains, forests, parks, and trees, they can be freed from this suffering (*dukkha*)." It is recorded in the texts that the Buddha then proclaimed the series of verses we mentioned earlier.</p>
+<p>Now let us look at the general meaning of those verses.</p>
+<p>*Bahuṃ ve saraṇaṃ yanti pabbatāni vanāni ca ārāmarukkhacetyāni manussā bhayatajjitā*</p>
+<p>Many people, driven by fear, go for refuge to mountains, forests, parks, and tree-shrines; they go seeking protection in them.</p>
+<p>*N’etaṃ kho saraṇaṃ khemaṃ n’etaṃ saraṇamuttamaṃ n’etaṃ saraṇamāgamma sabbadukkhā pamuccati*</p>
+<p>But these things are not a secure refuge or protection. "That is not a safe refuge, that is not the supreme refuge." This is not the truly supreme refuge. The Buddha explains in detail that by going to such a refuge, one cannot be released from all suffering (*dukkha*). Next, he declares how one is released from suffering (*dukkha*).</p>
+<p>*Yo ca buddhañca dhammañca saṅghañca saraṇaṃ gato cattāri ariyasaccāni sammapaññāya passati Dukkhaṃ dukkhasamuppādaṃ dukkhassa ca atikkamaṃ ariyañcaṭṭhaṅgikaṃ maggaṃ dukkhūpasamagāminaṃ*</p>
+<p>But whoever goes for refuge to the Triple Gem—the Buddha, the Dhamma, and the Saṅgha—and sees with right wisdom (*sammā-paññā*), with great wisdom, these Four Noble Truths: suffering (*dukkha*), the arising of suffering (*dukkha-samuppāda*), the transcending of suffering (*dukkhassa ca atikkamaṃ*), and the Noble Eightfold Path that leads to the calming and appeasing of suffering (*dukkhūpasamagāminaṃ*);</p>
+<p>*Etaṃ kho saraṇaṃ khemaṃ etaṃ saraṇamuttamaṃ etaṃ saraṇamāgamma sabbadukkhā pamuccati*</p>
+<p>This indeed is the secure refuge, the true protection. "This is the supreme refuge." This is the truly supreme refuge. "Having come to this refuge, one is released from all suffering." The Buddha declared that only by coming to this refuge, this protection, can one be released from all the suffering (*dukkha*) of saṃsāra.</p>
+<p>From these verses and this story, we can extract many Dhamma principles. Even if we reflect on the story itself, according to the standards of the present day, there are things in it that appear miraculous, especially concerning psychic miracles (*iddhi-pātihāriya*). Nowadays, these are things that people might doubt. However, during the time of the Buddha, when we speak of the great Arahant Moggallāna being the foremost among those possessing great psychic power, wonderful things are recorded in the texts. Now, the most important point here is the ordination (going forth) of the brahmin Aggidatta.</p>
+<p>Going forth is something done very easily even in this day and age. But regarding the ascetic going-forth—how did the brahmin Aggidatta go forth? It was not because of a lack of food, drink, clothing, shelter, or social status. It was not due to illnesses. Even while receiving royal honor at the highest level, even while possessing the privilege to sit on a seat equal to the King's, and even while having the power to get "anything whatsoever" done, and having such great favor of both the country and the King, he reflected with far-sighted wisdom: "This status will not last forever. I am now old. I must retire now, retire completely."</p>
+<p>When we talk about retiring, what that brahmin did was not what people do nowadays when they retire. When he retired, he did not do so keeping a little savings for himself. He gave everything away in charity. He opened the doors of his treasuries, announced it with the beat of drums, gave away all his wealth, and went forth only after freeing himself from those riches. That is a lesson for us. Even though we might call those external ascetics "wrong-viewed" (*micchā-diṭṭhi*), they have given us a valuable lesson, especially when we think about ordination in the present era. It is the very strength that comes from renunciation (*nekkhamma*) that helps to carry the ordination forward. Where there is no renunciation (*nekkhamma*), it is a mere ordination—a totally empty ordination. There is no strength within it; one cannot progress; one spins back to lay life. But concerning the ascetic going-forth in the past, even during times when no Buddha had appeared in the world, even great kings were called "royal sages" (*rāja-rishi*). They abandoned kingship and went to practice asceticism in the Himalayan forests, discarding all sensual pleasures like a glob of spit spat out in the early morning; it was not done lightly.</p>
+<p>That is how it is mentioned. So here too, according to the ascetic going-forth, that custom is an eternal custom regarding renunciation (*nekkhamma*). Respecting that custom, the departure of the brahmin Aggidatta is a lesson for us when we reflect on our present times. So let us look at what is said from that point onwards.</p>
+<p>Next, indeed, that brahmin taught a certain skillful method to his disciples for eliminating defiled thoughts such as sensual thoughts (*kāma-vitakka*). It is also apparent that the disciples acted obediently according to it. As soon as defiled thoughts arose—such as sensual thoughts or angry thoughts—what did they do? They ran, brought a bag of sand right at that moment, and dumped it. If we contemplate the Dhamma-principle behind this, they cut off that defiled thought by directing their minds to another activity without giving room to the defiled thought (*kilesa-vitakka*). There is such a technique there, a certain skillful device. It was through this that those brahmins developed great strength. So much so that, at the end of the sermon, all those ascetics attained Arahantship with the analytical knowledges (*paṭisambhidā*) and became disciples of the Buddha through the "come, monk" (*ehi-bhikkhu*) ordination.</p>
+<p>Thus, what helped them to develop such great strength was that this work of suppressing the defilements had begun from that very moment. It was precisely because of this that a massive crowd supported them as their patrons. In the end, having heard the Dhamma sermon of the Buddha, they understood: "This is not the true way of taking refuge and seeking protection. Taking refuge in mountains and forests is not it. It is taking refuge in this Triple Gem." It was because of this understanding that, upon hearing the Buddha's sermon containing those verses, the cognitive revolution—the transformation—that occurred within those brahmins was so great that they attained Arahantship. Next, the Buddha granted them ordination through the *ehi-bhikkhu* formula.</p>
+<p>That is how it is mentioned in the Dhamma. Just as devotion toward the Triple Gem arose within a massive crowd, we generally understand "taking refuge" as going for refuge to the Buddha, the Dhamma, and the Saṅgha. However, this verse states that it is not merely that; taking refuge begins there, but it culminates in the realization of the Four Noble Truths. This saṃsāric existence is suffering (*dukkha*), its cause is craving (*taṇhā*), the extinguishment of that craving (*taṇhā*) is Nibbāna, and the path to it is the Noble Eightfold Path. By properly understanding the meaning of those verses, that large crowd finally became disciples of the Buddha. At that very moment, a large crowd of other patrons from the kingdoms of Anga and Magadha arrived. Seeing the transformation that had occurred, they initially thought, "The Buddha is a disciple of this brahmin Aggidatta." It is mentioned that to dispel this, the Buddha spoke to the brahmin Aggidatta at that moment, asking him to settle the doubts of the crowd. Then, using the psychic power (*iddhi-sakti*) he had attained, the brahmin Aggidatta rose into the air and paid homage to the Buddha seven times, declaring: "The Blessed One is my Teacher, I am the disciple; I am the follower," thereby dispelling the doubts of the visiting patrons, as the story further records.</p>
+<p>Thus, through this story, we must reflect not only on the model of ordination shown at the beginning, but also on the cognitive revolution and transformation that occurred within the ordained group as a result of this sermon. Nowadays, many people, due to their saṃsāric suffering (*dukkha*) as well as the various suffering-filled situations that arise in life, go searching for protection, searching for refuge. How this search for protection and refuge can become truly fruitful and successful is what is declared in this sermon. Regarding taking refuge in the Buddha, Dhamma, and Saṅgha—the ordinary world thinks that there is some occult/mysterious power in trees, rocks, and mountains, and they expect protection from those forces; that is how the ordinary world thinks.</p>
+<p>But the Buddha pointed out that the true shelter for the world to escape saṃsāric suffering (*dukkha*)—in short, to be released from all saṃsāric suffering (*dukkha*) such as birth (*jāti*), decay and death (*jarāmaraṇa*), and sickness—is to seek refuge in this Triple Gem, namely the Buddha-gem, the Dhamma-gem, and the Saṅgha-gem. That is why, as you devotees know, it is stated in the Dhamma that a person becomes a lay follower (*upāsaka*)—the minimum requirement being described as: "*Buddhaṃ saraṇaṃ gato hoti, Dhammaṃ saraṇaṃ gato hoti, Saṅghaṃ saraṇaṃ gato hoti*"—that is, when someone goes for refuge to the Buddha, the Dhamma, and the Saṅgha, by that much they become a lay follower. Then, for that lay follower to become virtuous, they undertake some precept-discipline such as the five precepts (*pañca-sīla*). However, just because it is described in this minimum way, one should not think, "We have said '*Buddhaṃ saraṇaṃ*' three times, so everything is complete." That is precisely why the verse states that immediately after taking refuge, one must see with right wisdom (*sammā-paññā*), with great wisdom, the Four Noble Truths: suffering (*dukkha*), the arising of suffering (*dukkha-samudaya*), the transcending of suffering, the cessation of suffering (*dukkha-nirodha*) which is Nibbāna, and the Noble Eightfold Path that assists it. It is by seeing this that one truly attains release from saṃsāric suffering (*dukkha*). Therefore, to complete the act of taking refuge (*saraṇāgamana*), one must walk on this path.</p>
+<p>Next, even if we think only of this act of taking refuge, you devotees have heard of a protection chant (*paritta*) called the *Dhajagga Sutta*. There, the Buddha declares that even for monks meditating in forests, at the foot of trees, or in empty dwellings (*suññāgāra*), if any fear, terror, or hair-standing-on-end should arise, they should recollect him. How should they recollect him? As you all know, through the *Itipi so* passage. They should recollect the passage on the nine supreme qualities of the Buddha, starting with "*Itipi so bhagavā...*" If they do not recollect this, they should recollect the Dhamma—the six qualities of the Dhamma starting with "*Svākkhāto...*" If they do not recollect that, they should recollect the nine qualities of the Saṅgha, starting with "*Supaṭipanno...*" The *Dhajagga Sutta* presents these twenty-four great qualities as a protective chant, stating that when one recollects them, any fear, terror, or hair-standing-on-end will disappear. Therefore, it must be remembered that the only refuge for the world is these twenty-four great qualities. That is why in the *Ratana Sutta*, the qualities of the Triple Gem, such as the qualities of the Buddha, are used as the foundation even for an asseveration of truth (*sacca-kiriyā*).</p>
+<p>In the background story of the *Ratana Sutta*, it is mentioned that during the great devastation in the city of Vesālī caused by the three fears—the fear of non-humans, the fear of disease, and the fear of famine—the Buddha commissioned Ven. Ānanda to wish peace for that region using the power of truth, the power of asseveration of truth, through the verses in the *Ratana Sutta*, chanting "*Etena saccena suvatthi hotu*" (By this truth may there be well-being). From this too, we see a good example: the power within the Triple Gem. The power within the Triple Gem is the power of truth. It is a Dhamma-principle that exists eternally in the world. There is immense power within truth, within an asseveration of truth. In the Jātaka stories, it is often seen and stated that due to various weaknesses, the Bodhisatta broke other precepts on various occasions, but regarding truth—that is, lying (*musāvāda*)—he strictly kept that training rule and preserved the truth. That is why there is the miracle of truth in the life of the Buddha.</p>
+<p>So that is exactly what we find here: the qualities of the Triple Gem. Those twenty-four great qualities are a truth. It is by the power of that truth that, in various ways, in blessing-verses, well-wishes are made for the world by focusing on and taking refuge in the Triple Gem, chanting "*Etena saccena suvatthi hotu*". Even in the problems and crises of daily life, it is worthwhile to consider the Triple Gem as one's refuge. Moreover, especially concerning what is called the suffering (*dukkha*) of saṃsāra—that terrifying suffering, that disaster—one cannot escape from it easily. One cannot be released merely by going for refuge to the Triple Gem in word only. For the refuge in the Triple Gem to be complete, one must see the Buddha, one must see the Dhamma, and one must personally see that realization seen by the Saṅgha Gem; one must walk on the path trodden by the Great Saṅgha Gem of the eight noble individuals (*aṭṭha-ariya-puggala*) and see its fruit. That is what is declared here: to realize it with right wisdom (*sammā-paññā*).</p>
+<p>Therefore, reflecting from that perspective as well, we must direct our minds to these Four Noble Truths. If we describe the entire Dhamma in brief—what the Buddha preached—it is indeed this preaching of the Four Noble Truths. That is exactly what the Buddha presented in detail in the *Dhammacakkappavattana Sutta*. It is this entire mass of saṃsāric suffering (*dukkha*), such as birth (*jāti*), decay and death (*jarāmaraṇa*), and sickness, that the Buddha pointed out there as the Truth of Suffering (*dukkha-sacca*). Its cause was pointed out by the Buddha as craving (*taṇhā*). It is due to this craving—described as sensual craving (*kāma-taṇhā*), craving for becoming (*bhava-taṇhā*), and craving for non-becoming (*vibhava-taṇhā*) existing in living beings—that the world of beings suffers birth (*jāti*), decay (*jarā*), and so forth for an infinite time in saṃsāra. The state of having eliminated this craving (*taṇhā*), of having appeased this craving (*taṇhā*), is indeed called Nibbāna. That extinguishment and the path leading to it is the Eightfold Path, namely *sammā-diṭṭhi* (right view), *sammā-saṅkappa* (right intention), *sammā-vācā* (right speech), *sammā-kammanta* (right action), *sammā-ājīva* (right livelihood), *sammā-vāyāma* (right effort), *sammā-sati* (right mindfulness), and *sammā-samādhi* (right concentration). Thus, by completing this path—by completing it supramundanely—one is able to be released from the entire suffering (*dukkha*) of saṃsāra. That is how it is shown.</p>
+<p>When we contemplate this a bit more carefully, what is called "right wisdom" (*sammā-paññā*) here is a capacity to comprehend and realize that exists within all of us. However, this wisdom is not something to be acquired through reasoning and logic (*tarka*). It must be developed through meditation (*bhāvanā*). Everyone makes a certain effort in practicing the Noble Eightfold Path. That is a somewhat piecemeal effort. Step by step, they try to practice that Eightfold Path to the best of their ability. But there are various twists and distortions in it. That is why it is shown as a separate wholesome action called "straightening one's view" (*diṭṭhijju-kamma*). An ordinary worldling (*puthujjana*) makes an effort to straighten their view.</p>
+<p>The Eightfold Path is not fully present in an ordinary worldling (*puthujjana*). It has twists and distortions. What they do is make an effort to align and straighten it. Such an effort to align it becomes successful when meditation reaches its culmination, when it bears fruit. Established in virtue (*sīla*), having developed concentration (*samādhi*), if at some point one realizes the truth through insight (*vipassanā*), it is at that moment that the Noble Eightfold Path—which is described in the Dhamma as the supramundane path (*lokuttara-magga*)—is realized. Indeed, mundanely, one practices it in a piecemeal fashion; however, on the supramundane path, it is said that all eight factors arise simultaneously in a single mind-moment. All eight factors arise in a single mind-moment, which is extremely brief. It is mentioned that path-concentration (*magga-samādhi*) arises as a momentary concentration (*khaṇika-samādhi*). This is an extremely profound matter. One can understand to some extent that although right view (*sammā-diṭṭhi*) leads the way, the other factors may be scattered in different directions. They have many twists and distortions. When these are aligned and straightened, this right view (*sammā-diṭṭhi*) ultimately develops and becomes right vision (*sammā-dassana*).</p>
+<p>That is precisely what occurs at the moment of path-knowledge (*magga-ñāṇa*). That is why the Buddha declared this Noble Eightfold Path to be a straight path. One has to straighten this. It manifests as perfectly straight at that supramundane level—for the first time at the stage of Stream-entry (*sotāpanna*). Why is this straightening necessary? A powerful mass of defilements (*kilesa*), a mountain of defilements, is deposited within this mental continuum (*citta-santāna*). It completely covers it, like a thick layer of rust. This cannot be cut away by ordinary thinking power. It can only be cut away by the concentration of the path-consciousness (*magga-citta-samādhi*). The supramundane mind is an immensely powerful concentration. In terms of meditation, the absorptions (*jhāna*)—described as the first absorption, second absorption, and so on—are indeed very powerful minds. Yet, a supramundane path-concentration is even more powerful than those ordinary absorption-minds. It is through this that these defilements (*kilesa*) can be cut away. That is why it is stated: "*Yaṃ buddhasettho parivannayī suciṃ, samādhimānantarikaññamāhu, samādhinā tena samo na vijjati*"—indicating that this supramundane concentration is so powerful and mighty that no other concentration can be compared to it. This power is obtained because all eight factors come together, and in a single moment, right view (*sammā-diṭṭhi*) arises as right vision (*sammā-dassana*). Through this, at the stage of the path of Stream-entry, those powerful defilements are broken at one level, leaving at most seven lifetimes. At the second stage of Once-returner (*sakadāgāmi*), it is reduced further so that one returns to this world only once more. At the stage of Non-returner (*anāgāmi*), one goes to the Brahma-world and ends it there. Finally, at the stage of Arahantship, one is completely released from all saṃsāric suffering (*dukkha*) such as birth (*jāti*), aging and death (*jarāmaraṇa*), and sickness; having broken that karmic force, one is brought to the state of non-arising. That is what is called release from all saṃsāric suffering (*dukkha*). Therefore, this meritorious crowd should reflect that there is a profound aspect to this taking of refuge. Otherwise, one might generally think that just because we say "*Buddhaṃ saraṇaṃ gacchāmi, Dhammaṃ saraṇaṃ gacchāmi, Saṅghaṃ saraṇaṃ gacchāmi*," we are all Buddhists and all our work is complete. However, here we generally use the term *saraṇāgamana*. If we consider *saraṇāgamana* according to the grammar of the language, it means "arriving at a refuge," "attaining protection." Yet, in truth, *saraṇāgamana* itself is "going in search of refuge."</p>
+<p>So, this journey in search of refuge is completed through the realization of the Four Noble Truths. The proper term is the "going to the three refuges"—going for refuge to the Triple Gem. The target, the end of this taking of refuge, is Nibbāna. The journey up to that point is indeed something that must begin with faith (*saddhā*). Now, let us next reflect on this faith (*saddhā*). Here too, we know that to develop the recollection of the Buddha (*buddhānussati*), the recollection of the Dhamma (*dhammānussati*), and the recollection of the Saṅgha (*saṅghānussati*), a certain faith (*saddhā*) must arise within us. For one who lacks it—one who has taken only to logic and argument—there is no meaning visible in this. To the extent that it is felt in the heart, that abundance of qualities—the qualities of the Buddha, the qualities of the Dhamma, and the qualities of the Saṅgha—must penetrate the mind.</p>
+<p>For such a person, next, as recollection of the Buddha (*buddhānussati*)—which means contemplating, recollecting the Buddha's qualities over and over; recollection of the Dhamma (*dhammānussati*), which means repeatedly contemplating and bringing to mind the qualities of the Dhamma; and recollection of the Saṅgha (*saṅghānussati*), repeatedly bringing to mind the qualities of the Saṅgha. Through such recollection, a certain development takes place within this person's character. One who constantly contemplates virtue becomes like an ocean of virtue. In short, it is mentioned in the scriptures regarding a person who constantly practices the recollection of the Buddha (*buddhānussati*) that they become just like the fragrant chamber (*gandha-kuṭi*) of the Buddha. The person who constantly contemplates the Buddha's qualities becomes like the fragrant cell (*gandhakiḷi*), the fragrant chamber, where the Buddha resides. Because when one constantly develops that mass of qualities, there is no room for unwholesome states (*akusala*). There is no room for unwholesome states to enter. One constantly lives in virtue itself—the qualities of the Buddha, the qualities of the Dhamma, the qualities of the Saṅgha. It is the very protection obtained from this that is mentioned in suttas like the *Dhajagga*.</p>
+<p>When recollecting the qualities of the Buddha, if there are certain karmic forces (*kamma-vega*) about to ripen, their ripening force is also averted. Furthermore, because the most powerful principle in the world is the principle of truth, by the power of truth, a certain force from the universe is also added to it. One might call it invisible. However, it is not an occult/mysterious force of the kind the ordinary world imagines. In the past, the aforementioned brahmin Aggidatta said that in trees, rocks, mountains, and places considered as shrines, there exists some occult force through which suffering can be ended. But what is spoken of here is not such a thing. By contemplating the qualities of the Buddha, Dhamma, and Saṅgha, and bringing them to mind, one generates their power within oneself. Through that power, those karmic forces are worn away, and one receives a certain relief, even a limited relief in daily life. That is why the Buddha spoke of the ordinary world as "*manussā bhayatajjitā*"—it is the ordinary nature of people to live driven by fear in the face of hazards and disasters that come in daily life. At that moment, if one contemplates the qualities of the Buddha, Dhamma, and Saṅgha, one can obtain a substantial Dhamma-comfort through that Dhamma-power. Moreover, a capacity to withstand those incoming hazards is also developed.</p>
+<p>Often, we are agitated and troubled by the disasters that come our way because our minds are not prepared to accept them. However, when we keep that mass of qualities regarding the Buddha-gem, Dhamma-gem, and Saṅgha-gem sustained in our minds, a capacity to withstand those disasters is also developed in the mind. By that too, the power of those disasters is broken. Not only that, through that very Dhamma-power, those karmic forces are worn away. This is the kind of Dhamma-principle that is present here. Therefore, one should not think wrongly: "At the beginning, it was said that people driven by fear go seeking protection in mountains, forests, trees, and shrines, and that this is not a refuge, not a protection." Looking at these verses, someone might say, "If so, are not these Bodhi-puja and stupa-worship performed by some Buddhists also wrong-viewed (*micchā-diṭṭhi*) things like that?" There is a point that needs to be clarified there.</p>
+<p>In this day and age, we hear some people who follow that line of logic saying, "Those are empty things." They say it is the work of undeveloped minds. However, what we must understand here is that the journey to Nibbāna begins with faith (*saddhā*). The meaning of the word *saddhā* is "establishing the heart." Therefore, if a person has a heart, some development must occur regarding it as well. If one develops intellect (*buddhi*) alone, an imbalanced development occurs within that person. We know that even when a fruit ripens, there is a difference between it ripening well or becoming stunted/withered. If it does not ripen well, if there are some deficiencies, it becomes stunted. Similarly, those who take intellect alone, disregarding feeling—not that they have no feeling, and not that they have no heart—but they sometimes hold rigidly to intellectualism, applying logic, and regard things like stupa-worship as things done by foolish people. However, in our Dhamma, it is shown that the stupa-worship in this dispensation is done with a profound meaning. You devotees have heard that there are three types of shrines (*cetiya*): bodily relics (*sārīrika*), items of use (*pāribhogika*), and memorial symbols (*uddesika*).</p>
+<p>Shrines in which the bodily relics of the Buddha are enshrined are *sārīrika*; next, the Bodhi tree which he associated with, his alms-bowl relic, etc., are *pāribhogika*; next, *uddesika* refers to Buddha-statues and images made in his honor—these are symbols of the Buddha, objects that assist in the recollection of the Buddha (*buddhānussati*) and in remembering the Buddha's qualities. It is by associating with these that humans purify, inspire, and gladden their minds. Therefore, if someone treats such an object with contempt, or destroys such a thing, saying, "This is the work of fools, there is no use in this, it is just a pile of stones and bricks," that person commits a grave unwholesome deed (*akusala*). It is due to a lack of understanding regarding wholesome and unwholesome actions that some people undervalue these, calling them foolishness done out of faith (*saddhā*). However, through this, the wise, meritorious person regards it as part of Buddha-worship itself, used to bring the Buddha to mind. We know that in daily life, people who live in houses use photographs or other symbols to remember their deceased relatives or other loved ones. Even those intellectualists do so. But when we come to this point, we must understand that to bring to mind the Buddha who is no longer physically alive, we need certain objects and assistance. It does not always come to our minds automatically. When we see it, that faith (*saddhā*) arises within us. That is where the beginning lies. That is why such objects have been used for so long.</p>
+<p>Next, those offerings (*pūjā*) are made as an expression of the response that arises upon bringing the Buddha to mind. Regarding these too, some people accumulate unnecessary unwholesome karma (*akusala*) by criticizing them. That faith (*saddhā*) is something another person cannot understand. That person's faith—even the Buddha remained equanimous (*upekkhā*) toward the way different individuals express their faith. Yet, through that, a spiritual development occurs within that person. If one insults it or destroys those objects, one commits a grave unwholesome deed (*akusala*). That is why we expressed these points, because there is a possibility of misunderstanding this sermon.</p>
+<p>Therefore, one must contemplate that the things that assist in this taking of refuge, the taking of refuge in the Triple Gem, are to daily sustain and deposit in one's mind this mass of qualities of the Triple Gem as recollection of the Buddha (*buddhānussati*), recollection of the Dhamma (*dhammānussati*), and recollection of the Saṅgha (*saṅghānussati*). Why is the Triple Gem important? Because for this journey of ours, the Buddha is our Teacher. Next, why is he our Teacher? Because he declared a certain Dhamma. That is why we said that the Triple Gem fully became manifest on the Esala full-moon Poya day. The collection of Dhamma discourses that began with that auspicious Dhamma sermon starting with the *Dhammacakkappavattana Sutta* is what we consider as the Dhamma Gem. Next, that Dhamma Gem can be put into practice; if it were something that could not be put into practice, the Saṅgha Gem would be of no use to us. What is demonstrated through the Saṅgha Gem is that this Dhamma can be practiced, and its practicality.</p>
+<p>Next, if we consider this entire practice—or this supramundane practice—as a great highway, the Great Saṅgha Gem of the eight noble individuals (*aṭṭha-ariya-puggala*) is like eight lamp-posts or lampposts. Those respective stages demonstrate that this or that stage can be attained—the stage of Stream-entry, Once-returning, and so on—giving that signal of possibility to the world. That is why the qualities of the Saṅgha are important, because of that richness of qualities they have attained. Along with this is the quality of "*Arahaṃ*"—"worthy of offerings," meaning the quality of being fit to receive offerings. When we constantly say that the Buddha is one worthy of offerings, our mind naturally says, "Ah, we must offer whatever we can." The cleanest, most naturally pure thing that nature constantly provides to the world is the flower. That is why, instead of the celestial flower offerings (*parasatu*) made by deities, we, according to our capacity, make offerings with wild flowers plucked from the forest. In this way, each person makes some offering to the Buddha according to the level of their faith (*saddhā*).</p>
+<p>The same applies to the offerings made to the Dhamma and to the Saṅgha. Through this, what do we do? We cultivate that quality of faith (*saddhā*) within. Where there is no moisture of faith (*saddhā*), there is no cultivation of virtuous qualities. Some people go shopping with money in their pockets. They go from shop to shop, peering through the glass windows, but they do not buy anything. They return home empty-handed. There are many such people in the world. They poke their noses in everywhere, but they derive no benefit. They have no real faith (*saddhā*); faith (*saddhā*) does not truly settle anywhere. That is why if one wants to utilize this Dhamma to end saṃsāric suffering (*dukkha*), one must have this faith (*saddhā*). That is why the Buddha declares: "*dukkhūpanisā saddhā*" (suffering is the proximate cause of faith). For faith (*saddhā*) to arise, some level of understanding of suffering (*dukkha*) must occur. The Buddha has declared that faith (*saddhā*) has suffering as its support. Even in society today, we can see some people who have absolutely no interest in the Dhamma, and we meet many such people even in these times. Through those who come to discuss with us, we learn that initially their lives followed that aforementioned intellectualism, or they went searching for other things. While going on like that, when crises such as illnesses or domestic troubles come upon them, they realize: "This life is not a bed of roses." It is full of terrifying suffering (*dukkha*) and hardships, and one does not know at what moment this life will be lost.</p>
+<p>Next, a certain level of understanding regarding suffering (*dukkha*) arises. They think: "This is indeed what the Buddha has explained better than me, and more deeply than I could comprehend." Then, they understand that Truth of Suffering (*dukkha-sacca*) to a certain extent. Next, they understand: "Is not the cause of this suffering (*dukkha*) my own craving (*taṇhā*)?" They realize: "To the extent that craving (*taṇhā*) is reduced, this suffering (*dukkha*) is also reduced, is it not?" That is indeed the Four Noble Truths.</p>
+<p>Even if one reflects on one's own life this very day, one can understand it to a certain extent; that is why there is right view (*sammā-diṭṭhi*). One does not have to wait until becoming a Buddha or an Arahant. One can realize this Four Noble Truths—the suffering (*dukkha*) of saṃsāric existence—at one's own level. Some people wait until suitable opportunities arise. For those who have cultivated spiritual perfections (*pāramī*) in past saṃsāra and have traveled far on this path, there is no need for such a massive revolution, disaster, or crisis to occur. Even before that, some wake up. Some wake up on their own in the morning, some need alarm clocks, some do not even wake up with that but wake up when a bomb explodes, and some do not wake up even when a bomb explodes.</p>
+<p>No. Therefore, we must reflect that each individual's saṃsāric intellect is a different thing altogether. It is not like mundane intellect. Sometimes, the saṃsāric intellect can be matured even in a seven-year-old child. Such are those who, using the skin-pentad meditation subject (*taca-pañcaka-kammaṭṭhāna*)—"*kesā, lomā, nakhā, dantā, taco*"—attain Arahantship at the very moment their hair is shaved and they are ordained. Having understood the suffering-nature and repulsive nature of the entire body, and the suffering-nature of saṃsāra and the world, they realize these Four Noble Truths. Therefore, saṃsāric intellect in the world is one thing, and the intellectual level the ordinary world thinks of is another. It is that mundane intellect that is used to pass exams and such.</p>
+<p>The person with sharp saṃsāric intellect thinks: "This is not a journey to be traveled half-heartedly." We daily refer to this in terms of the intellectual side and the emotional side, which exist in everyone. Because we need physical concepts to represent them, we say "the brain and the heart." Even though we express it that way, everyone has an intellectual side and an emotional side. If one develops the intellect alone without purifying that emotional side and without paying attention to it, one becomes cunning and deceitful. That is what is shown in the Dhamma. In some instances, it is shown: "*balava-saddho manda-pañño*"—one who is strong in faith but weak in wisdom goes to the side of delusion. One's faith is high but wisdom is low; such a person turns toward the foolish side. On the other hand, it is said that when faith is low and wisdom—or the power of realization, the intellectual level—is high, such people go to the deceitful/cunning side. Such people extremistically reject all these things, making disparaging remarks about stupa-worship and efforts made to develop the recollection of the Buddha (*buddhānussati*), thereby committing unwholesome deeds (*akusala*). Therefore, one must be careful about this as well.</p>
+<p>Therefore, through this sermon, we see the value of this taking of refuge. Indeed, in this crisis-ridden era, we see in society that people look in all directions, hoping for pacification rituals (*śānti-karma*) to comfort their minds during their difficulties. This is an era where people run here and there, in all directions. However, as Buddhists, if we have come to recognize the Triple Gem—whether through parents or through books—there is no use in running here and there anymore. Regarding taking refuge in the Triple Gem, the Buddha has declared with absolute emphasis, concluding this series of verses: "*Etaṃ kho saraṇaṃ khemaṃ, etaṃ saraṇamuttamaṃ, etaṃ saraṇamāgamma, sabbadukkhā pamuccati.*" It is not that other refuge mentioned earlier; this refuge is the supreme refuge, the secure refuge. It is by seeking such a refuge that one can be released from all suffering (*dukkha*).</p>
+<p>Thus, that journey begins by hearing the Dhamma in that manner, comparing it with the experiences of one's daily life, and attaining a certain understanding: "This is acceptable; this indeed is the true path." From there, one must move forward. One must go right up to direct realization. When it is said "*sammā-paññāya passati*" (sees with right wisdom), it means one must develop wisdom for that purpose. That journey is not an ordinary journey traveled on foot. It is traveled along those steps called virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*). Or in other words, through *sammā-diṭṭhi*, *sammā-saṅkappa*, and so on of the Noble Eightfold Path. There itself we can see why it is called a path. We can see this when we reflect a little on the Noble Eightfold Path.</p>
+<p>What is present there as steps—these steps are not the kind of steps we think of in the world. What is called right view (*sammā-diṭṭhi*) is shown. The Buddha has declared that in one who has right view, right intention arises: "*Sammādiṭṭhissa sammāsaṅkappo pahoti*". That occurs naturally. When right view (*sammā-diṭṭhi*) develops well, when right vision is properly cultivated, right thoughts arise. Next, it is shown in the same way, connecting one factor to another: when right thoughts arise, that person's mind inclines to utter right words. When the utterance of right words is purified, one is directed toward right courses of action. When right courses of action are completed, as one eliminates the defilements (*kilesa*) within oneself and corrects deficiencies, one's very livelihood—the true livelihood, the way of living—is also corrected. In the effort made to correct that way of living, a fourfold effort (*vīriya*) is developed, which consists of: not giving room to defilements (*kilesa*) that may arise within oneself, eliminating existing defilements (*kilesa*), bringing close unarisen wholesome qualities (*kusala-dhamma*), and developing existing wholesome qualities (*kusala-dhamma*).</p>
+<p>To prevent the arising of unarisen unwholesome states, to abandon arisen unwholesome states, to produce unarisen wholesome states, and to stabilize arisen wholesome states. In this way, the fourfold effort develops as right effort (*sammā-vāyāma*). In applying that effort, as right mindfulness (*sammā-sati*) is applied in that manner, right mindfulness—the proper mindfulness—develops. The stabilization of that mindfulness is what is called concentration (*samādhi*). That is why we stated that when this Noble Eightfold Path, from right view (*sammā-diṭṭhi*) right up to concentration (*samādhi*), has its twists straightened out and is aligned, it is at that moment that a supramundane path-knowledge (*lokuttara-magga-ñāṇa*) arises as right vision (*sammā-dassana*). It is through that path-knowledge (*magga-ñāṇa*) that one breaks through those thick, dense levels of defilements (*kilesa*), that darkness of ignorance (*avijjā*), and is able to realize Nibbāna through the light of wisdom.</p>
+<p>Certain teachers have illustrated this with two excellent similes. There are two valuable similes that can encompass all of this. One is the lighting of a lamp. When a lamp is lit—it is compared here to the Four Noble Truths—it is said that four things occur simultaneously. We know that when a lamp is lit, the wick burns down to a certain extent; likewise, the darkness is dispelled; the light spreads; and the oil is consumed, decreasing bit by bit. These four similes are compared to the Four Noble Truths. Like the burning of the wick, the understanding of suffering (*dukkha*) develops gradually. Like the dispelling of darkness, craving (*taṇhā*) is abandoned (*pahīṇa*), decreasing bit by bit. Like the spreading of light, the Noble Path (*ariya-magga*) is developed. Like the consuming of the oil, the levels of defilements (*kilesa*) are reduced, and Nibbāna is realized.</p>
+<p>Another simile is given concerning the rising of the sun. When the sun rises, with the support of that light we see forms. Next, as the sun rises, darkness is dispelled to a certain extent; likewise, light spreads; and due to the sun's warmth, the cold is also reduced. This is compared to: just as we see forms when the sun rises, we gradually understand this Truth of Suffering (*dukkha-sacca*) through this light of wisdom. With the arising of the sun, next, darkness is dispelled. Similarly, craving (*taṇhā*) is reduced to a certain extent. The spreading of light is the development of the path (*magga*). Finally, like the reduction of cold, the levels of defilements (*kilesa*) are reduced, and the realization of Nibbāna is attained.</p>
+<p>Cessation (*nirodha*) is compared to the Four Noble Truths in this way through similes. Whichever way it is explained, it is through this wisdom—right wisdom—that the defilements (*kilesa*) are ultimately dried up and destroyed. Having appeased the defilements (*kilesa*), one is able to be released from the entanglement of karma (*kamma*) that causes this saṃsāra. Why is it that we are born in this saṃsāra for such a long time, even if we do not wish for it? Reflect on this a little: in our mental continuum (*citta-santāna*), there exist preparations (*saṅkhāra*)—a nature of preparing and constructing things due to delusion and ignorance (*avijjā*)—accumulating karma (*kamma*). We accumulate karma (*kamma*), whether wholesome (*kusala*) or unwholesome (*akusala*). There is a nature of those accumulated karmas to give results; that is a natural law. If something has been accumulated, one must experience its results. The journey between that karma and its result is what we call the saṃsāric journey. In it, we do not experience only the pleasures we hope for, but we have to experience a mass of suffering (*dukkha*) as the result of the things we have done. Even if there were no other additional suffering (*dukkha*), there is the suffering (*dukkha*) rooted in birth (*jāti*). If one is born, from that point on, one decays, is harassed by illnesses, and eventually must die. That is the greatest fear. In this way, a massive crowd of suffering (*dukkha*) comes as the suffering of birth (*jāti-dukkha*).</p>
+<p>So, release from this entire mass of suffering (*dukkha*) is possible only through those supramundane path-knowledges (*lokuttara-magga-ñāṇa*) we mentioned: the supramundane path-knowledges of Stream-entry, Once-returning, Non-returning, and Arahantship. Therefore, properly understanding this Triple Refuge, may this meritorious crowd seek protection only in the Triple Gem on this valuable Poya day, without searching for other protections. To strengthen this Triple Gem, may they engage in cultivating virtue (*sīla*), concentration (*samādhi*), and wisdom (*paññā*), and in practicing meditation, which assist in attaining that supramundane right wisdom (*sammā-paññā*). May this listening to the Dhamma definitely assist them in this very life to be freed from all saṃsāric suffering (*dukkha*) such as birth (*jāti*), decay and death (*jarāmaraṇa*), sickness, and death (*maraṇa*), and to be comforted by the supreme, deathless, great Nibbāna! May those qualities of faith (*saddhā*), effort (*vīriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*) that arise through this listening to the Dhamma become Dhamma-powers (*bala-dhamma*). Through association with good friends (*kalyāṇa-mitta*), making this human existence obtained during a rare era of a Buddha's appearance fruitful, may this listening to the Dhamma definitely be a cause and support for this meritorious crowd to be comforted by the deathless, great Nibbāna!</p>
+<p>Likewise, may this mass of merit we accumulated today through preaching the Dhamma and listening to the Dhamma be shared with the deities who protect the Dispensation, as well as our deceased relatives, and any beings from Avīci up to Akaniṭṭha who wish to rejoice in these merits! May they all rejoice in these merits and realize the supreme, deathless, great Nibbāna through whichever Bodhi (enlightenment) they aspire to! Holding that aspiration, let us share merits by reciting the verses in this manner.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_050.html" class="doc-btn">← Previous Sermon (050)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_052.html" class="doc-btn">Next Sermon (052) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

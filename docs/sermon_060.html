@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 060 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_059.html" class="doc-btn">← Previous Sermon (059)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_061.html" class="doc-btn">Next Sermon (061) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 060</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_060_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_060_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_060_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #60</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.177)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Manujassa pamattacārino, taṇhā vaḍḍhati māluvā viya; So plavati hurā huraṃ, phalamicchaṃva vanasmiṃ vānaro. Yaṃ esā sahatī jammī, taṇhā loke visattikā; Sokā tassa pavaḍḍhanti, abhivaṭṭhaṃva bīraṇaṃ. Yo cetaṃ sahatī jammiṃ, taṇhaṃ loke duraccayaṃ; Sokā tamhā papatanti, udabindūva pokkharā. Taṃ vo vadāmi bhaddaṃ vo, yāvantettha samāgatā; Taṇhāya mūlaṃ khaṇatha, usīratthova bīraṇaṃ; Mā vo naḷaṃva sotova, māro bhañji punappunaṃ. Karotha buddhavacanaṃ, khaṇo vo mā upaccagā; Khaṇātītā hi socanti, nirayamhi samappitā.</p>
+<p>Pamādo rajo, pamādanupatito rajo; Appamādena vijjāya, abbahe sallamattano ti.</p>
+<p>From:</p>
+<p>Verses 334-337 from the Taṇhāvagga (Chapter on Craving) together with Verse 315 from the Nirayavagga (Chapter on Hell) of the Dhammapada</p>
+<p>Dear Listeners,</p>
+<p>The Buddha, the Teacher of the Three Worlds, pointed out that it is because of *Taṇhā* (Craving) that we journey through this round of rebirths (*saṃsāra*), being born and dying. Precisely because it is the primary cause of renewed existence (*punarbhava*), *taṇhā* is designated by the term *ponobhavikā* [leading to renewed existence]. Until *taṇhā* is uprooted, one runs panting through this *saṃsāra*. What is shown by this series of verses chosen as our theme today is the nature of *taṇhā*—its disadvantageous side.</p>
+<p>According to what is explained in the Commentary regarding the background story related to the Māluṅkyaputta Thera Gāthā in the Theragāthā Pāli, these verses were preached by the Great Arahant Māluṅkyaputta. The account concerning him is as follows: This Venerable Māluṅkyaputta was born into a high-class family in Sāvatthi. He was known as Māluṅkyaputta, derived from his mother's name, Māluṅkyā. Having lived in the household life for some time, he became disillusioned with it, went forth from the home life, and received ordination among the wanderers (*paribbājakas*). Having stayed among the wanderers for some time, on a certain occasion he met the Buddha, heard the Dhamma, went forth under him, developed insight (*vipassanā*), and attained Arahantship. After attaining Arahantship, out of compassion for his relatives, he visited his birthplace or former home. His relatives served him with delicious food and drinks and offered alms. At the same time, hoping to entice the Venerable Thera back to the household life, they gathered and piled up their family wealth before him and invited him, saying: "All of this belongs to the Venerable Sir. May you return to the household life, become a layman, and support a wife and children with this wealth." At that moment, according to the Commentary, he rose into the air and declared the disadvantageous side of *taṇhā* through these verses. In fact, some of these verses are also recorded in the Dhammapada as the Buddha's own words. The meaning of these few verses is extremely deep. Let us try to understand them generally.</p>
+<p>*"Manujassa pamattacārino, taṇhā vaḍḍhati māluvā viya"* — For a person who behaves negligently, *Taṇhā* (Craving) grows like a *māluvā* creeper.</p>
+<p>*"So plavati hurā huraṃ, phalamicchaṃva vanasmiṃ vānaro"* — He leaps from life to life in *saṃsāra*, like a monkey seeking fruit in a forest jumping from tree to tree.</p>
+<p>*"Yaṃ esā sahatī jammī, taṇhā loke visattikā"* — Whomever this wretched, sticky *taṇhā* in the world—known as *visattikā* [clinging / spreading]—overcomes,</p>
+<p>*"sokā tassa pavaḍḍhanti, abhivaṭṭhaṃva bīraṇaṃ"* — his sorrows multiply like *bīraṇa* grass after a downpour of rain.</p>
+<p>*"Yo cetaṃ sahatī jammiṃ, taṇhaṃ loke duraccayaṃ"* — But whoever overcomes this wretched *taṇhā*, so difficult to escape in the world,</p>
+<p>*"sokā tamhā papatanti, udabindūva pokkharā"* — his sorrows fall away from him, like drops of water from a lotus leaf.</p>
+<p>*"Taṃ vo vadāmi bhaddan vo, yāvantettha samāgatā"* — Therefore I say to you, blessings to all of you who have assembled here!</p>
+<p>*"mūlaṃ khaṇatha usīratthova bīraṇaṃ"* — Dig up the root of *taṇhā*, just as one digs up the root of the *bīraṇa* grass seeking its fragrant root (*usīra*).</p>
+<p>*"mā vo naḷaṃva sotova, māro bhañji punappunaṃ"* — Do not let Māra break you again and again, like a torrent breaking reeds. Do not allow yourselves to be swept away by that torrent of *taṇhā*, nor let Māra destroy you repeatedly through repeated birth and death.</p>
+<p>Having declared so, he next says: *"Karotha buddhavacanaṃ, khaṇo vo mā upaccagā, khaṇātītā hi socanti, nirayamhi samappitā"* — Act according to the word of the Buddha. Let not the supreme moment pass you by, for those who miss the moment sorrow when they are consigned to hell.</p>
+<p>*"Pamādo rajo, pamādanupatito rajo"* — *Raja* means dust. Negligence generates and increases the dust of defilements. Therefore, through diligence (*appamāda*) and *vijjā* [wisdom / understanding / clear vision], uproot that dart of *taṇhā* from oneself: *"abbahe sallamattano'ti"*.</p>
+<p>This is the meaning of those verses. What I have stated is their general meaning. Even the similes contained in these verses are extremely valuable.</p>
+<p>That *māluvā* creeper is a parasitic plant that grows on trees. One often sees a *māluvā* creeper on trees. It starts small and eventually covers and destroys the tree. That is the simile used here. The *taṇhā* of a negligent person grows in the same way.</p>
+<p>Next, *"So plavati hurā huraṃ, phalamicchaṃva vanasmiṃ vānaro"* means that just like a monkey wishing to eat fruit leaps from tree to tree in the forest, it carries that person from existence to existence, from *bhava* to *Bhava* (Becoming).</p>
+<p>The next simile: *"Yaṃ esā sahatī jammī taṇhā loke visattikā"*—whomever is overcome by this wretched, sticky *taṇhā* in the world, that person's sorrows grow like a *bīraṇa* grass bush on which rain has fallen. On the other hand, if someone subdues that *taṇhā*, his sorrows roll off him like water drops on a lotus leaf. Thus, it is explained through various similes.</p>
+<p>Next, as an invitation to eliminate that *taṇhā*, it says: *"Taṃ vo vadāmi bhaddan vo, yāvantettha samāgatā, taṇhāya mūlaṃ khaṇatha bīraṇaṃ"*. The tuber of this *bīraṇa* plant is called *usīra*. Some identify it as vetiver, and in some regions, it is called *sēra* [lemongrass]. Just like digging up this plant for its *usīra* root, dig up the root of *taṇhā*. That is what is said through various similes. We can discuss more details related to these Dhamma matters in due course.</p>
+<p>Before that, there are many accounts concerning the Great Arahant Māluṅkyaputta in the Sutta discourses. Let us mention some. Regarding him, the following is mentioned in the Saṃyutta Nikāya: On one occasion, the Venerable Māluṅkyaputta approached the Blessed One and made this request: "Venerable Sir, please teach me the Dhamma in brief. With the help of that teaching, I shall go into seclusion, dwell alone, put forth effort, and realize Arahantship." When he said this, the Blessed One remarked: "Māluṅkyaputta, what am I to say to the young, newly ordained monks when you, who are old and advanced in years, come and ask for a brief teaching?" The Buddha said this as a form of mild admonishment. Then the Venerable Māluṅkyaputta said: "Venerable Sir, please preach to me a brief discourse. In that way, I shall become an heir of the Blessed One's teaching."</p>
+<p>Next, before giving that brief sermon, as if to test his suitability, the Buddha asked Ven. Māluṅkyaputta: "What do you think, Māluṅkyaputta? Do you have any desire, lust, or affection for forms cognizable by the eye that you have not seen before?" Similarly, one can think of the others: forms, sounds, smells, tastes, tangibles, and thoughts—the objects met at the six sense-doors. "Do you have any passion, affection, or desire to experience them?" He replied in the negative to all of these. It was then that the Buddha delivered that brief sermon.</p>
+<p>To express this in English: "Then, Māluṅkyaputta, regarding things seen, heard, sensed, and cognized—that is, *diṭṭha, suta, muta, viññāta*—in the seen there will be only the seen, in the heard there will be only the heard, in the sensed there will be only the sensed, in the cognized there will be only the cognized. Then, Māluṅkyaputta, you will not be 'by' that. When, Māluṅkyaputta, you are not 'by' that, then, Māluṅkyaputta, you will not be 'in' that. When, Māluṅkyaputta, you are not 'in' that, then you are neither here, nor there, nor in between the two. This itself is the end of *Dukkha* (Suffering)." He delivered this riddle-like discourse. Those devotees who have listened to our previous sermons would know that this is the very same brief sermon the Buddha preached to the ascetic Bāhiya Dārucīriya, which he also preached here to the Thera.</p>
+<p>Now, if we consider the meaning of this brief sermon: those four terms—seen, heard, sensed, and cognized—are in Pali *diṭṭha, suta, muta, viññāta*. What is caught within these four are our six sense bases. That is, the very objects that are the domain of the eye, ear, nose, tongue, body, and mind. Usually, we are accustomed to taking things as "the thing seen," "the thing heard," and so on. Here, the Buddha states that everything coming through these sense bases, that entire mass of objects, is encompassed by these four words: seen, heard, sensed, and cognized. The "sensed" refers to what is experienced through the tongue, body, and nose. So, one can understand "seen" as the objects coming to the eye, and "heard" as the objects coming to the ear. "Sensed" refers to the sensing through the nose, tongue, and body. Lastly, "cognized" refers to the sensing or cognition that comes to the mind.</p>
+<p>So, concerning these, what is preached here is a wondrously brief discourse. Its meaning is that in the seen, it stops at just the seen; in the heard, it stops in that way. What ultimately happens through such stopping is extremely deep. What happens then? According to the Buddha, then "you are not 'by' that." This means you do not make assumptions, conceptualizations, or proliferate regarding them in terms of the seen, heard, sensed, and cognized. To explain this in an understandable way: normally, when something strikes our eye, we take it as "a thing seen." But in reality, there is only a seeing, only a hearing, only a sensing, only a cognizing. Yet we do not understand this. Extremely rapidly, the mind acts, and what was taken as "that seen thing" becomes established through *taṇhā* [craving], *māna* [conceit], and *diṭṭhi* [views]. Through *taṇhā*, we take it as "this is mine"; through *māna*, we take it as "this am I"; through *diṭṭhi*, we take it as a self. It is through this grasping, through getting established, that—now you can understand—one exists "by" that. Once you make that seen thing into your own, then by taking it "from" that, you exist "in" it. You enter into it. We have analyzed this in detail previously so that you can get some idea of it.</p>
+<p>What the Buddha is pointing out is that instead of taking the objects met by our six sense bases—the eye, ear, nose, etc.—exactly as they are, we become established there through the defilements of *taṇhā*, *māna*, and *diṭṭhi*. It is by thus getting established that it is said "you are 'in' it." Once you go inside it, then a "here" is created. When a "here" is created, along with that "here," a "there" also arises. This is what we call duality. So, when something is taken as "here," opposed to it, a "there" is also created. The moment those two are created, there is also an "in-between." Here, the Buddha shows that liberation—complete liberation from *saṃsāra*—lies within these few words. Accordingly, if we do not get established in terms of *taṇhā*, *māna*, and *diṭṭhi* in the seen, heard, sensed, and cognized, and if we do not grasp them as "I" and "mine," then we have no "here." When there is no "here," there is no "there." When those two are absent, there is also no "in-between." Indeed, it is through the story of "here," "there," and the "in-between" that this *saṃsāra* goes on and on. That is precisely why it was said that this itself is the end of *dukkha*.</p>
+<p>It is recorded that upon hearing this advice, Ven. Māluṅkyaputta went into seclusion and very quickly realized Arahantship. Thus, we began this discourse concerning the Great Arahant Māluṅkyaputta with the event that took place after he became an Arahant. However, next, because of matters directly related to *taṇhā*, we also mentioned this passage which was supportive of his Arahantship. But the explanation does not end here. This too is a matter mentioned in the Sutta itself. After the Buddha presented this brief discourse, Ven. Māluṅkyaputta said: "Venerable Sir, I understand the detailed meaning of this brief discourse preached by you in this manner." Here, the Great Arahant presents an explanation like a brief commentary. How does he explain it? He shows it through a series of verses related to the six senses. When we discuss one sense, you can apply it to the others and understand.</p>
+<p>Here, Ven. Māluṅkyaputta says: "Having seen a form with the eye, by grasping an agreeable sign, one's mindfulness (*sati*) is bewildered, and then one engenders lustful thoughts. One experiences feeling (*vedanā*). Through experiencing that feeling, strong greed arises. Then, the mind is defiled by distress and so on. Through that, *dukkha* is next accumulated—that is, the five groups of grasping (*pañcupādānakkhandhā*) are accumulated. This means that through grasping them, they go and accumulate. By such accumulation, one is far from Nibbāna—*ārā nibbānā*, far from Nibbāna."</p>
+<p>Through that verse, the Venerable Thera shows that side of clinging. Just as it was said about the eye and the objects coming to the eye, you can briefly apply this to the objects coming to the ear, nose, tongue, body, and finally, the deepest one, the objects coming to the mind. By taking them as agreeable in that way and by grasping (*upādāna*) them, the groups of grasping (*upādānakkhandha*) that expand *saṃsāra* are accumulated.</p>
+<p>Next, he states the other side: "But if someone establishes mindfulness (*sati*) regarding the objects coming to the eye, and does not develop clinging or lust towards them, that person is liberated from those aforementioned sufferings. Sometimes, that leads to the reduction of the groups of grasping, to their wearing away." What was first mentioned was "accumulation"—through defilements, the groups of grasping are accumulated. Next, through developing dispassion (*virāga*) toward them, they are eliminated, they decrease. In Pali, the terms used are *ācinati* [he accumulates] and *apacinati* [he decumulates/reduces]. Words like *upacaya* [building up] and *apacaya* [wearing down] are also used. The groups of grasping are accumulated because of one's grasping of them and clinging to the feeling (*vedanā*) experienced through the senses. By seeing them right there, and letting in the seen be only the seen, in the heard only the heard, what happens is their wearing away. It is recorded that after these things were said, the Buddha approved what Ven. Māluṅkyaputta had said, saying "Sādhu, Sādhu!" After that, the Thera went and meditated accordingly and quickly attained Arahantship.</p>
+<p>Now, in connection with this, we spoke of the *ponobhavikā* [renewed existence] nature of *taṇhā*, like a monkey leaping from tree to tree. There are many important points in that. If we are to speak of it, the nature of *taṇhā* is to connect one thing to another. There is a very good Sutta to illustrate this. On one occasion, when the Buddha was staying in the Deer Park at Isipatana in Benares, after their alms-round, the Theras assembled in the circular pavilion and discussed the meaning of a verse preached by the Buddha in the Metteyya Sutta of the Pārāyana Vagga, holding a discussion on it. Here is that verse:</p>
+<p>> *"Yo ubhante viditvāna,*</p>
+<p>> *majjhe mantā na lippati;*</p>
+<p>> *taṃ brūmi mahāpurisoti,*</p>
+<p>> *so’dha sibbanimaccagā."*</p>
+<p>This is a deep verse preached by the Buddha, currently found in the Pārāyana Vagga. It is like a riddle. "He who, having known both ends, does not cling to the middle with wisdom—him I call a great man; he has escaped the seamstress here." 'Seamstress' (*sibbanī*) is a name for *taṇhā*. It means he has bypassed the seamstress called *taṇhā*.</p>
+<p>Now, as to the meaning of that verse, six bhikkhus offered six different explanations. I am not going to mention all six here. On this occasion, only the very first explanation is relevant. Actually, when all six explanations were presented to the Buddha, saying, "During our discussion, six different opinions arose like this," the Buddha said that all six were correct. However, he declared that what he himself intended by that verse was the first explanation presented. That is the explanation we are presenting at this moment. During the discussion among the Theras, the question arose: What are the two ends mentioned by the Buddha in this verse? What is the middle? Who is the seamstress called *sibbanī*? That is why those six opinions were presented.</p>
+<p>Only the first opinion is relevant to us here. That first Thera declared: "As I understand it, these two ends are *phassa* [contact] and the origin of *phassa* (*phassa-samudaya*)." There is nothing special to define about *phassa*. The origin of *phassa* means the arising of contact. *Phassa* is one end, and the arising of *phassa* is the other end. The middle is the cessation of contact (*phassa-nirodha*). Looking at this, too, it is like a riddle. *Phassa* is one end, the origin of *phassa* is the second end, and the middle is *phassa-nirodha*, the cessation of contact.</p>
+<p>Next, *sibbanī*, that is, the seamstress, is *taṇhā*. This is worth reflecting upon. It is a complete subject of meditation (*kammaṭṭhāna*) in itself. Although the Buddha said the other explanations were also correct, since he intended the first explanation, we should pay closer attention to it.</p>
+<p>Thus, it shows a certain characteristic of *taṇhā*. Along with this contact and the arising of contact, there is also its cessation taking place extremely rapidly. But we do not see it. Cessation lies in the middle. There is a tendency in this *saṃsāric* being to forget that cessation. That is why it is generally said that *saṃsāric* beings dwell on the side of arising (*samudaya*). On one occasion, the Buddha declared that those living in the fine-material worlds (*rūpa-loka*) and those in the immaterial worlds (*arūpa-loka*)—indeed, all these beings—keep returning to *saṃsāra* and *Bhava* (Becoming) because they do not understand cessation (*nirodha*). This shows that we do not see this cessation, which is the breaking up and vanishing of things. Instead, we connect one thing to another through *taṇhā*. Through *taṇhā*, we only see each contact and the arising of contact. We do not see the cessation of contact. That cessation is the middle. In fact, the essence of this entire Saddhamma is Nibbāna. Nibbāna is called cessation—*nirodho nibbānaṃ*. So, what is unseen by ordinary worldlings is this cessation. Thus, contact and the arising of contact are stitched together. When there is a seamstress, she joins two pieces of cloth and sews them. Likewise, contact and the next arising of contact are joined together while forgetting the cessation of contact, ignoring the *nirodha*. It is through this that one falls under the power of *taṇhā*.</p>
+<p>Now, from the advice given to the Arahant here, as well as from the advice previously given to Bāhiya Dārucīriya, we see that it stops at "in the seen, only the seen." It does not allow it to go beyond. It stops at the mere seeing. Next, it does not allow contact to proliferate into *Vedanā* (Feeling), *taṇhā*, and so forth. Indeed, that is why *taṇhā* was called *ponobhavikā* [leading to renewed existence]. Within *taṇhā* itself, there is a force that creates another existence (*bhava*).</p>
+<p>On another occasion, there is a highly debated Sutta passage. Let us recall it. Once, the wanderer Vacchagotta, illustrating with a simile regarding the story of rebirth, asked about how a flame thrown and spread by the wind has what as its grasping (*upādāna* / fuel) when a person dies. When someone dies, this life ends here; we do not see anything going. Indeed, that is the very question of the whole world: what goes from here? There, the Buddha declares that the flame, thrown and propelled by the wind, clings to another tree. Similarly, within this *taṇhā* there is a nature of *upādāna* [grasping / fuel]. Therefore, the Buddha states that when one discards one body and goes to another body, it is *taṇhā* itself that assists. "*Taṇhā* itself stands as the *upādāna* [grasping / fuel]," he said. Thus, we see that as long as there is *taṇhā*, there is also *upādāna*. Through *taṇhā*, something to grasp is created.</p>
+<p>We can think of it like this. Just as when we talk about a mirage, the vision seen by a deer appears as something helpful for drinking, *taṇhā* connects things again and again. That is one aspect of it—creating another existence (*bhava*) repeatedly. That is precisely why it is also described as *tatratatrābhinandinī*—finding delight here and there—like jumping around from place to place. Because of this, at the moment of death, due to not being satisfied, and because *taṇhā* is present, one wishes for another *bhava*. One wishes for a *bhava* in a subtle manner. How subtle this is, is shown in a statement by the Buddha in a Dhammapada verse:</p>
+<p>> *"Yathāpi mūle anupaddave daḷhe,*</p>
+<p>> *chinno’pi rukkho punareva rūhati;*</p>
+<p>> *evam’pi taṇhānusaye anūhate,*</p>
+<p>> *nibbattatī dukkham’idaṃ punappunaṃ."*</p>
+<p>Just as when the root of a tree remains undamaged and firm, the tree grows again even if its branches are cut down, so long as the underlying tendency of craving (*taṇhā-anusaya*) is not destroyed, this *dukkha* [suffering / unsatisfactoriness] arises again and again in *saṃsāra*. It has been shown in that way.</p>
+<p>Thus, a dangerous side of *taṇhā* is shown. We are analyzing the very words mentioned in the verses. Furthermore, more similes are mentioned in the Dhamma. *Visattikā* refers to the sticky, clinging nature of *taṇhā*. It is also called *lepa* [plaster/glue]. In Sinhala, too, we use the word *lēpa* as in "applying" (*ālēpa karanavā*). *Lepa* means the sticky nature. The Buddha once gave a wonderful simile for this, like telling an ancient story, to the Bhikkhus. This was particularly addressed to the Bhikkhus, though the world too can learn something from it. In the Himalayan forests, there are level regions where both humans and monkeys roam. In such areas, a hunter seeking to catch monkeys hangs some sticky pitch/gum (*lēpa*) on a tree along the path where monkeys travel as a trap. So, a foolish monkey, being greedy by nature, goes and touches that sticky pitch with one hand. When he touches it, it sticks. Next, trying to free it with his other hand, that hand also gets stuck. The Buddha describes it in this way. Next, to free his two hands, he presses one foot against it. That foot also gets stuck in the pitch. Then, to free his hands and foot, he presses his other foot against it. That also gets stuck. Now, both hands and both feet are stuck in this pile of pitch. This is a method of catching monkeys, a kind of trap. Then, the monkey presses his snout/mouth against it to free them. That too gets stuck. In the end, the monkey, stuck in five places, is shot/captured by the hunter and taken away.</p>
+<p>That simile was given to show the *lepa* [sticky] nature of *taṇhā* arising from the five strands of sensual pleasure—eye, ear, nose, tongue, and body. In that way, on various occasions, the Buddha described that sticky nature of *taṇhā*, the world's clinging nature, as *lepa*. Having taught the disadvantageous side in that manner, and on various other occasions, the Buddha showed how *taṇhā* repeatedly creates another *bhava*. This is because there is a nature in *taṇhā* that is never satisfied, like the ocean that is never filled. Since there is no limit to *taṇhā*, it is repeatedly clinging to the next *bhava*. It is also called *nati* [leaning/inclination]. If a mountain range leans towards one side, it will fall to that side. Within *taṇhā* there is a nature that carries the world repeatedly to another *bhava*.</p>
+<p>Next, the root of *taṇhā* has also been declared—to dig up the root of *taṇhā* like digging up the *bīraṇa* bush. What is the root of *taṇhā*? The root of *taṇhā* is shown to be *avijjā* [ignorance] itself. That is why it is said to uproot this root with the help of *vijjā* [wisdom/clear vision]. This *avijjā*, which is the root of *taṇhā*, is sometimes shown as the non-seeing of the *anicca* [impermanent] nature of this eye, the incoming objects, and every phenomenon arising in connection with them. Thus, sometimes it is shown how the world lives within these sense bases. To show this, the Buddha points out the reality as follows: "Bhikkhus, the eye is *anicca* [impermanent], unstable, subject to change. Forms are *anicca*, unstable, subject to change. *Calaṃ*—it is moving, unstable. There is a nature in the eye of becoming otherwise. Forms are the same."</p>
+<p>Next, because of not understanding that *anicca* nature, dependent on those two, *viññāṇa* [consciousness] arises. But the Buddha says *viññāṇa* is also *anicca*. So, the eye is *anicca*, forms are *anicca*. By taking what is *anicca* as permanent, and through the coming together of those two, the illusion called *cakkhu-viññāṇa* [eye-consciousness] arises. That is why *viññāṇa* is called an illusion. Trees and plants do not have it. So, this being with defilements like *avijjā* and *taṇhā* took the eye to be permanent. He took a stand there. Next, without thinking of forms as a mirage, he took a stand there too. Those two came together and arose. But the Buddha says that *viññāṇa* is also *anicca*. Yet, due to not understanding that either, bringing all three together, one constructed something called *phassa* [contact]. There comes that story of *phassa*—*cakkhu-samphassa* [eye-contact]. But the Buddha says that *cakkhu-samphassa* is also *anicca*. The world does not see it. By taking that too as permanent, one creates a sensation—one creates it in terms of *Vedanā* (Feeling). Those too are *anicca*. It is this non-seeing of *aniccatā* [impermanence] that is the cause of our falling under the power of *taṇhā*. Indeed, if one understands the twelve links of *paṭiccasamuppāda* [dependent arising], we see that there are many links prior to *taṇhā*. At the root is *avijjā*. This shows that the world falls under *taṇhā* because they do not know the Four Noble Truths—that is, due to *avijjā*. Without knowing that a mass of *dukkha* is arising, we consider them as permanent. Thus, it shows us that knowing the true nature lies within the perception of impermanence (*anicca-saññā*).</p>
+<p>If one constantly remembers that the eye is *anicca*, forms are *anicca*, the resulting *viññāṇa* is *anicca*, the contact (*phassa*) from the coming together of those three is *anicca*, and the feeling (*vedanā*) arising from it is *anicca*—when one develops the perception of impermanence, such *taṇhā* and so forth cannot accumulate. That is the meaning.</p>
+<p>The Buddha on one occasion declared: "Bhikkhus, when the perception of impermanence (*anicca-saññā*) is developed and cultivated..." If the perception of impermanence is well developed, it destroys all sensual lust (*kāma-rāga*), lust for existence (*bhava-rāga*), and lust for form (*rūpa-rāga*). Now next, there is a certain Sutta discourse related to this *avijjā*, *taṇhā*, and the story of the "dart" (*salla*) mentioned in the final verse.</p>
+<p>If we take the portion relevant to us from a discourse preached by the Buddha to a Licchavi youth on one occasion; a wonderful simile is given there too. The Buddha says: A man was struck by a poisoned arrow. When this happened, his relatives summoned a physician. Here, he is described as *bhisakko sallakatto*. *Sallakatta* means the surgeon. *Bhisakka* means the poison-doctor or physician. So, both are connected. They summon a doctor who knows both general medicine and surgery. The doctor, using an instrument used by surgeons, opens the wound where the arrow struck, and then, if any part of the arrow remains in the body, to locate it—a Pali word is used there, *esanī*, which is a probe used by surgeons to extract a dart—he pulls out the dart with that instrument. Having extracted it, he applies medicine to heal it.</p>
+<p>Next, comparing the simile with the meaning, the Buddha states: that man struck by the poisoned arrow is this worldling, pierced by the dart of craving (*taṇhā-salla*). What is the poison in this dart of *taṇhā*? It is *avijjā* [ignorance]. It is called the poison of *avijjā*. Thus, the word *taṇhā-salla* [the dart of craving] is mentioned in many places. The Buddha is called the destroyer of the dart of craving (*taṇhā-sallassa hantā*). This became a poisoned arrow precisely due to that toxic defect of *avijjā*.</p>
+<p>Next, the instrument used to open the wound is called "Noble Wisdom" (*ariya-paññā*). Next, the probe called *esanī* used to locate the dart is mindfulness (*sati*). That is why it is said that everything is contained within *satipaṭṭhāna* [establishments of mindfulness]. So, opening the wound through Noble Wisdom, and using the probe of mindfulness (*sati*), one locates and extracts that dart.</p>
+<p>Next, who is this surgeon, this physician? It is the Tathāgata. Thus, based on this simile given by the Buddha, one should treat oneself. That is how that verse concluded: *abbahe*—one pulled out one's own dart. That was extracted through the instruments shown according to the surgical and medical principles given by the Buddha. From this, one can understand that the dart of *taṇhā* is pierced within. It is a poisoned arrow. That poison is *avijjā*. So, to extract it, one uses the weapon of Noble Wisdom. Opening the wound and through mindfulness (*sati*), one extracts that arrow from where it was pierced. That is where the perception of impermanence (*anicca-saññā*) is helpful.</p>
+<p>So, that wisdom is on one side. The Buddha has given the world the fundamental understanding to pull out that dart. In fact, the Buddha highlighted the nature of arising and passing away—*udayabbaya*—present in everything in the world. That is "perception of impermanence" (*anicca-saññā*). In two words, it is *udayabbaya*—through arising and passing away. So, that is the basic lesson of insight (*vipassanā*). First, within this perception of impermanence, one sees the arising and passing away of everything. Even realizing this is difficult for the ordinary worldling, because, due to the work of the aforementioned seamstress, they forget the passing away side. The world likes this forgetting very much.</p>
+<p>To tell you an incident from daily life: in this world of fashion, there are clothes and other things you use. Once you buy a more valuable, modern design from the shops for some money and bring it home, the old one goes somewhere and ends up in the rubbish heap. Thus, forgetting the passing away side, they renew it. Worldlings are constantly renewing. *Taṇhā* assists in this. The seamstress *taṇhā* ties knots. What is that knot? Forgetting cessation (*nirodha*). Forgetting that this breaks up. Then, what does the practitioner of insight (*vipassanā*) do? With the help of that fundamental principle given by the Buddha, he sees that everything has a nature of arising and passing away momentarily and very rapidly. To show this, it was said that "this eye exists." From the very beginning of this sermon, "this eye of mine exists." Likewise, "forms exist." "You, devotees, are in front of me." We do not say that they do not exist. But the Buddha says that the eye is also *anicca*, changing moment by moment, *calaṃ*—it is moving. In that way, many words are used there, like *aññathābhāvī* [becoming otherwise]. Words like *aniccaṃ*, *calaṃ*, *vayaṃ*, *vipariṇāmī*, *aññathābhāvī*, etc., are applied to impress this upon the mind. Although none of this is visible to the physical eye known to the ordinary world, this eye also changes extremely rapidly. Next, the thing we took to be "form" also changes in the same way. But we do not realize it. The aforementioned *taṇhā* stitches it together. Even when it is said that *viññāṇa* [consciousness] is also *anicca*, we do not realize that either. That is indeed the deepest point.</p>
+<p>Generally, we said that if we take all four—seen, heard, sensed, cognized—turning back to what was explained earlier, these are the six bases themselves taken as seen, heard, sensed, cognized. Among them, the "seen" is highly gross (*oḷārika*) and coarse. Because even if we look at something and then look away, it seems to still be there, doesn't it? It is still there. How can we say it is not? Although the Buddha says it is not, it remains visible to our physical eye, and we say it exists in that very manner. Even if we are told, when we look once and look away, it remains just as it was. So, how can we say it changes? Thus, looked at in that way, the "seen" is still coarse and gross.</p>
+<p>Next, how about the "heard"? Now, as long as there is an echo of the words I speak, you will hear them. Sometimes we have heard that in vast deserts where no echo can occur, when someone speaks, the words vanish right where they are spoken. Now, you know very well the echo coming from the surrounding hills, don't you? It is like two people speaking. Likewise, in this environment, the sound we make reverberates and returns as an echo. That further assists our hearing. Though it is not as gross as the "seen," the "heard" is also somewhat gross.</p>
+<p>Next, what is more personal and even subtler is found in the "sensed" (*muta*). The "sensed" refers to what is felt by the tongue, nose, and body. Now, just like what Andare did, if someone says "this is delicious," to show that taste to another, he must feed it to him. Otherwise, it is impossible. It is highly personal. It is extremely subtle there. What is sensed by the nose, tongue, and body is extremely subtle. So, searching for their impermanence is harder than the others.</p>
+<p>Next, the "cognized" (*viññāta*) is even harder and subtler. The cognized mind—the story about that mind is said to be a bizarre illusion (*māyā*). There, what are the objects coming to the mind? Not *Dhamma* in the sense of the teachings. If we speak of them as objects, just as forms are to the eye, sounds to the ear, smells to the nose, tastes to the tongue, and touch to the body, so *dhamma* is applied to the mind. If we translate *dhamma*, it means "things that come to the mind." We think the mind is one thing, and the things coming to the mind are another. Those two must collide. We are caught right there. That is what the Buddha preached: *"Manopubbaṅgamā dhammā, manoseṭṭhā manomayā"*. There, *dhammā* means thoughts/objects coming to the mind. But the world thinks that the things coming to the mind exist separately. However, the Buddha says the mind is the forerunner. These are mind-made. Things constructed by the mind. Right there is the work of the magician—the illusion (*māyā*). Yet, the world does not realize it. Taking the thought coming to the mind as separate, making it our own, we get caught in clinging, entanglement, confusion, and *papañca* [conceptual proliferation / prolific conceptualization]. That is the extremely subtle point. It is there that the practitioner of insight gradually extracts the impermanence of the seen, starting from that, and next contemplates the impermanence of the heard. Going even deeper, there is what is personally felt, what is felt by the tongue. That is why it is said that one can realize Nibbāna based on any one of these six sense bases. From that perspective, one can say Nibbāna is at the tip of the tongue.</p>
+<p>That is why in the past, some Bhikkhus are said to have attained Arahantship while taking their meals, by contemplating that contact (*phassa*) felt on the tongue. Likewise, contemplating the contact felt by the eye, even upon seeing the form of a dancing girl, they are said to have attained Arahantship by generating the perception of impermanence (*anicca-saññā*) at that moment. Similarly, one can realize Nibbāna through what is heard by the ear, and through the smell felt by the nose. But the world does not turn in that direction. For one who constantly contemplates those two—arising and passing away—given by the Buddha, as one goes deeper into the understanding of arising and passing away, the breaking-up side (*bhaṅga*) becomes clearer to the practitioner of insight than before. The side of breaking up, which was unseen hitherto. Because as that desire called *taṇhā* fades away, the true nature emerges. The Buddha's word on arising and passing away becomes clear. When, between the two of arising and passing away, the breaking-up side is seen more clearly, that is where knowledge of dissolution—*bhaṅga-ñāṇa*—is shown in insight meditation. To that person, everything is seen as breaking up. Even thoughts are seen to dissolve. Then, it is from those breakups that disadvantages and so forth arise. There lies *mano-samphassa* [mind-contact]. Understanding that the thought coming to the mind strikes the mind is also extremely subtle. Yet, at some point, a space is seen: the mind and the thought strike each other. When one understands that they strike in this way, it is called "in the cognized, only the cognized" (*viññāte viññātamattaṃ*). It is said that the ascetic Bāhiya Dārucīriya attained Arahantship the moment this was said, extremely rapidly.</p>
+<p>This Arahant Māluṅkyaputta also attained Arahantship quickly by depending on this brief advice. From this, we see that beyond stopping at "in the seen, only the seen," next is "in the heard, only the heard," "in the sensed, only the sensed," and finally "in the cognized, only the cognized." This is something so wonderful that it is hard for us to even conceive. The practitioner of insight, at some stage in meditation, understands according to the Buddha's word that both the mind and the thought are *anicca*, subject to change. Instead of saying "heart," let us say "mind" (*manas*) is *anicca*, and the mental object (*dhamma*) coming to the mind is also subject to change. It is when such changing things come together that it is called mind-consciousness (*mano-viññāṇa*). That is what the Buddha means. The beings of this world, even those in the aforementioned fine-material and immaterial worlds, create another *bhava* repeatedly because they do not know cessation (*nirodha*). If they saw cessation, just as in the story of the seamstress: *"yo ubhante viditvāna"*—having known these two ends. One understood contact (*phassa*). One understood the origin of contact. Next, when the mind is established in that cessation of contact—*phassa-nirodha*—that is when one is liberated. One is liberated from the world, freed from the world. This is what is meant by "the end of *dukkha*." We previously mentioned the story of the flame. So, this *taṇhā*—as long as there is unsatisfied desire, incomplete desire, the mind constantly radiates outward. It radiates outward from this body. It grasps whatever is presented by kamma. Be it a mother's womb, an animal's womb, or in hell, the sign presented according to kamma is grasped through *taṇhā* at the moment of death. As long as the underlying tendency of craving (*taṇhā-anusaya*) is present, there is no need to explain further about being reborn. There is no need for a strange life-force to go and plant itself there, as the world thinks. *Taṇhā* is sufficient. That is why it was said that just as a flame is thrown and spread by the wind, as long as *taṇhā* exists, beings of the world construct another *bhava*. This is what we called *ponobhavikā*. Now, one understands here that it is *taṇhā* that creates renewed existence (*punarbhava*). To understand its operation, one must eliminate the aforementioned *avijjā* and bring forth Noble Wisdom (*ariya-paññā*).</p>
+<p>Now, we have presented the meaning of those brief discourses in the verses in various ways. It is possible to explain even further. But if you would at least apply your minds to the similes given by the Buddha, you can understand many things. We wish that this discourse will assist you in walking on this path of insight (*vipassanā-magga*) at your own level in daily life. It is because you understand the fearsomeness of *saṃsāra* that you observe the precepts and practice meditation on an occasion like this. Indeed, this is a time when the fearsome nature of this *saṃsāra* becomes self-evident to oneself, according to the teachings of the Buddha.</p>
+<p>Therefore, as long as we do not eliminate that aforementioned *taṇhā*, no matter how much we say "I will not be born again," that birth belongs to us because of that aforementioned inclination (*nati*). For that reason, one must strive again and again, with the help of the virtue (*sīla*) one guards, through meditations like tranquility (*samatha*) and insight (*vipassanā*), to realize the Noble Wisdom shown by the Buddha, through the penetration of the paths and fruits of Stream-entry (*Sotāpatti*), Once-returning (*Sakadāgāmitā*), Non-returning (*Anāgāmitā*), and Arahantship—and by using *satipaṭṭhāna* and mindfulness (*sati*), may you aspire that this discourse will help you realize in this very life the supreme state you hope for. Then, may all beings from Avīci to Akaniṭṭha, whoever wish to rejoice in this sharing of the merit of preaching and hearing the Dhamma, by so rejoicing, realize the supreme, deathless, great Nibbāna through the Bodhi of their aspiration. Say in this manner.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_059.html" class="doc-btn">← Previous Sermon (059)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_061.html" class="doc-btn">Next Sermon (061) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

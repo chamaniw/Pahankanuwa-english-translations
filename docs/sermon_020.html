@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 020 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_019.html" class="doc-btn">← Previous Sermon (019)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_021.html" class="doc-btn">Next Sermon (021) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 020</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_020_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_020_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_020_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #20</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No. )</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Pheṇūpamaṃ kāyamimaṃ viditvā, marīcidhammaṃ abhisambudhāno; Chetvāna mārassa papupphakāni, adassanaṃ maccurājassa gacche.</p>
+<p>From:</p>
+<p>Verse 46 from the Pupphavagga (Chapter on Flowers) of the Dhammapada</p>
+<p>Dear Listeners,</p>
+<p>The Nibbāna is the highest aspiration and ultimate goal of every Buddhist. This word 'Amata' (the Deathless) is pleasing to everyone's ears. Why does everyone show such fondness for this word 'Amata'? It is because they see and feel within this word 'Amata' a solution to the grave problem of death that every living being born in this world must face. This word 'Amata' is pleasing not only to humans but even to devas and brahmās. That is because, even if they live for aeons, someday they have to pass away from there; they have to die. Therefore, this word 'Amata' is a highly pleasing and desirable word.</p>
+<p>Why, then, do we revere our Lord Buddha, the Supreme One? It is because the Lord Buddha presented the solution to this very question of death, which the world—including devas and humans—was looking forward to. That is what is called the Nibbāna.</p>
+<p>We know that the Lord Buddha defeated Māra. What is the meaning of this defeat of Māra? The Lord Buddha discovered a place invisible to Māra, a place beyond the grasp of Māra. That is what is called the Nibbāna element, the Nibbāna. It is referred to by terms such as the Unconditioned (*Asaṅkhata*) element. Death is conquered by bringing the mind to a supramundane state that is invisible to Māra, a state that Māra cannot see. The Lord Buddha not only realized that Deathless state, the Nibbāna, but also presented in this Dhamma the helpful instructions for the world to reach that state, to defeat Māra within their own mental continuums, and to realize that Deathless state. What is shown very briefly in the verse we have chosen as our theme today is also an instruction on insight (*vipassanā*) that helps in bringing the mind to this Deathless state.</p>
+<p>This verse of the Dhamma was expounded to a certain monk who, having taken a meditation subject (*kammaṭṭhāna*) from the Lord Buddha, had gone to a remote forest to practice insight (*vipassanā*). Having obtained the meditation subject from the Lord Buddha and gone to such a forest, this venerable monk meditated with great effort, but was unable to attain Arahantship. Later, he thought, "I must meet the Lord Buddha again, clarify my meditation subject, and get special instructions." With this thought, while traveling a long distance, he saw a mirage. A mirage is something one can see during the summer—in dry seasons like this—appearing like vapor rising from the ground, looking like flowing water. Seeing this, the monk contemplated: "This state of existence of mine—this body—is also like a mirage." This mirage appears as if it exists in the distance, as if it is something real that can be grasped. But the nature of a mirage is such that when one goes near, it is not there. In the same way, just as the Lord Buddha had declared, it appeared to this monk as a mirage. What is seen of this body is not what is actually there. It is of the nature of arising and passing away. When one goes to look at the point of arising, it disappears from there. Next, coming along while thinking about the mirage, he arrived at the river Achiravatī. To relieve the fatigue and heat of his body, he bathed, and then sat down serenely under a tree where the river water was flowing very rapidly. He watched how frothy foam was repeatedly forming and dissolving in the swift current of the river. This also became a meditation subject for the monk. He contemplated: "This form (*rūpa*) of mine, this physical frame, this body, this state of existence, is also like a lump of foam." While he was contemplating this, the Lord Buddha—who usually observes with His Buddha-cognition the movements of thought and how the minds of the monks to whom He gave meditation subjects are working—saw that this monk's mind was now mature. At that moment, the Lord Buddha, seeing the thought that had arisen in this monk, appeared before him—while remaining in His own Perfumed Chamber (*Gandhakuṭi*)—and uttered the verse we mentioned earlier:</p>
+<p>*Pheṇūpamaṃ kāyamimaṃ viditvā - marīcidhammaṃ abhisambudhāno*</p>
+<p>*Chetvāna māraṣṣa pappuphakāni - adassanaṃ maccurājassa gacche*</p>
+<p>Confirming the insight (*vipassanā*) that had arisen in that monk, validating his perception, and encouraging him further, the Lord Buddha said:</p>
+<p>'*Pheṇūpamaṃ kāyamimaṃ viditvā*' - Knowing this body to be comparable to a lump of foam,</p>
+<p>'*Marīcidhammaṃ abhisambudhāno*' - Wisely understanding the mirage-like nature of this body, comprehending it thoroughly,</p>
+<p>'*Chetvāna māraṣṣa pappuphakāni*' - Cutting off the flower-arrows shot by the Māra of defilements (*kilesa-māra*), or the arrows with flower-tips,</p>
+<p>'*Adassanaṃ maccurājassa gacche*' - Go to a place out of the sight of the King of Death.</p>
+<p>Thus, the Lord Buddha gave this advice. It is mentioned that upon hearing this instruction, the monk's insight-knowledges matured, and he became an Arahant possessing the four analytical knowledges (*paṭisambhidā*).</p>
+<p>Now, on this basis—in connection with this verse—let us try to understand the Dhamma points contained herein.</p>
+<p>Comparing this body to a lump of foam: The Lord Buddha compared form (*rūpa*) to a lump of foam. Let us contemplate how reasonable—how well-reasoned—this is. The Lord Buddha compared form (*rūpa*) to a lump of foam because the more one thinks about it, the deeper one reflects on it, the closer one gets to Nibbāna. Now, a lump of foam arises when something, say a log, gets stuck in a swiftly flowing stream, and as the debris collects, foam rises from the water as it gets swept along. From a distance, due to the perception of compactness (*ghana-saññā*), that lump of foam appears as something solid, something permanent, something substantial. But when one looks closely, it is a substanceless thing, an empty thing. Moreover, this lump of foam exists only for a very short duration. If one looks at a lump of foam very closely, it is like a mass of bubbles rapidly arising and passing away. This body is also such a thing. Yet, when we look at it as form (*rūpa*), what we see is like the mirage we spoke of earlier. What is its mirage-like nature? From a distance, it appears as a highly pleasing, permanent thing. But this body is put together just like that lump of foam. We know that various things—food and drink—fall into this body. Milk, gruel, rice—these boil and foam in the kitchen before they enter this body. Once they enter the body, they boil and foam even further. By the boiling and overflowing of this foam, blood, flesh, bones, nerves, and so forth are formed. Once they are formed—in that manner, by the overflowing of this foam—we cherish the parts we like to keep in the body, and with great pride, thinking "this is mine" and "this is I," we groom, decorate, dress, feed, and nourish this body. The remaining part of that foam, the part that overflows outwards, such as feces, urine, and sweat, we wash away as waste and filth. Such is the situation regarding the lump of foam of this body when one contemplates it. As the Lord Buddha declared, the thirty-two impure parts of the body are brought together in just this way. By way of the primary elements of earth (*pathavī*), water (*āpo*), fire (*tejo*), and air (*vāyo*), due to the boiling nature within this body, this body grows over many years, constantly foaming. It is a lump of foam. Thus, having correctly understood the foam-like nature of this body—"*Pheṇūpamaṃ kāyamimaṃ viditvā*."</p>
+<p>Similarly, its mirage-like nature means that from a distance, if one does not look with the eye of wisdom, it appears as a very pleasing thing. Whether we take a photograph or look in a mirror, to the ordinary physical eye—what we call the natural eye, our ordinary eye—when we look with that eye, it appears to us as a highly pleasing form (*rūpa*), both one’s own form and the forms of others. Now, there are instruments in the world to see things that the physical eye cannot see, such as microscopes. What do they do? They magnify fine things to look at them. Magnifying fine things is a distortion. Yet, we are satisfied with it, thinking, "Look, I have seen a fine thing." But wisdom—insight (*vipassanā*) wisdom—does not look in that way. It sees the fine thing as a fine thing itself. That is a direct realization. It is confirmed by directly realizing the fine thing as a fine thing. Otherwise, as long as the instrument is there, we see it; once the instrument is removed, it is gone. Such is the difference in the world regarding seeing—and insight (*vipassanā*) means a special kind of seeing—and the seeing of the practitioner of insight.</p>
+<p>To understand form (*rūpa*) as a lump of foam in this manner, there is no need to make the effort to place parts of it under a microscope, nor is there any expense. By constantly contemplating some part of this form (*rūpa*)—even a single hair from among the hair of the head and body, or any of the thirty-two impure parts of the body such as hair of the head, hair of the body, nails, teeth, etc., which strikes one as most repulsive—as a meditation subject, in terms of tranquility (*samatha*), by anchoring the mind on it, and through one-pointedness (*ekaggatā*), seeing it deeply, then one understands. Next, an opportunity arises to see the nature of the elements (*dhātu*) within this by way of insight (*vipassanā*). As the insight-knowledges mature, whether through the aspect of foulness (*asubha*) or by way of elements (*dhātu*), one can remove the attachment to this and comprehend its true nature. There is a word, "nibbedhikā paññā." Dear devotees, "*nibbedhikā paññā*" means penetrative wisdom. Wisdom is something penetrative. When we think about this body, we often use the term "body-cage." Indeed, it is a cage. Inside this body-cage, the mind is trapped. This cage is a cage built by Māra, a cage created by Māra. Within this body-cage created by Māra, the mind is trapped. Thus, a person strives, a wise person strives, to attain liberation of the mind, to realize Nibbāna. What is this realization of Nibbāna? It is the penetrative seeing of this cage. Through the penetrative seeing of this cage, the mind is liberated. It is that penetrative seeing which is accomplished by insight (*vipassanā*).</p>
+<p>To show how great this wisdom is, it is compared to a diamond. A diamond (*vajra-māṇikya*) is something that can cut other gems. A diamond has the strength and sharpness to cut through other gems. This insight-knowledge is also like a diamond; it penetrates, it sees through. It sees through this—now, to say that one sees impermanence (*anicca*), there are two sides to impermanence, two petals: arising and passing away. It begins with contemplating the nature of arising and the nature of passing away. Going deeper into this, through that, one penetrates to the fact that there is nothing substantial here. As one goes deeper and deeper, one can see impermanent (*anicca*), suffering (*dukkha*), not-self (*anattā*), and substanceless nature. This, then—the seeing of arising and passing away—is the initial stage of the operation of this 'diamond': insight (*vipassanā*) wisdom. It is by seeing in this way that one can understand this body as a lump of foam, not through some artificial instruments, not through other artificial things. However, we get the hint for this from Nature, by way of illustration. In the past, during the Buddha's time, it was the set of similes shown by the Lord Buddha that these monks took with them to the forest when going to meditate, not other books. They did not carry other books on their shoulders. Those similes alone were useful. Why? Because a simile contains many points that would fill a great book, but it is grasped—understood—only as one goes deeper and deeper. When one simply says "a lump of foam," it is something that can be seen anywhere when looking at a river. If one just looks at it and turns away, it goes no further. But it is not just the simile, but the object of comparison (*upameya*). To what did the Lord Buddha compare this simile? To this body. At first glance, this might seem unacceptable. But one must apply the mind deeply to this, apply contemplation, and reflect on it. When one constantly directs the mind to this, then one realizes how true what the Lord Buddha declared is.</p>
+<p>In this manner, therefore, one who hopes for insight-knowledges (*vipassanā-ñāṇa*) and wishes to go to that Deathless state—to that place invisible to Māra—must sharpen those insight-knowledges. "*Pheṇūpamaṃ kāyamimaṃ viditvā*." Furthermore, if we contemplate the mirage-like nature of this, we have already mentioned that characteristic of a mirage. The deer is deceived by it. The deer, being largely an ignorant animal, because it appears in the distance during summer like water, runs towards it. When it gets there, it is not there. But according to the view (*diṭṭhi*) it has taken, it appears even further away. So, it keeps running in the same way, and does not realize until it finally collapses from exhaustion. It is a similar situation. Now, it is the same regarding this form (*rūpa*). The world's attachment to this form (*rūpa*) is the work of Māra, the work of Māra of defilements (*kilesa-māra*). It is always shown as something beautiful (*subha*). That is why the Lord Buddha has pointed out that the world is trapped within four distorted views, called distortions (*vipallāsa*): regarding the impermanent (*anicca*) as permanent (*nicca*), the foul (*asubha*) as beautiful (*subha*), the suffering (*dukkha*) as pleasant (*sukha*), and the not-self (*anattā*)—that which is not one's own—as self (*attā*). There exists such a distorted state, a state of distortion (*vipallāsa*), in the world. According to it, that lump of foam also appears as something permanent, something highly beautiful, something to be acquired, and something substantial. It is the same with the mirage. Thinking it is water, the thirsty deer, out of its need to drink that water, goes far. Because of the very thirst called craving (*taṇhā*), the animal often takes that distant sight as a view (*diṭṭhi*), thinking, "This is indeed water, nothing else." Due to that firmly grasped view, and next, due to the thoughts generated in accordance with it, that deer runs.</p>
+<p>Thus, the Lord Buddha declared that these distorted ideas called distortions (*vipallāsa*) operate on three levels: distortion of perception (*saññā-vipallāsa*), distortion of mind (*citta-vipallāsa*), and distortion of view (*diṭṭhi-vipallāsa*). Distortion of perception means recognition. The deer perceives the distant mirage as water. Then, based on that perception, it generates numerous thoughts: "If I go there, I will be able to drink some water." Because of those thoughts, expectations, and wishes, the deer runs. It forms a view based on what appears in the distance. "This is indeed water; even if it is not here, it is visible further away—when one goes further. Since it is visible, it can definitely be obtained." Now, this kind of mirage-like nature is the same regarding this body, and also regarding other luxury items that support the body. We know how these three factors operate in daily life. Perhaps one's neighbor brings a brand new luxury item to their house. Seeing this, one thinks, "Somehow I must get this too." This is indeed the mirage. One thinks, "The day I get this, I too will be somebody." Thinking so, one goes into debt for it. Borrowing and earning, one somehow obtains that luxury item, that object which was in the beautifully decorated room. By the time one gets it, the neighbor's item has gone to the kitchen, and a different item has arrived, and then one tries to get that one. It is after such a mirage that the world runs. The world spends its entire life with such craving (*taṇhā*)—a grave craving—not only for this body, but also for the luxury goods that support this body. Such is the situation. This happens because of Māra. That is the part mentioned next in the verse.</p>
+<p>"*Chetvāna māraṣṣa pappuphakāni*" – cutting off the flower-arrows of Māra, or the arrows with flower-tips. A deep meaning is expressed here. What are these arrows? Māra of defilements shoots these arrows at our six senses. What is shown here is the object of defilements (*kilesa*) coming to the eye, ear, nose, tongue, body, and mind. Because these defiled objects come in a pleasing guise, they are shown as flower-arrows. If one cannot cut off those flower-arrows properly—one looks at the arrow because there is a flower at its tip. But despite looking at the flower, it comes and pierces the eye. That is the kind of thing here. Now, what is used to cut off this nature of defilement? It is that same diamond we mentioned earlier, the very insight (*vipassanā*) wisdom. It is called 'insight attention' (*vipassanā-manasikāra*)—contemplating. It is through insight attention that one can cut off these defiled objects. Generally, through contemplation, if one contemplates like the ordinary world—that is, ignorantly—if one contemplates under the sway of defilements, then, based on that object, one grasps various other signs (*nimitta*). An object does not come alone; it brings signs. The defilements give various signs to the mind: "This is beautiful," "This is permanent," "This is pleasant," "This brings pleasure," "This is a good thing," "This is mine,"—giving such feelings.</p>
+<p>Likewise, there is a pleasing appearance to it. Accordingly, these sense objects have a nature that fosters desire. It is with insight (*vipassanā*) wisdom that one can cut off this sticky nature, this nature of attachment, this nature of binding found in the object, and see through the objects. That is what is meant by cutting off these arrows of defilement—these defiled objects—shot by Māra. In that way, one contemplates this object very rapidly, not to yield to those signs, but to use these objects to see the three characteristics declared by the Lord Buddha: impermanence (*anicca*), suffering (*dukkha*), and not-self (*anattā*). "Ah, there it came. Here it remained. There it went." The object came, remained, went. What does one understand through this? How true is the nature of impermanence (*anicca*) declared by the Lord Buddha! Next, one sees through that very thing that if one develops an attachment to this, along with it comes the grief, fear, and lamentation caused by separation from it.</p>
+<p>Now, within those insight-knowledges (*vipassanā-ñāṇa*) declared by the Lord Buddha lies the entire mass of experiences we have gathered over an infinite time in this *saṃsāra*. It is by applying this mass of experience to a very brief moment, making it like a diamond that cuts through, that one can escape from this *saṃsāra*, that one can escape from becoming (*bhava*). What is the solution given by the Lord Buddha? It is not the solution the ordinary world thinks of.</p>
+<p>The ordinary world sees in everything a craving (*taṇhā*), a clinging; they speak of craving and grasping (*upādāna*). They grasp with craving (*taṇhā*). It is through this grasping that the ordinary world expects security. We know that when a small child feels fear, they cling to their mother. The mother sometimes clings to her husband. If a thief comes, or if someone comes to kill, they might cling to security guards. You, dear devotees, know very well at this time that none of these clingings or attachments are permanent. One can never conquer Māra or escape from death through this nature of grasping and clinging.</p>
+<p>Instead, the Lord Buddha gives a highly wonderful solution, one that is inconceivable to a person. The Lord Buddha declares that to escape from Māra, when Māra pulls, you must let go; when Māra pulls, you must let go. Why? Because in the force with which Māra pulls, there is a mental state that brings grief, fear, lamentation, and despair. If someone firmly grasps or holds onto something, when that grasped object is pulled, it generates fear, lamentation, and grief. Let us say one clings to a thorny branch. When that thorny branch is pulled, that person's hand also gets wounded. Similarly, regarding grasping (*upādāna*) in this world, the Lord Buddha declared, "I do not see any single thing in this becoming (*bhava*) by grasping which one can escape." This is hard for a person to conceive. On various levels, one decides, "I will hold onto just this much." But the Lord Buddha declares that as long as one grasps, through everything one becomes prey to Māra. To what extent, dear devotees? The Lord Buddha has declared—as we as Buddhists have often heard—that what we call "I" and "mine" is just five heaps: form (*rūpa*), feeling (*vedanā*), perception (*saññā*), preparations (*saṅkhāra*), and consciousness (*viññāṇa*). The Lord Buddha has identified each of these heaps as Māra. Form is Māra, feeling is Māra, perception is Māra, preparations are Māra, consciousness is Māra. All of these are shown as belonging to Māra. What, then, is that which does not belong to Māra? It is the very letting go of these. Therein lies the bliss of liberation. This is not something obtained by grasping.</p>
+<p>Now, let us take a common analogy for this. Let us think of a tug-of-war. What happens in a tug-of-war? At the beginning, we know that the two teams on either side grasp this rope with all their might. If needed, they even wrap it around their bodies. With a firm determination not to let it move even a bit, they hang onto the rope. Then, let us assume one side, which can somehow win, pulls that side. When they pull, some of those who cling to it fall to the ground, get scraped, and suffer injuries if they remain hanging on. That is a fact well realized by us. But regarding that victory, there too is a mirage. Because of the perception of the mirage, they grasp it firmly. They think they have won. Amidst great panting, they express happiness. Such is the situation presented as the solution in the world. What the Lord Buddha shows is not that kind of thing. It is letting go when Māra pulls. If one lets go when the pull is made with all that force, what happens? There, the pressure is on Māra. The pressure is on Māra there. One is free. For oneself, there is no fear, grief, lamentation, or despair. Letting go. One can realize this in daily life. Within what we grasp, there is that which gives suffering (*dukkha*). Let us say we are very proud of our set of teeth. A tooth right in front starts aching. A toothache occurs. Now, we somehow bear the ache. If this tooth is lost, it would be a major blemish on our face. But the dentist says, "This is a decayed tooth; if this is not removed somehow, it will damage the others too." Then, on that day, discarding the desire for that tooth, one allows it to be extracted. Once it is extracted, there is relief. That is what one should know regarding the matter of the tooth. Such is the situation in the world. Although we mention this as an ordinary example, it is not realized all at once in daily life. But those who have traveled on that path of the Dhamma of the Lord Buddha have realized this. They let go of things that seemed impossible to let go of. Why? Because they saw that each of these—like the subtle arrows of Māra—is an invitation from Māra. He gives it, saying, "Here, grasp this," and then pulls. The moment it is grasped, he pulls.</p>
+<p>Through this grasping—let us try to uncover a deeper Dhamma through this very analogy. We spoke about grasping the rope. At the time of grasping a rope in a tug-of-war, how much effort, endeavor, energy, or strain is applied for its sake? How much struggle is exerted? To grasp this rope, to embrace it. In the same way, there exists within the beings of this world a nature of clinging tightly to everything by way of mind, speech, and body, in the form of intentions, aspirations, and expectations. Or, to put it another way, there are many 'preparatory leanings' (*ara-ændīm* / preparations). You, dear devotees, know this word 'preparatory leanings'. A preparation. A great preparation, a leaning, when we reflect on our entire life. Life is entirely a preparation, a leaning, a mass of preparatory leanings, made in order to live, to survive, not to die. Even before these leanings are finished, before these leanings are properly completed, Māra pulls it away. At that moment, then, as we mentioned earlier, amidst fear, lamentation, and despair, one undergoes suffering (*dukkha*). One thinks, "I have died." Thinking so, somehow, due to those defilements generated elsewhere in accordance with karma, due to Māra of defilements—one takes another birth (*jāti*) in accordance with karma. Next, one settles down there. One takes root there. Māra pulls towards the other world. The one who is about to die pulls towards this world. Finally, the Lord Buddha declared that this is a pulling that belongs to neither world. When this pulling is over, one goes and settles down there, taking root. Suppose one had a human form (*rūpa*), and next goes and is born in the womb of an animal. Then, due to ignorance (*avijjā*), one grasps that body-cage. One grasps the senses belonging to that body, thinking "this is I" and "this is mine." That is how it is. That is what is called the journey of *saṃsāra*. This journey is not one that can be measured in miles or meters. That journey of *saṃsāra* exists between these two: between 'that world' and 'this world', in the way one grasps. Or, as we say, between 'there' and 'here'. Now, in the case of the mirage, the deer runs from 'here' seeking the water visible 'there'. What is used to connect 'there' and 'here'? Conceit (*māna*). If we say craving (*taṇhā*), the deer, starting from 'here', generates a thought—according to craving (*taṇhā*), it generates the thought. The view (*diṭṭhi*) of what is visible in the distance assists it. It connects these two with conceit (*māna*): "If I go there, I can drink that water."</p>
+<p>In this manner, according to the three defilements of craving (*taṇhā*), conceit (*māna*), and view (*diṭṭhi*), the beings of the world travel this long journey of *saṃsāra*. Although we call it long, it is like spinning in one place. It is a highly wonderful situation, like spinning in the very same place. Now, if it is a cycle of this nature, one cannot escape by running. That is why the Lord Buddha declared that within this fathom-long body, He points out the world, the arising of the world, the cessation of the world, and the path leading to it. For this, as we mentioned earlier, one must see through this body-cage. One must see through each and every one of these. The Lord Buddha has shown only two similes here. But in the Dhamma, similes are shown for the entire five aggregates. You, dear devotees, may have often heard that form (*rūpa*) is compared to a lump of foam, and feeling (*vedanā*) to water bubbles—like water bubbles rapidly arising and passing away when rain falls. Next, perception (*saññā*) is said to be a mirage. preparations (*saṅkhāra*)—we understood preparations (*saṅkhāra*) as all those various intentions, aspirations, expectations, preparatory leanings, and preparations. We do this through mind, body, and speech—even in a tug-of-war, that word is used—body, speech, and mind. A great effort—numerous efforts—done through all of these is present in a tug-of-war. Numerous preparations and leanings. Similarly, this is a heap of preparations (*saṅkhāra*). There is no substance in these; they are substanceless. preparations (*saṅkhāra*) are compared to a banana trunk. A person who sees a banana trunk for the first time, going to search for its heartwood, seeing the smooth nature of this banana trunk, thinks, "This is a wood with good heartwood." But as he peels it, peeling it very finely, lo and behold, it is just a sheath—what appeared so good was just a sheath, not heartwood. He discards it. "Now, here is the heartwood." That too is just a sheath. Next, he discards that too. "Ah, that too is just a sheath." Finally, he reaches the core. It is not there either. There is no substance there either. Within it too, there is only a multitude of sheaths.</p>
+<p>In just this way, in this entire *saṃsāra*, dear devotees, we have only been peeling sheaths. We have not obtained any heartwood. Searching for the heartwood, we have gone on peeling sheaths. This is it. Regarding preparations (*saṅkhāra*)—the Lord Buddha declared, "*saṅkhārapāramā dukkhā*" (preparations are the ultimate suffering). He said that the subtlest suffering (*dukkha*) in the world is the suffering of preparations (*saṅkhāra-dukkha*). Generally, we say it is suffering (*dukkha*) when we lose a loved one, when we fall sick, when we are ill, or when we have nothing to eat or drink—these are what we call suffering (*dukkha*). But the Lord Buddha declared that the subtlest level of suffering (*dukkha*) is preparations (*saṅkhāra*). That is understood only by the practitioner of insight (*vipassanā*). Gradually, the suffering (*dukkha*) in this is understood. To cure a disease, what does a doctor do? First, they suppress the externally visible symptoms of the disease—if there is a fever or some pain—they suppress those. But the disease is not cured. One must treat the root cause, the origin of the disease. In the same way, the Lord Buddha also searched for the origin of the disease and removed that cause. That origin is craving (*taṇhā*). The Lord Buddha pointed out craving (*taṇhā*). It is due to this craving (*taṇhā*) that one grasps. Now, why do all these five heaps become suffering (*dukkha*)? It is because they are grasped—because one is grasping them. As long as they are grasped, it is suffering (*dukkha*). When they are let go, there is no suffering (*dukkha*) there. But the nature of the world is to grasp each one of these, saying, "This is I," "This is mine." To grasp means the unwillingness to let go. To keep grasping means the unwillingness to let go. This is revealed—the ordinary world takes views (*diṭṭhi*) regarding each of these. Regarding form (*rūpa*), they say, "Form is mine." If someone asks what the relation is between you and form (*rūpa*), they say, "This form is mine." If someone shows logically that it cannot be so, they say, "No, no, I made a slight mistake; I am one who possesses form." Or, "Form is in me." Or, "I am in form." In this way. What does that show? They do not want to let go of form (*rūpa*). They cling to it somehow in those four ways. Clinging in such twenty ways is what is called the view of existing group (*sakkāya-diṭṭhi*), the view (*diṭṭhi*).</p>
+<p>Now, why are preparations (*saṅkhāra*) compared to a banana trunk in this way? If someone thinks, "The Lord Buddha has compared preparations (*saṅkhāra*) to a banana tree. There are many banana trees in our garden. Therefore, it is very easy for me to understand preparations (*saṅkhāra*)," they are mistaken. One must reflect on this deeply. Such is the nature of preparations (*saṅkhāra*). Consciousness (*viññāṇa*) is something even subtler. Consciousness (*viññāṇa*) is compared to an illusion. An illusion, in modern terms, is a magic trick. Everyone goes eagerly to watch magic shows. Why do they go? To be deceived. Not just freely, but paying money to be deceived. But this deception—this trickery—is always happening in *saṃsāra*, even if we do not pay money for it. This deception is what is called consciousness (*viññāṇa*). Because the nature of consciousness (*viññāṇa*) is to show something non-existent as existing. The Lord Buddha illustrated this with a simile of a magician performing a magic trick at a crossroads, conjuring up illusions. He shows non-existent things as existing. Those who are deluded look at it and rejoice, saying, "Ah! Yes! Bravo!" But there is nothing substantial there. It is substanceless. That very understanding—that there is no substance, no heartwood—is what the Lord Buddha ultimately points to as Nibbāna. The ordinary world thinks of this Nibbāna as some kind of strange world. That is the place invisible to Māra. What is called the place invisible to Māra is that state of mind. That is to say, if a person has attained in this life that supramundane state declared by the Lord Buddha through Arahantship, at the moment of that person's death, when Māra pulls, they do not pull back towards this side. Instead, if Māra pulls, they let go, as if saying, "If this is yours, take it." When they let go, there is no grief, lamentation, or despair whatsoever. Therein lies the secret of it. The Lord Buddha declared a highly wonderful solution: letting go when pulled.</p>
+<p>One must first realize this letting go right in this world. The path to that realization is what is called the insight-knowledges (*vipassanā-ñāṇa*). It is seen through that impermanence (*anicca*). There is a great depth in the word impermanence (*anicca*). When we say impermanence (*anicca*), we think it exists for some time. Not a year, but a month. Not a month, but a day. In this way, when looking at the end, one has to penetrate this too. How is it brought to direct realization through the two, arising and passing away? For one who is observing those two, rather than the arisings, they see these things breaking down with greater speed. Now, why did that monk compare this body to a lump of foam upon seeing it? It appeared to him that this body breaks down with a speed even greater than its arising. To that extent, it is something that is constantly breaking down. This breaking-down nature is not visible to the ordinary physical eye. As we mentioned earlier, even if seen through microscopes, that is not direct knowledge (*paccakkha-ñāṇa*). Even if seen in a laboratory, one does not remember it after coming home. Therefore, for it to be a direct realization, it must be realized. This is visible only to a mind prepared with concentration (*samādhi*), equanimity (*upekkhā*), and one-pointedness (*ekaggatā*). That is what is meant by cutting off Māra's flower-arrows. Within those contemplations, there are these two: equanimity and one-pointedness. One-pointedness is obtained through concentration (*samādhi*). Through that, the mind becomes strong, becomes sharp. Even a knife, if it is dull, cannot cut, can it? One must sharpen it well. Having sharpened it—next is equanimity. There is a way in equanimity of aiming it properly, keeping it there without shaking or dispersing. It is through these two that one brings forth that insight (*vipassanā*) wisdom.</p>
+<p>With that wisdom, systematically, first those two, arising and passing away. Next, through that, one sees it breaking down, breaking down rapidly. As it repeatedly breaks down, one understands: "Why do I grasp this thing which is constantly breaking down?" If one grasps a breaking-down thing—say, a decayed fence—one falls along with the fence. Similarly, when one grasps a shaking thing, a vibrating thing, it is oneself who suffers the affliction from it. In the same way, the Lord Buddha declared that in each of these—form, feeling, perception, preparations (*saṅkhāra*), and consciousness (*viññāṇa*)—there are numerous vibrations. That which is called preparations (*saṅkhāra*) can be regarded as vibrations. It is due to that multitude of grasped preparatory leanings, preparations, expectations, intentions, and aspirations that those vibrations and so forth occur. Escaping from that mental conflict is liberation (*vimutti*). That is why we say this Nibbāna is close to us. This is something to be realized through comprehension—through wisdom. This is not just ordinary wisdom. This is systematically realized through some meditation subject (*kammaṭṭhāna*). Suppose, now, to cultivate disillusionment regarding this body, one constantly applies one's meditation attention (*bhāvanā-manasikāra*) to some part, such as hair of the head, hair of the body, nails, teeth, etc., and thereby attains a level of concentration (*samādhi*); through that, those distorted ideas called distortions (*vipallāsa*) that we mentioned earlier are removed. The perception of beauty (*subha-saññā*) is removed. The attachment to it is lost. Instead, one begins to comprehend its true nature. In that way, one contemplates it as foul (*asubha*). Or, by way of elements (*dhātu*), we see some characteristic in all of these—things connected to this body-cage, as well as things around us—such as earth (*pathavī*), water (*āpo*), fire (*tejo*), and air (*vāyo*) on this great earth, in water, in fire, and in air. These are also merely elemental natures. We recognize these just as a blind person learns by touching. We know whether this is the earth element (*pathavī-dhātu*) because it is hard. That too is felt by this body. It is through the body that we comprehend that this is a hard thing. Is this a flowing thing? Is this a hot, warming thing? Is this a moving, blowing thing? These four elements exist within our body. If we consider the parts in which the earth element (*pathavī-dhātu*) is predominant, they are hair of the head, hair of the body, nails, teeth, etc. One can bring forth the feeling of hardness through them. When touching them, there is hardness, hardness and softness, etc. Similarly, this flowing nature, the liquid nature: in saliva, phlegm, snot, urine, etc., we feel that the water element (*āpo-dhātu*) also exists within this body. Next, through hunger, fever, etc., we know the fire element (*tejo-dhātu*). Likewise, the air element (*vāyo-dhātu*) is known through this inhalation and exhalation. Thus, it is through these that the Lord Buddha pointed out the path to bring forth Nibbāna. There is nowhere else to go. Right within this body. The body, and next, these trees around us are also preaching. Although they do not preach dressed up like this, these trees, leaves, flowers, fruits—all of these are preaching. But one does not listen to them. In the Buddha's time, they did listen to them. That is how, in the past, when monks went to a forest, during their leisure time they read the books that were there. There are Dhamma-books in the trees. There is Dhamma in the rivers. Those are what are shown here too. That monk read a Dhamma-book flowing in that river. In just this way, the Lord Buddha pointed out the true nature of this world. One finds the three characteristics—impermanence (*anicca*), suffering (*dukkha*), and not-self (*anattā*)—abundantly visible. Bringing them forth from these belongs to insight (*vipassanā*) wisdom. For that, one must travel the path pointed out by the Lord Buddha.</p>
+<p>Reflecting in this manner, all of these are preparations (*saṅkhāra*). It is by removing the attachment to this body-cage, by seeing through it, that one can realize that noble, supreme, supramundane state shown as the place invisible to Māra—Nibbāna—that liberation. If the mind is brought to that liberated state right in this life, that person is said to be extinguished. That Nibbāna. Until then, there is a burning. Realizing that Nibbāna is the ultimate purpose of this Dhamma. Therefore, you, dear devotees, must contemplate in your daily lives, without putting this off, that these are right within this body-cage—this body-cage that we constantly carry around. Let alone anything else, if we reflect a little on this mindfulness of breathing (*ānāpānasati*) meditation which helped every Buddha to attain Buddhahood, there lies the operation of the air element (*vāyo-dhātu*). If we reflect a little on this phenomenon of inhalation and exhalation, we can conceive this. These two, inhalation and exhalation, are like the panting caused by this futile, long running in *saṃsāra*. Indeed, dear devotees, mindfulness of breathing (*ānāpānasati*) does not mean panting. Do not misunderstand. *Sati* means mindfulness. But inhalation and exhalation, called *ānāpāna*, is like something that indicates the momentum, the panting, generated within this running in *saṃsāra*. Within this is embedded the message regarding this suffering of *saṃsāra*. That is why they say one becomes a Buddha through this mindfulness of breathing (*ānāpānasati*). Within this inhalation and exhalation, there is also the establishment of mindfulness of contemplation of the body (*kāyānupassanā satipaṭṭhāna*), meaning observing the body. The capacity to comprehend feeling (*vedanā*), called contemplation of feeling (*vedanānupassanā*), is also present within this very inhalation and exhalation. The secret of comprehending the mind, the movement of the mind, how the mind behaves, is also within this *ānāpāna*—within the two, inhalation and exhalation. Next, the capacity to comprehend the objects that come to the mind, their true nature, called contemplation of mind-objects (*dhammānupassanā*), is also present.</p>
+<p>Accordingly, when we contemplate, these two, inhalation and exhalation, are like the 'panting' of this momentum of *saṃsāra*. Allaying this 'panting'—stopping the running and sitting down in one place and applying the mind to this inhalation and exhalation, dear devotees, is how one resolves the 'panting' brought along with this *saṃsāric* momentum. One resolves this panting by making this inhalation and exhalation subtle. Not by forcing it. When one sits down calmly and applies the mind to it, it becomes agitated by thoughts (*vitakka*)—by thinking. The mind runs. The mind has a tendency to run to those defiled objects grasped earlier. For someone who has just sat down for mindfulness of breathing (*ānāpānasati*) meditation, these networks of thoughts flow in to the point of frustration. But systematically cultivating those four protective meditations (*caturārakkhā*) shown as supportive basic meditation subjects—recollection of the Buddha (*buddhānussati*), loving-kindness (*mettā*), foulness (*asubha*), and recollection of death (*maraṇassati*)—systematically cultivating them, what does the person who sits down for *ānāpānasati* do gradually? By contemplating that inhalation and exhalation, by contemplating it subtly, or by establishing mindfulness (*sati*) on it, anchoring mindfulness (*sati*) within it, not allowing space for thoughts (*vitakka*), and cutting off the arrows of Māra, behold, they gradually tranquilize that inhalation and exhalation. Along with the tranquilizing, the understanding, the wisdom, becomes sharp. Next, like a diamond, like a precious gem, that insight (*vipassanā*) wisdom gradually increases by way of arising and passing away (*udayabbaya*), dissolution (*bhaṅga*), and so forth. At some point, comprehending the true nature of these preparations (*saṅkhāra*), the strain in taking this inhalation and exhalation, this preparation, this leaning, the subtle *saṃsāric* bond within it, through the penetration (*paṭivedha*) of the paths called Stream-entry (*sotāpatti*), Once-returning (*sakadāgāmitā*), Non-returning (*anāgāmitā*), and Arahantship (*arahatta*), one becomes able to escape from this body-cage and bring forth that liberated mind.</p>
+<p>If that liberated mind is brought forth, although that person spends the rest of their lifespan from then on according to the karmic momentum gathered in the past, at the moment of death, when Māra pulls, no agitation occurs. When mentioning the final passing away (*pariNibbāna) of the Lord Buddha, some might misunderstand that Māra came and invited Him, and therefore the Lord Buddha passed away. But at the moment He passed away, because His mind was completely liberated, He attained peace from it and passed away in a peaceful state. That peace is not found within the ordinary beings of the world. When an ordinary person dies, amidst many torments they wail, and carrying thoughts of their relatives, they die and are born again elsewhere according to karma. Thus, it goes on and on in this *saṃsāra*. That is what is shown in the Dhamma as the round of karma (*kamma-vaṭṭa*), the round of defilements (*kilesa-māra-vaṭṭa*), and the round of results (*vipāka-vaṭṭa*). Being caught by those arrows, those flower-tipped arrows shot by Māra, they accumulate various kinds of karma. As the results of that karma, next, body-cages arise. Those body-cages generated due to that very ignorance (*avijjā*) and craving (*taṇhā*). Because of each arising body-cage, it is a great entertainment for Māra. Māra pulls. Next, when he pulls, they die wailing amidst grief, lamentation, fear, and terror. That is what is called suffering (*dukkha*). Why is this word 'Māra' used? It is in order to take that ignorance (*avijjā*) and craving (*taṇhā*) embedded within this world—which they have not recognized—as objects in a way that is comprehensible to their minds, so they can carry out this journey to Nibbāna, that the Lord Buddha has used this word 'Māra' on many occasions. There is also a class of beings called Māra-devaputtas. But here, what is mostly meant and used as Māra—Māra of defilements (*kilesa-māra*)—is used in a way that is comprehensible to the mind, because if such a Dhamma object is not presented, one will not strive.</p>
+<p>What is called the Middle Path (*majjhima paṭipadā*) is a middle way. Neither remaining passive nor struggling will do. On one occasion, a deva came and asked the Lord Buddha: "O painless one, how did you cross over the flood?" The flood refers to this *saṃsāric* flood of defilements. "How did you cross over this flood?" The Lord Buddha declared: "By not halting and by not straining, I crossed over the flood." If one halts, when caught in a flood, thinking there is nothing to be done, if one suddenly halts, that too is death. If one struggles, that too is death. Instead, to escape from that flood, one makes a systematic and wise effort. Such is the path that the Lord Buddha pointed out as insight attention (*vipassanā-manasikāra*).</p>
+<p>Therefore, on this valuable Poya day, you, dear devotees, have listened to an analysis and exposition based on a word of the Dhamma of the Lord Buddha, which helps in bringing to an end your *saṃsāric* suffering (*dukkha*). You must contemplate this. Instead of stopping at merely "hearing the sermon," you must put these into practice as much as possible in your daily lives, without putting it off. The Lord Buddha pointed these out in a way that they can be realized in daily life. It is mentioned in those Dhamma accounts that not only the monks, but also lay devotees—upāsakas and upāsikās—both during the Buddha's time and thereafter, leaned towards this path of Dhamma, systematically cultivated meditation, and sometimes realized these even before the monks. Therefore, we hope that you, dear devotees, will make an effort, not to store these Dhamma points presented today as a mere heap of knowledge, but to use them as an aid to sharpen that diamond of yours by way of insight (*vipassanā*)—to develop insight wisdom—reflecting on their practical value and making use of them.</p>
+<p>Thus, on a day like today, you, dear devotees, listened to the Dhamma, even if for a short time. Within that, you were able to develop some sense of those parts of this Dhamma that can be realized by oneself—the valuable spiritual faculties (*indriya-dhamma*) and spiritual powers (*bala-dhamma*)—namely, faith (*saddhā*) in the Triple Gem, the energy (*viriya*) that follows that faith, the mindfulness (*sati*) brought forth in accordance with that energy, the concentration (*samādhi*) established in accordance with that mindfulness, and the wisdom (*paññā*) if some understanding was generated through that concentration. Today, then, you must rejoice, for it is through this kind of effort that someday we will be able to escape from this dangerous *saṃsāra*, from all of these such as birth (*jāti*), aging (*jarā*), sickness, and death (*maraṇa*), grief, and lamentation, and realize the Nibbāna. You must firmly resolve: "May the strength and power be mine to attain that peace right in this life without delay!" Furthermore, may the guardian deities and brahmās, including the divine and brahmā kings who daily—though invisible to us—lend a hand and support these Sasana activities, share in this merit of our Dhamma-desana and Dhamma-hearing! Having shared in it, providing protection to the Sasana and to us, may they realize the Nibbāna through their own aspired Bodhi! Likewise, from Avici up to Akanittha, whatever beings there may be, including our relatives, who desire merit and desire Nibbāna, may all of them share in this merit of Dhamma-desana and Dhamma-hearing, escape from this dangerous *saṃsāra*, and find peace in the Nibbāna! With this aspiration, recite these verses and transfer merit:</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_019.html" class="doc-btn">← Previous Sermon (019)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_021.html" class="doc-btn">Next Sermon (021) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

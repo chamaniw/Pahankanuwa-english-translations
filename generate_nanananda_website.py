@@ -4,6 +4,12 @@ import re
 from pathlib import Path
 import pandas as pd
 
+# Optional import for reading DOCX files
+try:
+    import docx
+except ImportError:
+    docx = None
+
 # ==========================================
 # PATH & DIRECTORY CONFIGURATION
 # ==========================================
@@ -26,12 +32,50 @@ SRC_DOCX_DIR = BASE_DIR / "docx"
 SRC_PDF_DIR = BASE_DIR / "pdf"
 SRC_EPUB_DIR = BASE_DIR / "epub"
 SRC_AUDIO_DIR = BASE_DIR / "audio"
+SRC_TXT_DIR = BASE_DIR / "txt"  # Fallback TXT directory if present
 
 # Complete collection file names
 DOCX_COMPLETE = "Pahankanuwa_Sermons_Complete.docx"
 PDF_COMPLETE = "Pahankanuwa_Sermons_Complete.pdf"
 EPUB_COMPLETE = "Pahankanuwa_Sermons_Complete.epub"
 ZIP_FILE = "Pahankanuwa_English_Translations.zip"
+
+
+# ==========================================
+# DOCX / TXT CONTENT EXTRACTOR
+# ==========================================
+def read_sermon_content(s_num):
+    """
+    Reads the content of a sermon from DOCX or TXT files and returns clean HTML paragraphs.
+    """
+    docx_filename = find_sermon_file(s_num, "docx", SRC_DOCX_DIR)
+    if docx_filename and (SRC_DOCX_DIR / docx_filename).exists():
+        docx_path = SRC_DOCX_DIR / docx_filename
+        if docx is not None:
+            try:
+                doc = docx.Document(docx_path)
+                html_paragraphs = []
+                for p in doc.paragraphs:
+                    text = p.text.strip()
+                    if text:
+                        formatted_text = text.replace("\n", "<br>")
+                        html_paragraphs.append(f"<p>{formatted_text}</p>")
+                if html_paragraphs:
+                    return "\n".join(html_paragraphs)
+            except Exception as e:
+                print(f"Error reading DOCX file {docx_path}: {e}")
+
+    txt_filename = find_sermon_file(s_num, "txt", SRC_TXT_DIR)
+    if txt_filename and (SRC_TXT_DIR / txt_filename).exists():
+        try:
+            with open(SRC_TXT_DIR / txt_filename, "r", encoding="utf-8") as f:
+                content = f.read().strip()
+                paras = [f"<p>{p.strip().replace('\n', '<br>')}</p>" for p in content.split("\n\n") if p.strip()]
+                return "\n".join(paras)
+        except Exception as e:
+            print(f"Error reading TXT file: {e}")
+
+    return f"<p><em>Text content for Sermon {s_num} is currently being prepared. You can download the source document using the links below.</em></p>"
 
 
 # ==========================================
@@ -143,8 +187,11 @@ def load_and_process_excel_data():
                 f'<a class="doc-btn" href="epub/{epub_file}" target="_blank">📘 EPUB</a>'
             )
 
+            # Prominent clickable sermon title link with class 'sermon-title-link'
+            sermon_link_html = f'<a href="sermon_{s_num}.html" class="sermon-title-link"><strong>{clean_title}</strong></a>'
+
             sermons_list.append({
-                "Sermon": f"<strong>{clean_title}</strong>",
+                "Sermon": sermon_link_html,
                 "Opening Passage Excerpt": excerpt.replace('\n', '<br>'),
                 "English Translation": english_translation.replace('\n', '<br>'),
                 "Likely Source": likely_source.replace('\n', '<br>'),
@@ -173,7 +220,7 @@ def load_and_process_excel_data():
 
 
 # ==========================================
-# GLOBAL CSS STYLING
+# GLOBAL CSS STYLING (Prominent Clickable Links Added)
 # ==========================================
 SITE_CSS = """
 :root {
@@ -418,6 +465,42 @@ a.doc-btn:hover {
     color: #ffffff;
 }
 
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
 footer {
     text-align: center;
     padding: 2rem;
@@ -483,6 +566,77 @@ def build_header_html(active_tab="home"):
     </div>
   </header>
   """
+
+
+# ==========================================
+# INDIVIDUAL SERMON PAGES GENERATOR
+# ==========================================
+def generate_individual_sermon_pages(total_sermons=170):
+    for i in range(1, total_sermons + 1):
+        s_num = str(i).zfill(3)
+        prev_num = str(i - 1).zfill(3) if i > 1 else None
+        next_num = str(i + 1).zfill(3) if i < total_sermons else None
+
+        docx_file = find_sermon_file(s_num, "docx", SRC_DOCX_DIR) or f"sermon_{s_num}_ENGLISH.docx"
+        pdf_file = find_sermon_file(s_num, "pdf", SRC_PDF_DIR) or f"sermon_{s_num}.pdf"
+        epub_file = find_sermon_file(s_num, "epub", SRC_EPUB_DIR) or f"sermon_{s_num}.epub"
+
+        sermon_text = read_sermon_content(s_num)
+
+        prev_link = f'<a href="sermon_{prev_num}.html" class="doc-btn">← Previous Sermon ({prev_num})</a>' if prev_num else '<span></span>'
+        next_link = f'<a href="sermon_{next_num}.html" class="doc-btn">Next Sermon ({next_num}) →</a>' if next_num else '<span></span>'
+
+        page_html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon {s_num} | Ven. Katukurunde Nanananda Thero</title>
+  <style>{SITE_CSS}</style>
+</head>
+<body>
+
+  {build_header_html('sermons')}
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      {prev_link}
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      {next_link}
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon {s_num}</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/{docx_file}" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/{pdf_file}" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/{epub_file}" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      {sermon_text}
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      {prev_link}
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      {next_link}
+    </div>
+
+  </main>
+
+  {FOOTER_HTML}
+
+</body>
+</html>
+"""
+        with open(DOCS_DIR / f"sermon_{s_num}.html", "w", encoding="utf-8") as f:
+            f.write(page_html)
+
+    print(f"Generated {total_sermons} individual sermon pages.")
 
 
 # ==========================================
@@ -638,7 +792,6 @@ def generate_downloads_page(metrics):
 
 
 def generate_audio_page():
-    # 1. Scan both source and docs folders for all MP3 files
     audio_files = set()
     for audio_dir in [SRC_AUDIO_DIR, DOCS_AUDIO_DIR]:
         if audio_dir.exists():
@@ -647,7 +800,6 @@ def generate_audio_page():
                     dest_name = f.name if f.name.lower().endswith(".mp3") else f"{f.name}.mp3"
                     audio_files.add(dest_name)
 
-    # 2. Group files into two separate playlists
     paticca_files = []
     pahankanuwa_files = []
 
@@ -657,7 +809,6 @@ def generate_audio_page():
         else:
             pahankanuwa_files.append(file_name)
 
-    # Helper function to sort files numerically based on numbers in the filename
     def sort_key(filename):
         numbers = re.findall(r'\d+', filename)
         return int(numbers[0]) if numbers else 0
@@ -665,7 +816,6 @@ def generate_audio_page():
     paticca_sorted = sorted(paticca_files, key=sort_key)
     pahankanuwa_sorted = sorted(pahankanuwa_files, key=sort_key)
 
-    # Helper function to build HTML blocks for a playlist
     def build_playlist_html(file_list, title_prefix, description_prefix):
         if not file_list:
             return "<p style='color: var(--text-muted); font-style: italic;'>No recordings currently available in this series.</p>"
@@ -693,20 +843,9 @@ def generate_audio_page():
             cards.append(card_html)
         return "\n".join(cards)
 
-    # 3. Generate HTML for both playlists
-    paticca_html = build_playlist_html(
-        paticca_sorted, 
-        "Paticca Samuppada", 
-        "Paticca Samuppada Audio Series"
-    )
-    
-    pahankanuwa_html = build_playlist_html(
-        pahankanuwa_sorted, 
-        "Pahankanuwa Sermon", 
-        "English Audio Narration"
-    )
+    paticca_html = build_playlist_html(paticca_sorted, "Paticca Samuppada", "Paticca Samuppada Audio Series")
+    pahankanuwa_html = build_playlist_html(pahankanuwa_sorted, "Pahankanuwa Sermon", "English Audio Narration")
 
-    # 4. Assemble the full page
     page_html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -715,46 +854,27 @@ def generate_audio_page():
 <title>Audio Recordings | Ven. Katukurunde Nanananda Thero</title>
 <style>{SITE_CSS}</style>
 </head>
-
 <body>
 
 {build_header_html('audio')}
 
 <main class="homepage-content">
-
 <section class="hero">
 
 <h1>Audio Recordings</h1>
+<p>Listen to English audio recordings of Venerable Katukurunde Nanananda Thero's Dhamma teachings.</p>
 
-<p>
-Listen to English audio recordings of Venerable Katukurunde Nanananda Thero's Dhamma teachings.
-New recordings will be added progressively as they become available.
-</p>
-
-<!-- Playlist 1: Paticca Samuppada -->
 <h2 style="color: var(--primary-color); margin-top: 1.5rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">
   Paticca Samuppada Series
 </h2>
-<p style="margin-bottom: 1.5rem;">Special sermon series focusing on Dependent Arising (Paticca Samuppada).</p>
-
 {paticca_html}
 
-<!-- Playlist 2: Pahankanuwa Sermons -->
 <h2 style="color: var(--primary-color); margin-top: 2.5rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">
   Pahankanuwa Sermons
 </h2>
-<p style="margin-bottom: 1.5rem;">English audio narrations of the Pahankanuwa sermon series.</p>
-
 {pahankanuwa_html}
 
-<h2 style="margin-top:2.5rem;">Future Recordings</h2>
-
-<p>
-Additional recordings in both series will be published as they become available.
-</p>
-
 </section>
-
 </main>
 
 {FOOTER_HTML}
@@ -762,11 +882,9 @@ Additional recordings in both series will be published as they become available.
 </body>
 </html>
 """
-
     with open(DOCS_DIR / "audio.html", "w", encoding="utf-8") as f:
         f.write(page_html)
 
-    print(f"Generated: docs/audio.html ({len(paticca_sorted)} Paticca Samuppada files, {len(pahankanuwa_sorted)} Pahankanuwa files loaded)")
 
 def generate_data_subpage(filename, tab_key, page_title, description, df_data):
     if df_data is not None and not df_data.empty:
@@ -918,40 +1036,34 @@ def generate_statistics_page(metrics, datasets):
 # FILE COPY & ASSET MANAGEMENT
 # ==========================================
 def copy_static_assets():
-    # Copy DOCX files
     if SRC_DOCX_DIR.exists():
         docx_files = list(SRC_DOCX_DIR.glob("*.docx"))
         for df in docx_files:
             shutil.copy2(df, DOCS_DOCX_DIR / df.name)
         print(f"Copied {len(docx_files)} DOCX files into docs/docx/")
 
-    # Copy PDF files
     if SRC_PDF_DIR.exists():
         pdf_files = list(SRC_PDF_DIR.glob("*.pdf"))
         for pf in pdf_files:
             shutil.copy2(pf, DOCS_PDF_DIR / pf.name)
         print(f"Copied {len(pdf_files)} PDF files into docs/pdf/")
 
-    # Copy EPUB files
     if SRC_EPUB_DIR.exists():
         epub_files = list(SRC_EPUB_DIR.glob("*.epub"))
         for ef in epub_files:
             shutil.copy2(ef, DOCS_EPUB_DIR / ef.name)
         print(f"Copied {len(epub_files)} EPUB files into docs/epub/")
 
-    # Copy AUDIO files (Fixes missing audio files)
     if SRC_AUDIO_DIR.exists():
         audio_files = list(SRC_AUDIO_DIR.glob("*"))
         copied_count = 0
         for af in audio_files:
             if af.is_file():
-                # Append extension if missing on disk
                 dest_name = af.name if af.name.lower().endswith(".mp3") else f"{af.name}.mp3"
                 shutil.copy2(af, DOCS_AUDIO_DIR / dest_name)
                 copied_count += 1
         print(f"Copied {copied_count} Audio files into docs/audio/")
 
-    # Copy Complete Archive and Document Files
     for file_name in [ZIP_FILE, DOCX_COMPLETE, PDF_COMPLETE, EPUB_COMPLETE]:
         src_file = BASE_DIR / file_name
         if src_file.exists():
@@ -983,7 +1095,9 @@ if __name__ == "__main__":
     )
     generate_statistics_page(metrics, datasets)
     
-    # Copies all files including audio into docs/ audio
+    # Generate individual sermon pages and read text from DOCX/TXT files
+    generate_individual_sermon_pages(metrics['sermons_count'])
+    
     copy_static_assets()
     
     print("\n==========================================")

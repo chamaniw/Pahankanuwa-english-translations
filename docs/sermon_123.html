@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 123 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_122.html" class="doc-btn">← Previous Sermon (122)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_124.html" class="doc-btn">Next Sermon (124) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 123</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_123_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_123_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_123_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #123</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.102)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Diso disaṃ yaṃ taṃ kayirā, verī vā pana verinaṃ;</p>
+<p>micchāpaṇihitaṃ cittaṃ, pāpiyo naṃ tato kare ti.</p>
+<p>From:</p>
+<p>Dhammapada 42 (Cittavagga)</p>
+<p>Dear Listeners,</p>
+<p>Since the mind precedes all things, the Buddha constantly emphasized the importance of establishing the mind correctly. If one directs one's mind along the wrong path and establishes it there, one becomes one’s own enemy. The Buddha pointed out that a wrongly directed mind causes far greater harm than the dangers arising from any external enemy. The verse that expresses this fact is our theme for today.</p>
+<p>That verse was preached in Sāvatthī concerning Nanda, the cowherd of the financier Anāthapiṇḍika. The Buddha almost constantly visited Anāthapiṇḍika’s mansion for alms. This cowherd named Nanda, who looked after Anāthapiṇḍika’s cattle, was quite a wealthy person. Whenever he brought the five products of the cow to the financier's mansion, he listened to the Dhamma from the Buddha and invited the Buddha to visit his home. However, the Buddha delayed the journey until this cowherd’s spiritual faculty of wisdom had matured. Later, on a certain occasion, while traveling with a retinue of monks, the Buddha sat at the foot of a tree near Nanda the cowherd's house. Nanda came there, exchanged friendly greetings with the Buddha, and invited him to accept alms at his home for seven days. Accepting the invitation, the Buddha, along with the retinue of monks, took alms at his home for seven days. On the seventh day, after the appreciation (*anumodanā*) with a Dhamma sermon given in a gradual sequence (*anupubbikathā*), Nanda the cowherd attained the fruit of Stream-entry (*Sotāpatti-phala*).</p>
+<p>While the Buddha was returning, Nanda the cowherd followed behind, carrying the Buddha's bowl. After going some distance, the Buddha said, “Nanda, stop here.” As the cowherd was returning, he was shot and killed by a hunter. The monks walking behind saw this and came to the Buddha, saying, “Venerable Sir, it was because the Blessed One accepted this difficult-to-accept invitation and visited this house that Nanda the cowherd met with such a sudden death. If the Blessed One had not visited, this death would not have occurred.” The Buddha said, “Monks, whether I came or not, even if Nanda the cowherd had gone to the four directions, intermediate directions, up or down, he could not have escaped death today.” He thus indicated that such a kamma was present. Having declared this, the Buddha said that a wrongly established mind causes far more harm than any harm that could be caused by an external enemy or hater. Demonstrating this fact, he spoke this precious verse:</p>
+<p>*Diso disaṃ yaṃ taṃ kayirā, verī vā pana verinaṃ*</p>
+<p>*Micchāpaṇihitaṃ cittaṃ, pāpiyo naṃ tato kare*</p>
+<p>The meaning of this verse is: whatever a foe may do to a foe, or a hater to a hater, a wrongly directed mind does to oneself a far worse, more severe harm. It is mentioned in the books that after this verse was declared, the assembly attained the paths and fruits accordingly.</p>
+<p>What is unusual here is that the past-life story is not mentioned. That is, the monks did not ask, and they did not question, what past bad kamma Nanda the cowherd had committed. Because of this, it is recorded in the books that the Buddha also did not declare that matter. This is somewhat strange; even you, devout friends, might have expected the past-life story—asking what Nanda the cowherd had done to die so suddenly. But for some reason, there is no mention of it in the books. We can only think of it this way: the monks unwittingly made an unfounded accusation against the Buddha, suggesting this happened because the Blessed One visited; at least, that is how it appeared according to the monks’ “sudden death inquest.” Even in these times, there is such a thing as a sudden death inquest. However, according to the Buddha’s Buddha-cognition (*buddha-ñāṇa*), he showed that this was the result of a kamma committed by Nanda the cowherd himself at some point in the past, due to a wrongly established mind. It appears the monks did not ask beyond that. They were satisfied with that general law of Dhamma (*dhamma-niyāma*), that reality (*dhammatā*), being demonstrated.</p>
+<p>Let us reflect on that small point as well. Now in this society, sudden deaths, road accidents, murders, and such things occur in this manner. These become news to us, and we strive to look at them because they are unexpected, sudden events. That is how it appears to us. But when the Buddha directs his mind, all of those appear like ordinary occurrences. Nowadays, a kind of sudden death inquest is conducted. A forensic medical officer comes, dissects the body, and gives certain conclusions, declaring the manner of the person’s death. The conclusion that anyone can easily make is that death occurred due to the inability to breathe. Looking a bit further, after cutting and dissecting the body, they say it happened due to a defect in some limb or organ of the body, or a sudden arrest of blood circulation, or something of that nature. Or else, they show that it occurred due to external dangers such as poisoning or being poisoned. Beyond that, no one can state the ultimate cause of death through medical examinations. But when we think deeply, all of those are merely immediately supporting conditions that came together. The real cause, the deep cause, the remote cause (*dūra-nidāna*), lies in kamma.</p>
+<p>Therefore, here, we must pay special attention to kamma and the cravings of the aforementioned directed mind (*paṇihita citta*). The divine eye (*dibba-cakkhu*) is a part belonging to the Buddha's own Buddha-cognition. It is mentioned that even some ancient sages (*ṛṣis*) during the Buddha’s time possessed it. But they did not have a completely pure knowledge of kamma. They saw past births, but they did not see them 100% completely; they saw them partially. The Buddha had an extremely pure understanding of it through his divine eye. Therefore, the Buddha declared on certain occasions: “Monks, due to a wrongly directed mind, through using wrong speech, performing wrong bodily actions, holding wrong views (*micchā-diṭṭhi*), and abusing the Noble Ones (*ariyas*), beings go to hell. I do not declare this having heard it from another recluse or brahmin, nor from hearsay. I declare this having seen it myself, with my own knowledge.” The Buddha made such fearless declarations in many places. Next, as a special point we can raise: when we think about the cause (*nidāna*) of bad kamma, in many places it is mentioned as greed, hatred, and delusion (*lobha, dosa, moha*). Briefly, the causes or roots of the unwholesome kamma in our minds can be shown as greed, hatred, and delusion.</p>
+<p>On one occasion when the Buddha was residing in Vesālī, the Licchavi prince named Mahāli asked the Buddha: “Venerable Sir, what is the cause, what is the reason, for committing a bad kamma?” On that occasion, the Buddha explained in detail, mentioning five factors. The first three factors are known to everyone: greed, hatred, and delusion. The fourth is *ayonisomanasikāra*, meaning unwise attention (non-radical attention). Fifthly, he mentions *micchā-paṇihita-citta*, the wrongly established mind. Thus, we can understand that in addition to the first three roots, unwise attention, which is called *ayonisomanasikāra*, and a wrongly established mind also assist in committing bad kamma. Accordingly, we must be mindful not to establish the mind wrongly, but to establish it correctly.</p>
+<p>This is the same idea mentioned earlier: a wrongly directed mind does far more severe harm to oneself than what an enemy or hater would do. There is another verse in the Dhammapada that shows the opposite side: a rightly directed mind (*sammā-paṇihita citta*) does one a greater good than even one's mother, father, or other relatives could do. Anyhow, this word *paṇihita* contains a deep meaning.</p>
+<p>There is also the word *praṇidhi*. *Praṇidhi* means setting a target/goal regarding something. People try to understand this in various ways. But the Buddha gave a very simple simile on one occasion to clarify this. We need to explain a certain word to understand the simile. Perhaps in this area, this word is not commonly used. At the tip of a grain of paddy, there is a very tiny point. That is called the awn of a paddy grain (*vī-naṇḍuwa*). The Buddha uses this awn as a simile. “Monks, if the awn of a grain of hill-paddy or barley is wrongly established or turned sideways, when trodden on by the palm or foot, it will not pierce the palm or foot and draw blood. Why? Because the awn is not directed straight.” This is compared to the *micchā-paṇihita* mind—the wrongly directed mind. Piercing the palm or foot is compared to shattering ignorance (*avijjā*). Drawing blood is compared to bringing forth knowledge (*vijjā*) and realizing Nibbāna,. But if that tiny awn is rightly directed and straight, when trodden upon, it pierces the palm or foot and draws blood. That is called *sammā-paṇihita citta*—the rightly established mind. Likewise, with a rightly established mind, one can shatter ignorance, bring forth knowledge, and realize Nibbāna,.</p>
+<p>We can see the awn of paddy, but the mind cannot be seen. If that tiny, visible awn can do such a thing, the unseen mind can do something far more wonderful. You might have heard of *praṇidhi* in the context of the Bodhisatta’s aspiration over a long period: “I will become a Buddha.” Setting the goal and establishing the mind with that wish. This word *praṇidhi* is often connected with the teachings on perfections (*pāramīs*), such as disciple-perfections. Next, we must understand what precedes or leads in establishing the mind rightly or wrongly. The Buddha says that wrong view (*micchā-diṭṭhi*) precedes the *micchā-paṇihita* mind, and right view (*sammā-diṭṭhi*) precedes the *sammā-paṇihita* mind. View is principal; view comes first everywhere.</p>
+<p>That is why it is said *sammādiṭṭhi-pubbaṅgamā*—"right view is the forerunner." In passages describing the Noble Path, it says right view goes ahead. On one occasion, the Buddha gave this discourse: “Monks, for one of wrong view, wrong intention (*micchā-saṅkappa*)”—now we have translated these into Sinhala as wrong view meaning wrong vision, and wrong intention meaning wrong thoughts—“and wrong speech (*micchā-vācā*), wrong action (*micchā-kammanta*), wrong livelihood (*micchā-ājīva*), wrong effort (*micchā-vāyāma*), wrong mindfulness (*micchā-sati*), wrong concentration (*micchā-samādhi*)...” And going further, ten factors are mentioned in that sutta, including wrong knowledge (*micchā-ñāṇa*) and wrong liberation (*micchā-vimutti*). This is a concept found among those of wrong views.</p>
+<p>These are the factors, starting from wrong view up to their liberation, according to the Buddha’s analysis of wrong view. The Buddha further shows that if a person has wrong view, wrong intention, wrong speech, wrong action, wrong livelihood, wrong effort, wrong mindfulness, wrong concentration, wrong knowledge, and wrong liberation, then all their bodily actions, verbal actions, and mental actions conform to that view. A few more important words are mentioned there:</p>
+<p>“Whatever intention (*cetanā*), whatever aspiration (*patthanā*), whatever resolution (*praṇidhi*), whatever saṅkhāra (preparations/preparations) that person generates, all of of those conform to that view. They go in the wrong direction.” If an intention arises, it is a wrong intention. If an aspiration is made, it is a wrong aspiration. *Praṇidhi*—our word—if there is a direction or target, that too is wrong. Next, *Saṅkhāra* (preparations), which can be briefly understood as dressings, fabrications, processes of action. If such exist, they all go astray because the root was wrong, because *sammā-diṭṭhi* (right view) was lacking. Next, a simile is given. Sometimes the Buddha gives the simile first, sometimes the Dhamma first.</p>
+<p>The Buddha says: “Just as, monks, when a seed of neem (*kohomba*), bitter-gourd (*karavila*), or bitter-pumpkin (*titta-labu*) is planted in moist soil, whatever earth-nutriment and water-moisture it draws in, all of it results in a bitter fruit. Why? Because the seed is bad, its nature is to yield bitter fruit.” In the same way, the outcome of all those factors starting from wrong view—not only words, actions, and thoughts, but also those intentions, aspirations, resolutions, and preparations (*saṅkhāras*)—goes to the bad side, yielding a bitter, painful fruit. Having shown the bad side, the Buddha then shows the opposite side. You can easily understand this even without me explaining: if one starts with *sammā-diṭṭhi* (right view), then *sammā-saṅkappa* (right intention), *sammā-vācā* (right speech), *sammā-kammanta* (right action), *sammā-ājīva* (right livelihood), *sammā-vāyāma* (right effort), *sammā-sati* (right mindfulness), *sammā-samādhi* (right concentration), *sammā-ñāṇa* (right knowledge), *sammā-vimutti* (right liberation)—these ten factors show that whatever bodily, verbal, or mental action that person performs, all of it is right (*sammā*) and on the good side.</p>
+<p>Likewise, whatever intention, aspiration, resolution, or preparation (*saṅkhāra*) they have, they all lead to the good side and bring good results. The simile given is: “Just as when a seed of sugarcane, hill-paddy, or grape is planted in moist soil, the fruit that arises from it is sweet and delicious.” Similarly, if the view is right, such results occur. Through this, we understand how wonderful the Noble Eightfold Path is. Starting with view, it usually ends with *sammā-samādhi*. In some places, it is shown that based on *sammā-samādhi*, through the *sammā-ñāṇa* (right knowledge) that arises next, one attains *sammā-vimutti* (right liberation). It is presented as ten factors. If it is wrong, the wrong fruit (bad, bitter side) comes; if it is right, good results come.</p>
+<p>On another occasion, the Buddha gave a wonderful discourse to the monks showing the importance of this Noble Eightfold Path: “Monks, when there is a disturbance of bile, phlegm, or wind, physicians give purgatives. Monks, there are such purgatives. I do not say they do not exist. But those purgatives given by physicians for the three humors may succeed or they may fail. But, monks, I give a Noble Purgative (*ariya-virecana*). I teach you a Noble Purgative which always succeeds and never fails. What is this Noble Purgative?” He then analyzes:</p>
+<p>“Monks, in a person of right view, through the very power of establishing that right view, wrong view is purged. Whatever evil, unwholesome states (*akusala dhamma*) associated with wrong view there are, they are all purged away. Wholesome states (*kusala dhamma*) connected with right view grow. Next, in one of right intention, through the power of that right intention, wrong intention is purged. Whatever unwholesome states arise due to wrong intention, they are purged away. Wholesome states grow through meditation (*bhāvanā*) and development. That is the good side, the blessing.” Ten factors are shown up to right liberation. In each, wrong liberation is eliminated, and all evil unwholesome states associated with it are eliminated. This is the purge—the Noble Purgative of the Buddha.</p>
+<p>It doesn't stop there. Next, the Buddha gives an emetic. It begins the same way. “Monks, physicians know emetic methods for bile, phlegm, and wind disorders... There is such an emetic method, I do not deny it. But, monks, I give an emetic, a Noble Emetic (*ariya-vamana*). The physician's emetic may succeed or fail, but this Noble Emetic never fails. What is it?” He analyzes it in the same way. “In one of right view, who has established right view correctly, wrong view is vomited up. They have to vomit up wrong view. Whatever evil unwholesome states associated with wrong view there are, they are also vomited up.” Then he states the wholesome side: “Whatever wholesome states there are due to right view, they grow. In one of right intention, wrong intention is vomited up...” and so on up to the tenth. Thus, the Buddha vividly illustrated the difference between *sammā-diṭṭhi* and *micchā-diṭṭhi*. The Buddha called himself the “unexcelled physician” (*anuttaro bhisakko*). Why? *Bhisakka* means physician. Many people use it for physical physicians. The word has become obsolete, but in the past, they were called *bhisag-vaidya* (physicians who treat with medicine) as opposed to *salya-vaidya* (surgeons who cut and heal). The Buddha speaks here as a physician who gives purgatives and emetics. The medicines of other physicians may fail, but those of the *Anuttaro* Buddha—the Noble Emetic and Noble Purgative—never fail.</p>
+<p>Indeed, there is a most valuable teaching in the Buddha's word regarding kamma which we must constantly bear in mind. You are familiar with these important words: *kammasako'mhi, kammadāyādo, kammayoni, kammabandhu, kammapaṭisaraṇo*. Each of these is very important. *Kammasako* means: kamma is one's own property. Not the external wealth and properties we claim. Truly, in saṃsāra, what belongs to us is only our kamma. *Kammadāyādo*: parents give various heritages to children, but children cannot take them away when they die; they only take the kamma they performed. *Kammayoni*: our birth arises from kamma. *Yoni* here means origin/source. We are reborn according to our kamma. *Kammabandhu*: our real friend, our real relative is kamma. According to the verse mentioned earlier, good kamma is one's real relative. If we do bad kamma, it becomes our enemy or hater. *Kammapaṭisaraṇa*: kamma is our refuge in this saṃsāra. We must constantly remind ourselves of this. Some people in this era fall into nihilistic views (*nāstika diṭṭhi*) because they ignore these facts. The Buddha here declared a reality (*dhammatā*) that affects the ordinary worldling who lives with the sense of “I” and “mine”. If there is anything that belongs to them, it is the kamma they perform. The foundation for this lies in *sammā-diṭṭhi* (right view).</p>
+<p>This *sammā-diṭṭhi* is described as ten-fold (*dasa-vatthuka*). Briefly: there are fruits and results of giving. There is this world and the next world. Some think it all ends here. But in the continuation of saṃsāric life, there is a distinction between this world and the next world. There is “mother” and “father”—meaning there are fruits and blessings in serving and looking after parents. There are fruits and results of good and bad deeds. One must believe this as a premise, as an accepted truth. Likewise, there are recluses and brahmins in the world who have rightly understood this world, noble ones who have developed their eye of wisdom and attained direct knowledges (*abhiññā*) beyond us. One must understand this. It is upon these premises that the Buddha presents the view on good and bad deeds. Without this ten-fold *sammā-diṭṭhi*, people do not care about wholesome and unwholesome deeds, merit and demerit, and try to live as they please. That is what humans easily do. Such a nihilistic view is what we easily see in the world today. But their consequences are also there, and they have to be experienced. This is the reality (*dhammatā*) the Buddha constantly reminds us of. Even the Buddha could not escape it, nor could the Arahants. You have heard this many times.</p>
+<p>We can understand this: even with the Buddha's spiritual power, when Devadatta rolled the rock, two other rocks came and stopped it, but a splinter chipped off and cut the Buddha's foot, causing severe pain. He had to be treated by the physician Jīvaka. This happened due to some past kamma. Everyone has also heard of Maha Moggallāna Thero. Despite his amazing supernormal powers, performing miracles of psychic power (*iddhi-pāṭihāriya*), traveling to the Brahma worlds and heaven worlds, doing miraculous things—when the past bad kamma of killing his parents matured and the wheel of kamma rolled in, even he could not escape it. Twice, using his power of absorption (*jhāna*) and psychic power, he escaped from five hundred bandits. But the third time, he realized the gravity of “kammic attraction” (*kamma-ākarṣaṇaya*).</p>
+<p>There is such a thing as “kammic attraction,” dear devotees, which the world does not know. Most people try to understand these things through a materialist perspective. There are aspects that do not fit into that. This “kammic attraction” is one such. Inside us are the four great elements; outside too are the four elements. But the mental energy, the intention (*cetanā*), and preparations (*saṅkhāra*) generated by a person who has grasped these internal four elements through craving (*taṇhā*) and ignorance (*avijjā*) are so powerful that the external four elements also submit and yield to it. That is why what we call “sudden accidents” sometimes occur in miraculous ways. Some escape. Some are pulled to that spot when the time of disaster comes—it is an attraction. Such incidents are found even in Jātaka stories, and many such things happen even today. Sometimes people commit terrible sins, not even knowing it is a sin. Sometimes lightning strikes and kills them in that very manner. There are many such real events in society. We can infer that there is indeed something called “kammic attraction.”</p>
+<p>The Buddha stated that some teachers who have partial understanding—meaning they have the divine eye but do not see kamma completely—make wrong conclusions. It is described thus: a certain person is committing bad deeds. We expect him to go to hell. But that teacher sees him reborn in a happy destination, in heaven. Then that teacher thinks: “Therefore, there is no result of kamma; I can see that.” The Buddha says that though he saw it partially, the result of that bad kamma will come at some point. Why did that rebirth happen? Either because of his near-death mind where something good arose, or a wholesome kamma more powerful than that bad kamma came forward at that moment to give rebirth. But the result of the bad deed will still manifest at some point. This is sometimes described in three terms: some kamma is *diṭṭhadhammavedaniya* (to be experienced in this very life), some is experienced in the next life (*upapajjavedaniya*), and other kamma keeps giving results across various lives (*aparāpariyavedaniya*) going on and on. Such is the situation in saṃsāra. Because the Buddha had a clear understanding of this, he did not make extreme conclusions like other teachers. He understood that in such cases, it was not because bad kamma has no result, but because a specific circumstance arose, so the result was not given immediately.</p>
+<p>The Buddha expressed this on one occasion in a Dhammapada verse:</p>
+<p>*Na hi pāpaṃ kataṃ kammaṃ, sajju khīraṃva muccati*</p>
+<p>*Dahantaṃ bālamanveti, bhasmacchannova pāvako*</p>
+<p>An evil deed committed does not immediately bear fruit, just as milk does not curdle all at once. Smoldering, it follows the fool like fire covered with ashes.</p>
+<p>This verse is interpreted slightly differently, even incorrectly, in some commentaries. Even the simile is wrongly explained. The commentaries talk about milk curdling quickly, but here we must take it as: bad kamma does not give results immediately, like milk coming out of a teat or udder all at once. Instead, it follows one, smoldering like an ember under ashes. That is what is meant there.</p>
+<p>One should not expect the results of some kamma immediately. Especially, severe deeds might be experienced in this very life. But if the kamma that gave birth to that person is very strong, the bad results might not show up in this life. That is why many people argue: “We live virtuously, observing precepts, keeping the five precepts—where is the benefit for us? We have nothing. But those who kill animals, steal, and enjoy themselves are doing great.” They hold this wrong view because of that. Devotees, there are many details in this simile of the ember under the ashes. When there is an ember under ashes, you can sit on it. After a while, you feel the heat. After another while, it burns enough to make you want to get up. If you don't get up, it might burn that side completely. Such is this sin: first, remorse (*pasutävilla*) begins. That is where the burning starts.</p>
+<p>From the moment a bad deed is done, one feels remorse. Why remorse? One's own mind knows. You know there are many mysteries in the world. Murders are investigated by police and found with great difficulty. Some are done so subtly. That subtle planning is what is called *micchā-paṇihita*. *Micchā-paṇihita* refers to that subtle planning.</p>
+<p>The Buddha declared that even the intelligence a fool gains is for his own destruction. In that way, some dangerous criminals have an amazing kind of intelligence. Through that intelligence, they plan great conspiracies and cunning deeds to commit terrible murders and robberies without getting caught. Even the detective police cannot catch them. They think, and the world sees them, as very clever. But one person knows. Who is that? Oneself knows. That is why the Buddha declared:</p>
+<p>*Natthi loke raho nāma, pāpakammaṃ pakubbato*</p>
+<p>*Attā te purisa jānāti, saccaṃ vā yadi vā musā*</p>
+<p>There is no secret in the world for one who commits an evil deed. Your own self, O man, knows whether it is true or false. Even if one employs clever lawyers, uses corrupt tricks, bribes, or silences witnesses through threats and fear, and wins the court case, one still has to undergo the punishment in the supreme court of kamma, according to one's conscience. That is it.</p>
+<p>No one can block that conscience. That is why they cannot sleep at night. Next, the first thing to fall victim to that burning is the four elements of one's own body. Aggravation of wind, phlegm, etc., burning sensations, itching, blisters, wounds arise, and finally, they end up in hospitals. Even doctors cannot find the cause. The cause that doctors cannot find was shown by the Buddha: that is the *micchā-paṇihita* mind—the wrongly established mind.</p>
+<p>Thus, even if one deceives the supreme courts and the world through cunning and commits murders and robberies, though other witnesses are silenced, that one witness cannot be stopped—the conscience cannot be stopped. And its result, the punishment, is experienced by oneself. The lives of such people end in a truly terrifying, tragic manner, amidst great pain. Sometimes at that moment, they scream and blabber about what they did. Not only about killing humans, dear devotees, but also about killing animals to satisfy their craving for taste (*rasa-taṇhā*). You know how many helpless animals are slaughtered daily to satisfy the craving for taste. The methods used are sometimes shocking and amazing, because they are so greedy for raw meat. The demon, the beast inside man is so powerful that he does not like old meat from shops. Just as no one likes old vegetables, they do not want to eat an animal killed days ago. They want the meat of an animal killed recently, today. Sometimes the animal is brought before them, killed, and eaten right there. The only difference is the spoon and fork to show he is not an animal. But the demon, the beast inside, is what commits that cruel slaughter. Although the body grows from it, the result—those diseases, mental illnesses—begins right there. Next, physical illnesses also begin as a result. Through that, first remorse, then burning in the body. Next, the flames of hell are ready and waiting. We know there are volcanoes. Even if people do not believe it nowadays, there are stories of the earth splitting open, fire burning, and dragging one down to hell. And what comes from above are thunderbolts.</p>
+<p>As we explained, here too are the four elements, and outside are the four elements. There is a relationship, a friendship between them. It is operated by that kamma-machine. Indeed, in some ancient books, even when there was no understanding of modern machines, ancient teachers regarded kamma as a machine: *kammayantena yantito* (bound by the machine of kamma). Kamma is such an amazing thing, understood only by the Buddha's knowledge. Even to us, its inner workings are not clearly visible. That is why the Buddha described this entire saṃsāra using terms like *tantākulakajāta* (tangled like a ball of thread), *muñjapabbata-bhūta* (matted like rushes), etc.—showing that this is completely tangled like a ball of thread that cannot be unraveled. Kamma and its results are all intertwined. Why is that? Let's say we experience a result of kamma—a loss from someone, a theft, or physical pain. At that moment, we do not see our own kamma, we do not see that we did this to ourselves. We do not see that person as merely an instrument. Instead, we think, “I am innocent, why did he do this to me?” Then we take revenge. Through that, it goes on and on. That is the danger in kamma. The ball of thread is tangled further.</p>
+<p>If you give a ball of thread to a cat and ask it to unravel it, what does it do? It rolls it this way and that and tangles it completely, because of ignorance (*avijjā*). Man is the same. The wheel of kamma is also amazing. A bad kamma done in youth in a past life, when it rolls around in this life, can give results during youth. The time-frame of the wheel of kamma is also shown in Dhamma in some places. That is why some kamma takes seven days to exhaust. Some takes many lives, some 500 times, some 1000 times, some 10,000 times. There is a wheel of kamma that gives results in this way. It rotates within consciousness (*viññāṇa*) and gives results. If a grain of sand gets caught in a spinning wheel, it makes a strange sound every time it rotates. Similarly, this bad kamma that has fallen in. As long as one lives, the wheel rotates. Every time it is remembered, one suffers remorse. It is the same after rebirth. If the seed of kamma has sprouted somewhere, one has to experience its bitter results for an infinite time in saṃsāra.</p>
+<p>So we can understand that the root of all this, on one hand, is the *micchā-paṇihita* mind (wrongly established mind). What supports it is wrong view (*micchā-diṭṭhi*) standing behind. Therefore, we must strive to remove those wrong views and bring forward the correct premises of life. The Buddha taught that there is this saṃsāric world and next world, there is mother and father, there are good and bad deeds, there are wise people in society. Some “intellectuals” say, before realizing Nibbāna: “Everything ends with the mind and logic. Such people do not need merit (*puñña*). Making merit means staying in saṃsāra for a long time, so we don't need merit either. And we don't commit sins anyway; we don't do harm to anyone.” In this way, they present arguments. But they cannot escape. The Buddha has shown that we do not know what kind of kamma we have done in the past. But we have a way of escape. We do not necessarily have to experience the results of every single kamma we performed. Instead, he presented the simile of the grain of salt, which we mentioned on previous occasions.</p>
+<p>It is through the Buddha's teaching on the simile of the grain of salt that some relief can be found within this wheel of kamma. First, let's state the simile. The Buddha first presents this Dhamma point as a problem: “Monks, of two persons who have committed a bad kamma of the same proportion, one goes to hell because of that kamma, while the other does not go to hell but experiences it mildly in this very life.” This is a problem. At first glance, this seems like an injustice of kamma. Both did the same kamma. The first goes to hell due to the result, while the second pays it off mildly in this life and escapes easily. Why is this? The Buddha says: “The world is unsubstantial (*anattā*), without a ruler.” There is no creator, no God who protects the world. Why does this happen? Is this unjust?</p>
+<p>Then he gives the reason: “Monks, that first person did not just commit the sin. His way of life is like this: *abhāvita-kāyo, abhāvita-sīlo, abhāvita-citto, abhāvita-pañño, paritto, appātumā*.” These words mean: this person has not developed his body (conduct), has not developed virtue (*sīla*), has not developed his mind (*citta*), has not developed wisdom (*paññā*). He has a narrow mind, a very low kind of person. Because of this nature, even for a small bad deed, he goes to hell. “And the other person, the one who pays it off mildly in this life as *diṭṭhadhammavedaniya* and escapes, his life is described as: *bhāvita-kāyo, bhāvita-sīlo, bhāvita-citto, bhāvita-pañño, appamāṇo*.” That means his body (conduct), virtue, mind, and wisdom are developed; his mind is immeasurable (*appamāṇo*). That is why he escapes.</p>
+<p>Then comes the simile, which anyone can understand. There are two equal grains of salt. We put one grain into a small cup of water, a small pot. When it dissolves, the water becomes very salty. We dissolve the other grain of salt in the River Ganges. We check the water of the river—no, there is no salty taste. Why? The water in the pot is very little, so the salty taste is strong. The water in the River Ganges is vast, so it is not felt. It is because of such a reality (*dhammatā*) that the Buddha declared that one can attain liberation through this life of purity (*brahmacariya*), through the path of Dhamma shown by the Buddha. What did the Jain disciples, the Nigaṇṭhas, who did not know this do? They too had some understanding of kamma, but it was a partial understanding. So they thought: “We have done infinite bad deeds in the past. Now what we have to do is pay off those bad deeds by inflicting pain on the body.” They tried to pay them off. By suffering as much as possible and torturing the body, they tried to exhaust past bad deeds, while not performing new kamma. You might see some Nigaṇṭhas living like this when you go to India—without clothes, without food, living in a strange way. That is the extreme view.</p>
+<p>Instead, the Buddha shows this simile of the grain of salt. We must reflect on this. We do not know what kind of bad deeds we have done in the past. But what we must do is not to feel remorse, but to increase our volume of water. Think about the simile of the River Ganges instead of the little water in the pot. If we develop virtues like *sīla*, even if those bad deeds come, they will be like mere scratches and we will escape. Just as some people die in terrible accidents, some escape by a hair's breadth, and some escape with just a scratch. There can be certain laws of Dhamma within this. Perhaps the one who has good virtues is the one who escapes in that way. If we understand this Buddha-word, within it is the path to liberation (*vimuktiya*). For how long have we wandered in saṃsāra? If even Maha Moggallāna Thero killed his parents in the past, what have we not done in this long saṃsāra? We might have done countless bad deeds.</p>
+<p>But at this moment, what we have to do is what needs to be done according to the Middle Path (*majjhimā paṭipadā*) shown by the Buddha. That is called *sīla* (virtue). *Sīla* is sometimes described as making a small platform for oneself to sit on for meditation in this swamp of saṃsāra. One builds that platform by planting five pillars as the Five Precepts (*pañca-sīla*), eight pillars as the Uposatha Eight Precepts, or ten pillars as the Ten Precepts. Having built a small platform, one prepares the mind: “Today, I live on this virtue, on this determination. My mind is pure.” Delighting the mind in that, one develops meditation (*bhāvanā*). You have heard that even Ven. Angulimāla, who killed thousands of people, finally became an Arahant based on this very reality (*dhammatā*). That means, whatever past kamma may be, if we live in the present moment in the way shown by the Buddha, we can bring forth liberation within it—this can be stated in accordance with the Dhamma.</p>
+<p>Therefore, we must correctly understand this word *micchā-paṇihita* (wrongly established). The mind becomes *micchā-paṇihita* if those many wrong factors that follow wrong view accumulate in our minds. We must strive to bring forth right view (*sammā-diṭṭhi*) in its purity. The Buddha declared that for one of right view, right intention (*sammā-saṅkappa*) arises naturally. This is not something a person does. There is a wonderful reality (*dhammatā*) there. That, devotees, is what is called dependent arising (*paṭiccasamuppāda*). Many people ask about liberation in this Dhamma: “If there is no 'I' (self), how is this done?” There is no self here, that is true. Due to the ignorance (*avijjā*) within us, the feeling of 'I' exists. But the Buddha showed that there is a wonderful connection in every part of this path of Dhamma. That is why the Buddha declared: *dhammā dhamme abhisaṇdenti, dhammā dhamme paripūrenti, apārā pāraṅgamanāya* (states flow into states, states complete states, for going from the near shore to the far shore). In going from this shore to the other shore, what happens? Dhamma itself flows into Dhamma. Dhamma itself fulfills Dhamma. It is the work of Dhamma, not one's own work, even though one thinks of it as one's own.</p>
+<p>What we have to do is simply complete those Dhammas. That is why, if right view arises in someone, right intention arises in them almost naturally. Right intention, as you know, means good thoughts. If good thoughts arise, good words are spoken. According to those words, one then strives to correct one's actions. If those actions are corrected in purity, then regarding one's livelihood, without going into the aforementioned wrong livelihoods (*micchā-ājīva*), right livelihood (*sammā-ājīva*) arises in them. In one of right livelihood, through the effort they make, right effort (*sammā-vāyāma*) arises in the mind without them even knowing it. The four-fold right endeavor (*sammā-ppadhāna*)—not to bring about unarisen unwholesome states, to discard arisen unwholesome states, to bring about unarisen wholesome states, and to consolidate arisen wholesome states—develops within oneself without one even knowing it. It can be said to happen without one even knowing.</p>
+<p>While that is developing, what happens? When one guards one's mind like a watchman, what is constantly done? Mindfulness (*sati*) develops. Mindfulness develops automatically. If one can maintain mindfulness correctly without letting it scatter, for ten minutes, fifteen minutes, half an hour, an hour, two, or three—that is concentration (*samādhi*). That is concentration. If it is not wrong concentration (*micchā-samādhi*) but real concentration as shown by the Buddha, then with the support of that concentration, one can direct radical attention (*yoniso manasikāra*) towards the Three Characteristics (*ti-lakkhaṇa*) of impermanence (*anicca*), suffering (*dukkha*), and not-self (*anattā*). If that practitioner (*yogāvacara*) directs radical attention (*yoniso manasikāra*), then as shown by the Buddha, through those insight-knowledges (*vipassanā-ñāṇa*), at some point, through the penetration of the paths and fruits of Stream-entry, Once-returning, Non-returning, and Arahantship, they can realize the supreme, deathless, great Nibbāna,.</p>
+<p>Within this short time, we have illustrated the Middle Path shown by the Buddha. To cultivate a rightly established mind (*sammā-paṇihita citta*) instead of a wrongly established mind (*micchā-paṇihita citta*), you have today observed precepts and listened to the Dhamma in that manner. I believe that through this listening to the Dhamma, you have also cultivated these faculties and powers (*indriya* and *bala*) which we constantly remind you of: faith (*saddhā*), energy (*viriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*). Relying on all these, with the help of association with good friends (*kalyāṇa-mitta*), constantly and diligently engaging in these practices of Dhamma and meditation, doing everything necessary for your liberation without delay, before this Dispensation (*sāsana*) declines, may this merit of listening to the Dhamma be a supportive condition for realizing the supreme, deathless, great Nibbāna,, through the penetration of the paths and fruits starting from Stream-entry! Thus you should aspire. Also, may all those in this universe, from the lowest realm to the highest (*Akaniṭṭha*), who wish to rejoice in these merits of preaching and listening to the Dhamma, by doing so, with the help of that meritorious energy, at some point realize the supreme, deathless, great Nibbāna,, through the Bodhi of their aspiration! Having made this aspiration, recite these verses.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_122.html" class="doc-btn">← Previous Sermon (122)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_124.html" class="doc-btn">Next Sermon (124) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

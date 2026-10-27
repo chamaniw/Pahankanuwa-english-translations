@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 131 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_130.html" class="doc-btn">← Previous Sermon (130)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_132.html" class="doc-btn">Next Sermon (132) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 131</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_131_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_131_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_131_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #131</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.35)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Yo daṇḍena adandesu, appaduṭṭhesu dussati;</p>
+<p>dasannamaññataraṃ ṭhānaṃ, khippameva nigacchati;</p>
+<p>vedanaṃ pharusaṃ jāniṃ, sarīrassa ca bhedanaṃ;</p>
+<p>garukaṃ vāpi ābādhaṃ, cittakkhepañca pāpuṇe;</p>
+<p>rājato vā upassaggaṃ, abbhakkhānañca dāruṇaṃ;</p>
+<p>parikkhayañca ñātīnaṃ, bhogānañca pabhaṅguraṃ;</p>
+<p>atha vassa agārāni, aggi ḍahati pāvako;</p>
+<p>kāyassa bhedā duppañño, nirayaṃ so upapajjatī ti.</p>
+<p>From:</p>
+<p>Dhammapada 137–140 (Daṇḍavagga)</p>
+<p>Dear Listeners,</p>
+<p>At this moment, we have chosen as our theme several verses related to a most poignant event of great significance in the Dispensation, which occurred while our Teacher of the Three Worlds, the Buddha, was residing at Veluvana Monastery. By realizing Nibbāna, a person becomes a noble treasure to the world. When a Buddha, a Paccekabuddha, or an Arahant arises in the world, a vast multitude—not only in this human world but also among the deities and Brahmas of the heavenly realms—attain great welfare and solace, not merely by making offerings to them, but even by simply gladdening their minds in their presence. That is why they are known as the supreme fields of merit—the incomparable field of merit.</p>
+<p>However, there is another group of people in the world who, by corrupting their minds toward these noble ones and by harming or harassing them, fall into intense *Dukkha* (Suffering). They undergo terrifying *Dukkha* (Suffering) and torment, boiling in hell for aeons. It is because of this state of affairs that the Buddha, through these verses, pointed out and declared a certain danger that can come upon the world regarding these noble persons. That danger refers to the numerous hazards that can occur by corrupting one's own mind. These verses were uttered as a warning regarding this.</p>
+<p>The incident connected to this is also of great value to the Dispensation. While the Buddha was residing at Veluvana Monastery, a group of sectarians known as the Nigaṇṭhas gathered in a certain place and discussed, "How is it that this Recluse Gotama receives so much gain and honor?" While discussing this, some of them said, "These massive gains and honors are received because of a monk in this Dispensation named Mahā Moggallāna. From time to time, he goes to the heavenly worlds, asks the deities about the meritorious deeds they performed which caused them to be born in heaven, and returning to the human world, tells the people. He also goes to the hells, finds out about the evil deeds that caused the torment of those born in the purgatories, and informs the humans. That is why such immense gain and honor are received. If we can kill this Elder Moggallāna, we can divert those gains and honors to ourselves." Next, what did they do? Having raised a subscription of a thousand gold coins (*kahāpaṇas*) from among their supporters, they hired a band of five hundred murderous bandits to put the Great Arahant Moggallāna to death. At that time, Ven. Moggallāna was residing at a rock known as Kālasilā.</p>
+<p>This band of bandits surrounded the hut to capture the Arahant. Knowing this, the Elder escaped and slipped away through the keyhole by his psychic power. That was the first time. Once again, when this band of bandits surrounded the hut to capture the Great Arahant Moggallāna, he broke through the circular peak of the roof and escaped, again by his psychic power. In this manner, two months passed. By the third month, the Great Arahant Moggallāna perceived that the gravity of a grave evil karma he had committed in the past had caught up with him. Realizing that this time there was no escape, he did not flee in that manner. The bandits broke into the hut, captured him, beat him severely, crushing his bones to the size of broken rice, and thinking he was dead, threw him into a bush and left. However, the Great Arahant Moggallāna did not pass away (*pariNibbāna simply by that. It is said that by the power of meditative absorption (*jhāna*), he gathered all the remaining bones of his body together and bound them with the "meditative wrap" (*jhāna-veṭhuma*). Flying through the air in this manner, he arrived before the Buddha and informed him, "Venerable Sir, I am about to attain *Parinibbāna*." The Buddha said, "Very well, then preach some Dhamma to me before you pass away." The Elder rose into the air, delivered a sermon, and then went to the Kālasilā region where he attained *Parinibbāna*.</p>
+<p>As this event spread throughout the country, King Ajātasattu deployed spies to capture the bandits who did this. While these spies were going about, on one occasion, members of that bandit gang, while drinking alcohol in a tavern, began boasting to one another. During a joke made among themselves, it was revealed that it was they who killed the Great Arahant Moggallāna. Thereupon, when the spies arrested them and investigated, the fact that they were employed by those Nigaṇṭhas was also revealed. Accordingly, when the five hundred Nigaṇṭhas and the five hundred bandits were arrested and handed over to the king, what punishment did the king decree? He ordered that all of them be buried in pits up to their waists in the palace courtyard, covered with soil, and burned to death. That was the punishment he meted out. Furthermore, after burying them, covering them with soil, throwing straw over them and burning their bodies, he ordered that harrows be dragged over them to shred all their bodies into pieces. While the monks were gathered in the Dhamma hall discussing this event, the Buddha arrived there. He asked, "Monks, what is the subject of your discussion?" The monks stated, "Venerable Sir, we are speaking about how the Great Arahant Moggallāna met a death that was unbefitting of him." At that moment, the Buddha declared, "Monks, although the Elder Moggallāna met a death that seems unbefitting of him in this life, that death occurred in a manner that was entirely fitting for an evil karma he committed in the past." He then recounted that past story.</p>
+<p>In the past, the Great Arahant Moggallāna was born as the only son of a pair of blind parents, and he looked after those blind parents, doing all the work in the house and the fields. Meanwhile, seeing the son exerting himself, the parents said, "We shall bring you a wife. You cannot do all this work alone." Although the son initially expressed his unwillingness, he agreed due to his parents' repeated entreaties.</p>
+<p>Accordingly, a certain woman was brought to that house. After serving the parents for a few days, she developed a disgust toward them. She began pointing out the parents' faults in a way that hurt her husband's feelings. When he did not believe her, she scattered slimy, frothy substances like gruel foam in various places in the house. When her husband returned home in the evening, she lied to him, saying, "Look at this! These parents are ruining and dirtying everything here." In this way, she poisoned the son's mind. Thus, this son decided that he must kill his parents.</p>
+<p>What did he do next? He told his parents, "Your relatives in such-and-such a distant region wish to see you." He put them in a cart, and while driving through a great forest, he told them, "There are many fierce bandits in this area. Therefore, I will get down from the cart." Giving the reins into his father's hands, he got down from the cart and made terrifying noises, just like fierce bandits shouting. The parents cried out, "Oh son, we are old! Save your own life!" While they were saying this, the son, continuing to make the sounds of the bandits, beat his parents to death, threw them into the forest, and returned home.</p>
+<p>Thereupon, the Buddha declared, "Because of that evil karma committed by my son Moggallāna in the past, he boiled in hell for hundreds of thousands of years. As a residual result, in a hundred lifetimes, he met his death with his bones crushed in this very manner. Therefore, this is entirely fitting for his past karma. Furthermore, due to the unwholesome karma they committed, this group of a thousand people who corrupted their minds toward my son Moggallāna—who himself harbored no corrupted mind and held no rod—suffered a terrifying destruction even in this very life, by order of the king." With this as the basis, he uttered those verses. As we mentioned earlier, the Buddha, through those verses, pointed out the numerous disasters that can karmically befall someone by corrupting one's mind toward those who are considered the most noble treasures of the world—the Buddhas, Paccekabuddhas, Arahants, as well as Noble Persons such as Stream-Enterers, Once-Returners, and Non-Returners, and by harming or harassing them.</p>
+<p>If we take the meaning of those verses: *Yo daṇḍena adaṇḍesu, appaduṭṭhesu dussati*—whoever harms with weapons/rods those who do not use weapons/rods, and whoever harbors hatred toward those who have uncorrupted minds and are free from hatred; *dasannamaññataraṃ ṭhānaṃ, khippameva nigacchati*—as a result of that, very quickly incurs one of ten consequences. What are they? *Vedanaṃ pharusaṃ jāniṃ*—he undergoes extremely harsh *Vedanā* (Feeling), grave *Vedanā* (Feeling). Next, *sarīrassa ca bhedanaṃ*—the parts of his body are broken and destroyed; he falls into great ruin. *Garukaṃ vāpi ābādhaṃ*—grave illnesses, chronic diseases that one might even carry from birth. Next, *cittakkhepañca*—he goes mad, falling into a state of insanity. Also, *rājato vā upassaggaṃ*—he undergoes harm from the king, disasters that come by royal command. *Dāruṇaṃ*—likewise, he faces terrible, baseless accusations. *Ñātīnaṃ*—his relatives are suddenly ruined. *Bhogānañca*—and his wealth is also destroyed. *Atha vassa agārāni*—furthermore, his houses, his dwellings, *aggi ḍahati pāvako*—are burned down by consuming fire. These are ten painful consequences that can befall someone due to insulting or harming the Noble Ones. Finally, *kāyassa bhedā duppañño, nirayaṃ so upapajjati*—upon the breakup of the body, that foolish person is reborn in hell. In this way, the Buddha, as a warning, pointed out the consequences of that grave evil karma.</p>
+<p>Thus, through this story as well as through these verses, the Buddha highlighted to the world the terrifying nature of this karma. The reason we recall this matter on many occasions is that we feel this is an era in which many people live under the concept of "it does not matter how one lives, as long as one gets by," spending this brief lifespan only to be reborn and suffer for countless billions of aeons in hells, animal realms, and ghost realms. The message that Buddhas give to the world is the turning away from the path of bad destinations to the path of good destinations, and then, liberating oneself from both good and bad destinations, to be freed from this entire samsara, and to find solace in the sublime, deathless Nibbāna. We can extract many points related to this from this story and these verses. Let us first reflect: Ven. Mahā Moggallāna was no ordinary person. He was someone who had fulfilled the perfections (*pāramīs*) for the position of Chief Disciple over a vast period of many aeons. Yet, even such a person, when he was a worldling (*pṛthagjana*), developed such a wrong view and hatred toward his parents, and committed the grave evil karma of murder. Concerning parents, the Buddha declared: *"āpādakā posakā, lokassa dassetāro"*—they are the ones who brought about one's birth, nourished one, and introduced the world. In the sense that they are to be regarded as the Brahmas of the household, the Buddha also declared: *"brahmāti mātāpitaro"*—"parents are called Brahmas."</p>
+<p>Developing hatred toward such parents who brought one up and putting them to death is a most grave unwholesome deed, and these virtuous people may have heard about *ānantariya* (immediate) weighty karmas (*garuka kamma*). Killing one's mother and killing one's father are pointed out as the primary, gravest unwholesome deeds. A person who commits such evil deeds has absolutely no escape; in the very next life, they go to hell. That is why it is called *ānantariya*—having immediate consequences. Thus, even Ven. Moggallāna, who had fulfilled such perfections, committed such a grave evil karma in the past and boiled in hell for a long time. As a mark of this, as you all know, even the body of the Arahant Moggallāna was dark in color.</p>
+<p>Indeed, because the definite prophecy (*niyata vivaraṇa*) obtained in the past also had to be fulfilled, he attained the position of Chief Disciple in this manner. From that event, we can understand that even psychic power (*iddhi-bala*) is defeated by the power of karma (*kamma-bala*). What is the illustration shown to us by the Great Arahant Moggallāna through this? What did his undergoing of that grave and terrifying disaster teach the world? Even many Buddhists regard psychic power as something magnificent. Indeed, they are great. But when we reflect on the fear of this samsara, it is clear that there is no escape through any of them. Especially, psychic power is not always sufficient to escape from the disasters that can arise karmically. This is evident from the fact that the Great Arahant Moggallāna, knowing in his final moments that the attraction of karma was supreme, did not flee from there. He understood that this was something destined to happen.</p>
+<p>Therefore, it occurs to us that the most powerful force in this world, surpassing even psychic powers, is the force of karma. Nowadays, people are amazed when they think about computers, which are considered modern inventions. When you input something into a computer, it can be retrieved. Similarly, the human mind—*Viññāṇa* (Consciousness)—has a similar nature. The Buddha declared: *"Cetanāhaṃ bhikkhave kammaṃ vadāmi. Cetayitvā kammaṃ karoti kāyena vācāya manasā"*—"Monks, I say that intention (*cetanā*) is karma. Having intended, one performs karma through body, speech, and mind." That is because every action or word considered as karma proceeds with intention as its forerunner. Therefore, when a karmic seed is deposited in *Viññāṇa* (Consciousness) according to that intentional force, it does not perish without yielding its result; it persists, undestroyed, for billions of aeons. How wonderfully it operates is shown by the statement made right here, that Ven. Moggallāna met his death in that manner, with his bones crushed, a hundred times. One cannot even fathom how it happens. It is so astonishing how everything in the external environment aligns itself so that the karmic seed grown in one's own mental continuum yields its fruit accordingly.</p>
+<p>Our mind exists depending on the four elements present in this body: earth (*paṭhavī*), water (*āpo*), fire (*tejo*), and air (*vāyo*). When something bad falls into that mind, it also affects those four elements. Earth, water, fire, and air are also what exist around us. Therefore, we can understand the connection between these. We live individually, saying "this is I" and "this is the other person." But apart from the idea created by ignorance (*avijjā*), namely "I" and "mine," what exists here are only those four elements: earth, water, fire, and air. Whether it is inside or outside, these are interconnected. Thus, what must happen karmically? Due to that force of karma, which is like the power in a computer, it operates in a precise, circular manner.</p>
+<p>The wheel of karma (*kammacakra*) is magnificent. Sometimes, it happens in a way that even the Wheel of Dhamma (*dhammacakra*) cannot withstand. Even here, Ven. Moggallāna was such a noble Elder who held the highest position in this Dispensation. Even though he spun the Wheel of Dhamma to such an extent, he was subjugated by his own wheel of karma. This shows that even if one attains the state of an Arahant, this life exists on the force generated by the karmic energies committed in the past, until one attains *Parinibbāna*. One has to experience the agreeable and disagreeable *Vedanā* (Feeling), the pleasures and pains that must be received from them. Even in the case of the Buddha, when Devadatta rolled down the rock, although he was able to prevent it with his supreme Buddha-power, he was still injured and afflicted by a splinter. This occurred in accordance with past karma. If karma yields its results even to the Buddha and the Arahants, we can imagine how powerful a force, a law (*niyāmatā*), it is. It is done by the mind itself. Whenever a grave unwholesome intentional seed is deposited in this mind of ours, which exists dependent on the four elements, it persists undestroyed thereafter and yields its results in a circular manner across various lifetimes. As found in some stories, seven times, sometimes a hundred times, five hundred times, a thousand times, or millions of times. In this way, this wheel of karma can spin and deliver the exact same result repeatedly. From this, we can see how terrifying this samsara is, how terrifying a situation it is.</p>
+<p>Many Buddhists, rather than supramundane virtues, often consider flying through the air by obtaining psychic powers as something grand. Flying through the air is done even by crows. Nowadays, it is done by vehicles and planes. These are common things. Even during times when no Buddha has arisen, non-Buddhists who attained *jhānas* and direct knowledges (*abhiññā*) performed various kinds of psychic miracles. But more than all of them, we must realize that the most terrifying force in this samsara is karma. So much so that even the Buddha declared that the domain of karma (*kamma-visaya*) is unthinkable (*acinteyya*). Within this karma, there is an astonishing nature that cannot be fully fathomed. The event that clearly reveals this is the final *Parinibbāna* of the Great Arahant Moggallāna, who reigned supreme in this Dispensation, occurring through his death at the hands of bandits with his bones crushed. What a heartbreaking event!</p>
+<p>Another nature of this karma is that, for the ripening of that karma, not only inanimate things but even living beings are drawn into it. In that way, they become entangled in the knots of karma. Here, we saw who became the instruments to exhaust the karmic force of Ven. Moggallāna. Those five hundred Nigaṇṭhas and five hundred bandits were drawn into that matter in that manner. Often, those with weak minds become involved in the karmic entanglements of others and suffer pain and distress. That is the most terrifying thing in this ball of karmic thread. When we live virtuously, well-established in those noble qualities, we have the strength, by applying wisdom, to remain free from those entanglements. Otherwise, if we live holding wrong views and committing evil deeds, without even knowing it, we are likely to become instruments to exhaust the karmic forces of others. We must keep this in mind as a warning. That danger can happen to us if we do not spend our daily lives properly in accordance with the Dhamma, according to the teachings of the Buddha. We too are likely to become instruments to exhaust the karma of others, just as happened to those Nigaṇṭhas and bandits. That is one lesson.</p>
+<p>Furthermore, not only that, someone might think that it is the duty of a king to punish those who did wrong. However, even King Ajātasattu accumulated evil karma through that. From these facts, we can see how chaotic this matter of karma is. That is to say, there is no escape for the king simply because he meted out a punishment. The king also became involved in that karma.</p>
+<p>From all of this, it is apparent to us that this samsara is a massive web of confusion. As long as one lives within this web of confusion, there is no solace. True solace lies only in being liberated from this entire samsara, in truth, through *Parinibbāna*. Normally, when some disaster comes as a result of such grave karma, a person's reaction is often to develop anger toward those who helped exhaust that karmic result. In an event like what happened to Ven. Moggallāna, if he had developed hatred toward those bandits, then that person would have accumulated more karma through it. That is why it is said: *appaduṭṭhesu dussati*—he harbored hatred toward those who are free from hatred. Ven. Moggallāna understood, "This is my past karma. These people are merely helpers who are exhausting my karma." From this, the value within the realization of Nibbāna is seen. Within that realization, there is a strength to develop a certain equanimity (*upekkhā*) toward things that arise karmically. One gains such an understanding. Likewise, a power of equanimity arises in the mind. That power of equanimity arises from the understanding: "This body of mine, and external things, are created from the four elements: earth, water, fire, and air. There is nothing here to be taken as I or mine." Indeed, we commit these evil deeds because of the self-notion, "I," which we have taken within these things, relying on the essence absorbed from the earth, and the blood, flesh, etc., received from our parents. What is done within samsara is the nourishing of this. Therefore, due to the disasters that come upon oneself, one corrupts one's mind and gets entangled in various evil deeds. While experiencing the result, one generates further karma through that result. Thus, there is no end to them. It goes on and on in samsara.</p>
+<p>Instead of that, what is the solace that the Buddha presented through this realization of Nibbāna? It shows a certain cooling down (*nivīma* / peace). While those karmic forces are being exhausted, by using wisdom and equanimity, one understands: "This is a past karma, and what are operating here are only these phenomena." Through that wisdom, it is shown that this is merely a collection of phenomena regarding the body or the mind. Next, for that very reason, one develops equanimity, without leaning toward the side of hatred or lust. That power is present at its highest in the Buddha. If the Arahants constantly remain concentrated in the concentration of the fruit of Arahantship (*arahattaphala-samādhi*), the mind can quickly be freed from the karmas that can approach; otherwise, some deficiency occurs. In the Dhamma, that is known by the name "habitual tendencies" (*vāsanā*).</p>
+<p>Now, you may have heard about the Buddha, that he is "one who has abandoned all defilements along with their habitual tendencies" (*savāsanā sakala-kilesa pahīna*). It is said that he destroyed not only the defilements but also the habitual tendencies (*vāsanā*). Today, this word *vāsanā* is used in society with a different meaning—such as regarding lotteries (luck/fortune). That is not the *vāsanā* spoken of in the Dhamma. What is the deep meaning of the word *vāsanā*? Now, we know that even if the fish is removed from a leaf in which it was wrapped, the smell of fish remains. On the other hand, even if the flowers or incense sticks are removed from something in which they were wrapped, the fragrance remains. It is in reference to this idea of odor or fragrance that this has been said. This means that certain grave karmas do not go away, and certain deficiencies that come in accordance with past character are seen even in Arahants. Due to those deficiencies—that is, at a time when they are not in that noble state called the attainment of the fruit of Arahantship (*arahattaphala-samāpatti*), at times when they do not keep the mind raised to the supramundane state—such things can arise in daily life samsarically even for Arahants. Although their minds travel some distance due to those weaknesses, they do not get entangled in a complete karmic knot to suffer for a long time. However, even Arahants generate a certain amount of unwholesome karma that yields results in this very life, which is called *diṭṭhadhammavedanīya* (to be experienced in this very life). That weakness is what is meant by the word *vāsanā* in the case of Arahants. There, *vāsanā* is not meant in a good sense, but as weaknesses. That too is a part of the defilements themselves. That is why it is said *savāsanā*—the Buddha has no defilements with habitual tendencies. But Arahants have them.</p>
+<p>Due to that weakness, certain deficiencies occur in Arahants. But even that does not lead to a future *Bhava* (Becoming). Why? Because in that fruit of Arahantship, in seeing Nibbāna, what is done? The Arahant has brought the mind to a state where rebirth does not occur, due to that wisdom, due to the power of relinquishing the five aggregates (*pañcakkhandha*). Then, the results of actions or karmic results that can approach due to certain deficiencies arising from this *vāsanā* are common even to Arahants. Such is the nature of that entanglement of karma.</p>
+<p>Now, when compared with ordinary people, the mind of the Arahants operates just like a sewing machine without an under-thread (*yaṭi nūla*). Now, as long as the under-thread is there, it knots properly. If it does not knot properly with the under-thread, there is no proper stitch. In the same way, because the portion called *Anusaya* (Underlying tendency) that lies beneath the defilements has been destroyed by the Arahants upon attaining Arahantship, a stitch cannot be made in the true sense. They do not build up grave karma again. That is the state of an Arahant's mind. For those noble ones who have reached the supreme state, like the Great Arahants Moggallāna and others who developed concentration to such a supreme degree near the Buddha, those states are minimal in them. Those weaknesses are fewer. But such weaknesses can be found in certain Arahants. Apart from that, there is no rebirth in samsara. Therefore, the greatest state in the world is the attainment of a mind liberated from this entire samsara. You have also heard this expressed in the Ratana Sutta:</p>
+<p>> *Khīṇaṃ purāṇaṃ navaṃ natthi sambhavaṃ,*</p>
+<p>> *virattacittā āyatike bhavasmiṃ;*</p>
+<p>> *Te khīṇabījā avirūḷhichandā,*</p>
+<p>> *nibbanti dhīrā yathāyaṃ padīpo.*</p>
+<p>The extinguishment (*nivīma*) of the Arahants is shown to be just like the extinguishing of a lamp. Why? Because *khīṇaṃ purāṇaṃ*—by the time they attain *Parinibbāna*, whatever old karmas there were that helped maintain their lives in the past are entirely exhausted. It is just like a lamp whose oil is completely finished. Next, *navaṃ natthi sambhavaṃ*—there is no accumulation of new karma in that Arahant's mind. Karmas that generate a future *Bhava* (Becoming) do not accumulate in an Arahant's mind. That is just like not adding any more oil to the lamp.</p>
+<p>Next, *virattacittā āyatike bhavasmiṃ*—likewise, there is no desire or *Taṇhā* (Craving) for a future *Bhava* (Becoming). The *Taṇhā* for *Bhava* (*bhava-taṇhā*) is the subtlest and gravest weakness in the world. One likes *Bhava*. One likes existence. No matter how many troubles and difficulties there are, why does one carry on this existence? It is because of the feeling, "I." One is afraid that "I" will cease to exist. Although the feeling "I" is a wrong understanding—and though "I" is necessary as a convention to live with the world—the Arahants have realized its lack of essence, its lack of core, its *Anattā* (Not-self) nature. Therefore, there is no desire for a future *Bhava* (Becoming). Concerning such Arahants, it is said: *te khīṇabījā*—this *Viññāṇa* (Consciousness) is the seed. This seed of *Viññāṇa* (Consciousness) sprouts in the field of karma (*kamma-khetta*). It sprouts in the field of karma. It is on wholesome or unwholesome karma that this *Viññāṇa* (Consciousness) sprouts. Just as a seed sprouts depending on the soil. Thus, *Viññāṇa* (Consciousness) sprouts in the field of karma. The moisture, the wetness that assists this is *Taṇhā* (Craving). As long as there is *Taṇhā* (Craving) in the world, and as long as one lives according to wrong view without a true understanding of karma, one performs various karmas and, accordingly, undergoes birth (*Jāti*) again and again. And what come along with that birth (*Jāti*) are indeed what the Buddha pointed out as *Jāti* (Birth), *Jarā* (decay/aging), *Vyādhi* (sickness), and *Maraṇa* (death).</p>
+<p>To destroy the mountain of *Dukkha* (Suffering) that can arise due to that impermanence, one must cut its root. That cutting of the root is indeed *te khīṇabījā*—there, the seed of *Viññāṇa* (Consciousness) came to an end. It was exhausted. *Avirūḷhichandā*—no *Taṇhā* (Craving) arises in that mind again. Therefore, *nibbanti dhīrā yathāyaṃ padīpo*—those wise ones are extinguished just like this lamp. That is how it is shown concerning the Arahants. Therefore, through this story, we must reflect on our own lives. We must make this a lesson for our own lives. This era is a time when Buddhists have adopted a strange way of thinking, such that they do not even believe in evil karma, let alone in places like hell. Due to rationalism, some even think that the stories about hell in books, and the sufferings of hell, are invented things.</p>
+<p>Indeed, if we have the eye, it is possible to see the things happening in places like hell as if seeing them with our own eyes. It cannot be shown to everyone. It cannot be shown. But things that are like symbols, things that run close to it, are seen in our daily lives. Now, look at the insects called winged termites (*meru*). In times of rain like this, they suddenly emerge from the earth. Millions of insects. Those insects fly. There, too, like a certain psychic power, they rise into the air. But they fly only to be destroyed. Those wings come for their destruction. There, too, we see the way karma works. As soon as wings come to them, they depart by the millions. In the end, only the wings remain. Other creatures gather and feast on those insects. They meet their death right there. From this, we see in this world, even before our very eyes, how animals undergo that *Dukkha* (Suffering) karmically.</p>
+<p>Similarly, when we think of how grasshoppers/moths (*palaṅgāṭiyan*) jump into a fire, we can understand how one is born in hell with blazing fires. Moths come to a place where there is a lamp or a fire, and even while seeing others of their own kind burning, they fall into that fire. In the same way, all of this happens to the beings of the world due to that soiled mind, that corrupted mind. Therefore, we must think of a way to escape from this. The Buddha also pointed out: *Sīla*, *Samādhi*, *Paññā* (virtue, concentration, wisdom). Even at the level of *Sīla* (virtue), we act with a certain fear of evil karma. Some regard fear as a bad thing. Sometimes, fear is good. Fear of sin (*ottappa*) is pointed out in the Dhamma as a good thing. It is pointed out as a world-protecting Dhamma (*lokapāla-dhamma*). *Abhaye bhayadassino, bhaye cābhayadassino*—in this way, it is pointed out that those who hold wrong views see fear in what is not fearful, and see no fear in what is fearful, which is incorrect.</p>
+<p>Therefore, to abstain from sin, one must have a fear of sin. When reflecting on stories of this nature, a sense of urgency (*saṃvega*) arises regarding one's own samsaric karma. One thinks, "This kind of thing can happen to us too." By being enslaved by the words of various people in society, and by developing hatred toward our own relatives, friends, and parents, we too can fall into such states, just as happened to the Great Arahant Moggallāna.</p>
+<p>Likewise, we must undertake and protect some virtue, such as the permanent Five Precepts (*nicca-pañcasīla*) or the Eight Precepts with Right Livelihood as the Eighth (*ājīva-aṭṭhamaka-sīla*). What do we do by undertaking that virtue? We know that in daily life, we take some vaccine or appropriate medicine against infectious diseases. By taking it, we provide some immunity to the body. It is when the body is weak that we fall ill. Therefore, through such an immunization, or by not frequenting places where those diseases spread, one must ensure one's own safety. It is such a thing, virtuous people, that is called undertaking virtue (*sīla*). This is not just something to be repeated when a monk says it, but must be regarded as a determination (*adhiṭṭhāna*) made by oneself, in agreement with one's own mind. This is not a mere statement in words. It is a constant determination every morning, and then trying to live according to that determination. That is what is called *Sīla*.</p>
+<p>What goes hand-in-hand with virtue is reflection (*āvarjanā*). One undertook virtue. Next, by constantly being mindful of it, one looks to see, "Is this being fulfilled by me?" Such a person thinks, "For no reason whatsoever will I kill a living being, commit theft, engage in sexual misconduct, or tell lies. Next, I will not engage in slander, harsh speech, or frivolous talk." Or else, if one takes it to heart, "I will not do those things considered as wrong livelihood—such as breeding animals for meat, trading in weapons, trading in poisons, trading in flesh, trading in intoxicants." Then, no matter among what kind of people or at what level in society that person moves, this is what is constantly brought to mind. That helps one not to fall prey to their instigations. What is present within a training rule (*sikkhāpada*) is a command to one's own wisdom. It tells you, "Behave in this manner." If that person exists accordingly, reflecting upon it, then they have created an immunity for themselves while moving through that corrupt society. At one level, that helps one to escape from these karmic forces.</p>
+<p>Next, there is a level even higher than that. Often, we lean toward sin because of the lack of concentration of the mind. When the mind is scattered, it is easy for us to be drawn away. Now, in a person who drinks alcohol, there is absolutely no such concentration of the mind. It is a distracted mind. The mind of a person inclined to other evil deeds is also distracted. Instead of that, if one strives to prevent the scattered nature of the mind and concentrate it by constantly bringing to mind some wholesome thought—such as the idea of "may they be well" in loving-kindness meditation (*mettā-bhāvanā*), a quality of the Buddha like *"Arahaṃ"* in the recollection of the Buddha (*buddhānussati*), something like "skeleton" (*aṭṭhika*) in the meditation on foulness (*asubha-bhāvanā*), or "death is certain, life is uncertain"—then what does that person do first when such a problem arises? They place the mind in concentration. Let us assume a difficult situation arose. That is to say, "Shall I kill this animal? If I kill it, there is profit. If I do not, there is loss. There is no one watching this theft. This can be done. If I do it, there is indeed a temporary profit for me. But shall I do this or not?" In such moments, what one must keep as one's value of life are indeed these Dhamma principles mentioned. Accordingly, by directing the mind to one's meditation subject (*kammaṭṭhāna*), one calms the mind; one unifies it. In such moments, if the mind is concentrated, one can make a true and correct decision in accordance with the truth; one can establish the mind. That is something extremely valuable in daily life. That is why the hindrances (*nīvaraṇa*) are pointed out as obstacles to concentration.</p>
+<p>Every virtuous person here knows that if lust, or sensual desire, arises, the mind becomes distracted. That is to say, when sensual desires arise, the mind is distracted. If hatred or anger arises, and next, if sleepiness and sluggishness (*thīna-middha*) arise, then too the mind is distracted. The mind does not function; it does not become workable (*kammañña*). Next, similarly, *uddhacca* which is the restlessness of the mind, and the state of over-regret (*kukkucca*). Next, doubt (*vicikicchā*)—such as harboring doubt and hesitation, thinking "will this be of any use?" It is due to such weaknesses arising in minds that one is unable to concentrate the mind.</p>
+<p>Thus, the Buddha has pointed out that by using some wholesome object, one frees the mind from those things called hindrances (*nīvaraṇa*) which scatter the mind, weaken mindfulness, and make the mind feeble and weak. In that way, a person who has that power of concentration, having freed the mind, can secure protection to some extent in the face of those grave karmic forces. Even higher than that, at the supreme level, in the deepest way, the power to forever escape from these karmic forces of samsara, from this grave phenomenon of karma, from this grave law of karma (*kamma-niyāma*), is developed indeed by cultivating that wisdom—namely, supramundane wisdom (*lokuttara-paññā*). It is about that we mentioned earlier. What is called realizing Nibbāna? What is this extinguishing (*nivīma*)? According to the Buddha's word, the entire samsara is a flow. Through new productions, this world gives us new targets day by day. Science, and the other forces that drag society along in this world, everyone always gives us a target. If we went to the moon, then to the next place. In that way, various targets are given to us. But every single one of these targets lies within samsara, within *Bhava* (Becoming), within existence.</p>
+<p>The Buddha pointed out existence as a fire. All of this has caught fire. The eye has caught fire; the ear has caught fire; the nose has caught fire. All of this has caught fire. With what have they caught fire? With the fires of lust (*rāga*), hatred (*dosa*), and delusion (*moha*). They are burning with them. Then, why is this simile of fire extremely meaningful? Fire always exists depending on something like wood, some fuel material. When fire blazes in that wood, that is what is called a fire. Similarly, how that fire spreads, why that fire arises, is pointed out by the Buddha. The word used for that in the Dhamma is *Upādāna* (Grasping), which means grasping/clinging. Due to *Taṇhā* (Craving), there is a certain grasping. This grasping is not a grasping with the hand that is spoken of here; it is a grasping with the mind. Due to *Taṇhā* (Craving), we hold on, we grasp with the mind, thinking "this is my property," "these are my relatives." In various ways, we grasp those things. Along with that grasped thing, we burn. There is a heating, a burning. That is why the Buddha points out existence itself as a fire in the mind. This fire, this sheet of fire, extends from hell up to the highest point of existence (*bhavāgra*), leaving aside the Akaniṭṭha Brahma world. That is because the Buddha has pointed out that there, the Non-Returners (*Anāgāmis*) exist as long as that life lasts, and definitely attain Arahantship.</p>
+<p>Until one reaches *Parinibbāna*, the entire samsaric life has to experience, to some extent, the karmic forces brought from the past. In a way that no other teacher pointed out, the Buddha declared the entire *Bhava* (Becoming) to be a fire. Therefore, what is here is an extinguishment (*nivīma*). Nibbāna means extinguishment. The wisdom that helps to bring the mind to that extinguishment is what a person realizes in the four stages of Stream-Entry, Once-Return, Non-Return, and Arahantship. The Buddha has pointed out that wisdom through three words: *Anicca* (Impermanent), *Dukkha* (Suffering), and *Anattā* (Not-self). What is required is to understand, to realize, the *Anicca*, *Dukkha*, and *Anattā* nature present within this entire existence.</p>
+<p>Within this body, and within everything around us that we call "I" and "mine," there is only impermanence (*Anicca*). Every single thing arises and ceases. Because both that arising and ceasing occur, there is nothing within this that can be considered permanent. There is nothing to be taken as beautiful or as pleasurable. That is *Dukkha* (Suffering). It is *Dukkha* because it breaks apart repeatedly. Likewise, there is no power or ability to grasp it and maintain it under one's control, saying "this is I." Therefore, it is *Anattā* (Not-self). By reflecting on this, a person, at some moment, through meditation, having established some concentration, becomes able to remove from the mind the five aggregates (*pañcakkhandha*), namely form (*rūpa*), feeling (*vedanā*), perception (*saññā*), volitional formations (*saṅkhāra*), and consciousness (*viññāṇa*), which the mind is grasping. It is at that moment that it is said that the under-thread of that sewing machine has, to a certain extent, ceased to knot again. That is why it is said that the Stream-Enterer (*Sotāpanna*) is freed from the four lower realms of suffering. A Stream-Enterer appears to act in daily life just like others do. But the *Upādāna* (Grasping)—the clinging toward them—is weak. Therefore, it does not knot. It does not knot to such an extent that it drags one to hell. The *Sotāpanna* mind has only the power to bring about results limited to seven more lifetimes. There lies that phenomenon, just like in that sewing machine.</p>
+<p>Next, going even further, when that Wheel of Dhamma spins once more, one becomes a Once-Returner (*Sakadāgāmi*). At another level, all other karmas are dried up except those that bring about birth only once more, or are limited to about two lifetimes. They are brought to a state where their results cannot be yielded. When one reaches the state of a Non-Returner (*Anāgāmi*), one is born in the Suddhāvāsa Brahma worlds and does not return to this world. All of this is pointed out based on the question of rebirth in samsara. Why? Because not only during the time when Buddhas arise, but even during times when no Buddha has arisen, every wise person thought about how to escape from this samsara. When that wisdom emerges, to everyone, the entire samsara appears as *Dukkha* (Suffering).</p>
+<p>Next, the escape from it is also seen. It is to answer this, and to show the path to this, that the Buddha fulfilled the perfections (*pāramīs*) for four incalculable aeons and a hundred thousand cosmic cycles (*sāra-asaṅkheyya-kappa-lakkha*). For the sake of crossing over from samsara. Because only by that path can one separate oneself from these terrifying karmic forces, from this clearly visible *Dukkha* (Suffering) of existence, from this fire. That is what is called extinguishment (*nivīma*). The word Nibbāna is used in this Dhamma for the highest goal in that very sense. We must reflect then that we can achieve our extinguishment at three levels. When we think, "By undertaking such virtue, I live within the virtue I determined; I spend today in this manner," there is extinguishment. When one comes to a place where animals are killed, even if others do it, one thinks, "This does not belong to me. The majority do this; we shall remain without doing it," and calms the mind there. One is not drawn into it. Next, similarly, there are so many who commit theft, and there are those who think it is profitable. Looking at one's own mind, one cools down. One extinguishes the mind from theft. One extinguishes the mind from misconduct, from lying, from falsehood. Next, looking at one's own mind in every single one of these, looking at the virtue one undertook, one extinguishes the mind. That is one level.</p>
+<p>The level higher than that is indeed concentration (*samādhi*), as we mentioned earlier. When one has developed concentration, one can remain happily within that concentration-pleasure one has obtained, even for an hour or two. That too is a certain solace, an extinguishment. Even higher than all of them is that supramundane extinguishment. Having developed insight (*vipassanā*) in that manner, having obtained the deep understanding of *Anicca* and *Anattā*, one finds solace in the sublime, deathless Nibbāna as declared by the Buddha. Thereafter, it is through that indeed that one can bring samsaric existence, that entire samsara, to an end. Today, a Dhamma exposition was presented. This story is a demonstration, an illustration. One must bring this demonstration to one's own mind, and thinking "such events can happen not only to the Great Arahant Moggallāna but to us as well; we live in this kind of society, in this kind of world," one must use it to assist that demonstration. Next, based on that, we must resolve to depart from the bad side of these things and walk on the good side. That is what is called undertaking (*samādan*). Understanding "these are good things, these are bad things," one must generate a sense of urgency (*saṃvega*) within oneself regarding this. Next, along with that sense of urgency, one must also generate joy within, thinking "we are walking at least a little on this path."</p>
+<p>The Buddha declared: *"sandasseti, samādapeti, samuttejeti, sampahaṃseti"* (he instructs, instigates, rouses, and gladdens) concerning Dhamma discourses. What we expect from every single Dhamma talk, from every Dhamma sermon, is for these virtuous people to apply these to their own lives, and to develop the correct path in their daily lives. Through that, one gains the strength to realize the value of the virtue one protects, next, a deep sense of urgency (*saṃvega*) regarding samsara, and a true joy, a happiness regarding this path, thinking "this path we are walking is correct," and to travel further on that path.</p>
+<p>Thus, by listening to this Dhamma sermon for about an hour, qualities such as faith (*saddhā*) were cultivated and arose in the minds of these virtuous people. Qualities such as faith (*saddhā*), energy (*vīriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*) are specifically pointed out as factors that assist Nibbāna. If you can develop these to some level, you should be joyful. Relying on this blessing obtained through listening to the Dhamma, and further developing these, may you gain the strength and power to practice meditation within this very life, within this valuable era of the arising of a Buddha, within this human existence we have obtained, and find solace in the sublime, deathless Nibbāna through the realization of the paths, fruits, and penetration of Stream-Entry, Once-Return, Non-Return, and Arahantship! Likewise, may all those who desire merit, from the Avīci hell up to the highest point of existence, rejoice in this great store of merit we have accumulated today through delivering and listening to this Dhamma, and may they use it to realize the sublime, deathless Nibbāna through their own aspired Bodhi (awakening)! Furthermore, if there are any groups, including your relatives and friends, who wish to rejoice in these merits, may all of them rejoice in these merits and find solace in the sublime, deathless Nibbāna! Directing these merits with a mind of compassion, recite these verses and dedicate the merits.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_130.html" class="doc-btn">← Previous Sermon (130)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_132.html" class="doc-btn">Next Sermon (132) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

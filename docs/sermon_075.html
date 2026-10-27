@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 075 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_074.html" class="doc-btn">← Previous Sermon (074)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_076.html" class="doc-btn">Next Sermon (076) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 075</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_075_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_075_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_075_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #75</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.166)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Adhigatamidaṃ bahūhi amataṃ,</p>
+<p>ajja pi ca labhanīyamidaṃ;</p>
+<p>yo yoniso payuñjati,</p>
+<p>na ca sakkā aghaṭamānena.</p>
+<p>From:</p>
+<p>Sumedhātherīgāthā (Verse 515)</p>
+<p>Dear Listeners,</p>
+<p>To conquer the forces of Māra that pull us into *saṁsāra*, a powerful strength of renunciation (*nekkhamma*) is necessary. Deeply contemplating the groups of discourses preached by the Teacher of the Three Worlds, the Fully Enlightened Buddha, regarding the terrifying nature of *saṁsāra*, helps to cultivate such a strength of renunciation. The story and biography of the Arahant Therī Sumedhā, who conquered the forces of Māra by relying on her own knowledge of the Dhamma, is an excellent illustration of this.</p>
+<p>On this Vesak Full Moon Poya day that has dawned today, we can find a valuable biography in the *Therīgāthā* of the Arahant Nun Sumedhā, which helps us develop faith in this manner. It is a certain stanza among them that we have chosen as our theme today.</p>
+<p>This Therī Sumedhā, having accumulated powerful wholesome potential under previous Buddhas, was born during the time of this Buddha in the city of Mantāvatī as the daughter of the regional King Koñca. After she reached youth, her parents decided to marry her to King Anīkadatta of the city of Vāraṇāvatī. However, by that time, Sumedhā, having visited the bhikkhunī monastery since her childhood along with royal princesses of her own age and maidservants, and having heard the Dhamma, had developed great faith in the Dispensation and a deep sense of urgency (*saṁvega*) regarding *saṁsāra*. Therefore, she did not agree to that proposal.</p>
+<p>When the day approached for King Anīkadatta to come and see Sumedhā (perhaps something like the *svayaṁvara* custom of the past), Sumedhā went to her parents and said, “I have no expectation of staying in the household life enjoying the fivefold sensual pleasures. I am inclined towards Nibbāna; I remain loving Nibbāna. Therefore, grant me permission to go forth as a monastic.” Furthermore, she declared the impermanence (*anicca*) of this becoming (*bhava* / existence), and the impermanence (*anicca*) that exists even in the heavenly worlds, showing how this becoming (*bhava*) is entirely impermanent (*anicca*). “One who has correctly understood the Four Noble Truths preached by the Blessed One does not wish even for the pleasures of the heavenly worlds. This becoming (*bhava*) is impermanent (*anicca*) everywhere, and sensual pleasures are extremely bitter; though they yield little satisfaction, they bring abundant suffering (*dukkha*) and trouble—this is the nature of the fivefold sensual pleasures. Therefore, I do not like this marriage proposal. Grant me permission to go forth (*pabbajjā*).”</p>
+<p>Then, at the same time, she declared: “This body is entirely like a leather bag filled with excrement and carcasses. Why give this to someone else? This is a body filled with worms. At any moment, as soon as consciousness (*viññāṇa*) departs from this, one’s own relatives will carry it to a cemetery and discard it. Why give such a body of this nature to anyone?” She further declared to her parents: “If you do not grant me permission to go forth, I will meet my death. I will take no more food as a layperson.” Saying so, she lay down on the floor of the palace. Then her mother and father came, and the mother, weeping, said, “Rise, my child.” Addressing her daughter, she said, “You are extremely beautiful. You are to be the chief queen of King Anīkadatta; you are still young. Enjoy these sensual pleasures.” Thus, they tried to encourage her further regarding the proposal.</p>
+<p>But she firmly insisted: “No, these fivefold sensual pleasures are not for me. This becoming (*bhava* / existence) is impermanent (*anicca*) from every aspect. If one day the inside of this body were turned inside out, even one’s own mother would detest it, unable to bear the stench. At any moment, as soon as consciousness (*viññāṇa*) departs from this body, it is cast into the cemetery, and the relatives return and bathe. Such is the nature of this body. Therefore, what I need is liberation from this becoming (*bhava*). Decay and death (*jarāmaraṇa*) follow closely behind me. In the heavenly worlds, the animal realms, or the hells, there is no opportunity to go forth as a monastic. A Buddha is born only very rarely; therefore, in this rare opportunity, on this occasion when the rare wealth of the opportune moment (*khaṇa-sampatti*) has been obtained, grant me permission to go forth.” Thus she declared repeatedly.</p>
+<p>“If you do not allow me, I will take no more food. Right here, I will meet my death,” she said, and lay down on the floor. At about that same moment, King Anīkadatta arrived in the city of Mandāvatī. On hearing this news, what Sumedhā did was cut off her hair, enter her chambers, lock the door, and, focusing on her cut hair, entered the first absorption (*jhāna*). Having emerged from the first absorption (*jhāna*) and while developing the perception of impermanence (*anicca-saññā*), the king arrived. When her parents and the king were standing by the door, Sumedhā came and opened the door. She saw her parents weeping. Finally, the king said to Sumedhā, “These parents are in great sorrow. You are very young. Sensual fortune is extremely rare. I will hand over all this royal wealth to you. All pleasures and fortunes are here. Going forth is difficult.” In this way, he tried to persuade her to accept the proposal.</p>
+<p>At that moment, Sumedhā declared the unsatisfying nature of sensual pleasures. King Mandhātā, who ruled over the four great continents and was foremost among all enjoyers of sensual pleasures, passed away completely unsatisfied. Even if it rained the seven kinds of gems, human beings would not attain satisfaction. Sensual desire is something that leaves humans unsatisfied. In particular, she briefly recalled for the king the ten similes mentioned in the Blessed One’s discourses regarding the fivefold sensual pleasures.</p>
+<p>The Blessed One has declared this regarding sensual pleasures. If we explain these similes briefly and in a detailed manner so that you, virtuous friends, can understand: in a slaughterhouse, a butcher throws a bone scraped of flesh and blood to a dog. The dog gnaws at it. While gnawing it, it ultimately meets with suffering (*dukkha*); there is no essence in it. You, virtuous friends, have heard this simile of “the fleshless bone”.</p>
+<p>Next, another simile given by the Blessed One to show the nature of sensual pleasures is that they are like a pit of glowing embers. Two strong men drag a person and throw him into a pit of embers, and he is burnt right there. Or, like holding a burning grass torch while walking against the wind—if one does not let go of that grass torch, one's hand will be burnt. Sensual pleasures are just like that. Furthermore, when a hawk flies up into the sky clutching a piece of meat, other birds and crows pursue and peck at it in order to snatch and eat that piece of meat. If that hawk or crow does not let go of the piece of meat, it will have to face death or deadly suffering (*dukkha*). This is common to all. Therefore, everyone fights over them and ultimately meets with destruction. Other similes are given: sensual pleasures are like borrowed goods. They are temporary; one never knows when one might lose them.</p>
+<p>Next, these sensual pleasures are like a dream. They are deceptive, illusory. It is something that appears real only for a brief moment. Another simile shown in detail by the Blessed One is the simile of the tree fruit (*rukkha-phala*). It is a simile about fruits on a tree. Someone, seeing fruits on a tree, climbs it to pluck them. Meanwhile, someone else who cannot climb the tree begins to cut it down from the base. If the climber does not descend, he will fall along with the tree and meet with death. Just like that, due to the nature of these sensual pleasures, people fight for them in both lawful and unlawful ways. Because of that struggle, many fall into suffering (*dukkha*).</p>
+<p>Furthermore, these sensual pleasures are compared to a serpent’s head, showing their dangerous nature. This lady declared many such similes to the king. Not only that, she briefly reminded the king of the terrifying nature of this long *saṁsāra*, its extremely long nature, based on the discourses delivered by the Blessed One in the *Anamatagga Saṁyutta*. Perhaps during that era, the Buddha’s discourses were more well-known than today. Thus, you, virtuous friends, may also have heard the Buddha’s discourses found in the *Anamatagga Saṁyutta*. The Blessed One declared that if someone were to cut down all the trees and foliage in this entire Jambudīpa into four-inch pieces, and set them aside one by one saying, “This is my mother, this is my mother’s mother, this is that mother’s mother,” even if all those trees and foliage were exhausted, one could not bring to an end the line of those who have been one’s mother in this *saṁsāra*. That discourse is meant to show that one has been born in this *saṁsāra* for such a long period of time.</p>
+<p>Similarly, if one were to make clay pellets the size of jujube seeds from the soil of the great earth, and count them saying, “This is my father, this is my father’s father,” and so on, that lineage of fathers would not come to an end even if the soil of the great earth were exhausted. This was declared to clarify that one has been wandering in this *saṁsāra* for an inconceivably long, *anamatagga* (without discoverable beginning) period of time.</p>
+<p>Similarly, the Blessed One has declared, in relation to the four great oceans, that during this long period, in this long *saṁsāra* whose beginning is not apparent, if one were to collect the tears shed by a single person weeping when separated from the loved and agreeable, and united with the unloved and disagreeable, they would be greater than the waters of the four great oceans. That is, the tears shed due to the death of one’s mother, the death of one’s daughter, the death of one’s son, and so on, as well as due to the loss of wealth and disasters of illness—these tears are greater than the four great oceans. Likewise, if the breast milk one has drunk from mothers in this long *saṁsāra* were collected, it too would be greater than the four great oceans. This is not presented as an exaggeration by the Blessed One; that quantity of milk is indeed greater than the four great oceans. Next, it is shown that if the blood shed by a person having their throat cut throughout this long *saṁsāra* were collected, it would be greater than the four great oceans.</p>
+<p>On one occasion, the Blessed One declared to a group of about thirty forest-dwelling bhikkhus, as a sermon sufficient for them to attain Arahantship, this very discourse about blood: how the blood shed when having one’s throat cut after being born as cows, buffaloes, goats, sheep, and chickens over a long period of time is greater than the four great oceans, and so on. Drawing from such sutta discourses that arouse urgency (*saṁvega*) regarding this wheel of *saṁsāra*, Sumedhā explained the terrifying nature of *saṁsāra* to King Anīkadatta.</p>
+<p>Then she said: “While my head is on fire, and decay and death (*jarāmaraṇa*) follow closely behind me, there is no help for me from others. I must strive to bring this decay and death (*jarāmaraṇa*) to an end. I need no help from others. Go, I do not wish to marry you. You must go!” She declared in this manner. Finally, perhaps because the king was somewhat softened by her declarations, he rose, bowed to Sumedhā’s father, and pleaded: “Grant Sumedhā permission to go forth to put an end to the suffering (*dukkha*) of *saṁsāra*.” Thus, Princess Sumedhā, having overcome the opposition of both her parents and the king who had come to marry her, and having obtained permission to go forth, was ordained in the Dispensation and ultimately attained Arahantship.</p>
+<p>Furthermore, after attaining Arahantship, in the final days of the Arahant Therī Sumedhā, she declared the powerful wholesome deed (*kusala*) that helped her attain this great gain, as recorded in the *Therīgāthā*. During the time of the Buddha Koṇāgamana, she, along with two of her female friends, had built and offered a dwelling (*āvāsa*) to the Buddha. Those two friends are identified in this Buddha’s Dispensation as the brahmin lady Dhanañjānī and the Therī Khemā. It was through associating with Buddhas over a long period and contemplating the deep aspects of the True Dhamma (*saddhamma*) that Princess Sumedhā ultimately chose to become a bhikkhunī instead of becoming a queen consort or chief queen. She ended her life as an Arahant nun. Among the heroic characters in this Dispensation, Therī Sumedhā occupies a unique place. Indeed, as the longest stanza group in the *Therīgāthā*, the story of Therī Sumedhā is mentioned last. For many, especially lay women devotees, this biography can be a source of great encouragement.</p>
+<p>Now, the stanza we have taken as our theme actually appears right at the end of the collection of *Therīgāthā*, which consists of about seventy poem groups. The stanza that precisely reflects the occasion that caused the king’s mind to change—the very one that led to it—is what we have cited as our theme on this occasion:</p>
+<p>*Adhigatamidaṁ bahūhi amataṁ, ajja pi ca labhanīyamidaṁ,*</p>
+<p>*Yo yoniso payuñjati, na ca sakkā aghaṭamānena.*</p>
+<p>*Adhigatamidaṁ bahūhi amataṁ* – This Deathless (*amata* / Nibbāna, this Extinction / Extinguishment (Nibbāna, has been attained by many. *Ajja pi ca labhanīyamidaṁ* – even today this Nibbāna can be obtained. *Yo yoniso payuñjati* – if one strives with wise attention (*yoniso*). *Na ca sakkā aghaṭamānena* – but it cannot be attained by someone who does not make a firm, strenuous effort.</p>
+<p>“The Nibbāna obtained by many in the past can be obtained today if one strives; but for one who cannot strive, this Nibbāna cannot be obtained,” the Blessed One declared. It was upon hearing this declaration that the king’s views completely changed. Therefore, in accordance with these words of the Buddha, we must reflect on the possibility of attaining Nibbāna within this Dispensation today as well, in keeping with the occasion. That is why we said that this stanza is exemplary. As Therī Sumedhā declared, if someone strives, they can escape from this decay and death (*jarāmaraṇa*) to what is called the “Deathless” (*amata* / *amṛta*). That is why Therī Sumedhā said her head was on fire, and that decay and death (*jarāmaraṇa*) were chasing after her. Having been born again and again in various ways in this *saṁsāra* for an infinite time, one has had to face death—often termed *ghāta*, being slaughtered. It is because of such a nature of this *saṁsāra* that those who heard the Buddha’s discourses in the past developed a sense of urgency (*saṁvega*) and strove to realize Nibbāna swiftly.</p>
+<p>It is the long duration as well as the terrifying nature of this *saṁsāra* that the Blessed One depicted through those similes of blood, tears, and breast milk. Through the explanations of the terrifying nature and long duration of *saṁsāra*, the Blessed One endeavored to make us understand the Truth of Suffering (*dukkha-sacca*) within the Four Noble Truths, as well as to cultivate disenchantment (*nibbidā*) towards *saṁsāra*.</p>
+<p>However, nowadays, the Truth of Suffering (*dukkha-sacca*) has often been reduced to a very simplistic level. One frequently hears people talking about daily disappointments or mental stress and anxiety as if they represent the Truth of Suffering (*dukkha-sacca*). But if one is to develop such a deep strength of renunciation (*nekkhamma*), one must contemplate the terrifying nature of *saṁsāra*, the long duration of *saṁsāra*, and its inconstant (*anicca*) nature, as found in the Buddha’s discourses.</p>
+<p>Now, one cannot say where one might be born next in *saṁsāra*. That is why Therī Sumedhā said that a person overwhelmed by the fivefold sensual pleasures, by engaging in bodily, verbal, and mental misconduct and unwholesome deeds, will be born in hellish realms and similar lower planes. Once born in such places, for another extremely long period, there is nothing but suffering (*dukkha*), and one cannot derive any benefit from this Dispensation of the Buddha.</p>
+<p>Therefore, as the Blessed One declared, while there are eight inopportune moments (*aṭṭha akkhaṇā*) where one cannot practice the path of the Dispensation, if one has obtained birth during the arising of a Buddha, obtaining the wealth of the opportune moment (*khaṇa-sampatti*), one must strive to escape from these conditions of birth (*jāti* / arising), decay (*jarā*), and death (*maraṇa*).</p>
+<p>You, virtuous friends, may have heard the inspired utterance (*udāna*) declared by the Blessed One after attaining Supreme Enlightenment. The inspired verse beginning with *“Aneka jāti saṁsāraṁ...”* speaks precisely about this problem of rebirth (*punabbhava*). *Aneka jāti saṁsāraṁ, sandhāvissaṁ anibbisaṁ* – “Through many births (*jāti*) in *saṁsāra* I have wandered, searching but not finding the builder of this house.” *Dukkhā jāti punappunaṁ* – “Painful is birth (*jāti*) again and again.” It is this very condition that the Blessed One pointed out as the Truth of Suffering (*dukkha-sacca*).</p>
+<p>We usually consider only daily disappointments, the inability to fulfill one’s expectations, and such things as suffering (*dukkha*). But the nature of this *saṁsāra* is something far deeper than that. The Blessed One declares: *“Anamataggoyaṁ, bhikkhave, saṁsāro, pubbākoṭi na paññāyati, avijjānīvaraṇānaṁ sattānaṁ taṇhāsaṁyojanānaṁ...”* and so forth.</p>
+<p>A first beginning of this *saṁsāra* cannot be seen, because the Blessed One has declared that there is no such beginning of ignorance (*avijjā*) where one could say that ignorance (*avijjā*) did not exist before and then arose. That is why it is said to have no first beginning, spanning such an immense duration of time. *Avijjānīvaraṇānaṁ* means covered by the hindrance of ignorance (*avijjā*), and *taṇhāsaṁyojanānaṁ* means fettered by the bond of craving (*taṇhā* / thirst); the Blessed One has declared that for a long time, beings have thus been wandering in *saṁsāra*.</p>
+<p>Therefore, on a day like this, we must reflect: if we are asked what our goal as Buddhists is, we should be able to say without fear, “It is to see the end of *saṁsāra* in this very life.” Although the word Nibbāna is used for this, Nibbāna is defined in very strange ways. Many describe Nibbāna in a way that actually increases craving for becoming (*bhava-taṇhā*). Many assume Nibbāna to be a special, separate world; they define Nibbāna as a novel world. However, the Blessed One has shown, *“Dukkhā jāti punappunaṁ”*— “Suffering (*dukkha*) is birth (*jāti* / arising) again and again.” Birth (*jāti*) occurs very easily, meaning as long as ignorance (*avijjā*) and craving (*taṇhā*) exist, one will certainly undergo birth (*jāti*) in various places and in various levels of becoming (*bhava* / existence). That is why Sumedhā too said that this becoming (*bhava*) is essence-less. Whether in heavenly worlds or the human world, impermanence (*anicca*) is everywhere. Impermanence (*anicca*) is indeed the nature of things.</p>
+<p>Thus, if there is birth (*jāti*) within that impermanent (*anicca*) becoming (*bhava*), decay (*jarā*), sickness (*vyādhi*), and death (*maraṇa*) will certainly be there. One cannot obtain a birth (*jāti*) that is devoid of death. Like a shadow, decay and death (*jarāmaraṇa*) go together with birth (*jāti*). For this reason, the suffering (*dukkha*) of *saṁsāra* is not those minor shortcomings as the worldly people generally think. It must be considered far more deeply; it must be understood far more deeply. It is only for someone who takes this deeply to heart that the practices of this Dispensation become meaningful.</p>
+<p>Thus, the Blessed One has summarized for us the necessary steps for liberation from this long *saṁsāra* within the Four Noble Truths. First, what is this illness called suffering (*dukkha*)? As mentioned before, it is birth (*jāti* / arising) again and again—*dukkhā jāti*. Then, along with it, birth (*jāti*), decay (*jarā*), sickness (*vyādhi*), and death (*maraṇa*). Furthermore, daily disappointments and such are also included in it: not getting what one wishes for, association with the unloved, separation from the loved, and so on—this is the nature of suffering (*dukkha*) inherent within existence. If the nature inherent in existence is suffering (*dukkha*), the Blessed One showed what lies beneath it: craving (*taṇhā* / thirst). The Blessed One declared that a being afflicted by the thirst of craving (*taṇhā*) is like one running after a mirage. No matter how far one goes in this, no satisfaction is ever found.</p>
+<p>That is why Therī Sumedhā said that even if it rained the seven kinds of gems, no satisfaction would be gained; and why she said that King Mandhātā, who was the foremost among the enjoyers of sensual pleasures, died without attaining satisfaction. The Blessed One pointed out the unsatisfying nature of craving (*taṇhā*), which is like running after a mirage, and it is this craving (*taṇhā*) that is called the origin (*samudaya*) of this entire mass of suffering (*dukkha*). This craving (*taṇhā*) is thus generated through ignorance (*avijjā*). This ignorance (*avijjā*) is like when we think of a deer—the deer mistakes the distant shimmering vision for water, and then runs after it. It is just such a thing.</p>
+<p>Due to the delusion arising from ignorance (*avijjā*), people run without limit after the goals they set for themselves in the world. The Blessed One has shown the craving (*taṇhā* / thirst) that arises towards things that object-ize the eye, ear, nose, tongue, body, and mind as a thirst. In some places, it is shown as an insatiable hunger. Its liberation is shown as *“taṇhakkhayo virāgo nirodho nibbānaṁ”* (the destruction of craving, dispassion, cessation, Nibbāna, and the very destruction and calming of craving (*taṇhā*) is shown as bliss. This is not something received in a special, different place. The Blessed One shows it as a state that can be experienced in this very life. For this reason, Nibbāna is sometimes designated by the name *“taṇhakkhaya”* (destruction of craving).</p>
+<p>The path leading to that is what the Blessed One has shown as the Noble Eightfold Path. All concepts and thoughts we generate through wrong views (*micchā-diṭṭhi*) drag us back to *saṁsāra* again and again. However, the Blessed One has declared that right view (*sammā-diṭṭhi*) is for the sake of escaping from this world. Whether one performs meritorious deeds or demeritorious deeds, one is still within *saṁsāra*. Therefore, the path for the exhaustion of these karmas is the supramundane Noble Eightfold Path. Through that Noble Eightfold Path, one proceeds towards a practice that puts an end to both merit and demerit. It is that very craving (*taṇhā*) that creates the urge in worldly beings to perform both meritorious and demeritorious actions.</p>
+<p>As long as the perception of self (*atta-saññā*), the dogma of self-illusion (*sakkāya-diṭṭhi*), and the sense of “I” and “mine” exist therein, worldly beings strive to grasp those various things as grasping / fuel (*upādāna*). In the Blessed One’s Dhamma, the Three Characteristics—impermanent (*anicca*), suffering (*dukkha*), and not-self (*anattā*)—are particularly shown. Now, everyone understands impermanence (*anicca*) to some extent. However, the Blessed One saw all these things far more deeply than that. Not only everything visible on the surface, but also our sense bases—namely, the eye, ear, nose, tongue, body, and mind, and everything that becomes their object—change extremely momentarily; they are impermanent (*anicca*). For this very reason, one has to experience their unsatisfying nature, their nature of suffering (*dukkha*). Therefore, they cannot be kept under one’s control. This inability to keep them under one’s control is what is called not-self (*anattā* / unsubstantial).</p>
+<p>Therefore, one must practice directing one’s daily thinking in such a way that the Three Characteristics of impermanent (*anicca*), suffering (*dukkha*), and not-self (*anattā*) are properly established in one’s mind. That is what helps to develop the supramundane path. Generally, within the Blessed One’s teaching, there is a mundane aspect of right view (*sammā-diṭṭhi*), which involves turning away from actions leading to lower realms and heading towards happy destinies; there is that side too. However, that is something that increases *saṁsāra* (becoming / existence).</p>
+<p>Therefore, one must contemplate deeply. That is why Sumedhā said that even in the pleasures of the heavenly worlds, there is no end, no satisfaction. Instead, what is to be killed is death itself. What is called *“ghāta”*—what is to be slaughtered is death itself; it is the fact of having to die in those various places. Thus, that fact of having to die is brought to an end only by bringing birth (*jāti*) to an end. Birth (*jāti*) is brought to an end by bringing death to an end, since birth (*jāti*) and death go together. The concept of birth (*jāti* / arising) arises through grasping / fuel (*upādāna*). Through grasping (*upādāna*), there is becoming (*bhava* / existence).</p>
+<p>As long as craving (*taṇhā*) exists, worldly beings undergo birth (*jāti*) in hell realms, heavenly worlds, or the human world, whether through wholesome or unwholesome deeds, in accordance with the sign (*nimitta*) grasped by the mind. Within every such existence (*bhava*), decay (*jarā*), sickness (*vyādhi*), and death (*maraṇa*) are seen and experienced. Therefore, the Blessed One pointed out that one must understand the true nature of the world insightfully (*vipassanā*-wise), in terms of impermanence (*anicca*), suffering (*dukkha*), and not-self (*anattā*).</p>
+<p>Now, what this world is trying to gratify is this skeletal cage of a body. The true nature of this body must be contemplated as unattractive (*asubha*). What Therī Sumedhā brought to light was this unattractive (*asubha*) nature of the body. Furthermore, its impermanence as impermanent (*anicca*-wise), or in terms of elements (*dhātu*). For some, even when contemplating in terms of elements (*dhātu*), the aforementioned Three Characteristics are understood. Because what exists inside this body, as well as externally, are the four great elements (*mahābhūta*) of earth (*paṭhavī*), water (*āpo*), fire (*tejo*), and wind (*vāyo*)—the four elements (*dhātu*).</p>
+<p>Due to grasping (*upādāna*) towards them, a division has been made into internal and external. One grasps it as “this is mine.” Next, one tries to grasp external things. To catch them, one runs after them. That is why it is said to be like running after a mirage.</p>
+<p>These six sense bases (*āyatana*) are like an octopus, trying to grasp the entire world through these six senses. That is an unsatisfying run. That is why the Blessed One declares that if someone constantly contemplates that what exists there as well as here is only earth (*paṭhavī*), water (*āpo*), fire (*tejo*), and wind (*vāyo*), that person can reduce that aforementioned craving (*taṇhā*) and oppression. If on some occasion one understands: “What is taken here as 'I' and 'mine' is merely a certain illusion. It is because of the delusion developed over a long period in *saṁsāra* that we undergo this suffering (*dukkha*).” To put it precisely, in this consciousness (*viññāṇa*) called 'mind' that we hold in such high esteem, there exists a certain deceptive quality. It is something that is caught when we look back. The Blessed One shows this as Name-and-Form (*nāmarūpa*). What is called Name-and-Form (*nāmarūpa*) there is merely a name in appearance and a form in appearance. When this is understood as Name-and-Form (*nāmarūpa*), then this delusion is thinned out to some extent.</p>
+<p>If someone recognizes that within everything that is seen and heard by them, there exists only a shadow cast in consciousness (*viññāṇa*) that is connected to that consciousness (*viññāṇa*), then the desire to grasp these things gradually thins out. It is in this way that one enters the path of insight (*vipassanā*). When watching a movie, our delusion arises because we glue together that rapidly running sequence of images with craving (*taṇhā*). We glue them together along the shadows falling extremely rapidly within this consciousness (*viññāṇa*), with some expectation of “I” and “mine”; through this, it appears to us as something that truly exists. It is in this way that the perception of permanence (*nicca-saññā*) arises. But if we practice looking closely, moment by moment, with mindfulness and clear comprehension (*sati-sampajañña*) through insight (*vipassanā*), we gradually realize that what exists here is only something like the aforementioned shadow. That is why the Blessed One takes Name-and-Form (*nāmarūpa*) as merely a shadow cast in consciousness (*viññāṇa*) itself—namely, the mental factors (*nāma-dhamma*) of feeling (*vedanā* / sensation), perception (*saññā*), volition (*cetanā*), contact (*phassa*), and attention (*manasikāra*); and next, what we hold onto as form (*rūpa*), which is merely those four elements (*dhātu*) of earth (*paṭhavī*), water (*āpo*), fire (*tejo*), and wind (*vāyo*), and the perception of form (*rūpa-saññā*) derived from those four great elements (*mahābhūta*).</p>
+<p>Then, the nature of this grasping (*upādāna*) is understood through that. What we call “the thing to be grasped” is merely an illusion. In truth, there is nothing to be grasped. Within that grasping, there is only that aforementioned feeling (*vedanā* / sensation), a perception (*saññā*) formed because of that feeling (*vedanā*), a volition (*cetanā*) applied to it, a contact (*phassa*), a place of contact, and attention (*manasikāra*)—that is all there is. Thus, in every instance, only these things exist. Once this is understood, the sense of “I” and “mine” thins out. Therefore, entering the path of insight (*vipassanā*) shown by the Blessed One occurs by establishing the good mindfulness and wisdom called mindfulness and clear comprehension (*sati-sampajañña*). That is what is contained in the Four Foundations of Mindfulness (*cattāro satipaṭṭhānā*). The Blessed One has shown how to recognize the body as body, feelings (*vedanā* / sensation) as feelings, the mind as mind, and mental objects as mental objects through the Four Foundations of Mindfulness. That is why the Blessed One declared: “Within this very fathom-long body, I declare the world, the origin of the world, the cessation of the world, and the path leading to the cessation of the world.” If we contemplate with wisdom that Dhamma preached by the Blessed One in that manner and apply those practices, even today we can—if we strive as Sumedhā said—attain that aforementioned Deathless (*amata* / *amṛta*). What is called the Deathless (*amata*) is not something that exists in a strange, different world, nor is it a kind of beverage.</p>
+<p>Generally, everyone is afraid of death. Why are they afraid of death? It is because of grasping (*upādāna*). The greater the grasping (*upādāna*), to that same extent is the fear of death. The fear or suffering (*dukkha*) that arises in us is exactly in proportion to the things we have grasped. Therefore, the Blessed One pointed out that it is through the gradually arising understanding, by gradually seeing the Three Characteristics of impermanent (*anicca*), suffering (*dukkha*), and not-self (*anattā*) of Name-and-Form (*nāmarūpa*) insightfully (*vipassanā*-wise), that the dark mass of ignorance (*avijjā*) is removed.</p>
+<p>Simultaneously, the craving (*taṇhā*) that exists along with the delusion generated through one’s own ignorance (*avijjā*) is thinned out to that same extent. It is where ignorance (*avijjā*) and craving (*taṇhā*) are absent that death is truly understood. Up to now, what was thought of as death was a massive fear arising at the moment this bodily cage is destroyed, because it was taken as “mine.” But we know, one cares for one’s teeth; yet if at some point, due to some reason, it becomes absolutely necessary to extract a tooth, we allow it. We give our consent. It is the same with the other organs of our body. When contemplating in that manner, the Blessed One shows: “What exists here is grasping (*upādāna*)—holding on.” Becoming (*bhava* / existence) is said to be the cause of this continuation. The state that arises when that is let go is what is called extinguishment without grasping (*anupādā pariNibbāna. It is simply the peace that arises at that moment of letting go; it is not some other world.</p>
+<p>Thus, the secret lies within this very consciousness (*viññāṇa*). This consciousness (*viññāṇa*) is trapped, narrowed down, within the six sense bases (*āyatana*). It is narrowed down within the six sense bases (*āyatana*) of eye, ear, nose, tongue, body, and mind. One cannot hear with the eye; one cannot see with the ear. Within these, a world has been built: the world seen by the eye, the world heard by the ear, the world felt by the tongue. Every enterprise, commercial business, or activity contained within this concept we call “the world” is connected to these six sense bases (*āyatana*): eye, ear, nose, tongue, body, and mind. The Blessed One pointed out these: it is within these six sense bases (*āyatana*) themselves that suffering (*dukkha*) lies. The entire world, too, exists right there.</p>
+<p>The Blessed One declared a wonderful stanza:</p>
+<p>> *Chassu loko samuppanno, chassu kubbati santhavaṁ,*</p>
+<p>> *Channameva upādāya, chassu loko vihaññati.*</p>
+<p>*Chassu loko samuppanno* – the world has arisen within these six. It is within these six sense bases (*āyatana*) that what is called “a world” has arisen. *Chassu kubbati santhavaṁ* – all connections and coordination in the world occur within these six; everything takes place within these six. Even the highly marvelous things considered as scientific products in this era, at one end of them lies either an eye or an ear. It is from the end of such a sense base (*āyatana*) that other things operate. This shows how true the Buddha’s word is.</p>
+<p>*Channameva upādāya, chassu loko vihaññati* – grasping onto these six, the world is oppressed and weary within the six. This is the story of the six given by the Blessed One.</p>
+<p>> *Chassu loko samuppanno, chassu kubbati santhavaṁ,*</p>
+<p>> *Channameva upādāya, chassu loko vihaññati.*</p>
+<p>></p>
+<p>> Born within the six,</p>
+<p>> In the six it seeks its companionship,</p>
+<p>> Grasping tightly onto the six,</p>
+<p>> Within the six itself, the world grows weary.</p>
+<p>Accordingly, we must reflect: in our daily life, we can develop the aforementioned Three Characteristics in relation to these six sense bases (*āyatana*), using the Buddha’s word as our help. Some make use of the meditation on the unattractive (*asubha-bhāvanā*) to cultivate disenchantment with this body. Others use the attention to elements (*dhātu-manasikāra*). Yet others, through mindfulness and clear comprehension (*sati-sampajañña*) regarding the objects arriving at these sense bases (*āyatana*), and by understanding their true nature, take the opportunity to escape from the aforementioned delusion in accordance with the Buddha’s word. By understanding that this is a mirage according to the Buddha’s word, we get the opportunity to free ourselves from delusion.</p>
+<p>That is exactly what the Blessed One declared: the world is trapped within these six sense bases (*āyatana*). Becoming (*bhava* / existence) or continuation exists only within these six. How does one escape from this? What helps to escape from these six is the light of wisdom (*paññā*). The Blessed One shows that the six sense bases (*āyatana*) function within ignorance (*avijjā*). But if on any occasion one understands the true nature of that consciousness (*viññāṇa*) through wisdom (*paññā*), through that light, then at that moment, having escaped from it, there is liberation.</p>
+<p>That is to say, through that liberation, one realizes, as stated in the Buddha’s word, *“loko suñño”*—the world is empty. Because at that moment, one directly experiences that what is called “a thing” is merely something fabricated by the mind of the world. The mind is liberated. The mind does not bind itself to even one of those six. It is the attainment of that liberated mind that was called the Deathless (*amata*). Therefore, what is called Nibbāna is the escape from the concepts built up by this world—the concept of birth (*jāti* / arising), becoming (*bhava* / existence) caused by grasping (*upādāna*), birth (*jāti*) caused by that becoming (*bhava*), and decay and death (*jarāmaraṇa*) caused by that birth (*jāti*). These are severed through that very understanding shown by the Blessed One.</p>
+<p>The secret of dependent co-arising (*paṭicca-samuppāda*), which you, virtuous friends, have heard in the form *“avijjā-paccayā saṅkhārā”* (dependent on ignorance, preparations / formations arise), also lies there. Within this darkness called ignorance (*avijjā*), and precisely because of that darkness—just as when one is in the dark, certain illusions or groups of uncertain feelings arise—that is what is called preparations / formations / volitional activity (*saṅkhāra*). Due to the concept of “I” and “mine” developed within that ignorance (*avijjā*), preparations (*saṅkhāra*) arise in the form of merit or demerit. It is as a part of that very preparation (*saṅkhāra*-ing / preparing) that there is a division into two: consciousness (*viññāṇa*) and Name-and-Form (*nāmarūpa*).</p>
+<p>Consciousness (*viññāṇa*) has a reflective nature. Consciousness (*viññāṇa*) has a certain capacity, and that is precisely the deceptive, illusion-like nature of consciousness (*viññāṇa*). The Blessed One compared consciousness (*viññāṇa*) to an illusion; an illusion is taken as something that exists as long as it is not understood. When it is understood, the illusion ceases to deceive. That is why, when the Blessed One compared consciousness (*viññāṇa*) to an illusion, the simile he showed was that of a magician showing an illusion at a crossroads. But ultimately, the Blessed One declares: “What essence is there in that illusion?” There is no substance in it. Showing what does not exist as if it exists is what that illusion is. Just such a thing is present within this consciousness (*viññāṇa*). This consciousness (*viññāṇa*) has a reflective capacity. When looking back, something is seen. Misunderstanding that seen thing is precisely what is called unwise attention (*ayonisomanasikāra*).</p>
+<p>Worldly beings wander in *saṁsāra* because they misunderstand that seen thing through unwise attention (*ayonisomanasikāra*). That misunderstanding is identified in the Dhamma as the four distortions (*vipallāsa*). *Vipallāsa* means distorted—the distorted feeling, the distorted understanding. What are the four distortions?</p>
+<p>1. *Anicce nicca-saññā* – taking what is in reality impermanent (*anicca*) as permanent; adopting the perception of permanence (*nicca-saññā*).</p>
+<p>2. *Asubhe subha-saññā* – taking what is in reality unattractive (*asubha*) as attractive (*subha*). This is what Sumedhā too said. Sumedhā was a beautiful lady, yet she herself explained the unattractive (*asubha*) nature of her body to her parents. The Blessed One pointed out that taking the unattractive as attractive is a distortion.</p>
+<p>3. *Dukkhe sukha-saññā* – what is taken as pleasure, the Blessed One showed as suffering (*dukkha*). That which is taken as pleasure was compared to a dream (*supinūpama*), because its change turns into suffering (*dukkha*). It cannot be kept forever. It changes constantly. It cannot be taken as pleasure. Taking it as pleasure is merely an illusion. Taking what is painful as pleasant is thus the third distortion.</p>
+<p>4. *Anattani atta-saññā* – taking what is not-self (*anattā*), what cannot be grasped as one’s own, what cannot be kept under one’s control, as though it could be kept under one’s control.</p>
+<p>Thus, the Blessed One shows that it is due to these distorted things (*vipallāsa-dhamma*) that the world has built up suffering (*dukkha*) in the darkness; suffering (*dukkha*) has arisen. To eliminate it, one must strive to see, as the Blessed One showed, the true suffering—to see impermanent (*anicca*) things as impermanent (*anicca*), painful (*dukkha*) things as painful (*dukkha*), unattractive (*asubha*) things as unattractive (*asubha*), and not-self (*anattā*) things as not-self (*anattā*). The Blessed One pointed out that this cannot be done with the instruments found in the world. Nowadays, we use various instruments for everything in the world. If the eye cannot see properly, we get glasses to see a bit better. If that is still not enough, we get a telescope. Yet, the Blessed One declares that the world of worldlings (*puthujjana*) is blind.</p>
+<p>Why was it declared so? Not to disparage us. It is because until that Eye of Dhamma (*dhamma-cakkhu*) arises, until the Eye of Wisdom (*paññā-cakkhu*) arises, the world is merely groping in the dark. Generally, when we think of a blind person, we think, “Oh, that person is just groping around.” But to the Blessed One’s Eye of Wisdom, it was clear that what the world is doing—including the scientists—is merely a groping in the dark.</p>
+<p>At that point, the Blessed One points out: “The world is trapped within these six sense bases (*āyatana*).” They say they see, they say they hear, they say they feel. All of this takes place within that narrow limit grasped as “I” and “mine”; it is within that that a world exists. It is like a sacrifice performed inside a gourd. Our ancestors may have heard of this “sacrifice inside a gourd”—the Blessed One declared something of that nature on a certain occasion to the Brahmin Verañja.</p>
+<p>“Brahmin, I am the very first chick in this era to break through the eggshell and come out.” One must contemplate the depth of this statement. What then is this eggshell? The Blessed One has shown it to be ignorance (*avijjā*). Therefore, everyone—including these scientists—remains inside this eggshell. It is this breaking through the eggshell that is called the arising of wisdom (*paññā*).</p>
+<p>That is why Nibbāna is sometimes designated by the name “cessation of the six sense bases” (*saḷāyatana-nirodha*). Breaking through the eggshell is compared to the cessation of the six sense bases (*saḷāyatana-nirodha*). Where the six sense bases (*saḷāyatana*) cease, it is not death. Where the six sense bases cease, the Eye of Wisdom (*paññā-cakkhu*) opens. To the Eye of Wisdom, things that previously appeared to exist are seen not to exist. Therein lies the secret. But the world does not like this. They want to keep everything, but they also want to eliminate suffering (*dukkha*). The Blessed One shows that this is impossible, because of the craving for becoming (*bhava-taṇhā*).</p>
+<p>Now, Therī Sumedhā said from the very beginning, “I have no desire for this becoming (*bhava* / existence).” She said directly to the king too: “My head is on fire. Decay and death (*jarāmaraṇa*) follow me. Why do they follow me? I have no use for those things. Go!” Thus, the most important thing is eliminating the attachment to becoming (*bhava*). But in the world, there exists a strong craving for becoming (*bhava-taṇhā*). They want to remain in becoming (*bhava* / existence) but also want to be free of suffering (*dukkha*). Both cannot be done. Because what is called becoming (*bhava*) is the sense of “I” and “mine.” The Blessed One shows the opposite. The Blessed One shows that the false notion existing within this world, this wrong grasping of “I” and “mine”—right there lies entire suffering (*dukkha*). Beings have thus been trapped within the sense bases (*āyatana*) in this *saṁsāra* for a long period of time.</p>
+<p>The Blessed One has shown the simile of a dog bound to a post in relation to the dogma of self-illusion (*sakkāya-diṭṭhi*). The dogma of self-illusion (*sakkāya-diṭṭhi*) is the assumption that this group/body actually exists. Each of us has a name given by our parents. To that name, various titles and statuses added by society are joined. Accordingly, we identify ourselves as a person. We, too, say “I, I.” But this skeletal cage of a body also changes constantly. Everything changes. Forgetting this, we grasp it as “a thing” through the perception of compactness (*ghana-saññā*). It is the same regarding other things too.</p>
+<p>However, if on some occasion the perception of impermanence (*anicca-saññā*) is developed to the highest level, at that moment, an inability to grasp in that manner arises. That is called the perception of a heap (*rāsi-saññā*). The meditator on insight (*vipassanā*) understands this step by step. What was grasped compactly as one thing, as a unit, is at some point seen by the eye of insight (*vipassanā*): “Here exists only a certain kind of illusion.” An illusion—that is, merely an image falling in consciousness (*viññāṇa*). What actually exists here is a set of mental factors (*nāma-dhamma*) associated with a consciousness (*viññāṇa*)—namely, feeling (*vedanā* / sensation), perception (*saññā*), volition (*cetanā*), contact (*phassa*), and attention (*manasikāra*); there is merely a name for a name there. Next, a perception of form (*rūpa-saññā*) that we adopt in relation to the four great elements (*mahābhūta*) of earth (*paṭhavī*), water (*āpo*), fire (*tejo*), and wind (*vāyo*), which we cannot identify separately. Thus, it is through the understanding that this is only Name-and-Form (*nāmarūpa*) that one is gradually able to understand.</p>
+<p>That is why it is said that in insight (*vipassanā*), as one proceeds forward from the understanding of Name-and-Form (*nāmarūpa*), this perception of impermanence (*anicca-saññā*) becomes very clear. What is present there is not the impermanence usually thought of by the world. It is understood extremely deeply that everything changes moment by moment, with extreme rapidity. Everything changes, at every single moment. Even within the in-breath and out-breath, in every single thing, the perception of not-self (*anattā-saññā*) gradually grows. One realizes that there is no basis for what was grasped as “I.” Proceeding in this manner, at some point, one is liberated from the darkness of ignorance (*avijjā*).</p>
+<p>Generally, when enjoying a movie, we do not think for even a single moment, “We are enjoying this movie thanks to the surrounding darkness.” At that time, we do not think, “It is because of this darkness.” If the thought of the darkness were to cross our mind for even a moment, we could not enjoy that movie. But because of that delusion, the delusion (*moha*) present in the world, our mind rests on that screen—the unstabilized screen. Relying on that unstabilized screen, a strange continuation of becoming (*bhava*) is conjured up, whether in the teledramas or films of this era, in every single one of them. Furthermore, we do not realize that this functions within a certain frame. That frame is what is called the prepared / conditioned (*saṅkhata*)—something fabricated. The Blessed One designates this frame as the prepared (*saṅkhata*).</p>
+<p>It is something we ourselves have fabricated, but we do not see it. Thus, the world remains within the prepared (*saṅkhata*) that they themselves have constructed. It is within that that all this birth (*jāti* / arising), decay (*jarā*), and death (*maraṇa*) occur. If this skeletal cage of a body had a beginning in a mother's womb at some point, it was not due to our mother's skill. This is said to occur because of grasping (*upādāna*). Thus, at the moment a being passes away in *saṁsāra*, in accordance with the sign (*nimitta*) that comes to the mind—as stated in *“kammaṁ khettaṁ viññāṇaṁ bījaṁ taṇhā sineho”* (karma is the field, consciousness is the seed, craving is the moisture)—as long as the seed of consciousness (*viññāṇa-bīja*) has the nature to sprout, the seed of consciousness (*viññāṇa*) is deposited, and the moisture of craving (*taṇhā*) is present. At that moment, a conception occurs in a mother’s womb as a child. This being, this child, who emerges bringing joy to the mother and father, ultimately does not know, nor do the parents know, that what is present here is simply that very delusion, that same ignorance (*moha*) that has come along for a long time in *saṁsāra*. As long as the body called “I” and “mine” grows from that point, one calls it “I” and “mine.” And so it is regarding other things in this world. As ignorance (*avijjā*) is eliminated through true understanding, the delusion present here is understood. Indeed, if there is no measuring viewpoint, there is no measurement either. Where there is measurement, there is narrowing. If at some point the primary peg that helps to measure is uprooted—that is what is called in the Dhamma the conceit “I am” (*asmi-māna*), the peg that says “I am.”</p>
+<p>That is to say, the most fundamental, extremely subtle part of continuation is the conceit “I am” (*asmi-māna*). The moment that is removed, things that appeared due to ignorance (*avijjā*) and darkness are no longer seen; things that were heard are no longer heard. Yet, one has not become blind; one has not become deaf. At that moment, the light of wisdom (*paññā*) arose. Just as mentioned regarding the cinema, the moment the light comes on, the things on the screen fade away. In the same way, there comes a moment when the world fades away. That very fading away is indeed liberation. Then, if someone has experienced that, it is registered in consciousness (*viññāṇa*) as a unique experience. What was prepared in consciousness (*viññāṇa*) at that point was a state of having died without dying.</p>
+<p>What is called the Deathless (*amata* / *amṛta*) is therefore not some strange beverage. It is a moment when that wrong notion taken as “death” is directly and personally eradicated; that is, one understands that one is being held by the mind. If that existence (*bhava* / continuation) grasped by the mind, which was taken as “this is I,” is let go at some point, at that moment, instead of suffering (*dukkha*), there arises peace—a sense of liberation, an escape. That bliss of liberation is what is called Nibbāna. The other side directly realized right here is that if it was previously a prepared consciousness (*saṅkhata-viññāṇa*) present in consciousness (*viññāṇa*), it was holding onto Name-and-Form (*nāmarūpa*); the delusion regarding Name-and-Form (*nāmarūpa*) was present. Therefore, when one is liberated from Name (*nāma-vimutta*), that person has no sign (*nimitta*) to undergo birth (*jāti* / arising) again.</p>
+<p>You, virtuous friends, have heard that it is in accordance with the sign (*nimitta*) developed at the final moment—such as the sign of karma (*kamma-nimitta*) or the sign of destination (*gati-nimitta*)—that one undergoes birth (*jāti*) in a hell realm, a mother’s womb, or an animal womb. Thus, if such a sign (*nimitta*) is not grasped at any moment, and consciousness (*viññāṇa*) is liberated, that person has no further becoming (*bhava* / existence). Therefore, it was because the direct realization of “no further becoming (*bhava*), no further birth (*jāti*)” was obtained that the Blessed One declared that aforementioned inspired verse (*udāna-gāthā*)—the valuable inspired verse that everyone has heard. Why did he, upon obtaining this direct realization, not declare anything else but present only this account of birth (*jāti*) and decay (*jarā*)?</p>
+<p>*Aneka jāti saṁsāraṁ, sandhāvissaṁ anibbisaṁ* – and so forth. “For a long time in this *saṁsāra*, I did not see the builder who constructed this house, this skeletal cage, this Name-and-Form (*nāmarūpa*), for all this time. Because I did not see him, I ran searching for all this time.”</p>
+<p>*Gahakārakaṁ gavesanto* – “Running, seeking the house-builder.”</p>
+<p>*Dukkhā jāti punappunaṁ* – “Painful is birth (*jāti* / arising) again and again,” because every house that is built collapses.</p>
+<p>But the Blessed One declares:</p>
+<p>*Gahakāraka diṭṭhosi* – “O house-builder, you are seen!” Who is the builder of this house? Consciousness (*viññāṇa*).</p>
+<p>*Puna gehaṁ na kāhasi* – “You shall not build a house again.” That refers to the liberated consciousness (*viññāṇa*), the consciousness (*viññāṇa*) liberated from Name-and-Form (*nāmarūpa*) when the light of wisdom (*paññā*) was obtained. That is why there is no further birth (*jāti* / arising).</p>
+<p>*Sabbā te phāsukā bhaggā, gahakūṭaṁ visaṅkhitaṁ* – “All your rafters are broken, the ridgepole is shattered.” This is the moment when everything is freed, because the house-builder has been understood.</p>
+<p>*Visaṅkhāragataṁ cittaṁ, taṇhānaṁ khayamajjhagā* – “The mind has reached the un-prepared / unconditioned (*visaṅkhāra*), attaining the destruction of cravings (*taṇhā*).” This is exactly what the Blessed One points out: ultimately, one who has attained that peace, the peace of Nibbāna. It is because of such a state that one does not undergo birth (*jāti*) again.</p>
+<p>Thus, it is that very state of the Deathless (*amata*) attained in this very life that the Blessed One has declared. The person who has obtained that direct realization knows with certainty that they will not be born again. That itself is the peace belonging to that person. Therefore, through the bliss experienced in this very life during the attainment of the Fruit of Arahantship (*arahatta-phala-samāpatti*), that person knows directly and surely that there is no further *saṁsāra* for them.</p>
+<p>Thus, through the story of the Arahant Therī Sumedhā, we have explained the fear of *saṁsāra*, which is a highly important part of the Four Noble Truths shown by the Blessed One. We must constantly reflect that we have traveled in *saṁsāra* for an immense period of time. Furthermore, on this extremely rare occasion of a Buddha’s arising, possessing the wealth of the opportune moment (*khaṇa-sampatti*), we must not limit ourselves to mere backbone-breaking physical routines, but understand deeply and, without letting this opportunity for escaping *saṁsāra* slip away, strive as much as possible to attain that aforementioned supramundane state.</p>
+<p>Therefore, today, you, virtuous friends, established in virtue (*sīla*), have listened to a Dhamma sermon that helps towards your Nibbāna. May all these wholesome deeds serve as a cause, a condition, and a strong support (*upanissaya*) for you to realize the supreme, deathless Great Nibbāna as swiftly as possible, before the decline of the Dispensation, through the penetration of the paths and fruits of Stream-entry (*sotāpatti*), Once-returning (*sakadāgāmitā*), Non-returning (*anāgāmitā*), and Arahantship! Thus you should wish.</p>
+<p>Likewise, may whatever beings there are, from the Avīci hell up to the Akaniṭṭha heaven, including one’s own relatives, who wish to rejoice in the merit of this giving and hearing of the Dhamma, by doing so, find peace in the supreme, deathless Great Nibbāna through their own respective bodhi (enlightenment)! Wishing thus, recite these stanzas and share the merit.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_074.html" class="doc-btn">← Previous Sermon (074)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_076.html" class="doc-btn">Next Sermon (076) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

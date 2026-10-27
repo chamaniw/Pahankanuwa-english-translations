@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 009 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_008.html" class="doc-btn">← Previous Sermon (008)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_010.html" class="doc-btn">Next Sermon (010) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 009</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_009_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_009_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_009_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #9</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No. )</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Attanāva kataṃ pāpaṃ, attajaṃ attasambhavaṃ; Abhimatthati dummedhaṃ, vajiraṃ vasmamayaṃ maṇiṃ.</p>
+<p>From:</p>
+<p>Verse 161 from the Attavagga (Chapter on the Self) of the Dhammapada</p>
+<p>Dear Listeners,</p>
+<p>When some people see a person who has lived a good life in society meet with death due to a sudden accident or an enemy's hostility, they might think, "Look at what happened to him despite living so well," and begin to doubt the value of a principled life. They weaken their faith in the fruits and results of wholesome and unwholesome actions (kamma). This kind of doubt arises because they do not have a proper understanding of the subtle workings of the wheel of kamma.</p>
+<p>The Buddha declared that beings must themselves be held responsible for the wholesome and unwholesome kamma they perform out of ignorance and craving—shrouded by ignorance and bound by craving—actions performed selfishly with the conceit of "self". He declared that they must experience the fruits and results of these actions, and that sooner or later, they will have to face their consequences. Although the subtle workings of kamma were not visible to other religious teachers, they were clearly perceived by the Buddha. Therefore, on certain occasions when such erroneous views arose in society, he would recount the past story related to the present incident as an illustration—as empirical evidence—thereby presenting such direct proof to the world. In doing so, he seized the opportunity to rescue people from the path of woeful states and guide them toward happy realms and Nibbāna.</p>
+<p>The background story of the verse we have chosen as our theme today is of a similar nature. During the time when the Buddha was residing at the Jetavana monastery, there lived in the city of Sāvatthī a faithful stream-enterer (*sotāpanna*) lay disciple named Mahākāla. He was accustomed to regularly observing the eight precepts. Eight days a month, he would come to the monastery, observe the precepts, and spend the entire night listening to Dhamma sermons. He was deeply devoted to this practice. One night, while this lay disciple was at the Jetavana monastery, a band of thieves broke into a nearby house. Hearing the noise as they were preparing to take the goods, the homeowners woke up and began chasing the thieves. The thieves started running, dropping the stolen goods here and there. One of the thieves fled along the path leading to the Jetavana monastery with the goods he had taken. By that time, in the early morning, the lay disciple Mahākāla had come to the pond to wash his face. What did this thief do? Seeing the lay disciple, he dropped the bundle of stolen goods right where the lay disciple was standing—likely in an attempt to deceive the pursuing crowd—and ran away. When the homeowners arrived, they saw the bundle of goods and found the lay disciple there. They grabbed him, shouting, "You broke into our house, and now you are standing here pretending to listen to Dhamma, posing as a pious lay disciple! You are a thief in disguise!" They beat him mercilessly, killed him, and left his body there.</p>
+<p>In the morning, some novice monks came to the pond to fetch water. Seeing the lay disciple lying dead in this manner, they went and reported it to the Buddha: "Venerable Sir, that innocent lay disciple, the one who listened so well to the Dhamma sermons, has been beaten to death and cast aside."</p>
+<p>The Buddha said, "Monks, although looking at his conduct in this life, it may seem that this lay disciple met with an undeserved death, yet, in terms of the evil kamma he performed in the past, this death is entirely fitting." Then, he related the story of the past.</p>
+<p>In the past, at the entrance to a forest in a border village of the Kingdom of Benares, the king had stationed a royal guard, as travelers were frequently harassed by thieves lurking in that forest. What was the guard's duty? It was to provide security to those who traveled to and fro along that forest path. One day, a certain man arrived there in a carriage, accompanied by his beautiful wife. As soon as the guard saw her, he felt a lustful attachment and devised a scheme to detain them. Although there was plenty of time left to travel safely, he said, "It is too late in the evening now. Therefore, stay here today. I will provide lodging in my house, and you may leave tomorrow morning." But the man replied, "No, no, there is plenty of time. Please let us proceed." What did the royal guard do? He used his men to forcibly stop the carriage and provided lodging and food for both the man and his wife there. During the night, he employed a trick. He had his men hide a gem belonging to the household inside their carriage. Furthermore, he created a noise as if thieves had entered the house. The next morning, after the couple had departed, he ordered his men, "Go and search those who are leaving this village. A gem in our house has gone missing; thieves have taken it." So, the guard's men went, stopped and searched the carriage, retrieved the gem they themselves had hidden, and brought the man before the village headman with a false accusation: "He has stolen the gem of the royal guard who gave him shelter." The village headman, unaware of the actual facts, ordered that the man be beaten and executed. The Buddha explained the consequences of that unwholesome act of taking life. As a result of that unwholesome kamma, the royal guard suffered for a long time in the Avīci hell, and as a residual effect, in the final portion of those consequences, he was beaten to death in a similar manner for a hundred lifetimes. The Buddha pointed out that what happened to Mahākāla on this occasion was indeed the very same consequence, and that this story was about him. Having explained this, the Buddha said, "Monks, if a person, being thus deluded, performs an evil kamma, it will bring results in this manner," and he uttered the aforementioned verse of Dhamma together with a simile.</p>
+<p>*Attanāva kataṁ pāpaṁ*</p>
+<p>*attajaṁ attasambhavaṁ*</p>
+<p>*abhimatthati dummedhaṁ*</p>
+<p>*vajiraṁ vasamayaṁ maṇiṁ*</p>
+<p>"By oneself is evil done, born of oneself, produced by oneself. It crushes the foolish person, just as a diamond crushes a gem born of rock."</p>
+<p>The meaning of this verse is that evil kamma, which is born of oneself and produced from within oneself, destroys the foolish person, just as a diamond-jewel (vajra) born of stone cuts and destroys the very stone from which it arose.</p>
+<p>Here, in this verse too, a gem is mentioned. There seems to be some subtle connection to the background story. However, there is a much deeper meaning here. When it is said "done by oneself," we see the sense of personal responsibility. In the past, that lay disciple, driven by selfishness and harboring the conceit of "self", committed that evil deed. The inevitable consequence of that false accusation—for indeed, it was a false accusation—is what he had to experience in this lifetime. Thus, although in the world we often see seemingly innocent people being killed, the Buddha-eye perceives their past connections. We can understand this through this story. Here we clearly see that when the lay disciple Mahākāla was a royal guard in the past, he violated the third precept and also the first precept by causing the taking of life of an innocent man. What he experienced now was the verdict of that false accusation. It was because of this that the thieves dropped the bundle of stolen goods right there. It was kamma that inclined the thieves' minds to drop it there. There is a wondrous karmic connection in these events. We can see that this reality underlies everything we hear about. Today, too, many such incidents occur. Events similar to those described in this present and past story are still seen in the world today. We can understand from this that the law of kamma and its result is subtly hidden within all these occurrences.</p>
+<p>Next, we must contemplate the deeper aspect of this matter. Now, this verse repeats several times phrases like "done by oneself", "born of oneself", "produced of oneself". Thus, "self" is emphasized. Indeed, this verse comes from the section called the *Atta Vagga* (Chapter on Self). Many translate this easily as "soul" or "self". But in this section of the Dhammapada, there is a discussion about oneself. Many interpret this as a permanent soul, but what is referred to here is not a permanent soul. Some debaters argue: "If this Dhamma is a teaching of Not-self (*Anattā*), how can one be held responsible for one's actions? How is responsibility demonstrated? After all, the one who experiences the result is not the same 'self'!" They try to escape through such arguments. But what is the meaning here? Shrouded by the veil of ignorance and bound by the fetters of craving (*taṇhā*), the world of living beings generates intentions. You have heard the phrase: "*Cetanāhaṁ bhikkhave kammaṁ vadāmi*"—"Intention, O monks, is what I call kamma." You must have heard this many times. The Buddha has shown that intention itself is kamma. Thus, through the ignorance that supports that intention—the feeling of "I" and "mine"—the concept of "self" arises. Having generated that conceit of "self" and acting with thoughts of one's own pleasure, protection, progress, and gain, the consequences of those actions must be experienced by oneself sooner or later. Why is this? Feeling (*vedanā*) is something that occurs with extreme rapidity. The activity of the mind is exceptionally swift. If it is directed in the wrong way, we can understand that it leads to great destruction. If a driver of a fast-moving vehicle, due to negligence or drowsiness regarding the controls operated by his hands and feet, lets the steering wheel slip even slightly, where will it end? The mind is just like that; it operates with extreme rapidity. It is something that changes so swiftly that nothing in the world can compare to it—hence it is described as *lahuparivattaṁ* (swiftly changing). Therefore, if such a mind, in accordance with the law explained by the Buddha, leans toward unrighteousness, unwholesomeness, and evil, then one has to suffer grave consequences for a very long time. Not just in one lifetime—depending on the strength of that intention—the Buddha has shown that the results of certain kammas are experienced in this very life as *diṭṭhadhammavedanīya*. The results of other kammas are experienced in future lifetimes as *aparāpariyavedanīya*. In this manner, the results of kamma are generally explained in various ways. Yet, when we contemplate deeply, the Buddha declares that the domain of kamma is unthinkable (*acinteyya*). The entanglement of kamma is that dangerous. The vast accumulation of kamma performed across various lifetimes gathers and deposits in consciousness (*viññāṇa*), only to resurface some day as fruit and result. This is the perilous nature of existence in this world that we can understand through this.</p>
+<p>Furthermore, we must constantly reflect on the relationship between kamma and its result. For, as mentioned earlier, some might think, "Is it not someone else who experiences the result of the kamma I perform?" In the next life, one might not know that they committed this deed. But to use a simple analogy: if one pours poison into a flowing stream at one point, and someone takes water further downstream, they can be harmed by that poison. The mind-stream (*citta-santāna*) is just like that. If an unwholesome quality—a defilement—is added to the mind-stream, it will resurface over a long period of time as ripening results to bring retribution to oneself.</p>
+<p>Among our Buddhists, there is a saying regarding this ripening of kamma, known as *kamma-sarikkhatā* (the correspondence of action and result). As illustrated by these two stories, the connection between kamma and its result often shows a close similarity—a kind of parallelism. Moreover, even Western scholars who are waking up to this reality use a new analogy to describe the working of kamma—how actions return to the doer. The kamma performed by oneself returning to oneself is sometimes compared to a weapon used by certain indigenous tribes called a "boomerang." When the boomerang is thrown at an animal, it hits the target and returns right back to the hand of the thrower. Kamma has a similar returning nature. If kamma originates from a particular mind-stream, it returns to that very same mind-stream. Therefore, one cannot escape by saying there is no "self." For we know that *saṁsāra* is the uninterrupted continuity of the stream of aggregates—even though there is no permanent soul—comprising form, feeling (*vedanā*), perception, preparations (*saṅkhāra*), and consciousness (*viññāṇa*). Within that stream of aggregates, sooner or later, in accordance with the law of kamma, the results will inevitably surface.</p>
+<p>Since such a state of affairs exists in the world, we must be exceptionally mindful of it. In this era of terror and violence, many people's understanding, belief, and faith (*saddhā*) in kamma tend to disappear. It is often forgotten. Such is the perilous condition of the world.</p>
+<p>Therefore, to constantly remind us of this law of kamma, there is a valuable discourse taught by the Buddha called the *Ṭhāna Sutta*. In that discourse, the Buddha points out five facts. We shall focus here particularly on the last point mentioned. To help one reflect on kamma, turn one's mind away from bad conduct, and direct it toward good conduct, the Buddha presents a certain formula to be constantly reflected upon (*abhiṇhaṁ paccavekkhitabbaṁ*). Whether lay or ordained, male or female, this is a matter that should be regularly reflected upon by everyone:</p>
+<p>"*Kammassakomhi kammadāyādo kammayoni kammabandhu kammapaṭisaraṇo.*</p>
+<p>*Yaṁ kammaṁ karissāmi kalyāṇaṁ vā pāpakaṁ vā tassa dāyādo bhavissāmīti*</p>
+<p>*abhiṇhaṁ paccavekkhitabbaṁ.*"</p>
+<p>This is how one should think. "*Kammassakomhi*" means—here too, if there is anything that can be taken as "self" or "mine", it is kamma alone. "*Kamma-sako*"—"*sako*" means "one's own". Thus, the general meaning is: "I am the owner of my kamma." "*Kammadāyādo*": "I am the heir to my kamma." "*Kammayoni*": "Kamma is the womb from which I am born." My origin, my beginning, is from this kamma. What is called "I" is indeed intention itself, which is taken as "I". That is why it says "*kammayoni*"—kamma also arises from the conceit of "I" and "self". "*Kammabandhu*": "Kamma is my kinsman." The only relative one has as a support is kamma itself. "*Kammapaṭisaraṇo*": "Kamma is my refuge; kamma is my support." "*Yaṁ kammaṁ karissāmi kalyāṇaṁ vā pāpakaṁ vā tassa dāyādo bhavissāmi*": "Whatever kamma I shall do, whether good or evil, of that I shall be the heir." It is stated that this is what should be constantly reflected upon by everyone—lay or ordained, male or female.</p>
+<p>The result or benefit of doing so is declared thus: in a person who reflects in this manner, bad bodily conduct, bad verbal conduct, and bad mental conduct—misdeeds done through body, speech, and mind—are either entirely eradicated or at least attenuated. This means that the best method to avoid bad conduct is to regularly apply this law of kamma to one's own mind. "Kamma is what is truly mine." When one thinks in this way, one realizes that the things one desperately grasps onto as "I" in moments of impulsiveness or haste in society are not what the Buddha pointed out. What remains with one in the end is the momentum of kamma generated within one's own mind. That is indeed what brings happiness or pain to oneself.</p>
+<p>Accordingly, we should contemplate the terrifying nature of this entanglement of kamma, which the Buddha has illustrated on many occasions in this manner. That is to say, when experiencing the result of kamma, we generally do not realize that it is a karmic retribution, even though it is clearly seen by the Buddha-eye. Instead, we think it is something done to us by others. Perhaps even the lay disciple Mahākāla—though details are not given, and being a devout lay disciple he might have tried to compose his mind—nevertheless, when those homeowners came and beat him to death, he might have felt anger, thinking, "Alas, they are killing me, an innocent man." He too must have considered himself innocent. There was even room for such an unwholesome thought to arise. But if one contemplates deeply according to that formula, no matter what misfortune or enemy hostility befalls one, one should think: "This is something of my own making." Now, who was the executioner of the lay disciple Mahākāla? It was himself! If we contemplate in accordance with the Dhamma, according to the principles of the Dhamma, the ultimate cause of anyone's death is an unwholesome act of taking life committed by themselves in the past. That is how we must contemplate. The proximate cause of death, the reason for death—we are not referring here to the mind at the moment of death—the cause of death is an unwholesome act of taking life committed by oneself in the past. This is clearly illustrated here. The death of the lay disciple Mahākāla was brought about by a taking of life he himself committed. He himself was his own executioner. It was not anyone else; he was his own executioner.</p>
+<p>If we accustom ourselves to contemplating in this manner, we can easily bring the mind to equanimity (*upekkhā*) in such situations, in accordance with the Buddha's word. It may not be directly perceived by us. Since we do not possess higher spiritual powers (*abhiññā*), we cannot see that "this particular kamma has caused this particular event to happen to me." However, if we practice reflecting on this as a universal law of nature—knowing that the Buddha’s word is true—we realize the Buddha has declared: "Kamma alone is my inheritance; kamma alone is my kinsman." It can be a relative or an enemy. In this regard, we should understand that wholesome kamma is one's true kinsman, while unwholesome kamma is one's enemy. The Buddha has pointed this out too, when speaking of kamma.</p>
+<p>*Caranti bālā dummedhā*</p>
+<p>*amitteneva attanā*</p>
+<p>*karontā pāpakaṁ kammaṁ*</p>
+<p>*yaṁ hoti kaṭukapphalaṁ*</p>
+<p>Thus the Buddha has declared: "Foolish and ignorant people go about acting as enemies to themselves, performing evil kamma which yields bitter fruit." "*Amitteneva attanā*"—they behave as if they are enemies to themselves. Why? Because by "*karontā pāpakaṁ kammaṁ yaṁ hoti kaṭukapphalaṁ*"—by performing evil deeds that bring bitter consequences, these foolish individuals live as enemies to themselves. Thus, while it is said that kamma is one's kinsman (*kammabandhu*), if we consider unwholesome actions, they can turn out to be one's enemies.</p>
+<p>Therefore, reflecting that this law of kamma—this natural law of kamma—is embedded in every single event that happens to us, often helps us, in accordance with the Buddha's words, to subdue impulsiveness, haste, and anger. This is something that must be constantly contemplated in a practical manner.</p>
+<p>Furthermore, this story reveals to us another important matter: the significance of the five precepts (*pañcasīla*). The five precepts taught by the Buddha are no trivial matter. Within this virtue (*sīla*), all the situations in which a being's mind leans toward unwholesomeness in this long *saṁsāra* are briefly and simply contained. In general, any unwholesome kamma we perform falls under either the first precept—the unwholesome act of taking life—or under taking what is not given, sexual misconduct, false speech, or taking intoxicants, as the primary categories. One could describe various branches and sub-branches of these, but these are the main ones. Thus, the consequences of the evil kamma related to the five sins we committed in that past *saṁsāra* are what we experience day by day in various ways. It is not only death, as mentioned before, but also illness, various disasters, loss of wealth and crops, and all such daily adversities—the cause of every single one of these is the terrible unwholesome kamma committed by oneself in the past. But that is not the only danger of kamma. As mentioned earlier, due to not knowing the true nature of kamma, one gets entangled in the ball of karmic thread. Indeed, the Buddha compares *saṁsāra* to a tangled ball of thread. How does it become a tangled ball of thread? We receive a certain result according to the kamma we have performed. When that result comes, we do not know how it happened. We tangle it further by generating more kamma in response to it. By harboring ill-will (*dosa*) toward those who instrumented that result—and not only that, but by succumbing to various defilements (*kilesa*) because of it—we entangle our kamma further and accumulate still more kamma. Such is the perilous state of this entanglement of kamma. And it is not only oneself who gets caught in this entanglement. When a kamma is performed, and when its result is experienced, there are others who join in. There are others who rejoice in it. We know that after giving a gift (*dāna*) or performing some other valuable meritorious deed, we share those merits with others. On such occasions, there is an opportunity for others to rejoice in that merit, and instead of falling into woeful states, to generate wholesome qualities that lead to happy realms. That is the good side. The word "rejoicing" (*anumodanā*) is generally used in connection with wholesome deeds. But, meritorious devotees, we also see in society many instances where people rejoice in unwholesome deeds.</p>
+<p>You know very well, especially in this era, that when one's friends or relatives gain some profit, even in an indirect or improper way, one rejoices over it. If that action was unwholesome, if that person accomplished it in a wrong way, then by rejoicing, we too are sharing in that unwholesome deed. Or, particularly if a friend has committed some serious wrong—such as wrong view, theft, or other corrupt activities—one either assists them through body and speech, or rejoices mentally, thinking, "Oh, how wonderful!" Nay, even when an enemy dies, there is a habit among beings to exclaim "Sādhu! Sādhu!" and thus rejoice in it. Such is their delusion. What does one do by this? One takes upon oneself something unrelated—something that does not belong to oneself—and binds oneself to that unwholesome kamma. Thus, although the word "*anumodanā*" is used in connection with wholesome deeds, we unwittingly participate in unwholesome deeds as well. This happens due to that very ignorance. That rejoicing too is kamma. Even if another person did the deed, when one rejoices in it mentally, one's own feeling (*vedanā*) becomes soiled by it. Through that, one accumulates unwholesome kamma for oneself. We must guard against such situations.</p>
+<p>In the world, there are various political parties and factions. However, the Dhamma mentions two parties that exist eternally in the universe: the *devas* (gods) and the *asuras* (demons). There is a perpetual struggle between these two factions. The Buddha states that when Tathāgatas appear in the world, the party of the *devas*—that is, the deities—grows stronger, while the faction of the *asuras*—the demons and hungry ghosts—declines, grows weak, and decreases in number. What does this mean? When beings incline toward wholesomeness, more gods are born in the world. Conversely, as they incline more and more toward unwholesomeness, those born in the lower realms like demons (*yakkhas*) and hungry ghosts (*petas*) increase. This is the kind of competition that exists in the world. This can be designated as black and white. When considered in terms of the Dhamma, the conflict between the wholesome and the unwholesome can be seen as white and black—the white side being wholesome and the black side being unwholesome. These are the two parties that eternally exist in the world, not the political parties we think of. Therefore, we must consider which party we belong to, and which party we vote for—the black party or the white party? Voting for the white party is called *kusala-chanda* (desire for wholesomeness) in the Dhamma. It is voting for the wholesome. There is also a bad side to desire (*chanda*), known as *chanda-rāga* (lustful desire). That goes toward the unwholesome. If one develops an attachment that leans toward that passion called *chanda-rāga*, it leads to ruin. *Kusala-chanda*, however, is a good thing because it is a valuable urgency or a desire for the Dhamma that culminates in Nibbāna. We must understand that these two forces exist in the world. If we do not shape our lives properly according to this Dhamma of the Buddha, we cannot tell into what abyss our journey will eventually end. Such is the situation.</p>
+<p>Therefore, we must contemplate especially on the observance of virtue (*sīla*). Even on this occasion, you have observed virtue—whether it is the eight precepts with right livelihood (*ājīva-aṭṭhamaka-sīla*), the eight Uposatha precepts, or in some cases, the ten precepts. We must reflect on its value. How precious is this virtue (*sīla*) declared by the Buddha! In this path of Dhamma, virtue is only the first step. Yet, how valuable is that which is contained within it! The training of body and speech is also something that must be carried out systematically.</p>
+<p>Sīla means "tame-ness" or "gentleness." If we translate it into Sinhala, sīla is *hīlākama* (tameness). We see the value of this tameness when we observe the behavior of a trained elephant. The mahout rides on the back of such a massive beast and makes it perform various tasks. Similarly, one rides a fast-running horse, taming it to do one's bidding. When even a wild beast, once systematically tamed, can perform such remarkable tasks and be of great use, how much more so with ourselves?</p>
+<p>If we thus discipline our body and speech in accordance with this virtue (*sīla*) declared by the Buddha—then, what is contained within is not just body and speech. Our bodies are not machines. The mind is the forerunner that enables these bodily and verbal actions to operate, in accordance with the verse: *manopubbaṅgamā dhammā* (mind is the forerunner of all states). The primary cause is the mind. In truth, what is contained within this virtue is not a meaningless repetition of training rules—as the Sangha often points out, like the story of "how the village rustic observed the precepts" without understanding. It must be taken to heart. Even if we recite them in Pali for the sake of tradition and respect, we must understand their meaning. The precept regarding abstaining from killing living beings—*veramaṇī* means abstaining, and *virati* means abstinence—is what is difficult. Doing is easy; abstaining is difficult. When one says, "I undertake the precept of abstaining, the rule of self-discipline," it means one is voluntarily—not because someone else forced it, but out of one's own free will—observing it and depositing that determination in the mind. It is like issuing a command to one's own wisdom. In our activities, there are things done impulsively according to our whims, and things done through thoughtful reflection. There is a vast difference between the two. Within each of us, there is a certain capacity called "wisdom"—what is known as mindful understanding—the ability to do things thoughtfully. But this must be brought out with effort. Why? Because the nature of *saṁsāra* is to flow downward toward the unwholesome, like a stream. Therefore, this wisdom remains buried. We usually act according to our whims and our superficial minds, which are often inclined toward the unwholesome. Yet, there is a capacity of wisdom, a power of understanding (*paññā*) within us. That very idea is what is called reflection (*paccavekkhaṇā*).</p>
+<p>If we consider the word reflection (*paccavekkhaṇā*) deeply—it is like a person going before a mirror to look at themselves. It is to contemplate something calmly. When preparing to go on a journey or attend a wedding, one dresses up and goes before a mirror to see if there are any flaws or if one's ornaments are placed correctly. Similarly, within our minds, there is a capacity to reconsider, a capacity to reflect back (*āvajjanā*). Specifically, we have the ability to pause and ponder, "Is this indeed so?" That is what is called reflection. Even the Buddha used the simile of the mirror to advise us to contemplate and examine how things are.</p>
+<p>The Buddha briefly explained the nature of the wholesome and unwholesome to Ven. Rāhula: unwholesome actions are those performed through body, speech, or mind that lead to one's own harm, to the harm of others, or to the harm of both. When understood in this way, we see that what the Buddha points out is not a short-term perspective. One might think, "I am gaining a profit at this moment." However, when contemplating in terms of kamma, one must not take such a short-term view.</p>
+<p>Now, someone might commit theft or a similar deed, thinking, "This will benefit me." But by doing so, harm is caused to others. Not only that, one's own mind becomes defiled. This is how one must contemplate with wisdom. We have the capacity to contemplate in this manner through reflection (*paccavekkhaṇā*). We must bring it to the forefront. Together with that wisdom, depositing a certain power of determination in the mind, comes what is known as recollection (*āvajjanā*)—the recollection of virtue (*sīlāvajjanā*).</p>
+<p>Recollection (*āvajjanā*) means reviewing one's virtue: "I have undertaken such a virtue; is my conduct in keeping with this virtue?" On this occasion, to remind themselves that they have undertaken precepts, some even change their attire. All of this serves to acknowledge that one is established in virtue. Then, bringing that to mind, one endeavors to live in conformity with that conduct. It is through this that one can discipline the mind. First, one disciplines body and speech. The Buddha has shown that through this alone, one experiences great happiness in daily life.</p>
+<p>That is called the happiness of blamelessness (*anavajja-sukha*)—the peace of knowing that we live without doing wrong. How many people today spend their lives in regret? The benefit of virtue is to live daily in the comfort of the Dhamma, free from remorse (*avippaṭisāra*). Although the person who commits unwholesome deeds may not think of them during his daily activities, perhaps when he goes to sleep, he remembers: "Have I not done such things?" This is especially true in old age, or at the moment of death. At the moment of death, an unwholesome deed comes to mind. If a grave unwholesome deed comes to mind at the moment of death, one goes straight to woeful states. Such is the perilous condition of *saṁsāra*. This is why the Buddha ultimately exhorts us to escape from this entire mass of *saṁsāra*. To escape from *saṁsāra* means to completely untangle oneself from that aforementioned entanglement of kamma. One cannot escape from it by ordinary means. It is like a wondrously tangled ball of thread. It is precisely because untangling this kamma—or escaping from *saṁsāra*—is so difficult, that a Buddha is needed.</p>
+<p>A Buddha is one who, having escaped himself, clarifies the Dhamma to help other beings escape as well. That method is supramundane liberation (*lokuttara-vimutti*). The supramundane liberation shown by the Buddhas is the crossing over from the world. It is through this alone that this entanglement of kamma can be resolved. The root cause of all this is shown to be formations (*saṅkhāra*). It is because of these formations that these things occur. Some of you may have heard that formations arise due to ignorance (*avijjā-paccayā saṅkhārā*). Thus, due to that aforementioned conceit of "self", taken as "I" and "mine", numerous fabrications occur within the mind. Briefly, these can be understood as intention. There is a stream of thoughts arising as intention, aspiration, and expectation—an activity of the mind. That activity carries us in *saṁsāra* into a state resembling a massive tangled ball of thread. It is the wholesome and unwholesome kamma we perform that keeps us alive in *saṁsāra* for a long period of time.</p>
+<p>Therefore, to escape from this, the power of intention, this karmic energy—or the momentum of these formations (*saṅkhāra*)—must be stilled. It must be calmed; it must be extinguished. That is what the Buddhas point to as supramundane liberation. Through the penetration of the paths and fruits, and through the path-knowledge (*magga-ñāṇa*) of the four stages—Stream-entry (*sotāpatti*), Once-returning (*sakadāgāmitā*), Non-returning (*anāgāmitā*), and Arahatship—the Buddhas resolve this entire problem of *saṁsāra*, this entanglement of kamma. Briefly, it can be understood in this way:</p>
+<p>You have all heard about a stream-enterer (*sotāpanna*). This means that based on virtue (*sīla*), having stilled the mind in concentration (*samādhi*), and through wisdom (*paññā*) regarding the Four Noble Truths—that existence in the world is suffering (*dukkha*), craving (*taṇhā*) is its cause, the stilling of craving is Nibbāna, and the Noble Eightfold Path is the way leading to it—one must realize these four facts to some degree. In other words, one must understand the three characteristics of all existence: impermanent (*anicca*), suffering (*dukkha*), and not-self (*anattā*). Having understood this, a sense of dispassion and turning away from *saṁsāric* existence must arise in the mind. As long as there is no turning away from it, one cannot escape from *saṁsāra*. In daily life, when various accidents and disasters occur, everyone momentarily feels in their heart: "Alas, there is no essence in this *saṁsāric* existence." Yet, because ignorance and craving (*taṇhā*) continue to operate in a dangerous manner, it is quickly forgotten. Such is the situation. Therefore, the Buddha declares that by systematically cultivating virtue, concentration, and wisdom in that manner, and developing wisdom through wise reflection (*yoniso manasikāra*), if at some point the mind reaches the state of Stream-entry, what happens through that path-knowledge? It limits further existence in *saṁsāra* to a maximum of seven lifetimes, and having left only that much, destroys all other karmic energies. In particular, one is freed from kamma leading to the planes of misery. That is why the Buddha declared that even the liberation obtained through the first path-knowledge, Stream-entry, is far superior to sole sovereignty over the earth. One must contemplate in this manner. That is the first stage.</p>
+<p>Next, the second stage is the state of Once-returning (*sakadāgāmitā*). Once-returning means that at this second level of wisdom, having left only one more birth in a heavenly realm and one more birth in the human world, all other kammas are exhausted. Indeed, a Once-returner is one who returns to this world only once. There is opportunity for them to be born once in a heavenly world and then return to the human world. Next, in the mind of one who has attained the stage of Non-returning (*anāgāmitā*), those fetters bound to becoming (*bhava-saṁyojana*) are severed, and they take birth in the Pure Abodes (*suddhāvāsa*) of the Brahma realms, attaining final passing away (*pariNibbāna) right there. At that point, only the subtle kamma to be experienced in the Pure Abodes remains. Finally, in Arahatship, when one becomes an Arahat, only those kammas that ripen in this very life (*diṭṭhadhammavedanīya*) are left to take effect, while all other karmic forces are stilled. Through the power of wisdom, the mind is brought to a state where it can never undergo another rebirth. This is what is called the stilling of all formations—*sabba-saṅkhāra-samatha*. A name for Nibbāna itself is the calming of all formations (*saṅkhāra*). Thus, terms such as calming, stilling, tranquilizing, and extinguishing demonstrate how the Buddhas resolved this problem of *saṁsāra*—through understanding, through wisdom, and through purification.</p>
+<p>The Buddhas have pointed out the path of Dhamma in that manner. Accordingly, we must reflect on how we should spend this life. Today, you are preparing to step into a new year and a new century in a few days. We should contemplate a little on what this past century has been. Materially speaking, it was a century that progressed toward advancement through remarkable manufacturing and products. Yet, spiritually speaking, it was an era that faced a terrifying decline. The reason for this might be a wrong understanding of the value of that material progress. Through that material development itself, people have likely accumulated the conditions for their own spiritual decline. As you know, people today complain that they have no opportunity to practice Dhamma or meditation in their daily lives, saying they have no time during the day. We can understand the reason for this when we look at the situation in households. Thus, the very thing we call progress has become the cause of our decline.</p>
+<p>Therefore, we must strive to gain a correct understanding of our spiritual values, which are the true treasures of life, by contemplating with wisdom and drawing lessons from Dhamma stories like this. This is not something confined to today or yesterday, nor is it relevant only to the past, nor did it happen only to the lay disciple Mahākāla; it can happen to any of us. Contemplating the law of nature embedded within these events in accordance with the Buddha's word, we must strive to cultivate the path of progress that helps us escape from this *saṁsāra*—the Noble Eightfold Path and the three-fold training—even amidst obstacles. For, this can only be done during the period when a Buddha’s dispensation is active. During a time when there is no Buddha, we would not even hear the word "Nibbāna" (Nibbāna). Even if we heard it, we would not understand it. Such is the wondrous nature of this era. Therefore, no matter how we think about a century, we actually live for only a single moment. We live only in this present moment. Everything we call life and existence lasts for only an extremely brief instant. As soon as that instant breaks, it is finished right there. Yet we bind ourselves to it through ignorance and craving (*taṇhā*). This is the truth that one must realize through meditation. We must directly realize within our own minds this truth of impermanence declared by the Buddha. We must see this. Through that seeing alone, that binding is stopped. Grasping (*upādāna*) means holding on. The mind is always holding on to things with extreme rapidity. Like a monkey leaping from tree to tree in a forest, this mind goes on holding. Observing this activity of the mind is what is called reflection in insight meditation (*vipassanā*). We must train ourselves to see how the mind operates with a concentrated mind. We must bring under control our three doors of action—body, speech, and mind—with the help of the training rules declared by the Buddha. Next, we must also guard the six doors of the senses: eye, ear, nose, tongue, body, and mind—for it is through these doors that unwholesome states flow in. Withdrawing the mind from these, and then, through a pure meditation subject, keeping the mind anchored on a wholesome object for a long time, one must experience the power of concentration—the strength of one's own mind. In this way, with a concentrated mind, one can see the true nature of one's five aggregates and the true nature of the world. That is indeed the supramundane liberation declared by the Buddha. In truth, escaping from this entanglement of kamma is possible through the Dhamma alone. The powerful force of this wheel of kamma can only be shattered by the Wheel of Dhamma.</p>
+<p>Therefore, this meritorious gathering must reflect on this. We must make an effort to bring about a significant correction in our daily lifestyle. If one is thinking of making a fresh start, or if one believes that, according to worldly convention, we are entering a new century, then instead of focusing on futile things, we should reflect on the spiritual values of life and arrange our daily lifestyle accordingly. We must organize our daily routine. We must plan our timetable. Another crucial matter is right livelihood (*ājīva*). This is an era where livelihoods are alarmingly inclined toward unrighteousness, and where unrighteous livelihoods are permitted from all sides. But one must ask oneself: "Am I shortening my journey in *saṁsāra*, or am I prolonging it?" through this mass of suffering. If we dislike suffering, we must not perform actions that cause suffering. We do not knowingly drink poison. We do not knowingly throw poison into the well from which we drink water. If that is the case, we must take care not to become enemies to ourselves. We must raise ourselves up through the very path of Dhamma declared by the Buddha.</p>
+<p>Today, we hear some people—certain debaters—arguing that even performing wholesome deeds increases becoming (*bhava*), and therefore, one should abstain from doing them as well. That is an erroneous view. What we have here is the Middle Path (*majjhimā paṭipadā*). We use the wholesome to abandon the unwholesome. The good conduct developed through the wholesome is what gives rise to concentration (*samādhi*). By removing remorse from the mind and through a certain joy and clarity, concentration is established. Therefore, according to the Middle Path, everything including giving (*dāna*) and meritorious deeds has its utility. However, we do not stop there. Once the mind is prepared, what do we do? We cultivate insight meditation (*vipassanā-bhāvanā*) which supports wisdom. That is the situation. Without getting confused about these matters, and without grabbing the snake by its tail, we must use all of these as a raft to cross over, and strive to guide our minds toward Nibbāna.</p>
+<p>Thus, if we are thinking about a next century or a next year, we must develop enough strength to guide, speak with, and teach the Dhamma we know to our children and others so that their lives may be shaped correctly, acting as good friends (*kalyāṇa-mitta*). We can develop that strength only by practicing the Dhamma ourselves. If we observe the precepts and practice meditation in this manner, then when someone faces a disaster or encounters a problem—similar to someone asking for urgent financial help—and is in grave danger, we will possess the verbal power to steer them away from it in accordance with the Dhamma. Such good friends (*kalyāṇa-mitta*) are sometimes found among those who have turned toward this path of Dhamma.</p>
+<p>Therefore, we hope that this meritorious gathering, by walking on the path of Dhamma, will narrowly escape from this abyss—even in an era heading toward a terrifying precipice—and, turning to the path of Dhamma, will comprehend the dangerous nature of *saṁsāra* explained here. Based on this, no matter how busy you are with work and duties in your daily routine, you must make a start, even for a short time. Sometimes people complain that they have to spend their entire day on various tasks. Such people must find some extra time, even by waking up ten or fifteen minutes earlier. If you make such a start, then when the benefits of that wholesome desire (*kusala-chanda*) begin to flow, even from a brief meditation practice, your enthusiasm and urgency will grow. Furthermore, the association with good friends (*kalyāṇa-mitta*) is absolutely essential. According to the Buddha's declaration, this entire holy life (*sāsana*) consists of good friendship (*kalyāṇa-mittatā*). Therefore, while striving to be a good friend oneself, one must also seek the help of other good friends. Even with difficulty, one must meet them, obtain their advice, and strive to carry on these activities.</p>
+<p>Now, if you contemplate in this manner and accustom yourselves to performing your daily activities and directing your stream of thoughts while meditating on the dangerous nature of kamma, it will help you avoid bad conduct and incline toward good conduct. Thinking in this way, today, on this valuable Poya day—which is the Poya day that ends the year—is an excellent opportunity to make some special determinations. Having observed a precious virtue (*sīla*) at this moment and disciplined your mind, body, and speech, you have listened to the Dhamma for this hour, directing your mind, body, and speech in a manner that arouses and develops the spiritual faculties (*indriya*) and powers (*bala*) of faith (*saddhā*), energy (*viriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*). As the benefit of these, instead of postponing it to a distant future, you must determine to obtain the full fruits and benefits of these qualities in this very life and escape from this terrifying *saṁsāra*. You must make the aspiration: "May this mass of merit accumulated today through the disciplining of mind, body, and speech, and by listening to the Dhamma, indeed be a supportive condition for us to be liberated from the suffering (*dukkha*) of *saṁsāra*." Furthermore, we must share this mass of merit accumulated through listening to the Dhamma and preaching the Dhamma with all the protector deities of the Dispensation throughout the divine and Brahma realms of this universe. May they all joyfully rejoice in this merit! May they receive the strength and power to develop their spiritual perfections (*pāramī*) and support the preservation of the Dispensation in the world! May they all realize the supreme and deathless Nibbāna through their aspired enlightenment (*bodhi*)! You must share this merit with the deities in this way. Likewise, may all departed relatives who have passed away in our names, as well as all living beings from the Avīci hell to the highest heaven of Akaniṭṭha, rejoice in this merit of listening to the Dhamma and preaching the Dhamma! May this merit lead to their liberation from the terrifying suffering of *saṁsāra*, comprising birth (*jāti*), aging (*jarā*), sickness, and death (*maraṇa*), and to their finding peace in the supreme and deathless Nibbāna! Share the merit by reciting the verses in this manner:</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_008.html" class="doc-btn">← Previous Sermon (008)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_010.html" class="doc-btn">Next Sermon (010) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

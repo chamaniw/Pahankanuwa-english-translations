@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 061 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_060.html" class="doc-btn">← Previous Sermon (060)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_062.html" class="doc-btn">Next Sermon (062) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 061</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_061_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_061_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_061_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #61</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.88)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Accāraddhamhi vīriyamhi,</p>
+<p>satthā loke anuttaro;</p>
+<p>Vīṇūpamaṃ karitvā me,</p>
+<p>dhammaṃ desesi cakkhumā.</p>
+<p>Tassāhaṃ vacanaṃ sutvā,</p>
+<p>vihāsiṃ sāsane rato.</p>
+<p>Samathaṃ paṭipādesiṃ,</p>
+<p>uttamatthassa pattiyā;</p>
+<p>Tisso vijjā anuppattā,</p>
+<p>kataṃ buddhassa sāsanaṃ.</p>
+<p>From:</p>
+<p>Khuddaka Nikāya → Theragāthā → Terasanipāta → Soṇakoḷivisattheragāthā → Thag 13.1 (verses 638–639)</p>
+<p>Dear Listeners,</p>
+<p>The Supreme Buddha, the Teacher of the Three Worlds, has declared that this Dhamma, which leads to the great, deathless Nibbāna, is for one who has aroused energy (*āraddha-vīriya*), and not for the lazy or indolent. It is shown in this Dhamma-Vinaya that only the energetic person lives happily, and that living even a single day with aroused energy is far more noble than living a hundred years in laziness and indolence. That is why on this Vap Full Moon Poya day, we hope to present some verses and a story that are meaningful and inspiring specifically to the energetic person.</p>
+<p>In the city of Campā, which belonged to the kingdom of King Bimbisāra, a meritorious child was born to the millionaire family of Kolivisa. His parents named the child Soṇa. The body of this millionaire's son, Soṇa Kolivisa, was extremely delicate and tender. So delicate was he that hair grew even on the soles of his feet. This was a wondrous thing. King Bimbisāra heard this news, and on one occasion, when summoning eighty thousand village chiefs for state affairs, he sent a messenger with a message saying, "I wish to see Soṇa. It would be good if Soṇa comes here. Please arrange for him to come." So, Soṇa’s parents told the millionaire’s son: "Son, the King wishes to see the soles of your feet. When you go there, do not stretch out your feet towards the King. Sit cross-legged—that is, fold your legs—and then the King will see the soles of your feet."</p>
+<p>So, when the people of Campā went to see King Bimbisāra, the millionaire's son Soṇa Kolivisa was carried in a palanquin. Having been brought before the King, the millionaire's son Soṇa paid homage to the King and sat down in the manner described. The King saw the soles of his feet. He witnessed the wondrous phenomenon of hair growing on the soles of his feet. Next, the King gave instructions on state matters to the eighty thousand village chiefs and said: "Now I have shown you how to achieve well-being in this world. To secure well-being in the next world, go and meet the Blessed One."</p>
+<p>At that time, the Blessed One was residing on the Vulture's Peak mountain (Gijjhakaṭa). So, this crowd of eighty thousand went to pay respects to the Buddha. At that time, the Buddha's personal attendant was Venerable Sāgata, a monk who had practiced kasina meditation and possessed great meditative absorptive powers. Venerable Sāgata conveyed the invitation to the Buddha on behalf of the eighty thousand people in a miraculous manner. Disappearing from where he stood, as if diving into the earth, he presented the invitation to the Buddha.</p>
+<p>Having witnessed this psychic miracle, the eighty thousand people focused their attention on Venerable Sāgata even more than on the Buddha. Understanding this, the Buddha told Venerable Sāgata: "Sāgata, display more psychic marvels." So, the Venerable monk rose into the air, and performed various miracles related to the fire-kasina (*tejo-kasiṇa*), such as sitting in the sky, walking up and down, and emitting flames, and finally descended to the ground, worshipped the Buddha's feet, and declared: "The Blessed One is my Teacher, I am the disciple."</p>
+<p>Hearing this, the crowd thought, "If the disciple can do such wondrous things, how great must the Teacher be!" At that moment when confidence (*saddhā*) arose in them, the Buddha delivered a Dhamma sermon consisting of the gradual instruction (*anupubbikathā*). It is mentioned that upon hearing that Dhamma sermon, the entire crowd attained the fruit of Stream-entry (*Sotāpatti-phala*) on their very seats. Having attained the fruit of Stream-entry, they became lay devotees who had taken refuge in the Triple Gem.</p>
+<p>Then, the millionaire's son, Soṇa Kolivisa, who was in this crowd, was deeply moved by this Dhamma sermon and thought: "It is not easy to live the pure holy life (*brahmacariya*) according to the Dhamma preached by the Blessed One while remaining in lay life. I must ordain." With this resolve, he approached the Buddha and requested ordination. The Buddha granted him ordination and higher ordination (*upasampadā*).</p>
+<p>Not long after his higher ordination, Venerable Soṇa went to the forest dwelling known as Sītavana (Cool Grove) and began practicing intense energy. He put in such great energy that, by spending too much time on the walking path (*caṅkamana*), the soles of his feet, which had hair on them, cracked. They cracked and began to bleed. It bled so much that the walking path was covered in blood, looking like a slaughterhouse where cattle had been killed. When, despite practicing such intense energy, he did not attain Arahantship, Venerable Soṇa, during a moment of rest, thought: "Among those disciples of the Blessed One who have aroused energy (*āraddha-vīriya*), I am indeed one. Yet, despite putting in such energy, I have not achieved Arahantship. There are abundant riches and wealth in our family. Therefore, I should enjoy those riches and perform meritorious deeds." Thus, he thought of returning to the lay life.</p>
+<p>The Buddha, who was staying on the Vulture's Peak, perceived this thought of Venerable Soṇa Kolivisa. Right at that moment, as quickly as a strong man might stretch out his bent arm or bend his outstretched arm, the Buddha vanished from Vulture's Peak and appeared in Sītavana. Then, the Buddha went on a tour of the lodgings with the other monks residing in Sītavana, as if to inspect lodgings from dwelling to dwelling, hut to hut. While walking, He came to the walking path of Venerable Soṇa Kolivisa and asked the monks: "Whose walking path is this? This path covered in blood, looking like a slaughterhouse?" The monks replied: "Venerable Sir, this is the walking path of the Venerable Soṇa. Venerable Soṇa, having exerted extreme and excessive energy, walked up and down until his path was covered in blood in this manner."</p>
+<p>Then, the Buddha went to Venerable Soṇa's hut. Sitting on the prepared seat, He asked Venerable Soṇa: "Soṇa, did a thought like this occur to you during a moment of rest: 'Now, despite exerting so much energy, I have not become an Arahant. Therefore, I should return to lay life'?" "Yes, Venerable Sir," he replied. Then the Buddha asked: "Soṇa, when you were a layman, were you not skilled in playing the lute?" "Yes, Venerable Sir," he replied. "How was it, Soṇa? When the strings of your lute were pulled too tight, extremely tight, was the lute in a playable condition?" "No, Venerable Sir." "And when the strings of your lute were too loose, was it in a good condition? Could the lute be played?" "No, not even then, Venerable Sir." "But, Soṇa, when the strings of your lute were neither too tight nor too loose, but tuned to an even pitch, was it then playable and melodious?" "Yes, Venerable Sir," he replied.</p>
+<p>Thus, using the simile of the lute, He gave advice to Venerable Soṇa. Having given this advice, He returned to Vulture's Peak through the air. Venerable Soṇa, acting according to this advice, practiced energy once more and understood the principle of the balancing of energy (*vīriya-samatā*)—the fact that there must be a certain middle or balanced state regarding energy.</p>
+<p>There is something called "balancing of the faculties" (*indriya-samatā*) in this Dhamma. What are called "faculties" (*indriya*) here are not the external physical faculties of eye, ear, nose, tongue, and body. The spiritual faculties (*indriya*) are conviction (*saddhā*), energy (*vīriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*), which are wholesome qualities that assist in reaching the noble state. Understanding the need for a certain balance among these, and the importance of developing them to a middle, balanced level, Venerable Soṇa very quickly realized Arahantship.</p>
+<p>Having become an Arahant, he then thought: "I must declare my Arahantship to the Blessed One." He approached the Buddha and, without explicitly saying he had attained Arahantship, presented the state of an Arahant's mind by explaining a range of Dhamma principles. The Buddha too, praised this, declaring to the community of monks: "This is indeed how noble clansmen declare their Arahantship; without explicitly asserting, 'I have attained Arahantship,' they reveal their attainment through Dhamma principles. That is the correct method. In doing so, their fewness of wishes is a valuable quality. It is a valuable quality of those noble ones who have achieved the higher realization." Thus, the Buddha praised it.</p>
+<p>Then the Buddha said: "Soṇa, your body is extremely delicate. Therefore, I allow you to wear single-layered footwear." Then, Venerable Soṇa replied: "Venerable Sir, I renounced eighty cartloads of gold coins and various other luxuries, left the household life, and ordained. Having ordained, if I start using a pair of single-layered footwear as a special privilege, people might start rumors. They might blame me. They would say: 'This monk Soṇa Kolivisa, having renounced wealth as vast as eighty cartloads, has now developed an attachment to a single-layered pair of sandals; he has become attached to it.' Therefore, if the Blessed One allows the wearing of footwear for the Sangha in general, I too will use them. If the Blessed One does not grant permission to the Sangha in general, then I too will not use them." It was on that occasion that the Buddha, for the first time, declared to the monks: "I allow single-layered footwear."</p>
+<p>From this, you lay devotees can understand many things. When the Buddha on various occasions awarded the chief (*etadagga*) titles to monks who excelled in outstanding qualities, He also paid special honor to Venerable Soṇa by declaring him the foremost among those of His disciples who have aroused energy (*āraddha-vīriya*).</p>
+<p>Thus, presenting all these facts, Venerable Soṇa expressed his past course of practice in verses, and two of those verses mentioned in the *Theragāthā* are what we have placed today as our theme.</p>
+<p>> *Accāraddhamhi vīriyamhi,*</p>
+<p>> *samatho me anuttaro;*</p>
+<p>> *Vīṇūpamaṃ pi me dhammaṃ,*</p>
+<p>> *desesi cakkhumā.*</p>
+<p>"Regarding the matter of over-exerted energy, the Unsurpassed Teacher in the world, the One with Vision, preached the Dhamma to me using the simile of the lute."</p>
+<p>> *Tassāhaṃ vacanaṃ sutvā,*</p>
+<p>> *vihāsiṃ sāsane rato;*</p>
+<p>"Having heard His word, I dwelt delighting in the Dispensation."</p>
+<p>"For the attainment of the supreme goal—noble Nibbāna—I achieved the balancing of the faculties (*indriya-samatā*)."</p>
+<p>> *Tisso vijjā anuppattā,*</p>
+<p>> *kataṃ buddhassa sāsanaṃ.*</p>
+<p>"The Three Knowledges—namely, the recollection of past lives (*pubbe-nivāsānussati*), the divine eye (*dibba-cakkhu*), and the destruction of the taints (*āsavakkhaya*)—have been attained. The instruction of the Buddha has been fulfilled." These are the two verses from the *Theragāthā* that we have placed as our theme.</p>
+<p>Through this story, many noble qualities in the character of Venerable Soṇa Kolivisa are revealed to us. Let us look particularly at his development of energy. If someone with such delicate soles had been full of pride like an ordinary person, he might have thought: "Even King Bimbisāra summoned me just to see this feature of mine. I cannot perform walking meditation." He did not think so. Energetically, he engaged in walking meditation. Ultimately, he put in such intense energy that his feet cracked and bled.</p>
+<p>Then, wisely understanding the simile of the lute presented by the Buddha, he brought himself to a balanced state of energy—a middle state—and thereby attained Arahantship. Furthermore, after attaining Arahantship, his declaration before the Buddha was highly exemplary; without explicitly saying "I have attained Arahantship," he presented it through Dhamma principles by describing the nature of an Arahant's mind as he understood it. Also, how content with little (*appiccha*) he was! He did not expect any special privileges. When the Buddha allowed him footwear, he stated that he would use them only if permission was granted to the Sangha in general. All of these are a collection of valuable qualities that we should take as examples.</p>
+<p>Next, when considering the Dhamma aspects, the key points are the balancing of energy (*vīriya-samatā*) and the balancing of the faculties (*indriya-samatā*). What is this balancing of the faculties (*indriya-samatā*)? Merit-seeking friends, it is not the external faculties of eye, ear, nose, tongue, and body that assist in seeing Nibbāna. Indeed, what assists in realizing Nibbāna are the five spiritual faculties (*indriya*) of the Dispensation: conviction (*saddhā*), energy (*vīriya*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*). Why are these presented as "faculties" (*indriya*)? It is because when they are developed and strengthened in one's mind, one understands the Dhamma of Nibbāna through that power and strength. There is also a certain systematic order among these five. We can understand it in this way.</p>
+<p>It is in one who has conviction (*saddhā*) that energy (*vīriya*) arises. Through conviction, energy is brought forth. Conviction is necessary to bring forth energy. Relying on energy, mindfulness (*sati*) is established. One develops mindfulness in the form of the foundations of mindfulness (*satipaṭṭhāna*). By developing mindfulness, one achieves concentration (*samādhi*)—one-pointedness of mind. It is with a concentrated mind that one understands reality as it is through insight (*vipassanā*), understanding the impermanent (*anicca*), suffering (*dukkha*), and not-self (*anattā*) nature of the world, and thereby brings forth insight-wisdom (*vipassanā-paññā*). In this way, there is a connection of one to another among the five: conviction, energy, mindfulness, concentration, and wisdom.</p>
+<p>However, when discussing their balance (*samatā*), we have to analyze it in a different way. The two factors, conviction and wisdom, are shown as a pair, a twin quality. Conviction is said to be related to the heart. Conviction means placing the heart (devotion). It is the emotional/affective aspect. The quality of conviction belongs to the feeling aspect of a person. Wisdom belongs to the understanding aspect. It is the intellectual/cognitive aspect. There must be a balance between these two. Teachers of old described a person who is low in conviction but high only in intellect as cunning or deceitful. One who has only conviction but lacks intellect becomes a foolish person; he develops blind faith even in improper things. To balance these, one enters the practice to develop wisdom through conviction. That is why it is necessary. Thus it is with those two.</p>
+<p>Similarly, another pair is energy and concentration. Energy tends toward restlessness (*uddhacca*). If one exerts excessive energy, the mind is bound to become restless. That is what happened to Venerable Soṇa. Concentration brings stillness to the mind. It is something that leads to sluggishness (*līnatā*) or absolute stillness. Restlessness comes through energy; the goal of concentration is stillness. At a glance, these seem contradictory. However, these must be developed systematically and evenly. One cannot develop concentration without energy. It is necessary to reach a certain level of concentration; it does not come by just doing nothing. Mindfulness (*sati*), which stands in the middle of these, balances conviction, wisdom, energy, and concentration, just like the needle of a weighing scale. There is such a relationship among these five Dhamma factors.</p>
+<p>The balancing of the faculties (*indriya-samatā*) is an important matter in this Dispensation. Through the balancing of the faculties, we can see the Middle Path taught by the Buddha. In the middle way, nothing is extremist. Here, every factor assists another, at a balanced, middle level. Bringing it to this balanced level might sometimes exceed limits for certain individuals, depending on their personal disposition. Just like Venerable Soṇa, who practiced excessive energy until his feet cracked and bled. As you all know, the Buddha Himself was caught up in the two extremes. Everyone has heard of the two extremes mentioned in the *Dhammacakkappavattana Sutta*. He experienced self-indulgence (*kāmasukhallikānuyoga*) in the royal palace, and He was also caught in the extreme of self-mortification (*attakilamathānuyoga*). It was after abandoning both those extremes that He arrived at the balanced level.</p>
+<p>Not only that, on one occasion, the Buddha explained very intimately to the three monks Anuruddha, Nandiya, and Kimbila how He Himself had realized this balancing of energy during His days as a Bodhisatta. "On one occasion, I exerted intense energy." He gave a simile for this: "If a person trying to catch a quail holds it too tightly in his grasp, the quail might die. On the other hand, if he holds it too loosely, the bird will fly away. In the same way, I understood from that simile that energy must be balanced." He explained this based on His own experience through various similes.</p>
+<p>Teachers of old also illustrated this point regarding the balancing of energy with various similes on different occasions. One simile found in the texts is that of the surgeon. In ancient times, surgeons trained their students—especially in surgeries like eye surgery—by having them draw lines with a scalpel on a blue water-lily petal floating on water. If someone is overly agitated, they will either submerge the lily petal in water or slice it completely through. The unskilled person, who has no dexterity, is too afraid even to touch the lily petal with the blade. The truly skilled person, who can apply balanced energy, is the one who carefully draws lines on the lily petal with the blade and passes the exercise.</p>
+<p>There is another simile: the simile of filling oil into a narrow tube. If one tries to pour oil in a hurry, the oil will spill. On the other hand, some might be unable to pour oil into a narrow-mouthed tube because they are too afraid of spilling it. But if one applies extremely balanced energy, carefully and with mindfulness (*sati*), one can fill the oil successfully.</p>
+<p>To take a simile suited to the modern mind, though not found in the texts: think of long-distance races in stadiums—let's say a ten-lap race around the track. What do some unskilled runners do? Eager for the cheers of the spectators, they run the first two or three laps as fast as they can. In the end, they are exhausted and have to drop out of the race. But what does the truly skilled runner do? He runs at a steady, moderate pace for the first few laps. It is in the final stretch, as if possessing the fourfold energy (*caturanga-samannāgata-vīriya*), that he applies his conserved strength when the right moment arrives, runs very fast, and wins the race.</p>
+<p>The fourfold energy (*caturanga-samannāgata-vīriya*) is mentioned in the life of the Buddha. You devotees must have heard of this. Once the right time comes, once the balancing of energy is perfectly achieved, the energy applied is one of life-sacrifice. "Let only skin, sinews, and bones remain; let flesh and blood dry up. Whatever goal can be achieved by manly energy, by manly strength, by manly effort, will not be abandoned until it is reached." The Buddha Himself exerted this supreme effort, known as the fourfold energy (*caturanga-samannāgata-vīriya*). He also exhorted His disciples to apply such energy.</p>
+<p>However, this energy becomes successful only when, as mentioned before, the balancing of the faculties (*indriya-samatā*) emerges. Only after arriving at the balanced middle. Indeed, it was only after arriving at the Middle Path that the Buddha realized Buddhahood through that fourfold energy. What happened to Venerable Soṇa initially was that he exerted extreme energy on the walking path for long periods in a way his body could not withstand. It was because of this that he even became discouraged in the first place.</p>
+<p>The Buddha has illustrated the balancing of energy in the Dhamma through various similes. On one occasion, the Buddha related to the monks an account concerning a past Buddha. The Buddha Sikhī once visited a certain Brahma-world along with His chief disciple, the monk Abhibhū. Having gone there, He assigned that disciple, Venerable Abhibhū, to preach the Dhamma to the Brahmas. On that occasion, the psychically powerful Venerable Abhibhū proclaimed two verses in a voice that resounded throughout a thousand world systems. These are very famous among energetic practitioners as the *Aruṇavatī Sutta*. One of those verses is as follows:</p>
+<p>> *Ārabhatha nikkhamatha,*</p>
+<p>> *yuñjatha buddhasāsane;*</p>
+<p>> *Dhunātha maccuno senaṃ,*</p>
+<p>> *naḷāgāraṃva kuñjaro.*</p>
+<p>Even upon hearing it, it is phrased in a way that arouses energy. "Arouse energy, go forth, exert yourself in the Buddha's Dispensation; destroy the army of Death, like an elephant crushing a reed-hut." Such teachings on energy are found in the Dhamma.</p>
+<p>Similarly, the Buddha Himself has pointed out three types of potential energies within our mental continuum as qualities that help overcome sleepiness and laziness:</p>
+<p>*   *Ārambha-dhātu*: the element of instigating effort (the power to begin something).</p>
+<p>*   *Nikkhama-dhātu*: the element of launching out (the power to carry forward what has been started).</p>
+<p>*   *Parakkama-dhātu*: the element of exerting progress (the power to advance by overcoming obstacles encountered along the way). These energies exist within us.</p>
+<p>This is precisely what is indicated in that verse:</p>
+<p>*   *Ārabhatha* - "Arouse energy" (corresponds to *ārambha-dhātu*).</p>
+<p>*   *Nikkhamatha* - "Go forth" (corresponds to *nikkhama-dhātu*).</p>
+<p>*   *Yuñjatha* - "Exert yourself" (corresponds to *parakkama-dhātu*, overcoming obstacles and moving forward).</p>
+<p>That showed the value of developing energy.</p>
+<p>Likewise, on one occasion, the Buddha showed the eight grounds for laziness (*kusīta-vatthu*) and the eight grounds for arousing energy (*ārambha-vatthu*). What are called the "grounds for laziness" (*kusīta-vatthu*) are the eight occasions a lazy person uses to justify his lazy behavior. What are they? This is illustrated using a lazy monk. But it is not only for a monk; even a practicing layperson can take an example from this teaching. A lazy monk thinks in this way:</p>
+<p>1.  The lazy monk has some special work to do. Let us say a task connected with monastic life, such as dyeing robes. Then that monk thinks: "Now, I have such-and-such work to do. When doing this work, my body will get very tired. Therefore, I must sleep now." Saying this, he sleeps.</p>
+<p>2.  Next, let us say he has finished the work. Once the work is done, that monk thinks: "Now, I have done some heavy work. I am tired. Therefore, I must sleep now." He sleeps. Thus, he slept before doing it, and he slept after finishing it as well.</p>
+<p>3.  Next, let us say the lazy monk has to go on a journey. Before embarking on the journey, he thinks: "Now, when I go on the journey, my body will get tired. Therefore, I must rest now." He sleeps.</p>
+<p>4.  Next, he returns from the journey. Then he thinks: "Now, because I went on the journey, I am very tired." He sleeps. He slept again.</p>
+<p>5.  Next, the lazy monk goes on alms-round (*piṇḍapāta*). That day, he does not receive a stomach-full of food on his alms-round. Then he thinks: "Now my body is very weak. Today I did not receive proper food. Therefore, I must sleep." He sleeps.</p>
+<p>6.  Alternatively, let us say he received plenty of food on his alms-round. Having eaten his fill, after finishing the meal, he thinks: "Today my body is very heavy, as if stuffed with beans. Today, therefore, I cannot meditate." He sleeps.</p>
+<p>7.  Next, when the lazy monk has a slight illness, how does he think? "Now, I have fallen ill. How can a sick person meditate?" So he sleeps.</p>
+<p>8.  Next, after he recovers from that illness, he thinks: "I have only just recovered from this illness. My body does not yet have full strength." Therefore, he sleeps.</p>
+<p>He is asleep all the time, the lazy monk, in this manner.</p>
+<p>The Buddha shows in this wonderful manner how the energetic monk uses these very same situations to arouse his energy:</p>
+<p>1.  The energetic monk has some special work to do. Then what does he think? "I have such-and-such work to do. While doing that work, I will not be able to easily maintain my meditative wise attention (*yoniso manasikāra*) according to the Buddha's instruction. Therefore, I must practice energy right now. I must meditate, so as to quickly realize Nibbāna." Thus, he meditates with great enthusiasm.</p>
+<p>2.  Next, having finished that work, how does the energetic monk think? "While doing that work, I was unable to maintain my meditative wise attention (*yoniso manasikāra*) according to the Buddha's instruction. Now at least I must do so." Thus, he meditates with enthusiasm.</p>
+<p>3.  The energetic monk has to go on a journey. So, that monk thinks: "Now, I have to go on such-and-such a journey. While traveling, I will not be able to meditate properly according to the Buddha's instruction. Therefore, I must meditate right now, before the journey."</p>
+<p>4.  After returning from the journey, that monk thinks: "While on the journey, I was unable to meditate properly. Now at least I must do so." Thus, he meditates.</p>
+<p>5.  When the energetic monk goes on alms-round and on a certain day does not receive a stomach-full of food, how does he think? "Today my body is very light. Today my body is highly active and workable. Today I must meditate. That is the best thing to do." Thinking thus when receiving little food, he meditates.</p>
+<p>6.  On another day, returning from alms-round after receiving a stomach-full of food, how does he think? "Today my body has good strength. I must meditate well." Thus, he meditates.</p>
+<p>7.  Next, when the monk with aroused energy (*āraddha-vīriya*) gets a slight illness, how does he think? "Now, a slight illness has arisen in me. If it increases, I might even die. Therefore, I must meditate right now." Thus, he meditates.</p>
+<p>8.  As soon as he recovers from the illness, when he has just risen from his sickbed, what does he think? "Because of this illness, I was unable to practice properly. Perhaps the illness might return. Therefore, before that happens, I must meditate well to see Nibbāna." Thinking thus, he meditates.</p>
+<p>Through this, we can see that between laziness, indolence, and energy, there is actually only a difference in attitude. This correct attitude, which is praised by the Buddha, is indeed the attitude of the energetic person. The energetic person utilizes every arising opportunity in a way that assists in reaching Nibbāna. The lazy person uses every single one of them in a way that assists saṃsāra. As there is a saying, "The lazy man has divine eyes..." Just like that, the lazy person has excuses for everything. The Buddha has always given the foremost place to the energetic person.</p>
+<p>Furthermore, the Buddha introduces Himself as a teacher of action (*kamma-vāda*), a teacher of efficacy of action (*kiriya-vāda*), and a teacher of energy (*vīriya-vāda*). If we consider His doctrine (*vāda*), the Buddha is to be identified by these three terms.</p>
+<p>*   *Kamma-vāda*: that is, stating that one must act with faith in the power of action (*kamma*).</p>
+<p>*   *Kiriya-vāda*: that a person possesses the potential/power for action.</p>
+<p>*   *Vīriya-vāda*: that by exerting energy, one can bring forth that potential for action.</p>
+<p>The Buddha explains the importance of these.</p>
+<p>But there is also something in the world called the doctrine of non-action (*akiriya-vāda*). During the time of the Buddha, there were sharp proponents of non-action. The doctrine of non-action (*akiriya-vāda*) claims that there is no such thing as *kamma*, no power of action, and no such thing as energy; and that doing nothing should be one's ultimate goal. A teacher during the Buddha's time who promoted this philosophy was Makkhali Gosāla. So, on one occasion, the Buddha spoke to the monks about this philosophy of Gosāla in this manner: "Monks, of all the garments woven from threads, the most wretched, the most disgusting garment is the hair-blanket (*kesa-kambala*)." This was a garment woven from human hair used by certain ascetics of that time who claimed to practice fewness of wishes. That is indeed the most disgusting garment. "In the same way, of all the doctrines of ascetics, of all the views held among ascetics, the doctrine of non-action (*akiriya-vāda*) is the most disgusting, the most wretched doctrine."</p>
+<p>Furthermore, He declared: "Whatever Fully Self-Enlightened Buddhas existed in the past, they were all teachers of action (*kamma-vādī*), teachers of the efficacy of action (*kiriya-vādī*), and teachers of energy (*vīriya-vādī*). Whatever Fully Self-Enlightened Buddhas arise in the future, they will all be teachers of action, teachers of the efficacy of action, and teachers of energy. I, who am now the Fully Self-Enlightened Buddha in the present, am also a teacher of action, a teacher of the efficacy of action, and a teacher of energy. This foolish man (*mogha-purisa*) Makkhali strikes at the teaching of the past Buddhas, strikes at the teaching of the future Buddhas, as well as my teaching in the present." He also gave another simile: "Monks, just as someone might cast a fishnet at the mouth of a river for the harm, suffering, and destruction of a vast number of fish, even so, this foolish man Makkhali has cast the net of this doctrine of non-action (*akiriya-vāda*) for the ruin, harm, and suffering of a vast number of human beings." The Buddha criticized and condemned Makkhali Gosāla’s doctrine to that extent.</p>
+<p>Yet, merit-seeking friends, you may have also heard that nowadays, it is this very doctrine of non-action (*akiriya-vāda*) that is gaining more ground. Presenting various arguments such as "there is no such thing as *kamma*, no such thing as merit or demerit, one should not have conviction in their operation; exerting a person's power of action or energy is spiritually useless, it only reinforces the sense of 'I' (egotism)," they completely reject energy, without any understanding of the Dhamma principles shown by the Buddha, such as the balancing of energy (*vīriya-samatā*).</p>
+<p>This is the philosophy of Makkhali. At first glance, this path seems easy. When a net is cast at the mouth of a river, it is sometimes cast with bait. Just as a large number of fish gather to eat that bait, only to meet their destruction, within the philosophy of non-action (*akiriya-vāda*), giving (*dāna*), virtue (*sīla*), and meditation (*bhāvanā*) are deemed useless. "There is no need to tire oneself with giving. No need to spend money and undergo trouble." "Observing virtue is also a useless thing." "Meditation is also a foolish thing." "It is a waste of time." Such wrong views appear easy. Swallowing that bait, people then get lost in saṃsāra. They meet with terrible destruction. That is why the Buddha specifically condemned that doctrine of Makkhali. It kills the power of action and the power of energy within a person. Through that, one can never achieve liberation. It is an extremely dangerous kind of philosophy.</p>
+<p>Yet, in these times, many people are drawn to such views, like fish drawn into a net. A large number of people are drawn in because it seems easy, because they can just do nothing. A special reason for this is modern life—the luxurious lifestyle. If one can get electric light just by pressing a button, why can't one obtain the light of wisdom (*paññā*) just as easily? If, just by pressing a button, one can turn on a fan at home and enjoy a nice cool breeze, can one not obtain the peace of the coolness of Nibbāna while doing nothing? Either by doing nothing, or with very little energy. That is how someone argues. But what lies within this is none other than that doctrine of non-action (*akiriya-vāda*) of Makkhali Gosāla.</p>
+<p>Another example of aroused energy (*āraddha-vīriya*) that can be taken from the Buddha's time is Venerable Ānanda's attainment of Arahantship. Three months after the parinibbāna of the Buddha, a Dhamma council was held. Although seats were prepared for five hundred Arahant monks to assemble, one monk was missing. A highly essential Venerable monk was missing. Venerable Ānanda, who had retained all the Buddha's discourses in memory and served as the Buddha's personal attendant for many years, had not yet attained Arahantship. That was the deficiency. The council was to begin the following day.</p>
+<p>The night before, Venerable Ānanda put in all the effort he could, meditating intensely while resolving in all four postures. Still, he did not attain Arahantship. While meditating intensely in this way, late at night when it was time to rest, he washed his feet, went to his bed, and bent his body to lie down on the couch. At that moment, he was neither in the sitting posture nor yet in the lying posture. It was right in between those two postures that Venerable Ānanda’s mind was liberated from all taints (*āsava*), and he attained Arahantship. This is a unique occurrence in this entire Dispensation, making Venerable Ānanda the only monk to have attained Arahantship apart from the four standard postures, right in between them. Yet, some people argue even about this event, saying: "Even Venerable Ānanda attained Arahantship only after making so much effort and then giving it up, didn't he?" Most people do not understand the underlying principle (*dhammatā*) in this.</p>
+<p>Venerable Ānanda was indeed a wondrous monk who received the chief (*etadagga*) status from the Buddha in several categories. *Etadagga* means the Buddha declaring: "Foremost among my disciples." You all know that the Buddha declared Venerable Ānanda foremost among personal attendants. He is also declared: *Satimantānaṃ, gatimantānaṃ, dhitimantānaṃ... etadaggaṃ.*</p>
+<p>*   *Satimantānaṃ*: Foremost among disciples of great mindfulness (*sati*).</p>
+<p>*   *Gatimantānaṃ*: Foremost among those of great comprehension/behavioral course (*gati*).</p>
+<p>*   *Dhitimantānaṃ*: Foremost among those of resoluteness (*dhiti*)—those who stand firm in the task they have undertaken, acting with intense energy and power of determination.</p>
+<p>Furthermore, Venerable Ānanda once declared about himself: "My best noble friend (*kalyāṇa-mitta*) is mindfulness directed to the body (*kāyagatā-sati*)." With this background, keeping Venerable Ānanda in mind, let us analyze the energy he exerted on that day in this manner.</p>
+<p>The Venerable monk made effort with intense determination, thinking: "I cannot join this Sasana activity tomorrow without becoming an Arahant. This Sasana task is an absolute necessity. Somehow, for the sake of the Sasana, I must practice energy, become fit for this task, and then enter it." You devotees can understand that within this, a certain restlessness (*uddhacca*) naturally arises. That is called over-exerted energy (*accāraddha-vīriya*). In this verse, it is mentioned as *accāraddhamhi*. Aroused energy (*āraddha-vīriya*) is good. Initiating energy is good. But over-exerted energy (*accāraddha-vīriya*) is bad. *Ati-āraddha-vīriya*—excessive energy—is bad. For Venerable Ānanda, at the moment of that exertion, his mind had actually slipped unconsciously into a state of restlessness (*uddhacca*).</p>
+<p>So, while acting with mindfulness in every posture, practicing mindfulness directed to the body (*kāyagatā-sati*), during the transition from the sitting posture to the lying-down posture, we can think of an analogy: even a skilled driver driving a high-speed vehicle has to carefully reduce the speed slightly before making a turn. Something similar must have occurred with Venerable Ānanda. In every posture, he had established mindfulness with intense energy. At that transition between postures, he arrived at the balancing of energy. That is the concentration of bodily postures (*iriyāpatha-samādhi*).</p>
+<p>Indeed, merit-seeking friends, the Buddha compares these four postures to the rolling of a wheel. Postures change just like a rolling wheel. From the sitting posture, one stands up. Having stood up, one remains standing. Then, one takes steps. One walks, sits, lies down. In this way, it goes around. Like a cycle. Between these four postures, there are transitions (joints). Most people are not even aware of these transitions. One who works in a constant hurry has no understanding of these postures. As soon as he hears some urgent news in a rush, he does not even realize that he has stood up. The person who was sitting is suddenly running.</p>
+<p>On the other hand, a mindful person, while sitting, contemplates that very posture of sitting. Contemplating the sitting posture, he stands up. The physical vehicle that was sitting has now stood up; contemplating the standing posture, he puts it into action. He begins walking. That is how one walks if one is mindful. But the one who lacks mindfulness, as soon as that news is heard, there he goes running. Ordinary worldlings do not have any understanding of even these postures of the body (*iriyāpatha*). Yet, Venerable Ānanda—the mindful one, who had long practiced mindfulness directed to the body (*kāyagatā-sati*) as his friend—even though he had exerted excessive energy (*accāraddha-vīriya*) due to a certain weakness in his eagerness for that Sasana purpose, nevertheless, by some underlying principle, arrived at the balancing of energy at the transition of postures. That is why he attained Arahantship at that moment. It was not because he abandoned energy. Some people think it was because he abandoned energy. That was not what happened. He attained Arahantship by realizing the balancing of energy (*vīriya-samatā*).</p>
+<p>Indeed, the balancing of energy is understood only by the person who enters into the work. You cannot swim while staying on dry land. Whether in swimming or driving vehicles, in all these, the skill emerges only when one is engaged in it and understands the balancing of energy. For within that energy, there are two extremes. In intense energy, there is rigidity. Rigidity is not good. In low energy, there is laxity. That is also not good.</p>
+<p>If even the Bodhisatta, who had fulfilled the perfections (*pāramīs*) to such an extent, and Venerable Ānanda made mistakes, there is no fault in our making mistakes. But one must enter into the work. Only the person who has entered into the work understands this. The ordinary worldling has no issue regarding this at all. It is only from the moment one starts driving a vehicle that one understands how to control the vehicle. Should the steering wheel be turned too much, or turned too little? All of this is understood only when one actually drives the vehicle. Like the person who gets into the water to swim, there too, one must be able to stay afloat without sinking. For that, a special skill must be brought forth. Similarly, only the person who has entered into the work can gradually move away from the two extremes and arrive at the middle. That is how one begins playing the lute as well. The beginner does not know whether the strings are too tight or too loose. Whichever way you look at them, these similes are highly practical.</p>
+<p>It is the habit of many to take only the literal meaning (*vācyārtha*) of these similes and illustrations in the Dhamma, looking only at the external aspect of the event, and thereby arrive at various wrong conclusions. But the Buddha has firmly declared: "If you are to take any doctrine as mine, it is to be stated as *kamma-vāda*, *kiriya-vāda*, and *vīriya-vāda*."</p>
+<p>Some might misunderstand *kamma-vāda*, thinking: "Everything happens because of the past. Therefore, there is nothing for us to do. Let things go as they will." It is not so; there is a deep meaning to this concept of *kamma*. All of this is a power arising through our intention (*cetanā*) in the present moment. Just as it is said, "Intention, monks, is what I call action (*cetanāhaṃ bhikkhave kammaṃ vadāmi*)," we possess a power in the present moment through this power of intention. To change these forces, we must apply energy at a certain point, just like in the race mentioned earlier. Steadying ourselves as described, and in the final moment, developing that fourfold energy (*caturanga-samannāgata-vīriya*) with life-sacrifice, making the effort...</p>
+<p>Even those who speak against exerting energy in spiritual life apply energy to worldly affairs, such as earning wealth. Why, then, do they say that no energy is needed for Sasana activities, meditation, and so forth? There lies a wrong view regarding the dogma of self-illusion (*sakkāya-diṭṭhi*). Nowadays, we hear various distorted explanations such as "developing energy increases the dogma of self-illusion (*sakkāya-diṭṭhi*)." As mentioned, nets have been cast everywhere at the mouth of the river. There are nets of wrong views (*micchā-diṭṭhi*) on all sides. Without falling into them, without being caught by them, one must understand this Dhamma of the Buddha in the way it should be understood. One must understand not only the literal meaning (*vācyārtha*) of these stories but also their deep meaning—the Dhamma-conforming meaning—and enter into the Middle Path to practice. Within this Dhamma, there is a Middle Path (*majjhimā paṭipadā*). A simile often used is that to cross a fast-flowing, torrential river, we must apply balanced energy. One cannot simply rush blindly into it. Yielding to the water while maintaining mindfulness and wisdom, slowly, step-by-step, one must reach the other shore. There too, lies a middle way, a balanced level.</p>
+<p>This is the very principle (*dhammatā*) we can bring forth from this story. If you devotees deeply absorb these facts into your minds, performing your deeds of giving (*dāna*), virtue (*sīla*), and meditation (*bhāvanā*) with greater conviction (*saddhā*)—for it is from conviction that energy (*vīriya*) arises—you can then bring forth mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*). The balancing of faculties can be brought forth in that manner at some point; but to say it has truly arisen—it is the person who has attained the path and fruit, the Stream-entrant (*Sotāpanna*), who possesses true conviction (*saddhā*). Generally, no matter how much conviction we claim to have, true conviction belongs only to the person who has seen Nibbāna for the first time. It is truly established only at the moment of attaining the path and fruit.</p>
+<p>A balance in this does not occur automatically. That is what needs to be understood. Just as Venerable Soṇa understood it. Just as Venerable Ānanda understood it. Let alone others, even the Buddha, despite having fulfilled the perfections (*pāramīs*) to such an extent, did not find his intense, extreme energy fruitful until He first brought forth this Middle Path. Therefore, we must indeed reflect that if liberation from saṃsāra is our ultimate goal, it is not obtained effortlessly. It requires an effort more intense than in any other pursuit, yet in a highly systematic and orderly manner—neither struggling restlessly, nor doing nothing, nor over-exerting, but at a balanced middle level can we succeed in this ultimate goal.</p>
+<p>On this valuable Poya day, you devotees listened to this precious Dhamma for about an hour. You also undertook a noble virtue (*sīla*) and developed those qualities of wisdom (*paññā*), energy (*vīriya*), mindfulness (*sati*), and concentration (*samādhi*). As we mentioned, these truly emerge in their proper form only at the stage of the path and fruit. Yet, as a preliminary phase, if these principles sink into your minds, you too will be able to achieve that state. Thus, having gained an understanding of the balancing of energy, and having guarded your virtue (*sīla*) to some extent through today's practice... That virtue is what assists concentration (*samādhi*). That concentration is what, to some level, assists wisdom (*paññā*). Understanding this systematic sequence, make an aspiration: "May the merits of listening to this Dhamma lead me to quickly escape all suffering (*dukkha*) of saṃsāra, such as birth (*jāti*), decay and death (*jarāmaraṇa*), and sickness, and to realize the supreme, deathless Nibbāna!"</p>
+<p>Likewise, make this aspiration: "May all those throughout this universe, from the Avīci hell to the Akaniṭṭha heaven, including our deceased relatives, who wish to rejoice in the merits of this Dhamma sermon and Dhamma listening—by rejoicing in this merit, may they attain peace in the noble, deathless Nibbāna through the Bodhi of their aspiration!" Having made this aspiration, recite the verses in this manner:</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_060.html" class="doc-btn">← Previous Sermon (060)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_062.html" class="doc-btn">Next Sermon (062) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

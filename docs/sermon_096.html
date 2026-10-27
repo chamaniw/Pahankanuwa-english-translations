@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 096 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_095.html" class="doc-btn">← Previous Sermon (095)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_097.html" class="doc-btn">Next Sermon (097) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 096</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_096_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_096_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_096_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #96</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.7)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Mano pubbaṅgamā dhammā, mano seṭṭhā manomayā;</p>
+<p>Manasā ce paduṭṭhena, bhāsati vā karoti vā;</p>
+<p>Tato naṃ dukkhamanveti, cakkaṃva vahato padaṃ.</p>
+<p>From:</p>
+<p>Dhammapada 1 (Yamaka-vagga)</p>
+<p>Dear Listeners,</p>
+<p>Today is the Nikini Full Moon Poya day. Today marks the completion of the first month of the rain-retreat (*vassa*) of the Maha Sangha. The three months of the rain-retreat is a special period of time for the Sangha who strive with energy to bring an end to the suffering of samsāra. Diverse Dhamma stories reveal how the Sangha during the Buddha's time, having received meditation instructions from the Buddha, meditated with firm determination and rousing energy (*uṭṭhāna-vīriya*) during those three months, attaining the noble fruit of Arahantship even before the retreat ended.</p>
+<p>The gargantuan effort to escape the suffering of samsāra can be described as a great conflict between the wheel of kamma (*kamma-cakka*) and the wheel of Dhamma (*Dhamma-cakka*). It is by subduing the retributive power of countless terrible evil deeds committed in past samsāra, and by turning the wheel of Dhamma within one's own mind-stream with energy and firm determination, that one is able to escape the suffering of samsāra.</p>
+<p>The background story relevant to the verse we have chosen as our theme is about a venerable monk who, by acting with such firm determination and rousing energy, activated that wheel of Dhamma and shattered the kammic force within his own mind-stream. During the time of the Buddha, there lived a certain wealthy merchant family in the city of Sāvatthī. In this family, there were two householders named Mahāpāla and Cullapāla. After the demise of their parents, the two of them inherited the immense wealth of the merchant family.</p>
+<p>Of these two householders, one day, the householder Mahāpāla joined a crowd going to Jetavana monastery to listen to the Dhamma, and listened to the sermon delivered by the Buddha. In the Buddha's method of teaching, there is what is called a graduated discourse (*anupubbikathā*). That is, first of all, he declares the discourse on giving (*dāna-kathā*), virtue (*sīla-kathā*), heaven (*sagga-kathā*), the drawbacks, lowliness, and impurity of sensual pleasures (*kāmānaṃ ādīnavaṃ okāraṃ saṅkilesaṃ*), and the advantages of renunciation (*nekkhamme āniśaṃsaṃ*). In this manner, he first proclaims the benefits of giving as a good practice. Next, the side of virtue and its advantages—how virtue must be fulfilled. Next, as its benefit, how one can be reborn in heaven and enjoy heavenly pleasures.</p>
+<p>However, he does not end there. Next, he points out that even in heaven and the human world, the sensual pleasures of the five chords of senses (*pañca-kāma*) are extremely low and defective, *okāraṃ saṅkilesaṃ*. He teaches that they have many drawbacks, defects, and shortcomings; they are very low and have the nature of generating defilements. Having thus created a sense of disenchantment towards sensual pleasures, he then proclaims the advantages of renunciation (*nekkhamma-āniśaṃsa*)—the value of leaving the household life, ordaining, and practicing the Dhamma of a monk—before presenting the deep discourse on the Four Noble Truths.</p>
+<p>When the discourse reached this point of renunciation, explaining the benefits of leaving the household life, the householder Mahāpāla reflected: "When going to the next world, I cannot take these children or wealth with me. Let alone anything else, I cannot even take this body with me. What is the use of these household riches to me? I must ordain." Having made this determination, at the end of the Dhamma sermon, he approached the Buddha and requested permission to ordain. The Buddha asked, "Do you have any relative to whom you should inform this matter?" "Yes, I have my younger brother," he replied. "Then, go and inform him."</p>
+<p>This householder Mahāpāla went home, spoke to his younger brother, and said, "Brother, from today, all this wealth is handed over to you. Use them as you wish." Then the brother asked, "But brother, what about you?" He replied, "My intention is to ordain." "Oh, what are you saying? After our mother passed away, you were like a mother to me. After our father passed away, you were like a father to me. Please do not go to ordain. We have plenty of wealth; we can perform meritorious deeds while remaining in the household life," the younger brother pleaded, opposing the idea.</p>
+<p>Once again, Mahāpāla said, "I have heard the teaching of the three characteristics (*tilakkhaṇa*) from the Buddha, which is beautiful in the beginning, middle, and end. To fully perfect it, the thought came to me that I must ordain. Therefore, I will ordain." Again, the brother said, "Oh, you are still young. You can do those things after you grow old." Then the householder Mahāpāla replied, "When one is old, one's limbs are no longer functional. How can one then fulfill the duties of a monk? Therefore, I will certainly ordain." While his brother was weeping and wailing, he received ordination and higher ordination (*upasampadā*) in the presence of the Buddha.</p>
+<p>Having received ordination and higher ordination, according to the monastic customs, he spent five years under his teachers and preceptors (*ācariya-upajjhāya*), learning the things pertaining to the life of a monk. Having spent five years in this manner, and as the next rain-retreat approached, he approached the Buddha and obtained permission to spend the rain-retreat in a remote forest hermitage, practicing meditation. Having obtained permission and received instructions for meditation (*kammaṭṭhāna*) up to Arahantship from the Buddha, he set off with a group of sixty other monks, passing through villages and market towns, searching for a suitable place many leagues away.</p>
+<p>When this group of monks arrived at a certain remote village, the faithful laypeople of that village, having come to know the intention of the monks, built and prepared a monastery and invited them to reside there. The monks agreed and resided there, taking up their lodgings. The next day, while they were walking for alms, a physician of that very village said to the Venerable Mahāpāla, "Venerable Sir, in places where many people reside, illnesses are frequent. Should such an occasion arise, please tell me. Please let me know," thus placing himself at their service.</p>
+<p>Then came the day of entering the rain-retreat, the start of the *vassa* period. On that day, Venerable Mahāpāla gathered the other sixty monks, and during the discussion at the start of the retreat, he asked, "Venerable sirs, in how many postures do you intend to spend these three months of the rain-retreat?" There are four postures: standing, sitting, walking, and reclining. "Out of these four postures, in how many postures do you intend to spend these three months of the *vassa*?" The monks replied, "We expect to spend these three months of the rain-retreat in all four postures."</p>
+<p>Then Venerable Mahāpāla declared, "We have received our instructions directly from the living Buddha. Friends, do not be negligent. For the negligent person, the four woeful states are like one's own home." Next, the monks asked, "Venerable Sir, in how many postures do you intend to spend these three months of the *vassa*?" The Venerable monk declared, "As for me, I intend to spend the three months of the rain-retreat in only three postures: standing, sitting, and walking. I have no intention of stretching my back on a bed or reclining during these three months." Then the other monks said, "Sādhu, sādhu, very well, Venerable Sir, please act diligently."</p>
+<p>This Venerable Mahāpāla meditated intensely day and night, without sleep. When one month of the rain-retreat had passed, around the time of a Poya day like this, the Venerable monk contracted a severe eye disease. One night, tears began to stream from his eyes like water flowing from a leaking pot. The next morning, when it was time to go for alms, the other monks came and said, "Venerable Sir, it is time for alms-round." Then he said, "In that case, take my bowl and robe."</p>
+<p>As he was preparing to go to the village with the monks, they saw the tears streaming from his eyes. Seeing this, they asked, "What is it, Venerable Sir?" and he replied, "I have contracted a wind-ailment (*vātābādha*)." Then they said, "In that case, Venerable Sir, a physician has put himself at our service. Shall we inform the physician?" He agreed, saying, "Very well."</p>
+<p>When the monks informed the physician of the matter, the physician prepared a certain medicine to be administered through the nose (*nasya*). Normally, nasal medicine must be administered while lying down. However, when Venerable Mahāpāla received the medicine, he administered it while sitting up, as he did not wish to break his determination.</p>
+<p>The next day, when he went to the village for alms, the physician met him and asked, "Venerable Sir, we heard that you are unwell. We prepared and sent some medicine; did you receive it?" "Yes, I received it." "Did you use it?" "Yes, I used it." "How is the illness now?" "It still hurts, doctor," he replied.</p>
+<p>The physician thought, "According to the nature of the medicine I sent, it should have been cured instantly. What is the reason for this?" and asked, "Venerable Sir, did you administer this nasal medicine sitting up or lying down?" The Venerable monk remained silent. The physician asked again and again, but received no answer. The physician then said, "Very well, Venerable Sir," and decided to go and see for himself. He went to the monastery, walked around the hut, and looked. He saw the place where the Venerable monk practiced walking meditation, and he saw the place where he sat, but there was no bed. There was no place to recline.</p>
+<p>The physician understood the situation, and when the Venerable monk returned, he said, "Venerable Sir, do not practice in this manner. It is only as long as this body is in good health that one can fulfill the duties of a monk. Therefore, please administer this medicine only while lying down," pleading with him repeatedly. Then, finding no way to escape the physician's pleading, the Venerable monk said, "Very well, lay devotee, you may go. We shall discuss and see about it." After the physician left, the Venerable monk held a discussion. With whom did he discuss? With himself. With his own body.</p>
+<p>"What do you say, Pālita? Are you looking after your two eyes, or are you looking after the Dispensation of the Buddha? In this samsāra, you must have been born blind countless times. Similarly, you have met hundreds of thousands of Buddhas. Yet, you have not associated with even one Buddha properly, nor have you derived any benefit from a Buddha; you have not done the real work. That is why you have remained in samsāra for so long. You have made a firm determination that you will meditate without sleeping during these three months of the rain-retreat, and that you will not stretch your back on a bed. Therefore, if the two eyes are destroyed, let them be destroyed; if they shatter, let them shatter. Direct your mind only toward the Dispensation of the Buddha. Think only about that!"</p>
+<p>Having firmly resolved in this manner, he administered the nasal medicine while sitting up on that day too, and continued his meditation intensely. The next day, when walking for alms, he met the physician again, who asked, "Venerable Sir, how did you use the medicine?" "Yes, I used it." "How is it now?" "It still hurts, doctor." The physician asked again, "Venerable Sir, did you use this medicine sitting up or lying down?" Again, the Venerable monk remained silent.</p>
+<p>Then the physician, somewhat displeased, said, "Venerable Sir, in that case, since you do not live in a way that is compatible with this medicine, from today, please do not tell anyone that I prepared and sent this medicinal oil. And I too will not tell anyone that I treated you." Thus, he rejected him; he refused to treat him. Having said this, the physician left. The Venerable monk returned to his hut and admonished himself again: "Now, Pālita, even the physician has rejected you. Now you must prepare for death. There is no more time to be negligent!" Having made a firm determination, he stepped down to the walking path and began to meditate.</p>
+<p>On that night, as the middle watch of the night was passing, at the very same moment, at the very same time, both his eyes and his defilements shattered. That is to say, simultaneously with the loss of his sight, his mind was established in the noble fruit of Arahantship, liberated from all defilements. Then, the Venerable monk, realizing the change that had occurred within him, came off the walking path, entered his hut, and sat on the bed.</p>
+<p>The next morning, when it was time to go for alms, the other monks came and informed him, "Venerable Sir, it is time for alms-round." "Ah, is that so? If so, you venerable sirs may go for alms," he said. "And what about you, Venerable Sir?" "My two eyes are lost," he replied. He did not speak of the other thing he had attained.</p>
+<p>Then the monks were filled with great sorrow and said, "Venerable Sir, we shall perform all the duties and attend to you. We shall look after you," and they went to the village for alms. The faithful lay devotees in the village, noticing that the elder monk had not arrived that day, asked, "Where is the chief Venerable monk today?" The monks explained the matter.</p>
+<p>Hearing this, the faithful laypeople were deeply moved. They quickly brought the alms-food, fell prostrate at the feet of the Venerable monk, weeping and wailing, and said, "Venerable Sir, we shall perform all services and look after you." Having made arrangements, they departed.</p>
+<p>During the remaining period of the three months of the rain-retreat, this Venerable monk constantly purified the meditation instructions (*kammaṭṭhāna*) and gave advice and admonitions to the other sixty monks, urging them to act diligently. Established in those admonitions, all sixty monks attained the noble fruit of Arahantship even before the end of the rain-retreat.</p>
+<p>At the end of the retreat, these monks thought, "Now we must go to see the Buddha." They came to the chief monk and asked for permission. Their intention was to take the chief monk along with them, but Venerable Mahāpāla, thinking that it would be a trouble to the others, did not go with them. He arranged for the other monks to go to Jetavana first, and for himself to go later.</p>
+<p>After Venerable Mahāpāla arrived at Jetavana, he began to reside in a separate hut. Because the story about Venerable Mahāpāla's eyes became famous, he was given a nickname: Venerable Cakkhupāla. It was due to this circumstance that he became famous as Venerable Cakkhupāla.</p>
+<p>Then, one day, some monks from that region came to see the Buddha, and thinking of visiting Venerable Cakkhupāla as well, they set out to go to his quarters in the evening. Just then, a heavy rain fell. Therefore, the monks thought, "We shall go and see him in the morning. Now it is raining, and it is too late in the evening," and they turned back.</p>
+<p>That night, during the middle watch, a very heavy rain fell and then cleared up. Next, in the early dawn, Venerable Cakkhupāla began to meditate, practicing walking meditation. After the rain, as you virtuous friends know, a type of insect called winged termites (*meru*) usually emerges from the earth with wings. Insects like winged termites came out on the walking path and were spread all over it. Since Venerable Cakkhupāla was blind, he did not see this. As he practiced walking meditation, those insects were killed.</p>
+<p>The next morning, while those monks were coming to visit Venerable Cakkhupāla's hut, they looked at the walking path and saw the dead insects. They asked the other monks who were there, "Who is it that has practiced walking meditation here?" The monks replied, "This is our preceptor."</p>
+<p>"Look at the deed of this monk! Doing nothing when his eyes were functional, sleeping well, and now, claiming to do walking meditation, he has put to death such a large number of insects!" Making a huge outcry and criticism, they went to the Buddha and reported the matter.</p>
+<p>The Buddha asked those monks, "Monks, did you see this monk killing the insects?" The monks replied, "No, Venerable Sir, we did not see it." "Just as you did not see it, so too that monk did not kill them intentionally. In an Arahant, even the volition (*cetanā*) to kill living beings does not arise." When this matter was declared, the monks inquired, "Venerable Sir, if Venerable Cakkhupāla had the fortune and merit to become an Arahant, why did he become blind?"</p>
+<p>Then the Buddha declared, "That too is due to a certain evil deed committed in the past." When the monks asked about that story, the Buddha related it.</p>
+<p>In the past, in the city of Benares (*Bārāṇasī*), there was a certain physician, a traveling doctor, who used to go from village to village treating people. He practiced this profession. One day, while traveling, he met a woman with an eye ailment and asked, "What is the matter?" She replied, "I can barely see with my eyes." He asked, "Shall I treat you?" "Yes, very well," she said.</p>
+<p>Then the physician asked, "In that case, what fee will you give me?" The woman said, "I, along with my children, will become your slaves." "Very well," said the physician, and he prepared and gave her a certain medicine. By using that medicine just once, the woman's eye ailment was completely cured.</p>
+<p>However, she thought, "If I tell the truth that I am cured, I will have to fulfill my promise. Therefore, I must deceive the physician." When the physician came again and asked, "How is your eye ailment?" she replied, "Oh, previously I could see at least a little, but now I cannot see at least a little, but now I cannot see at all. Now it is extremely painful."</p>
+<p>The physician understood her motive: "This woman is trying to deceive me. I will teach her a good lesson." (Even nowadays people say such things, "I will teach a good lesson".) Thinking "I will teach her a good lesson," he went home, told his wife, and prepared another medicine. It was a medicine that would cause blindness.</p>
+<p>He brought it and told the woman, "Use this again," and made her apply it right there. As soon as she finished applying it, just like a lamp-flame going out, both her eyes went blind.</p>
+<p>In this manner, having declared the past kamma, the Buddha said, "Monks, my son Cakkhupāla has been pursued by that evil deed committed in the past up to this very day." He explained that the evil deed committed by someone follows him just as the wheel follows the hoof of the ox bound to the cart, and then the Buddha proclaimed the Dhamma verse we chose as our theme today:</p>
+<p>> *Mano pubbaṅgamā dhammā, mano seṭṭhā manomayā;*</p>
+<p>> *Manasā ce paduṭṭhena, bhāsati vā karoti vā;*</p>
+<p>> *Tato naṃ dukkhamanveti, cakkaṃva vahato padaṃ.*</p>
+<p>"Mind precedes all phenomena, mind is their chief, they are mind-made." This mind precedes all mental states (*cetasika*) and thoughts that arise in the mind. To whatever extent thoughts arise in the mind—feeling (*vedanā*), perception (*saññā*), volition (*cetanā*), etc., which are called preparations (*saṅkhāra*)—the mind precedes every single phenomenon that arises in the mind.</p>
+<p>Likewise, "mind is their chief" (*mano seṭṭhā*)—the mind is supreme to them. "Mind-made" (*manomayā*)—they are processed and fashioned by the mind itself. Because of this fact, this law of nature, "if with a corrupt mind one speaks or acts" (*manasā ce paduṭṭhena bhāsati vā karoti vā*)—if one speaks or acts with a corrupt mind, a defiled mind, "suffering follows him, even as the wheel follows the hoof of the ox" (*tato naṃ dukkhamanveti cakkaṃva vahato padaṃ*)—because of that, suffering follows that person. Suffering pursues him closely, just as the wheel of the cart follows the hoof of the ox drawing the cart. The Buddha proclaimed this verse which is placed at the very beginning of the Dhammapada.</p>
+<p>This verse is an extremely helpful and valuable verse for shaping one's life and philosophy of life. That is why, although there are countless verses, it is placed at the very beginning of the Dhammapada. Let us contemplate further on this verse.</p>
+<p>The arising of a thought is something directly experienced by you virtuous friends. A thought arises regarding some object. That arising thought can sometimes be an unwholesome thought, or a wholesome thought. Here, it speaks about the unwholesome side. Unwholesome means it can be a thought of greed (*lobha*), a thought of hatred (*dosa*), or a thought of delusion (*moha*). In this manner, a thought arises.</p>
+<p>Let us say, upon seeing something in one's house or in some place, greed arises immediately. Along with that thought, the feelings (*vedanā*) or sensations experienced regarding it, the perceptions (*saññā*) as recognition of it, and the actions to be taken regarding it—all these arise in accordance with that very greed. In that manner, when a thought of greed, hatred, or delusion arises, because other phenomena arise in accordance with it, if a person speaks or acts with a corrupt mind, the things done with such a corrupt, defiled mind are what are mentioned even in the virtue with livelihood as the eighth (*ājīva-aṭṭhamaka-sīla*): lying, slandering, harsh speech, and frivolous talk, which occur due to greed, hatred, and delusion.</p>
+<p>If one uses words in that manner, or, as deeds done by the body, actions such as killing living beings, stealing, and sexual misconduct; and furthermore, there are things thought by the mind without controlling it—unwholesome states generated by the mind itself as mental kamma (*manokamma*). Bodily kamma, verbal kamma, mental kamma. These are covetousness (*abhijjhā*), ill-will (*vyāpāda*), and wrong view (*micchā-diṭṭhi*). In accordance with covetousness, seeing another's prosperity, one thinks, "Oh, if only I could get this!" Or, generating hatred toward someone, one has angry thoughts instead of thoughts of loving-kindness. Or, holding wrong views, one thinks various thoughts according to a wrong understanding.</p>
+<p>In this way, a person can commit all ten unwholesome courses of action (*dasa-akusala-kamma*) due to this corrupt mind. Because of the things thus accumulated, the results of those unwholesome actions will later cause that person to experience severe physical and mental suffering (*dukkha*) in this long samsāra—in the four woeful states: in hell, the animal realm, the peta world, and the asura world—or even in the human world itself. Just as an ox bound to a cart has its neck squeezed when pulling the cart, and its leg is struck by the wheel when it moves backward, so too these evil deeds are a massive, heavy burden for a person. That law of nature must be understood—the supremacy of the mind in all this, and the law of nature between the action and its result.</p>
+<p>We must think about the lesson to be drawn from this narrative. There is a lesson to be drawn from such a story. The verse too is exemplary for leading our lives. When we think about this narrative, the conflict between the wheel of kamma and the wheel of Dhamma, which we mentioned earlier, is evident here.</p>
+<p>Venerable Cakkhupāla's determination to meditate intensely and severely during those three months of the rain-retreat succeeded; he became an Arahant. Yet, at the same time, an evil deed that pursued him from behind was activated. From this, we see the terrible connection between kamma and its result. Kamma and its result go together inevitably, in an unavoidable manner.</p>
+<p>To say nothing of others, even for a Buddha, this law of nature—how powerful the wheel of kamma is—is such that even after attaining Arahantship, one has to experience its results. However, there is one consolation: after attaining Arahantship, there is no further birth (*jāti*). There is no force left in the performed kammas to bring about a new birth. The seed-potential of kamma is destroyed. That is what attaining Arahantship means.</p>
+<p>Yet, even Arahants have to experience certain retributive results in this very life. It is mentioned that even the Arahant Angulimāla had to experience the results of kamma (*kamma-vipāka*) after becoming an Arahant. The same is said of the Chief Disciple Arahant Maha Moggallāna. Those Arahants too had to experience the results of kamma. From this, we can imagine how powerful the wheel of kamma is. Yet, at the same time, the important thing we see is the path of liberation from this. By ending birth, which means bringing it to a close there, the power of kamma to yield results is deactivated. This is what is called Nibbāna.</p>
+<p>It is only during the period of a Buddha’s appearance in the world that we are able to do this—to travel on this path to Nibbāna in accordance with such a philosophy of life, to attain that peace of Nibbāna, and to escape from this wheel of kamma. Therefore, we must contemplate deeply on this Dhamma verse.</p>
+<p>When we look at this present era, almost everywhere in the world, human beings give priority to material things. The materialist perspective is what stands out in the world today. Due to giving prominence to things seen by the eye and heard by the ear, the mind, which is the precursor to everything, has been forgotten. The Buddha has highlighted this fact: *Mano pubbaṅgamā dhammā mano seṭṭhā manomayā*. We must constantly recollect these extremely valuable words.</p>
+<p>No matter how many external things there are in the world, you virtuous friends know that whatever bad things happen in the world, the mind is at the root of them all. It is through the mind that one is told, "Do this and that." Likewise, the mind is at the root of good things too.</p>
+<p>Because of this, the most valuable lesson we can draw from this verse and this story is to keep a close watch over our own mind. If we do not guard this mind, if we do not protect the mind, and consequently commit unwholesome actions with a corrupt mind, or by using bad words, doing bad things, committing evil deeds—sometimes the retributive result of an evil deed committed in a single fraction of a second, in a single moment, has to be paid for in hell for aeons (*kalpas*). Evil deeds that cause suffering for aeons can sometimes occur in a single moment. The Buddha has declared that the mind is supreme in all of this:</p>
+<p>> *Cittena nīyati loko, cittena parikassati;*</p>
+<p>> *Cittassa ekadhammassa, sabbeva vasamanvagū.*</p>
+<p>The Buddha declared: "The world is led by the mind; by the mind it is drawn away. Under the sway of this one state, the mind, all have come." Here, "the world" refers to the beings of the world. It is by the mind itself that the beings of the world are led to various states. *Cittena nīyati loko*—the mind alone leads them. "Come, let's go to heaven; come, let's go to hell; come, let's go to the animal realm"—in this manner, the mind alone speaks. We do not know it, but this is what lies in those wholesome and unwholesome actions we perform. It is the mind itself that takes us, that leads us.</p>
+<p>Next, *cittena parikassati*—the mind drags us hither and thither. Constantly, when going to the city, people go searching for various things according to their minds; therefore, the mind is supreme in every single thing. *Cittassa ekadhammassa sabbeva vasamanvagū*—the entire world is subject to this single thing called the mind. Only the Buddha has made such a fearless declaration regarding the mind.</p>
+<p>The ordinary world is deluded by things seen by the eye and heard by the ear. Giving prominence to these, they make their long journey in samsāra terrible, experiencing their retributive results. The Buddha also declared: *Cittasaṅkilesā, bhikkhave, sattā saṅkil बढ़ती santi; cittavodānā sattā visujjhanti.* "Monks, by the defilement of the mind, beings are defiled; by the purification of the mind, beings are purified."</p>
+<p>No matter how well one bathes in scented water, applies perfumes and powders, and remains clean, if that man's or woman's mind is defiled—defiled with greed, lust, hatred, and delusion—at that moment, all that external cleanliness is gone. It is in such a state. The Buddha declared that it is through the defilement of the mind that everyone becomes defiled. Thus, the necessity of guarding the mind is evident to us.</p>
+<p>The mind acts with extreme rapidity. The Buddha declared that nothing in the world revolves as fast as this mind. It is called *lahuparivattaṃ* (swift to change). Nothing is seen in the world that acts as fast as this mind; it is extremely swift. Therefore, to control a mind that acts so rapidly, a certain systematic program is necessary. That is what is called meditation (*bhāvanā*). Meditation means development—the development of the mind.</p>
+<p>The world is extremely enthusiastic about the development of the body, because it is something visible externally. But the development of the mind, this invisible mind—its development is what the Buddha has shown as meditation. If this is not properly controlled, one cannot say whether one will get caught in the terrible evil deeds of samsāra and have to experience their results.</p>
+<p>To escape from these evil deeds, some people climb high into the sky, some go to the middle of the sea, and others go into the clefts of mountains. The Buddha declared that one cannot escape by any of these means:</p>
+<p>> *Na antalikkhe na samuddamajjhe,*</p>
+<p>> *Na pabbatānaṃ vivaraṃ pavissa;*</p>
+<p>> *Na vijjati so jagatippadeso,*</p>
+<p>> *Yatthaṭṭhito muñceyya pāpakammā.*</p>
+<p>In a verse in the Dhammapada itself, it is stated: "Not in the sky, nor in the midst of the sea, nor by entering a cleft in the mountains; there is no place found on earth where staying, one may escape from the consequences of an evil deed." If the consequences of these evil deeds are so terrible, then a special effort must be made to guard this mind.</p>
+<p>When we consider the effort to guard this mind, the first thing to be understood is this division of wholesome and unwholesome (*kusala* and *akusala*). Here, the talk is about the unwholesome side. The ordinary world mostly remains on the unwholesome side. The Buddha has shown what the roots of these unwholesome states are: greed, hatred, and delusion (*lobha, dosa, moha*).</p>
+<p>Next, the wholesome roots are shown as the effort exerted to remove these unwholesome roots. If one generates a thought through the effort to eliminate greed, that is non-greed (*alobha*). Next, the opposite of hatred is non-hatred (*adosa*). The thought opposite to delusion is non-delusion (*amoha*). Contemplating in this manner, selecting and distinguishing between these wholesome roots and unwholesome roots is extremely necessary for a person. Every time a thought arises, one must immediately investigate and see what it is.</p>
+<p>There is also someone who takes charge of watching over this mind. That person resides within this very mind. The Buddha has introduced that as mindfulness (*sati*). *Sati* means memory or attentiveness. The Buddha has shown *sati ārakkhāsārathī*—mindfulness is the guardian and the charioteer. When driving a chariot, it is the driver who controls and protects it there. The importance given to the word *sati* is evident from this: *sati ārakkhāsārathī*—mindfulness is the guardian soldier.</p>
+<p>This mindfulness, this guardian soldier, also has an operation. The operation here is attention (*manasikāra*)—reflection or pondering. Therefore, what is expected here is reflecting with mindfulness. Along with this mindfulness, another factor is employed. That is called clear comprehension (*sampajañña*)—wisdom, thorough wisdom. Mindfulness and clear comprehension go together. The two words *sati-sampajañña* are often used together. The reason for this is that mindfulness brings the matter to the forefront, and clear comprehension, with thorough wisdom, understands that matter and gains a correct comprehension of it.</p>
+<p>Now, let us say a thought has arisen regarding something. Turning back immediately, one directs one's reflection to see: "What is this thought? Is it a thought of greed? Is it a thought of hatred? Is it a thought of delusion?" and remains watchful over it. In that manner, employing mindfulness, and through the operation called attention (*manasikāra*) in accordance with mindfulness, one must quickly recognize that thought. If it is an unwholesome thought, it must be nipped in the bud. If instead of nipping it in the bud, one gives way to that thought, then consequently bad words will be uttered and one gets bound to evil deeds; or wrong actions are committed, the body acts accordingly, and one gets bound to evil deeds.</p>
+<p>Therefore, the Buddha has pointed out that one must be diligent in this reflection: *sati-sampajañña*. The grand plan for this is what the Buddha has shown as the four establishments of mindfulness (*satipaṭṭhāna*)—establishing mindfulness on this body, on feelings (*vedanā*), on the mind, and on the mental phenomena that arise in the mind, and living mindfully regarding them. This is what *satipaṭṭhāna* means. It is through this that, in terms of insight (*vipassanā*), one can bring to light even the three characteristics (*tilakkhaṇa*): impermanence (*anicca*), suffering (*dukkha*), and non-self (*anattā*). With the thorough wisdom employed alongside mindfulness, the true nature of things is revealed. Mindfulness is applied, and at the same time, clear comprehension (*sampajañña*) explains its meaning there. This is what *sati-sampajañña* is.</p>
+<p>Thus, by means of this *sati-sampajañña*, during the period of a Buddha’s appearance in the world, a person is able to ultimately break the wheel of kamma. Breaking the wheel of kamma, as mentioned before, means drying up the retributive power of kammas. Kamma possesses a power to create various existences (*bhava*) and yield results. That retributive power is dried up by wisdom.</p>
+<p>You virtuous friends have heard: *avijjā-paccayā saṅkhārā*—due to ignorance, preparations (*saṅkhāra*) accumulate. Therefore, if it is due to not knowing that preparations—these kammas—accumulate, when wisdom is added, their kammic power is diminished. That is why, through the path to Nibbāna shown by the Buddha, one is ultimately able to dry up the seeds of kamma and attain liberation from samsāra. Why do we undergo suffering, being born again and again for such an extremely long time? It is to pay off these kammas. The severity of kamma is evident from this.</p>
+<p>It is by these kammas alone that these physical cages are fashioned. Although we say "I" and "mine", this is something received as a result of kamma itself. The Buddha has shown this as "heirs to kamma" (*kamma-dāyāda*), etc. The mind is supreme in all this. Guarding this mind is the function that the Buddha has shown as meditation.</p>
+<p>The deepest idea regarding this is the path to Nibbāna shown by the Buddha, which is the middle path called insight meditation (*vipassanā bhāvanā*). Insight meditation is the realization of the true nature of the world as impermanent (*anicca*) and non-self (*anattā*). It is for this that correct mindfulness and thorough wisdom are helpful. Through this reflection, one can realize the true nature of everything. It is not that a Buddha shows it, but as *paccattaṃ veditabbo viññūhi* (to be personally realized by the wise), the Buddha has declared that the wise can realize this Dhamma, this law of nature, by themselves.</p>
+<p>The path that helps in this is the Noble Eightfold Path. There too, *Sammā-diṭṭhi, Sammā-saṅkappa, Sammā-vācā, Sammā-kammanta, Sammā-ājīva, Sammā-vāyāma*, and *Sammā-sati* represent the bringing of this life onto the correct path according to a plan. It is steering it from the wrong path onto the right path. *Sammā-diṭṭhi* means right view. Within right view is the understanding of good and bad, the understanding of wholesome and unwholesome, as well as the comprehension of the Four Noble Truths: suffering (*dukkha*), the cause of suffering, the cessation of suffering which is Nibbāna, and the path thereto, the Noble Eightfold Path. The understanding of the Four Noble Truths is contained within this *Sammā-diṭṭhi*.</p>
+<p>The vision of life gained through this *Sammā-diṭṭhi* makes a very powerful change in a person's life. Because this mind operates with extreme rapidity. The stream of the mind is extremely swift. If one is unable to control it, it is just like taking the steering wheel of a vehicle without a proper understanding of its control panel. One does not know where it will end. Therefore, right view is extremely necessary.</p>
+<p>Even if one does not have an understanding of those deep and vast teachings at one's own level, it is like having an understanding of good and bad, an understanding of black and white. The Buddha has shown "the dark and the bright states are contrastive" (*kaṇha-sukka appaṭibhāgaṃ*), as mentioned in the Dhamma. He points out black and white to the world. At the very least, a person must know: "This is black, this is white."</p>
+<p>In the same way, the Buddha has pointed out what is unwholesome and what is wholesome. Greed, hatred, and delusion are unwholesome. Non-greed, non-hatred, and non-delusion are wholesome. If a person understands at least this much, they can shape their philosophy of life to a great extent accordingly.</p>
+<p>A greater depth comes with gaining some degree of understanding of the Four Noble Truths, which correctly display the nature of this samsāra and the nature of life. This entire samsāric existence is suffering (*dukkha*). From this very incident, it is clear that even after becoming an Arahant, Venerable Cakkhupāla had to experience such retributive results. Similarly, other Arahants and even the Buddha had to experience the results of kamma. So terrible is kamma and its retributive aspect. Having understood that matter, what must be done is to escape from this samsāra.</p>
+<p>The Buddha reminds us: "Why remain in such a risky place?" He urges us to act diligently and escape from this samsāra. Indeed, Nibbāna means the ending of this suffering, the escape from samsāra. A person must have a great sense of spiritual urgency (*saṃvega*) regarding this, in order to cultivate a good philosophy of life.</p>
+<p>Therefore, one must develop a deep understanding of suffering to some extent. Next, at the root of this suffering lies craving (*taṇhā*). It is because of craving that the world acts, speaks, and thinks in this manner. That fact must be understood. This craving is like an endless thirst. What must be done is to completely quench this thirst. Normally, quenching a physical thirst is completed by drinking water. But quenching the thirst of craving is not an easy thing. No matter how many things are given to it—it is only the fuel (*upādāna*) given to this greed, hatred, and delusion that has changed between the Buddha's time and this time.</p>
+<p>More than two thousand years ago, what existed was greed, hatred, and delusion. Today, too, the very same things exist. Some might say that this Dhamma is something obsolete. The Buddha has declared: *Satañca dhammo na jaraṃ upeti*—the Dhamma of the virtuous, of the Buddhas and other noble ones, never undergoes decay or becomes obsolete. The only difference is in the fuel given to greed. They have changed. Instead of the fuel given for greed in the past, in this era, different fuel is given. Similarly for hatred: instead of the weapons used in the past, in this era, different weapons are used. For delusion, it is the same. Even so, it is these three that exist in the world forever.</p>
+<p>Thinking in this manner about the thirst of craving, the calming of this craving itself is Nibbāna, the escape from this samsāra. Indeed, that itself is that peace. Next, one must also develop some understanding of the Noble Eightfold Path which helps in this.</p>
+<p>In that manner, if right view (*Sammā-diṭṭhi*) is established, right thoughts (*Sammā-saṅkappa*) arise in that person. If right thoughts are developed, right speech (*Sammā-vācā*) comes out of that person. The person who uses right speech then directs himself toward right action (*Sammā-kammanta*)—the correct path of action. By perfecting those paths of action, that person becomes a person with right livelihood (*Sammā-ājīva*), a correct way of living.</p>
+<p>Within the person who leads such a good and correct livelihood, there is a great effort and energy called right effort (*Sammā-vāyāma*). Through that effort, right mindfulness (*Sammā-sati*) arises in him in the correct manner. Through the power of establishing that mindfulness for a long time, he develops right concentration (*Sammā-samādhi*), a correct one-pointedness of mind. It is through this that one is able to personally realize this Dhamma of Nibbāna.</p>
+<p>It is to a concentrated mind that the three characteristics of the world—impermanence (*anicca*), suffering (*dukkha*), and non-self (*anattā*)—can be understood. In the Dhamma, we call this the arising of the eye of Dhamma (*Dhamma-cakkhu*). This Venerable monk did not sacrifice his eyes for some trivial thing. Having sacrificed his eyes, he became blind. Simultaneously with becoming blind, what arose was that eye of Dhamma. It was for this eye of Dhamma that he made this sacrifice.</p>
+<p>Indeed, it is not the physical eye in the world that is important, but the eye of wisdom (*paññā-cakkhu*). The eye of wisdom, which is the *Dhamma-paññā-cakkhu*, is the realization of Nibbāna. By means of that eye of wisdom, to say nothing of others, even a stream-enterer (*sotāpanna*)—a person who has seen Nibbāna through the first path-knowledge—attains immense relief.</p>
+<p>That is why the Buddha, taking a tiny bit of soil on his fingernail, declared regarding the portion of samsāric suffering that the stream-enterer has brought to an end: "The suffering remaining for him is like this tiny bit of soil on the fingernail. The suffering he has ended and extinguished is like the soil of the great earth." In this manner, the stream-enterer is freed from the four woeful states. Due to stream-entry, because of the change that occurred in his mind, he will never again go to a woeful state. The power of actions leading to the woeful states is broken. One must contemplate how much relief is obtained from that first path-knowledge alone.</p>
+<p>Next, it is when one becomes an Arahant that the greatest relief is obtained. Even the stream-enterer is born up to seven times. The Arahant is not born again in this existence (*bhava*). Samsāra is ended. That indeed is the supreme liberation. It is through that state that one is forever liberated from that terrible wheel of kamma.</p>
+<p>To attain such a noble state, something the Buddha constantly declared, as if it were the first letter of the alphabet, is diligence (*appamāda*)—the factor of diligence. The Buddha declares that this period of a Buddha’s appearance is extremely rare. It is recorded that daily, as the advice of the Sugata (Buddha), he admonished the monks: *Dullabho Buddhuppādo lokasmiṃ*—the appearance of a Buddha in the world is extremely rare. There are some aeons (*kalpas*) that are void of Buddhas (*suñña-kappa*), times when there is no Buddha. One can imagine how dark those times are.</p>
+<p>Just as when a great city, shining brightly with electric lamps, suddenly falls into pitch darkness, and what a miserable feeling arises in a person—in the same way, one must imagine the difference between the period of a Buddha’s appearance and the period of a Buddha’s non-appearance.</p>
+<p>Thus, the birth of a Buddha is extremely rare. Equally rare is human birth (*manussatta*). Indeed, one can say that a human birth obtained during the period of a Buddha’s appearance is even rarer. Because during that period of a Buddha’s appearance, if one is elsewhere, that opportunity is lost.</p>
+<p>Next, having obtained a human birth, and then having the intellectual capacity to understand the Dhamma, without being deformed in limbs or organs, being born in a region where one can hear the Dhamma and practice it—these are pointed out as the opportune moment (*khaṇa-sampatti*). That too is equally rare.</p>
+<p>Next, having obtained that opportune moment, receiving the ordination that correctly leads that Dhamma life is even rarer. Next, even if one receives that ordination, hearing the Dhamma (*dhamma-savana*) which helps toward Nibbāna is even rarer. Next, even if one gets to hear the Dhamma, the association with spiritual friends (*kalyāṇa-mitta*)—the company of the virtuous—who advise and help one to practice that Dhamma, is even rarer.</p>
+<p>Thinking in this manner about the rare appearance of a Buddha, the human birth, the opportune moment, the hearing of the Dhamma, and then the association with the virtuous (*sappurisa-saṃseva*)—to use a simile, these are like the concentric colored circles on a target board. The rarest thing in the very center is finding someone who can give meditation instructions (*kammaṭṭhāna*) and advise one on how to practice according to the Dhamma and meditate.</p>
+<p>Thinking in this manner, during the period of a Buddha’s appearance, one must act diligently. Because even the deities say that the human world is the best place to realize Nibbāna. Even the deities refer to this human world as the happy destination (*sugati*). Human beings do not know this.</p>
+<p>Sometimes, those who have passed away and gone to the next world, having understood their suffering and trials in accordance with kamma, express their weeping and wailing, saying: "Alas, we lost that opportunity! Having obtained that rare human birth during the rare appearance of a Buddha, we were unable to bring an end to this suffering of samsāra," thus testifying to the truth of the Buddha's words that samsāra is suffering.</p>
+<p>Therefore, having diligently directed oneself toward this path of Dhamma, and having established within oneself the philosophy of life expressed in this verse—reflecting that the mind precedes everything, that the mind is supreme, that everything is fashioned by the mind itself, and that we have to experience the retributive results of the things done and spoken with this mind, even for aeons—and having thus generated a sense of spiritual urgency (*saṃvega*), if one is to travel on this path of Dhamma, one must make an effort to embark on that journey of the Noble Eightfold Path as declared by the Buddha. One must make a firm determination.</p>
+<p>Likewise, employing mindfulness and clear comprehension (*sati-sampajañña*), and that attention (*manasikāra*) of meditation, and traveling on that path of Dhamma, one must make a determination to realize that noble, deathless Nibbāna which liberates one from all samsāric suffering such as birth (*jāti*), aging (*jarā*), sickness, and death (*maraṇa*).</p>
+<p>Thus, during this short period of time, you virtuous friends have listened to a highly valuable Dhamma sermon and a Dhamma verse declared by the Buddha, as well as the story relevant to it, and have generated faith (*saddhā*) and spiritual urgency (*saṃvega*) at this moment. The wholesome thoughts (*kusala-citta*) we generate by listening to this Dhamma are no trivial thing. Although we call them wholesome thoughts, what actually arise within us that help toward Nibbāna are faith (*saddhā*), mindfulness (*sati*), concentration (*samādhi*), and wisdom (*paññā*).</p>
+<p>The Buddha has declared the faculties (*indriya*) and powers (*bala*) that help a person realize Nibbāna, among the thirty-seven aids to enlightenment (*bodhipakkhiya-dhamma*). They are faith, energy, mindfulness, concentration, and wisdom (*saddhā, vīriya, sati, samādhi, paññā*); these are what exist as faculties and powers that help toward Nibbāna. Therefore, if even for a brief moment faith arose within you virtuous friends, and along with that faith, a mental energy (*cetasika-vīriya*)—a resolve in the mind that "we must travel on this path of Dhamma, we cannot remain as before, we must practice in this manner"—if such energy arose, that is a great thing. Likewise, while directing the mind to the Dhamma, if a certain mindfulness (*sati*) arose, that too is a valuable thing.</p>
+<p>Next, the concentration (*samādhi*) developed during the time of listening to the Dhamma, by directing the mind to it and making it one-pointed—that too is a great wholesome thought. In the same way, if you thought deeply about this Dhamma and gained some understanding in terms of wisdom (*paññā*), that too helps toward Nibbāna.</p>
+<p>In this manner, during this hour, many wholesome thoughts must have arisen within the mind-stream of you virtuous friends. Reflecting on them, and directing our lives solely toward the wholesome side, steering away from the unwholesome, we must make an effort to spend our time.</p>
+<p>To that end, we must put into use the weapons introduced by the Buddha. The Buddha has pointed out all those guardians and weapons that can be used for this battle against defilements, for this operation. We must realize that this is our real battle. We spend our time in this samsāra with a great responsibility. Because the ones we are responsible for are not others, nor are we responsible for our temporary relatives; ultimately, we are responsible for the various existences (*bhava*) that arise according to kamma, in accordance with the actions we perform. This kamma gives us those births again and again. We are responsible for them.</p>
+<p>Therefore, if we lead bad lives and are born in those miserable peta-existences, or yakkha-existences, or in places like hell, then we will have to blame only ourselves, thinking, "Alas, we did not take advantage of the opportunity we had." From this, it is clear that this responsibility, indeed, lies primarily with oneself. *Attā hi attano nātho*—oneself indeed is one's own savior. *Tumhehi kiccaṃ ātappaṃ, akkhātāro tathāgatā*—the effort must be made by yourselves; the Tathāgatas are only teachers—thus the Buddha has declared. Therefore, what needs to be done must be done by oneself. The Tathāgatas are only teachers.</p>
+<p>Understanding these matters, may this multitude of wholesome thoughts generated in your mind-stream up to this moment be a supportive condition (*upanissaya*) and a blessing for the personal realization of the noble, deathless Nibbāna through the realization of the paths and fruits of Stream-entry, Sakadāgāmī, Anāgāmī, and Arahantship!</p>
+<p>Likewise, may the deities who protect the Dispensation, and any deities presiding over this place, rejoice in this collection of merits accumulated by us up to this moment through this Dhamma sermon and Dhamma listening! Having rejoiced, may they escape from this extremely terrible suffering of samsāra and realize the noble, deathless Nibbāna through whichever Bodhi (awakening) they have aspired to! In this manner, share the merits.</p>
+<p>Likewise, may the relatives who have passed away in your names, and all beings from the Avīci hell up to the Akaniṭṭha Brahma realm who are desirous of merit and Nibbāna, rejoice in this merit of Dhamma preaching and Dhamma listening! Having rejoiced, may they realize the noble, deathless Nibbāna through whichever Bodhi they have aspired to!</p>
+<p>Make your aspirations in this manner, recite the verses, and transfer the merits.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_095.html" class="doc-btn">← Previous Sermon (095)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_097.html" class="doc-btn">Next Sermon (097) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 107 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_106.html" class="doc-btn">← Previous Sermon (106)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_108.html" class="doc-btn">Next Sermon (108) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 107</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_107_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_107_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_107_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #107</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.45)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Akkodhena jine kodhaṃ, asādhuṃ sādhunā jine;</p>
+<p>jine kadariyaṃ dānena, saccena alikavādinaṃ.</p>
+<p>From:</p>
+<p>Dhammapada 223 (Kodhavagga)</p>
+<p>Dear Listeners,</p>
+<p>The ordinary world expects to win the battle of life through unrighteous means. In a society that is largely inclined towards unrighteousness, finding a solution to arising problems through unrighteousness itself seems to us to be the easy way. Yet, the Buddha taught that this battle of life must indeed be won, and a true victory achieved, through the path of Dhamma. To achieve victory through that path of Dhamma, sometimes one may even have to make a great sacrifice. Even if one has to make such a sacrifice, the final result, the victory obtained through it, brings a deep peace that is hundreds of thousands of times more valuable than the victory won through unrighteous means. The advice given by this verse we have chosen as our theme today, as well as the example provided by the background story related to it, will explain this very principle of victory.</p>
+<p>In the city of Rājagaha, the financier Puṇṇa, his wife, and their daughter named Uttarā were all three devoted lay-disciples who had attained the stage of stream-entry (*Sotāpanna*)—noble disciples. In the same city of Rājagaha, the financier Sumana held wrong views. This financier proposed a marriage for his son with Uttarā. Puṇṇa was reluctant; he expressed his opposition, saying, "I cannot give my daughter to such a clan of wrong views. She cannot live separated from the Triple Gem." However, due to the pressure of many people, he finally gave his consent and married his daughter to the son of the financier Sumana on the full-moon day of Āsāḷha. From the day she went to her husband's home, she had no opportunity to see a monk or a nun, to give alms (*dāna*), or to hear the Dhamma. Since she was a very devout person, she spent about two and a half months in great sorrow because of being deprived of seeing the Triple Gem, to which she was accustomed. By then, the rainy retreat (*Vassa*) was drawing to a close. She sent a message to her father: "Why have you betrayed me into such a prison? It would have been better if I were made a maidservant rather than being married off to a household of wrong views. I have no opportunity to perform alms-givings, to hear the Dhamma, or even to see the monks, nuns, and the Blessed One." When she sent this very sorrowful message, what did the financier do? Thinking of a solution, he sent fifteen thousand *kahāpaṇas*. He instructed her to hire Sirimā, a courtesan of Rājagaha who charged one thousand per day, hand her over to her husband, and thereby obtain permission for herself to perform acts of merit and alms-giving for a fortnight. This was a surprising proposal and idea, of a kind that a father would not normally make. Uttarā also accepted it with great joy, went to meet Sirimā, arranged this transaction, and handed her over to her husband, saying, "During these two weeks, I will be engaged in offering alms and other duties to the Saṅgha led by the Buddha, and in listening to the Dhamma. This woman will serve as your companion." Having made these arrangements, Uttarā went to the Blessed One and invited him, saying, "Please accept alms by coming to our home, to this alms-hall, along with the Saṅgha for this entire fortnight." The Blessed One, perhaps considering the great sacrifice made, consented and visited daily for alms accordingly.</p>
+<p>Thus, as the two weeks went by, the final day approached. Right at the end of the rainy retreat, on the day before the Great Pavāraṇā day, Uttarā's husband came to the window facing the kitchen or the alms-hall and looked at what this woman was doing. He saw her covered in soot and sweat, busy organizing the alms-giving. He smiled mockingly, thinking, "Oh, what a foolish woman! Covered in soot and dirt, she is busy serving the monks, abandoning such luxury and wealth." He smiled in derision. Sirimā, who was standing nearby, saw this. She saw that when he came and looked through the window, he was smiling at Uttarā. At that moment, she forgot for a while that she was an outsider. Just as it happens in households in such situations, a severe jealousy arose in her. Anger arose. Driven by that anger, she entered the alms-hall or kitchen of the mansion, approached the pot of boiling ghee on the hearth used for frying sweetmeats, took a ladleful of ghee with a coconut-shell ladle, and came to pour it over Uttarā’s head. As she was coming, Uttarā saw by her manner that she was coming to do such a thing. What did she do? She suffused Sirimā with a mind of loving-kindness (*mettā*). "This friend of mine has done me such a great favor by giving me the opportunity to perform these alms-offerings to the Saṅgha led by the Buddha. The entire universe is not spacious enough, and the Brahma-world is not high enough, to contain her virtue. She possesses a virtue so vast that it can fill the world. If there is indeed any anger in me towards her, may this ghee burn me. If there is no anger, may it not burn me." Thus she made an assertion of truth (*saccakiriyā*), relying on that very absorption of loving-kindness (*mettā-jhāna*). Then, when that woman poured the boiling ghee, it was like cold water. Nothing happened to her. So Sirimā thought perhaps the ghee was not hot enough. When she went back to the hearth to get another ladleful, the maidservants gathered, beat her thoroughly, threw her to the ground, and as they were preparing to beat her further, Uttarā herself stepped forward to stop them, washed her with compassion, applied oil, and comforted her.</p>
+<p>At that moment, Sirimā felt a great sense of spiritual urgency (*saṃvega*): "Alas, what a virtuous person is this, to whom I, an outsider, have brought harm out of jealousy and hatred!" She fell at her feet and begged for forgiveness. When she begged for forgiveness saying, "My head will split if I do not ask for forgiveness from such a person," Uttarā replied, "I am a daughter who has a father. I will forgive you only if my father forgives you." Then Sirimā said, "Very well, I will ask for forgiveness from the financier Puṇṇa." Uttarā replied, "No, no. Puṇṇa is the father who gave birth to me in Saṃsāra. The father who gave birth to me on the path to Nibbāna is the Fully Enlightened One. You must ask for forgiveness from Him." When Sirimā asked, "How can I do that?", Uttarā said, "Then, tomorrow when the Blessed One visits, bring some alms that you have prepared. Then you can obtain forgiveness."</p>
+<p>Thus, on the following day, when the Blessed One arrived with the Saṅgha, Sirimā too came with her attendant women, having prepared various alms. To participate in the alms-giving, she had Uttarā offer them to the Blessed One on her behalf. Finally, Sirimā fell prostrate before the Blessed One to ask for forgiveness. When asked for the reason, she said, "This is what happened through me yesterday. Uttarā, who possesses such a wonderful and miraculous wealth of virtue, healed me instead of retaliating for what I did. She harbored no hatred whatsoever. Then she told me to ask for forgiveness from the Blessed One." The Blessed One further questioned Uttarā about this: "Uttarā, what did you think when she was coming with that hot ghee?" She replied, "I thought in this way: regarding Sirimā's virtue—the help she rendered by providing me the opportunity to perform my alms-offerings and service to the Buddha and Saṅgha for two weeks—when considering that virtue, the universe is not spacious enough for it; it is something that rises higher than the Brahma-world." She thus explained the assertion of truth she had made. At that moment, the Buddha expressed his appreciation by saying, "Sādhu, Sādhu!" and declared: "That is how it should be done, Uttarā. This is the true practice of Dhamma, the practice of victory through Dhamma." To convey this idea, he uttered the verse mentioned earlier:</p>
+<p>> *"Akkodhena jine kodhaṃ, asādhuṃ sādhunā jine,*</p>
+<p>> *jine kadariyaṃ dānena, saccena alikavādinaṃ."*</p>
+<p>It is very simple:</p>
+<p>* "Akkodhena jine kodhaṃ" – One should conquer anger by non-anger.</p>
+<p>* "Asādhuṃ sādhunā jine" – One should conquer the bad, or the unvirtuous person, by goodness or virtue.</p>
+<p>* "Jine kadariyaṃ dānena" – One should conquer the stingy person through giving (*dāna*), by sharing what one owns.</p>
+<p>* "Saccena alikavādinaṃ" – One should conquer the liar with truth.</p>
+<p>It is mentioned that after listening to the sermon delivered along with that verse, even Sirimā, who was filled with remorse, despite having attempted such a grave wrong, attained stream-entry (*Sotāpanna*) along with her attendant women and the rest of the group.</p>
+<p>Indeed, after this event, in the Suttas we see Sirimā engaged in serving the Buddha and the Saṅgha. Thus, regardless of her profession, it is revealed that she achieved the state of stream-entry (*Sotāpanna*) and attained a great benefit in terms of the Dispensation (*Sāsana*). Looking at this story, one might think of it as a miraculous event almost impossible to believe in this day and age. In particular, we primarily see the virtue of Uttarā. How deep a faith must have existed within Uttarā and the financier Puṇṇa to propose such a scheme or to implement such a course of action! She made a great sacrifice of a kind that a wife would not normally make—bringing and handing over another woman to her own husband. It was like handing her over in her own home, while she herself stayed in the kitchen, dedicating her time to serving the Buddha and the Saṅgha. Looking at it from this perspective, we can imagine how deep a faith they must have had in the Triple Gem. Moreover, we must especially contemplate the mind of loving-kindness (*mettā*) mentioned here in relation to this incident. How deep a loving-kindness must have been present there! It is loving-kindness capable of showing such miracles that is called the liberation of mind through loving-kindness (*mettā-cetovimutti*).</p>
+<p>You have heard the word "liberation" (*vimutti*) in various ways. Liberation means freedom, the idea of release. "Liberation of mind" (*cetovimutti*) means the freeing of the mind, the liberation of the mind. From what does it get released? When we think of loving-kindness, to achieve the liberation of mind through loving-kindness, one must remove the barriers and fences of anger. Otherwise, the ordinary world lives within the fences of anger. When that is removed, next there is the fence regarding those who are dear to us. When that too is removed, then there is the fence regarding neutral people. When that too is removed, next there is the fence regarding hostile people. It is in the midst of many such fences that an ordinary person spends life, trapped within them. There is no liberation there. Therefore, the purpose of this meditation, of the meditation on loving-kindness, the state of liberation of mind through loving-kindness, is to remove those barriers and fences, and to radiate the thought of well-being even towards an enemy, just as a mother would protect her only child, as shown in the *Karaṇīyametta Sutta*.</p>
+<p>We see that Uttarā practically implemented this, because its benefits were received right there. In the *Mettānisasa Sutta*, the Buddha points out eleven benefits of loving-kindness. One of them is:</p>
+<p>*"Nāssa aggi vā visaṃ vā satthaṃ vā kamati"* — fire, poison, or weapons do not harm the body of one who has practiced the liberation of mind through loving-kindness. That was proven by this story, by this incident. Regarding that liberation of mind through loving-kindness, in the places where it is mentioned, the way it should be developed is described. A series of terms is shown there to describe the effort to bring the mind of loving-kindness to that state:</p>
+<p>*"Mettāya, bhikkhave, cetovimuttiyā āsevitāya, bhāvitāya, bahulīkatāya, yānīkatāya, vatthukatāya, anuṭṭhitāya, paricitāya, susamāraddhāya."*</p>
+<p>This means that the mind of loving-kindness is not cultivated in a casual manner; it is frequently associated with—one constantly radiates the thought of loving-kindness, "may all be well." Likewise, it is developed (*bhāvitāya*). Next, it is practiced abundantly (*bahulīkatāya*). *"Yānīkatāya"* means making it into a vehicle. Some people travel, as it were, on the vehicle of loving-kindness; they remain in a state of loving-kindness to that extent.</p>
+<p>*"Vatthukatāya"* refers to *vatthu*, which means the plot of land needed when building a house. That plot can be taken as the foundation; one makes that mind of loving-kindness the foundation for everything. *"Anuṭṭhitāya"* means being established in it, as if leaning on it, carrying out all one's activities in accordance with loving-kindness. *"Paricitāya"* means practiced, habituated. And *"susamāraddhāya"* means well-undertaken. The Buddha has stated that it is only when the mind of loving-kindness is well-cultivated in this manner that one should expect such benefits.</p>
+<p>Thus, the benefits of loving-kindness are shown. We all know that in the *Karaṇīya Sutta*, which is regularly chanted, what can easily be recalled by anyone as a meditation subject (*kammaṭṭhāna*) is the thought: "May all beings be happy!" It is mentioned in the *Karaṇīya Sutta* as *"Sabbe sattā bhavantu sukhitattā"* — "May all beings be happy at heart." How deep that concept of "all" is, is clarified by a few words and phrases preceding it in the *Karaṇīya Sutta*. The way the Buddha has presented it in the *Karaṇīya Sutta* is truly wondrous. In these times, when we cultivate loving-kindness, when we try to think of "all," we sometimes mix in the names of various nations and individuals. Through that, without our even knowing, thoughts of hatred can arise. Instead of that, the Buddha presents them all as a whole, without exception (*niravasesa*), that is, leaving none out, approaching from different aspects and saying "all beings." If we take this as an illustration: *"Ye keci pāṇabhūtatthi, tasā vā thāvarā vā anavasesā..."* — that first part. Whatever living beings there are: *"tasā"* means those who tremble (the frail/fearful), *"thāvarā"* means the firm, stable, which can be taken as those who do not tremble (the strong). Thus, those who tremble and those who do not tremble—all are gathered together. If we are to divide these groups as a whole, they can be taken under these two categories, according to their respective measures: either trembling, or stable to their respective degrees. *"Anavasesā"* means without exception.</p>
+<p>If we take an example: a frog in the mouth of a cobra. That frog is trembling in fear. The cobra is stable, firm; it does not let go. In such situations, according to what the Buddha says, we should not radiate loving-kindness only to the frog. It is not right to kill the cobra in order to save the frog. We must extend a mind of loving-kindness to that animal as well. From this, we can understand what we should do in such situations when various people ask various argumentative questions. When the pure mind of loving-kindness is lost, other thoughts (*vitakka*) arise. What is said here is that if one can save the animal in a wise way without harming it, that is a different matter. But that is the situation; we must understand. It is not appropriate to harm the cobra for that sake. *"Dīghā vā ye mahantā vā, majjhimā rassakāṇukathūlā..."* The first classification of the whole was based on the distinction of trembling and not trembling.</p>
+<p>Next is shown the size, the physical size: *"Dīghā vā ye mahantā vā"* — long ones, like snakes; great ones, like elephants; *"majjhimā,"* of medium size; short-bodied ones; and then *"aṇuka-thūlā"* (very minute or gross). Here, *"aṇu"* refers to those so small that they are barely visible or invisible to the naked eye, like things seen under a microscope; and *"thūla"* refers to large animals. Combining all of them according to height, weight, largeness, and smallness, this too is presented as a whole. For every animal. What is the next classification of the whole? *"Diṭṭhā vā ye vā addiṭṭhā"* — those seen and those unseen. Some people can cultivate loving-kindness only towards those they have seen; they cannot do so for those unseen. Here it speaks of combining both groups—all those seen and unseen. *"Ye ca dūre vasanti avidūre"* — those living far and those living near. Or rather, those living far and those living near. *"Avidūre."* *"Bhūtā vā sambhavesī vā"* — next, those who have come to birth and those seeking birth. Now, we might not harm a chicken, but we do not think or reflect much on harm regarding a chicken egg. In that way. From whatever angle we look at it, this is also shown deeply as those beings who are preparing to enter existence (*bhava*). A child in a mother's womb can also be understood in this manner. In any case, it is said that we must not harm anyone who is in existence or seeking existence. That is also said here: *"Sabbe sattā bhavantu sukhitattā"* — indeed, all these beings mentioned. From this, we can see that the Buddha did not exclude any living being.</p>
+<p>Having presented it as an immeasurable whole in this manner, it next says: *"Na paro paraṃ nikubbetha, nātimaññetha katthaci naṃ kañci."* There too is something important. We cultivate loving-kindness. Next is the other side. What is it? *"Na paro paraṃ nikubbetha"* — let no one deceive another. *"Nikubbetha"* means let no one revile, or let there be no cheating or fraud towards another. *"Nātimaññetha katthaci naṃ kañci"* — let no one despise anyone anywhere. Next: *"Byārosanā paṭighasaññā, nāññamaññassa dukkhamiccheyya"* — out of anger or resentful perception, let no one wish suffering (*dukkha*) upon another. There are times when we do not want to do anything to our enemy, perhaps because we would be punished, or because we would get caught by the law. But if someone else harms them in some indirect way, we rejoice, saying "Sādhu, Sādhu!" We appreciate it. There is such a tendency. Here, there is no room even for that: let no one else do it to another! There is a wonderful, deep meaning here. It is a loving-kindness so pure that not only does one not do harm oneself, but one wishes that no one else does it on one's behalf either.</p>
+<p>Here, Uttarā used the very hostility committed against her to bring out a virtue. There is a great Dhamma-principle (*dhammatā*) in this. This might be a question for you: why did Uttarā take that as a great virtue? It was part of Sirimā's profession. Yet, Uttarā took it as a virtue at that moment in order to prevent a mind of hatred. You know the saying in our country: "One can cover a mountain with a hair." That is what often happens—a single hair of fault can cover a mountain of virtue. This is the opposite of that: with a single hair of virtue, she covered that entire mountain of fault. This is what is called radical attention / wise attention (*yoniso manasikāra*). This is what the Buddha has allowed. Rationalizers may not understand this. This is what is called Right Intention (*sammā-saṅkappa*). Right Intention means that if defilements arise in any way, the Buddha has taught us to think in whatever way that puts an end to those defilements. That is what intention means. Rationalizers might say, "What a foolish idea of Uttarā's is this? Is this even worth mentioning?" However, depending on the situation, she thought in that way to prevent the mind of hatred. "The universe is not spacious enough, and the Brahma-world is not high enough, for this virtue—such a vast mass of virtue she has done for me." It was through the very power of that mind of loving-kindness that she then turned it into an assertion of truth. After removing the hatred in her mind in that manner, she thought, "If there is indeed anger within me, let me be burned by this oil. If not, let me not be burned!" There we see the liberation of mind through loving-kindness in its true form.</p>
+<p>A method of removing hatred, taught by the Chief Disciple Ven. Sāriputta—who possessed a wonderful quality of loving-kindness, compassion, and humility—can be cited as evidence for this. The simile given for it is *"gopade udakaṃ"* — water in a cow's footprint. The simile is as follows: suppose a person is traveling through a vast desert without a drop of water. At that moment, there is no water anywhere. Suddenly, he sees a tiny bit of water in a place where a cow has stepped. He cannot draw it with a bucket. So what does he do? He falls on all fours, laps it up with his tongue, and drinks that little water as if it were a major task, because he cannot do without drinking it due to his intense thirst at that moment. In the same way, when that angry mind arises, to remove it by any means possible, one must bring out even a small virtue. That is exactly what Uttarā did here. She covered the mountain with a hair. The difference here is that she covered the mountain of fault with a hair of virtue. That, too, is something done through wise attention (*yoniso manasikāra*), with wisdom. That is the result of it.</p>
+<p>One can gain a vast and deep understanding of this loving-kindness. In addition to this, we can also bring in a Sutta preached by the Buddha called the *Āghātapaṭivinaya* (Removal of Resentment). "Āghāta" is what we call resentment or anger. There are several words for it, and there are various levels of this anger, as we all know. There is a state of slight irritation, then a higher state of intolerance, then getting angry, then wrath, then malice when it matures further, then deep-seated malice, and finally, resentment (*āghāta*). Going along that path is how, in Saṃsāra, it goes on from birth to birth, as in the stories of Serivāṇija and Kacchapuṭa, and the story of Devadatta. Thus it grows. The Buddha shows five methods of removing such deep-seated resentment in the mind in the *Āghātapaṭivinaya Sutta*. There too, a great depth is shown. There, the Buddha does not show loving-kindness alone. He points out five factors for removing deep-seated malice or resentment within a person. What are they? If there is resentment or deep-seated malice towards someone, one should develop loving-kindness towards that person. We all know that. That is the first factor.</p>
+<p>When it cannot be done through loving-kindness, compassion (*karuṇā*) should be developed. We can understand that too in such situations. Sometimes we might think, "Oh, this person is doing this out of ignorance, out of not knowing, due to some lack of understanding of the Dhamma, or some deficiency in Saṃsāra." One must at least be able to compose one's mind in that way. That is what compassion is. If they do not respond to loving-kindness, we try to apply compassion to conquer that hatred: "Alas, this person is helpless without the support of this Dhamma." Next, if even that fails, we apply the mind to equanimity (*upekkhā*). Equanimity means neutrality. One makes the mind neutral towards it, as if it is something that does not concern one. If it still keeps arising, what does one do next? The Buddha has shown that too: *"Asati amanasikāro"* — which means non-mindfulness and non-attention. Now, mindfulness (*sati*) and attention (*manasikāra*) mean being mindful and reflecting. In most instances in the Dhamma, mindfulness and attention are shown as good qualities. But here, the Buddha shows non-mindfulness and non-attention. That too is with reason and logic; that is, depending on the situation. Non-mindfulness means removing from the mind that enemy who constantly assails one's head. One does not direct mindfulness towards them; one directs the mind to something else.</p>
+<p>Similarly, instead of reflecting on them, one reflects on something else related to loving-kindness or the Dhamma, and removes the mind from there. Just as we look away when a strong light comes that is blinding or disturbing to the eye, saying at that moment "I don't want this," one distances the mind from that thought. Thus, in these ways, one brings forward loving-kindness, or brings forward compassion, or brings forward equanimity, or brings forward non-attention as the fourth. A fifth factor is also shown. If all of these do not work, next one reflects on the principle of the ownership of kamma (*kammassakatā*). The Buddha has preached that everyone has their own kamma as their own property, as their inheritance, as their kinsman. What they do belongs to them; what I do belongs to me. This is something our old Buddhist parents used to say constantly. In such situations, to comfort the mind, one applies the thought of kamma—one's fate. It may even be a habit of their speech. Be that as it may, the kamma they perform is theirs.</p>
+<p>I do not need to condone or rejoice in it. Now, for those of you who read newspapers and such, this is something that can be very helpful to protect your mind. Let them do as they do. I do not need to condone the kamma they perform; those are indeed unwholesome. How many days do we generate unwholesome states regarding various things like killings, by condoning what others do? In such situations, by means of the Dhamma, one remains neutral, seeing it as something that happens. One uses wisdom as an aid. The Buddha has shown such methods because this is such a serious unwholesome state. We all know that greed, hatred, and delusion are defilements in our long Saṃsāra. They come in various levels. Some cannot be easily scraped off and finished. We must direct our minds to a multitude of such instructions, dealing with the coarse aspect in a coarse way, and then the subtle aspect in whatever way possible, because the beneficial side of these has been shown to us through this story. We too should think, "If Uttarā cultivated a mind of loving-kindness in the midst of such financier wealth, why can't we?" In that way, we must value the quality of loving-kindness as well as faith in the Triple Gem, just like Uttarā. Also, when the maidservants were beating her, she could have just looked away, since she herself was not striking. But instead of letting the maidservants beat Sirimā as much as they wanted, what this woman did, as mentioned there, was that when it became too much, she sat on her, stopped the maidservants, applied oil, washed her, and comforted her. That is the pure mind of loving-kindness.</p>
+<p>What was the result of that? In the end, Sirimā too became a noble disciple. The mental transformation, the revolution that took place within her was so great that she too eventually became a noble disciple. So that is what we said at the beginning—in the ordinary world, we look to win our battle of life through unrighteousness. But what are the four principles stated by the Buddha, the four principles of victory through Dhamma?</p>
+<p>* "Akkodhena jine kodhaṃ" — one conquers the angry person by non-anger.</p>
+<p>* "Asādhuṃ sādhunā jine" — one conquers the bad person, the unvirtuous person, through virtue and goodness.</p>
+<p>* "Jine kadariyaṃ dānena" — one conquers the stingy person through giving (*dāna*).</p>
+<p>* "Saccena alikavādinaṃ" — one conquers the liar through truthful speech.</p>
+<p>But it is the opposite of this that is found in society. We all know what the ordinary practice in society is: anger must be conquered by anger itself. Next, the person who does bad must be conquered by that very bad, in that same way. The stingy must be conquered by stinginess itself. Next, the liar must be conquered by telling an even bigger lie. What the Buddha stated in gentle words is often much harsher in practice in today's society, because society has become gross to that extent due to the decline of virtues. Generally, what was called anger exists in society as hatred, malice, and so on. Similarly, the words corruption and malpractice, which we often hear of in society, can be closely associated with this "bad." Corruption and malpractices. Thus, there is a policy of destroying poison with poison. Just like destroying poison with poison, people think that an angry person must be destroyed by anger itself. Regarding this corruption, the ordinary society thinks: "We must build the trellis in the direction the vine grows. We cannot correct this in society. This is what is found everywhere, so we must also go along with it." If there is fraud, corruption, and malpractice somewhere, they learn that method, do it even better, accumulate a substantial amount for themselves, and go to hell.</p>
+<p>Such is the concept that exists in society. And the same applies to stinginess. When we see someone being stingy, we think, "Why should we alone give? If they do not give, why should we?" There is a good folk tale about this. If we can learn a lesson from anything, we should not discard it. It must be a story from recent times: the story of how the seven mendicants (*Āṇḍis*) drank porridge at the resting-hall (*ambalama*). Some of you may have heard it. The story goes like this: in the past, as you know, there were resting-halls by the roadsides where people traveling on foot came to spend the night. In this way, seven mendicants came to a resting-hall in the evening. Each of them had a tiny amount of rice, like a handful. But when they gathered and asked, "What shall we eat tonight?", they said, "Let's drink porridge." Now, everyone knows how porridge is put on the hearth. But here, instead of that, a pot of water was placed on the hearth. As it was heating up, each was supposed to put in a handful of rice. Saying "Here is my handful, here is my handful," all seven mendicants pretended to put in their handful of rice and sat waiting to drink the porridge in the end. What did they drink? Hot water! You can imagine how it happened. To deceive the other, each became stingy in response to the other's stinginess. So in the end, there is the result. Even though it is a small story, there is a big lesson to learn from how the seven mendicants drank porridge. If we too become stingy like a stingy person, we will experience a similar result. Not only in this world, but in the next world too. In this Dhamma, it is shown that stinginess is a cause that leads to even the limbs becoming crippled. That is a psychological result.</p>
+<p>It is the same regarding truth. Untruth and falsehood are of various kinds. That too exists in society in an even more severe manner. Rather than the word falsehood, today fraud is more commonly used. It exists in society in an even more acute form than the other. One feels that one must be a more clever fraudster than the other. In this day and age, it has become something that grows along with education as a form of unskilfulness in everyone, big and small, high and low. But the Buddha states the opposite of that: one conquers falsehood with truth. Why? Because in many instances in the Dhamma, the value of truth is declared—there is a wonderful power in truth. Now, it is clear from Uttarā’s story above. One can show miracles through truth. There is a power in the assertion of truth (*saccakiriyā*). Today, a person who does nothing truthful cannot win by an assertion of truth. But the Buddha has shown the victory and value of truth in various ways in Sutta discourses and so on: *"Saccaṃ ve amatā vācā, esa dhammo sanantano"* — "Truth indeed is the deathless speech; this is an ancient law." Similarly, when contemplating life, it is mentioned in the Dhamma that the perfection of truth (*sacca-pāramitā*) was kept to the highest degree. During the Bodhisatta period, sometimes even things like transgression may have occurred within that stock of merit for awakening (*bodhi-sambhāra*), but it is mentioned that he consistently adhered to truthful speech. It was through the very power of that truth that when the Buddha approached the group of five monks, who were initially refusing to show him respect, and said, "Monks, give ear to the Dhamma, I have attained [awakening]," the group of five monks accepted those words. Earlier, they had thought, "If he could not attain Buddhahood even after practicing such severe austerities, how can we believe that he has attained Buddhahood just because he says so now?" When he first spoke, the Buddha did not jump into the sky to show miracles. Sitting right there, he asked only this much: "Monks, have I ever spoken to you in this manner before?" Then, through the power of the Buddha's perfection of truth, the doubt that was within the group of five monks was dispelled. From this, we see the meaning of what the Buddha said: *"Saccaṃ ve amatā vācā"* — truth is indeed the deathless speech.</p>
+<p>In the same way, the manner in which the perfection of truth was fulfilled is mentioned in those stories. Nibbāna is a state to be realized through wisdom. Wisdom means the destruction of delusion, the destruction of ignorance. Therefore, one cannot destroy delusion by deceiving oneself. That is to say, it is a self-deception, a fraud. For that reason, the value of truthful speech is shown there. The Buddha has presented something like a challenge to the world here. The world goes on in that way, "destroying poison with poison," "building the trellis in the direction the vine grows," in whatever way possible, even if it leads to ruin in both worlds, just to temporarily gather some position, power, wealth, and grain in this world. The inner life is severely degraded. In these times, too, what many people focus their minds on are terms we hear like social reform, social cleansing, rehabilitation, and uplifting society. Firstly, these four principles help to purify one's inner life, one's own mind. And the same applies to society. In shaping society, too, those very virtues...</p>
+<p>Even if we think about anger, some who are very harsh and untameable have been disciplined by others in a wondrous way through gentleness and softness. The Buddha’s taming of Nālāgiri, the taming of Aṅgulimāla, and so on are sufficient examples of this. Even if we cannot do it at that level, by adopting those gentle and soft policies, one sets an example for the other person. Now, in that situation, due to Uttarā’s action, Sirimā was prompted to think beyond her usual limits. That is what we often have to do: we must allow them to think. By allowing them to think, that person develops a deeper appreciation of the value of those virtues. Instead of that, the easiest method for us is to destroy poison with poison. Instead of that, we must try to gradually bring these Dhamma points preached by the Buddha closer to our lives. Because we often engage in activities like listening to sermons and meditation, but various defilements (*kilesa*) remain in our minds like these weeds.</p>
+<p>The medicine needed for them is what the Buddha has shown in these various discourses. Moreover, through the characters of the male and female disciples of the Buddha's time, we can obtain good examples for these. Today, they are regarded as miracles, but in truth, they are nothing unusual for a person who conducts themselves properly in the Dhamma. That is a part of the peace found there. Through that person's mental strength, a large number of people receive relief, an example, and a great light for their lives. In that way, to the best of our ability, we must be eager to shape our lives through this path of example.</p>
+<p>Especially when reflecting on oneself, regarding that meditation on loving-kindness, in daily life many people say, along with the word meditation itself, that they have no time to do these things. The Buddha has shown in the *Karaṇīya Sutta*: *"Tiṭṭhaṃ caraṃ nisinno vā, sayāno vā yāvat'assa vigatamiddho..."* Although meditation is initially started sitting in a cross-legged posture, when the mind gradually gets a good hold of it, it can be done in all four postures. Now, even Uttarā turned her mind to the mind of loving-kindness in that sudden emergency because she had practiced it well. If one has not practiced it, one cannot make use of it. No matter what daily activities there are, if one has understood its value, if the desire (*chanda*) and eagerness for it have arisen, whether lay or ordained, that person, as expressed by the Buddha—in the manner of *āsevitāya, bhāvitāya, bahulīkatāya*—gradually not only associates with it and develops it, but practices it abundantly. They make it a vehicle. They make it a foundation, a plot of land. They remain established in it. They practice it. They do it having well-undertaken it. In that way, one must make an effort to cultivate that mind of loving-kindness. And the same applies to anger. Regarding other things too, and regarding goodness and virtue, one must contemplate every day. There are various cultivations in the world. Even in these times, we hear about cultivation campaigns and cultivation battles. But in truth, whatever cultivations there are, we have clear evidence that they can be destroyed overnight where there is no cultivation of virtue. Houses with vast wealth are finished in a single moment by bringing a matchstick close with a mind of hatred. Let us consider paddy fields, and various other estates—it takes a very small thing to bring a tiny matchstick close to them. But what aided that was indeed that angry mind, hatred, revenge, jealousy, and other defilements. From this, we see that the cultivation of virtue is more important than all other cultivations. Where there is no cultivation of virtue, every other cultivation is barren. It is not by drought that they become barren, nor by floods, but by the lack of the cultivation of virtue.</p>
+<p>Next is virtuous conduct (*sādhu-caryā*). What the Buddha uses there are the words "asādhu" (bad) and "sādhu" (good). It is a very neutral word. The word "Sādhu" is familiar even to our ears; it is very dear to us. Virtuous conduct means the very best behavior. What is known in the ordinary world today is goodness and virtue, not vice. Therefore, the cultivation of virtue. One must accumulate it. Just like collecting bit by bit in a savings pot, each one must think of collecting into one's own mind-stream those virtues grouped and shown by the Buddha, as presented in the *Karaṇīya Sutta* and elsewhere. It is by accumulating these that an exemplary person is born into the world one day. The Buddha himself accumulated in this manner for aeons (*kalpa*) and thereby gained the power, as a Buddha, to preach this Dhamma to the world and show us this path to Nibbāna. It is the same for everyone. If there is anything to accumulate in Saṃsāra, it is this—these virtues. Then, through those virtues, through their maturing, one is able to attain liberation (*vimutti*).</p>
+<p>It is very easily said that "we must destroy this hatred and delusion." But to do that, one has to uproot those weeds mentioned earlier. Those small things must be removed. Along with that, the cultivation of virtue. If we do not cultivate a certain place, it becomes fallow. Some intellectuals argue that since there is an argument for just letting the cultivation go and remaining idle, "there is no need to cultivate what is called loving-kindness. When anger arises, we will just show loving-kindness to them. There is no need to sit for hours and practice it as meditation." But even such people sometimes spend months exerting themselves for running races and so on to win them. From this, it is clear that unless there is some practice, training, habituation, and training in various ways as mentioned, we do not have the strength to do it when the opportunity arises. That is why the Buddha shows this as an application, to be done as a yogi. The meaning of the word "yoga" is application. Therefore, it is by applying oneself in that manner and developing these virtues that one can retain a value for one's life. That is the cultivation of virtue. Therefore, if anyone wants to hold a certain purpose high in their life, they must make that purpose the cultivation of virtue. The ultimate peak of that cultivation of virtue is, in the end, the supramundane (*lokuttara*) cultivation of virtue. Starting from the mundane (*lokiya*) cultivation of virtue, and finally the supramundane cultivation of virtue. Thus, at the end of that mundaneness, along with virtue, wisdom (*paññā*) matures. Along with virtue, those summarized as virtue, concentration, and wisdom (*sīla, samādhi, paññā*) mature through those practices.</p>
+<p>Now, many of you merit-seekers have observed the eight precepts on this Uposatha day. Some others have observed the ten precepts. Some have observed the precepts of right livelihood as the eighth (*ājīva-aṭṭhamaka-sīla*) at this moment. What is done by all of these? Just like uprooting weeds in the manner mentioned, one basically takes some steps regarding those defilements (*kilesa*) that can arise in one's mind-stream. Because one disciplines bodily and verbal actions. Now, a thought may arise. Along with the arising of the thought, if bodily and verbal actions are carried out, we fall into a terrible abyss without even knowing it. Therefore, the very first level is virtue (*sīla*).</p>
+<p>What is done through virtue (*sīla*) is disciplining bodily and verbal actions. Thoughts do arise, but through the determination one has made: *"Pāṇātipātā veramaṇī sikkhāpadaṃ samādiyāmi"* — by oneself, not because anyone else said so, but declaring "I stand within this practice." This means abstaining. The determination to keep the training rule of abstaining from taking life, from killing other living beings. To project that into the light of wisdom and try to conduct one's life within it—this is what is called virtue (*sīla*). The Buddha has shown the vast amount of merit and wholesome kamma that arises when someone keeps five, eight, or ten training rules in that manner for a day. Where the Buddha speaks about the eight precepts, he describes the eightfold precept (*aṭṭhaṅga-sīla*) as *"mahajjutiko mahāvipphāro"* — of great luster, of great resonance, such is the merit of keeping the eight precepts on the Uposatha day. At the very least, even the five precepts—that too is something of wonderful power. Though we consider the five precepts as something small, if kept purely, how great a power is it! Yet, people are not inclined to keep even that. They do not know their value either. Thus, what is done through virtue is disciplining bodily and verbal actions. Next, those virtues and vices arise in the mind.</p>
+<p>According to the statement *"Manopubbaṅgamā dhammā,"* which we all know, the mind is the forerunner of all these. So, stopping what arises in this mind is not an easy task. It must be done through meditation. Having stilled the mind that scatters in that manner, one then maintains it on a wholesome object. Indeed, that is why a wholesome object is provided. The mind grasps some object. The very nature of the mind is to go on grasping objects. It goes on grasping and grasping. So, instead of a bad object, a good object is given for it to grasp. That is what is done here. To protect that good object, one must act by contemplating wisely through wise attention / radical attention (*yoniso manasikāra*). Sometimes, even what the ordinary world considers unnecessary through logic is needed. For what? We know there are medicines for some illnesses that surprise us when we are told about them. We even wonder if that is a medicine. But the work gets done. If one gets cured even by a water injection, then that is a medicine. Likewise, there are certain things that arise in the very mind in a very subtle manner, which one can discover for oneself. That is the kind of method Uttarā used here too, by bringing out a small virtue of that woman—bringing out something the ordinary world would consider small—and through that, erasing her own hatred. In that way, we must contemplate: if our purpose is the cultivation of virtue, and the uprooting and expelling of vice, we must try to shape our lives in a manner corresponding to that.</p>
+<p>The next question is the one regarding values. Our values need not be the values of society. Generally, in these times, there are various feelings such as "these are the contemporary values," or "one cannot live like that in this day and age." But here, there is no time limit for kamma. There is no time limit regarding wholesome and unwholesome kamma. Whether performed in the Buddha's time or in this day and age, the results of unwholesome, sinful kamma are identical. Therefore,</p>
+<p>regardless of those, what we must maintain is that very value we receive from the Dhamma and kamma. Especially since kamma affects our saṃsāric life. Everywhere, "unwholesome" (*akusala*) means being unskilled, in the manner of the Dhamma. Being unskilled in living in Saṃsāra is what is called unwholesome. One becomes unskilled in a bad place; otherwise, one meets with disaster right here as its consequence, as its result. "Wholesome" (*kusala*) means that very skillfulness. Those deeds that direct one to Nibbāna without going to miserable realms like hell in this Saṃsāra are what are called wholesome. Thus, when contemplating in this manner, our value must be on that wholesome side. "Kusala-chanda" means giving one's preference to the wholesome. We must give our preference to the wholesome when the question of choice arises. In that way, one must contemplate; regardless of social conventions, one must present a set of values to one's life in that manner. "My life is lived under these very values, no matter what anyone else says." When one's character grows through these, then others awaken. Sometimes, those who laughed, mocked, or called it foolishness, in the end, come to you with their problems. When a serious problem arises and there is no refuge, they come to the person who appears to the world as a spiritual friend (*kalyāṇa-mitta*). Becoming such a valuable person is not something done in a day or two. We see that from the Buddha's life itself. But we must think: we have not done these things in this life alone. We are not making a beginning in this life. We are here today as the result of a beginning made over a long period. When contemplating in that way, we are adding to what has already come, and we should not think of this as something we are doing anew. The difference is that those two—good and bad—are always a part of its very nature.</p>
+<p>That is what Māra is. He shows the bad to us as good. That is the nature of the world. The Buddha points out that, like water flowing downwards, the nature of minds is to be drawn towards the unwholesome. In the question of good and bad, the bad always presents itself and shows us a beneficial side, as it were. It shows it falsely. If one submits to it, then one is caught by Māra. So, at the very least, when we blame someone else, we should think, "Here is Māra. Either Māra has possessed them, or Māra has possessed me." Having a correct understanding of this, one must return to the Dhamma. One must develop a correct understanding of kamma. One must develop a correct understanding of the Dhamma. Even Buddhas, Paccekabuddhas, and Arahants are subject to kamma. The law of kamma that operates in this Saṃsāra is that powerful. No one can override it. Therefore, one must bow one's head to it. Bowing one's head means submitting to it as a world-principle; it is not something done by anyone else—if one does it, it is for oneself. According to the principle "as you sow, so shall you reap," one must correct one's behavior. If one corrects the mind, body, and speech, then if the results of past sinful kamma are ready to ripen, it helps to suppress those results, as is said regarding obstructive kamma (*upapīḷaka-kamma*) and so on. Similarly, it becomes supportive (*upatthambhaka*) to one's wholesome side. The wholesome deeds one performs help to further develop them. Such is it regarding kamma.</p>
+<p>And next is the Dhamma. When thinking of the Dhamma, the Nibbāna declared by the Buddha is like that light seen from afar on a great mountain—like the Sri Pada mountain. One must think of it in that way. Whatever other things we do in our lives, whether we do jobs or hold other positions, as Buddhists, the ultimate goal of our life is Nibbāna. Therefore, it is within that light of Nibbāna that we must carry out our other activities. If that light is turned to the other side, we cannot climb Sri Pada. Therefore, we must always bear that in mind. Whether it is realized today, tomorrow, or in another aeon, it is only if we make that idea of Nibbāna our goal that we can travel this journey correctly. That itself is what is called Right View (*sammā-diṭṭhi*), the correct vision. If there is no correct vision, the world is blind.</p>
+<p>That is why the Buddha declared:</p>
+<p>*"Andhabhūto ayaṃ loko, tanuk'ettha vipassati."*</p>
+<p>The entire world is blind; only a very few see, declares the Buddha. Similarly, the Buddha has declared: *"Sabbe puthujjanā ummattakā"* — as long as they are worldlings (*puthujjana*), they behave like madmen in the world. He has declared them to be insane. Sometimes, someone might feel resentful towards the Buddha for saying this. But to the Buddha's knowledge, the mind of a worldling is just like a mad mind, like an insane mind. In that way. Therefore, escaping from that insanity and moving towards wisdom, getting rid of those called greed, hatred, and delusion, and purifying the mind, making it perfectly clean—the path to this is called the path to Nibbāna, the Noble Eightfold Path. When one is aligned with Right View (*sammā-diṭṭhi*), having developed correct vision, and then correct thoughts, then using correct words in accordance with correct thoughts, performing correct deeds, correct actions, and then correcting one's daily routine in accordance with that, turning it into correct livelihood, and through that effort, bringing out correct effort, and through that very effort, bringing out that valuable quality called correct mindfulness, and by consolidating that very quality, developing correct concentration—it is in this way that the Noble Eightfold Path is completed. It is to a mind concentrated in this manner that the subtle point shown by the Buddha can be properly penetrated and seen through the Three Characteristics of Impermanence (*anicca*), suffering (*dukkha*), and Not-self (*anattā*). It is through this that one can realize the path and fruit of stream-entry, once-returning, non-returning, and Arahantship that we all aspire to, and realize the supreme deathless Nibbāna in this very way. That indeed is our aspiration.</p>
+<p>Indeed, let us aspire that this accumulation of merit we have gathered so far by listening to the Dhamma and observing the precepts may lead to the development of those spiritual faculties of faith, energy, mindfulness, concentration, and wisdom, which aid in realizing Nibbāna, and to the realization of the Path and Fruits! Moreover, if the guardian deities of the Dispensation, including the assembly of Devas and Brahmas, wish to rejoice in this accumulated stock of merit to fulfill their aspirations for the perfections (*pāramī*), may they rejoice in it and realize the supreme, deathless Nibbāna through whatever Bodhi state they have aspired to! May they also protect us and this Dispensation! Likewise, if any beings, from Avīci to Akaniṭṭha, including our departed relatives, wish to rejoice in this merit of preaching and hearing the Dhamma, may they all rejoice, be freed from all saṃsāric suffering (*dukkha*), and bring an end to this suffering of Saṃsāra through the peace of supreme, deathless Nibbāna! Wishing thus, repeat this verse.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_106.html" class="doc-btn">← Previous Sermon (106)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_108.html" class="doc-btn">Next Sermon (108) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

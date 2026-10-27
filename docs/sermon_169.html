@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 169 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_168.html" class="doc-btn">← Previous Sermon (168)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_170.html" class="doc-btn">Next Sermon (170) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 169</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_169_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_169_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_169_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #169</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.135)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Vanaṃ chindatha mā rukkhaṃ,</p>
+<p>vanato jāyate bhayaṃ,</p>
+<p>chetvā vanañca vanathañca,</p>
+<p>nibbānā hotha bhikkhavo.</p>
+<p>Yāva hi vanatho na chijjati,</p>
+<p>aṇumattopi narassa nārisu,</p>
+<p>paṭibaddhamano va tāva so,</p>
+<p>vaccho khīrapakova mātari.</p>
+<p>From:</p>
+<p>Dhammapada Verses 283 and 284 Magga Vagga (The Path)</p>
+<p>Dear Listeners,</p>
+<p>Leaving the household life and ordaining is generally identified as renunciation (*nekkhamma*). Even if one departs from the household life and ordains, if one remains bound by lay attachments, by home-centered attachments, and remains engaged in household thoughts and desires, there is no true renunciation. Today, we are taking up for discussion two verses and a story that illustrate the subtle nature of these home-centered attachments.</p>
+<p>These two verses were uttered by the Blessed One while he was residing in Sāvatthi, with reference to a group of monks who had ordained in their old age. In Sāvatthi, a group of wealthy householders lived in great harmony, engaging in various meritorious acts of giving and listening to the Dhamma. Having reached old age, they too thought, “There is no benefit in remaining in the lay life; we must ordain.” Having obtained permission from the Blessed One, they ordained. However, because they had ordained in their old age, they lacked the capacity to engage in the corresponding studies and meditation (*bhāvanā*). This group built several huts behind the Jetavana monastery and resided there. Moreover, when going on alms-round, they mostly frequented the houses of their former wives and children.</p>
+<p>Having gone there and collected almsfood, they would bring it to the house of the former wife of one of those monks—referred to in the texts as *purāṇa-dutiyikā* (former wife)—and sit down. The reason they did so was because that woman was highly skilled in cooking delicious food. She was known as *Madhurapācikā* (the sweet-cook). These monks would assemble at the house of this lay devotee, Madhurapācikā, and consume their meals there, because she provided the delicious flavor-enhancers they desired.</p>
+<p>While they were living in this manner, that laywoman suddenly passed away due to an illness. Thereupon, as an expression of their grief, these monks gathered in the hut of the monk who had been her former husband and began to weep and wail, clasping each other's necks, saying, “Our laywoman Madhurapācikā, who cooked such delicious food for us, is lost!” When other monks came from here and there and asked what the commotion was, they said, “This is what has happened to us. The laywoman who prepared and gave us such delicious food is gone. How can we find such a person again?” and they wailed. This story reached the Dhamma assembly.</p>
+<p>While the monks were talking about this incident, the Blessed One arrived and, as was his custom, asked, “What were you discussing, monks?” Upon their explanation, he declared, “Monks, not only now, but in the past too, when born in the womb of crows, this monk and his wife were a crow-pair, and when she was swept away by the sea while they were eating sacrificial offerings on the seashore, they exhausted themselves trying to empty the ocean with their beaks and fell into great distress.” On that occasion, the Blessed One related the Kāka Jātaka (Crow Birth Story).</p>
+<p>According to that story, it is as follows. In the past, when the Blessed One was a Bodhisatta, he was born as a sea deity. The people of that region, as a custom, would bring sacrifices of meat, food, and liquor as offerings to the sea deity and the Nāgas, and place them on the seashore.</p>
+<p>While a male and female crow were walking along the seashore, they ate the meat, drank the liquor, became intoxicated, and went to bathe in the sea. The female crow was caught by a wave, swept away, and became prey to a fish. The male crow began to cry out and express his grief.</p>
+<p>The rest of the flock of crows also gathered, lamenting, “Alas, our wonderful companion has been dragged away by this terrible ocean! Let us empty this ocean!” Together, they filled their beaks with water and carried it out, trying to dry up the ocean. In the end, when their throats and mouths were parched from the seawater and they were exhausted, the sea deity assumed a terrifying form and drove the crows away. Having related this story, the Blessed One declared: “The couple of the past is the very same couple today. That flock of crows is none other than these elderly monks. Therefore, monks, as long as one does not cut down the forest of lust, hatred, and delusion, one cannot escape from these...” In this sense, he uttered the two verses mentioned earlier.</p>
+<p>When these verses are uttered, their meaning is not immediately clear. It is evident that a deep meaning lies beneath them.</p>
+<p>*Vanaṁ chindatha mā rukkhaṁ,*</p>
+<p>*vanato jāyatī bhayaṁ*</p>
+<p>“Cut down the forest, not the tree.” Not just the tree, but cut down the entire forest. *“Vanato jāyati bhayaṁ”*—from the forest arises fear, dangers, and hazards.</p>
+<p>*Chetvā vanañca vanathañca,*</p>
+<p>*nibbanaṁ hotha bhikkhavo*</p>
+<p>“Monks, having cut down both the forest and the brushwood, be without forest—attain Nibbāna!” In the next verse, it says:</p>
+<p>*Yāvaṁ hi vanatho na chijjati, aṇumattopi narassa nārisu, paṭibaddhamanova tāva so, vaccho khīrapākova mātari'ti.*</p>
+<p>“As long as the underbrush of desire of a man for women is not cut down, even to the slightest degree, so long is his mind bound, just like a sucking calf is bound to its mother.” This is the meaning conveyed by those verses. When it was said “cut down the forest, not the tree,” it indicates that for many, ordaining means merely leaving the household, abandoning lay possessions, and putting on the robes. However, the Blessed One points out here that there is a vast forest of defilements. When speaking of defilements, you lay devotees have also heard that there is a class called underlying tendencies (*anusaya*). It is not only the gross defilements that appear prominent; deep beneath them lie subtle defilements rooted deeply from a long journey in Saṁsāra, where minds have succumbed to lust, hatred, and delusion. These are referred to in our Dhamma as latency / underlying tendencies (*anusaya*).</p>
+<p>Therefore, even if one ordains in that manner, various obstacles arise in one's path to Nibbāna. In particular, the obstacle of relatives (*ñāti-palibodha*) is one of them. The obstruction from relatives often becomes an obstacle to monks. Here too, it was because of their attachment to the delicious food of the former wife (*purāṇa-dutiyikā*) that they fell into such grief. On this very point, the Blessed One delivered a highly valuable discourse on one occasion at Kosambī, while residing on the banks of the river Ganges.</p>
+<p>The Blessed One saw a great log of wood being swept away by the current of the river. Addressing the monks, he asked: “Do you see, monks, that great log of wood being swept along by the river current?” “Yes, Venerable Sir.” Then the Blessed One declared: “Monks, if that log of wood does not drift to this bank, nor to the outer bank; if it does not sink in mid-stream; if it does not run aground on a sandbank; if it is not taken by human beings, nor by non-human beings; if it is not caught in a whirlpool; and if it does not rot from within—it will tilt, slope, and slide towards the ocean and one day reach the ocean.” This is presented as a riddle. “Similarly, monks, if you do not drift to this bank, nor to the outer bank; if you do not sink in mid-stream; if you do not run aground on a sandbank; if you are not taken by human beings, nor by non-human beings; if you are not caught in a whirlpool; and if you do not rot from within, you will arrive at Nibbāna, which is the final consummation of this monk's life. Why? Because right-view (*sammā-diṭṭhi*) tilts, slopes, and leads towards Nibbāna.”</p>
+<p>When this was declared, a certain monk asked the Blessed One: “Venerable Sir, what is 'this bank'? What is 'the outer bank'? What is 'sinking in mid-stream'? What is 'running aground'? What is 'being taken by human beings' and 'being taken by non-human beings'? What is 'being caught in a whirlpool'? What is 'rotting from within'?” Thereupon, the Blessed One compared the simile to its meaning, bringing out the Dhamma principles.</p>
+<p>“Monk, in this simile, by 'this bank' I mean the six internal bases (*ajjhattika-āyatana*). The six internal bases are the eye, ear, nose, tongue, body, and mind. To drift to 'this bank' means to take these six internal bases as self (*attā*) and to form an attachment to them. Then, 'the outer bank' means the six external bases (*bāhira-āyatana*)—namely, the objects contacted by the eye, etc.: forms, sounds, smells, tastes, tangibles, and thoughts (*rūpa, sadda, gandha, rasa, phoṭṭhabba, dhamma*). Those are 'the outer bank'. By 'sinking in mid-stream' is meant delight and lust (*nandīrāga*), the nature of being attached. Next, 'running aground' means the subtle conceit 'I am' (*asmi-māna*). The conceit 'I am' is the very subtle pride that exists within a person.</p>
+<p>The Blessed One explains 'being taken by human beings' in detail. A certain person, having ordained, lives in association with laypeople (*gihi-saṁsagga*). Association with laypeople means engaging in activities with them, rejoicing when they rejoice, grieving when they grieve, being happy in their happiness, and sad in their sorrow, without equanimity, as a result of that connection. Furthermore, if laypeople have various major or minor tasks, the monk remains occupied with them. Instead of Dhamma study and meditation (*bhāvanā*), he is engaged in the various affairs of laypeople—there is no need to describe these in detail to you, lay devotees—that monk is occupied with such things. This is what is called 'being taken by human beings' (*manussaggāha*). 'Being taken by non-human beings' is explained as a monk who protects the dispensational practices and observes virtue, thinking, 'By this virtue, by this vow, by this practice, I will be reborn in a certain heavenly world,' thus practicing the holy life with a heavenly realm as his goal. Not Nibbāna. Not putting an end to Saṁsāra. That is 'being taken by non-human beings' (*amanussaggāha*).</p>
+<p>Next, *āvaṭṭagāho*, 'the whirlpool', means the fivefold sensual pleasures (*pañca-kāma-sampatti*). Falling prey to sensual pleasures is like being caught in a whirlpool. Next, *antopūti*, 'rotting from within', means living a life of immorality, evil, and non-celibacy while pretending to be a monk, though not being one. Living a corrupted, defiled life. That is 'rotting from within'. If that happens, one cannot reach the final destination of Nibbāna, due to these mentioned obstacles.</p>
+<p>At the time of this sermon, a cowherd named Nanda was standing near the Blessed One. This sermon struck Nanda the cowherd so deeply that he said: “Venerable Sir, I shall not drift to this bank, nor to the outer bank. I shall not sink in mid-stream, nor run aground. I shall not be taken by human beings, nor by non-human beings. I shall not be caught in a whirlpool, nor rot from within. Venerable Sir, may the Blessed One grant me ordination and higher ordination in this Dispensation!” The Blessed One said: “In that case, Nanda, go and hand over the herd of cows to their owner.” Nanda was so eager for ordination that he said: “Venerable Sir, these cows will find their own way back out of affection for their calves.” But the Blessed One insisted: “No, Nanda, go and hand over the cattle to their owner and then return.” Obeying this, Nanda went and returned the cattle, came back, received ordination, and by striving with great diligence, soon attained the noble fruit of Arahatship.</p>
+<p>Here, many obstacles that exist after ordaining are mentioned, especially *manussaggāha* (being taken by human beings). To explain this further and make it more meaningful, the commentaries have elaborated on various points. In particular, if one ordains in old age, due to the connection to one's family, such a monk is called in the commentaries *samaṇa-kuṭumbika* (a monastic householder). *Kutumba* means family. *Kuṭumbika* means a family man. There is an old Sinhala word, *keḷembiyā*. Thus, he lives as a “monastic householder.” He did not completely break that bond. To illustrate this, the commentaries give a simile: there is a tree on the riverbank whose roots are on land, but its leaves hang over and touch the river. If one lives such a life, engaging in lay activities and doing what one did during lay life, it is equivalent to “being taken by human beings.”</p>
+<p>The Blessed One pointed out the subtle obstacles to the ordained life in this manner. Beyond the defilements that appear coarse, gross, and rough externally, there are subtler levels of defilements. It is in this Dispensation of the Buddha that these have been brought to light, and the way to overcome them has been shown. The Blessed One delivered various discourses on different occasions to the monks, giving instructions on how to overcome defilements at those respective levels. A highly valuable discussion on this is mentioned in the Dhamma.</p>
+<p>This is a Dhamma discussion between Ven. Piṇḍola Bhāradvāja and King Udeni. The discussion took place at the Ghositārāma in Kosambī. When Ven. Piṇḍola Bhāradvāja visited Ghositārāma, King Udeni—who was not yet a Buddhist at the time—came and asked Ven. Piṇḍola Bhāradvāja the following question. Lacking real faith, he addressed the Venerable One by his clan name, “Bhāradvāja.”</p>
+<p>“Bhāradvāja, how is it that young monks with black hair, in the prime of their youth, can live the holy life (*brahmacariya*) for their entire lives? What is the secret to this? What is the reason?” Then Ven. Piṇḍola Bhāradvāja declared: “Great King, our Blessed One has delivered this discourse: 'Come, monks, with regard to women who are of the age of your mother, arouse the perception of a mother, arouse the mind towards them as a mother. With regard to women of the age of your sister, arouse the perception of a sister. With regard to women of the age of your daughter, arouse the perception of a daughter.' Such a discourse has been delivered.”</p>
+<p>When this was said, the King replied: “Bhāradvāja, the mind is of a very fickle nature. Sometimes, lustful thoughts can arise even towards a mother, a sister, or a daughter. Is there any other instruction delivered by the Blessed One to help these monks complete the holy life?” Thereupon, Ven. Piṇḍola Bhāradvāja declared:</p>
+<p>“Yes, Great King, the Blessed One has also delivered this discourse: 'Monks, contemplate the body from the soles of the feet up to the hair on the head as foul (*asubha*).' Lay devotees, you know the discourse related to the meditation on foulness (*paṭikūlasaññā / asubha-bhāvanā*) where the thirty-two parts of the body are mentioned; that is presented here as being helpful.”</p>
+<p>At that, the King said: “Bhāradvāja, for one who has developed virtue, concentration, and wisdom (*sīla, samādhi, paññā*), that meditation might take root in the mind. But sometimes, when one tries to contemplate the foul, it might appear beautiful (*subha*). Such confusion can occur. Apart from this, is there any other discourse to help monks live the holy life?”</p>
+<p>Then, for the third time, Ven. Piṇḍola Bhāradvāja declared: “The Blessed One has also delivered this discourse: 'Come, monks, practice restraint. Be restrained regarding the eye. When seeing a form with the eye, do not grasp its sign (*nimitta*) or its details (*anuvyañjana*). Do not grasp signs and details. Live with the door of the eye-faculty guarded (*guttadvāra*). Close the doors as required for sensory restraint.'” He presented the complete discourse that constantly mentions sense-restraint (*indriya-saṁvara*).</p>
+<p>He also explained why one must close them: “In order to prevent the influx of taints (*āsava*) associated with greed and hatred, constantly guard those doors. Close those doors.” The discourse on sense-restraint was presented. Hearing this, King Udeni was highly pleased and said: “Bhāradvāja, this indeed is the true reason that helps monks maintain the holy life.” Thus, the King expressed his appreciation.</p>
+<p>Although this king was a sensualist enjoying royal pleasures, he added his own experience with his harem and made this statement regarding the nature of this Dhamma: “Bhāradvāja, on certain days, when I enter the harem without guarding my body, speech, and mind, without mindfulness and clear comprehension (*sati-sampajañña*), and without sensory restraint, my mind becomes highly overcome by greed. But when I enter the harem with body, speech, and mind guarded, possessed of sensory restraint and mindfulness and clear comprehension, such defilements do not flow into me.” Having validated the third point through his own experience, King Udeni praised it highly: “How wonderful, Bhāradvāja, that the Blessed One has delivered such a teaching!” and he went for refuge to the Triple Gem on that very spot. In such instances, the passage in the texts usually reads: “Excellent, Venerable Sir! The teaching of the Blessed One is superb. From this day forward, I go for refuge to the Buddha, the Dhamma, and the Saṅgha for as long as life lasts.” It was on that occasion that King Udeni went for refuge. Whichever way defilements are suppressed, King Udeni connected it to his own personal experience.</p>
+<p>Let us consider the latency / underlying tendencies (*anusaya*) we mentioned earlier. In this day and age, various views (*diṭṭhi*) have arisen regarding doctrines like the underlying tendency (*anusaya*), without much concern for the mind. There is a group that thinks, “As soon as we close the five senses, we can conquer these defilements.” It is true that the texts speak of six senses. But in some places, it is mentioned that the five external senses are on the periphery, while the mind-faculty (*manindriya*), the sixth, is in the center. There is a statement of the Blessed One: “Monks, the five external senses—the eye, ear, nose, tongue, and body—have their own distinct domains, their own unique pastures. The eye ranges over forms, the ear over sounds, the nose over smells, and so on.”</p>
+<p>“Having ranged in their respective pastures, whatever pasture they bring back, the mind-faculty (*manindriya*) in the center consumes it all.” What is brought by all five is deposited in the mind. That is where the deepest part lies. Therefore, what filters through this vast accumulation gathered over a long time in Saṁsāra are the taints (*āsava*). It is referred to by words such as *āsava* and *anusaya*. Underlying tendency (*anusaya*) means “lying dormant beneath.” Defilements have three stages: underlying tendency (*anusaya*), arousal (*pariyuṭṭhāna*), and transgression (*vītikkama*). *Anusaya* is the latent state of defilements, lying dormant as if asleep. *Pariyuṭṭhāna* is the stage of arousal. *Vītikkama* is the stage where they become strong enough to break a precept. The cause of this underlying tendency (*anusaya*) is a collection of saṁsāric habits we have formed through this accumulation. Overcoming them is not easy.</p>
+<p>The Blessed One delivered another sublime discourse on one occasion. While residing in the village of Kajangalā, there was a brahmin named Pārāsarī. His student was Uttara. One day, this student Uttara came to see the Blessed One, and after exchanging pleasantries, sat to one side. The Blessed One asked: “Uttara, is it true that your teacher, Pārāsarī, teaches a certain meditation?” “Yes, our teacher teaches a development of the faculties (*indriya-bhāvanā*).” “What is that meditation?” When asked, he replied: “Master Gotama, one does not see forms with the eye, and one does not hear sounds with the ear. This is the development of the faculties taught by our teacher Pārāsarī.”</p>
+<p>Then the Blessed One remarked: “If that is so, Uttara, then a blind person has developed his faculties, and a deaf person has practiced this restraint. For a blind person does not see, and a deaf person does not hear.” The Blessed One did not accept this. Closing the eyes, ears, and nose is not the development of faculties. When this was said, Uttara was silenced, looking down at the ground without a word. But the Blessed One, turning to Ven. Ānanda, said: “Ānanda, the development of faculties taught by Pārāsarī is one thing. But the supreme development of faculties (*anuttarā indriya-bhāvanā*) in this Dispensation is quite another.” Then Ven. Ānanda invited him: “Now is the time, Blessed One, to explain this matter.”</p>
+<p>Thereupon, the Blessed One, using similes, delivers an extraordinarily deep discourse on sensory restraint regarding the six senses. “Here, Ānanda, when a monk sees a form with the eye, there arises what is agreeable (*manāpa*), what is disagreeable (*amanāpa*), or what is both agreeable and disagreeable. Then he understands: 'Now, there has arisen in me what is agreeable, what is disagreeable, or what is both. And that is prepared (*saṅkhataṁ*), coarse (*oḷārikaṁ*), dependently arisen (*paṭicca-samuppannaṁ*).'” Here, deep terms are expressed: “This is prepared, this is coarse, this is dependently arisen, born of conditions, arisen due to contact (*phassa*). In contrast, he thinks: 'This is peaceful, this is sublime, namely, equanimity (*upekkha*).'” Thus, he quickly removes the agreeable, disagreeable, or both, and rapidly brings the mind to equanimity. This is not as easy as it sounds. But the Blessed One is explaining sensory restraint at the highest level. The similes he gives are truly wonderful.</p>
+<p>“Just as, Ānanda, a man with sight might blink his eyes—opening a closed eye or closing an open eye—with such speed, as fast as a blink, he removes the agreeable and disagreeable states regarding the form seen with the eye and brings the mind to equanimity.” Here, the Blessed One used the eye itself as a simile to illustrate restraint of the eye. This is sensory restraint of the eye. In truth, it is the mind that is restrained. Because defilements arise by looking again and again, one establishes sensory restraint. Deeper still, even if one turns the eyes away, if the agreeable and disagreeable attitudes continue, sensory restraint is not complete. There, one applies wisdom (*paññā*): “This is impermanent (*anicca*), dependently arisen, prepared by myself, and coarse. What is peaceful and sublime is equanimity.” He brings the mind to equanimity. Reflecting with wisdom, he removes the agreeable and disagreeable states born of contact through the eye and establishes the mind in equanimity.</p>
+<p>That was the simile for the eye. “Similarly, Ānanda, when hearing a sound with the ear, there arise agreeable thoughts, disagreeable thoughts, or both. At that moment, he reflects: 'Now, these have arisen in me. This is dependently arisen, born of conditions, arisen due to contact (*phassa*), and it is coarse and impermanent (*anicca*).' Then he thinks: 'This is peaceful, this is sublime,' and brings the mind to equanimity. Even after the sound has ceased, if that sound continues to echo and re-echo within the mind through agreeable and disagreeable thoughts, a long conceptual proliferation (*papañca*) goes on. Quieting it right there, he brings the mind to equanimity. The simile given for this: just as a strong man might snap his fingers with ease. A finger-snap is done in an instant and produces a brief sound. As soon as the snap is made, the sound is gone. Likewise, for restraint of the ear, the Blessed One gives the sound itself as a simile.</p>
+<p>Next, regarding the nose. When smelling an odor with the nose—be it pleasant or unpleasant—and agreeable, disagreeable, or mixed feelings arise, he reflects in the same way: 'This is dependently arisen due to contact (*phassa*), and it is coarse,' and brings the mind to equanimity. The simile for this: 'Just as, Ānanda, if a few drops of water were to fall on a lotus leaf, they would roll off as soon as the leaf is slightly tilted. *Udabindu yathāpi padumapatte.*' Just as dew drops do not remain on a slightly tilted lotus leaf, he removes the agreeable and disagreeable feelings regarding the smell. The lotus leaf simile is somewhat related to the nose and scent. The Blessed One gave this simile so that it is easy to remember.</p>
+<p>Next, regarding the tongue. When tasting a flavor, when agreeable, disagreeable, and other defiled thoughts flow continuously, he reflects in the same way: 'This is arisen due to contact (*phassa*).' Food is not tasty simply by being on the table, nor when brought forward, nor when held in the hand. It is tasty only when it touches the tongue—just for that brief moment. It is due to contact (*phassa*) that flavor arises. But we attribute it to the dish. That is why saliva flows just by looking at the dish. This is the way of the ordinary world. But when practicing mindfulness and clear comprehension (*sati-sampajañña*) and wise attention (*yoniso manasikāra*), one realizes: 'That flavor is neither in the dish, nor in the tongue. It exists only when the two collide.' That is why it is dependently arisen (*paṭicca-samuppanna*) and prepared (*saṅkhata*). It is a coarse, rough thing. So at that moment, without letting it go further, he brings the mind to equanimity. The simile here is also related to the tongue: 'Just as a strong man might collect a spit of saliva on the tip of his tongue and spit it out without much effort.' Likewise, discarding the craving (*taṇhā*) for flavor, and the agreeable and disagreeable feelings as quickly as possible, is what is called the noble, highest level of sensory restraint (*ariyo bhāvitindriyo*).</p>
+<p>Next, regarding the body. When a tactile sensation is felt by the body, and agreeable, disagreeable, or mixed thoughts arise, he reflects: 'It is because the mind went to this contact (*phassa*) that this division into agreeable and disagreeable arose based on pleasure and pain. This is an attitude.' Reflecting with wisdom that equanimity is peaceful while the other is coarse, he brings the mind to equanimity through wisdom. The simile for this: 'Just as a strong man might stretch out his bent arm, or bend his stretched arm.'</p>
+<p>You have heard this simile often. How quickly a strong man can bend or extend his arm—just like that. With such speed, he removes the agreeable and disagreeable thoughts arisen through contact with the body and brings the mind to equanimity. Next comes the mind (*manas*)—the aspect of the mind-faculty. This is indeed the deepest part. An object comes to the mind-faculty; it could be something external or something generated from within. When an object comes to the mind, and an agreeable or disagreeable state arises, he understands: 'This is a dependently arisen, coarse thing made by myself through contact (*phassa*),' and quickly brings the mind to equanimity. The simile for bringing the mind to equanimity is also very subtle: 'Just as a strong man drops a few drops of water onto an iron pan that has been heated all day. The drops of water fall slowly, but even before they hit, as soon as they touch the hot iron, they evaporate.' This is to show the rapid speed. Regarding the mind, when the object is removed with such speed, that is when true nobility is spoken of.</p>
+<p>This points to something highly valuable regarding meditation. When speaking of Vipassanā meditation, you lay devotees have often heard of attention (*manasikāra*). There are two sides to this attention: unwise attention (*ayoniso manasikāra*) and radical attention (*yoniso manasikāra*). Throughout Saṁsāra, we have practiced unwise attention (*ayoniso manasikāra*). Our thinking regarding objects coming through the senses goes further and further. The simile for this, which we often recall, is like a deer chasing a mirage. When the deer sees it, thinking it is water, it runs. It does not reflect with wisdom on how it arose. It does not consider the relationship or the gap between itself and what appears in the distance. Thinking of it as a real thing, it runs and runs without end. That is where unwise attention (*ayoniso manasikāra*) lies.</p>
+<p>*Yoni* means the place of origin, the source, the starting point. Without considering that, one takes the distant object firmly and runs after it. That is *ayoniso*. What the Blessed One brings to light is radical attention (*yoniso manasikāra*). Through radical attention (*yoniso manasikāra*), one understands where it arose. It is neither from this end, nor from that end, but when the two meet. That is what is called contact (*phassa*). Grasping that moment as self (*attā*). Instead of taking it as self, the idea here is to dissolve it at each point. The mind understands that phenomenon (*dhamma*). Instead of thinking about it further, he considers it as dependently arisen (*paṭicca-samuppanna*) and coarse (*oḷārika*), and brings the mind to equanimity right there.</p>
+<p>That is where the underlying tendency (*anusaya*) becomes active. If one succumbs to that underlying tendency (*anusaya*), there arises thought (*vitakka*), and then conceptual proliferation (*papañca*). That means, because of misapprehending the object that came to the mind via contact (*phassa*), one might sometimes succumb to a stream of thoughts like a daydream for minutes. One becomes so absorbed in them that one does not even realize what one is doing. This is conceptual proliferation (*papañca*). To prevent this, rapid attention (*manasikāra*) is necessary. The water drop on the hot iron pan is the simile for this rapid action. When water drops fall on a pan heated all day, you see them fall, but you don't even see the speed of their evaporation. The Blessed One shows that attention must be that rapid. From these points, we can understand that merely restricting sensory restraint or virtue (*sīla*) to the five physical senses is not in accordance with the Dhamma. There is something much deeper in the mind. The sixth sense, the mind-faculty, lies in the center of the five, and we have carried it with us for a long time in Saṁsāra. That is why there is a sleeping, dormant part of these defilements as underlying tendencies (*anusaya*).</p>
+<p>On another occasion, the Blessed One asked the monk Mālunkyaputta: “What are the fetters (*saṁyojana*)?” Just as any of us would answer, Ven. Mālunkyaputta replied: “Dogma of self-illusion (*sakkāya-diṭṭhi*), doubt (*vicikicchā*), adherence to rules and vows (*sīlabbata-parāmāsa*), sensual desire (*kāmacchanda*), and ill-will (*vyāpāda*).” Sometimes they are also listed as sensual lust (*kāmarāga*) and aversion (*paṭigha*). These fetters are the bonds that bind us to Saṁsāra. Ten fetters are mentioned as the ten fetters (*dasa saṁyojana*). The first five—*sakkāya-diṭṭhi, vicikicchā, sīlabbata-parāmāsa, kāmacchanda, vyāpāda*—are the lower fetters (*orambhāgiya-saṁyojana*) that pull us down to this side. Those that pull upwards, towards the Brahma worlds, are lust for form (*rūparāga*), lust for the formless (*arūparāga*), conceit (*māna*), restlessness (*uddhacca*), and ignorance (*avijjā*). It is said that all ten must be conquered to end the suffering (*dukkha*) of Saṁsāra and to prevent the state of rebirth (*jāti*). Here, we are speaking of the first five. But the Blessed One did not approve of the answer given, perhaps to clarify a certain misconception held by the monk Mālunkyaputta. The Blessed One declared: “Well, Mālunkyaputta, other sectarians might ask you this question: 'Where is the dogma of self-illusion (*sakkāya-diṭṭhi*) in a tiny infant lying on its back?'”</p>
+<p>You lay devotees have heard about the dogma of self-illusion (*sakkāya-diṭṭhi*). The Blessed One declared that an ordinary worldling has a twenty-fold view regarding the five aggregates (*pañcakkhandha*): form, feeling, perception, preparations, and consciousness (*rūpa, vedanā, saññā, saṅkhāra, viññāṇa*). Taking each of these as self: “This is mine, this I am, this is my self.” Either one takes form as self, or thinks there is a self within form, or that form is within self, or that self possesses form. In this way, four modes for each of the five aggregates make twenty views. This is called the dogma of self-illusion (*sakkāya-diṭṭhi*).</p>
+<p>So the Blessed One says: “Mālunkyaputta, other sectarians might say: 'How can a newborn infant have the dogma of self-illusion (*sakkāya-diṭṭhi*)?' *Sakkāya* means the feeling that 'there is a body'. Even that is not present in an infant lying on its back. How can the dogma of self-illusion (*sakkāya-diṭṭhi*) arise? But this is the reason: the underlying tendency of the dogma of self-illusion (*sakkāya-diṭṭhi-anusaya*) exists within that child. However small, the underlying tendency carried over a long time in Saṁsāra remains. It is not something arising solely from the external five senses. That is why we say this cannot be resolved by limiting it to the five senses. It is something embedded within mind-consciousness (*manoviññāṇa*) over a long journey in Saṁsāra. Thus, we speak of the underlying tendency of the dogma of self-illusion.”</p>
+<p>“Similarly with doubt (*vicikicchā*). An infant lying on its back does not even have the concept of 'things' or phenomena (*dhamma*). So where is doubt regarding the Dhamma? Someone might ask this. Where is doubt in a small child? But the Blessed One speaks of the underlying tendency of doubt (*vicikicchā-anusaya*). The underlying tendency of doubt exists even in that infant stage. That is what later turns into active doubt.”</p>
+<p>Doubt (*vicikicchā*) means indecision, skepticism. Adherence to rules and vows (*sīlabbata-parāmāsa*) means grasping firmly onto precepts and vows, as seen in other religions—like brahmins bathing in water to wash away sins, or observing vows to live like cattle or dogs, believing that suffering (*dukkha*) can be ended through such practices; grasping such wrong views. “How can adherence to rules and vows (*sīlabbata-parāmāsa*) exist in a small infant? Someone might ask. But the Blessed One declares that the underlying tendency of adherence to rules and vows (*sīlabbata-parāmāsa-anusaya*) exists even within that small infant. The child does not even have the concept of virtue (*sīla*), yet the underlying tendency of adherence to rules and vows remains.”</p>
+<p>“Next, regarding sensual desire (*kāmacchanda*). An infant lying on its back has no concept of sensuality, nor does it know anything about sensuality. Yet, the underlying tendency of sensual lust (*kāmarāga-anusaya*), the underlying tendency of sensual desire, exists within that child. Likewise, ill-will (*vyāpāda*), which is hatred. A small child has no concept of 'others'. The infant lying on its back does not even have the notion of 'this person' or 'that person'. Yet, the underlying tendency of that defilement of ill-will (*vyāpāda-anusaya*), of hatred, exists within that child. From this, we must understand that the Blessed One has brought to light the levels of defilements deposited in the mental continuum over a long period in Saṁsāra. These are what are referred to by terms like *āsaya* (disposition), underlying tendency (*anusaya*), and taint (*āsava*). He declares that as long as these are not eradicated, there is no escape from Saṁsāra. As a method of eradicating them, he advises reducing as much as possible the habit of grasping thoughts that arise regarding what is seen through the eye.”</p>
+<p>“The ordinary worldling looks at all experiences through the attitude: 'This is mine, this I am, this is my self' (*etaṁ mama, esohamasmi, eso me attā*). Through this, grasping (*upādāna*) is performed. The five aggregates of grasping (*upādānakkhandha*) are five grasped heaps. They are grasped in the manner mentioned: 'This is mine, this I am, this is my self.' It is by thinking of them and treating them in these three ways that they accumulate as grasping (*upādāna*). Therefore, one must constantly develop the opposite attitudes: 'This is not mine, this I am not, this is not my self' (*n'etaṁ mama, n'esohamasmi, na me so attā*). These three attitudes are characterized by craving, conceit, and views (*taṇhā, māna, diṭṭhi*). The attitude born of craving (*taṇhā*) is 'this is mine'. Treating it with conceit (*māna*) is 'this I am'. Grasping it as a view (*diṭṭhi*) is 'this is my self'. One might not know what 'self' is, but somehow one grasps it as something permanent: 'This is my self.' A person who has grasped something as fuel/holding (*upādāna*) treats it as his own, as a sign of his self-identity, and thinks of it as the real essence and substance of his entire life. It is through these attitudes of craving, conceit, and views that the underlying tendencies (*anusaya*) are formed, as the Blessed One has brought to light on many occasions.”</p>
+<p>“So we are told to hold the opposite attitude. To eliminate the dogma of self-illusion (*sakkāya-diṭṭhi*), it means bringing those experiences to equanimity as quickly as possible. In passages discussing feeling (*vedanā*), it is mentioned that the underlying tendency to lust (*rāgānusaya*) lies beneath pleasant feeling (*sukha-vedanā*). Within pleasant feeling, the underlying tendency to lust—which is attachment—operates subtly. Beneath painful feeling (*dukkha-vedanā*), there lies the underlying tendency to aversion (*paṭighānusaya*), which is conflict.”</p>
+<p>“Sometimes seven underlying tendencies (*anusaya*) are listed. Thus, there are two sides. Beneath pleasant feeling lies the underlying tendency to lust. Beneath painful feeling—because we dislike it and clash with it—lies the underlying tendency to aversion, dormant. Next is the neutral feeling, neither-painful-nor-pleasant (*adukkhamasukha-vedanā*). In the ordinary world, this is experienced by many as a neutral, middle feeling. On one side is pleasant feeling, on the other is painful feeling, and in between lies the neutral state of neither-painful-nor-pleasant. But the ordinary person cannot clearly discern this middle state. Therefore, ignorance (*avijjā*) prevails regarding it.”</p>
+<p>“Therefore, the Blessed One declares that beneath neither-painful-nor-pleasant feeling lies the underlying tendency to ignorance (*avijjā-anusaya*). That too is an underlying tendency (*anusaya*). There is an underlying tendency of ignorance. Ignorance means not knowing. A subtle form of not knowing operates there. That is why the Blessed One points out that one must emerge from pleasant feeling—leaving behind the underlying tendency to lust beneath it—and from painful feeling—leaving behind the underlying tendency to aversion associated with it. Then, there is the neutral feeling. It is from there that one walks the path to Nibbāna. Beneath neither-painful-nor-pleasant feeling lies the underlying tendency to ignorance (*avijjā-anusaya*). To eliminate that underlying tendency to ignorance, one must activate and vitalize the speed of attention (*manasikāra*), the act of reflection. That is why meditators in Vipassanā are told to note every single thing, reflecting on whatever arises right there. According to the three characteristics (*tilakkhaṇa*), because everything is impermanent (*anicca*), it exists only for an extremely brief moment. One reflects on it in that moment and lets it go, recognizing its impermanent nature, directly experiencing its impermanence.”</p>
+<p>“In Vipassanā regarding the six senses, it is by reflecting on whatever arises right there that the underlying tendency to ignorance (*avijjā-anusaya*) is discarded and true knowledge (*vijjā*) arises. Where ignorance is discarded, knowledge remains. Knowledge means wisdom (*paññā*), light. It is through this that one can realize Nibbāna. The Blessed One brought these levels to light. The ordinary world thinks that through the story of the five physical senses alone, this saṁsāric suffering can be ended. Those who hold certain views take this lightly. Especially in this day and age, there are very popular views. There are new methods of achieving these states easily by staying at home, just listening to a couple of sermons, and doing meditation superficially. Some people bring these forward, and many are drawn to them. The reason for this is ignoring the existing underlying tendencies (*anusaya*) and taints (*āsava*).”</p>
+<p>“But the Blessed One brings them to light. Even in an innocent child lying on its back, who knows absolutely nothing, those underlying tendencies (*anusaya*) exist. That is what we must contemplate. When we fondle a child, we think, 'Oh, what an innocent child, knowing absolutely nothing.' It is not that the child knows nothing; everything is there inside, asleep, dormant. Just like the child, they are asleep. That is what the Blessed One brings to light. We must contemplate this state. Therein lies the depth of this Dhamma. The Blessed One presented a course of practice suited to this through the development of radical attention (*yoniso manasikāra*) in meditation.”</p>
+<p>“In fact, you lay devotees have heard that the more one contemplates with such depth that which the ordinary world regards as self, the more one sees that there are only these phenomena of Name-and-Form (*nāmarūpa*). These phenomena merely arise and pass away at each moment. There is no place where taking it as 'I' or 'mine' makes any sense. When reflecting subtly, the Vipassanā meditator sees instantaneous changes everywhere. The ordinary worldling does not see this because he ignores the relationship of cause and effect. He is stuck and submerged in that view, like the deer seeing the mirage in the distance and taking it to be water.”</p>
+<p>“The Blessed One brings to light that nothing exists in isolation. Everything arises out of a vast web of causes and conditions (*hetu-paccaya*). When considering that web of causes and conditions, none of these has any foundation; not a single one is permanent (*anicca*). Grasping them as self is futile. It turns out to be futile and empty (*suñña*). It is this that one must realize for oneself. These are stated in books, but no matter how much one memorizes them, it is through actual practice that the meditator, the one who applies himself, must understand. That is why it is said: *paccattaṁ veditabbo viññūhī*—to be personally experienced by the wise. The path to this is shown by the Blessed One: undertaking virtue (*sīla*), establishing oneself in Vipassanā, taking up a meditation subject (*kammaṭṭhāna*), and practicing with a concentrated mind. A concentrated mind is a sharp mind. Through that mind, one gains the strength to reflect right there. When reflecting with an alert mind, one sees that nothing remains even for a single moment. Furthermore, the ordinary world is trapped in grasping a 'perception of compactness' (*ghana-saññā*). What appears as compact, as a single unit, is seen by the Vipassanā meditator as a multiplicity.”</p>
+<p>“Just as looking at a waterfall from a distance, but as one gets closer, the process there is caught in a truly wonderful way as a flow of arising and passing away—bringing the mind to a state where a flow of arising and passing away is seen wherever one looks. It is through that path of Vipassanā that, at some point, a succession of Vipassanā knowledges regarding arising and passing away (*udayabbaya*) is developed. The ordinary saṁsāric being strives to create preparations (*saṅkhāra*). But the attention of the one who hopes for Nibbāna, who hopes to end Saṁsāra, is directed more towards dissolution (*bhaṅga*). Even faster than they arise, they are seen to dissolve; as one's disenchantment with this increases, this vision matures.”</p>
+<p>“Then, through contemplating the fear and danger in that dissolution, Vipassanā matures at some point. There comes a stage where a certain equanimity regarding preparations (*saṅkhārūpekkhā*) arises. There is no attachment to preparations (*saṅkhāra*), nor any aversion. External things go on, but there is no clinging to them. There is a certain peace there. But going even further, by contemplating through the three characteristics—impermanent, suffering, and non-self (*anicca, dukkha, anattā*)—at some point, as the Blessed One points out, one turns away from the prepared (*saṅkhata*) state to reach the Unprepared (*asaṅkhata*): 'the stilling of all preparations, the relinquishment of all acquisitions, the destruction of craving, dispassion, cessation' (*sabba-saṅkhāra-samatha sabbūpadhi-paṭinissagga taṇhakkhaya virāga nirodha*). This should be the expectation. The prepared state is coarse and rough. The Unprepared (*asaṅkhata*) is what the Blessed One points out as peaceful and sublime. That supreme equanimity is born of the stilling of preparations (*saṅkhāra*). Meditators of tranquility (*samatha*) experience a certain peace within preparations at the level of Jhana, but it is not pure.”</p>
+<p>“Beyond that, the Blessed One showed the complete stilling of these preparations (*saṅkhāra*). Preparations (*saṅkhāra*) must be stilled to escape from this ignorance (*avijjā*). For ignorance to be destroyed, wisdom (*paññā*) must arise. When darkness is removed, light arrives. Coinciding with the removal of darkness, there is a light. This is what is referred to in some places as the luminous mind (*pabhassara-citta*): 'Monks, this mind is luminous, but it is defiled by visiting defilements.' The ordinary person does not know this, which is why they do not turn to meditation.”</p>
+<p>“But the noble disciple, the meditator, knows well that there is this luminosity of the mind. It is not something hidden beneath, but a potential. Understanding this, one must begin to empty this mind, to remove those defilements in that manner. When that is done, it is the Unprepared (*asaṅkhata*) element, which is Nibbāna. There comes a time when that luminous mind is not seen by the dark, blind world. That is the stage of the cessation of the six sense-bases (*saḷāyatana-nirodha*). When the cessation of existence/becoming (*bhava-nirodha*) is also realized through the cessation of the sense-bases, it is as if one has died in this very world before actual death, yet without fear. That is why it is called the Deathless (*amata*). The Deathless element (*amata-dhātu*) is indeed this. Therefore, this Nibbāna is not a permanent real world existing somewhere beyond death. One must understand that it is to be experienced right here in this very life, within the mind itself.”</p>
+<p>“Today, if you have undertaken a valuable virtue (*sīla*), and if you have practiced meditation based on that virtue, and also if you have used this sermon to help fulfill the qualities of virtue, concentration, and wisdom (*sīla, samādhi, paññā*), may this merit of listening to the Dhamma be a cause for all of us to realize right here in this life that noble, great Nibbāna—the escape from birth, aging, illness, and death (*jāti, jarā, vyādhi, marana*)—as quickly as possible before this Dispensation declines! From the Avīci hell up to the Akanitha heaven, whoever wishes to rejoice in this merit of sharing and listening to the Dhamma, may they, through that rejoicing, end the suffering (*dukkha*) of Saṁsāra by realizing their aspired Bodhi!” With this aspiration, recite these verses:</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_168.html" class="doc-btn">← Previous Sermon (168)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_170.html" class="doc-btn">Next Sermon (170) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

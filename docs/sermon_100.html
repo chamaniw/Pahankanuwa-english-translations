@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 100 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_099.html" class="doc-btn">← Previous Sermon (099)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_101.html" class="doc-btn">Next Sermon (101) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 100</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_100_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_100_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_100_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #100</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.138)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>No bhāsamānaṃ jānanti, missaṃ bālehi paṇḍitaṃ;</p>
+<p>Bhāsamānañca jānanti, desentaṃ amataṃ padaṃ.</p>
+<p>Bhāsaye jotaye dhammaṃ, paggaṇhe isinaṃ dhajaṃ;</p>
+<p>Subhāsitadhajā isayo, dhammo hi isinaṃ dhajo ti.</p>
+<p>From:</p>
+<p>Itivuttaka (It 105)</p>
+<p>Dear Listeners,</p>
+<p>The Teacher of the Three Worlds, the Buddha, highlighted on many occasions how the preaching of the Dhamma is the fundamental foundation for the longevity of the Buddha’s Dispensation (*Sammā Sambuddha Sāsana*). He also explained the method of preaching the Dhamma in such a way that a life, a life's journey, is completely transformed. Certain members of the Sangha who preached the Dhamma in an exemplary manner even won the praise of the Buddha. The two verses chosen as today's theme were uttered by him on such an occasion. While the Buddha was residing in the Gabled Hall (*Kūṭāgāra Sālā*) in the Great Forest (*Mahāvana*) near Vesālī, the Venerable Visākha Pañcālaputta was giving a Dhamma instruction to the Sangha in the assembly hall. Several special words are mentioned regarding the manner of that Dhamma instruction: *“dhammiyā kathāya sandasseti, samādapeti, samuttejeti, sampahaṁseti”*. *Sandasseti* (instructing) through a Dhamma talk means making the points one is explaining clearly visible, demonstrating, and clarifying them by using various similes and examples. Similarly, *samādapeti* (instigating) means thoroughly convincing them of those things. Just as taking upon oneself (*samādāna*) generosity and virtue (*dāna*, *sīla*) means making oneself accept them. *Samuttejeti* (encouraging) means inspiring effort. *Sampahaṁseti* (gladdening) means making them happy.</p>
+<p>Thus, the characteristics of a good Dhamma sermon involve demonstrating those points through similes and illustrations, thoroughly convincing the listeners of those points, inspiring effort, and bringing joy. Those words are employed there. Furthermore, several other terms and phrases are mentioned there concerning the style of speech and style of preaching. Regarding that language, five terms and phrases are mentioned: *“poriyā vācāya, vissaṭṭhāya, anelagalāya, atthassa viññāpanīya, anissitāya”*. *Poriyā vācā*—*paura* means the language of the citizens or townspeople. Generally, *poriyā vācā* implies that the sermon is delivered in an eloquent, polite, and refined language. *Vissaṭṭhāya* means pronouncing the words and letters very clearly and smoothly. *Anelagalāya* means flowing faultlessly. *Atthassa viññāpanīya* means preaching in a manner that makes the meaning perfectly clear. And *anissitāya* means delivering the Dhamma sermon not in a way that fosters attachment to this becoming (*bhava*), but in a way that helps one gain release from becoming (*bhava*). Thus, endowed with these characteristics, he delivered the Dhamma sermon to the Sangha in the assembly hall.</p>
+<p>That evening, the Buddha arose from his seclusion, came to the assembly hall, sat on the prepared seat, and asked the Sangha, “Monks, who is it that inspired the Sangha in this assembly hall with a Dhamma talk, using such and such vocabulary?” Then the Sangha replied, “Venerable Sir, it was the Venerable Visākha Pañcālaputta who inspired the Sangha with a Dhamma talk.” Then the Buddha, addressing Venerable Visākha Pañcālaputta, said, “*Sādhu, sādhu, Visākha*. Very good, Visākha, to inspire the Sangha with such pure vocabulary!” Having praised him thus, he uttered the two thematic verses on that occasion.</p>
+<p>*“No bhāsamānaṁ jānanti, missaṁ bālehi paṇḍitaṁ.”* As long as the wise man mixed among fools does not speak, others do not recognize him. *“Bhāsamānaṁ ca jānanti, desentaṁ amataṁ padaṁ.”* When he speaks, when he teaches the deathless state (*amataṁ padaṁ*) which is Nibbāna, others recognize him. The next verse preached by the Buddha is like a challenge. If we state its general meaning, it is as follows: *“Bhāsaye jotaye dhammaṁ”*, let him preach this Dhamma, let him illuminate it. *“Paggaṇhe isinaṁ dhajaṁ”*, let him raise and hold up the banner of the seers. *“Subhāsitadhajā isayo”*, seers have well-spoken words as their banner. *“Dhammo hi isinaṁ dhajo”*, indeed, the Dhamma itself is the banner of the seers. If we attempt to present that challenging character through a translation, we can say:</p>
+<p>> *Preach, illuminate the True Dhamma;*</p>
+<p>> *take up and raise the banner of the seers!*</p>
+<p>> *Seers have well-spoken words as their banner;*</p>
+<p>> *the Dhamma itself is the banner of the seers.*</p>
+<p>The Buddha uttered those verses. Next, regarding that Venerable Visākha Pañcālaputta, there are some brief descriptions of his life story and biography in the Dhamma commentaries. He was from the country of Magadha. What is understood from the name “Pañcālaputta” is—as mentioned in some places—that he was the son of a queen named Pañcālī, but he was actually the son of a regional governor. When the Buddha visited that area, he listened to the Dhamma, gained confidence, ordained, went to Sāvatthī, and became an Arahant endowed with higher spiritual powers (*abhiññā*). Subsequently, he returned to his native village and preached the Dhamma to the local people. On that occasion, those people asked what characteristics a true expounder of the Dhamma (Dhamma preacher) should possess. The answer he gave is recorded in his *Theragāthā*. That verse is as follows:</p>
+<p>> *“Na ukkhipe no pi pare na okkhipe,*</p>
+<p>> *pāragataṁ na eraye;*</p>
+<p>> *na cattavaṇṇaṁ parisāsu byāhare,*</p>
+<p>> *anuddhato sammitabhāṇi subbato.”*</p>
+<p>*“Na ukkhipe”* means not exalting oneself. Within a Dhamma sermon, one does not inflate oneself and talk about one's own greatness, in terms of caste or education. *“No pi pare”* means not belittling others by way of criticism. *“Na okkhipe”* means not looking down on others. *“Pāragataṁ na eraye”* means not disparaging the Arahants who have gone to the further shore. *“Na cattavaṇṇaṁ parisāsu byāhare”* means not praising oneself in the midst of assemblies. *“Anuddhato”* means being un-excited/not haughty, and *“sammitabhāṇi”* means speaking measuredly, weighing one's words to the right proportion. *“Subbato”* means being of good, pure conduct. In this manner, it is mentioned that he preached even the component characteristics of a true expounder of the Dhamma.</p>
+<p>From these, what we can gather is that the Buddha’s call to “raise the banner of the Dhamma” was meant to highlight the value of the Dhamma. Because in this Dispensation (*Sāsana*), as you lay devotees have heard, respect for the Dhamma is greater than respect for individuals. The Buddha himself declared on one occasion that he spent his life respecting the Dhamma. “Monks, newly awakened, while I was staying in seclusion under the Ajapāla Banyan tree on the banks of the Nerañjarā River in Uruvelā, this thought occurred to me: ‘To live a life without showing respect and without relying on a teacher is painful [characterized by suffering / unsatisfactoriness / stress (*dukkha*)]. Under what recluse or brahmin should I live, honoring and respecting him?’” Thus, he considered and reflected with wisdom. Even though he searched the entire world, including the devas and brahmās, the Buddha did not see anyone superior to himself in virtue (*sīla*), concentration (*samādhi*), wisdom (*paññā*), or liberation (*vimutti*). It is said that he then thought as follows:</p>
+<p>Then, this thought occurred to me: “What if I were to live honoring, respecting, and relying on this very Dhamma which I have fully awakened to?” No sooner had this thought arisen in the Buddha than Sahampati Brahmā, understanding his thought, appeared there, sat to one side, paid homage, and said to the Buddha, “So it is, O Sugata (Happy One), so it is, O Sugata! All those Buddhas, those Tathāgatas who existed in the past, all of them lived honoring, respecting, and relying on the Dhamma itself. All those Buddhas who will arise in the future will also do the same. Therefore, let the Blessed One also live honoring and respecting the Dhamma itself!” It is mentioned there in two verses that “this is a natural law (*esā buddhāna dhammatā*): respecting the Dhamma is the natural way of the Buddhas.” It is in accordance with this that, as you lay devotees have often seen, even if a seven-year-old novice monk (*sāmaṇera*) is preaching the Dhamma, a high seat is offered, in order to express respect for that Dhamma.</p>
+<p>Next, on one occasion, the Buddha addressed the Sangha and declared, “Monks, as long as the Sugata or the Discipline of the Sugata (*Sugata-vinaya*) remains in the world, it will bring welfare, happiness, and benefit to the world, including devas and humans.” First, he defines who the Sugata is. The Sugata is the Tathāgata, the Fully Self-Awakened One (*Sammā Sambuddha*). What is the Discipline of the Sugata? The Discipline of the Sugata refers to the Dhamma preached by the Tathāgata, which is good in the beginning, good in the middle, and good in the end, with the correct meaning and phrasing—"phrasing" (*vyañjana*) meaning complete in letters and words—proclaiming the pure holy life (*brahmacariya*). Having declared that as long as the Sugata or the Discipline of the Sugata remains in the world, immense relief is brought to the world, including devas and humans, the Buddha simultaneously stated four factors that lead to the disappearance of this True Dhamma and its being forgotten by the world. The first factor is that monks study this Dhamma incorrectly. They grasp and learn the Dhamma in a wrong way, with incorrect words, phrasing, and letters. Then the Buddha states that due to incorrectly grasped letters and words, the meaning also becomes distorted. Thus, studying the Dhamma incorrectly is shown as a cause for the decline of the Dhamma.</p>
+<p>Secondly, he shows that in the future, monks will arise who are very undisciplined, disobedient, and who do not listen to Dhamma instructions. That attitude of the Sangha also leads to the disappearance of the True Dhamma. The third factor is that monks who are keepers of the Dhamma (*dhammadhara*) and keepers of the Discipline (*vinayadhara*) do not properly teach the Dhamma to the subsequent generation, to other monks, or to their disciples. Because of this, those discourses (*sūtrānta* Dhamma) disappear. Lacking a refuge—meaning there is no one to accept those discourses. We have all heard how in those days, particularly through the lineage of reciters (*bhāṇaka*), this Dhamma was preserved by word of mouth from teacher to disciple; that is the point. The fourth factor shown is that the way of life of the elder monks changes. When elder monks arise who lean towards luxury, have very loose conduct, do not delight in seclusion, do not delight in Nibbāna, and do not strive for Nibbāna, then the subsequent generation, namely their group of disciples, will also conform to that way. This, too, is declared in that discourse as a cause for the disappearance of the True Dhamma.</p>
+<p>Even better, in another valuable discourse, the Buddha demonstrates how the True Dhamma gradually declines, presenting it as a future danger (*anāgata-bhaya*) and a prophecy. You lay devotees yourselves must see to what extent this has come true. In that discourse, the Buddha first presents a certain simile. “Monks, a group of Kṣatriya kings called the Dasārahas had a ceremonial drum. That drum was known by the name ‘Āṇaka’.” There is also a story about this crab-claw drum called Āṇaka. It is more likely that it was a drum frame constructed by joining together wooden pegs or splints. In any case, that drum had a very loud sound, a sound that could be heard from afar. When one splint of this drum decayed or fell off, the owners plugged it with a peg made of some good, valuable material. When another splint fell off, they plugged it with another peg. Plugging it with pegs in this manner, eventually, the old drum frame disappeared, and only a collection of pegs remained. The Buddha presented this description as a simile.</p>
+<p>“In the same way, monks, in the future, monks will arise who, when the profound, meaningful discourses connected with supramundane emptiness (*suññatā*) preached by the Tathāgata are being recited, will not listen. They will not strive to learn them. They will not consider their meaning. They will not strive to study and master them. Instead, if there are discourses composed by outsiders, which are poetic, with ornate letters and ornate words, they will listen to them attentively. They will be eager to learn them. They will hold them in high esteem. In that manner, the True Dhamma is liable to disappear in the future.” Then, the Buddha advises the Sangha, “Therefore, monks, you should train yourselves in this way: ‘Let us strive to learn, study, and understand these discourses uttered by the Tathāgata that are supramundane and connected with emptiness.’ You must train yourselves thus,” the Buddha declared.</p>
+<p>From this, we understand that preserving the True Dhamma is a serious responsibility. Similarly, preaching the True Dhamma is also a serious responsibility. Another story revealing this is mentioned next in the Dhamma, concerning a monk named Udāyī in this Dispensation. As shown in the *Vinaya Piṭaka*, the monk Udāyī frequently broke disciplinary rules and often received the epithet *“Mogha Purisa”* from the Buddha. *“Mogha Purisa”* means a hollow man / foolish person. The Buddha often blamed this monk Udāyī for his behavior, his conduct with laypeople, and his falling into many offenses—he was a strange character indeed. Yet, this monk Udāyī was very popular.</p>
+<p>One day, this monk Udāyī was preaching the Dhamma surrounded by a large crowd. Venerable Ānanda saw this. Having seen it, he went and said to the Buddha, “Venerable Sir, I saw the Venerable Udāyī sitting in the midst of a large crowd and preaching the Dhamma.” Thereupon, the Buddha declared, “Ānanda, preaching the Dhamma to others is no easy task. One who preaches the Dhamma to others should do so having established five things within himself, having firmly resolved upon five things. How so?” He then points them out one by one as the practices to be observed when preaching: *“Ānupubbikathaṁ kathessāmīti paresaṁ dhammo desitabbo.”* That is, one must conduct the Dhamma sermon with the intention: “I will speak a gradual discourse”—this is the first factor.</p>
+<p>The second factor: *“Pariyāyadassāvī kathaṁ kathessāmīti paresaṁ dhammo desitabbo”*. *Pariyāya* means that the Dhamma should be preached with reasons and examples. Next: *“Anuddayataṁ paṭicca paresaṁ dhammaṁ desessāmīti”*. One must preach with the point established in mind: “I will preach the Dhamma out of kindness and compassion towards the listeners in the world.” Next: *“Na āmisantaro kathaṁ kathessāmīti paresaṁ dhammo desitabbo”*. That is, one should not preach the Dhamma with material gain in view, thinking, “May I receive offerings of the four requisites by their listening to this sermon.” The fifth factor: *“Attānañca parañca anupahacca dhammaṁ desessāmīti”*. Preaching the Dhamma without harming oneself or others. “Harming oneself” refers to speaking in self-praise and the like. “Harming others” refers to criticizing others and thus denigrating their virtues. Avoiding that as well, one must preach this Dhamma. In this way, five factors are pointed out there.</p>
+<p>To explain this briefly, you lay devotees have often heard of the “gradual discourse” (*anupubbikathā*), which is frequently mentioned in connection with the Buddha’s preaching style. His path of exposition as recorded in books usually proceeds as: talk on giving (*dāna-kathā*), talk on virtue (*sīla-kathā*), talk on heaven (*sagga-kathā*). He starts first with the talk on giving, followed by the talk on virtue, and the talk on heaven. Then, the danger of sensual pleasures (*kāmānaṁ ādīnavaṁ*), their degradation and defilement (*okāraṁ saṅkilesaṁ*), and the benefits of renunciation (*nekkhamma-ānisasaṁ*). This is what is chiefly included in the gradual discourse. He preaches the benefits of giving, and that giving is a good practice. The Buddha explains that virtue is a valuable practice. For the people at that level, that is a great thing. Just like a gentle shower falling on young paddy crops, their minds are awakened regarding giving, keeping precepts, and so forth. Thus: talk on giving, talk on virtue. Next, that by giving and keeping precepts one can be reborn in heaven: talk on heaven. Since this occurs in accordance with the Dhamma and in line with *kamma*, the Buddha highlights that as well. By then, great joy is created in those listeners. Next, like descending a mountain: talk on giving, talk on virtue, talk on heaven, and then the danger of sensual pleasures (*kāmānaṁ ādīnavaṁ*)—the disadvantageous side of the five strands of sensual pleasure for those dwelling in the human world or the heavenly worlds. This is how he inclines them towards Nibbāna. Their dangers (*ādīnava*), their degradation and defilement (*okāraṁ saṅkilesaṁ*), their lowliness, and their nature of generating defilements. Right after that, he preaches the benefits of renunciation (*nekkhamme ca ānisasaṁ*), showing the advantages of leaving the household life to ordain.</p>
+<p>By that stage, if the minds of any among the listening crowd have become prepared and suited for ordination, the Buddha had the ability to know that. The state of the prepared mind of the listeners is described using terms such as *“kalla-cittaṁ, mudu-cittaṁ, vinīvaraṇa-cittaṁ, udagga-cittaṁ, pasanna-cittaṁ”*. When the mind is systematically prepared, softened, free from the hindrances (*nīvaraṇa*) for that moment, gladdened, and ready to accept the Dhamma, that is when the Buddhas present the instruction unique to themselves (*yā buddhānaṁ sāmukkaṁsikā dhammadesanā*), which they revealed and raised up for the world: the Four Noble Truths—*Dukkha* (Suffering), its arising (*samudaya*), its cessation (*nirodha*), and the path (*magga*). This is what is generally referred to as the gradual discourse.</p>
+<p>Even otherwise, if a certain Dhamma sermon is delivered systematically, step-by-step in sequence, it can be called a gradual discourse. Instead of expending all the coconut oil of the lamp on the introductory homage (*namaskāra*), preaching the facts in order, clearly and sequentially, is what is meant by preaching in a gradual order. Next, *“pariyāyadassī kathā”* means presenting the Dhamma sermon in a way that convinces the listeners, by adducing causes and examples appropriate to the occasion. *“Anuddayataṁ paṭicca”* (out of compassion) can be understood as preaching with kindness: “May a word of mine help to free these beings sunk in this Saṁsāra from suffering (*dukkha*).” *“Na āmisantaro”* (not for material gain) means preaching not with the thought, “By their listening to this, may my donation bowl be filled,” but with the thought, “May their minds be fulfilled, and may this help them realize Nibbāna one day.” Lastly, *“attānañca parañca”* means preaching without praising one's own virtues or denigrating the virtues of others. The Buddha points out those five factors there as qualities that must especially reside in Dhamma preachers.</p>
+<p>Furthermore, there is a valuable discourse concerning the Buddha’s own style of preaching the Dhamma. The way a Buddha preaches the Dhamma is not in expectation of anything, making no distinction whatsoever; whether to a king, a wealthy merchant, or the poorest beggar, he preaches in the very same manner. There is a valuable discourse mentioning this. The Buddha first presents the simile: “Monks, in the evening, the lion emerges from his cave, stretches his back, and yawns. Then, he looks in the four directions. Having looked, he roars the lion’s roar three times. Having roared the lion’s roar, he sets out in search of prey. When that lion sets out for prey, whether he attacks an elephant, he strikes with absolute precision, without any deficiency. Whether he attacks a wild buffalo, he leaps upon the wild buffalo with the same speed. Whether he leaps upon a cow, it is the same. Whether he leaps upon a leopard, it is the same. Even if he leaps upon a hare or a cat, the lion leaps with the very same effort. Why does he do so? For the lion, missing his target is a disgrace. The lion’s leap, the leap he takes when hunting for prey, is something special. He leaps in that manner with the thought, ‘May I not miss my target.’”</p>
+<p>Next, the Buddha explains this through the application of the simile: “Monks, the lion is a designation for the Tathāgata, the Arahant, the Fully Self-Awakened One. The lion’s roar is a designation for the preaching of the Dhamma.” Then he declares: “Whether the Tathāgata preaches the Dhamma to monks, he preaches it carefully. Proclaiming this holy life (*brahmacariya*) which is good in the beginning, middle, and end, with the correct words, phrasing, and letters—even when preaching to monks, he preaches it carefully. Whether he preaches to nuns, he preaches it carefully and properly. Whether to laymen or laywomen, it is the same. Even if he preaches to a beggar or a hunter, he preaches it carefully. Why? Because,” as shown there, like the lion’s target, “the Tathāgatas are respecters of the Dhamma (*dhamma-garu*). They act out of respect for the Dhamma, respecting the Dhamma, not out of respect for material gain (*āmisa-garu*). If they were respecters of material gain, they would look only at the person's face and preach just to please them with words.”</p>
+<p>But the Buddha, whether to a king, a merchant, or an extreme pauper, preaches the Dhamma in that manner, just as the lion leaps. This is the Buddha’s style of preaching. Although we say so, even in the Buddha’s time, there were certain critical people who looked for flaws in the Buddha’s preaching. Such a story is revealed when he was residing in the Pāvārika Mango Grove in Nālandā. A headman named Asibandhakaputta—*gāmiṇī* means headman—came to the Buddha, paid homage, sat to one side, and asked a question. He asked this with the intention of criticizing the Buddha: “Is the Blessed One compassionate towards all living beings?” The term used there is *“sabbapāṇabhūta-hitānukampī”*. “Is the Blessed One compassionate and concerned for the welfare of all living beings?” Then the Buddha said, “Yes, Gāmaṇi, the Tathāgata”—the Buddha used the word “Tathāgata” when speaking of himself—“the Tathāgata is indeed compassionate and concerned for the welfare of all living beings.” “If so, why does the Blessed One preach the Dhamma carefully to some, but not carefully to others?” He must have noticed that the Buddha spent a lot of time and preached with great care to those members of the Sangha who had a special interest in the Dhamma, which prompted this question.</p>
+<p>Let us see the Buddha’s reply to this. The Buddha asks, “Very well, Gāmaṇi, I will ask you a question in return. Answer as you please. Suppose a farmer has three fields, three paddy fields. One field is of the highest grade, with excellent fertile soil—a supreme field. The second field is of medium quality; it is not as fertile, but it is good. The third field is completely infertile—a barren land, a barren land with salty clay soil. Out of those three fields, when that farmer sows his seed, in which field does he sow first? In the first field, the second, or the third?” Thereupon, it was Asibandhakaputta’s turn to answer, and he explained it in detail.</p>
+<p>“Venerable Sir, that farmer would sow first in the first field, that supreme field mentioned. Having sown there, if there is still seed-paddy left over, he would sow in the medium-quality field. Having sown there, if there is still something left over, he would sow in that infertile land of salty clay. With what intention? Thinking, ‘At the very least, may this yield something as food for the cattle. Even if there is no grain harvest, let me at least get some straw from it.’”</p>
+<p>When he said that, the Buddha connected it to this Dhamma talk. “In the same way, Gāmaṇi, I too...” applying the very same simile, “Just like that first field, like that fertile field, are the monks and nuns to me. Why? Because...” several words are mentioned there to show why he was most affectionate towards them, *“mamaṁdīpā mamaṁtāṇā mamaṁleṇā mamaṁsaraṇā”*—because they live making me their island, making me their shelter, treating me as their protection, and taking me as their refuge. That is why I show them this special favor. Therefore, they are like the first field. Like the second field are the laymen and laywomen to me. Because they too hold me as their island, shelter, protection, and refuge, I show them that favor as well. But like the third field, that infertile land of salty clay, are the recluses and brahmins of other sects (*aññatitthiya*) to me.</p>
+<p>To both of those first-mentioned groups, the Buddha shows, “I preach the Dhamma that is good in the beginning, middle, and end, with the correct meaning and phrasing, proclaiming the pure holy life (*brahmacariya*)—this is what I do for everyone.” And thirdly, he shows, “To this third group as well, I preach in the very same way. But this is the thought I have: ‘If they should understand even a single sentence of this, it will lead to their welfare and happiness for a long time.’”</p>
+<p>See how beautiful and fitting the simile given for this is. Asibandhakaputta Gāmaṇi had criticized the Buddha, claiming he made distinctions when preaching the Dhamma. The Buddha replied to that. He did not stop there. He gave a second simile. “Gāmaṇi, suppose a man has three water vessels. One water vessel has no holes; it does not leak, and water does not flow out. The second vessel has no holes, but water leaks and flows out. The third vessel has holes; water leaks and flows out. Into which of these three water vessels would that man first bring and pour water?” When asked this, Asibandhakaputta again answered in this way: “Venerable Sir, that man would first pour water into the vessel that has no holes, does not leak, and from which water does not flow out. If there is still water left over, he would pour it into the second vessel which has no holes but leaks and flows out. If there is still something left, he would put it even into the third type of vessel which has holes and leaks water. With what intention? Thinking, ‘At the very least, let it be useful to me for washing utensils, such as plates, and for similar purposes.’”</p>
+<p>After Asibandhakaputta Gāmaṇi had said that, the Buddha connected it to the preaching of the Dhamma. “In the same way, Gāmaṇi, like that first-class vessel which has no holes, does not leak, and from which water does not flow out, are the monks and nuns to me. As mentioned before, they treat me as their shelter, protection, and so forth. Therefore, to them, I preach the Dhamma of the fundamental holy life, which is good in the beginning, middle, and end. Like the second category are the laymen and laywomen. Reflect on the simile mentioned: the second category has no holes, yet water leaks and flows out. The third category has holes, water leaks, and flows out. Just like that are the recluses and brahmins of other sects. To them too, I preach the Dhamma, with the thought: ‘At least may a single sentence be a supportive condition and of help to them.’” That is the answer the Buddha gave on that occasion.</p>
+<p>Thus, we also know there are many things we can learn from the Buddha’s life and his style of preaching. In this era of conducting various novel researches, you lay devotees can extract valuable principles of educational science from the Buddha’s preaching style. You know how important a place the simile and the parabolic story occupy in a Dhamma talk of the Buddha. There are the “simile” (*upamā*) and the “thing compared” (*upameyya*). You know what a simile is. The “thing compared” is the subject matter represented by the simile. Often, if there are ten aspects to the simile the Buddha uses, the ten aspects of the Dhamma point taken as the thing compared also correspond and align with it beautifully. Thus, preaching the Dhamma through similes and things compared is something that penetrates a person's heart deeply. Moreover, it can be retained in the mind very easily. It has practical value. It touches the very depth of the mind. In particular, we can see how wonderfully the Buddha presented similes drawn from the daily life of that environment—from cattle farming, the farmer's life, the river, and trees. Furthermore, those similes and things compared match each other perfectly. The Buddha declared the natural principle regarding this: *“Upamāyapi idh'ekacce viññū purisā bhāsitassa atthaṁ ājānanti.”* He presents it as a Dhamma principle, which can even be taken as a general educational principle of the world: “Some wise men understand the meaning of what is said even by means of a simile”—according to that principle.</p>
+<p>Similarly, on some occasions, the Buddha presents Dhamma points numerically. Even when telling things to children in a school, when one says, “Here are five points,” they are ready to count them on their five fingers. Just like that, when the Buddha says, “Monks, now I shall declare these ten factors,” they listen to them one by one with curiosity and attentiveness. Then, beautifully and often in an ascending order, starting from a minor point, saying “this is the first factor, this is the second factor,” and going higher and higher, the final factor mentioned is the one that serves as the true climax and is the most valuable. In many places, you lay devotees can clearly observe and understand how he analyzed the Dhamma in that manner and presented those Dhamma sermons in such a valuable way.</p>
+<p>In that way, the Buddha also answered the questions asked by certain individuals on the spot, according to the situation. There are deeply profound matters in them. To mention briefly, he did not say “yes” or “no” to every question. That, too, is something the world and preachers should know. There are certain questions that, when the inquirer asks “is it yes or no?” can be answered directly with “yes” or “no”. But there are some questions that must be clarified by questioning the inquirer in return before giving an answer. The former is called *“ekaṁsa-vyākaraṇīya”* (to be answered categorically). The second category is *“paṭipucchā-vyākaraṇīya”* (to be answered with a counter-question), where one must ask questions back, clarify them, and then answer. Similarly, there are other matters called *“vibhajja-vyākaraṇīya”* (to be answered analytically), which must be analyzed and examined before answering. There are still other questions that, if their premise is wrong, are *“ṭhapanīya”* (to be set aside)—they are put to one side and not answered, because answering them would lead to a trap. A preacher must also possess this understanding. We can extract such points from the Buddha’s preaching style. In his sermons, there are no extraneous matters apart from Dhamma points; they are entirely the Dhamma. Furthermore, on some occasions, the Buddha created opportunities for Dhamma sermons because he could read others’ minds; just like in this story of Visākha Pañcālaputta, he asked the Sangha as if he himself did not know.</p>
+<p>The Buddha must have heard that Dhamma sermon beautifully with his divine ear (*dibba-sota*). Having heard it, he raises this question to the Sangha, “Who is this?”—just like that. Similarly, on some occasions, as is frequently mentioned in the Dhamma, while the monks are sitting and talking, he arrives at the right moment and asks what conversation they were engaged in. If the monks were engaged in low conversation (*tiracchāna-kathā*)—meaning the thirty-two kinds of worldly talk, bad talk—he preaches in a way that is suited to correct that. Otherwise, if there is some Dhamma point relevant to that day's situation, he takes that as the basis and objective, and then delivers the sermon. The Buddha possessed such styles of preaching. Then, he convinces them of it through the concluding words of the sermon, building up curiosity and leading them to a clear explanation of the matter.</p>
+<p>Not only that, we can also understand how he, as the Teacher, trained his group of disciples through that style of Dhamma preaching. On certain occasions, such as on an Observance Day (*Uposatha*), the Buddha would preach the Dhamma to the community of monks almost the entire night. After a watch of the night had passed, after a long time, the Buddha would say, “Sāriputta, the community of monks is free from sleepiness and well awake. My back is aching slightly. I wish to lie down a bit. I need to stretch my back.” Saying this, the Buddha would sometimes lie down right there—not to sleep, but listening closely to the Dhamma sermon. While the Buddha was lying down there, Venerable Sāriputta would preach the Dhamma. After he had preached, the Buddha would often praise him, saying, “*Sādhu, sādhu!*” Not only regarding the Arahant Venerable Sāriputta, but also concerning Venerable Ānanda and others in these Dhamma talks—why did he do that? He gave the opportunity to his disciples. He also observed the way they preached the Dhamma. Having observed, he then expressed his praise.</p>
+<p>You lay devotees know of many other such occasions mentioned in the Dhamma, and those who read the Dhamma would have seen them. Particularly, as a means of providing opportunities for those monks who were capable of explaining the Buddha's teachings in detail, the Buddha employed a certain skillful means—a strategic method. He would deliver a short sermon, like a riddle, to the Sangha, to the community of monks. Having delivered it, the Buddha would arise from his seat and enter his dwelling. Then, that group of monks would be left bewildered, wondering, “Alas, how can we understand in detail what the Blessed One has stated in brief?” Thereupon, they would talk among themselves, realizing, “Now we cannot go back to find the Blessed One again.”</p>
+<p>Next, some of them think of Venerable Sāriputta, some of Venerable Mahākaccāyana, and some of Venerable Ānanda. Speaking of such an occasion, concerning Venerable Ānanda, the monks say, “Ah, this is a person praised in this manner by the Blessed One. We must invite Venerable Ānanda.” Having gone, they invite Venerable Ānanda, saying, “May the Venerable One explain to us in detail what the Blessed One preached in brief.” But Venerable Ānanda does not accept immediately. He states very humbly—often mentioned with a simile—“Friends, this is just like leaving behind the root and trunk of a sal tree and searching for heartwood in its leaves; such is your coming to search for me. The meaning of what was said should be asked from the Blessed One himself.” Thereupon, the monks plead again, “Now that opportunity has passed, and Venerable Ānanda is skilled in this. Therefore, may the Venerable One preach this to us.” When they urge him repeatedly, Venerable Ānanda says, “Very well, friends, I shall tell you as it appears to me.” After saying that, and after the Buddha approves it later, Venerable Ānanda gives an exposition on it. Having heard that exposition, and when the monks clarify this matter to the Buddha during a quiet moment, the Buddha approves it, saying, “*Sādhu, sādhu!*” and praises him, saying, “Monks, had you asked me, I too would have explained it in the very same way.” It is those very expositions that are ultimately seen in those discourses as the utterances of the disciples (*sāvaka-bhāsita*).</p>
+<p>Thus, from this too we see that, in his effort to carry forward the Buddha's Dhamma as a teacher, he gave that strength to his disciples, sometimes even while he himself was present. In particular, they are highlighted as those who aspired to illuminate this Dispensation and this Dhamma in various aspects, or as those who had made such resolutions in Saṁsāra. You all know that the Arahant Venerable Sāriputta was of great wisdom, foremost in wisdom (*paññā*). He could not be compared to the Buddha, of course, but secondarily, he was foremost in wisdom. Similarly, the Arahant Venerable Mahākaccāyana received the foremost (*etadagga*) position for explaining in detail what was preached in brief. Just like awarding degrees in modern times, the Buddha, according to their resolutions made in Saṁsāra and their corresponding skills, awarded foremost positions (*etadagga*) to those skilled ones on various occasions. He declared the Arahant Venerable Mahākaccāyana as foremost among those monks who could explain in detail what was preached in brief. Similarly, among those of beautiful articulation (*kalyāṇa-vākkarāṇa*) in pronouncing the words of the Dhamma sermon very well, Venerable Soṇa Kuṭikaṇṇa was foremost. Among those who could preach the Dhamma in a sweet voice—not in the form of singing, but according to a certain vocal strength endowed by birth—Venerable Lakuṇṭaka Bhaddiya was foremost. Next, Venerable Ānanda was foremost among those of great learning (*bahu-suta*). Among the expounders of the Dhamma (Dhamma preachers), Venerable Puṇṇa Mantāniputta was foremost.</p>
+<p>In that manner, he awarded foremost positions to those respective Venerable Ones. Thereby, the Buddha introduced to the disciple Sangha those Venerable Ones from whom assistance could be sought in various aspects for carrying this Dhamma forward. From this too, we can extract valuable points. As shown in the previously mentioned similes, the monks, nuns, laymen, and laywomen lived treating the Buddha as their island, shelter, protection, and refuge. But who is there when the Buddha is no more? That question arises automatically. That is why it was said earlier that as long as the Sugata or the Discipline of the Sugata remains, the welfare of the world is ensured. It is that very point that you have heard the Buddha mentioned in the *Mahāparinibbāna Sutta*: “Ānanda, after my passing away, it might occur to you: ‘The Dispensation has no Teacher.’ You should not think so, Ānanda. Whatever Dhamma I have preached and whatever Discipline (*vinaya*) I have laid down, that will be your Teacher after my passing.”</p>
+<p>Thus, this shows us that when the Buddha is no more, it is that very Dhamma and Discipline that holds the position of the Teacher for us. That is why we must understand how, as a future danger, that Dhamma and Discipline should be protected; just like the removal of those pegs, if we start removing those pegs, eventually a time will come when this Dhamma stops functioning altogether. In fact, the Dhamma has also been compared to a drum. The Buddha declared to Upaka the Ājīvaka, “I am going to the city of Kāsī to deliver the first Dhamma sermon,” and on his way he said, *“āhacca amata-dundubhiṁ”*—*dundubhi* means drum—“I go to the city of Kāsī, to beat the drum of the Deathless.” On that occasion, this Dhamma is referred to as “amata.” You know that the Deathless (*amata*) is Nibbāna. Therefore, the sound of Nibbāna, the sound of extinguishment, must come from the drum. That is what must happen in a Dhamma sermon. Often, in the Buddha’s discourses, even in that gradual discourse mentioned, it must ultimately reach its climax in Nibbāna through the Four Noble Truths. Otherwise, only a hollow sound is heard.</p>
+<p>The true sound of the Deathless drum is the sound of Nibbāna. Instead of that, a hollow sound can arise. In that manner, by putting new and beautiful splints on each decaying splint, the drum frame eventually becomes an entirely different drum frame. Therefore, we must reflect that this is a duty towards the Dhamma to be performed by both parties—both the Dhamma preacher and the listener. That is why the Buddha speaks of “respect for the Dhamma” (*dhamma-gāravatā*). Respect for the Dhamma must be greater than respect for individuals. To cultivate that respect for the Dhamma, the Buddha points out three kinds of preaching. There is one kind of preaching where the preacher is *“atthappaṭisaṁvedī”* and *“dhammappaṭisaṁvedī”* regarding the Dhamma he preaches. He experiences the meaning of the Dhamma he preaches, and he also experiences the Dhamma therein. But the listener does not experience it. In the second kind of preaching, the preacher does not experience either the taste of the meaning or the taste of the Dhamma of the sermon he delivers, but the listener experiences it. In the third kind of preaching, both the preacher and the listener experience both the taste of the meaning and the taste of the Dhamma within that teaching.</p>
+<p>What is this taste of the meaning (*attha-rasa*) and taste of the Dhamma (*dhamma-rasa*)? You lay devotees can consider this: when listening to a Dhamma sermon, some people may listen to it with the intention of academic study. Thinking, “This is just another Dhamma sermon,” and then listening with a critical attitude—not to gather something for one's life, but to find the flaws mentioned, or comparing it with another sermon they have heard in order to arrive at certain conclusions. In that case, that person might indeed experience the meaning as described, but they do not experience the taste of the Dhamma. They do not get to experience the taste of the Dhamma contained within it. Therefore, if one is to experience this taste of the Dhamma as well, there is a way in which those listeners should listen to the Dhamma, as described in the past. Regarding everything they hear, in the manner described as *“atthikaṭvā, manasikaritvā, sabba-cetaso samannāharitvā, ohitasoto dhammaṁ suṇāti”*—thinking “this is of benefit to me,” reflecting upon it, directing the entire mind towards it, and listening with attentive ears. It is through this reflection that one becomes a true listener. It is from Dhamma heard in that manner that the taste of the Dhamma can be experienced. If the preacher also does this on certain occasions, it is when the listener hears it in that way that they attain the paths and fruits (*magga-phala*). It is mentioned in the Dhamma that sometimes the preacher, too, upon finishing his sermon, also attains the paths and fruits. Such stories are mentioned in the Dhamma.</p>
+<p>There was a monk named Khemaka who, at a time when some doubt arose regarding his realization—he was a non-returner (*anāgāmī*)—sent a message to the other monks, declaring, “I do not regard any of these five aggregates (*pañcakkhandha*) as self, yet I am not an Arahant.” When this message was sent back and forth two or three times, the group of sixty monks in the other monastery doubted it. They thought, “This does not fit; it is contradictory.” Finally, this Venerable One said, “Then I shall go and explain it myself.” Taking a walking staff, he went and explained to those monks using two similes: “What I said is entirely true. For although I do not perceive this fivefold aggregate of grasping (*pañcupādānakkhandha*) [grasping / holding / fuel] as a single entity, as self, or as mine, I still have some defilements remaining.” He gave two similes. What were those similes? “Just as with the scent of a flower, I cannot say whether the scent comes from the petals, the pollen, or from which part of the flower. Yet, there is something called the scent of the flower. I do not know where it comes from. In the same way, I do not regard any single aggregate as self. Yet, the subtle conceit ‘I am’ (*asmi-māna*) still remains within me.”</p>
+<p>Next, he gives another simile. “Suppose a washerman cleans a dirty cloth using a certain substance that was used in those days instead of soap, referred to as ‘gomiya’—which might have been some cleaning substance mixed with cow dung. He removes the dirt by applying that substance. Although the dirt is removed, the scent of the cleaning agent applied, like soap, remains. But after the owner of the cloth takes it back and stores it in a chest for some time, that scent too disappears.” What he demonstrated through that simile is: “I do not regard any single aggregate as ‘I’ or ‘mine’. Yet, I am not an Arahant either.” It is mentioned that when he finished saying this, those listening monks attained Arahantship, and the preaching monk himself advanced from the stage of a non-returner (*anāgāmī*) to the fruit of Arahantship (*arahatta-phala*), realizing Nibbāna. That is what we must understand: both the listener of the Dhamma and the preacher of the Dhamma must strive to listen as *“atthappaṭisaṁvedī”* and *“dhammappaṭisaṁvedī”*, in the manner described.</p>
+<p>True, according to the needs of this era, these machines placed in front of us are operating on our behalf. But one day, we might have to say that if anyone is to become an Arahant, it will be those machines! Because in the coming computer age, all of these will be retained in those computer machines. Among you lay devotees who use them, this Dhamma is perhaps not stored within. Even if it is stored, it is stored only for academic purposes. Otherwise, it is based on various other unsuitable objectives.</p>
+<p>Therefore, we must be careful; although we use these devices as requirements of the era, we must not become enslaved by them. When listening to the Dhamma, we must bear in mind: “It is a rare Dhamma that we are getting to hear.” We are striving to make this rare Dhamma common and accessible for the sake of the world. That may be good in one aspect. Yet, because it is common, the value of valuable things is sometimes lost—and that is exactly what is happening now. While keeping in mind the verses uttered by the Buddha as a challenge, and just as he said, “Illuminate, raise the banner of the seers!”, we must understand that while making the Dhamma common, it is not something to be disrespected or lightly estimated merely because it is common. Furthermore, when that Dhamma is studied in that manner, its words and meanings automatically fall apart. They become distorted. Because they do not study them with realization. Consequently, words are sometimes omitted. Over time, that very fate of the drum mentioned earlier will befall the Dhamma.</p>
+<p>Therefore, this Dhamma is preserved only if the respective listeners and—just like the preachers—the listeners properly understand the Dhamma through both learning and retention. That is why it is said: *“bahu-ssutā, dhatā, vacasā paricitā, diṭṭhiyā suppaṭividdhā”*. A series of words is mentioned in this manner concerning a person of great learning (*bahu-ssuta*). He has heard the Dhamma; he has heard much of the Dhamma. In the past, people learned these by hearing the Dhamma. In that case, along with hearing goes its retention. *“Sutā, dhatā”*—retaining what has been heard. Now, the things in books are gathering dust in libraries, or recorded things are left on discs. None of them touches the heart. However, we are not going back to the past, but we must remember the things to be taken from it through these words. *“Sutā, dhatā”*—not only having heard, *“bahu-ssutā”*—not only having heard much Dhamma, but retaining it. In the past, they used to say in a simile that it is like holding lion's oil in a golden casket.</p>
+<p>Next, *“vacasā paricitā”* (familiarized by speech)—in the past, they not only retained those, but also committed them to speech for the next generation. Reciting them without letting them be forgotten: *“vacasā paricitā”*. Each time they recite them, their minds are purified. Next, *“manasānupekkhitā”* (examined with the mind)—when sitting idle, they mentally reflect with wisdom upon that Dhamma they possess, which they have studied, memorized, and retained. They understand its meaning deeper and deeper. Having understood, next, *“diṭṭhiyā suppaṭividdhā”* (well penetrated by view)—they penetrate it thoroughly with right view. That was how people handled the Dhamma in the past. Now in these times, just like these machines operating instantly, a misconception is spreading in the world that we too can instantly attain the paths and fruits. Why is it called a misconception? Indeed, if this Dhamma which is directly visible (*sandiṭṭhika*) and timeless (*akālika*) is heard properly and preached properly in that manner, we see from the past discourses such as that of Bāhiya that it is not impossible for a person to attain the paths and fruits on that very occasion.</p>
+<p>Depending on those levels of understanding, the Buddha points out four types of individuals: *“ugghaṭitaññū, vipañcitaññū, neyya, padaparama”*. Some understand thoroughly when a word or two is spoken, such as Bāhiya and others. Some need things to be elaborated a bit. Some need to be shown in greater detail, like taking them by the hand and showing them. For some, who are *“padaparama”* (one for whom the word is the maximum), they only memorize the words and cannot go beyond that. Thus, at an individual level, in whatever way, if they retain that Dhamma properly as described, and listen while reflecting upon it, that is the moment when the realization of the paths and fruits (*magga-phala*) takes place. Therefore, we must reflect that protecting this True Dhamma is achieved not by recording it in these machines, nor by writing it down in books, nor by writing it in golden letters and storing it away, but by both the preacher and the listener living within the Dhamma and realizing it, in the manner described.</p>
+<p>Thus, today's Dhamma sermon is about the Dhamma sermon itself. There is nothing more. It is about the Dhamma sermon. Yet, everything is contained within this. Therefore, on this valuable day, you lay devotees must reflect today that the responsibility of the Dispensation (*Sāsana*) lies with you as well, belonging to the fourfold assembly of monks, nuns, laymen, and laywomen. Thus, fulfilling that duty within yourselves, and in the manner declared by the Buddha, for the long-term benefit and welfare of devas and humans—if the strength to preach that Dhamma was generated through this sermon, may this merit also be a supportive condition for you lay devotees to realize the paths and fruits! May all those from Avīci up to Akaniṭṭha who wish to partake in this merit of preaching and hearing the Dhamma, by partaking in it, realize the supreme, great Nibbāna through their aspired Bodhi! With this aspiration, recite this verse:</p>
+<p>>*“Puññen'ānena pappanā,*</p>
+<p>> *maṁ sadevaka-mānuse;*</p>
+<p>> *sabba-dukkha-pamuccatu”ti.*</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_099.html" class="doc-btn">← Previous Sermon (099)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_101.html" class="doc-btn">Next Sermon (101) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

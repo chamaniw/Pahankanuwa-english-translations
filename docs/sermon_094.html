@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 094 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_093.html" class="doc-btn">← Previous Sermon (093)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_095.html" class="doc-btn">Next Sermon (095) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 094</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_094_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_094_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_094_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #94</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.122)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Yāvadeva anatthāya, ñattaṃ bālassa jāyati;</p>
+<p>hanti bālassa sukkaṃsaṃ, muddhamassa vipātayaṃ.</p>
+<p>From:</p>
+<p>Dhammapada 72 (Bālavagga)</p>
+<p>Dear Listeners,</p>
+<p>The Blessed One points out to us that no matter how much knowledge and education one possesses, one does not become a wise person (*paṇḍita*) by that alone. If someone falls into ruin because of their very knowledge and education, that person is described in the Dhamma as a fool (*bāla*), an ignorant person.</p>
+<p>Today we present a stanza and a story illustrating how a person lacking the eye of wisdom to distinguish between good and bad, wholesome (*kusala*) and unwholesome (*akusala*), benefit and harm, falls into destruction precisely due to the knowledge they have acquired. The Teacher of the Three Worlds, the Blessed One, expounded this stanza at the Veḷuvana monastery in Rājagaha, concerning a hungry ghost (*peta*) named Saṭṭhikūṭa. On one occasion, the great Arahant Moggallāna and the Arahant Lakkhaṇa were residing on the Gijjhakūṭa (Vulture's Peak) hill, descending daily to Rājagaha for alms. One day, while descending Vulture's Peak for alms, the great Arahant Moggallāna smiled slightly at a certain spot. Venerable Lakkhaṇa asked him the reason for this, to which he replied, "I will not say now. I shall speak of it in the presence of the Blessed One."</p>
+<p>When both of them, having partaken of their almsfood, approached the Blessed One, Venerable Lakkhaṇa inquired about the reason for the great Arahant Moggallāna’s smile. On that occasion, the great Arahant Moggallāna declared: "While descending Vulture's Peak, I saw a hungry ghost (*peta*) with a body about three leagues (*gavu*) in size. Upon that hungry ghost's head, sixty thousand blazing, glowing iron hammers were falling. As they fell and rose, his head split apart, yet it repeatedly reformed. I smiled because I thought to myself: 'I have never seen such a wondrous event, such a being, before!'"</p>
+<p>The Blessed One then said: "Monks, I too saw this very thing at the terrace of enlightenment (*Bodhimanda*). However, I did not declare it, thinking that those who did not believe my words would accumulate unwholesome deeds (*akusala*). Now, since Venerable Moggallāna stands as a witness for me, I declare that this matter is true." Then the Sangha inquired about the past history of that hungry ghost. The Blessed One related that in the past, there was a cripple (*piḷā*) in Benares. Dear devotees, a cripple is one whose legs are so deformed and bent that he cannot walk, sometimes called a 'sokara'. That cripple lived under a banyan tree near the city, where people would bring him daily and place him. This cripple was highly skilled in slinging pebbles, in the art of slinging pebbles. When the village children came and asked, he would sling pebbles through the leaves of the banyan tree to trace the shapes of elephants, horses, and so on. In return, the children would give him food and drinks. This was the cripple’s livelihood.</p>
+<p>One day, when the king was heading to the pleasure garden, the children saw him approaching the banyan tree and quickly placed the cripple among the roots of the banyan tree and ran away. When the king arrived under the tree, since it was midday, the shadow cast through the holes in the leaves fell on his body, and he looked up. Seeing the shapes of the animals, he asked, "Whose work is this?" The royal officers replied, "This is the work of this cripple." Summoning the cripple, the king said, "My chaplain (*purohita*) Brahmin has the defect of being excessively talkative—that is, loquacity. Whenever I ask him something briefly regarding state matters, he has a habit of reciting a massive monologue. Can you sling goat dung into his mouth?" The cripple replied, "I can do that, Your Majesty. If you bring goat dung and seat the chaplain with me behind a curtain, I shall do the rest." The king arranged it accordingly. The cripple made a hole in the curtain with the point of a pair of scissors, and the king began a conversation. Every time the Brahmin opened his mouth, the cripple slung a goat-dung pellet inside. It is said that he slung about a measure (*naḷiya*) of goat dung. When he finished slinging the goat dung, the cripple shook the curtain as a signal (*saññā*). The king understood from this that the goat dung was finished. The king then said, "O teacher, you were talking so much that you did not even realize you have swallowed this much goat dung!"</p>
+<p>Thereupon, the Brahmin felt highly ashamed and, from that day on, gave up his talkative habit. The king, feeling great relief, presented the cripple with what kings call a *Sabbaṭṭhaka* reward—eight of every kind of item as a gift of appreciation. He also granted him four villages at the four gates of the city. Thus, the cripple received great wealth due to his skill in slinging pebbles. Seeing this, a certain man in that city thought: "How valuable this craft must be, that this person has received such wealth! I too must learn this craft." Approaching the cripple, he said, "Teacher, please teach me this." The cripple refused. However, for a long time, this man attended to the cripple, massaging his hands and feet, and repeatedly pleaded with him to teach him the art.</p>
+<p>Finally, thinking, "This man has been so helpful to me," the cripple taught him the art. When the training was completely finished, the cripple asked, "Now, what will you do?" The man replied, "I will test this art." The cripple asked, "What will you test, and how will you test it?" He said, "I will shoot at a cow or a person and kill them." The cripple warned, "My son, if you do that, you will incur a debt you can never repay. Because if you kill a cow, the fine is a hundred; if you kill a human, the fine is a thousand," stating the law as far as he knew it. "Therefore, if it is someone who has no father or mother, it is alright to do something to demonstrate your skill." So, this man went and waited at the city gate. At that time, a Paccekabuddha named Sunetta lived near the city. When He was entering the city for alms, this man saw Him and thought, "Now I have found someone without a father or a mother." Carrying pebbles in his pocket, he went and slung a pebble into the right ear of the Paccekabuddha. So skilled was he in his art that the pebble went right out through the left ear. The Paccekabuddha experienced intense, indescribable sensation (*vedanā*). Unable to continue His almsround, He flew through the air back to His hut, His monastery, and upon arrival, attained final Nibbāna.</p>
+<p>The people were waiting to offer almsfood. Since He did not appear, they went to investigate and, upon finding what had happened, began to weep and wail. This man also went to see what was happening. There, in a boastful manner, he let slip: "I did this just to test my target, to demonstrate my skill on the Paccekabuddha." All the people gathered and cried, "Because of this sinner, we have lost our Paccekabuddha!" and beat him to death on the spot. According to the texts, that man was boiled in hell for an exceedingly long time, for many aeons (*kalpas*). As a residual result of that evil karma, he obtained this state of a hungry ghost (*peta*) with a body three leagues (*gavu*) in size. The Blessed One explained this matter, and in connection with it, expounded this stanza.</p>
+<p>"Monks, the knowledge and intellect acquired by foolish people are solely for their own destruction." Conveying this meaning:</p>
+<p>> *Yāvadeva anatthāya, ñattaṃ bālassa jāyati,*</p>
+<p>> *anti bālassa sukkaṃsaṃ, muddhamassa vipātayaṃ.*</p>
+<p>The knowledge a fool acquires is only for his own ruin. It is purely to his detriment that the fool gains knowledge. It destroys his wholesome portion, severing the very head of his wisdom. This is the meaning contained in this stanza. Now, in connection with this story and the stanza, let us see if we can draw out certain points of the Dhamma.</p>
+<p>The first part of the story reveals the weakness of the Brahmin chaplain. When the king inquired about state affairs, the speed of his talking was such that he did not even realize he was being slung with so much goat dung. That was the Brahmin's weakness. Yet, due to the skill of the cripple, the Brahmin learned a lesson, for better or worse. Next, we have the cleverness of the cripple's pupil. This is what became the subject of the stanza. He thought to show off his skill. At first, he thought of shooting either a cow or a human. The cripple pointed out the law. But that is only worldly law. One cannot do everything merely with legal expertise in worldly law. There is a far more serious, universally valid law of karma. According to this law of karma, the retribution for slinging a pebble at the motherless and fatherless Paccekabuddha is indeed what is described in the Dhamma. From this, we can understand the value of the Dhamma, and the difference between material value and spiritual value. Nowadays, many people question these things. Indeed, they might even mock this story: "Are there really hungry ghosts (*peta*) with such huge bodies? Who has seen them? How can such things be?"</p>
+<p>Dear devotees, in the past, wise people referred to karma as the 'machine of karma' (*kamma-yantraya*). It is truly wondrous; the Blessed One has declared that a karma is not exhausted without yielding its results. *Nāhaṃ, bhikkhave, katānaṃ upacitānaṃ kammānaṃ abyantīkiriyaṃ vadāmi...* "Monks, I do not say that there is an ending of deeds (*kamma*) done and accumulated without experiencing their results." That is why, as that body is broken down again and again, it is reformed. This is also the case in hell. In hells and other purgatories, one might wonder: "How do the beings in hell endure such intense, blazing heat?" It is solely due to the momentum of karma, dear devotees. It is a highly wondrous thing. Because people of this era do not understand these events, which fall within the range of Buddha-knowledge and are visible to those who have attained higher knowledges (*abhiññā*), they use intellectual logic to subject them to ridicule.</p>
+<p>However, there is a wondrous order of karma (*kamma-niyāma*) operating in the world, which is universally applicable and from which even Buddhas, Paccekabuddhas, and Great Arahants cannot escape. This is what demonstrates its terrifying nature. Even if we reflect on our present era in this light, nowadays, everyone considers a new discovery as something extraordinary. Whatever the field may be, research is given a high place in this era. Most of that research exists precisely for the aforementioned self-destruction—not only of oneself but of the entire society and the entire world. When we think of how the lives of helpless animals are sacrificed for some of these new discoveries, we realize that they do not consider the side of karmic consequences. They exploit animals in their products to prove their own cleverness.</p>
+<p>Next, consider weapons of war. They wait for a war to measure the power of those weapons on the battlefield. Then, in this day and age, they talk about environmental pollution. The entire atmosphere has become toxic. Trees, plants, and vegetation are being destroyed. All of this is due to that fool (*bāla*)—though in this era, we might hesitate to call them fools. If someone holds a string of degrees, calling them a fool seems somewhat awkward. Yet, according to the Buddha's word, we cannot call them wise (*paṇḍita*) either. Fortunately, there was another word used for this in the past: 'overly wise' (*ati-paṇḍita*). People whose cleverness has run amok. We can indeed call such people 'overly wise.' Thus, due to such excessive cleverness, and by giving prominence to material things while ignoring the spiritual aspect, research is taken so seriously by the world that it leads to self-destruction and suicide. Its consequence is seen only in terms of this world. In truth, it is like the vision of a one-eyed person. Their plans are only for this world. Even when we think of this world, because of this path to hell that has been trodden for centuries, this universe has become entirely incompatible with human life. One day, at some point, it may even be destroyed by these very research projects. Everyone makes this prediction. Therefore, we can reflect on this in this light.</p>
+<p>In the past, too, there were such 'overly wise' teachers. There were heretical teachers even during the Buddha's time. Among them, the teacher who faced the most severe criticism from the Blessed One was Makkhali Gosāla. To such an extent, the Blessed One declared: "Monks, I do not see any other person born for the detriment of many people, for the suffering (*dukkha*) of many people, like Makkhali, that foolish man (*moghapurisa*), or anyone who teaches such a practice and doctrine." The philosophy of Makkhali Gosāla is compared to a net placed at the mouth of a river for the ruin of many fish. Likewise, this foolish man Makkhali casts a net over people and traps them. What, then, is contained in Makkhali Gosāla's philosophy? It is fatalism (*niyati-vāda*), also called 'purification through transmigration' (*saṃsāra-suddhi*). He does not accept that the defilement or purification of beings occurs through causes and conditions. Furthermore, he asserts that there is no individual effort, strength, or power for these beings to achieve liberation. Both the fool (*bāla*) and the wise (*paṇḍita*) travel through this round of rebirths (*saṃsāra*) without distinction, running along until one day their suffering (*dukkha*) comes to an end on its own. It is viewed as something that happens spontaneously, by necessity.</p>
+<p>The simile he offers is that of a ball of thread thrown: just as it goes on unwinding until it is completely unrolled, so too both the fool (*bāla*) and the wise (*paṇḍita*) run through the world, through this round of rebirths (*saṃsāra*), and finally come to an end. He gives no place to karma. There is no understanding of causes and conditions. This is a perverse philosophy, a doctrine of fatalism (*niyati-vāda*). Not only that, another philosophy that the Blessed One frequently criticized in a similar manner was the doctrine of non-action (*akiriya-vāda*) taught by the teacher Pūraṇa Kassapa. His philosophy also claims that there is no such thing as merit or demerit. By killing living beings, stealing, committing adultery, lying, and so forth, no sin is committed. By giving alms and so on, no merit is acquired. He claims that even if one were to slaughter and mince all the living beings on this earth with a razor-sharp wheel into a single heap of flesh, no demerit would come to anyone. Giving alms, self-taming, and self-control are useless activities; none of these yield any fruit. That is the way of the doctrine of non-action (*akiriya-vāda*), which is a rejection of karma. This, too, is a form of being 'overly wise'.</p>
+<p>Not only that, in another place in the Dhamma, it is mentioned that on one occasion, Venerable Ānanda pointed out to the wanderer (*paribbājaka*) named Sandhaka. Nowadays, logic or reasoning (*tarka*) is something that many people hold in high esteem and worship. However, in accordance with the Dhamma, Venerable Ānanda pointed out that logic can be consistent with reason, or it can be contrary to reason. It may look right through logic, but the actual fact is wrong. Such things exist. Yet, we have arrived at an era where people use logic itself to reject the very word of the Buddha. Therefore, logic is like a double-edged sword. It is not an absolute criterion for measuring the truth of something. In such an environment, the Blessed One on certain occasions revealed a wondrous principle of Dhamma (*dhamma-niyāma*) which can be of great use to the intellectuals of today.</p>
+<p>When He visited the Brahmin village of Sālā, and the householders came to see Him, the Blessed One asked: "Householders, do you have any teacher whom you prefer, whose teaching you can accept with faith (*saddhā*) and practice?" They replied, "We have no such teacher." The Blessed One did not say, "Then, here I am." Instead, He declared: "Then, householders, I shall teach you a principle of Dhamma (*dhamma-niyāma*). It is called the 'unquestionable teaching' (*Apaṇṇaka Dhamma*), also known as the unquestionable practice." It is an unusual word. It is explained in various ways. The core meaning is this: *apaṇṇaka* means a principle by which one can arrive at a definitive conclusion without any hesitation, after weighing the matter comparatively. In short, it has the meaning of being 'free from doubt.' It is a principle of Dhamma that one can practice without any issue. In common worldly parlance, there is a saying: "Whether it turns out right or wrong, it fits either way." Rather than just stating it this way, it is better to explain it using the similes given by the Blessed One Himself.</p>
+<p>The Blessed One then introduces what this 'unquestionable teaching' (*Apaṇṇaka Dhamma*) is. You have heard of the ten-fold right view (*sammā-diṭṭhi*). Opposite to that, there is the ten-fold wrong view (*micchā-diṭṭhi*). It is this wrong view that is mentioned here. It consists of ten points saying 'there is not, there is not.' As in the Pali terms: *Natthi dinnaṃ, natthi yiṭṭhaṃ, natthi hutaṃ, natthi sukatadukkaṭānaṃ kammānaṃ phalaṃ vipāko...* "There is no fruit or result of almsgiving, sacrifice, or oblation; there is no result of good or bad deeds; there is no obligation to mother or father; there is no this world, no other world; there are no spontaneously arisen beings (*opapātika*, such as hungry ghosts or deities); there are no ascetics and Brahmins in the world who, through their own higher knowledge, understand and describe this world and the next." This is the wrong view of negation ('there is not, there is not') encompassing these ten points, which the Blessed One is speaking of here. He then explains it according to the unquestionable (*apaṇṇaka*) principle. Now, if someone hears this view of negation, they may feel inclined toward it. They might feel like holding onto it. But the Blessed One asks them to investigate it in this way:</p>
+<p>If indeed the opposite view—namely, the right view (*sammā-diṭṭhi*) that there are results of almsgiving, sacrifice, and good or bad karma—is true, then this opinion of theirs becomes wrong view (*micchā-diṭṭhi*). If the former is the actual reality, then this presentation of 'there is not, there is not' is their wrong view. Furthermore, thinking in accordance with that wrong view becomes wrong intention (*micchā-saṅkappa*). Declaring that wrong view to others becomes wrong speech (*micchā-vācā*). Moreover, presenting this view directly clashes with and opposes the teaching of those Arahants in the world who possess understanding of the other world, creating a completely contradictory view. Proclaiming this wrong view to others also constitutes the preaching of false doctrine (*asaddhamma*). These are the drawbacks (*ādīnava*) of this position. Furthermore, because of this very view, they will not be inclined to cultivate virtues such as moral conduct (*sīla*). The Blessed One points out that there are numerous drawbacks in valuing immoral behavior within such a wrong view.</p>
+<p>Next, He explains how a wise person (*viññū-purisa*)—one who is considered wise by societal standards—should reflect on this. How? "If this philosophy taught by these people is somehow correct, then they do not have to worry about a next life. No matter how they live, they will face no trouble in the next world. There is no issue there. However, if the opposite right view is true, then these people will go to a state of misery (*duggati*)." Then they think from the other side: "Even if we assume their philosophy is correct, during their lifetime in this world, wise people will condemn them as immoral nihilists. They will be censured in this world, and if there is a next world, they will also fall into a state of misery (*duggati*)." Thus, the Blessed One states that one must weigh the good and bad sides comparatively and make a decision.</p>
+<p>In the same way, He speaks about the affirmative view. The wise person reflects: "Now, there is also this philosophy: there are fruits and results of almsgiving and sacrifice; there are fruits and results of good and bad karma; there is this world; there is the next world; there is mother; there is father." Next, He speaks of this right view of the ownership of action (*kammassakatā sammā-diṭṭhi*). Regarding this view, the Blessed One states that if it is indeed so, then that person's view is right view (*sammā-diṭṭhi*). The thoughts formed in accordance with it are right intention (*sammā-saṅkappa*), and the words spoken in accordance with it are right speech (*sammā-vācā*). The stance taken is aligned with the view of the Arahants who know the next world, and attempting to convince others of it is right action (*sammā-kammanta*). Thus, a positive side of benefits (*ānisaṃsa*) is demonstrated there. They make an effort to live a good life, endowed with virtue (*sīla*). Even if, in some way, that right view (*sammā-diṭṭhi*) is true or not, the person who spends their life in this world according to that right view receives praise as a virtuous person. At the very least, they are praised in this world as a virtuous, affirmative-minded person. Moreover, if that right view is true, they will obtain a happy destination (*sugati*) in the next life.</p>
+<p>Thus, comparing the advantages—what we call benefits or blessings (*ānisaṃsa*) in modern terms—and deciding after investigating with wisdom is what is known here as the unquestionable practice, the unquestionable teaching (*Apaṇṇaka Dhamma*). This is an extremely valuable matter. In this day and age, it is very difficult for many people to establish faith (*saddhā*) in any person. Everyone has various kinds of doubts, thoughts (*vitakka*), and numerous such problems. When they cannot even generate faith in the Blessed One, how could they establish faith in others? Therefore, they proceed solely with logic. Very well, if one is to use logic, here is the principle: the unquestionable (*apaṇṇaka*) principle. One must weigh the side of drawbacks (*ādīnava*) against the side of benefits (*ānisaṃsa*). If the side of benefits is greater, then one should follow that. That is why we said: "Whether it turns out right or wrong, or wrong or right, one can find peace either way." There is no room for regret. This is what is introduced as the *Apaṇṇaka Dhamma*. Since these points about the *apaṇṇaka* principle might be somewhat complex, it is difficult to present them in a way that is immediately clear to everyone in a sermon of this kind. However, our ancient poet Alagiyavanna Mukaveti, in his work *Subhāṣitaya*, has presented this matter in a very simple verse:</p>
+<p>> "O virtuous ones, whether there is a next world or not,</p>
+<p>> It is best to abandon evil deeds from the mind.</p>
+<p>> If there is no next world, no harm will arise from this;</p>
+<p>> But if there is, disaster awaits him who sinned believing there is none."</p>
+<p>It is not difficult for you, dear devotees, to understand this. Whether there is a next world or not, it is best to abandon evil deeds. Giving up evil deeds is good because even if there is no next world, no harm comes of it. Not only does no harm come of it, but one also receives some praise in this society, like: "Ah, this person is living a good life." However, if there indeed is a next world, disaster will befall the one who committed sins under the view or logic that "there is none." This is exactly what we have been saying all this time. This is the essence.</p>
+<p>Thus, the Blessed One continues this discourse into deeper aspects as well in the *Apaṇṇaka Sutta*. Some people in this era are not even inclined to think about these things. Many people nowadays—specifically those who adhere to pure logic—only talk about this world of sensory desires (*kāma-loka*) and have no faith in higher knowledges (*abhiññā*). As we mentioned in previous sessions, modern science has developed devices that mimic what can be attained through higher knowledges, such as the divine eye (*dibba-cakkhu*) or divine ear (*dibba-sota*). Because of this, those who worship modern science do not believe in the ancient three-fold knowledge (*tevijjā*) and similar attainments. Yet, the Blessed One has pointed out the form realms (*rūpa-loka*) and formless realms (*arūpa-loka*) that transcend the realm of sensory desires (*kāma-loka*). Not only our Blessed One, but also ancient noble sages who attained absorptions (*jhāna*) pointed out the states of mind-made fine-material meditative attainments (*samāpatti*) that transcend this world of sensory desires. Even beyond those are the formless states. At the time of the Buddha's appearance, ancient yogis had attained these states. The pleasures of this world of sensory desires are incomparable to them; when compared to the bliss of meditative absorption (*jhāna-sukha*), the pleasures of the realm of sensory desires are likened to a small child playing with excrement and urine. This is the matter the Blessed One speaks of here.</p>
+<p>Certain teachers claim that formless worlds do not exist. They do not say fine-material worlds (*rūpa-loka*) do not exist, but they deny formless worlds (*arūpa-loka*). They say that these formless, non-perceptual states do not exist. Another group says that formless worlds do exist. Next, the Blessed One explains how to resolve this doubt using the unquestionable (*apaṇṇaka*) principle. The wise person reflects: "If I adopt the view that only fine-material worlds exist, while formless worlds actually do exist, I will not be able to go beyond fine-material existence; I can only exist in mind-made fine-material forms. But if the view that formless worlds exist is true, and I act accordingly, I can attain much higher formless meditative attainments (*samāpatti*), such as the sphere of infinite space (*ākāsānañcāyatana*), the sphere of infinite consciousness (*viññāṇañcāyatana*), the sphere of neither-perception-nor-non-perception (*nevasaññānāsaññāyatana*), and so forth. I can attain these superior meditative states."</p>
+<p>Furthermore, that wise person reflects: "It is indeed because of this form (*rūpa*) that the taking up of weapons, and various quarrels and disputes occur. Many drawbacks (*ādīnava*) in the world are rooted in this form. Therefore, by transcending and overcoming form and obtaining the formless, the mind is freed from these troubles." Therein lies the benefit. Hence, that person does not grasp either extreme. The Blessed One points out that because one has no personal direct experience (*paccakkha*), one cannot declare that the first view is absolutely true. One cannot arrive at the dogmatic conclusion, "Only this is true, everything else is false," since one lacks direct knowledge. What is it? That "formless worlds do not exist." Similarly, one cannot say, "The view that formless worlds exist is the sole truth, and everything else is false," because one does not possess that direct experience either. Instead, keeping an open mind, investigating comparatively based on the benefits and advantages (*ānisaṃsa*), one reflects on the stance to be taken. Rather than remaining in doubt, one reasons: "If only mind-made fine-material worlds exist, then asserting that formless realities exist and acting in accordance with that will yield greater benefits." Thus, one gives more weight to the second option.</p>
+<p>Next, this unquestionable (*apaṇṇaka*) principle rises even higher. There, the two sides are described thus: One says that the highest a human can reach is only the formless realms, the formless perceptual states. A certain teacher declares that one can only reach the formless meditative absorptions (*jhāna*) up to the sphere of infinite consciousness and the sphere of neither-perception-nor-non-perception. They claim that one cannot go beyond that. Another person declares that it is possible to transcend this and realize the cessation of existence (*bhava-nirodha*). The cessation of existence, dear devotees, is Nibbāna.</p>
+<p>Now there is a doubt: "Should I adopt the view that one cannot go higher than the formless states, or should I adopt the philosophy that there is a way to transcend the formless states, transcend the suffering of this round of rebirths (*saṃsāra*), cross over existence (*bhava*), and attain the cessation of existence (*bhava-nirodha*), which is Nibbāna?" This is the next doubt. There, the wise person reflects: "Even this world is something that belongs to existence (*bhava*). Even the formless worlds exist within attachment and grasping—what are called lust (*rāga*) and grasping (*upādāna*). There are subtle attachments even in them. However, if there is such a thing as the cessation of existence (*bhava-nirodha*), I can realize final extinguishment here and now, in this very life." Thinking thus, the wise person does not adopt the stance that only the formless worlds exist, but accepts the teaching that one can transcend them and cross over this existence (*bhava*).</p>
+<p>There too, the stance that the wise person should adopt was shown. Understand this—it is a long discourse, and I have only presented the summary to you. Reflect accordingly. In short, how does this discourse end? The Blessed One did not say to those householders who came to Him, "If you do not have a teacher, here I am. Go to my refuge saying *Buddhaṃ saraṇaṃ gacchāmi*." It had a wondrous conclusion fitting for those wise people. At its conclusion, those householders took refuge in the Triple Gem through understanding. This is a highly valuable discourse for this era. For those who cannot place faith (*saddhā*) and trust in a teacher, this is the medicine. For them, the Blessed One pointed out this unquestionable practice (*apaṇṇaka-paṭipadā*) so they could live in a way that assists their progress and well-being, by comparing, analyzing, and weighing logical arguments that are consistent with reason, rather than contrary to it. Dear devotees, now is not the time to relate long Jataka stories about this word *apaṇṇaka*. You have heard of Jataka stories. The very first Jataka story in the Jataka book is the *Apaṇṇaka Jātaka*. The *Apaṇṇaka Jātaka* also contains this very same principle.</p>
+<p>To state it briefly, when the Bodhisatta merchant and the merchant Devadatta were traveling through a desert, the demons (*yakkhā*) in the desert, with the intention of killing and eating them, approached looking as though they had just bathed and come from a place with plenty of water. Devadatta was deceived by this and threw away the water carried in his carts. The Bodhisatta merchant reflected: "Very well, this may be true or it may be false, but let us carry our water with us." Thereby, they were saved; they did not throw away their water. From this too, you can understand the word *apaṇṇaka*. It refers to a decision that can be made with absolute certainty, without fear or hesitation, in a situation of doubt. If we reflect according to the *apaṇṇaka* principle, even if the Blessed One did not state it explicitly, we can make various decisions all the way up to Nibbāna by thinking in accordance with this unquestionable practice.</p>
+<p>It does not mean throwing everything away just because it is not visible to our eyes. Rather, it is about considering their benefits and shaping one's philosophy of life, for the Blessed One has declared that we can achieve great things during this short lifespan of ours—even realizing the cessation of existence (*bhava-nirodha*), which is Nibbāna, as mentioned before. However, the basis for this is view (*diṭṭhi*). If one cannot even straighten one's view, how will the rest of the path unfold? Even in this day and age, in some places where the Dhamma is presented as Buddhism but is merely a shadow of it, that same wrong view (*micchā-diṭṭhi*) is found. They do not accept almsgiving and merit. They say: "Almsgiving and other meritorious deeds are later additions, and virtues like moral conduct (*sīla*) were created later for society. These are outdated things." There is such an era, a trend, a bent of mind among many people. "Where are those hungry ghost (*peta*) states? We cannot see them anywhere." The Blessed One compares our rejection of everything we cannot see to blind men claiming there is no sun or moon—should we accept that? Those without eyes cannot see them. Yet, there are in the world—we cannot say how many, perhaps a small number, which is why room is left in right view (*sammā-diṭṭhi*)—ascetics and Brahmins who have attained such states and know that there is another world.</p>
+<p>Therefore, if one arbitrarily takes up one's own opinion and rejects, ridicules, attacks, and disparages all of this through faulty logic, one is merely cutting off the head of one's own wisdom. That is why it is said that one’s knowledge, wisdom, and degrees can sometimes lead to one’s own ruin. Perhaps, if one writes a doctoral thesis on such a subject, they might receive a degree according to the current intellectual trends. The book might also sell well. But just as in the story of Makkhali Gosāla, where a vast number of fish are caught in a net cast by villagers, numerous helpless humans are trapped in wrong view (*micchā-diṭṭhi*), influenced by the book of that so-called scholar. In this way, on one hand, we often talk about environmental pollution due to the material-scientific bias—about external environmental pollution. But not many talk about mental environmental pollution. That is what we are highlighting here.</p>
+<p>The cause of mental environmental pollution is indeed heretics (*micchā-diṭṭhi-gatā*) of that sort. Because heretics like Makkhali Gosāla and Pūraṇa Kassapa set themselves up as teachers and presented such false philosophies to vast audiences, millions of people must have gone to hell. Following them, using logic that is contrary to reason, saying "this is not visible to our eyes, how can it happen?", ridiculing and dismissing these realities, attacking the Buddha's Dhamma, and adopting views like 'there is no other world' also result in mental environmental pollution. Indeed, as a result of this, we see in the field of modern education that future generations are not even ready to accept the basic premises of the Blessed One's Dhamma. In those fields, prominence is given to new opinions, new discoveries, and new products under the name of a "critical attitude." Something cannot be accepted solely because of its novelty. We cannot discard something merely because it is old, nor can we accept it merely because it is new. The course of action that a wise person must take is the unquestionable (*apaṇṇaka*) way we have shown.</p>
+<p>Some people reflect, carrying in mind not wisdom but that 'overly wise' attitude, that right view (*sammā-diṭṭhi*) means only absolute truth. This is also something many have confused. It is clear right here that there is a place for the right view of ownership of action (*kammassakatā sammā-diṭṭhi*). If one is to wander in the round of rebirths (*saṃsāra*), if one is to continue in the round of rebirths, and if one adopts nihilism, one will end up dwelling in hell and similar places. *Kammassakatā sammā-diṭṭhi* is the right view that actions (*kamma*) are one's own. It refers to the course of action taken by accepting the premises that there are fruits and results of almsgiving, of serving mother and father, and of good and bad deeds, and that there is this world and a next world. It is through living according to right view (*sammā-diṭṭhi*) that one can avoid states of misery and go to happy destinations in this round of rebirths (*saṃsāra*). Therefore, the analysis of the wholesome (*kusala*) and unwholesome (*akusala*), the analysis of merit (*puñña*) and demerit (*pāpa*), as taught by the Blessed One, must be reflected upon with wisdom. If we take the ordinary meaning of the word *kusala*, it means skill. Worldly skill, however, is close to cunning.</p>
+<p>Now, the skills of that cripple and his pupil were in reality not significant things. Similarly, the cripple’s legalistic knowledge was limited only to that scope; he did not understand the terrifying consequences of that nature in the end. Therefore, we must reflect that this *kammassakatā sammā-diṭṭhi* is an important thing. By shaping our behavior according to it, and by fulfilling virtues like moral conduct (*sīla*), the door to concentration (*samādhi*) is opened. It is by developing concentration, and by being established in concentration, that wisdom (*paññā*) can be developed. If, at the very beginning, one abandons right view (*sammā-diṭṭhi*) and adopts a nihilistic view, claiming "there is no this world, no other world, no merit or demerit," there is no progress for them. You, dear devotees, have frequently heard the analysis of the wholesome (*kusala*) and unwholesome (*akusala*) in the Dhamma. The unwholesome roots are greed, hatred, and delusion (*lobha, dosa, moha*). The wholesome roots are non-greed, non-hatred, and non-delusion (*alobha, adosa, amoha*). This does not mean that greed is entirely eradicated right away. These are the two sides. The actions that follow from these are described as the five sins, the ten unwholesome actions, the ten wholesome actions, and so on. There is room for those analyses within that right view (*sammā-diṭṭhi*). However, at a deeper level, there are the Four Noble Truths—suffering (*dukkha*), the origin of suffering, the cessation of suffering, and the path leading to the cessation of suffering—in a supramundane (*lokuttara*) sense. Yet, both of these were taught by the Blessed One Himself; they are not later additions. One should not misunderstand this. As long as one is within existence (*bhava*), the ten-fold right view (*sammā-diṭṭhi*), the *kammassakatā sammā-diṭṭhi*, helps to remove the path to states of misery and lead to the path of happy destinations.</p>
+<p>As long as the stance 'I' and 'mine' exists, one is prompted to perform actions (*kamma*). This must be accepted. One has to answer for the responsibility one has taken. One has to experience the results of things done with the thought of 'I' and 'mine.' Therefore, simply rejecting it will not do. There is a stage where this is transcended in a supramundane (*lokuttara*) sense—the deeper part of it. But if one remains established in self-identity and abandons that mundane right view prematurely, one cannot reach that supramundane stage; it is like throwing away the ladder before climbing it, or pushing the ladder away before one has even ascended.</p>
+<p>Therefore, we must reflect so as to avoid falling into such dogmatic views. This is exactly what we analyzed on previous occasions regarding the Blessed One's teachings. This ten-fold right view (*sammā-diṭṭhi*) is described as *sāsavā puññabhāgiyā upadhivepakkā* (affected by taints, siding with merit, ripening in the assets of existence). It is affected by taints; that is true. Yet it is *puññabhāgiyā*—it leans toward the side of merit, not demerit. That is good. It is *upadhivepakkā*, which means it ripens in good states of rebirth in existence (*bhava*). To live one's life without such hardships, even for a member of the Sangha... as mentioned in the past, Venerable Losaka, due to a certain unwholesome karma, did not even receive almsfood properly until his final moments. What assists one to live without such hardship is the view that is *puññabhāgiyā upadhivepakkā*. It yields the results of rebirth, providing favorable states of rebirth. One who travels through existence (*bhava*) cannot reject these. However, the state that transcends this is found within the Four Noble Truths: *ariyā anāsavā lokuttarā maggaṅgā* (noble, taintless, supramundane, a factor of the path). It is noble. It is taintless, without taints (*anāsava*). It is supramundane (*lokuttara*). It demonstrates the state of crossing over the world. It belongs to that path, which is called the supramundane path-consciousness. Thus, if one grasps only what belongs to the supramundane path and, remaining established in that view, rejects the *kammassakatā sammā-diṭṭhi*, that is where they go wrong. Therefore, we must reflect that when we analyze the various points in this Dhamma, instead of the foolish person’s state, we should analyze and understand things case by case, as indicated by the Blessed One for a wise person (*viññū-purisa*). If a devotee possesses that capability, it is highly to be praised. If someone considers faith (*saddhā*) to be a weakness, the Blessed One declares that they should reflect with wisdom, weigh things in this manner, and adopt a stance. Generating faith (*saddhā*) upon hearing the Dhamma from someone like the Blessed One is possible only for those who have some suitable preparation in this round of rebirths (*saṃsāra*). Not everyone can do it. There must have been so many who met the Blessed One. Even after the Blessed One introduced Himself, Upaka the Ajivaka merely said, "Yes, it may be so," shook his head, and went away, didn't he? It was only after being humbled in the end that he returned.</p>
+<p>The Blessed One had to introduce Himself on several occasions, yet they did not accept Him. Well, if someone developed such faith (*saddhā*) upon hearing a discourse from the Blessed One's teaching, things are easier for them, because they established faith (*saddhā*) in the right place. Indeed, if one establishes faith (*saddhā*) in the wrong way in an unworthy person, they are ruined right there. Yet, faith (*saddhā*) is not something to be discarded. What is the reason for this? It is in accordance with faith (*saddhā*) that energy (*viriya*) arises. In accordance with energy (*viriya*), mindfulness (*sati*) is established. As mindfulness (*sati*) is consolidated, concentration (*samādhi*) arises. Assisted by concentration (*samādhi*), wisdom (*paññā*) comes. Therefore, if one hopes to develop the spiritual faculties (*indriya*) of energy, mindfulness, concentration, and wisdom (*viriya, sati, samādhi, paññā*), one must establish faith (*saddhā*) in the Triple Gem. Even though it was not explicitly said to the Brahmin householders of Sālā, by the end of the sermon, they recognized the Blessed One and established faith (*saddhā*). This is exactly what we have to say to you, dear devotees. This is an era where various opinions, doctrines, and heretical views are spreading.</p>
+<p>In the name of the Dhamma, in the name of the Dispensation (*sāsana*), many fish are caught in the net of various heretical views (*micchā-diṭṭhi*). However, reflecting with wisdom and in accordance with the unquestionable (*apaṇṇaka*) principle pointed out by the Blessed One, we must strive to free ourselves from being fools (*bāla*) and become truly wise (*paṇḍita*). Today, on this valuable day, this gathering of devotees, reflecting with wisdom and discarding all their self-importance, understood that virtues like moral conduct (*sīla*) are the very starting point. With the purpose of fulfilling these virtues, many have observed the eight precepts or ten precepts on this Poya day. They spent their valuable day in this manner. Therefore, if you, dear devotees, hope to cross over this round of rebirths (*saṃsāra*), which is filled with the suffering (*dukkha*) of existence (*bhava*), birth (*jāti*), decay and death (*jarāmaraṇa*), disease, and death (*maraṇa*), you must travel along the path of moral conduct, concentration, and wisdom (*sīla, samādhi, paññā*).</p>
+<p>Thus, if you have been able to gather certain points from this sermon, may they assist to some extent in building the spiritual faculties and powers (*indriya-bala*) of faith, energy, mindfulness, concentration, and wisdom (*saddhā, viriya, sati, samādhi, paññā*), which aid in one's Nibbāna, through the moral conduct observed, the meditation practiced, and the Dhamma heard today. Utilizing all of these as a strong support (*upanissaya*), and relying on the association with good friends (*kalyāṇa-mitta*), may you, as quickly as possible before the disappearance of the Dispensation, be freed from this terrifying suffering of the round of rebirths (*saṃsāra-dukkha*). May this Dhamma sermon also assist you in realizing the supreme, deathless, great Nibbāna through the penetration of the paths and fruits of Stream-entry (*Sotāpanna*), Once-returning (*Sakadāgāmi*), Non-returning (*Anāgāmi*), and Arahantship! Let us make this aspiration. Furthermore, may all beings in the universe, from the Avīci hell to the Akanaiṭṭha heaven, who wish to rejoice in the merit of this Dhamma teaching and Dhamma listening, by rejoicing in it, end their suffering in the round of rebirths (*saṃsāra*) according to their noble aspirations for the Dhamma, and realize the supreme, deathless, great Nibbāna through their aspired Bodhi! Making this aspiration, let us recite the stanzas in this manner:</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_093.html" class="doc-btn">← Previous Sermon (093)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_095.html" class="doc-btn">Next Sermon (095) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

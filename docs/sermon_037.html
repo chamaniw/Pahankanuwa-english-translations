@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 037 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_036.html" class="doc-btn">← Previous Sermon (036)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_038.html" class="doc-btn">Next Sermon (038) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 037</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_037_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_037_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_037_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #37</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.146)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Yadā buddho abhiññāya, dhammacakkaṁ pavattayī; Sadevakassa lokassa, satthā appaṭipuggalo. Sakkāyañca nirodhañca, sakkāyassa ca sambhavaṁ; Ariyañcaṭṭhaṅgikaṁ maggaṁ, dukkhūpasamagāminaṁ. Ye pi dīghāyukā devā, vaṇṇavanto yasassino; Bhītā santāsamāpāduṁ, sīhassev’itare migā. Avītivattā sakkāyaṁ, aniccā kira bho mayaṁ; Arahato vacanaṁ sutvā, vippamuttassa tādino.</p>
+<p>From:</p>
+<p>Saṁyutta Nikāya, Dhammacakkappavattana tradition verses</p>
+<p>Dear Listeners,</p>
+<p>In contemplating the virtues of the Buddha, through the phrase *“satthā devamanussānaṃ”* (Teacher of gods and humans), we accept that the Blessed One is indeed the Teacher of gods and humans. It was on a full-moon day of Āsāḷha that the appearance of such a supreme Teacher became manifest to the world including the devas. We have all heard the wonderful news that on such a noble day, the sermon of the *Dhammacakkappavattana Sutta*, which joined the atmosphere of the Isipatana Migadāya in Benares, was instantly broadcast from deva-world to deva-world, and from brahma-world to brahma-world. We have taken as our theme today a few verses that reveal the majestic nature of that supreme Buddhist sermon.</p>
+<p>Before presenting these verses, the Buddha, at the Jetavana monastery in Sāvatthi, declared a certain simile as an introduction to present a matter.</p>
+<p>"Monks, the lion, the king of beasts, emerges from his lair in the evening. Emerging from his lair, he stretches his body and yawns. Having stretched his body, he roars the lion’s roar three times. Having roared the lion’s roar three times, he sets out in search of prey. Monks, whatever wild beasts in the forest hear that lion's roar, they all fall into fear, terror, and dismay. Creatures dwelling in holes enter their holes. Creatures dwelling in water enter the water. Birds fly into the sky. Let alone others, even royal elephants, even festive state elephants, bound with strong leather straps in villages, towns, and capitals, upon hearing that lion's roar, break and sever those straps and flee in all directions, evacuating their bowels. Monks, that lion, the king of beasts, possesses such great psychic power, such great majesty, such great influence among the wild beasts."</p>
+<p>"In the same way, monks, when a Tathāgata, a Worthy One, a Fully Self-Awakened One, perfect in knowledge and conduct, sublime, knower of worlds, incomparable leader of men to be tamed, teacher of gods and humans, awakened, blessed, appears in the world; and when He teaches the Dhamma in this manner: ‘Such is Form (*rūpa*), such is the arising of Form, such is the passing away of Form; such is Feeling/Sensation (*vedanā*), such is the arising of Feeling/Sensation, such is the passing away of Feeling/Sensation; such is perception (*saññā*), such is the arising of perception, such is the passing away of perception; such are preparations/preparations (*saṅkhāra*), such is the arising of preparations/preparations, such is the passing away of preparations/preparations; such is Consciousness (*viññāṇa*), such is the arising of Consciousness, such is the passing away of Consciousness.’ When He delivers such a Dhamma discourse, then even those devas who are long-lived, beautiful, possessing abundant retinue, who have resided for a long time in high celestial mansions, fall into fear, terror, and dismay. 'While being impermanent (*anicca*), we thought ourselves to be permanent. Not being eternal, we thought ourselves to be eternal. It seems we too are impermanent! We too are unstable! It seems we are not eternal! It seems we are caught up in the dogma of self-illusion (*sakkāya-diṭṭhi*)!' In that manner, those devas fall into fear, terror, and dismay. Monks, in the world with its devas, the Tathāgata is one of such great psychic power, such great majesty, such great influence." Having declared this, that is the very matter the Buddha summarized in the verses we mentioned earlier, as stated in that Sutta.</p>
+<p>*Yadā buddho abhiññāya dhammacakkaṃ pavattayī* — "When the Buddha, having directly known, set rolling the Wheel of Dhamma." What is contained in that Wheel of Dhamma is found in the next verse:</p>
+<p>*Sakkāyañca nirodhañca sakkāyassa ca sambhavaṃ*</p>
+<p>*Ariyañcaṭṭhaṅgikaṃ maggaṃ dukkhūpasamagāminaṃ*</p>
+<p>Here, venerable friends, *sakkāya* (the existing group) means none other than the five aggregates of grasping (*pañcupādānakkhandha*). It is those very five aggregates of grasping that are called suffering (*dukkha*). So, what is presented here is the Four Noble Truths. When He teaches the Four Noble Truths—namely, the suffering of those five aggregates of grasping called the existing group (*sakkāya*), its cessation (*nirodha*), its origin (*sambhava*), and the Noble Eightfold Path which is the way that leads to the calming of that suffering—having heard it,</p>
+<p>*Ye pi dīghāyukā devā vaṇṇavanto yasassino*</p>
+<p>*Bhītā santāsamāpāduṃ sīhassev’itare migā*</p>
+<p>Having heard that sermon, even those devas who are long-lived, beautiful, and possessing abundant retinue, fall into fear, terror, and dismay—just like wild beasts before a lion.</p>
+<p>*Avītivattā sakkāyaṃ aniccā kira, bho, mayaṃ*</p>
+<p>*Arahato vacanaṃ sutvā vippamuttassa tādino’ti*</p>
+<p>Hearing the words of the Buddha—who is worthy (Arahant), well-released, and of steadfast virtue (the Such, *tādī*)—they declare: "We are those who have not transcended this existing group (*sakkāya*), this dogma of self-illusion (*sakkāya-diṭṭhi*). We are indeed impermanent (*anicca*)." Thus, those devas fall into religious urgency (*saṃvega*). That is the meaning of these verses.</p>
+<p>Now, venerable friends, what we have presented is the essence of the *Dhammacakkappavattana Sutta*, the Four Noble Truths. Everyone knows that when asked what the Buddha taught, one immediately says the Four Noble Truths, which we know as suffering (*dukkha*), origin (*samudaya*), cessation (*nirodha*), and path (*magga*). The Buddha has analyzed this in various ways—sometimes in brief, sometimes in detail. In the *Dhammacakkappavattana Sutta* itself, as you may know, the Noble Truth of Suffering was analyzed: birth (*jāti*) is suffering, decay/aging (*jarā*) is suffering, disease is suffering, death (*maraṇa*) is suffering, association with the disliked is suffering, separation from the liked is suffering, not getting what one wishes for is suffering. Having listed these, He finally says: "In brief, the five aggregates of grasping (*pañcupādānakkhandha*) are suffering." Venerable friends, the five aggregates of grasping refers to these five which we hold onto and grasp (*upādāna*) as "I" and "mine"—namely, Form (*rūpa*), Feeling/Sensation (*vedanā*), perception (*saññā*), preparations/preparations (*saṅkhāra*), and Consciousness (*viññāṇa*). On certain occasions, those five are also given the name *sakkāya* (the existing group). On certain occasions, the Buddha begins by saying, "Monks, I will teach you suffering, the cause of suffering, the cessation of suffering, and the path leading to the cessation of suffering," and declares that suffering is none other than the five aggregates of grasping. There is no need to repeat the earlier list. It is when one clings to those five that birth (*jāti*), decay and death (*jarāmaraṇa*), sickness, sorrow, lamentation, and so forth, all arise. That is how it is.</p>
+<p>Next, that itself is what is called the existing group (*sakkāya*). The meaning of the word *sakkāya* might sometimes not be clear. *'Sat'* means 'existing' or 'being'. *'Kāya'* means a group, a collective noun. So when we say "this form is mine," we are catching hold of a group of forms. We grasp (*upādāna*) it; we seize it with the perception of compactness (*ghana-saññā*) as "this is mine," without regarding its nature of breaking up, its impermanent (*anicca*) nature. Feeling/Sensation (*vedanā*) is also like that; perception (*saññā*) is like that; preparations/preparations (*saṅkhāra*) are like that. This is what you have often heard presented through the similes of the lump of foam, the water bubble, the mirage, the banana trunk, and the magic illusion. Due to not knowing their true nature, one grasps them, and that itself becomes the cause of suffering.</p>
+<p>Then why does one grasp them? If grasping (*upādāna*) means holding on, the cause for that holding on is indeed that craving/thirst (*taṇhā*). Thus, it is declared as the cause of suffering, as the origin of suffering. That craving/thirst is shown in a threefold way: craving for sensuality (*kāma-taṇhā*), craving for becoming (*bhava-taṇhā*), and craving for non-becoming (*vibhava-taṇhā*). It is that craving/thirst that causes a person's repeated birth/arising (*jāti*).</p>
+<p>It is said: *"taṇhā janeti purisaṃ"* (craving gives birth to a person). *"Nandīrāgasahagatā tatratatrābhinandinī"* — accompanied by delight and lust, finding delight here and there. Then, the state when that craving is ceased—that cessation is shown as cessation (*nirodha*), as Nibbāna. Next is the Noble Eightfold Path, which you have all heard of: right view (*sammā-diṭṭhi*), right intention (*sammā-saṅkappa*), right speech (*sammā-vācā*), right action (*sammā-kammanta*), right livelihood (*sammā-ājīva*), right effort (*sammā-vāyāma*), right mindfulness (*sammā-sati*), and right concentration (*sammā-samādhi*). That is the Noble Eightfold Path. So, that is the Four Noble Truths.</p>
+<p>So, this Four Noble Truths is the core of the Buddha's teaching. This is especially misunderstood because of the perception of permanence (*nicca-saññā*) that exists in the world. It is upon hearing this sermon that those devas are shaken, particularly the long-lived devas and Brahma kings, who generate conceit (*māna*) thinking they are permanent. Such accounts are mentioned in the Dhamma. On certain occasions, the Buddha stepped forward and broke the conceit of the Brahmas, as mentioned in the Dhamma. It is told of Baka Brahma that because he had lived for a very long period—nearly an aeon—he forgot his past. He forgot that he had come to that place. He thought, "This is permanent, this is stable, there is no birth or death or anything here." When such conceit arose, the Buddha perceived it while at Jetavana and, with the speed described as "just as a strong man might stretch his bent arm," the Buddha went to that Brahma world by psychic power. The Brahma king then invited the Buddha, "Ah! Noble One, come, come! This is permanent, this is stable, this is eternal!" Then the Buddha told the Brahma, "You are overcome by ignorance (*avijjā*)." He tried to remove that wrong view (*micchā-diṭṭhi*). But the Brahma king said, "Many beings in this world, many humans, strive greatly to attain my status, to attain this Brahma status." When he would not let go, the Buddha then showed him, "What you think is a long time is actually seen to be a short time; your past is limitless," pointing it out with examples. He showed the Brahma king, "It was because of the wholesome deeds you performed as an ascetic who had attained direct knowledges (*abhiññā*) in the past that you received this status." After that past account was revealed, it is mentioned that Baka Brahma abandoned his conceit.</p>
+<p>From that, we can understand that perception of permanence. So, we can understand how conceit arose due to the perception of permanence in those Brahmas who lived for aeons in the past. But for us, who do not live even a hundred years, if we reflect on how the conceit called the 'intoxication of life' (*jīvita-mada*) arises within us, how much ignorance (*avijjā*) must there be in us?</p>
+<p>But in order to shatter that ignorance, to shatter the perception of permanence, the Buddha presents the perception of impermanence (*anicca-saññā*). This meditation on the perception of impermanence is something the Buddha praised in the highest terms. To what extent? The Buddha declares: "Monks, if the perception of impermanence is properly developed, if it is made much of, through that perception of impermanence, all lust for sensuality (*kāma-rāga*) is completely abandoned. Lust for form (*rūpa-rāga*) is completely abandoned. Lust for becoming (*bhava-rāga*) is completely abandoned. All ignorance (*avijjā*) is completely abandoned. The conceit 'I am' (*asmi-māna*) is completely destroyed and uprooted. So powerful is this perception of impermanence." Thus, the Buddha praised this insight meditation (*vipassanā-bhāvanā*) of the perception of impermanence in the highest terms. He did not stop there. Next, he gave several similes. One simile is: "Monks, just as in the autumn season, when a farmer plows with a great plow, he completely uproots all the creeping roots in that field, in the very same way, if this perception of impermanence is developed and made much of, it completely uproots all the aforementioned lust for sensuality, lust for form, lust for becoming, ignorance, and the conceit 'I am'."</p>
+<p>Next, He gives another simile: just as when the stalk of a bunch of mangoes is cut, all the mangoes connected to the stalk are detached, in the same way, through the perception of impermanence, all the aforementioned lust for sensuality, lust for becoming, and so forth, are destroyed.</p>
+<p>Then He shows another simile: just as in the autumn season, the sun, rising into a cloudless sky, dispels all darkness, in the same way, if the perception of impermanence is properly developed and practiced abundantly, it uproots all defilements (*kilesa*)—namely, lust for sensuality, lust for form, lust for becoming, ignorance, and the conceit 'I am'—and completely destroys them.</p>
+<p>So, the perception of impermanence has been praised in that manner. Then, how is this perception of impermanence to be developed? The Buddha also declared that. How is the perception of impermanence developed? It is shown in brief, but we must understand... we must reflect and understand how to bring it practically close to our lives. It is stated in this way: "Such is Form, such is the arising of Form, such is the passing away of Form; such is Feeling/Sensation, such is the arising of Feeling/Sensation, such is the passing away of Feeling/Sensation; such is perception, such is the arising of perception, such is the passing away of perception; such are preparations/preparations, such is the arising of preparations/preparations, such is the passing away of preparations/preparations; such is Consciousness, such is the arising of Consciousness, such is the passing away of Consciousness." The Buddha shows it there as a truth to be confirmed by constantly engaging the mind in wise attention / radical attention (*yoniso manasikāra*) in a direct, experiential way.</p>
+<p>Next, you have all heard of this perception of impermanence. Just as was said about the Four Noble Truths, if one asks what the Buddha taught, there are three characteristics by which it can be recognized. What are the three characteristics? They are the three characteristics of impermanence (*anicca*), suffering (*dukkha*), and not-self (*anattā*). These three characteristics are interconnected. Sometimes nowadays people ask about this. According to the Buddha's word: *“yad aniccaṃ taṃ dukkhaṃ, yaṃ dukkhaṃ tad anattā”* — "what is impermanent is suffering; what is suffering is not-self." It is stated in brief like that. So, let us try to understand, with reference to the Buddha's teachings, how this impermanent thing is suffering, and how that which is suffering is not-self.</p>
+<p>Why does this impermanence become suffering? It is because we grasp (*upādāna*) these impermanent things. The Buddha has given a good simile for that—the simile of the river (*nadī upamā*). On one occasion, the Buddha declared: "Monks, on both banks of a swift-flowing river coming down from a mountain and traveling a long distance, there grow rushes, wild oats, grasses, and other trees. All of them are leaning over the river. A man being swept away by the rapid current of this river catches hold of those rushes, wild oats, and grasses, or catches hold of the branches. Every single thing he catches hold of breaks and tears away. Consequently, that man falls into ruin and suffering." What we have to understand from this simile is that by grasping as permanent this flow of life, disregarding its impermanent (*anicca*) nature, we fall into various anxieties. Now we know, especially if we catch hold of a blade of kusa grass, before that grass slips away, it might even cut our hand. It was declared that one can fall into such ruin.</p>
+<p>The Buddha also declared the manner of this grasping, and how one grasps. One regards Form as self; one regards self as possessing Form; one regards Form as in self; one regards self as in Form. In these four ways, one grasps. In the same way, four ways of grasping (*upādāna*) have been shown for Feeling/Sensation (*vedanā*), perception (*saññā*), preparations/preparations (*saṅkhāra*), and Consciousness (*viññāṇa*). What is shown by this is the unwillingness to let go. One takes Form as self. When there is no room for that, [one thinks] "No, no, my self is something possessing Form." When there is no room for that either, "No, Form is within self." When there is no room for that either, "Self is within Form." In this manner, one is unwilling to let go of Form which has been grasped—the aggregate of Form-grasping (*rūpupādānakkhandha*). Those four ways, when multiplied by the five aggregates, become the twenty [views]. So, this is what is called the dogma of self-illusion (*sakkāya-diṭṭhi*). Now, the dogma of self-illusion means the twenty views built up by grasping "this is my self" as a self. He who transcends this is the one who has reached the fruit of Stream-entry (*sotāpatti-phala*), the person who has experientially understood that impermanence.</p>
+<p>So, next, just as we spoke about impermanence, because one falls into suffering and ruin by grasping (*upādāna*) those impermanent things, the Buddha declared: *“yad aniccaṃ taṃ dukkhaṃ”* (what is impermanent is suffering). Next, how that which is suffering is not-self (*anattā*), that characteristic of not-self—you have often heard that the group of five monks attained Arahantship by listening to the sermon on the characteristic of not-self, the *Anattalakkhaṇa Sutta*. It is true that at Isipatana Migadāya, having heard the *Dhammacakkappavattana Sutta*, Ven. Aññā Koṇḍañña reached the fruit [of Stream-entry]. However, the other venerable monks, as well as all five of them in the end, reached the fruit of Arahantship by listening to the *Anattalakkhaṇa Sutta* taught by the Buddha.</p>
+<p>Not only that, it was there that the Buddha, for the first time, declared this state of not-self (*anattā*) to the Saṅgha, and thereby to the world. It begins in this way: "Monks, Form is not-self." First, He declared that. Then He says the opposite side: "Monks, if Form were self, it would not lead to affliction—Form would not bring us illness, to put it briefly. If Form were self, if Form were mine, it would not bring us illness. Furthermore, we should be able to exercise control over Form, to keep it under our power: 'Let my Form be thus, let my Form not be thus.' But, monks, because Form is not-self, one cannot exercise control or power over Form, saying, 'Let my Form be thus, let my Form not be thus.' And Form also brings us illness." In the same way, the Buddha convinced the group of five monks about the not-self nature of Feeling/Sensation, perception, preparations/preparations, and Consciousness.</p>
+<p>Next, that changing, impermanent nature, alteration (*vipariṇāma*)—it changes, turning from what it was to another side. Because of that, the Buddha then brings out the three characteristics: "Monks, is Form permanent or impermanent?" When they reply, "Impermanent, venerable sir," He asks, "That which is impermanent, is it ease or suffering?" They have to accept that it is suffering, based on what was said earlier. Next, if something is impermanent, suffering, and subject to change—then, leaving room for their own capacity of understanding, He asks, "Is it fit to regard it as: 'This is mine,' 'This am I,' 'This is my self'?" That regarding as 'I' and 'mine' is shown in three ways: *etaṃ mama*, *eso ham asmi*, *eso me attā*. *Etaṃ mama* means 'this is mine'—grasping it through craving (*taṇhā*). *Eso ham asmi* means 'this I am'—grasping it through conceit (*māna*). *Eso me attā* means 'this is my self'—grasping it through view/dogma (*diṭṭhi*). One does not know what 'self' is, but grasps it through view as 'this is my self'. Thus, there is a threefold grasping through craving, conceit, and view. It was in this manner that the Buddha presented the characteristic of not-self. Then those monks had to answer that it is not fit. If something is impermanent, if all five aggregates of grasping are impermanent, if they cause suffering, if one cannot keep them under one's control, then one must let them go. It is mentioned in the Dhamma that by the end of that discourse, they all attained Arahantship.</p>
+<p>So now it becomes clear to us that the three characteristics expressed in *“yad aniccaṃ taṃ dukkhaṃ, yaṃ dukkhaṃ tad anattā”* are indeed correct. If something is impermanent, it leads to suffering. If it leads to suffering, and if we cannot keep it under our control—since we expect happiness—how can we keep it under our control? We would keep it in such a way that happiness comes to us. Since that cannot be done, taking them as self is entirely wrong; that is what the Buddha shows. At some point, we must let go of those views. We cannot go forward while holding onto those views. That is why this dogma of self-illusion (*sakkāya-diṭṭhi*) is said to be extremely powerful. Having carried this self-illusion for a long time in Saṃsāra, we cling to it in four ways due to our unwillingness to let it go.</p>
+<p>So, how do we let them go? Next, the Buddha declares that lust for sensuality, lust for form, lust for becoming, the conceit 'I am', and ignorance are all destroyed through the perception of impermanence. Therefore, we must practice seeing things as impermanent. In seeing them as impermanent, the Buddha explains this impermanence in various other ways. Now, these—Form, Feeling/Sensation, perception, preparations/preparations, and Consciousness—arise due to causes and conditions (*hetu-paccaya*). By considering them according to causes and conditions, we can understand their impermanent nature. Dependent Arising (*paṭiccasamuppāda*) means 'arisen on account of'. *Paṭicca* means 'on account of'. Nothing arises without a cause. Everything arises only on account of causes and conditions. Not a single thing has the strength to stand alone. Such is the nature of this becoming (*bhava*). This is why there is no place for the view of self. When we consider with wisdom, when we subject it to attention, under everything there lie causes and conditions. Nothing arises apart from causes and conditions.</p>
+<p>In that regard, the cause for Form is shown. The cause and condition for Form is shown as the four great elements (*cattāro mahābhūtā*). As you know: earth (*paṭhavī*), water (*āpo*), fire (*tejo*), and wind (*vāyo*). When we say 'earth', we usually think of something like a rock or a mountain. When we say 'water', the idea of water arises—like a well or an ocean. When we say 'fire', a great fire. When we say 'wind', a storm. Although we say so, the Buddha shows that these are four great elemental things that do not exist individually and are unrecognizable. They exist together. It is according to their relative abundance that we have given them names like 'earth', 'water', and so forth. There is an occasion when this becomes directly experienced. Just as when explaining Form to a small child, we use forms, but as understanding comes, those forms become unnecessary. When these are directly experienced, when they are understood, then those great elements are understood as existing in an unrecognizable, subtle manner. To give an analogy for those great elements: when water is frozen into an ice cube, because it is solid, one might think it is something like a stone. But when it melts, it is water; when heated further, it becomes vapor. In this way, there is a constantly changing nature in everything. Forgetting this, we grasp this Form tightly. Our body also decays without our even being aware of it. But we, saying "my Form, my Form," not only take photographs on various occasions but also grasp them as "I" and "mine" and try hard to reinforce that sense of self (*mamatva*). So, that is Form. The others are also like that.</p>
+<p>The Buddha shows that what is shown by the similes mentioned earlier is the way things appear from afar—which is called 'view' (*diṭṭhi*). Grasping a lump of foam according to the way it appears from afar. One did not look closely. If one looks closely, what appeared like a white stone is in the end not such a thing. Sensation/feeling (*vedanā*) is like a water bubble, and so on. In these similes, when one gets closer and looks inside, it is something else. Magic illusion (*māyā*) in that respect is the highest, a wonderful thing that can deceive a person. Magic, trickery, is something meant solely to deceive a person. That is Consciousness (*viññāṇa*).</p>
+<p>In this way, the Buddha has said here that the cause and condition for Form is the four great elements. As the cause and condition for Feeling/Sensation (*vedanā*), He points to Contact (*phassa*). Contact—without reflecting on this Contact, one grasps Feeling/Sensation tightly. But beneath Feeling/Sensation lies Contact. Through each subtle Contact, this Feeling/Sensation changes rapidly. But that is not caught in the attention of an ordinary person. One grasps it as a single thing, saying "this is my Feeling/Sensation." But when one looks with wisdom and a concentrated mind, each Feeling/Sensation arises because of each Contact. When that Contact ceases, that Feeling/Sensation ceases. Therefore, the condition for Feeling/Sensation is shown as Contact.</p>
+<p>For perception (*saññā*) too, the cause and condition shown is also Contact (*phassa*). Now, a mirage seen from afar—without understanding that the mirage is seen due to the Contact made from that particular spot, the deer runs after it. Not only does the deer run, but we must understand that all the visions/perceptions that the ordinary world takes are, according to the Buddha's word, a mirage.</p>
+<p>Next, preparations/preparations (*saṅkhāra*) are also like that. For them too, the cause and condition shown is Contact (*phassa*) itself. Preparations/preparations—these are the mental fabrications we make through volition (*cetanā*) and so forth. They also occur according to whatever Contact comes to the mind. So, that too is grasped. One takes it as something like a banana trunk. But there is only a heap of layers there. When we look at volition and so forth, there is only a heap of layers.</p>
+<p>Next, the most wonderful thing of all, and that is where most people get stuck: as the cause and condition for Consciousness (*viññāṇa*), the Buddha has pointed to Name-and-Form (*nāmarūpa*). Name-and-Form—now, regarding this matter, many people hold a wrong view. Even if not all, some of you know that there are twelve links in the teaching of Dependent Arising (*paṭiccasamuppāda*). Starting from ignorance (*avijjā*) up to suffering (*dukkha*), there are twelve links. Among these links, there is a conditional relationship with Consciousness. The Buddha shows: *“viññāṇapaccayā nāmarūpaṃ, nāmarūpapaccayā viññāṇaṃ”* — "with Consciousness as condition, Name-and-Form; with Name-and-Form as condition, Consciousness." In the analysis of Dependent Arising, it is clearly there as a mutual condition. But some people, in analyzing the five aggregates of grasping, confuse this with Name-and-Form. Now, many scholars say that to understand Name-and-Form, it is the five aggregates of grasping. They put all the other four—Feeling/Sensation, perception, preparations/preparations, and Consciousness—as 'Name' (*nāma*). But that is a confusion. It is by confusing the analysis of the five aggregates of grasping with Dependent Arising that one thinks in that way.</p>
+<p>Because, in the Buddha's teaching, it is clearly stated that it is Name-and-Form that is the condition. That is the deepest part. According to the Dhamma of Dependent Arising—it is through Name-and-Form that it next branches out into the six sense-spheres (*saḷāyatana*). Venerable friends, the six sense-spheres are shown in the Dhamma, in short, as six consciousnesses. There is no such thing as a mere consciousness. There are six consciousnesses: eye-consciousness (*cakkhu-viññāṇa*), ear-consciousness (*sota-viññāṇa*), nose-consciousness (*ghāṇa-viññāṇa*), tongue-consciousness (*jivhā-viññāṇa*), body-consciousness (*kāya-viññāṇa*), and mind-consciousness (*mano-viññāṇa*). Consciousness is not deposited in those which we take as sense organs—the eye, ear, nose, tongue, body, and mind. The Buddha shows, according to the Dhamma of Dependent Arising, that it arises from causes and conditions. *“Aññatra paccayā natthi viññāṇassa sambhavo”* — "apart from conditions, there is no arising of Consciousness." That is the deepest thing. Likewise, the Buddha declares: *“dvayaṃ, bhikkhave, paṭicca viññāṇaṃ sambhoti”* — "monks, dependent on a dyad, Consciousness comes into being." What is the dyad? The eye and Form. Dependent on the eye and Form, eye-consciousness arises. Dependent on the ear and sound, ear-consciousness arises. Now, if one is listening to these words, if at that moment sound is not heard, there is no ear-consciousness at that moment. But we think that because the ear exists, ear-consciousness exists. That is a wrong idea. It is like thinking that fire exists inside a matchbox. Fire comes only after the match is struck, doesn't it? It is true that this is a conscious body—a body with Consciousness. But Consciousness arises in six ways only when the conditions for it come together. Understand it in that way. So, it is dependent on the eye and Form. That is where many people go wrong. Eye-consciousness is dependent on the eye and Form. Ear-consciousness is dependent on the ear and sound. In that way, the very last is mind-consciousness, which arises where the mind (*manas*) and the mind-objects (*dhamma*)—the things that become objects to the mind—come together. This is a very deep matter.</p>
+<p>So, this very dyad is what is meant by 'with Consciousness as condition, Name-and-Form; with Name-and-Form as condition, Consciousness.' Now, the practitioner of insight meditation (*vipassanā-bhāvanā-yogī*) regards every object that comes to the mind as Name-and-Form. Whether it is a form coming to the eye or a sound coming to the ear, what is there is Name-and-Form. What is this Name-and-Form? Then one tries to understand. 'Name' (*nāma*) is a word we all use. But here, it is not a conventional name. Here it says: "What, monks, is Name? Feeling/Sensation, perception, volition, Contact, and attention—these are name-factors (*nāma-dhamma*)." Then, Form (*rūpa*) is shown as the perception one creates by catching hold of and grasping (*upādāna*) the four great elements together. So, Name-and-Form means a kind of artificial nature, a deceptive nature, right there. It points to the deceptive nature of the object that comes to Consciousness. Name does not stand alone. Supported by Name, Form exists. Supported by Form, Name exists. Here too, a relationship of cause and condition is mentioned. We recognize something through Feeling/Sensation, perception, the volition that arises regarding it, and then Contact (*phassa*) and attention (*manasikāra*) which is directed towards it. It is on account of those factors that we recognize even form-factors (*rūpa-dhamma*). We recognize their hardness, roughness, softness, heat, cold, and so forth, with the support of the aforementioned name-factors: Feeling/Sensation, perception, volition, Contact, and attention. Then, through that recognition, we take it as 'a form'. It is just like a blind man bumping into something and taking that bumped thing as an object. The ordinary world, through the dogma of self-illusion (*sakkāya-diṭṭhi*), takes this as a 'thing'. But the Buddha shows that what is here is only a shadow. We have shown this in so many ways.</p>
+<p>The Buddha, Ven. Puṇṇa Mantāniputta, and Ven. Ānanda have also declared that it is only when looking in a mirror that one can say "this is I." In the same way, it is by grasping Form that the conceit 'I am' (*asmi*) arises. Likewise, Feeling/Sensation—it is by grasping something. That is why it is called grasping (*upādāna*). Within that grasping, there is the feeling of a dyad. Then, that is perceived by the mind through that grasping. When it is let go, it is not there. But one does not wish to let go. So, through that grasping, the idea 'I am' arises. That is the biggest problem for the world. That is why the simile of the dog on the footbridge is shown on some occasions. When a dog walks on a footbridge, it is deceived by its own reflection. It growls, thinking it is another dog, or it wags its tail, or it looks at it again and again. This is because it does not know the reflective nature of water. Similarly, Consciousness (*viññāṇa*) also has a reflective nature, known as reflection (*paccavekkhaṇā*). Because of not knowing this, the world thinks that the things they see exist just as they are. But to the insight meditator, it gradually becomes clear that within those things there is only a group of name-factors and a group of form-factors. So, that is the matter regarding those Name-and-Form factors.</p>
+<p>Next, the six sense-spheres (*saḷāyatana*). Let us reflect. We said earlier that the analysis of the five aggregates of grasping is one thing, and the analysis of Dependent Arising (*paṭiccasamuppāda*) is another. Now, how do we connect them? We started this sermon with the statement where, at the end of listing 'birth is suffering, decay is suffering,' and so forth, the Buddha says: "In brief, the five aggregates of grasping (*pañcupādānakkhandha*) are suffering." That is where we have to go. Dependent Arising means arising from causes and conditions. The end of this arising due to causes and conditions is the five aggregates of grasping. The final result is divided into these five. Now, at this moment, during the time you are listening to this Dhamma, or when you are at home, the aggregates of grasping may accumulate in a different way. Now, after going back home, when you think about how this moment was spent, the forms related to this moment are grasped as 'my heap of forms'. The feelings related to this are taken as 'my feelings'. The perceptions related to this are taken as 'my perceptions'. The consciousness related to this is taken as 'my consciousness'. So, this was produced through the six sense-spheres (*saḷāyatana*). That is where it is important. It is within these six sense-spheres that it is produced. We use this word ['produced'] to drive home a meaning; it is not an ancient word. But, in short, it is within the six sense-spheres that these five aggregates of grasping are produced. That is where we come to next.</p>
+<p>So, how does that happen? As was said earlier—Consciousness—before that, someone might ask why we did not think about ignorance (*avijjā*) and preparations/preparations (*saṅkhāra*). All of this happens in the background of ignorance, because of not knowing. Just like the dog, because of not knowing, grasped its reflection, wagged its tail, and stayed there. In the person bound by the dogma of self-illusion (*sakkāya-diṭṭhi*)—that is why the Buddha has declared:</p>
+<p>*“Avijjānīvaraṇassa, bhikkhave, bālassa taṇhāya sampayuttassa evaṃ ayaṃ kāyo samudāgato”* — "Monks, for the foolish person obstructed by ignorance and associated with craving/thirst, this body has thus come into being."</p>
+<p>*“Iti ayaṃ ceva kāyo bahiddhā ca nāmarūpaṃ”* — "Thus there is this body and externally there is Name-and-Form."</p>
+<p>*“It’etaṃ dvayaṃ”* — "because of this dyad, Contact and the six sense-spheres arise," as the Buddha declared. What does this mean? For the being who is obstructed by ignorance and bound by craving/thirst, this body is received. In this body, that Consciousness emerges as soon as Contact and the aforementioned conditions arrive. Then, along with that, it branches out as the six sense-spheres. These six sense-spheres—what we said just now—what you call sense organs become sense-spheres (*āyatana*) only where there is activity. The place where there is activity is called a sense-sphere (*āyatana*). The faculty exists—the eye exists, but it does not see. The ear exists, but it does not hear. But when those conditions come and become active, that is what we call a sense-sphere (*āyatana*). Although the eye-faculty (*cakkhundriya*) exists, the eye-sphere (*cakkhāyatana*) is not there. The sense-sphere arises only where it connects with causes and conditions. Fire springs up only where the match strikes the matchbox. If you do not understand, that is the point to understand. It must be understood in that way. So, it divides into the six sense-spheres. Then, within the magic illusion of Consciousness, that Name-and-Form branches out.</p>
+<p>Because of the craving/thirst (*taṇhā*) that clung to this body in the past, we want to see, we want to hear, we want to taste, we want to experience. Because of that unappeased craving/thirst, this body is received by the uninstructed worldling. To this body, Name-and-Form is added. From that Name-and-Form, the six sense-spheres are built up. So, it leads into Dependent Arising (*paṭiccasamuppāda*). With the six sense-spheres as condition, Contact (*phassa*). With Contact as condition, Feeling/Sensation (*vedanā*). With Feeling/Sensation as condition, craving/thirst (*taṇhā*). With craving/thirst as condition, grasping (*upādāna*). Finally, the five aggregates of grasping are built up. That is why we said, when we think about this moment, we can say that this moment of today in my life was spent because a certain Form was present at that moment, such a Feeling/Sensation, such a perception—all of those are finally sorted and deposited as the five aggregates of grasping.</p>
+<p>But how this is made was also declared by the Buddha. That is a very deep discourse. In the discourse named *Mahāsaḷāyatanika Sutta*, the Buddha shows how these five aggregates of grasping are built up, and how they are unraveled and worn away. The two words used for that are accumulation (*upacaya*) and wearing away (*apacaya*). *Upacaya* means accumulation. *Apacaya* means wearing away. Then, how the five aggregates of grasping are worn away is presented by the Buddha in that Sutta through the term 'knowledge of things as they are' (*yathābhūta-ñāṇa*). Knowledge of things as they are means understanding the truth as it is. Now we have understood that the knowledge of things as they are is the vision of impermanence (*aniccata-dassana*). Seeing the truth as it is means the vision of impermanence. That is why the Buddha gave those kinds of similes. So here, the Buddha shows how a person builds up these five aggregates of grasping when the six sense-spheres are active: as you know, the things related to that are the eye, Form, the Consciousness related to the eye, then Contact where the eye, Form, and Consciousness meet, and then the sensations (*vedayita*) that come because of Contact. Because one does not know the impermanent nature of every single one of these factors in terms of things as they are, they become an aggregate of grasping, as the Buddha declared. For the person who stays with the understanding of the impermanence of this, moment by moment, they do not accumulate.</p>
+<p>So, the vision of impermanence helps the wearing away of the five aggregates of grasping. Without the vision of impermanence, the vision of things as they are, when one acts with the perception of permanence as 'I' and 'mine', the five aggregates of grasping are built up. When one constantly remains with the perception of impermanence (*anicca-saññā*), those things end right then and there. They end right then and there. They do not get built up or accumulated. That is what is declared there.</p>
+<p>Then, there is a deepest Sutta that makes this matter even clearer. It is called the *Aniccatā Sutta*. The Buddha declares this Sutta in a wonderful way. It is said that upon hearing it, one even falls into the concentration of impermanence (*aniccata-samādhi*). "Monks, the eye is impermanent, subject to change, subject to becoming otherwise. Form is impermanent, [subject to change], subject to becoming otherwise. Then, both of these are thus impermanent. Next, the eye-consciousness (*cakkhu-viññāṇa*) that arises due to them—when the eye and Form meet, whatever eye-consciousness arises, that too is impermanent, subject to change, subject to becoming otherwise." Then the Buddha declares to the monks: "The cause and condition owing to which Consciousness arises is also impermanent. Then how could Consciousness be permanent? If the cause and condition from which something arose is impermanent, how could Consciousness be permanent?" Why does He ask this? Because people take Consciousness to be permanent. So, the eye is also impermanent—meaning it is constantly shaking, constantly breaking up. Form is also like that. But where they meet, we grasp it as 'consciousness'—as permanent—as eye-consciousness and so forth. But if one sees the impermanence of the eye right then and there, and sees the impermanence of forms right then and there, if our mind is established in wisdom, there is no Consciousness there. How could Consciousness be permanent?</p>
+<p>Next, the meeting of those three is what the Buddha declares as Contact (*phassa*). But the Buddha declares that eye-contact (*cakkhu-samphassa*) is also impermanent—it shakes, it changes constantly. Then He asks: if the causes due to which Contact arose are impermanent, how could the eye-contact arising from them be permanent? Next, it is because of eye-contact that sensation (*vedayita*) arises. That too is impermanent, subject to change. It is also shaking. But the world regards that sensation, that Feeling/Sensation, as permanent. In this way, step by step, the Buddha tries to convince us that every step in this factory of the six sense-spheres is shaking, subject to change, subject to becoming otherwise. But the person obstructed by ignorance and bound by craving/thirst, failing to see that impermanence, grasps them with the perception of permanence and the perception of compactness.</p>
+<p>That is indeed what is called the perception of a mass (*rāsi-saññā*) when speaking of the insight meditator. There is a time when this compactness is broken. What helps to break it is the understanding of Name-and-Form (*nāmarūpa*). By the understanding of Name-and-Form—now, if that dog sitting on the footbridge wagging its tail in that manner thought even for a moment, "This is my own reflection," it would stop that work and walk away, wouldn't it? In the same way, as the understanding of this Name-and-Form goes deeper and deeper, the Buddha declares that if Name-and-Form is fully understood, Consciousness is ceased right there. That is what was meant.</p>
+<p>Next, we will speak of what helps this: preparations/preparations (*saṅkhāra*). This is one of the deepest terms in this Dhamma—*saṅkhāra*. All of us use the word *saṅkhāra*. Even in funeral announcements, we say 'all preparations/preparations are impermanent' (*aniccā vata saṅkhārā*). But we do not even know what preparations/preparations are. So, the general meaning of preparations/preparations we can understand as things that help to project/create an illusion, things of a deceptive nature. Like in plays—and not only in plays, but now it is done on the highway too—various kinds of deceptions to deceive a person; what a magician or an illusionist does is that kind of thing. What an actor does is also that kind of thing. Before a dancer comes onto the stage, with how many decorations/make-up is she sent? From ancient times, those have been called 'bodily preparations' (*aṅga-saṅkhāra*). Painting colors and various things—that is what is in the word *saṅkhāra*. Artificial deceptions. That is why you can connect it: because of ignorance, because of not knowing, we bring about preparations/preparations.</p>
+<p>Because of that, how much is one deluded in the dark! When walking past a cemetery on a pitch-black night, what kind of thoughts come? In the end, when light comes, one understands: "This is false, this is entirely a delusion/illusion that I created myself. There is nothing real here." In the same way, the world dwelling in the dense darkness of ignorance creates a certain set of creations through the mind. That is the meaning of the word *saṅkhāra* in the context of Dependent Arising as shown by the Buddha. What are preparations/preparations? They are shown in three ways; there are three kinds of preparations/preparations: bodily preparations (*kāya-saṅkhāra*), verbal preparations (*vacī-saṅkhāra*), and mental preparations (*citta-saṅkhāra*). These fabrications are made by body, by speech, and by mind. Making them by mind means building them up through Feeling/Sensation, perception, and so forth—molding them through Feeling/Sensation and perception. Preparations/preparations made by body, preparations/preparations made by speech, preparations/preparations made by mind.</p>
+<p>Now, think about it for a moment: when a magic show takes place, what that man does is a deception on the stage. But those who watch it look with open mouths because they are deceived by those deceptions. Those are preparations/preparations made by body. Or the dances and so forth done by a dancer, plays and so forth—through those, they create things in the mind. They take the words associated with them as true. They wrongly grasp the feelings and perceptions regarding them. Those are the preparations/preparations.</p>
+<p>So, this existence (*pavätma*) is a kind of performance nourished by these preparations/preparations, like a competition between two sides. That is what exists between Consciousness (*viññāṇa*) and Name-and-Form (*nāmarūpa*). To put it another way, it is like a whirlpool. How is a whirlpool formed? For some reason, a current of water separates from the flowing river and tries to go forward. When it cannot go forward, it is forced to turn back. When it spins in a circle, gradually a wheel-like thing is formed, a circle. It has two halves. Now you can understand: the half of Consciousness, and the half of Name-and-Form that turns back. That is indeed the very reflection we mentioned. So, those two halves finally become a wheel, a whirlpool, and then we give it a name as a person, as an individual. Everything we regard according to this becoming (*bhava*) exists between Consciousness and Name-and-Form. That is the Buddha's word. 'Monks, with Consciousness as condition, Name-and-Form; with Name-and-Form as condition, Consciousness.' The Buddha declared that it is between these two that birth (*jāti*), death (*maraṇa*), decay/aging, rebirth, and all these concepts, thoughts, and so forth, exist.</p>
+<p>So, as a final result of that spinning between this Consciousness and Name-and-Form, it branches out through the six sense-spheres (*saḷāyatana*). The sense-spheres also occur within ignorance. Because of not seeing its impermanence, one takes the eye to be permanent, and one takes Form to be permanent. The consciousness that arises when those two meet, one takes that to be permanent too. The Contact that occurs within that, one takes to be permanent. The Feeling/Sensation that arises because of that Contact, one takes to be permanent. When taken in that way, in the end, as a result, this is sorted and sorted, and the five aggregates of grasping are formed, thinking: 'this is my heap of forms,' 'this is my heap of feelings,' 'this is my heap of perceptions,' 'this is my heap of preparations,' 'this is my heap of consciousness.'</p>
+<p>So, then it can be understood that the five aggregates of grasping cannot be put inside in that manner. Rather, it is as a result of the competition between them—according to the analysis of Dependent Arising carried out between Consciousness and Name-and-Form—that we finally build up the five aggregates of grasping. The Buddha showed then that when the true nature of these Name-and-Form factors is understood through the understanding of causes and conditions, and through the attention, the constant reflection that helps it, Consciousness is ceased right there—the magic illusion called Consciousness. When the inside of the magic illusion is seen, there is no magic illusion there. In the same way, if Consciousness is a magic illusion, if it is not a real thing, when it is exposed by the light of true wisdom, it ceases. But that is what the world is afraid of. That is what they fear. That is what is taken as 'the stopping'. That is it. But that is exactly what the Buddha points to as Nibbāna. If birth (*jāti*) is suffering, where birth is ceased, that is no longer a world. Birth is ceased right here. What is taken as birth is indeed because of the wrong whirlpool of those two. So, where that stops is what we call Nibbāna. That is the final result. Generally, when the Buddha says 'the five aggregates of grasping,' this is entirely suffering. When He said 'this existence is suffering,' its result—the clash of those two—is suffering. So, that is calmed through understanding. It is the path leading to that understanding that the Buddha presented to the world on a day like today through the *Dhammacakkappavattana Sutta*.</p>
+<p>Then, the reason why even the devas and Brahmas who were attached to becoming (*bhava*) trembled, just like the other wild beasts trembled at the sound of the king of beasts, is because of the craving for becoming (*bhava-taṇhā*) that exists within the world. It was not out of greed or stinginess that the Buddha hesitated to teach the Dhamma, but thinking, "How will the world understand this?"</p>
+<p>You must make an effort to understand this deep Dhamma on a day like today. You must strive, if you hope to be released from this Saṃsāra. If you wish to remain in becoming (*bhava*), none of this is necessary. That is all there is to say.</p>
+<p>Therefore, if you have gained some understanding from this Dhamma sermon presented so far, using it as a help for your own Dhamma practice and meditation—this period of the arising of a Buddha (*buddhotpāda-kāla*) is a rare opportunity. I hope you will be eager to take this opportunity to be released from Saṃsāra. May this power of merit—the virtue (*sīla*) kept so far, the meditation (*bhāvanā*) practiced, the Dhamma heard—be a support for realizing the noble, deathless, great Nibbāna through the penetration of the paths and fruits of Stream-entry (*sotāpatti*), Once-returning (*sakadāgāmitā*), Non-returning (*anāgāmitā*), and Arahantship within this very life. Likewise, may all beings existing in this becoming (*bhava*), including devas and Brahmas, rejoice in this merit of sharing and hearing the Dhamma, and through that rejoicing, may they all be stilled in the noble, deathless, great Nibbāna. Recite these verses:</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_036.html" class="doc-btn">← Previous Sermon (036)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_038.html" class="doc-btn">Next Sermon (038) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

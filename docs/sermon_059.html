@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 059 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_058.html" class="doc-btn">← Previous Sermon (058)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_060.html" class="doc-btn">Next Sermon (060) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 059</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_059_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_059_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_059_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #59</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No.172)</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Khīṇaṃ purāṇaṃ, navaṃ natthi sambhavaṃ; Virattacittā āyatike bhavasmiṃ. Te khīṇabījā avirūḷhichandā, nibbanti dhīrā yathāyaṃ padīpo. Idamapi saṅghe ratanaṃ paṇītaṃ, etena saccena suvatthi hotu.</p>
+<p>From:</p>
+<p>Ratana Sutta (Sn 2.1) from the Sutta Nipāta</p>
+<p>Dear Listeners,</p>
+<p>Taking refuge in the Triple Gem is a search for the shelter of the highly powerful Triple Gem. The boundless qualities of this Triple Gem—the Buddha, Dhamma, and Saṅgha—are so potent that they can form the very foundation of an Act of Truth (*Saccakiriya*). This is made beautifully clear in the *Ratana Sutta*, which you all frequently recite. The verse we have selected as our theme today comes from the latter part of this *Ratana Sutta*, a discourse that faithful Buddhists often utilize as a protective chant (*paritta*) and refuge in times of adversity.</p>
+<p>According to the commentaries, the origin story of the *Ratana Sutta* lies in the city of Vesālī, which was struck by a threefold fear: the fear of famine, the fear of non-human spirits, and the fear of pestilence. To dispel these fears and bring peace and blessing, the Teacher of the Three Worlds, the Buddha, delivered this discourse. It is recorded in the scriptures that during the time of the Buddha, Vesālī was an exceptionally prosperous kingdom in Jambudīpa, governed very righteously and systematically as a republic. However, at one point, a severe drought occurred, leading to famine.</p>
+<p>First, the poor and destitute began to die. The citizens threw the corpses outside the city walls. As they rotted, non-human spirits gradually entered the city, drawn by the stench. Consequently, even more people began to die. Along with this, the texts mention *ahivātaka-roga*—which, in modern terms, was an epidemic akin to the plague.</p>
+<p>When this threefold fear of famine, non-human spirits, and pestilence gripped the city, the citizens of Vesālī approached their kings to complain. While the rulers gathered in the assembly hall (*santhāgāra*) to discuss what should be done, they realized that a highly powerful, spiritually potent fully enlightened Buddha, the Tathāgata, had appeared in the world. Concluding that He could be their refuge, the Licchavi kings sent two envoys with gifts to King Bimbisāra in the city of Rājagaha, for at that time, the Buddha was residing at the Veḷuvana monastery. As the story goes, King Bimbisāra remained equanimous about the matter and told them to invite the Buddha themselves. So the envoys went and made their appeal to the Blessed One. Out of great compassion, the Buddha accepted their invitation. There is a detailed account of this journey in the scriptures, but if we dwell on those details, we will not have time to discuss more important matters. In any case, the Buddha arrived in Vesālī. It is said that as soon as He reached the borders of Vesālī, a great rainstorm arose, washing all the rotting corpses into the river. Standing at the city gate, the Buddha then taught the *Ratana Sutta* and instructed the Venerable Ānanda: "Chant this protective discourse throughout the city, within its walls, accompanied by the Licchavi princes." Accordingly, Venerable Ānanda walked through the city, using this sutta as a protective chant, and thereby dispelled the threefold fear. This, in brief, is the origin story of the *Ratana Sutta*.</p>
+<p>Now, all of you use this *Ratana Sutta* as a protective chant (*paritta*). When we analyze the *Ratana Sutta*, we can understand that it consists of a series of verses in the form of an Act of Truth, based on the profound qualities of the Buddha, Dhamma, and Saṅgha. If it is an Act of Truth, one must understand what the truth is. An Act of Truth performed without properly understanding its true meaning does not yield its full benefits. Therefore, in the explanation we intend to give today, we hope to focus more on the flavor of the meaning (*attha rasa*) rather than the flavor of the sound (*sadda rasa*). Many of you may already know these through translations, but to make it as comprehensible as possible to everyone, let us first analyze the meaning of the verses of the *Ratana Sutta* in sequence, according to the time available, before we delve into our main theme verse.</p>
+<p>You all know the first verse:</p>
+<p>> *Yānīdha bhūtāni samāgatāni,*</p>
+<p>> *bhummāni vā yāni va antalikkhe,*</p>
+<p>> *sabbeva bhūtā sumanā bhavantu,*</p>
+<p>> *atho pi sakkacca suṇantu bhāsitaṃ.*</p>
+<p>This is an invitation to the spirits: "Whatever spirits are gathered here, whether terrestrial (dwelling on the earth) or celestial (dwelling in the sky), may all those spirits be happy-minded (joyful), and let them listen attentively to what is spoken."</p>
+<p>> *Tasmā hi bhūtā nisāmetha sabbe,*</p>
+<p>> *mettaṃ karotha mānusiyā pajāya,*</p>
+<p>> *divā ca ratto ca haranti ye baliṃ,*</p>
+<p>> *tasmā hi ne rakkhatha appamattā.*</p>
+<p>"Therefore, O spirits, listen all of you! Show loving-kindness (*mettā*) to the human generation who bring you offerings day and night. Therefore, protect them diligently, without negligence." From this point on, the actual Act of Truth begins.</p>
+<p>> *Yaṃ kiñci vittaṃ idha vā huraṃ vā,*</p>
+<p>> *saggesu vā yaṃ ratanaṃ paṇītaṃ,*</p>
+<p>> *na no samaṃ atthi tathāgatena,*</p>
+<p>> *idamapi buddhe ratanaṃ paṇītaṃ,*</p>
+<p>> *etena saccena suvatthi hotu.*</p>
+<p>"Whatever treasure there is in this world or in other worlds, or whatever exquisite jewel there is in the heavens, there is none equal to the Tathāgata. In the Buddha is this precious jewel; by this truth, may there be well-being." This is the Act of Truth concerning the qualities of the Buddha.</p>
+<p>> *Khayaṃ virāgaṃ amataṃ paṇītaṃ,*</p>
+<p>> *sakyamunī samāhito nadhigā,*</p>
+<p>> *na tena dhammena samatthi kiñci,*</p>
+<p>> *idamapi dhamme ratanaṃ paṇītaṃ,*</p>
+<p>> *etena saccena suvatthi hotu.*</p>
+<p>*Khayaṃ*, *virāgaṃ*, *amataṃ*, *paṇītaṃ*—all these are terms applied to Nibbāna. As you may have heard, Nibbāna is described as the destruction of craving (*taṇhakkhaya*), dispassion (*virāga*), cessation (*nirodha*), and Nibbāna. *Khaya* refers to the nature of destroying craving (*taṇhā* / thirst), *virāga* is another name for Nibbāna, and *amataṃ paṇītaṃ* refers to the exquisite Deathless state. What the Sakyan Sage, concentrated in mind, attained—there is nothing equal to that Dhamma. This is the precious jewel in the Dhamma; by this truth, may there be well-being!</p>
+<p>> *Yaṃ buddhaseṭṭho parivaṇṇayī suciṃ,*</p>
+<p>> *samādhina-ānantarikaññamāhu,*</p>
+<p>> *samādhina tena samo na vijjati,*</p>
+<p>> *idamapi dhamme ratanaṃ paṇītaṃ,*</p>
+<p>> *etena saccena suvatthi hotu.*</p>
+<p>"That pure concentration which the supreme Buddha praised, which the wise call 'immediate' (*ānantarika*)—there is no concentration equal to that concentration. This too is the precious jewel in the Dhamma; by this truth, may there be well-being!"</p>
+<p>Now, this point requires some explanation. Here, the text is referring to the Concentration of the Path (*magga-samādhi*). The pure concentration praised by the Buddha, which the Buddhas and Arahants call the *ānantarika* concentration (immediate concentration), is such that no other concentration can equal it. This refers to the supramundane (*lokuttara*) level. Regarding the supramundane Concentration of the Path, as you know, in the Noble Eightfold Path, all eight path factors arise in a highly powerful manner in a single mind-moment. That is the supramundane Path. Immediately after that Path, one falls into the Fruition (*phala*). That is why it is called 'immediate' (*ānantarika*) concentration. The Path is immediately followed by its Fruition without any interval. This concentration is unequal to any mundane concentration. That is the meaning of "there is no concentration equal to that"—it refers to this Concentration of the Path. This describes the aspect of the Path.</p>
+<p>> *Ye puggalā aṭṭha sataṃ pasatthā,*</p>
+<p>> *cattāri etāni yugāni honti,*</p>
+<p>> *te dakkhiṇeyyā sugatassa sāvakā,*</p>
+<p>> *etesu dinnāni mahapphalāni,*</p>
+<p>> *idamapi saṅghe ratanaṃ paṇītaṃ,*</p>
+<p>> *etena saccena suvatthi hotu.*</p>
+<p>"The eight individuals praised by the virtuous, they constitute four pairs. They are the disciples of the Sugata, worthy of offerings; gifts given to them yield great fruit. This too is the precious jewel in the Saṅgha; by this truth, may there be well-being!" These eight individuals form four pairs. They are the true disciples of the Sugata who are worthy of gifts and offerings. Giving to this Saṅgha yields great fruits. This is the precious jewel in the Saṅgha.</p>
+<p>> *Ye suppayuttā manasā daḷhena,*</p>
+<p>> *nikkāmino gotama-sāsanamhi,*</p>
+<p>> *te pattipattā amataṃ vigayha,*</p>
+<p>> *laddhā mudhā nibbutiṃ bhuñjamānā,*</p>
+<p>> *idamapi saṅghe ratanaṃ paṇītaṃ,*</p>
+<p>> *etena saccena suvatthi hotu.*</p>
+<p>This describes those members of the Saṅgha: "Those who, with a firm mind and strong determination, are well-applied in the dispensation of Gotama, free from sensory desire, having attained their goal, have merged into the Deathless, and enjoy the extinguishment [Nibbāna] obtained for free. This too is the precious jewel in the Saṅgha; by this truth, may there be well-being!"</p>
+<p>This refers to those who are engaged in this dispensation with firm effort. They have attained Arahantship and enjoy "the extinguishment obtained for free" (*laddhā mudhā nibbutiṃ*). *Mudhā* means without any expense, completely free. In the world, all other coolings of desires, such as craving, require one to spend money to acquire things before they can be appeased. But this extinguishment is obtained by letting go of everything. It is a cooling that comes naturally; hence it is called "free" (*mudhā*). Having obtained this extinguishment for free, they experience and enjoy it through the attainment of the Fruition of Arahantship (*arahatta-phala-samāpatti*). This is presented as a quality of the Saṅgha.</p>
+<p>> *Yathindakhīlo paṭhaviṃ sito siyā,*</p>
+<p>> *catubbhi vātehi asampakampiyo,*</p>
+<p>> *tathūpamaṃ sappurisaṃ vadāmi,*</p>
+<p>> *yo ariyasaccāni avecca passati,*</p>
+<p>> *idamapi saṅghe ratanaṃ paṇītaṃ,*</p>
+<p>> *etena saccena suvatthi hotu.*</p>
+<p>"Just as a city-pillar (*indakhīla*)—which in ancient times was a firm stone post erected at the city gates—firmly planted in the earth, is unshaken by the winds blowing from the four quarters, so do I call that virtuous person—the Noble disciple who has attained Stream-entry—who sees the Noble Truths with wisdom. This too is the precious jewel in the Saṅgha; by this truth, may there be well-being!" This compares the Noble disciple to the *indakhīla*.</p>
+<p>> *Ye ariyasaccāni vibhāvayanti,*</p>
+<p>> *gambhīrapaññena sudesitāni,*</p>
+<p>> *kiñcāpi te honti bhusappamattā,*</p>
+<p>> *na te bhavaṃ aṭṭhamaṃ ādiyanti,*</p>
+<p>> *idamapi saṅghe ratanaṃ paṇītaṃ,*</p>
+<p>> *etena saccena suvatthi hotu.*</p>
+<p>"Those who clearly comprehend the Noble Truths, well-taught by the One of deep wisdom—even if they are highly negligent, they do not take an eighth becoming [*bhava*]. This too is the precious jewel in the Saṅgha; by this truth, may there be well-being!" This refers to the Stream-enterer (*sotāpanna*), those who have comprehended the Four Noble Truths for the first time, or who have seen Nibbāna from afar, having directly understood the Four Noble Truths taught by the Buddha.</p>
+<p>There is something to be explained here. Even if they fall into great negligence, they will not undergo an eighth becoming (*bhava* / existence). There is an analysis regarding the Stream-enterer. Some who become Stream-enterers do not advance further within that lifetime. As you know, individuals like Visākhā are called *pamāda-sekha* (negligent disciples on the path of training). They became Stream-enterers but did not progress to the stages of Once-returner, etc., in that very life.</p>
+<p>When such individuals pass away, they fall into three categories. Let us say they are divided into three groups. The ultimate limit for a Stream-enterer is a maximum of seven lifetimes. That is what is stated here: they will not go to an eighth becoming. A *pamāda-sekha* who did not attain higher paths and fruits in this life, upon death, is classified by the Buddha into three groups: *ekabīji* (single-seeded), *kolaṅkola* (passing from family to family), and *sattakkhattuparama* (seven times at most). *Ekabīji* refers to a Stream-enterer who takes only one more birth; these are likely those who have highly developed spiritual faculties such as faith (*saddhā*). A *kolaṅkola* Stream-enterer takes two or three more births before ending the suffering of saṃsāra and becoming an Arahant. The *sattakkhattuparama* is the most negligent among them, taking at most seven more births. It is according to this Dhamma-nature that it is said: *na te bhavaṃ aṭṭhamaṃ ādiyanti*—they do not take an eighth becoming. This is an absolute truth, and because it is a truth, it forms a powerful Act of Truth.</p>
+<p>> *Sahāvassa dassanasampadāya,*</p>
+<p>> *tayassu dhammā jahitā bhavanti,*</p>
+<p>> *sakkāyadiṭṭhi vicikicchitañca,*</p>
+<p>> *sīlabbataṃ vāpi yadatthi kiñci,*</p>
+<p>> *catūhapāyehi ca vippamutto,*</p>
+<p>> *chaccābhīṭhānāni abhabbo kātuṃ,*</p>
+<p>> *idamapi saṅghe ratanaṃ paṇītaṃ,*</p>
+<p>> *etena saccena suvatthi hotu.*</p>
+<p>"Simultaneously with his acquisition of the vision of Stream-entry, three things are abandoned: the dogma of self-illusion [*sakkāya-diṭṭhi*], doubt, and whatever clinging to rules and vows [*sīlabbata-parāmāsa*] there may be. He is also completely freed from the four states of misery [apāya], and is incapable of committing the six heinous crimes..."</p>
+<p>You have heard that a Stream-enterer eradicates these three fetters (*saṃyojana*). This is what is meant here. Furthermore, that person is freed from the four states of misery and is incapable of committing the six *abhīṭhāna* (heinous crimes). What are these six? Matricide, patricide, murdering an Arahant, maliciously shedding the blood of a Buddha, causing a schism in the Saṅgha, and taking another teacher (proclaiming someone other than the Buddha as one's teacher). A Stream-enterer is incapable of committing these six acts; the Buddha has declared this impossibility. This too is a truth. This is the precious jewel in the Saṅgha; by this truth, may there be well-being!</p>
+<p>> *Kiñcāpi so kammaṃ karoti pāpakaṃ,*</p>
+<p>> *kāyena vācā uda cetasā vā,*</p>
+<p>> *abhabbo so tassa paṭicchādāya,*</p>
+<p>> *abhabbatā diṭṭhapadassa vuttā,*</p>
+<p>> *idamapi saṅghe ratanaṃ paṇītaṃ,*</p>
+<p>> *etena saccena suvatthi hotu.*</p>
+<p>"Even if he should commit some evil deed by body, speech, or mind, he is incapable of concealing it. This incapability of one who has seen Nibbāna has been declared by the Buddha." This too is the precious jewel in the Saṅgha; by this truth, may there be well-being!</p>
+<p>> *Vanappagumbe yathā phussitāgge,*</p>
+<p>> *gimhānamāse paṭhamasmiṃ gimhe,*</p>
+<p>> *tathūpamaṃ dhammavaraṃ adesayī,*</p>
+<p>> *nibbānagāmiṃ paramaṃ hitāya,*</p>
+<p>> *idamapi buddhe ratanaṃ paṇītaṃ,*</p>
+<p>> *etena saccena suvatthi hotu.*</p>
+<p>Here, the Buddha gives a beautiful simile: "Just as a forest grove with blossoming tops in the first month of the summer season, such is the sublime Dhamma he taught, leading to Nibbāna, for the supreme benefit of all." The Buddha used this simile to describe the Dhamma of scripture (*pariyatti-dhamma*) that He taught. This too is the precious jewel in the Buddha; by this truth, may there be well-being!</p>
+<p>> *Varo varaññū varado varāharo,*</p>
+<p>> *anuttaro dhammavaraṃ adesayī,*</p>
+<p>> *idamapi buddhe ratanaṃ paṇītaṃ,*</p>
+<p>> *etena saccena suvatthi hotu.*</p>
+<p>*Varo* means excellent, used here as an epithet for the Buddha. "The excellent One, the knower of the excellent [Nibbāna], the giver of the excellent, the bringer of the excellent, the peerless One taught the excellent Dhamma. This too is the precious jewel in the Buddha; by this truth, may there be well-being!"</p>
+<p>Now we come to the verse we selected as our theme:</p>
+<p>> *Khīṇaṃ purāṇaṃ navaṃ natthi sambhavaṃ,*</p>
+<p>> *Virattacittā āyatike bhavasmiṃ,*</p>
+<p>> *Te khīṇabījā avirūḷhichandā,*</p>
+<p>> *Nibbanti dhīrā yathāyaṃ padīpo,*</p>
+<p>> *Idamapi saṅghe ratanaṃ paṇītaṃ,*</p>
+<p>> *Etena saccena suvatthi hotu.*</p>
+<p>"Whatever old there was is destroyed; there is no new arising. Their minds are detached from future becoming." This is said of the Arahants. Their minds are free from desire for future becoming (*āyatike bhavasmiṃ*). "They, with seeds destroyed..."—we will explain these seeds later—"and desires not growing, those wise ones are extinguished just like this lamp. This too is the precious jewel in the Saṅgha; by this truth, may there be well-being!"</p>
+<p>The three verses that follow are generally verses of homage. According to the commentaries, after this recital, Sakka, the king of devas, along with the gathered spirits, chanted these three verses to pay homage to the Triple Gem:</p>
+<p>> *Yānīdha bhūtāni samāgatāni,*</p>
+<p>> *bhummāni vā yāni va antalikkhe,*</p>
+<p>> *tathāgataṃ devamanussapūjitaṃ,*</p>
+<p>> *buddhaṃ namassāma suvatthi hotu.*</p>
+<p>"Whatever spirits are gathered here, whether terrestrial or celestial, let us pay homage to the Tathāgata, the Buddha, who is honored by gods and humans. May there be well-being!"</p>
+<p>> *Yānīdha bhūtāni samāgatāni,*</p>
+<p>> *bhummāni vā yāni va antalikkhe,*</p>
+<p>> *tathāgataṃ devamanussapūjitaṃ,*</p>
+<p>> *dhammaṃ namassāma suvatthi hotu.*</p>
+<p>"Whatever spirits are gathered here, whether terrestrial or celestial, let us pay homage to the Tathāgata's Dhamma, which is honored by gods and humans. May there be well-being!"</p>
+<p>And the third:</p>
+<p>> *Yānīdha bhūtāni samāgatāni,*</p>
+<p>> *bhummāni vā yāni va antalikkhe,*</p>
+<p>> *tathāgataṃ devamanussapūjitaṃ,*</p>
+<p>> *saṅghaṃ namassāma suvatthi hotu.*</p>
+<p>"Whatever spirits are gathered here, whether terrestrial or celestial, let us pay homage to the Tathāgata's Saṅgha, which is honored by gods and humans. May there be well-being!"</p>
+<p>What we have just discussed is the *Ratana Sutta*. As mentioned before, this is a protective chant based on an Act of Truth. Since some people question whether there is room for such practices within this dispensation, we must address this. The Buddha, on many occasions, has declared the supreme power of the qualities of the Triple Gem, as in discourses like the *Aggappasāda Sutta*. He states that among all living beings—whether footless, two-footed, four-footed, many-footed, with form or formless, conscious, unconscious, or neither-conscious-nor-unconscious—the Tathāgata, the Fully Enlightened Buddha, is supreme. If anyone places faith and confidence in the Tathāgata, they place confidence in the supreme.</p>
+<p>"For those who have confidence in the supreme, the result is supreme." If one places confidence in the Buddha, the supreme Tathāgata, the result of that confidence is also supreme. Similarly, He states:</p>
+<p>"Bhikkhus, among all prepared/conditioned [*saṅkhata*] things, the Noble Eightfold Path is declared supreme." If anyone places confidence in the Noble Eightfold Path, they place confidence in the supreme, and its fruits and results are likewise supreme.</p>
+<p>Furthermore, He states that among all things, whether prepared or unprepared/unconditioned (*saṅkhata* or *asaṅkhata*), the Unprepared (*asaṅkhata*)—which is dispassion (*virāga*), Nibbāna—is supreme. If one places confidence in Nibbāna, the supreme, its benefits are also supreme.</p>
+<p>Then He states that among all groups, assemblies, or communities in the world, the Saṅgha of the Tathāgata is supreme. If one places confidence in this supreme Saṅgha, the result is supreme. Thus, placing faith and confidence in the Triple Gem, as well as in the truth of the Path and the truth of Nibbāna, is declared to be immensely beneficial.</p>
+<p>You might also be familiar with the *Dhajagga Paritta* from your chant books. The Buddha did not teach this protective discourse for things like winning lawsuits. He taught it for the Saṅgha who, in their efforts to attain Nibbāna, dwell in forests, under trees, or in empty huts (*araññagato vā, rukkhamūlagato vā, suññāgāragato vā*). If, during their meditation, they experience fear, trepidation, or hair-standing-on-end (*bhayaṃ vā chambhitattaṃ vā lomahaṃso vā*), the Buddha instructed them: "At that moment, recollect Me" (*mameva tasmiṃ samaye anussareyyātha*). How should they recollect Him? You know the formula: *Itipi so bhagavā arahaṃ sammāsambuddho...* Thus, if any danger, fear, or trepidation arises for the meditating monks in the forest, at the root of a tree, or in an empty hut, the Buddha has permitted them to recollect Him. By doing so, their fear, trepidation, and hair-standing-on-end will be dispelled.</p>
+<p>The Buddha further states: "If you cannot recollect Me, then recollect the Dhamma." This refers to the Dhamma endowed with six qualities (such as *svākkhāto...*). Through that recollection, the fear, trepidation, and hair-standing-on-end will disappear. "If you cannot recollect the Dhamma, then recollect My Saṅgha, the Saṅgha of the Tathāgata" (such as *supaṭipanno...*). Then, too, your fear will be dispelled. From this, we can see that the *Dhajagga Paritta* is indeed something that can be recollected for protection.</p>
+<p>Although you use the word *paritta* (pirit), you might not know its etymology. *Paritrāṇa* is made of *pari*, meaning "around" or "from all sides", and *trāṇa*, meaning "protection". Thus, it means protection from all sides. It provided protection all around the city of Vesālī. "From all sides" can refer to various seen and unseen forces, since Vesālī was afflicted by diseases as well as non-human spirits. Similarly, meditating monks can encounter such unusual disturbances. The Buddha approved this protective chanting to provide comprehensive protection from all sides.</p>
+<p>Furthermore, it is our duty to preserve this paritta that the Buddha taught for our protection. Why do we say this? Because these discourses were preserved with great difficulty over centuries by the lineage of reciters (*bhāṇaka*) through memorization. Today, due to various modern influences, they are sometimes caught up in musical trends, and the protective chants are being diluted. The flavor of the sound (*sadda rasa*) is emphasized at the expense of the flavor of the meaning (*attha rasa*). Such a thing is happening in society, and many of you are drawn to it. There is a slight excuse for being drawn to music under the guise of listening to paritta, but what actually happens is that the meaning is entirely lost and forgotten. The flavor of meaning is destroyed. The Saṅgha preserved these chants with great difficulty, staying awake at night, through famines and droughts, carefully maintaining the distinction between aspirated and unaspirated sounds. Now, in an era where we have all kinds of recording devices, if we corrupt this heritage, how can we justify it?</p>
+<p>This is why, dear devotees, the *Ratana Sutta* is specifically an Act of Truth. To recollect the qualities of the Buddha, one must first possess faith in those qualities. These are not mere magic spells. In some other religions, like Hinduism, as you may know, they have mantras in the Atharvaveda and so forth. When you look at them, they have no meaning; they are just a string of sounds. Yet they believe there is some occult power in them. The Buddha generally rejected such things. Instead, He presented something meaningful. We have previously explained to you the rich meaning behind the *Metta Sutta*.</p>
+<p>We have also explained how the *Mahā-maṅgala Sutta* was made meaningful. By discarding the superstitious views of that era—such as things seen as auspicious (*diṭṭha-maṅgala*), heard as auspicious (*suta-maṅgala*), or felt as auspicious (*muta-maṅgala*)—the Buddha presented a set of meaningful auspicious actions showing how one can cultivate one's own well-being and establish self-protection. In this *Ratana Sutta*, even unseen forces are subdued by the power and boundless qualities of the Triple Gem. Specifically, what is highlighted here is the power of truth. This Act of Truth is a force that exists in the universe not only during the time of a Buddha's appearance. As we learn from the Jātaka stories, the Act of Truth is a cosmic force that operates even during eras when no Buddha is present. Truth is a force; there can be no action without energy. If you perform an Act of Truth without even knowing what the truth is, then there is no real Act of Truth. That is why we have taken so much trouble to bring out the meaning of these verses, which many of you recite so fluently from memory.</p>
+<p>Because of modern trends, the musical sound is overemphasized. Sometimes, the chants are recited in a way that the meaning of the words is completely erased. We do not say this to attack anyone in the dispensation, but out of a deep desire to preserve this dispensation.</p>
+<p>If you, too, encourage such trends, the flavor of meaning and the profound depth of these teachings will be suppressed. You can now appreciate what a vast ocean of deep meaning lies within this *Ratana Sutta*. These additional explanations were meant to clarify this.</p>
+<p>Now, to elaborate further on the verse we selected as our theme: *Khīṇaṃ purāṇaṃ navaṃ natthi sambhavaṃ*—"The old is destroyed, there is no new arising." When we speak of "the old" as past kamma, some might ask: if past kamma is destroyed, how do the Buddha and the Arahants experience the results of kamma? Some even claim that the Buddha and Arahants do not experience the results of kamma at all. However, there is a very deep point here. The Buddha Himself, on one occasion, delivered a discourse to the Saṅgha regarding "New and Old Kamma" (*Nava Purāṇa Kamma*).</p>
+<p>He said: "Bhikkhus, I will teach you new and old kamma." But in His explanation, He first presents old kamma. "What, bhikkhus, is old kamma? The eye is old kamma, prepared [formations/preparations - *abhisaṅkhataṃ*], willed [volitional activity - *abhisañcetayitaṃ*], to be felt [sensation/feeling - *vedanīyaṃ daṭṭhabbaṃ*]." The eye, bhikkhus, is old kamma. It is prepared through kamma, willed through the energy we generated in the past, and it is something to be felt.</p>
+<p>Now, think about this. You may have heard of the Venerable Cakkhupāla. At the very moment he attained Arahantship, he lost his eyesight. He became blind due to a past kamma. An even clearer example, which everyone knows, is the Venerable Mahā Moggallāna, who was supreme in psychic power in this Buddha's dispensation. In the very distant past—so distant that it can hardly be measured—he had beaten his own parents to death. Because of that evil kamma, five hundred bandits came and crushed his body to pieces. Just as the Buddha explained regarding the eye, He declared the same for the other sense faculties. As we mentioned: "The eye is old kamma, prepared, willed, to be felt." It is given to us to be felt. You must understand that all six sense faculties—the eye, ear, nose, tongue, body, and mind—have been received by us, as well as by the Buddha and the Arahants, due to the power of past kamma (*abhisaṅkhataṃ abhisañcetayitaṃ*). And they are "to be felt" (*vedanīyaṃ daṭṭhabbaṃ*)—we must experience them. This experiencing is the same for both the Buddha and the Arahants. When does this experiencing come to an end? It ends only at the moment of the Arahant's *anupādisesa-nibbāna-dhātu* (the extinguishment without residue). That is the meaning here.</p>
+<p>Some Arahants pass away at the very moment they attain Arahantship; they are called *samasīsī* (those who attain ending of defilements and life simultaneously). Others must continue to live. Even though the Buddha was requested to live for an aeon, He could not do so. Because of past kamma, He had to undergo severe physical pain in this body. Even if the specific details are not fully recorded in the books, it was due to some past kamma. This is because the eye, ear, nose, tongue, body, and mind are given to us with the mandate: "Go and experience them!" Out of craving (*taṇhā* / thirst) and ignorance, we begged Māra for them, and Māra gave them to us, saying: "Go and experience them!" So we must experience them. The same applies even to the pleasant side. Even the fact that we have to wear spectacles now is due to this. It was given to us to be felt. I mentioned this so that you might understand it. This is how we should understand *khīṇaṃ purāṇaṃ*—at that final moment, all past kamma is completely exhausted.</p>
+<p>*Navaṃ natthi sambhavaṃ*—"There is no new arising." This means that there is no more kamma to cause a future becoming (*bhava* / existence) for the Arahants. Having destroyed ignorance, they have seen the stilled nature of formations/preparations (*saṅkhāra*). By destroying craving (*taṇhā*)—that is, sensual craving (*kāma-taṇhā*), craving for becoming (*bhava-taṇhā*), and craving for non-becoming (*vibhava-taṇhā*)—they have also destroyed the craving for becoming. Therefore, they do not delight in becoming (*bhave na rajjati*); they do not wish for a future becoming. That is why there is no new arising. *Virattacittā āyatike bhavasmiṃ*—they have no desire for a future becoming; their minds are detached from it.</p>
+<p>Now, some people do not like our way of explaining the Dhamma because they think: "Then the Arahant is annihilated, there is nothing left." But if there is no craving (*taṇhā*), why should we force another life upon the Arahant? Why try to feed someone who is not hungry? Why try to give water to someone who is not thirsty? Why try to plant the Arahant, who is free from craving, back into becoming, and invent some kind of 'everlasting Nibbāna' for them? *Virattacittā āyatike bhavasmiṃ*—there is no attachment in the detached mind for another becoming.</p>
+<p>*Te khīṇabījā*—here, another profound point is made. What is meant by "those with seeds destroyed" (*khīṇabījā*)? In one of His discourses, the Buddha defines what the seed is: "Kamma is the field, consciousness [*viññāṇa*] is the seed, and craving [*taṇhā*] is the moisture." When discussing rebirth, this is a key point that many scholars might not even know. *Kammaṃ khettaṃ*—kamma is the field. *Viññāṇaṃ bījaṃ*—consciousness is the seed. *Taṇhā sineho*—craving is the moisture. For a seed to grow, it needs moisture, and it also needs a field. The Arahants have destroyed even that field.</p>
+<p>To add to this from the same discourse, we mentioned "old kamma". The discourse also speaks of "new kamma"—the kamma created in this life through body, speech, and mind. One might ask: "Do the Arahants just sit idle? Do they not perform various actions like offering to the Buddha?" Those actions do not accumulate kamma. They do not accumulate the kamma necessary to bring about a future becoming. In this field of kamma, the consciousness of an ordinary person sprouts because the moisture of craving is present.</p>
+<p>Now, here is the deep point. Why is it said that their seeds are destroyed (*khīṇabījā*)? The seed of consciousness of the Arahants does not sprout because its core has been removed. The core of that seed has been pulled out. What is that core? It is Name-and-Form (*nāmarūpa*). This exact simile is not found in this sutta discourse, but I am explaining it so that you can understand. In the light of the Dhamma, the consciousness of such Arahants is called *anidassana-viññāṇa* (non-manifestative consciousness). This *anidassana-viññāṇa* is a major point of contention for many scholars today. *Anidassana-viññāṇa* means a consciousness that does not project or establish itself in Name-and-Form (*nāmarūpa*). This is because the Arahants have attained the wisdom that penetrates Name-and-Form. They do not cling to, merge with, or get entangled in Name-and-Form.</p>
+<p>Therefore, that consciousness, in truth, is a ceased consciousness—it is quenched. The Arahants experience this cessation of consciousness (*viññāṇa-nirodha*) during the attainment of the Fruition of Arahantship (*arahatta-phala-samāpatti*). It is this very mind of Fruition-attainment that presents itself at the final moment of the Arahant's life. That is why they do not go to a future becoming. *Te khīṇabījā avirūḷhichandā*—hence, that desire (*chanda*) is, we may say, the very sprout of craving. When a plant sprouts, a shoot emerges. Similarly, the unseen aspect of craving is called *chanda* (desire/will). It is not the desire of modern terms. Everything begins once a liking or desire for something arises. *Chanda* contains a very subtle state of desire; it arises in a highly subtle manner. It means this desire does not spring up again. Kamma is destroyed, and when Name-and-Form is fully understood, one is liberated from Name-and-Form. *Te khīṇabījā*—it is then, at the final passing away (parinibbāna) of the Arahants, that the process is completed, like a lamp going out. The oil of the lamp is exhausted, the wick is burnt out—that is what is called Nibbāna, that extinguishment.</p>
+<p>Why is this Nibbāna called the Deathless (*amata*)? Because even a person who has merely glimpsed Nibbāna, like a Stream-enterer, becomes free from the fear of death. This is because, for a moment, through the power of insight-knowledge (*vipassanā-ñāṇa*), the five aggregates are let go of. In that letting go, they experience a unique, extraordinary supramundane peace and tranquility that the world cannot even fathom. It is this very peace that becomes fully manifest. It is experienced at the highest level by the Arahant who has eradicated all fetters.</p>
+<p>They consume and experience that Deathless state in the attainment of the Fruition of Arahantship. Because of that experiencing, what exists there is the bliss of the absence of death. Everyone has the fear of death. That bliss of the Deathless is natural. If one has realized this by letting go of grasping (*upādāna*) in the mind, even without discarding the physical body, then this Dhamma is realized in this very life (*sandiṭṭhiko dhammo*). When the time comes to discard the physical body, it is this state that presents itself.</p>
+<p>That is why: *Te khīṇabījā avirūḷhichandā, nibbanti dhīrā yathāyaṃ padīpo*—no more oil is poured into that lamp, no more wicks are added. It is just like a lamp going out.</p>
+<p>We have tried, to the best of our ability, to bring out the flavor of the meaning of the *Ratana Sutta* for you. There are singers with voices far sweeter and more melodious than mine. Even if we record these, people might not be very interested in listening to them. Be that as it may, we decided to present this theme because this valuable *Ratana Sutta* is on the verge of fading away. Therefore, wise devotees should take the flavor of its meaning into consideration and recite it as a true Act of Truth. Due to a lapse in mindfulness, the flavor of the meaning can easily be forgotten. You must make an effort. Even when chanting, do it as a genuine Act of Truth, reflecting on the qualities of the Buddha, Dhamma, and Saṅgha. Otherwise, it is very easy to use a machine to chant it a hundred thousand times. You do not have to tire yourself out to do it a hundred thousand times; you can just use a device. But then, it does not become an Act of Truth.</p>
+<p>We say this because many people today are drawn to such things. Through this, both the laity and the clergy fall into decline. Moreover, what is even more dangerous is that for future generations, nothing will remain of these valuable discourses—which have been preserved for centuries—except the sound. Only a hollow sound will remain. Therefore, today, we have tried to present this sutta—which you all love, listen to, and recollect, and which was recollected even this morning—in a meaningful way. Benefit from this. While using this as a comprehensive protection and refuge in your daily life and meditation, may you draw closer and closer to the qualities of the Triple Gem. May this sermon help all of us to achieve the paths and fruits of Stream-entry, Once-returning, Non-returning, and Arahantship, which are attainable through the supreme Triple Gem—the Buddha, Dhamma, and Saṅgha—as mentioned in this *Ratana Sutta*! This is our wish.</p>
+<p>May all beings, from the Avīci hell to the highest heaven of Akaniṭṭha, who wish to rejoice in the merits generated by this Dhamma sermon and Dhamma listening, rejoice in these merits and attain the supreme, peaceful, great Nibbāna through the path of awakening of their choice! Please recite these verses to share the merits.</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_058.html" class="doc-btn">← Previous Sermon (058)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_060.html" class="doc-btn">Next Sermon (060) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>

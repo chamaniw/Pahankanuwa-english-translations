@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahankanuwa Sermon 025 | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+/* Prominent Clickable Sermon Title Links */
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sermon Reader Body Styling */
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html" class="active">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <main class="homepage-content">
+
+    <div class="sermon-nav-bar">
+      <a href="sermon_024.html" class="doc-btn">← Previous Sermon (024)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_026.html" class="doc-btn">Next Sermon (026) →</a>
+    </div>
+
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Pahankanuwa Sermon 025</h1>
+      <p style="margin-top: 0.5rem;">
+        <strong>Download Files:</strong>
+        <a class="doc-btn" href="docx/sermon_025_ENGLISH.docx" target="_blank">📄 DOCX</a>
+        <a class="doc-btn" href="pdf/sermon_025_ENGLISH.pdf" target="_blank">📕 PDF</a>
+        <a class="doc-btn" href="epub/sermon_025_ENGLISH.epub" target="_blank">📘 EPUB</a>
+      </p>
+    </section>
+
+    <article class="sermon-reader">
+      <p>Pahankanuwa Sermon #25</p>
+<p>English Translation</p>
+<p>Translated from Sinhala</p>
+<p>Author: Ven. Katukurunde Nanananda Thero</p>
+<p>(Pahankaṇuwa Sinhala Audio Dhamma Sermon No. )</p>
+<p>Namo tassa bhagavato arahato sammāsambuddhassa</p>
+<p>(Homage to the Blessed One, the Worthy One, the Fully Self-Enlightened One)</p>
+<p>Pali Stanza:</p>
+<p>Ādīnavaṁ loke disvā, dhammaṁ ñatvā nirūpadhiṁ; Na ramati pāpe, pāpe na ramatī sucī.</p>
+<p>From:</p>
+<p>Verses 412 from the Brāhmaṇavagga (Chapter on the Brahmin) of the Dhammapada</p>
+<p>Dear Listeners,</p>
+<p>It is only to the extent that one’s understanding of the aspect of danger (*ādīnava*) in the world deepens that one’s thoughts and concepts come to maturity. It is in proportion to the maturity of one's thoughts that the ultimate goal of the monastic life can be realized. If the difference between lay pleasure and monastic happiness is not understood correctly, monastic life is liable to become monotonous or tasteless. It is because of this that the ancient teachers employed various skillful means to strengthen the mind of an aspirant for ordination. An illustration of this will also be found in the story we hope to present today.</p>
+<p>At the time when the Great Arahant Mahā Kaccāna was residing in the region of Kuraraghara in the Avanti country, there was a lay disciple named Soṇa Kuṭikaṇṇa who served as his attendant. This lay disciple Soṇa Kuṭikaṇṇa was the son of a very wealthy and faithful female lay disciple named Kālī in that Kuraraghara area. One day, while this lay disciple Soṇa Kuṭikaṇṇa was engaged in meditation in seclusion, the following thought occurred to him: "As the Venerable Mahā Kaccāna preaches the Dhamma, it is difficult to lead this pure holy life (*brahmacariya*) while living in the household. It is extremely hard. Therefore, I should shave off my hair and beard, don the saffron robes, and go forth from the home life into homelessness." After having this thought, he went to the Venerable Kaccāna, expressed that such an idea had occurred to him, and requested, "Venerable Sir, please ordain me." Then the Venerable Mahā Kaccāna said: "Soṇa, it is difficult to protect the holy life in this Dispensation for life, subsisting on a single meal a day and sleeping on a solitary bed. It is hard. Therefore, remaining in that very lay life, practice that method of the holy life, that practice, by occasionally keeping the eight-fold Uposatha precepts as taught by the Buddha, subsisting on a single meal a day and sleeping on a solitary bed." After hearing this, the lay disciple Soṇa Kuṭikaṇṇa’s enthusiasm for ordination subsided. Having gone back, while meditating once again, the thought came strongly to his mind once more: "It is difficult to practice the pure holy life in this lay life; I must ordain." He went back to Venerable Mahā Kaccāna and requested permission just as before. Venerable Mahā Kaccāna again reiterated that this task is difficult. "Therefore, remaining in that lay life, strive to observe the holy life periodically, not lifelong, in that manner." On that occasion too, that thought subsided, and he returned. But when this thought arose very strongly for the third time during meditation, he came and requested Venerable Mahā Kaccāna once again. It was on that occasion that Venerable Mahā Kaccāna ordained the lay disciple Soṇa Kuṭikaṇṇa.</p>
+<p>Three years after ordaining him, with great difficulty, they managed to gather ten bhikkhus from here and there for his higher ordination (*upasampadā*). The reason was that monks were very scarce in the Avanti country. Therefore, it was with great difficulty that they found ten bhikkhus to fulfill the quorum of the Sangha for higher ordination, and thus conferred higher ordination. Now, after Venerable Soṇa Kuṭikaṇṇa had received higher ordination and spent the rains retreat (*vassa*), the following thought occurred to him: "I have only heard of the Blessed One, the Buddha, but I have not yet been able to see Him with my own eyes. It would be a great thing for me if I could get to see the Blessed One. Therefore, if my preceptor (*upajjhāya*) permits, I should go on a journey to see the Blessed One." Thereupon, Venerable Kuṭikaṇṇa went to Venerable Mahā Kaccāna, mentioned his intention, and requested permission. Then the Venerable Mahā Kaccāna expressed great joy, saying, "Sādhu, sādhu!" and said, "Go, Soṇa. Go and see the Blessed One, who is inspiring in appearance and possesses an exceptionally peaceful and tamed mind. Having seen Him, pay homage on my behalf and inquire after His health. Tell Him: 'My preceptor bows at the feet of the Blessed One.' " In this manner, he approved of it with his blessings.</p>
+<p>So, Venerable Soṇa Kuṭikaṇṇa, having paid homage to his teacher and circumambulated him, packed away his lodgings, took his bowl and robes, and set out on the long journey from Avanti country towards Jētavanārāma. Wandering by stages, he eventually arrived at Jētavanārāma. Having seen the Buddha, he paid homage to Him exactly as his teacher had instructed. The Blessed One also engaged in the usual friendly conversation that is customary when a visiting monk arrives: "How was your journey? Did you obtain alms-food easily? Did you arrive safely without any trouble?" When he replied, "Yes, Venerable Sir," the Blessed One said to Venerable Ānanda, "Ānanda, prepare a lodging for this visiting monk." Venerable Ānanda, who knew the thoughts and wishes of the Blessed One very well, understood: "The Blessed One must be giving this special instruction to prepare a lodging because He wishes this monk to spend the night in His own fragrant chamber (*gandhakuṭi*)." Understanding this, he prepared a lodging for Venerable Soṇa Kuṭikaṇṇa in the Blessed One's fragrant chamber itself.</p>
+<p>That night, the Blessed One spent most of the time meditating in the open air, and then, having washed His feet, entered the chamber. Venerable Soṇa too spent most of the night meditating in the open air and then entered his lodging. Next, we hear that the Blessed One, having awoken in the early hours of the morning, said to Venerable Soṇa, "Bhikkhu, may you be inspired to preach the Dhamma!" Thereupon, Venerable Soṇa recited from memory, in a very beautiful voice and with a suitable, appropriate tone, all sixteen deep and meaningful verses of the *Aṭṭhaka Vagga* (Octet Chapter), which are included in the collection of discourses known as the *Sutta Nipāta*. Having heard this, the Blessed One expressed great delight: "Very good, bhikkhu! You have recited these discourses in an excellent voice that is very clear, flawless, fluent, and illuminating the meaning." Then the Buddha asked, "Monk, how many rains (*vassa*) do you have?" Then Venerable Soṇa Kuṭikaṇṇa said, "Venerable Sir, I have one rains retreat." The age of monastics is counted according to the number of rains retreats they have spent. So he said, "I have only one rains"—one rains since higher ordination. Then the Buddha asked, "Monk, what have you been doing all this time? What were you doing all this time?" Then Venerable Soṇa replied, "Venerable Sir, I did indeed see the aspect of danger in sensual pleasures. Yet, due to the various chores, troubles, and duties of household life, my ordination was delayed in this manner." It was on that occasion that the Buddha uttered the verse we mentioned as our theme. That verse is actually recorded in the Pali texts (specifically the Udāna). In that book, it is presented as an utterance of joy (*udāna*). The verse uttered by the Buddha as a statement of joy is what we recited at the beginning:</p>
+<p>*“Ādīnavaṃ loke disvā, dhammaṃ ñatvā nirūpadhiṃ,*</p>
+<p>*na ramati pāpe, pāpe na ramatī suci.”*</p>
+<p>"Having seen the danger in the world, and knowing the Dhamma free from acquisitions (*nirūpadhi*)—which is Nibbāna: consisting in the relinquishment of all acquisitions—the noble person, the pure one, does not delight in evil; the pure one does not delight in evil." That is the brief meaning there.</p>
+<p>Accounts regarding Venerable Soṇa are found in many other places in the Sutta Piṭaka and the Vinaya Piṭaka. Here, since we have prioritized this utterance of joy, this portion is discussed. Taking this as our primary subject and integrating other relevant details as appropriate, let us now attempt to make some commentary on this. Our aim in this is to bring out the valuable ideas contained within this story and the verse. First, as we direct our minds to this, since there are matters here that might raise doubts in your minds, let us look at them one by one to clarify them.</p>
+<p>Now, this Venerable Mahā Kaccāna was no ordinary person. He was one who received the distinguished title of "foremost" (*etadagga*) as an honor from the Buddha in this Dispensation. Meritorious people, this title of "foremost" refers to a custom of the Buddha—indeed, a custom of all Buddhas—to declare to the Sangha those who possess exceptional abilities in various fields among the fourfold assembly of bhikkhus, bhikkhunis, laymen, and laywomen, using the phrase: *"Etadaggaṃ mama sāvakānaṃ..."* "Among my disciples, this person (he or she) is chief, preeminent," and then that specific quality is mentioned. In that manner, Venerable Mahā Kaccāna received the chief, foremost position among those bhikkhus who are capable of explaining in detail what was preached in brief by the Buddha. That special capability was found in Venerable Mahā Kaccāna—that is, the analytical exposition of a brief statement uttered by the Buddha, explaining it at length. He was indeed such a valuable monk.</p>
+<p>Furthermore, it was mentioned in this story that the Sangha of bhikkhus in the Avanti country was extremely scarce. In such a situation, a doubt might arise in our minds: why did Venerable Mahā Kaccāna refuse the lay disciple Soṇa Kuṭikaṇṇa twice when he requested ordination? We might expect that he should have said something like this: "Our region is very short of Sangha strength. It is excellent, get ordained quickly! If possible, bring another ten or fifteen people with you. We can find requisites, and we can hold a grand ordination ceremony." Instead of encouraging him in that way, he pointed out the difficulty of ordination. The words with which he expressed that difficulty are also very significant. We bring up this matter because it is timely and relevant. There, Venerable Mahā Kaccāna showed the difficulty of ordination in this way:</p>
+<p>The word "lifelong" (*yāvajīvaṃ*) is mentioned. The meaning of this ordination is to observe the holy life (*brahmacariya*) for life, lifelong, subsisting on a single meal a day, and sleeping on a solitary bed. It is a difficult thing. From this, we can see that in those days, ordination was not a "temporary" concept but a "lifelong" concept, regarded as something highly serious. It is not something to be taken lightly. Ordination is a decisive step regarding one's life, taken with firm determination. Great renunciation is not something done casually. It is not like going away on a holiday for a week or two and coming back. What we see from this is that in the Buddha's time, ordination was a decisive step that had to be taken with deep understanding and a profound concept of renunciation (*nekkhamma*). That is why Venerable Mahā Kaccāna refused him twice, knowing that the lay disciple did not yet possess the suitability or sufficient maturity for it. However, at the same time, he showed an alternative course of action instead. What should be done then? If one does not have the strength to take that step with such a lifelong, intense commitment as ordination, what one should do is to remain in lay life and strive periodically (*kālayuttaṃ*) toward the holy life by occasionally giving up a meal for the day, relinquishing lay pleasures, and safeguarding the holy life. Venerable Mahā Kaccāna pointed out that alternative path as well.</p>
+<p>Through this, we can gain some insight into ordination in the past. Thus, they did not ordain an aspirant just because he came or requested it, with a desire to increase numbers. The progress of the Dispensation cannot be measured by counting heads. Therefore, even if they are few, it is only when they are prepared to fulfill the requirements of monastic life with a genuine, deep understanding and with the aforementioned commitment—only at that mature stage—that permission is granted. That is why it was only on the third request that Venerable Mahā Kaccāna gave his permission. This shows that he allowed the thought of renunciation (*nekkhamma*) to mature within his mind. Even today, as a general custom, ordination is requested three times. However, it is repeated one after another in rapid succession. But what is the deep meaning behind this? When requested the first time, if perchance the mind changed, it would stop there. Today, of course, it has turned into a mere ritual. But here, we can clearly see: he came and requested the first time, and was sent back. He requested the second time, and was sent back again. When he requested the third time, realizing that he was requesting for the third time with a deep intention, permission was granted. From this, we can see that the teachers of the past trained their aspirants for ordination in a manner that preserved the dignity of ordination. Likewise, it might have been difficult for Venerable Soṇa to keep those practices because he was a lay disciple from a very wealthy family, and probably had various business affairs and other such engagements. It was due to all of this that Venerable Mahā Kaccāna did not grant permission initially, but did so later, once that intention had matured in his mind.</p>
+<p>That is how that matter stands. Next, let us look at another aspect. After Venerable Soṇa arrived to see the Buddha, the Buddha granted him a special privilege. What was this privilege? He was permitted to spend the night in the Buddha's own chamber. For an ordinary disciple, to get to spend a night in the Buddha's fragrant chamber (*gandhakuṭi*) is a very rare privilege. We must also consider what the reason for this was. This Venerable Soṇa Kuṭikaṇṇa was also no ordinary person. Just as Venerable Mahā Kaccāna attained that status—the chief position (*etadagga*) we mentioned—because he had received a definite declaration from the Buddha Padumuttara that he would receive the foremost position among those bhikkhus who analyze and expound in detail what was preached in brief in the Dispensation of the Gautama Buddha. Similarly, it is recorded that Venerable Soṇa Kuṭikaṇṇa had also received a definite declaration from the Buddha Padumuttara regarding a certain special quality. What was that? It is mentioned there as *kalyāṇavākkaraṇānaṃ*. *Kalyāṇavākkaraṇa* means having a beautiful or pleasant voice. Venerable Kuṭikaṇṇa received the foremost position among the bhikkhus who could preach the Dhamma with a beautiful voice. Although it is not detailed in this short story, it is mentioned in places like the Vinaya Piṭaka that the Buddha not only approved and expressed appreciation for Venerable Soṇa Kuṭikaṇṇa's recital, but specifically praised his *sarabhañña* recital. *Sarabhañña* recital refers to the skill of chanting the Dhamma in a well-attuned, melodious tone, in a flawless and fluent manner that makes the meaning clear. Therefore, the Buddha bestowed on Venerable Soṇa Kuṭikaṇṇa the foremost position, that honor, among the bhikkhus who possess a beautiful voice (*kalyāṇavākkaraṇa*). From this, we can understand that the special privilege was given because the Buddha wished to hear a recital from this pupil. It was only after listening to his recital properly in the morning that He conferred the honor. Thus, we can understand that the Buddha allowed the visiting monk, Venerable Soṇa Kuṭikaṇṇa, to spend the night there in order to facilitate this opportunity.</p>
+<p>Moreover, we can see that this accommodation was not provided so that He could chat with the monk about worldly affairs. This is clear from the fact that the Blessed One spent most of the night meditating in the open air. The visiting monk, Venerable Soṇa, also spent most of the night meditating in the open air, and it was only in the middle watch of the night that they went to sleep. This shows that the Blessed One did not grant this privilege to this visiting monk just to talk about local news, but to hear his recital upon waking up in the morning and to give due recognition to one who deserved it. We can understand this point in that way.</p>
+<p>Along with this, it must be mentioned how Venerable Soṇa's beautiful manner of speaking is described in the discourse. The primary word *kalyāṇiyā* (beautiful) is mentioned there. Beautiful words. The words *vissaṭṭhāya, anelagalāya, atthassa viññāpaniyā* are used. This means speaking with very clear words—words that flow clearly and flawlessly, and in a manner that conveys, clarifies, and reveals the meaning. In the Dhamma, this method of chanting is called *sarabhañña*—the *sarabhañña* method of recital. However, it must be noted that the Buddha has stated in the Vinaya Piṭaka that preaching the Dhamma in a singing voice (*gītassara*) is an offense, a mistake. The Buddha established a disciplinary rule stating that the Dhamma should not be preached in a drawn-out, singing manner, and pointed out its dangers (*ādīnava*)—the undesirable consequences. What are these undesirable consequences? They are listed as five: "Monks, there are these five dangers in preaching the Dhamma in a drawn-out, singing voice. What is the first danger? One is himself attached to his own voice—the preacher becomes attached to his own singing voice. Others, too, become attached to that singing voice; those who listen get attached to that singing voice. What is the third undesirable consequence? Lay people criticize, saying: 'Just like we hold musical performances and sing songs, these Sakyaputtian ascetics are also singing songs.' The fourth point is that by paying more attention to the rhythm of the music or song, and by being attached to it, concentration (*samādhi*) is broken; whatever concentration one had developed is shattered because the mind wanders to the singing voice. The fifth point is that future generations—for which the term *pascimā janatā* is used, those who come later—will take a wrong example from this, and based on what they see, they will follow and imitate it, thinking: 'This is the correct way.' Thus, it sets a bad example for future generations." Because of these reasons, the Buddha declared that the Dhamma should not be preached in a singing voice.</p>
+<p>Indeed, the discourses in the *Aṭṭhaka Vagga* that we mentioned are verse discourses. Yet, even though they were verse discourses, Venerable Soṇa did not recite them as music. He chanted them by pronouncing each word very clearly, in a melodious way, and in a manner suited to them. Now, we know that if the meaning is to be preserved correctly—as it is said, *sātthaṃ sabyañjanaṃ* (with meaning and with phrasing)—the Buddha's Dhamma can only be maintained if attention is paid to both the aspect of meaning (*attha*) and the aspect of phrasing/letters (*byañjana*). You know that meaning refers to the sense. Phrasing/letters (*byañjana*) refers to the letters/syllables. In any discourse, there is an aspect called meaning, and then there are the letters—the arrangement of syllables and words appropriate to it. The Buddha pointed out that if letters are used incorrectly, the meaning also becomes distorted. Therefore, for instance, as grammarians often point out in the Sinhala language, if instead of saying "a cobra in the hole" (*benēka nayek*), one says "a blind one in the hole" (*benē kanayek*), it gives two completely different meanings. If one errs in the division of words and terms, the meaning becomes distorted. Thus, to preserve the Buddha's word over thousands of years, it is absolutely essential to protect both the aspect of meaning and the aspect of letters/phrasing. If one allows that singing voice, what happens? The meaning gets erased. The meaning gets erased and only the music remains. Ultimately, only the tones remain. In the end, the entire Dhamma would be reduced to a collection of tones or a set of pleasant rhythms. But in the past, with those verse teachings—now, here we have a collection of deep verse discourses—we can imagine that Venerable Soṇa Kuṭikaṇṇa must have pronounced them very well, dividing those words correctly. In the Pali language, there is a distinction between unaspirated (*appaprāṇa*) and aspirated (*mahāprāṇa*) sounds. If one pronounces an aspirated word as unaspirated, it can convey a different meaning. He must have divided the words properly, without confusing them in that manner. Thus, without giving way to a singing voice, *sarabhañña* means chanting in a way that preserves the meaning, highlights the meaning, and brings out the meaning. Now, we know there is a difference between prose and verse. There is indeed a difference between prose and verse. But what is the purpose of verse? The rhythm and meter found there are used to highlight the meaning, to make the meaning more manifest, and to impress it more deeply on the mind—not to erase the meaning. However, if music is allowed, over time, one would not even know what is being said. One gets attached to the sound, and the listener also gets attached to it. In the end, only the sensory pleasure of sound, which is common to animals, remains.</p>
+<p>So, this is how it is regarding the Dhamma. You discuss the Gem of the Dhamma—the Gem of the Buddha, the Gem of the Dhamma, the Gem of the Sangha. You pay homage to the book of Dhamma, and you give a high seat to the Dhamma preacher. Why is all of this done? Because we must protect the Dhamma. This is what the Buddha Himself respected. After attaining Buddhahood, He contemplated, "Whom shall I respect?" He found, "There is no one in this world worthy of receiving respect from Me." He looked at the custom of past Buddhas to see what they did. Every Tathāgata spent His life respecting and honoring the Dhamma itself. Therefore, it is said in this Dispensation that respect for the Dhamma is greater than respect for individuals. If respect for the Dhamma is so valuable, then this matter is also important for the preservation of the Dhamma. Today, in an era where books are abundant, when writing a book to preserve the Dhamma, we have to proofread the drafts several times. But in the era when this was preserved orally by lineages of reciters (*bhāṇaka*), they had to preserve it in the aforementioned manner, protecting both the meaning and the phrasing (*sabyañjanaṃ*)—safeguarding both *attha* and *byañjana*—to carry this Dhamma forward.</p>
+<p>Thus, here it has aligned perfectly in a wonderful way. When we think of the perfection (*pāramī*) qualities, we can understand: Venerable Mahā Kaccāna, who received his definite declaration from the Buddha Padumuttara, was the most skilled expert in expounding in detail the Dhamma that the Buddha preached in brief. Then, Venerable Soṇa Kuṭikaṇṇa was a pupil of that very teacher. He, too, had received a definite declaration from the Buddha Padumuttara to pronounce that Dhamma correctly and present it with a beautiful voice. These two fit together perfectly. Thus, what we possess is a Dhamma that has been preserved and brought down through such lineages. There may be some shortcomings even in those. But we must try to preserve at least this much, in the aforementioned manner, by utilizing the *sarabhañña* method without giving prominence to a singing voice. That may be a bit difficult to understand. However, its characteristics are that the words must flow very clearly, flawlessly, and in a way that makes the meaning clear. Sometimes, during the recital of protective discourses (*paritta suttas*) and chanting, some people do not even know what is being said. A nice rhythm is maintained, and in the end, only that rhythm remains as the *paritta*. But those *parittas* have deep meanings. What we call *paritta* recitals are also the Buddha's word, the Dhamma. Just because it is included in the book of protective discourses, or just because it is chanted, it does not become a song. Within it lies a deep Dhamma. If you think about the *Karaṇīyametta Sutta*, the *Ratana Sutta*, or the *Mahāmangala Sutta*, there is a profound meaning in every single verse, in every single word. But if, without considering the meaning of those words, we turn it into music just because it is being chanted, then that becomes something of an insult to the Gem of the Dhamma. Therefore, we are compelled to remind you of these matters in a timely manner.</p>
+<p>Next, let us direct our attention to the matter mentioned in the verse. What did the Buddha point out through the verse? The aspect of danger (*ādīnava*) in this world. Now we are coming to a somewhat deeper part. After Venerable Soṇa had recited the Dhamma in that *sarabhañña* style, the Buddha, after praising him, asked a question: "How many rains do you have?" After he stated the number of rains, the Buddha asked another question. That question is one that is valuable enough for each of you to ask yourselves. What is that question? "What were you doing all this time? What have you been doing all this time?" What is the meaning of that? "Despite seeing so much danger in this lay life, why did you not ordain? Why did you not take this step?" On that occasion, Venerable Soṇa Kuṭikaṇṇa did not blame his teacher. He did not say, "I asked for ordination, but he did not give it to me." He did not say such things. He stated his own inability: "Blessed One, I did see the danger in these sensual pleasures. Yet, because of the mass of work in this household life, this was delayed for me." Perhaps you too might have to say the same thing. In any case, what we will bring up next are several points that the Buddha preached in various places regarding the danger of sensual pleasures.</p>
+<p>One should not think of this as strange. Some might think that telling lay people about the danger of sensual pleasures is inappropriate, and that it should only be told to the Sangha. But the Sangha are not people who fell from the sky. It was only after being like the lay disciple Soṇa Kuṭikaṇṇa that he eventually became the great Elder Kuṭikaṇṇa. Therefore, this can be helpful to you as well. What we have to say is that when discussing this aspect of danger, you may have heard of the valuable similes the Buddha gave to householders. This is mentioned in a section of the Dhamma called the *Potaliya Sutta*. At one time, the householder Potaliya, having handed over all his wealth to his children and relinquished all his chores and business affairs, came to see the Buddha. When he came to the tree where the Buddha was sitting in seclusion, the Buddha addressed this householder as "Householder." He felt offended by this. He expected that since he had renounced these things, the Buddha would address him with a more esteemed term, and felt that he was not being respected as a layperson. But the Buddha had addressed him as "Householder." After he became angry and displeased at this, the Buddha showed him that if one truly wishes to detach the mind from the entanglements of lay life, one must direct the mind to these very matters. Among those are these seven similes. Let us take them one by one. These are the similes shown by the Buddha to express the aspect of danger, the undesirable consequences, of sensual pleasures.</p>
+<p>The first simile is the simile of the skeleton/bone fragment (*aṭṭhikankaḷūpama*). You may have heard this story in brief. The Buddha describes it in this way: "Householder, suppose a dog, extremely hungry, weak and afflicted, is waiting near a slaughterhouse. A butcher or his apprentice throws a bone fragment to that dog—a bone that has been scraped clean of all meat, with just a smear of blood. The dog chews and chews on it. What do you think, householder? Would that dog's hunger be appeased by that?" "No, Venerable Sir, in the end, it only experiences fatigue." "In the same way, remember, householder, sensual pleasures have been compared by the Blessed One to a skeleton—to a fleshless bone fragment smeared with just a trace of blood, involving much Suffering / Unsatisfactoriness / Stress (*dukkha*), much despair, and great danger." The Buddha uttered that simile there.</p>
+<p>The next simile: "In the same way, householder, suppose a vulture, a crow, or a hawk takes a piece of meat and flies up into the sky. Seeing this, other vultures, crows, or hawks pursue that bird, clawing and pecking at it. Now, householder, if that vulture, crow, or hawk does not let go of that piece of meat, what would happen to it? Because of those birds pecking at it, it would either meet with death or experience suffering equal to death." In that manner, the Buddha showed that sensual pleasures are compared to a piece of meat (*maṃsapesūpama*), illustrating the point through that simile.</p>
+<p>Next, he presents the third simile: "Suppose, householder, a man walks against the wind holding a blazing grass torch. If he does not quickly let go of that blazing grass torch, that fire would burn his hand, his arm, or some other part of his body, and he would either meet with death or experience suffering equal to death." In that way, the Blessed One compared sensual pleasures to a grass torch (*tiṇukkūpama*) as the third simile.</p>
+<p>The fourth simile: "Suppose there is a pit of glowing coals (*aṅgārakāsūpama*), deeper than a man's height, filled with smokeless, glowing embers. Then a man comes along who wants to live, who does not want to die, who loves pleasure and recoils from pain. Two strong men grab him by both arms and drag him towards that pit of glowing coals. What would that poor man do? He would struggle and twist this way and that." Then Potaliya says, "Blessed One, that man knows that if he falls into it, he will experience death or suffering equal to death." "In the same way, householder, understand that sensual pleasures have been compared by the Blessed One to a pit of glowing coals."</p>
+<p>Next, he gives the fifth simile: "Suppose a man in his sleep dreams of beautiful parks, beautiful forests, beautiful ponds, and beautiful fields. But when he wakes up, he sees nothing of them. In the same way, remember, householder, sensual pleasures have been compared by the Blessed One to a dream (*supinakūpama*)." He told this to the householder Potaliya.</p>
+<p>Then the next simile: "Suppose a man who needs to attend a special event, like a wedding, wants to dress up specially. What does he do? He borrows garments on loan—clothes, ornaments, and even vehicles. He borrows them saying, 'We have such an event on this day; can you lend us this dress, this pair of shoes, or this vehicle?' Having borrowed them, he dresses up in all of them, wearing the borrowed jewelry and clothes, and drives elegantly in the borrowed carriage through the bazaar street. People in the town, seeing him, say: 'This must be an exceptionally wealthy man! This is how rich people display their wealth. This is excellent!' While people are expressing admiration, the owners of those borrowed items come and say: 'We have an urgent matter. Please return those items—return the shoes, and we need this carriage.' They take them back right there. What happens to that man then? Even though he appeared to be very wealthy, all of it is lost to him on the spot." Having given that simile, the Buddha said: "In the same way, householder, understand that sensual pleasures are like borrowed goods (*yācitakūpama*)." That is the simile.</p>
+<p>What is the next simile? "Suppose there is a tree in a dense forest near a village, laden with ripe fruit—let us say a mango tree. There is plenty of fruit, but none has fallen to the ground. A man comes along looking for fruit, searching for mangoes. He sees the mangoes on the tree, and though none is on the ground, he knows how to climb. So he climbs the tree, eats mangoes there, and fills his lap with them. While he is doing this, another man arrives, also searching for mangoes. In his hand, he holds a sharp axe. No fruit has fallen, and this second man does not know how to climb. He thinks: 'There are mangoes on this tree, and I have an axe, but I cannot climb. So what I must do is cut down the tree, take as much fruit as I want, fill his lap, and go.' He begins to chop down the tree. Now, householder, what do you think? If the first man who climbed the tree does not climb down quickly, what will happen to him? When the tree falls, he will fall with it, and break a hand or a foot, or even lose his life." When asked, "Is that not so?" the householder Potaliya replied, "Yes, Venerable Sir." That is how the householder replied.</p>
+<p>In this manner, the Buddha pointed out seven similes. The deep meaning of each of these similes is such that in the news we hear in daily life—about serious crimes, murders, suicides—the underlying principle is found in these similes. If we briefly consider each simile: first, we mentioned the simile of the skeleton/bone fragment. There, as the dog chews on the thrown bone because it is smeared with a little blood, it unwittingly drinks the blood coming from its own gums, taking it as food. That is how the nature of sensual pleasures is illustrated there. The Buddha has declared: *"Appassādā bahudukkhā kāmā"*—"Sensual pleasures provide little gratification and much Suffering / Unsatisfactoriness / Stress (*dukkha*)." It is not that they have no gratification (*assāda*). Gratification refers to enjoying the pleasure of taste. If we say there is no gratification at all, some might find fault and say the Buddha could not have said that. But the Buddha did declare that there is an aspect of gratification, but it is little, while the aspect of Suffering / Unsatisfactoriness / Stress (*dukkha*) is much. The gratification is little, and the suffering is much. Thus, the dog licked the trace of blood on that bloody bone fragment. But it did not stop there; what follows is a mountain of suffering. That is the simile.</p>
+<p>Next, the same applies to the simile of the piece of meat. When we think about it, sensual pleasures refer to what is desired. How many others desire what you desire? Consequently, when trying to possess what you desire, how many others who desire the same thing must you fight with? These are occurrences you have seen endlessly in daily life, whether regarding wealth or regarding people. That piece of meat is carried to the sky by a single vulture. How many others follow and peck at it? This principle can be understood in relation to wealth and other things.</p>
+<p>Similarly, there is the simile of the grass torch. Unknowingly, one's hand gets burned. It shows the peril, the hazardous nature of sensual pleasures. Then, too, the simile of the pit of glowing coals. One goes toward it in a strange way. One knows that one will fall into disaster—one is aware of it—yet one is drawn to it, just as one is dragged into a pit of embers. Next, the dreamlike nature. This shows the emptiness and worthlessness of sensual pleasures. In a dream, one sees various beautiful sights. But upon waking up, not a single one is there. Not a single one remains; there is only darkness around—only the darkness of the night. In the same way are sensual pleasures: their worthlessness, emptiness, voidness, and deceptive nature are all expressed through this.</p>
+<p>Next, regarding borrowed or loaned goods. This is also something you can actually observe in daily life. When a wedding or a similar event comes up, how many people do they have to beg to obtain the necessary items when they lack the funds themselves? And having borrowed those things, they are filled with fear: "At what moment will they ask for these back? If these get damaged slightly, I will have to pay for them, won't I? I will have to pay compensation." Thus, they use them very carefully, somehow, just until the photographs are taken. If the owners come to claim them before that, then that is the end of it. That is how it is with weddings and such events today.</p>
+<p>Through all of this, we can see—no more illustrations are needed—you can imagine how fitting those similes given by the Buddha are. Sensual pleasures are like something borrowed from others, something taken on loan. Next, the simile of the tree. There, it actually speaks of the fruits on the tree. The fruits are on the tree, but they are sought after in two different ways. One person climbs in the proper way and tries to enjoy the fruits. While he is enjoying them, another person seeks to obtain the fruits by cutting down the tree in an improper way. The conflict between these two is what is shown there.</p>
+<p>When one directs one's mind to these similes given by the Buddha regarding the danger of sensual pleasures, reflecting on them in the light of the events one sees, hears, and experiences in daily life, a great and deep disillusionment with saṃsāra arises. In the Dhamma, the word used for this disillusionment is *nibbidā* (disenchantment / disillusionment). Here, we mentioned *ādīnava* (danger / disadvantage). *Ādīnava* refers to the undesirable nature, the undesirable consequences, of the fivefold sensual pleasures. When one sees these, it is natural for disillusionment to arise. It is not something to be feared. The Buddha has declared that if one sees the reality of the world as it is, through that very seeing, one becomes disenchanted with the world. To prevent that, just as when a young child grows, they do not cut off parts of their body to fit into their childhood clothes, but rather discard those clothes and wear garments suited to them; in the same way, the transition from lay life to monastic life is such a process. Therefore, no one can find fault with this and say, "It is not good to talk to lay people about the danger. They should not think about it. They should only think about the pleasures of lay life." To say so is incorrect; the Dhamma of the Buddha is open.</p>
+<p>Therefore, when reflecting on these, you can see through them the Three Characteristics of Impermanent / Inconstant (*anicca*), Suffering / Unsatisfactoriness / Stress (*dukkha*), and Not-self / Non-self / Unsubstantial (*anattā*). Insight (*vipassanā*) is something one experiences directly. We know that insight is a seeing, not a mere saying. Therefore, to achieve that seeing, one must contemplate how true the Buddha's word is, based on one's own experiences and the examples visible around. It is when contemplating in this way that one realizes internally: "Was not what I did all this time a foolishness?" That is where the question asked by the Buddha fits in—the question we mentioned: "What were you doing all this time? What have you been doing all this time?" What you did all this time was precisely expanding saṃsāra. That is what we have referred to on other occasions as walking on the path of expanding the world and expanding the cemeteries. That is why we say: "Do not be an expander of the world; do not be an expander of cemeteries." What was done until now was expanding worlds, expanding cemeteries, and expanding skeletons. But what the Buddha points out is to depart from that practice of expanding the world and expanding cemeteries, and to cross over from the world. This is Suffering / Unsatisfactoriness / Stress (*dukkha*). And that is what is expressed next in the verse.</p>
+<p>The verse is very simple, yet a great many deep meanings are expressed there. *Disvā ādīnavaṃ loke*—having seen the danger in the world. *Dhammaṃ nirūpadhiṃ*—here, that term is used for Nibbāna:. It is a somewhat deep word. To explain it at an understandable level, *upadhi* (acquisitions / assets / substrate) refers to those things on which one's sense of "I-ness" or "my-ness" relies. In daily life, the Buddha explained *upadhi* in this way: let us say a person who has children is proud of and delighted by their children. On one occasion, Māra came and presented a challenge before the Buddha: "One with children delights in children. One with cattle delights in cattle." He spoke thus. Those aforementioned things like acquisitions, assets, deposits—to use a modern term, deposits or assets—all of these are known as *upadhi*. Thus, that entire collection of animate or inanimate possessions is regarded as *upadhi*. Māra claimed that one who does not have them cannot be happy. But the Buddha turned that very statement around on that occasion and declared: *"Socati puttehi puttima"*—"One with children sorrows because of children." Ultimately, they fall into suffering. When children do not care for them, or when children die untimely, then they fall into sorrow. Similarly, with a herd of cattle: when trouble or destruction befalls the herd, they grieve over it. In that manner, the herd of cattle represents that collection of assets, deposits. So the Buddha points out all of this as Suffering / Unsatisfactoriness / Stress (*dukkha*). Therefore, "Acquisitions are indeed a man's sorrowing; he does not sorrow who is free from acquisitions (*nirūpadhi*)." The one who is free from acquisitions is the one who does not sorrow.</p>
+<p>It is according to that concept of *upadhi* mentioned there that we can understand why the Buddha called Nibbāna: *nirūpadhi* (free from acquisitions). *Nirūpadhi* means, in the final analysis, that what we have done in this saṃsāra is pile up acquisitions (*upadhi*)—pile up deposits. When we contemplate deeply, it is not just these properties, lands, wealth, and grains, but the acquisitions we have gathered are rūpa (form), Feeling / Sensation (*vedanā*), saññā (perception), and Preparations / preparations / Volitional activity (*saṅkhāra*), which we call the five aggregates of Grasping / Holding / Fuel (*upādāna*). There is the word Grasping / Holding / Fuel (*upādāna*). *Upādāna* means seizing, clinging. Clinging to something, or holding onto something. *Upadhi* means standing on something. Often, these two can be almost the same thing. It is looking at the matter from two sides. One clings to something seeking security; one relies on something seeking security. Thus, because of Craving / Thirst (*taṇhā*) for rūpa, Feeling / Sensation (*vedanā*), etc., they cling to them, and in that sense they are called the five aggregates of Grasping / Holding / Fuel (*upādāna*)—five bundles of grasping. These themselves can serve as *upadhi*. Because when one projects a sense of self-identity saying "this is my form," "this is my feeling," etc., and develops an attachment to them, then that becomes *upadhi*. The state of being freed from these is *sabbūpadhipaṭinissagga* (the relinquishment of all acquisitions). The phrase *sabbūpadhipaṭinissagga* is applied to Nibbāna:. The relinquishment of all acquisitions. When we say the relinquishment of all acquisitions, one does not become *nirūpadhi* (free from acquisitions) merely by handing over one's properties to children and retiring from industries and businesses, as that householder did. One has to let go of this very five aggregates—rūpa (form), Feeling / Sensation (*vedanā*), saññā (perception), Preparations / preparations / Volitional activity (*saṅkhāra*), and Consciousness (*viññāṇa*)—piled up in saṃsāra thus far. And that letting go happens at the aforementioned stage of the Path and Fruit (*magga-phala*). Gradually developing insight, realizing the characteristics of Impermanent / Inconstant (*anicca*) and Not-self / Non-self / Unsubstantial (*anattā*), and through that, when one directly realizes for oneself the impermanence, the Suffering / Unsatisfactoriness / Stress (*dukkha*) nature, the Not-self / Non-self / Unsubstantial (*anattā*) nature, the voidness, and the emptiness of this rūpa, Feeling / Sensation (*vedanā*), etc., they slip away naturally. A deep aversion, a revulsion, arises, and there comes a moment when this is cast off like a carcass suddenly hung around one's neck. It is at that moment that the realization of the Path and Fruit is attained; that is what is called Nibbāna:. That indeed is what is called the greatest peace. "Laying down the burden" refers to this—laying down the burden of the five aggregates.</p>
+<p>It is this journey toward Nibbāna: that you are undertaking today through observing the precepts, listening to the Dhamma, and so on. Therefore, you should reflect that although this Dhamma sermon—which is relevant to the Buddha's teaching—began in a simple manner, it has gradually become deeper. Reflecting on all of this and aligning these preached points with your ultimate purpose, drawing them close to your lives, may you quickly be released from all the saṃsāra suffering of Birth / Arising (*jāti*), Decay and Death / Aging and Death (*jarāmaraṇa*), sickness, and so forth. Freeing yourselves from the aforementioned path of expanding the world and expanding cemeteries, may this virtue observed today, this meditation practiced, and this Dhamma heard serve as a supportive condition, a source of merit, for ending the world, crossing over from the world, and attaining that supreme ambrosial Nibbāna: taught by the Buddha—attaining that noble, acquisition-free state of Nibbāna: through the realization of the paths and fruits of Stream-entry (*Sotāpatti*), Once-returning (*Sakadāgāmi*), Non-returning (*Anāgāmi*), and Arahanthood. Aspire thus!</p>
+<p>Now, with the aspiration that all this mass of merit accumulated by preaching and listening to the Dhamma may be shared by whatever departed relatives of yours who have passed away, and likewise by the righteous devas and deities, including the kings of the devas and Brahmas, and indeed by all living beings from Avīci up to Akaniṭṭha; and that all may rejoice in it and quickly attain the great deathless Nibbāna: through whichever of the three Bodhis they aspire for—with this aspiration, please recite this verse:</p>
+<p>“*Ettāvatā ca amhehi.........*”</p>
+    </article>
+
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermon_024.html" class="doc-btn">← Previous Sermon (024)</a>
+      <a href="sermons.html" class="doc-btn">📜 Back to All Sermons</a>
+      <a href="sermon_026.html" class="doc-btn">Next Sermon (026) →</a>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <p style="margin-bottom: 1rem;">
+      <a class="btn" href="Pahankanuwa_English_Translations.zip" download>
+        📦 Download All Sermons (.ZIP Archive)
+      </a>
+    </p>
+    <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
+  </footer>
+
+
+</body>
+</html>
