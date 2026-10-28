@@ -1226,6 +1226,49 @@ document.getElementById('searchBox').addEventListener('input', performSearch);
 
 
 # ==========================================
+# SITEMAP GENERATOR
+# ==========================================
+def generate_sitemap(max_sermon=202, base_url="https://pahankanuwa.github.io/"):
+    """
+    Generates a sitemap.xml file inside the docs folder listing all main pages and individual sermon URLs.
+    Update base_url if your custom domain or GitHub Pages URL differs.
+    """
+    pages = [
+        "",
+        "index.html",
+        "sermons.html",
+        "downloads.html",
+        "audio.html",
+        "search.html",
+        "statistics.html"
+    ]
+    
+    # Collect all valid individual sermon pages (automatically handles gaps like 170 -> 183)
+    for i in range(1, max_sermon + 1):
+        s_num = str(i).zfill(3)
+        if find_sermon_file(s_num, "docx", SRC_DOCX_DIR) or find_sermon_file(s_num, "txt", SRC_TXT_DIR):
+            pages.append(f"sermon_{s_num}.html")
+            
+    sitemap_lines = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+    ]
+    
+    for page in pages:
+        loc = f"{base_url.rstrip('/')}/{page}" if page else f"{base_url.rstrip('/')}/"
+        sitemap_lines.append('  <url>')
+        sitemap_lines.append(f'    <loc>{loc}</loc>')
+        sitemap_lines.append('  </url>')
+        
+    sitemap_lines.append('</urlset>')
+    
+    sitemap_path = DOCS_DIR / "sitemap.xml"
+    with open(sitemap_path, "w", encoding="utf-8") as f:
+        f.write("\n".join(sitemap_lines))
+    print(f"Generated sitemap.xml with {len(pages)} URLs successfully.")
+
+
+# ==========================================
 # FILE COPY & ASSET MANAGEMENT
 # ==========================================
 def copy_static_assets():
@@ -1290,6 +1333,9 @@ if __name__ == "__main__":
     generate_search_index()
 
     generate_search_page()
+
+    # Generate sitemap.xml for Google Search Console
+    generate_sitemap(202)
 
     copy_static_assets()
     
