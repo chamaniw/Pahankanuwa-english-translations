@@ -258,10 +258,18 @@ body {
     font-style: italic;
 }
 
+.top-nav-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
 .top-nav {
     display: flex;
     gap: 0.5rem;
     flex-wrap: wrap;
+    align-items: center;
 }
 .top-nav a {
     color: #ffffff;
@@ -275,6 +283,29 @@ body {
 .top-nav a:hover, .top-nav a.active {
     background-color: rgba(255, 255, 255, 0.25);
     color: #ffffff;
+}
+
+.header-search-form {
+    display: flex;
+    align-items: center;
+}
+.header-search-input {
+    padding: 0.45rem 0.8rem;
+    font-size: 0.88rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    outline: none;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+.header-search-input::placeholder {
+    color: #ffd1d1;
+}
+.header-search-input:focus {
+    background-color: #ffffff;
+    color: #2c2c2c;
+    border-color: #ffffff;
 }
 
 .search-container {
@@ -534,7 +565,6 @@ def build_header_html(active_tab="home"):
         ("downloads", "Downloads", "downloads.html"),
         ("audio", "Audio", "audio.html"),
         ("search", "Search", "search.html"),
-        ("citations", "Citations", "citations.html"),
         ("statistics", "Statistics", "statistics.html"),
     ]
     
@@ -550,9 +580,14 @@ def build_header_html(active_tab="home"):
         <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
         <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
       </div>
-      <nav class="top-nav">
-        {"".join(nav_links)}
-      </nav>
+      <div class="top-nav-wrapper">
+        <nav class="top-nav">
+          {"".join(nav_links)}
+        </nav>
+        <form action="search.html" method="get" class="header-search-form">
+          <input type="text" name="q" class="header-search-input" placeholder="Search sermons..." aria-label="Search sermons">
+        </form>
+      </div>
     </div>
   </header>
   """
@@ -651,10 +686,6 @@ def generate_index_page(metrics):
 
   {build_header_html('home')}
 
-  <div class="search-container">
-    <input type="text" id="searchInput" class="search-input" onkeyup="filterData()" placeholder="Search sermon index by title, citation, or source...">
-  </div>
-
   <main class="homepage-content">
 
     <section class="hero">
@@ -700,20 +731,19 @@ def generate_index_page(metrics):
         <span class="stat-number">4 Formats</span>
         <span class="stat-label">Downloads Page</span>
       </a>
-      <a href="citations.html" class="stat-card">
-        <span class="stat-number">{metrics['citations_count']:,}</span>
-        <span class="stat-label">Browse Citations Index</span>
-      </a>
       <a href="statistics.html" class="stat-card">
         <span class="stat-number">100%</span>
         <span class="stat-label">View Collection Stats</span>
+      </a>
+      <a href="search.html" class="stat-card">
+        <span class="stat-number">🔍</span>
+        <span class="stat-label">Search Entire Collection</span>
       </a>
     </section>
 
   </main>
 
   {FOOTER_HTML}
-  {SEARCH_JS}
 
 </body>
 </html>
@@ -999,10 +1029,6 @@ def generate_statistics_page(metrics, datasets):
         <span class="stat-number">{metrics['sermons_count']:,}</span>
         <span class="stat-label">Sermons (Click to Access Documents)</span>
       </a>
-      <a href="citations.html" class="stat-card">
-        <span class="stat-number">{metrics['citations_count']:,}</span>
-        <span class="stat-label">Citations (Click to View Index)</span>
-      </a>
       <a href="#sermons-tree" class="stat-card">
         <span class="stat-number">100%</span>
         <span class="stat-label">Document Availability</span>
@@ -1073,7 +1099,7 @@ def generate_search_page():
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Search</title>
+<title>Search | Ven. Katukurunde Nanananda Thero</title>
 
 <style>
 __SITE_CSS__
@@ -1113,12 +1139,6 @@ placeholder="Search..."
 
 let searchData=[];
 
-fetch('search_index.json')
-.then(r=>r.json())
-.then(data=>{
-    searchData=data;
-});
-
 function normalize(str){
     return str
     .normalize("NFD")
@@ -1140,45 +1160,55 @@ function getSnippet(content, query, maxLength = 250) {
     return snippet;
 }
 
-document.getElementById('searchBox')
-.addEventListener('input',function(){
+function performSearch() {
+    const box = document.getElementById('searchBox');
+    const query = normalize(box.value.trim());
+    const results = document.getElementById('results');
 
-let query=normalize(this.value);
+    if (query.length < 2) {
+        results.innerHTML = "";
+        return;
+    }
 
-let results=document.getElementById('results');
+    const matches = searchData.filter(x => x.normalized.includes(query)).slice(0, 50);
 
-if(query.length<2){
-    results.innerHTML="";
-    return;
+    if (matches.length === 0) {
+        results.innerHTML = "<p style='margin-top: 1.5rem; color: var(--text-muted);'>No matching sermons found.</p>";
+        return;
+    }
+
+    results.innerHTML = matches.map(m => `
+<div class="download-item">
+  <div class="download-info">
+    <h4>
+      <a href="sermon_${m.sermon}.html">
+        ${m.title}
+      </a>
+    </h4>
+    <p>
+      ${getSnippet(m.content, query, 250)}
+    </p>
+  </div>
+</div>
+`).join("");
 }
 
-let matches=searchData.filter(
-x=>x.normalized.includes(query)
-).slice(0,50);
-
-results.innerHTML=matches.map(m=>`
-
-<div class="download-item">
-
-<div class="download-info">
-
-<h4>
-<a href="sermon_${m.sermon}.html">
-${m.title}
-</a>
-</h4>
-
-<p>
-${getSnippet(m.content, query, 250)}
-</p>
-
-</div>
-
-</div>
-
-`).join("");
-
+fetch('search_index.json')
+.then(r => r.json())
+.then(data => {
+    searchData = data;
+    
+    // Check URL parameters (e.g. ?q=paticca)
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialQuery = urlParams.get('q') || urlParams.get('search') || "";
+    if (initialQuery) {
+        const box = document.getElementById('searchBox');
+        box.value = initialQuery;
+        performSearch();
+    }
 });
+
+document.getElementById('searchBox').addEventListener('input', performSearch);
 
 </script>
 
@@ -1251,11 +1281,6 @@ if __name__ == "__main__":
     )
     generate_downloads_page(metrics)
     generate_audio_page()
-    generate_data_subpage(
-        "citations.html", "citations", "Browse Citations Index",
-        "Opening passages and textual citations with direct links to corresponding sermon translations.",
-        datasets["citations"]
-    )
     generate_statistics_page(metrics, datasets)
     
     # Generate individual sermon pages and handle gaps automatically

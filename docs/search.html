@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Search</title>
+<title>Search | Ven. Katukurunde Nanananda Thero</title>
 
 <style>
 
@@ -58,10 +58,18 @@ body {
     font-style: italic;
 }
 
+.top-nav-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
 .top-nav {
     display: flex;
     gap: 0.5rem;
     flex-wrap: wrap;
+    align-items: center;
 }
 .top-nav a {
     color: #ffffff;
@@ -75,6 +83,29 @@ body {
 .top-nav a:hover, .top-nav a.active {
     background-color: rgba(255, 255, 255, 0.25);
     color: #ffffff;
+}
+
+.header-search-form {
+    display: flex;
+    align-items: center;
+}
+.header-search-input {
+    padding: 0.45rem 0.8rem;
+    font-size: 0.88rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    outline: none;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+.header-search-input::placeholder {
+    color: #ffd1d1;
+}
+.header-search-input:focus {
+    background-color: #ffffff;
+    color: #2c2c2c;
+    border-color: #ffffff;
 }
 
 .search-container {
@@ -311,9 +342,14 @@ footer {
         <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
         <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
       </div>
-      <nav class="top-nav">
-        <a href="index.html">Home</a><a href="sermons.html">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="search.html" class="active">Search</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
-      </nav>
+      <div class="top-nav-wrapper">
+        <nav class="top-nav">
+          <a href="index.html">Home</a><a href="sermons.html">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="search.html" class="active">Search</a><a href="statistics.html">Statistics</a>
+        </nav>
+        <form action="search.html" method="get" class="header-search-form">
+          <input type="text" name="q" class="header-search-input" placeholder="Search sermons..." aria-label="Search sermons">
+        </form>
+      </div>
     </div>
   </header>
   
@@ -347,12 +383,6 @@ placeholder="Search..."
 
 let searchData=[];
 
-fetch('search_index.json')
-.then(r=>r.json())
-.then(data=>{
-    searchData=data;
-});
-
 function normalize(str){
     return str
     .normalize("NFD")
@@ -374,45 +404,55 @@ function getSnippet(content, query, maxLength = 250) {
     return snippet;
 }
 
-document.getElementById('searchBox')
-.addEventListener('input',function(){
+function performSearch() {
+    const box = document.getElementById('searchBox');
+    const query = normalize(box.value.trim());
+    const results = document.getElementById('results');
 
-let query=normalize(this.value);
+    if (query.length < 2) {
+        results.innerHTML = "";
+        return;
+    }
 
-let results=document.getElementById('results');
+    const matches = searchData.filter(x => x.normalized.includes(query)).slice(0, 50);
 
-if(query.length<2){
-    results.innerHTML="";
-    return;
+    if (matches.length === 0) {
+        results.innerHTML = "<p style='margin-top: 1.5rem; color: var(--text-muted);'>No matching sermons found.</p>";
+        return;
+    }
+
+    results.innerHTML = matches.map(m => `
+<div class="download-item">
+  <div class="download-info">
+    <h4>
+      <a href="sermon_${m.sermon}.html">
+        ${m.title}
+      </a>
+    </h4>
+    <p>
+      ${getSnippet(m.content, query, 250)}
+    </p>
+  </div>
+</div>
+`).join("");
 }
 
-let matches=searchData.filter(
-x=>x.normalized.includes(query)
-).slice(0,50);
-
-results.innerHTML=matches.map(m=>`
-
-<div class="download-item">
-
-<div class="download-info">
-
-<h4>
-<a href="sermon_${m.sermon}.html">
-${m.title}
-</a>
-</h4>
-
-<p>
-${getSnippet(m.content, query, 250)}
-</p>
-
-</div>
-
-</div>
-
-`).join("");
-
+fetch('search_index.json')
+.then(r => r.json())
+.then(data => {
+    searchData = data;
+    
+    // Check URL parameters (e.g. ?q=paticca)
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialQuery = urlParams.get('q') || urlParams.get('search') || "";
+    if (initialQuery) {
+        const box = document.getElementById('searchBox');
+        box.value = initialQuery;
+        performSearch();
+    }
 });
+
+document.getElementById('searchBox').addEventListener('input', performSearch);
 
 </script>
 

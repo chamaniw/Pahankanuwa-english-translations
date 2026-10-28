@@ -54,10 +54,18 @@ body {
     font-style: italic;
 }
 
+.top-nav-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
 .top-nav {
     display: flex;
     gap: 0.5rem;
     flex-wrap: wrap;
+    align-items: center;
 }
 .top-nav a {
     color: #ffffff;
@@ -71,6 +79,29 @@ body {
 .top-nav a:hover, .top-nav a.active {
     background-color: rgba(255, 255, 255, 0.25);
     color: #ffffff;
+}
+
+.header-search-form {
+    display: flex;
+    align-items: center;
+}
+.header-search-input {
+    padding: 0.45rem 0.8rem;
+    font-size: 0.88rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    outline: none;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+.header-search-input::placeholder {
+    color: #ffd1d1;
+}
+.header-search-input:focus {
+    background-color: #ffffff;
+    color: #2c2c2c;
+    border-color: #ffffff;
 }
 
 .search-container {
@@ -305,16 +336,17 @@ footer {
         <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
         <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
       </div>
-      <nav class="top-nav">
-        <a href="index.html" class="active">Home</a><a href="sermons.html">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="search.html">Search</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
-      </nav>
+      <div class="top-nav-wrapper">
+        <nav class="top-nav">
+          <a href="index.html" class="active">Home</a><a href="sermons.html">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="search.html">Search</a><a href="statistics.html">Statistics</a>
+        </nav>
+        <form action="search.html" method="get" class="header-search-form">
+          <input type="text" name="q" class="header-search-input" placeholder="Search sermons..." aria-label="Search sermons">
+        </form>
+      </div>
     </div>
   </header>
   
-
-  <div class="search-container">
-    <input type="text" id="searchInput" class="search-input" onkeyup="filterData()" placeholder="Search sermon index by title, citation, or source...">
-  </div>
 
   <main class="homepage-content">
 
@@ -361,13 +393,13 @@ footer {
         <span class="stat-number">4 Formats</span>
         <span class="stat-label">Downloads Page</span>
       </a>
-      <a href="citations.html" class="stat-card">
-        <span class="stat-number">3,062</span>
-        <span class="stat-label">Browse Citations Index</span>
-      </a>
       <a href="statistics.html" class="stat-card">
         <span class="stat-number">100%</span>
         <span class="stat-label">View Collection Stats</span>
+      </a>
+      <a href="search.html" class="stat-card">
+        <span class="stat-number">🔍</span>
+        <span class="stat-label">Search Entire Collection</span>
       </a>
     </section>
 
@@ -382,20 +414,6 @@ footer {
     </p>
     <p>Ven. Katukurunde Nanananda Thero Dhamma Knowledge Base &copy; 2026.</p>
   </footer>
-
-  
-<script>
-function filterData() {
-    var input = document.getElementById('searchInput');
-    var filter = input.value.toLowerCase();
-    
-    var rows = document.querySelectorAll('.data-table tbody tr, .download-item');
-    rows.forEach(function(row) {
-        var text = row.innerText.toLowerCase();
-        row.style.display = text.includes(filter) ? '' : 'none';
-    });
-}
-</script>
 
 
 </body>
