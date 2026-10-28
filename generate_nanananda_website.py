@@ -1228,7 +1228,7 @@ document.getElementById('searchBox').addEventListener('input', performSearch);
 # ==========================================
 # SITEMAP GENERATOR
 # ==========================================
-def generate_sitemap(max_sermon=202, base_url="https://pahankanuwa.github.io/"):
+def generate_sitemap(max_sermon=202, base_url="https://chamaniw.github.io/Pahankanuwa-english-translations/"):
     """
     Generates a sitemap.xml file inside the docs folder listing all main pages and individual sermon URLs.
     Update base_url if your custom domain or GitHub Pages URL differs.
