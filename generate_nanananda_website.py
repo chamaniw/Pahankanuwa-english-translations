@@ -3,6 +3,8 @@ import shutil
 import re
 from pathlib import Path
 import pandas as pd
+import unicodedata
+import json
 
 # Optional import for reading DOCX files
 try:
@@ -114,6 +116,18 @@ def find_sermon_file(s_num, format_ext, search_dir):
             return file.name
     return None
 
+def normalize_text(text):
+    if not text:
+        return ""
+
+    text = str(text)
+    text = unicodedata.normalize("NFD", text)
+    text = "".join(
+        ch for ch in text
+        if unicodedata.category(ch) != "Mn"
+    )
+    return text.lower()
+
 
 # ==========================================
 # DATA LOADING & PROCESSOR
@@ -145,41 +159,14 @@ def load_and_process_excel_data():
             pdf_file = find_sermon_file(s_num, "pdf", SRC_PDF_DIR) or f"sermon_{s_num}.pdf"
             epub_file = find_sermon_file(s_num, "epub", SRC_EPUB_DIR) or f"sermon_{s_num}.epub"
 
-            # Opening Pali passage
-            para_7 = (
-                str(row['Para_7']).strip()
-                if 'Para_7' in row and pd.notna(row['Para_7'])
-                else ""
-            )
-            excerpt = (
-                para_7
-                if para_7 and para_7.lower() != "nan"
-                else "No excerpt available"
-            )
+            para_7 = str(row['Para_7']).strip() if 'Para_7' in row and pd.notna(row['Para_7']) else ""
+            excerpt = para_7 if para_7 and para_7.lower() != "nan" else "No excerpt available"
 
-            # English translation of the opening passage
-            para_9 = (
-                str(row['Para_9']).strip()
-                if 'Para_9' in row and pd.notna(row['Para_9'])
-                else ""
-            )
-            english_translation = (
-                para_9
-                if para_9 and para_9.lower() != "nan"
-                else "No English translation available"
-            )
+            para_9 = str(row['Para_9']).strip() if 'Para_9' in row and pd.notna(row['Para_9']) else ""
+            english_translation = para_9 if para_9 and para_9.lower() != "nan" else "No English translation available"
 
-            # Likely canonical source
-            para_11 = (
-                str(row['Para_11']).strip()
-                if 'Para_11' in row and pd.notna(row['Para_11'])
-                else ""
-            )
-            likely_source = (
-                para_11
-                if para_11 and para_11.lower() != "nan"
-                else "Unspecified Canonical Source"
-            )
+            para_11 = str(row['Para_11']).strip() if 'Para_11' in row and pd.notna(row['Para_11']) else ""
+            likely_source = para_11 if para_11 and para_11.lower() != "nan" else "Unspecified Canonical Source"
 
             doc_links = (
                 f'<a class="doc-btn" href="docx/{docx_file}" target="_blank">📄 DOCX</a> '
@@ -187,7 +174,6 @@ def load_and_process_excel_data():
                 f'<a class="doc-btn" href="epub/{epub_file}" target="_blank">📘 EPUB</a>'
             )
 
-            # Prominent clickable sermon title link with class 'sermon-title-link'
             sermon_link_html = f'<a href="sermon_{s_num}.html" class="sermon-title-link"><strong>{clean_title}</strong></a>'
 
             sermons_list.append({
@@ -212,7 +198,7 @@ def load_and_process_excel_data():
             datasets["statistics"] = pd.read_excel(xls_kb, sheet_name='Statistics')
 
     metrics = {
-        "sermons_count": len(datasets["sermons"]) if not datasets["sermons"].empty else 170,
+        "sermons_count": len(datasets["sermons"]) if not datasets["sermons"].empty else 202,
         "citations_count": len(datasets["citations"]) if not datasets["citations"].empty else 2815,
     }
 
@@ -220,7 +206,7 @@ def load_and_process_excel_data():
 
 
 # ==========================================
-# GLOBAL CSS STYLING (Prominent Clickable Links Added)
+# GLOBAL CSS STYLING
 # ==========================================
 SITE_CSS = """
 :root {
@@ -313,8 +299,8 @@ body {
 
 .homepage-content {
     max-width: 1200px;
-    margin: 1.5rem auto 3rem auto;
-    padding: 0 1.5rem;
+    margin: 1rem auto 3rem auto;
+    padding: 0 0.5rem;
 }
 
 .hero {
@@ -465,7 +451,6 @@ a.doc-btn:hover {
     color: #ffffff;
 }
 
-/* Prominent Clickable Sermon Title Links */
 a.sermon-title-link {
     color: var(--header-bg);
     text-decoration: underline;
@@ -477,16 +462,20 @@ a.sermon-title-link:hover {
     color: var(--accent-color);
 }
 
-/* Sermon Reader Body Styling */
 .sermon-reader {
     background: #ffffff;
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    padding: 2.5rem 3rem;
+    padding: 1rem;
     margin-top: 1.5rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.03);
     font-size: 1.05rem;
     line-height: 1.8;
+}
+@media (min-width: 768px) {
+    .sermon-reader {
+        padding: 2rem 3rem;
+    }
 }
 .sermon-reader p {
     margin-bottom: 1.25rem;
@@ -544,6 +533,7 @@ def build_header_html(active_tab="home"):
         ("sermons", "Sermons", "sermons.html"),
         ("downloads", "Downloads", "downloads.html"),
         ("audio", "Audio", "audio.html"),
+        ("search", "Search", "search.html"),
         ("citations", "Citations", "citations.html"),
         ("statistics", "Statistics", "statistics.html"),
     ]
@@ -571,11 +561,17 @@ def build_header_html(active_tab="home"):
 # ==========================================
 # INDIVIDUAL SERMON PAGES GENERATOR
 # ==========================================
-def generate_individual_sermon_pages(total_sermons=170):
-    for i in range(1, total_sermons + 1):
+def generate_individual_sermon_pages(max_sermon=202):
+    # Collect all valid existing sermon numbers (automatically handles 170 -> 183 gap)
+    valid_sermons = []
+    for i in range(1, max_sermon + 1):
         s_num = str(i).zfill(3)
-        prev_num = str(i - 1).zfill(3) if i > 1 else None
-        next_num = str(i + 1).zfill(3) if i < total_sermons else None
+        if find_sermon_file(s_num, "docx", SRC_DOCX_DIR) or find_sermon_file(s_num, "txt", SRC_TXT_DIR):
+            valid_sermons.append(s_num)
+
+    for idx, s_num in enumerate(valid_sermons):
+        prev_num = valid_sermons[idx - 1] if idx > 0 else None
+        next_num = valid_sermons[idx + 1] if idx < len(valid_sermons) - 1 else None
 
         docx_file = find_sermon_file(s_num, "docx", SRC_DOCX_DIR) or f"sermon_{s_num}_ENGLISH.docx"
         pdf_file = find_sermon_file(s_num, "pdf", SRC_PDF_DIR) or f"sermon_{s_num}.pdf"
@@ -636,7 +632,7 @@ def generate_individual_sermon_pages(total_sermons=170):
         with open(DOCS_DIR / f"sermon_{s_num}.html", "w", encoding="utf-8") as f:
             f.write(page_html)
 
-    print(f"Generated {total_sermons} individual sermon pages.")
+    print(f"Generated {len(valid_sermons)} individual sermon pages.")
 
 
 # ==========================================
@@ -663,7 +659,7 @@ def generate_index_page(metrics):
 
     <section class="hero">
       <h1>Pahankanuwa Sermon Series</h1>
-      <h2>English Translation Collection (Sermons 001–170)</h2>
+      <h2>English Translation Collection (Sermons 001–202)</h2>
       <p style="text-align: center; font-weight: 500;">Original Sermons by Most Venerable Katukurunde Nanananda Thero</p>
       
       <div class="pali-quote">"Sabba-dānaṃ dhamma-dānaṃ jināti"<br>The Gift of Dhamma Excels All Gifts — Dhammapada 354</div>
@@ -676,6 +672,15 @@ def generate_index_page(metrics):
       </div>
 
       <p>Welcome to the structured Dhamma Knowledge Base, cataloging and indexing the English translations of the Pahankanuwa Sermons delivered by Most Venerable Katukurunde Nanananda Thero. This portal provides direct cross-references between translated sermon passages, Dhamma subjects, and canonical Sutta citations.</p>
+
+<div style="margin-top: 1.5rem; margin-bottom: 1.5rem; padding: 1.25rem; border-left: 5px solid #800000; background-color: #fff8f0; border-radius: 6px;">
+    <h3 style="margin-bottom: 0.5rem; color: #800000;">
+        Featured Collection: The Paticca Samuppada Series (Sermons 183–202)
+    </h3>
+    <p style="margin-bottom: 0;">
+        Sermons 183–202 represent Ven. Katukurunde Nanananda Thero's profound exposition of Paṭicca Samuppāda (Dependent Arising), later published by the Venerable Thero as the book <em>The Law of Dependent Arising</em>.
+    </p>
+</div>
 
       <div style="margin-top: 1.5rem; margin-bottom: 1.5rem; padding: 1rem; border-left: 4px solid var(--header-bg); background-color: #fcfaf7; border-radius: 6px;">
         <h3 style="margin-bottom:0.5rem; color: var(--header-bg);">Sinhala Pahankanuwa Collection</h3>
@@ -719,8 +724,11 @@ def generate_index_page(metrics):
 
 def generate_downloads_page(metrics):
     individual_items = []
-    for i in range(1, 171):
+    for i in range(1, 203):
         pad_num = str(i).zfill(3)
+        if not (find_sermon_file(pad_num, "docx", SRC_DOCX_DIR) or find_sermon_file(pad_num, "txt", SRC_TXT_DIR)):
+            continue
+            
         docx_file = find_sermon_file(pad_num, "docx", SRC_DOCX_DIR) or f"sermon_{pad_num}_ENGLISH.docx"
         pdf_file = find_sermon_file(pad_num, "pdf", SRC_PDF_DIR) or f"sermon_{pad_num}.pdf"
         epub_file = find_sermon_file(pad_num, "epub", SRC_EPUB_DIR) or f"sermon_{pad_num}.epub"
@@ -765,7 +773,7 @@ def generate_downloads_page(metrics):
     <div class="download-list">
       <div class="download-item" style="border-left: 4px solid var(--header-bg);">
         <div class="download-info">
-          <h4>Complete Sermon Collection (All 170 Sermons)</h4>
+          <h4>Complete Sermon Collection (All Sermons)</h4>
           <p>Complete set available in DOCX, PDF, EPUB, and a combined ZIP archive.</p>
         </div>
         <div class="download-links">
@@ -1031,6 +1039,161 @@ def generate_statistics_page(metrics, datasets):
     with open(DOCS_DIR / "statistics.html", "w", encoding="utf-8") as f:
         f.write(page_html)
 
+def generate_search_index():
+    search_list = []
+    for i in range(1, 203):
+        s_num = str(i).zfill(3)
+        # Check if the sermon file exists before indexing (handles 170 -> 183 gap)
+        docx_file = find_sermon_file(s_num, "docx", SRC_DOCX_DIR)
+        txt_file = find_sermon_file(s_num, "txt", SRC_TXT_DIR)
+        if not (docx_file or txt_file):
+            continue
+
+        title = f"Pahankanuwa Sermon {s_num}"
+        content = read_sermon_content(s_num)
+        clean_content = re.sub(r'<[^>]+>', '', content)
+        
+        search_item = {
+            "sermon": s_num,
+            "title": title,
+            "content": clean_content,
+            "normalized": normalize_text(title + " " + clean_content)
+        }
+        search_list.append(search_item)
+        
+    with open(DOCS_DIR / "search_index.json", "w", encoding="utf-8") as f:
+        json.dump(search_list, f, ensure_ascii=False, indent=2)
+    print("Generated search_index.json successfully.")
+
+def generate_search_page():
+    search_html = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Search</title>
+
+<style>
+__SITE_CSS__
+</style>
+</head>
+
+<body>
+
+__HEADER_HTML__
+
+<main class="homepage-content">
+
+<section class="hero">
+
+<h1>Search the Sermon Collection</h1>
+
+<p>
+Search all translated sermons,
+including the Paticca Samuppada series.
+Searches ignore diacritics,
+so typing "paticca" will find "Paṭicca".
+</p>
+
+<input
+id="searchBox"
+class="search-input"
+placeholder="Search..."
+>
+
+<div id="results"></div>
+
+</section>
+
+</main>
+
+<script>
+
+let searchData=[];
+
+fetch('search_index.json')
+.then(r=>r.json())
+.then(data=>{
+    searchData=data;
+});
+
+function normalize(str){
+    return str
+    .normalize("NFD")
+    .replace(/[\\u0300-\\u036f]/g,"")
+    .toLowerCase();
+}
+
+function getSnippet(content, query, maxLength = 250) {
+    const lowerContent = content.toLowerCase();
+    const index = lowerContent.indexOf(query);
+    if (index === -1) {
+        return content.substring(0, maxLength);
+    }
+    const start = Math.max(0, index - 80);
+    const end = Math.min(content.length, start + maxLength);
+    let snippet = content.substring(start, end);
+    if (start > 0) snippet = "..." + snippet;
+    if (end < content.length) snippet = snippet + "...";
+    return snippet;
+}
+
+document.getElementById('searchBox')
+.addEventListener('input',function(){
+
+let query=normalize(this.value);
+
+let results=document.getElementById('results');
+
+if(query.length<2){
+    results.innerHTML="";
+    return;
+}
+
+let matches=searchData.filter(
+x=>x.normalized.includes(query)
+).slice(0,50);
+
+results.innerHTML=matches.map(m=>`
+
+<div class="download-item">
+
+<div class="download-info">
+
+<h4>
+<a href="sermon_${m.sermon}.html">
+${m.title}
+</a>
+</h4>
+
+<p>
+${getSnippet(m.content, query, 250)}
+</p>
+
+</div>
+
+</div>
+
+`).join("");
+
+});
+
+</script>
+
+</body>
+
+</html>
+""".replace("__SITE_CSS__", SITE_CSS).replace("__HEADER_HTML__", build_header_html('search'))
+
+    with open(
+        DOCS_DIR / "search.html",
+        "w",
+        encoding="utf-8"
+    ) as f:
+        f.write(search_html)
+
 
 # ==========================================
 # FILE COPY & ASSET MANAGEMENT
@@ -1095,9 +1258,14 @@ if __name__ == "__main__":
     )
     generate_statistics_page(metrics, datasets)
     
-    # Generate individual sermon pages and read text from DOCX/TXT files
-    generate_individual_sermon_pages(metrics['sermons_count'])
-    
+    # Generate individual sermon pages and handle gaps automatically
+    generate_individual_sermon_pages(202)
+
+    # Generate search index JSON file required by search.html (with gap skipping)
+    generate_search_index()
+
+    generate_search_page()
+
     copy_static_assets()
     
     print("\n==========================================")

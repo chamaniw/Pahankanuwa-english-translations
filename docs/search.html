@@ -1,87 +1,421 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search | Ven. Nāṇānanda Dhamma Reference</title>
-    <link rel="stylesheet" href="assets/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Search</title>
+
+<style>
+
+:root {
+    --header-bg: #800000;
+    --header-text: #ffffff;
+    --header-subtitle: #ffd1d1;
+    --primary-color: #5c2c16;
+    --accent-color: #c88a2a;
+    --bg-color: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-color: #2c2c2c;
+    --text-muted: #666666;
+    --border-color: #e2d7c7;
+    --table-header-bg: #800000;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.brand-section .logo-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.brand-section .subtitle {
+    font-size: 0.95rem;
+    color: var(--header-subtitle);
+    font-style: italic;
+}
+
+.top-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.top-nav a:hover, .top-nav a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    outline: none;
+}
+.search-input:focus {
+    border-color: var(--header-bg);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.homepage-content {
+    max-width: 1200px;
+    margin: 1rem auto 3rem auto;
+    padding: 0 0.5rem;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
+.hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
+.hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
+
+.download-banner {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--header-bg);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.btn:hover { background-color: #5c0000; }
+.btn-secondary {
+    background-color: transparent;
+    color: var(--header-bg) !important;
+    border: 1px solid var(--header-bg);
+}
+.btn-secondary:hover { background-color: #f4eee6; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+.stat-number {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.4rem;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.download-info h4 { margin: 0 0 0.25rem 0; color: var(--header-bg); font-family: 'Georgia', serif; }
+.download-info p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.download-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+table.data-table th {
+    background-color: var(--table-header-bg);
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+}
+table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
+table.data-table tr:hover { background-color: #f4eee6; }
+
+a.doc-btn {
+    display: inline-block;
+    background-color: #f4eee6;
+    color: var(--header-bg);
+    border: 1px solid var(--header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 2px 2px;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+}
+a.doc-btn:hover {
+    background-color: var(--header-bg);
+    color: #ffffff;
+}
+
+a.sermon-title-link {
+    color: var(--header-bg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: color 0.15s ease-in-out;
+}
+a.sermon-title-link:hover {
+    color: var(--accent-color);
+}
+
+.sermon-reader {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+@media (min-width: 768px) {
+    .sermon-reader {
+        padding: 2rem 3rem;
+    }
+}
+.sermon-reader p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+.sermon-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+
+</style>
 </head>
+
 <body>
 
-<div class="page-wrapper">
-    <header>
-        <h1><a href="index.html">Ven. Nāṇānanda Dhamma Reference Portal</a></h1>
-    </header>
 
-    <div class="layout">
-        <nav class="sidebar">
-            <div class="sidebar-section">
-                <h3>Navigation</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="sermons/index.html" class="">Sermons Index</a></li>
-                    <li><a href="stanzas/index.html" class="">Stanzas Index</a></li>
-                    <li><a href="search.html" class="active">Search</a></li>
-                </ul>
-            </div>
-        </nav>
-
-        <main class="content">
-            
-    <h2>Search Knowledge Base</h2>
-    <input type="text" id="searchInput" placeholder="Type Pāli or English term (e.g. tanha, vinnana, craving)..." 
-           style="width: 100%; padding: 12px; font-size: 16px; border: 2px solid var(--line-color); margin-bottom: 20px;">
-    <div id="searchResults"></div>
-
-    <script>
-    let searchData = [];
-    fetch('search_index.json')
-        .then(res => res.json())
-        .then(data => searchData = data);
-
-    function normalizeStr(str) {
-        if (!str) return '';
-        return str.replace(/[ṁṃ]/g, 'm').replace(/[ṀṂ]/g, 'M')
-                  .normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
-    }
-
-    document.getElementById('searchInput').addEventListener('input', function(e) {
-        const query = normalizeStr(e.target.value.trim());
-        const resultsDiv = document.getElementById('searchResults');
-        resultsDiv.innerHTML = '';
-
-        if (query.length < 2) return;
-
-        const matches = searchData.filter(item => item.norm_text.includes(query));
-        
-        if (matches.length === 0) {
-            resultsDiv.innerHTML = '<p>No matching results found.</p>';
-            return;
-        }
-
-        matches.forEach(item => {
-            const div = document.createElement('div');
-            div.className = 'item-card';
-            div.innerHTML = `<div class="item-title"><a href="${item.url}">${item.title}</a></div>
-                             <p><small>Type: ${item.type.toUpperCase()} | Source: ${item.source}</small></p>`;
-            resultsDiv.appendChild(div);
-        });
-    });
-    </script>
-    
-        </main>
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="logo-title">Ven. Katukurunde Nanananda Thero</div>
+        <div class="subtitle">English Translations of Pahankanuwa Sermons</div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a><a href="sermons.html">Sermons</a><a href="downloads.html">Downloads</a><a href="audio.html">Audio</a><a href="search.html" class="active">Search</a><a href="citations.html">Citations</a><a href="statistics.html">Statistics</a>
+      </nav>
     </div>
+  </header>
+  
 
-    <footer>
-        <div class="copyright">
-            &copy; 2026 Ven. Nāṇānanda Dhamma Text Project<br>
-            <span style="font-size: 12px; color: #666;">Released for free distribution.</span>
-        </div>
-        <div class="contact">
-            Pāli Reference & Knowledge Base
-        </div>
-    </footer>
+<main class="homepage-content">
+
+<section class="hero">
+
+<h1>Search the Sermon Collection</h1>
+
+<p>
+Search all translated sermons,
+including the Paticca Samuppada series.
+Searches ignore diacritics,
+so typing "paticca" will find "Paṭicca".
+</p>
+
+<input
+id="searchBox"
+class="search-input"
+placeholder="Search..."
+>
+
+<div id="results"></div>
+
+</section>
+
+</main>
+
+<script>
+
+let searchData=[];
+
+fetch('search_index.json')
+.then(r=>r.json())
+.then(data=>{
+    searchData=data;
+});
+
+function normalize(str){
+    return str
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g,"")
+    .toLowerCase();
+}
+
+function getSnippet(content, query, maxLength = 250) {
+    const lowerContent = content.toLowerCase();
+    const index = lowerContent.indexOf(query);
+    if (index === -1) {
+        return content.substring(0, maxLength);
+    }
+    const start = Math.max(0, index - 80);
+    const end = Math.min(content.length, start + maxLength);
+    let snippet = content.substring(start, end);
+    if (start > 0) snippet = "..." + snippet;
+    if (end < content.length) snippet = snippet + "...";
+    return snippet;
+}
+
+document.getElementById('searchBox')
+.addEventListener('input',function(){
+
+let query=normalize(this.value);
+
+let results=document.getElementById('results');
+
+if(query.length<2){
+    results.innerHTML="";
+    return;
+}
+
+let matches=searchData.filter(
+x=>x.normalized.includes(query)
+).slice(0,50);
+
+results.innerHTML=matches.map(m=>`
+
+<div class="download-item">
+
+<div class="download-info">
+
+<h4>
+<a href="sermon_${m.sermon}.html">
+${m.title}
+</a>
+</h4>
+
+<p>
+${getSnippet(m.content, query, 250)}
+</p>
+
 </div>
 
+</div>
+
+`).join("");
+
+});
+
+</script>
+
 </body>
+
 </html>
