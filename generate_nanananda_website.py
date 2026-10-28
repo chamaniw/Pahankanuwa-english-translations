@@ -344,7 +344,7 @@ body {
 }
 .hero h1 { font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 0.3rem; }
 .hero h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--primary-color); margin-bottom: 1.2rem; font-weight: normal; }
-.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: justify; }
+.hero p { margin-bottom: 1rem; color: #333; font-size: 0.98rem; text-align: left; }
 .pali-quote { font-style: italic; color: var(--header-bg); text-align: center; margin: 1.5rem 0; font-weight: 500; }
 .hero p.disclaimer { font-size: 0.88rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1.5rem; }
 
@@ -510,7 +510,7 @@ a.sermon-title-link:hover {
 }
 .sermon-reader p {
     margin-bottom: 1.25rem;
-    text-align: justify;
+    text-align: left;
 }
 .sermon-nav-bar {
     display: flex;
