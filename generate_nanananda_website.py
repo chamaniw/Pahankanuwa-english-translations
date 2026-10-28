@@ -719,7 +719,7 @@ def generate_index_page(metrics):
         <a href="https://dharmapress.github.io/" class="btn btn-secondary" target="_blank">Visit Dharmapress Sinhala Collection</a>
       </div>
 
-      <p class="disclaimer"><strong>Disclaimer:</strong> These translations are provided for educational and Dhamma-study purposes only and are not intended for commercial use.</p>
+      <p class="disclaimer">The translations presented in this knowledge base were prepared from digitised editions of the Pahankanuwa sermon series. Original sermon texts were derived from OCR-processed versions of publicly available PDF editions and translated through a collaborative workflow involving OCR correction, AI-assisted translation, and human review and proofreading. The project is intended as a freely accessible resource for Dhamma study and reference.<br><br><strong>Disclaimer:</strong> These translations are provided for educational and Dhamma-study purposes only and are not intended for commercial use. All credit for the original sermons belongs to Ven. Katukurunde Nanananda Thero and the original publishers. If you are a copyright holder and have concerns regarding the distribution of these materials, please contact the repository maintainer.</p>
     </section>
 
     <section class="stats-grid">
