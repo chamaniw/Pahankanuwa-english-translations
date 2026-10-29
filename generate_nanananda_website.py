@@ -42,6 +42,8 @@ PDF_COMPLETE = "Pahankanuwa_Sermons_Complete.pdf"
 EPUB_COMPLETE = "Pahankanuwa_Sermons_Complete.epub"
 ZIP_FILE = "Pahankanuwa_English_Translations.zip"
 
+GOOGLE_VERIFICATION_META = '<meta name="google-site-verification" content="c657a9af5aaf80ef">'
+
 
 # ==========================================
 # DOCX / TXT CONTENT EXTRACTOR
@@ -597,7 +599,6 @@ def build_header_html(active_tab="home"):
 # INDIVIDUAL SERMON PAGES GENERATOR
 # ==========================================
 def generate_individual_sermon_pages(max_sermon=202):
-    # Collect all valid existing sermon numbers (automatically handles 170 -> 183 gap)
     valid_sermons = []
     for i in range(1, max_sermon + 1):
         s_num = str(i).zfill(3)
@@ -622,6 +623,7 @@ def generate_individual_sermon_pages(max_sermon=202):
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {GOOGLE_VERIFICATION_META}
   <title>Pahankanuwa Sermon {s_num} | Ven. Katukurunde Nanananda Thero</title>
   <style>{SITE_CSS}</style>
 </head>
@@ -679,6 +681,7 @@ def generate_index_page(metrics):
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {GOOGLE_VERIFICATION_META}
   <title>English Translations of Pahankanuwa Sermons | Ven. Katukurunde Nanananda Thero</title>
   <style>{SITE_CSS}</style>
 </head>
@@ -709,7 +712,7 @@ def generate_index_page(metrics):
         Featured Collection: The Paticca Samuppada Series (Sermons 183–202)
     </h3>
     <p style="margin-bottom: 0;">
-        Sermons 183–202 represent Ven. Katukurunde Nanananda Thero's profound exposition of Paṭicca Samuppāda (Dependent Arising), later published by the Venerable Thero as the book <em>The Law of Dependent Arising</em>.
+        Sermons 183–202 represent Ven. Katukurunde Nanananda Thero's profound exposition of Paṭicca Samuppāda (Dependent Arising), later published by the Venerable Thero as the book <a href="https://chamaniw.github.io/law-of-dependent-arising/" target="_blank" style="color: #800000; font-weight: bold; text-decoration: underline;">The Law of Dependent Arising</a>.
     </p>
 </div>
 
@@ -783,6 +786,7 @@ def generate_downloads_page(metrics):
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {GOOGLE_VERIFICATION_META}
   <title>Downloads & Documents | Ven. Katukurunde Nanananda Thero</title>
   <style>{SITE_CSS}</style>
 </head>
@@ -889,6 +893,7 @@ def generate_audio_page():
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{GOOGLE_VERIFICATION_META}
 <title>Audio Recordings | Ven. Katukurunde Nanananda Thero</title>
 <style>{SITE_CSS}</style>
 </head>
@@ -951,6 +956,7 @@ def generate_data_subpage(filename, tab_key, page_title, description, df_data):
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {GOOGLE_VERIFICATION_META}
   <title>{page_title} | Ven. Katukurunde Nanananda Thero</title>
   <style>{SITE_CSS}</style>
 </head>
@@ -1007,6 +1013,7 @@ def generate_statistics_page(metrics, datasets):
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {GOOGLE_VERIFICATION_META}
   <title>Collection Statistics | Ven. Katukurunde Nanananda Thero</title>
   <style>{SITE_CSS}</style>
 </head>
@@ -1069,7 +1076,6 @@ def generate_search_index():
     search_list = []
     for i in range(1, 203):
         s_num = str(i).zfill(3)
-        # Check if the sermon file exists before indexing (handles 170 -> 183 gap)
         docx_file = find_sermon_file(s_num, "docx", SRC_DOCX_DIR)
         txt_file = find_sermon_file(s_num, "txt", SRC_TXT_DIR)
         if not (docx_file or txt_file):
@@ -1098,7 +1104,7 @@ def generate_search_page():
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+__GOOGLE_VERIFICATION_META__
 <title>Search | Ven. Katukurunde Nanananda Thero</title>
 
 <style>
@@ -1198,7 +1204,6 @@ fetch('search_index.json')
 .then(data => {
     searchData = data;
     
-    // Check URL parameters (e.g. ?q=paticca)
     const urlParams = new URLSearchParams(window.location.search);
     const initialQuery = urlParams.get('q') || urlParams.get('search') || "";
     if (initialQuery) {
@@ -1215,7 +1220,7 @@ document.getElementById('searchBox').addEventListener('input', performSearch);
 </body>
 
 </html>
-""".replace("__SITE_CSS__", SITE_CSS).replace("__HEADER_HTML__", build_header_html('search'))
+""".replace("__SITE_CSS__", SITE_CSS).replace("__HEADER_HTML__", build_header_html('search')).replace("__GOOGLE_VERIFICATION_META__", GOOGLE_VERIFICATION_META)
 
     with open(
         DOCS_DIR / "search.html",
@@ -1229,10 +1234,6 @@ document.getElementById('searchBox').addEventListener('input', performSearch);
 # SITEMAP GENERATOR
 # ==========================================
 def generate_sitemap(max_sermon=202, base_url="https://chamaniw.github.io/Pahankanuwa-english-translations/"):
-    """
-    Generates a sitemap.xml file inside the docs folder listing all main pages and individual sermon URLs.
-    Update base_url if your custom domain or GitHub Pages URL differs.
-    """
     pages = [
         "",
         "index.html",
@@ -1243,7 +1244,6 @@ def generate_sitemap(max_sermon=202, base_url="https://chamaniw.github.io/Pahank
         "statistics.html"
     ]
     
-    # Collect all valid individual sermon pages (automatically handles gaps like 170 -> 183)
     for i in range(1, max_sermon + 1):
         s_num = str(i).zfill(3)
         if find_sermon_file(s_num, "docx", SRC_DOCX_DIR) or find_sermon_file(s_num, "txt", SRC_TXT_DIR):
@@ -1305,6 +1305,18 @@ def copy_static_assets():
         if src_file.exists():
             shutil.copy2(src_file, DOCS_DIR / file_name)
 
+    # Ensure google site verification html file is copied or present in docs/
+    verification_filename = "googlec657a9af5aaf80ef.html"
+    src_verification = BASE_DIR / verification_filename
+    if src_verification.exists():
+        shutil.copy2(src_verification, DOCS_DIR / verification_filename)
+        print(f"Copied {verification_filename} to docs/")
+    else:
+        # Create it if it doesn't exist locally
+        with open(DOCS_DIR / verification_filename, "w", encoding="utf-8") as f:
+            f.write("google-site-verification: googlec657a9af5aaf80ef.html")
+        print(f"Created {verification_filename} in docs/")
+
 
 # ==========================================
 # MAIN EXECUTION
@@ -1326,17 +1338,10 @@ if __name__ == "__main__":
     generate_audio_page()
     generate_statistics_page(metrics, datasets)
     
-    # Generate individual sermon pages and handle gaps automatically
     generate_individual_sermon_pages(202)
-
-    # Generate search index JSON file required by search.html (with gap skipping)
     generate_search_index()
-
     generate_search_page()
-
-    # Generate sitemap.xml for Google Search Console
     generate_sitemap(202)
-
     copy_static_assets()
     
     print("\n==========================================")
