@@ -155,7 +155,7 @@ def load_and_process_excel_data():
             
             num_match = re.search(r'(\d{1,3})', fn)
             s_num = num_match.group(1).zfill(3) if num_match else "000"
-            clean_title = f"Pahankanuwa Sermon {s_num}"
+            clean_title = f"Sermon {s_num}"
 
             docx_file = find_sermon_file(s_num, "docx", SRC_DOCX_DIR) or f"sermon_{s_num}_ENGLISH.docx"
             pdf_file = find_sermon_file(s_num, "pdf", SRC_PDF_DIR) or f"sermon_{s_num}.pdf"
@@ -450,32 +450,56 @@ table.data-table {
     border-collapse: collapse;
     text-align: left;
     font-size: 0.92rem;
+    table-layout: fixed;
+}
+table.data-table th, table.data-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 table.data-table th {
     background-color: var(--table-header-bg);
     color: #ffffff;
-    padding: 0.8rem 1rem;
     font-weight: 600;
-}
-table.data-table td {
-    padding: 0.8rem 1rem;
-    border-bottom: 1px solid var(--border-color);
-    vertical-align: top;
 }
 table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
 table.data-table tr:hover { background-color: #f4eee6; }
+
+/* Desktop Width Allocation: Wider Source, Narrower Link column & single-line Sermon labels */
+table.data-table th:nth-child(1), table.data-table td:nth-child(1) { width: 11%; white-space: nowrap; } /* Sermon */
+table.data-table th:nth-child(2), table.data-table td:nth-child(2) { width: 31%; } /* Opening Passage Excerpt */
+table.data-table th:nth-child(3), table.data-table td:nth-child(3) { width: 31%; } /* English Translation */
+table.data-table th:nth-child(4), table.data-table td:nth-child(4) { width: 19%; } /* Likely Source */
+table.data-table th:nth-child(5), table.data-table td:nth-child(5) { width: 8%;  } /* Document Link */
+
+/* Mobile Width Allocation */
+@media (max-width: 768px) {
+    table.data-table {
+        font-size: 0.82rem;
+    }
+    table.data-table th, table.data-table td {
+        padding: 0.6rem 0.35rem;
+    }
+    table.data-table th:nth-child(1), table.data-table td:nth-child(1) { width: 13%; white-space: nowrap; font-size: 0.75rem; }
+    table.data-table th:nth-child(2), table.data-table td:nth-child(2) { width: 37%; }
+    table.data-table th:nth-child(3), table.data-table td:nth-child(3) { width: 36%; }
+    table.data-table th:nth-child(4), table.data-table td:nth-child(4) { width: 0%; display: none; }
+    table.data-table th:nth-child(5), table.data-table td:nth-child(5) { width: 14%; }
+}
 
 a.doc-btn {
     display: inline-block;
     background-color: #f4eee6;
     color: var(--header-bg);
     border: 1px solid var(--header-bg);
-    padding: 0.35rem 0.75rem;
-    border-radius: 4px;
+    padding: 0.2rem 0.45rem;
+    border-radius: 3px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.85rem;
-    margin: 2px 2px;
+    font-size: 0.75rem;
+    margin: 1px 1px;
     white-space: nowrap;
     transition: all 0.15s ease-in-out;
 }
@@ -593,8 +617,6 @@ def build_header_html(active_tab="home"):
     </div>
   </header>
   """
-
-
 # ==========================================
 # INDIVIDUAL SERMON PAGES GENERATOR
 # ==========================================
