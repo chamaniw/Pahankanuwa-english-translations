@@ -248,10 +248,10 @@ table.data-table {
     border-collapse: collapse;
     text-align: left;
     font-size: 0.92rem;
-    table-layout: fixed;
+    table-layout: auto;
 }
 table.data-table th, table.data-table td {
-    padding: 0.8rem 1rem;
+    padding: 0.9rem 1rem;
     border-bottom: 1px solid var(--border-color);
     vertical-align: top;
     word-wrap: break-word;
@@ -261,16 +261,18 @@ table.data-table th {
     background-color: var(--table-header-bg);
     color: #ffffff;
     font-weight: 600;
+    line-height: 1.4;
+    white-space: normal;
 }
 table.data-table tr:nth-child(even) { background-color: #fcfaf7; }
 table.data-table tr:hover { background-color: #f4eee6; }
 
-/* Desktop Width Allocation: Wider Source, Narrower Link column & single-line Sermon labels */
-table.data-table th:nth-child(1), table.data-table td:nth-child(1) { width: 11%; white-space: nowrap; } /* Sermon */
-table.data-table th:nth-child(2), table.data-table td:nth-child(2) { width: 31%; } /* Opening Passage Excerpt */
-table.data-table th:nth-child(3), table.data-table td:nth-child(3) { width: 31%; } /* English Translation */
-table.data-table th:nth-child(4), table.data-table td:nth-child(4) { width: 19%; } /* Likely Source */
-table.data-table th:nth-child(5), table.data-table td:nth-child(5) { width: 8%;  } /* Document Link */
+/* Desktop Width Allocation */
+table.data-table th:nth-child(1), table.data-table td:nth-child(1) { width: 15%; min-width: 110px; } /* Sermon */
+table.data-table th:nth-child(2), table.data-table td:nth-child(2) { width: 30%; } /* Opening Passage Excerpt */
+table.data-table th:nth-child(3), table.data-table td:nth-child(3) { width: 30%; } /* English Translation */
+table.data-table th:nth-child(4), table.data-table td:nth-child(4) { width: 15%; } /* Likely Source */
+table.data-table th:nth-child(5), table.data-table td:nth-child(5) { width: 10%; min-width: 90px; } /* Document Link */
 
 /* Mobile Width Allocation */
 @media (max-width: 768px) {
@@ -278,13 +280,13 @@ table.data-table th:nth-child(5), table.data-table td:nth-child(5) { width: 8%; 
         font-size: 0.82rem;
     }
     table.data-table th, table.data-table td {
-        padding: 0.6rem 0.35rem;
+        padding: 0.6rem 0.5rem;
     }
-    table.data-table th:nth-child(1), table.data-table td:nth-child(1) { width: 13%; white-space: nowrap; font-size: 0.75rem; }
-    table.data-table th:nth-child(2), table.data-table td:nth-child(2) { width: 37%; }
-    table.data-table th:nth-child(3), table.data-table td:nth-child(3) { width: 36%; }
+    table.data-table th:nth-child(1), table.data-table td:nth-child(1) { width: 18%; min-width: 80px; }
+    table.data-table th:nth-child(2), table.data-table td:nth-child(2) { width: 41%; }
+    table.data-table th:nth-child(3), table.data-table td:nth-child(3) { width: 41%; }
     table.data-table th:nth-child(4), table.data-table td:nth-child(4) { width: 0%; display: none; }
-    table.data-table th:nth-child(5), table.data-table td:nth-child(5) { width: 14%; }
+    table.data-table th:nth-child(5), table.data-table td:nth-child(5) { width: 0%; display: none; }
 }
 
 a.doc-btn {
