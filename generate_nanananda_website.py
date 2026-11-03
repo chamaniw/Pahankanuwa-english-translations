@@ -21,6 +21,7 @@ DOCS_DOCX_DIR = DOCS_DIR / "docx"
 DOCS_PDF_DIR = DOCS_DIR / "pdf"
 DOCS_EPUB_DIR = DOCS_DIR / "epub"
 DOCS_AUDIO_DIR = DOCS_DIR / "audio"
+DOCS_IMAGES_DIR = DOCS_DIR / "images"
 
 # Ensure all destination output directories exist
 DOCS_DIR.mkdir(parents=True, exist_ok=True)
@@ -28,6 +29,7 @@ DOCS_DOCX_DIR.mkdir(parents=True, exist_ok=True)
 DOCS_PDF_DIR.mkdir(parents=True, exist_ok=True)
 DOCS_EPUB_DIR.mkdir(parents=True, exist_ok=True)
 DOCS_AUDIO_DIR.mkdir(parents=True, exist_ok=True)
+DOCS_IMAGES_DIR.mkdir(parents=True, exist_ok=True)
 
 # Source asset folders
 SRC_DOCX_DIR = BASE_DIR / "docx"
@@ -35,6 +37,7 @@ SRC_PDF_DIR = BASE_DIR / "pdf"
 SRC_EPUB_DIR = BASE_DIR / "epub"
 SRC_AUDIO_DIR = BASE_DIR / "audio"
 SRC_TXT_DIR = BASE_DIR / "txt"  # Fallback TXT directory if present
+SRC_IMAGES_DIR = BASE_DIR / "images"
 
 # Complete collection file names
 DOCX_COMPLETE = "Pahankanuwa_Sermons_Complete.docx"
@@ -43,6 +46,21 @@ EPUB_COMPLETE = "Pahankanuwa_Sermons_Complete.epub"
 ZIP_FILE = "Pahankanuwa_English_Translations.zip"
 
 GOOGLE_VERIFICATION_META = '<meta name="google-site-verification" content="c657a9af5aaf80ef">'
+
+# Social Share Meta Tags (Open Graph / WhatsApp / Twitter Preview)
+BASE_URL = "https://chamaniw.github.io/Pahankanuwa-english-translations/"
+THUMBNAIL_URL = f"{BASE_URL}images/thumbnail.png"
+
+SOCIAL_META_TAGS = f"""
+  <meta property="og:title" content="English Translations of Pahankanuwa Sermons | Ven. Katukurunde Nanananda Thero">
+  <meta property="og:description" content="Explore the structured Dhamma Knowledge Base cataloging and indexing English translations of Pahankanuwa Sermons delivered by Most Venerable Katukurunde Nanananda Thero.">
+  <meta property="og:image" content="{THUMBNAIL_URL}">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="English Translations of Pahankanuwa Sermons | Ven. Katukurunde Nanananda Thero">
+  <meta name="twitter:description" content="Explore the structured Dhamma Knowledge Base cataloging and indexing English translations of Pahankanuwa Sermons.">
+  <meta name="twitter:image" content="{THUMBNAIL_URL}">
+"""
 
 
 # ==========================================
@@ -648,6 +666,7 @@ def generate_individual_sermon_pages(max_sermon=202):
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {GOOGLE_VERIFICATION_META}
+  {SOCIAL_META_TAGS}
   <title>Pahankanuwa Sermon {s_num} | Ven. Katukurunde Nanananda Thero</title>
   <style>{SITE_CSS}</style>
 </head>
@@ -706,6 +725,7 @@ def generate_index_page(metrics):
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {GOOGLE_VERIFICATION_META}
+  {SOCIAL_META_TAGS}
   <title>English Translations of Pahankanuwa Sermons | Ven. Katukurunde Nanananda Thero</title>
   <style>{SITE_CSS}</style>
 </head>
@@ -811,6 +831,7 @@ def generate_downloads_page(metrics):
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {GOOGLE_VERIFICATION_META}
+  {SOCIAL_META_TAGS}
   <title>Downloads & Documents | Ven. Katukurunde Nanananda Thero</title>
   <style>{SITE_CSS}</style>
 </head>
@@ -918,6 +939,7 @@ def generate_audio_page():
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 {GOOGLE_VERIFICATION_META}
+{SOCIAL_META_TAGS}
 <title>Audio Recordings | Ven. Katukurunde Nanananda Thero</title>
 <style>{SITE_CSS}</style>
 </head>
@@ -981,6 +1003,7 @@ def generate_data_subpage(filename, tab_key, page_title, description, df_data):
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {GOOGLE_VERIFICATION_META}
+  {SOCIAL_META_TAGS}
   <title>{page_title} | Ven. Katukurunde Nanananda Thero</title>
   <style>{SITE_CSS}</style>
 </head>
@@ -1038,6 +1061,7 @@ def generate_statistics_page(metrics, datasets):
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {GOOGLE_VERIFICATION_META}
+  {SOCIAL_META_TAGS}
   <title>Collection Statistics | Ven. Katukurunde Nanananda Thero</title>
   <style>{SITE_CSS}</style>
 </head>
@@ -1129,6 +1153,7 @@ def generate_search_page():
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 __GOOGLE_VERIFICATION_META__
+__SOCIAL_META_TAGS__
 <title>Search | Ven. Katukurunde Nanananda Thero</title>
 
 <style>
@@ -1244,7 +1269,7 @@ document.getElementById('searchBox').addEventListener('input', performSearch);
 </body>
 
 </html>
-""".replace("__SITE_CSS__", SITE_CSS).replace("__HEADER_HTML__", build_header_html('search')).replace("__GOOGLE_VERIFICATION_META__", GOOGLE_VERIFICATION_META)
+""".replace("__SITE_CSS__", SITE_CSS).replace("__HEADER_HTML__", build_header_html('search')).replace("__GOOGLE_VERIFICATION_META__", GOOGLE_VERIFICATION_META).replace("__SOCIAL_META_TAGS__", SOCIAL_META_TAGS)
 
     with open(
         DOCS_DIR / "search.html",
@@ -1323,6 +1348,14 @@ def copy_static_assets():
                 shutil.copy2(af, DOCS_AUDIO_DIR / dest_name)
                 copied_count += 1
         print(f"Copied {copied_count} Audio files into docs/audio/")
+
+    # Copy thumbnail.png from C:\Pahankanuwa\images to docs/images/
+    src_thumbnail = SRC_IMAGES_DIR / "thumbnail.png"
+    if src_thumbnail.exists():
+        shutil.copy2(src_thumbnail, DOCS_IMAGES_DIR / "thumbnail.png")
+        print(f"Copied thumbnail.png into docs/images/")
+    else:
+        print(f"Warning: thumbnail.png not found at {src_thumbnail}. Please verify location.")
 
     for file_name in [ZIP_FILE, DOCX_COMPLETE, PDF_COMPLETE, EPUB_COMPLETE]:
         src_file = BASE_DIR / file_name
