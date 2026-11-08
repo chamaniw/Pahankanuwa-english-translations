@@ -567,6 +567,13 @@ a.sermon-title-link:hover {
     border-bottom: 1px solid var(--border-color);
 }
 
+mark {
+    background: #ffeeba;
+    padding: 1px 3px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
 footer {
     text-align: center;
     padding: 2rem;
@@ -637,6 +644,8 @@ def build_header_html(active_tab="home"):
     </div>
   </header>
   """
+
+
 # ==========================================
 # INDIVIDUAL SERMON PAGES GENERATOR
 # ==========================================
@@ -714,6 +723,354 @@ def generate_individual_sermon_pages(max_sermon=202):
 
     print(f"Generated {len(valid_sermons)} individual sermon pages.")
 
+
+# ==========================================
+# SUMMARY PAGES GENERATOR
+# ==========================================
+def generate_individual_summary_pages(max_sermon=202):
+    valid_summaries = []
+    for i in range(1, max_sermon + 1):
+        s_num = str(i).zfill(3)
+        summary_filename = f"sermon_{s_num}_SUMMARY.docx"
+        if (SRC_DOCX_DIR / summary_filename).exists():
+            valid_summaries.append(s_num)
+
+    for s_num in valid_summaries:
+        summary_path = SRC_DOCX_DIR / f"sermon_{s_num}_SUMMARY.docx"
+        summary_text = f"<p><em>Summary content for Sermon {s_num} is currently being prepared.</em></p>"
+        if docx is not None:
+            try:
+                doc = docx.Document(summary_path)
+                paras = [f"<p>{p.text.strip().replace('\n', '<br>')}</p>" for p in doc.paragraphs if p.text.strip()]
+                if paras:
+                    summary_text = "\n".join(paras)
+            except Exception as e:
+                print(f"Error reading summary docx {summary_path}: {e}")
+
+        page_html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {GOOGLE_VERIFICATION_META}
+  {SOCIAL_META_TAGS}
+  <title>Sermon {s_num} Summary | Ven. Katukurunde Nanananda Thero</title>
+  <style>{SITE_CSS}</style>
+</head>
+<body>
+  {build_header_html('sermons')}
+  <main class="homepage-content">
+    <div class="sermon-nav-bar">
+      <a href="sermons.html" class="doc-btn">📜 Back to Sermons</a>
+      <a href="sermon_{s_num}.html" class="doc-btn">📖 Read Full Sermon {s_num}</a>
+    </div>
+    <section class="hero" style="margin-bottom: 1rem;">
+      <h1>Sermon {s_num} Summary</h1>
+    </section>
+    <article class="sermon-reader">
+      {summary_text}
+    </article>
+    <div class="sermon-nav-bar" style="margin-top: 2rem;">
+      <a href="sermons.html" class="doc-btn">📜 Back to Sermons</a>
+    </div>
+  </main>
+  {FOOTER_HTML}
+</body>
+</html>
+"""
+        with open(DOCS_DIR / f"sermon_{s_num}_summary.html", "w", encoding="utf-8") as f:
+            f.write(page_html)
+    print(f"Generated {len(valid_summaries)} individual summary pages.")
+
+
+# ==========================================
+# INTERACTIVE SERMONS PAGE GENERATOR
+# ==========================================
+def generate_interactive_sermons_page():
+    explorer_file = BASE_DIR / "Explorer.xlsx"
+    if not explorer_file.exists():
+        print("Explorer.xlsx not found in base directory!")
+        return
+
+    df_exp = pd.read_excel(explorer_file).fillna("")
+    
+    sermons_data = []
+    for _, row in df_exp.iterrows():
+        fn = str(row.get('FileName', ''))
+        match = re.search(r'(\d{1,3})', fn)
+        if not match:
+            continue
+        s_num = match.group(1).zfill(3)
+        
+        # Format Core Dhamma Points (CDP1 to CDP12)
+        cdps = []
+        for i in range(1, 13):
+            cdp_val = str(row.get(f'CDP{i}', '')).strip()
+            if cdp_val and cdp_val.lower() != 'nan':
+                cdps.append(f"<div style='margin-bottom: 0.75rem;'><strong>Point {i}:</strong> {cdp_val.replace('\n', '<br>')}</div>")
+        core_dhamma_html = "".join(cdps) if cdps else "No core dhamma points listed."
+
+        # Raw values from Explorer.xlsx
+        exc = str(row.get('Opening Excerpt ', '')).strip().replace('\n', '<br>')
+        src = str(row.get('Source', '')).strip().replace('\n', '<br>')
+        trans = str(row.get('Translation ', '')).strip().replace('\n', '<br>')
+
+        # Opening Excerpt + Source layout
+        opening_source_combined = f"<div style='margin-bottom: 0.5rem;'>{exc}</div><div style='color: var(--text-muted); font-size: 0.9em; border-top: 1px dashed var(--border-color); padding-top: 0.4rem;'><strong>Source:</strong> {src}</div>" if src else exc
+
+        # Opening Excerpt + Translation side-by-side 2-column layout
+        if exc and trans:
+            opening_trans_combined = f"""
+            <div style="display: flex; gap: 1.5rem; width: 100%; align-items: flex-start;">
+                <div style="flex: 1; min-width: 0; font-style: italic;">{exc}</div>
+                <div style="flex: 1; min-width: 0; border-left: 2px solid var(--border-color); padding-left: 1rem;">{trans}</div>
+            </div>
+            """
+        elif trans:
+            opening_trans_combined = trans
+        else:
+            opening_trans_combined = exc
+
+        docx_file = find_sermon_file(s_num, "docx", SRC_DOCX_DIR) or f"sermon_{s_num}_ENGLISH.docx"
+        pdf_file = find_sermon_file(s_num, "pdf", SRC_PDF_DIR) or f"sermon_{s_num}.pdf"
+        epub_file = find_sermon_file(s_num, "epub", SRC_EPUB_DIR) or f"sermon_{s_num}.epub"
+        
+        summary_html_file = f"sermon_{s_num}_summary.html"
+        has_summary = (DOCS_DIR / summary_html_file).exists() or (SRC_DOCX_DIR / f"sermon_{s_num}_SUMMARY.docx").exists()
+        
+        summary_btn = f'<a class="doc-btn" href="sermon_{s_num}_summary.html" target="_blank">📝 Summary</a>' if has_summary else ''
+
+        sermons_data.append({
+            "sermon_num": s_num,
+            "sermon_title_html": f'<a href="sermon_{s_num}.html" class="sermon-title-link"><strong>Sermon {s_num}</strong></a>',
+            "action_buttons": f"""
+                <div style="display: flex; flex-direction: column; gap: 4px; align-items: flex-start;">
+                  <a href="sermon_{s_num}.html" class="sermon-title-link"><strong>Sermon {s_num}</strong></a>
+                  <div style="display: flex; flex-wrap: wrap; gap: 2px; margin-top: 4px;">
+                    <a class="doc-btn" href="sermon_{s_num}.html">📖 Read Online</a>
+                    {summary_btn}
+                    <a class="doc-btn" href="docx/{docx_file}" target="_blank">📄 DOCX</a>
+                    <a class="doc-btn" href="pdf/{pdf_file}" target="_blank">📕 PDF</a>
+                    <a class="doc-btn" href="epub/{epub_file}" target="_blank">📘 EPUB</a>
+                  </div>
+                </div>
+            """,
+            "opening_source": opening_source_combined,
+            "opening_translation": opening_trans_combined,
+            "primary_theme": str(row.get('Primary Theme', '&#8212;')).replace('\n', '<br>'),
+            "core_dhamma": core_dhamma_html,
+            "characters": str(row.get('Characters', '&#8212;')).replace('\n', '<br>'),
+            "interaction": str(row.get('Interaction', '&#8212;')).replace('\n', '<br>'),
+            "turning_point": str(row.get('Turning Point', '&#8212;')).replace('\n', '<br>'),
+            "resolution": str(row.get('Resolution', '&#8212;')).replace('\n', '<br>')
+        })
+
+    sermons_json = json.dumps(sermons_data, ensure_ascii=False)
+
+    page_html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {GOOGLE_VERIFICATION_META}
+  {SOCIAL_META_TAGS}
+  <title>Browse Sermons | Ven. Katukurunde Nanananda Thero</title>
+  <style>
+    {SITE_CSS}
+    .sermon-layout {{
+        display: flex;
+        gap: 1.5rem;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin-top: 1.5rem;
+    }}
+    .sidebar-nav {{
+        flex: 0 0 280px;
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 1.25rem;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+    }}
+    .sidebar-nav h3 {{
+        font-size: 1.05rem;
+        color: var(--header-bg);
+        margin-bottom: 0.75rem;
+        font-family: 'Georgia', serif;
+    }}
+    .sidebar-category {{
+        font-weight: bold;
+        color: var(--primary-color);
+        margin-top: 1rem;
+        margin-bottom: 0.3rem;
+        font-size: 0.95rem;
+    }}
+    .sidebar-list {{
+        list-style: none;
+        padding-left: 0;
+    }}
+    .sidebar-list li {{
+        padding: 0.4rem 0.6rem;
+        margin-bottom: 0.25rem;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9rem;
+        transition: background 0.15s, color 0.15s;
+    }}
+    .sidebar-list li:hover {{
+        background: #f4eee6;
+        color: var(--header-bg);
+    }}
+    .sidebar-list li.active {{
+        background: var(--header-bg);
+        color: #ffffff;
+        font-weight: 600;
+    }}
+    .table-main-area {{
+        flex: 1;
+        min-width: 0;
+    }}
+    @media (max-width: 900px) {{
+        .sermon-layout {{ flex-direction: column; }}
+        .sidebar-nav {{ flex: 1 1 100%; }}
+    }}
+  </style>
+</head>
+<body>
+
+  {build_header_html('sermons')}
+
+  <div class="search-container">
+    <input type="text" id="searchInput" class="search-input" onkeyup="filterTable()" placeholder="Search sermon number or content...">
+  </div>
+
+  <main class="homepage-content">
+    <section class="hero">
+      <h1>Browse Sermons</h1>
+      <p>Catalog of Pahankanuwa sermon translations. Select any category from the left panel to explore themes, narrative structure, or source excerpts.</p>
+    </section>
+
+    <div class="sermon-layout">
+      <!-- Left Sidebar Navigation -->
+      <div class="sidebar-nav">
+        <h3>Browse Sermons By</h3>
+        
+        <div class="sidebar-category">Opening Passage</div>
+        <ul class="sidebar-list">
+          <li onclick="switchCategory('opening_source', this)">Opening Excerpt + Source</li>
+          <li onclick="switchCategory('opening_translation', this)">Opening Excerpt + Translation</li>
+        </ul>
+
+        <div class="sidebar-category">By Themes</div>
+        <ul class="sidebar-list">
+          <li class="active" onclick="switchCategory('primary_theme', this)">Primary Theme</li>
+          <li onclick="switchCategory('core_dhamma', this)">Core Dhamma Points</li>
+        </ul>
+
+        <div class="sidebar-category">By Narrative Structure</div>
+        <ul class="sidebar-list">
+          <li onclick="switchCategory('characters', this)">Characters</li>
+          <li onclick="switchCategory('interaction', this)">Interaction</li>
+          <li onclick="switchCategory('turning_point', this)">Turning Point</li>
+          <li onclick="switchCategory('resolution', this)">Resolution</li>
+        </ul>
+      </div>
+
+      <!-- Right Table Area -->
+      <div class="table-main-area">
+        <div class="table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th style="width: 25%;">Sermon</th>
+                <th id="rightColHeader" style="width: 75%;">Primary Theme</th>
+              </tr>
+            </thead>
+            <tbody id="sermonTableBody">
+              <!-- Dynamically populated by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  {FOOTER_HTML}
+
+  <script type="application/json" id="sermonsDataJson">
+    {sermons_json}
+  </script>
+
+  <script>
+    const sermonsData = JSON.parse(document.getElementById('sermonsDataJson').textContent);
+    let currentCategory = 'primary_theme';
+    let currentCategoryName = 'Primary Theme';
+
+    const categoryTitles = {{
+      'opening_source': 'Opening Excerpt + Source',
+      'opening_translation': 'Opening Excerpt + Translation',
+      'primary_theme': 'Primary Theme',
+      'core_dhamma': 'Core Dhamma Points',
+      'characters': 'Characters',
+      'interaction': 'Interaction',
+      'turning_point': 'Turning Point',
+      'resolution': 'Resolution'
+    }};
+
+    function renderTable(filterText = '') {{
+      const tbody = document.getElementById('sermonTableBody');
+      tbody.innerHTML = '';
+
+      const query = filterText.toLowerCase();
+
+      sermonsData.forEach(item => {{
+        const contentVal = item[currentCategory] || '';
+        const rowText = (item.sermon_num + ' ' + contentVal).toLowerCase();
+
+        if (query && !rowText.includes(query)) {{
+          return;
+        }}
+
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td>${{item.action_buttons}}</td>
+          <td>${{contentVal}}</td>
+        `;
+        tbody.appendChild(tr);
+      }});
+    }}
+
+    function switchCategory(categoryKey, element) {{
+      currentCategory = categoryKey;
+      currentCategoryName = categoryTitles[categoryKey] || 'Details';
+
+      // Update header
+      document.getElementById('rightColHeader').innerText = currentCategoryName;
+
+      // Update active class in sidebar
+      document.querySelectorAll('.sidebar-list li').forEach(li => li.classList.remove('active'));
+      element.classList.add('active');
+
+      renderTable(document.getElementById('searchInput').value);
+    }}
+
+    function filterTable() {{
+      const query = document.getElementById('searchInput').value;
+      renderTable(query);
+    }}
+
+    // Initial render defaulting to Primary Theme
+    document.addEventListener('DOMContentLoaded', () => {{
+      renderTable();
+    }});
+  </script>
+
+</body>
+</html>
+"""
+    with open(DOCS_DIR / "sermons.html", "w", encoding="utf-8") as f:
+        f.write(page_html)
+    print("Generated interactive sermons.html successfully.")
 
 # ==========================================
 # PAGE GENERATORS
@@ -975,65 +1332,6 @@ def generate_audio_page():
         f.write(page_html)
 
 
-def generate_data_subpage(filename, tab_key, page_title, description, df_data):
-    if df_data is not None and not df_data.empty:
-        df_clean = df_data.fillna("").copy()
-        headers_html = "".join([f"<th>{col}</th>" for col in df_clean.columns])
-        
-        rows_list = []
-        for _, row in df_clean.iterrows():
-            cells = "".join([f"<td>{row[col]}</td>" for col in df_clean.columns])
-            rows_list.append(f"<tr>{cells}</tr>")
-        
-        rows_html = "".join(rows_list)
-        table_html = f"""
-        <div class="table-container">
-            <table class="data-table">
-                <thead><tr>{headers_html}</tr></thead>
-                <tbody>{rows_html}</tbody>
-            </table>
-        </div>
-        """
-    else:
-        table_html = "<div class='hero'><p>No records found.</p></div>"
-
-    page_html = f"""<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  {GOOGLE_VERIFICATION_META}
-  {SOCIAL_META_TAGS}
-  <title>{page_title} | Ven. Katukurunde Nanananda Thero</title>
-  <style>{SITE_CSS}</style>
-</head>
-<body>
-
-  {build_header_html(tab_key)}
-
-  <div class="search-container">
-    <input type="text" id="searchInput" class="search-input" onkeyup="filterData()" placeholder="Search this index...">
-  </div>
-
-  <main class="homepage-content">
-    <section class="hero">
-      <h1>{page_title}</h1>
-      <p>{description}</p>
-    </section>
-
-    {table_html}
-  </main>
-
-  {FOOTER_HTML}
-  {SEARCH_JS}
-
-</body>
-</html>
-"""
-    with open(DOCS_DIR / filename, "w", encoding="utf-8") as f:
-        f.write(page_html)
-
-
 def generate_statistics_page(metrics, datasets):
     sermons_df = datasets.get("sermons", pd.DataFrame())
     sermon_rows_list = []
@@ -1122,32 +1420,93 @@ def generate_statistics_page(metrics, datasets):
 
 def generate_search_index():
     search_list = []
+    
     for i in range(1, 203):
         s_num = str(i).zfill(3)
         docx_file = find_sermon_file(s_num, "docx", SRC_DOCX_DIR)
         txt_file = find_sermon_file(s_num, "txt", SRC_TXT_DIR)
+        
         if not (docx_file or txt_file):
             continue
-
+            
         title = f"Pahankanuwa Sermon {s_num}"
         content = read_sermon_content(s_num)
-        clean_content = re.sub(r'<[^>]+>', '', content)
         
-        search_item = {
+        paragraphs = re.findall(
+            r'<p>(.*?)</p>',
+            content,
+            flags=re.DOTALL
+        )
+        
+        paragraphs = [
+            re.sub(r'<[^>]+>', '', p).strip()
+            for p in paragraphs
+            if p.strip()
+        ]
+        
+        search_list.append({
             "sermon": s_num,
             "title": title,
-            "content": clean_content,
-            "normalized": normalize_text(title + " " + clean_content)
-        }
-        search_list.append(search_item)
+            "paragraphs": paragraphs,
+            "normalized_paragraphs": [
+                normalize_text(p)
+                for p in paragraphs
+            ]
+        })
         
-    with open(DOCS_DIR / "search_index.json", "w", encoding="utf-8") as f:
-        json.dump(search_list, f, ensure_ascii=False, indent=2)
+    with open(
+        DOCS_DIR / "search_index.json",
+        "w",
+        encoding="utf-8"
+    ) as f:
+        json.dump(
+            search_list,
+            f,
+            ensure_ascii=False,
+            indent=2
+        )
+        
     print("Generated search_index.json successfully.")
 
 def generate_search_page():
-    search_html = """
-<!DOCTYPE html>
+    search_list = []
+    
+    for i in range(1, 203):
+        s_num = str(i).zfill(3)
+        docx_file = find_sermon_file(s_num, "docx", SRC_DOCX_DIR)
+        txt_file = find_sermon_file(s_num, "txt", SRC_TXT_DIR)
+        
+        if not (docx_file or txt_file):
+            continue
+            
+        title = f"Pahankanuwa Sermon {s_num}"
+        content = read_sermon_content(s_num)
+        
+        paragraphs = re.findall(
+            r'<p>(.*?)</p>',
+            content,
+            flags=re.DOTALL
+        )
+        
+        paragraphs = [
+            re.sub(r'<[^>]+>', '', p).strip()
+            for p in paragraphs
+            if p.strip()
+        ]
+        
+        search_list.append({
+            "sermon": s_num,
+            "title": title,
+            "paragraphs": paragraphs,
+            "normalized_paragraphs": [
+                normalize_text(p)
+                for p in paragraphs
+            ]
+        })
+
+    search_json_str = json.dumps(search_list, ensure_ascii=False)
+
+    search_html = """<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -1184,92 +1543,190 @@ class="search-input"
 placeholder="Search..."
 >
 
-<div id="results"></div>
+<div id="results" style="margin-top: 2rem; text-align: left;"></div>
 
 </section>
 
 </main>
 
+__FOOTER_HTML__
+
+<script type="application/json" id="searchDataJson">
+__SEARCH_JSON__
+</script>
+
 <script>
 
-let searchData=[];
+const searchData = JSON.parse(document.getElementById('searchDataJson').textContent);
 
-function normalize(str){
+function normalize(str) {
+    if (!str) return "";
     return str
     .normalize("NFD")
     .replace(/[\\u0300-\\u036f]/g,"")
     .toLowerCase();
 }
 
-function getSnippet(content, query, maxLength = 250) {
-    const lowerContent = content.toLowerCase();
-    const index = lowerContent.indexOf(query);
-    if (index === -1) {
-        return content.substring(0, maxLength);
-    }
-    const start = Math.max(0, index - 80);
-    const end = Math.min(content.length, start + maxLength);
-    let snippet = content.substring(start, end);
-    if (start > 0) snippet = "..." + snippet;
-    if (end < content.length) snippet = snippet + "...";
-    return snippet;
+function escapeRegExp(string) {
+    return string.replace(
+    new RegExp('[.*+?^${}()|[\\]\\\\]', 'g'),
+    '\\\\$&'
+    );
 }
 
 function performSearch() {
-    const box = document.getElementById('searchBox');
-    const query = normalize(box.value.trim());
-    const results = document.getElementById('results');
 
-    if (query.length < 2) {
-        results.innerHTML = "";
+    const rawQuery =
+    document.getElementById("searchBox")
+    .value
+    .trim();
+
+    const query = normalize(rawQuery);
+
+    const results =
+    document.getElementById("results");
+
+    if(query.length < 2) {
+        results.innerHTML="";
         return;
     }
 
-    const matches = searchData.filter(x => x.normalized.includes(query)).slice(0, 50);
+    let matchCount=0;
+    let html="";
 
-    if (matches.length === 0) {
-        results.innerHTML = "<p style='margin-top: 1.5rem; color: var(--text-muted);'>No matching sermons found.</p>";
-        return;
+    searchData.forEach(item => {
+
+        item.normalized_paragraphs.forEach(
+        (normP,idx) => {
+
+            if(
+                normP.includes(query)
+                &&
+                matchCount < 40
+            ) {
+
+                matchCount++;
+
+                let passage="";
+
+                const start=
+                Math.max(0,idx-2);
+
+                const end=
+                Math.min(
+                    item.paragraphs.length-1,
+                    idx+2
+                );
+
+                for(
+                    let p=start;
+                    p<=end;
+                    p++
+                ) {
+
+                    let text =
+                    item.paragraphs[p];
+
+                    if(rawQuery) {
+                        try {
+                            // Normalize text to NFD to align diacritics for highlighting
+                            let nfdText = text.normalize("NFD");
+                            const cleanQuery = escapeRegExp(query);
+                            
+                            // Build a diacritic-agnostic regex pattern (matches base letters followed by optional combining marks)
+                            let pattern = "";
+                            for (let i = 0; i < cleanQuery.length; i++) {
+                                pattern += cleanQuery[i] + "[\\\\u0300-\\\\u036f]*";
+                            }
+                            
+                            const regex = new RegExp('(' + pattern + ')', 'gi');
+                            nfdText = nfdText.replace(regex, '<mark>$1</mark>');
+                            text = nfdText;
+                        } catch(e) {}
+                    }
+
+                    if(p===idx) {
+
+                        passage +=
+                        '<p style="margin-bottom: 0.8rem; background: #fdf6ec; padding: 0.4rem; border-left: 3px solid var(--header-bg); text-align: left;">' +
+                        '<strong>[Paragraph ' + (p+1) + ']</strong><br>' +
+                        text +
+                        '</p>';
+
+                    } else {
+
+                        passage +=
+                        '<p style="margin-bottom: 0.8rem; color: #444; text-align: left;">' + text + '</p>';
+                    }
+                }
+
+                html += 
+                    '<div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 6px rgba(0,0,0,0.02);">' +
+                      '<h4 style="margin-bottom: 1rem; font-size: 1.15rem;">' +
+                        '<a href="sermon_' + item.sermon + '.html" style="color: var(--header-bg); text-decoration: none;">' +
+                          item.title +
+                        '</a>' +
+                      '</h4>' +
+                      '<div style="font-size: 0.95rem; line-height: 1.7; max-height: 400px; overflow-y: auto; padding-right: 0.5rem; border: 1px solid #eee; padding: 1rem; background: #faf8f5; border-radius: 6px;">' +
+                        passage +
+                      '</div>' +
+                    '</div>';
+            }
+        });
+
+    });
+
+    if(matchCount===0) {
+
+        results.innerHTML =
+        "<p style='color: var(--text-muted); text-align: center;'>No matching passages found.</p>";
+
+    } else {
+
+        results.innerHTML =
+        '<p style="margin-bottom: 1.0rem; font-size: 0.9rem; color: var(--text-muted); text-align: left;">' +
+        'Found matching passages across the sermons:' +
+        '</p>' + html;
     }
-
-    results.innerHTML = matches.map(m => `
-<div class="download-item">
-  <div class="download-info">
-    <h4>
-      <a href="sermon_${m.sermon}.html">
-        ${m.title}
-      </a>
-    </h4>
-    <p>
-      ${getSnippet(m.content, query, 250)}
-    </p>
-  </div>
-</div>
-`).join("");
 }
 
-fetch('search_index.json')
-.then(r => r.json())
-.then(data => {
-    searchData = data;
-    
-    const urlParams = new URLSearchParams(window.location.search);
-    const initialQuery = urlParams.get('q') || urlParams.get('search') || "";
-    if (initialQuery) {
-        const box = document.getElementById('searchBox');
-        box.value = initialQuery;
-        performSearch();
-    }
-});
+const urlParams =
+new URLSearchParams(
+    window.location.search
+);
 
-document.getElementById('searchBox').addEventListener('input', performSearch);
+const initialQuery =
+urlParams.get("q") || "";
+
+if(initialQuery) {
+
+    document
+    .getElementById("searchBox")
+    .value = initialQuery;
+
+    performSearch();
+}
+
+document
+.getElementById("searchBox")
+.addEventListener(
+    "input",
+    performSearch
+);
 
 </script>
 
 </body>
 
 </html>
-""".replace("__SITE_CSS__", SITE_CSS).replace("__HEADER_HTML__", build_header_html('search')).replace("__GOOGLE_VERIFICATION_META__", GOOGLE_VERIFICATION_META).replace("__SOCIAL_META_TAGS__", SOCIAL_META_TAGS)
+"""
+
+    search_html = search_html.replace("__SITE_CSS__", SITE_CSS) \
+                             .replace("__HEADER_HTML__", build_header_html('search')) \
+                             .replace("__GOOGLE_VERIFICATION_META__", GOOGLE_VERIFICATION_META) \
+                             .replace("__SOCIAL_META_TAGS__", SOCIAL_META_TAGS) \
+                             .replace("__FOOTER_HTML__", FOOTER_HTML) \
+                             .replace("__SEARCH_JSON__", search_json_str)
 
     with open(
         DOCS_DIR / "search.html",
@@ -1353,7 +1810,7 @@ def copy_static_assets():
     src_thumbnail = SRC_IMAGES_DIR / "thumbnail.png"
     if src_thumbnail.exists():
         shutil.copy2(src_thumbnail, DOCS_IMAGES_DIR / "thumbnail.png")
-        print(f"Copied thumbnail.png into docs/images/")
+        print(f"Template thumbnail.png copied successfully into docs/images/")
     else:
         print(f"Warning: thumbnail.png not found at {src_thumbnail}. Please verify location.")
 
@@ -1386,11 +1843,8 @@ if __name__ == "__main__":
     metrics, datasets = load_and_process_excel_data()
     
     generate_index_page(metrics)
-    generate_data_subpage(
-        "sermons.html", "sermons", "Browse Sermons",
-        "Catalog of Pahankanuwa sermon translations with opening excerpts, canonical sources, and document links.",
-        datasets["sermons"]
-    )
+    generate_individual_summary_pages(202)
+    generate_interactive_sermons_page()
     generate_downloads_page(metrics)
     generate_audio_page()
     generate_statistics_page(metrics, datasets)
@@ -1403,4 +1857,4 @@ if __name__ == "__main__":
     
     print("\n==========================================")
     print(" Generation Complete! Open C:\\Pahankanuwa\\docs\\index.html in browser.")
-    print("==========================================")
+    print("==========================================\n")
