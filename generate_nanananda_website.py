@@ -64,6 +64,16 @@ SOCIAL_META_TAGS = f"""
 
 
 # ==========================================
+# CANONICAL TAG HELPER
+# ==========================================
+def get_canonical_tag(page_filename=""):
+    """Generates the absolute canonical link tag for a given page."""
+    clean_filename = page_filename.lstrip("/")
+    canonical_url = f"{BASE_URL}{clean_filename}"
+    return f'<link rel="canonical" href="{canonical_url}">'
+
+
+# ==========================================
 # DOCX / TXT CONTENT EXTRACTOR
 # ==========================================
 def read_sermon_content(s_num):
@@ -674,6 +684,7 @@ def generate_individual_sermon_pages(max_sermon=202):
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {get_canonical_tag(f"sermon_{s_num}.html")}
   {GOOGLE_VERIFICATION_META}
   {SOCIAL_META_TAGS}
   <title>Pahankanuwa Sermon {s_num} | Ven. Katukurunde Nanananda Thero</title>
@@ -752,6 +763,7 @@ def generate_individual_summary_pages(max_sermon=202):
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {get_canonical_tag(f"sermon_{s_num}_summary.html")}
   {GOOGLE_VERIFICATION_META}
   {SOCIAL_META_TAGS}
   <title>Sermon {s_num} Summary | Ven. Katukurunde Nanananda Thero</title>
@@ -872,6 +884,7 @@ def generate_interactive_sermons_page():
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {get_canonical_tag("sermons.html")}
   {GOOGLE_VERIFICATION_META}
   {SOCIAL_META_TAGS}
   <title>Browse Sermons | Ven. Katukurunde Nanananda Thero</title>
@@ -1081,6 +1094,7 @@ def generate_index_page(metrics):
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {get_canonical_tag("index.html")}
   {GOOGLE_VERIFICATION_META}
   {SOCIAL_META_TAGS}
   <title>English Translations of Pahankanuwa Sermons | Ven. Katukurunde Nanananda Thero</title>
@@ -1187,6 +1201,7 @@ def generate_downloads_page(metrics):
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {get_canonical_tag("downloads.html")}
   {GOOGLE_VERIFICATION_META}
   {SOCIAL_META_TAGS}
   <title>Downloads & Documents | Ven. Katukurunde Nanananda Thero</title>
@@ -1295,6 +1310,7 @@ def generate_audio_page():
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{get_canonical_tag("audio.html")}
 {GOOGLE_VERIFICATION_META}
 {SOCIAL_META_TAGS}
 <title>Audio Recordings | Ven. Katukurunde Nanananda Thero</title>
@@ -1358,6 +1374,7 @@ def generate_statistics_page(metrics, datasets):
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {get_canonical_tag("statistics.html")}
   {GOOGLE_VERIFICATION_META}
   {SOCIAL_META_TAGS}
   <title>Collection Statistics | Ven. Katukurunde Nanananda Thero</title>
@@ -1511,6 +1528,7 @@ def generate_search_page():
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+__CANONICAL_TAG__
 __GOOGLE_VERIFICATION_META__
 __SOCIAL_META_TAGS__
 <title>Search | Ven. Katukurunde Nanananda Thero</title>
@@ -1723,6 +1741,7 @@ document
 
     search_html = search_html.replace("__SITE_CSS__", SITE_CSS) \
                              .replace("__HEADER_HTML__", build_header_html('search')) \
+                             .replace("__CANONICAL_TAG__", get_canonical_tag("search.html")) \
                              .replace("__GOOGLE_VERIFICATION_META__", GOOGLE_VERIFICATION_META) \
                              .replace("__SOCIAL_META_TAGS__", SOCIAL_META_TAGS) \
                              .replace("__FOOTER_HTML__", FOOTER_HTML) \
