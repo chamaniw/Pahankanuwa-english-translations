@@ -777,9 +777,34 @@ def generate_individual_summary_pages(max_sermon=202):
         if docx is not None:
             try:
                 doc = docx.Document(summary_path)
-                paras = [f"<p>{p.text.strip().replace('\n', '<br>')}</p>" for p in doc.paragraphs if p.text.strip()]
-                if paras:
-                    summary_text = "\n".join(paras)
+                html_paragraphs = []
+                for p in doc.paragraphs:
+                    if p.text:
+                        para_html_parts = []
+                        if p.runs:
+                            for run in p.runs:
+                                run_text = run.text
+                                if not run_text:
+                                    continue
+                                # Escape special HTML characters
+                                run_text = run_text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+                                
+                                # Apply inline formatting for summaries
+                                if run.italic:
+                                    run_text = f"<em>{run_text}</em>"
+                                if run.bold:
+                                    run_text = f"<strong>{run_text}</strong>"
+                                
+                                para_html_parts.append(run_text)
+                            full_para_html = "".join(para_html_parts)
+                        else:
+                            full_para_html = p.text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+                        
+                        if full_para_html.strip():
+                            formatted_text = full_para_html.replace("\n", "<br>")
+                            html_paragraphs.append(f"<p>{formatted_text}</p>")
+                if html_paragraphs:
+                    summary_text = "\n".join(html_paragraphs)
             except Exception as e:
                 print(f"Error reading summary docx {summary_path}: {e}")
 
@@ -818,7 +843,7 @@ def generate_individual_summary_pages(max_sermon=202):
 """
         with open(DOCS_DIR / f"sermon_{s_num}_summary.html", "w", encoding="utf-8") as f:
             f.write(page_html)
-    print(f"Generated {len(valid_summaries)} individual summary pages.")
+    print(f"Generated {len(valid_summaries)} individual summary pages with formatting.")
 
 
 # ==========================================
