@@ -62,6 +62,8 @@ SOCIAL_META_TAGS = f"""
   <meta name="twitter:image" content="{THUMBNAIL_URL}">
 """
 
+ANALYTICS_SNIPPET = '<script defer src="/_vercel/insights/script.js"></script>'
+
 
 # ==========================================
 # CANONICAL TAG HELPER
@@ -725,6 +727,7 @@ def generate_individual_sermon_pages(max_sermon=202):
   </main>
 
   {FOOTER_HTML}
+  {ANALYTICS_SNIPPET}
 
 </body>
 </html>
@@ -787,6 +790,7 @@ def generate_individual_summary_pages(max_sermon=202):
     </div>
   </main>
   {FOOTER_HTML}
+  {ANALYTICS_SNIPPET}
 </body>
 </html>
 """
@@ -1009,6 +1013,7 @@ def generate_interactive_sermons_page():
   </main>
 
   {FOOTER_HTML}
+  {ANALYTICS_SNIPPET}
 
   <script type="application/json" id="sermonsDataJson">
     {sermons_json}
@@ -1162,6 +1167,7 @@ def generate_index_page(metrics):
   </main>
 
   {FOOTER_HTML}
+  {ANALYTICS_SNIPPET}
 
 </body>
 </html>
@@ -1242,6 +1248,7 @@ def generate_downloads_page(metrics):
 
   {FOOTER_HTML}
   {SEARCH_JS}
+  {ANALYTICS_SNIPPET}
 
 </body>
 </html>
@@ -1340,6 +1347,7 @@ def generate_audio_page():
 </main>
 
 {FOOTER_HTML}
+{ANALYTICS_SNIPPET}
 
 </body>
 </html>
@@ -1428,6 +1436,7 @@ def generate_statistics_page(metrics, datasets):
 
   {FOOTER_HTML}
   {SEARCH_JS}
+  {ANALYTICS_SNIPPET}
 
 </body>
 </html>
@@ -1568,6 +1577,7 @@ placeholder="Search..."
 </main>
 
 __FOOTER_HTML__
+__ANALYTICS_SNIPPET__
 
 <script type="application/json" id="searchDataJson">
 __SEARCH_JSON__
@@ -1745,6 +1755,7 @@ document
                              .replace("__GOOGLE_VERIFICATION_META__", GOOGLE_VERIFICATION_META) \
                              .replace("__SOCIAL_META_TAGS__", SOCIAL_META_TAGS) \
                              .replace("__FOOTER_HTML__", FOOTER_HTML) \
+                             .replace("__ANALYTICS_SNIPPET__", ANALYTICS_SNIPPET) \
                              .replace("__SEARCH_JSON__", search_json_str)
 
     with open(
