@@ -80,7 +80,8 @@ def get_canonical_tag(page_filename=""):
 # ==========================================
 def read_sermon_content(s_num):
     """
-    Reads the content of a sermon from DOCX or TXT files and returns clean HTML paragraphs.
+    Reads the content of a sermon from DOCX or TXT files, preserving italics and bold formatting, 
+    and returns clean HTML paragraphs.
     """
     docx_filename = find_sermon_file(s_num, "docx", SRC_DOCX_DIR)
     if docx_filename and (SRC_DOCX_DIR / docx_filename).exists():
@@ -90,10 +91,31 @@ def read_sermon_content(s_num):
                 doc = docx.Document(docx_path)
                 html_paragraphs = []
                 for p in doc.paragraphs:
-                    text = p.text.strip()
-                    if text:
-                        formatted_text = text.replace("\n", "<br>")
-                        html_paragraphs.append(f"<p>{formatted_text}</p>")
+                    if p.text:
+                        para_html_parts = []
+                        if p.runs:
+                            for run in p.runs:
+                                run_text = run.text
+                                if not run_text:
+                                    continue
+                                # Escape special HTML characters to prevent breaking layout
+                                run_text = run_text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+                                
+                                # Apply inline formatting based on Word run properties
+                                if run.italic:
+                                    run_text = f"<em>{run_text}</em>"
+                                if run.bold:
+                                    run_text = f"<strong>{run_text}</strong>"
+                                
+                                para_html_parts.append(run_text)
+                            full_para_html = "".join(para_html_parts)
+                        else:
+                            # Fallback if paragraph has no runs but has text
+                            full_para_html = p.text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+                        
+                        if full_para_html.strip():
+                            formatted_text = full_para_html.replace("\n", "<br>")
+                            html_paragraphs.append(f"<p>{formatted_text}</p>")
                 if html_paragraphs:
                     return "\n".join(html_paragraphs)
             except Exception as e:
