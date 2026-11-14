@@ -1172,7 +1172,9 @@ def generate_index_page(metrics):
         <a href="{ZIP_FILE}" class="btn btn-secondary" download>Download All (ZIP)</a>
       </div>
 
-      <p>Welcome to the structured Dhamma Knowledge Base, cataloging and indexing the English translations of the Pahankanuwa Sermons delivered by Most Venerable Katukurunde Nanananda Thero. This portal provides direct cross-references between translated sermon passages, Dhamma subjects, and canonical Sutta citations.</p>
+      <p>
+The <em>Pahankanuwa</em> website brings together the complete collection of translated sermons by <strong>Bhikkhu Nanananda</strong> in a searchable and easy-to-navigate format. Readers can study individual sermons, explore key Buddhist concepts, trace recurring themes across the series, and discover connections between teachings. Whether approached as a structured study programme or a source of daily reflection, the collection provides a unique opportunity to deepen one's understanding of the Buddha's Dhamma through the clarity, insight, and distinctive perspective of Bhikkhu Nanananda.
+</p>
 
 <div style="margin-top: 1.5rem; margin-bottom: 1.5rem; padding: 1.25rem; border-left: 5px solid #800000; background-color: #fff8f0; border-radius: 6px;">
     <h3 style="margin-bottom: 0.5rem; color: #800000;">
